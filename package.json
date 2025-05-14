@@ -51,7 +51,7 @@
     "axios": "^1.5.0",
     "clsx": "^2.1.0",
     "docusaurus-plugin-sass": "^0.2.5",
-    "dotenv": "^16.5.0",
+    "@dotenvx/dotenvx": "^1.44.0",
     "fs-extra": "^11.3.0",
     "glob": "^11.0.1",
     "listr2": "^8.2.5",

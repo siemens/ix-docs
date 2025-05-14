@@ -4,7 +4,10 @@ import figmaPlugin from './plugins/figma-pictures/figma';
 import path from 'path';
 import { themes as prismThemes } from 'prism-react-renderer';
 import versionDeployment from './version-deployment.json' with { type: 'json ' };
-import 'dotenv/config';
+import { config as dotenv } from '@dotenvx/dotenvx';
+
+dotenv();
+
 function getAnnouncementBarConfig() {
   const latestVersion = versionDeployment.versions.find(version => version.id === versionDeployment.currentVersion);
 

@@ -6,7 +6,6 @@
  * This source code is licensed under the MIT license found in the
  * LICENSE file in the root directory of this source tree.
  */
-import 'dotenv/config';
 import { Octokit } from '@octokit/rest';
 import AdmZip from 'adm-zip';
 import fs from 'fs-extra';
@@ -14,16 +13,28 @@ import inquirer from 'inquirer';
 import os from 'os';
 import path from 'path';
 import copyTheme from './copy-theme';
+import { config as dotenv } from '@dotenvx/dotenvx';
 
 const __dirname = path.resolve();
+
+dotenv({
+  path: path.join(__dirname, '.env'),
+});
+
+dotenv({
+  path: path.join(__dirname, '.env.production'),
+});
+
 const __temp = path.join(os.tmpdir(), 'ix-docs');
 const __promptDefaults = path.join(__temp, 'defaults.json');
 
-async function getPromptDefaults() {
-  if (process.env.CI) {
-    return {};
-  }
+type BranchConfig = {
+  branch: string;
+  branchType: 'main' | 'pull request' | (string & {});
+  prNumber: string;
+};
 
+async function getDefaultFile() {
   if (!(await fs.exists(__promptDefaults))) {
     return {};
   }
@@ -32,22 +43,68 @@ async function getPromptDefaults() {
   return defaults;
 }
 
-async function setPromptDefaults(defaults: any) {
-  if (process.env.CI) {
-    return;
-  }
+async function writeDefaultFile(defaults: any) {
   await fs.writeFile(__promptDefaults, JSON.stringify(defaults, null, 2));
 }
 
-async function main() {
-  const defaults = await getPromptDefaults();
-  await copyTheme();
-  const result = await promptBranch(defaults);
-  await downloadLatestArtifact(result.branch);
-  await setPromptDefaults(result);
+async function getDefaults(): Promise<BranchConfig> {
+  let defaults: BranchConfig = {
+    branch: 'main',
+    branchType: 'main',
+    prNumber: '',
+  };
+
+  if (process.env.CI) {
+    if (
+      !(
+        process.env.DOCS_BRANCH &&
+        process.env.DOCS_BRANCH_TYPE &&
+        process.env.DOCS_PR_NUMBER
+      )
+    ) {
+      throw new Error(
+        'DOCS_BRANCH, DOCS_BRANCH_TYPE and DOCS_PR_NUMBER environment variables are required in CI.'
+      );
+    }
+
+    defaults.branch = process.env.DOCS_BRANCH;
+    defaults.branchType = process.env.DOCS_BRANCH_TYPE;
+    defaults.prNumber = process.env.DOCS_PR_NUMBER;
+  } else {
+    defaults = await getDefaultFile();
+  }
+
+  return defaults;
 }
 
-async function promptBranch(defaults) {
+async function main() {
+  const defaults = await getDefaults();
+
+  console.log('Script will started with the following defaults:');
+  console.log(`Branch: ${defaults.branch}`);
+  console.log(`Branch Type: ${defaults.branchType}`);
+  console.log(`PR Number: ${defaults.prNumber}`);
+
+  await copyTheme();
+
+  if (process.env.CI) {
+    const branch = getBranch(defaults);
+    await downloadLatestArtifact(branch);
+  } else {
+    const result = await promptBranch(defaults);
+    await downloadLatestArtifact(result.branch);
+    await writeDefaultFile(result);
+  }
+}
+
+function getBranch(config: BranchConfig) {
+  if (config.branchType === 'pull request') {
+    return `pull/${config.prNumber}`;
+  }
+  return config.branch;
+}
+
+async function promptBranch(defaults: BranchConfig) {
   const { branchType } = await inquirer.prompt([
     {
       type: 'list',

@@ -14,6 +14,7 @@ concurrency: pr-preview-${{ github.ref }}
 
 jobs:
   deploy-preview:
+    if: ${{ contains(github.event.pull_request.labels.*.name, 'Deploy Preview') }}
     runs-on: ubuntu-latest
     permissions:
       contents: write

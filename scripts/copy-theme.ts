@@ -1,13 +1,18 @@
 /*
  * COPYRIGHT (c) Siemens AG 2018-2025 ALL RIGHTS RESERVED.
  */
-import 'dotenv/config';
 import fs from 'fs-extra';
 import path from 'path';
 import axios from 'axios';
 import os from 'os';
 import zlib from 'zlib';
 import * as tar from 'tar';
+
+import { config as dotenv } from '@dotenvx/dotenvx';
+
+dotenv({
+  override: true,
+});
 
 const __dirname = path.resolve();
 const __node_modules = path.join(__dirname, 'node_modules');
