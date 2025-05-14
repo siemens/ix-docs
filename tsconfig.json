@@ -3,11 +3,6 @@
   "extends": "@docusaurus/tsconfig",
   "compilerOptions": {
     "baseUrl": ".",
-    "types": [
-      "node",
-      "@docusaurus/module-type-aliases",
-      "@docusaurus/preset-classic"
-    ],
     "noUnusedLocals": true,
     "noUnusedParameters": true
   },

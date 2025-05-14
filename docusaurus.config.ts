@@ -1,6 +1,6 @@
 import type * as Preset from '@docusaurus/preset-classic';
 import type { Config } from '@docusaurus/types';
-import figmaPlugin from 'figma-plugin';
+import figmaPlugin from './plugins/figma-pictures/figma';
 import path from 'path';
 import { themes as prismThemes } from 'prism-react-renderer';
 import versionDeployment from './version-deployment.json' with { type: 'json ' };
@@ -47,9 +47,11 @@ try {
   );
   console.log('Found optionalDependency @siemens-ix/corporate-theme.');
   customCss.push(path);
+  customCss.push('./src/scss/prod.scss')
   withBrandTheme = true;
 } catch (e) {
   console.warn('optionalDependency @siemens-ix/corporate-theme not found!');
+  customCss.push('./src/scss/local-dev.scss')
 }
 
 const brokenLinks = 'throw';
