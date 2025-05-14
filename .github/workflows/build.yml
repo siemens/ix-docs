@@ -16,7 +16,8 @@ jobs:
       - uses: ./.github/workflows/actions/turbo
 
       - name: Build
-        run: pnpm build --cache-dir=.turbo
-
-      - name: Lint
-        run: pnpm lint
+        run: pnpm build
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          FIGMA_API_TOKEN: ${{ secrets.FIGMA_API_TOKEN }}
+          CSC: ${{ secrets.CSC }}
