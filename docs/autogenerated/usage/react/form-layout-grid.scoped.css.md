@@ -1,7 +1,0 @@
-```css
-.layout-grid-example ix-select,
-ix-input,
-ix-button {
-  width: 100%;
-}
-```

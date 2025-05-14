@@ -1,4 +1,0 @@
-```html
-<ix-button outline variant="danger"> Button </ix-button>
-<ix-button disabled outline variant="danger"> Button </ix-button>
-```

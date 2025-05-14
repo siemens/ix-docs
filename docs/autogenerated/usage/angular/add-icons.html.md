@@ -1,8 +1,0 @@
-```html
-<ix-icon [name]="icons.iconStar"></ix-icon>
-<ix-icon name="star"></ix-icon>
-
-<ix-icon [name]="icons.iconStarFilled"></ix-icon>
-<ix-icon name="starFilled"></ix-icon>
-<ix-icon name="star-filled"></ix-icon>
-```

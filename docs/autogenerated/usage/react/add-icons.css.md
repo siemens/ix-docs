@@ -1,5 +1,0 @@
-```css
-body {
-  display: flex;
-}
-```

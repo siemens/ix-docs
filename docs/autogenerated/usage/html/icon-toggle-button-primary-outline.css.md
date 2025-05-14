@@ -1,9 +1,0 @@
-```css
-body {
-  display: flex;
-}
-
-ix-icon-toggle-button {
-  margin: 0.25rem;
-}
-```

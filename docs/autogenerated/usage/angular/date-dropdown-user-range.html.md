@@ -1,7 +1,0 @@
-```html
-<ix-date-dropdown
-  [dateRangeOptions]="dateDropdownOptions"
-  date-range-id="last-7"
-  format="LL/dd/yyyy"
-></ix-date-dropdown>
-```

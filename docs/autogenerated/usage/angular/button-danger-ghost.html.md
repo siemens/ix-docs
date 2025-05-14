@@ -1,4 +1,0 @@
-```html
-<ix-button ghost variant="secondary"> Button </ix-button>
-<ix-button disabled ghost variant="secondary"> Button </ix-button>
-```

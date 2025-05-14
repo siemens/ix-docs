@@ -1,5 +1,0 @@
-```css
-ix-blind {
-  margin: 0.5rem 0;
-}
-```

@@ -1,6 +1,0 @@
-```css
-ix-menu {
-  width: 100vw;
-  height: 100vh;
-}
-```
