@@ -13,23 +13,52 @@ import fs from 'fs-extra';
 import inquirer from 'inquirer';
 import os from 'os';
 import path from 'path';
+import copyTheme from './copy-theme';
 
 const __dirname = path.resolve();
+const __temp = path.join(os.tmpdir(), 'ix-docs');
+const __promptDefaults = path.join(__temp, 'defaults.json');
 
-async function main() {
-  const branch = await promptBranch();
-  await downloadLatestArtifact(branch);
+async function getPromptDefaults() {
+  if (process.env.CI) {
+    return {};
+  }
+
+  if (!(await fs.exists(__promptDefaults))) {
+    return {};
+  }
+
+  const defaults = JSON.parse(await fs.readFile(__promptDefaults, 'utf8'));
+  return defaults;
 }
 
-async function promptBranch() {
+async function setPromptDefaults(defaults: any) {
+  if (process.env.CI) {
+    return;
+  }
+  await fs.writeFile(__promptDefaults, JSON.stringify(defaults, null, 2));
+}
+
+async function main() {
+  console.log('temp', __temp);
+  const defaults = await getPromptDefaults();
+  await copyTheme();
+  const result = await promptBranch(defaults);
+  await downloadLatestArtifact(result.branch);
+  await setPromptDefaults(result);
+}
+
+async function promptBranch(defaults) {
   const { branchType } = await inquirer.prompt([
     {
       type: 'list',
       name: 'branchType',
       message: 'Which branch do you want to prepare?',
       choices: ['main', 'pull request'],
+      default: defaults.branchType ?? '',
     },
   ]);
+
   let branch = 'main';
   if (branchType === 'pull request') {
     const { prNumber } = await inquirer.prompt([
@@ -39,11 +68,14 @@ async function promptBranch() {
         message: 'Enter the pull request number:',
         validate: (input) =>
           /^\d+$/.test(input) || 'Please enter a valid PR number',
+        default: defaults.prNumber ?? '',
       },
     ]);
     branch = `pull/${prNumber}`;
+
+    return { branch, branchType, prNumber };
   }
-  return branch;
+  return { branch, branchType };
 }
 
 async function downloadLatestArtifact(branch: string) {

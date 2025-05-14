@@ -4,7 +4,6 @@ import figmaPlugin from './plugins/figma-pictures/figma';
 import path from 'path';
 import { themes as prismThemes } from 'prism-react-renderer';
 import versionDeployment from './version-deployment.json' with { type: 'json ' };
-import copyTheme from './scripts/copy-theme';
 
 function getAnnouncementBarConfig() {
   const latestVersion = versionDeployment.versions.find(version => version.id === versionDeployment.currentVersion);
@@ -59,8 +58,6 @@ const brokenLinks = 'throw';
 const baseUrl = process.env.BASE_URL || '/';
 
 console.log('Using BASE_URL', baseUrl);
-
-copyTheme();
 
 const config: Config = {
   title: 'Siemens Industrial Experience',
