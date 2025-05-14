@@ -1,0 +1,15 @@
+```css
+.tabs {
+  display: block;
+  position: relative;
+  width: 100%;
+}
+
+.tabs > div[data-tab-content] {
+  display: none;
+}
+
+.tabs > div[data-tab-content].show {
+  display: block;
+}
+```

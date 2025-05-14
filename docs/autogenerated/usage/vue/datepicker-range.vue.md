@@ -1,0 +1,9 @@
+```vue
+<script setup lang="ts">
+import { IxDatePicker } from '@siemens/ix-vue';
+</script>
+
+<template>
+  <IxDatePicker from="2022/12/15" to="2022/12/24" />
+</template>
+```

@@ -1,0 +1,56 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Custom field validation example</title>
+  </head>
+  <body>
+    <div>
+      <ix-custom-field
+        helper-text="Add your first name here"
+        valid-text="Valid first name"
+        label="First name"
+      >
+        <input
+          id="first-name"
+          type="text"
+          class="ix-form-control ix-valid"
+          value="Jane"
+        />
+      </ix-custom-field>
+    </div>
+
+    <div>
+      <ix-custom-field info-text="Family name" label="Last name">
+        <input
+          id="last-name"
+          type="text"
+          class="ix-form-control ix-info"
+          value="Doe"
+        />
+      </ix-custom-field>
+    </div>
+
+    <div>
+      <ix-custom-field warning-Text="Not a valid email address" label="Email">
+        <input
+          id="email"
+          type="email"
+          class="ix-form-control ix-warning"
+          value="info@"
+        />
+      </ix-custom-field>
+    </div>
+
+    <div>
+      <ix-custom-field invalid-text="Required" label="Address">
+        <input id="address" type="text" class="ix-form-control ix-invalid" />
+      </ix-custom-field>
+    </div>
+
+    <script type="module" src="./init.js"></script>
+  </body>
+</html>
+```

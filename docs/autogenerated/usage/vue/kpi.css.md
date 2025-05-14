@@ -1,0 +1,13 @@
+```css
+.kpi {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: relative;
+  max-width: 20rem;
+}
+
+.kpi > ix-kpi {
+  margin: 0.5rem;
+}
+```

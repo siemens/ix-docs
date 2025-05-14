@@ -1,0 +1,12 @@
+```vue
+<script setup lang="ts">
+import { IxEventList, IxEventListItem } from '@siemens/ix-vue';
+</script>
+
+<template>
+  <IxEventList itemHeight="L">
+    <IxEventListItem color="color-primary">Text 1</IxEventListItem>
+    <IxEventListItem color="color-primary">Text 2</IxEventListItem>
+  </IxEventList>
+</template>
+```

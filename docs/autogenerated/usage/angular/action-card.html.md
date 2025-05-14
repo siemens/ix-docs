@@ -1,0 +1,9 @@
+```html
+<ix-action-card
+  icon="refresh"
+  heading="Scan for new devices"
+  subheading="Secondary text"
+  variant="outline"
+  (click)="onClick($event)"
+></ix-action-card>
+```

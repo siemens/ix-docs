@@ -1,0 +1,333 @@
+import {SinceTag, DeprecatedTag} from '@site/src/components/UI/Tags';
+import FrameworkSelection from '@site/src/components/UI/FrameworkSelection';
+import ApiTable from '@site/src/components/ApiTable';
+
+## API for ix-category-filter
+
+### Properties
+
+<ApiTable id="property-categories">
+  <ApiTable.PropertyHeader name="categories" singleFramework="">
+  </ApiTable.PropertyHeader>
+
+  <ApiTable.Text name="Description">
+    { `Configuration object hash used to populate the dropdown menu for type-ahead and quick selection functionality.Each ID maps to an object with a label and an array of options to select from.` }
+  </ApiTable.Text>
+
+  <ApiTable.Code name="Attribute">
+    {`categories`}
+  </ApiTable.Code>
+
+  <ApiTable.Code name="Type">
+   {`{ [id: string]: { label: string; options: string[]; }; }`}
+  </ApiTable.Code>
+
+
+</ApiTable>
+<ApiTable id="property-disabled">
+  <ApiTable.PropertyHeader name="disabled" singleFramework="">
+  </ApiTable.PropertyHeader>
+
+  <ApiTable.Text name="Description">
+    { `If true the filter will be in disabled state` }
+  </ApiTable.Text>
+
+  <ApiTable.Code name="Attribute">
+    {`disabled`}
+  </ApiTable.Code>
+
+  <ApiTable.Code name="Type">
+   {`boolean`}
+  </ApiTable.Code>
+
+  <ApiTable.Code name="Default">
+    {`false`}
+  </ApiTable.Code>
+
+</ApiTable>
+<ApiTable id="property-filterState">
+  <ApiTable.PropertyHeader name="filterState" singleFramework="">
+  </ApiTable.PropertyHeader>
+
+  <ApiTable.Text name="Description">
+    { `A set of search criteria to populate the component with.` }
+  </ApiTable.Text>
+
+  <ApiTable.Code name="Attribute">
+    {`filter-state`}
+  </ApiTable.Code>
+
+  <ApiTable.Code name="Type">
+   {`FilterState`}
+  </ApiTable.Code>
+
+
+</ApiTable>
+<ApiTable id="property-hideIcon">
+  <ApiTable.PropertyHeader name="hideIcon" singleFramework="">
+  </ApiTable.PropertyHeader>
+
+  <ApiTable.Text name="Description">
+    { `Allows to hide the icon inside the text input.Defaults to false` }
+  </ApiTable.Text>
+
+  <ApiTable.Code name="Attribute">
+    {`hide-icon`}
+  </ApiTable.Code>
+
+  <ApiTable.Code name="Type">
+   {`boolean`}
+  </ApiTable.Code>
+
+  <ApiTable.Code name="Default">
+    {`false`}
+  </ApiTable.Code>
+
+</ApiTable>
+<ApiTable id="property-i18nPlainText">
+  <ApiTable.PropertyHeader name="i18nPlainText" singleFramework="">
+  </ApiTable.PropertyHeader>
+
+  <ApiTable.Text name="Description">
+    { `i18n` }
+  </ApiTable.Text>
+
+  <ApiTable.Code name="Attribute">
+    {`i-1-8n-plain-text`}
+  </ApiTable.Code>
+
+  <ApiTable.Code name="Type">
+   {`string`}
+  </ApiTable.Code>
+
+  <ApiTable.Code name="Default">
+    {`'Filter by text'`}
+  </ApiTable.Code>
+
+</ApiTable>
+<ApiTable id="property-icon">
+  <ApiTable.PropertyHeader name="icon" singleFramework="">
+  </ApiTable.PropertyHeader>
+
+  <ApiTable.Text name="Description">
+    { `The icon next to the actual text inputDefaults to &#39;search&#39;` }
+  </ApiTable.Text>
+
+  <ApiTable.Code name="Attribute">
+    {`icon`}
+  </ApiTable.Code>
+
+  <ApiTable.Code name="Type">
+   {`string`}
+  </ApiTable.Code>
+
+
+</ApiTable>
+<ApiTable id="property-labelCategories">
+  <ApiTable.PropertyHeader name="labelCategories" singleFramework="">
+  </ApiTable.PropertyHeader>
+
+  <ApiTable.Text name="Description">
+    { `i18n` }
+  </ApiTable.Text>
+
+  <ApiTable.Code name="Attribute">
+    {`label-categories`}
+  </ApiTable.Code>
+
+  <ApiTable.Code name="Type">
+   {`string`}
+  </ApiTable.Code>
+
+  <ApiTable.Code name="Default">
+    {`'Categories'`}
+  </ApiTable.Code>
+
+</ApiTable>
+<ApiTable id="property-nonSelectableCategories">
+  <ApiTable.PropertyHeader name="nonSelectableCategories" singleFramework="">
+  </ApiTable.PropertyHeader>
+
+  <ApiTable.Text name="Description">
+    { `In certain use cases some categories may not be available for selection anymore.To allow proper display of set filters with these categories this ID to label mapping can be populated.Configuration object hash used to supply labels to the filter chips in the input field.Each ID maps to a string representing the label to display.` }
+  </ApiTable.Text>
+
+  <ApiTable.Code name="Attribute">
+    {`non-selectable-categories`}
+  </ApiTable.Code>
+
+  <ApiTable.Code name="Type">
+   {`{ [id: string]: string; }`}
+  </ApiTable.Code>
+
+  <ApiTable.Code name="Default">
+    {`{}`}
+  </ApiTable.Code>
+
+</ApiTable>
+<ApiTable id="property-placeholder">
+  <ApiTable.PropertyHeader name="placeholder" singleFramework="">
+  </ApiTable.PropertyHeader>
+
+  <ApiTable.Text name="Description">
+    { `Placeholder text to be displayed in an empty input field.` }
+  </ApiTable.Text>
+
+  <ApiTable.Code name="Attribute">
+    {`placeholder`}
+  </ApiTable.Code>
+
+  <ApiTable.Code name="Type">
+   {`string`}
+  </ApiTable.Code>
+
+
+</ApiTable>
+<ApiTable id="property-readonly">
+  <ApiTable.PropertyHeader name="readonly" singleFramework="">
+  </ApiTable.PropertyHeader>
+
+  <ApiTable.Text name="Description">
+    { `If true the filter will be in readonly mode` }
+  </ApiTable.Text>
+
+  <ApiTable.Code name="Attribute">
+    {`readonly`}
+  </ApiTable.Code>
+
+  <ApiTable.Code name="Type">
+   {`boolean`}
+  </ApiTable.Code>
+
+  <ApiTable.Code name="Default">
+    {`false`}
+  </ApiTable.Code>
+
+</ApiTable>
+<ApiTable id="property-repeatCategories">
+  <ApiTable.PropertyHeader name="repeatCategories" singleFramework="">
+  </ApiTable.PropertyHeader>
+
+  <ApiTable.Text name="Description">
+    { `If set to true, allows that a single category can be set more than once.An already set category will not appear in the category dropdown if set to false.Defaults to true` }
+  </ApiTable.Text>
+
+  <ApiTable.Code name="Attribute">
+    {`repeat-categories`}
+  </ApiTable.Code>
+
+  <ApiTable.Code name="Type">
+   {`boolean`}
+  </ApiTable.Code>
+
+  <ApiTable.Code name="Default">
+    {`true`}
+  </ApiTable.Code>
+
+</ApiTable>
+<ApiTable id="property-staticOperator">
+  <ApiTable.PropertyHeader name="staticOperator" singleFramework="">
+  </ApiTable.PropertyHeader>
+
+  <ApiTable.Text name="Description">
+    { `If set categories will always be filtered via the respective logical operator.Toggling of the operator will not be available to the user.` }
+  </ApiTable.Text>
+
+  <ApiTable.Code name="Attribute">
+    {`static-operator`}
+  </ApiTable.Code>
+
+  <ApiTable.Code name="Type">
+   {`LogicalFilterOperator.EQUAL | LogicalFilterOperator.NOT_EQUAL`}
+  </ApiTable.Code>
+
+
+</ApiTable>
+<ApiTable id="property-suggestions">
+  <ApiTable.PropertyHeader name="suggestions" singleFramework="">
+  </ApiTable.PropertyHeader>
+
+  <ApiTable.Text name="Description">
+    { `A list of strings that will be supplied as type-ahead suggestions not tied to any categories.` }
+  </ApiTable.Text>
+
+  <ApiTable.Code name="Attribute">
+    {`suggestions`}
+  </ApiTable.Code>
+
+  <ApiTable.Code name="Type">
+   {`string[]`}
+  </ApiTable.Code>
+
+
+</ApiTable>
+
+
+### Events
+
+<ApiTable id="event-categoryChanged">
+  <ApiTable.EventHeader name="categoryChanged">
+  </ApiTable.EventHeader>
+
+  <ApiTable.Text name="Description">
+    { `Event dispatched whenever a category gets selected in the dropdown` }
+  </ApiTable.Text>
+
+  <ApiTable.Code name="Event">
+    {`categoryChanged`}
+  </ApiTable.Code>
+
+  <ApiTable.Code name="Detail">
+    {`string`}
+  </ApiTable.Code>
+</ApiTable>
+<ApiTable id="event-filterChanged">
+  <ApiTable.EventHeader name="filterChanged">
+  </ApiTable.EventHeader>
+
+  <ApiTable.Text name="Description">
+    { `Event dispatched whenever the filter state changes.` }
+  </ApiTable.Text>
+
+  <ApiTable.Code name="Event">
+    {`filterChanged`}
+  </ApiTable.Code>
+
+  <ApiTable.Code name="Detail">
+    {`FilterState`}
+  </ApiTable.Code>
+</ApiTable>
+<ApiTable id="event-filterCleared">
+  <ApiTable.EventHeader name="filterCleared">
+  </ApiTable.EventHeader>
+
+  <ApiTable.Text name="Description">
+    { `Event dispatched whenever the filter gets cleared.` }
+  </ApiTable.Text>
+
+  <ApiTable.Code name="Event">
+    {`filterCleared`}
+  </ApiTable.Code>
+
+  <ApiTable.Code name="Detail">
+    {`void`}
+  </ApiTable.Code>
+</ApiTable>
+<ApiTable id="event-inputChanged">
+  <ApiTable.EventHeader name="inputChanged">
+  </ApiTable.EventHeader>
+
+  <ApiTable.Text name="Description">
+    { `Event dispatched whenever the text input changes.` }
+  </ApiTable.Text>
+
+  <ApiTable.Code name="Event">
+    {`inputChanged`}
+  </ApiTable.Code>
+
+  <ApiTable.Code name="Detail">
+    {`InputState`}
+  </ApiTable.Code>
+</ApiTable>
+
+

@@ -1,0 +1,48 @@
+<ApiTable id="event-dateChange">
+  <ApiTable.EventHeader name="dateChange">
+  </ApiTable.EventHeader>
+
+  <ApiTable.Text name="Description">
+    { `Date change` }
+  </ApiTable.Text>
+
+  <ApiTable.Code name="Event">
+    {`dateChange`}
+  </ApiTable.Code>
+
+  <ApiTable.Code name="Detail">
+    {`string | { from?: string; to?: string; }`}
+  </ApiTable.Code>
+</ApiTable>
+<ApiTable id="event-dateSelect">
+  <ApiTable.EventHeader name="dateSelect">
+  </ApiTable.EventHeader>
+
+  <ApiTable.Text name="Description">
+    { `Datetime selection event is fired after confirm button is pressed` }
+  </ApiTable.Text>
+
+  <ApiTable.Code name="Event">
+    {`dateSelect`}
+  </ApiTable.Code>
+
+  <ApiTable.Code name="Detail">
+    {`{ from?: string; to?: string; time: string; }`}
+  </ApiTable.Code>
+</ApiTable>
+<ApiTable id="event-timeChange">
+  <ApiTable.EventHeader name="timeChange">
+  </ApiTable.EventHeader>
+
+  <ApiTable.Text name="Description">
+    { `Time change` }
+  </ApiTable.Text>
+
+  <ApiTable.Code name="Event">
+    {`timeChange`}
+  </ApiTable.Code>
+
+  <ApiTable.Code name="Detail">
+    {`string`}
+  </ApiTable.Code>
+</ApiTable>

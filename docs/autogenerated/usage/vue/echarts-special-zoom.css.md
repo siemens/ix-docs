@@ -1,0 +1,8 @@
+```css
+.echarts {
+  position: relative;
+  width: 100%;
+  height: 40rem;
+  padding-top: 1rem;
+}
+```

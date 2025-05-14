@@ -1,0 +1,89 @@
+import {SinceTag, DeprecatedTag} from '@site/src/components/UI/Tags';
+import FrameworkSelection from '@site/src/components/UI/FrameworkSelection';
+import ApiTable from '@site/src/components/ApiTable';
+
+## API for ix-message-bar
+
+### Properties
+
+<ApiTable id="property-dismissible">
+  <ApiTable.PropertyHeader name="dismissible" singleFramework="">
+  </ApiTable.PropertyHeader>
+
+  <ApiTable.Text name="Description">
+    { `If true, close button is enabled and alert can be dismissed by the user` }
+  </ApiTable.Text>
+
+  <ApiTable.Code name="Attribute">
+    {`dismissible`}
+  </ApiTable.Code>
+
+  <ApiTable.Code name="Type">
+   {`boolean`}
+  </ApiTable.Code>
+
+  <ApiTable.Code name="Default">
+    {`true`}
+  </ApiTable.Code>
+
+</ApiTable>
+<ApiTable id="property-type">
+  <ApiTable.PropertyHeader name="type" singleFramework="">
+      <DeprecatedTag message={`Type \`danger\` will be removed in 4.0. Use \`alarm\` instead.`} />
+  </ApiTable.PropertyHeader>
+
+  <ApiTable.Text name="Description">
+    { `Specifies the type of the alert.` }
+  </ApiTable.Text>
+
+  <ApiTable.Code name="Attribute">
+    {`type`}
+  </ApiTable.Code>
+
+  <ApiTable.Code name="Type">
+   {`"alarm" | "critical" | "danger" | "info" | "neutral" | "primary" | "success" | "warning"`}
+  </ApiTable.Code>
+
+  <ApiTable.Code name="Default">
+    {`'info'`}
+  </ApiTable.Code>
+
+</ApiTable>
+
+
+### Events
+
+<ApiTable id="event-closeAnimationCompleted">
+  <ApiTable.EventHeader name="closeAnimationCompleted">
+  </ApiTable.EventHeader>
+
+  <ApiTable.Text name="Description">
+    { `An event emitted when the close animation is completed` }
+  </ApiTable.Text>
+
+  <ApiTable.Code name="Event">
+    {`closeAnimationCompleted`}
+  </ApiTable.Code>
+
+  <ApiTable.Code name="Detail">
+    {`any`}
+  </ApiTable.Code>
+</ApiTable>
+<ApiTable id="event-closedChange">
+  <ApiTable.EventHeader name="closedChange">
+  </ApiTable.EventHeader>
+
+  <ApiTable.Text name="Description">
+    { `An event emitted when the close button is clicked` }
+  </ApiTable.Text>
+
+  <ApiTable.Code name="Event">
+    {`closedChange`}
+  </ApiTable.Code>
+
+  <ApiTable.Code name="Detail">
+    {`any`}
+  </ApiTable.Code>
+</ApiTable>
+
+

@@ -1,0 +1,19 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Select editable example</title>
+  </head>
+  <body>
+    <ix-select editable value="1">
+      <ix-select-item label="Item 1" value="1"></ix-select-item>
+      <ix-select-item label="Item 2" value="2"></ix-select-item>
+      <ix-select-item label="Item 3" value="3"></ix-select-item>
+      <ix-select-item label="Item 4" value="4"></ix-select-item>
+    </ix-select>
+    <script type="module" src="./init.js"></script>
+  </body>
+</html>
+```

@@ -1,0 +1,90 @@
+import {SinceTag, DeprecatedTag} from '@site/src/components/UI/Tags';
+import FrameworkSelection from '@site/src/components/UI/FrameworkSelection';
+import ApiTable from '@site/src/components/ApiTable';
+
+## API for ix-basic-navigation
+
+### Properties
+
+<ApiTable id="property-applicationName">
+  <ApiTable.PropertyHeader name="applicationName" singleFramework="">
+  </ApiTable.PropertyHeader>
+
+  <ApiTable.Text name="Description">
+    { `Application name` }
+  </ApiTable.Text>
+
+  <ApiTable.Code name="Attribute">
+    {`application-name`}
+  </ApiTable.Code>
+
+  <ApiTable.Code name="Type">
+   {`string`}
+  </ApiTable.Code>
+
+
+</ApiTable>
+<ApiTable id="property-breakpoints">
+  <ApiTable.PropertyHeader name="breakpoints" singleFramework="">
+      
+  </ApiTable.PropertyHeader>
+
+  <ApiTable.Text name="Description">
+    { `Supported layouts` }
+  </ApiTable.Text>
+
+  <ApiTable.Code name="Attribute">
+    {`breakpoints`}
+  </ApiTable.Code>
+
+  <ApiTable.Code name="Type">
+   {`("sm" | "md" | "lg")[]`}
+  </ApiTable.Code>
+
+  <ApiTable.Code name="Default">
+    {`['sm', 'md', 'lg']`}
+  </ApiTable.Code>
+
+</ApiTable>
+<ApiTable id="property-forceBreakpoint">
+  <ApiTable.PropertyHeader name="forceBreakpoint" singleFramework="">
+  </ApiTable.PropertyHeader>
+
+  <ApiTable.Text name="Description">
+    { `Change the responsive layout of the menu structure` }
+  </ApiTable.Text>
+
+  <ApiTable.Code name="Attribute">
+    {`force-breakpoint`}
+  </ApiTable.Code>
+
+  <ApiTable.Code name="Type">
+   {`"lg" | "md" | "sm"`}
+  </ApiTable.Code>
+
+
+</ApiTable>
+<ApiTable id="property-hideHeader">
+  <ApiTable.PropertyHeader name="hideHeader" singleFramework="">
+  </ApiTable.PropertyHeader>
+
+  <ApiTable.Text name="Description">
+    { `Hide application header. Will disable responsive feature of basic navigation.` }
+  </ApiTable.Text>
+
+  <ApiTable.Code name="Attribute">
+    {`hide-header`}
+  </ApiTable.Code>
+
+  <ApiTable.Code name="Type">
+   {`boolean`}
+  </ApiTable.Code>
+
+  <ApiTable.Code name="Default">
+    {`false`}
+  </ApiTable.Code>
+
+</ApiTable>
+
+
+

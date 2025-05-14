@@ -1,0 +1,5 @@
+```css
+ix-pill {
+  min-width: 7rem;
+}
+```

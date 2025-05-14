@@ -1,0 +1,113 @@
+import {SinceTag, DeprecatedTag} from '@site/src/components/UI/Tags';
+import FrameworkSelection from '@site/src/components/UI/FrameworkSelection';
+import ApiTable from '@site/src/components/ApiTable';
+
+## API for ix-flip-tile
+
+### Properties
+
+<ApiTable id="property-height">
+  <ApiTable.PropertyHeader name="height" singleFramework="">
+  </ApiTable.PropertyHeader>
+
+  <ApiTable.Text name="Description">
+    { `Height interpreted as REM` }
+  </ApiTable.Text>
+
+  <ApiTable.Code name="Attribute">
+    {`height`}
+  </ApiTable.Code>
+
+  <ApiTable.Code name="Type">
+   {`"auto" | number`}
+  </ApiTable.Code>
+
+  <ApiTable.Code name="Default">
+    {`15.125`}
+  </ApiTable.Code>
+
+</ApiTable>
+<ApiTable id="property-index">
+  <ApiTable.PropertyHeader name="index" singleFramework="">
+      <SinceTag message={`3.0.0`} />
+  </ApiTable.PropertyHeader>
+
+  <ApiTable.Text name="Description">
+    { `Index of the currently visible content` }
+  </ApiTable.Text>
+
+  <ApiTable.Code name="Attribute">
+    {`index`}
+  </ApiTable.Code>
+
+  <ApiTable.Code name="Type">
+   {`number`}
+  </ApiTable.Code>
+
+  <ApiTable.Code name="Default">
+    {`0`}
+  </ApiTable.Code>
+
+</ApiTable>
+<ApiTable id="property-state">
+  <ApiTable.PropertyHeader name="state" singleFramework="">
+  </ApiTable.PropertyHeader>
+
+  <ApiTable.Text name="Description">
+    { `Variation of the Flip` }
+  </ApiTable.Text>
+
+  <ApiTable.Code name="Attribute">
+    {`state`}
+  </ApiTable.Code>
+
+  <ApiTable.Code name="Type">
+   {`FlipTileState.Alarm | FlipTileState.Info | FlipTileState.None | FlipTileState.Primary | FlipTileState.Warning`}
+  </ApiTable.Code>
+
+
+</ApiTable>
+<ApiTable id="property-width">
+  <ApiTable.PropertyHeader name="width" singleFramework="">
+  </ApiTable.PropertyHeader>
+
+  <ApiTable.Text name="Description">
+    { `Width interpreted as REM` }
+  </ApiTable.Text>
+
+  <ApiTable.Code name="Attribute">
+    {`width`}
+  </ApiTable.Code>
+
+  <ApiTable.Code name="Type">
+   {`"auto" | number`}
+  </ApiTable.Code>
+
+  <ApiTable.Code name="Default">
+    {`16`}
+  </ApiTable.Code>
+
+</ApiTable>
+
+
+### Events
+
+<ApiTable id="event-toggle">
+  <ApiTable.EventHeader name="toggle">
+      <SinceTag message={`3.0.0`} />
+  </ApiTable.EventHeader>
+
+  <ApiTable.Text name="Description">
+    { `Event emitted when the index changes` }
+  </ApiTable.Text>
+
+  <ApiTable.Code name="Event">
+    {`toggle`}
+  </ApiTable.Code>
+
+  <ApiTable.Code name="Detail">
+    {`number`}
+  </ApiTable.Code>
+</ApiTable>
+
+

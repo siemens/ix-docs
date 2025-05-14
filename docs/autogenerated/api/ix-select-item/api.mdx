@@ -1,0 +1,87 @@
+import {SinceTag, DeprecatedTag} from '@site/src/components/UI/Tags';
+import FrameworkSelection from '@site/src/components/UI/FrameworkSelection';
+import ApiTable from '@site/src/components/ApiTable';
+
+## API for ix-select-item
+
+### Properties
+
+<ApiTable id="property-label">
+  <ApiTable.PropertyHeader name="label" singleFramework="">
+  </ApiTable.PropertyHeader>
+
+  <ApiTable.Text name="Description">
+    { `Displayed name of the item` }
+  </ApiTable.Text>
+
+  <ApiTable.Code name="Attribute">
+    {`label`}
+  </ApiTable.Code>
+
+  <ApiTable.Code name="Type">
+   {`string`}
+  </ApiTable.Code>
+
+
+</ApiTable>
+<ApiTable id="property-selected">
+  <ApiTable.PropertyHeader name="selected" singleFramework="">
+  </ApiTable.PropertyHeader>
+
+  <ApiTable.Text name="Description">
+    { `Flag indicating whether the item is selected` }
+  </ApiTable.Text>
+
+  <ApiTable.Code name="Attribute">
+    {`selected`}
+  </ApiTable.Code>
+
+  <ApiTable.Code name="Type">
+   {`boolean`}
+  </ApiTable.Code>
+
+  <ApiTable.Code name="Default">
+    {`false`}
+  </ApiTable.Code>
+
+</ApiTable>
+<ApiTable id="property-value">
+  <ApiTable.PropertyHeader name="value" singleFramework="">
+  </ApiTable.PropertyHeader>
+
+  <ApiTable.Text name="Description">
+    { `The value of the item.Important: The select component uses string values to handle selection and will call toString() on this value.Therefor a string should be passed to value to prevent unexpected behavior.` }
+  </ApiTable.Text>
+
+  <ApiTable.Code name="Attribute">
+    {`value`}
+  </ApiTable.Code>
+
+  <ApiTable.Code name="Type">
+   {`string`}
+  </ApiTable.Code>
+
+
+</ApiTable>
+
+
+### Events
+
+<ApiTable id="event-itemClick">
+  <ApiTable.EventHeader name="itemClick">
+  </ApiTable.EventHeader>
+
+  <ApiTable.Text name="Description">
+    { `Item clicked` }
+  </ApiTable.Text>
+
+  <ApiTable.Code name="Event">
+    {`itemClick`}
+  </ApiTable.Code>
+
+  <ApiTable.Code name="Detail">
+    {`string`}
+  </ApiTable.Code>
+</ApiTable>
+
+

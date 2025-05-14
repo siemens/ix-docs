@@ -1,0 +1,8 @@
+```css
+.echarts-gauge {
+  position: relative;
+  width: 100%;
+  height: 20rem;
+  padding-top: 3rem;
+}
+```

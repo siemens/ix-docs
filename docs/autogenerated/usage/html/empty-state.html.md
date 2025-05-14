@@ -1,0 +1,37 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Empty state example</title>
+    <script type="module">
+      import { addIcons } from '@siemens/ix-icons';
+      import { iconAdd } from '@siemens/ix-icons/icons';
+      addIcons({
+        iconAdd,
+      });
+    </script>
+  </head>
+  <body>
+    <ix-empty-state
+      header="No elements available"
+      sub-header="Create an element first"
+      icon="add"
+      action="Create element"
+    ></ix-empty-state>
+
+    <script>
+      (async function () {
+        await window.customElements.whenDefined('ix-empty-state');
+        const emptyState = document.querySelector('ix-empty-state');
+
+        emptyState.addEventListener('actionClick', (event) =>
+          console.log(event)
+        );
+      })();
+    </script>
+    <script type="module" src="./init.js"></script>
+  </body>
+</html>
+```

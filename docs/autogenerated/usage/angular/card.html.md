@@ -1,0 +1,16 @@
+```html
+<ix-card (click)="onClick($event)" variant="outline">
+  <ix-card-content>
+    <ix-icon name="capacity"></ix-icon>
+    <ix-typography bold>Number of components</ix-typography>
+    <ix-typography>
+      Vanilla JavaScript<br />
+      Angular<br />
+      Blazor<br />
+      React<br />
+      Vue.js
+    </ix-typography>
+    <ix-typography format="h1">123</ix-typography>
+  </ix-card-content>
+</ix-card>
+```

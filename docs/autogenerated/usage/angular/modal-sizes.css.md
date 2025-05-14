@@ -1,0 +1,12 @@
+```css
+.modal-sizes {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.modal-sizes > ix-button {
+  width: auto;
+  margin: 0.25rem;
+}
+```

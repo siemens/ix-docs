@@ -1,0 +1,33 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Loading example</title>
+  </head>
+  <body>
+    <ix-button>Start loading</ix-button>
+
+    <script type="module">
+      import { showModalLoading } from '@siemens/ix';
+
+      const btn = document.querySelector('ix-button');
+      btn.addEventListener('click', () => {
+        let count = 0;
+        const progress = showModalLoading('Loading 0/2');
+        const interval = setInterval(() => {
+          count++;
+          progress.update(`Loading ${count}/2`);
+
+          if (count === 2) {
+            progress.finish('Done');
+            clearInterval(interval);
+          }
+        }, 1000);
+      });
+    </script>
+    <script type="module" src="./init.js"></script>
+  </body>
+</html>
+```

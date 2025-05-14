@@ -1,0 +1,190 @@
+import {SinceTag, DeprecatedTag} from '@site/src/components/UI/Tags';
+import FrameworkSelection from '@site/src/components/UI/FrameworkSelection';
+import ApiTable from '@site/src/components/ApiTable';
+
+## API for ix-modal
+
+### Properties
+
+<ApiTable id="property-animation">
+  <ApiTable.PropertyHeader name="animation" singleFramework="">
+  </ApiTable.PropertyHeader>
+
+  <ApiTable.Text name="Description">
+    { `Should the modal be animated` }
+  </ApiTable.Text>
+
+  <ApiTable.Code name="Attribute">
+    {`animation`}
+  </ApiTable.Code>
+
+  <ApiTable.Code name="Type">
+   {`boolean`}
+  </ApiTable.Code>
+
+  <ApiTable.Code name="Default">
+    {`true`}
+  </ApiTable.Code>
+
+</ApiTable>
+<ApiTable id="property-backdrop">
+  <ApiTable.PropertyHeader name="backdrop" singleFramework="">
+  </ApiTable.PropertyHeader>
+
+  <ApiTable.Text name="Description">
+    { `Show a backdrop behind the modal dialog` }
+  </ApiTable.Text>
+
+  <ApiTable.Code name="Attribute">
+    {`backdrop`}
+  </ApiTable.Code>
+
+  <ApiTable.Code name="Type">
+   {`boolean`}
+  </ApiTable.Code>
+
+  <ApiTable.Code name="Default">
+    {`true`}
+  </ApiTable.Code>
+
+</ApiTable>
+<ApiTable id="property-beforeDismiss">
+  <ApiTable.PropertyHeader name="beforeDismiss" singleFramework="">
+  </ApiTable.PropertyHeader>
+
+  <ApiTable.Text name="Description">
+    { `Is called before the modal is dismissed.- Return &#x60;true&#x60; to proceed in dismissing the modal- Return &#x60;false&#x60; to abort in dismissing the modal` }
+  </ApiTable.Text>
+
+  <ApiTable.Code name="Attribute">
+    {`before-dismiss`}
+  </ApiTable.Code>
+
+  <ApiTable.Code name="Type">
+   {`(reason?: any) => boolean | Promise<boolean>`}
+  </ApiTable.Code>
+
+
+</ApiTable>
+<ApiTable id="property-centered">
+  <ApiTable.PropertyHeader name="centered" singleFramework="">
+  </ApiTable.PropertyHeader>
+
+  <ApiTable.Text name="Description">
+    { `Centered modal` }
+  </ApiTable.Text>
+
+  <ApiTable.Code name="Attribute">
+    {`centered`}
+  </ApiTable.Code>
+
+  <ApiTable.Code name="Type">
+   {`boolean`}
+  </ApiTable.Code>
+
+  <ApiTable.Code name="Default">
+    {`false`}
+  </ApiTable.Code>
+
+</ApiTable>
+<ApiTable id="property-closeOnBackdropClick">
+  <ApiTable.PropertyHeader name="closeOnBackdropClick" singleFramework="">
+  </ApiTable.PropertyHeader>
+
+  <ApiTable.Text name="Description">
+    { `Dismiss modal on backdrop click` }
+  </ApiTable.Text>
+
+  <ApiTable.Code name="Attribute">
+    {`close-on-backdrop-click`}
+  </ApiTable.Code>
+
+  <ApiTable.Code name="Type">
+   {`boolean`}
+  </ApiTable.Code>
+
+  <ApiTable.Code name="Default">
+    {`false`}
+  </ApiTable.Code>
+
+</ApiTable>
+<ApiTable id="property-closeOnEscape">
+  <ApiTable.PropertyHeader name="closeOnEscape" singleFramework="">
+  </ApiTable.PropertyHeader>
+
+  <ApiTable.Text name="Description">
+    { `If set to true the modal can be closed by pressing the Escape key` }
+  </ApiTable.Text>
+
+  <ApiTable.Code name="Attribute">
+    {`close-on-escape`}
+  </ApiTable.Code>
+
+  <ApiTable.Code name="Type">
+   {`boolean`}
+  </ApiTable.Code>
+
+  <ApiTable.Code name="Default">
+    {`true`}
+  </ApiTable.Code>
+
+</ApiTable>
+<ApiTable id="property-size">
+  <ApiTable.PropertyHeader name="size" singleFramework="">
+  </ApiTable.PropertyHeader>
+
+  <ApiTable.Text name="Description">
+    { `Modal size` }
+  </ApiTable.Text>
+
+  <ApiTable.Code name="Attribute">
+    {`size`}
+  </ApiTable.Code>
+
+  <ApiTable.Code name="Type">
+   {`"360" | "480" | "600" | "720" | "840" | "full-screen" | "full-width"`}
+  </ApiTable.Code>
+
+  <ApiTable.Code name="Default">
+    {`'360'`}
+  </ApiTable.Code>
+
+</ApiTable>
+
+
+### Events
+
+<ApiTable id="event-dialogClose">
+  <ApiTable.EventHeader name="dialogClose">
+  </ApiTable.EventHeader>
+
+  <ApiTable.Text name="Description">
+    { `Dialog close` }
+  </ApiTable.Text>
+
+  <ApiTable.Code name="Event">
+    {`dialogClose`}
+  </ApiTable.Code>
+
+  <ApiTable.Code name="Detail">
+    {`any`}
+  </ApiTable.Code>
+</ApiTable>
+<ApiTable id="event-dialogDismiss">
+  <ApiTable.EventHeader name="dialogDismiss">
+  </ApiTable.EventHeader>
+
+  <ApiTable.Text name="Description">
+    { `Dialog cancel` }
+  </ApiTable.Text>
+
+  <ApiTable.Code name="Event">
+    {`dialogDismiss`}
+  </ApiTable.Code>
+
+  <ApiTable.Code name="Detail">
+    {`any`}
+  </ApiTable.Code>
+</ApiTable>
+
+

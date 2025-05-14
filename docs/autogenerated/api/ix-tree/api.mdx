@@ -1,0 +1,175 @@
+import {SinceTag, DeprecatedTag} from '@site/src/components/UI/Tags';
+import FrameworkSelection from '@site/src/components/UI/FrameworkSelection';
+import ApiTable from '@site/src/components/ApiTable';
+
+## API for ix-tree
+
+### Properties
+
+<ApiTable id="property-context">
+  <ApiTable.PropertyHeader name="context" singleFramework="">
+  </ApiTable.PropertyHeader>
+
+  <ApiTable.Text name="Description">
+    { `Selection and collapsed state management` }
+  </ApiTable.Text>
+
+  <ApiTable.Code name="Attribute">
+    {`context`}
+  </ApiTable.Code>
+
+  <ApiTable.Code name="Type">
+   {`{ [x: string]: TreeItemContext; }`}
+  </ApiTable.Code>
+
+  <ApiTable.Code name="Default">
+    {`{}`}
+  </ApiTable.Code>
+
+</ApiTable>
+<ApiTable id="property-model">
+  <ApiTable.PropertyHeader name="model" singleFramework="">
+  </ApiTable.PropertyHeader>
+
+  <ApiTable.Text name="Description">
+    { `Tree model` }
+  </ApiTable.Text>
+
+  <ApiTable.Code name="Attribute">
+    {`model`}
+  </ApiTable.Code>
+
+  <ApiTable.Code name="Type">
+   {`{ [x: string]: TreeItem<any>; }`}
+  </ApiTable.Code>
+
+  <ApiTable.Code name="Default">
+    {`{}`}
+  </ApiTable.Code>
+
+</ApiTable>
+<ApiTable id="property-renderItem">
+  <ApiTable.PropertyHeader name="renderItem" singleFramework="">
+  </ApiTable.PropertyHeader>
+
+  <ApiTable.Text name="Description">
+    { `Render function of tree items` }
+  </ApiTable.Text>
+
+  <ApiTable.Code name="Attribute">
+    {`render-item`}
+  </ApiTable.Code>
+
+  <ApiTable.Code name="Type">
+   {`<T = any>(index: number, data: T, dataList: T[], context: TreeContext, update: (callback: UpdateCallback) => void) => HTMLElement`}
+  </ApiTable.Code>
+
+
+</ApiTable>
+<ApiTable id="property-root">
+  <ApiTable.PropertyHeader name="root" singleFramework="">
+  </ApiTable.PropertyHeader>
+
+  <ApiTable.Text name="Description">
+    { `Initial root element will not be rendered` }
+  </ApiTable.Text>
+
+  <ApiTable.Code name="Attribute">
+    {`root`}
+  </ApiTable.Code>
+
+  <ApiTable.Code name="Type">
+   {`string`}
+  </ApiTable.Code>
+
+
+</ApiTable>
+<ApiTable id="property-toggleOnItemClick">
+  <ApiTable.PropertyHeader name="toggleOnItemClick" singleFramework="">
+      <SinceTag message={`3.0.0`} />
+  </ApiTable.PropertyHeader>
+
+  <ApiTable.Text name="Description">
+    { `Enable to toggle items by click on the item` }
+  </ApiTable.Text>
+
+  <ApiTable.Code name="Attribute">
+    {`toggle-on-item-click`}
+  </ApiTable.Code>
+
+  <ApiTable.Code name="Type">
+   {`boolean`}
+  </ApiTable.Code>
+
+
+</ApiTable>
+
+
+### Events
+
+<ApiTable id="event-contextChange">
+  <ApiTable.EventHeader name="contextChange">
+  </ApiTable.EventHeader>
+
+  <ApiTable.Text name="Description">
+    { `Context changed` }
+  </ApiTable.Text>
+
+  <ApiTable.Code name="Event">
+    {`contextChange`}
+  </ApiTable.Code>
+
+  <ApiTable.Code name="Detail">
+    {`{ [x: string]: TreeItemContext; }`}
+  </ApiTable.Code>
+</ApiTable>
+<ApiTable id="event-nodeClicked">
+  <ApiTable.EventHeader name="nodeClicked">
+  </ApiTable.EventHeader>
+
+  <ApiTable.Text name="Description">
+    { `Node clicked event` }
+  </ApiTable.Text>
+
+  <ApiTable.Code name="Event">
+    {`nodeClicked`}
+  </ApiTable.Code>
+
+  <ApiTable.Code name="Detail">
+    {`string`}
+  </ApiTable.Code>
+</ApiTable>
+<ApiTable id="event-nodeRemoved">
+  <ApiTable.EventHeader name="nodeRemoved">
+  </ApiTable.EventHeader>
+
+  <ApiTable.Text name="Description">
+    { `Emits removed nodes` }
+  </ApiTable.Text>
+
+  <ApiTable.Code name="Event">
+    {`nodeRemoved`}
+  </ApiTable.Code>
+
+  <ApiTable.Code name="Detail">
+    {`any`}
+  </ApiTable.Code>
+</ApiTable>
+<ApiTable id="event-nodeToggled">
+  <ApiTable.EventHeader name="nodeToggled">
+  </ApiTable.EventHeader>
+
+  <ApiTable.Text name="Description">
+    { `Node toggled event` }
+  </ApiTable.Text>
+
+  <ApiTable.Code name="Event">
+    {`nodeToggled`}
+  </ApiTable.Code>
+
+  <ApiTable.Code name="Detail">
+    {`{ id: string; isExpanded: boolean; }`}
+  </ApiTable.Code>
+</ApiTable>
+
+

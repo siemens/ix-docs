@@ -1,0 +1,4 @@
+```html
+<ix-button variant="danger"> Button </ix-button>
+<ix-button disabled variant="danger"> Button </ix-button>
+```

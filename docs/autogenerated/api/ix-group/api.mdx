@@ -1,0 +1,200 @@
+import {SinceTag, DeprecatedTag} from '@site/src/components/UI/Tags';
+import FrameworkSelection from '@site/src/components/UI/FrameworkSelection';
+import ApiTable from '@site/src/components/ApiTable';
+
+## API for ix-group
+
+### Properties
+
+<ApiTable id="property-collapsed">
+  <ApiTable.PropertyHeader name="collapsed" singleFramework="">
+  </ApiTable.PropertyHeader>
+
+  <ApiTable.Text name="Description">
+    { `Whether the group is collapsed or expanded. Defaults to true.` }
+  </ApiTable.Text>
+
+  <ApiTable.Code name="Attribute">
+    {`collapsed`}
+  </ApiTable.Code>
+
+  <ApiTable.Code name="Type">
+   {`boolean`}
+  </ApiTable.Code>
+
+  <ApiTable.Code name="Default">
+    {`true`}
+  </ApiTable.Code>
+
+</ApiTable>
+<ApiTable id="property-expandOnHeaderClick">
+  <ApiTable.PropertyHeader name="expandOnHeaderClick" singleFramework="">
+  </ApiTable.PropertyHeader>
+
+  <ApiTable.Text name="Description">
+    { `Expand the group if the header is clicked` }
+  </ApiTable.Text>
+
+  <ApiTable.Code name="Attribute">
+    {`expand-on-header-click`}
+  </ApiTable.Code>
+
+  <ApiTable.Code name="Type">
+   {`boolean`}
+  </ApiTable.Code>
+
+  <ApiTable.Code name="Default">
+    {`false`}
+  </ApiTable.Code>
+
+</ApiTable>
+<ApiTable id="property-header">
+  <ApiTable.PropertyHeader name="header" singleFramework="">
+  </ApiTable.PropertyHeader>
+
+  <ApiTable.Text name="Description">
+    { `Group header` }
+  </ApiTable.Text>
+
+  <ApiTable.Code name="Attribute">
+    {`header`}
+  </ApiTable.Code>
+
+  <ApiTable.Code name="Type">
+   {`string`}
+  </ApiTable.Code>
+
+
+</ApiTable>
+<ApiTable id="property-index">
+  <ApiTable.PropertyHeader name="index" singleFramework="">
+  </ApiTable.PropertyHeader>
+
+  <ApiTable.Text name="Description">
+    { `The index of the selected group entry.If undefined no group item is selected.` }
+  </ApiTable.Text>
+
+  <ApiTable.Code name="Attribute">
+    {`index`}
+  </ApiTable.Code>
+
+  <ApiTable.Code name="Type">
+   {`number`}
+  </ApiTable.Code>
+
+
+</ApiTable>
+<ApiTable id="property-selected">
+  <ApiTable.PropertyHeader name="selected" singleFramework="">
+  </ApiTable.PropertyHeader>
+
+  <ApiTable.Text name="Description">
+    { `Whether the group is selected.` }
+  </ApiTable.Text>
+
+  <ApiTable.Code name="Attribute">
+    {`selected`}
+  </ApiTable.Code>
+
+  <ApiTable.Code name="Type">
+   {`boolean`}
+  </ApiTable.Code>
+
+  <ApiTable.Code name="Default">
+    {`false`}
+  </ApiTable.Code>
+
+</ApiTable>
+<ApiTable id="property-subHeader">
+  <ApiTable.PropertyHeader name="subHeader" singleFramework="">
+  </ApiTable.PropertyHeader>
+
+  <ApiTable.Text name="Description">
+    { `Group header subtitle` }
+  </ApiTable.Text>
+
+  <ApiTable.Code name="Attribute">
+    {`sub-header`}
+  </ApiTable.Code>
+
+  <ApiTable.Code name="Type">
+   {`string`}
+  </ApiTable.Code>
+
+
+</ApiTable>
+<ApiTable id="property-suppressHeaderSelection">
+  <ApiTable.PropertyHeader name="suppressHeaderSelection" singleFramework="">
+  </ApiTable.PropertyHeader>
+
+  <ApiTable.Text name="Description">
+    { `Prevent header from being selectable` }
+  </ApiTable.Text>
+
+  <ApiTable.Code name="Attribute">
+    {`suppress-header-selection`}
+  </ApiTable.Code>
+
+  <ApiTable.Code name="Type">
+   {`boolean`}
+  </ApiTable.Code>
+
+  <ApiTable.Code name="Default">
+    {`false`}
+  </ApiTable.Code>
+
+</ApiTable>
+
+
+### Events
+
+<ApiTable id="event-collapsedChanged">
+  <ApiTable.EventHeader name="collapsedChanged">
+  </ApiTable.EventHeader>
+
+  <ApiTable.Text name="Description">
+    { `Group collapsed` }
+  </ApiTable.Text>
+
+  <ApiTable.Code name="Event">
+    {`collapsedChanged`}
+  </ApiTable.Code>
+
+  <ApiTable.Code name="Detail">
+    {`boolean`}
+  </ApiTable.Code>
+</ApiTable>
+<ApiTable id="event-selectGroup">
+  <ApiTable.EventHeader name="selectGroup">
+  </ApiTable.EventHeader>
+
+  <ApiTable.Text name="Description">
+    { `Emits when whole group gets selected.` }
+  </ApiTable.Text>
+
+  <ApiTable.Code name="Event">
+    {`selectGroup`}
+  </ApiTable.Code>
+
+  <ApiTable.Code name="Detail">
+    {`boolean`}
+  </ApiTable.Code>
+</ApiTable>
+<ApiTable id="event-selectItem">
+  <ApiTable.EventHeader name="selectItem">
+  </ApiTable.EventHeader>
+
+  <ApiTable.Text name="Description">
+    { `Emits when group item gets selected.` }
+  </ApiTable.Text>
+
+  <ApiTable.Code name="Event">
+    {`selectItem`}
+  </ApiTable.Code>
+
+  <ApiTable.Code name="Detail">
+    {`number`}
+  </ApiTable.Code>
+</ApiTable>
+
+

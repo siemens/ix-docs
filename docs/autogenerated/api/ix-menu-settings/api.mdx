@@ -1,0 +1,86 @@
+import {SinceTag, DeprecatedTag} from '@site/src/components/UI/Tags';
+import FrameworkSelection from '@site/src/components/UI/FrameworkSelection';
+import ApiTable from '@site/src/components/ApiTable';
+
+## API for ix-menu-settings
+
+### Properties
+
+<ApiTable id="property-activeTabLabel">
+  <ApiTable.PropertyHeader name="activeTabLabel" singleFramework="">
+  </ApiTable.PropertyHeader>
+
+  <ApiTable.Text name="Description">
+    { `Active tab` }
+  </ApiTable.Text>
+
+  <ApiTable.Code name="Attribute">
+    {`active-tab-label`}
+  </ApiTable.Code>
+
+  <ApiTable.Code name="Type">
+   {`string`}
+  </ApiTable.Code>
+
+
+</ApiTable>
+<ApiTable id="property-label">
+  <ApiTable.PropertyHeader name="label" singleFramework="">
+  </ApiTable.PropertyHeader>
+
+  <ApiTable.Text name="Description">
+    { `Label of first tab` }
+  </ApiTable.Text>
+
+  <ApiTable.Code name="Attribute">
+    {`label`}
+  </ApiTable.Code>
+
+  <ApiTable.Code name="Type">
+   {`string`}
+  </ApiTable.Code>
+
+  <ApiTable.Code name="Default">
+    {`'Settings'`}
+  </ApiTable.Code>
+
+</ApiTable>
+
+
+### Events
+
+<ApiTable id="event-close">
+  <ApiTable.EventHeader name="close">
+  </ApiTable.EventHeader>
+
+  <ApiTable.Text name="Description">
+    { `Popover closed` }
+  </ApiTable.Text>
+
+  <ApiTable.Code name="Event">
+    {`close`}
+  </ApiTable.Code>
+
+  <ApiTable.Code name="Detail">
+    {`CustomCloseEvent`}
+  </ApiTable.Code>
+</ApiTable>
+<ApiTable id="event-tabChange">
+  <ApiTable.EventHeader name="tabChange">
+      <SinceTag message={`3.0.0`} />
+  </ApiTable.EventHeader>
+
+  <ApiTable.Text name="Description">
+    { `Active tab changed` }
+  </ApiTable.Text>
+
+  <ApiTable.Code name="Event">
+    {`tabChange`}
+  </ApiTable.Code>
+
+  <ApiTable.Code name="Detail">
+    {`string`}
+  </ApiTable.Code>
+</ApiTable>
+
+

@@ -1,0 +1,32 @@
+```tsx
+import { IxSlider } from '@siemens/ix-react';
+
+export default () => {
+  return (
+    <>
+      <IxSlider
+        trace
+        trace-reference={50}
+        marker={[0, 25, 50, 75, 100]}
+        value={25}
+      >
+        <span slot="label-start">0</span>
+        <span slot="label-end">100</span>
+      </IxSlider>
+
+      <IxSlider
+        min={0}
+        max={50}
+        value={20}
+        step={10}
+        trace
+        trace-reference={10}
+        marker={[0, 10, 20, 30, 40, 50]}
+      >
+        <span slot="label-start">0</span>
+        <span slot="label-end">50</span>
+      </IxSlider>
+    </>
+  );
+};
+```

@@ -1,0 +1,7 @@
+```html
+<ix-radio
+  label='256GB SSD storage'
+  value='1'
+  name='storage-256gb'
+></ix-radio>
+```
