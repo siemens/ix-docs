@@ -4,6 +4,7 @@ import figmaPlugin from './plugins/figma-pictures/figma';
 import path from 'path';
 import { themes as prismThemes } from 'prism-react-renderer';
 import versionDeployment from './version-deployment.json' with { type: 'json ' };
+import copyTheme from './scripts/copy-theme';
 
 function getAnnouncementBarConfig() {
   const latestVersion = versionDeployment.versions.find(version => version.id === versionDeployment.currentVersion);
@@ -58,6 +59,8 @@ const brokenLinks = 'throw';
 const baseUrl = process.env.BASE_URL || '/';
 
 console.log('Using BASE_URL', baseUrl);
+
+copyTheme();
 
 const config: Config = {
   title: 'Siemens Industrial Experience',
@@ -123,7 +126,7 @@ const config: Config = {
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
           editUrl:
-            'https://github.com/siemens/ix/tree/main/packages/documentation/',
+            'https://github.com/siemens/ix-docs/tree/main/',
           // Useful options to enforce blogging best practices
           onInlineTags: 'warn',
           onInlineAuthors: 'warn',
