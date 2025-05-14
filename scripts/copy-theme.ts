@@ -100,7 +100,9 @@ function copyTheme() {
     fs.copySync(__from, __htmlPreview);
     fs.copySync(__from, __htmlMobile);
   } catch (e) {
-    console.error('Cannot copy theme', e);
+    console.error(
+      'Cannot copy theme, documentation will run without additional theme'
+    );
   }
 }
 

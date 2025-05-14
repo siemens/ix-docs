@@ -40,7 +40,6 @@ async function setPromptDefaults(defaults: any) {
 }
 
 async function main() {
-  console.log('temp', __temp);
   const defaults = await getPromptDefaults();
   await copyTheme();
   const result = await promptBranch(defaults);
