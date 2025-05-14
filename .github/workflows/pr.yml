@@ -31,3 +31,4 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           FIGMA_API_TOKEN: ${{ secrets.FIGMA_API_TOKEN }}
           CSC: ${{ secrets.CSC }}
+          BRAND_URL: ${{ vars.BRAND_URL }}
