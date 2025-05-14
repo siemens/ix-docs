@@ -22,7 +22,7 @@ async function downloadTheme() {
   const __themeZip = path.join(__temp, `theme.tgz`);
 
   if (!token) {
-    console.error('CSC is required');
+    console.error('CSC is required to download additional theme');
     return;
   }
 
