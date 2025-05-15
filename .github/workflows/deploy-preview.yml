@@ -1,0 +1,85 @@
+name: Deploy Preview
+
+on:
+  pull_request:
+    branches-ignore:
+      - changeset-release/main
+    types:
+      - opened
+      - reopened
+      - synchronize
+      - labeled
+
+concurrency: pr-preview-${{ github.ref }}
+
+jobs:
+  deploy-preview:
+    if: ${{ contains(github.event.pull_request.labels.*.name, 'Deploy Preview') }}
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+      pull-requests: write
+      id-token: write
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - uses: ./.github/workflows/actions/turbo
+
+      - name: Build
+        run: pnpm build
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          FIGMA_API_TOKEN: ${{ secrets.FIGMA_API_TOKEN }}
+          CSC: ${{ secrets.CSC }}
+          BRAND_URL: ${{ vars.BRAND_URL }}
+
+      - name: Publish
+        id: publish
+        uses: netlify/actions/cli@375963b92b795c7b979927c580dd6f2a65ebcf28
+        with:
+          args: deploy --message pr-preview-${{ github.event.pull_request.number }} --alias pr-preview-${{ github.event.pull_request.number }}
+        env:
+          NETLIFY_SITE_ID: ${{ secrets.NETLIFY_SITE_ID }}
+          NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
+
+      - name: Find comments
+        id: find_comments
+        uses: actions-cool/issues-helper@a610082f8ac0cf03e357eb8dd0d5e2ba075e017e
+        with:
+          actions: 'find-comments'
+          token: ${{ secrets.GITHUB_TOKEN }}
+          issue-number: ${{ github.event.pull_request.number }}
+          comment-auth: 'github-actions[bot]'
+          body-includes: 'Deploy Preview for *industrial-experience* ready!'
+
+      - uses: actions/github-script@v7
+        id: filter-comment
+        env:
+          COMMENTS_RESULT: ${{ steps.find_comments.outputs.comments }}
+        with:
+          script: |
+            const { COMMENTS_RESULT } = process.env;
+            const comments = JSON.parse(COMMENTS_RESULT);
+            if (comments.length === 1) {
+              return comments[0].id;
+            }
+            return '';
+          result-encoding: string
+
+      - name: Create PR comment
+        if: ${{ steps.filter-comment.outputs.result == '' }}
+        uses: actions-cool/issues-helper@a610082f8ac0cf03e357eb8dd0d5e2ba075e017e
+        with:
+          issue-number: ${{ github.event.pull_request.number }}
+          actions: 'create-comment'
+          token: ${{ secrets.GITHUB_TOKEN }}
+          body: |
+            ### <span aria-hidden="true">✅</span> Deploy Preview for *industrial-experience* ready!
+
+
+            |  Name | Link |
+            |:-:|------------------------|
+            |<span aria-hidden="true">🔍</span> Latest deploy log | [${{ steps.publish.outputs.NETLIFY_LOGS_URL }}](${{ steps.publish.outputs.NETLIFY_LOGS_URL }}) |
+            |<span aria-hidden="true">😎</span> Deploy Preview | [${{ steps.publish.outputs.NETLIFY_URL }}](${{ steps.publish.outputs.NETLIFY_URL }}) |
+            ---
