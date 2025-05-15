@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkix_documentation=self.webpackChunkix_documentation||[]).push([[3157],{91219:e=>{e.exports=JSON.parse('{"tags":[{"label":"Release","permalink":"/ix-docs/blog/tags/release","description":"Blog posts about new Industrial Experience design system releases","count":2}]}')}}]);
