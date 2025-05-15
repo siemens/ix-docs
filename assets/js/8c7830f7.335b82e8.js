@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunkix_documentation=self.webpackChunkix_documentation||[]).push([[3989],{58251:e=>{e.exports=JSON.parse('{"metadata":{"permalink":"/ix-docs/blog","page":1,"postsPerPage":10,"totalPages":1,"totalCount":2,"blogDescription":"Blog","blogTitle":"Blog"}}')}}]);
