@@ -148,4 +148,6 @@ scripts/.typedoc
 static/svg
 static/storybook-static
 static/figma
-static/demo/v2/preview
+
+static/demo/v2
+!static/demo/v2/code-runtime
