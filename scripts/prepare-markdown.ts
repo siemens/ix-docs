@@ -25,6 +25,11 @@ dotenv({
   path: path.join(__dirname, '.env.production'),
 });
 
+dotenv({
+  path: path.join(__dirname, '.env.pullrequest'),
+  override: true,
+});
+
 const __temp = path.join(os.tmpdir(), 'ix-docs');
 const __promptDefaults = path.join(__temp, 'defaults.json');
 
@@ -43,10 +48,6 @@ async function getDefaultFile() {
   return defaults;
 }
 
-async function writeDefaultFile(defaults: any) {
-  await fs.writeFile(__promptDefaults, JSON.stringify(defaults, null, 2));
-}
-
 async function getDefaults(): Promise<BranchConfig> {
   let defaults: BranchConfig = {
     branch: 'main',
@@ -54,25 +55,21 @@ async function getDefaults(): Promise<BranchConfig> {
     prNumber: '',
   };
 
-  if (process.env.CI) {
-    if (
-      !(
-        process.env.DOCS_BRANCH &&
-        process.env.DOCS_BRANCH_TYPE &&
-        process.env.DOCS_PR_NUMBER
-      )
-    ) {
-      throw new Error(
-        'DOCS_BRANCH, DOCS_BRANCH_TYPE and DOCS_PR_NUMBER environment variables are required in CI.'
-      );
-    }
-
-    defaults.branch = process.env.DOCS_BRANCH;
-    defaults.branchType = process.env.DOCS_BRANCH_TYPE;
-    defaults.prNumber = process.env.DOCS_PR_NUMBER;
-  } else {
-    defaults = await getDefaultFile();
+  if (
+    !(
+      process.env.DOCS_BRANCH &&
+      process.env.DOCS_BRANCH_TYPE &&
+      process.env.DOCS_PR_NUMBER !== undefined
+    )
+  ) {
+    throw new Error(
+      'DOCS_BRANCH, DOCS_BRANCH_TYPE and DOCS_PR_NUMBER environment variables are required in CI.'
+    );
   }
+
+  defaults.branch = process.env.DOCS_BRANCH;
+  defaults.branchType = process.env.DOCS_BRANCH_TYPE;
+  defaults.prNumber = process.env.DOCS_PR_NUMBER;
 
   return defaults;
 }
@@ -87,14 +84,8 @@ async function main() {
 
   await copyTheme();
 
-  if (process.env.CI) {
-    const branch = getBranch(defaults);
-    await downloadLatestArtifact(branch);
-  } else {
-    const result = await promptBranch(defaults);
-    await downloadLatestArtifact(result.branch);
-    await writeDefaultFile(result);
-  }
+  const branch = getBranch(defaults);
+  await downloadLatestArtifact(branch);
 }
 
 function getBranch(config: BranchConfig) {
@@ -161,12 +152,12 @@ async function downloadLatestArtifact(branch: string) {
     repo,
     branch: branchName,
     status: 'success',
-    per_page: 1,
+    per_page: 10,
   });
   if (!runs.workflow_runs || runs.workflow_runs.length === 0) {
     throw new Error('No workflow runs found for this branch.');
   }
-  const runId = runs.workflow_runs[0].id;
+  const runId = runs.workflow_runs.filter((run) => run.name === 'Build')[0].id;
 
   // Get artifacts for the run
   const { data: artifactsData } =
@@ -175,10 +166,18 @@ async function downloadLatestArtifact(branch: string) {
       repo,
       run_id: runId,
     });
+
   if (!artifactsData.artifacts || artifactsData.artifacts.length === 0) {
     throw new Error('No artifacts found for this workflow run.');
   }
-  const artifact = artifactsData.artifacts[0];
+
+  const artifact = artifactsData.artifacts.find((artifact) =>
+    artifact.name.startsWith('documentation-')
+  );
+
+  if (!artifact) {
+    throw new Error('No documentation artifact found for this workflow run.');
+  }
 
   // Download the artifact zip
   const { data: zipData } = await octokit.actions.downloadArtifact({
