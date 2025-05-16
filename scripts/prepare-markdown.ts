@@ -151,13 +151,21 @@ async function downloadLatestArtifact(branch: string) {
     owner,
     repo,
     branch: branchName,
-    status: 'success',
     per_page: 10,
   });
-  if (!runs.workflow_runs || runs.workflow_runs.length === 0) {
-    throw new Error('No workflow runs found for this branch.');
+  if (
+    !runs.workflow_runs ||
+    runs.workflow_runs.length === 0 ||
+    runs.workflow_runs.filter(
+      (run) => run.name === 'Build' || run.name === 'Pull Request'
+    ).length === 0
+  ) {
+    const message = `No workflow runs found for this branch. ${branchName}`;
+    throw new Error(message);
   }
-  const runId = runs.workflow_runs.filter((run) => run.name === 'Build')[0].id;
+  const runId = runs.workflow_runs.filter(
+    (run) => run.name === 'Build' || run.name === 'Pull Request'
+  )[0].id;
 
   // Get artifacts for the run
   const { data: artifactsData } =
