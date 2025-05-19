@@ -9,7 +9,6 @@
 import { Octokit } from '@octokit/rest';
 import AdmZip from 'adm-zip';
 import fs from 'fs-extra';
-import inquirer from 'inquirer';
 import os from 'os';
 import path from 'path';
 import copyTheme from './copy-theme';
@@ -100,7 +99,20 @@ async function downloadLatestArtifact(branch: string) {
   const owner = 'siemens';
   const token = process.env.GITHUB_TOKEN;
   if (!token) {
-    throw new Error('GITHUB_TOKEN environment variable is required.');
+    const message = [
+      'GITHUB_TOKEN environment variable is not set.',
+      '',
+      '',
+      '⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️',
+      'Please set the GITHUB_TOKEN environment variable to a valid GitHub token.',
+      `You can create a new token at https://github.com/settings/personal-access-tokens,`,
+      'the token must not have any permissions.',
+      '⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️',
+      '',
+      '',
+    ];
+
+    throw new Error(message.join('\n'));
   }
   const octokit = new Octokit({ auth: token });
 
