@@ -32,6 +32,7 @@ export async function docusaurusFetch(url: string) {
 
 export type CodePreviewFiles = {
   angular?: Record<string, string>;
+  angular_standalone?: Record<string, string>;
   react?: Record<string, string>;
   vue?: Record<string, string>;
   html?: Record<string, string>;
@@ -39,6 +40,7 @@ export type CodePreviewFiles = {
 
 export type SourceFiles = {
   angular?: Record<string, JSX.Element>;
+  angular_standalone?: Record<string, JSX.Element>;
   react?: Record<string, JSX.Element>;
   vue?: Record<string, JSX.Element>;
   html?: Record<string, JSX.Element>;

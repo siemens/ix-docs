@@ -75,6 +75,13 @@ async function getDefaults(): Promise<BranchConfig> {
 }
 
 async function main() {
+  if (process.env.SKIP_PREPARE) {
+    console.log('========================================');
+    console.log('===      SKIPPING PREPARE STEP       ===');
+    console.log('========================================');
+    console.log(`Reason: SKIP_PREPARE is set to "${process.env.SKIP_PREPARE}"`);
+    return;
+  }
   const defaults = await getDefaults();
 
   console.log('Script will started with the following defaults:');
