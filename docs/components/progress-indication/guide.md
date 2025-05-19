@@ -6,31 +6,34 @@ import DoAndDont from '@site/src/components/DoAndDont';
 
 # Progress indicator - Usage
 
-## Linear progress bar
+Progress indicators inform users about the status of ongoing processes, such as loading data, submitting forms or processing non-blocking operations.
 
-The primary purpose of progress bars is to offer a clear indication of how much of the task has been completed and how much remains. Progress bars are commonly employed in various applications, ranging from software installations and file downloads to form submissions and multi-step processes.
+We offer both a **linear progress bar** and a **circular progress indicator**, each supporting the same options and states. As a general guideline, the linear progress bar is ideal for determinate loading in horizontal layouts, while the circular indicator is better suited for indeterminate loading in compact or centered layouts.
 
-![Progress bar anatomy](https://www.figma.com/design/wEptRgAezDU1z80Cn3eZ0o/iX-Documentation-illustrations?node-id=2094-345&t=pq3AmdWOVOjIx4S4-4)
+![Progress indicator anatomy](https://www.figma.com/design/wEptRgAezDU1z80Cn3eZ0o/iX-Documentation-illustrations?node-id=2094-345&t=pq3AmdWOVOjIx4S4-4)
 
-1. **Label:** The label text describes the process the progress bar refers to. 
-2. **Helper:**  The helper displays additional information about the process.
-3. **Value indicator:** shows how much a determinated process has progressed. For indeterminated processes the indicator bar moves from left to right in a continuous loop.
-4. **Background track:** the area that the indicator fills or moves across. For an determinated process it marks the expected length.
+1. Label
+2. Helper text
+3. Value indicator
+4. Background track
+5. Center content slot
+
+The basic anatomy of progress indicators consists of a value indicator moving along a background track. For determinate processes, the track represents the total expected length while the indicator shows the current progress. For indeterminate processes, where the completion time is unknown, the indicator moves along the track in a continuous loop to show that the process is ongoing.
 
 ## Options
 
-- **Alignment:** Linear progress bars can either be left or center aligned.
-- **Display mode:** Set the progress bar to inline to display it without label and content, we typically use this option when nested in another component.
-- **Label:** The label can optionally be hidden.
-- **Helper:** The helper text can optionally be hidden. If the helper text is not shown below the progress bar, it is accessible as tooltip.
-- **Height:** Progress bars come in five different heights `xs`, `sm`, `md`, `lg` and `xl`.
-- **Value:** The min and max values can also be customized appropriately for whatever the progress bar is showing. By default, the min value starts at 0 and the max value is set to 100.
-- **Indeterminate:** This progress bar animates continuously until the process is complete. It indicates that work is occurring without indicating a scope for completion or implying an estimate for how long it will take. We typically use it for unknown load times.
-- **Error:** The error indicates that the action did not successfully complete. If an error occurs, an inline notification or error handling within the form should appear. As soon as a process fails, the indicator bar’s progress turns red. A failed icon is also shown.
+- **Alignment:** Progress indicators can be aligned either left or center, relative to their label and helper text.
+- **Display mode:** The default mode includes full styling with padding and spacing. The inline mode offers a more compact version—without text, padding, or margins—ideal for use within other components.
+- **Label:** A label can be added to describe the process being tracked, helping users understand what operation is in progress.
+- **Helper:** Use helper text to provide additional context, such as percentage complete, estimated time remaining, or validation states. This text can be optionally hidden. When hidden, it remains accessible via a tooltip.
+- **Height:** Progress indicators are available in five predefined heights `xs`, `sm`, `md`, `lg` and `xl`.
+- **Value:** The progress range is customizable. By default, it spans from 0 to 100, but both min and max values can be adjusted to suit the specific use case.
+- **Indeterminate:** In this mode, the indicator animates continuously to show that a process is ongoing, without conveying how long it will take. We typically use this when the duration or progress of the task is unknown.
+- **Center content slot:** Available for circular variants with sufficient size, this slot allows you to display additional content such as percentage values, status messages, or custom elements like icons.
 
 ## States
 
-The linear progress bar comes in six different states: Default, Success, Error, Info, Warning and Pause.
+The progress indicators comes in six different states: Default, Success, Error, Info, Warning and Pause.
 
 ## Behavior in context
 
@@ -46,14 +49,15 @@ Progress bars show real-time status of operations, maintaining consistent width 
 
 <DoAndDont>
   <DoAndDont.Do>
-    <DoAndDont.Item>Do make sure the progress bar clearly shows how much is done.</DoAndDont.Item>
-    <DoAndDont.Item>Do place text close to the progress bar.</DoAndDont.Item>
-    <DoAndDont.Item>Do keep a width based on content.</DoAndDont.Item>
+    <DoAndDont.Item>Do use progress indication consistently for similar processes.</DoAndDont.Item>
+    <DoAndDont.Item>Do use linear progress bars for determinate processes where progress can be measured.</DoAndDont.Item>
+    <DoAndDont.Item>Do use circular progress indicators for indeterminate processes or quick loading states.</DoAndDont.Item>
+    <DoAndDont.Item>Do use linear progress bars in horizontal layouts and circular indicators in compact spaces or centered layouts.</DoAndDont.Item>    
   </DoAndDont.Do>
   <DoAndDont.Dont>
-    <DoAndDont.Item>Don't neglect to provide clear error messages.</DoAndDont.Item>
-    <DoAndDont.Item>Don't use long information, instead keep it short.</DoAndDont.Item>
-    <DoAndDont.Item>Don’t use in constrained spaces indicating indeterminate loading state.</DoAndDont.Item>
+    <DoAndDont.Item>Don't use progress indicators for operations shorter than one second.</DoAndDont.Item>
+    <DoAndDont.Item>Don't mix inline and standard display modes in the same context.</DoAndDont.Item>
+    <DoAndDont.Item>Don't overcrowd the center content slot with too much information.</DoAndDont.Item>
     <DoAndDont.Item>Don't leave users wondering if a task is complete; provide clear feedback.</DoAndDont.Item>
   </DoAndDont.Dont>
 </DoAndDont>
