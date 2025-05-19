@@ -23,9 +23,6 @@ importers:
       '@mdx-js/react':
         specifier: ^3.0.0
         version: 3.1.0(@types/react@18.3.21)(react@18.3.1)
-      '@octokit/rest':
-        specifier: ^21.1.1
-        version: 21.1.1
       '@siemens/ix':
         specifier: ^3.0.0
         version: 3.0.0(@siemens/ix-icons@3.0.0)
@@ -75,6 +72,9 @@ importers:
       '@dotenvx/dotenvx':
         specifier: ^1.44.0
         version: 1.44.0
+      '@octokit/rest':
+        specifier: ^21.1.1
+        version: 21.1.1
       '@types/adm-zip':
         specifier: ^0.5.7
         version: 0.5.7

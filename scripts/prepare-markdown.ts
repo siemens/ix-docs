@@ -95,36 +95,6 @@ function getBranch(config: BranchConfig) {
   return config.branch;
 }
 
-async function promptBranch(defaults: BranchConfig) {
-  const { branchType } = await inquirer.prompt([
-    {
-      type: 'list',
-      name: 'branchType',
-      message: 'Which branch do you want to prepare?',
-      choices: ['main', 'pull request'],
-      default: defaults.branchType ?? '',
-    },
-  ]);
-
-  let branch = 'main';
-  if (branchType === 'pull request') {
-    const { prNumber } = await inquirer.prompt([
-      {
-        type: 'input',
-        name: 'prNumber',
-        message: 'Enter the pull request number:',
-        validate: (input) =>
-          /^\d+$/.test(input) || 'Please enter a valid PR number',
-        default: defaults.prNumber ?? '',
-      },
-    ]);
-    branch = `pull/${prNumber}`;
-
-    return { branch, branchType, prNumber };
-  }
-  return { branch, branchType };
-}
-
 async function downloadLatestArtifact(branch: string) {
   const repo = 'ix';
   const owner = 'siemens';
