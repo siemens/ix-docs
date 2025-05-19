@@ -1,5 +1,10 @@
 /*
- * COPYRIGHT (c) Siemens AG 2018-2025 ALL RIGHTS RESERVED.
+ * SPDX-FileCopyrightText: 2025 Siemens AG
+ *
+ * SPDX-License-Identifier: MIT
+ *
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
  */
 import fs from 'fs-extra';
 import path from 'path';
@@ -7,7 +12,7 @@ import axios from 'axios';
 import os from 'os';
 import zlib from 'zlib';
 import * as tar from 'tar';
-
+import { fetchChangelog } from './fetch-changelog';
 import { config as dotenv } from '@dotenvx/dotenvx';
 
 dotenv({
@@ -16,6 +21,9 @@ dotenv({
 
 const __dirname = path.resolve();
 const __node_modules = path.join(__dirname, 'node_modules');
+
+const __docs = path.join(__dirname, 'docs');
+const __changelog = path.join(__docs, 'home', 'releases', 'changelog.md');
 
 async function downloadTheme() {
   const token = process.env.CSC;
@@ -111,7 +119,25 @@ function copyTheme() {
   }
 }
 
+async function generateChangelog() {
+  console.log('Generating changelog...');
+
+  const changeLogExist = fs.existsSync(__changelog);
+
+  if (!process.env.GITHUB_TOKEN) {
+    if (changeLogExist) {
+      return;
+    }
+    console.error('No GITHUB_TOKEN provided, creating empty changelog');
+    return;
+  }
+
+  const changelog = await fetchChangelog();
+  await fs.writeFile(__changelog, changelog);
+}
+
 export default async function main() {
   await downloadTheme();
+  await generateChangelog();
   copyTheme();
 }
