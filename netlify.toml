@@ -1,0 +1,3 @@
+[build]
+  # Skip builds for branches starting with dependabot/
+  ignore = "if [[ $BRANCH == dependabot/* ]]; then exit 0; else exit 1; fi"
