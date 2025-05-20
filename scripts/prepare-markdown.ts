@@ -133,8 +133,8 @@ async function downloadLatestArtifact(branch: string) {
     owner,
     repo,
     branch: branchName,
-    per_page: 10,
   });
+
   if (
     !runs.workflow_runs ||
     runs.workflow_runs.length === 0 ||
