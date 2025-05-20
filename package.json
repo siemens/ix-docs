@@ -46,7 +46,7 @@
     "@types/rimraf": "^4.0.5",
     "@types/tar": "^6.1.13",
     "adm-zip": "^0.5.16",
-    "autoprefixer": "10.4.5",
+    "autoprefixer": "10.4.21",
     "axios": "^1.5.0",
     "clsx": "^2.1.0",
     "docusaurus-plugin-sass": "^0.2.5",
