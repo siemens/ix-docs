@@ -236,5 +236,5 @@ export const figmaPlugin = (config: FigmaConfig) => {
 
     await Promise.all(modifiedNodes);
   };
-  return transformer;
+  return () => transformer;
 };
