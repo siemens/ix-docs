@@ -9,7 +9,6 @@
 import { Octokit } from '@octokit/rest';
 import AdmZip from 'adm-zip';
 import fs from 'fs-extra';
-import inquirer from 'inquirer';
 import os from 'os';
 import path from 'path';
 import copyTheme from './copy-theme';
@@ -95,42 +94,25 @@ function getBranch(config: BranchConfig) {
   return config.branch;
 }
 
-async function promptBranch(defaults: BranchConfig) {
-  const { branchType } = await inquirer.prompt([
-    {
-      type: 'list',
-      name: 'branchType',
-      message: 'Which branch do you want to prepare?',
-      choices: ['main', 'pull request'],
-      default: defaults.branchType ?? '',
-    },
-  ]);
-
-  let branch = 'main';
-  if (branchType === 'pull request') {
-    const { prNumber } = await inquirer.prompt([
-      {
-        type: 'input',
-        name: 'prNumber',
-        message: 'Enter the pull request number:',
-        validate: (input) =>
-          /^\d+$/.test(input) || 'Please enter a valid PR number',
-        default: defaults.prNumber ?? '',
-      },
-    ]);
-    branch = `pull/${prNumber}`;
-
-    return { branch, branchType, prNumber };
-  }
-  return { branch, branchType };
-}
-
 async function downloadLatestArtifact(branch: string) {
   const repo = 'ix';
   const owner = 'siemens';
   const token = process.env.GITHUB_TOKEN;
   if (!token) {
-    throw new Error('GITHUB_TOKEN environment variable is required.');
+    const message = [
+      'GITHUB_TOKEN environment variable is not set.',
+      '',
+      '',
+      '⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️',
+      'Please set the GITHUB_TOKEN environment variable to a valid GitHub token.',
+      `You can create a new token at https://github.com/settings/personal-access-tokens,`,
+      'the token must not have any permissions.',
+      '⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️',
+      '',
+      '',
+    ];
+
+    throw new Error(message.join('\n'));
   }
   const octokit = new Octokit({ auth: token });
 
@@ -151,13 +133,21 @@ async function downloadLatestArtifact(branch: string) {
     owner,
     repo,
     branch: branchName,
-    status: 'success',
     per_page: 10,
   });
-  if (!runs.workflow_runs || runs.workflow_runs.length === 0) {
-    throw new Error('No workflow runs found for this branch.');
+  if (
+    !runs.workflow_runs ||
+    runs.workflow_runs.length === 0 ||
+    runs.workflow_runs.filter(
+      (run) => run.name === 'Build' || run.name === 'Pull Request'
+    ).length === 0
+  ) {
+    const message = `No workflow runs found for this branch. ${branchName}`;
+    throw new Error(message);
   }
-  const runId = runs.workflow_runs.filter((run) => run.name === 'Build')[0].id;
+  const runId = runs.workflow_runs.filter(
+    (run) => run.name === 'Build' || run.name === 'Pull Request'
+  )[0].id;
 
   // Get artifacts for the run
   const { data: artifactsData } =
