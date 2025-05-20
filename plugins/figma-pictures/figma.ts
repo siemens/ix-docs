@@ -176,7 +176,7 @@ async function modifyMDXUrl(
   }
 }
 
-export default (config: FigmaConfig) => {
+export const figmaPlugin = (config: FigmaConfig) => {
   logger.log(
     `Figma plugin running (version: ${config.fileVersionId ?? 'current'})`
   );
@@ -191,51 +191,50 @@ export default (config: FigmaConfig) => {
     fs.mkdirSync(config.figmaFolder);
   }
 
-  return () => {
-    const transformer = async (ast: any) => {
-      const imageRequests = new Map<string, Set<string>>();
-      const standardNodes: any[] = [];
+  const transformer = async (ast: any) => {
+    const imageRequests = new Map<string, Set<string>>();
+    const standardNodes: any[] = [];
 
-      visit(ast, 'image', (node: any) => {
-        standardNodes.push(node);
-      });
+    visit(ast, 'image', (node: any) => {
+      logger.debug('Collect image', node.url);
+      standardNodes.push(node);
+    });
 
-      for (const node of standardNodes) {
-        const { fileName, nodeId } = getFigmaMeta(node);
-        if (imageRequests.has(fileName)) {
-          imageRequests.get(fileName)!.add(nodeId);
-        } else {
-          imageRequests.set(fileName, new Set([nodeId]));
-        }
+    for (const node of standardNodes) {
+      const { fileName, nodeId } = getFigmaMeta(node);
+      if (imageRequests.has(fileName)) {
+        imageRequests.get(fileName)!.add(nodeId);
+      } else {
+        imageRequests.set(fileName, new Set([nodeId]));
       }
+    }
 
-      const waitForAllImageRequest: Promise<Record<string, string>>[] = [];
-      imageRequests.forEach(async (ids, fileName) => {
-        const images = getImageResource(
-          fileName,
-          Array.from(ids),
-          config.apiToken,
-          config.fileVersionId
-        );
-        waitForAllImageRequest.push(images);
+    const waitForAllImageRequest: Promise<Record<string, string>>[] = [];
+    imageRequests.forEach(async (ids, fileName) => {
+      const images = getImageResource(
+        fileName,
+        Array.from(ids),
+        config.apiToken,
+        config.fileVersionId
+      );
+      waitForAllImageRequest.push(images);
+    });
+
+    const urls = await Promise.all(waitForAllImageRequest);
+
+    const modifiedNodes: Promise<void>[] = [];
+    urls.forEach((s3BucketUrls) => {
+      standardNodes.forEach((node) => {
+        const { nodeId } = getFigmaMeta(node);
+        const localId = decodeURIComponent(nodeId).replace(/-/, ':');
+
+        if (s3BucketUrls[localId]) {
+          modifiedNodes.push(modifyMDXUrl(node, s3BucketUrls, config));
+        }
       });
+    });
 
-      const urls = await Promise.all(waitForAllImageRequest);
-
-      const modifiedNodes: Promise<void>[] = [];
-      urls.forEach((s3BucketUrls) => {
-        standardNodes.forEach((node) => {
-          const { nodeId } = getFigmaMeta(node);
-          const localId = decodeURIComponent(nodeId).replace(/-/, ':');
-
-          if (s3BucketUrls[localId]) {
-            modifiedNodes.push(modifyMDXUrl(node, s3BucketUrls, config));
-          }
-        });
-      });
-
-      await Promise.all(modifiedNodes);
-    };
-    return transformer;
+    await Promise.all(modifiedNodes);
   };
+  return () => transformer;
 };
