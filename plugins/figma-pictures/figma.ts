@@ -184,15 +184,10 @@ async function modifyMDXUrl(
 }
 
 export const figmaPlugin = (config: FigmaConfig) => {
-  let isReplacementMode = false;
-  logger.log(
-    `Figma plugin running (version: ${config.fileVersionId ?? 'current'})`
-  );
-
+  let isReplacementMode = process.env.NODE_ENV === 'development';
   if (config.apiToken === undefined || config.apiToken === '') {
-    logger.error(
-      '@siemens/figma-plugin no auth token provided. Going into replacement mode.'
-    );
+    logger.error('@siemens/figma-plugin no auth token provided.');
+    logger.error('⚠️ Force replacement mode. No image will be downloaded.');
     isReplacementMode = true;
   }
 
@@ -200,6 +195,12 @@ export const figmaPlugin = (config: FigmaConfig) => {
     rimrafSync(config.figmaFolder);
     fs.mkdirSync(config.figmaFolder);
   }
+
+  logger.log(
+    `Figma plugin running in ${
+      isReplacementMode ? 'replacement' : 'normal'
+    } mode. (version: ${config.fileVersionId ?? 'current'}`
+  );
 
   const transformer = async (ast: any) => {
     const imageRequests = new Map<string, Set<string>>();
