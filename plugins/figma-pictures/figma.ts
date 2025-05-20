@@ -124,56 +124,51 @@ async function modifyMDXUrl(
     return;
   }
 
-  if (process.env.NODE_ENV === 'production') {
-    const imageUUID = `${fileName}_${id.replace(/:/, '_')}`;
-    const imageFileName = `${imageUUID}.png`;
+  const imageUUID = `${fileName}_${id.replace(/:/, '_')}`;
+  const imageFileName = `${imageUUID}.png`;
 
-    if (
-      !fs.existsSync(path.join(config.figmaFolder, imageFileName)) &&
-      !isFetching.has(imageUUID)
-    ) {
-      isFetching.add(imageUUID);
-      logger.log('Download image for filename', fileName, 'node', id);
-      try {
-        const imageResponse = await axios.get(s3BucketUrl, {
-          responseType: 'stream',
-        });
+  if (
+    !fs.existsSync(path.join(config.figmaFolder, imageFileName)) &&
+    !isFetching.has(imageUUID)
+  ) {
+    isFetching.add(imageUUID);
+    logger.log('Download image for filename', fileName, 'node', id);
+    try {
+      const imageResponse = await axios.get(s3BucketUrl, {
+        responseType: 'stream',
+      });
 
-        const imagePath = path.join(config.figmaFolder, imageFileName);
-        const imageStream = fs.createWriteStream(imagePath);
+      const imagePath = path.join(config.figmaFolder, imageFileName);
+      const imageStream = fs.createWriteStream(imagePath);
 
-        imageResponse.data.pipe(imageStream);
+      imageResponse.data.pipe(imageStream);
 
-        await new Promise<void>((resolve, reject) => {
-          imageStream.on('finish', () => resolve());
-          imageStream.on('error', reject);
-        });
+      await new Promise<void>((resolve, reject) => {
+        imageStream.on('finish', () => resolve());
+        imageStream.on('error', reject);
+      });
 
-        logger.log(`Image downloaded to ${imagePath}`);
-      } catch (e) {
-        logger.error('Error downloading image', e);
-        if (retry) {
-          logger.error('Abort retry executed second time', e);
-          throw Error(
-            'Error downloading image. Abort retry executed second time'
-          );
-        }
-        logger.error('Retry downloading image', e);
-        await new Promise<void>((resolve) => {
-          setTimeout(async () => {
-            await modifyMDXUrl(node, images, config);
-            resolve();
-          }, 2000);
-        });
+      logger.log(`Image downloaded to ${imagePath}`);
+    } catch (e) {
+      logger.error('Error downloading image', e);
+      if (retry) {
+        logger.error('Abort retry executed second time', e);
+        throw Error(
+          'Error downloading image. Abort retry executed second time'
+        );
       }
-    } else {
-      logger.log('Skip download. Image already existing or in fetching phase.');
+      logger.error('Retry downloading image', e);
+      await new Promise<void>((resolve) => {
+        setTimeout(async () => {
+          await modifyMDXUrl(node, images, config);
+          resolve();
+        }, 2000);
+      });
     }
-    node.url = `${config.baseUrl}/${imageFileName}`;
   } else {
-    node.url = s3BucketUrl;
-    logger.log(`Use inline image: ${s3BucketUrl}`);
+    logger.log('Skip download. Image already existing or in fetching phase.');
   }
+  node.url = `${config.baseUrl}/${imageFileName}`;
 }
 
 export const figmaPlugin = (config: FigmaConfig) => {
