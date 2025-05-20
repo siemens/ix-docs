@@ -42,7 +42,7 @@ The date input component is typically used in forms, filters and scheduling tool
   - Escape key closes the date picker.
 - **Validation**:
   - Use feedback text for validation types valid, info, warning and invalid.
-  - Invalid feedback automatically provided if entered date is not parsable.
+  - Invalid feedback is automatically provided if the entered date is not parsable.
   - Refer to the [validation](../forms-validation) chapter for detailed guidelines.
 - **Overflow**: The input field should be wide enough to display the full date without truncation.
 - **Alignment**: Date inputs are always aligned to the left.
