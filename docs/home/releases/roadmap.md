@@ -8,7 +8,7 @@ no_single_tab: true
 description: 'We’re constantly improving our design system for you by extending the component library, developing our user guidance and ensuring the system is reliable and easy to use. Here’s what’s happening over the next year so you know what to expect from your Siemens Industrial Experience team.'
 ---
 
-# 
+# Roadmap
 
 ![Roadmap](https://www.figma.com/design/wEptRgAezDU1z80Cn3eZ0o/iX-Documentation-illustrations?node-id=4605-1671&t=SSoI7h5Yi5HXNvhi-4)
 
@@ -29,8 +29,8 @@ Here’s what’s happening over the next year so you know what to expect from y
 - **Date and time selection**: Introducing comprehensive date and time selection options, including all pickers and inputs with range options for date, time, and date-time.
 - **Enhanced accessibility support**: Empowering project teams to build accessible products by improving our components and providing comprehensive guidelines on achieving an accessible app with our design system.
 ### 🗓️ Scheduled / With tentative timeline
-- **Contribution guidelines:** Establishing clear guidelines for contributing to our design system. This encourages community involvement and ensures contributions are consistent and high-quality.
-- **Cards with tabs:** Introducing ix-tabbed-cards to organize content more effectively and improve user navigation, e.g. with two levels of tabs.
+- **Contribution guidelines**: Establishing clear guidelines for contributing to our design system. This encourages community involvement and ensures contributions are consistent and high-quality.
+- **Cards with tabs**: Introducing a new, more prominent box-like tabs component that come already with a container. It lets designers organize app content more effectively and improve user navigation, e.g. with two levels of tabs.
 
 ### ⏳ Planned / Without specific timeline
 - **Enhanced ix-modal**: Improving our modal component to provide a more flexible and user-friendly experience. This includes better usage together with the ix-toast, more styling options and enhanced functionality.
