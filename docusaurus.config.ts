@@ -63,15 +63,13 @@ const baseUrl = process.env.BASE_URL || '/';
 console.log('Using BASE_URL', baseUrl);
 
 const remarkPlugins = [];
-if (!process.env.CI) {
-  remarkPlugins.push(figmaPlugin({
-    baseUrl: `${baseUrl}figma`,
-    figmaFolder: `${path.join(__dirname, 'static', 'figma')}`,
-    error_image: path.join('..', 'img', 'figma_error.png'),
-    apiToken: process.env.FIGMA_API_TOKEN!,
-    rimraf: false,
-  }));
-}
+remarkPlugins.push(figmaPlugin({
+  baseUrl: `${baseUrl}figma`,
+  figmaFolder: `${path.join(__dirname, 'static', 'figma')}`,
+  error_image: path.join('..', 'img', 'figma_error.png'),
+  apiToken: process.env.FIGMA_API_TOKEN!,
+  rimraf: false,
+}));
 
 const config: Config = {
   title: 'Siemens Industrial Experience',
