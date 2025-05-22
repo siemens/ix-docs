@@ -18,7 +18,7 @@
 <h1>How to start?</h1>
 <ul>
 <li>Install <code>@siemens/ix</code> (<code>@siemens/ix-angular</code>, <code>@siemens/ix-react</code>, <code>@siemens/ix-vue</code>) via the <code>latest</code> tag</li>
-<li>Access the comprehensive migration guide to smoothly transition to the new version <a href="https://ix.siemens.io/docs/home/migration/3_0_0/">here</a>.</li>
+<li>Access the comprehensive migration guide to smoothly transition to the new version <a href="https://ix.siemens.io/docs/home/migration/3_0_0">here</a>.</li>
 </ul>
 <h1>What's new?</h1>
 <p>Our previous <a href="https://ix.siemens.io/blog/v3-alpha">blog entry on the alpha release</a> provides a detailed description of the new features. Here is a brief summary:</p>
