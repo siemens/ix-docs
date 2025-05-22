@@ -99,6 +99,14 @@ export function getFigmaMeta(node: MDXImageNode): {
   };
 }
 
+function getLocalFilename(fileName: string, nodeId: string) {
+  const localId = decodeURIComponent(nodeId)
+    .replace(/:/, '_')
+    .replace(/-/, '_');
+  const imageUUID = `${fileName}_${localId}`;
+  return `${imageUUID}.png`;
+}
+
 async function modifyMDXUrl(
   node: MDXImageNode,
   images: Record<string, string>,
@@ -124,10 +132,11 @@ async function modifyMDXUrl(
     return;
   }
 
-  if (process.env.NODE_ENV === 'production') {
-    const imageUUID = `${fileName}_${id.replace(/:/, '_')}`;
-    const imageFileName = `${imageUUID}.png`;
+  const imageUUID = `${fileName}_${id.replace(/:/, '_')}`;
+  const imageFileName = getLocalFilename(fileName, nodeId);
+  const imagePath = path.join(config.figmaFolder, imageFileName);
 
+  if (process.env.NODE_ENV === 'production') {
     if (
       !fs.existsSync(path.join(config.figmaFolder, imageFileName)) &&
       !isFetching.has(imageUUID)
@@ -139,7 +148,6 @@ async function modifyMDXUrl(
           responseType: 'stream',
         });
 
-        const imagePath = path.join(config.figmaFolder, imageFileName);
         const imageStream = fs.createWriteStream(imagePath);
 
         imageResponse.data.pipe(imageStream);
@@ -171,19 +179,16 @@ async function modifyMDXUrl(
     }
     node.url = `${config.baseUrl}/${imageFileName}`;
   } else {
-    node.url = s3BucketUrl;
-    logger.log(`Use inline image: ${s3BucketUrl}`);
+    node.url = `${config.baseUrl}/${imageFileName}`;
   }
 }
 
 export const figmaPlugin = (config: FigmaConfig) => {
-  logger.log(
-    `Figma plugin running (version: ${config.fileVersionId ?? 'current'})`
-  );
-
+  let isReplacementMode = process.env.NODE_ENV === 'development';
   if (config.apiToken === undefined || config.apiToken === '') {
-    logger.error('@siemens/figma-plugin no auth token provided');
-    return () => {};
+    logger.error('@siemens/figma-plugin no auth token provided.');
+    logger.error('⚠️ Force replacement mode. No image will be downloaded.');
+    isReplacementMode = true;
   }
 
   if (config.rimraf === true) {
@@ -191,14 +196,33 @@ export const figmaPlugin = (config: FigmaConfig) => {
     fs.mkdirSync(config.figmaFolder);
   }
 
+  logger.log(
+    `Figma plugin running in ${
+      isReplacementMode ? 'replacement' : 'normal'
+    } mode. (version: ${config.fileVersionId ?? 'current'}`
+  );
+
   const transformer = async (ast: any) => {
     const imageRequests = new Map<string, Set<string>>();
     const standardNodes: any[] = [];
 
     visit(ast, 'image', (node: any) => {
-      logger.debug('Collect image', node.url);
+      if (isReplacementMode) {
+        const originalUrl = node.url;
+
+        const { fileName, nodeId } = getFigmaMeta(node);
+        node.url = `${config.baseUrl}/${getLocalFilename(fileName, nodeId)}`;
+        logger.debug('Replace Image', originalUrl, node.url);
+
+        return;
+      }
+
       standardNodes.push(node);
     });
+
+    if (isReplacementMode) {
+      return;
+    }
 
     for (const node of standardNodes) {
       const { fileName, nodeId } = getFigmaMeta(node);
