@@ -99,6 +99,14 @@ export function getFigmaMeta(node: MDXImageNode): {
   };
 }
 
+function getLocalFilename(fileName: string, nodeId: string) {
+  const localId = decodeURIComponent(nodeId)
+    .replace(/:/, '_')
+    .replace(/-/, '_');
+  const imageUUID = `${fileName}_${localId}`;
+  return `${imageUUID}.png`;
+}
+
 async function modifyMDXUrl(
   node: MDXImageNode,
   images: Record<string, string>,
@@ -124,10 +132,11 @@ async function modifyMDXUrl(
     return;
   }
 
-  if (process.env.NODE_ENV === 'production') {
-    const imageUUID = `${fileName}_${id.replace(/:/, '_')}`;
-    const imageFileName = `${imageUUID}.png`;
+  const imageUUID = `${fileName}_${id.replace(/:/, '_')}`;
+  const imageFileName = getLocalFilename(fileName, nodeId);
+  const imagePath = path.join(config.figmaFolder, imageFileName);
 
+  if (process.env.NODE_ENV === 'production') {
     if (
       !fs.existsSync(path.join(config.figmaFolder, imageFileName)) &&
       !isFetching.has(imageUUID)
@@ -139,7 +148,6 @@ async function modifyMDXUrl(
           responseType: 'stream',
         });
 
-        const imagePath = path.join(config.figmaFolder, imageFileName);
         const imageStream = fs.createWriteStream(imagePath);
 
         imageResponse.data.pipe(imageStream);
@@ -171,19 +179,16 @@ async function modifyMDXUrl(
     }
     node.url = `${config.baseUrl}/${imageFileName}`;
   } else {
-    node.url = s3BucketUrl;
-    logger.log(`Use inline image: ${s3BucketUrl}`);
+    node.url = `${config.baseUrl}/${imageFileName}`;
   }
 }
 
-export default (config: FigmaConfig) => {
-  logger.log(
-    `Figma plugin running (version: ${config.fileVersionId ?? 'current'})`
-  );
-
+export const figmaPlugin = (config: FigmaConfig) => {
+  let isReplacementMode = process.env.NODE_ENV === 'development';
   if (config.apiToken === undefined || config.apiToken === '') {
-    logger.error('@siemens/figma-plugin no auth token provided');
-    return () => {};
+    logger.error('@siemens/figma-plugin no auth token provided.');
+    logger.error('⚠️ Force replacement mode. No image will be downloaded.');
+    isReplacementMode = true;
   }
 
   if (config.rimraf === true) {
@@ -191,51 +196,69 @@ export default (config: FigmaConfig) => {
     fs.mkdirSync(config.figmaFolder);
   }
 
-  return () => {
-    const transformer = async (ast: any) => {
-      const imageRequests = new Map<string, Set<string>>();
-      const standardNodes: any[] = [];
+  logger.log(
+    `Figma plugin running in ${
+      isReplacementMode ? 'replacement' : 'normal'
+    } mode. (version: ${config.fileVersionId ?? 'current'}`
+  );
 
-      visit(ast, 'image', (node: any) => {
-        standardNodes.push(node);
-      });
+  const transformer = async (ast: any) => {
+    const imageRequests = new Map<string, Set<string>>();
+    const standardNodes: any[] = [];
 
-      for (const node of standardNodes) {
+    visit(ast, 'image', (node: any) => {
+      if (isReplacementMode) {
+        const originalUrl = node.url;
+
         const { fileName, nodeId } = getFigmaMeta(node);
-        if (imageRequests.has(fileName)) {
-          imageRequests.get(fileName)!.add(nodeId);
-        } else {
-          imageRequests.set(fileName, new Set([nodeId]));
-        }
+        node.url = `${config.baseUrl}/${getLocalFilename(fileName, nodeId)}`;
+        logger.debug('Replace Image', originalUrl, node.url);
+
+        return;
       }
 
-      const waitForAllImageRequest: Promise<Record<string, string>>[] = [];
-      imageRequests.forEach(async (ids, fileName) => {
-        const images = getImageResource(
-          fileName,
-          Array.from(ids),
-          config.apiToken,
-          config.fileVersionId
-        );
-        waitForAllImageRequest.push(images);
+      standardNodes.push(node);
+    });
+
+    if (isReplacementMode) {
+      return;
+    }
+
+    for (const node of standardNodes) {
+      const { fileName, nodeId } = getFigmaMeta(node);
+      if (imageRequests.has(fileName)) {
+        imageRequests.get(fileName)!.add(nodeId);
+      } else {
+        imageRequests.set(fileName, new Set([nodeId]));
+      }
+    }
+
+    const waitForAllImageRequest: Promise<Record<string, string>>[] = [];
+    imageRequests.forEach(async (ids, fileName) => {
+      const images = getImageResource(
+        fileName,
+        Array.from(ids),
+        config.apiToken,
+        config.fileVersionId
+      );
+      waitForAllImageRequest.push(images);
+    });
+
+    const urls = await Promise.all(waitForAllImageRequest);
+
+    const modifiedNodes: Promise<void>[] = [];
+    urls.forEach((s3BucketUrls) => {
+      standardNodes.forEach((node) => {
+        const { nodeId } = getFigmaMeta(node);
+        const localId = decodeURIComponent(nodeId).replace(/-/, ':');
+
+        if (s3BucketUrls[localId]) {
+          modifiedNodes.push(modifyMDXUrl(node, s3BucketUrls, config));
+        }
       });
+    });
 
-      const urls = await Promise.all(waitForAllImageRequest);
-
-      const modifiedNodes: Promise<void>[] = [];
-      urls.forEach((s3BucketUrls) => {
-        standardNodes.forEach((node) => {
-          const { nodeId } = getFigmaMeta(node);
-          const localId = decodeURIComponent(nodeId).replace(/-/, ':');
-
-          if (s3BucketUrls[localId]) {
-            modifiedNodes.push(modifyMDXUrl(node, s3BucketUrls, config));
-          }
-        });
-      });
-
-      await Promise.all(modifiedNodes);
-    };
-    return transformer;
+    await Promise.all(modifiedNodes);
   };
+  return () => transformer;
 };
