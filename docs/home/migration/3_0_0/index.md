@@ -338,4 +338,4 @@ const myEChart = echarts.init(element, theme);
 
 ## Questions ❓🙋‍♀️
 
-Check out the [Breaking Changes guide](https://github.com/siemens/ix/blob/release-3.0.0/BREAKING_CHANGES/v3.md) and if you have further questions or migration problems [contact us](./../../support/contact-us).
+Check out the [Breaking Changes guide](https://github.com/siemens/ix/blob/release-3.0.0/BREAKING_CHANGES/v3.md) and if you have further questions or migration problems [contact us](./../../home/support/contact-us).
