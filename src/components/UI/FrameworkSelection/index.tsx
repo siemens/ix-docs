@@ -54,6 +54,9 @@ function FrameworkSelection(
           <IxDropdownItem onClick={() => setFramework('angular')}>
             Angular
           </IxDropdownItem>
+          <IxDropdownItem onClick={() => setFramework('angular_standalone')}>
+            Angular Standalone
+          </IxDropdownItem>
           <IxDropdownItem onClick={() => setFramework('react')}>
             React
           </IxDropdownItem>
