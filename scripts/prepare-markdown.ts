@@ -76,7 +76,7 @@ async function getDefaults(): Promise<BranchConfig> {
 async function main() {
   const defaults = await getDefaults();
 
-  console.log('Script will started with the following defaults:');
+  console.log('Script will start with the following defaults:');
   console.log(`Branch: ${defaults.branch}`);
   console.log(`Branch Type: ${defaults.branchType}`);
   console.log(`PR Number: ${defaults.prNumber}`);
