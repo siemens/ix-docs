@@ -6,19 +6,18 @@ doc-type: 'tab-item'
 
 Time pickers are primarily used within [time inputs](../input-time) but can also be utilized standalone in applications where direct time selection is required.
 
-![TODO Overview](https://www.figma.com/design/wEptRgAezDU1z80Cn3eZ0o/iX-Pattern-Illustrations?node-id=2550-58743&t=LITgbzwcgm87dQXa-4)
+![Time picker anatomy](https://www.figma.com/design/wEptRgAezDU1z80Cn3eZ0o/iX-Documentation-illustrations?node-id=5730-2889&t=X5f645XuQl3ZV8XD-4)
 
 1. Time picker container
-2. Time value
-3. Header
-4. Time format
-5. Interval settings
-6. Column headers
+2. Time unit (column) headers
+3. Selected time
+5. AM/PM select (12-hour format only)
+6. Confirm ![button](../button)
 
 ## Options
 
 - **Value**: The selected time value.
-- **Format**: Choose which time units to display, depending on your needs (hours, minutes, seconds, milliseconds). Additionally, define a 12- or 24-hour format. We recommend to use a 24-hour format for universal readability (read more in the UX Writing guides <font color="#ff0000">TODO ADD LINK</font>).
+- **Format**: Choose which time units to display, depending on your needs (hours, minutes, seconds, milliseconds). Additionally, define a 12- or 24-hour format. We recommend to use a 24-hour format for universal readability (read more in the [UX Writing guides](../../guidelines/language)).
   - **Columns**: Hide hours, minutes, seconds and milliseconds columns when not needed.
   - **Intervals**: Define an interval for every unit to restrict allowed values and provide a faster selection. For example 2 hours, 15 minutes, 30 seconds, 100 milliseconds.
 - **Header**: Define a header text that conveys the context of the time selection. Hide it when there is already a related headline in your UI.
@@ -36,14 +35,20 @@ Time pickers are primarily used within [time inputs](../input-time) but can also
 
 An individual time item of a time picker has five states: Default, hover, active, disabled and focused.
 
-![TODO Statuses](https://www.figma.com/design/wEptRgAezDU1z80Cn3eZ0o/iX-Pattern-Illustrations?node-id=2550-58743&t=LITgbzwcgm87dQXa-4)
+![Time picker states](https://www.figma.com/design/wEptRgAezDU1z80Cn3eZ0o/iX-Documentation-illustrations?node-id=5730-2897&t=ZhOOQlwBUWtHJWDA-4)
 
 ## Dos and Don’ts
 
-- Do use the time picker to ensure accurate time selection (we recommend to use [time inputs](../input-time) for that reason)
-- Do provide clear instructions and labels for users
-- Do ensure the time picker is accessible via keyboard
-- Don’t clutter the time picker with unnecessary options
+<DoAndDont>
+  <DoAndDont.Do>
+    <DoAndDont.Item>Do use the time picker to ensure accurate time selection (we recommend to use [time inputs](../input-time) for that reason)</DoAndDont.Item>
+    <DoAndDont.Item>Do provide clear instructions and labels for users</DoAndDont.Item>
+    <DoAndDont.Item>Do ensure the time picker is accessible via keyboard</DoAndDont.Item>    
+  </DoAndDont.Do>
+  <DoAndDont.Dont>
+    <DoAndDont.Item>Don’t clutter the time picker with unnecessary options</DoAndDont.Item>
+  </DoAndDont.Dont>
+</DoAndDont>
 
 ## Related
 
