@@ -208,10 +208,13 @@ function BrowserOnlyColorTable({ children, colorName }) {
         .join('')}`;
     }
 
-    if (hex.length === 8) {
-      // Handle 8-character hex (e.g., #rrggbbaa -> #rrggbb + alpha in percentage)
-      const color = hex.substring(0, 6);
-      const alphaHex = hex.substring(6);
+    if (hex.length % 4 === 0) {
+      const subtractSuffix = hex.length === 8 ? 2 : 1;
+      // Handle 8-character or 4-character hex
+      // #rgba -> #rgb + alpha in percentage
+      // #rrggbbaa -> #rrggbb + alpha in percentage
+      const color = hex.substring(0, hex.length - subtractSuffix);
+      const alphaHex = hex.substring(hex.length - subtractSuffix);
       const alphaPercentage = Math.round((parseInt(alphaHex, 16) / 255) * 100);
       return alphaPercentage < 100
         ? `#${color} ${alphaPercentage}%`
