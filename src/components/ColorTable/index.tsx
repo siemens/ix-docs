@@ -202,7 +202,10 @@ function BrowserOnlyColorTable({ children, colorName }) {
 
     if (hex.length === 3) {
       // Expand shorthand hex (e.g., #abc -> #aabbcc)
-      return `#${hex.split('').map((char) => char + char).join('')}`;
+      return `#${hex
+        .split('')
+        .map((char) => char + char)
+        .join('')}`;
     }
 
     if (hex.length === 8) {
@@ -210,7 +213,9 @@ function BrowserOnlyColorTable({ children, colorName }) {
       const color = hex.substring(0, 6);
       const alphaHex = hex.substring(6);
       const alphaPercentage = Math.round((parseInt(alphaHex, 16) / 255) * 100);
-      return alphaPercentage < 100 ? `#${color} ${alphaPercentage}%` : `#${color}`;
+      return alphaPercentage < 100
+        ? `#${color} ${alphaPercentage}%`
+        : `#${color}`;
     }
 
     return value;

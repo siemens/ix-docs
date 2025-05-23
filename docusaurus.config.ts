@@ -51,10 +51,11 @@ try {
   console.log('Found optionalDependency @siemens-ix/corporate-theme.');
   customCss.push(path);
   customCss.push('./src/scss/prod.scss')
+  customCss.push('./src/scss/classic-theme.scss')
   withBrandTheme = true;
 } catch (e) {
   console.warn('optionalDependency @siemens-ix/corporate-theme not found!');
-  customCss.push('./src/scss/local-dev.scss')
+  customCss.push('./src/scss/classic-theme.scss')
 }
 
 const brokenLinks = 'throw';

@@ -3,3 +3,11 @@
  */
 @use '@siemens/ix/dist/siemens-ix/theme/classic-dark.css';
 @use '@siemens/ix/dist/siemens-ix/theme/classic-light.css';
+
+.color-table-classic-dark {
+  @extend .theme-classic-dark;
+}
+
+.color-table-classic-light {
+  @extend .theme-classic-light;
+}
