@@ -29,7 +29,7 @@ Here’s what’s happening over the next year so you know what to expect from y
 - **Date and time selection**: Introducing comprehensive date and time selection options, including all pickers and inputs with range options for date, time, and date-time.
 - **Enhanced accessibility support**: Empowering project teams to build accessible products by improving our components and providing comprehensive guidelines on achieving an accessible app with our design system.
 ### 🗓️ Scheduled / With tentative timeline
-- **Contribution guidelines**: Establishing clear guidelines for contributing to our design system. This encourages community involvement and ensures contributions are consistent and high-quality.
+- **Contribution guidelines**: Establishing clear guidelines for contributing to our design system. This encourages community involvement and ensures contributions are consistent.
 - **Cards with tabs**: Introducing a new, more prominent box-like tabs component that come already with a container. It lets designers organize app content more effectively and improve user navigation, e.g. with two levels of tabs.
 
 ### ⏳ Planned / Without specific timeline
