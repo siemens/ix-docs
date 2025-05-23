@@ -28,7 +28,7 @@ The default is `classic` in `dark` mode. To enable light mode, set the `data-ix-
 <html>
   <!-- Framework related imports -->
   <!--  -->
-  <body data-ix-theme="classic" data-ix-schema="dark"></body>
+  <body data-ix-theme="classic" data-ix-color-schema="dark"></body>
 </html>
 ```
 
