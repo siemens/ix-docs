@@ -167,20 +167,6 @@ const config: Config = {
   ],
 
   headTags: [
-    {
-      tagName: 'script',
-      attributes: {
-        type: 'module',
-        src: 'https://cdn.jsdelivr.net/npm/@siemens/ix-icons@3.0.0-alpha.0/dist/ix-icons/ix-icons.esm.js',
-      },
-    },
-    {
-      tagName: 'script',
-      attributes: {
-        nomodule: 'true',
-        src: 'https://cdn.jsdelivr.net/npm/@siemens/ix-icons@3.0.0-alpha.0/dist/ix-icons/ix-icons.js',
-      },
-    },
     getFontHeadTag('Bold'),
     getFontHeadTag('BoldItalic'),
     getFontHeadTag('Italic'),
