@@ -102,13 +102,7 @@ p {
   --ifm-menu-color-active: var(--theme-color-primary);
 }
 
-.color-table-classic-dark {
-  @extend .theme-classic-dark;
-}
 
-.color-table-classic-light {
-  @extend .theme-classic-light;
-}
 
 .anchor {
   scroll-margin-top: 15rem !important;

@@ -32,6 +32,7 @@ import CodeBlock from '@theme/CodeBlock';
 import { fromKebabCaseToCamelCase } from '@site/src/lib/utils/string-format';
 import { debounce } from '@site/src/lib/utils/debounce';
 import BrowserOnly from '@docusaurus/BrowserOnly';
+import { getIcon } from '@site/src/utils/icons';
 
 function getIconCode(iconName: string, framework: FrameworkTypes) {
   const importedName = 'icon' + fromKebabCaseToCamelCase(iconName);
@@ -103,7 +104,7 @@ const IconTiles: React.FC<{ columnCount: number; iconList: string[] }> = (
         style={{ width: getWidth() }}
         className={styles.Icon__Details}
       >
-        <IxIcon name={props.iconName} size="32" />
+        <IxIcon name={getIcon(props.iconName)} size="32" />
         <div className={styles.Icon__FlexContent}>
           <div className={styles.Icon__NameContainer}>
             <IxTypography format="h3">{props.iconName}</IxTypography>
@@ -211,7 +212,7 @@ const IconTiles: React.FC<{ columnCount: number; iconList: string[] }> = (
                   }}
                 >
                   {React.createElement('ix-icon', {
-                    name: icon,
+                    name: getIcon(icon),
                   })}
                   <div className={styles.Icon__Name}>
                     <IxTypography tabIndex={0} format="body">
@@ -335,7 +336,7 @@ const Icons: React.FC = () => {
             <div className={styles.Search__NoResults}>
               <IxIcon
                 className={styles.Search__NoResultsIcon}
-                name="search"
+                name={iconSearch}
                 color="color-soft-text"
               ></IxIcon>
               <div className={styles.Search__NoIconsFound}>No icons found</div>
