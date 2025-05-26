@@ -8,12 +8,19 @@
  */
 import { useLocalStorage } from './use-localStorage';
 
-export type FrameworkTypes = 'angular' | 'react' | 'vue' | 'html';
+export type FrameworkTypes =
+  | 'angular'
+  | 'angular_standalone'
+  | 'react'
+  | 'vue'
+  | 'html';
 
 export const getDisplayNameFrameworkTypes = (framework: FrameworkTypes) => {
   switch (framework) {
     case 'angular':
       return 'Angular';
+    case 'angular_standalone':
+      return 'Angular (Standalone)';
     case 'react':
       return 'React';
     case 'vue':
