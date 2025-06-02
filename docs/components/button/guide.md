@@ -31,7 +31,7 @@ Buttons initiate actions, apply actions to selected objects and activate/deactiv
 - **Interaction:** Buttons can be triggered by pressing anywhere within the button container. When buttons are focused, they can be triggered by pressing `Space`.
 - **Text truncation:** Button labels are not truncated. All text on buttons is one line only. 
 - **Alignment:** Buttons can be left- or right-aligned or fully span a container’s width.
-- **Button width:** Buttons dynamically adjust their width based on content but have a default minimum width of `5rem` to ensure harmonious alignment for common pairs like "OK" and "Cancel." The minimum width can be customized for different needs.
+- **Button width:** Buttons dynamically adjust their width based on content but have a default minimum width of `5rem` to ensure harmonious alignment for common pairs like "OK" and "Cancel". The minimum width can be customized for different needs.
 - **Cluster buttons:** Cluster buttons in groups with related functions. A cluster might include various types of buttons, e.g. default, outline and ghost to show primary, secondary and tertiary actions. We recommend a gap of `0.5rem` between buttons.
 
 ![Cluster buttons](https://www.figma.com/design/wEptRgAezDU1z80Cn3eZ0o/iX-Documentation-illustrations?node-id=5773-6487&t=yk9Vv3HSXaEzBbQk-4)
