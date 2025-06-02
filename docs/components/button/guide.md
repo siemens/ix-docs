@@ -45,7 +45,7 @@ Buttons have six states: Default, hover, active, disabled, loading and focused. 
 ## Dos and Don’ts
 
 - Do use short button labels to allow users to quickly scan, understand and remember them (see our [writing style guide](../../guidelines/language/dialogs-and-buttons.md))
-- Do use ellipsis (...) to indicate that an action requires further input or choice from the user, e.g. "Save as…" which opens a list of file types to choose from.
+- Do use ellipsis (…) to indicate that an action requires further input or choice from the user, e.g. "Save as…" which opens a list of file types to choose from.
 - Do use only one default button in one visual unit for a clear and singular focus on the main call to action
 - Don’t use the danger button excessively or repetitively in lists or tables
 - Don’t rely on standard buttons when many actions are necessary (use [dropdown buttons](../dropdown-button/index.mdx) or [split buttons](../split-button/index.mdx) instead, or move some functionality to a [pane](../panes/index.mdx) or a [dialog](../modal/index.mdx))
