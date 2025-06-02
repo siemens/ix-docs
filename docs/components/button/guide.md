@@ -10,21 +10,21 @@ Buttons initiate actions, apply actions to selected objects and activate/deactiv
 1. Label
 2. Icon
 
-## Options
-
-- **Default:** Use default buttons for primary actions.
-- **Outline:** Use outline buttons for secondary actions supporting the primary action, e.g. "Cancel", "Reset" or "Advanced Options".
-- **Ghost:** Use ghost buttons for tertiary actions that serve specialized or conditional purposes, e.g. "Advanced settings", "More options", "Help" or "Customize", "Change preferences" or "View details".
-- **Label:** The label is the text displayed on the button. We typically use short, descriptive labels that clearly communicate the action the button triggers.
-- **Icon:** An icon can be displayed on the button. We typically use icons to support the label and make the button more easy to discover by the user. The icon should be widely known for representing the action or function among your users. See [icon button](../icon-button/index.mdx) for buttons without label and icon only.
-- **Type:** Use the type "submit" when sending user input from a form to a server. For all other actions such as triggering dialogs or performing navigation use the default type "button".
-
 ## Variants
 
 ![Button variants](https://www.figma.com/design/wEptRgAezDU1z80Cn3eZ0o/iX-Documentation-illustrations?node-id=5771-6179&t=yk9Vv3HSXaEzBbQk-4)
 
 - **Subtle:** Use as an alternative to the default button when a less prominent visual emphasis is desired. Previously labeled as 'secondary' in earlier versions of the design system, the term 'subtle' more accurately reflects its intended purpose and visual hierarchy.
 - **Danger:** Use for destructive or critical actions like "delete" or "remove". We typically use the danger button for actions that are irreversible or have a significant impact on the user’s data or the application state.
+
+## Options
+
+- **Default:** Use default buttons for primary actions.
+- **Outline:** Use outline buttons for secondary actions supporting the primary action, e.g. "Cancel" or "Reset".
+- **Ghost:** Use ghost buttons for tertiary actions that serve specialized or conditional purposes, e.g. "Advanced settings", "More options", "Help" or "Customize", "Change preferences" or "View details".
+- **Label:** The label is the text displayed on the button. We typically use short, descriptive labels that clearly communicate the action the button triggers.
+- **Icon:** An icon can be displayed on the button. We typically use icons to support the label and make the button more easy to discover by the user. The icon should be widely known for representing the action or function among your users. See [icon button](../icon-button/index.mdx) for buttons without label and icon only.
+- **Type:** Use the type "submit" when sending user input from a form to a server. For all other actions such as triggering dialogs or performing navigation use the default type "button".
 
 ## Behavior in context
 
@@ -46,7 +46,7 @@ Buttons have six states: Default, hover, active, disabled, loading and focused. 
 
 - Do use short button labels to allow users to quickly scan, understand and remember them (see our [writing style guide](../../guidelines/language/dialogs-and-buttons.md))
 - Do use ellipsis (…) to indicate that an action requires further input or choice from the user, e.g. "Save as…" which opens a list of file types to choose from.
-- Do use only one default button in one visual unit for a clear and singular focus on the main call to action
+- Do use the default option for buttons to indicate one primary action in a visual unit, all other secondary actions should use the outline option.
 - Don’t use the danger button excessively or repetitively in lists or tables
 - Don’t rely on standard buttons when many actions are necessary (use [dropdown buttons](../dropdown-button/index.mdx) or [split buttons](../split-button/index.mdx) instead, or move some functionality to a [pane](../panes/index.mdx) or a [dialog](../modal/index.mdx))
 
