@@ -19,7 +19,7 @@ Buttons initiate actions, apply actions to selected objects and activate/deactiv
 
 ## Options
 
-- **Default:** Use default buttons for primary actions.
+- **Default:** Use default buttons with filled style for primary actions.
 - **Outline:** Use outline buttons for secondary actions supporting the primary action, e.g. "Cancel" or "Reset".
 - **Ghost:** Use ghost buttons for tertiary actions that serve specialized or conditional purposes, e.g. "Advanced settings", "More options", "Help" or "Customize", "Change preferences" or "View details".
 - **Label:** The label is the text displayed on the button. We typically use short, descriptive labels that clearly communicate the action the button triggers.
