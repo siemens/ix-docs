@@ -25,12 +25,12 @@ Here’s what’s happening over the next year so you know what to expect from y
 **🔹 Major release 3.0** in Q1: Read more in our [migration guide](../migration/3_0_0/index.md).
 
 ### 🚧 In progress / Currently being worked on
-- **Progress indicators**: Introducing a flexible, versatile possibility to give visual feedback on the status of ongoing processes.
+- **Progress indicators**: Introducing a versatile option to give visual feedback on the status of ongoing processes.
 - **Date and time selection**: Introducing comprehensive date and time selection options, including all pickers and inputs with range options for date, time, and date-time.
 - **Enhanced accessibility support**: Empowering project teams to build accessible products by improving our components and providing comprehensive guidelines on achieving an accessible app with our design system.
 ### 🗓️ Scheduled / With tentative timeline
-- **Contribution guidelines**: Establishing clear guidelines for contributing to our design system. This encourages community involvement and ensures contributions are consistent.
-- **Cards with tabs**: Introducing a new, more prominent box-like tabs component that come already with a container. It lets designers organize app content more effectively and improve user navigation, e.g. with two levels of tabs.
+- **Contribution guidelines**: Establishing clearer guidelines for contributing to our design system. This encourages community involvement and ensures contributions are consistent.
+- **Cards with tabs**: Introducing a new, more prominent box-like tab component with a container. It lets designers organize app content more effectively and improve user navigation, e.g. with two levels of tabs.
 
 ### ⏳ Planned / Without specific timeline
 - **Enhanced ix-modal**: Improving our modal component to provide a more flexible and user-friendly experience. This includes better usage together with the ix-toast, more styling options and enhanced functionality.
