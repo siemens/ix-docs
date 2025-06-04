@@ -14,7 +14,7 @@ Buttons initiate actions, apply actions to selected objects and activate/deactiv
 
 ![Button variants](https://www.figma.com/design/wEptRgAezDU1z80Cn3eZ0o/iX-Documentation-illustrations?node-id=5771-6179&t=yk9Vv3HSXaEzBbQk-4)
 
-- **Subtle:** Use as an alternative to the default button when a less prominent visual emphasis is desired. Previously labeled as 'secondary' in earlier versions of the design system, the term 'subtle' more accurately reflects its intended purpose and visual hierarchy.
+- **Subtle:** Use as an alternative to the default button when a less prominent visual emphasis is desired. Previously labeled as "secondary" in earlier versions of the design system, the term "subtle" more accurately reflects its intended purpose and visual hierarchy.
 - **Danger:** Use for destructive or critical actions like "delete" or "remove". We typically use the danger button for actions that are irreversible or have a significant impact on the user’s data or the application state.
 
 ## Options
