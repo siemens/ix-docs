@@ -30,7 +30,7 @@ Here’s what’s happening over the next year so you know what to expect from y
 - **Enhanced accessibility support**: Empowering project teams to build accessible products by improving our components and providing comprehensive guidelines on achieving an accessible app with our design system.
 ### 🗓️ Scheduled / With tentative timeline
 - **Contribution guidelines**: Establishing clearer guidelines for contributing to our design system. This encourages community involvement and ensures contributions are consistent.
-- **Cards with tabs**: Introducing a new, more prominent box-like tab component with a container. It lets designers organize app content more effectively and improve user navigation, e.g. with two levels of tabs.
+- **Tabs with containers**: Introducing a new, more prominent box-like tab component with a container. It lets designers organize app content more effectively and improve user navigation, e.g. with two levels of tabs.
 
 ### ⏳ Planned / Without specific timeline
 - **Enhanced ix-modal**: Improving our modal component to provide a more flexible and user-friendly experience. This includes better usage together with the ix-toast, more styling options and enhanced functionality.
