@@ -51,10 +51,11 @@ try {
   console.log('Found optionalDependency @siemens-ix/corporate-theme.');
   customCss.push(path);
   customCss.push('./src/scss/prod.scss')
+  customCss.push('./src/scss/classic-theme.scss')
   withBrandTheme = true;
 } catch (e) {
   console.warn('optionalDependency @siemens-ix/corporate-theme not found!');
-  customCss.push('./src/scss/local-dev.scss')
+  customCss.push('./src/scss/classic-theme.scss')
 }
 
 const brokenLinks = 'throw';
@@ -63,15 +64,13 @@ const baseUrl = process.env.BASE_URL || '/';
 console.log('Using BASE_URL', baseUrl);
 
 const remarkPlugins = [];
-if (!process.env.CI) {
-  remarkPlugins.push(figmaPlugin({
-    baseUrl: `${baseUrl}figma`,
-    figmaFolder: `${path.join(__dirname, 'static', 'figma')}`,
-    error_image: path.join('..', 'img', 'figma_error.png'),
-    apiToken: process.env.FIGMA_API_TOKEN!,
-    rimraf: true,
-  }));
-}
+remarkPlugins.push(figmaPlugin({
+  baseUrl: `${baseUrl}figma`,
+  figmaFolder: `${path.join(__dirname, 'static', 'figma')}`,
+  error_image: path.join('..', 'img', 'figma_error.png'),
+  apiToken: process.env.FIGMA_API_TOKEN!,
+  rimraf: false,
+}));
 
 const config: Config = {
   title: 'Siemens Industrial Experience',
@@ -83,6 +82,7 @@ const config: Config = {
   // Set the /<baseUrl>/ pathname under which your site is served
   // For GitHub pages deployment, it is often '/<projectName>/'
   baseUrl: baseUrl,
+  trailingSlash: false,
 
   // GitHub pages deployment config.
   // If you aren't using GitHub pages, you don't need these.
@@ -168,20 +168,6 @@ const config: Config = {
   ],
 
   headTags: [
-    {
-      tagName: 'script',
-      attributes: {
-        type: 'module',
-        src: 'https://cdn.jsdelivr.net/npm/@siemens/ix-icons@3.0.0-alpha.0/dist/ix-icons/ix-icons.esm.js',
-      },
-    },
-    {
-      tagName: 'script',
-      attributes: {
-        nomodule: 'true',
-        src: 'https://cdn.jsdelivr.net/npm/@siemens/ix-icons@3.0.0-alpha.0/dist/ix-icons/ix-icons.js',
-      },
-    },
     getFontHeadTag('Bold'),
     getFontHeadTag('BoldItalic'),
     getFontHeadTag('Italic'),
