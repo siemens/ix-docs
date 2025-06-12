@@ -135,24 +135,39 @@ async function downloadLatestArtifact(branch: string) {
     branchName = pr.head.ref;
   }
 
-  // Get latest successful workflow run for the branch
-  const { data: runs } = await octokit.actions.listWorkflowRunsForRepo({
-    owner,
-    repo,
-    branch: branchName,
-  });
+  const eventRuns = await Promise.all([
+    octokit.actions.listWorkflowRunsForRepo({
+      owner,
+      repo,
+      branch: branchName,
+      event: 'workflow_dispatch',
+    }),
+    octokit.actions.listWorkflowRunsForRepo({
+      owner,
+      repo,
+      branch: branchName,
+      event: 'push',
+    }),
+    octokit.actions.listWorkflowRunsForRepo({
+      owner,
+      repo,
+      branch: branchName,
+      event: 'pull_request',
+    }),
+  ]);
+
+  const runs = eventRuns.flatMap((run) => run.data.workflow_runs);
 
   if (
-    !runs.workflow_runs ||
-    runs.workflow_runs.length === 0 ||
-    runs.workflow_runs.filter(
-      (run) => run.name === 'Build' || run.name === 'Pull Request'
-    ).length === 0
+    !runs ||
+    runs.length === 0 ||
+    runs.filter((run) => run.name === 'Build' || run.name === 'Pull Request')
+      .length === 0
   ) {
     const message = `No workflow runs found for this branch. ${branchName}`;
     throw new Error(message);
   }
-  const runId = runs.workflow_runs.filter(
+  const runId = runs.filter(
     (run) => run.name === 'Build' || run.name === 'Pull Request'
   )[0].id;
 
