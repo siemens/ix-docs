@@ -51,10 +51,11 @@ try {
   console.log('Found optionalDependency @siemens-ix/corporate-theme.');
   customCss.push(path);
   customCss.push('./src/scss/prod.scss')
+  customCss.push('./src/scss/classic-theme.scss')
   withBrandTheme = true;
 } catch (e) {
   console.warn('optionalDependency @siemens-ix/corporate-theme not found!');
-  customCss.push('./src/scss/local-dev.scss')
+  customCss.push('./src/scss/classic-theme.scss')
 }
 
 const brokenLinks = 'throw';
@@ -81,6 +82,7 @@ const config: Config = {
   // Set the /<baseUrl>/ pathname under which your site is served
   // For GitHub pages deployment, it is often '/<projectName>/'
   baseUrl: baseUrl,
+  trailingSlash: false,
 
   // GitHub pages deployment config.
   // If you aren't using GitHub pages, you don't need these.
@@ -166,20 +168,6 @@ const config: Config = {
   ],
 
   headTags: [
-    {
-      tagName: 'script',
-      attributes: {
-        type: 'module',
-        src: 'https://cdn.jsdelivr.net/npm/@siemens/ix-icons@3.0.0-alpha.0/dist/ix-icons/ix-icons.esm.js',
-      },
-    },
-    {
-      tagName: 'script',
-      attributes: {
-        nomodule: 'true',
-        src: 'https://cdn.jsdelivr.net/npm/@siemens/ix-icons@3.0.0-alpha.0/dist/ix-icons/ix-icons.js',
-      },
-    },
     getFontHeadTag('Bold'),
     getFontHeadTag('BoldItalic'),
     getFontHeadTag('Italic'),
