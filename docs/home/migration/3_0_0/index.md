@@ -32,6 +32,10 @@ Figma libraries for v2.0.0 are in the **Archive** project (find the link in the 
 We have also prepared a video showing the process in our internal Siemens learning world [here](https://mylearningworld.siemens.com/web/en/app/toc/lex_auth_014279158647750656628/overview).
 :::
 
+## Icons renamed or removed
+
+With release 3.0.0 of `@siemens/ix-icons` we have fixed several typos and naming inconsistencies. All breaking changes are listed in the [BREAKING-CHANGES.md](https://github.com/siemens/ix-icons/blob/main/BREAKING_CHANGES.md) of the icon repository.
+
 ## Changed loading of icons from package `@siemens/ix-icons`
 
 Prior to version 3.0.0 of `@siemens/ix-icons` the entire icon set was loaded into the client by default, which caused unnecessary usage of bandwidth and memory.
