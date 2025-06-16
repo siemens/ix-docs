@@ -916,6 +916,16 @@ const sidebars: SidebarsConfig = {
           ],
         }),
         createTabItem({
+          id: 'components/progress-indication/index',
+          label: 'Progress indication',
+          items: [
+            {
+              id: 'components/progress-indication/guide',
+              label: 'Usage',
+            },
+          ],
+        }),
+        createTabItem({
           id: 'components/spinner/index',
           label: 'Spinner',
           items: [
