@@ -916,16 +916,6 @@ const sidebars: SidebarsConfig = {
           ],
         }),
         createTabItem({
-          id: 'components/progress-indication/index',
-          label: 'Progress indication',
-          items: [
-            {
-              id: 'components/progress-indication/guide',
-              label: 'Usage',
-            },
-          ],
-        }),
-        createTabItem({
           id: 'components/spinner/index',
           label: 'Spinner',
           items: [
@@ -963,6 +953,10 @@ const sidebars: SidebarsConfig = {
           id: 'components/progress-indicator/index',
           label: 'Progress indicator',
           items: [
+            {
+              id: 'components/progress-indicator/guide',
+              label: 'Usage',
+            },
             {
               id: 'components/progress-indicator/code',
               label: 'Code',
