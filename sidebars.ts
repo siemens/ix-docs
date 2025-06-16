@@ -878,7 +878,6 @@ const sidebars: SidebarsConfig = {
     {
       type: 'category',
       className: 'doc-sidebar-item-bold',
-
       label: 'System feedback and status',
       items: [
         createTabItem({
