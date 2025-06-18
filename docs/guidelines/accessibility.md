@@ -213,7 +213,7 @@ function focusItem(item) {
 
 Always attempt to keep the focus on changes to prevent the user from manually having to navigate back to the previous location.
 
-#### Focus Management
+#### Focus management
 
 Implement focus trapping for modal dialogs and other overlay components:
 
