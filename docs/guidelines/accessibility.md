@@ -158,7 +158,7 @@ When you work with ARIA attributes in JavaScript, use the `setAttribute()` metho
 const button = document.querySelector('button');
 button.setAttribute('aria-label', 'Save document');
 
-// Or using direct property assignment
+// Or use direct property assignment
 button.ariaLabel = 'Save document';
 ```
 
