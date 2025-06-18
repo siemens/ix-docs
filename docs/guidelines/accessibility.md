@@ -154,7 +154,7 @@ to provide semantic meaning where it might otherwise be missing. Use JavaScript 
 When you work with ARIA attributes in JavaScript, use the `setAttribute()` method or direct property assignment:
 
 ```javascript
-// Using setAttribute for ARIA attributes
+// Use setAttribute for ARIA attributes
 const button = document.querySelector('button');
 button.setAttribute('aria-label', 'Save document');
 
