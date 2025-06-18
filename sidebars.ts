@@ -1087,7 +1087,7 @@ const sidebars: SidebarsConfig = {
   guidelines: [
     'guidelines/overview',
     'guidelines/designprinciples',
-    'guidelines/accessibility',
+    'guidelines/accessibility/overview',
     {
       type: 'category',
       className: 'doc-sidebar-item-bold',
