@@ -138,7 +138,7 @@ It adopts the content of the WCAG 2.1. The following describes the usage with li
 
 ## Accessibility in HTML/JavaScript
 
-A lot of cases will already be covered by using iX components with their built in accessibility features.
+We covered most common use cases in our components with built-in accessibility features.
 This chapter describes best practices for designing HTML/JavaScript applications that work well for all
 users, including those who rely on assistive technologies.
 
