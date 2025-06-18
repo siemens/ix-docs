@@ -151,7 +151,7 @@ For a detailed introduction into basic questions and general techniques for desi
 Building accessible web experiences often involves setting [ARIA attributes](https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA)
 to provide semantic meaning where it might otherwise be missing. Use JavaScript to dynamically control the values of accessibility-related attributes.
 
-When working with ARIA attributes in JavaScript, you can use the `setAttribute()` method or direct property assignment:
+When you work with ARIA attributes in JavaScript, use the `setAttribute()` method or direct property assignment:
 
 ```javascript
 // Using setAttribute for ARIA attributes
