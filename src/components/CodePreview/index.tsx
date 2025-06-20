@@ -91,6 +91,7 @@ export default function CodePreview(props: Readonly<CodePreviewProps>) {
                 return (
                   <IxDropdownItem
                     key={name}
+                    className={styles.DropdownItem}
                     checked={selectedFile === name}
                     onClick={() => {
                       setSelectedFile(name);
