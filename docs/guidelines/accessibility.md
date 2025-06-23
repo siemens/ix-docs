@@ -138,18 +138,14 @@ It adopts the content of the WCAG 2.1. The following describes the usage with li
 
 ## Accessibility in HTML/JavaScript
 
+This chapter describes best practices for designing HTML/JavaScript applications that work well for all users, including those who rely on assistive technologies.
 We covered most common use cases in our components with built-in accessibility features.
-This chapter describes best practices for designing HTML/JavaScript applications that work well for all
-users, including those who rely on assistive technologies.
 
-For a detailed introduction into basic questions and general techniques for designing accessible applications, see the
-[accessibility](https://developer.mozilla.org/en-US/docs/Web/Accessibility) section of the
-[mdn web docs](https://developer.mozilla.org/en-US/).
+For a detailed introduction into basic questions and general techniques for designing accessible applications, see the [accessibility](https://developer.mozilla.org/en-US/docs/Web/Accessibility) section of the [mdn web docs](https://developer.mozilla.org/en-US/).
 
 ### Accessibility attributes
 
-Building accessible web experiences often involves setting [ARIA attributes](https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA)
-to provide semantic meaning where it might otherwise be missing. Use JavaScript to dynamically control the values of accessibility-related attributes.
+Building accessible web experiences often involves setting [ARIA attributes](https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA) to provide semantic meaning where it might otherwise be missing. Use JavaScript to dynamically control the values of accessibility-related attributes.
 
 When you work with ARIA attributes in JavaScript, use the `setAttribute()` method or direct property assignment:
 
@@ -169,11 +165,11 @@ Static ARIA attributes can be set directly in HTML:
 <button aria-label="Save document"><i class="icon element-save"></i></button>
 ```
 
-Alternatively, using the `label` attribute that most iX components offer, will set the aria attribute for the relevant HTML element.
+Alternatively, use the `label` attribute that most iX components offer to set the aria attribute for the relevant HTML element.
 
 **add iX example here**
 
-### Keyboard only / No Keyboard trap
+### Keyboard only/No Keyboard trap
 
 All functionality of the content is operable through a keyboard interface without requiring specific timings for individual keystrokes,
 except where the underlying function requires input that depends on the path of the user's movement and not just the endpoints.
@@ -241,7 +237,7 @@ function trapFocus(container) {
 }
 ```
 
-Or just use the ix-modal with built-in focus trapping:
+Or just use the [modals](../components/modal/index.mdx) with built-in focus trapping:
 
 **add example here**
 
@@ -266,7 +262,7 @@ When you are using iX components, the relevant attribute will be set when you se
 
 #### Aria-labelledby
 
-Is used when there is already a text which describes the element. An example are forms where there is a field description followed by the input.
+Use when there is already a text which describes the element. An example are forms where there is a field description followed by the input.
 
 ```html
 <p id="input-name-label">This is the input label</p>
@@ -290,17 +286,17 @@ const button = document.querySelector('#save-button');
 button.setAttribute('aria-label', 'Save document');
 ```
 
-#### alt attribute
+#### Alt attribute
 
-Some elements have an alt attribute which can be used to give an element and additional text. Depending on the screen reader it might not get picked up.
+Use `alt` attributes some elements offer to add an additional description to an element. Depending on the screen reader it might not get picked up.
 
 ```html
 <img src="chart.png" alt="Sales increased by 25% in Q3" />
 ```
 
-#### title attribute
+#### Title attribute
 
-Same as for the alt attribute, title allows to add a text which might not be catched up by screen readers.
+Similar to the `alt` attribute, the `title` allows adding additional information about an element. Again, it might not be caught up by screen readers.
 
 ```html
 <button title="Save document"><i class="icon element-save"></i></button>
@@ -308,8 +304,7 @@ Same as for the alt attribute, title allows to add a text which might not be cat
 
 #### Visually hidden text
 
-Can be used to make specific description text hidden from the UI itself but it will be read by a screen reader,
-this is helpful for adding any kind of description to an element when an `aria-label` for example isn't allowed or does not make sense to use.
+When e.g. `aria-label` isn't allowed or doesn't make sense to use, use hidden text to make specific description text that is read by a screen reader but isn't visible in the UI.
 
 ```html
 <i class="icon element-physical-input" aria-hidden="true"></i><span class="visually-hidden">physical input</span>
@@ -333,7 +328,7 @@ this is helpful for adding any kind of description to an element when an `aria-l
 
 If you are using chrome dev tools you have some options that make your life easier here. You can either use the [audit](https://developer.chrome.com/docs/devtools/accessibility/reference#audits) functionality to generate a report or use the [accesibility tree](https://developer.chrome.com/blog/full-accessibility-tree).
 
-Alternatively you can use browser extensions or playwright in conjunction with [@axe-core/playwright](https://www.npmjs.com/package/@axe-core/playwright) within the CI/CD Pipeline, also using a screen reader to test it can be beneficial.
+Alternatively, you can use browser extensions or playwright in conjunction with [@axe-core/playwright](https://www.npmjs.com/package/@axe-core/playwright) within the CI/CD Pipeline. Additionally, using a screen reader to test it is beneficial.
 
 ### Navigation / Landmark
 
