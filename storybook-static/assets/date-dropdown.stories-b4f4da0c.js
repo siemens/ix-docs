@@ -1,0 +1,3 @@
+import{g as o,m as d}from"./generic-render-0222c656.js";import"./sample-cfb362e2.js";const p={title:"Example/DateDropdown",tags:[],render:s=>o("ix-date-dropdown",s),argTypes:d("ix-date-dropdown",{}),parameters:{design:{type:"figma",url:"https://www.figma.com/design/r2nqdNNXXZtPmWuVjIlM1Q/iX-Components---Brand-Dark?node-id=45886-17140&m=dev"}}},e={args:{}};var r,a,t;e.parameters={...e.parameters,docs:{...(r=e.parameters)==null?void 0:r.docs,source:{originalSource:`{
+  args: {}
+}`,...(t=(a=e.parameters)==null?void 0:a.docs)==null?void 0:t.source}}};const i=["Default"];export{e as Default,i as __namedExportsOrder,p as default};

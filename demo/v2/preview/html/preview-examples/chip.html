@@ -15,42 +15,55 @@ LICENSE file in the root directory of this source tree.
     <title>Chip example</title>
     
     
-    <script type="module" crossorigin src="../assets/chip-f177a04b.js"></script>
-    <link rel="modulepreload" crossorigin href="../assets/global-9b2308da.js">
-    <link rel="modulepreload" crossorigin href="../assets/init-394db2f8.js">
-    <link rel="modulepreload" crossorigin href="../assets/icon-1ecd1404-8007a342.js">
+    <script type="module" crossorigin src="../assets/chip-00864693.js"></script>
+    <link rel="modulepreload" crossorigin href="../assets/global-bbf431ac.js">
+    <link rel="modulepreload" crossorigin href="../assets/init-af7d69a1.js">
+    <link rel="modulepreload" crossorigin href="../assets/icon-1ecd1404-a606277f.js">
     <link rel="modulepreload" crossorigin href="../assets/index-da7f59e9.js">
-    <link rel="stylesheet" href="../assets/global-dfd94658.css">
-    <link rel="stylesheet" href="../assets/chip-2e8b85cb.css">
+    <link rel="stylesheet" href="../assets/global-652332a7.css">
+    <link rel="stylesheet" href="../assets/chip-c2bddf1d.css">
   </head>
   <body>
     <div class="chip">
-      <ix-chip closable outline>Primary</ix-chip>
-      <ix-chip icon="print" tooltip-text="Custom tooltip text">
-        Primary with icon
-      </ix-chip>
-      <ix-chip icon="print" tooltip-text style="width: 10rem" closable>
-        Primary
-      </ix-chip>
-
-      <ix-chip variant="critical" closable outline>Alarm</ix-chip>
-      <ix-chip variant="alarm" icon="print">Alarm with icon</ix-chip>
-      <ix-chip variant="alarm" icon="print" style="width: 10rem" closable>
-        Alarm
-      </ix-chip>
-      <ix-chip variant="warning" icon="print" style="width: 10rem" closable>
-        Alarm
-      </ix-chip>
-      <ix-chip
-        background="purple"
-        chip-color="green"
-        variant="custom"
-        icon="print"
-        style="width: 10rem"
-        closable
-      >
-        Custom
-      </ix-chip>
+      <div class="chip-column">
+        <ix-chip icon="print" variant="primary" outline closable
+          >Primary</ix-chip
+        >
+        <ix-chip icon="print" variant="alarm" outline closable>Alarm</ix-chip>
+        <ix-chip icon="print" variant="critical" outline>Critical</ix-chip>
+        <ix-chip icon="print" variant="warning" outline>Warning</ix-chip>
+        <ix-chip icon="print" variant="info" outline>Info</ix-chip>
+        <ix-chip icon="print" variant="success" outline>Success</ix-chip>
+        <ix-chip icon="print" variant="neutral" outline>Neutral</ix-chip>
+        <ix-chip
+          icon="print"
+          variant="custom"
+          background="#FF00FF"
+          outline
+          closable
+          >Custom</ix-chip
+        >
+        <ix-chip icon="print" variant="primary" outline closable
+          >Chip with icon
+        </ix-chip>
+      </div>
+      <div class="chip-column">
+        <ix-chip icon="print" variant="primary" closable>Primary</ix-chip>
+        <ix-chip icon="print" variant="alarm" closable>Alarm</ix-chip>
+        <ix-chip icon="print" variant="critical">Critical</ix-chip>
+        <ix-chip icon="print" variant="warning">Warning</ix-chip>
+        <ix-chip icon="print" variant="info">Info</ix-chip>
+        <ix-chip icon="print" variant="success">Success</ix-chip>
+        <ix-chip icon="print" variant="neutral">Neutral</ix-chip>
+        <ix-chip
+          variant="custom"
+          background="#FF00FF"
+          chip-color="black"
+          closable
+          >Custom</ix-chip
+        >
+        <ix-chip variant="primary" outline closable>Chip without icon </ix-chip>
+      </div>
     </div>
     
   </body>
