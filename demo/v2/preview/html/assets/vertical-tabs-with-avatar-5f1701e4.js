@@ -1,0 +1,11 @@
+import "./global-7dbfff85.js";
+import { a as addIcons } from "./icon-1ecd1404-d891335b.js";
+import "./init-77cf101f.js";
+import { D as iconUserProfile, q as iconHome, B as iconGlobe, i as iconStar } from "./index-da7f59e9.js";
+const verticalTabsWithAvatar = "";
+addIcons({
+  iconUserProfile,
+  iconHome,
+  iconGlobe,
+  iconStar
+});
