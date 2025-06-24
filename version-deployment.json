@@ -5,12 +5,12 @@
     {
       "id": "v3",
       "href": "https://ix.siemens.io",
-      "label": "V3.0.0"
+      "label": "Version 3 (Latest)"
     },
     {
       "id": "v2",
       "href": "https://ix.siemens.io/version-2.7",
-      "label": "V2.7.0 (LTS)"
+      "label": "Version 2 (LTS)"
     }
   ]
 }
