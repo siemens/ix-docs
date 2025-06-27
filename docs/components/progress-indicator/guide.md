@@ -6,7 +6,7 @@ import DoAndDont from '@site/src/components/DoAndDont';
 
 # Progress indicator - Usage
 
-Progress indicators inform users about the status of ongoing processes, e.g. loading data, submitting forms or processing non-blocking operations.
+Progress indicators inform users about the status of ongoing measurable processes, e.g. loading data, submitting forms or processing non-blocking operations (for indeterminate processes use [spinners](../spinner/index.mdx) instead).
 
 ![Progress indicator anatomy](https://www.figma.com/design/wEptRgAezDU1z80Cn3eZ0o/iX-Documentation-illustrations?node-id=2094-345&t=pq3AmdWOVOjIx4S4-4)
 
@@ -33,7 +33,7 @@ Progress indicator variants (types):
 	- Warning: Process ongoing but needs attention (e.g. "Storage space is running low")
 	- Error: Process interrupted or failed (e.g. due to network connection problems)
 	- Paused: Process temporarily stopped by the system or by the user (e.g. by pressing a button)
-- **Alignment:** By default, the label, control and helper text are left-aligned. Use the centered option to accommodate layouts with vertical reading patterns.
+- **Alignment:** By default, the label, control and helper text are left-aligned. Use the centered option to accommodate layouts with vertical reading patterns e.g. low-width containers.
 - **Label:** Add a label to describe the process being tracked, helping users understand what operation is in progress.
 - **Helper text:** Use helper text to provide additional context, e.g. percentage completed, estimated time remaining or errors that happened during the process.
 - **Show text as tooltip:** This option hides the helper text and displays it only when the user hovers or focuses the progress indicator.
@@ -42,7 +42,7 @@ Progress indicator variants (types):
 - **Content slot:** Use this slot to display additional content such as percentage values or custom elements like icons.
 
 :::info
-For more information about correct copywriting for helper text or label please see our [UX Writing guidelines](../../guidelines/language/basics.md).
+For more information about writing effective helper texts or labels please see our [UX Writing guidelines](../../guidelines/language/basics.md).
 :::
 ## Behavior in context
 

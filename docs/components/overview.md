@@ -66,15 +66,15 @@ import { CategoryButton } from '@site/src/components/CategoryButton';
 
 ## Application frame
 
-| Component | Description |
-| :----------------- | :------------ |
-| [Application](./application/index.mdx)  | Applications manage the layout and theming of top-level app elements, ensuring a cohesive user experience. |
-| [Application header](./application-header/index.mdx) | Application headers provide a structured area for key elements like brand logo, application name and user avatar. |
-| [Application menu](./application-menu/index.mdx) | The navigation menu provides direct access to main application parts, legal and version information, and settings. |
-| [Avatar](./avatar/index.mdx) | Avatars visually or textually represent individual identities, typically for users logged into a system. |
-| [Content](./content/index.mdx) | The content component is a simple layout component made for hosting content. |
-| [About and legal](./about-and-legal/index.mdx) | The About and legal component is an overlay we typically use to show application information, application versions, license terms, legal regulations, copyright information and other legal content. |
-| [Settings](./settings/index.mdx) | The settings overlay provides a centralized location for application settings. |
+| Component                                            | Description                                                                                                                                                                                          |
+| :--------------------------------------------------- | :--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| [Application](./application/index.mdx)               | Applications manage the layout and theming of top-level app elements, ensuring a cohesive user experience.                                                                                           |
+| [Application header](./application-header/index.mdx) | Application headers provide a structured area for key elements like brand logo, application name and user avatar.                                                                                    |
+| [Application menu](./application-menu/index.mdx)     | The navigation menu provides direct access to main application parts, legal and version information, and settings.                                                                                   |
+| [Avatar](./avatar/index.mdx)                         | Avatars visually or textually represent individual identities, typically for users logged into a system.                                                                                             |
+| [Content](./content/index.mdx)                       | The content component is a simple layout component made for hosting content.                                                                                                                         |
+| [About and legal](./about-and-legal/index.mdx)       | The About and legal component is an overlay we typically use to show application information, application versions, license terms, legal regulations, copyright information and other legal content. |
+| [Settings](./settings/index.mdx)                     | The settings overlay provides a centralized location for application settings.                                                                                                                       |
 
 ## Navigation and hierarchy
 
@@ -148,14 +148,15 @@ import { CategoryButton } from '@site/src/components/CategoryButton';
 
 ## System feedback and status
 
-| Component | Description |
-| :------- | :------------ |
-| [Empty state](./empty-state/index.mdx) | Empty states inform users that there is no content to display.  |
-| [Message bar](./messagebar/index.mdx) | Message bars display important information to users, e.g. feedback, warnings or errors.  |
-| [Pill](./pill/index.mdx) | Pills display small pieces of information, e.g. counters or statuses.  |
-| [Spinner](./spinner/index.mdx) | Spinners indicate that a process is running to provide feedback to the user.  |
-| [Toast](./toast/index.mdx) | Toasts are small pop-ups that provide simple feedback on a process.  |
-| [Tooltip](./tooltip/index.mdx) | Tooltips provide additional information when users hover over or focus on an element.  |
+| Component                                         | Description                                                                                                                                        |
+| :------------------------------------------------ | :------------------------------------------------------------------------------------------------------------------------------------------------- |
+| [Empty state](./empty-state/index.mdx)            | Empty states inform users that there is no content to display.                                                                                     |
+| [Message bar](./messagebar/index.mdx)             | Message bars display important information to users, e.g. feedback, warnings or errors.                                                            |
+| [Pill](./pill/index.mdx)                          | Pills display small pieces of information, e.g. counters or statuses.                                                                              |
+| [Progress indicator](progress-indicator/guide.md) | Progress indicators inform users about the status of ongoing processes, e.g. loading data, submitting forms or processing non-blocking operations. |
+| [Spinner](./spinner/index.mdx)                    | Spinners indicate that a process is running to provide feedback to the user.                                                                       |
+| [Toast](./toast/index.mdx)                        | Toasts are small pop-ups that provide simple feedback on a process.                                                                                |
+| [Tooltip](./tooltip/index.mdx)                    | Tooltips provide additional information when users hover over or focus on an element.                                                              |
 
 ## Data display
 
