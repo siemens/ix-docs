@@ -7,6 +7,7 @@
  * LICENSE file in the root directory of this source tree.
  */
 
+import { iconInfo, iconWarningFilled } from '@siemens/ix-icons/icons';
 import { IxIcon } from '@siemens/ix-react';
 import Admonition from '@theme-original/Admonition';
 import type { Props } from '@theme/Admonition';
@@ -16,14 +17,14 @@ export default function AdmonitionWrapper(props: Props) {
     case 'info':
       return (
         <Admonition
-          icon={<IxIcon name="info"></IxIcon>}
+          icon={<IxIcon name={iconInfo}></IxIcon>}
           {...props}
         ></Admonition>
       );
     case 'warning':
       return (
         <Admonition
-          icon={<IxIcon name="warning-filled"></IxIcon>}
+          icon={<IxIcon name={iconWarningFilled}></IxIcon>}
           {...props}
         ></Admonition>
       );
