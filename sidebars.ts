@@ -966,6 +966,20 @@ const sidebars: SidebarsConfig = {
             },
           ],
         }),
+        createTabItem({
+          id: 'components/progress-indicator/index',
+          label: 'Progress indicator',
+          items: [
+            {
+              id: 'components/progress-indicator/guide',
+              label: 'Usage',
+            },
+            {
+              id: 'components/progress-indicator/code',
+              label: 'Code',
+            },
+          ],
+        }),
       ],
       collapsed: true,
     },
