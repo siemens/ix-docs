@@ -32,7 +32,7 @@ Progress indicator variants (types):
 	- Info: Process ongoing with low-impact additional information, e.g. "Compressing files before upload"
 	- Warning: Process ongoing but needs attention, e.g. "Storage space is running low"
 	- Error: Process interrupted or failed, e.g. due to network connection problems
-	- Paused: Process temporarily stopped by the system or by the user (e.g. by pressing a button)
+	- Paused: Process temporarily stopped by the system or by the user, e.g. by pressing a button
 - **Alignment:** By default, the label, control and helper text are left-aligned. Use the centered option to accommodate layouts with vertical reading patterns, e.g. low-width containers.
 - **Label:** Add a label to describe the process being tracked, helping users understand what operation is in progress.
 - **Helper text:** Use helper text to provide additional context, e.g. percentage completed, estimated time remaining or errors that happened during the process.
