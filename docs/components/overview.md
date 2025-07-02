@@ -73,7 +73,7 @@ import { CategoryButton } from '@site/src/components/CategoryButton';
 | [Application menu](./application-menu/index.mdx)     | The navigation menu provides direct access to main application parts, legal and version information, and settings.                                                                                   |
 | [Avatar](./avatar/index.mdx)                         | Avatars visually or textually represent individual identities, typically for users logged into a system.                                                                                             |
 | [Content](./content/index.mdx)                       | The content component is a simple layout component made for hosting content.                                                                                                                         |
-| [About and legal](./about-and-legal/index.mdx)       | The About and legal component is an overlay we typically use to show application information, application versions, license terms, legal regulations, copyright information and other legal content. |
+| [About and legal](./about-and-legal/index.mdx)       | The About & legal component is an overlay we typically use to show application information, application versions, license terms, legal regulations, copyright information and other legal content. |
 | [Settings](./settings/index.mdx)                     | The settings overlay provides a centralized location for application settings.                                                                                                                       |
 
 ## Navigation and hierarchy
