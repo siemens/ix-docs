@@ -1072,7 +1072,20 @@ const sidebars: SidebarsConfig = {
   guidelines: [
     'guidelines/overview',
     'guidelines/designprinciples',
-    'guidelines/accessibility',
+    createTabItem({
+      id: 'guidelines/accessibility/index',
+      label: 'Accessibility',
+      items: [
+        {
+          id: 'guidelines/accessibility/overview',
+          label: 'Overview',
+        },
+        {
+          id: 'guidelines/accessibility/code',
+          label: 'Code',
+        },
+      ],
+    }),
     {
       type: 'category',
       className: 'doc-sidebar-item-bold',
