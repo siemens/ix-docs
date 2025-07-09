@@ -1,3 +1,109 @@
-# Time and date
+# Dates 
 
-Lorem ipsum
+Accurate dates and times are essential in industrial settings, serving as the backbone for effective scheduling, seamless coordination, and overall efficiency. Deciding on the right format to convey this information is challenging due to varying guidelines across different regions and industries. 
+
+## General rules  
+
+Use the ISO 8601 date and time format standards when backend localization is not possible. 
+
+DO: 2025-04-08 (April 8, 2025) 
+DON’T: 2025/04/08 
+DO: 14:30:00 (24-hour format) 
+DON’T: 2:30 PM 
+
+Add tooltips or in-line text to support users and clarify which format is being used.  
+
+DO: YYYY-MM-DD 
+DO: 24-hour format 
+
+DO: Dates are formatted as YYYY-MM-DD. For example, April 8, 2025, is written as 2025-04-08. 
+
+DO: Times are formatted in 24-hour format as HH:MM. For example, 2:30 PM is written as 14:30. 
+
+DO: Dates and times include time zones. For example, April 8, 2025, at 2:30 PM in Berlin is written as 2025-04-08T14:30:00+02:00. 
+
+Avoid adding unnecessary punctuation to abbreviated dates.  
+
+DO: Jan  
+DON’T: Jan. 
+
+## Dates 
+
+Write out full dates using commas to separate elements within longer texts and paragraphs. 
+
+DO: Monday, January 12, 2025 
+DONT: Monday: January 12th: 2025 
+
+Write out dates with the abbreviated form using dashes (hyphens) instead of slashes for better readability. 
+
+DO: Aug-26-2025 
+DON’T: Aug/26/2025 
+DO: Apr-09-2025 DON’T: Apr 09/2025  
+
+Write dates in tables using abbreviated months to avoid confusion and the need for further tooltips or explanation. 
+
+DO: Apr-09 
+DON’T: 04-09  
+
+Avoid using “st” (as in 1st) or “th” (as in 5th) for a cleaner user interface. 
+
+DO: Monday, January 12, 2025 
+DONT: Monday, January 12th, 2025 
+
+## Days 
+
+Start all days with a capital letter. 
+
+DO: Monday, Tuesday, Wednesday, etc.. 
+
+Use three-letter abbreviations without punctuation when there isn’t enough space. 
+
+DO: Mon  
+DON’T: Mon. 
+
+## Weeks 
+
+Avoid calendar weeks (CW) whenever possible as these are very specific to certain regions. 
+
+DO: Week 15 (April 7 – April 13, 2025) 
+DON’T: CW 15 (15th week of the year) 
+DON’T: CW 15/2025 (15th calendar week of the year 2025) 
+DON’T: Calendar week 05 in year 2025 
+
+## Months 
+
+Start all months with a capital letter.  
+
+DO: January, February, March, etc.  
+
+Use three-letter abbreviations without punctuation when there isn’t enough space.  
+
+DO: Jan 
+DON’T: Jan. 
+
+## Years 
+
+Use the four-digit format and never abbreviate in industrial applications.  
+
+DO: 2023 
+DON’T: ‘23 
+
+## Decades 
+
+Use plural -s when talking about decades.  
+
+DO: 1980s 
+DON’T: 1980’s 
+
+## Centuries 
+
+Use “th” and “nd” to reference centuries with ordinals without using superscript.  
+
+DO: Welcome to the 21st century of industrial innovation! Our app uses AI to deliver efficiency in your operations. 
+DON’T: Welcome to the 21st century of industrial innovation! Our app uses AI to deliver efficiency in your operations. 
+
+## Related  
+
+- Date input
+- Date picker
+- Time input
