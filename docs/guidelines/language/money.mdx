@@ -1,44 +1,83 @@
+---
+sidebar_label: Money and currencies
+title: Money and currencies
+doc-type: 'banner'
+component-tabs: ['']
+no_single_tab: true
+description: 'Understanding money and currency is important for designing user interfaces that facilitate financial transactions, licensing, display prices, and manage currency conversions. This requires attention to details like currency symbols, formatting standards, and localization to ensure precision and user-friendliness. '
+---
+
+import DoAndDont from '@site/src/components/DoAndDont';
+
 # Money and currencies
-
-## Money and currency 
-
-Understanding money and currency is important for designing user interfaces that facilitate financial transactions, licensing, display prices, and manage currency conversions. This requires attention to details like currency symbols, formatting standards, and localization to ensure precision and user-friendliness. 
 
 ## General rules  
 
-Use the same formatting throughout your user interface.  
+Use the same formatting throughout your user interface. Place the currency symbol before the amount within American English user interfaces.  
 
-DO: £320 DON’T: £320/£320.00/Three hundred and twenty pounds/320 pounds  
-
-Place the currency symbol before the amount within American English user interfaces.  
-
-DO: £320 DON’T: 320£ 
+<DoAndDont>
+  <DoAndDont.Do>
+    <DoAndDont.Item>£320</DoAndDont.Item>
+  </DoAndDont.Do>
+  <DoAndDont.Dont>
+    <DoAndDont.Item>£320/£320.00/Three hundred and twenty pounds/320 pounds </DoAndDont.Item>
+	<DoAndDont.Item>320£</DoAndDont.Item>
+  </DoAndDont.Dont>
+</DoAndDont>
 
 Use decimal points for cents or smaller units within American English user interfaces. 
 
-DO: €999.50 DON’T: €999,50 
-DO: $400,456.50 DON’T: $400.456,50 
+<DoAndDont>
+  <DoAndDont.Do>
+    <DoAndDont.Item>€999.50</DoAndDont.Item>
+    <DoAndDont.Item>$400,456.50</DoAndDont.Item>
+  </DoAndDont.Do>
+  <DoAndDont.Dont>
+    <DoAndDont.Item>€999,50</DoAndDont.Item>
+	<DoAndDont.Item>$400.456,50 </DoAndDont.Item>
+  </DoAndDont.Dont>
+</DoAndDont>
 
 Never add a space between the currency symbol and the amount. 
 
-DO: $100  
-DON’T: $ 100 
+<DoAndDont>
+  <DoAndDont.Do>
+    <DoAndDont.Item>$100</DoAndDont.Item>
+  </DoAndDont.Do>
+  <DoAndDont.Dont>
+    <DoAndDont.Item>$ 100</DoAndDont.Item>
+  </DoAndDont.Dont>
+</DoAndDont>
 
 Use the ISO currency code before the number without a space.  
 
-DO: USD400 
-DON’T: 300USD 
+<DoAndDont>
+  <DoAndDont.Do>
+    <DoAndDont.Item>USD400</DoAndDont.Item>
+  </DoAndDont.Do>
+  <DoAndDont.Dont>
+    <DoAndDont.Item>300USD</DoAndDont.Item>
+  </DoAndDont.Dont>
+</DoAndDont>
 
 Use numbers and currency symbols within the UI when talking about marketing and pricing.  
 
-DO: Thank you. Your payment of $50 has been processed. 
-DO: Invest in our new soft sensors for $6,000 to boost your production efficiency.
-DO: Spare parts cost estimation for 2025 is $125,999.
-DO: The subscription costs $10 per month. 
+<DoAndDont>
+  <DoAndDont.Do>
+    <DoAndDont.Item>Thank you. Your payment of $50 has been processed.</DoAndDont.Item>
+    <DoAndDont.Item>Invest in our new soft sensors for $6,000 to boost your production efficiency.</DoAndDont.Item>
+	<DoAndDont.Item>Spare parts cost estimation for 2025 is $125,999.</DoAndDont.Item>
+	<DoAndDont.Item>The subscription costs $10 per month.</DoAndDont.Item>
+  </DoAndDont.Do>
+</DoAndDont>
 
 Write out the full word in formal and legal documents. 
 
-DO: The total amount shall not exceed four thousand dollars.  
+<DoAndDont>
+  <DoAndDont.Do>
+    <DoAndDont.Item>The total amount shall not exceed four thousand dollars.</DoAndDont.Item>
+  </DoAndDont.Do>
+</DoAndDont>
 
 ## Understand when to use the currency symbol (¥) or the currency code (JPY). 
 

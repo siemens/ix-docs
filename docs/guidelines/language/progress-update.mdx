@@ -1,85 +1,160 @@
-# Progress update text  
+---
+sidebar_label: Progress update
+title: Progress update
+doc-type: banner
+component-tabs:
+  - ""
+no_single_tab: true
+description: Progress updates are a crucial element of user interface design, serving as a bridge between system processes and user understanding. They provide essential feedback during operations that require waiting time, helping users stay informed and confident that the system is actively working on their behalf.
+---
+
+import DoAndDont from '@site/src/components/DoAndDont';
+
+# Progress update  
+
+## General rules
 
 While some companies use humorous text like “Chopping the onions…” or “Gathering your dragons…” to give users progress updates, our messages are straightforward and professional, such as "Loading…", "Saving…", or "Processing…" alongside visual indicators. 
 
 Use sentence case to align with our UX writing guidelines. 
 
-DO: Downloading assets...   
-DON’T: Downloading Assets... 
+<DoAndDont>
+	<DoAndDont.Do>
+		<DoAndDont.Item>Downloading assets…</DoAndDont.Item>
+	</DoAndDont.Do>
+	<DoAndDont.Dont>
+		<DoAndDont.Item>Downloading Assets...</DoAndDont.Item>
+	</DoAndDont.Dont>
+</DoAndDont>
 
 Use the present simple progressive (continuous, -ing) verb form to indicate ongoing actions. 
 
-DO: Loading… 
-DO: Downloading… 
-DO: Charging… 
-DO: Saving… 
-DO: Searching… 
-
-DON’T: Been loading… 
-DON’T: To be loading… 
-DON’T: Will be loading… 
+<DoAndDont>
+  <DoAndDont.Do>
+    <DoAndDont.Item>Loading…</DoAndDont.Item>
+    <DoAndDont.Item>Downloading…</DoAndDont.Item>
+    <DoAndDont.Item>Charging…</DoAndDont.Item>
+    <DoAndDont.Item>Saving…</DoAndDont.Item>
+    <DoAndDont.Item>Searching…</DoAndDont.Item>
+  </DoAndDont.Do>
+  <DoAndDont.Dont>
+    <DoAndDont.Item>Been loading…</DoAndDont.Item>
+    <DoAndDont.Item>To be loading…</DoAndDont.Item>
+    <DoAndDont.Item>Will be loading…</DoAndDont.Item>
+  </DoAndDont.Dont>
+</DoAndDont>
 
 Use verbs before nouns to focus on the action and make messages easier to scan.  
 
-DO: Loading file… 
-
-DON’T: File loading… 
+<DoAndDont>
+	<DoAndDont.Do>
+		<DoAndDont.Item>Loading file…</DoAndDont.Item>
+	</DoAndDont.Do>
+	<DoAndDont.Dont>
+		<DoAndDont.Item>File loading…</DoAndDont.Item>
+	</DoAndDont.Dont>
+</DoAndDont>
 
 Use horizontal ellipses (…) after the verb without a space. 
 
 Use the Unicode (U+2026) instead of adding three full stops (Mac Option+/Windows ALT+0133). 
-
-DO: Loading...  
-DON’T: Loading …  
-DON’T: Processing⋰ 
+<DoAndDont>
+	<DoAndDont.Do>
+		<DoAndDont.Item>Loading…</DoAndDont.Item>
+	</DoAndDont.Do>
+	<DoAndDont.Dont>
+		<DoAndDont.Item>Loading ...</DoAndDont.Item>
+		<DoAndDont.Item>Processing⋰</DoAndDont.Item>
+	</DoAndDont.Dont>
+</DoAndDont>
 
 Use ellipses for text with numbers or the object to show a running process. 
 
-DO: Uploading 5 items…  
-DO: Uploading items… 
-DO: Processing request… 
-DO: Saving settings… 
-DO: Saving changes… 
-DON’T: Uploading 1 file 
+<DoAndDont>
+  <DoAndDont.Do>
+    <DoAndDont.Item>Uploading 5 items…</DoAndDont.Item>
+    <DoAndDont.Item>Uploading items…</DoAndDont.Item>
+    <DoAndDont.Item>Processing request…</DoAndDont.Item>
+    <DoAndDont.Item>Saving settings…</DoAndDont.Item>
+    <DoAndDont.Item>Saving changes…</DoAndDont.Item>
+  </DoAndDont.Do>
+  <DoAndDont.Dont>
+    <DoAndDont.Item>Uploading 1 file</DoAndDont.Item>
+  </DoAndDont.Dont>
+</DoAndDont>
 
 Avoid ellipses to show time remaining and approximate or unknown times as they’re status indicators, not actions.  
 
-DO: 5 minutes remaining 
-DO: About 33 minutes remaining  
-DON’T: 5 minutes remaining… 
-DON’T: About 33 minutes remaining… 
+<DoAndDont>
+  <DoAndDont.Do>
+    <DoAndDont.Item>5 minutes remaining</DoAndDont.Item>
+    <DoAndDont.Item>About 33 minutes remaining</DoAndDont.Item>
+  </DoAndDont.Do>
+  <DoAndDont.Dont>
+    <DoAndDont.Item>5 minutes remaining…</DoAndDont.Item>
+    <DoAndDont.Item>About 33 minutes remaining…</DoAndDont.Item>
+  </DoAndDont.Dont>
+</DoAndDont>
 
 Change verb form without ellipses when possible in buttons with loading spinners to avoid visual clutter.  
 
-DO: Download → Downloading → Downloaded 
-DON’T: Download → Downloading… → Downloaded 
+<DoAndDont>
+	<DoAndDont.Do>
+		<DoAndDont.Item>Download → Downloading → Downloaded</DoAndDont.Item>
+	</DoAndDont.Do>
+	<DoAndDont.Dont>
+		<DoAndDont.Item>Download → Downloading… → Downloaded</DoAndDont.Item>
+	</DoAndDont.Dont>
+</DoAndDont>
 
 Use the correct verb form without using ellipses to show background processes.  
 
-DO: Download → Downloading → Downloaded 
-DON’T: Download → Downloading… → Downloaded 
+<DoAndDont>
+	<DoAndDont.Do>
+		<DoAndDont.Item>Download → Downloading → Downloaded</DoAndDont.Item>
+	</DoAndDont.Do>
+	<DoAndDont.Dont>
+		<DoAndDont.Item>Download → Downloading… → Downloaded</DoAndDont.Item>
+	</DoAndDont.Dont>
+</DoAndDont>
 
 Use specific and definitive text to make users aware of what is happening and how long the process takes.  
 
-DO: Downloading… 
-DON’T: Please wait. 
-DON’T: Thank you for waiting. 
-DON’T: Just a moment. 
+<DoAndDont>
+	<DoAndDont.Do>
+		<DoAndDont.Item>Downloading…</DoAndDont.Item>
+	</DoAndDont.Do>
+	<DoAndDont.Dont>
+		<DoAndDont.Item>Please wait…</DoAndDont.Item>
+		<DoAndDont.Item>Thank you for waiting…</DoAndDont.Item>
+		<DoAndDont.Item>Just a moment.</DoAndDont.Item>
+	</DoAndDont.Dont>
+</DoAndDont>
 
 Use informative text and actions when multiple processes are happening at the same time.   
 
-DO: Carrying out tasks… 
-DON’T: Thank you for waiting. 
-DON’T: Just a moment. 
+<DoAndDont>
+  <DoAndDont.Do>
+    <DoAndDont.Item>Carrying out tasks…</DoAndDont.Item>
+  </DoAndDont.Do>
+  <DoAndDont.Dont>
+    <DoAndDont.Item>Thank you for waiting.</DoAndDont.Item>
+    <DoAndDont.Item>Just a moment.</DoAndDont.Item>
+  </DoAndDont.Dont>
+</DoAndDont>
 
 Use transitional text to manage user expectations and reduce frustration for lengthy processes.  
 
-DO: Processing your request. This usually takes about 1–2 minutes. 
-DO: This step takes a bit longer than usual.  
-DO: We’re preparing your dashboard. Once it’s ready, you’ll be able to customize your view. 
+<DoAndDont>
+  <DoAndDont.Do>
+    <DoAndDont.Item>Processing your request. This usually takes about 1–2 minutes.</DoAndDont.Item>
+    <DoAndDont.Item>This step takes a bit longer than usual.</DoAndDont.Item>
+    <DoAndDont.Item>We're preparing your dashboard. Once it's ready, you'll be able to customize your view.</DoAndDont.Item>
+  </DoAndDont.Do>
+</DoAndDont>
 
 ## Related  
 
-Loading indicators 
-Punctuation  
-Grammar
+- Loading indicators
+- [Punctuation](punctuation.md)
+- [Grammar](grammar-and-vocabulary.md)

@@ -1,109 +1,186 @@
-# Dates 
+---
+sidebar_label: Dates
+title: Dates
+doc-type: banner
+component-tabs:
+  - ""
+no_single_tab: true
+description: Accurate dates and times are essential in industrial settings, serving as the backbone for effective scheduling, seamless coordination, and overall efficiency. Deciding on the right format to convey this information is challenging due to varying guidelines across different regions and industries.
+---
 
-Accurate dates and times are essential in industrial settings, serving as the backbone for effective scheduling, seamless coordination, and overall efficiency. Deciding on the right format to convey this information is challenging due to varying guidelines across different regions and industries. 
+import DoAndDont from '@site/src/components/DoAndDont';
+
+# Dates 
 
 ## General rules  
 
 Use the ISO 8601 date and time format standards when backend localization is not possible. 
 
-DO: 2025-04-08 (April 8, 2025) 
-DON’T: 2025/04/08 
-DO: 14:30:00 (24-hour format) 
-DON’T: 2:30 PM 
+<DoAndDont>
+  <DoAndDont.Do>
+    <DoAndDont.Item>2025-04-08 (April 8, 2025)</DoAndDont.Item>
+	<DoAndDont.Item>14:30:00 (24-hour format)</DoAndDont.Item>
+  </DoAndDont.Do>
+  <DoAndDont.Dont>
+    <DoAndDont.Item>2025/04/08</DoAndDont.Item>
+    <DoAndDont.Item>2:30 PM</DoAndDont.Item>
+  </DoAndDont.Dont>
+</DoAndDont>
 
 Add tooltips or in-line text to support users and clarify which format is being used.  
 
-DO: YYYY-MM-DD 
-DO: 24-hour format 
-
-DO: Dates are formatted as YYYY-MM-DD. For example, April 8, 2025, is written as 2025-04-08. 
-
-DO: Times are formatted in 24-hour format as HH:MM. For example, 2:30 PM is written as 14:30. 
-
-DO: Dates and times include time zones. For example, April 8, 2025, at 2:30 PM in Berlin is written as 2025-04-08T14:30:00+02:00. 
+<DoAndDont>
+	<DoAndDont.Do>
+		<DoAndDont.Item>YYYY-MM-DD</DoAndDont.Item>
+		<DoAndDont.Item>24-hour format</DoAndDont.Item>
+		<DoAndDont.Item>Times are formatted in 24-hour format as HH:MM. For example, 2:30 PM is written as 14:30.</DoAndDont.Item>
+		<DoAndDont.Item>Dates and times include time zones. For example, April 8, 2025, at 2:30 PM in Berlin is written as 2025-04-08T14:30:00+02:00.</DoAndDont.Item>
+	</DoAndDont.Do>
+</DoAndDont>
 
 Avoid adding unnecessary punctuation to abbreviated dates.  
 
-DO: Jan  
-DON’T: Jan. 
+<DoAndDont>
+	<DoAndDont.Do>
+		<DoAndDont.Item>Jan</DoAndDont.Item>
+	</DoAndDont.Do>
+	<DoAndDont.Dont>
+		<DoAndDont.Item>Jan.</DoAndDont.Item>
+	</DoAndDont.Dont>
+</DoAndDont>
 
 ## Dates 
 
 Write out full dates using commas to separate elements within longer texts and paragraphs. 
 
-DO: Monday, January 12, 2025 
-DONT: Monday: January 12th: 2025 
+<DoAndDont>
+	<DoAndDont.Do>
+		<DoAndDont.Item>Monday, January 12, 2025</DoAndDont.Item>
+	</DoAndDont.Do>
+	<DoAndDont.Dont>
+		<DoAndDont.Item>Monday: January 12th: 2025</DoAndDont.Item>
+	</DoAndDont.Dont>
+</DoAndDont>
 
 Write out dates with the abbreviated form using dashes (hyphens) instead of slashes for better readability. 
 
-DO: Aug-26-2025 
-DON’T: Aug/26/2025 
-DO: Apr-09-2025 DON’T: Apr 09/2025  
+<DoAndDont>
+	<DoAndDont.Do>
+		<DoAndDont.Item>Dec-26-2025</DoAndDont.Item>
+		<DoAndDont.Item>Apr-09-2025</DoAndDont.Item>
+	</DoAndDont.Do>
+	<DoAndDont.Dont>
+		<DoAndDont.Item>Apr/09/2025</DoAndDont.Item>
+		<DoAndDont.Item>Apr 09/2025</DoAndDont.Item>
+	</DoAndDont.Dont>
+</DoAndDont>
 
 Write dates in tables using abbreviated months to avoid confusion and the need for further tooltips or explanation. 
 
-DO: Apr-09 
-DON’T: 04-09  
+<DoAndDont>
+	<DoAndDont.Do>
+		<DoAndDont.Item>Apr-09</DoAndDont.Item>
+	</DoAndDont.Do>
+	<DoAndDont.Dont>
+		<DoAndDont.Item>04-09</DoAndDont.Item>
+	</DoAndDont.Dont>
+</DoAndDont>
 
 Avoid using “st” (as in 1st) or “th” (as in 5th) for a cleaner user interface. 
 
-DO: Monday, January 12, 2025 
-DONT: Monday, January 12th, 2025 
+<DoAndDont>
+	<DoAndDont.Do>
+		<DoAndDont.Item>Monday, January 12, 2025</DoAndDont.Item>
+	</DoAndDont.Do>
+	<DoAndDont.Dont>
+		<DoAndDont.Item>Monday, January 12th, 2025</DoAndDont.Item>
+	</DoAndDont.Dont>
+</DoAndDont>
 
 ## Days 
 
-Start all days with a capital letter. 
+Start all days with a capital letter. Use three-letter abbreviations without punctuation when there isn’t enough space. 
 
-DO: Monday, Tuesday, Wednesday, etc.. 
-
-Use three-letter abbreviations without punctuation when there isn’t enough space. 
-
-DO: Mon  
-DON’T: Mon. 
+<DoAndDont>
+	<DoAndDont.Do>
+		<DoAndDont.Item>Monday, Tuesday, Wednesday, etc.</DoAndDont.Item>
+		<DoAndDont.Item>Mon</DoAndDont.Item>
+	</DoAndDont.Do>
+	<DoAndDont.Dont>
+		<DoAndDont.Item>Mon.</DoAndDont.Item>
+	</DoAndDont.Dont>
+</DoAndDont>
 
 ## Weeks 
 
 Avoid calendar weeks (CW) whenever possible as these are very specific to certain regions. 
 
-DO: Week 15 (April 7 – April 13, 2025) 
-DON’T: CW 15 (15th week of the year) 
-DON’T: CW 15/2025 (15th calendar week of the year 2025) 
-DON’T: Calendar week 05 in year 2025 
+<DoAndDont>
+	<DoAndDont.Do>
+		<DoAndDont.Item>Week 15 (April 7 – April 13, 2025)</DoAndDont.Item>
+	</DoAndDont.Do>
+	<DoAndDont.Dont>
+		<DoAndDont.Item>CW 15 (15th week of the year)</DoAndDont.Item>
+		<DoAndDont.Item>CW 15/2025 (15th calendar week of the year 2025)</DoAndDont.Item>
+		<DoAndDont.Item>Calendar week 05 in year 2025</DoAndDont.Item>
+	</DoAndDont.Dont>
+</DoAndDont>
 
 ## Months 
 
-Start all months with a capital letter.  
+Start all months with a capital letter. Use three-letter abbreviations without punctuation when there isn’t enough space.  
 
-DO: January, February, March, etc.  
-
-Use three-letter abbreviations without punctuation when there isn’t enough space.  
-
-DO: Jan 
-DON’T: Jan. 
+<DoAndDont>
+	<DoAndDont.Do>
+		<DoAndDont.Item>January, February, March, etc.</DoAndDont.Item>
+		<DoAndDont.Item>Jan</DoAndDont.Item>
+	</DoAndDont.Do>
+	<DoAndDont.Dont>
+		<DoAndDont.Item>Jan.</DoAndDont.Item>
+	</DoAndDont.Dont>
+</DoAndDont>
 
 ## Years 
 
 Use the four-digit format and never abbreviate in industrial applications.  
 
-DO: 2023 
-DON’T: ‘23 
+<DoAndDont>
+	<DoAndDont.Do>
+		<DoAndDont.Item>2023</DoAndDont.Item>
+	</DoAndDont.Do>
+	<DoAndDont.Dont>
+		<DoAndDont.Item>’23</DoAndDont.Item>
+	</DoAndDont.Dont>
+</DoAndDont>
 
 ## Decades 
 
 Use plural -s when talking about decades.  
 
-DO: 1980s 
-DON’T: 1980’s 
+<DoAndDont>
+	<DoAndDont.Do>
+		<DoAndDont.Item>1980s</DoAndDont.Item>
+	</DoAndDont.Do>
+	<DoAndDont.Dont>
+		<DoAndDont.Item>1980’s</DoAndDont.Item>
+	</DoAndDont.Dont>
+</DoAndDont>
 
 ## Centuries 
 
 Use “th” and “nd” to reference centuries with ordinals without using superscript.  
 
-DO: Welcome to the 21st century of industrial innovation! Our app uses AI to deliver efficiency in your operations. 
-DON’T: Welcome to the 21st century of industrial innovation! Our app uses AI to deliver efficiency in your operations. 
+<DoAndDont>
+	<DoAndDont.Do>
+		<DoAndDont.Item>Welcome to the 21st century of industrial innovation! Our app uses AI to deliver efficiency in your operations.</DoAndDont.Item>
+	</DoAndDont.Do>
+	<DoAndDont.Dont>
+		<DoAndDont.Item>Welcome to the 21st century of industrial innovation! Our app uses AI to deliver efficiency in your operations.</DoAndDont.Item>
+	</DoAndDont.Dont>
+</DoAndDont>
 
 ## Related  
 
-- Date input
-- Date picker
-- Time input
+- [Date input](../../components/input-date/index.mdx)
+- [Date picker](../../components/date-picker/index.mdx)
+- [Time input](../../components/input-time/index.mdx)
