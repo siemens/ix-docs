@@ -7,7 +7,7 @@ The navigation menu is an essential part of your application. It offers a way to
 ![Navigation menu collapsed and expanded](https://www.figma.com/design/wEptRgAezDU1z80Cn3eZ0o/iX-Pattern-Illustrations?type=design&node-id=990-122297&mode=design&t=JbZngO5IAS8hvpTb-11)
 
 1. Expand/collapse icon button: Expands and collapses the navigation menu.
-2. [Avatar button](#avatar-button): Shows the logged-in user and provides access to user-related actions (optional)  
+2. [Avatar button](#avatar-button): Shows the logged-in user and provides access to user-related actions (optional)
    **Please note:** Only basic navigation and map navigation still use the avatar at this position. The new [application](../application-header).
 3. Navigation section: Navigates through the main parts of an application.
 4. [Bottom section](#bottom-section): Hosts infrastructural actions and additional content but does not navigate away from the selected main part.
@@ -16,8 +16,13 @@ The navigation menu is an essential part of your application. It offers a way to
 
 ### Avatar button
 
-The avatar button is optional. It shows information about the logged-in user. When collapsed it shows only the avatar, and when expanded it shows additional user information. A dropdown menu with user-related actions appears when selecting (note the available actions are specific to each application). The log out item is available by default.  
-**Please note:** Only basic navigation and map navigation still use the avatar in the navigation menu. The new [application](../application-header).
+The avatar button is optional. It shows information about the logged-in user. When collapsed it shows only the avatar and when expanded it shows additional user information. A dropdown menu with user-related actions appears when selecting (note the available actions are specific to each application). The log out item is available by default.
+
+:::info
+
+Only basic navigation and map navigation still use the avatar in the navigation menu. We now recommend to use the [application header](../application-header) and place the avatar button in the top right corner instead.
+
+:::
 
 ![Avatar dropdown menu](https://www.figma.com/design/wEptRgAezDU1z80Cn3eZ0o/iX-Pattern-Illustrations?type=design&node-id=1013-70909&mode=design&t=Ch2wsi2EtQ3sPBpS-11)
 
@@ -61,25 +66,23 @@ Items in this section do not navigate away from the current content. They either
 
 ## Options
 
-**Avatar button**
+### Avatar button
 - **Top:** Defines the first line of the additional user information. We typically use this to show primary user information (first and last name or username), depending on the available information. Overflows are clipped with an ellipsis (...).
 - **Bottom:** Defines the second line of additional user information, used to show secondary information, for example user role. Overflows are clipped with an ellipsis (...).
 - **Initials:** Shows avatar with initials.
 - **Image:** Shows avatar with images.
 
-**Menu items and menu category**
+### Menu items and menu category
 - **Notifications:** Displays a number at the top right corner of the icon (2).
 - **Icon:** Defines the icon for the menu item or menu category.
 - **Label:** Defines the name of the menu item or menu category, which is visible when the navigation menu is expanded.
 - **Selected:** Marks the menu item as selected, which highlights it in the navigation menu.
-- **Tooltip:** By default, the 
+- **Tooltip text:** By default, the tooltip will show the label of the menu item or menu category. You can override this with custom text to give additional context if the label alone is not sufficient.
 
-**Navigation menu options**
+### Navigation menu
 - **Enable settings:** Shows the settings icon (gear wheel) in the bottom section, it opens the [settings](../settings) overlay and the content can be freely defined.
 - **Enable toggle theme:** Shows the theme toggle icon, offers an easy and direct way to toggle between light and dark themes. We don’t typically use this when dedicated theme settings are available elsewhere, e.g. in the settings overlay.
 - **Enable map expand:** Only relevant for [map navigation](../../legacy/map-navigation), shows an icon that expands/collapses the side panel of the map navigation.
-
-See the code tab for more information and other options available.
 
 ## Behavior
 
@@ -87,13 +90,13 @@ See the code tab for more information and other options available.
 
 - Navigation menu expands and collapses with a transition.
 - The width of the collapse and expand state are fixed and cannot be configured.
-- The number of menu items can overflow, this is recognizable by the shadow at the bottom and/or top.
-
-<br></br>
+- The number of menu items can overflow with a vertical scroll, this is recognizable by the shadow at the bottom and/or top.
+- On hover, a tooltip is shown that displays the label of the menu item or menu category by default.
 
 ## Dos and Don’ts
 
 - Do use icons in second-level navigation items when it helps users to better understand and recognize them
+- Do use a custom tooltip text if the label is so long that it gets truncated or needs additional context
 - Don’t mix menu items with and without icons within a second-level navigation category
 - Don’t place non-navigational items in the navigation section
 - Don’t place navigation items in the bottom section as items in the bottom section must not navigate away from the current context
