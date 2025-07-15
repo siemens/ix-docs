@@ -16,9 +16,7 @@ the workplace, as well as their self-determined participation and respectful tre
 _[...] It is generally agreed that hardware, software and IT media have to be accessible thus people with disabilities can
 access and use them in the normal way, without difficulty, and generally without any external assistance[...]"_
 
-Even more business relevant for Siemens is the offering of accessible ICT products and services to customers. Public
-sector bodies are forced by regulation in Europe and north America to buy accessible solutions, where accessibility is a
-procurement criterion.
+Even more business relevant for Siemens is the offering of accessible ICT products and services to customers. Public sector bodies are forced by regulation in Europe and north America to buy accessible solutions, where accessibility is a procurement criterion.
 
 ## Our commitment as a design system
 
@@ -36,7 +34,7 @@ A comprehensible quick reference on how to meet Web Content Accessibility Guidel
 
 Web Content Accessibility Guidelines (WCAG) explains how to make web content more accessible to people with disabilities. WCAG covers web sites, applications, and other digital content. It is developed by the World Wide Web Consortium (W3C) Web Accessibility Initiative (WAI). WCAG is an international standard.
 
-The four main guiding principles of accessibility within WCAG are perceivable, operable, understandable, and robust. These overarching principles contain clear guidelines for creating and presenting WCAG-compliant digital content. 
+The four main guiding principles of accessibility within WCAG are perceivable, operable, understandable, and robust. These overarching principles contain clear guidelines for creating and presenting WCAG-compliant digital content.
 
 There are three levels of conformance:
 - Level A is the minimum level.
@@ -64,16 +62,15 @@ Provide text alternatives for non-text content. It allows content to be adapted 
 
 **Example**: Use ARIA tags to ensure that your content is accessible and understandable to all users, including those using assistive technologies.
 
-| ARIA tag | Description | 
+| ARIA tag | Description |
 | :----------------- | :------------ |
 | `aria-label` | Provides an accessible name for an element. |
 | `aria-labelledby`  | Identifies one or more elements that provide the accessible name for an element. It is often used when the label is already present on the page. |
 | `aria-describedby` | Identifies the element that provides a description for the element it is applied to. |
 
-
 ### Create adaptable content
 
-Design and implement content that can be presented in various ways, such as a simpler layout, without losing information or structure. This flexibility allows users to access and understand content regardless of their specific needs or the devices they are using ([WCAG reference 1.3](https://www.w3.org/WAI/WCAG22/quickref/?showtechniques=141%2C131#adaptable)). 
+Design and implement content that can be presented in various ways, such as a simpler layout, without losing information or structure. This flexibility allows users to access and understand content regardless of their specific needs or the devices they are using ([WCAG reference 1.3](https://www.w3.org/WAI/WCAG22/quickref/?showtechniques=141%2C131#adaptable)).
 
 - Ensure information is available in text or can be programmatically determined
 - Allow both landscape and portrait orientations
@@ -88,7 +85,7 @@ Design and implement content that can be presented in various ways, such as a si
 
 ### Combine color and contrast
 
-In industrial software applications, color significantly enhances the visual communication of information. Nonetheless, it is essential to account for users with limited vision or color blindness. Use color combinations ([WCAG reference 1.4](https://www.w3.org/WAI/WCAG22/quickref/?showtechniques=141%2C131#distinguishable)) that meet accessibility standards for contrast to make it easier for users to see content, including separating foreground from background. 
+In industrial software applications, color significantly enhances the visual communication of information. Nonetheless, it is essential to account for users with limited vision or color blindness. Use color combinations ([WCAG reference 1.4](https://www.w3.org/WAI/WCAG22/quickref/?showtechniques=141%2C131#distinguishable)) that meet accessibility standards for contrast to make it easier for users to see content, including separating foreground from background.
 
 #### Use text on background
 
@@ -130,12 +127,12 @@ While the components in our design system are built to meet baseline contrast re
 
 ### Provide keyboard usage
 
-Every feature in your industrial software needs to be operable via a keyboard ([WCAG reference 2.1](https://www.w3.org/WAI/WCAG22/quickref/?showtechniques=141%2C131#keyboard-accessible)). This approach supports users who prefer or need to use keyboard controls, and cannot rely on mouse or touch. 
+Every feature in your industrial software needs to be operable via a keyboard ([WCAG reference 2.1](https://www.w3.org/WAI/WCAG22/quickref/?showtechniques=141%2C131#keyboard-accessible)). This approach supports users who prefer or need to use keyboard controls, and cannot rely on mouse or touch.
 
 - Annotate tab order
 - Annotate keyboard interaction
 - Ensure all components are operable by keyboard
-- Follow ARIA keyboard guidance for custom components ([ARIA reference](https://www.w3.org/WAI/ARIA/apg/)) 
+- Follow ARIA keyboard guidance for custom components ([ARIA reference](https://www.w3.org/WAI/ARIA/apg/))
 
 **Example**: Annotate tab order to allow the navigation of interactive elements by pressing the Tab key. The standard behavior follows the reading order from left to right and top to bottom.
 
@@ -158,7 +155,7 @@ Ensure that users have sufficient time to read and interact with the content in 
 
 ### Implement navigable aids
 
-Navigation aids help users find content and understand their location within your applications ([WCAG reference 2.4](https://www.w3.org/WAI/WCAG22/quickref/?showtechniques=141%2C131#navigable)). This includes features like breadcrumbs, search functionality, and clear labeling to enhance user experience and efficiency. 
+Navigation aids help users find content and understand their location within your applications ([WCAG reference 2.4](https://www.w3.org/WAI/WCAG22/quickref/?showtechniques=141%2C131#navigable)). This includes features like breadcrumbs, search functionality, and clear labeling to enhance user experience and efficiency.
 
 - Use headings properly (`<h1>` ... `<h6>`)
 - Provide descriptive page titles
@@ -210,7 +207,7 @@ Create consistent and intuitive applications that behave as users expect. Ensure
 - Ensure predictable patterns on input and focus
 - Keep button styles consistent
 
-**Example**: Using the application frame ensures that the main navigation is always in the same location. 
+**Example**: Using the application frame ensures that the main navigation is always in the same location.
 
 ![Application frame](https://www.figma.com/design/wEptRgAezDU1z80Cn3eZ0o/iX-Documentation-illustrations?node-id=5402-18219&t=JzJxfVEhA9XmeCtN-4)
 
@@ -244,4 +241,3 @@ Build your application with clean, standards-compliant code that ensures compati
 **Example**: Test whether content is readable and functional when zooming in to at least 200%, ensuring users with visual impairments can effectively use your application.
 
 ![Page zoom](https://www.figma.com/design/wEptRgAezDU1z80Cn3eZ0o/iX-Documentation-illustrations?node-id=5402-18199&t=JzJxfVEhA9XmeCtN-4)
-
