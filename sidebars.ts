@@ -732,9 +732,27 @@ const sidebars: SidebarsConfig = {
           ],
         }),
         createTabItem({
+          id: 'components/input-time/index',
+          label: 'Time input',
+          items: [
+            {
+              id: 'components/input-time/guide',
+              label: 'Usage',
+            },
+            {
+              id: 'components/input-time/code',
+              label: 'Code',
+            },
+          ],
+        }),
+        createTabItem({
           id: 'components/time-picker/index',
           label: 'Time picker',
           items: [
+            {
+              id: 'components/time-picker/guide',
+              label: 'Usage',
+            },
             {
               id: 'components/time-picker/code',
               label: 'Code',
@@ -944,6 +962,20 @@ const sidebars: SidebarsConfig = {
           items: [
             {
               id: 'components/tooltip/code',
+              label: 'Code',
+            },
+          ],
+        }),
+        createTabItem({
+          id: 'components/progress-indicator/index',
+          label: 'Progress indicator',
+          items: [
+            {
+              id: 'components/progress-indicator/guide',
+              label: 'Usage',
+            },
+            {
+              id: 'components/progress-indicator/code',
               label: 'Code',
             },
           ],
