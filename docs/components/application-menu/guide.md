@@ -1,90 +1,33 @@
 ---
 doc-type: 'tab-item'
 ---
-
 The navigation menu is an essential part of your application. It offers a way to directly navigate to the main application parts and it can give your users access to legal and version information, and access to settings.
 
-![Navigation menu collapsed and expanded](https://www.figma.com/design/wEptRgAezDU1z80Cn3eZ0o/iX-Pattern-Illustrations?type=design&node-id=990-122297&mode=design&t=JbZngO5IAS8hvpTb-11)
+![Navigation menu collapsed and expanded](https://www.figma.com/design/wEptRgAezDU1z80Cn3eZ0o/iX-Documentation-illustrations?node-id=990-122297&t=ePzRHLjXBksLOgto-4)
 
-1. Expand/collapse icon button: Expands and collapses the navigation menu.
-2. [Avatar button](#avatar-button): Shows the logged-in user and provides access to user-related actions (optional)
-   **Please note:** Only basic navigation and map navigation still use the avatar at this position. The new [application](../application-header).
-3. Navigation section: Navigates through the main parts of an application.
-4. [Bottom section](#bottom-section): Hosts infrastructural actions and additional content but does not navigate away from the selected main part.
-
-## Atoms
-
-### Avatar button
-
-The avatar button is optional. It shows information about the logged-in user. When collapsed it shows only the avatar and when expanded it shows additional user information. A dropdown menu with user-related actions appears when selecting (note the available actions are specific to each application). The log out item is available by default.
-
-:::info
-
-Only basic navigation and map navigation still use the avatar in the navigation menu. We now recommend to use the [application header](../application-header) and place the avatar button in the top right corner instead.
-
-:::
-
-![Avatar dropdown menu](https://www.figma.com/design/wEptRgAezDU1z80Cn3eZ0o/iX-Pattern-Illustrations?type=design&node-id=1013-70909&mode=design&t=Ch2wsi2EtQ3sPBpS-11)
-
-### Menu item and menu category
-
-Menu items represent the main parts of an application. They have an icon for quick visual identification. When the navigation menu is expanded, the full name of the item is visible.
-
-Menu categories can host menu items as a second navigation level.
-
-![Navigation item](https://www.figma.com/design/wEptRgAezDU1z80Cn3eZ0o/iX-Pattern-Illustrations?type=design&node-id=998-67465&mode=design&t=puecEZZMJ24R1ngI-11)
-
-1. Selected item
-2. Item with notification
-3. Unselected item
-4. Menu category, holds menu items as a second level navigation (on selection, the second level items appear)
-5. Second level navigation menu, appears when navigation menu is collapsed
-6. Second level navigation expanded inline, appears when navigation menu is expanded
-
-![Selected navigation item with sub-items](https://www.figma.com/design/wEptRgAezDU1z80Cn3eZ0o/iX-Pattern-Illustrations?type=design&node-id=1005-10267&mode=design&t=ljAWsgheUZngQeQG-11)
-
-7. Menu category appears selected if one of its children items is selected
-8. When second level menu items are visible, the currently selected item also appears selected
-
-![Second level items with icons](https://www.figma.com/design/wEptRgAezDU1z80Cn3eZ0o/iX-Pattern-Illustrations?type=design&node-id=2062-21146&mode=design&t=E5f1YhpwznaV7Qjk-11)
-
-Second level items with icons in collapsed (9) and expanded (10) navigation menu
-
-We usually don’t use icons on the second navigation level as in most cases it won’t add any value for users. But it is allowed to use icons if it helps users to better understand and recognize the items. Don’t mix items with and without icon within a category.
-
-### Bottom section
-
-Items in this section do not navigate away from the current content. They either toggle states, e.g. light and dark mode, or open a layer over the current content. This means users do not lose their current workflow by interacting with these items.
-
-![Bottom section icons](https://www.figma.com/design/wEptRgAezDU1z80Cn3eZ0o/iX-Pattern-Illustrations?type=design&node-id=1005-10817&mode=design&t=ljAWsgheUZngQeQG-11)
-
-1. Settings: Opens the [settings](../settings) overlay.
-2. Toggle theme: Toggles between light and dark themes.
-3. Custom item
-4. About & legal information: Opens the [about & legal](../about-and-legal) overlay to display legal information, release notes, license information, etc.
-5. Collapse/expand side panel: Only relevant for [map navigation](../../legacy/map-navigation).
+1. Expand/collapse icon button
+2. Main navigation section
+3. Bottom section
+4. Selected item
+5. Item with notification
+6. Second level navigation menu
+7. [Settings](../settings)
+8. Toggle theme
+9. Custom item
+10. [About & legal](../about-and-legal)
 
 ## Options
 
-### Avatar button
-- **Top:** Defines the first line of the additional user information. We typically use this to show primary user information (first and last name or username), depending on the available information. Overflows are clipped with an ellipsis (...).
-- **Bottom:** Defines the second line of additional user information, used to show secondary information, for example user role. Overflows are clipped with an ellipsis (...).
-- **Initials:** Shows avatar with initials.
-- **Image:** Shows avatar with images.
-
-### Menu items and menu category
-- **Notifications:** Displays a number at the top right corner of the icon (2).
-- **Icon:** Defines the icon for the menu item or menu category.
-- **Label:** Defines the name of the menu item or menu category, which is visible when the navigation menu is expanded.
-- **Selected:** Marks the menu item as selected, which highlights it in the navigation menu.
-- **Tooltip text:** By default, the tooltip will show the label of the menu item or menu category. You can override this with custom text to give additional context if the label alone is not sufficient.
-
-### Navigation menu
-- **Enable settings:** Shows the settings icon (gear wheel) in the bottom section, it opens the [settings](../settings) overlay and the content can be freely defined.
-- **Enable toggle theme:** Shows the theme toggle icon, offers an easy and direct way to toggle between light and dark themes. We don’t typically use this when dedicated theme settings are available elsewhere, e.g. in the settings overlay.
-- **Enable map expand:** Only relevant for [map navigation](../../legacy/map-navigation), shows an icon that expands/collapses the side panel of the map navigation.
-
-## Behavior
+- **Navigation menu:**
+	- **Enable settings:** Show the settings item in the bottom section which opens the [settings](../settings) overlay.
+	- **Enable toggle theme:** Use the option to offer your users an easy and direct way to toggle between light and dark themes. We typically don’t use it when dedicated theme settings are available elsewhere e.g. in the [settings](../settings) overlay.
+- **Menu items and menu category:**
+	- **Notifications:** Display a number at the top right corner of the icon.
+	- **Icon:** Define an icon for an item. We recommend to using icons in submenu items rarely since they often don't add any value.
+	- **Label:** Define the name of the menu item or menu category which is visible when the navigation menu is expanded.
+	- **Selected:** Mark a menu item as selected which highlights it in the navigation menu.
+	- **Tooltip text:** By default, the tooltip will show the label of the menu item or menu category. Override it with custom text to give additional context if the label alone is not sufficient.
+## Behavior in context
 
 ![Navigation menu overflow behavior](https://www.figma.com/design/wEptRgAezDU1z80Cn3eZ0o/iX-Pattern-Illustrations?type=design&node-id=1013-68267&mode=design&t=RG8M7S3eIKxiDqv5-11)
 
@@ -92,7 +35,10 @@ Items in this section do not navigate away from the current content. They either
 - The width of the collapse and expand state are fixed and cannot be configured.
 - The number of menu items can overflow with a vertical scroll, this is recognizable by the shadow at the bottom and/or top.
 - On hover, a tooltip is shown that displays the label of the menu item or menu category by default.
+- Items in the bottom section do not navigate away from the current content. They either toggle states, e.g. light and dark mode, or open a layer over the current content. This means users do not lose their current workflow by interacting with these items.
 
+## States
+The application menu has two states: collapsed and expanded. The appearance of the states varies between screen sizes.
 ## Dos and Don’ts
 
 - Do use icons in second-level navigation items when it helps users to better understand and recognize them
