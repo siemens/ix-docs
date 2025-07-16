@@ -73,7 +73,7 @@ Clicking the avatar opens a dropdown (1) with additional user information (2, 3,
 
 If your application can be used without being logged in to, you can offer access to a login process in different ways, for example:
 
-- Show a log in button in the [slot for additional elements](#slot) and hide the avatar.
+- Show a log in button in the slot for additional elements and hide the avatar.
 - Show the avatar with a placeholder image and show text in the user information section.
 
 :::info
