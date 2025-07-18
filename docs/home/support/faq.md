@@ -91,6 +91,11 @@ Our codebase is openly and freely accessible for anyone to view, modify and dist
 We are working towards meeting the WCAG (Web Content Accessibility Guidelines) and other relevant accessibility standards. Our team is dedicated to ensuring that our design system is accessible to all users. While we’re still in the process of fully aligning with these guidelines, we have made significant progress and are continuously improving our accessibility features. We appreciate your patience and understanding as we strive to achieve full compliance. For specific accessibility concerns or updates on our progress, please feel free to reach out to our team.
 </Accordion>
 
-<Accordion title="How does the release schedule work?" id="release-info" showBorderBottom>
+<Accordion title="How does the release schedule work?" id="release-info">
 The Siemens Industrial Experience design team provides a transparent versioning and release process. For more details on our versioning, release types, frequency, and support policies, visit our [Roadmap](https://ix.siemens.io/docs/roadmap) and [Versioning and release](https://ix.siemens.io/docs/release-info).
 </Accordion>
+
+<Accordion title="Can I use the design system to build my documentation?" id="docu-theme" showBorderBottom>
+The Siemens Industrial Experience design system is intended for building industrial applications. If you are a Siemens AG employee looking to create a documentation website, use the [official MkDocs theme](https://code.siemens.com/code-ops/docs-theme) for documentation purposes. This ensures consistency and alignment with Siemens documentation standards.
+</Accordion>
+
