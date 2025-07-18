@@ -35,7 +35,8 @@ Here’s what’s happening over the next year so you know what to expect from y
 ### ⏳ Planned / Without specific timeline
 - **Enhanced ix-modal**: Improving our modal component to provide a more flexible and user-friendly experience. This includes better usage together with the ix-toast, more styling options and enhanced functionality.
 - **Styles and design tokens**: Introducing a new design token structure with clearer and consistent naming for colors. Additionally, providing detailed style chapters on animations, borders and typography.
-**🔹 Major release 4.0**: Planned for Q3, see info on [beta versions](https://ix.siemens.io/docs/installation/CHANGELOG) & [release strategy](https://ix.siemens.io/docs/release-info)
+
+**🔹 Major release 4.0**: Planned for Q3, see info on [release strategy](./release-version.md)
 
 ### ✏️ Conceptual / Early stage of consideration
 - **Updated demo application**: Providing an updated demo application showcasing how to effectively utilize the best-of-the-best components. This demo will serve as a practical guide, helping project teams integrate these components seamlessly into their projects.
