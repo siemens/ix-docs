@@ -17,7 +17,7 @@ The About and legal component appears when users click on the "About and legal" 
 ## Options
 
 - **Tabs:** Use tabs with meaningful labels to separate content into categories.
-- **Label of about menu:** Title that is shown in the content header. We recommend to use the default "About & legal information".
+- **Label:** Title that is shown in the content header. We recommend to use the default "About & legal information".
 - **Content:** Add information about the application e.g. version, author, copyright. It can also include legal information e.g. terms of service, privacy policy.
 
 ## Behavior
@@ -33,5 +33,5 @@ The overlay can be closed in three ways:
 When the navigation menu is collapsed, the overlay stays open.
 
 :::info
-The About and Legal components require specific content to comply with Siemens AG regulations. The official content and guidelines are exclusively available for Siemens AG employees and can be accessed [here](https://code.siemens.com/siemens-ix/ix-brand-theme/apps/documentation/src/pages/about-legal-information.md).
+The About and Legal components require specific content to comply with Siemens AG regulations. The official content and guidelines are exclusively available for Siemens AG employees and can be accessed [here](https://code.siemens.com/siemens-ix/ix-brand-theme/-/blob/af74de1ec3c7d9b1fdd6e06e9c0c6eadefaf695b/apps/documentation/src/pages/about-legal-information.md).
 :::
