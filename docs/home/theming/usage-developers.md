@@ -44,6 +44,8 @@ The default theme is `theme-classic-dark`. To set a different theme, change the 
 </html>
 ```
 
+Avoid mixing the class-based approach with `data-` attributes, as this will cause redundant CSS custom properties to be loaded.
+
 ## Using the old classic theme
 
 The original classic theme was deprecated in favor of an updated version that is more easily maintainable for us.
