@@ -2,22 +2,6 @@
 doc-type: 'tab-item'
 ---
 
-## Introduction
-
-An aging society and a resulting prolonged work lifetime causes that more people with reduced abilities or disabilities
-are employed. Consequently our software and services shall be usable and accessible for these user groups providing equal
-access and equal opportunities by complying to accessibility standards and, in some countries, respective regulation.
-
-The Siemens Inclusion Agreement from 2018 underlines the importance of accessible ICT:
-
-_"Siemens is committed to ensuring equal opportunities for people with disabilities, their inclusion in society and in
-the workplace, as well as their self-determined participation and respectful treatment_
-
-_[...] It is generally agreed that hardware, software and IT media have to be accessible thus people with disabilities can
-access and use them in the normal way, without difficulty, and generally without any external assistance[...]"_
-
-Even more business relevant for Siemens is the offering of accessible ICT products and services to customers. Public sector bodies are forced by regulation in Europe and north America to buy accessible solutions, where accessibility is a procurement criterion.
-
 ## Our commitment as a design system
 
 We are committed that our deliverables qualify for building solutions that are accessible for everyone. We strive to meet **WCAG AA standards** with providing perceivable, operable, and understandable components that follow our accessibility checklist.
