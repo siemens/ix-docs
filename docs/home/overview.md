@@ -32,7 +32,7 @@ Siemens Industrial Experience provides and maintains a Figma design kit containi
   <Card link="home/installation/angular"><AngularIcon className="Card_Icon" />Angular</Card>
   <Card link="home/installation/react"><ReactIcon className="Card_Icon" />React</Card>
   <Card link="home/installation/javascript"><WebComponentsIcon className="Card_Icon" />Web Components</Card>
-  <Card link="home/installation/vue"><VueIcon className="Card_Icon" />Vue&nbsp;<span style={{fontSize: '0.8rem'}}>(experimental)</span></Card>
+  <Card link="home/installation/vue"><VueIcon className="Card_Icon" />Vue</Card>
   <Card link="home/installation/blazor"><BlazorIcon className="Card_Icon" />Blazor&nbsp;<span style={{fontSize: '0.8rem'}}>(experimental)</span></Card>
 </CardList>
 
