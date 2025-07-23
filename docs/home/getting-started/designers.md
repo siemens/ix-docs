@@ -24,7 +24,7 @@ Use the horizontal navigation in the header to quickly access the desired topic.
 
 Our **Figma library** contains all designed components, styles, and blueprints ready for app design.
 
-- The **Figma library** is maintained within the Siemens AG Global account.
+- The **Figma library** is maintained within the Siemens AG Global account. As a Siemens employee with a Figma license, please search for "iX Design System" in Figma to access the library.
 - Siemens employees can use the self-service to obtain a Figma license. For guest access please contact us.
 - The **Figma library** contains Siemens specific brand elements and is only accessible to Siemens employees and business partners. [Get more information here](https://siemens-ix.code.siemens.io/ix-brand-theme/)
 - For the classic theme **Figma library** (open source) please [contact us](./../support/contact-us.md).
