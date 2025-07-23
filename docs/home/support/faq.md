@@ -5,7 +5,7 @@ title: FAQ
 doc-type: 'banner'
 component-tabs: ['']
 no_single_tab: true
-description: "Welcome to the Industrial Experience design system FAQ. These are your go-to resource for quick and clear answers about Industrial Experience. Whether you’re just starting with the design system or need insights into integration and functionality, you’ll find answers to the most common questions here. If you can’t find what you’re looking for, feel free to reach out. The FAQ are continuously updated, and we welcome suggestions for improvement via email to our support team. Thank you for choosing to use Siemens Industrial Experience."
+description: 'Welcome to the Industrial Experience design system FAQ. These are your go-to resource for quick and clear answers about Industrial Experience. Whether you’re just starting with the design system or need insights into integration and functionality, you’ll find answers to the most common questions here. If you can’t find what you’re looking for, feel free to reach out. The FAQ are continuously updated, and we welcome suggestions for improvement via email to our support team. Thank you for choosing to use Siemens Industrial Experience.'
 ---
 
 import Accordion from '@site/src/components/Accordion';
@@ -72,7 +72,7 @@ Users are free to utilize open-source libraries at their discretion. However, cu
 </Accordion>
 
 <Accordion title="What kind of framework support is there?" id="framework-support">
-Our design system is built with plain Web Components and is, therefore, framework agnostic. For better integration, we provide support for some of the most popular web development frameworks in Angular, React and Vue (experimental). You can find more information about our frameworks [here](https://ix.siemens.io/docs/installation/).
+Our design system is built with plain Web Components and is, therefore, framework agnostic. For better integration, we provide support for some of the most popular web development frameworks in Angular, React and Vue. You can find more information about our frameworks [here](https://ix.siemens.io/docs/installation/).
 </Accordion>
 
 <Accordion title="What does open source mean within our design system?" id="open-source" showBorderBottom>
