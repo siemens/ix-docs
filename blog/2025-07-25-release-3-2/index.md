@@ -23,7 +23,7 @@ We’ll also give you a sneak peek at what’s coming in the upcoming 4.0 major 
 
 ![Time input](./2507_blog_timepicker.png)
 
-The redesigned time picker introduces a smoother, more intuitive experience with scrollable values and one-click selection for hours minutes, seconds and milliseconds. This makes it easier and faster for users to select precise times, especially on touch devices. Learn more in the [usage guide](/docs/components/time-picker/guide).
+The redesigned time picker introduces a smoother, more intuitive experience with scrollable values and one-click selection for hours, minutes, seconds, and milliseconds. This makes it easier and faster for users to select precise times, especially on touch devices. Learn more in the [usage guide](/docs/components/time-picker/guide).
 
 Built on top of the new time picker, the new **time input** component is fully form-ready and integrates seamlessly with our form infrastructure described in the [forms field section](/docs/components/forms-field/guide). It supports validation, accesibility, and consistent styling. 
 
@@ -33,7 +33,7 @@ Learn more in the [usage guide](/docs/components/input-time/guide).
 
 ![Progress indicator](./2507_blog_progress.png)
 
-A long-awaited feature, the progress indicator is now available in both linear and circular variants. The linear variant is designed for horizontal layouts or when the progress value should be more visible. The circular variant suits compact or centered layouts, e.g. when it's replacing an icon.
+A long-awaited feature, the progress indicator is now available in both linear and circular variants. The linear variant is designed for horizontal layouts or when the progress value should be more visible. The circular variant is more suitable for compact or centered layouts, e.g. when it's replacing an icon.
 
 Whether you're tracking file uploads, form completion, or background tasks, these indicators provide clear, accessible feedback to users. They’re fully customizable and easy to integrate. 
 
@@ -43,7 +43,7 @@ Learn more in the [usage guide](/docs/components/progress-indicator/code).
 
 ![Render performance](./2507_blog_render.png)
 
-We’ve significantly improved initial render performance by optimizing how components are initialized and rendered with StencilJS. 
+We’ve significantly improved the initial render performance by optimizing how components are initialized and rendered with StencilJS. 
 
 Users will notice faster load times and smoother interactions, particularly in data-heavy applications, especially in complex environments like AG Grid.
 
@@ -51,7 +51,7 @@ Users will notice faster load times and smoother interactions, particularly in d
 
 ![Icon toggle button](./2507_blog_icontogglebutton.png)
 
-The icon toggle button has been enhanced with a new oval attribute, allowing its shape to be adjusted from square to oval. This provides greater flexibility in aligning with different design aesthetics and layout needs.
+The icon toggle button has a new oval attribute, allowing its shape to be adjusted from square to oval. This provides greater flexibility in aligning with different design aesthetics and layout needs.
 
 Toggle buttons are ideal for switching between states or modes. They’re commonly used in scenarios where a setting can be turned on or off independently.
 
@@ -71,29 +71,9 @@ We’ve expanded our accessibility support with:
 
 - Extended [WCAG guidelines](/docs/guidelines/accessibility/overview) tailored to our components
 - Component-level accessibility checklists in Figma
-- ARIA-label support for our components
+- ARIA label support for our components
 
 These improvements help teams build inclusive, accessible experiences more easily and confidently.
-
-<!-- # Slot option for content header
-
-![Content header](./2507_blog_contentheader.png)
-
-The content header component now supports a new slot next to the title, allowing you to add contextual elements like status pills or icons.
-
-This makes it easier to convey additional information at a glance without cluttering the layout. 
-
-Learn more in the [content header](/docs/components/content-header/code).
-
-# Consistent arrow logic
-
-![Arrow logic](./2507_blog_arrowlogic.png)
-
-We've standardized arrow behavior across components to improve usability and consistency:
-
-- **Hierarchical relationships:** Right arrow = collapsed, Down arrow = expanded (see [tree](/docs/components/tree/code)).
-- **Semantic toggles:** Down arrow = collapsed, Up arrow = expanded (show/hide behavior for [blinds](/docs/components/blind/guide), [push cards](/docs/components/card/guide), etc.) -->
-
 
 # Upcoming 4.0 major release
 
@@ -101,18 +81,16 @@ We've standardized arrow behavior across components to improve usability and con
 
 The upcoming 4.0 major release will introduce several impactful changes and enhancements across the design system and component libraries:
 
-- **Button rework:** We’re refining the button component with
+- **Button rework:** We’re refining the button component with:
     - Updated naming conventions for clarity
     - Rounded corners for Siemens brand consistency
     - A new icon-right option for better layout flexibility
 
-- **App header enhancements:** The app header will become more customizable with:
-    - Guideline on product icon positioning
-    - Additional slot options for providing custom content
+- **App header enhancements:** The app header will become more customizable with an additional slot option for providing custom content.
 
 - **Elevation principle simplification:** We’re streamlining the elevation system to make it easier to apply and understand visual hierarchy across components.
 
-- **Angular 20 support:** Full compatibility with Angular 20, ensuring your projects stay up to date with the latest framework improvements.
+- **Angular 20 support:** Full compatibility with Angular 20, ensuring your projects stay up-to-date with the latest framework improvements.
 
 - **AG Grid update:** We’re aligning with the latest AG Grid version to ensure seamless integration and improved performance.
 
@@ -120,4 +98,4 @@ The upcoming 4.0 major release will introduce several impactful changes and enha
 Please reach out to us at [team.ix.industry@siemens.com](mailto:team.ix.industry@siemens.com) and tell us about your migration experience.
 If you encounter any issues, we are here to support you every step of the way.
 
-🙏 We greatly appreciate your contributions.
+We greatly appreciate your contributions.
