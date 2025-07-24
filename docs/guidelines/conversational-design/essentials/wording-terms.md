@@ -9,6 +9,8 @@ no_single_tab: true
 description: Although AI chatbots are continuously evolving, many common words within the UI remain the same and have become the norm for agents and chatbots.
 ---
 
+import DoAndDont from '@site/src/components/DoAndDont';
+
 #
 
 
