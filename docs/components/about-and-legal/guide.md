@@ -17,8 +17,8 @@ The About and legal component appears when users click on the "About and legal" 
 ## Options
 
 - **Tabs:** Use tabs with meaningful labels to separate content into categories.
-- **Label:** Title that is shown in the content header. We recommend to use the default "About & legal information".
-- **Content:** Add information about the application e.g. version, author, copyright. It can also include legal information e.g. terms of service, privacy policy.
+- **Label:** Title that is shown in the content header. We recommend using the default "About & legal information" wording.
+- **Content:** Add information about the application, e.g. version, author, copyright. It can also include legal information, e.g. terms of service, privacy policy.
 
 ## Behavior
 
