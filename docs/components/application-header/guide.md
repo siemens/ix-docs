@@ -22,7 +22,7 @@ doc-type: 'tab-item'
 	- **Bottom:** Defines the second line of additional user information, used to show secondary information, for example user role. Overflows are clipped with an ellipsis (…).
 	- **Initials:** Shows avatar with initials.
 	- **Image:** Shows avatar with images.
-- **Slot:** Use the slot to provide additional high-level information or actions and functions which may impact the application context e.g. mode switching. Note that overflows are not handled automatically; at breakpoint `sm` the slot collapses and is only accessible via the overflow icon.
+- **Slot:** Use the slot to provide additional high-level information or actions and functions which may impact the application context, e.g. mode switching. Note that overflows are not handled automatically; at breakpoint `sm` the slot collapses and is only accessible via the overflow icon.
 
 ![Examples of slot usages](https://www.figma.com/design/wEptRgAezDU1z80Cn3eZ0o/iX-Pattern-Illustrations?type=design&node-id=1679-19526&mode=design&t=UPXhDWuRHtygtfFI-11)
 
@@ -56,7 +56,7 @@ At breakpoints "lg" and "md" the application header behaves identically. At brea
 
 ### Avatar
 
-With the new modular application frame we moved the avatar from the navigation menu to the application header. This ensures the avatar has security-relevant information available at all breakpoints.
+With the new modular application frame, we moved the avatar from the navigation menu to the application header. This ensures the avatar has security-relevant information available at all breakpoints.
 
 ![Avatar and avatar dropdown](https://www.figma.com/design/wEptRgAezDU1z80Cn3eZ0o/iX-Pattern-Illustrations?type=design&node-id=1635-60462&mode=design&t=UPXhDWuRHtygtfFI-11)
 
