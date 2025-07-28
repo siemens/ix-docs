@@ -65,7 +65,7 @@ With the new modular application frame, we moved the avatar from the navigation 
 3. Top text line
 4. Bottom text line
 
-The avatar is an optional element and indicates the current logged in user. If your application doesn’t support different users or user profiles, don’t use the avatar.
+The avatar is an optional element and indicates the current logged in user. If your application doesn’t support different users or user profiles, the avatar can be removed.
 
 Clicking the avatar opens a dropdown (1) with additional user information (2, 3, 4) and possibly other user related actions like log out, profile settings or user settings.
 
