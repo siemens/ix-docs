@@ -71,7 +71,7 @@ Clicking the avatar opens a dropdown (1) with additional user information (2, 3,
 
 ![Examples of access login](https://www.figma.com/design/wEptRgAezDU1z80Cn3eZ0o/iX-Pattern-Illustrations?type=design&node-id=1636-62468&mode=design&t=4XzscFw57dE7McUX-11)
 
-If your application can be used without being logged in to, you can offer access to a login process in different ways, for example:
+If your application is accessible without a specific user or profile log in, you can offer alternative ways of logging in without needing to specify a user or showing the avatar. Alternative approaches can be:
 
 - Show a log in button in the slot for additional elements and hide the avatar.
 - Show the avatar with a placeholder image and show text in the user information section.
