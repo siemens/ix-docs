@@ -236,8 +236,6 @@ Avoid punctuation, such as exclamation marks for buttons, hover text, titles and
 	 </doAndDont.Dont>
 </doAndDont>
 
-Legal disclaimer for all Siemens chatbots 
-
 ## Problematic wording to avoid 
 
 Most problematic wording involves the bot expressing itself as a human with human emotions carrying out human cognitive processing. Ensure your bot persona has been prompted to avoid human-like, emotional responses.  
