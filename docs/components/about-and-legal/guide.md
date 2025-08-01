@@ -4,15 +4,21 @@ doc-type: 'tab-item'
 
 # About and legal - Usage
 
-The About and legal component appears when users click on the "About and legal" icon (1) and overlays the current content. Closing this overlay brings users back to the original content.
+The About and legal component appears when users click on the "About and legal" item (1) and overlays the current content. Closing this overlay brings users back to the original content.
 
 ![About and legal overlay](https://www.figma.com/design/wEptRgAezDU1z80Cn3eZ0o/iX-Pattern-Illustrations?type=design&node-id=1029-79866&mode=design&t=Ntzn8IlSOlPey8s5-11)
 
-- (1) Info icon: opens and closes the About and legal overlay
-- (2) Replaceable content header: with default string "About & legal information"
-- (3) Close button: closes the overlay
-- (4) Tabs (optional): navigates through multiple content categories
-- (5) Changeable content: we use this to add specific application information and local legal regulations (note our Figma design is our personal recommendation)
+1. Application menu item - info
+2. Content header
+3. Close button
+4. Tabs
+5. Changeable content
+
+## Options
+
+- **Tabs:** Use tabs with meaningful labels to separate content into categories.
+- **Label:** Title that is shown in the content header. We recommend using the default "About & legal information" wording.
+- **Content:** Add information about the application, e.g. version, author, copyright. It can also include legal information, e.g. terms of service, privacy policy.
 
 ## Behavior
 
@@ -25,3 +31,7 @@ The overlay can be closed in three ways:
 - Click another navigation item.
 
 When the navigation menu is collapsed, the overlay stays open.
+
+:::info
+The About and Legal components require specific content to comply with Siemens AG regulations. The official content and guidelines are exclusively available for Siemens AG employees and can be accessed [here](https://code.siemens.com/siemens-ix/ix-brand-theme/-/blob/af74de1ec3c7d9b1fdd6e06e9c0c6eadefaf695b/apps/documentation/src/pages/about-legal-information.md).
+:::
