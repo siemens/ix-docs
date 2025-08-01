@@ -21,6 +21,19 @@ Siemens AG employees can access the Corporate Brand Theme at [**https://code.sie
 
 ## How to set a theme
 
+To choose a theme set the `data-ix-theme` attribute of the `<html>` or `<body>` tag to the theme of choice (e.g. `classic`).
+The default is `classic` in `dark` mode. To enable light mode, set the `data-ix-color-schema` attribute to `light` instead.
+
+```html
+<html data-ix-theme="classic" data-ix-color-schema="dark">
+  <!-- Framework related imports -->
+  <!--  -->
+  <body></body>
+</html>
+```
+
+The CSS class based theme configuration is still supported, but will be removed in version 4.0.0:
+
 The default theme is `theme-classic-dark`. To set a different theme, change the `class` attribute of the `<body>` tag to contain e.g. `theme-classic-light` instead of `theme-classic-dark`.
 
 ```html
@@ -31,7 +44,9 @@ The default theme is `theme-classic-dark`. To set a different theme, change the 
 </html>
 ```
 
-## Using the old classic theme
+Avoid mixing the class-based approach with `data-` attributes, as this will cause redundant CSS custom properties to be loaded.
+
+## Using the legacy classic theme selector
 
 The original classic theme was deprecated in favor of an updated version that is more easily maintainable for us.
 The legacy theme is still available but no longer part of the main CSS file. In order to still apply it to your app, you have to load it manually.

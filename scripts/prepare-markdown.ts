@@ -156,7 +156,12 @@ async function downloadLatestArtifact(branch: string) {
     }),
   ]);
 
-  const runs = eventRuns.flatMap((run) => run.data.workflow_runs);
+  const runs = eventRuns
+    .flatMap((run) => run.data.workflow_runs)
+    .sort(
+      (a, b) =>
+        new Date(b.created_at).getTime() - new Date(a.created_at).getTime()
+    );
 
   if (
     !runs ||
@@ -190,6 +195,11 @@ async function downloadLatestArtifact(branch: string) {
   if (!artifact) {
     throw new Error('No documentation artifact found for this workflow run.');
   }
+
+  console.log(
+    `Downloading artifact: ${artifact.name} (ID: ${artifact.id})`,
+    artifact
+  );
 
   // Download the artifact zip
   const { data: zipData } = await octokit.actions.downloadArtifact({
