@@ -732,9 +732,27 @@ const sidebars: SidebarsConfig = {
           ],
         }),
         createTabItem({
+          id: 'components/input-time/index',
+          label: 'Time input',
+          items: [
+            {
+              id: 'components/input-time/guide',
+              label: 'Usage',
+            },
+            {
+              id: 'components/input-time/code',
+              label: 'Code',
+            },
+          ],
+        }),
+        createTabItem({
           id: 'components/time-picker/index',
           label: 'Time picker',
           items: [
+            {
+              id: 'components/time-picker/guide',
+              label: 'Usage',
+            },
             {
               id: 'components/time-picker/code',
               label: 'Code',
@@ -948,6 +966,20 @@ const sidebars: SidebarsConfig = {
             },
           ],
         }),
+        createTabItem({
+          id: 'components/progress-indicator/index',
+          label: 'Progress indicator',
+          items: [
+            {
+              id: 'components/progress-indicator/guide',
+              label: 'Usage',
+            },
+            {
+              id: 'components/progress-indicator/code',
+              label: 'Code',
+            },
+          ],
+        }),
       ],
       collapsed: true,
     },
@@ -1072,7 +1104,20 @@ const sidebars: SidebarsConfig = {
   guidelines: [
     'guidelines/overview',
     'guidelines/designprinciples',
-    'guidelines/accessibility/overview',
+    createTabItem({
+      id: 'guidelines/accessibility/index',
+      label: 'Accessibility',
+      items: [
+        {
+          id: 'guidelines/accessibility/overview',
+          label: 'Overview',
+        },
+        {
+          id: 'guidelines/accessibility/code',
+          label: 'Code',
+        },
+      ],
+    }),
     {
       type: 'category',
       className: 'doc-sidebar-item-bold',
