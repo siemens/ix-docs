@@ -220,35 +220,33 @@ async function createAngularStandaloneProjectFiles(
     project[`src/${key.replace('./', '')}`] = snippets[key];
   });
 
-  // const additionalAngularComponents = getAdditionalAngularComponents(
-  //   snippets,
-  //   name
-  // );
+  const additionalAngularComponents = getAdditionalAngularComponents(
+    snippets,
+    name
+  );
 
-  // const importsString = additionalAngularComponents
-  //   .map(
-  //     (file) => `import ${fromKebabCaseToCamelCase(file)} from './../${file}';`
-  //   )
-  //   .join('\n');
+  const importsString = additionalAngularComponents
+    .map(
+      (file) => `import ${fromKebabCaseToCamelCase(file)} from './../${file}';`
+    )
+    .join('\n');
 
-  // project['src/app/app.module.ts'] = project['src/app/app.module.ts'].replace(
-  //   "import ExampleComponent from './example.component';",
-  //   [
-  //     `import ${fromKebabCaseToCamelCase(name)} from './../${name}';`,
-  //     importsString,
-  //   ].join('\n')
-  // );
+  project['src/app/app.ts'] = project['src/app/app.ts'].replace(
+    `import ExampleComponent from "./example.component";`,
+    [
+      `import ${fromKebabCaseToCamelCase(name)} from './../${name}';`,
+      importsString,
+    ].join('\n')
+  );
 
-  // const importComponent = additionalAngularComponents
-  //   .map((file) => fromKebabCaseToCamelCase(file))
-  //   .join(', ');
+  const importComponent = additionalAngularComponents
+    .map((file) => fromKebabCaseToCamelCase(file))
+    .join(', ');
 
-  // project['src/app/app.module.ts'] = project['src/app/app.module.ts'].replace(
-  //   'declarations: [AppComponent, ExampleComponent],',
-  //   `declarations: [AppComponent, ${fromKebabCaseToCamelCase(
-  //     name
-  //   )}, ${importComponent}],`
-  // );
+  project['src/app/app.ts'] = project['src/app/app.ts'].replace(
+    'imports: [ExampleComponent],',
+    `imports: [${fromKebabCaseToCamelCase(name)}, ${importComponent}],`
+  );
 
   return project;
 }
@@ -364,7 +362,7 @@ export async function openStackBlitz({
 
   if (framework === 'angular_standalone') {
     const globalCss = await docusaurusFetch(
-      `${snippetBaseUrl}/angular-standalone/global.css`
+      `${snippetBaseUrl}/angular/global.css`
     );
     sourceFiles['styles.css'] = globalCss;
 
