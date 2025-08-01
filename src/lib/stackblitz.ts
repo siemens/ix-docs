@@ -10,6 +10,7 @@ import { fromKebabCaseToCamelCase } from './utils/string-format';
 import { FrameworkTypes } from '@site/src/hooks/use-framework';
 import {
   getAngularRuntime,
+  getAngularStandaloneRuntime,
   getHTMLRuntime,
   getReactRuntime,
   getVueRuntime,
@@ -79,6 +80,21 @@ async function openAngularStackBlitz(
   const projectFiles = await createAngularProjectFiles(baseUrl, snippets, name);
 
   openProject('angular', projectFiles, `src/${name}.ts`, version);
+}
+
+async function openAngularStandaloneStackBlitz(
+  baseUrl: string,
+  snippets: Record<string, string>,
+  name: string,
+  version: string
+) {
+  const projectFiles = await createAngularStandaloneProjectFiles(
+    baseUrl,
+    snippets,
+    name
+  );
+
+  openProject('angular-standalone', projectFiles, `src/${name}.ts`, version);
 }
 
 async function openReactStackBlitz(
@@ -189,6 +205,54 @@ async function createAngularProjectFiles(
   return project;
 }
 
+async function createAngularStandaloneProjectFiles(
+  baseUrl: string,
+  snippets: Record<string, string>,
+  name: string
+) {
+  const runtime = await getAngularStandaloneRuntime(baseUrl);
+
+  const project = {
+    ...runtime,
+  };
+
+  Object.keys(snippets).forEach((key) => {
+    project[`src/${key.replace('./', '')}`] = snippets[key];
+  });
+
+  // const additionalAngularComponents = getAdditionalAngularComponents(
+  //   snippets,
+  //   name
+  // );
+
+  // const importsString = additionalAngularComponents
+  //   .map(
+  //     (file) => `import ${fromKebabCaseToCamelCase(file)} from './../${file}';`
+  //   )
+  //   .join('\n');
+
+  // project['src/app/app.module.ts'] = project['src/app/app.module.ts'].replace(
+  //   "import ExampleComponent from './example.component';",
+  //   [
+  //     `import ${fromKebabCaseToCamelCase(name)} from './../${name}';`,
+  //     importsString,
+  //   ].join('\n')
+  // );
+
+  // const importComponent = additionalAngularComponents
+  //   .map((file) => fromKebabCaseToCamelCase(file))
+  //   .join(', ');
+
+  // project['src/app/app.module.ts'] = project['src/app/app.module.ts'].replace(
+  //   'declarations: [AppComponent, ExampleComponent],',
+  //   `declarations: [AppComponent, ${fromKebabCaseToCamelCase(
+  //     name
+  //   )}, ${importComponent}],`
+  // );
+
+  return project;
+}
+
 async function createHTMLProjectFiles(
   baseUrl: string,
   snippets: Record<string, string>,
@@ -245,13 +309,15 @@ async function createVueProjectFiles(
 }
 
 export async function openStackBlitz({
-  baseUrl,
+  snippetBaseUrl,
+  runtimeBaseUrl,
   name,
   framework,
   sourcePath,
   version,
 }: {
-  baseUrl: string;
+  snippetBaseUrl: string;
+  runtimeBaseUrl: string;
   name: string;
   sourcePath: Record<string, string>;
   framework: FrameworkTypes;
@@ -262,23 +328,72 @@ export async function openStackBlitz({
 
   await Promise.all(
     Object.keys(sourcePath).map(async (key) => {
-      sourceFiles[key] = await docusaurusFetch(`${baseUrl}/${sourcePath[key]}`);
+      sourceFiles[key] = await docusaurusFetch(
+        `${snippetBaseUrl}/${sourcePath[key]}`
+      );
     })
   );
 
   if (framework === 'react') {
-    return openReactStackBlitz(baseUrl, sourceFiles, name, libraryVersion);
+    const globalCss = await docusaurusFetch(
+      `${snippetBaseUrl}/react/global.css`
+    );
+    sourceFiles['styles/global.css'] = globalCss;
+
+    return openReactStackBlitz(
+      runtimeBaseUrl,
+      sourceFiles,
+      name,
+      libraryVersion
+    );
   }
 
   if (framework === 'angular') {
-    return openAngularStackBlitz(baseUrl, sourceFiles, name, libraryVersion);
+    const globalCss = await docusaurusFetch(
+      `${snippetBaseUrl}/angular/global.css`
+    );
+    sourceFiles['styles.css'] = globalCss;
+
+    return openAngularStackBlitz(
+      runtimeBaseUrl,
+      sourceFiles,
+      name,
+      libraryVersion
+    );
+  }
+
+  if (framework === 'angular_standalone') {
+    const globalCss = await docusaurusFetch(
+      `${snippetBaseUrl}/angular-standalone/global.css`
+    );
+    sourceFiles['styles.css'] = globalCss;
+
+    return openAngularStandaloneStackBlitz(
+      runtimeBaseUrl,
+      sourceFiles,
+      name,
+      libraryVersion
+    );
   }
 
   if (framework === 'html') {
-    return openHtmlStackBlitz(baseUrl, sourceFiles, name, libraryVersion);
+    const globalCss = await docusaurusFetch(
+      `${runtimeBaseUrl}/html/global.css`
+    );
+    sourceFiles['src/styles/global.css'] = globalCss;
+
+    return openHtmlStackBlitz(
+      runtimeBaseUrl,
+      sourceFiles,
+      name,
+      libraryVersion
+    );
   }
 
   if (framework === 'vue') {
-    return openVueStackBlitz(baseUrl, sourceFiles, name, libraryVersion);
+    const globalCss = await docusaurusFetch(`${snippetBaseUrl}/vue/global.css`);
+    sourceFiles['src/styles/global.css'] = globalCss;
+
+    return openVueStackBlitz(runtimeBaseUrl, sourceFiles, name, libraryVersion);
   }
 }
