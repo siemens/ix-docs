@@ -376,9 +376,9 @@ export async function openStackBlitz({
 
   if (framework === 'html') {
     const globalCss = await docusaurusFetch(
-      `${runtimeBaseUrl}/html/global.css`
+      `${snippetBaseUrl}/html/global.css`
     );
-    sourceFiles['src/styles/global.css'] = globalCss;
+    sourceFiles['styles/global.css'] = globalCss;
 
     return openHtmlStackBlitz(
       runtimeBaseUrl,
@@ -390,7 +390,7 @@ export async function openStackBlitz({
 
   if (framework === 'vue') {
     const globalCss = await docusaurusFetch(`${snippetBaseUrl}/vue/global.css`);
-    sourceFiles['src/styles/global.css'] = globalCss;
+    sourceFiles['styles/global.css'] = globalCss;
 
     return openVueStackBlitz(runtimeBaseUrl, sourceFiles, name, libraryVersion);
   }

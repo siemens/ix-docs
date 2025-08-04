@@ -27,8 +27,6 @@ export async function getVueRuntime(baseUrl: string) {
   });
 
   await Promise.all(runtime$);
-  const globalCss = await docusaurusFetch(`${baseUrl}/vue/global.css`);
-  runtime['src/styles/global.css'] = globalCss;
   return runtime;
 }
 

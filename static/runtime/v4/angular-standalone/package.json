@@ -20,6 +20,7 @@
   },
   "private": true,
   "dependencies": {
+    "@angular/animations": "^20.1.0",
     "@angular/common": "^20.1.0",
     "@angular/compiler": "^20.1.0",
     "@angular/core": "^20.1.0",
@@ -32,7 +33,7 @@
     "@siemens/ix-icons": "latest",
     "ag-grid-angular": "^32.0.2",
     "ag-grid-community": "^32.0.2",
-    "echarts": "6.0.0",
+    "echarts": "^5.3.3",
     "echarts-gl": "^2.0.9",
     "ngx-echarts": "^20.0.1",
     "rxjs": "~7.8.0",
