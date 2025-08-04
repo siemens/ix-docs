@@ -4,10 +4,86 @@
         <title>Siemens Industrial Experience Blog</title>
         <link>https://ix.siemens.io/blog</link>
         <description>Siemens Industrial Experience Blog</description>
-        <lastBuildDate>Fri, 09 May 2025 00:00:00 GMT</lastBuildDate>
+        <lastBuildDate>Fri, 25 Jul 2025 00:00:00 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <generator>https://github.com/jpmonette/feed</generator>
         <language>en</language>
+        <item>
+            <title><![CDATA[Release V3.2.0]]></title>
+            <link>https://ix.siemens.io/blog/2025/07/25/release-3-2</link>
+            <guid>https://ix.siemens.io/blog/2025/07/25/release-3-2</guid>
+            <pubDate>Fri, 25 Jul 2025 00:00:00 GMT</pubDate>
+            <description><![CDATA[banner]]></description>
+            <content:encoded><![CDATA[<p><img decoding="async" loading="lazy" alt="banner" src="https://ix.siemens.io/assets/images/2507_blog_3-2-089665150658908e9248b029dc218a83.png" width="896" height="360" class="img_QgcI"></p>
+<p>Over the past few months, we've been hard at work delivering new features, usability improvements, and important bug fixes. In this post, we’ll walk you through the highlights of our recent 3.1.0 and 3.2.0 minor releases.</p>
+<p>We’ll also give you a sneak peek at what’s coming in the upcoming 4.0 major release.</p>
+<h1>How to start?</h1>
+<ul>
+<li>Install <code>@siemens/ix</code> (<code>@siemens/ix-angular</code>, <code>@siemens/ix-react</code>, <code>@siemens/ix-vue</code>) via the <code>latest</code> tag</li>
+<li>Review detailed changelog <a href="https://ix.siemens.io/docs/home/migration/3_0_0">here</a></li>
+<li>Make sure you're using the latest published version of our Figma library</li>
+</ul>
+<h1>Time input and redesigned time picker</h1>
+<p><img decoding="async" loading="lazy" alt="Time input" src="https://ix.siemens.io/assets/images/2507_blog_timepicker-fcb658caf345b1f989c512684a56f91e.png" width="896" height="360" class="img_QgcI"></p>
+<p>The redesigned time picker introduces a smoother, more intuitive experience with scrollable values and one-click selection for hours, minutes, seconds, and milliseconds. This makes it easier and faster for users to select precise times, especially on touch devices. Learn more in the <a href="https://ix.siemens.io/docs/components/time-picker/guide">usage guide</a>.</p>
+<p>Built on top of the new time picker, the new time input component is fully form-ready and integrates seamlessly with our form infrastructure described in the <a href="https://ix.siemens.io/docs/components/forms-field/guide">forms field section</a>. It supports validation, accesibility, and consistent styling.</p>
+<p>Learn more in the <a href="https://ix.siemens.io/docs/components/input-time/guide">usage guide</a>.</p>
+<h1>Progress indicator</h1>
+<p><img decoding="async" loading="lazy" alt="Progress indicator" src="https://ix.siemens.io/assets/images/2507_blog_progress-f280a82351452a95bded6da4b6a05d9a.png" width="896" height="360" class="img_QgcI"></p>
+<p>A long-awaited feature, the progress indicator is now available in both linear and circular variants. The linear variant is designed for horizontal layouts or when the progress value should be more visible. The circular variant is more suitable for compact or centered layouts, e.g. when it's replacing an icon.</p>
+<p>Whether you're tracking file uploads, form completion, or background tasks, these indicators provide clear, accessible feedback to users. They’re fully customizable and easy to integrate.</p>
+<p>Learn more in the <a href="https://ix.siemens.io/docs/components/progress-indicator/code">usage guide</a>.</p>
+<h1>Improved initial render performance</h1>
+<p><img decoding="async" loading="lazy" alt="Render performance" src="https://ix.siemens.io/assets/images/2507_blog_render-2d275a7f4544040514acc09135c8ca16.png" width="896" height="360" class="img_QgcI"></p>
+<p>We’ve significantly improved the initial render performance by optimizing how components are initialized and rendered with StencilJS.</p>
+<p>Users will notice faster load times and smoother interactions, particularly in data-heavy applications, especially in complex environments like AG Grid.</p>
+<h1>Enhanced icon toggle button</h1>
+<p><img decoding="async" loading="lazy" alt="Icon toggle button" src="https://ix.siemens.io/assets/images/2507_blog_icontogglebutton-2076a52196d896cb754097d342763951.png" width="896" height="360" class="img_QgcI"></p>
+<p>The icon toggle button has a new oval attribute, allowing its shape to be adjusted from square to oval. This provides greater flexibility in aligning with different design aesthetics and layout needs.</p>
+<p>Toggle buttons are ideal for switching between states or modes. They’re commonly used in scenarios where a setting can be turned on or off independently.</p>
+<p>Learn more in the <a href="https://ix.siemens.io/docs/components/toggle-button/guide">usage guide</a>.</p>
+<h1>Theme generator</h1>
+<p><img decoding="async" loading="lazy" alt="Theme generator" src="https://ix.siemens.io/assets/images/2507_blog_themegenerator-a1ef6ee934dfa763312bca2ed4dad699.png" width="896" height="360" class="img_QgcI"></p>
+<p>Our updated theme generator produces smaller, more efficient CSS variable files. It also supports cross-platform theming, making it easier to apply your design system consistently across web, mobile, and desktop applications. This update simplifies customization while improving performance.</p>
+<h1>Accessibility</h1>
+<p><img decoding="async" loading="lazy" alt="Accessibility" src="https://ix.siemens.io/assets/images/2507_blog_accessibility-fd5071456042c1060fde84945074d52a.png" width="896" height="360" class="img_QgcI"></p>
+<p>We’ve expanded our accessibility support with:</p>
+<ul>
+<li>Extended <a href="https://ix.siemens.io/docs/guidelines/accessibility/overview">WCAG guidelines</a> tailored to our components</li>
+<li>Component-level accessibility checklists in Figma</li>
+<li>ARIA label support for our components</li>
+</ul>
+<p>These improvements help teams build inclusive, accessible experiences more easily and confidently.</p>
+<h1>Upcoming 4.0 major release</h1>
+<p><img decoding="async" loading="lazy" alt="Upcoming" src="https://ix.siemens.io/assets/images/2507_blog_upcoming-625ae5d05433a8de7d1789e7e999f94c.png" width="896" height="360" class="img_QgcI"></p>
+<p>The upcoming 4.0 major release will introduce several impactful changes and enhancements across the design system and component libraries:</p>
+<ul>
+<li>
+<p><strong>Button rework:</strong> We’re refining the button component with:</p>
+<ul>
+<li>Updated naming conventions for clarity</li>
+<li>Rounded corners for Siemens brand consistency</li>
+<li>A new icon-right option for better layout flexibility</li>
+</ul>
+</li>
+<li>
+<p><strong>App header enhancements:</strong> The app header will become more customizable with an additional slot option for providing custom content.</p>
+</li>
+<li>
+<p><strong>Elevation principle simplification:</strong> We’re streamlining the elevation system to make it easier to apply and understand visual hierarchy across components.</p>
+</li>
+<li>
+<p><strong>Angular 20 support:</strong> Full compatibility with Angular 20, ensuring your projects stay up-to-date with the latest framework improvements.</p>
+</li>
+<li>
+<p><strong>AG Grid update:</strong> We’re aligning with the latest AG Grid version to ensure seamless integration and improved performance.</p>
+</li>
+</ul>
+<p>Please reach out to us at <a href="mailto:team.ix.industry@siemens.com" target="_blank" rel="noopener noreferrer">team.ix.industry@siemens.com</a> and tell us about your migration experience.
+If you encounter any issues, we are here to support you every step of the way.</p>
+<p>We greatly appreciate your contributions.</p>]]></content:encoded>
+            <category>Release</category>
+        </item>
         <item>
             <title><![CDATA[Release V3.0.0]]></title>
             <link>https://ix.siemens.io/blog/2025/05/09/release-3</link>
