@@ -98,6 +98,7 @@ function CodeActions(
 
 export type PlaygroundProps = Readonly<{
   name: string;
+  alternativePreviewName?: string;
   files: CodePreviewFiles;
   source: SourceFiles;
   height?: string;
@@ -113,7 +114,7 @@ function Playground(props: PlaygroundProps) {
   const [theme, setTheme] = useState(defaultTheme);
   const iframeSrc = useBaseUrl(
     `/demo/v2/preview/html/preview-examples/${
-      props.name
+      props.alternativePreviewName ?? props.name
     }.html?no-margin=true&theme=theme-${theme}-${isDark ? 'dark' : 'light'}`
   );
   const [framework, setFramework] = useState<FrameworkTypes>(

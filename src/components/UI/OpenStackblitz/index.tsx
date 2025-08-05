@@ -23,7 +23,8 @@ export default function OpenStackblitz(
   }>
 ) {
   const context = useDocusaurusContext();
-  const baseUrl = useBaseUrl('/demo/v2/');
+  const snippetsBaseUrl = useBaseUrl('/demo/v2/');
+  const runtimeBaseUrl = useBaseUrl('/runtime/v3');
 
   return (
     <BrowserOnly>
@@ -31,7 +32,8 @@ export default function OpenStackblitz(
         <Button
           onClick={() => {
             openStackBlitz({
-              baseUrl,
+              snippetBaseUrl: snippetsBaseUrl,
+              runtimeBaseUrl: runtimeBaseUrl,
               framework: props.framework,
               name: props.mount,
               sourcePath: props.files,
