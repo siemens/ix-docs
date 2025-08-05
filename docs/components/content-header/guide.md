@@ -8,9 +8,10 @@ The content header helps users understand what the page is about. We typically u
 ![Content header overview](https://www.figma.com/design/wEptRgAezDU1z80Cn3eZ0o/iX-Pattern-Illustrations?type=design&node-id=2250-4784&mode=design&t=XmCepM9jPR9PImPw-4)
 
 1. Back button
-2. Content title
-3. Content subtitle
-4. Action buttons
+2. Header title
+3. Header subtitle
+4. Slot
+5. Action buttons
 
 ## Variants
 
@@ -26,6 +27,7 @@ Our content header variants makes it easier to achieve a well-balanced visual hi
 - **Back button**: Enable if you want to provide a way for the user to navigate back.
 - **Header title**: Set your page title here. Use a clear, short and descriptive wording.
 - **Header subtitle**: Provide additional info for your content such as a descriptive sentence when required.
+- **Slot**: Use this slot to add additional content that is relevant to the page, e.g. an object's status or counter displaying the number of children by using a [pill](../pill) . This can include elements like search fields, filters, or other contextual information.
 - **Action buttons**: Offer convenient shortcuts for actions that the user might need to perform frequently, for example "Add" or "Edit".
 
 ## Behavior
