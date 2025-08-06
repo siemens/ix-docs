@@ -4,6 +4,370 @@ description: ''
 title: Changelog
 doc-type: 'banner'
 ---
+## [@siemens/ix@3.2.0](https://github.com/siemens/ix/releases/tag/%40siemens/ix%403.2.0) (2025-08-04T13:36:14Z)
+### Minor Changes
+
+-   [#2004](https://github.com/siemens/ix/pull/2004) [`e8e660fd56af649eace36a313b33cda8ebb69469`](https://github.com/siemens/ix/commit/e8e660fd56af649eace36a313b33cda8ebb69469) Thanks [@nuke-ellington](https://github.com/nuke-ellington)! - Update theme files to new token structure and add support for new theming syntax (**data-ix-theme**, **data-ix-color-schema**).
+
+-   [#1951](https://github.com/siemens/ix/pull/1951) [`ecbbd0a7435722731337b3da6cb83bb2d40654aa`](https://github.com/siemens/ix/commit/ecbbd0a7435722731337b3da6cb83bb2d40654aa) Thanks [@danielleroux](https://github.com/danielleroux)! - Add **ix-progress-indicator**
+
+    Fixes #651
+
+-   [#2005](https://github.com/siemens/ix/pull/2005) [`76016130da552410c00e0a0ea0c3bc58a015c132`](https://github.com/siemens/ix/commit/76016130da552410c00e0a0ea0c3bc58a015c132) Thanks [@danielleroux](https://github.com/danielleroux)! - **ix-tree**: add method `markItemAsDirty` to flag tree items which request a hard rerender
+
+-   [#1974](https://github.com/siemens/ix/pull/1974) [`6b9a8fc5922f936a96e3f09e8ea11e0720aa5383`](https://github.com/siemens/ix/commit/6b9a8fc5922f936a96e3f09e8ea11e0720aa5383) Thanks [@danielleroux](https://github.com/danielleroux)! - Remove internal type definition from public api types.
+
+    Fixes #1969
+
+-   [#1986](https://github.com/siemens/ix/pull/1986) [`e44cb4912b89ab91c6ace605ff939dd4121f0a7f`](https://github.com/siemens/ix/commit/e44cb4912b89ab91c6ace605ff939dd4121f0a7f) Thanks [@lzeiml](https://github.com/lzeiml)! - Added properties to set aria-labels for the following components:
+
+    -   ix-action-card
+    -   ix-avatar
+    -   ix-breadcrumb-item
+    -   ix-button
+    -   ix-card-accordion
+    -   ix-card-list
+    -   ix-category-filter
+    -   ix-chip
+    -   ix-date-input
+    -   ix-date-picker
+    -   ix-datetime-picker
+    -   ix-drawer
+    -   ix-dropdown-button
+    -   ix-dropdown-item
+    -   ix-empty-state
+    -   ix-event-list-item
+    -   ix-expanding-search
+    -   ix-filter-chip
+    -   ix-group-item
+    -   ix-icon-toggle-button
+    -   ix-key-value
+    -   ix-kpi
+    -   ix-link-button
+    -   ix-map-navigation-overlay
+    -   ix-modal-header
+    -   ix-pagination
+    -   ix-pane
+    -   ix-pill
+    -   ix-select
+    -   ix-split-button
+    -   ix-tabs
+    -   ix-toast
+    -   ix-toggle-button
+    -   ix-tree-item
+
+-   [#1864](https://github.com/siemens/ix/pull/1864) [`4077296037dd7889ddeb175559aca11f93a33312`](https://github.com/siemens/ix/commit/4077296037dd7889ddeb175559aca11f93a33312) Thanks [@GayatriK2002](https://github.com/GayatriK2002)! - Add option for action button slot to **ix-toast**
+
+-   [#1877](https://github.com/siemens/ix/pull/1877) [`813b9cea25e8f6d948a992f9145254bf7045adf0`](https://github.com/siemens/ix/commit/813b9cea25e8f6d948a992f9145254bf7045adf0) Thanks [@GayatriK2002](https://github.com/GayatriK2002)! - Add `centerContent` property to `ix-chip`.
+
+    Fixes #1854
+
+-   [#1853](https://github.com/siemens/ix/pull/1853) [`b67d0122acdf2f4f7df1f8d85bbd5a3fafe38624`](https://github.com/siemens/ix/commit/b67d0122acdf2f4f7df1f8d85bbd5a3fafe38624) Thanks [@lzeiml](https://github.com/lzeiml)! - Rework `ix-time-picker` according to new design
+
+    The ix-time-picker has been reworked to a new design and now uses different columns with selectable numbers to select the time. Milliseconds can now be selected as well.
+    There are also new interval properties to control which numbers are displayed for hours, minutes, seconds and milliseconds.
+    Additionally the displayed columns are now determined by the used format, making the showHour, showMinutes, showSeconds properties deprecated and will be removed with 4.0.0.
+    The numbers for hours, minutes, etc. can also be selected by tabbing onto the first number, and then using arrow keys and Enter to select the desired time.
+
+    Add new `ix-time-input` component
+
+    The time-input component has been added as well, combining an input field and the new ix-time-picker, similar to the ix-date-input.
+
+-   [#2002](https://github.com/siemens/ix/pull/2002) [`963502f6fe2e5194c34f4c8780820f30b581b7de`](https://github.com/siemens/ix/commit/963502f6fe2e5194c34f4c8780820f30b581b7de) Thanks [@lzeiml](https://github.com/lzeiml)! - The following properties have been added to ix-date-input: minDate, maxDate, weekStartIndex. Fixes #1965
+
+### Patch Changes
+
+-   [#1882](https://github.com/siemens/ix/pull/1882) [`455933edb3f3b9d8145ea4f58007fe815f46f841`](https://github.com/siemens/ix/commit/455933edb3f3b9d8145ea4f58007fe815f46f841) Thanks [@1307-Dev](https://github.com/1307-Dev)! - Gracefully handle whitespace and undefined texts in `ix-field-wrapper`.
+
+-   [#1950](https://github.com/siemens/ix/pull/1950) [`1d273b149630b4f80ebe370963df4269ab813e4f`](https://github.com/siemens/ix/commit/1d273b149630b4f80ebe370963df4269ab813e4f) Thanks [@Nadim901](https://github.com/Nadim901)! - Keep **ix-modal** open after mouse down on backdrop and mouse up over modal or vice versa.
+
+    Fixes #1663
+
+-   [#1963](https://github.com/siemens/ix/pull/1963) [`6642dbb398850508497bd96e00e19fd4da3aa616`](https://github.com/siemens/ix/commit/6642dbb398850508497bd96e00e19fd4da3aa616) Thanks [@varun-srinivasa](https://github.com/varun-srinivasa)! - Align expand/collapse arrows with design for:
+
+    -   **ix-blind**
+    -   **ix-card**
+    -   **ix-dropdown-button**
+    -   **ix-group**
+    -   **ix-select**
+    -   **ix-tree-item**
+
+-   [#1947](https://github.com/siemens/ix/pull/1947) [`6f12a6a14ebd090c979b5c5a7b30b27ef40a0e95`](https://github.com/siemens/ix/commit/6f12a6a14ebd090c979b5c5a7b30b27ef40a0e95) Thanks [@Nadim901](https://github.com/Nadim901)! - Break label text of **ix-toggle** in case of text overflow.
+
+    Fixes #683
+
+-   [#2014](https://github.com/siemens/ix/pull/2014) [`39c9694bd3cd5864e127a8628e49c895add5da62`](https://github.com/siemens/ix/commit/39c9694bd3cd5864e127a8628e49c895add5da62) Thanks [@danielleroux](https://github.com/danielleroux)! - Increase z-index for `toast`s
+
+    Fixes #1908
+
+-   [#1941](https://github.com/siemens/ix/pull/1941) [`f892591ef14286ed7876ca0b071a8fd35de79bbf`](https://github.com/siemens/ix/commit/f892591ef14286ed7876ca0b071a8fd35de79bbf) Thanks [@Raghavendra5577](https://github.com/Raghavendra5577)! - **Ix-modal** animation is always identical regardless of poisition.
+    It will appear from above and disappear towards the top of the screen again.
+    It will only travel it's own height before animation ends, not the whole distance from/to top.
+
+-   [#2016](https://github.com/siemens/ix/pull/2016) [`3f0d55ae2f195e6c86a73c409ea28976dc3f2961`](https://github.com/siemens/ix/commit/3f0d55ae2f195e6c86a73c409ea28976dc3f2961) Thanks [@lakshmi-priya-b](https://github.com/lakshmi-priya-b)! - Ensure that setting max-width on **ix-chip** and/or **ix-pill** will affect componet width.
+
+-   [#1980](https://github.com/siemens/ix/pull/1980) [`3d953256650eaa541dfbb93ec5e98a48212d97ad`](https://github.com/siemens/ix/commit/3d953256650eaa541dfbb93ec5e98a48212d97ad) Thanks [@1307-Dev](https://github.com/1307-Dev)! - Set soft text as subheading color for filled and outline variant of **ix-action-card**.
+
+    Fixes #1967
+
+-   [#2034](https://github.com/siemens/ix/pull/2034) [`4d4e5672137dc5b803d267e0564bb5944f4d9ae2`](https://github.com/siemens/ix/commit/4d4e5672137dc5b803d267e0564bb5944f4d9ae2) Thanks [@AndreasBerliner](https://github.com/AndreasBerliner)! - Fix styling of tooltip container height in **ix-tooltip**.
+
+    Fixes #2009.
+
+-   [#1994](https://github.com/siemens/ix/pull/1994) [`d346cc2d69596c0a72e7ef77b64097d8500a999c`](https://github.com/siemens/ix/commit/d346cc2d69596c0a72e7ef77b64097d8500a999c) Thanks [@GayatriK2002](https://github.com/GayatriK2002)! - Set background-color explicitly for outline variants of **ix-chip** and **ix-pill**.
+
+-   [#2022](https://github.com/siemens/ix/pull/2022) [`152d7af26f90e2f489d4bae99c60369449b910db`](https://github.com/siemens/ix/commit/152d7af26f90e2f489d4bae99c60369449b910db) Thanks [@danielleroux](https://github.com/danielleroux)! - Add additional check if the helper text is undefined to hide empty validation text
+
+    Fixes #2021
+
+-   [#1943](https://github.com/siemens/ix/pull/1943) [`9776d7fb0cc5bb3b9afb4982cbceb00a8c638549`](https://github.com/siemens/ix/commit/9776d7fb0cc5bb3b9afb4982cbceb00a8c638549) Thanks [@RamVinayMandal](https://github.com/RamVinayMandal)! - Remove obsolete console warning message for formerly illegal property combinations for **ix-toggle-button** and **ix-icon-toggle-button**.
+
+-   [#1945](https://github.com/siemens/ix/pull/1945) [`a3ac05becce0e245f0397a8f6b9789176b7728e6`](https://github.com/siemens/ix/commit/a3ac05becce0e245f0397a8f6b9789176b7728e6) Thanks [@GayatriK2002](https://github.com/GayatriK2002)! - Align **ix-pill** and **ix-chip** vertically flush, with or without icons.
+
+-   [#1985](https://github.com/siemens/ix/pull/1985) [`2496426f26665cd848a66bc69395a7d0261fa5a5`](https://github.com/siemens/ix/commit/2496426f26665cd848a66bc69395a7d0261fa5a5) Thanks [@varun-srinivasa](https://github.com/varun-srinivasa)! - Don't take up space for empty dropdown slot in **ix-group**.
+
+    Fixes #1486
+
+-   [#1993](https://github.com/siemens/ix/pull/1993) [`b519b420fd3ca5de9c73c227ce78431b520ec4a6`](https://github.com/siemens/ix/commit/b519b420fd3ca5de9c73c227ce78431b520ec4a6) Thanks [@AndreasBerliner](https://github.com/AndreasBerliner)! - Improve jsdocs for **ix-date-picker** to better describe `locale` property
+
+-   [#2015](https://github.com/siemens/ix/pull/2015) [`023cad0595fb3b110de2f62d982c32275b4aaea6`](https://github.com/siemens/ix/commit/023cad0595fb3b110de2f62d982c32275b4aaea6) Thanks [@danielleroux](https://github.com/danielleroux)! - Update to stenciljs v4.36.0
+
+    Fixes #1543 #1286
+
+-   [#1873](https://github.com/siemens/ix/pull/1873) [`b630ffefe83f20c458bbef88d21918479e1ae540`](https://github.com/siemens/ix/commit/b630ffefe83f20c458bbef88d21918479e1ae540) Thanks [@varun-srinivasa](https://github.com/varun-srinivasa)! - Align visual appearance of **ix-workflow** to component state
+
+    Fixes #1808
+
+-   [#1978](https://github.com/siemens/ix/pull/1978) [`1055e0127f0e25a654f5a7d69e5db102340a3a83`](https://github.com/siemens/ix/commit/1055e0127f0e25a654f5a7d69e5db102340a3a83) Thanks [@1307-Dev](https://github.com/1307-Dev)! - Fix order of bottom menu items in **ix-menu**. Now "Settings" appears first and "About and legal information" appears last.
+
+## [@siemens/ix-vue@3.2.0](https://github.com/siemens/ix/releases/tag/%40siemens/ix-vue%403.2.0) (2025-08-04T13:36:17Z)
+### Minor Changes
+
+-   [#1986](https://github.com/siemens/ix/pull/1986) [`e44cb4912b89ab91c6ace605ff939dd4121f0a7f`](https://github.com/siemens/ix/commit/e44cb4912b89ab91c6ace605ff939dd4121f0a7f) Thanks [@lzeiml](https://github.com/lzeiml)! - Added properties to set aria-labels for the following components:
+
+    -   ix-action-card
+    -   ix-avatar
+    -   ix-breadcrumb-item
+    -   ix-button
+    -   ix-card-accordion
+    -   ix-card-list
+    -   ix-category-filter
+    -   ix-chip
+    -   ix-date-input
+    -   ix-date-picker
+    -   ix-datetime-picker
+    -   ix-drawer
+    -   ix-dropdown-button
+    -   ix-dropdown-item
+    -   ix-empty-state
+    -   ix-event-list-item
+    -   ix-expanding-search
+    -   ix-filter-chip
+    -   ix-group-item
+    -   ix-icon-toggle-button
+    -   ix-key-value
+    -   ix-kpi
+    -   ix-link-button
+    -   ix-map-navigation-overlay
+    -   ix-modal-header
+    -   ix-pagination
+    -   ix-pane
+    -   ix-pill
+    -   ix-select
+    -   ix-split-button
+    -   ix-tabs
+    -   ix-toast
+    -   ix-toggle-button
+    -   ix-tree-item
+
+-   [#1864](https://github.com/siemens/ix/pull/1864) [`4077296037dd7889ddeb175559aca11f93a33312`](https://github.com/siemens/ix/commit/4077296037dd7889ddeb175559aca11f93a33312) Thanks [@GayatriK2002](https://github.com/GayatriK2002)! - Add option for action button slot to **ix-toast**
+
+-   [#1872](https://github.com/siemens/ix/pull/1872) [`3cbebbd3b13a869ab0fd7bf3452c19adde77de6b`](https://github.com/siemens/ix/commit/3cbebbd3b13a869ab0fd7bf3452c19adde77de6b) Thanks [@tiagogviegas](https://github.com/tiagogviegas)! - add support for showModal
+
+    Fixes #1771
+
+-   [#1877](https://github.com/siemens/ix/pull/1877) [`813b9cea25e8f6d948a992f9145254bf7045adf0`](https://github.com/siemens/ix/commit/813b9cea25e8f6d948a992f9145254bf7045adf0) Thanks [@GayatriK2002](https://github.com/GayatriK2002)! - Add `centerContent` property to `ix-chip`.
+
+    Fixes #1854
+
+-   [#1853](https://github.com/siemens/ix/pull/1853) [`b67d0122acdf2f4f7df1f8d85bbd5a3fafe38624`](https://github.com/siemens/ix/commit/b67d0122acdf2f4f7df1f8d85bbd5a3fafe38624) Thanks [@lzeiml](https://github.com/lzeiml)! - Rework `ix-time-picker` according to new design
+
+    The ix-time-picker has been reworked to a new design and now uses different columns with selectable numbers to select the time. Milliseconds can now be selected as well.
+    There are also new interval properties to control which numbers are displayed for hours, minutes, seconds and milliseconds.
+    Additionally the displayed columns are now determined by the used format, making the showHour, showMinutes, showSeconds properties deprecated and will be removed with 4.0.0.
+    The numbers for hours, minutes, etc. can also be selected by tabbing onto the first number, and then using arrow keys and Enter to select the desired time.
+
+    Add new `ix-time-input` component
+
+    The time-input component has been added as well, combining an input field and the new ix-time-picker, similar to the ix-date-input.
+
+-   [#2002](https://github.com/siemens/ix/pull/2002) [`963502f6fe2e5194c34f4c8780820f30b581b7de`](https://github.com/siemens/ix/commit/963502f6fe2e5194c34f4c8780820f30b581b7de) Thanks [@lzeiml](https://github.com/lzeiml)! - The following properties have been added to ix-date-input: minDate, maxDate, weekStartIndex. Fixes #1965
+
+### Patch Changes
+
+-   [#2008](https://github.com/siemens/ix/pull/2008) [`da6d384abc27cdfe4acac1f29e36af49bcf97f4d`](https://github.com/siemens/ix/commit/da6d384abc27cdfe4acac1f29e36af49bcf97f4d) Thanks [@danielleroux](https://github.com/danielleroux)! - Ensure ix-icon custom component is defined during library usage
+
+    Fixes #2003
+
+-   Updated dependencies \[[`e8e660fd56af649eace36a313b33cda8ebb69469`](https://github.com/siemens/ix/commit/e8e660fd56af649eace36a313b33cda8ebb69469), [`ecbbd0a7435722731337b3da6cb83bb2d40654aa`](https://github.com/siemens/ix/commit/ecbbd0a7435722731337b3da6cb83bb2d40654aa), [`76016130da552410c00e0a0ea0c3bc58a015c132`](https://github.com/siemens/ix/commit/76016130da552410c00e0a0ea0c3bc58a015c132), [`455933edb3f3b9d8145ea4f58007fe815f46f841`](https://github.com/siemens/ix/commit/455933edb3f3b9d8145ea4f58007fe815f46f841), [`6b9a8fc5922f936a96e3f09e8ea11e0720aa5383`](https://github.com/siemens/ix/commit/6b9a8fc5922f936a96e3f09e8ea11e0720aa5383), [`1d273b149630b4f80ebe370963df4269ab813e4f`](https://github.com/siemens/ix/commit/1d273b149630b4f80ebe370963df4269ab813e4f), [`6642dbb398850508497bd96e00e19fd4da3aa616`](https://github.com/siemens/ix/commit/6642dbb398850508497bd96e00e19fd4da3aa616), [`6f12a6a14ebd090c979b5c5a7b30b27ef40a0e95`](https://github.com/siemens/ix/commit/6f12a6a14ebd090c979b5c5a7b30b27ef40a0e95), [`39c9694bd3cd5864e127a8628e49c895add5da62`](https://github.com/siemens/ix/commit/39c9694bd3cd5864e127a8628e49c895add5da62), [`f892591ef14286ed7876ca0b071a8fd35de79bbf`](https://github.com/siemens/ix/commit/f892591ef14286ed7876ca0b071a8fd35de79bbf), [`3f0d55ae2f195e6c86a73c409ea28976dc3f2961`](https://github.com/siemens/ix/commit/3f0d55ae2f195e6c86a73c409ea28976dc3f2961), [`3d953256650eaa541dfbb93ec5e98a48212d97ad`](https://github.com/siemens/ix/commit/3d953256650eaa541dfbb93ec5e98a48212d97ad), [`4d4e5672137dc5b803d267e0564bb5944f4d9ae2`](https://github.com/siemens/ix/commit/4d4e5672137dc5b803d267e0564bb5944f4d9ae2), [`d346cc2d69596c0a72e7ef77b64097d8500a999c`](https://github.com/siemens/ix/commit/d346cc2d69596c0a72e7ef77b64097d8500a999c), [`e44cb4912b89ab91c6ace605ff939dd4121f0a7f`](https://github.com/siemens/ix/commit/e44cb4912b89ab91c6ace605ff939dd4121f0a7f), [`4077296037dd7889ddeb175559aca11f93a33312`](https://github.com/siemens/ix/commit/4077296037dd7889ddeb175559aca11f93a33312), [`152d7af26f90e2f489d4bae99c60369449b910db`](https://github.com/siemens/ix/commit/152d7af26f90e2f489d4bae99c60369449b910db), [`9776d7fb0cc5bb3b9afb4982cbceb00a8c638549`](https://github.com/siemens/ix/commit/9776d7fb0cc5bb3b9afb4982cbceb00a8c638549), [`813b9cea25e8f6d948a992f9145254bf7045adf0`](https://github.com/siemens/ix/commit/813b9cea25e8f6d948a992f9145254bf7045adf0), [`a3ac05becce0e245f0397a8f6b9789176b7728e6`](https://github.com/siemens/ix/commit/a3ac05becce0e245f0397a8f6b9789176b7728e6), [`b67d0122acdf2f4f7df1f8d85bbd5a3fafe38624`](https://github.com/siemens/ix/commit/b67d0122acdf2f4f7df1f8d85bbd5a3fafe38624), [`2496426f26665cd848a66bc69395a7d0261fa5a5`](https://github.com/siemens/ix/commit/2496426f26665cd848a66bc69395a7d0261fa5a5), [`b519b420fd3ca5de9c73c227ce78431b520ec4a6`](https://github.com/siemens/ix/commit/b519b420fd3ca5de9c73c227ce78431b520ec4a6), [`023cad0595fb3b110de2f62d982c32275b4aaea6`](https://github.com/siemens/ix/commit/023cad0595fb3b110de2f62d982c32275b4aaea6), [`963502f6fe2e5194c34f4c8780820f30b581b7de`](https://github.com/siemens/ix/commit/963502f6fe2e5194c34f4c8780820f30b581b7de), [`b630ffefe83f20c458bbef88d21918479e1ae540`](https://github.com/siemens/ix/commit/b630ffefe83f20c458bbef88d21918479e1ae540), [`1055e0127f0e25a654f5a7d69e5db102340a3a83`](https://github.com/siemens/ix/commit/1055e0127f0e25a654f5a7d69e5db102340a3a83)]:
+    -   @siemens/ix@3.2.0
+
+## [@siemens/ix-react@3.2.0](https://github.com/siemens/ix/releases/tag/%40siemens/ix-react%403.2.0) (2025-08-04T13:36:11Z)
+### Minor Changes
+
+-   [#1986](https://github.com/siemens/ix/pull/1986) [`e44cb4912b89ab91c6ace605ff939dd4121f0a7f`](https://github.com/siemens/ix/commit/e44cb4912b89ab91c6ace605ff939dd4121f0a7f) Thanks [@lzeiml](https://github.com/lzeiml)! - Added properties to set aria-labels for the following components:
+
+    -   ix-action-card
+    -   ix-avatar
+    -   ix-breadcrumb-item
+    -   ix-button
+    -   ix-card-accordion
+    -   ix-card-list
+    -   ix-category-filter
+    -   ix-chip
+    -   ix-date-input
+    -   ix-date-picker
+    -   ix-datetime-picker
+    -   ix-drawer
+    -   ix-dropdown-button
+    -   ix-dropdown-item
+    -   ix-empty-state
+    -   ix-event-list-item
+    -   ix-expanding-search
+    -   ix-filter-chip
+    -   ix-group-item
+    -   ix-icon-toggle-button
+    -   ix-key-value
+    -   ix-kpi
+    -   ix-link-button
+    -   ix-map-navigation-overlay
+    -   ix-modal-header
+    -   ix-pagination
+    -   ix-pane
+    -   ix-pill
+    -   ix-select
+    -   ix-split-button
+    -   ix-tabs
+    -   ix-toast
+    -   ix-toggle-button
+    -   ix-tree-item
+
+-   [#1864](https://github.com/siemens/ix/pull/1864) [`4077296037dd7889ddeb175559aca11f93a33312`](https://github.com/siemens/ix/commit/4077296037dd7889ddeb175559aca11f93a33312) Thanks [@GayatriK2002](https://github.com/GayatriK2002)! - Add option for action button slot to **ix-toast**
+
+-   [#1877](https://github.com/siemens/ix/pull/1877) [`813b9cea25e8f6d948a992f9145254bf7045adf0`](https://github.com/siemens/ix/commit/813b9cea25e8f6d948a992f9145254bf7045adf0) Thanks [@GayatriK2002](https://github.com/GayatriK2002)! - Add `centerContent` property to `ix-chip`.
+
+    Fixes #1854
+
+-   [#1853](https://github.com/siemens/ix/pull/1853) [`b67d0122acdf2f4f7df1f8d85bbd5a3fafe38624`](https://github.com/siemens/ix/commit/b67d0122acdf2f4f7df1f8d85bbd5a3fafe38624) Thanks [@lzeiml](https://github.com/lzeiml)! - Rework `ix-time-picker` according to new design
+
+    The ix-time-picker has been reworked to a new design and now uses different columns with selectable numbers to select the time. Milliseconds can now be selected as well.
+    There are also new interval properties to control which numbers are displayed for hours, minutes, seconds and milliseconds.
+    Additionally the displayed columns are now determined by the used format, making the showHour, showMinutes, showSeconds properties deprecated and will be removed with 4.0.0.
+    The numbers for hours, minutes, etc. can also be selected by tabbing onto the first number, and then using arrow keys and Enter to select the desired time.
+
+    Add new `ix-time-input` component
+
+    The time-input component has been added as well, combining an input field and the new ix-time-picker, similar to the ix-date-input.
+
+-   [#2002](https://github.com/siemens/ix/pull/2002) [`963502f6fe2e5194c34f4c8780820f30b581b7de`](https://github.com/siemens/ix/commit/963502f6fe2e5194c34f4c8780820f30b581b7de) Thanks [@lzeiml](https://github.com/lzeiml)! - The following properties have been added to ix-date-input: minDate, maxDate, weekStartIndex. Fixes #1965
+
+### Patch Changes
+
+-   [#1974](https://github.com/siemens/ix/pull/1974) [`6b9a8fc5922f936a96e3f09e8ea11e0720aa5383`](https://github.com/siemens/ix/commit/6b9a8fc5922f936a96e3f09e8ea11e0720aa5383) Thanks [@danielleroux](https://github.com/danielleroux)! - Update react-ouput-target to 1.1.0
+
+-   [#2005](https://github.com/siemens/ix/pull/2005) [`76016130da552410c00e0a0ea0c3bc58a015c132`](https://github.com/siemens/ix/commit/76016130da552410c00e0a0ea0c3bc58a015c132) Thanks [@danielleroux](https://github.com/danielleroux)! - **ix-tree**: call render function if item data is updated
+
+    Fixes #1948
+
+-   [#2008](https://github.com/siemens/ix/pull/2008) [`da6d384abc27cdfe4acac1f29e36af49bcf97f4d`](https://github.com/siemens/ix/commit/da6d384abc27cdfe4acac1f29e36af49bcf97f4d) Thanks [@danielleroux](https://github.com/danielleroux)! - Ensure ix-icon custom component is defined during library usage
+
+    Fixes #2003
+
+-   Updated dependencies \[[`e8e660fd56af649eace36a313b33cda8ebb69469`](https://github.com/siemens/ix/commit/e8e660fd56af649eace36a313b33cda8ebb69469), [`ecbbd0a7435722731337b3da6cb83bb2d40654aa`](https://github.com/siemens/ix/commit/ecbbd0a7435722731337b3da6cb83bb2d40654aa), [`76016130da552410c00e0a0ea0c3bc58a015c132`](https://github.com/siemens/ix/commit/76016130da552410c00e0a0ea0c3bc58a015c132), [`455933edb3f3b9d8145ea4f58007fe815f46f841`](https://github.com/siemens/ix/commit/455933edb3f3b9d8145ea4f58007fe815f46f841), [`6b9a8fc5922f936a96e3f09e8ea11e0720aa5383`](https://github.com/siemens/ix/commit/6b9a8fc5922f936a96e3f09e8ea11e0720aa5383), [`1d273b149630b4f80ebe370963df4269ab813e4f`](https://github.com/siemens/ix/commit/1d273b149630b4f80ebe370963df4269ab813e4f), [`6642dbb398850508497bd96e00e19fd4da3aa616`](https://github.com/siemens/ix/commit/6642dbb398850508497bd96e00e19fd4da3aa616), [`6f12a6a14ebd090c979b5c5a7b30b27ef40a0e95`](https://github.com/siemens/ix/commit/6f12a6a14ebd090c979b5c5a7b30b27ef40a0e95), [`39c9694bd3cd5864e127a8628e49c895add5da62`](https://github.com/siemens/ix/commit/39c9694bd3cd5864e127a8628e49c895add5da62), [`f892591ef14286ed7876ca0b071a8fd35de79bbf`](https://github.com/siemens/ix/commit/f892591ef14286ed7876ca0b071a8fd35de79bbf), [`3f0d55ae2f195e6c86a73c409ea28976dc3f2961`](https://github.com/siemens/ix/commit/3f0d55ae2f195e6c86a73c409ea28976dc3f2961), [`3d953256650eaa541dfbb93ec5e98a48212d97ad`](https://github.com/siemens/ix/commit/3d953256650eaa541dfbb93ec5e98a48212d97ad), [`4d4e5672137dc5b803d267e0564bb5944f4d9ae2`](https://github.com/siemens/ix/commit/4d4e5672137dc5b803d267e0564bb5944f4d9ae2), [`d346cc2d69596c0a72e7ef77b64097d8500a999c`](https://github.com/siemens/ix/commit/d346cc2d69596c0a72e7ef77b64097d8500a999c), [`e44cb4912b89ab91c6ace605ff939dd4121f0a7f`](https://github.com/siemens/ix/commit/e44cb4912b89ab91c6ace605ff939dd4121f0a7f), [`4077296037dd7889ddeb175559aca11f93a33312`](https://github.com/siemens/ix/commit/4077296037dd7889ddeb175559aca11f93a33312), [`152d7af26f90e2f489d4bae99c60369449b910db`](https://github.com/siemens/ix/commit/152d7af26f90e2f489d4bae99c60369449b910db), [`9776d7fb0cc5bb3b9afb4982cbceb00a8c638549`](https://github.com/siemens/ix/commit/9776d7fb0cc5bb3b9afb4982cbceb00a8c638549), [`813b9cea25e8f6d948a992f9145254bf7045adf0`](https://github.com/siemens/ix/commit/813b9cea25e8f6d948a992f9145254bf7045adf0), [`a3ac05becce0e245f0397a8f6b9789176b7728e6`](https://github.com/siemens/ix/commit/a3ac05becce0e245f0397a8f6b9789176b7728e6), [`b67d0122acdf2f4f7df1f8d85bbd5a3fafe38624`](https://github.com/siemens/ix/commit/b67d0122acdf2f4f7df1f8d85bbd5a3fafe38624), [`2496426f26665cd848a66bc69395a7d0261fa5a5`](https://github.com/siemens/ix/commit/2496426f26665cd848a66bc69395a7d0261fa5a5), [`b519b420fd3ca5de9c73c227ce78431b520ec4a6`](https://github.com/siemens/ix/commit/b519b420fd3ca5de9c73c227ce78431b520ec4a6), [`023cad0595fb3b110de2f62d982c32275b4aaea6`](https://github.com/siemens/ix/commit/023cad0595fb3b110de2f62d982c32275b4aaea6), [`963502f6fe2e5194c34f4c8780820f30b581b7de`](https://github.com/siemens/ix/commit/963502f6fe2e5194c34f4c8780820f30b581b7de), [`b630ffefe83f20c458bbef88d21918479e1ae540`](https://github.com/siemens/ix/commit/b630ffefe83f20c458bbef88d21918479e1ae540), [`1055e0127f0e25a654f5a7d69e5db102340a3a83`](https://github.com/siemens/ix/commit/1055e0127f0e25a654f5a7d69e5db102340a3a83)]:
+    -   @siemens/ix@3.2.0
+
+## [@siemens/ix-angular@3.2.0](https://github.com/siemens/ix/releases/tag/%40siemens/ix-angular%403.2.0) (2025-08-04T13:36:08Z)
+### Minor Changes
+
+-   [#1986](https://github.com/siemens/ix/pull/1986) [`e44cb4912b89ab91c6ace605ff939dd4121f0a7f`](https://github.com/siemens/ix/commit/e44cb4912b89ab91c6ace605ff939dd4121f0a7f) Thanks [@lzeiml](https://github.com/lzeiml)! - Added properties to set aria-labels for the following components:
+
+    -   ix-action-card
+    -   ix-avatar
+    -   ix-breadcrumb-item
+    -   ix-button
+    -   ix-card-accordion
+    -   ix-card-list
+    -   ix-category-filter
+    -   ix-chip
+    -   ix-date-input
+    -   ix-date-picker
+    -   ix-datetime-picker
+    -   ix-drawer
+    -   ix-dropdown-button
+    -   ix-dropdown-item
+    -   ix-empty-state
+    -   ix-event-list-item
+    -   ix-expanding-search
+    -   ix-filter-chip
+    -   ix-group-item
+    -   ix-icon-toggle-button
+    -   ix-key-value
+    -   ix-kpi
+    -   ix-link-button
+    -   ix-map-navigation-overlay
+    -   ix-modal-header
+    -   ix-pagination
+    -   ix-pane
+    -   ix-pill
+    -   ix-select
+    -   ix-split-button
+    -   ix-tabs
+    -   ix-toast
+    -   ix-toggle-button
+    -   ix-tree-item
+
+-   [#1864](https://github.com/siemens/ix/pull/1864) [`4077296037dd7889ddeb175559aca11f93a33312`](https://github.com/siemens/ix/commit/4077296037dd7889ddeb175559aca11f93a33312) Thanks [@GayatriK2002](https://github.com/GayatriK2002)! - Add option for action button slot to **ix-toast**
+
+-   [#1877](https://github.com/siemens/ix/pull/1877) [`813b9cea25e8f6d948a992f9145254bf7045adf0`](https://github.com/siemens/ix/commit/813b9cea25e8f6d948a992f9145254bf7045adf0) Thanks [@GayatriK2002](https://github.com/GayatriK2002)! - Add `centerContent` property to `ix-chip`.
+
+    Fixes #1854
+
+-   [#1853](https://github.com/siemens/ix/pull/1853) [`b67d0122acdf2f4f7df1f8d85bbd5a3fafe38624`](https://github.com/siemens/ix/commit/b67d0122acdf2f4f7df1f8d85bbd5a3fafe38624) Thanks [@lzeiml](https://github.com/lzeiml)! - Rework `ix-time-picker` according to new design
+
+    The ix-time-picker has been reworked to a new design and now uses different columns with selectable numbers to select the time. Milliseconds can now be selected as well.
+    There are also new interval properties to control which numbers are displayed for hours, minutes, seconds and milliseconds.
+    Additionally the displayed columns are now determined by the used format, making the showHour, showMinutes, showSeconds properties deprecated and will be removed with 4.0.0.
+    The numbers for hours, minutes, etc. can also be selected by tabbing onto the first number, and then using arrow keys and Enter to select the desired time.
+
+    Add new `ix-time-input` component
+
+    The time-input component has been added as well, combining an input field and the new ix-time-picker, similar to the ix-date-input.
+
+-   [#2002](https://github.com/siemens/ix/pull/2002) [`963502f6fe2e5194c34f4c8780820f30b581b7de`](https://github.com/siemens/ix/commit/963502f6fe2e5194c34f4c8780820f30b581b7de) Thanks [@lzeiml](https://github.com/lzeiml)! - The following properties have been added to ix-date-input: minDate, maxDate, weekStartIndex. Fixes #1965
+
+### Patch Changes
+
+-   [#1993](https://github.com/siemens/ix/pull/1993) [`b519b420fd3ca5de9c73c227ce78431b520ec4a6`](https://github.com/siemens/ix/commit/b519b420fd3ca5de9c73c227ce78431b520ec4a6) Thanks [@AndreasBerliner](https://github.com/AndreasBerliner)! - Improve jsdocs for **ix-date-picker** to better describe `locale` property
+
+-   [#2008](https://github.com/siemens/ix/pull/2008) [`da6d384abc27cdfe4acac1f29e36af49bcf97f4d`](https://github.com/siemens/ix/commit/da6d384abc27cdfe4acac1f29e36af49bcf97f4d) Thanks [@danielleroux](https://github.com/danielleroux)! - Ensure ix-icon custom component is defined during library usage
+
+    Fixes #2003
+
+-   [#1933](https://github.com/siemens/ix/pull/1933) [`7a8d7b72c00a1b303006531965233c794c9f1bcb`](https://github.com/siemens/ix/commit/7a8d7b72c00a1b303006531965233c794c9f1bcb) Thanks [@Nadim901](https://github.com/Nadim901)! - Keep **radio-value-accessor** in sync with form control.
+
+-   Updated dependencies \[[`e8e660fd56af649eace36a313b33cda8ebb69469`](https://github.com/siemens/ix/commit/e8e660fd56af649eace36a313b33cda8ebb69469), [`ecbbd0a7435722731337b3da6cb83bb2d40654aa`](https://github.com/siemens/ix/commit/ecbbd0a7435722731337b3da6cb83bb2d40654aa), [`76016130da552410c00e0a0ea0c3bc58a015c132`](https://github.com/siemens/ix/commit/76016130da552410c00e0a0ea0c3bc58a015c132), [`455933edb3f3b9d8145ea4f58007fe815f46f841`](https://github.com/siemens/ix/commit/455933edb3f3b9d8145ea4f58007fe815f46f841), [`6b9a8fc5922f936a96e3f09e8ea11e0720aa5383`](https://github.com/siemens/ix/commit/6b9a8fc5922f936a96e3f09e8ea11e0720aa5383), [`1d273b149630b4f80ebe370963df4269ab813e4f`](https://github.com/siemens/ix/commit/1d273b149630b4f80ebe370963df4269ab813e4f), [`6642dbb398850508497bd96e00e19fd4da3aa616`](https://github.com/siemens/ix/commit/6642dbb398850508497bd96e00e19fd4da3aa616), [`6f12a6a14ebd090c979b5c5a7b30b27ef40a0e95`](https://github.com/siemens/ix/commit/6f12a6a14ebd090c979b5c5a7b30b27ef40a0e95), [`39c9694bd3cd5864e127a8628e49c895add5da62`](https://github.com/siemens/ix/commit/39c9694bd3cd5864e127a8628e49c895add5da62), [`f892591ef14286ed7876ca0b071a8fd35de79bbf`](https://github.com/siemens/ix/commit/f892591ef14286ed7876ca0b071a8fd35de79bbf), [`3f0d55ae2f195e6c86a73c409ea28976dc3f2961`](https://github.com/siemens/ix/commit/3f0d55ae2f195e6c86a73c409ea28976dc3f2961), [`3d953256650eaa541dfbb93ec5e98a48212d97ad`](https://github.com/siemens/ix/commit/3d953256650eaa541dfbb93ec5e98a48212d97ad), [`4d4e5672137dc5b803d267e0564bb5944f4d9ae2`](https://github.com/siemens/ix/commit/4d4e5672137dc5b803d267e0564bb5944f4d9ae2), [`d346cc2d69596c0a72e7ef77b64097d8500a999c`](https://github.com/siemens/ix/commit/d346cc2d69596c0a72e7ef77b64097d8500a999c), [`e44cb4912b89ab91c6ace605ff939dd4121f0a7f`](https://github.com/siemens/ix/commit/e44cb4912b89ab91c6ace605ff939dd4121f0a7f), [`4077296037dd7889ddeb175559aca11f93a33312`](https://github.com/siemens/ix/commit/4077296037dd7889ddeb175559aca11f93a33312), [`152d7af26f90e2f489d4bae99c60369449b910db`](https://github.com/siemens/ix/commit/152d7af26f90e2f489d4bae99c60369449b910db), [`9776d7fb0cc5bb3b9afb4982cbceb00a8c638549`](https://github.com/siemens/ix/commit/9776d7fb0cc5bb3b9afb4982cbceb00a8c638549), [`813b9cea25e8f6d948a992f9145254bf7045adf0`](https://github.com/siemens/ix/commit/813b9cea25e8f6d948a992f9145254bf7045adf0), [`a3ac05becce0e245f0397a8f6b9789176b7728e6`](https://github.com/siemens/ix/commit/a3ac05becce0e245f0397a8f6b9789176b7728e6), [`b67d0122acdf2f4f7df1f8d85bbd5a3fafe38624`](https://github.com/siemens/ix/commit/b67d0122acdf2f4f7df1f8d85bbd5a3fafe38624), [`2496426f26665cd848a66bc69395a7d0261fa5a5`](https://github.com/siemens/ix/commit/2496426f26665cd848a66bc69395a7d0261fa5a5), [`b519b420fd3ca5de9c73c227ce78431b520ec4a6`](https://github.com/siemens/ix/commit/b519b420fd3ca5de9c73c227ce78431b520ec4a6), [`023cad0595fb3b110de2f62d982c32275b4aaea6`](https://github.com/siemens/ix/commit/023cad0595fb3b110de2f62d982c32275b4aaea6), [`963502f6fe2e5194c34f4c8780820f30b581b7de`](https://github.com/siemens/ix/commit/963502f6fe2e5194c34f4c8780820f30b581b7de), [`b630ffefe83f20c458bbef88d21918479e1ae540`](https://github.com/siemens/ix/commit/b630ffefe83f20c458bbef88d21918479e1ae540), [`1055e0127f0e25a654f5a7d69e5db102340a3a83`](https://github.com/siemens/ix/commit/1055e0127f0e25a654f5a7d69e5db102340a3a83)]:
+    -   @siemens/ix@3.2.0
+
+## [@siemens/ix-aggrid@3.0.2](https://github.com/siemens/ix/releases/tag/%40siemens/ix-aggrid%403.0.2) (2025-08-04T13:36:06Z)
+### Patch Changes
+
+-   [#1983](https://github.com/siemens/ix/pull/1983) [`bbb849d7c51b8b388f9a6d2b27e0769ae1e68442`](https://github.com/siemens/ix/commit/bbb849d7c51b8b388f9a6d2b27e0769ae1e68442) Thanks [@GayatriK2002](https://github.com/GayatriK2002)! - Fix tooltip background color for **AG Grid**.
+
+    Fixes #1932
+
+-   Updated dependencies \[[`e8e660fd56af649eace36a313b33cda8ebb69469`](https://github.com/siemens/ix/commit/e8e660fd56af649eace36a313b33cda8ebb69469), [`ecbbd0a7435722731337b3da6cb83bb2d40654aa`](https://github.com/siemens/ix/commit/ecbbd0a7435722731337b3da6cb83bb2d40654aa), [`76016130da552410c00e0a0ea0c3bc58a015c132`](https://github.com/siemens/ix/commit/76016130da552410c00e0a0ea0c3bc58a015c132), [`455933edb3f3b9d8145ea4f58007fe815f46f841`](https://github.com/siemens/ix/commit/455933edb3f3b9d8145ea4f58007fe815f46f841), [`6b9a8fc5922f936a96e3f09e8ea11e0720aa5383`](https://github.com/siemens/ix/commit/6b9a8fc5922f936a96e3f09e8ea11e0720aa5383), [`1d273b149630b4f80ebe370963df4269ab813e4f`](https://github.com/siemens/ix/commit/1d273b149630b4f80ebe370963df4269ab813e4f), [`6642dbb398850508497bd96e00e19fd4da3aa616`](https://github.com/siemens/ix/commit/6642dbb398850508497bd96e00e19fd4da3aa616), [`6f12a6a14ebd090c979b5c5a7b30b27ef40a0e95`](https://github.com/siemens/ix/commit/6f12a6a14ebd090c979b5c5a7b30b27ef40a0e95), [`39c9694bd3cd5864e127a8628e49c895add5da62`](https://github.com/siemens/ix/commit/39c9694bd3cd5864e127a8628e49c895add5da62), [`f892591ef14286ed7876ca0b071a8fd35de79bbf`](https://github.com/siemens/ix/commit/f892591ef14286ed7876ca0b071a8fd35de79bbf), [`3f0d55ae2f195e6c86a73c409ea28976dc3f2961`](https://github.com/siemens/ix/commit/3f0d55ae2f195e6c86a73c409ea28976dc3f2961), [`3d953256650eaa541dfbb93ec5e98a48212d97ad`](https://github.com/siemens/ix/commit/3d953256650eaa541dfbb93ec5e98a48212d97ad), [`4d4e5672137dc5b803d267e0564bb5944f4d9ae2`](https://github.com/siemens/ix/commit/4d4e5672137dc5b803d267e0564bb5944f4d9ae2), [`d346cc2d69596c0a72e7ef77b64097d8500a999c`](https://github.com/siemens/ix/commit/d346cc2d69596c0a72e7ef77b64097d8500a999c), [`e44cb4912b89ab91c6ace605ff939dd4121f0a7f`](https://github.com/siemens/ix/commit/e44cb4912b89ab91c6ace605ff939dd4121f0a7f), [`4077296037dd7889ddeb175559aca11f93a33312`](https://github.com/siemens/ix/commit/4077296037dd7889ddeb175559aca11f93a33312), [`152d7af26f90e2f489d4bae99c60369449b910db`](https://github.com/siemens/ix/commit/152d7af26f90e2f489d4bae99c60369449b910db), [`9776d7fb0cc5bb3b9afb4982cbceb00a8c638549`](https://github.com/siemens/ix/commit/9776d7fb0cc5bb3b9afb4982cbceb00a8c638549), [`813b9cea25e8f6d948a992f9145254bf7045adf0`](https://github.com/siemens/ix/commit/813b9cea25e8f6d948a992f9145254bf7045adf0), [`a3ac05becce0e245f0397a8f6b9789176b7728e6`](https://github.com/siemens/ix/commit/a3ac05becce0e245f0397a8f6b9789176b7728e6), [`b67d0122acdf2f4f7df1f8d85bbd5a3fafe38624`](https://github.com/siemens/ix/commit/b67d0122acdf2f4f7df1f8d85bbd5a3fafe38624), [`2496426f26665cd848a66bc69395a7d0261fa5a5`](https://github.com/siemens/ix/commit/2496426f26665cd848a66bc69395a7d0261fa5a5), [`b519b420fd3ca5de9c73c227ce78431b520ec4a6`](https://github.com/siemens/ix/commit/b519b420fd3ca5de9c73c227ce78431b520ec4a6), [`023cad0595fb3b110de2f62d982c32275b4aaea6`](https://github.com/siemens/ix/commit/023cad0595fb3b110de2f62d982c32275b4aaea6), [`963502f6fe2e5194c34f4c8780820f30b581b7de`](https://github.com/siemens/ix/commit/963502f6fe2e5194c34f4c8780820f30b581b7de), [`b630ffefe83f20c458bbef88d21918479e1ae540`](https://github.com/siemens/ix/commit/b630ffefe83f20c458bbef88d21918479e1ae540), [`1055e0127f0e25a654f5a7d69e5db102340a3a83`](https://github.com/siemens/ix/commit/1055e0127f0e25a654f5a7d69e5db102340a3a83)]:
+    -   @siemens/ix@3.2.0
+
 ## [@siemens/ix@3.1.0](https://github.com/siemens/ix/releases/tag/%40siemens/ix%403.1.0) (2025-06-16T10:53:12Z)
 ### Minor Changes
 
@@ -739,313 +1103,3 @@ doc-type: 'banner'
 
 -   Updated dependencies \[[`e8049c9966e7d5019c8ed0ae0e6cf2597f81dce5`](https://github.com/siemens/ix/commit/e8049c9966e7d5019c8ed0ae0e6cf2597f81dce5), [`8324312fa39abc53711850d4a94b765d994f15cd`](https://github.com/siemens/ix/commit/8324312fa39abc53711850d4a94b765d994f15cd), [`c448755f97b66af96cce435025dc1f37892e9eb8`](https://github.com/siemens/ix/commit/c448755f97b66af96cce435025dc1f37892e9eb8), [`30a98977feb83c7fb8ec8ca76a4b524042b2e5af`](https://github.com/siemens/ix/commit/30a98977feb83c7fb8ec8ca76a4b524042b2e5af), [`df65c4d5436bf97f08dc2ec2899e2556c4ad7eaa`](https://github.com/siemens/ix/commit/df65c4d5436bf97f08dc2ec2899e2556c4ad7eaa)]:
     -   @siemens/ix@3.0.0-alpha.1
-
-## [@siemens/ix-angular@3.0.0-alpha.1](https://github.com/siemens/ix/releases/tag/%40siemens/ix-angular%403.0.0-alpha.1) (2025-03-21T08:45:25Z)
-### Patch Changes
-
--   Updated dependencies \[[`e8049c9966e7d5019c8ed0ae0e6cf2597f81dce5`](https://github.com/siemens/ix/commit/e8049c9966e7d5019c8ed0ae0e6cf2597f81dce5), [`8324312fa39abc53711850d4a94b765d994f15cd`](https://github.com/siemens/ix/commit/8324312fa39abc53711850d4a94b765d994f15cd), [`c448755f97b66af96cce435025dc1f37892e9eb8`](https://github.com/siemens/ix/commit/c448755f97b66af96cce435025dc1f37892e9eb8), [`30a98977feb83c7fb8ec8ca76a4b524042b2e5af`](https://github.com/siemens/ix/commit/30a98977feb83c7fb8ec8ca76a4b524042b2e5af), [`df65c4d5436bf97f08dc2ec2899e2556c4ad7eaa`](https://github.com/siemens/ix/commit/df65c4d5436bf97f08dc2ec2899e2556c4ad7eaa)]:
-    -   @siemens/ix@3.0.0-alpha.1
-
-## [@siemens/ix@3.0.0-alpha.0](https://github.com/siemens/ix/releases/tag/%40siemens/ix%403.0.0-alpha.0) (2025-03-17T14:02:36Z)
-## 3.0.0-alpha.0
-
-### Major Changes
-
-- [#1581](https://github.com/siemens/ix/pull/1581) [`7eb4d5147056e1e3252e387e5a718df7e593909e`](https://github.com/siemens/ix/commit/7eb4d5147056e1e3252e387e5a718df7e593909e) Thanks [@matthiashader](https://github.com/matthiashader)! - Component Updates and Enhancements
-
-  New Variants for Card Components:
-
-  - **ix-action-card**, **ix-card**, and **ix-push-card**:
-    - The `insight` and `notification` variants have been **replaced by** `outline` and `filled`.
-
-  Property Updates:
-
-  - **ix-chip**:
-    - The `color` property has been **replaced by** `chipColor`.
-  - **ix-event-list**:
-    - The `color` attribute has been **replaced by** `itemColor`.
-  - **ix-icon-button**:
-    - The `color` attribute has been **replaced by** `iconColor`.
-    - Size `32` has been removed.
-  - **ix-pill**:
-    - The `color` attribute has been **replaced by** `pillColor`.
-  - **ix-typography**:
-    - The `color` attribute has been **replaced by** `textColor`.
-  - **ix-select**:
-    - The `selectedIndices` attribute has been **replaced by** `value`.
-    - The `itemSelectionChange` event has been **replaced by** `valueChange`.
-  - **ix-select-item**:
-    - The type of the `value` property type has been updated to `string`.
-
-  Date and Time Picker Enhancements:
-
-  - **ix-date-picker**:
-    - Removed attributes: `individual` and `eventDelimiter`.
-    - The `textSelectedDate` property has been **replaced by** `i18nDone`.
-    - The `done` event has been **replaced by** `dateSelect`.
-  - **ix-datetime-picker**:
-    - The `textSelectedDate` property has been **replaced by** `i18nDone`.
-    - The `done` event has been **replaced by** `dateSelect`.
-    - Removed the `eventDelimiter` property.
-  - **ix-time-picker**:
-    - Removed attributes: `individual` and `showTimeReference`.
-
-  Removed Features:
-
-  - **ix-menu**:
-    - Removed the `maxVisibleMenuItems` attribute.
-  - **ix-menu-item**:
-    - The `tabIcon` attribute has been removed and replaced with `icon`.
-
-  Other Changes:
-
-  - **ix-modal**:
-    - The `keyboard` attribute has been **replaced by** `closeOnEscape`.
-
-- [#1700](https://github.com/siemens/ix/pull/1700) [`2e2972260eafb1a87b84e5a705e3c932b15b8467`](https://github.com/siemens/ix/commit/2e2972260eafb1a87b84e5a705e3c932b15b8467) Thanks [@jul-lam](https://github.com/jul-lam)! - The **ix-tooltip** is working as expected when utilized for an **ix-dropdown-item** inside an **ix-dropdown**. The tooltip is now displayed outside the dropdown without breaking its layout.
-
-  Fixes #1618
-
-- [#1238](https://github.com/siemens/ix/pull/1238) [`8803f3185b8a183926576d9f28894f9e1aa92ec3`](https://github.com/siemens/ix/commit/8803f3185b8a183926576d9f28894f9e1aa92ec3) Thanks [@danielleroux](https://github.com/danielleroux)! - feat: reduce bundle size in combination with icons
-
-- [#1742](https://github.com/siemens/ix/pull/1742) [`8b757805d65f62e9296e6d1abd67a8f0b30099f3`](https://github.com/siemens/ix/commit/8b757805d65f62e9296e6d1abd67a8f0b30099f3) Thanks [@matthiashader](https://github.com/matthiashader)! - Adapt the event signature of the `dateSelect` event of the `ix-date-picker` to reflect undefined values.
-
-- [#1578](https://github.com/siemens/ix/pull/1578) [`dd8b3eb28eb162f30c5fef27b369036b3bd6dd8b`](https://github.com/siemens/ix/commit/dd8b3eb28eb162f30c5fef27b369036b3bd6dd8b) Thanks [@danielleroux](https://github.com/danielleroux)! - Remove `devDependency` and `peerDependency` to bootstrap. For more information checkout BREAKING_CHANGES.md
-
-- [#1758](https://github.com/siemens/ix/pull/1758) [`f6fd42a74b42ff0f9f2ffd2b4c2a49fbb4402760`](https://github.com/siemens/ix/commit/f6fd42a74b42ff0f9f2ffd2b4c2a49fbb4402760) Thanks [@danielleroux](https://github.com/danielleroux)! - Prevent global styling for `input` and `textarea`. If you still want to use the legacy styling provide a `class="ix-form-control"` to `input` or `textarea`.
-  Prevent global styling for `label`. If you still want to use the legacy styling provide a `class="ix-form-label"` to `label`.
-
-  Fixes #1398
-
-- [#1457](https://github.com/siemens/ix/pull/1457) [`3d62fffdc107bfc92b2ecad8437662dc7c03796f`](https://github.com/siemens/ix/commit/3d62fffdc107bfc92b2ecad8437662dc7c03796f) Thanks [@matthiashader](https://github.com/matthiashader)! - fix(core/pane-layout): remove absolute positioning
-
-- [#1330](https://github.com/siemens/ix/pull/1330) [`c9c5bf0451998ce94a57247b974e00176f294437`](https://github.com/siemens/ix/commit/c9c5bf0451998ce94a57247b974e00176f294437) Thanks [@github-actions](https://github.com/apps/github-actions)! - The **VariantMapping** that mapped legacy font classes to current ones was removed.
-
-- [#1394](https://github.com/siemens/ix/pull/1394) [`24f3ad61ab275bf7c9bbd7e9ee84f6b4f7d3b5ff`](https://github.com/siemens/ix/commit/24f3ad61ab275bf7c9bbd7e9ee84f6b4f7d3b5ff) Thanks [@AndreasBerliner](https://github.com/AndreasBerliner)! - refactor: replace internal comments with annotations
-
-- [#1758](https://github.com/siemens/ix/pull/1758) [`f6fd42a74b42ff0f9f2ffd2b4c2a49fbb4402760`](https://github.com/siemens/ix/commit/f6fd42a74b42ff0f9f2ffd2b4c2a49fbb4402760) Thanks [@danielleroux](https://github.com/danielleroux)! - Change default width from `input.ix-from-control` from `width: 100%` to `width: auto`
-
-- [#1743](https://github.com/siemens/ix/pull/1743) [`4bdec91e4a837e487caa4a25407f24eb37616531`](https://github.com/siemens/ix/commit/4bdec91e4a837e487caa4a25407f24eb37616531) Thanks [@lzeiml](https://github.com/lzeiml)! - **ix-date-picker**: Week numbers are now hidden by default inside the ix-date-picker. They can be shown by setting showWeekNumbers to true.
-  **ix-datetime-picker**: Week numbers are now hidden by default inside the ix-date-picker. They can be shown by setting showWeekNumbers to true.
-  **ix-date-dropdown**: Week numbers are now hidden by default inside the ix-date-picker. They can be shown by setting showWeekNumbers to true.
-  **ix-date-input**: Week numbers are now hidden by default inside the ix-date-picker. They can be shown by setting showWeekNumbers to true.
-
-- [#1742](https://github.com/siemens/ix/pull/1742) [`db785bb8a4cc0654104cb24d420b7a1e2d45fdba`](https://github.com/siemens/ix/commit/db785bb8a4cc0654104cb24d420b7a1e2d45fdba) Thanks [@matthiashader](https://github.com/matthiashader)! - `ix-date-dropdown`: Adapt the types `DateDropdownOption` and `DateRangeChangeEvent` to reflect the changed signature of the `ix-date-picker`'s `dateSelect` event.
-
-- [#1742](https://github.com/siemens/ix/pull/1742) [`db785bb8a4cc0654104cb24d420b7a1e2d45fdba`](https://github.com/siemens/ix/commit/db785bb8a4cc0654104cb24d420b7a1e2d45fdba) Thanks [@matthiashader](https://github.com/matthiashader)! - `ix-date-input`: Adapt the `value` property and the `valueChange` event to reflect the changed signature of the `date-picker`'s `dateSelect` event.
-
-- [#1613](https://github.com/siemens/ix/pull/1613) [`b3846c925ec4f03fd5d26b0b66042185b766f099`](https://github.com/siemens/ix/commit/b3846c925ec4f03fd5d26b0b66042185b766f099) Thanks [@jul-lam](https://github.com/jul-lam)! - **ix-application** now utilizes full viewport height and full viewport width
-
-- [#1273](https://github.com/siemens/ix/pull/1273) [`e8f825f7f494c8cc05dcce075afcff77839f8096`](https://github.com/siemens/ix/commit/e8f825f7f494c8cc05dcce075afcff77839f8096) Thanks [@nuke-ellington](https://github.com/nuke-ellington)! - fix(core/checkbox): allow multiline labels and align checkbox at the top
-
-### Minor Changes
-
-- [#1737](https://github.com/siemens/ix/pull/1737) [`149dfbd6518e94da9e966d06ea2292c8e96772ce`](https://github.com/siemens/ix/commit/149dfbd6518e94da9e966d06ea2292c8e96772ce) Thanks [@matthiashader](https://github.com/matthiashader)! - `ix-message-bar`: Add new types `critical`, `success`, `primary`, and `neutral`, and deprecate type `danger`.
-  Additionally, add new `NotificationColor` colors `color-critical`, `color-alarm`, `color-neutral`, and `color-primary`.
-
-- [#1697](https://github.com/siemens/ix/pull/1697) [`9e13a08340efc9cb7dd1f0ef7d56481c8b5dcbbe`](https://github.com/siemens/ix/commit/9e13a08340efc9cb7dd1f0ef7d56481c8b5dcbbe) Thanks [@AndreasBerliner](https://github.com/AndreasBerliner)! - `ix-chip` and `ix-pill`: Add property `tooltip-text` to display an `ix-tooltip` with customizable text.
-
-- [#1676](https://github.com/siemens/ix/pull/1676) [`4685dc2c2b0de0961b464d305f633e1115a5926a`](https://github.com/siemens/ix/commit/4685dc2c2b0de0961b464d305f633e1115a5926a) Thanks [@nuke-ellington](https://github.com/nuke-ellington)! - `ix-flip-tile`: Expsose `index` property to allow setting of displayed content and add `toggle` event.
-
-- [#1688](https://github.com/siemens/ix/pull/1688) [`5a12c6ac20e80a77f9fd3ad9aaffd66468f72b40`](https://github.com/siemens/ix/commit/5a12c6ac20e80a77f9fd3ad9aaffd66468f72b40) Thanks [@matthiashader](https://github.com/matthiashader)! - `ix-message-bar`: Event `closedChange` can now be prevented via `event.preventDefault()`.
-  An additional event is added to get notified after the close animation of the `ix-message-bar` is finished.
-
-- [#1676](https://github.com/siemens/ix/pull/1676) [`4685dc2c2b0de0961b464d305f633e1115a5926a`](https://github.com/siemens/ix/commit/4685dc2c2b0de0961b464d305f633e1115a5926a) Thanks [@nuke-ellington](https://github.com/nuke-ellington)! - `ix-menu`: Add `openSettings` and `openAbout` events. Event `expandChange` can now be prevented via `event.preventDefault()`.
-
-- [#1758](https://github.com/siemens/ix/pull/1758) [`d20b43d5f5bd5291b5125b120d2bb2d72286acfd`](https://github.com/siemens/ix/commit/d20b43d5f5bd5291b5125b120d2bb2d72286acfd) Thanks [@danielleroux](https://github.com/danielleroux)! - Add new global class `.ix-table` and `.ix-table-striped` to display a simple html table
-
-- [#1676](https://github.com/siemens/ix/pull/1676) [`4685dc2c2b0de0961b464d305f633e1115a5926a`](https://github.com/siemens/ix/commit/4685dc2c2b0de0961b464d305f633e1115a5926a) Thanks [@nuke-ellington](https://github.com/nuke-ellington)! - `ìx-drawer`: Events `open` and `drawerClose` can now be prevented via`event.preventDefault()`.
-
-- [#1676](https://github.com/siemens/ix/pull/1676) [`4685dc2c2b0de0961b464d305f633e1115a5926a`](https://github.com/siemens/ix/commit/4685dc2c2b0de0961b464d305f633e1115a5926a) Thanks [@nuke-ellington](https://github.com/nuke-ellington)! - Add `tabChange` event to `ix-menu-settings` and `ix-menu-about`.
-
-- [#1760](https://github.com/siemens/ix/pull/1760) [`ac163467de8fc4d943f5366415492a9a02748999`](https://github.com/siemens/ix/commit/ac163467de8fc4d943f5366415492a9a02748999) Thanks [@nuke-ellington](https://github.com/nuke-ellington)! - **ix-datetime-picker**: Time selection headline can now be translated via property `i18nTime`.
-
-### Patch Changes
-
-- [#1706](https://github.com/siemens/ix/pull/1706) [`e8bd3b6301d7553e6a02b79e2925aa0595b674ca`](https://github.com/siemens/ix/commit/e8bd3b6301d7553e6a02b79e2925aa0595b674ca) Thanks [@lzeiml](https://github.com/lzeiml)! - **ix-menu-category**: Dynamically added items are now instantly visible. This is achieved by adjusting the max-height everytime an item gets added.
-
-  Fixes #1606
-
-- [#1683](https://github.com/siemens/ix/pull/1683) [`aa63b4fd901bc50e98877826699412affa127ae7`](https://github.com/siemens/ix/commit/aa63b4fd901bc50e98877826699412affa127ae7) Thanks [@ridvandmrc](https://github.com/ridvandmrc)! - `active=false` of the `ix-chip` will now show the chip as not interactable.
-
-  Fixed #1656
-
-- [#1681](https://github.com/siemens/ix/pull/1681) [`5b56d90813239cb34d28b4c20255392b9dd1d66f`](https://github.com/siemens/ix/commit/5b56d90813239cb34d28b4c20255392b9dd1d66f) Thanks [@jul-lam](https://github.com/jul-lam)! - Update `@floating-ui/dom` dependency to fix a wrong placement of the `ix-dropdown` if the dropdown is placed inside a `dialog`-element with animations in certain environments.
-
-- [#1708](https://github.com/siemens/ix/pull/1708) [`96c8f78e4d3d4d304b1d5a41504d5b24401ea461`](https://github.com/siemens/ix/commit/96c8f78e4d3d4d304b1d5a41504d5b24401ea461) Thanks [@lzeiml](https://github.com/lzeiml)! - **ix-radio**: Now doesn't change height/layout anymore when clicked. This is achieved by changing the way one of the component's divs is rendered.
-  **ix-checkbox**: Now doesn't change height/layout anymore when clicked. This is achieved by changing the way one of the component's SVGs is rendered.
-
-  Fixes #1702
-
-- [#1699](https://github.com/siemens/ix/pull/1699) [`093c78352916a193e7f2cbfab692362c4ba0de9a`](https://github.com/siemens/ix/commit/093c78352916a193e7f2cbfab692362c4ba0de9a) Thanks [@danielleroux](https://github.com/danielleroux)! - Update classic theme colors to match latest figma specs
-
-- [#1561](https://github.com/siemens/ix/pull/1561) [`699958d387c1044b50def5071369f27de49f56ef`](https://github.com/siemens/ix/commit/699958d387c1044b50def5071369f27de49f56ef) Thanks [@ridvandmrc](https://github.com/ridvandmrc)! - Update slot references for **ix-input-group**.
-
-- [#1687](https://github.com/siemens/ix/pull/1687) [`2d4e3b8cdb756dff44627941adfea6a0230ccf26`](https://github.com/siemens/ix/commit/2d4e3b8cdb756dff44627941adfea6a0230ccf26) Thanks [@matthiashader](https://github.com/matthiashader)! - Fix issue of `ix-button` which prevent a form get submitted twice in row.
-
-- [#1330](https://github.com/siemens/ix/pull/1330) [`b5e2da18f871d6189c064a72bd9b29a82d0685eb`](https://github.com/siemens/ix/commit/b5e2da18f871d6189c064a72bd9b29a82d0685eb) Thanks [@github-actions](https://github.com/apps/github-actions)! - fix(core): semver from stencil/core to minor
-
-- [#1691](https://github.com/siemens/ix/pull/1691) [`8726afc094adf2ddb4f8e927c6a42aa8dc0ed589`](https://github.com/siemens/ix/commit/8726afc094adf2ddb4f8e927c6a42aa8dc0ed589) Thanks [@nuke-ellington](https://github.com/nuke-ellington)! - `ix-workflow-step`: change icon for 'done' state to be different from the one shown for 'success' state to pervent confusion.
-
-- [#1682](https://github.com/siemens/ix/pull/1682) [`f41b5d60299cb874cec9730394038dd4c2df8a60`](https://github.com/siemens/ix/commit/f41b5d60299cb874cec9730394038dd4c2df8a60) Thanks [@danielleroux](https://github.com/danielleroux)! - Prevent input elements like (`ix-input`, `ix-number-input`, `ix-date-input`, `ix-select`, `ix-textarea`) to show `required` validation error without any user interaction.
-
-  If the class `ix-invalid` is applied programmatically an error message is still shown even without a user interaction.
-
-  Fixes #1638, #1680
-
-- [#1561](https://github.com/siemens/ix/pull/1561) [`699958d387c1044b50def5071369f27de49f56ef`](https://github.com/siemens/ix/commit/699958d387c1044b50def5071369f27de49f56ef) Thanks [@ridvandmrc](https://github.com/ridvandmrc)! - **ix-drawer**: Allow nested content to calculate it's layout properly by setting drawer width explicitly.
-
-- [#1769](https://github.com/siemens/ix/pull/1769) [`dacbced83d226380c256d868620ee640996cf229`](https://github.com/siemens/ix/commit/dacbced83d226380c256d868620ee640996cf229) Thanks [@nuke-ellington](https://github.com/nuke-ellington)! - Refactor return type of `focusInput` method of `IxInputFieldComponent` interface to `Promise<void>`.
-## [](https://github.com/siemens/ix/releases/tag/%40siemens/ix-vue%403.0.0-alpha.0) (2025-03-17T14:05:15Z)
-## 3.0.0-alpha.0
-
-### Major Changes
-
-- [#1581](https://github.com/siemens/ix/pull/1581) [`7eb4d5147056e1e3252e387e5a718df7e593909e`](https://github.com/siemens/ix/commit/7eb4d5147056e1e3252e387e5a718df7e593909e) Thanks [@matthiashader](https://github.com/matthiashader)! - Component Updates and Enhancements
-
-  New Variants for Card Components:
-
-  - **ix-action-card**, **ix-card**, and **ix-push-card**:
-    - The `insight` and `notification` variants have been **replaced by** `outline` and `filled`.
-
-  Property Updates:
-
-  - **ix-chip**:
-    - The `color` property has been **replaced by** `chipColor`.
-  - **ix-event-list**:
-    - The `color` attribute has been **replaced by** `itemColor`.
-  - **ix-icon-button**:
-    - The `color` attribute has been **replaced by** `iconColor`.
-    - Size `32` has been removed.
-  - **ix-pill**:
-    - The `color` attribute has been **replaced by** `pillColor`.
-  - **ix-typography**:
-    - The `color` attribute has been **replaced by** `textColor`.
-  - **ix-select**:
-    - The `selectedIndices` attribute has been **replaced by** `value`.
-    - The `itemSelectionChange` event has been **replaced by** `valueChange`.
-  - **ix-select-item**:
-    - The type of the `value` property type has been updated to `string`.
-
-  Date and Time Picker Enhancements:
-
-  - **ix-date-picker**:
-    - Removed attributes: `individual` and `eventDelimiter`.
-    - The `textSelectedDate` property has been **replaced by** `i18nDone`.
-    - The `done` event has been **replaced by** `dateSelect`.
-  - **ix-datetime-picker**:
-    - The `textSelectedDate` property has been **replaced by** `i18nDone`.
-    - The `done` event has been **replaced by** `dateSelect`.
-    - Removed the `eventDelimiter` property.
-  - **ix-time-picker**:
-    - Removed attributes: `individual` and `showTimeReference`.
-
-  Removed Features:
-
-  - **ix-menu**:
-    - Removed the `maxVisibleMenuItems` attribute.
-  - **ix-menu-item**:
-    - The `tabIcon` attribute has been removed and replaced with `icon`.
-
-  Other Changes:
-
-  - **ix-modal**:
-    - The `keyboard` attribute has been **replaced by** `closeOnEscape`.
-
-- [#1238](https://github.com/siemens/ix/pull/1238) [`8803f3185b8a183926576d9f28894f9e1aa92ec3`](https://github.com/siemens/ix/commit/8803f3185b8a183926576d9f28894f9e1aa92ec3) Thanks [@danielleroux](https://github.com/danielleroux)! - feat: reduce bundle size in combination with icons
-
-- [#1394](https://github.com/siemens/ix/pull/1394) [`24f3ad61ab275bf7c9bbd7e9ee84f6b4f7d3b5ff`](https://github.com/siemens/ix/commit/24f3ad61ab275bf7c9bbd7e9ee84f6b4f7d3b5ff) Thanks [@AndreasBerliner](https://github.com/AndreasBerliner)! - refactor: replace internal comments with annotations
-
-- [#1328](https://github.com/siemens/ix/pull/1328) [`c17750dfad2fe69854f52fe56a447302c9ff4cc8`](https://github.com/siemens/ix/commit/c17750dfad2fe69854f52fe56a447302c9ff4cc8) Thanks [@danielleroux](https://github.com/danielleroux)! - feat(vue): remove commonjs
-
-### Minor Changes
-
-- [#1697](https://github.com/siemens/ix/pull/1697) [`9e13a08340efc9cb7dd1f0ef7d56481c8b5dcbbe`](https://github.com/siemens/ix/commit/9e13a08340efc9cb7dd1f0ef7d56481c8b5dcbbe) Thanks [@AndreasBerliner](https://github.com/AndreasBerliner)! - `ix-chip` and `ix-pill`: Add property `tooltip-text` to display an `ix-tooltip` with customizable text.
-
-- [#1676](https://github.com/siemens/ix/pull/1676) [`4685dc2c2b0de0961b464d305f633e1115a5926a`](https://github.com/siemens/ix/commit/4685dc2c2b0de0961b464d305f633e1115a5926a) Thanks [@nuke-ellington](https://github.com/nuke-ellington)! - `ix-flip-tile`: Expsose `index` property to allow setting of displayed content and add `toggle` event.
-
-- [#1688](https://github.com/siemens/ix/pull/1688) [`5a12c6ac20e80a77f9fd3ad9aaffd66468f72b40`](https://github.com/siemens/ix/commit/5a12c6ac20e80a77f9fd3ad9aaffd66468f72b40) Thanks [@matthiashader](https://github.com/matthiashader)! - `ix-message-bar`: Event `closedChange` can now be prevented via `event.preventDefault()`.
-  An additional event is added to get notified after the close animation of the `ix-message-bar` is finished.
-
-- [#1676](https://github.com/siemens/ix/pull/1676) [`4685dc2c2b0de0961b464d305f633e1115a5926a`](https://github.com/siemens/ix/commit/4685dc2c2b0de0961b464d305f633e1115a5926a) Thanks [@nuke-ellington](https://github.com/nuke-ellington)! - `ix-menu`: Add `openSettings` and `openAbout` events. Event `expandChange` can now be prevented via `event.preventDefault()`.
-
-- [#1676](https://github.com/siemens/ix/pull/1676) [`4685dc2c2b0de0961b464d305f633e1115a5926a`](https://github.com/siemens/ix/commit/4685dc2c2b0de0961b464d305f633e1115a5926a) Thanks [@nuke-ellington](https://github.com/nuke-ellington)! - Add `tabChange` event to `ix-menu-settings` and `ix-menu-about`.
-
-- [#1760](https://github.com/siemens/ix/pull/1760) [`ac163467de8fc4d943f5366415492a9a02748999`](https://github.com/siemens/ix/commit/ac163467de8fc4d943f5366415492a9a02748999) Thanks [@nuke-ellington](https://github.com/nuke-ellington)! - **ix-datetime-picker**: Time selection headline can now be translated via property `i18nTime`.
-
-### Patch Changes
-
-- Updated dependencies [[`7eb4d5147056e1e3252e387e5a718df7e593909e`](https://github.com/siemens/ix/commit/7eb4d5147056e1e3252e387e5a718df7e593909e), [`e8bd3b6301d7553e6a02b79e2925aa0595b674ca`](https://github.com/siemens/ix/commit/e8bd3b6301d7553e6a02b79e2925aa0595b674ca), [`aa63b4fd901bc50e98877826699412affa127ae7`](https://github.com/siemens/ix/commit/aa63b4fd901bc50e98877826699412affa127ae7), [`149dfbd6518e94da9e966d06ea2292c8e96772ce`](https://github.com/siemens/ix/commit/149dfbd6518e94da9e966d06ea2292c8e96772ce), [`2e2972260eafb1a87b84e5a705e3c932b15b8467`](https://github.com/siemens/ix/commit/2e2972260eafb1a87b84e5a705e3c932b15b8467), [`9e13a08340efc9cb7dd1f0ef7d56481c8b5dcbbe`](https://github.com/siemens/ix/commit/9e13a08340efc9cb7dd1f0ef7d56481c8b5dcbbe), [`4685dc2c2b0de0961b464d305f633e1115a5926a`](https://github.com/siemens/ix/commit/4685dc2c2b0de0961b464d305f633e1115a5926a), [`8803f3185b8a183926576d9f28894f9e1aa92ec3`](https://github.com/siemens/ix/commit/8803f3185b8a183926576d9f28894f9e1aa92ec3), [`5b56d90813239cb34d28b4c20255392b9dd1d66f`](https://github.com/siemens/ix/commit/5b56d90813239cb34d28b4c20255392b9dd1d66f), [`8b757805d65f62e9296e6d1abd67a8f0b30099f3`](https://github.com/siemens/ix/commit/8b757805d65f62e9296e6d1abd67a8f0b30099f3), [`dd8b3eb28eb162f30c5fef27b369036b3bd6dd8b`](https://github.com/siemens/ix/commit/dd8b3eb28eb162f30c5fef27b369036b3bd6dd8b), [`96c8f78e4d3d4d304b1d5a41504d5b24401ea461`](https://github.com/siemens/ix/commit/96c8f78e4d3d4d304b1d5a41504d5b24401ea461), [`f6fd42a74b42ff0f9f2ffd2b4c2a49fbb4402760`](https://github.com/siemens/ix/commit/f6fd42a74b42ff0f9f2ffd2b4c2a49fbb4402760), [`3d62fffdc107bfc92b2ecad8437662dc7c03796f`](https://github.com/siemens/ix/commit/3d62fffdc107bfc92b2ecad8437662dc7c03796f), [`c9c5bf0451998ce94a57247b974e00176f294437`](https://github.com/siemens/ix/commit/c9c5bf0451998ce94a57247b974e00176f294437), [`093c78352916a193e7f2cbfab692362c4ba0de9a`](https://github.com/siemens/ix/commit/093c78352916a193e7f2cbfab692362c4ba0de9a), [`5a12c6ac20e80a77f9fd3ad9aaffd66468f72b40`](https://github.com/siemens/ix/commit/5a12c6ac20e80a77f9fd3ad9aaffd66468f72b40), [`699958d387c1044b50def5071369f27de49f56ef`](https://github.com/siemens/ix/commit/699958d387c1044b50def5071369f27de49f56ef), [`24f3ad61ab275bf7c9bbd7e9ee84f6b4f7d3b5ff`](https://github.com/siemens/ix/commit/24f3ad61ab275bf7c9bbd7e9ee84f6b4f7d3b5ff), [`f6fd42a74b42ff0f9f2ffd2b4c2a49fbb4402760`](https://github.com/siemens/ix/commit/f6fd42a74b42ff0f9f2ffd2b4c2a49fbb4402760), [`2d4e3b8cdb756dff44627941adfea6a0230ccf26`](https://github.com/siemens/ix/commit/2d4e3b8cdb756dff44627941adfea6a0230ccf26), [`4bdec91e4a837e487caa4a25407f24eb37616531`](https://github.com/siemens/ix/commit/4bdec91e4a837e487caa4a25407f24eb37616531), [`db785bb8a4cc0654104cb24d420b7a1e2d45fdba`](https://github.com/siemens/ix/commit/db785bb8a4cc0654104cb24d420b7a1e2d45fdba), [`b5e2da18f871d6189c064a72bd9b29a82d0685eb`](https://github.com/siemens/ix/commit/b5e2da18f871d6189c064a72bd9b29a82d0685eb), [`db785bb8a4cc0654104cb24d420b7a1e2d45fdba`](https://github.com/siemens/ix/commit/db785bb8a4cc0654104cb24d420b7a1e2d45fdba), [`4685dc2c2b0de0961b464d305f633e1115a5926a`](https://github.com/siemens/ix/commit/4685dc2c2b0de0961b464d305f633e1115a5926a), [`b3846c925ec4f03fd5d26b0b66042185b766f099`](https://github.com/siemens/ix/commit/b3846c925ec4f03fd5d26b0b66042185b766f099), [`8726afc094adf2ddb4f8e927c6a42aa8dc0ed589`](https://github.com/siemens/ix/commit/8726afc094adf2ddb4f8e927c6a42aa8dc0ed589), [`f41b5d60299cb874cec9730394038dd4c2df8a60`](https://github.com/siemens/ix/commit/f41b5d60299cb874cec9730394038dd4c2df8a60), [`699958d387c1044b50def5071369f27de49f56ef`](https://github.com/siemens/ix/commit/699958d387c1044b50def5071369f27de49f56ef), [`d20b43d5f5bd5291b5125b120d2bb2d72286acfd`](https://github.com/siemens/ix/commit/d20b43d5f5bd5291b5125b120d2bb2d72286acfd), [`4685dc2c2b0de0961b464d305f633e1115a5926a`](https://github.com/siemens/ix/commit/4685dc2c2b0de0961b464d305f633e1115a5926a), [`4685dc2c2b0de0961b464d305f633e1115a5926a`](https://github.com/siemens/ix/commit/4685dc2c2b0de0961b464d305f633e1115a5926a), [`e8f825f7f494c8cc05dcce075afcff77839f8096`](https://github.com/siemens/ix/commit/e8f825f7f494c8cc05dcce075afcff77839f8096), [`ac163467de8fc4d943f5366415492a9a02748999`](https://github.com/siemens/ix/commit/ac163467de8fc4d943f5366415492a9a02748999), [`dacbced83d226380c256d868620ee640996cf229`](https://github.com/siemens/ix/commit/dacbced83d226380c256d868620ee640996cf229)]:
-  - @siemens/ix@3.0.0-alpha.0
-## [](https://github.com/siemens/ix/releases/tag/%40siemens/ix-react%403.0.0-alpha.0) (2025-03-17T14:04:46Z)
-## 3.0.0-alpha.0
-
-### Major Changes
-
-- [#1581](https://github.com/siemens/ix/pull/1581) [`7eb4d5147056e1e3252e387e5a718df7e593909e`](https://github.com/siemens/ix/commit/7eb4d5147056e1e3252e387e5a718df7e593909e) Thanks [@matthiashader](https://github.com/matthiashader)! - Component Updates and Enhancements
-
-  New Variants for Card Components:
-
-  - **ix-action-card**, **ix-card**, and **ix-push-card**:
-    - The `insight` and `notification` variants have been **replaced by** `outline` and `filled`.
-
-  Property Updates:
-
-  - **ix-chip**:
-    - The `color` property has been **replaced by** `chipColor`.
-  - **ix-event-list**:
-    - The `color` attribute has been **replaced by** `itemColor`.
-  - **ix-icon-button**:
-    - The `color` attribute has been **replaced by** `iconColor`.
-    - Size `32` has been removed.
-  - **ix-pill**:
-    - The `color` attribute has been **replaced by** `pillColor`.
-  - **ix-typography**:
-    - The `color` attribute has been **replaced by** `textColor`.
-  - **ix-select**:
-    - The `selectedIndices` attribute has been **replaced by** `value`.
-    - The `itemSelectionChange` event has been **replaced by** `valueChange`.
-  - **ix-select-item**:
-    - The type of the `value` property type has been updated to `string`.
-
-  Date and Time Picker Enhancements:
-
-  - **ix-date-picker**:
-    - Removed attributes: `individual` and `eventDelimiter`.
-    - The `textSelectedDate` property has been **replaced by** `i18nDone`.
-    - The `done` event has been **replaced by** `dateSelect`.
-  - **ix-datetime-picker**:
-    - The `textSelectedDate` property has been **replaced by** `i18nDone`.
-    - The `done` event has been **replaced by** `dateSelect`.
-    - Removed the `eventDelimiter` property.
-  - **ix-time-picker**:
-    - Removed attributes: `individual` and `showTimeReference`.
-
-  Removed Features:
-
-  - **ix-menu**:
-    - Removed the `maxVisibleMenuItems` attribute.
-  - **ix-menu-item**:
-    - The `tabIcon` attribute has been removed and replaced with `icon`.
-
-  Other Changes:
-
-  - **ix-modal**:
-    - The `keyboard` attribute has been **replaced by** `closeOnEscape`.
-
-- [#1326](https://github.com/siemens/ix/pull/1326) [`23307a0bed36c61da3ca3b77bad99d71f8b18f3c`](https://github.com/siemens/ix/commit/23307a0bed36c61da3ca3b77bad99d71f8b18f3c) Thanks [@danielleroux](https://github.com/danielleroux)! - feat(react): remove commonjs support
-
-- [#1238](https://github.com/siemens/ix/pull/1238) [`8803f3185b8a183926576d9f28894f9e1aa92ec3`](https://github.com/siemens/ix/commit/8803f3185b8a183926576d9f28894f9e1aa92ec3) Thanks [@danielleroux](https://github.com/danielleroux)! - feat: reduce bundle size in combination with icons
-
-- [#1394](https://github.com/siemens/ix/pull/1394) [`24f3ad61ab275bf7c9bbd7e9ee84f6b4f7d3b5ff`](https://github.com/siemens/ix/commit/24f3ad61ab275bf7c9bbd7e9ee84f6b4f7d3b5ff) Thanks [@AndreasBerliner](https://github.com/AndreasBerliner)! - refactor: replace internal comments with annotations
-
-### Patch Changes
-
-- Updated dependencies [[`7eb4d5147056e1e3252e387e5a718df7e593909e`](https://github.com/siemens/ix/commit/7eb4d5147056e1e3252e387e5a718df7e593909e), [`e8bd3b6301d7553e6a02b79e2925aa0595b674ca`](https://github.com/siemens/ix/commit/e8bd3b6301d7553e6a02b79e2925aa0595b674ca), [`aa63b4fd901bc50e98877826699412affa127ae7`](https://github.com/siemens/ix/commit/aa63b4fd901bc50e98877826699412affa127ae7), [`149dfbd6518e94da9e966d06ea2292c8e96772ce`](https://github.com/siemens/ix/commit/149dfbd6518e94da9e966d06ea2292c8e96772ce), [`2e2972260eafb1a87b84e5a705e3c932b15b8467`](https://github.com/siemens/ix/commit/2e2972260eafb1a87b84e5a705e3c932b15b8467), [`9e13a08340efc9cb7dd1f0ef7d56481c8b5dcbbe`](https://github.com/siemens/ix/commit/9e13a08340efc9cb7dd1f0ef7d56481c8b5dcbbe), [`4685dc2c2b0de0961b464d305f633e1115a5926a`](https://github.com/siemens/ix/commit/4685dc2c2b0de0961b464d305f633e1115a5926a), [`8803f3185b8a183926576d9f28894f9e1aa92ec3`](https://github.com/siemens/ix/commit/8803f3185b8a183926576d9f28894f9e1aa92ec3), [`5b56d90813239cb34d28b4c20255392b9dd1d66f`](https://github.com/siemens/ix/commit/5b56d90813239cb34d28b4c20255392b9dd1d66f), [`8b757805d65f62e9296e6d1abd67a8f0b30099f3`](https://github.com/siemens/ix/commit/8b757805d65f62e9296e6d1abd67a8f0b30099f3), [`dd8b3eb28eb162f30c5fef27b369036b3bd6dd8b`](https://github.com/siemens/ix/commit/dd8b3eb28eb162f30c5fef27b369036b3bd6dd8b), [`96c8f78e4d3d4d304b1d5a41504d5b24401ea461`](https://github.com/siemens/ix/commit/96c8f78e4d3d4d304b1d5a41504d5b24401ea461), [`f6fd42a74b42ff0f9f2ffd2b4c2a49fbb4402760`](https://github.com/siemens/ix/commit/f6fd42a74b42ff0f9f2ffd2b4c2a49fbb4402760), [`3d62fffdc107bfc92b2ecad8437662dc7c03796f`](https://github.com/siemens/ix/commit/3d62fffdc107bfc92b2ecad8437662dc7c03796f), [`c9c5bf0451998ce94a57247b974e00176f294437`](https://github.com/siemens/ix/commit/c9c5bf0451998ce94a57247b974e00176f294437), [`093c78352916a193e7f2cbfab692362c4ba0de9a`](https://github.com/siemens/ix/commit/093c78352916a193e7f2cbfab692362c4ba0de9a), [`5a12c6ac20e80a77f9fd3ad9aaffd66468f72b40`](https://github.com/siemens/ix/commit/5a12c6ac20e80a77f9fd3ad9aaffd66468f72b40), [`699958d387c1044b50def5071369f27de49f56ef`](https://github.com/siemens/ix/commit/699958d387c1044b50def5071369f27de49f56ef), [`24f3ad61ab275bf7c9bbd7e9ee84f6b4f7d3b5ff`](https://github.com/siemens/ix/commit/24f3ad61ab275bf7c9bbd7e9ee84f6b4f7d3b5ff), [`f6fd42a74b42ff0f9f2ffd2b4c2a49fbb4402760`](https://github.com/siemens/ix/commit/f6fd42a74b42ff0f9f2ffd2b4c2a49fbb4402760), [`2d4e3b8cdb756dff44627941adfea6a0230ccf26`](https://github.com/siemens/ix/commit/2d4e3b8cdb756dff44627941adfea6a0230ccf26), [`4bdec91e4a837e487caa4a25407f24eb37616531`](https://github.com/siemens/ix/commit/4bdec91e4a837e487caa4a25407f24eb37616531), [`db785bb8a4cc0654104cb24d420b7a1e2d45fdba`](https://github.com/siemens/ix/commit/db785bb8a4cc0654104cb24d420b7a1e2d45fdba), [`b5e2da18f871d6189c064a72bd9b29a82d0685eb`](https://github.com/siemens/ix/commit/b5e2da18f871d6189c064a72bd9b29a82d0685eb), [`db785bb8a4cc0654104cb24d420b7a1e2d45fdba`](https://github.com/siemens/ix/commit/db785bb8a4cc0654104cb24d420b7a1e2d45fdba), [`4685dc2c2b0de0961b464d305f633e1115a5926a`](https://github.com/siemens/ix/commit/4685dc2c2b0de0961b464d305f633e1115a5926a), [`b3846c925ec4f03fd5d26b0b66042185b766f099`](https://github.com/siemens/ix/commit/b3846c925ec4f03fd5d26b0b66042185b766f099), [`8726afc094adf2ddb4f8e927c6a42aa8dc0ed589`](https://github.com/siemens/ix/commit/8726afc094adf2ddb4f8e927c6a42aa8dc0ed589), [`f41b5d60299cb874cec9730394038dd4c2df8a60`](https://github.com/siemens/ix/commit/f41b5d60299cb874cec9730394038dd4c2df8a60), [`699958d387c1044b50def5071369f27de49f56ef`](https://github.com/siemens/ix/commit/699958d387c1044b50def5071369f27de49f56ef), [`d20b43d5f5bd5291b5125b120d2bb2d72286acfd`](https://github.com/siemens/ix/commit/d20b43d5f5bd5291b5125b120d2bb2d72286acfd), [`4685dc2c2b0de0961b464d305f633e1115a5926a`](https://github.com/siemens/ix/commit/4685dc2c2b0de0961b464d305f633e1115a5926a), [`4685dc2c2b0de0961b464d305f633e1115a5926a`](https://github.com/siemens/ix/commit/4685dc2c2b0de0961b464d305f633e1115a5926a), [`e8f825f7f494c8cc05dcce075afcff77839f8096`](https://github.com/siemens/ix/commit/e8f825f7f494c8cc05dcce075afcff77839f8096), [`ac163467de8fc4d943f5366415492a9a02748999`](https://github.com/siemens/ix/commit/ac163467de8fc4d943f5366415492a9a02748999), [`dacbced83d226380c256d868620ee640996cf229`](https://github.com/siemens/ix/commit/dacbced83d226380c256d868620ee640996cf229)]:
-  - @siemens/ix@3.0.0-alpha.0
-## [](https://github.com/siemens/ix/releases/tag/%40siemens/ix-echarts%403.0.0-alpha.0) (2025-03-17T14:04:01Z)
-## 3.0.0-alpha.0
-
-### Major Changes
-
-- [#1238](https://github.com/siemens/ix/pull/1238) [`8803f3185b8a183926576d9f28894f9e1aa92ec3`](https://github.com/siemens/ix/commit/8803f3185b8a183926576d9f28894f9e1aa92ec3) Thanks [@danielleroux](https://github.com/danielleroux)! - feat: reduce bundle size in combination with icons
