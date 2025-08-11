@@ -35,7 +35,19 @@ We also offer a card container component that enables designers to display vario
 
 ## Variants
 
-Cards are available in nine variants: Insight (outline style), notification (filled style), alarm, critical, warning, success, info, neutral and primary. Each variant emphasizes different aspects to guide the user's attention. These variants differ visually through the presence of an outline and a distinct container fill color, but they all follow the same interaction pattern. We typically use the insight variant as the default choice as we find this creates a more balanced and subtle appearance for users.
+Cards are available in nine variants:
+
+* Outline
+* Filled
+* Alarm
+* Critical
+* Warning
+* Success
+* Info
+* Neutral
+* Primary
+
+Each variant emphasizes different aspects to guide the user's attention. These variants differ visually through the presence of an outline and a distinct container fill color, but they all follow the same interaction pattern. We typically use the outline variant as the default choice as we find this creates a more balanced and subtle appearance for users.
 
 ![Card variants](https://www.figma.com/design/wEptRgAezDU1z80Cn3eZ0o/iX-Pattern-Illustrations?type=design&node-id=858-4969&mode=design&t=RDimbEsIHFIXIByo-1)
 
