@@ -32,10 +32,10 @@ const ColorContainerFix = ({ children }) => {
       themeContainer.classList.remove('color-table-classic-dark');
       themeContainer.classList.remove('color-table-classic-light');
       themeContainer.setAttribute('data-ix-theme', 'brand');
-      themeContainer.setAttribute('data-ix-variant', variant);
+      themeContainer.setAttribute('data-ix-color-schema', variant);
     } else {
       themeContainer.removeAttribute('data-ix-theme');
-      themeContainer.removeAttribute('data-ix-variant');
+      themeContainer.removeAttribute('data-ix-color-schema');
       themeContainer.className = `color-table-${theme}-${variant}`;
     }
   }, [theme, variant]);

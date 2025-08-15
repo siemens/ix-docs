@@ -24,8 +24,8 @@ importers:
         specifier: ^3.0.0
         version: 3.1.0(@types/react@18.3.22)(react@18.3.1)
       '@siemens/ix':
-        specifier: ^3.0.0
-        version: 3.0.0(@siemens/ix-icons@3.0.0)
+        specifier: ~3.2.0
+        version: 3.2.0(@siemens/ix-icons@3.0.0)
       '@siemens/ix-icons':
         specifier: ^3.0.0
         version: 3.0.0
@@ -1892,6 +1892,11 @@ packages:
 
   '@siemens/ix@3.0.0':
     resolution: {integrity: sha512-osVM3NYOxTuM6A3ncJpXrDLV1T+42JTTNmOfD+6tXWZo5n1zPEW7D77jBbKqGvatwgjBP/XGkNrCU0zIN92Zkg==}
+    peerDependencies:
+      '@siemens/ix-icons': ^3.0.0
+
+  '@siemens/ix@3.2.0':
+    resolution: {integrity: sha512-a9joNlCRSzroRVyKhMER+BdM+8aDYjlP1nM1minuRqdCOHYT3Pz1snitXkXfxql5cj333ufj6qrxN625eDrNJA==}
     peerDependencies:
       '@siemens/ix-icons': ^3.0.0
 
@@ -8709,6 +8714,10 @@ snapshots:
       '@types/luxon': 3.6.2
       animejs: 3.2.2
       luxon: 3.6.1
+
+  '@siemens/ix@3.2.0(@siemens/ix-icons@3.0.0)':
+    dependencies:
+      '@siemens/ix-icons': 3.0.0
 
   '@sinclair/typebox@0.27.8': {}
 

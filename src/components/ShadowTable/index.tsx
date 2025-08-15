@@ -45,12 +45,12 @@ const ColorContainerFix = forwardRef<
       themeContainer.classList.remove('color-table-classic-light');
       themeContainer.setAttribute('data-ix-theme', 'brand');
       themeContainer.setAttribute(
-        'data-ix-variant',
+        'data-ix-color-schema',
         isDarkColor ? 'dark' : 'light'
       );
     } else {
       themeContainer.removeAttribute('data-ix-theme');
-      themeContainer.removeAttribute('data-ix-variant');
+      themeContainer.removeAttribute('data-ix-color-schema');
       themeContainer.className = `color-table-${theme}-${
         isDarkColor ? 'dark' : 'light'
       }`;
