@@ -32,10 +32,14 @@ export default function DocRootLayoutSidebar({
   hiddenSidebarContainer,
   setHiddenSidebarContainer,
 }: Props): ReactNode {
+  const { pathname } = useLocation();
+
+  // Check if the current path is for the components documentation
+  const isComponentsPath = pathname.startsWith('/docs/components/');
+
   const [componentListStyle, setComponentListStyle] = useLocalStorage<
     'category' | 'alphabetical'
   >('components_list_style', 'category');
-  const { pathname } = useLocation();
 
   const [hiddenSidebar, setHiddenSidebar] = useState(false);
   const toggleSidebar = useCallback(() => {
@@ -60,6 +64,13 @@ export default function DocRootLayoutSidebar({
     })
     .filter((item) => item.customProps?.hideOnAlphabetical !== true);
 
+  let sidebarItems = sidebar;
+
+  if (isComponentsPath) {
+    sidebarItems =
+      componentListStyle === 'category' ? sidebar : flatSidebarItems;
+  }
+
   return (
     <aside
       className={clsx(
@@ -77,15 +88,17 @@ export default function DocRootLayoutSidebar({
         }
       }}
     >
-      <IxToggle
-        textOn="Show as alphabetical"
-        textOff="Show as categories"
-        checked={componentListStyle === 'alphabetical'}
-        onCheckedChange={(event) => {
-          setComponentListStyle(event.detail ? 'alphabetical' : 'category');
-        }}
-        className={styles.toggleListStyle}
-      ></IxToggle>
+      {isComponentsPath && (
+        <IxToggle
+          textOn="Show as alphabetical"
+          textOff="Show as categories"
+          checked={componentListStyle === 'alphabetical'}
+          onCheckedChange={(event) => {
+            setComponentListStyle(event.detail ? 'alphabetical' : 'category');
+          }}
+          className={styles.toggleListStyle}
+        ></IxToggle>
+      )}
       <ResetOnSidebarChange>
         <div
           className={clsx(
@@ -94,9 +107,7 @@ export default function DocRootLayoutSidebar({
           )}
         >
           <DocSidebar
-            sidebar={
-              componentListStyle === 'category' ? sidebar : flatSidebarItems
-            }
+            sidebar={sidebarItems}
             path={pathname}
             onCollapse={toggleSidebar}
             isHidden={hiddenSidebar}
