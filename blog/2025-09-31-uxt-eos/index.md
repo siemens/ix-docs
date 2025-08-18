@@ -1,8 +1,8 @@
 ---
 authors:
- - kathrinschalber
+  - kathrinschalber
 tags:
- - other-design-systems
+  - merging
 ---
 import {Card, CardList} from '@site/src/components/Card';
 import '../docs/home/card-with-icon.css';
