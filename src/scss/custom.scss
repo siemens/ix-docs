@@ -4,6 +4,7 @@
  * work well for content-centric websites.
  */
 @use '@siemens/ix/scss/theme/core/common' as common;
+@use '@siemens/ix/scss/theme/core/components' as components;
 
 @use './overwrite/doc-sidebar';
 @use './overwrite/navbar';
@@ -31,6 +32,7 @@ $font-family: 'Siemens Sans', Arial, Helvetica, sans-serif;
 
 body {
   @include common.setVars;
+  @include components.setComponentVars;
 }
 
 #__docusaurus {

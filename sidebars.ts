@@ -135,7 +135,13 @@ const sidebars: SidebarsConfig = {
     },
   ],
   components: [
-    'components/overview',
+    {
+      id: 'components/overview',
+      type: 'doc',
+      customProps: {
+        hideOnAlphabetical: true,
+      },
+    },
     {
       type: 'category',
       className: 'doc-sidebar-item-bold',
@@ -1049,6 +1055,13 @@ const sidebars: SidebarsConfig = {
       label: 'Charts',
       items: [
         'components/charts-overview/index',
+        {
+          id: 'components/charts-overview/index',
+          type: 'doc',
+          customProps: {
+            hideOnAlphabetical: true,
+          },
+        },
         'components/line-chart/index',
         'components/bar-chart/index',
         'components/gauge-chart/index',
@@ -1061,7 +1074,6 @@ const sidebars: SidebarsConfig = {
     {
       type: 'category',
       className: 'doc-sidebar-item-bold',
-
       label: 'Deprecated',
       items: [
         createTabItem({
