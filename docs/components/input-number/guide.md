@@ -35,7 +35,7 @@ The number input component is commonly used in forms, calculators and other area
 - **Validation:** See [form field](../forms-validation).
 - **Overflow:** Numbers are truncated to fit within the input field. Ensure that the expected value is visible in the input field so it can be properly displayed.
 - **Alignment:** Number inputs are always aligned to the right.
-- **Display format:** The input field translates scientific notations in actual numbers after loosing focus (e.g. 1e3 will become 1000, 1e-3 will become 0.001).
+- **Display format:** The input field translates scientific notations into actual numbers after losing focus, e.g. 1e3 becomes 1000, 1e-3 becomes 0.001.
 ## States
 
 The number input has five states: default, hover, focused, disabled and read-only.
