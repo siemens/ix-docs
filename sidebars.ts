@@ -137,9 +137,10 @@ const sidebars: SidebarsConfig = {
   components: [
     {
       id: 'components/overview',
+      label: 'Overview',
       type: 'doc',
       customProps: {
-        hideOnAlphabetical: true,
+        ignoreSortingOnAlphabetical: true,
       },
     },
     {

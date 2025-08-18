@@ -11,9 +11,13 @@ import ExpandButton from '@theme-original/DocRoot/Layout/Sidebar/ExpandButton';
 import type { Props } from '@theme/DocRoot/Layout/Sidebar';
 
 import styles from './styles.module.css';
-import { IxToggle } from '@siemens/ix-react';
+import sortSwitchStyles from './sort-switch.module.css';
 import type { PropSidebarItem } from '@docusaurus/plugin-content-docs';
 import { useLocalStorage } from './../../../../hooks/use-localStorage';
+import {
+  iconDeviceViewHierarchical,
+  iconSortDescending,
+} from '@siemens/ix-icons/icons';
 
 // Reset sidebar state when sidebar changes
 // Use React key to unmount/remount the children
@@ -24,6 +28,37 @@ function ResetOnSidebarChange({ children }: { children: ReactNode }) {
     <React.Fragment key={sidebar?.name ?? 'noSidebar'}>
       {children}
     </React.Fragment>
+  );
+}
+
+function SortSwitch({
+  grouped,
+  onChange,
+}: {
+  grouped: boolean;
+  onChange: (value: 'grouped' | 'sorted') => void;
+}) {
+  return (
+    <div className={sortSwitchStyles.SortSwitch}>
+      <button
+        className={clsx(sortSwitchStyles.SortSwitchButton, {
+          [sortSwitchStyles.Active]: grouped,
+        })}
+        onClick={() => onChange('grouped')}
+      >
+        {React.createElement('ix-icon', { name: iconDeviceViewHierarchical })}
+        Grouped
+      </button>
+      <button
+        className={clsx(sortSwitchStyles.SortSwitchButton, {
+          [sortSwitchStyles.Active]: !grouped,
+        })}
+        onClick={() => onChange('sorted')}
+      >
+        {React.createElement('ix-icon', { name: iconSortDescending })}
+        Sorted
+      </button>
+    </div>
   );
 }
 
@@ -38,8 +73,8 @@ export default function DocRootLayoutSidebar({
   const isComponentsPath = pathname.startsWith('/docs/components/');
 
   const [componentListStyle, setComponentListStyle] = useLocalStorage<
-    'category' | 'alphabetical'
-  >('components_list_style', 'category');
+    'grouped' | 'sorted'
+  >('components_list_style', 'grouped');
 
   const [hiddenSidebar, setHiddenSidebar] = useState(false);
   const toggleSidebar = useCallback(() => {
@@ -57,6 +92,15 @@ export default function DocRootLayoutSidebar({
   const flatSidebarItems = (sidebar as PropSidebarItem[])
     .flatMap((item) => (item.type === 'category' ? item.items : [item]))
     .sort((a, b) => {
+      const aIgnoreSort =
+        'customProps' in a && a.customProps?.ignoreSortingOnAlphabetical;
+      const bIgnoreSort =
+        'customProps' in b && b.customProps?.ignoreSortingOnAlphabetical;
+
+      if (aIgnoreSort || bIgnoreSort) {
+        return 0;
+      }
+
       if ('label' in a && 'label' in b) {
         return a.label.localeCompare(b.label);
       }
@@ -68,7 +112,7 @@ export default function DocRootLayoutSidebar({
 
   if (isComponentsPath) {
     sidebarItems =
-      componentListStyle === 'category' ? sidebar : flatSidebarItems;
+      componentListStyle === 'grouped' ? sidebar : flatSidebarItems;
   }
 
   return (
@@ -89,15 +133,10 @@ export default function DocRootLayoutSidebar({
       }}
     >
       {isComponentsPath && (
-        <IxToggle
-          textOn="Show as alphabetical"
-          textOff="Show as categories"
-          checked={componentListStyle === 'alphabetical'}
-          onCheckedChange={(event) => {
-            setComponentListStyle(event.detail ? 'alphabetical' : 'category');
-          }}
-          className={styles.toggleListStyle}
-        ></IxToggle>
+        <SortSwitch
+          grouped={componentListStyle === 'grouped'}
+          onChange={setComponentListStyle}
+        />
       )}
       <ResetOnSidebarChange>
         <div

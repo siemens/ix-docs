@@ -1,0 +1,38 @@
+/*
+ * COPYRIGHT (c) Siemens AG 2018-2025 ALL RIGHTS RESERVED.
+ */
+.SortSwitch {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  margin: 0px 8px;
+  padding: 0 0.5rem 1.5rem 0.5rem;
+}
+
+.SortSwitchButton {
+  all: unset;
+  display: flex;
+  height: 1.5rem;
+  padding: 4px;
+  justify-content: center;
+  align-items: center;
+  gap: 4px;
+  flex: 1 0 0;
+  border-radius: 4px;
+  border: 1px solid var(--theme-color-x-weak-bdr);
+  cursor: pointer;
+}
+
+.SortSwitchButton.Active {
+  background: var(--theme-color-2);
+}
+
+.SortSwitchButton:hover {
+  background: var(--theme-color-1--hover);
+}
+
+.SortSwitchButton:active {
+  background: var(--theme-color-1--active);
+}
