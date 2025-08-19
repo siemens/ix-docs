@@ -142,6 +142,7 @@ const sidebars: SidebarsConfig = {
       customProps: {
         ignoreSortingOnAlphabetical: true,
       },
+      className: 'doc-sidebar-item-overview',
     },
     {
       type: 'category',

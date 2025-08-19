@@ -18,6 +18,7 @@ import {
   iconDeviceViewHierarchical,
   iconSortDescending,
 } from '@siemens/ix-icons/icons';
+import { IxTypography } from '@siemens/ix-react';
 
 // Reset sidebar state when sidebar changes
 // Use React key to unmount/remount the children
@@ -46,8 +47,13 @@ function SortSwitch({
         })}
         onClick={() => onChange('grouped')}
       >
-        {React.createElement('ix-icon', { name: iconDeviceViewHierarchical })}
-        Grouped
+        {React.createElement('ix-icon', {
+          name: iconDeviceViewHierarchical,
+          size: '16',
+        })}
+        <IxTypography format="body-sm" bold={grouped}>
+          Grouped
+        </IxTypography>
       </button>
       <button
         className={clsx(sortSwitchStyles.SortSwitchButton, {
@@ -55,8 +61,14 @@ function SortSwitch({
         })}
         onClick={() => onChange('sorted')}
       >
-        {React.createElement('ix-icon', { name: iconSortDescending })}
-        Sorted
+        {React.createElement('ix-icon', {
+          name: iconSortDescending,
+          size: '16',
+        })}
+
+        <IxTypography format="body-sm" bold={!grouped}>
+          Sorted
+        </IxTypography>
       </button>
     </div>
   );
