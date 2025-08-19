@@ -4,8 +4,12 @@ authors:
 tags:
   - merging
 ---
+
+import React from "react";
+import { IxIcon } from "@siemens/ix-react";
+import { iconReplace, iconSupport } from "@siemens/ix-icons/icons";
 import {Card, CardList} from '@site/src/components/Card';
-import '../docs/home/card-with-icon.css';
+import '../../docs/home/card-with-icon.css';
 
 # UXT Migration to Siemens Industrial Experience
 
@@ -14,16 +18,16 @@ import '../docs/home/card-with-icon.css';
 As part of our journey, we proudly announce the integration of User Experience Toolkit (UXT) into Siemens Industrial Experience (iX). This strategic move consolidates our design resources and provides you with a more comprehensive, modern, and efficient solution.
 
 <CardList>
- <Card link="home/migrate/uxt">Migrate from UXT to iX</Card>
- <Card link="support/contact-us">Get support</Card>
+ <Card link="home/migrate/uxt"><IxIcon className="Card_Icon" name={iconReplace} size="16"></IxIcon> Migrate from UXT to iX</Card>
+ <Card link="support/contact-us"><IxIcon className="Card_Icon" name={iconSupport} size="16"></IxIcon>Get support</Card>
 </CardList>
 
 <!-- truncate -->
 
-## How to start?
+# How to start?
 
-- [Migration guide](../docs/home/migration/uxt.md): For UXT users transitioning to iX, find step-by-step instructions.
-- [Support channels](../home/support/contact-us): Reach out for any questions or assistance you might need.
+- [Migration guide](/docs/home/migration/uxt): For UXT users transitioning to iX, find step-by-step instructions.
+- [Support channels](/docs/home/support/contact-us): Reach out for any questions or assistance you might need.
 - [GitHub](https://github.com/siemens/ix/issues): Explore our official open source repository to request new features.
 
 ## Benefits of joining iX
