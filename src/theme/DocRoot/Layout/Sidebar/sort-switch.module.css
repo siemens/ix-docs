@@ -25,9 +25,6 @@
   cursor: pointer;
 }
 
-.Icon {
-}
-
 .SortSwitchButton.Active {
   background: var(--theme-color-2);
 }
