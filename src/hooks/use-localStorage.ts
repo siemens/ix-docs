@@ -12,6 +12,10 @@ export function useLocalStorage<T>(
   key: string,
   initialValue: T
 ): [T, (value: T) => void, boolean] {
+  if (typeof window === 'undefined') {
+    return [initialValue, () => {}, false];
+  }
+
   // Get the initial value from local storage or use the provided initial value
   const [storedValue, setStoredValue] = useState(() => {
     try {
