@@ -55,6 +55,7 @@
     "node-fetch": "^3.3.2",
     "octokit": "^4",
     "postcss": "^8.4.29",
+    "react-markdown": "^10.1.0",
     "rimraf": "^6.0.1",
     "tailwindcss": "^3.4.12",
     "tar": "^7.4.3",
