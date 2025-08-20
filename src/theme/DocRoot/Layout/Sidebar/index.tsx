@@ -1,24 +1,19 @@
-import React, { type ReactNode, useState, useCallback } from 'react';
-import clsx from 'clsx';
+import { useDocsSidebar } from '@docusaurus/plugin-content-docs/client';
+import { useLocation } from '@docusaurus/router';
 import {
   prefersReducedMotion,
   ThemeClassNames,
 } from '@docusaurus/theme-common';
-import { useDocsSidebar } from '@docusaurus/plugin-content-docs/client';
-import { useLocation } from '@docusaurus/router';
-import DocSidebar from '@theme/DocSidebar';
 import ExpandButton from '@theme-original/DocRoot/Layout/Sidebar/ExpandButton';
 import type { Props } from '@theme/DocRoot/Layout/Sidebar';
+import DocSidebar from '@theme/DocSidebar';
+import clsx from 'clsx';
+import React, { type ReactNode, useCallback, useState } from 'react';
 
-import styles from './styles.module.css';
-import sortSwitchStyles from './sort-switch.module.css';
 import type { PropSidebarItem } from '@docusaurus/plugin-content-docs';
 import { useLocalStorage } from './../../../../hooks/use-localStorage';
-import {
-  iconDeviceViewHierarchical,
-  iconSortDescending,
-} from '@siemens/ix-icons/icons';
-import { IxTypography } from '@siemens/ix-react';
+import styles from './styles.module.css';
+import SortSwitch from '@site/src/components/theme/SortSwitch';
 
 // Reset sidebar state when sidebar changes
 // Use React key to unmount/remount the children
@@ -29,48 +24,6 @@ function ResetOnSidebarChange({ children }: { children: ReactNode }) {
     <React.Fragment key={sidebar?.name ?? 'noSidebar'}>
       {children}
     </React.Fragment>
-  );
-}
-
-function SortSwitch({
-  grouped,
-  onChange,
-}: {
-  grouped: boolean;
-  onChange: (value: 'grouped' | 'sorted') => void;
-}) {
-  return (
-    <div className={sortSwitchStyles.SortSwitch}>
-      <button
-        className={clsx(sortSwitchStyles.SortSwitchButton, {
-          [sortSwitchStyles.Active]: grouped,
-        })}
-        onClick={() => onChange('grouped')}
-      >
-        {React.createElement('ix-icon', {
-          name: iconDeviceViewHierarchical,
-          size: '16',
-        })}
-        <IxTypography format="body-sm" bold={grouped}>
-          Grouped
-        </IxTypography>
-      </button>
-      <button
-        className={clsx(sortSwitchStyles.SortSwitchButton, {
-          [sortSwitchStyles.Active]: !grouped,
-        })}
-        onClick={() => onChange('sorted')}
-      >
-        {React.createElement('ix-icon', {
-          name: iconSortDescending,
-          size: '16',
-        })}
-
-        <IxTypography format="body-sm" bold={!grouped}>
-          Sorted
-        </IxTypography>
-      </button>
-    </div>
   );
 }
 
