@@ -36,7 +36,7 @@
     "@docusaurus/module-type-aliases": "3.7.0",
     "@docusaurus/tsconfig": "3.7.0",
     "@docusaurus/types": "3.7.0",
-    "@dotenvx/dotenvx": "^1.44.0",
+    "@dotenvx/dotenvx": "^1.49.0",
     "@octokit/rest": "^22.0.0",
     "@types/adm-zip": "^0.5.7",
     "@types/fs-extra": "^11.0.4",
