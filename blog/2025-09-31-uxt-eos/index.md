@@ -18,8 +18,8 @@ import '../../docs/home/card-with-icon.css';
 As part of our journey, we proudly announce the integration of User Experience Toolkit (UXT) into Siemens Industrial Experience (iX). This strategic move consolidates our design resources and provides you with a more comprehensive, modern, and efficient solution.
 
 <CardList>
- <Card link="home/migrate/uxt"><IxIcon className="Card_Icon" name={iconReplace} size="16"></IxIcon> Migrate from UXT to iX</Card>
- <Card link="support/contact-us"><IxIcon className="Card_Icon" name={iconSupport} size="16"></IxIcon>Get support</Card>
+ <Card link="home/migration/uxt"><IxIcon className="Card_Icon" name={iconReplace} size="16"></IxIcon> Migrate from UXT to iX</Card>
+ <Card link="home/support/contact-us"><IxIcon className="Card_Icon" name={iconSupport} size="16"></IxIcon>Get support</Card>
 </CardList>
 
 <!-- truncate -->
