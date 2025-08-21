@@ -3,6 +3,8 @@
  * bundles Infima by default. Infima is a CSS framework designed to
  * work well for content-centric websites.
  */
+@use '@siemens/ix/scss/theme/core/common' as common;
+@use '@siemens/ix/scss/theme/core/components' as components;
 
 @use './overwrite/doc-sidebar';
 @use './overwrite/navbar';
@@ -27,6 +29,11 @@
 @tailwind utilities;
 
 $font-family: 'Siemens Sans', Arial, Helvetica, sans-serif;
+
+body {
+  @include common.setVars;
+  @include components.setComponentVars;
+}
 
 #__docusaurus {
   color: var(--theme-color-std-text);
@@ -89,20 +96,18 @@ p {
   --ifm-link-color: var(--theme-color-dynamic);
 }
 
-[data-ix-theme='brand'][data-ix-variant='dark'],
+[data-ix-theme='brand'][data-ix-color-schema='dark'],
 #__docusaurus.theme-classic-dark {
   --ix-docs-hero-background: var(--ifm-background-color);
   --ix-docs-hero-tab-active: var(--ifm-background-color);
 }
 
-[data-ix-theme='brand'][data-ix-variant='light'],
+[data-ix-theme='brand'][data-ix-color-schema='light'],
 #__docusaurus.theme-classic-light {
   --ix-docs-hero-background: var(--ifm-background-color);
   --ix-docs-hero-tab-active: var(--ifm-background-color);
   --ifm-menu-color-active: var(--theme-color-primary);
 }
-
-
 
 .anchor {
   scroll-margin-top: 15rem !important;

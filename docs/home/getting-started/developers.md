@@ -26,7 +26,6 @@ Use the horizontal navigation in the header to quickly access the desired topic.
 - **Icons:** Access our icon library with code snippets to integrate icons directly into your code. Learn how to integrate icons based on your framework and how to incorporate external icons.
 - **Styles:** Explore detailed overviews of our design elements, including colors, borders, shadows, and typography, complete with properties and code snippets to apply these styles in your code.
 
-
 ## Development frameworks
 
 Follow the links below to the respective installation guides:
@@ -35,7 +34,7 @@ Follow the links below to the respective installation guides:
   <Card link="home/installation/angular"><AngularIcon className="Card_Icon" />Angular</Card>
   <Card link="home/installation/react"><ReactIcon className="Card_Icon" />React</Card>
   <Card link="home/installation/javascript"><WebComponentsIcon className="Card_Icon" />Web Components</Card>
-  <Card link="home/installation/vue"><VueIcon className="Card_Icon" />Vue&nbsp;<span style={{fontSize: '0.8rem'}}>(experimental)</span></Card>
+  <Card link="home/installation/vue"><VueIcon className="Card_Icon" />Vue</Card>
   <Card link="home/installation/blazor"><BlazorIcon className="Card_Icon" />Blazor&nbsp;<span style={{fontSize: '0.8rem'}}>(experimental)</span></Card>
 </CardList>
 

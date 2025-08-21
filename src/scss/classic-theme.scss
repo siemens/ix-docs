@@ -1,13 +1,13 @@
 /*
  * COPYRIGHT (c) Siemens AG 2018-2025 ALL RIGHTS RESERVED.
  */
-@use '@siemens/ix/dist/siemens-ix/theme/classic-dark.css';
-@use '@siemens/ix/dist/siemens-ix/theme/classic-light.css';
+@use '@siemens/ix/scss/theme/classic/light/variables' as light;
+@use '@siemens/ix/scss/theme/classic/dark/variables' as dark;
 
 .color-table-classic-dark {
-  @extend .theme-classic-dark;
+  @include dark.setVars;
 }
 
 .color-table-classic-light {
-  @extend .theme-classic-light;
+  @include light.setVars;
 }

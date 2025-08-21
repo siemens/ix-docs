@@ -5,7 +5,7 @@ title: FAQ
 doc-type: 'banner'
 component-tabs: ['']
 no_single_tab: true
-description: "Welcome to the Industrial Experience design system FAQ. These are your go-to resource for quick and clear answers about Industrial Experience. Whether you’re just starting with the design system or need insights into integration and functionality, you’ll find answers to the most common questions here. If you can’t find what you’re looking for, feel free to reach out. The FAQ are continuously updated, and we welcome suggestions for improvement via email to our support team. Thank you for choosing to use Siemens Industrial Experience."
+description: 'Welcome to the Industrial Experience design system FAQ. These are your go-to resource for quick and clear answers about Industrial Experience. Whether you’re just starting with the design system or need insights into integration and functionality, you’ll find answers to the most common questions here. If you can’t find what you’re looking for, feel free to reach out. The FAQ are continuously updated, and we welcome suggestions for improvement via email to our support team. Thank you for choosing to use Siemens Industrial Experience.'
 ---
 
 import Accordion from '@site/src/components/Accordion';
@@ -72,7 +72,7 @@ Users are free to utilize open-source libraries at their discretion. However, cu
 </Accordion>
 
 <Accordion title="What kind of framework support is there?" id="framework-support">
-Our design system is built with plain Web Components and is, therefore, framework agnostic. For better integration, we provide support for some of the most popular web development frameworks in Angular, React and Vue (experimental). You can find more information about our frameworks [here](https://ix.siemens.io/docs/installation/).
+Our design system is built with plain Web Components and is, therefore, framework agnostic. For better integration, we provide support for some of the most popular web development frameworks in Angular, React and Vue. You can find more information about our frameworks [here](https://ix.siemens.io/docs/installation/).
 </Accordion>
 
 <Accordion title="What does open source mean within our design system?" id="open-source" showBorderBottom>
@@ -91,6 +91,11 @@ Our codebase is openly and freely accessible for anyone to view, modify and dist
 We are working towards meeting the WCAG (Web Content Accessibility Guidelines) and other relevant accessibility standards. Our team is dedicated to ensuring that our design system is accessible to all users. While we’re still in the process of fully aligning with these guidelines, we have made significant progress and are continuously improving our accessibility features. We appreciate your patience and understanding as we strive to achieve full compliance. For specific accessibility concerns or updates on our progress, please feel free to reach out to our team.
 </Accordion>
 
-<Accordion title="How does the release schedule work?" id="release-info" showBorderBottom>
+<Accordion title="How does the release schedule work?" id="release-info">
 The Siemens Industrial Experience design team provides a transparent versioning and release process. For more details on our versioning, release types, frequency, and support policies, visit our [Roadmap](https://ix.siemens.io/docs/roadmap) and [Versioning and release](https://ix.siemens.io/docs/release-info).
 </Accordion>
+
+<Accordion title="Can I use the design system to build my documentation?" id="docu-theme" showBorderBottom>
+The Siemens Industrial Experience design system is intended for building industrial applications. If you are a Siemens AG employee looking to create a documentation website, use the [official MkDocs theme](https://code.siemens.com/code-ops/docs-theme) for documentation purposes. This ensures consistency and alignment with Siemens documentation standards.
+</Accordion>
+
