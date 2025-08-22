@@ -28,7 +28,7 @@ As part of our journey, we proudly announce the integration of User Experience T
 
 - [Migration guide](/docs/home/migration/uxt): For UXT users transitioning to iX, find step-by-step instructions.
 - [Support channels](/docs/home/support/contact-us): Reach out for any questions or assistance you might need.
-- [GitHub](https://github.com/siemens/ix/issues): Explore our official open source repository to request new features.
+- [GitHub](https://github.com/siemens/ix/issues): Explore our official open-source repository to request new features.
 
 ## Benefits of joining iX
 
@@ -44,6 +44,6 @@ The integration of UXT into iX brings several key benefits:
 - UXT has reached end-of-service and is no longer actively maintained.
 - The UXT CDN will be discontinued soon.
 
-We strongly recommend beginning your migration to iX as soon as possible.
+We strongly recommend migrating to iX as soon as possible.
 
 We encourage you to reach out with any concerns. Our team is here to support you with a smooth transition.
