@@ -5,17 +5,13 @@ title: Roadmap
 doc-type: 'banner'
 component-tabs: ['']
 no_single_tab: true
-description: 'We’re constantly improving our design system for you by extending the component library, developing our user guidance and ensuring the system is reliable and easy to use. Here’s what’s happening over the next year so you know what to expect from your Siemens Industrial Experience team.'
+description: 'We’re constantly improving our design system for you by extending the component library, developing our user guidance and ensuring the system is reliable and easy to use. Here’s what’s happening next so you know what to expect from your Siemens Industrial Experience team.'
 ---
 
 # Roadmap
 
 ![Roadmap](https://www.figma.com/design/wEptRgAezDU1z80Cn3eZ0o/iX-Documentation-illustrations?node-id=6344-311&t=xhNABAyFoqjz7A1d-4)
 
-<p className="text-l-title">
-We’re constantly improving our design system for you by extending the component library, developing our user guidance and ensuring the system is reliable and easy to use.  
-Here’s what’s happening over this year so you know what to expect from your Siemens Industrial Experience team. 
-</p>
 ### ✅ Completed
 - **🔹 Release 3.0**: Improving Angular support, global CSS changes, Bootstrap removal, input validation enhancements, date picker enhancements, documentation redesign with versioning. [Read more](/blog/v3-alpha)
 - **🔹 Release 3.1**: Adding form attribute to the button component, enhancing icon toggle button and fixing bugs.
