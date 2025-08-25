@@ -17,9 +17,9 @@ We’re constantly improving our design system for you by extending the componen
 Here’s what’s happening over this year so you know what to expect from your Siemens Industrial Experience team. 
 </p>
 ### ✅ Completed
-- **🔹 Release 3.0**: Improving Angular support, global CSS changes, Bootstrap removal, input validation enhancements, date picker enhancements, documentation redesign with versioning. [Read more](../../../blog/2025-04-03-alpha-release-3)
+- **🔹 Release 3.0**: Improving Angular support, global CSS changes, Bootstrap removal, input validation enhancements, date picker enhancements, documentation redesign with versioning. [Read more](/blog/v3-alpha)
 - **🔹 Release 3.1**: Adding form attribute to the button component, enhancing icon toggle button and fixing bugs.
-- **🔹 Release 3.2**: Redesigning time picker and time input, new progress indicator, improving initial render performance, updating the theme generator and enhancing our accessibility guidelines. [Read more](../../../blog/2025-07-25-release-3-2)
+- **🔹 Release 3.2**: Redesigning time picker and time input, new progress indicator, improving initial render performance, updating the theme generator and enhancing our accessibility guidelines. [Read more](/blog/2025/07/25/release-3-2)
 
 ### 🚧 In progress / Currently being worked on
 - **Elevation principle**: Simplifying the elevation system to make it easier to apply and understand visual hierarchy across components.
