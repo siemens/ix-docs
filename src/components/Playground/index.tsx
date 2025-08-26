@@ -32,10 +32,10 @@ const ColorContainerFix = ({ children }) => {
       themeContainer.classList.remove('color-table-classic-dark');
       themeContainer.classList.remove('color-table-classic-light');
       themeContainer.setAttribute('data-ix-theme', 'brand');
-      themeContainer.setAttribute('data-ix-variant', variant);
+      themeContainer.setAttribute('data-ix-color-schema', variant);
     } else {
       themeContainer.removeAttribute('data-ix-theme');
-      themeContainer.removeAttribute('data-ix-variant');
+      themeContainer.removeAttribute('data-ix-color-schema');
       themeContainer.className = `color-table-${theme}-${variant}`;
     }
   }, [theme, variant]);
@@ -98,6 +98,7 @@ function CodeActions(
 
 export type PlaygroundProps = Readonly<{
   name: string;
+  alternativePreviewName?: string;
   files: CodePreviewFiles;
   source: SourceFiles;
   height?: string;
@@ -113,7 +114,7 @@ function Playground(props: PlaygroundProps) {
   const [theme, setTheme] = useState(defaultTheme);
   const iframeSrc = useBaseUrl(
     `/demo/v2/preview/html/preview-examples/${
-      props.name
+      props.alternativePreviewName ?? props.name
     }.html?no-margin=true&theme=theme-${theme}-${isDark ? 'dark' : 'light'}`
   );
   const [framework, setFramework] = useState<FrameworkTypes>(

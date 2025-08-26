@@ -13,14 +13,6 @@ import TabItem from '@theme/TabItem';
 
 #
 
-:::warning Experimental disclaimer
-
-There is no guarantee that the core functionality is fully covered by the Vue wrappers.
-Bug reports and feature requests related to Vue can only be handled with low priority.
-Nevertheless feedback of any kind will be helpful.
-
-:::
-
 ## Library installation
 
 Install `@siemens/ix`, `@siemens/ix-vue` and `@siemens/ix-icons` using a package manager:

@@ -47,10 +47,10 @@ async function getImageResource(
     },
   });
 
-  logger.log('Fetch image resource for', url);
+  logger.debug('Fetch image resource for', url);
 
   if (response.status !== 200) {
-    logger.log(
+    logger.error(
       `🪲 Oops! Received unexpected status code ${response.status}`,
       fileName,
       'with node ids:',
@@ -58,7 +58,7 @@ async function getImageResource(
     );
 
     if (response.status === 429) {
-      logger.log('🕰️ Retry after 60 seconds');
+      logger.error('🕰️ Retry after 60 seconds');
       return new Promise((resolve) => {
         setTimeout(() => {
           resolve(getImageResource(fileName, nodeIds, figmaToken, fileVersion));
@@ -142,7 +142,7 @@ async function modifyMDXUrl(
       !isFetching.has(imageUUID)
     ) {
       isFetching.add(imageUUID);
-      logger.log('Download image for filename', fileName, 'node', id);
+      logger.debug('Download image for filename', fileName, 'node', id);
       try {
         const imageResponse = await axios.get(s3BucketUrl, {
           responseType: 'stream',
@@ -157,7 +157,7 @@ async function modifyMDXUrl(
           imageStream.on('error', reject);
         });
 
-        logger.log(`Image downloaded to ${imagePath}`);
+        logger.debug(`Image downloaded to ${imagePath}`);
       } catch (e) {
         logger.error('Error downloading image', e);
         if (retry) {
@@ -175,7 +175,9 @@ async function modifyMDXUrl(
         });
       }
     } else {
-      logger.log('Skip download. Image already existing or in fetching phase.');
+      logger.debug(
+        'Skip download. Image already existing or in fetching phase.'
+      );
     }
     node.url = `${config.baseUrl}/${imageFileName}`;
   } else {
@@ -196,7 +198,7 @@ export const figmaPlugin = (config: FigmaConfig) => {
     fs.mkdirSync(config.figmaFolder);
   }
 
-  logger.log(
+  logger.debug(
     `Figma plugin running in ${
       isReplacementMode ? 'replacement' : 'normal'
     } mode. (version: ${config.fileVersionId ?? 'current'}`
