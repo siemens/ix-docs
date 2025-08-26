@@ -188,8 +188,7 @@ async function updateFigmaImage(regex: string) {
         fileName,
         nodeId,
         images,
-        // path.join(process.cwd(), 'static', 'figma')
-        path.join(process.cwd(), 'xxx')
+        path.join(process.cwd(), 'static', 'figma')
       );
     }
   }
@@ -200,7 +199,7 @@ async function updateFigmaImage(regex: string) {
 yargs(hideBin(process.argv))
   .command(
     'update [regex]',
-    'Update all images inside regex',
+    'Update download and replace figma images',
     (yargs) => {
       return yargs.positional('regex', {
         describe: 'The regex to match image links',
