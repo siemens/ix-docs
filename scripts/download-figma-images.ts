@@ -77,7 +77,13 @@ async function downloadImageResource(
       logger.error('Retry downloading image', e);
       await new Promise<void>((resolve) => {
         setTimeout(async () => {
-          await downloadImageResource(fileName, nodeId, images, targetFolder);
+          await downloadImageResource(
+            fileName,
+            nodeId,
+            images,
+            targetFolder,
+            true
+          );
           resolve();
         }, 2000);
       });
