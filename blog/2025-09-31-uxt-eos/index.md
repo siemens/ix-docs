@@ -44,6 +44,5 @@ The integration of UXT into iX brings several key benefits:
 - UXT has reached end-of-service and is no longer actively maintained.
 - The UXT CDN will be discontinued soon.
 
-We strongly recommend migrating to iX as soon as possible.
+We strongly recommend migrating to iX as soon as possible. Our team is here to support you with a smooth transition. 
 
-We encourage you to reach out with any concerns. Our team is here to support you with a smooth transition.
