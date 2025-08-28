@@ -9,7 +9,7 @@ description: Welcome to the migration guide for upgrading from Siemens Industria
 
 ## TL;DR
 - We renamed the [button variants](#ix-button) to better reflect their usage.
-- Map and basic navigation has been removed in favor of the [application](../../../components/application/guide.mdx) component.
+- Map and basic navigation have been removed in favor of the [application](../../../components/application/guide.md) component.
 - Drawer has been deprecated in favor of [panes](../../../components/panes/index.mdx).
 
 ## Icons renamed or removed
@@ -27,18 +27,18 @@ TO BE DONE
 
 ### Deprecated drawer
 
-The drawer component has been deprecated and will be removed in the next major release. We recommend using [panes](../pane) instead, which provides similar functionality with improved performance and usability. Use this configuration for a similar experience:
+The drawer component has been deprecated and will be removed in the next major release. We recommend using [panes](../../../components/panes/index.mdx) instead, which provide similar functionality with improved performance and usability. Use this configuration for a similar experience:
 
 ```html
 <ix-pane
-	heading=”Title”
+	heading="Title"
 	variant="floating"
-	composition=”right”
-	borderless=”true”
+	composition="right"
+	borderless="true"
 	size="320px"
 	close-on-click-outside="true"
 	hide-on-collapse>
-	My content  
+	My content
 </ix-pane>
 ```
 
