@@ -12,7 +12,7 @@ export default function SiteMetadataWrapper(props: Props): JSX.Element {
 
   useEffect(() => {
     document.documentElement.setAttribute('data-ix-theme', `brand`);
-    document.documentElement.setAttribute('data-ix-variant', 'dark');
+    document.documentElement.setAttribute('data-ix-color-schema', 'dark');
   }, []);
 
   useEffect(() => {
@@ -36,7 +36,7 @@ export default function SiteMetadataWrapper(props: Props): JSX.Element {
       }
 
       document.documentElement.setAttribute('data-ix-theme', `brand`);
-      document.documentElement.setAttribute('data-ix-variant', variant);
+      document.documentElement.setAttribute('data-ix-color-schema', variant);
     });
     observer.observe(document.documentElement, {
       attributes: true,
