@@ -1,0 +1,197 @@
+---
+sidebar_label: Measurements and units
+title: Measurements and units
+doc-type: banner
+component-tabs:
+  - ""
+no_single_tab: true
+description: In industrial settings, accurate measurements are vital for ensuring process efficiency, safety and product quality. These measurements range from basic dimensions, like length, width, and height, to complex parameters such as temperature, pressure, and flow rate. Proper unit casing is essential to help users interpret data correctly and make informed decisions.
+---
+
+import DoAndDont from '@site/src/components/DoAndDont';
+
+## General rules
+
+Use the same measurement format and style throughout your user interface and consider localization conflicts. Write out measurement abbreviations in full if there is any chance users will not understand.
+
+<DoAndDont>
+	<DoAndDont.Do>
+		<DoAndDont.Item>British Thermal Unit (BTU): 1</DoAndDont.Item>
+		<DoAndDont.Item>Nautical Mile (nmi): 8</DoAndDont.Item>
+	</DoAndDont.Do>
+	<DoAndDont.Dont>
+		<DoAndDont.Item>BTU: 1</DoAndDont.Item>
+		<DoAndDont.Item>nmi: 8</DoAndDont.Item>
+	</DoAndDont.Dont>
+</DoAndDont>
+
+Do not allow line breaks between the value and the unit by using a protected (non-breaking) space. Use the singular when talking about a specific number and in abbreviations. Use lower case as the default for most unit abbreviations (see exceptions below).  
+
+<DoAndDont>
+	<DoAndDont.Do>
+		<DoAndDont.Item>200 kg</DoAndDont.Item>
+		<DoAndDont.Item>20 kg</DoAndDont.Item>
+		<DoAndDont.Item>4 in</DoAndDont.Item>
+		<DoAndDont.Item>200 g</DoAndDont.Item>
+	</DoAndDont.Do>
+	<DoAndDont.Dont>
+		<DoAndDont.Item>200kg</DoAndDont.Item>
+		<DoAndDont.Item>20 kgs</DoAndDont.Item>
+		<DoAndDont.Item>4 in.</DoAndDont.Item>
+		<DoAndDont.Item>200 G</DoAndDont.Item>
+	</DoAndDont.Dont>
+</DoAndDont>
+
+Use lower case for units named after people when the abbreviation is written out in full. Use upper case for unit abbreviations named after people.
+
+<DoAndDont>
+	<DoAndDont.Do>
+		<DoAndDont.Item>6 volts</DoAndDont.Item>
+		<DoAndDont.Item>6 V</DoAndDont.Item>
+	</DoAndDont.Do>
+	<DoAndDont.Dont>
+		<DoAndDont.Item>6 Volts</DoAndDont.Item>
+		<DoAndDont.Item>6 v</DoAndDont.Item>
+	</DoAndDont.Dont>
+</DoAndDont>
+
+| Person | Unit abbreviation |
+| ------ | ----------------- |
+| Newton | N                 |
+| Pascal | Pa                |
+| Watt   | W                 |
+| Volta  | V                 |
+| Joule  | J                 |
+| Hertz  | Hz                |
+| Ampere | A                 |
+
+Use a slash to show how compound units are divided.
+
+<DoAndDont>
+	<DoAndDont.Do>
+		<DoAndDont.Item>km/h</DoAndDont.Item>
+		<DoAndDont.Item>A/m</DoAndDont.Item>
+	</DoAndDont.Do>
+	<DoAndDont.Dont>
+		<DoAndDont.Item>km / h</DoAndDont.Item>
+	</DoAndDont.Dont>
+</DoAndDont>
+
+## Exceptions
+
+Use “L” (liter) instead of lower case “l” only if there is any doubt users will confuse it with “1”. 
+
+<DoAndDont>
+	<DoAndDont.Do>
+		<DoAndDont.Item>2 L</DoAndDont.Item>
+		<DoAndDont.Item>11 L</DoAndDont.Item>
+		<DoAndDont.Item>2 l</DoAndDont.Item>
+	</DoAndDont.Do>
+	<DoAndDont.Dont>
+		<DoAndDont.Item>11 l</DoAndDont.Item>
+	</DoAndDont.Dont>
+</DoAndDont>
+
+Use upper case “B” to abbreviate byte and lower case “b” to abbreviate bit. Use M for mega, G for giga and T for tera to distinguish from m (milli), g (gram) and t (ton).
+
+<DoAndDont>
+	<DoAndDont.Do>
+		<DoAndDont.Item>120 MB (megabytes)</DoAndDont.Item>
+		<DoAndDont.Item>120 Mb (megabits)</DoAndDont.Item>
+		<DoAndDont.Item>1 t</DoAndDont.Item>
+		<DoAndDont.Item>1 TB</DoAndDont.Item>
+		<DoAndDont.Item>1 THz</DoAndDont.Item>
+	</DoAndDont.Do>
+	<DoAndDont.Dont>
+		<DoAndDont.Item>1 T</DoAndDont.Item>
+	</DoAndDont.Dont>
+</DoAndDont>
+
+## Volume
+
+Use superscript to indicate cubed measurements.
+
+<DoAndDont>
+	<DoAndDont.Do>
+		<DoAndDont.Item>m³</DoAndDont.Item>
+		<DoAndDont.Item>cm³</DoAndDont.Item>
+	</DoAndDont.Do>
+	<DoAndDont.Dont>
+		<DoAndDont.Item>m3</DoAndDont.Item>
+		<DoAndDont.Item>cm3</DoAndDont.Item>
+	</DoAndDont.Dont>
+</DoAndDont>
+
+Use the plain text caret symbol (^) when superscript is not possible in your application.
+
+<DoAndDont>
+	<DoAndDont.Do>
+		<DoAndDont.Item>m^3</DoAndDont.Item>
+	</DoAndDont.Do>
+	<DoAndDont.Dont>
+		<DoAndDont.Item>m3</DoAndDont.Item>
+	</DoAndDont.Dont>
+</DoAndDont>
+
+Use mcg to abbreviate microgram instead of the Greek letter mu (μ).
+
+<DoAndDont>
+	<DoAndDont.Do>
+		<DoAndDont.Item>1000 mcg</DoAndDont.Item>
+	</DoAndDont.Do>
+	<DoAndDont.Dont>
+		<DoAndDont.Item>1000 μg</DoAndDont.Item>
+	</DoAndDont.Dont>
+</DoAndDont>
+
+## Temperature
+
+Use a non-breaking space (Ctrl + Shift + Space) between the number and the degree symbol.
+
+<DoAndDont>
+	<DoAndDont.Do>
+		<DoAndDont.Item>23 °C</DoAndDont.Item>
+	</DoAndDont.Do>
+	<DoAndDont.Dont>
+		<DoAndDont.Item>23°C</DoAndDont.Item>
+		<DoAndDont.Item>23° C</DoAndDont.Item>
+	</DoAndDont.Dont>
+</DoAndDont>
+
+Use the degree symbol (°) before the initial letter of the temperature scale without a space.
+
+<DoAndDont>
+	<DoAndDont.Do>
+		<DoAndDont.Item>23 °C</DoAndDont.Item>
+	</DoAndDont.Do>
+	<DoAndDont.Dont>
+		<DoAndDont.Item>23 C°</DoAndDont.Item>
+	</DoAndDont.Dont>
+</DoAndDont>
+
+## Web
+
+Use “px” in lower case to abbreviate pixels with a space for readability. Use spaces when writing dimensions for clarity. Avoid periods (dots, full stops) after px, pt (point) and dpi (dots per inch).  
+
+<DoAndDont>
+	<DoAndDont.Do>
+		<DoAndDont.Item>45 px</DoAndDont.Item>
+		<DoAndDont.Item>1280 x 780 px</DoAndDont.Item>
+		<DoAndDont.Item>4 pt</DoAndDont.Item>
+	</DoAndDont.Do>
+	<DoAndDont.Dont>
+		<DoAndDont.Item>45PX</DoAndDont.Item>
+		<DoAndDont.Item>1280x780px</DoAndDont.Item>
+		<DoAndDont.Item>4pt.</DoAndDont.Item>
+	</DoAndDont.Dont>
+</DoAndDont>
+
+## Related
+
+- [Numbers and percentages](numbers.mdx)
+- [Number input](../../../components/input-number/index.mdx)
+- [KPI](../../../components/kpi/index.mdx)
+- [Key value](../../../components/key-value/index.mdx)
+- [AG Grid](../../../components/grid/index.mdx)
+- [HTML Table](../../../components/html-grid/index.mdx)
+- [Charts](../../../components/charts-overview/index.mdx)
