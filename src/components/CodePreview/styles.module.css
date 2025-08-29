@@ -15,6 +15,10 @@
   margin-right: auto;
 }
 
+.DropdownItem {
+  color: var(--theme-color-std-text);
+}
+
 .sourceFileName {
   overflow: hidden;
   text-overflow: ellipsis;

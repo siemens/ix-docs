@@ -18,7 +18,7 @@ Variants, options and states of the [button](../button/index.mdx) and the [icon 
 
 ## Behavior in context
 
-- **Independent toggling:** Toggle buttons are typically used on their own or in layouts where each button represents an independent setting or mode. For example, toggling bold, italic, or underline in a text editor.
+- **Independent toggling:** Toggle buttons are typically used on their own or in layouts where each button represents an independent setting or mode. For example, toggling bold, italic or underline in a text editor.
 
 ## States
 

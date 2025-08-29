@@ -6,6 +6,10 @@ doc-type: 'banner'
 description: 'Welcome to the migration guide for upgrading from Siemens Industrial Experience design system v2 to v3. This guide introduces all major changes.'
 ---
 
+import React from "react";
+import { IxIcon } from "@siemens/ix-react";
+import { iconBook } from "@siemens/ix-icons/icons";
+
 # Upgrade to v3.0.0
 
 ## Removed light and foundation Figma libraries
@@ -20,7 +24,7 @@ The following Figma libraries have been replaced by the _iX Component_ library:
 Follow the instructions below to update your Figma files to the new iX Component library:
 
 1. On the left panel, click **Assets**.
-2. Click on the <ix-icon name="book" size="16"></ix-icon> icon to open the libraries dialog.
+2. Click on the <IxIcon name={iconBook} size="16"></IxIcon> icon to open the libraries dialog.
 3. Select a library you want to replace.
 4. Click **Swap library**.
 5. Choose **iX Components**.
@@ -31,6 +35,10 @@ Figma libraries for v2.0.0 are in the **Archive** project (find the link in the 
 :::info
 We have also prepared a video showing the process in our internal Siemens learning world [here](https://mylearningworld.siemens.com/web/en/app/toc/lex_auth_014279158647750656628/overview).
 :::
+
+## Icons renamed or removed
+
+With release 3.0.0 of `@siemens/ix-icons` we have fixed several typos and naming inconsistencies. All breaking changes are listed in the [BREAKING-CHANGES.md](https://github.com/siemens/ix-icons/blob/main/BREAKING_CHANGES.md) of the icon repository.
 
 ## Changed loading of icons from package `@siemens/ix-icons`
 

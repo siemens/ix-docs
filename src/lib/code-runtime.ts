@@ -22,13 +22,11 @@ export async function getVueRuntime(baseUrl: string) {
   const runtime: Record<string, string> = {};
 
   const runtime$ = files.map(async (file) => {
-    const source = await docusaurusFetch(`${baseUrl}code-runtime/vue/${file}`);
+    const source = await docusaurusFetch(`${baseUrl}/vue/${file}`);
     runtime[file] = source;
   });
 
   await Promise.all(runtime$);
-  const globalCss = await docusaurusFetch(`${baseUrl}/vue/global.css`);
-  runtime['src/styles/global.css'] = globalCss;
   return runtime;
 }
 
@@ -47,15 +45,11 @@ export async function getReactRuntime(baseUrl: string) {
   const runtime: Record<string, string> = {};
 
   const runtime$ = files.map(async (file) => {
-    const source = await docusaurusFetch(
-      `${baseUrl}code-runtime/react/${file}`
-    );
+    const source = await docusaurusFetch(`${baseUrl}/react/${file}`);
     runtime[file] = source;
   });
 
   await Promise.all(runtime$);
-  const globalCss = await docusaurusFetch(`${baseUrl}/react/global.css`);
-  runtime['src/styles/global.css'] = globalCss;
   return runtime;
 }
 
@@ -75,16 +69,38 @@ export async function getAngularRuntime(baseUrl: string) {
   const runtime: Record<string, string> = {};
 
   const runtime$ = files.map(async (file) => {
+    const source = await docusaurusFetch(`${baseUrl}/angular/${file}`);
+    runtime[file] = source;
+  });
+
+  await Promise.all(runtime$);
+
+  return runtime;
+}
+
+export async function getAngularStandaloneRuntime(baseUrl: string) {
+  const files = [
+    'src/app/app.ts',
+    'src/app/app.html',
+    'src/index.html',
+    'src/main.ts',
+    'tsconfig.json',
+    'tsconfig.app.json',
+    'angular.json',
+    'package.json',
+  ];
+
+  const runtime: Record<string, string> = {};
+
+  const runtime$ = files.map(async (file) => {
     const source = await docusaurusFetch(
-      `${baseUrl}code-runtime/angular/${file}`
+      `${baseUrl}/angular-standalone/${file}`
     );
     runtime[file] = source;
   });
 
   await Promise.all(runtime$);
 
-  const globalCss = await docusaurusFetch(`${baseUrl}/angular/global.css`);
-  runtime['src/styles.css'] = globalCss;
   return runtime;
 }
 
@@ -94,7 +110,7 @@ export async function getHTMLRuntime(baseUrl: string) {
   const runtime: Record<string, string> = {};
 
   const runtime$ = files.map(async (file) => {
-    const source = await docusaurusFetch(`${baseUrl}code-runtime/html/${file}`);
+    const source = await docusaurusFetch(`${baseUrl}/html/${file}`);
     runtime[file] = source;
   });
 
@@ -103,7 +119,5 @@ export async function getHTMLRuntime(baseUrl: string) {
   runtime['src/init.js'] = runtime['src/main.js'];
   delete runtime['src/main.js'];
 
-  const globalCss = await docusaurusFetch(`${baseUrl}/html/global.css`);
-  runtime['src/styles/global.css'] = globalCss;
   return runtime;
 }

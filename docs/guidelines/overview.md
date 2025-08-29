@@ -20,42 +20,42 @@ import { CategoryButton } from '@site/src/components/CategoryButton';
       imageWidth="5.5rem"
       title="Design principles"
       link="#design-principles">
-      ![](https://www.figma.com/design/wEptRgAezDU1z80Cn3eZ0o/iX-Documentation-illustrations?node-id=5392-136)
+      ![](https://www.figma.com/design/wEptRgAezDU1z80Cn3eZ0o/iX-Documentation-illustrations?node-id=5186-244&t=gkh6VNlJun96I6Ac-11)
     </CategoryButton>
     <CategoryButton
       buttonWidth="8rem"
       imageWidth="5.5rem"
       title="Accessibility"
       link="#accessibility">
-      ![](https://www.figma.com/design/wEptRgAezDU1z80Cn3eZ0o/iX-Documentation-illustrations?node-id=5423-91)
+      ![](https://www.figma.com/design/wEptRgAezDU1z80Cn3eZ0o/iX-Documentation-illustrations?node-id=5186-198&t=gkh6VNlJun96I6Ac-11)
     </CategoryButton>
     <CategoryButton
       buttonWidth="8rem"
       imageWidth="5.5rem"
       title="Responsive design"
       link="#responsive-design">
-      ![](https://www.figma.com/design/wEptRgAezDU1z80Cn3eZ0o/iX-Documentation-illustrations?node-id=5392-139)
+      ![](https://www.figma.com/design/wEptRgAezDU1z80Cn3eZ0o/iX-Documentation-illustrations?node-id=5186-140&t=gkh6VNlJun96I6Ac-11)
     </CategoryButton>
     <CategoryButton
       buttonWidth="8rem"
       imageWidth="5.5rem"
       title="UX writing"
       link="#ux-writing">
-      ![](https://www.figma.com/design/wEptRgAezDU1z80Cn3eZ0o/iX-Documentation-illustrations?node-id=5392-142)
+      ![](https://www.figma.com/design/wEptRgAezDU1z80Cn3eZ0o/iX-Documentation-illustrations?node-id=5186-144&t=gkh6VNlJun96I6Ac-11)
     </CategoryButton>
     <CategoryButton
       buttonWidth="8rem"
       imageWidth="5.5rem"
       title="Conversational design"
       link="#conversational-design">
-      ![](https://www.figma.com/design/wEptRgAezDU1z80Cn3eZ0o/iX-Documentation-illustrations?node-id=5392-147)
+      ![](https://www.figma.com/design/wEptRgAezDU1z80Cn3eZ0o/iX-Documentation-illustrations?node-id=5186-175&t=gkh6VNlJun96I6Ac-11)
     </CategoryButton>
     <CategoryButton
       buttonWidth="8rem"
       imageWidth="5.5rem"
       title="CLI design"
       link="#cli-design">
-      ![](https://www.figma.com/design/wEptRgAezDU1z80Cn3eZ0o/iX-Documentation-illustrations?node-id=5392-148)
+      ![](https://www.figma.com/design/wEptRgAezDU1z80Cn3eZ0o/iX-Documentation-illustrations?node-id=5186-193&t=gkh6VNlJun96I6Ac-11)
     </CategoryButton>
   </IxRow>
 </IxLayoutGrid>
@@ -65,7 +65,7 @@ Elevating user experience with Industrial Experience design principles. In the f
 
 ## Accessibility
 
-Accessibility ensures that digital products are usable by everyone, including people with disabilities. It is crucial for creating inclusive solutions that meet diverse needs and comply with standards like WCAG, enhancing the overall user experience. Learn how to make your designs accessible to all users. [Read more](./accessibility)
+Accessibility ensures that digital products are usable by everyone, including people with disabilities. It is crucial for creating inclusive solutions that meet diverse needs and comply with standards like WCAG, enhancing the overall user experience. Learn how to make your designs accessible to all users. [Read more](./accessibility/overview)
 
 ## Responsive design
 

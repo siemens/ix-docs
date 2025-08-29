@@ -135,7 +135,15 @@ const sidebars: SidebarsConfig = {
     },
   ],
   components: [
-    'components/overview',
+    {
+      id: 'components/overview',
+      label: 'Overview',
+      type: 'doc',
+      customProps: {
+        ignoreSortingOnAlphabetical: true,
+      },
+      className: 'doc-sidebar-item-overview',
+    },
     {
       type: 'category',
       className: 'doc-sidebar-item-bold',
@@ -732,9 +740,27 @@ const sidebars: SidebarsConfig = {
           ],
         }),
         createTabItem({
+          id: 'components/input-time/index',
+          label: 'Time input',
+          items: [
+            {
+              id: 'components/input-time/guide',
+              label: 'Usage',
+            },
+            {
+              id: 'components/input-time/code',
+              label: 'Code',
+            },
+          ],
+        }),
+        createTabItem({
           id: 'components/time-picker/index',
           label: 'Time picker',
           items: [
+            {
+              id: 'components/time-picker/guide',
+              label: 'Usage',
+            },
             {
               id: 'components/time-picker/code',
               label: 'Code',
@@ -878,7 +904,6 @@ const sidebars: SidebarsConfig = {
     {
       type: 'category',
       className: 'doc-sidebar-item-bold',
-
       label: 'System feedback and status',
       items: [
         createTabItem({
@@ -945,6 +970,20 @@ const sidebars: SidebarsConfig = {
           items: [
             {
               id: 'components/tooltip/code',
+              label: 'Code',
+            },
+          ],
+        }),
+        createTabItem({
+          id: 'components/progress-indicator/index',
+          label: 'Progress indicator',
+          items: [
+            {
+              id: 'components/progress-indicator/guide',
+              label: 'Usage',
+            },
+            {
+              id: 'components/progress-indicator/code',
               label: 'Code',
             },
           ],
@@ -1018,6 +1057,13 @@ const sidebars: SidebarsConfig = {
       label: 'Charts',
       items: [
         'components/charts-overview/index',
+        {
+          id: 'components/charts-overview/index',
+          type: 'doc',
+          customProps: {
+            hideOnAlphabetical: true,
+          },
+        },
         'components/line-chart/index',
         'components/bar-chart/index',
         'components/gauge-chart/index',
@@ -1030,7 +1076,6 @@ const sidebars: SidebarsConfig = {
     {
       type: 'category',
       className: 'doc-sidebar-item-bold',
-
       label: 'Deprecated',
       items: [
         createTabItem({
@@ -1073,7 +1118,20 @@ const sidebars: SidebarsConfig = {
   guidelines: [
     'guidelines/overview',
     'guidelines/designprinciples',
-    'guidelines/accessibility',
+    createTabItem({
+      id: 'guidelines/accessibility/index',
+      label: 'Accessibility',
+      items: [
+        {
+          id: 'guidelines/accessibility/overview',
+          label: 'Overview',
+        },
+        {
+          id: 'guidelines/accessibility/code',
+          label: 'Code',
+        },
+      ],
+    }),
     {
       type: 'category',
       className: 'doc-sidebar-item-bold',
