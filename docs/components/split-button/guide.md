@@ -7,7 +7,11 @@ Split buttons consist of two parts: a button labeled with text and/or an icon on
 
 ![Overview](https://www.figma.com/design/wEptRgAezDU1z80Cn3eZ0o/iX-Documentation-illustrations?node-id=5888-8071&t=rJDt18BP7skzAPnM-4)
 
-**Legend:** 1. Button, 2. Dropdown button, 3. Button icon, 4. Button label, 5. Dropdown button icon
+1. Button
+2. Dropdown button
+3. Button icon
+4. Button label
+5. Dropdown button icon
 
 All the variants, options and states of the [button](../button/index.mdx) and the [dropdown button](../dropdown-button/index.mdx) components apply to the split button. We've listed additional or deviating specifications here.
 

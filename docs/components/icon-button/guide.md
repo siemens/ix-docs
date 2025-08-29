@@ -7,7 +7,8 @@ Icon buttons are button elements containing only an icon and no text. Due to the
 
 ![Overview](https://www.figma.com/design/wEptRgAezDU1z80Cn3eZ0o/iX-Documentation-illustrations?node-id=6403-7454&t=rJDt18BP7skzAPnM-4)
 
-**Legend:** 1. Container, 2. Icon
+1. Container
+2. Icon
 
 All the variants, options and states of the [button](../button) component apply to the icon button. We’ve listed additional or deviating specifications here.
 

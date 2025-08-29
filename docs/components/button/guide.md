@@ -7,8 +7,8 @@ Buttons initiate actions, apply actions to selected objects and activate/deactiv
 
 ![Overview](https://www.figma.com/design/wEptRgAezDU1z80Cn3eZ0o/iX-Documentation-illustrations?node-id=5771-4670&t=rJDt18BP7skzAPnM-4) 
 
-**Legend:** 1. Label, 2. Icon
-
+1. Label
+2. Icon
 
 ## Variants
 
