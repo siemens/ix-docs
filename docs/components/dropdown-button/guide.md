@@ -7,10 +7,7 @@ Dropdown buttons are button elements that allow users to select an action from a
 
 ![Overview](https://www.figma.com/design/wEptRgAezDU1z80Cn3eZ0o/iX-Documentation-illustrations?node-id=5887-7624&t=yk9Vv3HSXaEzBbQk-4)
 
-1. Container
-2. Label
-3. Chevron
-4. Icon
+**Legend:** 1. Container, 2. Label, 3. Chevron, 4. Icon
 
 All the variants, options and states of the [button](../button/index.mdx) component apply to the dropdown button. We've listed additional or deviating specifications here.
 

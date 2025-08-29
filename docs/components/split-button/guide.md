@@ -5,13 +5,9 @@ doc-type: 'tab-item'
 
 Split buttons consist of two parts: a button labeled with text and/or an icon on the left and a dropdown button labeled with an icon on the right. We typically use split buttons when a default action is available but more options need to be offered. Split buttons group similar or related actions.
 
-![Overview](https://www.figma.com/design/wEptRgAezDU1z80Cn3eZ0o/iX-Documentation-illustrations?node-id=5888-8071&t=yk9Vv3HSXaEzBbQk-4)
+![Overview](https://www.figma.com/design/wEptRgAezDU1z80Cn3eZ0o/iX-Documentation-illustrations?node-id=5888-8071&t=rJDt18BP7skzAPnM-4)
 
-1. Button
-2. Dropdown button
-3. Button icon
-4. Button label
-5. Dropdown button icon
+**Legend:** 1. Button, 2. Dropdown button, 3. Button icon, 4. Button label, 5. Dropdown button icon
 
 All the variants, options and states of the [button](../button/index.mdx) and the [dropdown button](../dropdown-button/index.mdx) components apply to the split button. We've listed additional or deviating specifications here.
 
