@@ -7,8 +7,8 @@ In its simplest version, application headers only show the company logo and the 
 
 ![Application header simple](https://www.figma.com/file/wEptRgAezDU1z80Cn3eZ0o?type=design&node-id=6427%3A39093&mode=design)
 
-1. [Company logo](#company-logo)
-2. [Application name](#application-name)
+1. Company logo
+2. Application name
 
 The company logo (1) identifies the brand. For Siemens applications, only the Siemens logo with the brand theme is allowed.
 Logos must be provided as SVG, be monochromatic, and contain no strokes. Logos are colored at runtime based on the selected theme. The logo adapts its width automatically, height remains fixed.
