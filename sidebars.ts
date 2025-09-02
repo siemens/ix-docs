@@ -1214,6 +1214,7 @@ const sidebars: SidebarsConfig = {
     }),
     'styles/borders',
     'styles/shadows',
+    'styles/elevation',
     'styles/animation',
   ],
 };
