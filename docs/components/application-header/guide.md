@@ -37,7 +37,7 @@ The avatar indicates the currently logged-in user and provides access to user-re
 Clicking the avatar opens a dropdown with additional user information and actions such as log out, user profile, or user settings. If the application does not support multiple users or user profiles, do not use the avatar.
 
 For applications that allow usage without login, consider alternative approaches:
-- Show a login button in the [slot for additional elements](#slot) and hide the avatar
+- Show a login button in the [slot for additional elements](#slot-for-right-aligned-content) and hide the avatar
 - Display the avatar with a placeholder image and show login-related text in the dropdown
 
 ## Application switch
