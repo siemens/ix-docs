@@ -3,8 +3,6 @@ doc-type: 'tab-item'
 ---
 # Application header - Usage
 
-## Anatomy
-
 In its simplest version, application headers only show the company logo and the application name.
 
 ![Application header simple](https://www.figma.com/file/wEptRgAezDU1z80Cn3eZ0o?type=design&node-id=6427%3A39093&mode=design)
@@ -12,12 +10,8 @@ In its simplest version, application headers only show the company logo and the 
 1. [Company logo](#company-logo)
 2. [Application name](#application-name)
 
-### Company logo
-
 The company logo (1) identifies the brand. For Siemens applications, only the Siemens logo with the brand theme is allowed.
 Logos must be provided as SVG, be monochromatic, and contain no strokes. Logos are colored at runtime based on the selected theme. The logo adapts its width automatically, height remains fixed.
-
-### Application name
 
 The application name (2) shows the official name of the application. Its width adjusts dynamically but may be truncated if space is limited by other header elements.
 
@@ -40,13 +34,13 @@ For applications that allow usage without login, consider alternative approaches
 - Show a login button in the [slot for additional elements](#slot-for-right-aligned-content) and hide the avatar
 - Display the avatar with a placeholder image and show login-related text in the dropdown
 
-## Application switch
+### Application switch
 
 ![Application switch](https://www.figma.com/file/wEptRgAezDU1z80Cn3eZ0o?type=design&node-id=6427%3A39460&mode=design)
 
 Use the application switch (see [application](../application)) to launch and navigate between related applications. Clicking the application switch (1) opens a modal (2) with a list of available applications.
 
-## Application icon
+### Application icon
 
 ![Application icon](https://www.figma.com/file/wEptRgAezDU1z80Cn3eZ0o?type=design&node-id=6427%3A39393&mode=design)
 
@@ -54,13 +48,13 @@ The application icon (1) is a non-interactive visual element placed in the heade
 
 An optional outline (2) can be added to visually separate the icon from the background when needed. The outline is not a border and should only be used when contrast or clarity requires it.
 
-## Sub label for application name
+### Sub label for application name
 
 ![Sub label](https://www.figma.com/file/wEptRgAezDU1z80Cn3eZ0o?type=design&node-id=6427%3A39713&mode=design)
 
 A sub label (1) appears to the right of the application name as subscript text. It provides additional context, such as partner branding e.g. "powered by Siemens".
 
-## Slot for right-aligned content
+### Slot for right-aligned content
 
 ![Slot](https://www.figma.com/file/wEptRgAezDU1z80Cn3eZ0o?type=design&node-id=6427%3A39744&mode=design)
 
@@ -74,7 +68,7 @@ We typically use the slot for:
 
 Overflow behavior is not handled automatically. At breakpoint sm, the slot collapses and its content becomes accessible via an overflow icon. See [behavior](#behavior) for details.
 
-## Secondary slot for left-aligned content
+### Secondary slot for left-aligned content
 
 ![Secondary slot](https://www.figma.com/file/wEptRgAezDU1z80Cn3eZ0o?type=design&node-id=6427%3A39911&mode=design)
 
@@ -86,13 +80,13 @@ We typically use the secondary slot for:
 
 Overflow behavior is not handled automatically. At breakpoint sm, the slot collapses and its content becomes accessible via an overflow icon. See [behavior](#behavior) for details.
 
-## Borderless
+### Borderless
 
 ![Borderless](https://www.figma.com/file/wEptRgAezDU1z80Cn3eZ0o?type=design&node-id=6427%3A40378&mode=design)
 
 The borderless option sets the existing bottom border (1) of the header to a transparent color. Using the same background color, this creates a visual connection between the header and the following element, making them appear as a unified block.
 
-## Framework header
+### Framework header
 
 If the application is hosted inside a framework that comes with its own header, you can omit the entire application header to avoid having two headers on top of each other. The framework’s header then provides the brand identity, the application name and other information.
 
