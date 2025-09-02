@@ -3,90 +3,124 @@ doc-type: 'tab-item'
 ---
 # Application header - Usage
 
-![Application header with different options](https://www.figma.com/design/wEptRgAezDU1z80Cn3eZ0o/iX-Pattern-Illustrations?type=design&node-id=1634-56424&mode=design&t=4XzscFw57dE7McUX-11)
+## Anatomy
 
-1. [Application switch](#application-switch) (optional)
-2. [Brand logo](#brand-logo)
-3. [Application name](#application-name)
-4. [Slot](#slot) for additional elements (optional)
-5. [Avatar](#avatar) (optional)
+In its simplest version, application headers only show the company logo and the application name.
+
+![Application header simple](https://www.figma.com/file/wEptRgAezDU1z80Cn3eZ0o?type=design&node-id=6427%3A39093&mode=design)
+
+1. [Company logo](#company-logo)
+2. [Application name](#application-name)
+
+### Company logo
+
+The company logo (1) identifies the brand. For Siemens applications, only the Siemens logo with the brand theme is allowed.
+Logos must be provided as SVG, be monochromatic, and contain no strokes. Logos are colored at runtime based on the selected theme. The logo adapts its width automatically, height remains fixed.
+
+### Application name
+
+The application name (2) shows the official name of the application. Its width adjusts dynamically but may be truncated if space is limited by other header elements.
+
+## Options
+
+The app header component offers great flexibility through optional elements, but each addition should be considered carefully. Adding too many elements can reduce usability and introduce challenges, especially regarding responsiveness and overflow behavior.
+
+### Avatar
+
+![Avatar and avatar dropdown](https://www.figma.com/file/wEptRgAezDU1z80Cn3eZ0o?type=design&node-id=6427%3A39231&mode=design)
+
+1. User avatar
+2. Avatar dropdown
+
+The avatar indicates the currently logged-in user and provides access to user-related actions and settings. Its position in the application header ensures visibility of security-relevant information across all breakpoints.
+
+Clicking the avatar opens a dropdown with additional user information and actions such as log out, user profile, or user settings. If the application does not support multiple users or user profiles, do not use the avatar.
+
+For applications that allow usage without login, consider alternative approaches:
+- Show a login button in the [slot for additional elements](#slot) and hide the avatar
+- Display the avatar with a placeholder image and show login-related text in the dropdown
 
 ## Application switch
 
-Use the application switch (see [application](../application)) to allow users to navigate across applications. When clicking the application switch (1), a modal with a list of available applications opens.
+![Application switch](https://www.figma.com/file/wEptRgAezDU1z80Cn3eZ0o?type=design&node-id=6427%3A39460&mode=design)
 
-## Brand logo
+Use the application switch (see [application](../application)) to launch and navigate between related applications. Clicking the application switch (1) opens a modal (2) with a list of available applications.
 
-Provide the brand logo (2) as SVG. The logo must be monochromatic and cannot contain strokes as it is colored during runtime depending on your chosen theme.
-For Siemens applications, only the Siemens logo with the brand theme is allowed.
+## Application icon
 
-## Application name
+![Application icon](https://www.figma.com/file/wEptRgAezDU1z80Cn3eZ0o?type=design&node-id=6427%3A39393&mode=design)
 
-The application name (3) shows the official name of the application. It can be extended with additional information by using the pipe character "|" and 2 spaces before and after to separate both.
+The application icon (1) is a non-interactive visual element placed in the header to represent the application. It is displayed within a fixed size and uses a defined border radius. The icon does not adapt to different image sizes or aspect ratios, so images must be prepared accordingly.
 
-## Slot
+An optional outline (2) can be added to visually separate the icon from the background when needed. The outline is not a border and should only be used when contrast or clarity requires it.
 
-![Examples of slot usages](https://www.figma.com/design/wEptRgAezDU1z80Cn3eZ0o/iX-Pattern-Illustrations?type=design&node-id=1679-19526&mode=design&t=UPXhDWuRHtygtfFI-11)
+## Sub label for application name
 
-We use this slot to provide additional high-level information or actions and functions which may impact the application context, e.g. mode switching. Note that overflows are not handled automatically; at breakpoint sm the slot collapses and is only accessible via the overflow icon.
+![Sub label](https://www.figma.com/file/wEptRgAezDU1z80Cn3eZ0o?type=design&node-id=6427%3A39713&mode=design)
+
+A sub label (1) appears to the right of the application name as subscript text. It provides additional context, such as partner branding e.g. "powered by Siemens".
+
+## Slot for right-aligned content
+
+![Slot](https://www.figma.com/file/wEptRgAezDU1z80Cn3eZ0o?type=design&node-id=6427%3A39744&mode=design)
+
+The slot (1) provides space for placing functions and information aligned to the right side of the application header. We use this slot for high-level information or actions impacting the application context, e.g. mode switching.
 
 We typically use the slot for:
-
-- Log in button, if the application runs without a logged in user
-- Changing the top level data context like environment, workspace, tenant or similar
-- Important contextual information users should be aware of (like local times in remote access use cases)
+- Log in button, if the application runs without a logged-in user
+- Changing the top-level data context like environment, workspace, or tenant
+- Displaying important contextual information, e.g. local times in remote access scenarios
 - Access to application-wide actions like global search
 
-## Avatar
+Overflow behavior is not handled automatically. At breakpoint sm, the slot collapses and its content becomes accessible via an overflow icon. See [behavior](#behavior) for details.
 
-With the new modular application frame we moved the avatar from the navigation menu to the application header. This ensures the avatar has security-relevant information available at all breakpoints. Nonetheless, if you still use the [basic navigation](../../legacy/map-navigation), the avatar is still in the navigation menu for compatibility reasons.
+## Secondary slot for left-aligned content
 
-![Avatar and avatar dropdown](https://www.figma.com/design/wEptRgAezDU1z80Cn3eZ0o/iX-Pattern-Illustrations?type=design&node-id=1635-60462&mode=design&t=UPXhDWuRHtygtfFI-11)
+![Secondary slot](https://www.figma.com/file/wEptRgAezDU1z80Cn3eZ0o?type=design&node-id=6427%3A39911&mode=design)
 
-6. Avatar dropdown
-7. User avatar
-8. Top text line
-9. Bottom text line
+The secondary slot (1) allows placing functions aligned to the left side of the application header. It also supports centered content by taking the full available width and applying center alignment.
 
-The avatar is an optional element and indicates the current logged in user. If your application doesn’t support different users or user profiles, don’t use the avatar.
+We typically use the secondary slot for:
+- Lean elements such as toolbars, which offer compact access to key actions and can be easily adapted for overflow behavior
+- While primary navigation tabs can also be placed here, they are more space-consuming and less flexible in responsive layouts.
 
-Clicking the avatar opens a dropdown (6) with additional user information (7, 8, 9) and possibly other user related actions like log out, profile settings or user settings.
+Overflow behavior is not handled automatically. At breakpoint sm, the slot collapses and its content becomes accessible via an overflow icon. See [behavior](#behavior) for details.
 
-![Examples of access login](https://www.figma.com/design/wEptRgAezDU1z80Cn3eZ0o/iX-Pattern-Illustrations?type=design&node-id=1636-62468&mode=design&t=4XzscFw57dE7McUX-11)
+## Borderless
 
-If your application can be used without being logged in to, you can offer access to a login process in different ways, for example:
+![Borderless](https://www.figma.com/file/wEptRgAezDU1z80Cn3eZ0o?type=design&node-id=6427%3A40378&mode=design)
 
-- Show a log in button in the [slot for additional elements](#slot) and hide the avatar.
-- Show the avatar with a placeholder image and show text in the user information section.
+The borderless option sets the existing bottom border (1) of the header to a transparent color. Using the same background color, this creates a visual connection between the header and the following element, making them appear as a unified block.
 
-## Options
+## Framework header
 
 If the application is hosted inside a framework that comes with its own header, you can omit the entire application header to avoid having two headers on top of each other. The framework’s header then provides the brand identity, the application name and other information.
 
 ## Behavior
 
-The header automatically adapts the breakpoints defined in the [application](../application).
+The header automatically adapts the breakpoints defined in the [application](../application) layout.
 
-![Application header at breakpoints lg/md and sm](https://www.figma.com/design/wEptRgAezDU1z80Cn3eZ0o/iX-Pattern-Illustrations?type=design&node-id=1636-62980&mode=design&t=4XzscFw57dE7McUX-11)
+![Application header at breakpoints lg/md and sm](https://www.figma.com/design/wEptRgAezDU1z80Cn3eZ0o/iX-Documentation-illustrations?node-id=6427-40565&t=S6lUQ3W9x7i87i8E-4)
 
-10. Layout at breakpoint lg and md
-11. Layout at breakpoint (sm)
-12. Application menu icon
-13. Overflow icon to access the slot content (14)
-14. Slot content
-15. Close icon to close the application menu
-16. Application menu with the application switch icon at the top
+At breakpoints "lg" and "md" the application header remains unchanged, truncation applies (1).
 
-At breakpoints "lg" and "md" the application header behaves identically. At breakpoint "sm" the layout changes in the following way:
+At breakpoint "sm" the layout changes in the following way:
+- The application menu is hidden and replaced by a menu icon (2) in the header, clicking it opens the menu.
+- The company logo is not shown.
+- If the application switch (3) is used, it moves to the application menu.
+- If slots are used, their elements move into dedicated sections in the overflow dropdown (4), accessible via the overflow icon (5).
+- If the manual overflow slot is used, its content appears in a separate section within the overflow dropdown.
 
-- The application menu hides, displaying the application menu icon (12), a click opens the application menu (16).
-- The application switch (if used) moves to the application menu (16).
-- The brand logo disappears.
-- The slot for additional elements (if used) moves to the overflow dropdown that opens on click on the overflow icon (13).
+Manual overflow menu
+- The overflow slot can be manually filled to trigger the overflow menu at any breakpoint.
+- When content is placed in the overflow slot, the overflow button appears even at medium (md) and large (lg) viewports.
+- This allows intentional placement of elements into the overflow menu (6), independent of automatic breakpoint behavior.
 
 ## Dos and Don’ts
 
 - Do align other slot usages for Siemens applications with our team to keep a consistent look and feel
 - Do use the avatar dropdown for actions related to the current logged in user
-- Don’t overload the slot with too many elements (overflows are not handled automatically)
+- Do test layout behavior at all breakpoints to ensure content remains accessible
+- Don’t overload the slots with too many elements to avoid losing clarity and hierarchy
 - Don’t use the avatar if your application does not support user profiles
+- Don’t rely on automatic overflow handling for complex layouts, reduce complexity
