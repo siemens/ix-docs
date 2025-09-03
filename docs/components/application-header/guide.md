@@ -10,14 +10,14 @@ In its simplest version, application headers only show the company logo and the 
 1. Company logo
 2. Application name
 
-The company logo (1) identifies the brand. For Siemens applications, the Siemens logo with the brand theme is the default combination. Contractual agreements may allow partner logos under certain conditions.  
+The **company logo** (1) identifies the brand. For Siemens applications, the Siemens logo with the brand theme is the default combination. Contractual agreements may allow partner logos under certain conditions.  
 The logo adapts its width automatically, height remains fixed. It is colored at runtime based on the selected theme if the following prerequisites are met:
 - Logo is provided as SVG
-- Color of SVG elements are set to "currentcolor"
+- Color of SVG elements are set to `currentcolor`
 
 Without meeting these prerequisites, the logo will appear without any color adaption.
 
-The application name (2) shows the official name of the application. Its width adjusts dynamically but may be truncated if space is limited by other header elements.
+The **application name** (2) shows the official name of the application. Its width adjusts dynamically but may be truncated if space is limited by other header elements.
 
 ## Options
 
