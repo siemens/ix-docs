@@ -10,14 +10,18 @@ In its simplest version, application headers only show the company logo and the 
 1. Company logo
 2. Application name
 
-The company logo (1) identifies the brand. For Siemens applications, only the Siemens logo with the brand theme is allowed.
-Logos must be provided as SVG, be monochromatic, and contain no strokes. Logos are colored at runtime based on the selected theme. The logo adapts its width automatically, height remains fixed.
+The company logo (1) identifies the brand. For Siemens applications, the Siemens logo with the brand theme is the default combination. Contractual agreements may allow partner logos under certain conditions.  
+The logo adapts its width automatically, height remains fixed. It is colored at runtime based on the selected theme if the following prerequisites are met:
+- Logo is provided as SVG
+- Color of SVG elements are set to "currentcolor"
+
+Without meeting these prerequisites, the logo will appear without any color adaption.
 
 The application name (2) shows the official name of the application. Its width adjusts dynamically but may be truncated if space is limited by other header elements.
 
 ## Options
 
-The app header component offers great flexibility through optional elements, but each addition should be considered carefully. Adding too many elements can reduce usability and introduce challenges, especially regarding responsiveness and overflow behavior.
+The app header component offers great flexibility through optional elements, but each addition should be considered carefully. Adding too many elements can reduce usability and introduce challenges, especially regarding responsiveness and overflow behavior. We recommend keeping the header clean and lean.
 
 ### Avatar
 
@@ -26,13 +30,13 @@ The app header component offers great flexibility through optional elements, but
 1. User avatar
 2. Avatar dropdown
 
-The avatar indicates the currently logged-in user and provides access to user-related actions and settings. Its position in the application header ensures visibility of security-relevant information across all breakpoints.
+The avatar indicates the currently logged in user and provides access to user-related actions and settings. Its position in the application header ensures visibility of security-relevant information across all breakpoints.
 
 Clicking the avatar opens a dropdown with additional user information and actions such as log out, user profile, or user settings. If the application does not support multiple users or user profiles, do not use the avatar.
 
 For applications that allow usage without login, consider alternative approaches:
 - Show a login button in the [slot for additional elements](#slot-for-right-aligned-content) and hide the avatar
-- Display the avatar with a placeholder image and show login-related text in the dropdown
+- Display the avatar with a placeholder image and provide login-related information and actions in the dropdown
 
 ### Application switch
 
@@ -44,15 +48,15 @@ Use the application switch (see [application](../application)) to launch and nav
 
 ![Application icon](https://www.figma.com/file/wEptRgAezDU1z80Cn3eZ0o?type=design&node-id=6427%3A39393&mode=design)
 
-The application icon (1) is a non-interactive visual element placed in the header to represent the application. It is displayed within a fixed size and uses a defined border radius. The icon does not adapt to different image sizes or aspect ratios, so images must be prepared accordingly.
+The application icon (1) is a non-interactive visual element placed in the header to represent the application. It is displayed within a fixed size and uses a defined border radius. The standard web image formats are supported. The provided image will be scaled if necessary while maintaining the aspect ratio.
 
-An optional outline (2) can be added to visually separate the icon from the background when needed. The outline is not a border and should only be used when contrast or clarity requires it.
+An optional outline (2) can be added to visually separate the icon from the background when needed. It should only be used when contrast or clarity requires it.
 
-### Sub label for application name
+### Suffix for application name
 
-![Sub label](https://www.figma.com/file/wEptRgAezDU1z80Cn3eZ0o?type=design&node-id=6427%3A39713&mode=design)
+![Application name suffix](https://www.figma.com/file/wEptRgAezDU1z80Cn3eZ0o?type=design&node-id=6427%3A39713&mode=design)
 
-A sub label (1) appears to the right of the application name as subscript text. It provides additional context, such as partner branding e.g. "powered by Siemens".
+The application name suffix (1) appears to the right of the application name. It provides additional information or context. For Siemens applications, we use it for contractually regulated additions in partner branding scenarios, e.g. "powered by Siemens".
 
 ### Slot for right-aligned content
 
@@ -72,8 +76,7 @@ Overflow behavior is not handled automatically. At breakpoint sm, the slot colla
 
 ![Secondary slot](https://www.figma.com/file/wEptRgAezDU1z80Cn3eZ0o?type=design&node-id=6427%3A39911&mode=design)
 
-The secondary slot (1) allows placing functions aligned to the left side of the application header. It also supports centered content by taking the full available width and applying center alignment.
-
+The secondary slot (1) allows placing functions aligned to the left side of the application header.
 We typically use the secondary slot for:
 - Lean elements such as toolbars, which offer compact access to key actions and can be easily adapted for overflow behavior
 - While primary navigation tabs can also be placed here, they are more space-consuming and less flexible in responsive layouts.
@@ -86,6 +89,16 @@ Overflow behavior is not handled automatically. At breakpoint sm, the slot colla
 
 The borderless option sets the existing bottom border (1) of the header to a transparent color. Using the same background color, this creates a visual connection between the header and the following element, making them appear as a unified block.
 
+### Window controls
+
+![OS specific window controls](https://www.figma.com/design/wEptRgAezDU1z80Cn3eZ0o/iX-Documentation-illustrations?node-id=6599-45912&t=07oqeGxwT0wAyLin-11)
+
+If the applications runs in a desktop framework like Electron, we recommend the following approach to avoid an additional OS specific window header above the application header:
+- Place a container (2) beside the actual application header (1), consider respecting the OS specifics.
+- Place the window controls inside, consider applying the OS specific style and behavior
+- Use same height, background and border properties for this container
+
+
 ### Framework header
 
 If the application is hosted inside a framework that comes with its own header, you can omit the entire application header to avoid having two headers on top of each other. The framework’s header then provides the brand identity, the application name and other information.
@@ -96,18 +109,18 @@ The header automatically adapts the breakpoints defined in the [application](../
 
 ![Application header at breakpoints lg/md and sm](https://www.figma.com/design/wEptRgAezDU1z80Cn3eZ0o/iX-Documentation-illustrations?node-id=6427-40565&t=S6lUQ3W9x7i87i8E-4)
 
-At breakpoints "lg" and "md" the application header remains unchanged, truncation applies (1).
+At breakpoints "lg" and "md" the application header remains unchanged, truncation applies to the application name (1). When its minimum width is reached truncation is applied to the secondary slot. 
 
 At breakpoint "sm" the layout changes in the following way:
-- The application menu is hidden and replaced by a menu icon (2) in the header, clicking it opens the menu.
-- The company logo is not shown.
-- If the application switch (3) is used, it moves to the application menu.
-- If slots are used, their elements move into dedicated sections in the overflow dropdown (4), accessible via the overflow icon (5).
-- If the manual overflow slot is used, its content appears in a separate section within the overflow dropdown.
+- The application menu is hidden and replaced by a menu icon (2) in the header, clicking it opens the menu
+- The company logo and a possibly used application name suffix is not shown
+- If the application switch (3) is used, it moves to the application menu
+- If slots are used, their elements move into dedicated sections in the overflow dropdown (4), accessible via the overflow icon (5)
+- If the manual overflow slot is used, its content appears at lowest position within the overflow dropdown (7)
 
-Manual overflow menu
+### Manual overflow menu
 - The overflow slot can be manually filled to trigger the overflow menu at any breakpoint.
-- When content is placed in the overflow slot, the overflow button appears even at medium (md) and large (lg) viewports.
+- When content is placed in the manual overflow slot, the overflow button appears even at medium (md) and large (lg) viewports.
 - This allows intentional placement of elements into the overflow menu (6), independent of automatic breakpoint behavior.
 
 ## Dos and Don’ts
