@@ -56,7 +56,7 @@ export default function DocDefaultHeader(props: {
                   if (typeof link === 'string') {
                     return (
                       <RedirectTag key={link} link={link}>
-                        Show deprecated version
+                        Show latest version
                       </RedirectTag>
                     );
                   }
