@@ -61,6 +61,12 @@ export default function DocDefaultHeader(props: {
                     );
                   }
 
+                  if (link.type === 'link') {
+                    <RedirectTag key={link.href} link={link.href}>
+                      {link.message}
+                    </RedirectTag>;
+                  }
+
                   if (link.type === 'deprecated') {
                     return (
                       <DeprecatedTag
