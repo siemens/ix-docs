@@ -1,21 +1,69 @@
 ---
+sidebar_position: 2
 sidebar_label: Elevation
 title: Elevation
 hide_table_of_contents: false
-doc-type: 'banner'
-component-tabs: ['']
+doc-type: banner
+component-tabs:
+  - ""
 no_single_tab: true
-description: 'Elevation of a surface is represented by its distance from the page background along the z-axis, creating a sense of depth and establishing content hierarchy within an application.'
+description: Elevation in our design system defines the perceived distance of a surface from the background along the z-axis, establishing content hierarchy and guiding user focus.
 ---
 
-In our design system, elevation is achieved through a combination of layered base colors and drop shadows, creating depth and spatial associations without unnecessary stylistic elements.
+# Elevation
 
-## Background colors and component colors
+Our design system achieves elevation through the application of background color layers, borders and selective shadows to achieve depth and clarity.
 
-At the core of the layering model are tokens for background colors and component colors.
+:::info
+**Important note:** We changed the elevation approach starting with version 4.0 of our design system, so it is only partially applicable for v3.x (see [migration guide](../migration/4_0_0/index.md) for guidance).
+:::
 
-- `color-1`: Is placed on the lowest position of the stack order, serving as the foundational background for the UI.
-- `color-2`: Is placed on top of `color-1` and is the default layer for overlays.
-- `color-component-1`: Is placed either on top of `color-1` or `color-2` and is the default layer for components.
+Our approach to elevation is two-fold:
+1. **Background color layers:** Primarily achieved through a system of distinct `color-` and `color-component-` tokens and additional border-colors. This defines the foundational stacking order for static content.
+2. **Selective drop shadows:** Used as a separate visual cue for elements that truly "float" above the UI, demanding immediate attention or representing a temporary interaction.
 
+When you use it intentionally, you can achieve:
+* **Clarity:** Help users understand the relationship between different UI elements.
+* **Hierarchy:** Guide the user's eye to the most important information or interactive elements.
+* **Focus:** Draw attention to temporary or critical content (e.g. toasts).
+* **Consistency:** Ensuring a predictable and intuitive user experience across all applications.
 
+### The layering model
+
+This model outlines the primary elevation levels for static UI elements:
+
+![Layering model](https://www.figma.com/design/wEptRgAezDU1z80Cn3eZ0o/iX-Documentation-illustrations?node-id=6605-276&t=QnYYtjAA8l2uj4Mu-4)
+
+#### Elevation 0: Base layer
+- **Purpose:** Main page background for the entire user interface.
+- **Usage:** Use `color-1` for the main canvas of your application, large sections, or the default background of a page.
+
+:::info
+**Tip:** Differentiate large sections on the base layer by using [borders](borders.md) (e.g. `color-soft-bdr` or `color-weak-bdr`). When using our components, we recommend using the available `outline` variants.
+:::
+
+#### Elevation 1: Primary containers
+- **Purpose:** Container elements that need to stand out from the main background.
+- **Usage:** Apply `color-2` or `component-1` (which shares the same color value in the new theme introduced in v4.0) to components like cards, side panels, distinct content blocks, or primary interactive elements.
+
+#### Elevation 2: Second-level containers
+- **Purpose:** Nested containers within a container (e.g., a sub-section inside a card).
+- **Usage:** Maintain `color-2` as the background, but differentiate these nested containers with [borders](borders.md) (e.g. `color-soft-bdr` or `color-weak-bdr`). Alternatively, use `color-component-2` which is semi-transparent.
+
+#### Elevation 3: Floating elements
+- **Purpose:** Elements that float above the main UI, demanding immediate attention or representing a temporary interaction.
+- **Usage:** Use selective shadows (primarily `shadow-4`, see [shadow](shadow.md)) to indicate physical overlap for components like [dropdowns](../components/dropdown/index.md), [tooltips](../components/tooltip.md), [modals](../components/modal/index.md), and [toasts](../components/toast/index.md).
+
+We don't use shadows that are part of the primary layout flow e.g. [navigation elements](../components/application-menu/index.mdx) or [cards](../components/card/index.md).
+
+### Other `color-` tokens (`color-3` to `color-8`)
+
+:::info
+**Important note:** While `color-3` through `color-8` exist, they are **not** intended for general elevation layering in the same way `color-1` and `color-2` are due to accessibility purposes. `color-3` and `color-4` even share the exact same visual color as `color-2`. These higher `color-` tokens are reserved for very specific, sparing use cases, often related to component-specific styling or unique visual requirements that fall outside the standard elevation model.
+:::
+
+**Guidance:** Do not use `color-3` to `color-8` to create new general elevation levels. Stick to the `color-1` and `color-2` model for primary background layering.
+
+### Interaction states (hover & active)
+
+For interactive elements, universal `--hover` and `--active` color tokens are available. These are applied consistently across all elevation layers to indicate interaction states. Refer to the [colors](colors.md) chapter for specific `--hover` and `--active` token names.
