@@ -15,7 +15,7 @@ description: Elevation in our design system defines the perceived distance of a 
 Our design system achieves elevation through the application of background color layers, borders and selective shadows to achieve depth and clarity.
 
 :::info
-**Important note:** We changed the elevation approach starting with version 4.0 of our design system, so it is only partially applicable for v3.x (see [migration guide](../migration/4_0_0/index.md) for guidance).
+**Important note:** We changed the elevation approach starting with version 4.0 of our design system, so it is only partially applicable for v3.x (see [migration guide](../home/migration/4_0_0/index.md) for guidance).
 :::
 
 Our approach to elevation is two-fold:
@@ -52,9 +52,9 @@ This model outlines the primary elevation levels for static UI elements:
 
 #### Elevation 3: Floating elements
 - **Purpose:** Elements that float above the main UI, demanding immediate attention or representing a temporary interaction.
-- **Usage:** Use selective shadows (primarily `shadow-4`, see [shadow](shadow.md)) to indicate physical overlap for components like [dropdowns](../components/dropdown/index.md), [tooltips](../components/tooltip.md), [modals](../components/modal/index.md), and [toasts](../components/toast/index.md).
+- **Usage:** Use selective shadows (primarily `shadow-4`, see [shadow](shadows.md)) to indicate physical overlap for components like [dropdowns](../components/dropdown/index.mdx), [tooltips](../components/index.mdx), [modals](../components/modal/index.mdx), and [toasts](../components/toast/index.mdx).
 
-We don't use shadows that are part of the primary layout flow e.g. [navigation elements](../components/application-menu/index.mdx) or [cards](../components/card/index.md).
+We don't use shadows that are part of the primary layout flow e.g. [navigation elements](../components/application-menu/index.mdx) or [cards](../components/card/index.mdx).
 
 ### Other `color-` tokens (`color-3` to `color-8`)
 
