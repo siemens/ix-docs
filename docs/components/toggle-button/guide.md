@@ -5,7 +5,7 @@ doc-type: 'tab-item'
 
 Toggle buttons with and without text labels are available. We typically use toggle buttons to switch between states or modes. They are ideal for scenarios where a setting can be turned on or off, or where a selection can be toggled independently of others.
 
-![Overview](https://www.figma.com/design/wEptRgAezDU1z80Cn3eZ0o/iX-Documentation-illustrations?node-id=5890-9246&t=rJDt18BP7skzAPnM-4)
+![Overview](https://www.figma.com/design/wEptRgAezDU1z80Cn3eZ0o/iX-Documentation-illustrations?node-id=5890-9247&t=p3alxGH4u4utYcc1-4)
 
 Variants, options and states of the [button](../button/index.mdx) and the [icon button](../icon-button/index.mdx) components apply. Only additional, deviating or detailing specifications are listed here.
 
