@@ -54,15 +54,17 @@ This model outlines the primary elevation levels for static UI elements:
 - **Purpose:** Elements that float above the main UI, demanding immediate attention or representing a temporary interaction.
 - **Usage:** Use selective shadows (primarily `shadow-4`, see [shadow](shadows.md)) to indicate physical overlap for components like [dropdowns](../components/dropdown/index.mdx), [tooltips](../components/tooltip/index.mdx), [modals](../components/modal/index.mdx), and [toasts](../components/toast/index.mdx).
 
-We don't use shadows that are part of the primary layout flow e.g. [navigation elements](../components/application-menu/index.mdx) or [cards](../components/card/index.mdx).
+We don't use shadows that are part of the primary layout flow e.g. [navigation elements](../components/application-menu) or [cards](../components/card/index.mdx).
 
-### Other `color-` tokens (`color-3` to `color-8`)
+### Other `color-` tokens
+
+We recommend to stick to the `color-1` and `color-2` model for primary background layering. Avoid using `color-3` to `color-8` to create new general elevation levels.
 
 :::info
-**Important note:** While `color-3` through `color-8` exist, they are **not** intended for general elevation layering in the same way `color-1` and `color-2` are due to accessibility purposes. `color-3` and `color-4` even share the exact same visual color as `color-2`. These higher `color-` tokens are reserved for very specific, sparing use cases, often related to component-specific styling or unique visual requirements that fall outside the standard elevation model.
+While `color-3` through `color-8` exist, they are **not** intended for general elevation layering in the same way `color-1` and `color-2` are due to accessibility purposes. `color-3` and `color-4` even share the exact same visual color as `color-2`.
 :::
 
-**Guidance:** Do not use `color-3` to `color-8` to create new general elevation levels. Stick to the `color-1` and `color-2` model for primary background layering.
+These higher `color-` tokens are reserved for very specific, sparing use cases, often related to component-specific styling or unique visual requirements that fall outside the standard elevation model.
 
 ### Interaction states (hover & active)
 
