@@ -12,44 +12,76 @@ import DoAndDont from '@site/src/components/DoAndDont';
 
 ## General rules
 
-Use specific text field labels for address.  
+Use specific text field labels for address.
 
-DO: Number | Street | State | ZIP code | Country 
-DON’T:  Address line 1, Address line 2, Address line 3.    
+<DoAndDont>
+  <DoAndDont.Do>
+    <DoAndDont.Item>Number | Street | State | ZIP code | Country</DoAndDont.Item>
+  </DoAndDont.Do>
+  <DoAndDont.Dont>
+    <DoAndDont.Item>Address line 1, Address line 2, Address line 3</DoAndDont.Item>
+  </DoAndDont.Dont>
+</DoAndDont>
 
-Ensure special and international characters are accepted for international addresses.  
+Ensure special and international characters are accepted for international addresses.
 
-DO: 12-142 Elm St 
-DO: #8C (unit or suite number)  
-DO: Straße (Street in German) 
-DO: VI (unit for floor in German) 
-DO: München (for Munich) 
+<DoAndDont>
+  <DoAndDont.Do>
+    <DoAndDont.Item>12-142 Elm St</DoAndDont.Item>
+    <DoAndDont.Item>#8C (unit or suite number)</DoAndDont.Item>
+    <DoAndDont.Item>Straße (Street in German)</DoAndDont.Item>
+    <DoAndDont.Item>VI (unit for floor in German)</DoAndDont.Item>
+    <DoAndDont.Item>München (for Munich)</DoAndDont.Item>
+  </DoAndDont.Do>
+</DoAndDont>
 
-Use commas to separate names, streets, states and countries to prevent errors when there is only one text field. 
+Use commas to separate names, streets, states and countries to prevent errors when there is only one text field.
 
-DO: John Doe, 123 Maple Street, Springfield, California, 62704, United States 
+<DoAndDont>
+  <DoAndDont.Do>
+    <DoAndDont.Item>John Doe, 123 Maple Street, Springfield, California, 62704, United States</DoAndDont.Item>
+  </DoAndDont.Do>
+</DoAndDont>
 
-## States, provinces and regions 
+## States, provinces and regions
 
-Use a comma between cities and states and other regions, e.g. cities within Cantons.  
+Use a comma between cities and states and other regions, e.g. cities within Cantons.
 
-DO: Springfield, Illinois 
-DO: Munich, Bavaria 
-DO: Thun, Bern 
+<DoAndDont>
+  <DoAndDont.Do>
+    <DoAndDont.Item>Springfield, Illinois</DoAndDont.Item>
+    <DoAndDont.Item>Munich, Bavaria</DoAndDont.Item>
+    <DoAndDont.Item>Thun, Bern</DoAndDont.Item>
+  </DoAndDont.Do>
+</DoAndDont>
 
-Use capital letters for abbreviated states without a full stop. 
+Use capital letters for abbreviated states without a full stop.
 
-DO: IL 
-DON’T: Il. 
+<DoAndDont>
+  <DoAndDont.Do>
+    <DoAndDont.Item>IL</DoAndDont.Item>
+  </DoAndDont.Do>
+  <DoAndDont.Dont>
+    <DoAndDont.Item>Il.</DoAndDont.Item>
+  </DoAndDont.Dont>
+</DoAndDont>
 
-## ZIP codes 
+## ZIP codes
 
-Use the correct regional format for ZIP codes, including any necessary spaces or hyphens. 
+Use the correct regional format for ZIP codes, including any necessary spaces or hyphens.
 
-DO: 90210 (US)  DON’T: 90 21 0 (US) 
-DO: SW1A 2AA (UK) DON’T: SW1A2AA (UK) 
-DO: 123-4567 (Japan) 
-DON’T: 1234567 (Japan) 
+<DoAndDont>
+  <DoAndDont.Do>
+    <DoAndDont.Item>90210 (US)</DoAndDont.Item>
+    <DoAndDont.Item>SW1A 2AA (UK)</DoAndDont.Item>
+    <DoAndDont.Item>123-4567 (Japan)</DoAndDont.Item>
+  </DoAndDont.Do>
+  <DoAndDont.Dont>
+    <DoAndDont.Item>90 21 0 (US)</DoAndDont.Item>
+    <DoAndDont.Item>SW1A2AA (UK)</DoAndDont.Item>
+    <DoAndDont.Item>1234567 (Japan)</DoAndDont.Item>
+  </DoAndDont.Dont>
+</DoAndDont>
 
 ## Streets 
 
@@ -68,47 +100,73 @@ Use common abbreviations for street types without full stops to avoid visual clu
 |Circle|Cir|
 |Terrace|Ter|
 
-## Buildings 
+## Buildings
 
-Use “Floor” numbers either before or after. Note different floor counting systems for international applications.
+Use "Floor" numbers either before or after. Note different floor counting systems for international applications.
 
-DO: Floor 3 
-DO: 3rd Floor 
-DO: Ground Floor (UK/Europe) 
-DO: First Floor (US) 
-DO: Floor G (International) 
-DON'T: Floor 3rd 
+<DoAndDont>
+  <DoAndDont.Do>
+    <DoAndDont.Item>Floor 3</DoAndDont.Item>
+    <DoAndDont.Item>3rd Floor</DoAndDont.Item>
+    <DoAndDont.Item>Ground Floor (UK/Europe)</DoAndDont.Item>
+    <DoAndDont.Item>First Floor (US)</DoAndDont.Item>
+    <DoAndDont.Item>Floor G (International)</DoAndDont.Item>
+  </DoAndDont.Do>
+  <DoAndDont.Dont>
+    <DoAndDont.Item>Floor 3rd</DoAndDont.Item>
+  </DoAndDont.Dont>
+</DoAndDont>
 
-Use numbers and letters after buildings, suites, apartments, rooms and floors.  
+Use numbers and letters after buildings, suites, apartments, rooms and floors.
 
-DO: Building A  
-DO: Building part 
-DO: Room segment 
-DO: Bldg A  
-DO: Suite 3B 
+<DoAndDont>
+  <DoAndDont.Do>
+    <DoAndDont.Item>Building A</DoAndDont.Item>
+    <DoAndDont.Item>Building part</DoAndDont.Item>
+    <DoAndDont.Item>Room segment</DoAndDont.Item>
+    <DoAndDont.Item>Bldg A</DoAndDont.Item>
+    <DoAndDont.Item>Suite 3B</DoAndDont.Item>
+  </DoAndDont.Do>
+</DoAndDont>
 
-## Production lines 
+## Production lines
 
-Use “Line” or add a description to your line, e.g. “Production line” or “Assembly line”. Use “Zone” or “Area” for larger facilities.  
+Use "Line" or add a description to your line, e.g. "Production line" or "Assembly line". Use "Zone" or "Area" for larger facilities.
 
-DO: Assembly line 2  
-DO: Line B 
-DO: Zone C  
-DO: Area 8  
+<DoAndDont>
+  <DoAndDont.Do>
+    <DoAndDont.Item>Assembly line 2</DoAndDont.Item>
+    <DoAndDont.Item>Line B</DoAndDont.Item>
+    <DoAndDont.Item>Zone C</DoAndDont.Item>
+    <DoAndDont.Item>Area 8</DoAndDont.Item>
+  </DoAndDont.Do>
+</DoAndDont>
 
-## Coordinates  
+## Coordinates
 
-Use clear labels when possible with “Latitude” first, then “Longitude”. 
+Use clear labels when possible with "Latitude" first, then "Longitude".
 
-DO: Latitude: 48.14389 | Longitude: 11.57633 
+<DoAndDont>
+  <DoAndDont.Do>
+    <DoAndDont.Item>Latitude: 48.14389 | Longitude: 11.57633</DoAndDont.Item>
+  </DoAndDont.Do>
+</DoAndDont>
 
-Use plus (+), minus (-), a comma and a space when adding both in one text field.  
+Use plus (+), minus (-), a comma and a space when adding both in one text field.
 
-DO: +48.14389, +11.57633  
+<DoAndDont>
+  <DoAndDont.Do>
+    <DoAndDont.Item>+48.14389, +11.57633</DoAndDont.Item>
+  </DoAndDont.Do>
+</DoAndDont>
 
-Use the correct degree symbol (Unicode U+00B0).   
+Use the correct degree symbol (Unicode U+00B0).
 
-DO:  ° 
-DON'T: o 
-
-## Related
+<DoAndDont>
+  <DoAndDont.Do>
+    <DoAndDont.Item>°</DoAndDont.Item>
+  </DoAndDont.Do>
+  <DoAndDont.Dont>
+    <DoAndDont.Item>o</DoAndDont.Item>
+  </DoAndDont.Dont>
+</DoAndDont>
