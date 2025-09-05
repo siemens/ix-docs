@@ -26,23 +26,23 @@ Buttons initiate actions, apply actions to selected objects and activate/deactiv
 ## Options
 
 - **Label:** Displays short, descriptive text that clearly communicates the action triggered by the button.
-- **Icon:** Appears to the left of the label and supports the label visually. This is the preferred position. Use icons that are widely recognized by users for the intended action. See [icon button](../icon-button/index.mdx) for buttons without label and icon only. In loading state this icon will be replaced by a loading spinner.
-- **Icon right:** Appears to the right of the label. Use this position when placing the icon on the left would be counterintuitive, such as a “Next” button with a right-pointing arrow in wizard-like modals.
+- **Icon:** Appears left of the label and supports the label visually. This is the preferred position. Use icons that are widely recognized by users for the intended action. See [icon button](../icon-button/index.mdx) for buttons without label with icon only. In loading state, this icon is replaced by a loading spinner.
+- **Icon right:** Appears to the right of the label. Use this position as placing the icon on the left is counterintuitive, such as a “Next” button with a right-pointing arrow in wizard-like modals.
 - **Type:** Use `submit` when sending user input from a form to a server. For all other actions such as triggering dialogs or performing navigation use the default type `button`.
 
 ## Behavior in context
 
 - **Interaction:** Buttons can be triggered by pressing anywhere within the button container. When buttons are focused, they can be triggered by pressing `Space`.
 - **Text truncation:** Button labels are not truncated. All text on buttons is one line only. 
-- **Alignment:** Buttons can be left- or right-aligned or fully span a container’s width.
-- **Button width:** Buttons dynamically adjust their width based on content but have a default minimum width of `5rem` to ensure harmonious alignment for common pairs like "OK" and "Cancel". The minimum width can be customized for different needs.
+- **Alignment:** Buttons can be left or right-aligned or fully span a container’s width.
+- **Button width:** Buttons dynamically adjust their width based on content, but have a default minimum width of `5rem` to ensure harmonious alignment for common pairs like "OK" and "Cancel". The minimum width can be customized for different needs.
 - **Cluster buttons:** Cluster buttons in groups with related functions. A cluster might include various types of buttons, e.g. primary, secondary and tertiary. We recommend a gap of `0.5rem` between buttons.
 
 ![Cluster buttons](https://www.figma.com/design/wEptRgAezDU1z80Cn3eZ0o/iX-Documentation-illustrations?node-id=5773-6487&t=yk9Vv3HSXaEzBbQk-4)
 
 ## States
 
-Buttons have six states: Default, hover, active, disabled, loading and focused. In a disabled and loading state, buttons are visually displayed but don’t offer any user interaction.
+Buttons have six states: Default, hover, active, disabled, loading and focused. In a disabled and loading state, buttons are visually displayed but never offer any user interaction.
 
 ![Button states](https://www.figma.com/design/wEptRgAezDU1z80Cn3eZ0o/iX-Documentation-illustrations?node-id=5878-6015&t=yk9Vv3HSXaEzBbQk-4)
 
