@@ -53,8 +53,9 @@ This release brings full compatibility with Angular 20, helping teams keep their
 
 To reflect this, the peer dependencies have been updated to Angular version 20. Projects using this package will need to upgrade to Angular 20 before migrating to the latest version of iX. See more in the migration guide.
 
+# AG Grid update
 
-- **AG Grid update:** We’re aligning with the latest AG Grid version to ensure seamless integration and improved performance.
+We are now publishing a separate Figma library using the official AG Grid design system styled with the iX theme. This gives designers direct access to AG Grid’s native components and layout logic. Developers benefit from AG Grid’s new theming API, which makes styling grids easier and more flexible. Together, this change makes design and development faster, clearer, and better aligned.
 
 
 Please reach out to us at [team.ix.industry@siemens.com](mailto:team.ix.industry@siemens.com) and tell us about your migration experience.
