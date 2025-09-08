@@ -112,11 +112,11 @@ The header automatically adapts the breakpoints defined in the [application](../
 At breakpoints "lg" and "md" the application header remains unchanged, truncation applies to the application name (1). When its minimum width is reached truncation is applied to the secondary slot. 
 
 At breakpoint "sm" the layout changes in the following way:
-- The application menu is hidden and replaced by a menu icon (2) in the header, clicking it opens the menu
-- The company logo and a possibly used application name suffix is not shown
-- If the application switch (3) is used, it moves to the application menu
-- If slots are used, their elements move into dedicated sections in the overflow dropdown (4), accessible via the overflow icon (5)
-- If the manual overflow slot is used, its content appears at lowest position within the overflow dropdown (7)
+- The application menu is hidden and replaced by a menu icon (2) in the header, clicking it opens the menu.
+- The company logo and a possibly used application name suffix is not shown.
+- If the application switch (3) is used, it moves to the application menu.
+- If slots are used, their elements move into dedicated sections in the overflow dropdown (4), accessible via the overflow icon (5).
+- If the manual overflow slot is used, its content appears at lowest position within the overflow dropdown (7).
 
 ### Manual overflow menu
 - The overflow slot can be manually filled to trigger the overflow menu at any breakpoint.
