@@ -15,7 +15,7 @@ The logo adapts its width automatically, height remains fixed. It is colored at 
 - Logo is provided as SVG
 - Color of SVG elements are set to `currentcolor`
 
-Without meeting these prerequisites, the logo will appear without any color adaption.
+Without meeting these prerequisites, the logo appears without any color adaption.
 
 The **application name** (2) shows the official name of the application. Its width adjusts dynamically but may be truncated if space is limited by other header elements.
 
@@ -48,7 +48,7 @@ Use the application switch (see [application](../application)) to launch and nav
 
 ![Application icon](https://www.figma.com/file/wEptRgAezDU1z80Cn3eZ0o?type=design&node-id=6427%3A39393&mode=design)
 
-The application icon (1) is a non-interactive visual element placed in the header to represent the application. It is displayed within a fixed size and uses a defined border radius. The standard web image formats are supported. The provided image will be scaled if necessary while maintaining the aspect ratio.
+The application icon (1) is a non-interactive visual element placed in the header to represent the application. It is displayed within a fixed size and uses a defined border radius. The standard web image formats are supported. The provided image is scaled if necessary while maintaining the aspect ratio.
 
 An optional outline (2) can be added to visually separate the icon from the background when needed. It should only be used when contrast or clarity requires it.
 
@@ -76,10 +76,10 @@ Overflow behavior is not handled automatically. At breakpoint sm, the slot colla
 
 ![Secondary slot](https://www.figma.com/file/wEptRgAezDU1z80Cn3eZ0o?type=design&node-id=6427%3A39911&mode=design)
 
-The secondary slot (1) allows placing functions aligned to the left side of the application header.
+The secondary slot (1) allows the placement of functions aligned to the left side of the application header.
 We typically use the secondary slot for:
-- Lean elements such as toolbars, which offer compact access to key actions and can be easily adapted for overflow behavior
-- While primary navigation tabs can also be placed here, they are more space-consuming and less flexible in responsive layouts.
+- Lean elements such as toolbars, which offer compact access to key actions and can be easily adapted for overflow behavior.
+- While primary navigation tabs can also be placed here, they consume more space and are less flexible in responsive layouts.
 
 Overflow behavior is not handled automatically. At breakpoint sm, the slot collapses and its content becomes accessible via an overflow icon. See [behavior](#behavior) for details.
 
@@ -93,10 +93,10 @@ The borderless option sets the existing bottom border (1) of the header to a tra
 
 ![OS specific window controls](https://www.figma.com/design/wEptRgAezDU1z80Cn3eZ0o/iX-Documentation-illustrations?node-id=6599-45912&t=07oqeGxwT0wAyLin-11)
 
-If the applications runs in a desktop framework like Electron, we recommend the following approach to avoid an additional OS specific window header above the application header:
-- Place a container (2) beside the actual application header (1), consider respecting the OS specifics.
-- Place the window controls inside, consider applying the OS specific style and behavior
-- Use same height, background and border properties for this container
+If the applications runs in a desktop framework like Electron, we recommend the following approach to avoid an additional OS-specific window header above the application header:
+- Place a container (2) beside the actual application header (1), while considering the OS specifics.
+- Place the window controls inside and consider applying the OS specific style and behavior.
+- Use same height, background and border properties for this container.
 
 
 ### Framework header
@@ -109,7 +109,7 @@ The header automatically adapts the breakpoints defined in the [application](../
 
 ![Application header at breakpoints lg/md and sm](https://www.figma.com/design/wEptRgAezDU1z80Cn3eZ0o/iX-Documentation-illustrations?node-id=6427-40565&t=S6lUQ3W9x7i87i8E-4)
 
-At breakpoints "lg" and "md" the application header remains unchanged, truncation applies to the application name (1). When its minimum width is reached truncation is applied to the secondary slot. 
+At breakpoints "lg" and "md" the application header remains unchanged, truncation applies to the application name (1). When its minimum width is, reached truncation is applied to the secondary slot. 
 
 At breakpoint "sm" the layout changes in the following way:
 - The application menu is hidden and replaced by a menu icon (2) in the header, clicking it opens the menu.
@@ -130,4 +130,4 @@ At breakpoint "sm" the layout changes in the following way:
 - Do test layout behavior at all breakpoints to ensure content remains accessible
 - Don’t overload the slots with too many elements to avoid losing clarity and hierarchy
 - Don’t use the avatar if your application does not support user profiles
-- Don’t rely on automatic overflow handling for complex layouts, reduce complexity
+- Don’t rely on automatic overflow handling for complex layouts, instead reduce complexity
