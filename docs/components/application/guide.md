@@ -4,7 +4,19 @@ doc-type: 'tab-item'
 
 # Application - Usage
 
-Application is a technical and infrastructural component without a direct visual appearance. It lays out the top level app elements like [header](../content). Furthermore, it controls the breakpoint handling and the theming of an application.
+Application is a technical and infrastructural component without a direct visual appearance. It lays out the top level app elements like [header](../content). The application component acts as a centralized hub for configuring aspects of your web-application, such as screen breakpoints, theming and app switch configuration. By consolidating these configuration points, it simplifies the management of application-wide settings and ensures a consistent user interface across different scenarios.
+
+The component itself is designed with modularity in mind. It can be seamlessly integrated with other components such as application-header, menu, content and more. This modular approach allows you to mix and match components based on your specific application requirements, providing flexibility and customization options.
+
+It's important to note that the application component focuses solely on layouting and does not dictate visual design.
+
+## Application example
+
+![Application example](https://www.figma.com/design/wEptRgAezDU1z80Cn3eZ0o/iX-Documentation-illustrations?node-id=6694-51419&t=bGky2tHjBPC9fOGT-4)
+
+1. [Application header](/docs/components/application-header/guide)
+2. [Application menu](/docs/components/application-menu/guide)
+3. [Content](/docs/components/content/guide)
 
 ## Application switch
 
