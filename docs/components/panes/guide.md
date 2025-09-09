@@ -58,6 +58,5 @@ Panes have two states: collapsed and expanded. The appearance of the states vari
 
 ## Related
 
-- [Drawers](../drawer)
 - [Header](../application-header)
 - [Menu](../application-menu)
