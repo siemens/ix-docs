@@ -59,7 +59,7 @@ The new colors are applied automatically when migrating to this version. Therefo
 
 This release brings full compatibility with Angular 20, helping teams keep their projects aligned with the latest framework improvements.
 
-To reflect this, the peer dependencies have been updated to Angular Version 20. Projects using this package will need to upgrade to Angular 20 before migrating to the latest version of iX. See more in the [migration guide](/docs/home/migration/4_0_0/index).
+To reflect this, the peer dependencies have been updated to Angular Version 20. Projects using this package will need to upgrade to Angular 20 before migrating to the latest version of iX. See more in the [migration guide](/docs/home/migration/4_0_0).
 
 # AG Grid update
 

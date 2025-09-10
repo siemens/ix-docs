@@ -5,13 +5,15 @@ title: Upgrade to v4
 doc-type: banner
 description: Welcome to the migration guide for upgrading from Siemens Industrial Experience design system v3 to v4. This guide introduces all major changes.
 ---
+
 # Upgrade to v4.0.0
 
 ## TL;DR
+
 - We upgrade to [Angular 20](#angular-20).
-- We renamed the [button variants](#ix-button) to better reflect their usage.
-- Map and basic navigation have been removed in favor of the [application](#basic-navigation-and-map-navigation) component.
-- Drawer has been [deprecated](#deprecated-drawer) in favor of [panes](/docs/components/panes/guideS).
+- We renamed the [button variants](#ix-button-variants) to better reflect their usage.
+- Map and basic navigation have been removed in favor of the [application](#removed-basic-navigation-and-map-navigation) component.
+- Drawer has been [deprecated](#drawer) in favor of [panes](/docs/components/panes/guide).
 - We made changes to the [elevation principle](#updated-elevation-principle), you need to check if your components need an outline.
 
 ## Updated dependencies
@@ -22,9 +24,9 @@ Projects using `@siemens/ix-angular` must upgrade to Angular 20 before updating 
 
 ## Renamed or removed icons
 
-| ❌ **Deprecated**    | ✅ **Replace with**      |
-| -------------------------------- | ------------------------ |
-| `cam`                      | Replace with `output-cam`                  |
+| ❌ **Deprecated** | ✅ **Replace with**       |
+| ----------------- | ------------------------- |
+| `cam`             | Replace with `output-cam` |
 
 ## Deprecated and removed components
 
@@ -32,14 +34,13 @@ Projects using `@siemens/ix-angular` must upgrade to Angular 20 before updating 
 
 Elements from basic and map navigation can be replaced by the following components:
 
-| ❌ **Navigation elements**    | ✅ **Replace with**      |
-| -------------------------------- | ------------------------ |
-| App header                      | Replace with [application header](/docs/components/application-header/guide)                  |
-| Navigation menu                      | Replace with [application menu](/docs/components/application-menu/guide)                  |
-| Sidebar                    | Replace with [inline pane](/docs/components/panes/guide)                  |
-| Sidebar icon                    | Automatically replaced with collapse/expand from [inline pane](/docs/components/panes/guide)                  |
-| Overlay                    | Replace with [floating pane](/docs/components/panes/guide) or replace the content with the original overlay content                  |
-
+| ❌ **Navigation elements** | ✅ **Replace with**                                                                                                 |
+| -------------------------- | ------------------------------------------------------------------------------------------------------------------- |
+| App header                 | Replace with [application header](/docs/components/application-header/guide)                                        |
+| Navigation menu            | Replace with [application menu](/docs/components/application-menu/guide)                                            |
+| Sidebar                    | Replace with [inline pane](/docs/components/panes/guide)                                                            |
+| Sidebar icon               | Automatically replaced with collapse/expand from [inline pane](/docs/components/panes/guide)                        |
+| Overlay                    | Replace with [floating pane](/docs/components/panes/guide) or replace the content with the original overlay content |
 
 ### Drawer
 
@@ -47,20 +48,21 @@ The drawer component has been deprecated and will be removed in the next major r
 
 ```html
 <ix-pane
-	heading="Title"
-	variant="floating"
-	composition="right"
-	borderless="true"
-	size="320px"
-	close-on-click-outside="true"
-	hide-on-collapse>
-	My content
+  heading="Title"
+  variant="floating"
+  composition="right"
+  borderless="true"
+  size="320px"
+  close-on-click-outside="true"
+  hide-on-collapse
+>
+  My content
 </ix-pane>
 ```
 
 Here is a comparison of the properties and events between the drawer and pane components:
 
-| ❌ **Drawer**        | ✅ **Pane**             |
+| ❌ **Drawer**     | ✅ **Pane**          |
 | ----------------- | -------------------- |
 | `expanded`        | `show`               |
 | `width`           | `size`               |
@@ -71,16 +73,27 @@ Here is a comparison of the properties and events between the drawer and pane co
 | `on-open`         | `on-expanded-change` |
 
 Additional changes you need to consider when migrating from drawers to panes:
+
 - You may need to adjust your content layout accordingly since pane contents have a default padding of `16px`.
 - You now need to define a title for the pane using the `heading` property.
 
 ## Component updates
 
 ### ix-application
+
 - `min-width: 0` has been added to the content-area in `ix-application` to prevent the flex container from growing beyond the screen width.
 - If you currently have implemented a workaround for this behavior your application's layout might be affected by this change.
 
-### ix-button, ix-dropdown-button, ix-icon-button,  ix-split-button, ix-toggle-button, ix-icon-toggle-button
+### ix-button variants
+
+Affected components:
+
+- ix-button
+- ix-dropdown-button
+- ix-icon-button
+- ix-split-button
+- ix-toggle-button
+- ix-icon-toggle-button
 
 - Renamed variant `secondary` to `subtle`
 - Removed the property `outline` in favor of new `secondary` variants
@@ -90,60 +103,59 @@ Additional changes you need to consider when migrating from drawers to panes:
 
 To take over the changes, rename all button variants according to this table. Start with renaming `secondary` variants to `subtle` to avoid unwanted overriding.
 
-| ❌ **Variant**       | ❌ **Outline**          | ❌ **Ghost**            | ✅ **New variant**      |
-| ----------------- | -------------------- | -------------------- | -------------------- |
-| `secondary`       | `false`              | `false`              | `subtle-primary`     |
-| `secondary`       | `true`               | `false`              | `subtle-secondary`   |
-| `secondary`       | `false`              | `true`               | `subtle-tertiary`    |
-| `primary`         | `false`              | `false`              | `primary`            |
-| `primary`         | `true`               | `false`              | `secondary`          |
-| `primary`         | `false`              | `true`               | `tertiary`           |
-| `danger`          | `false`              | `false`              | `danger-primary`     |
-| `danger`          | `true`               | `false`              | `danger-secondary`   |
-| `danger`          | `false`              | `true`               | `danger-tertiary`    |
+| ❌ **Variant** | ❌ **Outline** | ❌ **Ghost** | ✅ **New variant** |
+| -------------- | -------------- | ------------ | ------------------ |
+| `secondary`    | `false`        | `false`      | `subtle-primary`   |
+| `secondary`    | `true`         | `false`      | `subtle-secondary` |
+| `secondary`    | `false`        | `true`       | `subtle-tertiary`  |
+| `primary`      | `false`        | `false`      | `primary`          |
+| `primary`      | `true`         | `false`      | `secondary`        |
+| `primary`      | `false`        | `true`       | `tertiary`         |
+| `danger`       | `false`        | `false`      | `danger-primary`   |
+| `danger`       | `true`         | `false`      | `danger-secondary` |
+| `danger`       | `false`        | `true`       | `danger-tertiary`  |
 
 For buttons without explicitly set variant, the default is used. As defaults differ between the button components, the renaming should happen component-specific.
 
 #### Button with default variant
 
-| ❌ **Variant**       | ❌ **Outline**          | ❌ **Ghost**            | ✅ **New variant**      |
-| ----------------- | -------------------- | -------------------- | -------------------- |
-| `default`         | `false`              | `false`              | `primary`            |
-| `default`         | `true`               | `false`              | `secondary`          |
-| `default`         | `false`              | `true`               | `tertiary`           |
+| ❌ **Variant** | ❌ **Outline** | ❌ **Ghost** | ✅ **New variant** |
+| -------------- | -------------- | ------------ | ------------------ |
+| `default`      | `false`        | `false`      | `primary`          |
+| `default`      | `true`         | `false`      | `secondary`        |
+| `default`      | `false`        | `true`       | `tertiary`         |
 
 #### Dropdown button with default variant
 
-| ❌ **Variant**       | ❌ **Outline**          | ❌ **Ghost**            | ✅ **New variant**      |
-| ----------------- | -------------------- | -------------------- | -------------------- |
-| `default`         | `false`              | `false`              | `primary`            |
-| `default`         | `true`               | `false`              | `secondary`          |
-| `default`         | `false`              | `true`               | `tertiary`           |
+| ❌ **Variant** | ❌ **Outline** | ❌ **Ghost** | ✅ **New variant** |
+| -------------- | -------------- | ------------ | ------------------ |
+| `default`      | `false`        | `false`      | `primary`          |
+| `default`      | `true`         | `false`      | `secondary`        |
+| `default`      | `false`        | `true`       | `tertiary`         |
 
 #### Icon button with default variant
 
-| ❌ **Variant**       | ❌ **Outline**          | ❌ **Ghost**            | ✅ **New variant**      |
-| ----------------- | -------------------- | -------------------- | -------------------- |
-| `default`         | `false`              | `false`              | `subtle-primary`            |
-| `default`         | `true`               | `false`              | `subtle-secondary`          |
-| `default`         | `false`              | `true`               | `subtle-tertiary`           |
+| ❌ **Variant** | ❌ **Outline** | ❌ **Ghost** | ✅ **New variant** |
+| -------------- | -------------- | ------------ | ------------------ |
+| `default`      | `false`        | `false`      | `subtle-primary`   |
+| `default`      | `true`         | `false`      | `subtle-secondary` |
+| `default`      | `false`        | `true`       | `subtle-tertiary`  |
 
 #### Split button with default variant
 
-| ❌ **Variant**       | ❌ **Outline**          | ❌ **Ghost**            | ✅ **New variant**      |
-| ----------------- | -------------------- | -------------------- | -------------------- |
-| `default`         | `false`              | `false`              | `primary`            |
-| `default`         | `true`               | `false`              | `secondary`          |
-| `default`         | `false`              | `true`               | `tertiary`           |
+| ❌ **Variant** | ❌ **Outline** | ❌ **Ghost** | ✅ **New variant** |
+| -------------- | -------------- | ------------ | ------------------ |
+| `default`      | `false`        | `false`      | `primary`          |
+| `default`      | `true`         | `false`      | `secondary`        |
+| `default`      | `false`        | `true`       | `tertiary`         |
 
 #### Toggle button and Icon toggle button with default variant
 
-| ❌ **Variant**       | ❌ **Outline**          | ❌ **Ghost**            | ✅ **New variant**      |
-| ----------------- | -------------------- | -------------------- | -------------------- |
-| `default`         | `false`              | `false`              | `subtle-primary`            |
-| `default`         | `true`               | `false`              | `subtle-secondary`          |
-| `default`         | `false`              | `true`               | `subtle-tertiary`           |
-
+| ❌ **Variant** | ❌ **Outline** | ❌ **Ghost** | ✅ **New variant** |
+| -------------- | -------------- | ------------ | ------------------ |
+| `default`      | `false`        | `false`      | `subtle-primary`   |
+| `default`      | `true`         | `false`      | `subtle-secondary` |
+| `default`      | `false`        | `true`       | `subtle-tertiary`  |
 
 Visually review your changes. Ensure that `subtle` variants are not mixed with the default button.
 
@@ -156,7 +168,7 @@ Visually review your changes. Ensure that `subtle` variants are not mixed with t
 
 ### ix-aggrid
 
-We are updating to the latest AG Grid version and are providing a new brand-aligned iX theme. 
+We are updating to the latest AG Grid version and are providing a new brand-aligned iX theme.
 
 #### Design
 
@@ -164,18 +176,18 @@ We are updating to the latest AG Grid version and are providing a new brand-alig
 - Deprecating AG Grid components from 'iX components' Figma library
 - Manual replacement effort needed, there is no automated replacement possible
 
-| ❌ **Deprecated**                          | ✅ **Replace with**				   |
-| ----------------------------------------- | ------------------------------------- |
-| AG Grid Building Blocks / Data Cell       |  Grid Cell               				|
-| AG Grid Building Blocks / Header Cell     |  Grid Header             				|
-| AG Grid Building Blocks / Header Row      |  not needed                          	|
-| AG Grid Building Blocks / Row             |  not needed      						|
-| AG Grid component / AG Grid Column        |  -              						|
-| AG Grid component / AG Grid Row			|  -              						|
-| AG Grid component / AG Grid Table		    |  AG Grid (Row & Column based layout)	|
-
+| ❌ **Deprecated**                     | ✅ **Replace with**                 |
+| ------------------------------------- | ----------------------------------- |
+| AG Grid Building Blocks / Data Cell   | Grid Cell                           |
+| AG Grid Building Blocks / Header Cell | Grid Header                         |
+| AG Grid Building Blocks / Header Row  | not needed                          |
+| AG Grid Building Blocks / Row         | not needed                          |
+| AG Grid component / AG Grid Column    | -                                   |
+| AG Grid component / AG Grid Row       | -                                   |
+| AG Grid component / AG Grid Table     | AG Grid (Row & Column based layout) |
 
 #### Implementation
+
 TBD
 
 ## Global style updates
@@ -186,14 +198,15 @@ With the updated elevation principle, some components require a visual outline i
 
 ![Elevation pricinple](https://www.figma.com/design/wEptRgAezDU1z80Cn3eZ0o/iX-Documentation-illustrations?node-id=6707-50604&t=bGky2tHjBPC9fOGT-4)
 
-| **Component**                                               | **Variant**          | **Property**             |
-| ----------------------------------------------------------- | -------------------- | ------------------------ |
-| [Card, Push card, Action card](/docs/components/card/guide) | `filled`             | use variant `outline`     |
-| [Blind](/docs/components/blind/guide)                       | `filled`             | use variant `outline`     |
+| **Component**                                               | **Variant** | **Property**          |
+| ----------------------------------------------------------- | ----------- | --------------------- |
+| [Card, Push card, Action card](/docs/components/card/guide) | `filled`    | use variant `outline` |
+| [Blind](/docs/components/blind/guide)                       | `filled`    | use variant `outline` |
 
 ### Legacy theme
 
 The previous elevation principle (v3.x) is reflected in the legacy themes and will be available for a smooth transition phase.
+
 - [Legacy] Brand light
 - [Legacy] Brand dark
 
