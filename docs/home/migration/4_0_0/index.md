@@ -11,16 +11,16 @@ description: Welcome to the migration guide for upgrading from Siemens Industria
 - We upgrade to [Angular 20](#angular-20).
 - We renamed the [button variants](#ix-button) to better reflect their usage.
 - Map and basic navigation have been removed in favor of the [application](#basic-navigation-and-map-navigation) component.
-- Drawer has been deprecated in favor of [panes](#deprecated-drawer).
+- Drawer has been [deprecated](#deprecated-drawer) in favor of [panes](/docs/components/panes/guideS).
 - We made changes to the [elevation principle](#updated-elevation-principle), you need to check if your components need an outline.
 
-## Updating dependencies
+## Updated dependencies
 
 ### Angular 20
 
 Projects using `@siemens/ix-angular` must upgrade to Angular 20 before updating to this version. Some APIs deprecated in previous Angular versions may have been removed; review the Angular 20 changelog for migration steps. Ensure all third-party Angular libraries are compatible with v20 to avoid runtime issues.
 
-## Icons renamed or removed
+## Renamed or removed icons
 
 | ❌ **Deprecated**    | ✅ **Replace with**      |
 | -------------------------------- | ------------------------ |
@@ -28,7 +28,7 @@ Projects using `@siemens/ix-angular` must upgrade to Angular 20 before updating 
 
 ## Deprecated and removed components
 
-### Basic navigation and map navigation
+### Removed basic navigation and map navigation
 
 Elements from basic and map navigation can be replaced by the following components:
 
@@ -41,7 +41,7 @@ Elements from basic and map navigation can be replaced by the following componen
 | Overlay                    | Replace with [floating pane](/docs/components/panes/guide) or replace the content with the original overlay content                  |
 
 
-### Deprecated drawer
+### Drawer
 
 The drawer component has been deprecated and will be removed in the next major release. We recommend using [panes](../../../components/panes/index.mdx) instead, which provide similar functionality with improved performance and usability. Use this configuration for a similar experience:
 
@@ -77,14 +77,16 @@ Additional changes you need to consider when migrating from drawers to panes:
 ## Component updates
 
 ### ix-application
-- `min-width: 0` has been added to the content-area in ix-application to prevent the flex container from growing beyond the screen width.
+- `min-width: 0` has been added to the content-area in `ix-application` to prevent the flex container from growing beyond the screen width.
 - If you currently have implemented a workaround for this behavior your application's layout might be affected by this change.
 
-### ix-button
+### ix-button, ix-dropdown-button, ix-icon-button,  ix-split-button, ix-toggle-button, ix-icon-toggle-button
 
 - Renamed variant `secondary` to `subtle`
 - Removed the property `outline` in favor of new `secondary` variants
 - Removed the property `ghost` in favor of new `tertiary` variants
+
+![Buttons](https://www.figma.com/design/wEptRgAezDU1z80Cn3eZ0o/iX-Documentation-illustrations?node-id=6708-52302&t=bGky2tHjBPC9fOGT-4)
 
 To take over the changes, rename all button variants according to this table. Start with renaming `secondary` variants to `subtle` to avoid unwanted overriding.
 
@@ -100,17 +102,9 @@ To take over the changes, rename all button variants according to this table. St
 | `danger`          | `true`               | `false`              | `danger-secondary`   |
 | `danger`          | `false`              | `true`               | `danger-tertiary`    |
 
-For buttons without explicitly set variant, the default is used. As defaults differ between the button components, the renaming should happen component-specific
+For buttons without explicitly set variant, the default is used. As defaults differ between the button components, the renaming should happen component-specific.
 
-#### Button
-
-| ❌ **Variant**       | ❌ **Outline**          | ❌ **Ghost**            | ✅ **New variant**      |
-| ----------------- | -------------------- | -------------------- | -------------------- |
-| `default`         | `false`              | `false`              | `primary`            |
-| `default`         | `true`               | `false`              | `secondary`          |
-| `default`         | `false`              | `true`               | `tertiary`           |
-
-#### Dropdown button
+#### Button with default variant
 
 | ❌ **Variant**       | ❌ **Outline**          | ❌ **Ghost**            | ✅ **New variant**      |
 | ----------------- | -------------------- | -------------------- | -------------------- |
@@ -118,7 +112,15 @@ For buttons without explicitly set variant, the default is used. As defaults dif
 | `default`         | `true`               | `false`              | `secondary`          |
 | `default`         | `false`              | `true`               | `tertiary`           |
 
-#### Icon button
+#### Dropdown button with default variant
+
+| ❌ **Variant**       | ❌ **Outline**          | ❌ **Ghost**            | ✅ **New variant**      |
+| ----------------- | -------------------- | -------------------- | -------------------- |
+| `default`         | `false`              | `false`              | `primary`            |
+| `default`         | `true`               | `false`              | `secondary`          |
+| `default`         | `false`              | `true`               | `tertiary`           |
+
+#### Icon button with default variant
 
 | ❌ **Variant**       | ❌ **Outline**          | ❌ **Ghost**            | ✅ **New variant**      |
 | ----------------- | -------------------- | -------------------- | -------------------- |
@@ -126,7 +128,7 @@ For buttons without explicitly set variant, the default is used. As defaults dif
 | `default`         | `true`               | `false`              | `subtle-secondary`          |
 | `default`         | `false`              | `true`               | `subtle-tertiary`           |
 
-#### Split button
+#### Split button with default variant
 
 | ❌ **Variant**       | ❌ **Outline**          | ❌ **Ghost**            | ✅ **New variant**      |
 | ----------------- | -------------------- | -------------------- | -------------------- |
@@ -134,7 +136,7 @@ For buttons without explicitly set variant, the default is used. As defaults dif
 | `default`         | `true`               | `false`              | `secondary`          |
 | `default`         | `false`              | `true`               | `tertiary`           |
 
-#### Toggle button
+#### Toggle button and Icon toggle button with default variant
 
 | ❌ **Variant**       | ❌ **Outline**          | ❌ **Ghost**            | ✅ **New variant**      |
 | ----------------- | -------------------- | -------------------- | -------------------- |
@@ -154,15 +156,24 @@ Visually review your changes. Ensure that `subtle` variants are not mixed with t
 
 ### ix-aggrid
 
-With this release we are updating to the latest AG Grid version and are providing a new brand-aligned iX theme. 
+We are updating to the latest AG Grid version and are providing a new brand-aligned iX theme. 
 
 #### Design
 
-We are providing a copy of the official AG Grid Figma file with an added iX theme. This allows designers to use the powerful AG Grid's native componenents and layout logic in brand consistent style.
+- Publishing a new 'AG Grid theme' library
+- Deprecating AG Grid components from 'iX components' Figma library
+- Manual replacement effort needed, there is no automated replacement possible
 
-To make the iX themed AG Grid components available for designers, we publish it in our Design System workspace. It is added per default as a suggested library for all Figma projects within the Siemens organization.
+| ❌ **Deprecated**                          | ✅ **Replace with**				   |
+| ----------------------------------------- | ------------------------------------- |
+| AG Grid Building Blocks / Data Cell       |  Grid Cell               				|
+| AG Grid Building Blocks / Header Cell     |  Grid Header             				|
+| AG Grid Building Blocks / Header Row      |  not needed                          	|
+| AG Grid Building Blocks / Row             |  not needed      						|
+| AG Grid component / AG Grid Column        |  -              						|
+| AG Grid component / AG Grid Row			|  -              						|
+| AG Grid component / AG Grid Table		    |  AG Grid (Row & Column based layout)	|
 
-With this new library in place, we are deprecating the AG Grid components within the iX components Figma library. Unfortunately, there is no automated replacement possible.
 
 #### Implementation
 TBD
@@ -171,14 +182,20 @@ TBD
 
 ### Updated elevation principle
 
-With the updated elevation principle, some components require a visual outline if they are placed on `color-2` or `component-1`:
+With the updated elevation principle, some components require a visual outline if they are placed on `color-2` or `component-1`. See more in the styles chapter on [elevation](https://ix.siemens.io/docs/styles/elevation).
+
+![Elevation pricinple](https://www.figma.com/design/wEptRgAezDU1z80Cn3eZ0o/iX-Documentation-illustrations?node-id=6707-50604&t=bGky2tHjBPC9fOGT-4)
 
 | **Component**                                               | **Variant**          | **Property**             |
 | ----------------------------------------------------------- | -------------------- | ------------------------ |
-| [Card, Push card, Action card](/docs/components/card/guide) | `filled`             | set `outline = true`     |
-| [Blind](/docs/components/blind/guide)                       | `filled`             | set `outline = true`     |
+| [Card, Push card, Action card](/docs/components/card/guide) | `filled`             | use variant `outline`     |
+| [Blind](/docs/components/blind/guide)                       | `filled`             | use variant `outline`     |
 
+### Legacy theme
 
+The previous elevation principle (v3.x) is reflected in the legacy themes and will be available for a smooth transition phase.
+- [Legacy] Brand light
+- [Legacy] Brand dark
 
 ## Questions ❓🙋‍♀️
 

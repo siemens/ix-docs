@@ -59,13 +59,13 @@ The new colors are applied automatically when migrating to this version. Therefo
 
 This release brings full compatibility with Angular 20, helping teams keep their projects aligned with the latest framework improvements.
 
-To reflect this, the peer dependencies have been updated to Angular version 20. Projects using this package will need to upgrade to Angular 20 before migrating to the latest version of iX. See more in the migration guide.
+To reflect this, the peer dependencies have been updated to Angular Version 20. Projects using this package will need to upgrade to Angular 20 before migrating to the latest version of iX. See more in the [migration guide](/docs/home/migration/4_0_0/index).
 
 # AG Grid update
 
 ![aggrid](./2510_blog_aggrid.png)
 
-We are now publishing a separate Figma library using the official AG Grid design system styled with the iX theme. This gives designers direct access to AG Grid’s native components and layout logic. Developers benefit from AG Grid’s new theming API, which makes styling grids easier and more flexible. Together, this change makes design and development faster, clearer, and better aligned.
+We are now publishing a separate Figma library using the official AG Grid design system styled with the iX theme. This gives designers direct access to AG Grid’s native components and layout logic. Developers benefit from AG Grid’s new [theming API](https://blog.ag-grid.com/introducing-our-new-theming-api/), which makes styling grids easier and more flexible. Together, this change makes design and development faster, clearer, and better aligned.
 
 # Any questions or feedback?
 
