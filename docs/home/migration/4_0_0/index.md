@@ -24,9 +24,11 @@ Projects using `@siemens/ix-angular` must upgrade to Angular 20 before updating 
 
 ## Renamed or removed icons
 
+<div class="table-full-width table-column-equal-width">
 | ❌ **Deprecated** | ✅ **Replace with**       |
-| ----------------- | ------------------------- |
+| :----------------- | :------------------------- |
 | `cam`             | Replace with `output-cam` |
+</div>
 
 ## Deprecated and removed components
 
@@ -34,13 +36,15 @@ Projects using `@siemens/ix-angular` must upgrade to Angular 20 before updating 
 
 Elements from basic and map navigation can be replaced by the following components:
 
+<div class="table-full-width table-column-equal-width">
 | ❌ **Navigation elements** | ✅ **Replace with**                                                                                                 |
-| -------------------------- | ------------------------------------------------------------------------------------------------------------------- |
+| :-------------------------- | :------------------------------------------------------------------------------------------------------------------ |
 | App header                 | Replace with [application header](/docs/components/application-header/guide)                                        |
 | Navigation menu            | Replace with [application menu](/docs/components/application-menu/guide)                                            |
 | Sidebar                    | Replace with [inline pane](/docs/components/panes/guide)                                                            |
 | Sidebar icon               | Automatically replaced with collapse/expand from [inline pane](/docs/components/panes/guide)                        |
 | Overlay                    | Replace with [floating pane](/docs/components/panes/guide) or replace the content with the original overlay content |
+</div>
 
 ### Drawer
 
@@ -62,8 +66,9 @@ The drawer component has been deprecated and will be removed in the next major r
 
 Here is a comparison of the properties and events between the drawer and pane components:
 
+<div class="table-full-width table-column-equal-width">
 | ❌ **Drawer**     | ✅ **Pane**          |
-| ----------------- | -------------------- |
+| :----------------- | :-------------------- |
 | `expanded`        | `show`               |
 | `width`           | `size`               |
 | `min-width`       | (not available)      |
@@ -71,6 +76,7 @@ Here is a comparison of the properties and events between the drawer and pane co
 | `full-height`     | (not available)      |
 | `on-drawer-close` | `on-expanded-change` |
 | `on-open`         | `on-expanded-change` |
+</div>
 
 Additional changes you need to consider when migrating from drawers to panes:
 
@@ -103,8 +109,9 @@ Affected components:
 
 To take over the changes, rename all button variants according to this table. Start with renaming `secondary` variants to `subtle` to avoid unwanted overriding.
 
+<div class="table-full-width table-column-equal-width">
 | ❌ **Variant** | ❌ **Outline** | ❌ **Ghost** | ✅ **New variant** |
-| -------------- | -------------- | ------------ | ------------------ |
+| :-------------- | :-------------- | :------------ | :------------------ |
 | `secondary`    | `false`        | `false`      | `subtle-primary`   |
 | `secondary`    | `true`         | `false`      | `subtle-secondary` |
 | `secondary`    | `false`        | `true`       | `subtle-tertiary`  |
@@ -114,6 +121,7 @@ To take over the changes, rename all button variants according to this table. St
 | `danger`       | `false`        | `false`      | `danger-primary`   |
 | `danger`       | `true`         | `false`      | `danger-secondary` |
 | `danger`       | `false`        | `true`       | `danger-tertiary`  |
+</div>
 
 For buttons without explicitly set variant, the default is used. As defaults differ between the button components, the renaming should happen component-specific.
 
@@ -121,7 +129,7 @@ For buttons without explicitly set variant, the default is used. As defaults dif
 
 <div class="table-full-width table-column-equal-width">
 | ❌ **Variant** | ❌ **Outline** | ❌ **Ghost** | ✅ **New variant** |
-| -------------- | -------------- | ------------ | ------------------ |
+| :-------------- | :-------------- | :------------ | :------------------ |
 | `default`      | `false`        | `false`      | `primary`          |
 | `default`      | `true`         | `false`      | `secondary`        |
 | `default`      | `false`        | `true`       | `tertiary`         |
@@ -131,7 +139,7 @@ For buttons without explicitly set variant, the default is used. As defaults dif
 
 <div class="table-full-width table-column-equal-width">
 | ❌ **Variant** | ❌ **Outline** | ❌ **Ghost** | ✅ **New variant** |
-| -------------- | -------------- | ------------ | ------------------ |
+| :-------------- | :-------------- | :------------ | :------------------ |
 | `default`      | `false`        | `false`      | `primary`          |
 | `default`      | `true`         | `false`      | `secondary`        |
 | `default`      | `false`        | `true`       | `tertiary`         |
@@ -141,7 +149,7 @@ For buttons without explicitly set variant, the default is used. As defaults dif
 
 <div class="table-full-width table-column-equal-width">
 | ❌ **Variant** | ❌ **Outline** | ❌ **Ghost** | ✅ **New variant** |
-| -------------- | -------------- | ------------ | ------------------ |
+| :-------------- | :-------------- | :------------ | :------------------ |
 | `default`      | `false`        | `false`      | `subtle-primary`   |
 | `default`      | `true`         | `false`      | `subtle-secondary` |
 | `default`      | `false`        | `true`       | `subtle-tertiary`  |
@@ -151,7 +159,7 @@ For buttons without explicitly set variant, the default is used. As defaults dif
 
 <div class="table-full-width table-column-equal-width">
 | ❌ **Variant** | ❌ **Outline** | ❌ **Ghost** | ✅ **New variant** |
-| -------------- | -------------- | ------------ | ------------------ |
+| :-------------- | :-------------- | :------------ | :------------------ |
 | `default`      | `false`        | `false`      | `primary`          |
 | `default`      | `true`         | `false`      | `secondary`        |
 | `default`      | `false`        | `true`       | `tertiary`         |
@@ -161,7 +169,7 @@ For buttons without explicitly set variant, the default is used. As defaults dif
 
 <div class="table-full-width table-column-equal-width">
 | ❌ **Variant** | ❌ **Outline** | ❌ **Ghost** | ✅ **New variant** |
-| -------------- | -------------- | ------------ | ------------------ |
+| :-------------- | :-------------- | :------------ | :------------------ |
 | `default`      | `false`        | `false`      | `subtle-primary`   |
 | `default`      | `true`         | `false`      | `subtle-secondary` |
 | `default`      | `false`        | `true`       | `subtle-tertiary`  |
@@ -186,8 +194,9 @@ We are updating to the latest AG Grid version and are providing a new brand-alig
 - Deprecating AG Grid components from 'iX components' Figma library
 - Manual replacement effort needed, there is no automated replacement possible
 
+<div class="table-full-width table-column-equal-width">
 | ❌ **Deprecated**                     | ✅ **Replace with**                 |
-| ------------------------------------- | ----------------------------------- |
+| :------------------------------------- | :----------------------------------- |
 | AG Grid Building Blocks / Data Cell   | Grid Cell                           |
 | AG Grid Building Blocks / Header Cell | Grid Header                         |
 | AG Grid Building Blocks / Header Row  | not needed                          |
@@ -195,6 +204,7 @@ We are updating to the latest AG Grid version and are providing a new brand-alig
 | AG Grid component / AG Grid Column    | -                                   |
 | AG Grid component / AG Grid Row       | -                                   |
 | AG Grid component / AG Grid Table     | AG Grid (Row & Column based layout) |
+</div>
 
 #### Implementation
 
@@ -208,10 +218,12 @@ With the updated elevation principle, some components require a visual outline i
 
 ![Elevation pricinple](https://www.figma.com/design/wEptRgAezDU1z80Cn3eZ0o/iX-Documentation-illustrations?node-id=6707-50604&t=bGky2tHjBPC9fOGT-4)
 
+<div class="table-full-width table-column-equal-width">
 | **Component**                                               | **Variant** | **Property**          |
-| ----------------------------------------------------------- | ----------- | --------------------- |
+| :----------------------------------------------------------- | :----------- | :--------------------- |
 | [Card, Push card, Action card](/docs/components/card/guide) | `filled`    | use variant `outline` |
 | [Blind](/docs/components/blind/guide)                       | `filled`    | use variant `outline` |
+</div>
 
 ### Legacy theme
 
