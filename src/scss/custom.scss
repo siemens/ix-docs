@@ -177,3 +177,16 @@ ix-dropdown {
 .blog-wrapper .margin-bottom--xl {
   margin: 0rem 1rem 5rem !important;
 }
+
+.table-full-width {
+  table {
+    width: 100% !important;
+    display: table !important;
+  }
+}
+
+.table-column-equal-width {
+  table {
+    table-layout: fixed;
+  }
+}

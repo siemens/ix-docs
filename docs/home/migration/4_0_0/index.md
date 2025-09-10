@@ -119,43 +119,53 @@ For buttons without explicitly set variant, the default is used. As defaults dif
 
 #### Button with default variant
 
+<div class="table-full-width table-column-equal-width">
 | ❌ **Variant** | ❌ **Outline** | ❌ **Ghost** | ✅ **New variant** |
 | -------------- | -------------- | ------------ | ------------------ |
 | `default`      | `false`        | `false`      | `primary`          |
 | `default`      | `true`         | `false`      | `secondary`        |
 | `default`      | `false`        | `true`       | `tertiary`         |
+</div>
 
 #### Dropdown button with default variant
 
+<div class="table-full-width table-column-equal-width">
 | ❌ **Variant** | ❌ **Outline** | ❌ **Ghost** | ✅ **New variant** |
 | -------------- | -------------- | ------------ | ------------------ |
 | `default`      | `false`        | `false`      | `primary`          |
 | `default`      | `true`         | `false`      | `secondary`        |
 | `default`      | `false`        | `true`       | `tertiary`         |
+</div>
 
 #### Icon button with default variant
 
+<div class="table-full-width table-column-equal-width">
 | ❌ **Variant** | ❌ **Outline** | ❌ **Ghost** | ✅ **New variant** |
 | -------------- | -------------- | ------------ | ------------------ |
 | `default`      | `false`        | `false`      | `subtle-primary`   |
 | `default`      | `true`         | `false`      | `subtle-secondary` |
 | `default`      | `false`        | `true`       | `subtle-tertiary`  |
+</div>
 
 #### Split button with default variant
 
+<div class="table-full-width table-column-equal-width">
 | ❌ **Variant** | ❌ **Outline** | ❌ **Ghost** | ✅ **New variant** |
 | -------------- | -------------- | ------------ | ------------------ |
 | `default`      | `false`        | `false`      | `primary`          |
 | `default`      | `true`         | `false`      | `secondary`        |
 | `default`      | `false`        | `true`       | `tertiary`         |
+</div>
 
 #### Toggle button and Icon toggle button with default variant
 
+<div class="table-full-width table-column-equal-width">
 | ❌ **Variant** | ❌ **Outline** | ❌ **Ghost** | ✅ **New variant** |
 | -------------- | -------------- | ------------ | ------------------ |
 | `default`      | `false`        | `false`      | `subtle-primary`   |
 | `default`      | `true`         | `false`      | `subtle-secondary` |
 | `default`      | `false`        | `true`       | `subtle-tertiary`  |
+</div>
 
 Visually review your changes. Ensure that `subtle` variants are not mixed with the default button.
 
