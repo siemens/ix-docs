@@ -3,24 +3,24 @@ sidebar_position: 0
 sidebar_title: Upgrade to v4
 title: Upgrade to v4
 doc-type: banner
-description: Welcome to the migration guide for upgrading from Siemens Industrial Experience design system v3 to v4. This guide introduces all major changes.
+description: Welcome to the migration guide for upgrading from Siemens Industrial Experience design system V3 to V4. This guide support you through all the major changes.
 ---
 
 # Upgrade to v4.0.0
 
 ## TL;DR
 
-- We upgrade to [Angular 20](#angular-20).
+- We upgraded to [Angular 20](#angular-20).
 - We renamed the [button variants](#ix-button-variants) to better reflect their usage.
 - Map and basic navigation have been removed in favor of the [application](#removed-basic-navigation-and-map-navigation) component.
 - Drawer has been [deprecated](#drawer) in favor of [panes](/docs/components/panes/guide).
-- We made changes to the [elevation principle](#updated-elevation-principle), you need to check if your components need an outline.
+- We made changes to the [elevation principle](#updated-elevation-principle) which means teams need to check whether their components need an outline.
 
 ## Updated dependencies
 
 ### Angular 20
 
-Projects using `@siemens/ix-angular` must upgrade to Angular 20 before updating to this version. Some APIs deprecated in previous Angular versions may have been removed; review the Angular 20 changelog for migration steps. Ensure all third-party Angular libraries are compatible with v20 to avoid runtime issues.
+Important: Projects using `@siemens/ix-angular` must upgrade to Angular 20 before updating to this version. Some APIs deprecated in previous Angular versions may have been removed; review the Angular 20 changelog for migration steps. Ensure all third-party Angular libraries are compatible with V20 to avoid runtime issues.
 
 ## Renamed or removed icons
 
@@ -88,7 +88,7 @@ Additional changes you need to consider when migrating from drawers to panes:
 ### ix-application
 
 - `min-width: 0` has been added to the content-area in `ix-application` to prevent the flex container from growing beyond the screen width.
-- If you currently have implemented a workaround for this behavior your application's layout might be affected by this change.
+- If you have implemented a workaround for this behavior, your application's layout might be affected by this change.
 
 ### ix-button variants
 
@@ -123,7 +123,7 @@ To take over the changes, rename all button variants according to this table. St
 | `danger`       | `false`        | `true`       | `danger-tertiary`  |
 </div>
 
-For buttons without explicitly set variant, the default is used. As defaults differ between the button components, the renaming should happen component-specific.
+For buttons without an explicit set variant, the default is used. As defaults differ between the button components, the renaming should be component-specific.
 
 #### Button with default variant
 
@@ -165,7 +165,7 @@ For buttons without explicitly set variant, the default is used. As defaults dif
 | `default`      | `false`        | `true`       | `tertiary`         |
 </div>
 
-#### Toggle button and Icon toggle button with default variant
+#### Toggle button and icon toggle button with default variant
 
 <div class="table-full-width table-column-equal-width">
 | ❌ **Variant** | ❌ **Outline** | ❌ **Ghost** | ✅ **New variant** |
@@ -175,7 +175,7 @@ For buttons without explicitly set variant, the default is used. As defaults dif
 | `default`      | `false`        | `true`       | `subtle-tertiary`  |
 </div>
 
-Visually review your changes. Ensure that `subtle` variants are not mixed with the default button.
+We recommend you visually review your changes. Ensure that `subtle` variants are not mixed with the default button.
 
 ### ix-pane
 
@@ -192,7 +192,7 @@ We are updating to the latest AG Grid version and are providing a new brand-alig
 
 - Publishing a new 'AG Grid theme' library
 - Deprecating AG Grid components from 'iX components' Figma library
-- Manual replacement effort needed, there is no automated replacement possible
+- Note: Manual replacement effort needed, there is no automated replacement possible
 
 <div class="table-full-width table-column-equal-width">
 | ❌ **Deprecated**                     | ✅ **Replace with**                 |
@@ -227,7 +227,7 @@ With the updated elevation principle, some components require a visual outline i
 
 ### Legacy theme
 
-The previous elevation principle (v3.x) is reflected in the legacy themes and will be available for a smooth transition phase.
+The previous elevation principle (V3.x) is reflected in the legacy themes and will be available for a smooth transition phase.
 
 - [Legacy] Brand light
 - [Legacy] Brand dark

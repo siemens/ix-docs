@@ -7,7 +7,7 @@ tags: [release]
 
 ![banner](./2510_blog_4-0.png)
 
-The next chapter of the Industrial Experience Design System is here. With this release we take a significant stept toward a shared design language across the organization. This version brings together thoughtful feature enhancements and essential style refinements, offering greater flexibility while reinforcing design consistency.
+The next chapter of the Industrial Experience Design System is here. This version brings together thoughtful feature enhancements and essential style refinements, offering greater flexibility while reinforcing design consistency.
 
 <!-- truncate -->
 
@@ -21,7 +21,7 @@ The next chapter of the Industrial Experience Design System is here. With this r
 
 ![button](./2510_blog_buttons.png)
 
-The time of confusing button variants is officially behind us. With this release, we’ve introduced a clear and intuitive naming convention: primary, secondary, and tertiary [buttons](/docs/components/button/guide). Now labeled exactly as such. This change improves clarity, making it easier to choose the right button for the right context.
+The time of confusing button naming is officially behind us. With this release, we’ve introduced a clear and intuitive naming convention: primary, secondary, and tertiary [buttons](/docs/components/button/guide). Now labeled exactly as such. This change improves clarity, making it easier to choose the right button for the right context.
 
 To implement this improvement, we had to introduce a breaking change. Existing variant names will need to be updated manually. Please refer to our [migration guide](/docs/home/migration/4_0_0) for detailed instructions.
 
