@@ -232,12 +232,6 @@ const config: Config = {
           label: 'Styles',
         },
         {
-          type: 'custom-news-pill',
-          position: 'left',
-          label: 'Release 3.0 is here',
-          value: '/blog/2025/05/09/release-3',
-        },
-        {
           type: 'custom-version-selection',
           position: 'right',
           value: versionDeployment
