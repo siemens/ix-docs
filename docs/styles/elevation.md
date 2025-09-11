@@ -25,7 +25,7 @@ Our approach to elevation is two-fold:
 When you use it intentionally, you can achieve:
 * **Clarity:** Help users understand the relationship between different UI elements.
 * **Hierarchy:** Guide the user's eye to the most important information or interactive elements.
-* **Focus:** Draw attention to temporary or critical content (e.g. toasts).
+* **Focus:** Draw attention to temporary or critical content, e.g. toasts.
 * **Consistency:** Ensuring a predictable and intuitive user experience across all applications.
 
 ### The layering model
@@ -47,7 +47,7 @@ Visually separate large sections on the base layer by applying [borders](borders
 - **Usage:** Apply `color-2` or `component-1` (which shares the same color value in the new theme introduced in v4.0) to components like cards, side panels, distinct content blocks, or primary interactive elements.
 
 #### Second-level containers
-- **Purpose:** Nested containers within a container (e.g., a sub-section inside a card).
+- **Purpose:** Nested containers within a container, e.g. a sub-section inside a card.
 - **Usage:** Maintain `color-2` as the background, but visually separate these nested containers with [borders](borders.md) (e.g. `color-soft-bdr` or `color-weak-bdr`). Alternatively, use `color-component-2` which is semi-transparent.
 
 #### Floating elements
