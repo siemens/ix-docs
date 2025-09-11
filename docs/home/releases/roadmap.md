@@ -5,7 +5,7 @@ title: Roadmap
 doc-type: 'banner'
 component-tabs: ['']
 no_single_tab: true
-description: 'We’re constantly improving our design system for you by extending the component library, developing our user guidance and ensuring the system is reliable and easy to use. Here’s what’s happening next so you know what to expect from your Siemens Industrial Experience team.'
+description: 'We’re constantly improving our design system for you by extending the component library, developing our user guidance and ensuring the system is reliable and easy to use. This is what’s happening next so you know what to expect from your Siemens Industrial Experience team.'
 ---
 
 # Roadmap
@@ -22,10 +22,10 @@ description: 'We’re constantly improving our design system for you by extendin
 ### 🚧 In progress / Currently being worked on
 - **Elevation principle**: Simplifying the elevation system to make it easier to apply and understand visual hierarchy across components.
 - **Buttons**: Reworking our button component with an updated naming convention for clarity, rounded corners for Siemens brand consistency and a new icon-right option for better layout flexibility.
-- **App header**: Enhancing the app header to become more customizable with an additional slot option for providing custom content.
+- **App header**: Enhancing the app header to become more customizable with an additional slot option for custom content.
 - **Angular 20**: Ensuring full compatibility with Angular 20 to stay up-to-date with the latest framework improvements.
 
-**🔹 Major release 4.0**: Planned for Q3, see info on [beta versions](https://ix.siemens.io/docs/installation/CHANGELOG) & [release strategy](https://ix.siemens.io/docs/release-info)
+**🔹 Major release 4.0**: Planned for Q3, see info on [beta versions](https://ix.siemens.io/docs/installation/CHANGELOG) and [release strategy](https://ix.siemens.io/docs/release-info)
 
 ### 🗓️ Scheduled / With tentative timeline
 - **AG Grid update**: Aligning with the latest AG Grid version to ensure seamless integration and improved performance.
