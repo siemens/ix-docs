@@ -16,8 +16,6 @@ import DoAndDont from '@site/src/components/DoAndDont';
 
 Always consider whether necessary
 
-`!` Exclamation mark for high-level warnings only!
-
 <div className="mb-2">
 `!` Exclamation mark for high-level warnings only!
 </div>
@@ -43,7 +41,7 @@ Always consider whether necessary
 </div>
 
 <div className="mb-2">
-`…` Ellipsis only for transitional text: Upload… 
+`…` Ellipsis only for transitional text: Upload…
 </div>
 
 <div className="mb-2">
