@@ -72,6 +72,7 @@ const sidebars: SidebarsConfig = {
       className: 'doc-sidebar-item-bold',
       label: 'Migration and upgrade',
       items: [
+        'home/migration/4_0_0/index',
         'home/migration/3_0_0/index',
         'home/migration/2_0_0/index',
         'home/migration/core-ui',
@@ -430,16 +431,6 @@ const sidebars: SidebarsConfig = {
           items: [
             {
               id: 'components/event-list/code',
-              label: 'Code',
-            },
-          ],
-        }),
-        createTabItem({
-          id: 'components/drawer/index',
-          label: 'Drawer',
-          items: [
-            {
-              id: 'components/drawer/code',
               label: 'Code',
             },
           ],
@@ -1106,6 +1097,16 @@ const sidebars: SidebarsConfig = {
             },
           ],
         }),
+                createTabItem({
+          id: 'legacy/drawer/index',
+          label: 'Drawer',
+          items: [
+            {
+              id: 'legacy/drawer/code',
+              label: 'Code',
+            },
+          ],
+        }),
         'legacy/checkbox',
         'legacy/input',
         'legacy/radiobutton',
@@ -1214,6 +1215,7 @@ const sidebars: SidebarsConfig = {
     }),
     'styles/borders',
     'styles/shadows',
+    'styles/elevation',
     'styles/animation',
   ],
 };
