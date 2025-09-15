@@ -9,6 +9,7 @@
 import React, { useEffect, useState } from 'react';
 import './accordion.scss';
 import clsx from 'clsx';
+import { iconMinus, iconPlus } from '@siemens/ix-icons/icons';
 
 let uniqueId = 0;
 
@@ -62,7 +63,7 @@ export default function Accordion(
             {props.title}
           </span>
           {React.createElement('ix-icon', {
-            name: expanded ? 'minus' : 'plus',
+            name: expanded ? iconMinus : iconPlus,
             color: expanded ? 'color-dynamic' : 'color-std-text',
           })}
         </div>

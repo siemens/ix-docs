@@ -6,12 +6,11 @@
  * This source code is licensed under the MIT license found in the
  * LICENSE file in the root directory of this source tree.
  */
-import axios from 'axios';
 import fs from 'fs';
-import path from 'path';
 import { rimrafSync } from 'rimraf';
 import { visit } from 'unist-util-visit';
 import { Logger } from './logger.js';
+import path from 'path';
 
 const logger = new Logger('LOG', 'figma-plugin');
 
@@ -27,49 +26,6 @@ type FigmaConfig = {
   fileVersionId?: string;
   rimraf?: boolean;
 };
-
-const isFetching = new Set<string>();
-
-async function getImageResource(
-  fileName: string,
-  nodeIds: string[],
-  figmaToken: string,
-  fileVersion?: string
-): Promise<Record<string, string>> {
-  const ids = nodeIds.join(',');
-
-  const url = `https://api.figma.com/v1/images/${fileName}?ids=${ids}${
-    fileVersion ? `&version=${fileVersion}` : ''
-  }`;
-  const response = await fetch(url, {
-    headers: {
-      'X-FIGMA-TOKEN': figmaToken,
-    },
-  });
-
-  logger.log('Fetch image resource for', url);
-
-  if (response.status !== 200) {
-    logger.log(
-      `🪲 Oops! Received unexpected status code ${response.status}`,
-      fileName,
-      'with node ids:',
-      ids
-    );
-
-    if (response.status === 429) {
-      logger.log('🕰️ Retry after 60 seconds');
-      return new Promise((resolve) => {
-        setTimeout(() => {
-          resolve(getImageResource(fileName, nodeIds, figmaToken, fileVersion));
-        }, 60 * 1000);
-      });
-    }
-  }
-
-  const data = await response.json();
-  return data.images;
-}
 
 export function getFigmaMeta(node: MDXImageNode): {
   fileName: string;
@@ -107,158 +63,39 @@ function getLocalFilename(fileName: string, nodeId: string) {
   return `${imageUUID}.png`;
 }
 
-async function modifyMDXUrl(
-  node: MDXImageNode,
-  images: Record<string, string>,
-  config: FigmaConfig,
-  retry = false
-) {
-  const { fileName, nodeId } = getFigmaMeta(node);
-  let id = decodeURIComponent(nodeId).replace(/-/, ':');
-
-  if (!images) {
-    logger.error(
-      `No image resource found for ${fileName} with node id ${nodeId}`
-    );
-    node.url = `${config.baseUrl}/${config.error_image}`;
-    return;
-  }
-
-  const s3BucketUrl = images[id];
-
-  if (s3BucketUrl === null) {
-    logger.error(`Cannot find image in ${fileName} with node id ${nodeId}`);
-    node.url = `${config.baseUrl}/${config.error_image}`;
-    return;
-  }
-
-  const imageUUID = `${fileName}_${id.replace(/:/, '_')}`;
-  const imageFileName = getLocalFilename(fileName, nodeId);
-  const imagePath = path.join(config.figmaFolder, imageFileName);
-
-  if (process.env.NODE_ENV === 'production') {
-    if (
-      !fs.existsSync(path.join(config.figmaFolder, imageFileName)) &&
-      !isFetching.has(imageUUID)
-    ) {
-      isFetching.add(imageUUID);
-      logger.log('Download image for filename', fileName, 'node', id);
-      try {
-        const imageResponse = await axios.get(s3BucketUrl, {
-          responseType: 'stream',
-        });
-
-        const imageStream = fs.createWriteStream(imagePath);
-
-        imageResponse.data.pipe(imageStream);
-
-        await new Promise<void>((resolve, reject) => {
-          imageStream.on('finish', () => resolve());
-          imageStream.on('error', reject);
-        });
-
-        logger.log(`Image downloaded to ${imagePath}`);
-      } catch (e) {
-        logger.error('Error downloading image', e);
-        if (retry) {
-          logger.error('Abort retry executed second time', e);
-          throw Error(
-            'Error downloading image. Abort retry executed second time'
-          );
-        }
-        logger.error('Retry downloading image', e);
-        await new Promise<void>((resolve) => {
-          setTimeout(async () => {
-            await modifyMDXUrl(node, images, config);
-            resolve();
-          }, 2000);
-        });
-      }
-    } else {
-      logger.log('Skip download. Image already existing or in fetching phase.');
-    }
-    node.url = `${config.baseUrl}/${imageFileName}`;
-  } else {
-    node.url = `${config.baseUrl}/${imageFileName}`;
-  }
-}
-
 export const figmaPlugin = (config: FigmaConfig) => {
-  let isReplacementMode = process.env.NODE_ENV === 'development';
-  if (config.apiToken === undefined || config.apiToken === '') {
-    logger.error('@siemens/figma-plugin no auth token provided.');
-    logger.error('⚠️ Force replacement mode. No image will be downloaded.');
-    isReplacementMode = true;
-  }
-
   if (config.rimraf === true) {
     rimrafSync(config.figmaFolder);
     fs.mkdirSync(config.figmaFolder);
   }
 
-  logger.log(
-    `Figma plugin running in ${
-      isReplacementMode ? 'replacement' : 'normal'
-    } mode. (version: ${config.fileVersionId ?? 'current'}`
-  );
-
-  const transformer = async (ast: any) => {
-    const imageRequests = new Map<string, Set<string>>();
-    const standardNodes: any[] = [];
-
+  const transformer = async (ast: any, vFile: any) => {
     visit(ast, 'image', (node: any) => {
-      if (isReplacementMode) {
-        const originalUrl = node.url;
+      const originalUrl = node.url;
 
-        const { fileName, nodeId } = getFigmaMeta(node);
+      const { fileName, nodeId } = getFigmaMeta(node);
+
+      const localFilename = path.join(
+        process.cwd(),
+        'static',
+        config.baseUrl,
+        getLocalFilename(fileName, nodeId)
+      );
+
+      if (fs.existsSync(localFilename)) {
         node.url = `${config.baseUrl}/${getLocalFilename(fileName, nodeId)}`;
         logger.debug('Replace Image', originalUrl, node.url);
-
-        return;
-      }
-
-      standardNodes.push(node);
-    });
-
-    if (isReplacementMode) {
-      return;
-    }
-
-    for (const node of standardNodes) {
-      const { fileName, nodeId } = getFigmaMeta(node);
-      if (imageRequests.has(fileName)) {
-        imageRequests.get(fileName)!.add(nodeId);
       } else {
-        imageRequests.set(fileName, new Set([nodeId]));
+        node.url = `${config.baseUrl}/${config.error_image}`;
+        logger.error('No local copy of', localFilename, 'found!');
+        logger.error(
+          `Execute "pnpm update-figma update '${vFile.path.replace(
+            vFile.cwd,
+            ''
+          )}'"`
+        );
       }
-    }
-
-    const waitForAllImageRequest: Promise<Record<string, string>>[] = [];
-    imageRequests.forEach(async (ids, fileName) => {
-      const images = getImageResource(
-        fileName,
-        Array.from(ids),
-        config.apiToken,
-        config.fileVersionId
-      );
-      waitForAllImageRequest.push(images);
     });
-
-    const urls = await Promise.all(waitForAllImageRequest);
-
-    const modifiedNodes: Promise<void>[] = [];
-    urls.forEach((s3BucketUrls) => {
-      standardNodes.forEach((node) => {
-        const { nodeId } = getFigmaMeta(node);
-        const localId = decodeURIComponent(nodeId).replace(/-/, ':');
-
-        if (s3BucketUrls[localId]) {
-          modifiedNodes.push(modifyMDXUrl(node, s3BucketUrls, config));
-        }
-      });
-    });
-
-    await Promise.all(modifiedNodes);
   };
   return () => transformer;
 };

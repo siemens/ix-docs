@@ -1,7 +1,11 @@
 ---
 doc-type: 'tab-item'
+deprecated:
+  - { type: 'deprecated', message: 'Since 2.6.0' }
+  - /docs/components/application
 unlisted: true
 ---
+
 # Basic navigation - Usage
 
 Basic navigation is a combination of essential infrastructure components forming the basic application layout structure. Alternatively, the [map navigation](../map-navigation) offers an additional but less flexible layout.  
