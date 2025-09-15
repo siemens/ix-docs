@@ -435,6 +435,7 @@ const sidebars: SidebarsConfig = {
             },
           ],
         }),
+
         createTabItem({
           id: 'components/layout-auto/index',
           label: 'Layout auto',
@@ -1070,6 +1071,16 @@ const sidebars: SidebarsConfig = {
       label: 'Deprecated',
       items: [
         createTabItem({
+          id: 'legacy/drawer/index',
+          label: 'Drawer',
+          items: [
+            {
+              id: 'legacy/drawer/code',
+              label: 'Code',
+            },
+          ],
+        }),
+        createTabItem({
           id: 'legacy/basic-navigation/index',
           label: 'Basic navigation',
           items: [
@@ -1097,7 +1108,17 @@ const sidebars: SidebarsConfig = {
             },
           ],
         }),
-                createTabItem({
+        createTabItem({
+          id: 'legacy/drawer/index',
+          label: 'Drawer',
+          items: [
+            {
+              id: 'legacy/drawer/code',
+              label: 'Code',
+            },
+          ],
+        }),
+        createTabItem({
           id: 'legacy/drawer/index',
           label: 'Drawer',
           items: [
