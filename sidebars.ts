@@ -1108,6 +1108,16 @@ const sidebars: SidebarsConfig = {
             },
           ],
         }),
+                createTabItem({
+          id: 'legacy/drawer/index',
+          label: 'Drawer',
+          items: [
+            {
+              id: 'legacy/drawer/code',
+              label: 'Code',
+            },
+          ],
+        }),
         createTabItem({
           id: 'legacy/drawer/index',
           label: 'Drawer',

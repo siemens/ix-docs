@@ -52,4 +52,3 @@ Toasts are UI elements where an event causes a small text field to appear on scr
 
 - [Modal](../modal)
 - [Message bar](../messagebar)
-- [Drawer](./../../legacy/drawer)
