@@ -34,17 +34,12 @@ Important: Projects using `@siemens/ix-angular` must upgrade to Angular 20 befor
 
 ### Removed basic navigation and map navigation
 
-Elements from basic and map navigation can be replaced by the following components:
+Use the [ix-application](/docs/components/application/guide) with following components to replace the basic and map navigation:
 
-<div class="table-full-width table-column-equal-width">
-| ❌ **Navigation elements** | ✅ **Replace with**                                                                                                 |
-| :-------------------------- | :------------------------------------------------------------------------------------------------------------------ |
-| App header                 | Replace with [application header](/docs/components/application-header/guide)                                        |
-| Navigation menu            | Replace with [application menu](/docs/components/application-menu/guide)                                            |
-| Sidebar                    | Replace with [inline pane](/docs/components/panes/guide)                                                            |
-| Sidebar icon               | Automatically replaced with collapse/expand from [inline pane](/docs/components/panes/guide)                        |
-| Overlay                    | Replace with [floating pane](/docs/components/panes/guide) or replace the content with the original overlay content |
-</div>
+- [Application header](/docs/components/application-header/guide) containing the previous `application name`
+- [Application menu](/docs/components/application-menu/guide)
+- [Pane (inline)](/docs/components/panes/guide) replacing the map navigation's left sidebar
+- [Pane (floating)](/docs/components/panes/guide) or original overlay content replacing the map navigation's right overlay
 
 ### Drawer
 
@@ -60,7 +55,7 @@ The drawer component has been deprecated and will be removed in the next major r
   close-on-click-outside="true"
   hide-on-collapse
 >
-  My content
+My content
 </ix-pane>
 ```
 
@@ -224,13 +219,6 @@ With the updated elevation principle, some components require a visual outline i
 | [Card, Push card, Action card](/docs/components/card/guide) | `filled`    | use variant `outline` |
 | [Blind](/docs/components/blind/guide)                       | `filled`    | use variant `outline` |
 </div>
-
-### Legacy theme
-
-The previous elevation principle (V3.x) is reflected in the legacy themes and will be available for a smooth transition phase.
-
-- [Legacy] Brand light
-- [Legacy] Brand dark
 
 ## Questions ❓🙋‍♀️
 
