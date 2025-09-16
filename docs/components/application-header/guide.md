@@ -10,7 +10,7 @@ In its simplest version, application headers only show the company logo and the 
 1. Company logo
 2. Application name
 
-The **company logo** (1) identifies the brand. For Siemens applications, the Siemens logo with the brand theme is the default combination. Contractual agreements may allow partner logos under certain conditions.  
+The **company logo** (1) identifies the brand. For Siemens applications, the Siemens logo with the brand theme is the default combination. Contractual agreements may allow partner logos under certain conditions.
 The logo adapts its width automatically, height remains fixed. It is colored at runtime based on the selected theme if the following prerequisites are met:
 - Logo is provided as SVG
 - Color of SVG elements are set to `currentcolor`
@@ -109,7 +109,7 @@ The header automatically adapts the breakpoints defined in the [application](../
 
 ![Application header at breakpoints lg/md and sm](https://www.figma.com/design/wEptRgAezDU1z80Cn3eZ0o/iX-Documentation-illustrations?node-id=6427-40565&t=S6lUQ3W9x7i87i8E-4)
 
-At breakpoints "lg" and "md" the application header remains unchanged, truncation applies to the application name (1). When its minimum width is, reached truncation is applied to the secondary slot. 
+At breakpoints "lg" and "md" the application header remains unchanged, truncation applies to the application name (1). When its minimum width is, reached truncation is applied to the secondary slot.
 
 At breakpoint "sm" the layout changes in the following way:
 - The application menu is hidden and replaced by a menu icon (2) in the header, clicking it opens the menu.
