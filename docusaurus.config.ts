@@ -46,7 +46,7 @@ let withBrandTheme = false;
 
 try {
   const path = require.resolve(
-    '@siemens-ix/corporate-theme/dist/css/corporate-theme.css'
+    '@siemens-ix/corporate-theme/dist/css/corporate-theme-hybrid.css'
   );
   console.log('Found optionalDependency @siemens-ix/corporate-theme.');
   customCss.push(path);
