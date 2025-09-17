@@ -16,62 +16,26 @@ import {
 import { IxIcon, IxTypography } from '@siemens/ix-react';
 import ApiTable, { AnchorHeader } from '@site/src/components/ApiTable';
 import { useFramework } from '@site/src/hooks/use-framework';
+import { capitalize } from '@site/src/lib/utils/string-format';
+import CodeBlock from '@theme/CodeBlock';
 import clsx from 'clsx';
 import {
   createContext,
-  forwardRef,
   useContext,
   useEffect,
-  useImperativeHandle,
   useLayoutEffect,
   useMemo,
   useRef,
   useState,
 } from 'react';
+import CopyButton from '../UI/CopyButton';
 import FrameworkSelection from '../UI/FrameworkSelection';
 import ThemeSelection, { useDefaultTheme } from '../UI/ThemeSelection';
+import {
+  ColorContainerFix,
+  ThemeContext,
+} from './../../components/ContainerFix';
 import styles from './TypographyTable.module.css';
-import CodeBlock from '@theme/CodeBlock';
-import CopyButton from '../UI/CopyButton';
-import { capitalize } from '@site/src/lib/utils/string-format';
-
-const ColorContainerFix = forwardRef<
-  HTMLDivElement,
-  {
-    children?: React.ReactNode;
-  }
->(({ children }, ref) => {
-  const { currentTheme: theme, isDarkColor } = useContext(ThemeContext);
-  const themeContainerRef = useRef<HTMLDivElement>(null);
-
-  useImperativeHandle(ref, () => themeContainerRef.current);
-
-  useEffect(() => {
-    const themeContainer = themeContainerRef.current;
-    if (!themeContainer) {
-      return;
-    }
-
-    if (theme === 'brand') {
-      themeContainer.classList.remove('color-table-classic-dark');
-      themeContainer.classList.remove('color-table-classic-light');
-      themeContainer.setAttribute('data-ix-theme', 'brand');
-      themeContainer.setAttribute(
-        'data-ix-color-schema',
-        isDarkColor ? 'dark' : 'light'
-      );
-    } else {
-      themeContainer.removeAttribute('data-ix-theme');
-      themeContainer.removeAttribute('data-ix-color-schema');
-      themeContainer.className = `color-table-${theme}-${
-        isDarkColor ? 'dark' : 'light'
-      }`;
-    }
-  }, [theme, isDarkColor]);
-
-  return <div ref={themeContainerRef}>{children}</div>;
-});
-
 type Typography = {
   name: string;
   fontFamily: string;
@@ -83,11 +47,6 @@ type Typography = {
 
 type TypographyContextType = Typography & { displayName: string };
 
-type ThemeContextType = {
-  currentTheme: string;
-  isDarkColor: boolean;
-};
-
 const TypographyContext = createContext<TypographyContextType>({
   name: '',
   fontFamily: '',
@@ -96,11 +55,6 @@ const TypographyContext = createContext<TypographyContextType>({
   fontWeight: '',
   letterSpacing: '',
   displayName: '',
-});
-
-const ThemeContext = createContext<ThemeContextType>({
-  currentTheme: 'brand',
-  isDarkColor: true,
 });
 
 function useTypographySnippet(format: string) {
@@ -178,12 +132,19 @@ function BrowserOnlyTypographyTable({ children, typographyName }) {
     setIsDarkColor(colorMode === 'dark');
   }, [colorMode]);
 
-  function getHexColors() {
+  function getFontValues() {
     const name = `--theme-${typographyName}`;
-    const [_, fontWeight, fontSize, lineHeight, fontFamily] =
-      /(\d*)\s(.*REM)\/(.*)%\s(.*)/g.exec(getCustomCSSValue(name));
+    const customValue = getCustomCSSValue(name);
+    const regexResult = /(\d*)\s(.*REM)\/(.*)\s((?:"|').*(?:"|'))/g.exec(
+      customValue
+    );
 
+    let [_, fontWeight, fontSize, lineHeight, fontFamily] = regexResult;
     const displayName = capitalize(typographyName, true);
+
+    if (!lineHeight.includes('%')) {
+      lineHeight = (parseFloat(lineHeight) * 100).toString();
+    }
 
     return {
       displayName,
@@ -196,11 +157,11 @@ function BrowserOnlyTypographyTable({ children, typographyName }) {
   }
 
   const observerRef = useRef(
-    new MutationObserver(() => setTypography(getHexColors()))
+    new MutationObserver(() => setTypography(getFontValues()))
   );
 
   useEffect(() => {
-    setTypography(getHexColors());
+    setTypography(getFontValues());
   }, [typographyName, themeRef.current]);
 
   useLayoutEffect(() => {
@@ -214,7 +175,7 @@ function BrowserOnlyTypographyTable({ children, typographyName }) {
     });
 
     setTimeout(() => {
-      setTypography(getHexColors());
+      setTypography(getFontValues());
     }, 250);
 
     return () => {
