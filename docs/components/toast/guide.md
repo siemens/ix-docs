@@ -1,7 +1,6 @@
 ---
 doc-type: 'tab-item'
 ---
-
 # Toast - Usage
 
 Toasts are UI elements where an event causes a small text field to appear on screen. Toasts are informative, last for a few seconds only, and take up a very small part of the screen to avoid interrupting the workflow. They usually follow an action performed by the user and provide information about the success or failure of that action. We typically use toasts for immediate feedback or tips on actions that a user performs, e.g. successful deletion.
@@ -52,4 +51,4 @@ Toasts are UI elements where an event causes a small text field to appear on scr
 
 - [Modal](../modal)
 - [Message bar](../messagebar)
-- [Drawer](./../../legacy/drawer)
+- [Drawer](../drawer)

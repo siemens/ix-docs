@@ -1,13 +1,14 @@
 /*
  * COPYRIGHT (c) Siemens AG 2018-2024 ALL RIGHTS RESERVED.
  */
+import BrowserOnly from '@docusaurus/BrowserOnly';
 import useBaseUrl from '@docusaurus/useBaseUrl';
 import { iconOpenExternal } from '@siemens/ix-icons/icons';
 import { FrameworkTypes } from '@site/src/hooks/use-framework';
 import { usePlaygroundThemeVariant } from '@site/src/hooks/use-playground-theme';
 import CodeBlock from '@theme/CodeBlock';
 import clsx from 'clsx';
-import React, { useContext, useEffect, useRef, useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import CodePreview, { CodePreviewFiles, SourceFiles } from '../CodePreview';
 import FrameworkSelection from '../UI/FrameworkSelection';
 import OpenStackblitz from '../UI/OpenStackblitz';
@@ -15,33 +16,7 @@ import Pill from '../UI/Pill';
 import ThemeSelection, { useDefaultTheme } from '../UI/ThemeSelection';
 import ThemeVariantToggle from '../UI/ThemeVariantToggle';
 import styles from './styles.module.css';
-import BrowserOnly from '@docusaurus/BrowserOnly';
-import { PlaygroundContext } from '@site/src/context/playground-context';
-
-const ColorContainerFix = ({ children }) => {
-  const { theme, variant } = useContext(PlaygroundContext);
-  const themeContainerRef = useRef<HTMLDivElement>(null);
-
-  useEffect(() => {
-    const themeContainer = themeContainerRef.current;
-    if (!themeContainer) {
-      return;
-    }
-
-    if (theme === 'brand') {
-      themeContainer.classList.remove('color-table-classic-dark');
-      themeContainer.classList.remove('color-table-classic-light');
-      themeContainer.setAttribute('data-ix-theme', 'brand');
-      themeContainer.setAttribute('data-ix-color-schema', variant);
-    } else {
-      themeContainer.removeAttribute('data-ix-theme');
-      themeContainer.removeAttribute('data-ix-color-schema');
-      themeContainer.className = `color-table-${theme}-${variant}`;
-    }
-  }, [theme, variant]);
-
-  return <div ref={themeContainerRef}>{children}</div>;
-};
+import { ColorContainerFix, ThemeContext } from '../ContainerFix';
 
 function PreviewActions(
   props: Readonly<{
@@ -115,7 +90,7 @@ function Playground(props: PlaygroundProps) {
   const iframeSrc = useBaseUrl(
     `/demo/v2/preview/html/preview-examples/${
       props.alternativePreviewName ?? props.name
-    }.html?no-margin=true&theme=theme-${theme}-${isDark ? 'dark' : 'light'}`
+    }?no-margin=true&theme=theme-${theme}-${isDark ? 'dark' : 'light'}`
   );
   const [framework, setFramework] = useState<FrameworkTypes>(
     props.onlyFramework ?? 'angular'
@@ -129,79 +104,75 @@ function Playground(props: PlaygroundProps) {
   }, [playgroundThemeVariant]);
 
   return (
-    <div className={styles.playground}>
-      <div className={styles.toolbar}>
-        {!props.noPreview && (
-          <>
-            <Pill onClick={() => setIsPreview(true)} active={isPreview}>
-              Preview
-            </Pill>
-            <Pill onClick={() => setIsPreview(false)} active={!isPreview}>
-              Code
-            </Pill>
-            <div className={styles.spacer}></div>
-          </>
-        )}
+    <ThemeContext.Provider value={{ currentTheme: theme, isDarkColor: isDark }}>
+      <ColorContainerFix>
+        <div className={styles.playground}>
+          <div className={styles.toolbar}>
+            {!props.noPreview && (
+              <>
+                <Pill onClick={() => setIsPreview(true)} active={isPreview}>
+                  Preview
+                </Pill>
+                <Pill onClick={() => setIsPreview(false)} active={!isPreview}>
+                  Code
+                </Pill>
+                <div className={styles.spacer}></div>
+              </>
+            )}
 
-        <div className={styles.toolbar__right}>
-          {!isPreview && (
-            <CodePreview
-              selectedFramework={framework}
-              name={props.name}
-              files={props.files}
-              source={props.source}
-              onShowSource={(source) => {
-                setSourceCode(() => source);
-              }}
-            ></CodePreview>
-          )}
+            <div className={styles.toolbar__right}>
+              {!isPreview && (
+                <CodePreview
+                  selectedFramework={framework}
+                  name={props.name}
+                  files={props.files}
+                  source={props.source}
+                  onShowSource={(source) => {
+                    setSourceCode(() => source);
+                  }}
+                ></CodePreview>
+              )}
 
-          <div className={styles.toolbar__actions}>
+              <div className={styles.toolbar__actions}>
+                {isPreview ? (
+                  <PreviewActions
+                    openExternalUrl={iframeSrc}
+                    onChangeTheme={setTheme}
+                  />
+                ) : (
+                  <CodeActions
+                    mount={props.name}
+                    hideFrameworkSelection={!!props.onlyFramework}
+                    onFrameworkChange={setFramework}
+                    framework={framework}
+                    files={props.files[framework]}
+                  />
+                )}
+              </div>
+            </div>
+          </div>
+          <div
+            className={clsx(styles.preview, {
+              [styles.code]: isPreview,
+            })}
+            style={{ ['--preview-height']: props.height } as any}
+          >
             {isPreview ? (
-              <PreviewActions
-                openExternalUrl={iframeSrc}
-                onChangeTheme={setTheme}
-              />
+              <iframe
+                title={`Preview for ${props.name}`}
+                src={iframeSrc}
+                className={styles.iframe}
+              ></iframe>
             ) : (
-              <CodeActions
-                mount={props.name}
-                hideFrameworkSelection={!!props.onlyFramework}
-                onFrameworkChange={setFramework}
-                framework={framework}
-                files={props.files[framework]}
-              />
+              <SourceCode />
             )}
           </div>
         </div>
-      </div>
-      <div
-        className={clsx(styles.preview, {
-          [styles.code]: isPreview,
-        })}
-        style={{ ['--preview-height']: props.height } as any}
-      >
-        {isPreview ? (
-          <iframe
-            title={`Preview for ${props.name}`}
-            src={iframeSrc}
-            className={styles.iframe}
-          ></iframe>
-        ) : (
-          <SourceCode />
-        )}
-      </div>
-    </div>
+      </ColorContainerFix>
+    </ThemeContext.Provider>
   );
 }
 
 export default function (props: PlaygroundProps) {
-  return (
-    <BrowserOnly>
-      {() => (
-        <ColorContainerFix>
-          <Playground {...props} />
-        </ColorContainerFix>
-      )}
-    </BrowserOnly>
-  );
+  return <BrowserOnly>{() => <Playground {...props} />}</BrowserOnly>;
 }

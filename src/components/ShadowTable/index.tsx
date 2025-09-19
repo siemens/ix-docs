@@ -9,56 +9,12 @@
 import BrowserOnly from '@docusaurus/BrowserOnly';
 import ApiTable, { AnchorHeader } from '@site/src/components/ApiTable';
 import { usePlaygroundThemeVariant } from '@site/src/hooks/use-playground-theme';
-import {
-  createContext,
-  forwardRef,
-  useContext,
-  useEffect,
-  useImperativeHandle,
-  useMemo,
-  useRef,
-  useState,
-} from 'react';
+import { useEffect, useMemo, useRef, useState } from 'react';
+import { ColorContainerFix, ThemeContext } from '../ContainerFix';
 import CopyButton from '../UI/CopyButton';
 import ThemeSelection, { useDefaultTheme } from '../UI/ThemeSelection';
 import ThemeVariantToggle from '../UI/ThemeVariantToggle';
 import styles from './ShadowTable.module.css';
-
-const ColorContainerFix = forwardRef<
-  HTMLDivElement,
-  {
-    children?: React.ReactNode;
-  }
->(({ children }, ref) => {
-  const { currentTheme: theme, isDarkColor } = useContext(ThemeContext);
-  const themeContainerRef = useRef<HTMLDivElement>(null);
-
-  useImperativeHandle(ref, () => themeContainerRef.current);
-  useEffect(() => {
-    const themeContainer = themeContainerRef.current;
-    if (!themeContainer) {
-      return;
-    }
-
-    if (theme === 'brand') {
-      themeContainer.classList.remove('color-table-classic-dark');
-      themeContainer.classList.remove('color-table-classic-light');
-      themeContainer.setAttribute('data-ix-theme', 'brand');
-      themeContainer.setAttribute(
-        'data-ix-color-schema',
-        isDarkColor ? 'dark' : 'light'
-      );
-    } else {
-      themeContainer.removeAttribute('data-ix-theme');
-      themeContainer.removeAttribute('data-ix-color-schema');
-      themeContainer.className = `color-table-${theme}-${
-        isDarkColor ? 'dark' : 'light'
-      }`;
-    }
-  }, [theme, isDarkColor]);
-
-  return <div ref={themeContainerRef}>{children}</div>;
-});
 
 function BoxShadowRect({ boxShadow }) {
   return (
@@ -72,16 +28,6 @@ function BoxShadowRect({ boxShadow }) {
     </div>
   );
 }
-
-type ThemeContextType = {
-  currentTheme: string;
-  isDarkColor: boolean;
-};
-
-const ThemeContext = createContext<ThemeContextType>({
-  currentTheme: 'brand',
-  isDarkColor: true,
-});
 
 function BrowserOnlyBorderTable({ shadowName }) {
   const [theme, setTheme] = useState(useDefaultTheme());

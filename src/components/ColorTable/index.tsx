@@ -18,15 +18,14 @@ import { usePlaygroundThemeVariant } from '@site/src/hooks/use-playground-theme'
 import clsx from 'clsx';
 import {
   createContext,
-  forwardRef,
   useContext,
   useEffect,
-  useImperativeHandle,
   useLayoutEffect,
   useMemo,
   useRef,
   useState,
 } from 'react';
+import { ColorContainerFix, ThemeContext } from '../ContainerFix';
 import CopyButton from '../UI/CopyButton';
 import ThemeSelection, { useDefaultTheme } from '../UI/ThemeSelection';
 import ThemeVariantToggle from '../UI/ThemeVariantToggle';
@@ -36,43 +35,6 @@ function capitalizeFirstLetter(input: string): string {
   if (input.length === 0) return input;
   return input.charAt(0).toUpperCase() + input.slice(1);
 }
-
-const ColorContainerFix = forwardRef<
-  HTMLDivElement,
-  {
-    children?: React.ReactNode;
-  }
->(({ children }, ref) => {
-  const { currentTheme: theme, isDarkColor } = useContext(ThemeContext);
-  const themeContainerRef = useRef<HTMLDivElement>(null);
-
-  useImperativeHandle(ref, () => themeContainerRef.current);
-
-  useEffect(() => {
-    const themeContainer = themeContainerRef.current;
-    if (!themeContainer) {
-      return;
-    }
-
-    if (theme === 'brand') {
-      themeContainer.classList.remove('color-table-classic-dark');
-      themeContainer.classList.remove('color-table-classic-light');
-      themeContainer.setAttribute('data-ix-theme', 'brand');
-      themeContainer.setAttribute(
-        'data-ix-color-schema',
-        isDarkColor ? 'dark' : 'light'
-      );
-    } else {
-      themeContainer.removeAttribute('data-ix-theme');
-      themeContainer.removeAttribute('data-ix-color-schema');
-      themeContainer.className = `color-table-${theme}-${
-        isDarkColor ? 'dark' : 'light'
-      }`;
-    }
-  }, [theme, isDarkColor]);
-
-  return <div ref={themeContainerRef}>{children}</div>;
-});
 
 function ColorCircle({ color }) {
   return (
@@ -105,11 +67,6 @@ const ColorContext = createContext<ColorContextType>({
   name: '',
   hex: '',
   children: [],
-});
-
-const ThemeContext = createContext<ThemeContextType>({
-  currentTheme: 'brand',
-  isDarkColor: true,
 });
 
 function BrowserOnlyColorTable({ children, colorName }) {
@@ -194,6 +151,10 @@ function BrowserOnlyColorTable({ children, colorName }) {
   }, [playgroundThemeVariant]);
 
   function formatHex(value: string) {
+    if (!value) {
+      return '';
+    }
+
     if (!value.startsWith('#')) {
       return value;
     }
