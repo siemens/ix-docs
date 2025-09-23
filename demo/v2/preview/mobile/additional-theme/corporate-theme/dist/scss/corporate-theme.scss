@@ -1,8 +1,10 @@
 /*
- * COPYRIGHT (c) Siemens AG 2018-2024 ALL RIGHTS RESERVED.
+ * COPYRIGHT (c) Siemens AG 2018-2025 ALL RIGHTS RESERVED.
  */
 @use '@siemens/ix/scss/common-variables';
-@use './brand/all';
+@use './brand/theme' as ix;
+
+@include ix.theme;
 
 $font-path: './fonts/';
 $font-weight-normal: 400;
@@ -11,8 +13,7 @@ $font-weight-bold: 700;
 @mixin add-font-face($file-name, $font-style, $font-weight) {
   @font-face {
     font-family: Siemens Sans;
-    src: url($font-path + $file-name + '.eot'), url($font-path + $file-name + '.woff2') format('woff2'), url($font-path + $file-name + '.woff') format('woff'),
-      url($font-path + $file-name + '.ttf') format('truetype');
+    src: url($font-path + $file-name + '.woff2') format('woff2'), url($font-path + $file-name + '.woff') format('woff'), url($font-path + $file-name + '.ttf') format('truetype');
     font-style: $font-style;
     font-weight: $font-weight;
     font-display: swap;

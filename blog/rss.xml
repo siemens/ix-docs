@@ -4,10 +4,41 @@
         <title>Siemens Industrial Experience Blog</title>
         <link>https://ix.siemens.io/blog</link>
         <description>Siemens Industrial Experience Blog</description>
-        <lastBuildDate>Fri, 25 Jul 2025 00:00:00 GMT</lastBuildDate>
+        <lastBuildDate>Wed, 01 Oct 2025 00:00:00 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <generator>https://github.com/jpmonette/feed</generator>
         <language>en</language>
+        <item>
+            <title><![CDATA[UXT Migration to Siemens Industrial Experience]]></title>
+            <link>https://ix.siemens.io/blog/2025/09/31/uxt-eos</link>
+            <guid>https://ix.siemens.io/blog/2025/09/31/uxt-eos</guid>
+            <pubDate>Wed, 01 Oct 2025 00:00:00 GMT</pubDate>
+            <description><![CDATA[banner]]></description>
+            <content:encoded><![CDATA[<p><img decoding="async" loading="lazy" alt="banner" src="https://ix.siemens.io/assets/images/2025_uxt-ba6a5557513b8acd03c1b943aed82a8f.png" width="896" height="360" class="img_QgcI"></p>
+<p>As part of our journey, we proudly announce the integration of User Experience Toolkit (UXT) into Siemens Industrial Experience (iX). This strategic move consolidates our design resources and provides you with a more comprehensive, modern, and efficient solution.</p>
+<div class="Card__List_uG0B"><a class="Card_iqH1 Card_iqH1" href="https://ix.siemens.io/docs/home/migration/uxt"><div class="Label_fp8h text-h2 Full__Height_omEW"><ix-icon class="Card_Icon"></ix-icon> Migrate from UXT to iX</div></a><a class="Card_iqH1 Card_iqH1" href="https://ix.siemens.io/docs/home/support/contact-us"><div class="Label_fp8h text-h2 Full__Height_omEW"><ix-icon class="Card_Icon"></ix-icon>Get support</div></a></div>
+<h1>How to start?</h1>
+<ul>
+<li><a href="https://ix.siemens.io/docs/home/migration/uxt">Migration guide</a>: For UXT users transitioning to iX, find step-by-step instructions.</li>
+<li><a href="https://ix.siemens.io/docs/home/support/contact-us">Support channels</a>: Reach out for any questions or assistance you might need.</li>
+<li><a href="https://github.com/siemens/ix/issues" target="_blank" rel="noopener noreferrer">GitHub</a>: Explore our official open-source repository to request new features.</li>
+</ul>
+<h2 class="anchor anchorWithStickyNavbar_loeA" id="benefits-of-joining-ix">Benefits of joining iX<a href="https://ix.siemens.io/blog/2025/09/31/uxt-eos#benefits-of-joining-ix" class="hash-link" aria-label="Direct link to Benefits of joining iX" title="Direct link to Benefits of joining iX">​</a></h2>
+<p>The integration of UXT into iX brings several key benefits:</p>
+<ul>
+<li><strong>Enhanced consistency:</strong> Unified design language across all Siemens industrial applications, creating a more cohesive user experience.</li>
+<li><strong>Streamlined workflow:</strong> Modern components and patterns enhance the productivity and quality of your application.</li>
+<li><strong>Unified documentation:</strong> Comprehensive, centralized resources for all your design system needs.</li>
+<li><strong>Consolidated maintenance:</strong> Single, robust design system with regular updates and improvements.</li>
+</ul>
+<h2 class="anchor anchorWithStickyNavbar_loeA" id="important-notice-for-uxt-users">Important notice for UXT users<a href="https://ix.siemens.io/blog/2025/09/31/uxt-eos#important-notice-for-uxt-users" class="hash-link" aria-label="Direct link to Important notice for UXT users" title="Direct link to Important notice for UXT users">​</a></h2>
+<ul>
+<li>UXT has reached end-of-service and is no longer actively maintained.</li>
+<li>The UXT CDN will be discontinued soon.</li>
+</ul>
+<p>We strongly recommend migrating to iX as soon as possible. Our team is here to support you with a smooth transition.</p>]]></content:encoded>
+            <category>Merging</category>
+        </item>
         <item>
             <title><![CDATA[Release V3.2.0]]></title>
             <link>https://ix.siemens.io/blog/2025/07/25/release-3-2</link>

@@ -1,5 +1,5 @@
 import { SiemensLogo as r } from "./components/siemens-logo.js";
-/* empty css                      */
+/* empty css                          */
 export {
   r as SiemensLogo
 };
