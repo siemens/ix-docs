@@ -30,9 +30,9 @@ The app header component offers great flexibility through optional elements, but
 1. User avatar
 2. Avatar dropdown
 
-The avatar indicates the currently logged in user and provides access to user-related actions and settings. Its position in the application header ensures visibility of security-relevant information across all breakpoints.
+The avatar indicates the currently logged in user and provides access to user-related actions. Its position in the application header ensures visibility of security-relevant information across all breakpoints.
 
-Clicking the avatar opens a dropdown with additional user information and actions such as log out, user profile, or user settings. If the application does not support multiple users or user profiles, do not use the avatar.
+Clicking the avatar opens a dropdown with additional user information and actions such as log out or user profile. If the application does not support multiple users or user profiles, do not use the avatar.
 
 For applications that allow usage without login, consider alternative approaches:
 - Show a login button in the [slot for additional elements](#slot-for-right-aligned-content) and hide the avatar
