@@ -1,5 +1,8 @@
 ---
 doc-type: 'tab-item'
+deprecated:
+  - { type: 'deprecated', message: 'Since 2.6.0' }
+  - /docs/components/application
 unlisted: true
 ---
 

@@ -4,7 +4,11 @@
 import type { PropSidebarItemLink } from '@docusaurus/plugin-content-docs';
 import { useHistory, useLocation } from '@docusaurus/router';
 import { useScrollPosition } from '@docusaurus/theme-common/internal';
-import { DeprecatedTag, FormReady, RedirectTag } from '@site/src/components/UI/Tags';
+import {
+  DeprecatedTag,
+  FormReady,
+  RedirectTag,
+} from '@site/src/components/UI/Tags';
 import clsx from 'clsx';
 import { useCallback, useState } from 'react';
 import styles from './styles.module.css';
@@ -82,9 +86,15 @@ export default function DocTabsHeader(
                   if (typeof link === 'string') {
                     return (
                       <RedirectTag key={link} link={link}>
-                        Show deprecated version
+                        Show latest version
                       </RedirectTag>
                     );
+                  }
+
+                  if (link.type === 'link') {
+                    <RedirectTag key={link.href} link={link.href}>
+                      {link.message}
+                    </RedirectTag>;
                   }
 
                   if (link.type === 'deprecated') {
@@ -97,7 +107,7 @@ export default function DocTabsHeader(
                   }
                 }
               )}
-              {frontMatter.formReady && (<FormReady />)}
+            {frontMatter.formReady && <FormReady />}
           </div>
           <p className={styles.Description}>{description}</p>
         </div>

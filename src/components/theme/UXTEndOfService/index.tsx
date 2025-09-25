@@ -24,7 +24,7 @@ export default function UXTEndOfService() {
   function redirectToBlog() {
     closeAnnouncement();
     history.replace({
-      pathname: '/blog',
+      pathname: '/blog/2025/09/31/uxt-eos',
     });
   }
 
