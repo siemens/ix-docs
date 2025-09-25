@@ -4,9 +4,9 @@ doc-type: 'tab-item'
 
 # Application - Usage
 
-Application is a technical and infrastructural component without a direct visual appearance. It lays out the top level app elements like [header](../content). The application component acts as a centralized hub for configuring aspects of your web-application, such as screen breakpoints, theming and app switch configuration. By consolidating these configuration points, it simplifies the management of application-wide settings and ensures a consistent user interface across different scenarios.
+Application is a technical and infrastructural component without a direct visual appearance. It lays out the top-level app elements like the [header](/docs/components/application-header/guide.md). The application component acts as a centralized hub for configuring aspects of your web application, such as screen breakpoints, theming and app switch configuration. By consolidating these configuration points, it simplifies the management of application-wide settings and ensures a consistent user interface across different scenarios.
 
-The component itself is designed with modularity in mind. It can be seamlessly integrated with other components such as application-header, menu, content and more. This modular approach allows you to mix and match components based on your specific application requirements, providing flexibility and customization options.
+The component itself is designed with modularity in mind. It can be seamlessly integrated with other components such as [application header](/docs/components/application-header/guide.md), [application menu](/docs/components/application-menu/guide.md), [content](/docs/components/content/guide.md) and more. This modular approach allows you to mix and match components based on your specific application requirements, providing flexibility and customization options.
 
 It's important to note that the application component focuses solely on layouting and does not dictate visual design.
 
