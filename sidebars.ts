@@ -1048,7 +1048,6 @@ const sidebars: SidebarsConfig = {
 
       label: 'Charts',
       items: [
-        'components/charts-overview/index',
         {
           id: 'components/charts-overview/index',
           type: 'doc',
