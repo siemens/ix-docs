@@ -76,9 +76,7 @@ export const figmaPlugin = (config: FigmaConfig) => {
       const { fileName, nodeId } = getFigmaMeta(node);
 
       const localFilename = path.join(
-        process.cwd(),
-        'static',
-        config.baseUrl,
+        config.figmaFolder,
         getLocalFilename(fileName, nodeId)
       );
 

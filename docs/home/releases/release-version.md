@@ -43,7 +43,8 @@ We recommend always following the active release. When a version moves from the 
 
 ## Supported versions
 
-| Version | Status | Released     |
-| ------- | :----: | ------------ |
-| v3.0.0  | Active | Mai 01, 2025 |
-| v2.0.0  |  LTS   | Sep 27, 2023 |
+| Version |  Status  | Released     |
+| ------- | :------: | ------------ |
+| v4.0.0  |  Active  | Nov 01, 2025 |
+| v3.0.0  |   LTS    | Mai 01, 2025 |
+| v2.0.0  | Outdated | Sep 27, 2023 |
