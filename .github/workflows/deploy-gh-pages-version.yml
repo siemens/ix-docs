@@ -1,0 +1,44 @@
+name: Deploy GitHub Page (prod@version)
+
+on:
+  workflow_dispatch:
+    inputs:
+      confirm_deployment:
+        description: 'Please confirm deployment'
+        required: true
+        type: boolean
+      folder:
+        description: 'Folder name to deploy to (e.g. 4.0.0)'
+        required: true
+        type: string
+
+concurrency: deploy-gh-pages-${{ github.ref }}
+
+jobs:
+  deploy-gh-pages:
+    if: ${{ inputs.confirm_deployment == true && github.repository == 'siemens/ix-docs' }}
+    permissions:
+      contents: write
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - uses: ./.github/workflows/actions/turbo
+
+      - name: Remove Pull Request Env
+        run: rm -f .env.pullrequest
+
+      - name: Build
+        run: pnpm build
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          CSC: ${{ secrets.CSC }}
+          BRAND_URL: ${{ vars.BRAND_URL }}
+
+      - name: Deploy GitHub Pages 🚀
+        uses: JamesIves/github-pages-deploy-action@6c2d9db40f9296374acc17b90404b6e8864128c8
+        with:
+          folder: ./build
+          target-folder: version-${{ github.event.inputs.folder }}
+          clean-exclude: version-*
