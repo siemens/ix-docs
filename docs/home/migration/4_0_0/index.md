@@ -85,6 +85,10 @@ Additional changes you need to consider when migrating from drawers to panes:
 - `min-width: 0` has been added to the content-area in `ix-application` to prevent the flex container from growing beyond the screen width.
 - If you have implemented a workaround for this behavior, your application's layout might be affected by this change.
 
+### ix-application-header
+
+- Changed height from `2.75rem` (44px) to `3rem` (48px).
+
 ### ix-button variants
 
 Affected components:
