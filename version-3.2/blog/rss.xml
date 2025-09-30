@@ -1,0 +1,228 @@
+<?xml version="1.0" encoding="utf-8"?><?xml-stylesheet type="text/xsl" href="rss.xsl"?>
+<rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+    <channel>
+        <title>Siemens Industrial Experience Blog</title>
+        <link>https://ix.siemens.io/3.2/blog</link>
+        <description>Siemens Industrial Experience Blog</description>
+        <lastBuildDate>Wed, 01 Oct 2025 00:00:00 GMT</lastBuildDate>
+        <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
+        <generator>https://github.com/jpmonette/feed</generator>
+        <language>en</language>
+        <item>
+            <title><![CDATA[UXT Migration to Siemens Industrial Experience]]></title>
+            <link>https://ix.siemens.io/3.2/blog/2025/09/31/uxt-eos</link>
+            <guid>https://ix.siemens.io/3.2/blog/2025/09/31/uxt-eos</guid>
+            <pubDate>Wed, 01 Oct 2025 00:00:00 GMT</pubDate>
+            <description><![CDATA[banner]]></description>
+            <content:encoded><![CDATA[<p><img decoding="async" loading="lazy" alt="banner" src="https://ix.siemens.io/3.2/assets/images/2025_uxt-ba6a5557513b8acd03c1b943aed82a8f.png" width="896" height="360" class="img_QgcI"></p>
+<p>As part of our journey, we proudly announce the integration of User Experience Toolkit (UXT) into Siemens Industrial Experience (iX). This strategic move consolidates our design resources and provides you with a more comprehensive, modern, and efficient solution.</p>
+<div class="Card__List_uG0B"><a class="Card_iqH1 Card_iqH1" href="https://ix.siemens.io/3.2/docs/home/migration/uxt"><div class="Label_fp8h text-h2 Full__Height_omEW"><ix-icon class="Card_Icon"></ix-icon> Migrate from UXT to iX</div></a><a class="Card_iqH1 Card_iqH1" href="https://ix.siemens.io/3.2/docs/home/support/contact-us"><div class="Label_fp8h text-h2 Full__Height_omEW"><ix-icon class="Card_Icon"></ix-icon>Get support</div></a></div>
+<h1>How to start?</h1>
+<ul>
+<li><a href="https://ix.siemens.io/3.2/docs/home/migration/uxt">Migration guide</a>: For UXT users transitioning to iX, find step-by-step instructions.</li>
+<li><a href="https://ix.siemens.io/3.2/docs/home/support/contact-us">Support channels</a>: Reach out for any questions or assistance you might need.</li>
+<li><a href="https://github.com/siemens/ix/issues" target="_blank" rel="noopener noreferrer">GitHub</a>: Explore our official open-source repository to request new features.</li>
+</ul>
+<h2 class="anchor anchorWithStickyNavbar_loeA" id="benefits-of-joining-ix">Benefits of joining iX<a href="https://ix.siemens.io/3.2/blog/2025/09/31/uxt-eos#benefits-of-joining-ix" class="hash-link" aria-label="Direct link to Benefits of joining iX" title="Direct link to Benefits of joining iX">​</a></h2>
+<p>The integration of UXT into iX brings several key benefits:</p>
+<ul>
+<li><strong>Enhanced consistency:</strong> Unified design language across all Siemens industrial applications, creating a more cohesive user experience.</li>
+<li><strong>Streamlined workflow:</strong> Modern components and patterns enhance the productivity and quality of your application.</li>
+<li><strong>Unified documentation:</strong> Comprehensive, centralized resources for all your design system needs.</li>
+<li><strong>Consolidated maintenance:</strong> Single, robust design system with regular updates and improvements.</li>
+</ul>
+<h2 class="anchor anchorWithStickyNavbar_loeA" id="important-notice-for-uxt-users">Important notice for UXT users<a href="https://ix.siemens.io/3.2/blog/2025/09/31/uxt-eos#important-notice-for-uxt-users" class="hash-link" aria-label="Direct link to Important notice for UXT users" title="Direct link to Important notice for UXT users">​</a></h2>
+<ul>
+<li>UXT has reached end-of-service and is no longer actively maintained.</li>
+<li>The UXT CDN will be discontinued soon.</li>
+</ul>
+<p>We strongly recommend migrating to iX as soon as possible. Our team is here to support you with a smooth transition.</p>]]></content:encoded>
+            <category>Merging</category>
+        </item>
+        <item>
+            <title><![CDATA[Release V3.2.0]]></title>
+            <link>https://ix.siemens.io/3.2/blog/2025/07/25/release-3-2</link>
+            <guid>https://ix.siemens.io/3.2/blog/2025/07/25/release-3-2</guid>
+            <pubDate>Fri, 25 Jul 2025 00:00:00 GMT</pubDate>
+            <description><![CDATA[banner]]></description>
+            <content:encoded><![CDATA[<p><img decoding="async" loading="lazy" alt="banner" src="https://ix.siemens.io/3.2/assets/images/2507_blog_3-2-089665150658908e9248b029dc218a83.png" width="896" height="360" class="img_QgcI"></p>
+<p>Over the past few months, we've been hard at work delivering new features, usability improvements, and important bug fixes. In this post, we’ll walk you through the highlights of our recent 3.1.0 and 3.2.0 minor releases.</p>
+<p>We’ll also give you a sneak peek at what’s coming in the upcoming 4.0 major release.</p>
+<h1>How to start?</h1>
+<ul>
+<li>Install <code>@siemens/ix</code> (<code>@siemens/ix-angular</code>, <code>@siemens/ix-react</code>, <code>@siemens/ix-vue</code>) via the <code>latest</code> tag</li>
+<li>Review detailed changelog <a href="https://ix.siemens.io/3.2/docs/home/migration/3_0_0">here</a></li>
+<li>Make sure you're using the latest published version of our Figma library</li>
+</ul>
+<h1>Time input and redesigned time picker</h1>
+<p><img decoding="async" loading="lazy" alt="Time input" src="https://ix.siemens.io/3.2/assets/images/2507_blog_timepicker-fcb658caf345b1f989c512684a56f91e.png" width="896" height="360" class="img_QgcI"></p>
+<p>The redesigned time picker introduces a smoother, more intuitive experience with scrollable values and one-click selection for hours, minutes, seconds, and milliseconds. This makes it easier and faster for users to select precise times, especially on touch devices. Learn more in the <a href="https://ix.siemens.io/3.2/docs/components/time-picker/guide">usage guide</a>.</p>
+<p>Built on top of the new time picker, the new time input component is fully form-ready and integrates seamlessly with our form infrastructure described in the <a href="https://ix.siemens.io/3.2/docs/components/forms-field/guide">forms field section</a>. It supports validation, accesibility, and consistent styling.</p>
+<p>Learn more in the <a href="https://ix.siemens.io/3.2/docs/components/input-time/guide">usage guide</a>.</p>
+<h1>Progress indicator</h1>
+<p><img decoding="async" loading="lazy" alt="Progress indicator" src="https://ix.siemens.io/3.2/assets/images/2507_blog_progress-f280a82351452a95bded6da4b6a05d9a.png" width="896" height="360" class="img_QgcI"></p>
+<p>A long-awaited feature, the progress indicator is now available in both linear and circular variants. The linear variant is designed for horizontal layouts or when the progress value should be more visible. The circular variant is more suitable for compact or centered layouts, e.g. when it's replacing an icon.</p>
+<p>Whether you're tracking file uploads, form completion, or background tasks, these indicators provide clear, accessible feedback to users. They’re fully customizable and easy to integrate.</p>
+<p>Learn more in the <a href="https://ix.siemens.io/3.2/docs/components/progress-indicator/code">usage guide</a>.</p>
+<h1>Improved initial render performance</h1>
+<p><img decoding="async" loading="lazy" alt="Render performance" src="https://ix.siemens.io/3.2/assets/images/2507_blog_render-2d275a7f4544040514acc09135c8ca16.png" width="896" height="360" class="img_QgcI"></p>
+<p>We’ve significantly improved the initial render performance by optimizing how components are initialized and rendered with StencilJS.</p>
+<p>Users will notice faster load times and smoother interactions, particularly in data-heavy applications, especially in complex environments like AG Grid.</p>
+<h1>Enhanced icon toggle button</h1>
+<p><img decoding="async" loading="lazy" alt="Icon toggle button" src="https://ix.siemens.io/3.2/assets/images/2507_blog_icontogglebutton-2076a52196d896cb754097d342763951.png" width="896" height="360" class="img_QgcI"></p>
+<p>The icon toggle button has a new oval attribute, allowing its shape to be adjusted from square to oval. This provides greater flexibility in aligning with different design aesthetics and layout needs.</p>
+<p>Toggle buttons are ideal for switching between states or modes. They’re commonly used in scenarios where a setting can be turned on or off independently.</p>
+<p>Learn more in the <a href="https://ix.siemens.io/3.2/docs/components/toggle-button/guide">usage guide</a>.</p>
+<h1>Theme generator</h1>
+<p><img decoding="async" loading="lazy" alt="Theme generator" src="https://ix.siemens.io/3.2/assets/images/2507_blog_themegenerator-a1ef6ee934dfa763312bca2ed4dad699.png" width="896" height="360" class="img_QgcI"></p>
+<p>Our updated theme generator produces smaller, more efficient CSS variable files. It also supports cross-platform theming, making it easier to apply your design system consistently across web, mobile, and desktop applications. This update simplifies customization while improving performance.</p>
+<h1>Accessibility</h1>
+<p><img decoding="async" loading="lazy" alt="Accessibility" src="https://ix.siemens.io/3.2/assets/images/2507_blog_accessibility-fd5071456042c1060fde84945074d52a.png" width="896" height="360" class="img_QgcI"></p>
+<p>We’ve expanded our accessibility support with:</p>
+<ul>
+<li>Extended <a href="https://ix.siemens.io/3.2/docs/guidelines/accessibility/overview">WCAG guidelines</a> tailored to our components</li>
+<li>Component-level accessibility checklists in Figma</li>
+<li>ARIA label support for our components</li>
+</ul>
+<p>These improvements help teams build inclusive, accessible experiences more easily and confidently.</p>
+<h1>Upcoming 4.0 major release</h1>
+<p><img decoding="async" loading="lazy" alt="Upcoming" src="https://ix.siemens.io/3.2/assets/images/2507_blog_upcoming-625ae5d05433a8de7d1789e7e999f94c.png" width="896" height="360" class="img_QgcI"></p>
+<p>The upcoming 4.0 major release will introduce several impactful changes and enhancements across the design system and component libraries:</p>
+<ul>
+<li>
+<p><strong>Button rework:</strong> We’re refining the button component with:</p>
+<ul>
+<li>Updated naming conventions for clarity</li>
+<li>Rounded corners for Siemens brand consistency</li>
+<li>A new icon-right option for better layout flexibility</li>
+</ul>
+</li>
+<li>
+<p><strong>App header enhancements:</strong> The app header will become more customizable with an additional slot option for providing custom content.</p>
+</li>
+<li>
+<p><strong>Elevation principle simplification:</strong> We’re streamlining the elevation system to make it easier to apply and understand visual hierarchy across components.</p>
+</li>
+<li>
+<p><strong>Angular 20 support:</strong> Full compatibility with Angular 20, ensuring your projects stay up-to-date with the latest framework improvements.</p>
+</li>
+<li>
+<p><strong>AG Grid update:</strong> We’re aligning with the latest AG Grid version to ensure seamless integration and improved performance.</p>
+</li>
+</ul>
+<p>Please reach out to us at <a href="mailto:team.ix.industry@siemens.com" target="_blank" rel="noopener noreferrer">team.ix.industry@siemens.com</a> and tell us about your migration experience.
+If you encounter any issues, we are here to support you every step of the way.</p>
+<p>We greatly appreciate your contributions.</p>]]></content:encoded>
+            <category>Release</category>
+        </item>
+        <item>
+            <title><![CDATA[Release V3.0.0]]></title>
+            <link>https://ix.siemens.io/3.2/blog/2025/05/09/release-3</link>
+            <guid>https://ix.siemens.io/3.2/blog/2025/05/09/release-3</guid>
+            <pubDate>Fri, 09 May 2025 00:00:00 GMT</pubDate>
+            <description><![CDATA[banner]]></description>
+            <content:encoded><![CDATA[<p><img decoding="async" loading="lazy" alt="banner" src="https://ix.siemens.io/3.2/assets/images/2505_blog_3-0015b09895ca25c1346a245570a6742a.png" width="896" height="360" class="img_QgcI"></p>
+<p>After gathering feedback on our alpha release, we proudly present the official launch of Industrial Experience V3.0.0.</p>
+<h1>How to start?</h1>
+<ul>
+<li>Install <code>@siemens/ix</code> (<code>@siemens/ix-angular</code>, <code>@siemens/ix-react</code>, <code>@siemens/ix-vue</code>) via the <code>latest</code> tag</li>
+<li>Access the comprehensive migration guide to smoothly transition to the new version <a href="https://ix.siemens.io/3.2/docs/home/migration/3_0_0">here</a>.</li>
+</ul>
+<h1>What's new?</h1>
+<p>Our previous <a href="https://ix.siemens.io/3.2/blog/v3-alpha">blog entry on the alpha release</a> provides a detailed description of the new features. Here is a brief summary:</p>
+<ul>
+<li><strong>Improved Angular support:</strong> Enhancing compatibility and ease of use for developers by updaging the minimum supported Angular version to version 18 and supporting Angular standalone components out of the box.</li>
+<li><strong>Global CSS Changes:</strong> To avoid style collisions with other CSS frameworks or libraries, a prefix has been added to some global styles such as table, input, and label.</li>
+<li><strong>Bootstrap removal:</strong> The CSS framework Bootstrap has been removed from our main style file, marking a significant change in our approach to styling.</li>
+<li><strong>Input validation enhancements:</strong> Input elements have been updated to improve user experience by preventing required validation errors from appearing without any user interaction.</li>
+<li><strong>Date picker enhancements:</strong> Week numbers are now hidden by default in several date-related components, enhancing the user interface and simplifying the display.</li>
+<li><strong>Documentation redesign:</strong> Introducing horizontal navigation in the header for quick access to essential resources and improved usability for component pages with a new preview and code snippet and an aligned property table.</li>
+<li><strong>Versioning of documentation:</strong> Users can now switch between different versions, making it easier to reference older documentation and track changes over time.</li>
+</ul>
+<p>Please reach out to us at <a href="mailto:team.ix.industry@siemens.com" target="_blank" rel="noopener noreferrer">team.ix.industry@siemens.com</a> and tell us about your migration experience.
+If you encounter any issues, we are here to support you every step of the way.</p>
+<p>🙏 We greatly appreciate your contributions.</p>]]></content:encoded>
+            <category>Release</category>
+        </item>
+        <item>
+            <title><![CDATA[Release V3.0.0-alpha]]></title>
+            <link>https://ix.siemens.io/3.2/blog/v3-alpha</link>
+            <guid>https://ix.siemens.io/3.2/blog/v3-alpha</guid>
+            <pubDate>Thu, 03 Apr 2025 00:00:00 GMT</pubDate>
+            <description><![CDATA[banner]]></description>
+            <content:encoded><![CDATA[<p><img decoding="async" loading="lazy" alt="banner" src="https://ix.siemens.io/3.2/assets/images/intro-c9d067d0c4349e53480310fdbfd999d5.png" width="1792" height="720" class="img_QgcI"></p>
+<p>Are you ready to be among the first to experience V3.0.0?</p>
+<p>We are seeking early adopters to test our alpha release and provide valuable feedback.</p>
+<p>As we prepare for the official launch of Industrial Experience V3.0.0, your insights will help us refine the code, documentation, and migration guide.</p>
+<p>Your participation not only benefits us but also the entire community eagerly awaiting this major update.</p>
+<h1>How to start?</h1>
+<ul>
+<li>Install <code>@siemens/ix</code> (<code>@siemens/ix-angular</code>, <code>@siemens/ix-react</code>, <code>@siemens/ix-vue</code>) via the <code>alpha</code> tag</li>
+<li>Get an exclusive preview of our revamped documentation <a href="https://ix.siemens.io/version-alpha/" target="_blank" rel="noopener noreferrer">here</a></li>
+</ul>
+<p>Access the comprehensive migration guide to smoothly transition to the new version <a href="https://ix.siemens.io/version-alpha/docs/home/migration/3_0_0/" target="_blank" rel="noopener noreferrer">here</a></p>
+<p>Your feedback on the new version, documentation redesign, and change log is crucial.</p>
+<h1>Update Angular version and support standalone components</h1>
+<p><img decoding="async" loading="lazy" alt="Angular standalone" src="https://ix.siemens.io/3.2/assets/images/angular-112d38f614b17d22b4abbcfde23f3eeb.png" width="1792" height="720" class="img_QgcI"></p>
+<p><strong>Exciting updates</strong> have been made to our Angular support, enhancing compatibility and ease of use for developers.</p>
+<p><strong>Key changes:</strong></p>
+<ul>
+<li><strong>Minimum Angular version:</strong> The minimum supported Angular version has been updated to version 18.</li>
+<li><strong>Standalone components:</strong> We now support Angular standalone components out of the box.</li>
+</ul>
+<p><strong>Example:</strong></p>
+<div class="language-typescript codeBlockContainer_NeE7 theme-code-block" style="--prism-color:#F8F8F2;--prism-background-color:#282A36"><div class="codeBlockContent_Znyc"><pre tabindex="0" class="prism-code language-typescript codeBlock_CAUA thin-scrollbar" style="color:#F8F8F2;background-color:#282A36"><code class="codeBlockLines_V4vN"><span class="token-line" style="color:#F8F8F2"><span class="token keyword" style="color:rgb(189, 147, 249);font-style:italic">import</span><span class="token plain"> </span><span class="token punctuation" style="color:rgb(248, 248, 242)">{</span><span class="token plain"> Component </span><span class="token punctuation" style="color:rgb(248, 248, 242)">}</span><span class="token plain"> </span><span class="token keyword" style="color:rgb(189, 147, 249);font-style:italic">from</span><span class="token plain"> </span><span class="token string" style="color:rgb(255, 121, 198)">'@angular/core'</span><span class="token punctuation" style="color:rgb(248, 248, 242)">;</span><span class="token plain"></span><br></span><span class="token-line" style="color:#F8F8F2"><span class="token plain"></span><span class="token keyword" style="color:rgb(189, 147, 249);font-style:italic">import</span><span class="token plain"> </span><span class="token punctuation" style="color:rgb(248, 248, 242)">{</span><span class="token plain"> IxButton </span><span class="token punctuation" style="color:rgb(248, 248, 242)">}</span><span class="token plain"> </span><span class="token keyword" style="color:rgb(189, 147, 249);font-style:italic">from</span><span class="token plain"> </span><span class="token string" style="color:rgb(255, 121, 198)">'@siemens/ix-angular/standalone'</span><span class="token punctuation" style="color:rgb(248, 248, 242)">;</span><span class="token plain"></span><br></span><span class="token-line" style="color:#F8F8F2"><span class="token plain" style="display:inline-block"></span><br></span><span class="token-line" style="color:#F8F8F2"><span class="token plain"></span><span class="token decorator at operator">@</span><span class="token decorator function" style="color:rgb(80, 250, 123)">Component</span><span class="token punctuation" style="color:rgb(248, 248, 242)">(</span><span class="token punctuation" style="color:rgb(248, 248, 242)">{</span><span class="token plain"></span><br></span><span class="token-line" style="color:#F8F8F2"><span class="token plain">  standalone</span><span class="token operator">:</span><span class="token plain"> </span><span class="token boolean">true</span><span class="token punctuation" style="color:rgb(248, 248, 242)">,</span><span class="token plain"></span><br></span><span class="token-line" style="color:#F8F8F2"><span class="token plain">  selector</span><span class="token operator">:</span><span class="token plain"> </span><span class="token string" style="color:rgb(255, 121, 198)">'app-example'</span><span class="token punctuation" style="color:rgb(248, 248, 242)">,</span><span class="token plain"></span><br></span><span class="token-line" style="color:#F8F8F2"><span class="token plain">  imports</span><span class="token operator">:</span><span class="token plain"> </span><span class="token punctuation" style="color:rgb(248, 248, 242)">[</span><span class="token plain">IxButton</span><span class="token punctuation" style="color:rgb(248, 248, 242)">]</span><span class="token punctuation" style="color:rgb(248, 248, 242)">,</span><span class="token plain"></span><br></span><span class="token-line" style="color:#F8F8F2"><span class="token plain">  template</span><span class="token operator">:</span><span class="token plain"> </span><span class="token template-string template-punctuation string" style="color:rgb(255, 121, 198)">`</span><span class="token template-string string" style="color:rgb(255, 121, 198)"></span><br></span><span class="token-line" style="color:#F8F8F2"><span class="token template-string string" style="color:rgb(255, 121, 198)">    &lt;ix-button&gt;Button&lt;/ix-button&gt;</span><br></span><span class="token-line" style="color:#F8F8F2"><span class="token template-string string" style="color:rgb(255, 121, 198)">    &lt;ix-button disabled&gt;Button&lt;/ix-button&gt;</span><br></span><span class="token-line" style="color:#F8F8F2"><span class="token template-string string" style="color:rgb(255, 121, 198)">  </span><span class="token template-string template-punctuation string" style="color:rgb(255, 121, 198)">`</span><span class="token punctuation" style="color:rgb(248, 248, 242)">,</span><span class="token plain"></span><br></span><span class="token-line" style="color:#F8F8F2"><span class="token plain"></span><span class="token punctuation" style="color:rgb(248, 248, 242)">}</span><span class="token punctuation" style="color:rgb(248, 248, 242)">)</span><span class="token plain"></span><br></span><span class="token-line" style="color:#F8F8F2"><span class="token plain"></span><span class="token keyword" style="color:rgb(189, 147, 249);font-style:italic">export</span><span class="token plain"> </span><span class="token keyword" style="color:rgb(189, 147, 249);font-style:italic">default</span><span class="token plain"> </span><span class="token keyword" style="color:rgb(189, 147, 249);font-style:italic">class</span><span class="token plain"> </span><span class="token class-name">Buttons</span><span class="token plain"> </span><span class="token punctuation" style="color:rgb(248, 248, 242)">{</span><span class="token punctuation" style="color:rgb(248, 248, 242)">}</span><br></span></code></pre><div class="buttonGroup_BCku"><button type="button" aria-label="Copy code to clipboard" title="Copy" class="clean-btn"><span class="copyButtonIcons_CAvs" aria-hidden="true"><svg viewBox="0 0 24 24" class="copyButtonIcon_zDS_"><path fill="currentColor" d="M19,21H8V7H19M19,5H8A2,2 0 0,0 6,7V21A2,2 0 0,0 8,23H19A2,2 0 0,0 21,21V7A2,2 0 0,0 19,5M16,1H4A2,2 0 0,0 2,3V17H4V3H16V1Z"></path></svg><svg viewBox="0 0 24 24" class="copyButtonSuccessIcon_JAhv"><path fill="currentColor" d="M21,7L9,19L3.5,13.5L4.91,12.09L9,16.17L19.59,5.59L21,7Z"></path></svg></span></button></div></div></div>
+<p>Standalone components offer a more straightforward approach to developing Angular applications. By utilizing standalone components, directives, and pipes, developers can enhance the authoring experience and minimize reliance on NgModules.</p>
+<h1>Global CSS Changes</h1>
+<p><img decoding="async" loading="lazy" alt="global style changes" src="https://ix.siemens.io/3.2/assets/images/css-ad0d94283ad2762220aed32dd065107e.png" width="1792" height="720" class="img_QgcI"></p>
+<p>To avoid style collisions with other CSS frameworks or libraries, a prefix has been added to some global styles such as table, input, and label.</p>
+<p><strong>Key changes</strong>:</p>
+<ul>
+<li><strong>Input and textarea</strong>: Global styling has been removed. To use legacy styling, add <code>class="ix-form-control"</code> to input or textarea.</li>
+<li><strong>Label</strong>: Global styling has been removed. To use legacy styling, add <code>class="ix-form-label"</code> to label.</li>
+<li><strong>Table</strong>: New global classes <code>.ix-table</code> and <code>.ix-table-striped</code> have been added to display a simple HTML table. These changes aim to enhance compatibility and prevent conflicts in styling across different frameworks and libraries.</li>
+</ul>
+<h1>Bootstrap is removed from our dependencies</h1>
+<p><img decoding="async" loading="lazy" alt="remove bootstrap" src="https://ix.siemens.io/3.2/assets/images/bootstrap-0a81e39767ec5ae727cdc28ce654bf32.png" width="1792" height="720" class="img_QgcI"></p>
+<p>The CSS framework Bootstrap has been removed from our main style file, marking a significant change in our approach to styling.</p>
+<p><strong>Key changes:</strong></p>
+<ul>
+<li><strong>Bootstrap removal:</strong> The third-party CSS framework Bootstrap has been completely removed from our style file.</li>
+</ul>
+<p><strong>Why this is beneficial:</strong></p>
+<ul>
+<li><strong>Reduced dependency:</strong> Removing Bootstrap reduces dependency on third-party frameworks, leading to fewer compatibility issues and conflicts with other libraries.</li>
+<li><strong>Improved performance:</strong> Without the additional overhead of Bootstrap, the overall performance and loading times of our applications can improve.</li>
+<li><strong>Customization and control:</strong> This change allows for greater customization and control over the styling, enabling more tailored and specific design choices that align with our unique requirements.</li>
+</ul>
+<h1>Input validation enhancements</h1>
+<p><img decoding="async" loading="lazy" alt="input validation" src="https://ix.siemens.io/3.2/assets/images/input-validation-ef5409701f01c7819151a5989235dc61.png" width="1792" height="720" class="img_QgcI"></p>
+<p>Input elements have been updated to improve user experience by preventing required validation errors from appearing without any user interaction.</p>
+<p><strong>Key changes:</strong></p>
+<ul>
+<li><strong>Input elements affected:</strong> ix-input, ix-number-input, ix-date-input, ix-select, and ix-textarea will no longer show required validation errors unless there has been user interaction.</li>
+<li><strong>Programmatic validation:</strong> If the class <code>ix-invalid</code> is applied programmatically, an error message will still be shown even without user interaction.</li>
+</ul>
+<h1>Date picker enhancements</h1>
+<p><img decoding="async" loading="lazy" alt="date picker" src="https://ix.siemens.io/3.2/assets/images/picker-87e5e9a7ce60984bfe55fe78a0d10049.png" width="1792" height="720" class="img_QgcI"></p>
+<p>Week numbers are now hidden by default in several date-related components, enhancing the user interface and simplifying the display.</p>
+<h1>Documentation redesign</h1>
+<p><img decoding="async" loading="lazy" alt="documentation redesign" src="https://ix.siemens.io/3.2/assets/images/documentation-c41ac47d3a81b0b82e1688348ef6c644.png" width="1792" height="720" class="img_QgcI"></p>
+<p>In response to valuable user feedback, we are unveiling the redesigned documentation for our design system. Last year, we sent out a comprehensive survey to our users. They provided insights that have shaped this transformation. Our goal is to enhance usability and accessibility, ensuring that our documentation meets the needs of our diverse user base.</p>
+<p><strong>Key changes:</strong></p>
+<ul>
+<li><strong>Horizontal navigation in the header:</strong> One of the most significant changes is the introduction of horizontal navigation in the header. Previously, users had to navigate deep within the main navigation to find components and icons, which were the most sought-after elements. The new horizontal navigation prominently features main categories, allowing users to access these critical sections quickly and efficiently.</li>
+<li><strong>Quick access to essential resources:</strong> We have added quick access links to the header. Users can now effortlessly reach the starter app, support resources, and our GitHub repository. This change ensures that essential tools and information are always within easy reach, reducing the time spent searching for these resources.</li>
+<li><strong>Versioning of documentation:</strong> We understand the importance of maintaining access to previous versions of our documentation. Users can now switch between different versions, making it easier to reference older documentation and track changes over time. This feature is particularly useful for teams working with legacy systems or those who need to compare updates.</li>
+<li><strong>Clustering components:</strong> In the past, components were listed alphabetically, which could be cumbersome for users looking for related items. We have now clustered components based on their functionality and usage. This logical grouping helps users find what they need more intuitively, enhancing the overall efficiency of the documentation.</li>
+<li><strong>Preview and code snippet:</strong> For the component pages, we have integrated the preview and code snippet sections. This allows users to easily switch between viewing a component in different themes and accessing the corresponding code for various frameworks.</li>
+<li><strong>Property table:</strong> Component and style pages now use the same property table for a better overview and consistent behavior.</li>
+</ul>
+<p>The redesign of our documentation is a direct result of listening to our users and understanding their needs. We believe these changes will significantly improve the user experience, making our design system easier to navigate. We are committed to continuous improvement and have exciting upcoming topics already planned. We welcome any further feedback to ensure our documentation remains a valuable resource for all users.</p>
+<p>Please reach out to us at <a href="mailto:team.ix.industry@siemens.com" target="_blank" rel="noopener noreferrer">team.ix.industry@siemens.com</a> and tell us about your migration experience.
+If you encounter any issues, we are here to support you every step of the way.</p>
+<p>🙏 We greatly appreciate your contributions.</p>]]></content:encoded>
+            <category>Release</category>
+        </item>
+    </channel>
+</rss>

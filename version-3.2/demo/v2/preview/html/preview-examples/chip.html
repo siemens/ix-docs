@@ -1,0 +1,70 @@
+<!--
+SPDX-FileCopyrightText: 2024 Siemens AG
+
+SPDX-License-Identifier: MIT
+
+This source code is licensed under the MIT license found in the
+LICENSE file in the root directory of this source tree.
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Chip example</title>
+    
+    
+    <script type="module" crossorigin src="../assets/chip-BF0Q031v.js"></script>
+    <link rel="modulepreload" crossorigin href="../assets/global-DaepF4XF.js">
+    <link rel="modulepreload" crossorigin href="../assets/init-D14Q4inb.js">
+    <link rel="modulepreload" crossorigin href="../assets/ix-icon.entry-5KbfRuSi.js">
+    <link rel="modulepreload" crossorigin href="../assets/index-TgiuVEsn.js">
+    <link rel="stylesheet" href="../assets/global-BKuWuaEU.css">
+    <link rel="stylesheet" href="../assets/chip-6pmiOKKy.css">
+  </head>
+  <body>
+    <div class="chip">
+      <div class="chip-column">
+        <ix-chip icon="print" variant="primary" outline closable
+          >Primary</ix-chip
+        >
+        <ix-chip icon="print" variant="alarm" outline closable>Alarm</ix-chip>
+        <ix-chip icon="print" variant="critical" outline>Critical</ix-chip>
+        <ix-chip icon="print" variant="warning" outline>Warning</ix-chip>
+        <ix-chip icon="print" variant="info" outline>Info</ix-chip>
+        <ix-chip icon="print" variant="success" outline>Success</ix-chip>
+        <ix-chip icon="print" variant="neutral" outline>Neutral</ix-chip>
+        <ix-chip
+          icon="print"
+          variant="custom"
+          background="#FF00FF"
+          outline
+          closable
+          >Custom</ix-chip
+        >
+        <ix-chip icon="print" variant="primary" outline closable
+          >Chip with icon
+        </ix-chip>
+      </div>
+      <div class="chip-column">
+        <ix-chip icon="print" variant="primary" closable>Primary</ix-chip>
+        <ix-chip icon="print" variant="alarm" closable>Alarm</ix-chip>
+        <ix-chip icon="print" variant="critical">Critical</ix-chip>
+        <ix-chip icon="print" variant="warning">Warning</ix-chip>
+        <ix-chip icon="print" variant="info">Info</ix-chip>
+        <ix-chip icon="print" variant="success">Success</ix-chip>
+        <ix-chip icon="print" variant="neutral">Neutral</ix-chip>
+        <ix-chip
+          variant="custom"
+          background="#FF00FF"
+          chip-color="black"
+          closable
+          >Custom</ix-chip
+        >
+        <ix-chip variant="primary" outline closable>Chip without icon </ix-chip>
+      </div>
+    </div>
+    
+  </body>
+</html>
