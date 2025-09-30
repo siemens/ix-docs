@@ -35,6 +35,7 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           CSC: ${{ secrets.CSC }}
           BRAND_URL: ${{ vars.BRAND_URL }}
+          BASE_URL: ${{ github.event.inputs.folder }}
 
       - name: Deploy GitHub Pages 🚀
         uses: JamesIves/github-pages-deploy-action@6c2d9db40f9296374acc17b90404b6e8864128c8
