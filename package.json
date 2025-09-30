@@ -15,7 +15,8 @@
     "serve": "docusaurus serve",
     "write-translations": "docusaurus write-translations",
     "write-heading-ids": "docusaurus write-heading-ids",
-    "typecheck": "tsc"
+    "typecheck": "tsc",
+    "update-figma": "tsx ./scripts/download-figma-images.ts update"
   },
   "dependencies": {
     "@docusaurus/core": "3.7.0",
@@ -51,6 +52,7 @@
     "clsx": "^2.1.0",
     "docusaurus-plugin-sass": "^0.2.5",
     "fs-extra": "^11.3.0",
+    "glob": "^11.0.3",
     "mustache": "^4.2.0",
     "node-fetch": "^3.3.2",
     "octokit": "^4",
@@ -61,7 +63,8 @@
     "tar": "^7.4.3",
     "tsx": "^4.15.4",
     "typescript": "~5.8.3",
-    "unist-util-visit": "^5.0.0"
+    "unist-util-visit": "^5.0.0",
+    "yargs": "^18.0.0"
   },
   "browserslist": {
     "production": [
@@ -76,12 +79,15 @@
     ]
   },
   "engines": {
-    "node": ">=18.0"
+    "node": ">=22.19.0"
   },
-  "packageManager": "pnpm@10.10.0",
+  "packageManager": "pnpm@10.17.0",
   "pnpm": {
     "overrides": {
       "cheerio": "1.0.0-rc.12"
     }
+  },
+  "volta": {
+    "node": "22.19.0"
   }
 }

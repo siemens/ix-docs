@@ -97,7 +97,7 @@ import { CategoryButton } from '@site/src/components/CategoryButton';
 | [Card list](./card-list/index.mdx)     | Card lists display a large number of cards or items of the same type in a lightweight, grouped manner.                       |
 | [Flip](./flip/index.mdx)               | Flips are containers that flip when clicked to reveal additional content.                                                    |
 | [Event list](./event-list/index.mdx)   | Event lists display a list of any type of element with additional details.                                                   |
-| [Drawer](./drawer/index.mdx)           | Drawers are containers that open on the click of a button to show additional content.                                        |
+| [Drawer](legacy/drawer/index.mdx)      | Drawers are containers that open on the click of a button to show additional content.                                        |
 | [Layout auto](./layout-auto/index.mdx) | Auto-layouts are containers that automatically adjust the size of their columns based on the content.                        |
 | [Layout grid](./layout-grid/index.mdx) | Layout grids are used to structure the layout of a page or screen responsively.                                              |
 | [Modal](./modal/index.mdx)             | Modals present information prominently and are useful for gathering essential user input without navigating to another page. |

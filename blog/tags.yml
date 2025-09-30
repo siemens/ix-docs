@@ -1,2 +1,4 @@
 release:
   description: 'Blog posts about new Industrial Experience design system releases'
+merging:
+  description: 'Merging activities from other design systems at Siemens'
