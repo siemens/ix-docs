@@ -79,12 +79,15 @@
     ]
   },
   "engines": {
-    "node": ">=18.0"
+    "node": ">=22.19.0"
   },
-  "packageManager": "pnpm@10.10.0",
+  "packageManager": "pnpm@10.17.0",
   "pnpm": {
     "overrides": {
       "cheerio": "1.0.0-rc.12"
     }
+  },
+  "volta": {
+    "node": "22.19.0"
   }
 }
