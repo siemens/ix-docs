@@ -436,16 +436,6 @@ const sidebars: SidebarsConfig = {
           ],
         }),
         createTabItem({
-          id: 'components/drawer/index',
-          label: 'Drawer',
-          items: [
-            {
-              id: 'components/drawer/code',
-              label: 'Code',
-            },
-          ],
-        }),
-        createTabItem({
           id: 'components/layout-auto/index',
           label: 'Layout auto',
           items: [
