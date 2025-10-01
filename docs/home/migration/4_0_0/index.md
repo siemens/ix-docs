@@ -202,7 +202,8 @@ We are updating to the latest AG Grid version and are providing a new brand-alig
 | AG Grid Building Blocks / Row         | not needed                          |
 | AG Grid component / AG Grid Column    | -                                   |
 | AG Grid component / AG Grid Row       | -                                   |
-| AG Grid component / AG Grid Table     | AG Grid (Row & Column based layout) |
+| AG Grid component / AG Grid Table     | iX AG Grid Table                    |
+| AG Grid component / AG Grid Table Example    | iX AG Grid Table Example            |
 </div>
 
 #### Implementation
