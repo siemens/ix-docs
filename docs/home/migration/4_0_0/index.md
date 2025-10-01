@@ -34,7 +34,7 @@ Important: Projects using `@siemens/ix-angular` must upgrade to Angular 20 befor
 
 ### Removed basic navigation and map navigation
 
-Use the [ix-application](/docs/components/application/guide) with following components to replace the basic and map navigation:
+Use the [ix-application](/docs/components/application/guide) with the following components to replace the basic and map navigation:
 
 - [Application header](/docs/components/application-header/guide) containing the previous `application name`
 - [Application menu](/docs/components/application-menu/guide)
@@ -43,7 +43,7 @@ Use the [ix-application](/docs/components/application/guide) with following comp
 
 ### Drawer
 
-The drawer component has been deprecated and will be removed in the next major release. We recommend using [panes](../../../components/panes/index.mdx) instead, which provide similar functionality with improved performance and usability. Use this configuration for a similar experience:
+The drawer component has been deprecated and will be removed in the next major release. We recommend using [panes](/docs/components/panes/index.mdx) instead, which provide similar functionality with improved performance and usability. Use this configuration for a similar experience:
 
 ```html
 <ix-pane
@@ -106,7 +106,7 @@ Affected components:
 
 ![Buttons](https://www.figma.com/design/wEptRgAezDU1z80Cn3eZ0o/iX-Documentation-illustrations?node-id=6708-52302&t=bGky2tHjBPC9fOGT-4)
 
-To take over the changes, rename all button variants according to this table. Start with renaming `secondary` variants to `subtle` to avoid unwanted overriding.
+To take over the changes, rename all button variants according to this table. Start with renaming `secondary` variants to `subtle-*` variants to avoid unwanted overriding.
 
 <div class="table-full-width table-column-equal-width">
 | ❌ **Variant** | ❌ **Outline** | ❌ **Ghost** | ✅ **New variant** |
@@ -213,9 +213,9 @@ TBD
 
 ### Updated elevation principle
 
-With the updated elevation principle, some components require a visual outline if they are placed on `color-2` or `component-1`. See more in the styles chapter on [elevation](https://ix.siemens.io/docs/styles/elevation).
+With the updated elevation principle, some components require a visual outline if they are placed on `color-2` or `component-1`. See more in the styles chapter on [elevation](/docs/styles/elevation).
 
-![Elevation pricinple](https://www.figma.com/design/wEptRgAezDU1z80Cn3eZ0o/iX-Documentation-illustrations?node-id=6707-50604&t=bGky2tHjBPC9fOGT-4)
+![Elevation principle](https://www.figma.com/design/wEptRgAezDU1z80Cn3eZ0o/iX-Documentation-illustrations?node-id=6707-50604&t=bGky2tHjBPC9fOGT-4)
 
 <div class="table-full-width table-column-equal-width">
 | **Component**                                               | **Variant** | **Property**          |
