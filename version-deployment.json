@@ -5,7 +5,8 @@
     {
       "id": "v4",
       "href": "https://ix.siemens.io",
-      "label": "Version 4 (Latest)"
+      "label": "Version 4",
+      "dropdownLabel": "Version 4 (latest)"
     },
     {
       "id": "v3",
