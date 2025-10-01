@@ -8,9 +8,10 @@ The content header helps users understand what the page is about. We typically u
 ![Content header overview](https://www.figma.com/design/wEptRgAezDU1z80Cn3eZ0o/iX-Pattern-Illustrations?type=design&node-id=2250-4784&mode=design&t=XmCepM9jPR9PImPw-4)
 
 1. Back button
-2. Content title
-3. Content subtitle
-4. Action buttons
+2. Header title
+3. Header subtitle
+4. Header slot
+5. Action buttons
 
 ## Variants
 
@@ -26,17 +27,22 @@ Our content header variants makes it easier to achieve a well-balanced visual hi
 - **Back button**: Enable if you want to provide a way for the user to navigate back.
 - **Header title**: Set your page title here. Use a clear, short and descriptive wording.
 - **Header subtitle**: Provide additional info for your content such as a descriptive sentence when required.
+- **Header slot**: Use this slot to add additional content that is relevant to the page. We typically use it to display an object's status or a counter displaying the number of children by using a [pill](../pill).
 - **Action buttons**: Offer convenient shortcuts for actions that the user might need to perform frequently, for example "Add" or "Edit".
 
 ## Behavior
 
 - **Interaction**: The back button navigates usually one step back or behaves the same as the browser back. Action buttons typically navigate to another view.
-- **Alignment**: Place the content header at the very top left corner related to the content position. Back button, title and subtitle are automatically aligned on the left side while the action buttons are aligned on the right side.
+- **Alignment**:
+	- Place the content header at the very top left corner related to the content position.
+	- Back button, title and subtitle are automatically aligned on the left side while the action buttons are aligned on the right side.
+	- Elements in the header slot are top aligned by default. Use top margin to center align it with the title.
 - **Cluster action buttons**: Action buttons are automatically aligned to the right. An example for the primary content header has the back button, title and subtitle at the left top corner of the whole page, and the action buttons at the right top corner of the page.
 
 ## Dos and Don'ts
 
 - Do use to provide quick access to common tasks for the whole content area
+- Do place only items in the header slot that don't take up too much space, such as a status or a counter
 - Don't use a secondary content header as a page title
 - Don't use more than one primary headline in one page
 

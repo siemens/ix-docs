@@ -46,7 +46,7 @@ let withBrandTheme = false;
 
 try {
   const path = require.resolve(
-    '@siemens-ix/corporate-theme/dist/css/corporate-theme.css'
+    '@siemens-ix/corporate-theme/dist/css/corporate-theme-hybrid.css'
   );
   console.log('Found optionalDependency @siemens-ix/corporate-theme.');
   customCss.push(path);
@@ -230,12 +230,6 @@ const config: Config = {
           sidebarId: 'styles',
           position: 'left',
           label: 'Styles',
-        },
-        {
-          type: 'custom-news-pill',
-          position: 'left',
-          label: 'Release 3.0 is here',
-          value: '/blog/2025/05/09/release-3',
         },
         {
           type: 'custom-version-selection',
