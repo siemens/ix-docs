@@ -32,10 +32,11 @@ We follow a time-based release schedule consisting of:
 
 All major releases receive support for approximately 12 months. We distinguish between two support stages for major releases:
 
-| Support stage           | Support window | Details                                       |
-| ----------------------- | :------------: | --------------------------------------------- |
-| Active                  |    6 months    | Receive regular minor releases                |
-| Long-term support (LTS) |    6 months    | Receive patch releases to fix critical issues |
+| Support stage | Support window | Details                                        |
+| ------------- | :------------: | ---------------------------------------------- |
+| Latest        |    6 months    | Receives regular minor releases                |
+| Deprecated    |    6 months    | Receives patch releases to fix critical issues |
+| End of Life   |       -        | Receives no support and no further releases    |
 
 Our support policy applies to all components of the design system including the code base, Figma design kits and our documentation.
 
@@ -43,8 +44,8 @@ We recommend always following the active release. When a version moves from the 
 
 ## Supported versions
 
-| Version |  Status  | Released     |
-| ------- | :------: | ------------ |
-| v4.0.0  |  Active  | Nov 01, 2025 |
-| v3.0.0  |   LTS    | Mai 01, 2025 |
-| v2.0.0  | Outdated | Sep 27, 2023 |
+| Version |   Status    | Released     | Deprecated since | End of life since |
+| ------- | :---------: | ------------ | ---------------- | ----------------- |
+| v4.0.0  |   Latest    | Nov 01, 2025 | -                | -                 |
+| v3.0.0  | Deprecated  | Mai 01, 2025 | Nov 01, 2025     | -                 |
+| v2.0.0  | End of Life | Sep 27, 2023 | Mai 01, 2025     | Nov 01, 2025      |
