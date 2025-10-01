@@ -1,0 +1,2 @@
+#Contains various configurable features that you can enable or disable, including specifying files to ignore using glob patterns
+#Find more information here: https://developers.google.com/gemini-code-assist/docs/customize-gemini-behavior-github?hl=de#add_configuration_files
