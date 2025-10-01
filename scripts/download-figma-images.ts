@@ -188,7 +188,11 @@ async function updateFigmaImage(regex: string) {
   }
 
   for (const [fileName, nodeIds] of imageRequests) {
-    const images = await fetchFigmaImageApi(fileName, Array.from(nodeIds));
+    const images = await fetchFigmaImageApi(
+      fileName,
+      Array.from(nodeIds),
+      process.env.FIGMA_FILE_VERSION!
+    );
     for (const nodeId of nodeIds) {
       await downloadImageResource(
         fileName,
