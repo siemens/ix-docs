@@ -67,6 +67,19 @@ To reflect this, the peer dependencies have been updated to Angular Version 20. 
 
 We are now publishing a separate Figma library using the official AG Grid design system styled with the iX theme. This gives designers direct access to AG Grid’s native components and layout logic. Developers benefit from AG Grid’s new [theming API](https://blog.ag-grid.com/introducing-our-new-theming-api/), which makes styling grids easier and more flexible. Together, this change makes design and development faster, clearer, and better aligned.
 
+# New section within UX writing guidelines: Formatting 
+
+We’ve just released a brand-new section in our [UX writing guidelines](/docs/guidelines/language/writing-style-guide-getting-started), designed to bring clarity, consistency, and user-friendliness to some of the most commonly used — and often overlooked — elements in digital communication. This update covers:
+
+- Addresses
+- Dates
+- Measurements and units
+- Money and currency 
+- Names and titles
+- Numbers and percentages
+- Software versions
+- Time and time zones
+
 # Any questions or feedback?
 
 Please reach out to us at [team.ix.industry@siemens.com](mailto:team.ix.industry@siemens.com) and tell us about your migration experience.
