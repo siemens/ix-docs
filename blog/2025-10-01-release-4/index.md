@@ -51,7 +51,7 @@ Elevation helps create depth in the user interface. A simple elevation principle
 
 With this major release, we are reducing the use of semi-transparent colors in favor of solid tones. This change improves visual separation between layers and aligns with our goal of a consistent design language.
 
-The new colors are applied automatically when migrating to this version. Therefore, we recommend teams visually review their interfaces. To support this, our migration guide includes an overview where switching to outline variants are needed for good layer separation.
+The new colors are applied automatically when migrating to this version. Therefore, we recommend teams visually review their interfaces. To support this, our migration guide includes an overview where switching to outline variants is needed for good layer separation.
 
 # Angular 20
 
@@ -59,22 +59,22 @@ The new colors are applied automatically when migrating to this version. Therefo
 
 This release brings full compatibility with Angular 20, helping teams keep their projects aligned with the latest framework improvements.
 
-To reflect this, the peer dependencies have been updated to Angular Version 20. Projects using this package will need to upgrade to Angular 20 before migrating to the latest version of iX. See more in the [migration guide](/docs/home/migration/4_0_0).
+To reflect this, the Angular specific peer dependencies have been updated to require at least version 20. Projects using this package will need to upgrade to Angular 20 or higher before migrating to the latest version of iX. See more in the [migration guide](/docs/home/migration/4_0_0).
 
 # AG Grid update
 
 ![aggrid](./2510_blog_aggrid.png)
 
-We are now publishing a separate Figma library using the official AG Grid design system styled with the iX theme. This gives designers direct access to AG Grid’s native components and layout logic. Developers benefit from AG Grid’s new [theming API](https://blog.ag-grid.com/introducing-our-new-theming-api/), which makes styling grids easier and more flexible. Together, this change makes design and development faster, clearer, and better aligned.
+We are now publishing a separate Figma library based on the [official AG Grid design system](https://www.figma.com/community/file/1360600846643230092) styled with the iX theme. This gives designers direct access to AG Grid’s native components and layout logic. Developers benefit from AG Grid’s new [theming API](https://blog.ag-grid.com/introducing-our-new-theming-api/), which makes styling grids easier and more flexible. Together, this change makes design and development faster, clearer, and better aligned.
 
-# New section within UX writing guidelines: Formatting 
+# New section within UX writing guidelines: Formatting
 
 We’ve just released a brand-new section in our [UX writing guidelines](/docs/guidelines/language/writing-style-guide-getting-started), designed to bring clarity, consistency, and user-friendliness to some of the most commonly used — and often overlooked — elements in digital communication. This update covers:
 
 - Addresses
 - Dates
 - Measurements and units
-- Money and currency 
+- Money and currency
 - Names and titles
 - Numbers and percentages
 - Software versions

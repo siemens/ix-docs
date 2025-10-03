@@ -20,7 +20,7 @@ description: Welcome to the migration guide for upgrading from Siemens Industria
 
 ### Angular 20
 
-Important: Projects using `@siemens/ix-angular` must upgrade to Angular 20 before updating to this version. Some APIs deprecated in previous Angular versions may have been removed; review the Angular 20 changelog for migration steps. Ensure all third-party Angular libraries are compatible with V20 to avoid runtime issues.
+Important: Projects using `@siemens/ix-angular` must upgrade to Angular 20 or higher before updating to this version. Some APIs deprecated in previous Angular versions may have been removed; review the Angular 20 changelog for migration steps. Ensure all third-party Angular libraries are compatible with at least V20 to avoid runtime issues.
 
 ## Renamed or removed icons
 
@@ -47,13 +47,13 @@ The drawer component has been deprecated and will be removed in the next major r
 
 ```html
 <ix-pane
-  heading="Title"
-  variant="floating"
-  composition="right"
-  borderless="true"
-  size="320px"
-  close-on-click-outside="true"
-  hide-on-collapse
+heading="Title"
+variant="floating"
+composition="right"
+borderless="true"
+size="320px"
+close-on-click-outside="true"
+hide-on-collapse
 >
 My content
 </ix-pane>
@@ -106,7 +106,7 @@ Affected components:
 
 ![Buttons](https://www.figma.com/design/wEptRgAezDU1z80Cn3eZ0o/iX-Documentation-illustrations?node-id=6708-52302&t=bGky2tHjBPC9fOGT-4)
 
-To take over the changes, rename all button variants according to this table. Start with renaming `secondary` variants to `subtle-*` variants to avoid unwanted overriding.
+To take over the changes, rename all button variants according to this table. Start with renaming `secondary` to `subtle-*` variants to avoid unwanted overriding.
 
 <div class="table-full-width table-column-equal-width">
 | ❌ **Variant** | ❌ **Outline** | ❌ **Ghost** | ✅ **New variant** |
@@ -122,7 +122,7 @@ To take over the changes, rename all button variants according to this table. St
 | `danger`       | `false`        | `true`       | `danger-tertiary`  |
 </div>
 
-For buttons without an explicit set variant, the default is used. As defaults differ between the button components, the renaming should be component-specific.
+For buttons without an explicity set variant, the default is used. As defaults differ between the button components, the renaming should be component-specific.
 
 #### Button with default variant
 
@@ -174,7 +174,7 @@ For buttons without an explicit set variant, the default is used. As defaults di
 | `default`      | `false`        | `true`       | `subtle-tertiary`  |
 </div>
 
-We recommend you visually review your changes. Ensure that `subtle` variants are not mixed with the default button.
+We recommend to visually review your changes. Ensure that `subtle-*` variants are not mixed with the default variant.
 
 ### ix-pane
 
@@ -189,9 +189,10 @@ We are updating to the latest AG Grid version and are providing a new brand-alig
 
 #### Design
 
-- Publishing a new 'AG Grid theme' library
-- Deprecating AG Grid components from 'iX components' Figma library
-- Note: Manual replacement effort needed, there is no automated replacement possible
+- Published a new 'AG Grid theme' library
+- Deprecated AG Grid components from 'iX components' Figma library
+
+Note: Manual replacement effort needed, there is no automated replacement possible.
 
 <div class="table-full-width table-column-equal-width">
 | ❌ **Deprecated**                     | ✅ **Replace with**                 |
@@ -218,12 +219,10 @@ With the updated elevation principle, some components require a visual outline i
 
 ![Elevation principle](https://www.figma.com/design/wEptRgAezDU1z80Cn3eZ0o/iX-Documentation-illustrations?node-id=6707-50604&t=bGky2tHjBPC9fOGT-4)
 
-<div class="table-full-width table-column-equal-width">
-| **Component**                                               | **Variant** | **Property**          |
-| :----------------------------------------------------------- | :----------- | :--------------------- |
-| [Card, Push card, Action card](/docs/components/card/guide) | `filled`    | use variant `outline` |
-| [Blind](/docs/components/blind/guide)                       | `filled`    | use variant `outline` |
-</div>
+If you have used the `filled` variant of following components on `color-2` or `component-1`, please change their variant to `outline`:
+- [Blind](/docs/components/blind/guide)
+- [Card, Push card, Action card](/docs/components/card/guide)
+- [Event list](/docs/components/event-list/)
 
 ## Questions ❓🙋‍♀️
 
