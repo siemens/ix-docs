@@ -57,7 +57,7 @@ The new colors are applied automatically when migrating to this version. Therefo
 
 ![angular20](./2510_blog_angular.png)
 
-This release brings full compatibility with Angular 20, helping teams keep their projects aligned with the latest framework improvements.
+This release brings full compatibility with Angular 20 and up, helping teams keep their projects aligned with the latest framework improvements.
 
 To reflect this, the Angular specific peer dependencies have been updated to require at least version 20. Projects using this package will need to upgrade to Angular 20 or higher before migrating to the latest version of iX. See more in the [migration guide](/docs/home/migration/4_0_0).
 
