@@ -1047,7 +1047,6 @@ const sidebars: SidebarsConfig = {
 
       label: 'Charts',
       items: [
-        'components/charts-overview/index',
         {
           id: 'components/charts-overview/index',
           type: 'doc',
@@ -1093,16 +1092,6 @@ const sidebars: SidebarsConfig = {
             },
             {
               id: 'legacy/map-navigation/code',
-              label: 'Code',
-            },
-          ],
-        }),
-        createTabItem({
-          id: 'legacy/drawer/index',
-          label: 'Drawer',
-          items: [
-            {
-              id: 'legacy/drawer/code',
               label: 'Code',
             },
           ],
