@@ -13,28 +13,24 @@ description: "We use meaningful animations to make applications appear physicall
 
 ## Standard timings
 
-If an animation is too slow it can feel sluggish and disturb efficient workflows.
-In contrast an animation that runs too fast can be irritating and stressful.
-Therefore it is important to choose the correct timing for the respective situation.
+If an animation is too slow it can feel sluggish and disturb efficient workflows. In contrast an animation that runs too fast can be irritating and stressful. Therefore it is important to choose the correct timing for the respective situation.
 
-##### default-time: 150 ms
-
+**default-time: `150 ms`**
 - all mouse state changes e.g. normal to hover to active/pressed
 - showing and hiding of small UI elements
 
-##### medium-time: 300 ms
-
+**medium-time: `300 ms`**
 - e.g. moving or fading complex components or multiple small elements
 
-##### slow-time: 500 ms
-
+**slow-time: `500 ms`**
 - e.g. moving or fading larger screen elements
 
-##### xslow-time: 1000 ms
-
+**xslow-time: `1000 ms`**
 - e.g. moving or fading entire screen parts
 
-### Acceleration & Deceleration
+If the `prefers-reduced-motion` (see [official MDN reference](https://developer.mozilla.org/en-US/docs/Web/CSS/@media/prefers-reduced-motion)) media query is set, all animation values are set to `0ms` to avoid any animations.
+
+## Acceleration & Deceleration
 
 - Objects should move in a learned physical way, objects have mass and don’t start or stop immediately, they accelerate and decelerate
 - use `ease-in` and `ease-out` to accelerate and decelerate objects
@@ -43,7 +39,7 @@ Therefore it is important to choose the correct timing for the respective situat
 - transformations or translations within the screen (object is visible the whole time) should use `ease-in-out`
 - hiding or appearing objects (opacity) use linear transitions as there is no mass to accelerate/decelerate
 
-### Animation timing variables
+## Animation timing variables
 
 All animation timing values are also available through CSS variables:
 
