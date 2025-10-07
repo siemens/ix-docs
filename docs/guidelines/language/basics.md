@@ -1,7 +1,7 @@
 ---
 sidebar_position: 1
 sidebar_label: Basics
-title: UX Writing Basics
+title: UX writing Basics
 doc-type: 'banner'
 component-tabs: ['']
 no_single_tab: true

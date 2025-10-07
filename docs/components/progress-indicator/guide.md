@@ -42,7 +42,7 @@ Progress indicator variants (types):
 - **Content slot:** Use this slot to display additional content such as percentage values or custom elements like icons.
 
 :::info
-For more information about writing effective helper texts or labels, see our [UX Writing guidelines](../../guidelines/language/basics.md).
+For more information about writing effective helper texts or labels, see our [UX writing guidelines](../../guidelines/language/basics.md).
 :::
 ## Behavior in context
 

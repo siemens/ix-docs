@@ -6,7 +6,7 @@ hide_table_of_contents: false
 doc-type: 'banner'
 component-tabs: ['']
 no_single_tab: true
-description: The key to chatbot language use in industrial contexts is simplicity. Use clear and concise grammar and wording for all responses without idiomatic language or slang. Instead, focus on domain-specific vocabulary. We recommend using both the defining conversations section to support your creation of sample dialogs and our UX Writing style guide for grammar and wording support.
+description: The key to chatbot language use in industrial contexts is simplicity. Use clear and concise grammar and wording for all responses without idiomatic language or slang. Instead, focus on domain-specific vocabulary. We recommend using both the defining conversations section to support your creation of sample dialogs and our UX writing style guide for grammar and wording support.
 ---
 
 #
@@ -71,7 +71,7 @@ Chatbots should use questions to engage the user and move interactions forward:
 For more question examples within specific communicative functions, see the designing conversations section.
 
 ### Contractions
-We recommend using contractions (connecting words such as it is – it’s) as these sound less formal and more conversational. Unlike in our UX Writing style guide, we recommend using negative contractions such as “can’t” instead of “cannot” as these sound more personable and natural within chatbots.
+We recommend using contractions (connecting words such as it is – it’s) as these sound less formal and more conversational. Unlike in our UX writing style guide, we recommend using negative contractions such as “can’t” instead of “cannot” as these sound more personable and natural within chatbots.
 
 ![Using contractions example 1](https://www.figma.com/design/wEptRgAezDU1z80Cn3eZ0o/iX-Pattern-Illustrations?node-id=3218-4297&t=etx1DcSbA7VDx5xD-4)
 
