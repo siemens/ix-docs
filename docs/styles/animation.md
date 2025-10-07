@@ -9,12 +9,12 @@ no_single_tab: true
 description: "We use meaningful animations to make applications appear physically tangible. This way UIs become predictable and interactions easier to follow along with for users. Abrupt state changes are prevented in oder to make UIs feel smooth and anchored in reality."
 ---
 
-# 
+#
 
 ## Standard timings
 
-If an animation is too slow it can feel sluggish and disturb efficient workflows.  
-In contrast an animation that runs too fast can be irritating and stressful.  
+If an animation is too slow it can feel sluggish and disturb efficient workflows.
+In contrast an animation that runs too fast can be irritating and stressful.
 Therefore it is important to choose the correct timing for the respective situation.
 
 ##### default-time: 150 ms
@@ -36,7 +36,7 @@ Therefore it is important to choose the correct timing for the respective situat
 
 ### Acceleration & Deceleration
 
-- Objects should move in a learned physical way, objects have mass and don't start or stop immediately, they accelerate and decelerate
+- Objects should move in a learned physical way, objects have mass and don’t start or stop immediately, they accelerate and decelerate
 - use `ease-in` and `ease-out` to accelerate and decelerate objects
 - Slide-in movements (from off screen) should use `ease-out` only
 - Slide-out movements (to off screen) should use `ease-in` only

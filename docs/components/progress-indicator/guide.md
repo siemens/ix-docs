@@ -22,7 +22,7 @@ The basic anatomy of progress indicators consists of a value indicator moving al
 
 Progress indicator variants (types):
 - **Linear:** Use for horizontal layouts or when the progress value should be more visible.
-- **Circular:** Use for compact or centered layouts, e.g. when it's replacing an icon. 
+- **Circular:** Use for compact or centered layouts, e.g. when it’s replacing an icon.
 
 ## Options
 
@@ -48,7 +48,7 @@ For more information about writing effective helper texts or labels, see our [UX
 
 - **Resizing:** The total width of progress indicators is `24rem` by default. Customize it to your context.
 - **Text overflow:** If the helper text or label are too long for the available horizontal space, it has a line-break.
-- **Slot:** Slots in linear progress indicators have a min-width of `2.25rem` to accommodate using values from 0% to 100% without changing the width of the actual bar. 
+- **Slot:** Slots in linear progress indicators have a min-width of `2.25rem` to accommodate using values from 0% to 100% without changing the width of the actual bar.
 
 ![progress indicator resizing](https://www.figma.com/design/wEptRgAezDU1z80Cn3eZ0o/iX-Documentation-illustrations?node-id=5650-16162&t=pq3AmdWOVOjIx4S4-4)
 
@@ -58,11 +58,11 @@ For more information about writing effective helper texts or labels, see our [UX
   <DoAndDont.Do>
     <DoAndDont.Item>Do use progress indicators consistently for similar processes</DoAndDont.Item>
     <DoAndDont.Item>Do use progress indicators for determinate processes where progress can be measured (otherwise use [spinners](../spinner/index.mdx))</DoAndDont.Item>
-    <DoAndDont.Item>Do use linear progress indicators in horizontal layouts and circular indicators in compact spaces or centered layouts</DoAndDont.Item> 
+    <DoAndDont.Item>Do use linear progress indicators in horizontal layouts and circular indicators in compact spaces or centered layouts</DoAndDont.Item>
 	<DoAndDont.Item>Do keep your slot content short, especially for the centered alignment (use helper texts and labels for lengthier content)</DoAndDont.Item>
   </DoAndDont.Do>
   <DoAndDont.Dont>
-    <DoAndDont.Item>Don't use progress indicators for operations shorter than one second</DoAndDont.Item>
+    <DoAndDont.Item>Don’t use progress indicators for operations shorter than one second</DoAndDont.Item>
     <DoAndDont.Item>Don’t only indicate progress completion with the indicator without clear task messages, e.g. success toasts or displaying the loaded content</DoAndDont.Item>
   </DoAndDont.Dont>
 </DoAndDont>

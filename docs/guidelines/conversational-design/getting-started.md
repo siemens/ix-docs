@@ -25,7 +25,7 @@ Here, you'll find guidelines on structuring conversations, from greeting and ack
 
 ## Language
 
-This section focuses on the role of generative AI in language, emphasizing the importance of precise wording, grammar, punctuation, and the appropriate use of emojis. It also includes a list of dos and don'ts to ensure clear and effective communication. [Read more](./language)
+This section focuses on the role of generative AI in language, emphasizing the importance of precise wording, grammar, punctuation, and the appropriate use of emojis. It also includes a list of dos and don’ts to ensure clear and effective communication. [Read more](./language)
 
 ## Resources
 

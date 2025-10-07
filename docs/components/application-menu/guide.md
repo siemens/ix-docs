@@ -25,7 +25,7 @@ The navigation menu is an essential part of your application. It offers a way to
 	- **Enable toggle theme:** Use the option to offer your users an easy and direct way to toggle between light and dark themes. We typically don’t use it when dedicated theme settings are available elsewhere e.g. in the [settings](../settings) overlay.
 - **Menu items and menu category:**
 	- **Notifications:** Display a number at the top right corner of the icon.
-	- **Icon:** Define an icon for an item. We recommend to using icons in submenu items rarely since they often don't add any value.
+	- **Icon:** Define an icon for an item. We recommend to using icons in submenu items rarely since they often don’t add any value.
 	- **Label:** Define the name of the menu item or menu category which is visible when the navigation menu is expanded.
 	- **Selected:** Mark a menu item as selected which highlights it in the navigation menu.
 	- **Tooltip text:** By default, the tooltip will show the label of the menu item or menu category. Override it with custom text to give additional context if the label alone is not sufficient.

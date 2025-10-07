@@ -24,10 +24,10 @@ Variants, options and states of the [button](../button/index.mdx) and the [icon 
 
 Toggle buttons have five states: Default, hover, active, disabled, loading and focused. All states are also available for pressed toggled buttons.
 
-## Dos and Don'ts
+## Dos and Don’ts
 
 - Do use toggle buttons when users can switch a setting on or off independently
-- Do use toggle buttons when two opposing options don't follow the on/off metaphor
+- Do use toggle buttons when two opposing options don’t follow the on/off metaphor
 - Don’t use toggle buttons in button groups where only one option can be selected (use normal [buttons](../button/index.mdx) or [icon buttons](../icon-button/index.mdx) instead)
 
 ## Related

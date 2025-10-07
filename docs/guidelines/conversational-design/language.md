@@ -108,7 +108,7 @@ Here if the chatbot is assisting with technical troubleshooting in a manufacturi
 
 Here the response is more concise, professional and shows the chatbot is aware of the working environment and the seriousness of the situation.
 
-## Dos and Don'ts
+## Dos and Don’ts
 
 - Do use your brand’s voice rules to shape your chatbot voice
 - Do work with developers to support data set collection

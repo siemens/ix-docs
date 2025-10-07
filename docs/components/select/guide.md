@@ -60,11 +60,11 @@ The select field has five states: default, hover, focused, disabled and read-onl
 - Do consider performance when loading an extensive list of items
 - Do use the select component when there is a finite list of items available to avoid manual input errors or duplicates
 - Do sort items logically, e.g. alphabetically or numerically
-- Don't use selects for binary choices, like yes and no, use [radio buttons](../toggle) instead
-- Don't use selects for navigational or search patterns, use [category filters](../expanding-search) instead
-- Don't combine several data attributes in an item label, use [tables](../event-list) with a search functionality instead
+- Don’t use selects for binary choices, like yes and no, use [radio buttons](../toggle) instead
+- Don’t use selects for navigational or search patterns, use [category filters](../expanding-search) instead
+- Don’t combine several data attributes in an item label, use [tables](../event-list) with a search functionality instead
 
-![Don't combine data attributes](https://www.figma.com/design/wEptRgAezDU1z80Cn3eZ0o/iX-Pattern-Illustrations?node-id=3978-800&t=MWpyPDZDK5B531n9-4)
+![Don’t combine data attributes](https://www.figma.com/design/wEptRgAezDU1z80Cn3eZ0o/iX-Pattern-Illustrations?node-id=3978-800&t=MWpyPDZDK5B531n9-4)
 
 ## Related
 
