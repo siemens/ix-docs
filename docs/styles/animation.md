@@ -30,7 +30,7 @@ If an animation is too slow it can feel sluggish and disturb efficient workflows
 
 If the `prefers-reduced-motion` (see [official MDN reference](https://developer.mozilla.org/en-US/docs/Web/CSS/@media/prefers-reduced-motion)) media query is set, all animation values are set to `0ms` to avoid any animations.
 
-## Acceleration & Deceleration
+## Acceleration and deceleration
 
 - Objects should move in a learned physical way, objects have mass and don’t start or stop immediately, they accelerate and decelerate
 - use `ease-in` and `ease-out` to accelerate and decelerate objects
