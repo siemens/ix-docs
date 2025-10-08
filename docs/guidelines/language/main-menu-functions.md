@@ -1,7 +1,7 @@
 ---
 sidebar_position: 5
-sidebar_label: Main menu functions
-title: Main menu functions
+sidebar_label: Main menu functions and labels
+title: Main menu functions and labels
 doc-type: 'banner'
 component-tabs: ['']
 no_single_tab: true
