@@ -75,7 +75,7 @@ import DoAndDont from '@site/src/components/DoAndDont';
 
 - Capitalize proper nouns, i.e. places, organizations, tools, languages, products and things: Siemens, SIMATIC PCS myexpert, iOS, JavaScript, MindSphere
 
-- Capitalize named app functions and UI elements: Go to Settings, Allocate users in User management, Press Ok
+- Capitalize named app functions and UI elements: Go to Settings, Allocate users in User management, Press OK
 
 <DoAndDont>
   <DoAndDont.Do>
@@ -86,7 +86,7 @@ import DoAndDont from '@site/src/components/DoAndDont';
   </DoAndDont.Do>
   <DoAndDont.Dont>
     <DoAndDont.Item>Go To Settings</DoAndDont.Item>
-    <DoAndDont.Item>Press Ok</DoAndDont.Item>
+    <DoAndDont.Item>Press OK</DoAndDont.Item>
     <DoAndDont.Item>LOG IN</DoAndDont.Item>
     <DoAndDont.Item>For more information, see Siemens industry online support.</DoAndDont.Item>
   </DoAndDont.Dont>
