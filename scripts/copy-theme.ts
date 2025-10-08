@@ -26,8 +26,23 @@ const __docs = path.join(__dirname, 'docs');
 const __changelog = path.join(__docs, 'home', 'releases', 'changelog.md');
 
 async function downloadTheme() {
-  const token = process.env.CSC;
-  const pkgUrl = process.env.BRAND_URL;
+  const token = process.env.CSC!;
+  let pkgUrl = process.env.BRAND_URL!;
+  let pkgVersion = process.env.BRAND_VERSION!;
+
+  if (!pkgUrl) {
+    console.log('No additional theme configured');
+    return;
+  }
+
+  if (!token) {
+    console.error('CSC is required to download additional theme');
+    return;
+  }
+
+  if (!pkgUrl.endsWith('.tgz')) {
+    pkgUrl = pkgUrl + '-' + pkgVersion + '.tgz';
+  }
 
   const __temp = path.join(os.tmpdir(), 'ix-docs');
   await fs.ensureDir(__temp);
