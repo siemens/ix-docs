@@ -25,7 +25,7 @@ We’ll also give you a sneak peek at what’s coming in the upcoming 4.0 major 
 
 The redesigned time picker introduces a smoother, more intuitive experience with scrollable values and one-click selection for hours, minutes, seconds, and milliseconds. This makes it easier and faster for users to select precise times, especially on touch devices. Learn more in the [usage guide](/docs/components/time-picker/guide).
 
-Built on top of the new time picker, the new time input component is fully form-ready and integrates seamlessly with our form infrastructure described in the [forms field section](/docs/components/forms-field/guide). It supports validation, accesibility, and consistent styling.
+Built on top of the new time picker, the new time input component is fully form-ready and integrates seamlessly with our form infrastructure described in the [forms field section](/docs/components/forms-field/guide). It supports validation, accessibility, and consistent styling.
 
 Learn more in the [usage guide](/docs/components/input-time/guide).
 

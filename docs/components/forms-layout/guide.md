@@ -28,7 +28,7 @@ Effective ways to organize form elements enhance user comprehension and interact
 - **Label alignment:** By default, the label is positioned above its input field. Use a custom field component for long forms with a lot of fields to position the label on the left (which saves vertical space).
 - **Grouping fields:** In some cases, it makes sense to combine multiple fields in one [custom field](../custom-field) with a single label that are connected contextually or through validation, e.g. entering the value and unit of an entity, selecting start and end date. It allows a clearer validation, e.g. the end date must be after the start date.
 - **Field width:** Use a consistent width for input fields to create a harmonious layout. For example, use a width of 100% for full-width fields and 50% for two-column fields.
- - **Responsive behavior**: Use [layout grids](../layout-grid/) or flexbox to create responsive forms that adapt to different screen sizes.
+- **Responsive behavior**: Use [layout grids](../layout-grid/) or flexbox to create responsive forms that adapt to different screen sizes.
 
 ## Related
 
