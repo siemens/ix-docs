@@ -37,7 +37,7 @@ For more information see the official [Figma documentation](https://help.figma.c
 
 If want to adapt the classic theme to your own brand design, follow these steps to modify the colors and other theme values within the Figma library:
 
-1. Import the iX Foundation into your Figma workspace.
+1. Import "iX Components" into your Figma workspace.
 2. In the top-right corner of the Figma interface, click the button labeled "Open settings" with a settings icon to open the variables dialog.
 3. Within the variables dialog, navigate to the desired collection, such as the "iX Colors" collection located at the top-left corner.
 4. From there, change the values of the variables to adjust the appearance of the theme.

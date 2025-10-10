@@ -35,7 +35,7 @@ All major releases receive support for approximately 12 months. We distinguish b
 | Support stage | Support window | Details                                        |
 | ------------- | :------------: | ---------------------------------------------- |
 | Latest        |    6 months    | Receives regular minor releases                |
-| Deprecated    |    6 months    | Receives patch releases to fix critical issues |
+| Maintenance   |    6 months    | Receives patch releases to fix critical issues |
 | End of Life   |       -        | Receives no support and no further releases    |
 
 Our support policy applies to all components of the design system including the code base, Figma design kits and our documentation.

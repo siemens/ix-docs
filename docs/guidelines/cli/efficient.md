@@ -23,13 +23,13 @@ import Separator from '@site/src/components/Separator';
 
 ![Informing 1 - Do](https://www.figma.com/design/YSvLeddwfyjLx8G5QWOTCH/Documentation-Visuals?node-id=1035-9127&t=2JP2nlNciwS43htp-1)
 
-![Informing 1 - Don't](https://www.figma.com/design/YSvLeddwfyjLx8G5QWOTCH/Documentation-Visuals?node-id=1035-11427&t=2JP2nlNciwS43htp-1)
+![Informing 1 - Don’t](https://www.figma.com/design/YSvLeddwfyjLx8G5QWOTCH/Documentation-Visuals?node-id=1035-11427&t=2JP2nlNciwS43htp-1)
 
 <Separator></Separator>
 
 ![Informing 2 - Do](https://www.figma.com/design/YSvLeddwfyjLx8G5QWOTCH/Documentation-Visuals?node-id=1035-9130&t=2JP2nlNciwS43htp-1)
 
-![Informing 2 - Don't](https://www.figma.com/design/YSvLeddwfyjLx8G5QWOTCH/Documentation-Visuals?node-id=1035-11430&t=2JP2nlNciwS43htp-1)
+![Informing 2 - Don’t](https://www.figma.com/design/YSvLeddwfyjLx8G5QWOTCH/Documentation-Visuals?node-id=1035-11430&t=2JP2nlNciwS43htp-1)
 
 ## Robustness
 
@@ -41,10 +41,10 @@ import Separator from '@site/src/components/Separator';
 
 ![Robustness 1 - Do](https://www.figma.com/design/YSvLeddwfyjLx8G5QWOTCH/Documentation-Visuals?node-id=1035-9133&t=2JP2nlNciwS43htp-1)
 
-![Robustness 1 - Don't](https://www.figma.com/design/YSvLeddwfyjLx8G5QWOTCH/Documentation-Visuals?node-id=1035-11433&t=2JP2nlNciwS43htp-1)
+![Robustness 1 - Don’t](https://www.figma.com/design/YSvLeddwfyjLx8G5QWOTCH/Documentation-Visuals?node-id=1035-11433&t=2JP2nlNciwS43htp-1)
 
 <Separator></Separator>
 
 ![Robustness 2 - Do](https://www.figma.com/design/YSvLeddwfyjLx8G5QWOTCH/Documentation-Visuals?node-id=1035-9136&t=2JP2nlNciwS43htp-1)
 
-![Robustness 2 - Don't](https://www.figma.com/design/YSvLeddwfyjLx8G5QWOTCH/Documentation-Visuals?node-id=1035-11436&t=2JP2nlNciwS43htp-1)
+![Robustness 2 - Don’t](https://www.figma.com/design/YSvLeddwfyjLx8G5QWOTCH/Documentation-Visuals?node-id=1035-11436&t=2JP2nlNciwS43htp-1)

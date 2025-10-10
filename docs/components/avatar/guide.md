@@ -23,4 +23,4 @@ The avatar is a display-only component with no further interactions. Images prov
 
 ![Avatar dos and don‘ts](https://www.figma.com/design/wEptRgAezDU1z80Cn3eZ0o/iX-Pattern-Illustrations?type=design&node-id=975-13&mode=design&t=SxUA6AcHswBAiIzi-4)
 
-- Don't use more than 2 characters when using the "Initials" option
+- Don’t use more than 2 characters when using the "Initials" option

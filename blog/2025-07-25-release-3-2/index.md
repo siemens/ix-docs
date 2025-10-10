@@ -25,7 +25,7 @@ We’ll also give you a sneak peek at what’s coming in the upcoming 4.0 major 
 
 The redesigned time picker introduces a smoother, more intuitive experience with scrollable values and one-click selection for hours, minutes, seconds, and milliseconds. This makes it easier and faster for users to select precise times, especially on touch devices. Learn more in the [usage guide](/docs/components/time-picker/guide).
 
-Built on top of the new time picker, the new time input component is fully form-ready and integrates seamlessly with our form infrastructure described in the [forms field section](/docs/components/forms-field/guide). It supports validation, accesibility, and consistent styling. 
+Built on top of the new time picker, the new time input component is fully form-ready and integrates seamlessly with our form infrastructure described in the [forms field section](/docs/components/forms-field/guide). It supports validation, accessibility, and consistent styling.
 
 Learn more in the [usage guide](/docs/components/input-time/guide).
 
@@ -33,9 +33,9 @@ Learn more in the [usage guide](/docs/components/input-time/guide).
 
 ![Progress indicator](./2507_blog_progress.png)
 
-A long-awaited feature, the progress indicator is now available in both linear and circular variants. The linear variant is designed for horizontal layouts or when the progress value should be more visible. The circular variant is more suitable for compact or centered layouts, e.g. when it's replacing an icon.
+A long-awaited feature, the progress indicator is now available in both linear and circular variants. The linear variant is designed for horizontal layouts or when the progress value should be more visible. The circular variant is more suitable for compact or centered layouts, e.g. when it’s replacing an icon.
 
-Whether you're tracking file uploads, form completion, or background tasks, these indicators provide clear, accessible feedback to users. They’re fully customizable and easy to integrate. 
+Whether you're tracking file uploads, form completion, or background tasks, these indicators provide clear, accessible feedback to users. They’re fully customizable and easy to integrate.
 
 Learn more in the [usage guide](/docs/components/progress-indicator/code).
 
@@ -43,7 +43,7 @@ Learn more in the [usage guide](/docs/components/progress-indicator/code).
 
 ![Render performance](./2507_blog_render.png)
 
-We’ve significantly improved the initial render performance by optimizing how components are initialized and rendered with StencilJS. 
+We’ve significantly improved the initial render performance by optimizing how components are initialized and rendered with StencilJS.
 
 Users will notice faster load times and smoother interactions, particularly in data-heavy applications, especially in complex environments like AG Grid.
 

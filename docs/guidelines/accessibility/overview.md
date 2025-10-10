@@ -4,7 +4,7 @@ doc-type: 'tab-item'
 
 ## Our commitment as a design system
 
-We are committed that our deliverables qualify for building solutions that are accessible for everyone. We strive to meet **WCAG AA standards** with providing perceivable, operable, and understandable components that follow our accessibility checklist.
+We are committed that our deliverables qualify for building solutions that are accessible for everyone. We strive to meet **WCAG AA standards** by providing perceivable, operable, and understandable components that follow our accessibility checklist.
 
 ## Ensuring accessibility in products
 
@@ -83,7 +83,7 @@ In industrial software applications, color significantly enhances the visual com
 
 #### Contrast components
 
-While the components in our design system are built to meet baseline contrast requirements, it's essential to evaluate contrast in the context of their implementation such as background colors or surrounding element.
+While the components in our design system are built to meet baseline contrast requirements, it’s essential to evaluate contrast in the context of their implementation such as background colors or surrounding element.
 
 - Ensure component contrast for adjoining colors is 3:1
 - Ensure visual states for components meet 3:1 contrast with adjoining colors

@@ -9,7 +9,7 @@ no_single_tab: true
 description: "This subchapter provides a comprehensive guide for creating an industrial chatbot. It outlines essential steps and considerations, from defining the chatbot's purpose and selecting the right technology stack to developing user journeys and continuously testing and updating the chatbot. By following these guidelines, your team can ensure the chatbot meets user needs and aligns with your brand's voice and tone."
 ---
 
-# 
+#
 
 ## Assumptions
 
@@ -54,13 +54,13 @@ Follow these steps and answer the questions with your teams to create your indus
    - How do we collect user feedback? Consider rating systems, post-query surveys.
    - How do we assess the chatbot's performance? Consider response time, accuracy, successful/abandoned interactions.
 
-## Dos and Don'ts
+## Dos and Don’ts
 - Do work with all stakeholders to ensure transparency
 - Do customize chatbot responses for project-specific terminology and processes
 - Do consider how your chatbot hands off to humans for complex issues
 - Do read and review interactions (with user consent)
-- Don't assume all chatbot interactions are successful
-- Don't forget to retrain, test and update your chatbot
+- Don’t assume all chatbot interactions are successful
+- Don’t forget to retrain, test and update your chatbot
 
 
 

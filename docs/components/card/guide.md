@@ -53,10 +53,10 @@ Each variant emphasizes different aspects to guide the user's attention. These v
 
 ## Options
 
-- **Icon**: Cards can, but don't have to, include an icon. The icon is positioned in the top-left corner of the container.
+- **Icon**: Cards can, but don’t have to, include an icon. The icon is positioned in the top-left corner of the container.
 - **Notification**: By default, push cards display a notification value at the top of the container. This value is logically related to the items displayed in the expanding content area.
-- **Heading**: Cards can, but don't have to, include a heading. The heading is aligned to the top-left corner of the container.
-- **Subheading**: Cards can, but don't have to, include a subheading. The subheading is aligned to the top-left corner of the container and positioned below the heading.
+- **Heading**: Cards can, but don’t have to, include a heading. The heading is aligned to the top-left corner of the container.
+- **Subheading**: Cards can, but don’t have to, include a subheading. The subheading is aligned to the top-left corner of the container and positioned below the heading.
 
 ## Behavior in context
 
@@ -70,12 +70,12 @@ Cards can take one of three states: Default, hover and active. Action cards also
 
 ![Card states](https://www.figma.com/design/wEptRgAezDU1z80Cn3eZ0o/iX-Pattern-Illustrations?type=design&node-id=858-4979&mode=design&t=RDimbEsIHFIXIByo-1)
 
-## Dos and Don'ts
+## Dos and Don’ts
 
 - Do group cards in lists or grids (use the [card list](../card-list) control)
 - Do keep multiple cards equal in size
-- Don't nest cards inside each other
-- Don't use cards to collect user input
+- Don’t nest cards inside each other
+- Don’t use cards to collect user input
 
 ## Related
 

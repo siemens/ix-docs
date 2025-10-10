@@ -632,7 +632,7 @@ const sidebars: SidebarsConfig = {
         }),
         createTabItem({
           id: 'components/date-time-picker/index',
-          label: 'Datetime picker',
+          label: 'Date time picker',
           items: [
             {
               id: 'components/date-time-picker/code',

@@ -3,7 +3,7 @@ doc-type: 'tab-item'
 ---
 # Dropdown - Usage
 
-Dropdown containers allow users to select one option from a list. Selecting one of the items in the dropdown performs the action. 
+Dropdown containers allow users to select one option from a list. Selecting one of the items in the dropdown performs the action.
 
 ![Overview](https://www.figma.com/design/wEptRgAezDU1z80Cn3eZ0o/iX-Pattern-Illustrations?type=design&node-id=2353-2278&mode=design&t=OVHeXvLZYLkP2CzN-4)
 
@@ -32,7 +32,7 @@ Dropdown containers allow users to select one option from a list. Selecting one 
   - Inside: clicking within the dropdown closes the dropdown.
   - Outside: clicking outside the dropdown closes the dropdown.
   - Both: clicking within and outside the dropdown closes the dropdown.
-  - False: dropdown will only close if it's parent gets closed.
+  - False: dropdown will only close if it’s parent gets closed.
 - **Placement:** Place a dropdown at the top, bottom, left or right edge as well as at the beginning or end of the trigger/anchor element. The placement may be automatically adjusted in case it cannot be displayed correctly (detailed behavior described in the context section below). We typically use the default (bottom right) placement option to ensure consistency.
 - **Date selection:** Use the component [date dropdown](../date-dropdown) to get a date selection in the dropdown.
 

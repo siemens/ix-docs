@@ -46,7 +46,7 @@ The number input has five states: default, hover, focused, disabled and read-onl
 - Do set appropriate min and max values to prevent invalid entries and guide user input
 - Do provide clear error messages when the input value is out of the allowed range or does not match the required pattern
 - Do consider special cases such as zero, negative numbers and very large numbers to ensure all possible inputs are handled correctly
-- Don't specify patterns that do not align with your use case, e.g. inappropriate intervals between valid values
+- Don’t specify patterns that do not align with your use case, e.g. inappropriate intervals between valid values
 
 ## Related
 

@@ -30,4 +30,4 @@ description: "CLIs support users by giving suggestions, being empathetic and pro
 
 ![Errors - Do](https://www.figma.com/design/YSvLeddwfyjLx8G5QWOTCH/Documentation-Visuals?node-id=1035-8921&t=2JP2nlNciwS43htp-1)
 
-![Errors - Don't](https://www.figma.com/design/YSvLeddwfyjLx8G5QWOTCH/Documentation-Visuals?node-id=1035-9024&t=2JP2nlNciwS43htp-1)
+![Errors - Don’t](https://www.figma.com/design/YSvLeddwfyjLx8G5QWOTCH/Documentation-Visuals?node-id=1035-9024&t=2JP2nlNciwS43htp-1)

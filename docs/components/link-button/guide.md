@@ -32,12 +32,12 @@ doc-type: 'tab-item'
 
 ## States
 
-Link buttons take five states: Default, hover, active, disabled and focused. On hover, the link destination is shown. In a disabled state, link buttons are visually displayed but don't offer any user interaction.
+Link buttons take five states: Default, hover, active, disabled and focused. On hover, the link destination is shown. In a disabled state, link buttons are visually displayed but don’t offer any user interaction.
 
 ![States](https://www.figma.com/design/wEptRgAezDU1z80Cn3eZ0o/iX-Pattern-Illustrations?type=design&node-id=1507-9250&mode=design&t=5MYmq6zAbfw7xIkC-11)
 
-## Dos and Don'ts
+## Dos and Don’ts
 
 - Do use link buttons for navigation
-- Don't use link buttons to indicate actions
-- Don't place link buttons within a paragraph
+- Don’t use link buttons to indicate actions
+- Don’t place link buttons within a paragraph

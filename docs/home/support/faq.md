@@ -18,7 +18,7 @@ import './faq.css';
 </div>
 
 <Accordion title="What’s the difference between the classic theme and the Siemens brand theme?" id="brand-vs-os">
-The classic theme is the default that can be utilized by any application, including non-Siemens applications. In contrast, the Siemens brand theme is exclusively available to Siemens employees and business partners, incorporating specific Siemens brand elements. Both themes are offered in dark and light modes. Additionally, you have the flexibility to create custom themes that align with third-party style guides. 
+The classic theme is the default that can be utilized by any application, including non-Siemens applications. In contrast, the Siemens brand theme is exclusively available to Siemens employees and business partners, incorporating specific Siemens brand elements. Both themes are offered in dark and light modes. Additionally, you have the flexibility to create custom themes that align with third-party style guides.
 </Accordion>
 
 <Accordion title="Which browsers are supported?" id="vendor-support">
@@ -84,7 +84,7 @@ Our codebase is openly and freely accessible for anyone to view, modify and dist
 </div>
 
 <Accordion title="Where are the component figma files and how can I access them?" id="figma-files">
-[Here](https://siemens-ix.code.siemens.io/ix-brand-theme/) you will find information on how to get Figma, how to access the most important Industrial Experience libraries in Figma, and other [libraries](https://ix.siemens.io/docs/design-kit/). Remember The Siemens brand library contains Siemens specific brand elements and is only accessible to Siemens employees and business partners. For the classic theme we don't have updated figma files, but you can use the code components. 
+[Here](https://siemens-ix.code.siemens.io/ix-brand-theme/) you will find information on how to get Figma, how to access the most important Industrial Experience libraries in Figma, and other [libraries](https://ix.siemens.io/docs/design-kit/). Remember The Siemens brand library contains Siemens specific brand elements and is only accessible to Siemens employees and business partners. For the classic theme we don’t have updated figma files, but you can use the code components.
 </Accordion>
 
 <Accordion title="Do we meet the WCAG and accessibility levels?" id="a11y-maturity-levels">

@@ -35,7 +35,7 @@ There are some constraints for using custom icons. For more information please r
 
 `@siemens/ix-icons` is no longer a direct dependency of `@siemens/ix`, `@siemens/ix-react`, `@siemens/ix-angular` and `@siemens/ix-vue`.
 
-If you are using `@siemens/ix-react`, `@siemens/ix-angular` and `@siemens/ix-vue`, you don't have to adapt any code.
+If you are using `@siemens/ix-react`, `@siemens/ix-angular` and `@siemens/ix-vue`, you don’t have to adapt any code.
 If you are using `@siemens/ix` directly, you must define the custom elements of the `@siemens/ix-icons` package.
 
 ```typescript
@@ -166,6 +166,6 @@ A detailed description can be found [here](../theming/usage-developers#applying-
 
 ## Questions ❓🙋‍♀️
 
-Don't forget to check out the [Breaking Changes guide](https://github.com/siemens/ix/blob/main/BREAKING_CHANGES.md).
+Don’t forget to check out the [Breaking Changes guide](https://github.com/siemens/ix/blob/main/BREAKING_CHANGES.md).
 
 If you have further questions or you are facing any problems during migration please [contact us over our forum](https://community.siemens.com/c/ix/).

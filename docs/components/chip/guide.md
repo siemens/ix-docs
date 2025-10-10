@@ -49,14 +49,14 @@ Chips take a default, hover, focused or active state with a varying background c
 
 ![Chip states](https://www.figma.com/design/wEptRgAezDU1z80Cn3eZ0o/iX-Pattern-Illustrations?type=design&node-id=1246-6190&mode=design&t=GHOok90R6TcaUrYi-1)
 
-## Dos and Don'ts
+## Dos and Don’ts
 
 - Do use chips to tag and categorize so users can easily organize and filter content
 - Do ensure proper color contrast between chip background and text/icon with the custom variant to support readability
 - Do consider chip spacing for easy tapping or selecting with mobiles and desktops
-- Don't overuse chips as this leads to cluttered and overwhelming interfaces
-- Don't use different styles for chips with the same or similar use
-- Don't use chips without any interaction (we recommend pills instead)
+- Don’t overuse chips as this leads to cluttered and overwhelming interfaces
+- Don’t use different styles for chips with the same or similar use
+- Don’t use chips without any interaction (we recommend pills instead)
 
 ## Related
 

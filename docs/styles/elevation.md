@@ -54,7 +54,7 @@ Visually separate large sections on the base layer by applying [borders](borders
 - **Purpose:** Elements that float above the main UI, demanding immediate attention or representing a temporary interaction.
 - **Usage:** Use selective shadows (primarily `shadow-4`, see [shadow](shadows.md)) to indicate physical overlap for components like [dropdowns](../components/dropdown/index.mdx), [tooltips](../components/tooltip/index.mdx), [modals](../components/modal/index.mdx), and [toasts](../components/toast/index.mdx).
 
-We don't use shadows that are part of the primary layout flow e.g. [navigation elements](../components/application-menu) or [cards](../components/card/index.mdx).
+We don’t use shadows that are part of the primary layout flow e.g. [navigation elements](../components/application-menu) or [cards](../components/card/index.mdx).
 
 ![Elevation example](https://www.figma.com/design/wEptRgAezDU1z80Cn3eZ0o/iX-Documentation-illustrations?node-id=6680-26&t=4CbXG1ZxBCDn6JYS-4)
 ### Other `color-` tokens
