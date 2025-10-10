@@ -14,14 +14,11 @@ Breadcrumb items are interactive. Users navigate to their respective location by
 2. Separator
 3. Dropdown
 
-## Variants
-
-Breadcrumbs are available as a ghost and solid variant. Both variants differ in font and fill color but interact in the same pattern. We typically use the ghost variant to create a lower visual emphasis for users.
+## Options
 
 ![Breadcrumb variants](https://www.figma.com/design/wEptRgAezDU1z80Cn3eZ0o/iX-Pattern-Illustrations?type=design&node-id=20-352&mode=design&t=JS1Aklcq48swr0Im-1)
 
-## Options
-
+- **Ghost**: By default, breadcrumbs appear in a ghost appearance. Switch  a solid appearance for higher visual emphasis.
 - **Icon**: Breadcrumb items can, but don’t have to, include an icon. The icon is positioned before the breadcrumb label. Icons can be included for each item or only for specific items (e.g. the root item).
 - **Show child items on last item**: By default, the last item of the breadcrumb doesn't offer any user interaction. An interactive item variant is available which allows the user to browse to child pages of the current page. Pressing the item triggers a dropdown listing all child elements.
 - **Visible item count**: By default, breadcrumbs display a limited number of items. This number can be adjusted.
