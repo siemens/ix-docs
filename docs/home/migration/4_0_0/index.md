@@ -228,7 +228,7 @@ Migration steps:
 ```
 
 3. Configure the theme using the new theming API
-```typescript
+```javascript
 import { useIxTheme } from '@siemens/ix-aggrid';
 import { provideGlobalGridOptions } from 'ag-grid-community';
 
