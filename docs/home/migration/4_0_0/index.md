@@ -221,7 +221,7 @@ Migration steps:
 @import '@siemens/ix-aggrid/dist/ix-aggrid/ix-aggrid.css';
 ```
 
-2. The `ag-theme-alpine-dark` and `ag-theme-ix` classes don't have to be applied anymore
+2. The `ag-theme-alpine-dark` and `ag-theme-ix` classes don’t have to be applied anymore
 ```html
 <!-- ❌ Remove these classes -->
 <div class="ag-theme-alpine-dark ag-theme-ix"></div>
