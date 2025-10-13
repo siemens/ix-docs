@@ -22,6 +22,10 @@ More information can be found on the [AG Grid licenses page](https://www.ag-grid
 - **Vue**: Follow the official AG Grid [installation instructions](https://www.ag-grid.com/vue-data-grid/getting-started/) for Vue.
 - **Javascript**: Follow the official AG Grid [installation instruction](https://www.ag-grid.com/javascript-data-grid/getting-started/) for JavaScript.
 
+:::note
+AG Grid version 32 or higher is required.
+:::
+
 ## Siemens Industrial Experience theme for AG Grid
 
 Install the `@siemens/ix-aggrid` package.
@@ -30,22 +34,19 @@ Install the `@siemens/ix-aggrid` package.
 npm install @siemens/ix-aggrid
 ```
 
-and apply the style file in one of your project's style files e.g. styles.scss
+Import and configure the IX theme:
 
-```scss
-@import '@siemens/ix-aggrid/dist/ix-aggrid/ix-aggrid.css';
-```
+```typescript
+import { useIxTheme } from '@siemens/ix-aggrid';
+import { provideGlobalGridOptions } from 'ag-grid-community';
 
-Siemens Industrial Experience theming for AG Grid (`ag-theme-ix`) is based on `ag-theme-alpine-dark`.
-Therefore it is vital to apply the two CSS theme classes in the correct order:
+const ixTheme = await useIxTheme(async () => {
+  return await import('ag-grid-community');
+});
 
-1. `ag-theme-alpine-dark`
-2. `ag-theme-ix`
-
-e.g.:
-
-```html
-<div class="ag-theme-alpine-dark ag-theme-ix"></div>
+provideGlobalGridOptions({
+  theme: ixTheme
+});
 ```
 
 ## Basic
