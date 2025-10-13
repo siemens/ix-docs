@@ -92,10 +92,9 @@ We are working towards meeting the WCAG (Web Content Accessibility Guidelines) a
 </Accordion>
 
 <Accordion title="How does the release schedule work?" id="release-info">
-The Siemens Industrial Experience design team provides a transparent versioning and release process. For more details on our versioning, release types, frequency, and support policies, visit our [Roadmap](/docs/releases/roadmap.md) and [Versioning and release](/docs/releases/release-version.md).
+The Siemens Industrial Experience design team provides a transparent versioning and release process. For more details on our versioning, release types, frequency, and support policies, visit our [Roadmap](../releases/roadmap.md) and [Versioning and release](../releases/release-version.md).
 </Accordion>
 
 <Accordion title="Can I use the design system to build my documentation?" id="docu-theme" showBorderBottom>
 The Siemens Industrial Experience design system is intended for building industrial applications. If you are a Siemens AG employee looking to create a documentation website, use the [official MkDocs theme](https://code.siemens.com/code-ops/docs-theme) for documentation purposes. This ensures consistency and alignment with Siemens documentation standards.
 </Accordion>
-
