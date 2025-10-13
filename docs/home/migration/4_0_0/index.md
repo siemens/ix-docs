@@ -217,7 +217,7 @@ Migration steps:
 
 1. Remove CSS imports of ix-aggrid.css
 ```scss
-// ❌ Remove all occurences of this line
+// ❌ Remove all occurrences of this line
 @import '@siemens/ix-aggrid/dist/ix-aggrid/ix-aggrid.css';
 ```
 
