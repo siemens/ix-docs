@@ -39,12 +39,12 @@ Our content header variants makes it easier to achieve a well-balanced visual hi
 	- Elements in the header slot are top aligned by default. Use top margin to center align it with the title.
 - **Cluster action buttons**: Action buttons are automatically aligned to the right. An example for the primary content header has the back button, title and subtitle at the left top corner of the whole page, and the action buttons at the right top corner of the page.
 
-## Dos and Don'ts
+## Dos and Don’ts
 
 - Do use to provide quick access to common tasks for the whole content area
-- Do place only items in the header slot that don't take up too much space, such as a status or a counter
-- Don't use a secondary content header as a page title
-- Don't use more than one primary headline in one page
+- Do place only items in the header slot that don’t take up too much space, such as a status or a counter
+- Don’t use a secondary content header as a page title
+- Don’t use more than one primary headline in one page
 
 ## Related
 

@@ -73,7 +73,7 @@ import DoAndDont from '@site/src/components/DoAndDont';
   <DoAndDont.Do>
     <DoAndDont.Item>Title: You have not saved all documents</DoAndDont.Item>
     <DoAndDont.Item>Explanation: You have to save all documents</DoAndDont.Item>
-    <DoAndDont.Item>Action: (Ok button)</DoAndDont.Item>
+    <DoAndDont.Item>Action: (OK button)</DoAndDont.Item>
   </DoAndDont.Do>
 </DoAndDont>
 

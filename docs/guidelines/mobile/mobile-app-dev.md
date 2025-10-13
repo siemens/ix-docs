@@ -81,7 +81,7 @@ Developers have many options when choosing a framework for implementing mobile a
 
 ### Theming Ionic
 
-In the first step, we're going to create a theme mapping between Siemens Industrial Experience and Ionic Framework.
+In the first step, we’re going to create a theme mapping between Siemens Industrial Experience and Ionic Framework.
 
 Ionic uses CSS custom properties (variables), just like Siemens Industrial Experience does. This makes is easy to map between the two theming systems.
 
@@ -100,7 +100,7 @@ To adapt our application to this, we need to set [environment variables](https:/
 --ix-safe-area-inset-left: env(safe-area-inset-left);
 ```
 
-Additionally, some variables specific to your hardware need to be set. In our example, we use an iPhone with a notch at the top. Depending on the display orientation, it's required to adjust the safe-areas of some components (e.g. `ix-menu`).
+Additionally, some variables specific to your hardware need to be set. In our example, we use an iPhone with a notch at the top. Depending on the display orientation, it’s required to adjust the safe-areas of some components (e.g. `ix-menu`).
 
 ```css
 body[data-screen-orientation='landscape-primary'] {

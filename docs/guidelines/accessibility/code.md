@@ -68,7 +68,7 @@ For components that use a more complex, two-dimensional structure, consider impl
 function handleArrowNavigation(event, container) {
     const items = Array.from(container.querySelectorAll('[role="gridcell"], [role="option"]'));
     const currentIndex = items.indexOf(event.target);
-    
+
     switch(event.key) {
         case 'ArrowRight':
             focusItem(items[currentIndex + 1] || items[0]);
@@ -184,7 +184,7 @@ Similar to the `alt` attribute, the `title` allows adding additional information
 
 #### Visually hidden text
 
-When e.g. `aria-label` isn't allowed or doesn't make sense to use, use hidden text to make specific description text that is read by a screen reader but isn't visible in the UI.
+When e.g. `aria-label` isn’t allowed or doesn't make sense to use, use hidden text to make specific description text that is read by a screen reader but isn’t visible in the UI.
 
 ```html
 <i class="icon element-physical-input" aria-hidden="true"></i><span class="visually-hidden">physical input</span>
@@ -383,19 +383,19 @@ function handleInteraction(element) {
     // Mouse events
     element.addEventListener('mousedown', startAction);
     element.addEventListener('mouseup', endAction);
-    
+
     // Touch events for mobile
     element.addEventListener('touchstart', (e) => {
         // Prevent mouse events from firing
         e.preventDefault();
         startAction(e);
     });
-    
+
     element.addEventListener('touchend', (e) => {
         e.preventDefault();
         endAction(e);
     });
-    
+
     // Keyboard support
     element.addEventListener('keydown', (e) => {
         if (e.key === 'Enter' || e.key === ' ') {
@@ -406,7 +406,7 @@ function handleInteraction(element) {
 }
 ```
 
-Avoid mouse-specific events that don't work on touch devices:
+Avoid mouse-specific events that don’t work on touch devices:
 
 ```javascript
 // ❌ Avoid: Mouse-only events
@@ -417,10 +417,10 @@ document.onmouseup = stopDrag;
 function addDragSupport(element) {
     // Mouse support
     element.addEventListener('mousedown', initiateDrag);
-    
+
     // Touch support
     element.addEventListener('touchstart', initiateDrag);
-    
+
     // Keyboard support
     element.addEventListener('keydown', (e) => {
         if (e.key === 'Enter' || e.key === ' ') {
@@ -481,13 +481,13 @@ Ensure your layouts work across different screen sizes and orientations:
         font-size: 16px; /* Minimum readable size */
         line-height: 1.5;
     }
-    
+
     /* Ensure touch targets are large enough */
     button, input, select, textarea {
         min-height: 44px;
         min-width: 44px;
     }
-    
+
     /* Provide adequate spacing between interactive elements */
     .interactive-element {
         margin: 8px 0;
@@ -522,16 +522,16 @@ Implement accessible hamburger menus and mobile navigation:
 
 ```html
 <nav role="navigation" aria-label="Main navigation">
-    <button 
-        class="menu-toggle" 
-        aria-controls="mobile-menu" 
+    <button
+        class="menu-toggle"
+        aria-controls="mobile-menu"
         aria-expanded="false"
         aria-label="Toggle navigation menu">
         <span class="hamburger-line"></span>
         <span class="hamburger-line"></span>
         <span class="hamburger-line"></span>
     </button>
-    
+
     <ul id="mobile-menu" class="mobile-menu" aria-hidden="true">
         <li><a href="#home">Home</a></li>
         <li><a href="#about">About</a></li>
@@ -544,7 +544,7 @@ Implement accessible hamburger menus and mobile navigation:
 function initializeMobileMenu() {
     const menuToggle = document.querySelector('.menu-toggle');
     const mobileMenu = document.getElementById('mobile-menu');
-    
+
     menuToggle.addEventListener('click', toggleMenu);
     menuToggle.addEventListener('keydown', (e) => {
         if (e.key === 'Enter' || e.key === ' ') {
@@ -552,14 +552,14 @@ function initializeMobileMenu() {
             toggleMenu();
         }
     });
-    
+
     function toggleMenu() {
         const isExpanded = menuToggle.getAttribute('aria-expanded') === 'true';
-        
+
         menuToggle.setAttribute('aria-expanded', !isExpanded);
         mobileMenu.setAttribute('aria-hidden', isExpanded);
         mobileMenu.classList.toggle('open');
-        
+
         // Focus management
         if (!isExpanded) {
             // Focus first menu item when opening
@@ -569,7 +569,7 @@ function initializeMobileMenu() {
             }
         }
     }
-    
+
     // Close menu when clicking outside
     document.addEventListener('click', (e) => {
         if (!e.target.closest('nav')) {
@@ -579,7 +579,7 @@ function initializeMobileMenu() {
             }
         }
     });
-    
+
     // Handle escape key
     document.addEventListener('keydown', (e) => {
         if (e.key === 'Escape') {
@@ -695,28 +695,28 @@ import AxeBuilder from '@axe-core/playwright';
 
 test('mobile accessibility compliance', async ({ page }) => {
     await page.goto('/your-page');
-    
+
     // Set mobile viewport
     await page.setViewportSize({ width: 375, height: 667 });
-    
+
     const accessibilityScanResults = await new AxeBuilder({ page })
         .withTags(['wcag2a', 'wcag2aa', 'wcag21aa'])
         .analyze();
-    
+
     expect(accessibilityScanResults.violations).toEqual([]);
 });
 
 test('touch target sizes', async ({ page }) => {
     await page.goto('/your-page');
     await page.setViewportSize({ width: 375, height: 667 });
-    
+
     const interactiveElements = page.locator('button, a, input, select, textarea');
     const count = await interactiveElements.count();
-    
+
     for (let i = 0; i < count; i++) {
         const element = interactiveElements.nth(i);
         const box = await element.boundingBox();
-        
+
         expect(box.width).toBeGreaterThanOrEqual(44);
         expect(box.height).toBeGreaterThanOrEqual(44);
     }

@@ -226,4 +226,6 @@ If you have used the `filled` variant of following components on `color-2` or `c
 
 ## Questions ❓🙋‍♀️
 
+If you’re using our Figma library, make sure to update to the latest published version. You can review all design-related changes in the Figma library’s release notes.
+
 Check out the [Breaking Changes guide](https://github.com/siemens/ix/blob/release-4.0.0/BREAKING_CHANGES/v4.md) and if you have further questions or migration problems [contact us](./../support/contact-us).
