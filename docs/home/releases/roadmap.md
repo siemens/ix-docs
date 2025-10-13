@@ -25,7 +25,7 @@ description: 'We’re constantly improving our design system for you by extendin
 - **App header**: Enhancing the app header to become more customizable with an additional slot option for custom content.
 - **Angular 20**: Ensuring full compatibility with Angular 20 to stay up-to-date with the latest framework improvements.
 
-**🔹 Major release 4.0**: Planned for Q3, see info on [beta versions](https://ix.siemens.io/docs/installation/CHANGELOG) and [release strategy](https://ix.siemens.io/docs/release-info)
+**🔹 Major release 4.0**: Planned for Q3, see info on [beta versions](changelog.md) and [release strategy](release-version.md).
 
 ### 🗓️ Scheduled / With tentative timeline
 - **AG Grid update**: Aligning with the latest AG Grid version to ensure seamless integration and improved performance.

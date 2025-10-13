@@ -36,7 +36,7 @@ Our design system is tailored for tablets and desktop computers, not smartphones
 
 <Accordion title="Can I build mobile applications with Siemens Industrial Experience?" id="mobile">
 With the help of our design system, you are able to swiftly build the user interface of your mobile web app or hybrid app.
-Read more on the topic in our development and UX guides on mobile development with the Industrial Experience Design System [here](/docs/mobile/mobile-app-dev).
+Read more on the topic in our development and UX guides on mobile development with the Industrial Experience Design System [here](/docs/guidelines/mobile/mobile-app-dev).
 </Accordion>
 
 <Accordion title="What languages does Industrial Experience support?" id="i18n" showBorderBottom>
@@ -51,8 +51,8 @@ Our design system uses English as default, but it can be used with any language.
 We want everyone to contribute to our design system and play a part in its development. There are three main ways to contribute to or report issues:
 - As a Siemens employee or business partner: Post in our [Viva Engage community](https://web.yammer.com/main/groups/eyJfdHlwZSI6Ikdyb3VwIiwiaWQiOiI1ODIzNzc5NjM1MiJ9)
 - As an open-source library user: Contribute within the [Siemens Xcelerator Community](https://community.siemens.com/c/ix/30) or open tickets in [Github](https://github.com/siemens/ix)
-- Directly contact our team regarding larger topics: experience.industry@siemens.com
-For more information, see our [Github Contributing Guide](https://github.com/siemens/ix/blob/main/CONTRIBUTING.md) which has guidance on bug reporting, workflow issues and suggesting enhancements.
+- Directly contact our team regarding larger topics: [team.ix.industry@siemens.com](mailto:team.ix.industry@siemens.com)
+For more information, see our [GitHub Contributing Guide](https://github.com/siemens/ix/blob/main/CONTRIBUTING.md) which has guidance on bug reporting, workflow issues and suggesting enhancements.
 </Accordion>
 
 <Accordion title="Can I request new components?" id="feature-requests" showBorderBottom>
@@ -64,7 +64,7 @@ Absolutely! Please add requests for the future in [Github](https://github.com/si
 </div>
 
 <Accordion title="How do I use custom icons?" id="custom-icons">
-The steps to incorporate your own custom SVG icon are found under the developing tab, in [Industrial Experience documentation](https://ix.siemens.io/docs/icon-library/icons#integrate-external-icons). There is also a guide for designing new icons based on the Industrial Experience (brand) style.
+The steps to incorporate your own custom SVG icon are found under the developing tab, in [Industrial Experience documentation](/docs/icons/developing-with-icons#integrate-external-icons). There is also a guide for designing new icons based on the Industrial Experience (brand) style.
 </Accordion>
 
 <Accordion title="Why can’t I customize my components?" id="component-customization">
@@ -83,8 +83,8 @@ Our codebase is openly and freely accessible for anyone to view, modify and dist
 ## Files, documentation and accessibility
 </div>
 
-<Accordion title="Where are the component figma files and how can I access them?" id="figma-files">
-[Here](https://siemens-ix.code.siemens.io/ix-brand-theme/) you will find information on how to get Figma, how to access the most important Industrial Experience libraries in Figma, and other [libraries](https://ix.siemens.io/docs/design-kit/). Remember The Siemens brand library contains Siemens specific brand elements and is only accessible to Siemens employees and business partners. For the classic theme we don’t have updated figma files, but you can use the code components.
+<Accordion title="Where are the component Figma files and how can I access them?" id="figma-files">
+[Here](/docs/home/getting-started/designers#figma-library) you will find information on how to get Figma, how to access the most important Industrial Experience libraries in Figma. Remember the Siemens brand library contains Siemens specific brand elements and is only accessible to Siemens employees and business partners. For the classic theme we haven’t updated Figma files, but you can use the code components.
 </Accordion>
 
 <Accordion title="Do we meet the WCAG and accessibility levels?" id="a11y-maturity-levels">
@@ -92,7 +92,7 @@ We are working towards meeting the WCAG (Web Content Accessibility Guidelines) a
 </Accordion>
 
 <Accordion title="How does the release schedule work?" id="release-info">
-The Siemens Industrial Experience design team provides a transparent versioning and release process. For more details on our versioning, release types, frequency, and support policies, visit our [Roadmap](https://ix.siemens.io/docs/roadmap) and [Versioning and release](https://ix.siemens.io/docs/release-info).
+The Siemens Industrial Experience design team provides a transparent versioning and release process. For more details on our versioning, release types, frequency, and support policies, visit our [Roadmap](/docs/releases/roadmap.md) and [Versioning and release](/docs/releases/release-version.md).
 </Accordion>
 
 <Accordion title="Can I use the design system to build my documentation?" id="docu-theme" showBorderBottom>
