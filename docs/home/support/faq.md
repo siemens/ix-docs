@@ -72,7 +72,6 @@ Users are free to utilize open-source libraries at their discretion. However, cu
 </Accordion>
 
 <Accordion title="What kind of framework support is there?" id="framework-support">
-Our design system is built with plain Web Components and is, therefore, framework agnostic. For better integration, we provide support for some of the most popular web development frameworks in Angular, React and Vue. You can find more information about our frameworks [here](https://ix.siemens.io/docs/installation/).
 </Accordion>
 
 <Accordion title="What does open source mean within our design system?" id="open-source" showBorderBottom>
