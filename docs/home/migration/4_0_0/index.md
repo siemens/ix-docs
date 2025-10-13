@@ -209,7 +209,37 @@ Note: Manual replacement effort needed, there is no automated replacement possib
 
 #### Implementation
 
-TBD
+Prerequisites:
+
+- Upgrade AG Grid to version 32 or higher.
+
+Migration steps:
+
+1. Remove CSS imports of ix-aggrid.css
+```scss
+// ❌ Remove all occurrences of this line
+@import '@siemens/ix-aggrid/dist/ix-aggrid/ix-aggrid.css';
+```
+
+2. The `ag-theme-alpine-dark` and `ag-theme-ix` classes don’t have to be applied anymore
+```html
+<!-- ❌ Remove these classes -->
+<div class="ag-theme-alpine-dark ag-theme-ix"></div>
+```
+
+3. Configure the theme using the new theming API
+```javascript
+import { useIxTheme } from '@siemens/ix-aggrid';
+import { provideGlobalGridOptions } from 'ag-grid-community';
+
+const ixTheme = await useIxTheme(async () => {
+  return await import('ag-grid-community');
+});
+
+provideGlobalGridOptions({
+  theme: ixTheme,
+});
+```
 
 ## Global style updates
 
