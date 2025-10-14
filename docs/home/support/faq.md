@@ -84,7 +84,7 @@ Our codebase is openly and freely accessible for anyone to view, modify and dist
 </div>
 
 <Accordion title="Where are the component Figma files and how can I access them?" id="figma-files">
-[Here](/docs/home/getting-started/designers#figma-library) you will find information on how to get Figma, how to access the most important Industrial Experience libraries in Figma. Remember the Siemens brand library contains Siemens specific brand elements and is only accessible to Siemens employees and business partners. For the classic theme we haven’t updated Figma files, but you can use the code components.
+[Here](/docs/home/getting-started/designers#figma-library) you will find information on how to get Figma and how to access the most important Industrial Experience libraries. Remember, the Siemens brand library contains Siemens-specific brand elements and is only accessible to Siemens employees and business partners. For the classic theme, we don’t have updated Figma files, but you can use the code components.
 </Accordion>
 
 <Accordion title="Do we meet the WCAG and accessibility levels?" id="a11y-maturity-levels">
