@@ -232,9 +232,7 @@ Migration steps:
 import { useIxTheme } from '@siemens/ix-aggrid';
 import { provideGlobalGridOptions } from 'ag-grid-community';
 
-const ixTheme = await useIxTheme(async () => {
-  return await import('ag-grid-community');
-});
+const ixTheme = await useIxTheme(() => import('ag-grid-community'));
 
 provideGlobalGridOptions({
   theme: ixTheme,
