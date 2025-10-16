@@ -211,7 +211,7 @@ Note: Manual replacement effort needed, there is no automated replacement possib
 
 Prerequisites:
 
-- Upgrade AG Grid to version 32 or higher.
+- Upgrade AG Grid to version 33 or higher.
 
 Migration steps:
 
