@@ -20,7 +20,7 @@ export const PlaygroundContext = createContext<{
   onThemeChange?: (theme: string) => void;
 }>({
   variant: 'dark',
-  theme: 'classic', // Changed from 'brand' to 'classic' as default
+  theme: 'brand',
 });
 
 function useContextValue() {
