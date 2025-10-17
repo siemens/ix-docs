@@ -1,16 +1,16 @@
 ---
 sidebar_position: 0
-sidebar_title: Upgrade to v3
-title: Upgrade to v3
+sidebar_title: Upgrade to V3
+title: Upgrade to V3
 doc-type: 'banner'
-description: 'Welcome to the migration guide for upgrading from Siemens Industrial Experience design system v2 to v3. This guide introduces all major changes.'
+description: 'Welcome to the migration guide for upgrading from Siemens Industrial Experience design system V2 to V3. This guide introduces all major changes.'
 ---
 
 import React from "react";
 import { IxIcon } from "@siemens/ix-react";
 import { iconBook } from "@siemens/ix-icons/icons";
 
-# Upgrade to v3.0.0
+# Upgrade to V3.0.0
 
 ## Removed light and foundation Figma libraries
 
@@ -30,7 +30,7 @@ Follow the instructions below to update your Figma files to the new iX Component
 5. Choose **iX Components**.
 6. Confirm and repeat for the other libraries.
 
-Figma libraries for v2.0.0 are in the **Archive** project (find the link in the main library).
+Figma libraries for V2.0.0 are in the **Archive** project (find the link in the main library).
 
 :::info
 We have also prepared a video showing the process in our internal Siemens learning world [here](https://mylearningworld.siemens.com/web/en/app/toc/lex_auth_014279158647750656628/overview).

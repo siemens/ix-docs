@@ -5,7 +5,7 @@ title: FAQ
 doc-type: 'banner'
 component-tabs: ['']
 no_single_tab: true
-description: 'Welcome to the Industrial Experience design system FAQ. These are your go-to resource for quick and clear answers about Industrial Experience. Whether you’re just starting with the design system or need insights into integration and functionality, you’ll find answers to the most common questions here. If you can’t find what you’re looking for, feel free to reach out. The FAQ are continuously updated, and we welcome suggestions for improvement via email to our support team. Thank you for choosing to use Siemens Industrial Experience.'
+description: 'Welcome to the Industrial Experience design system FAQ. These is your go-to resource for quick and clear answers about Industrial Experience. Whether you’re just starting with the design system or need insights into integration and functionality, you’ll find answers to the most common questions here. If you can’t find what you’re looking for, feel free to reach out. The FAQ are continuously updated, and we welcome suggestions for improvement via email to our support team. Thank you for choosing to use Siemens Industrial Experience.'
 ---
 
 import Accordion from '@site/src/components/Accordion';
@@ -18,7 +18,7 @@ import './faq.css';
 </div>
 
 <Accordion title="What’s the difference between the classic theme and the Siemens brand theme?" id="brand-vs-os">
-The classic theme is the default that can be utilized by any application, including non-Siemens applications. In contrast, the Siemens brand theme is exclusively available to Siemens employees and business partners, incorporating specific Siemens brand elements. Both themes are offered in dark and light modes. Additionally, you have the flexibility to create custom themes that align with third-party style guides.
+The classic theme is the default that can be used by any application, including non-Siemens applications. In contrast, the Siemens brand theme is exclusively available to Siemens employees and business partners, incorporating specific Siemens brand elements. Both themes are offered in dark and light modes. Additionally, you have the flexibility to create custom themes that align with third-party style guides.
 </Accordion>
 
 <Accordion title="Which browsers are supported?" id="vendor-support">
@@ -26,7 +26,7 @@ Although our design system can be used with any modern browser, we recommend Chr
 </Accordion>
 
 <Accordion title="Which device types are supported?" id="device-type-support">
-Our design system is tailored for tablets and desktop computers, not smartphones. However many components, including the main navigation, are mobile-ready. We support breakpoints for the following screen sizes to ensure flexibility across various devices, even though our primary focus is on larger screens:
+Our design system is tailored for tablets and desktop computers, not smartphones. However, many components, including the main navigation, are mobile-ready. We support breakpoints for the following screen sizes to ensure flexibility across various devices, even though our primary focus is on larger screens:
 
 - Small screens: &lt;768 pixels
 - Medium screens: 768-1280 pixels
@@ -40,7 +40,7 @@ Read more on the topic in our development and UX guides on mobile development wi
 </Accordion>
 
 <Accordion title="What languages does Industrial Experience support?" id="i18n" showBorderBottom>
-Our design system uses English as default, but it can be used with any language. All texts are fully customizable and therefore integrate nicely with third-party i18n solutions which means your software can easily be adapted for users of different cultures and languages.
+Our design system uses English as default, but it can be used with any language. All texts are fully customizable and therefore integrate nicely with third-party i18n solutions, which means your software can easily be adapted for users of different cultures and languages.
 </Accordion>
 
 <div className="h2-faq">
@@ -68,7 +68,7 @@ The steps to incorporate your own custom SVG icon are found under the developing
 </Accordion>
 
 <Accordion title="Why can’t I customize my components?" id="component-customization">
-Users are free to utilize open-source libraries at their discretion. However, customizing components may prevent future updates of our libraries from being applied to your software. Industrial Experience is built on the Web Component standard, encapsulating components within a local Shadow DOM. This prevents external styling from affecting the components, ensuring that future updates remain compatible and do not break your software due to custom styling.
+Users are free to utilize open-source libraries at their discretion. However, customizing components may prevent future updates of our libraries from being applied to your software. Industrial Experience is built on the Web Component standard, encapsulating components in a local Shadow DOM. This prevents external styling from affecting the components, ensuring that future updates remain compatible and do not break your software due to custom styling.
 </Accordion>
 
 <Accordion title="What kind of framework support is there?" id="framework-support">
@@ -88,7 +88,7 @@ Our codebase is openly and freely accessible for anyone to view, modify and dist
 </Accordion>
 
 <Accordion title="Do we meet the WCAG and accessibility levels?" id="a11y-maturity-levels">
-We are working towards meeting the WCAG (Web Content Accessibility Guidelines) and other relevant accessibility standards. Our team is dedicated to ensuring that our design system is accessible to all users. While we’re still in the process of fully aligning with these guidelines, we have made significant progress and are continuously improving our accessibility features. We appreciate your patience and understanding as we strive to achieve full compliance. For specific accessibility concerns or updates on our progress, please feel free to reach out to our team.
+We are working towards meeting the WCAG (Web Content Accessibility Guidelines) and other relevant accessibility standards. Our team is dedicated to ensuring that our design system is accessible to all users. While we’re still in the process of fully aligning with these guidelines, we have made significant progress and continue to improve our accessibility features. We appreciate your patience and understanding as we strive to achieve full compliance. For specific accessibility concerns or updates on our progress, please feel free to reach out to our team.
 </Accordion>
 
 <Accordion title="How does the release schedule work?" id="release-info">
