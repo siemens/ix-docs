@@ -11,25 +11,24 @@ export default function SiteMetadataWrapper(props: Props): JSX.Element {
     !context.siteConfig.customFields.withBrandTheme;
 
   useEffect(() => {
-    // Set initial theme based on whether brand theme is available
     const initialVariant = document.documentElement.getAttribute('data-theme') || 'dark';
     
-    if (isDevelopedWithoutBrandTheme) {
-      document.documentElement.setAttribute('data-ix-theme', 'classic');
-      document.documentElement.setAttribute('data-ix-color-schema', initialVariant);
-    } else {
-      document.documentElement.setAttribute('data-ix-theme', 'brand');
-      document.documentElement.setAttribute('data-ix-color-schema', initialVariant);
-    }
+    const theme = isDevelopedWithoutBrandTheme ? 'classic' : 'brand';
+    document.documentElement.setAttribute('data-ix-theme', theme);
+    document.documentElement.setAttribute('data-ix-color-schema', initialVariant);
 
     const observer = new MutationObserver(() => {
       const variant = document.documentElement.getAttribute('data-theme');
+      const theme = isDevelopedWithoutBrandTheme ? 'classic' : 'brand';
 
       if (isDevelopedWithoutBrandTheme) {
         console.log('development theme');
-        document.documentElement.setAttribute('data-ix-theme', 'classic');
-        document.documentElement.setAttribute('data-ix-color-schema', variant);
-        
+      }
+
+      document.documentElement.setAttribute('data-ix-theme', theme);
+      document.documentElement.setAttribute('data-ix-color-schema', variant);
+      
+      if (isDevelopedWithoutBrandTheme) {
         document
           .getElementById('__docusaurus')
           .classList.remove('theme-classic-dark');
@@ -39,12 +38,7 @@ export default function SiteMetadataWrapper(props: Props): JSX.Element {
         document
           .getElementById('__docusaurus')
           .classList.add(`theme-classic-${variant}`);
-
-        return;
       }
-
-      document.documentElement.setAttribute('data-ix-theme', 'brand');
-      document.documentElement.setAttribute('data-ix-color-schema', variant);
     });
     observer.observe(document.documentElement, {
       attributes: true,
