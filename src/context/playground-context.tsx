@@ -24,8 +24,8 @@ export const PlaygroundContext = createContext<{
 });
 
 function useContextValue() {
-  const context = useDocusaurusContext();
-  const defaultTheme = context.siteConfig.customFields.withBrandTheme ? 'brand' : 'classic';
+  const docusaurusContext = useDocusaurusContext();
+  const defaultTheme = docusaurusContext.siteConfig.customFields.withBrandTheme ? 'brand' : 'classic';
 
   const cbOnVariantChange = useCallback((variant: string) => {
     setContext((prev) => ({
@@ -43,7 +43,7 @@ function useContextValue() {
     themeStorage.set(theme);
   }, []);
 
-  const [contextState, setContext] = useState({
+  const [context, setContext] = useState({
     variant: 'dark',
     theme: defaultTheme,
     onVariantChange: cbOnVariantChange,
@@ -71,7 +71,7 @@ function useContextValue() {
     });
   }, [defaultTheme]);
 
-  return contextState;
+  return context;
 }
 
 export const PlaygroundProvider = ({ children }) => {
