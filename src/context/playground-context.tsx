@@ -7,6 +7,7 @@
  * LICENSE file in the root directory of this source tree.
  */
 import { createStorageSlot } from '@docusaurus/theme-common/internal';
+import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 import { createContext, useCallback, useEffect, useState } from 'react';
 
 const variantStorage = createStorageSlot('docusaurus.playground.theme.variant');
@@ -19,10 +20,13 @@ export const PlaygroundContext = createContext<{
   onThemeChange?: (theme: string) => void;
 }>({
   variant: 'dark',
-  theme: 'brand',
+  theme: 'classic', // Changed from 'brand' to 'classic' as default
 });
 
 function useContextValue() {
+  const context = useDocusaurusContext();
+  const defaultTheme = context.siteConfig.customFields.withBrandTheme ? 'brand' : 'classic';
+
   const cbOnVariantChange = useCallback((variant: string) => {
     setContext((prev) => ({
       ...prev,
@@ -39,9 +43,9 @@ function useContextValue() {
     themeStorage.set(theme);
   }, []);
 
-  const [context, setContext] = useState({
+  const [contextState, setContext] = useState({
     variant: 'dark',
-    theme: 'brand',
+    theme: defaultTheme,
     onVariantChange: cbOnVariantChange,
     onThemeChange: cbOnThemeChange,
   });
@@ -50,7 +54,7 @@ function useContextValue() {
     setContext((prev) => ({
       ...prev,
       variant: variantStorage.get() || 'dark',
-      theme: themeStorage.get() || 'brand',
+      theme: themeStorage.get() || defaultTheme,
     }));
 
     variantStorage.listen(() => {
@@ -62,12 +66,12 @@ function useContextValue() {
     themeStorage.listen(() => {
       setContext((prev) => ({
         ...prev,
-        theme: themeStorage.get() || 'brand',
+        theme: themeStorage.get() || defaultTheme,
       }));
     });
-  }, []);
+  }, [defaultTheme]);
 
-  return context;
+  return contextState;
 }
 
 export const PlaygroundProvider = ({ children }) => {
