@@ -42,9 +42,9 @@ The `size` can be configured over the configuration object of the `showModal` fu
 How to open a modal depends on the framework in use. Note that you will not instantiate `ix-modal` on your own.
 Select the appropriate section below for the respective usage information.
 
-## Angular
+### Angular
 
-### By template
+#### By template
 
 <Playground
   name="modal-by-template"
@@ -63,7 +63,7 @@ Select the appropriate section below for the respective usage information.
   onlyFramework="angular"
 ></Playground>
 
-### By instance
+#### By instance
 
 <Playground
   name="modal-by-instance"
@@ -93,7 +93,7 @@ If you want to pass arbitrary data to the modal use the `data`-property. In orde
 open(config: ModalConfig<TData: any, TReason: any>): Promise<ModalInstance<TData>>
 ```
 
-## React
+### React
 
 `@siemens/ix-react` provides an function that allows to open modal dialogs based on a `JSXElement`.
 
@@ -131,7 +131,7 @@ ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
 );
 ```
 
-## Vue
+### Vue
 
 `@siemens/ix-vue` provides a function that allows to open modal dialogs based on a `VNode`.
 
@@ -178,7 +178,7 @@ import { IxApplicationContext } from '@siemens/ix-vue';
 </template>
 ```
 
-## Javascript
+### Javascript
 
 <Playground
   name="modal"

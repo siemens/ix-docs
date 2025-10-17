@@ -17,7 +17,7 @@ Our [FAQ section](./faq) is your go-to resource for quick and clear answers abou
 Our [GitHub repository](https://github.com/siemens/ix/issues) is the central hub for managing feature requests and bug tickets. Here, you can track the progress of ongoing issues, contribute to discussions, and stay updated with the latest changes and improvements to our design system.
 
 ## Viva Engage
-Siemens employees are invited to join our [Viva Engage community](https://web.yammer.com/main/groups/eyJfdHlwZSI6Ikdyb3VwIiwiaWQiOiI1ODIzNzc5NjM1MiJ9), a space for discussions about all aspects of the design system. It's a great place to share ideas, ask questions, and collaborate with colleagues on design-related topics.
+Siemens employees are invited to join our [Viva Engage community](https://engage.cloud.microsoft/main/org/siemens.com/groups/eyJfdHlwZSI6Ikdyb3VwIiwiaWQiOiI1ODIzNzc5NjM1MiJ9), a space for discussions about all aspects of the design system. It’s a great place to share ideas, ask questions, and collaborate with colleagues on design-related topics.
 
 ## Team email
 For inquiries about collaborations or any other questions, please reach out to us at team.ix.industry@siemens.com. We’re always open to exploring new opportunities and partnerships to enhance our design system.

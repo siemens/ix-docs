@@ -5,7 +5,7 @@ title: Migration from Core UI 6.5.0
 doc-type: 'banner'
 component-tabs: ['']
 no_single_tab: true
-description: 'Core UI was the predecessor to the Siemens Industrial Experience design system. This section provides detailed instructions on how to migrate from Core UI 6.5.0 to Siemens Industrial Experience design system v1.'
+description: 'Core UI was the predecessor to the Siemens Industrial Experience design system. This section provides detailed instructions on how to migrate from Core UI 6.5.0 to Siemens Industrial Experience design system V1.'
 ---
 
 #

@@ -47,7 +47,7 @@ Note that **not** all sections need to be filled out, e.g. if there are no varia
 
 ### Grammar, voice and tone
 
-- Use "don’t", "isn’t" and "aren’t" instead of "do not", "is not" and "are not".
+- Use "don’t", "isn’t", "haven’t" and "aren’t" instead of "do not", "is not", "have not" and "are not".
 - Use "e.g." instead of "for example", "such as" or "like".
 - Use active voice instead of passive voice.
 - Talk about components in plurals, e.g. buttons, icons, breadcrumbs. An exception are components from the application frame since they only occur once in an application.
