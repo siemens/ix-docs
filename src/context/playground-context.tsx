@@ -25,7 +25,7 @@ export const PlaygroundContext = createContext<{
 
 function useContextValue() {
   const docusaurusContext = useDocusaurusContext();
-  const defaultTheme = docusaurusContext.siteConfig.customFields.withBrandTheme ? 'brand' : 'classic';
+  const defaultTheme = docusaurusContext.siteConfig.customFields.withBrandTheme === false ? 'classic' : 'brand';
 
   const cbOnVariantChange = useCallback((variant: string) => {
     setContext((prev) => ({
