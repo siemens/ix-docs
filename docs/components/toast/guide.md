@@ -43,7 +43,7 @@ Toasts are UI elements where an event causes a small text field to appear on scr
 
 - Do use toasts to provide contextual tips and shortcuts for users
 - Do use toasts to instantly inform a user about the outcome of an action
-- Do include shortcuts to undo an action immediately after it's taken
+- Do include shortcuts to undo an action immediately after it’s taken
 - Do stick with a consistent position for toasts within the same app and avoid interchanging their positions
 - Don’t use toasts for high-priority or critical alerts that prevent the user from continuing their work (use a [modal](../messagebar) instead)
 - Don’t edit or reuse icons or icon colors from the four predefined toast types when creating custom toasts

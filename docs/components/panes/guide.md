@@ -49,13 +49,13 @@ Panes help users focus on tasks as related controls are visually grouped and the
 
 Panes have two states: collapsed and expanded. The appearance of the states varies between variants and screen sizes.
 
-## Dos and Don'ts
+## Dos and Don’ts
 
 - Do use panes to organize your content and guide your users' attention
 - Do use panes to display different views within a single screen
 - Do use panes to expand/collapse content or hide/reveal content
-- Don't use panes for a small amount of content
-- Don't use panes for content that should stay visible
+- Don’t use panes for a small amount of content
+- Don’t use panes for content that should stay visible
 
 ## Related
 
