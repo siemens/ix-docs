@@ -59,8 +59,8 @@ Date input has five states: Default, hover, disabled, read-only and focused.
 - Do use separate inputs for start and end dates to simplify date ranges
 - Do provide clear instructions, such as “Enter the date in yyyy/mm/dd format”
 - Do consider localization to adapt date formats to local conventions
-- Don't use ambiguous formats like 09/08/2006 without giving clear context
-- Don't allow free text without validation or formatting guidance
+- Don’t use ambiguous formats like 09/08/2006 without giving clear context
+- Don’t allow free text without validation or formatting guidance
 
 ## Related
 

@@ -209,7 +209,35 @@ Note: Manual replacement effort needed, there is no automated replacement possib
 
 #### Implementation
 
-TBD
+Prerequisites:
+
+- Upgrade AG Grid to version 33 or higher.
+
+Migration steps:
+
+1. Remove CSS imports of ix-aggrid.css
+```scss
+// ❌ Remove all occurrences of this line
+@import '@siemens/ix-aggrid/dist/ix-aggrid/ix-aggrid.css';
+```
+
+2. The `ag-theme-alpine-dark` and `ag-theme-ix` classes don’t have to be applied anymore
+```html
+<!-- ❌ Remove these classes -->
+<div class="ag-theme-alpine-dark ag-theme-ix"></div>
+```
+
+3. Configure the theme using the new theming API
+```javascript
+import { useIxTheme } from '@siemens/ix-aggrid';
+import { provideGlobalGridOptions } from 'ag-grid-community';
+
+const ixTheme = await useIxTheme(() => import('ag-grid-community'));
+
+provideGlobalGridOptions({
+  theme: ixTheme,
+});
+```
 
 ## Global style updates
 
@@ -225,5 +253,7 @@ If you have used the `filled` variant of following components on `color-2` or `c
 - [Event list](/docs/components/event-list/)
 
 ## Questions ❓🙋‍♀️
+
+If you’re using our Figma library, make sure to update to the latest published version. You can review all design-related changes in the Figma library’s release notes.
 
 Check out the [Breaking Changes guide](https://github.com/siemens/ix/blob/release-4.0.0/BREAKING_CHANGES/v4.md) and if you have further questions or migration problems [contact us](./../support/contact-us).

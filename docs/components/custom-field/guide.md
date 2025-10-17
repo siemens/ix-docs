@@ -35,9 +35,9 @@ The states depend on the component that you use in the custom field. The custom
 
 - Do use the custom field when your desired solution is not covered by the already existing form field components
 - Do use the custom field in combination with the form component to create complex forms
-- Don't use the custom field for simple form fields, use the form field component instead
-- Don't use the custom field without a form component, it is a wrapper component that is meant to be used in combination with the form component
-- Don't use helper and feedback texts for single fields within a custom field, use the helper and feedback text of the whole custom field instead
+- Don’t use the custom field for simple form fields, use the form field component instead
+- Don’t use the custom field without a form component, it is a wrapper component that is meant to be used in combination with the form component
+- Don’t use helper and feedback texts for single fields within a custom field, use the helper and feedback text of the whole custom field instead
 
 ## Related
 
