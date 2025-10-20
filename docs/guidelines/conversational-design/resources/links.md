@@ -25,7 +25,7 @@ The following resources are available for Siemens employees and business partner
 
 ### Siemens Industrial Copilot videos
 
-[Siemens Industrial Copilot: Your generative AI-powered assistant across the value chain]( https://www.youtube.com/watch?v=Kpr6rDTqtE4)
+[Siemens Industrial Copilot: Your generative AI-powered assistant across the value chain](https://www.youtube.com/watch?v=Kpr6rDTqtE4)
 
 [Power of Generative AI: Automate the Automation with the Siemens Industrial Copilot](https://www.youtube.com/watch?v=Na5HjNLv9_Y)
 

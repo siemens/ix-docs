@@ -46,6 +46,6 @@ We recommend always following the active release. When a version moves from the 
 
 | Version |   Status    | Released     | Maintenance support since | End of life since |
 | ------- | :---------: | ------------ | ---------------- | ----------------- |
-| v4.0.0  |   Latest    | Nov 03, 2025 | -                | -                 |
-| v3.0.0  | Maintenance  | Mai 01, 2025 | Nov 03, 2025     | -                 |
-| v2.0.0  | End of Life | Sep 27, 2023 | Mai 01, 2025     | Nov 03, 2025      |
+| V4.0.0  |   Latest    | Nov 03, 2025 | -                | -                 |
+| V3.0.0  | Maintenance  | Mai 01, 2025 | Nov 03, 2025     | -                 |
+| V2.0.0  | End of Life | Sep 27, 2023 | Mai 01, 2025     | Nov 03, 2025      |

@@ -18,7 +18,7 @@ description: 'We’re constantly improving our design system for you by extendin
 ### 🚧 In progress / Currently being worked on
 
 - **Date-time selection**: Applying all enhancements from the date and time components to the combined date-time selection.
-- **Styles and design tokens**: Introducing a new design token structure with clearer and consistent mapping of colors. 
+- **Styles and design tokens**: Introducing a new design token structure with clearer and consistent mapping of colors.
 - **Accessibility for components**: Improving our components to meet the WCAG AA standards. [Read more](../../guidelines/accessibility/index.mdx)
 
 **🔹 Major release 5.0**: Planned for Q2 2026, see info on [release strategy](release-version.md).
