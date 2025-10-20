@@ -25,7 +25,7 @@ description: 'We’re constantly improving our design system for you by extendin
 
 ### 🗓️ Scheduled / With tentative timeline
 
-- **Form elements update**: New styles for disabled and readonly states, aligned with Siemens brand guidelines.
+- **Form elements update**: New styles for disabled and read-only states, aligned with Siemens brand guidelines.
 - **Contribution guidelines**: Clearer rules and processes to encourage consistent and community-driven contributions.
 - **Enhanced modal**: Improving our modal component to provide a more flexible and user-friendly experience. This includes better usage together with the ix-toast, more styling options and enhanced functionality.
 
