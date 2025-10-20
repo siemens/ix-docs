@@ -211,7 +211,7 @@ Note: Manual replacement effort needed, there is no automated replacement possib
 
 Prerequisites:
 
-- Upgrade AG Grid to version 32 or higher.
+- Upgrade AG Grid to version 33 or higher.
 
 Migration steps:
 
@@ -232,9 +232,7 @@ Migration steps:
 import { useIxTheme } from '@siemens/ix-aggrid';
 import { provideGlobalGridOptions } from 'ag-grid-community';
 
-const ixTheme = await useIxTheme(async () => {
-  return await import('ag-grid-community');
-});
+const ixTheme = await useIxTheme(() => import('ag-grid-community'));
 
 provideGlobalGridOptions({
   theme: ixTheme,

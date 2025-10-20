@@ -23,7 +23,7 @@ More information can be found on the [AG Grid licenses page](https://www.ag-grid
 - **Javascript**: Follow the official AG Grid [installation instruction](https://www.ag-grid.com/javascript-data-grid/getting-started/) for JavaScript.
 
 :::note
-AG Grid version 32 or higher is required.
+AG Grid version 33 or higher is required.
 :::
 
 ## Siemens Industrial Experience theme for AG Grid
@@ -40,9 +40,7 @@ Import and configure the IX theme:
 import { useIxTheme } from '@siemens/ix-aggrid';
 import { provideGlobalGridOptions } from 'ag-grid-community';
 
-const ixTheme = await useIxTheme(async () => {
-  return await import('ag-grid-community');
-});
+const ixTheme = await useIxTheme(() => import('ag-grid-community'));
 
 provideGlobalGridOptions({
   theme: ixTheme
