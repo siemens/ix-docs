@@ -17,7 +17,7 @@ All the variants, options and states of the [button](../button/index.mdx) compon
 ## Options
 
 - **Label:** Set a label for the dropdown button. We typically use short labels including verbs.
-- **Placement:** Define where the dropdown appears when the button is active. Choose between different directions (top, bottom, left, right) and two options for alignment with the button (start, end). When there isn't enough space for the chosen placement, it's automatically corrected.
+- **Placement:** Define where the dropdown appears when the button is active. Choose between different directions (top, bottom, left, right) and two options for alignment with the button (start, end). When there isn’t enough space for the chosen placement, it’s automatically corrected.
 
 ![Placement example](https://www.figma.com/design/wEptRgAezDU1z80Cn3eZ0o/iX-Documentation-illustrations?node-id=5887-7647&t=yk9Vv3HSXaEzBbQk-4)
 
@@ -34,7 +34,7 @@ Dropdown buttons have five states: Default, hover, active, disabled and focused.
 ## Dos and Don’ts
 
 - Do use dropdown buttons when selecting an option triggers an action
-- Don't use dropdown buttons when there is a frequent or most-important action (use a standard button or a split button instead)
+- Don’t use dropdown buttons when there is a frequent or most-important action (use a standard button or a split button instead)
 
 ## Related
 

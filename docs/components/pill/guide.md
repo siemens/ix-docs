@@ -35,20 +35,20 @@ Pill variants:
 
 ## Behavior
 
-- **Placement**: We usually position pills inline with other elements to convey their status or category. We do not place pills within input and filter components as these already contain similar components. However, it's possible to add components similar to pills to tabs and navigation menu items. These counter or notification components are provided as component options.
+- **Placement**: We usually position pills inline with other elements to convey their status or category. We do not place pills within input and filter components as these already contain similar components. However, it’s possible to add components similar to pills to tabs and navigation menu items. These counter or notification components are provided as component options.
 - **Text truncation**: When you set a width for pills, long labels are truncated to fit the available space.
 
 ## States
 
 Pills are read-only.
 
-## Dos and Don'ts
+## Dos and Don’ts
 
 - Do use pills to communicate tags and categories
 - Do use pills to indicate the status or characteristics of an item
-- Don't overuse pills as this leads to cluttered and overwhelming interfaces
-- Don't use different styles for pills with the same or similar use
-- Don't use pills if users can interact with the component (e.g. click, close) use chips instead
+- Don’t overuse pills as this leads to cluttered and overwhelming interfaces
+- Don’t use different styles for pills with the same or similar use
+- Don’t use pills if users can interact with the component (e.g. click, close) use chips instead
 
 ## Related
 

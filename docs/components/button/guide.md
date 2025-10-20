@@ -5,7 +5,7 @@ doc-type: 'tab-item'
 
 Buttons initiate actions, apply actions to selected objects and activate/deactivate functions. We typically use buttons to trigger an immediate action, and you can place them within dialogs, forms, modal windows and other containers.
 
-![Overview](https://www.figma.com/design/wEptRgAezDU1z80Cn3eZ0o/iX-Documentation-illustrations?node-id=5771-4670&t=rJDt18BP7skzAPnM-4) 
+![Overview](https://www.figma.com/design/wEptRgAezDU1z80Cn3eZ0o/iX-Documentation-illustrations?node-id=5771-4670&t=rJDt18BP7skzAPnM-4)
 
 1. Label
 2. Icon
@@ -33,7 +33,7 @@ Buttons initiate actions, apply actions to selected objects and activate/deactiv
 ## Behavior in context
 
 - **Interaction:** Buttons can be triggered by pressing anywhere within the button container. When buttons are focused, they can be triggered by pressing `Space`.
-- **Text truncation:** Button labels are not truncated. All text on buttons is one line only. 
+- **Text truncation:** Button labels are not truncated. All text on buttons is one line only.
 - **Alignment:** Buttons can be left or right-aligned or fully span a container’s width.
 - **Button width:** Buttons dynamically adjust their width based on content, but have a default minimum width of `5rem` to ensure harmonious alignment for common pairs like "OK" and "Cancel". The minimum width can be customized for different needs.
 - **Cluster buttons:** Cluster buttons in groups with related functions. A cluster might include various types of buttons, e.g. primary, secondary and tertiary. We recommend a gap of `0.5rem` between buttons.
@@ -51,7 +51,7 @@ Buttons have six states: Default, hover, active, disabled, loading and focused. 
 - Do use short button labels to allow users to quickly scan, understand and remember them (see our [writing style guide](../../guidelines/language/dialogs-and-buttons.md))
 - Do use ellipsis (…) to indicate that an action requires further input or choice from the user, e.g. "Save as…" which opens a list of file types to choose from
 - Do use the primary variant for buttons to indicate one primary action in a visual unit, all other secondary actions should use the secondary variant
-- Don't place icons both left and right of the label on the same button
+- Don’t place icons both left and right of the label on the same button
 - Don’t use the danger button excessively or repetitively in lists or tables
 - Don’t rely on standard buttons when many actions are necessary (use [dropdown buttons](../dropdown-button/index.mdx) or [split buttons](../split-button/index.mdx) instead, or move some functionality to a [pane](../panes/index.mdx) or a [dialog](../modal/index.mdx))
 
