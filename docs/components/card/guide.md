@@ -5,34 +5,27 @@ doc-type: 'tab-item'
 
 Cards make it easy for users to quickly scan small chunks of information. We typically use cards to create dashboards or modular, flexible designs that adapt seamlessly to various screen sizes. Additionally, cards can be used to draw attention to important content and serve as an entry point to deeper levels of navigation or detailed views.
 
-Cards are interactive elements. The entire container is clickable and triggers a single action.
-
-![Card overview](https://www.figma.com/design/wEptRgAezDU1z80Cn3eZ0o/iX-Documentation-illustrations?node-id=7006-24531&t=fUz6fPoLgAqrvmTT-11)
-
-1. Card
-	1. Card container
-	2. Card content
-2. Action card
-	1. Icon
-	2. Heading
-	3. Subheading
-3. Push card
-	1. Notification
-	2. Icon
-	3. Heading
-	4. Subheading
-	5. Expandable section
-
-## Card types
-
-We currently offer three types of cards:
-1. Cards: Use to display various types of content e.g. images, charts or key data.
+We offer three types of cards:
+1. Cards: Use flexibly to display various types of content e.g. images, charts or key data.
 2. Action cards: Use to trigger key actions, similar to [buttons](../button).
 3. Push cards: Use to display notifications and additional content related to the notification value.
 
-![Card types](https://www.figma.com/design/wEptRgAezDU1z80Cn3eZ0o/iX-Pattern-Illustrations?type=design&node-id=858-4953&mode=design&t=RDimbEsIHFIXIByo-1)
+![Card overview](https://www.figma.com/design/tfahbu7mmoTEDYYFYE2XmB/Update-card?node-id=7006-24531&t=ezJ14BAYO4fXC1jm-4)
 
-![Card examples](https://www.figma.com/design/wEptRgAezDU1z80Cn3eZ0o/iX-Pattern-Illustrations?type=design&node-id=1329-26613&mode=design&t=sOZRNgWt7R52iLSF-1)
+- **Card**
+	1. Card container
+	2. Card content
+- **Action card**
+	1. Icon
+	2. Heading
+	3. Subheading
+- **Push card**
+	1. Icon
+	2. Notification
+	3. Heading
+	4. Subheading
+	5. Expand area
+	6. Expandable content
 
 ## Variants
 
@@ -72,9 +65,11 @@ Each variant emphasizes different aspects to guide the user's attention. These v
 	- Action cards have a fixed size of `8rem` width and `8rem` height.
 	- Push cards have a fixed height of `11rem` and a default width of `16rem`. The width can be adjusted as needed.
 - **Placement:** We typically group cards and position them in the top-left corner of the page or content area. Within the group, cards can be organized into lists or grids using [card lists](../card-list).
+
+![Card examples](https://www.figma.com/design/wEptRgAezDU1z80Cn3eZ0o/iX-Pattern-Illustrations?type=design&node-id=1329-26613&mode=design&t=sOZRNgWt7R52iLSF-1)
 ## States
 
-Cards have three states: Default, hover and active.
+Cards have three states: Default, hover, active and focused.
 
 ![Card states](https://www.figma.com/design/wEptRgAezDU1z80Cn3eZ0o/iX-Pattern-Illustrations?type=design&node-id=858-4979&mode=design&t=RDimbEsIHFIXIByo-1)
 
