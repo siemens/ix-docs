@@ -3,7 +3,7 @@ sidebar_position: 0
 sidebar_title: Upgrade to V2
 title: Upgrade to V2
 doc-type: 'banner'
-description: 'Welcome to the migration guide for upgrading from Siemens Industrial Experience design system V1 to V2. This guide introduces all major changes. This includes, inter alia, the switch from offering an icon font to a SVG based implementation, changes and extensions to the ix-menu and the migration of our components to Shadow DOM.'
+description: 'Welcome to the migration guide for upgrading from Siemens Industrial Experience design system V1 to V2. This guide introduces all major changes. This includes, among other things, the switch from offering an icon font to a SVG based implementation, changes and extensions to the ix-menu and the migration of our components to Shadow DOM.'
 ---
 
 # Upgrade to V2.0.0
