@@ -10,7 +10,7 @@ description: 'We’re constantly improving our design system for you by extendin
 
 # Roadmap
 
-![Roadmap](https://www.figma.com/design/wEptRgAezDU1z80Cn3eZ0o/iX-Documentation-illustrations?node-id=6344-311&t=xhNABAyFoqjz7A1d-4)
+![Roadmap](https://www.figma.com/design/wEptRgAezDU1z80Cn3eZ0o/iX-Documentation-illustrations?node-id=6992-210&t=UmcDJUatVbcLymkF-4)
 
 ### ✅ Completed
 **🔹 Release 3.0**: Improving Angular support, global CSS changes, Bootstrap removal, input validation enhancements, date picker enhancements, documentation redesign with versioning. [Read more](/blog/v3-alpha)

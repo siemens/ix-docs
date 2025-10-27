@@ -11,7 +11,7 @@ doc-type: 'tab-item'
 4. Required indicator
 5. Counter (input and textarea field only)
 
-**Note:** In this chapter, we describe the default field component. For details about [custom fields](../forms-layout) chapter.
+**Note:** In this chapter, we describe the default field component. For details about custom fields, see the [custom fields](../custom-field/) chapter.
 
 ## Options
 
