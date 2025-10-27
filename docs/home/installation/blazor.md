@@ -27,7 +27,7 @@ All credits go to the maintainers of [siemens-ix-blazor](https://github.com/yagi
 
 ## Installation
 
-Install the `SiemensIXBlazor` package from the [NuGet](https://www.nuget.org/packages/SiemensIXBlazor/) package manager.
+Install the `SiemensIXBlazor` package from the [NuGet](https://www.nuget.org/packages/Siemens.IX.Blazor/) package manager.
 
 ## .NET CLI
 
