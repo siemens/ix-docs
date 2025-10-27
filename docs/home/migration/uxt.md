@@ -40,7 +40,7 @@ In the end, your setup should look like this:
 </body>
 ```
 
-**Note**: We recommend using the CSS theme with UXT v2.7.0
+**Note**: We recommend using the CSS theme with UXT V2.7.0
 
 Your layout might change in some places when applying the theme, including:
 
