@@ -21,7 +21,7 @@ We offer three types of cards:
 2. Heading
 3. Subheading
 
- **Push card**
+**Push card**
 1. Icon
 2. Notification
 3. Heading
@@ -72,7 +72,7 @@ Each variant emphasizes different aspects to guide the user's attention. These v
 ![Card examples](https://www.figma.com/design/wEptRgAezDU1z80Cn3eZ0o/iX-Pattern-Illustrations?type=design&node-id=1329-26613&mode=design&t=sOZRNgWt7R52iLSF-1)
 ## States
 
-Cards have three states: Default, hover, active and focused.
+Cards have four states: Default, hover, active and focused.
 
 ![Card states](https://www.figma.com/design/wEptRgAezDU1z80Cn3eZ0o/iX-Pattern-Illustrations?type=design&node-id=858-4979&mode=design&t=RDimbEsIHFIXIByo-1)
 
