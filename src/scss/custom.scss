@@ -96,10 +96,12 @@ p {
 
 [data-ix-theme='classic'][data-ix-color-schema='dark'] {
   --ix-docs-hero-background: var(--theme-color-1);
+  --ix-docs-hero-tab-active: transparent;
 }
 
 [data-ix-theme='classic'][data-ix-color-schema='light'] {
   --ix-docs-hero-background: #fff;
+  --ix-docs-hero-tab-active: transparent;
 }
 
 [data-ix-theme='brand'][data-ix-color-schema='dark'] {
