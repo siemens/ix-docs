@@ -301,7 +301,7 @@ const Icons: React.FC = () => {
               ></IxIcon>
               {iconFilter && (
                 <IxIconButton
-                  ghost
+                  variant="tertiary"
                   oval
                   iconColor="color-soft-text"
                   icon={iconClear}

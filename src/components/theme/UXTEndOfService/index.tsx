@@ -39,12 +39,12 @@ export default function UXTEndOfService() {
         </span>
       </div>
       <div className={styles.Content}>
-        <IxButton outline onClick={redirectToBlog}>
+        <IxButton variant="secondary" onClick={redirectToBlog}>
           Read more
         </IxButton>
         <IxIconButton
           icon={iconClose}
-          ghost
+          variant="tertiary"
           onClick={closeAnnouncement}
         ></IxIconButton>
       </div>
