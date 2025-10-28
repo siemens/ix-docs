@@ -60,7 +60,6 @@ $RECYCLE.BIN/
 
 UserInterfaceState.xcuserstate
 .env
-.npmrc
 coverage
 test-results/
 playwright-report/
