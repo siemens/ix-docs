@@ -6,7 +6,13 @@ formReady: true
 
 A toggle is a user interface element that enables users to switch between two states, such as on/off or enable/disable. It consists of a switch that can be slid or clicked to change its state. They offer a visually clear representation of the current state and allow users to easily toggle between different settings. We typically use toggles in settings, preferences, and other areas where users need to switch between two states quickly and easily.
 
-![Anatomy toggle](https://www.figma.com/design/wEptRgAezDU1z80Cn3eZ0o/iX-Pattern-Illustrations?node-id=3749-1943&t=VCAAFzKIYCDb7nIX-4)
+![Anatomy toggle](https://www.figma.com/design/wEptRgAezDU1z80Cn3eZ0o/iX-Documentation-illustrations?node-id=7147-451930&t=DrLi4Tgyh22TBGiT-4)
+
+1. Label
+2. Required indicator
+3. Toggle
+4. Toggle label
+5. Helper or feedback text
 
 ## Options
 
