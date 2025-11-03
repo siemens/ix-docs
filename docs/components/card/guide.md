@@ -6,7 +6,7 @@ doc-type: 'tab-item'
 Cards make it easy for users to quickly scan small chunks of information. We typically use cards to create dashboards or modular, flexible designs that adapt seamlessly to various screen sizes. Additionally, cards can be used to draw attention to important content and serve as an entry point to deeper levels of navigation or detailed views.
 
 We offer three types of cards:
-1. **Cards:** Use flexibly to display various types of content e.g. images, charts or key data.
+1. **Cards:** Use flexibly to display various types of content, e.g. images, charts or key data.
 2. **Action cards:** Use to trigger key actions, similar to [buttons](../button).
 3. **Push cards:** Use to display notifications and additional content related to the notification value.
 
@@ -55,7 +55,7 @@ Each variant emphasizes different aspects to guide the user's attention. These v
 
 - **Card:**
 	- **Selected:** Use the selected state to indicate that the corresponding action is currently active.
-	- **Content area:** Cards can contain various types of content e.g. images, charts, key data. It is positioned below the heading and subheading. We recommend a padding of `1rem`.
+	- **Content area:** Cards can contain various types of content, e.g. images, charts, key data. It is positioned below the heading and subheading. We recommend a padding of `1rem`.
 - **Action card & push card**:
 	- **Selected (action card only):** Use the selected state in action cards to indicate that the corresponding action is currently active.
 	- **Icon:** Use icons that are widely recognized by users for the intended action.
