@@ -1067,13 +1067,7 @@ const sidebars: SidebarsConfig = {
       type: 'category',
       className: 'doc-sidebar-item-bold',
       label: 'Deprecated',
-      items: [
-        'legacy/checkbox',
-        'legacy/input',
-        'legacy/radiobutton',
-        'legacy/textarea',
-        'legacy/validation',
-      ],
+      items: ['legacy/drawer'],
     },
   ],
 
