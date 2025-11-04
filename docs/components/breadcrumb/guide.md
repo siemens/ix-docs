@@ -1,6 +1,7 @@
 ---
 doc-type: 'tab-item'
 ---
+
 # Breadcrumb - Usage
 
 Breadcrumb navigation is a UI control that allows users to track their location within an application and easily navigate to previous or child pages.
@@ -46,6 +47,4 @@ Interactive items can take one of four states: Default, hover, active and focuse
 ## Related
 
 - [Dropdown](../dropdown)
-- [Basic navigation](../../legacy/basic-navigation)
-- [Map navigation](../../legacy/map-navigation)
 - [Workflow](../workflow)

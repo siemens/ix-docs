@@ -11,11 +11,15 @@ export default function SiteMetadataWrapper(props: Props): JSX.Element {
     !context.siteConfig.customFields.withBrandTheme;
 
   useEffect(() => {
-    const initialVariant = document.documentElement.getAttribute('data-theme') || 'dark';
-    
+    const initialVariant =
+      document.documentElement.getAttribute('data-theme') || 'dark';
+
     const theme = isDevelopedWithoutBrandTheme ? 'classic' : 'brand';
     document.documentElement.setAttribute('data-ix-theme', theme);
-    document.documentElement.setAttribute('data-ix-color-schema', initialVariant);
+    document.documentElement.setAttribute(
+      'data-ix-color-schema',
+      initialVariant
+    );
 
     const observer = new MutationObserver(() => {
       const variant = document.documentElement.getAttribute('data-theme');
@@ -27,19 +31,8 @@ export default function SiteMetadataWrapper(props: Props): JSX.Element {
 
       document.documentElement.setAttribute('data-ix-theme', theme);
       document.documentElement.setAttribute('data-ix-color-schema', variant);
-      
-      if (isDevelopedWithoutBrandTheme) {
-        document
-          .getElementById('__docusaurus')
-          .classList.remove('theme-classic-dark');
-        document
-          .getElementById('__docusaurus')
-          .classList.remove('theme-classic-light');
-        document
-          .getElementById('__docusaurus')
-          .classList.add(`theme-classic-${variant}`);
-      }
     });
+
     observer.observe(document.documentElement, {
       attributes: true,
       attributeFilter: ['data-theme'],
