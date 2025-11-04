@@ -22,7 +22,6 @@ export function CategoryButton(
 ) {
   return (
     <IxButton
-      ghost
       className={styles.CategoryButton}
       onClick={() => {
         window.location.href = props.link;
@@ -30,6 +29,7 @@ export function CategoryButton(
       style={{
         width: props.buttonWidth,
       }}
+      variant="tertiary"
     >
       <div className={styles.CategoryButton__Content}>
         <div className={styles.CategoryButton__Title}>{props.title}</div>
