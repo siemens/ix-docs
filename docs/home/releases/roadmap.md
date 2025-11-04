@@ -13,7 +13,7 @@ description: 'We’re constantly improving our design system for you by extendin
 ![Roadmap](https://www.figma.com/design/wEptRgAezDU1z80Cn3eZ0o/iX-Documentation-illustrations?node-id=6992-210&t=GqJuor09UDyRbxCY-4)
 
 ### ✅ Completed
-**🔹 Release 4.0**: Updated elevation principle, button reworks on naming and rounded corners, new app header options, full compatibility with Angular 20 and AG Grid update. [Read more](/blog/2025/11/03/release-4)
+**🔹 Release 4.0**: Updated elevation principle, button reworks on naming and rounded corners, new app header options, full compatibility with Angular 20 and AG Grid update. [Read more](/blog/2025/11/10/release-4)
 
 ### 🚧 In progress / Currently being worked on
 

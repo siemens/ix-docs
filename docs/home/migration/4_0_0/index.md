@@ -5,6 +5,7 @@ title: Upgrade to V4
 doc-type: banner
 description: Welcome to the migration guide for upgrading from Siemens Industrial Experience design system V3 to V4. This guide supports you through all the major changes.
 ---
+import ButtonMigrationHelper from '@site/src/components/ButtonMigrationHelper/ButtonMigrationHelper';
 
 # Upgrade to V4.0.0
 
@@ -91,14 +92,7 @@ Additional changes you need to consider when migrating from drawers to panes:
 
 ### ix-button variants
 
-Affected components:
-
-- ix-button
-- ix-dropdown-button
-- ix-icon-button
-- ix-split-button
-- ix-toggle-button
-- ix-icon-toggle-button
+Affected components: `ix-button`, `ix-dropdown-button`, `ix-icon-button`,  `ix-split-button`, `ix-toggle-button`, `ix-icon-toggle-button`.
 
 - Renamed variant `secondary` to `subtle`
 - Removed the property `outline` in favor of new `secondary` variants
@@ -106,7 +100,11 @@ Affected components:
 
 ![Buttons](https://www.figma.com/design/wEptRgAezDU1z80Cn3eZ0o/iX-Documentation-illustrations?node-id=6708-52302&t=bGky2tHjBPC9fOGT-4)
 
-To take over the changes, rename all button variants according to this table. Start with renaming `secondary` to `subtle-*` variants to avoid unwanted overriding.
+To take over the changes, use the migration helper or the tables below to rename all button variants. Start with renaming `secondary` to `subtle-*` variants to avoid unwanted overriding.
+
+<ButtonMigrationHelper />
+
+#### Button migration overview
 
 <div class="table-full-width table-column-equal-width">
 | ❌ **Variant** | ❌ **Outline** | ❌ **Ghost** | ✅ **New variant** |
@@ -122,59 +120,60 @@ To take over the changes, rename all button variants according to this table. St
 | `danger`       | `false`        | `true`       | `danger-tertiary`  |
 </div>
 
-For buttons without an explicity set variant, the default is used. As defaults differ between the button components, the renaming should be component-specific.
+For buttons **without an explicity defined variant**, the default is used. As defaults differ between the button components, the renaming should be component-specific.
 
-#### Button with default variant
+#### Button without defined variant
 
 <div class="table-full-width table-column-equal-width">
-| ❌ **Variant** | ❌ **Outline** | ❌ **Ghost** | ✅ **New variant** |
-| :-------------- | :-------------- | :------------ | :------------------ |
-| `default`      | `false`        | `false`      | `primary`          |
-| `default`      | `true`         | `false`      | `secondary`        |
-| `default`      | `false`        | `true`       | `tertiary`         |
+| ❌ **Outline** | ❌ **Ghost** | ✅ **New variant** |
+| :-------------- | :------------ | :------------------ |
+| `false`        | `false`      | `primary`          |
+| `true`         | `false`      | `secondary`        |
+| `false`        | `true`       | `tertiary`         |
 </div>
 
-#### Dropdown button with default variant
+#### Dropdown button without defined variant
 
 <div class="table-full-width table-column-equal-width">
-| ❌ **Variant** | ❌ **Outline** | ❌ **Ghost** | ✅ **New variant** |
-| :-------------- | :-------------- | :------------ | :------------------ |
-| `default`      | `false`        | `false`      | `primary`          |
-| `default`      | `true`         | `false`      | `secondary`        |
-| `default`      | `false`        | `true`       | `tertiary`         |
+| ❌ **Outline** | ❌ **Ghost** | ✅ **New variant** |
+| :-------------- | :------------ | :------------------ |
+| `false`        | `false`      | `primary`          |
+| `true`         | `false`      | `secondary`        |
+| `false`        | `true`       | `tertiary`         |
 </div>
 
-#### Icon button with default variant
+#### Icon button without defined variant
 
 <div class="table-full-width table-column-equal-width">
-| ❌ **Variant** | ❌ **Outline** | ❌ **Ghost** | ✅ **New variant** |
-| :-------------- | :-------------- | :------------ | :------------------ |
-| `default`      | `false`        | `false`      | `subtle-primary`   |
-| `default`      | `true`         | `false`      | `subtle-secondary` |
-| `default`      | `false`        | `true`       | `subtle-tertiary`  |
+| ❌ **Outline** | ❌ **Ghost** | ✅ **New variant** |
+| :-------------- | :------------ | :------------------ |
+| `false`        | `false`      | `subtle-primary`   |
+| `true`         | `false`      | `subtle-secondary` |
+| `false`        | `true`       | `subtle-tertiary`  |
 </div>
 
-#### Split button with default variant
+#### Split button without defined variant
 
 <div class="table-full-width table-column-equal-width">
-| ❌ **Variant** | ❌ **Outline** | ❌ **Ghost** | ✅ **New variant** |
-| :-------------- | :-------------- | :------------ | :------------------ |
-| `default`      | `false`        | `false`      | `primary`          |
-| `default`      | `true`         | `false`      | `secondary`        |
-| `default`      | `false`        | `true`       | `tertiary`         |
+| ❌ **Outline** | ❌ **Ghost** | ✅ **New variant** |
+| :-------------- | :------------ | :------------------ |
+| `false`        | `false`      | `primary`          |
+| `true`         | `false`      | `secondary`        |
+| `false`        | `true`       | `tertiary`         |
 </div>
 
-#### Toggle button and icon toggle button with default variant
+#### Toggle button and icon toggle button without defined variant
 
 <div class="table-full-width table-column-equal-width">
-| ❌ **Variant** | ❌ **Outline** | ❌ **Ghost** | ✅ **New variant** |
-| :-------------- | :-------------- | :------------ | :------------------ |
-| `default`      | `false`        | `false`      | `subtle-primary`   |
-| `default`      | `true`         | `false`      | `subtle-secondary` |
-| `default`      | `false`        | `true`       | `subtle-tertiary`  |
+| ❌ **Outline** | ❌ **Ghost** | ✅ **New variant** |
+| :-------------- | :------------ | :------------------ |
+| `false`        | `false`      | `subtle-primary`   |
+| `true`         | `false`      | `subtle-secondary` |
+| `false`        | `true`       | `subtle-tertiary`  |
 </div>
 
 We recommend to visually review your changes. Ensure that `subtle-*` variants are not mixed with the default variant.
+
 
 ### ix-pane
 
