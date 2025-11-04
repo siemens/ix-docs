@@ -33,7 +33,7 @@ Typical structure:
 
 ### File structure
 
-We always have the following ordering of sections in our Markdown files:
+We always have the following ordering of sections in our markdown files:
 1. Front matter (title and description)
 2. Short description and its anatomy (without headline, with image and a list)
 3. Variants
@@ -47,14 +47,16 @@ Note that **not** all sections need to be filled out, e.g. if there are no varia
 
 ### Grammar, voice and tone
 
-- Use "don’t", "isn’t" and "aren’t" instead of "do not", "is not" and "are not".
+- Use "don’t", "isn’t", "haven’t" and "aren’t" instead of "do not", "is not", "have not" and "are not".
 - Use "e.g." instead of "for example", "such as" or "like".
+- Use "changelog" instead of "change log" (as one word).
+- Use "among other things" instead of "inter alia".
 - Use active voice instead of passive voice.
 - Talk about components in plurals, e.g. buttons, icons, breadcrumbs. An exception are components from the application frame since they only occur once in an application.
 - Use present simple tense whenever possible as the guide is forever and not just for the future, e.g. buttons show x, users select x.
-- Talk about users and not "the user" (plural).
-- Capitalize and use proper nouns, e.g. write button not Button, map navigation not Map Navigation - the only component which is an official and recognized proper noun is "About and legal information".
-- "Changelog" is acceptable as one word.
+- Talk about "users" and not "the user" (plural).
+- Capitalize and use proper nouns, e.g. write button not Button, application header not Application Header - the only component which is an official and recognized proper noun is "About and legal information".
+- No whitespace at the end of lines.
 
 ### Special guidelines for specific sections
 
