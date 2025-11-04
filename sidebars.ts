@@ -1069,34 +1069,6 @@ const sidebars: SidebarsConfig = {
       label: 'Deprecated',
       items: [
         createTabItem({
-          id: 'legacy/basic-navigation/index',
-          label: 'Basic navigation',
-          items: [
-            {
-              id: 'legacy/basic-navigation/guide',
-              label: 'Usage',
-            },
-            {
-              id: 'legacy/basic-navigation/code',
-              label: 'Code',
-            },
-          ],
-        }),
-        createTabItem({
-          id: 'legacy/map-navigation/index',
-          label: 'Map navigation',
-          items: [
-            {
-              id: 'legacy/map-navigation/guide',
-              label: 'Usage',
-            },
-            {
-              id: 'legacy/map-navigation/code',
-              label: 'Code',
-            },
-          ],
-        }),
-        createTabItem({
           id: 'legacy/drawer/index',
           label: 'Drawer',
           items: [
@@ -1106,11 +1078,6 @@ const sidebars: SidebarsConfig = {
             },
           ],
         }),
-        'legacy/checkbox',
-        'legacy/input',
-        'legacy/radiobutton',
-        'legacy/textarea',
-        'legacy/validation',
       ],
     },
   ],

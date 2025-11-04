@@ -55,7 +55,7 @@ Note that **not** all sections need to be filled out, e.g. if there are no varia
 - Talk about components in plurals, e.g. buttons, icons, breadcrumbs. An exception are components from the application frame since they only occur once in an application.
 - Use present simple tense whenever possible as the guide is forever and not just for the future, e.g. buttons show x, users select x.
 - Talk about "users" and not "the user" (plural).
-- Capitalize and use proper nouns, e.g. write button not Button, map navigation not Map Navigation - the only component which is an official and recognized proper noun is "About and legal information".
+- Capitalize and use proper nouns, e.g. write button not Button, application header not Application Header - the only component which is an official and recognized proper noun is "About and legal information".
 - No whitespace at the end of lines.
 
 ### Special guidelines for specific sections
