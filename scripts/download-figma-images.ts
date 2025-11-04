@@ -68,6 +68,10 @@ async function downloadImageResource(
       logger.debug(`Image downloaded to ${imagePath}`);
     } catch (e) {
       logger.error('Error downloading image', e);
+      logger.error('Filename', fileName);
+      logger.error('Node ID', nodeId);
+      logger.error('S3 URL', s3BucketUrl);
+
       if (retry) {
         logger.error('Abort retry executed second time', e);
         throw Error(

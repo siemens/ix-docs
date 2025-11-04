@@ -10,7 +10,7 @@ description: 'We’re constantly improving our design system for you by extendin
 
 # Roadmap
 
-![Roadmap](https://www.figma.com/design/wEptRgAezDU1z80Cn3eZ0o/iX-Documentation-illustrations?node-id=6992-210&t=GqJuor09UDyRbxCY-4)
+![Roadmap](https://www.figma.com/design/wEptRgAezDU1z80Cn3eZ0o/iX-Documentation-illustrations?node-id=6992-210&t=UmcDJUatVbcLymkF-4)
 
 ### ✅ Completed
 **🔹 Release 4.0**: Updated elevation principle, button reworks on naming and rounded corners, new app header options, full compatibility with Angular 20 and AG Grid update. [Read more](/blog/2025/11/10/release-4)
@@ -30,6 +30,7 @@ description: 'We’re constantly improving our design system for you by extendin
 - **Enhanced modal**: Improving our modal component to provide a more flexible and user-friendly experience. This includes better usage together with the ix-toast, more styling options and enhanced functionality.
 
 ### ⏳ Planned / Without specific timeline
+
 - **Density options**: More compact variants for high-density component use cases.
 - **Generic list**: Evolving the existing event list into a versatile generic list component, offering more configuration options and support for multiple size variants.
 - **Component updates**: Introducing a new box-style tab variant with container support, reworking the category filter for improved usability and enhancing the popover news component into a full “What’s new” dialog.
