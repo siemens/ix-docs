@@ -1,3 +1,5 @@
+import { iconSuccess } from '@siemens/ix-icons/icons';
+import { IxIcon, IxSelect, IxSelectItem } from '@siemens/ix-react';
 import React, { useState } from 'react';
 
 export default function ButtonMigrationHelper() {
@@ -65,13 +67,6 @@ export default function ButtonMigrationHelper() {
     }
   };
 
-  const selectStyle = {
-    height: '2.5rem',
-    fontSize: '1rem',
-    padding: '0.25rem 0.5rem',
-    width: '100%',
-  };
-
   const fieldStyle = {
     display: 'flex',
     flexDirection: 'column',
@@ -80,51 +75,95 @@ export default function ButtonMigrationHelper() {
   };
 
   return (
-    <div style={{ border: '1px solid #ccc', padding: '1rem', borderRadius: '8px' }}>
-      <p>Enter your current button configuration to see the recommended new variant name.</p>
+    <div
+      style={{
+        border: 'var(--theme-std-bdr-1)',
+        padding: '1rem',
+        borderRadius: '8px',
+      }}
+    >
+      <p>
+        Enter your current button configuration to see the recommended new
+        variant name.
+      </p>
 
       <div style={{ display: 'flex', gap: '1rem', flexWrap: 'wrap' }}>
         <div style={fieldStyle}>
-          <label>Component</label>
-          <select style={selectStyle} value={component} onChange={(e) => setComponent(e.target.value)}>
-            <option value="ix-button">ix-button</option>
-            <option value="ix-dropdown-button">ix-dropdown-button</option>
-            <option value="ix-icon-button">ix-icon-button</option>
-            <option value="ix-split-button">ix-split-button</option>
-            <option value="ix-toggle-button">ix-toggle-button</option>
-            <option value="ix-icon-toggle-button">ix-icon-toggle-button</option>
-          </select>
+          <IxSelect
+            label="Component"
+            value={component}
+            onValueChange={(e) => setComponent(e.target.value)}
+          >
+            <IxSelectItem value="ix-button" label="ix-button"></IxSelectItem>
+            <IxSelectItem
+              value="ix-dropdown-button"
+              label="ix-dropdown-button"
+            ></IxSelectItem>
+            <IxSelectItem
+              value="ix-icon-button"
+              label="ix-icon-button"
+            ></IxSelectItem>
+            <IxSelectItem
+              value="ix-split-button"
+              label="ix-split-button"
+            ></IxSelectItem>
+            <IxSelectItem
+              value="ix-toggle-button"
+              label="ix-toggle-button"
+            ></IxSelectItem>
+            <IxSelectItem
+              value="ix-icon-toggle-button"
+              label="ix-icon-toggle-button"
+            ></IxSelectItem>
+          </IxSelect>
         </div>
 
         <div style={fieldStyle}>
-          <label>Variant</label>
-          <select style={selectStyle} value={variant} onChange={(e) => setVariant(e.target.value)}>
-            <option value="undefined">undefined</option>
-            <option value="primary">primary</option>
-            <option value="secondary">secondary</option>
-            <option value="danger">danger</option>
-          </select>
+          <IxSelect
+            label="Variant"
+            value={variant}
+            onValueChange={(e) => setVariant(e.target.value)}
+          >
+            <IxSelectItem value="undefined" label="undefined"></IxSelectItem>
+            <IxSelectItem value="primary" label="primary"></IxSelectItem>
+            <IxSelectItem value="secondary" label="secondary"></IxSelectItem>
+            <IxSelectItem value="danger" label="danger"></IxSelectItem>
+          </IxSelect>
         </div>
 
         <div style={fieldStyle}>
-          <label>Outline</label>
-          <select style={selectStyle} value={outline} onChange={(e) => setOutline(e.target.value)}>
-            <option value="false">false</option>
-            <option value="true">true</option>
-          </select>
+          <IxSelect
+            label="Outline"
+            value={outline}
+            onValueChange={(e) => setOutline(e.target.value)}
+          >
+            <IxSelectItem value="false" label="false"></IxSelectItem>
+            <IxSelectItem value="true" label="true"></IxSelectItem>
+          </IxSelect>
         </div>
 
         <div style={fieldStyle}>
-          <label>Ghost</label>
-          <select style={selectStyle} value={ghost} onChange={(e) => setGhost(e.target.value)}>
-            <option value="false">false</option>
-            <option value="true">true</option>
-          </select>
+          <IxSelect
+            label="Ghost"
+            value={ghost}
+            onValueChange={(e) => setGhost(e.target.value)}
+          >
+            <IxSelectItem value="false" label="false"></IxSelectItem>
+            <IxSelectItem value="true" label="true"></IxSelectItem>
+          </IxSelect>
         </div>
       </div>
 
-      <div style={{ marginTop: '1rem' }}>
-        <strong>✅ New variant:</strong> <span>{getResult()}</span>
+      <div
+        style={{
+          display: 'flex',
+          alignItems: 'normal',
+          marginTop: '1rem',
+          gap: '0.5rem',
+        }}
+      >
+        ✅<strong>New variant:</strong>
+        <span>{getResult()}</span>
       </div>
     </div>
   );
