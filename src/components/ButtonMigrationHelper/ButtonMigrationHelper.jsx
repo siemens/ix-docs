@@ -4,7 +4,7 @@ import React, { useState } from 'react';
 
 export default function ButtonMigrationHelper() {
   const [component, setComponent] = useState('ix-button');
-  const [variant, setVariant] = useState('undefined');
+  const [variant, setVariant] = useState('not set / default');
   const [outline, setOutline] = useState('false');
   const [ghost, setGhost] = useState('false');
 
@@ -57,13 +57,13 @@ export default function ButtonMigrationHelper() {
     const o = outline === 'true';
     const g = ghost === 'true';
 
-    if (variant === 'undefined') {
+    if (variant === 'not set / default') {
       const key = `${o}-${g}`;
       const map = defaultVariantMap[component];
-      return map?.[key] || 'Unknown combination';
+      return map?.[key] || '-';
     } else {
       const key = `${variant}-${o}-${g}`;
-      return definedVariantMap[key] || 'Unknown combination';
+      return definedVariantMap[key] || '-';
     }
   };
 
@@ -83,7 +83,7 @@ export default function ButtonMigrationHelper() {
       }}
     >
       <p>
-        Enter your current button configuration to see the recommended new
+        Enter your <strong>current button configuration</strong> to see the recommended new
         variant name.
       </p>
 
@@ -124,7 +124,7 @@ export default function ButtonMigrationHelper() {
             value={variant}
             onValueChange={(e) => setVariant(e.target.value)}
           >
-            <IxSelectItem value="undefined" label="undefined"></IxSelectItem>
+            <IxSelectItem value="not set / default" label="not set / default"></IxSelectItem>
             <IxSelectItem value="primary" label="primary"></IxSelectItem>
             <IxSelectItem value="secondary" label="secondary"></IxSelectItem>
             <IxSelectItem value="danger" label="danger"></IxSelectItem>
