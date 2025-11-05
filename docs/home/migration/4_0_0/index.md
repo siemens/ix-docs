@@ -228,21 +228,23 @@ Migration steps:
 
 3. Configure the theme using the new theming API
 ```javascript
-import { getIxTheme } from '@siemens/ix-aggrid';
-import { provideGlobalGridOptions } from 'ag-grid-community';
+import { getIxTheme, getIxThemeAsync } from '@siemens/ix-aggrid';
+import * as agGrid from 'ag-grid-community';
 
-// Get iX theme based on your ag-grid module
-const ixTheme = await getIxTheme(() => import('ag-grid-community'));
+// Get iX theme based on your AG Grid module
+const ixTheme = getIxTheme(agGrid);
+// Alternative: Use async import
+const ixTheme = await getIxThemeAsync(() => import('ag-grid-community'));
 
-// Set the theme in your grid options
+// Option 1: Set the theme per grid instance
 const gridOptions = {
   theme: ixTheme,
-  // Rest of options
+  // ... other options
 };
 
-// Or set the theme globally for all grids
-// Make sure to do this before initializing any grid
-provideGlobalGridOptions({
+// Option 2: Set the theme globally for all grids
+// Note: Must be called before initializing any grid instance
+agGrid.provideGlobalGridOptions({
   theme: ixTheme,
 });
 ```
