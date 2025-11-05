@@ -2,9 +2,11 @@ import { iconSuccess } from '@siemens/ix-icons/icons';
 import { IxIcon, IxSelect, IxSelectItem } from '@siemens/ix-react';
 import React, { useState } from 'react';
 
+const DEFAULT_VARIANT_VALUE = 'not set / default';
+
 export default function ButtonMigrationHelper() {
   const [component, setComponent] = useState('ix-button');
-  const [variant, setVariant] = useState('not set / default');
+  const [variant, setVariant] = useState(DEFAULT_VARIANT_VALUE);
   const [outline, setOutline] = useState('false');
   const [ghost, setGhost] = useState('false');
 
@@ -57,7 +59,7 @@ export default function ButtonMigrationHelper() {
     const o = outline === 'true';
     const g = ghost === 'true';
 
-    if (variant === 'not set / default') {
+    if (variant === DEFAULT_VARIANT_VALUE) {
       const key = `${o}-${g}`;
       const map = defaultVariantMap[component];
       return map?.[key] || '-';
@@ -83,8 +85,8 @@ export default function ButtonMigrationHelper() {
       }}
     >
       <p>
-        Enter your <strong>current button configuration</strong> to see the recommended new
-        variant name.
+        Enter your <strong>current button configuration</strong> to see the
+        recommended new variant name.
       </p>
 
       <div style={{ display: 'flex', gap: '1rem', flexWrap: 'wrap' }}>
@@ -124,7 +126,10 @@ export default function ButtonMigrationHelper() {
             value={variant}
             onValueChange={(e) => setVariant(e.target.value)}
           >
-            <IxSelectItem value="not set / default" label="not set / default"></IxSelectItem>
+            <IxSelectItem
+              value={DEFAULT_VARIANT_VALUE}
+              label={DEFAULT_VARIANT_VALUE}
+            ></IxSelectItem>
             <IxSelectItem value="primary" label="primary"></IxSelectItem>
             <IxSelectItem value="secondary" label="secondary"></IxSelectItem>
             <IxSelectItem value="danger" label="danger"></IxSelectItem>
