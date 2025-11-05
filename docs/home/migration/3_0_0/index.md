@@ -231,11 +231,15 @@ We changed the default width of the `input` element from `width: 100%` to `width
 
 #### ix-action-card
 
-- Replaced `insight` and `notification` variants with `outline` and `filled`.
+- Replaced `insight` and `notification` variants with `filled` and `outline`.
+
+#### ix-blind
+
+- Replaced `insight` and `notification` variants with `filled` and `outline`.
 
 #### ix-card
 
-- Replaced `insight` and `notification` variants with `outline` and `filled`.
+- Replaced `insight` and `notification` variants with `filled` and `outline`.
 
 #### ix-chip
 
@@ -280,7 +284,7 @@ We changed the default width of the `input` element from `width: 100%` to `width
 
 #### ix-push-card
 
-- Replaced `insight` and `notification` variants with `outline` and `filled`.
+- Replaced `insight` and `notification` variants with `filled` and `outline`.
 
 #### ix-select
 

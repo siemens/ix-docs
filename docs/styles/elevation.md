@@ -56,7 +56,7 @@ Visually separate large sections on the base layer by applying [borders](borders
 
 We don’t use shadows that are part of the primary layout flow e.g. [navigation elements](../components/application-menu) or [cards](../components/card/index.mdx).
 
-![Elevation example](https://www.figma.com/design/wEptRgAezDU1z80Cn3eZ0o/iX-Documentation-illustrations?node-id=6680-26&t=4CbXG1ZxBCDn6JYS-4)
+![Elevation example](https://www.figma.com/design/wEptRgAezDU1z80Cn3eZ0o/iX-Documentation-illustrations?node-id=6680-26&t=kzkpbUNYKiDRChug-4)
 ### Other `color-` tokens
 
 We recommend to stick to the `color-1` and `color-2` model for primary background layering. `color-3` to `color-8` are preserved for specific component use cases and should not be used.

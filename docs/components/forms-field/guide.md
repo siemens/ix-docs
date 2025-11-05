@@ -1,6 +1,7 @@
 ---
 doc-type: 'tab-item'
 ---
+
 # Forms field - Usage
 
 ![Field](https://www.figma.com/design/wEptRgAezDU1z80Cn3eZ0o/iX-Pattern-Illustrations?node-id=2781-323&t=pKzFQBhaXmjTsR8P-4)
@@ -11,7 +12,7 @@ doc-type: 'tab-item'
 4. Required indicator
 5. Counter (input and textarea field only)
 
-**Note:** In this chapter, we describe the default field component. For details, see the [custom fields](../custom-field) chapter.
+**Note:** In this chapter, we describe the default field component. For details about custom fields, see the [custom fields](../custom-field/) chapter.
 
 ## Options
 
