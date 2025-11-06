@@ -25,13 +25,13 @@ importers:
         version: 3.1.0(@types/react@18.3.22)(react@18.3.1)
       '@siemens/ix':
         specifier: 0.0.0-pr-2198-20251023082407
-        version: 0.0.0-pr-2198-20251023082407(@siemens/ix-icons@3.0.0)
+        version: 0.0.0-pr-2198-20251023082407(@siemens/ix-icons@3.2.0)
       '@siemens/ix-icons':
-        specifier: ^3.0.0
-        version: 3.0.0
+        specifier: ^3.2.0
+        version: 3.2.0
       '@siemens/ix-react':
         specifier: 0.0.0-pr-2198-20251023082407
-        version: 0.0.0-pr-2198-20251023082407(@siemens/ix-icons@3.0.0)(@stencil/core@4.31.0)(@types/react@18.3.22)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+        version: 0.0.0-pr-2198-20251023082407(@siemens/ix-icons@3.2.0)(@stencil/core@4.31.0)(@types/react@18.3.22)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
       '@stackblitz/sdk':
         specifier: ^1.11.0
         version: 1.11.0
@@ -1909,9 +1909,9 @@ packages:
   '@sideway/pinpoint@2.0.0':
     resolution: {integrity: sha512-RNiOoTPkptFtSVzQevY/yWtZwf/RxyVnPy/OcA9HBM3MlGDnBEYL5B41H0MTn0Uec8Hi+2qUtTfG2WWZBmMejQ==}
 
-  '@siemens/ix-icons@3.0.0':
-    resolution: {integrity: sha512-eudP3wv/aUwfc/z7IRweRRPdpZTLew1fIhPfjkFSwZIoRMuzDt13zFoiyZ6taQvPpZgSgBJjUJXZJs714GRudw==}
-    engines: {node: '>=18.x.x', pnpm: '>=9.x.x'}
+  '@siemens/ix-icons@3.2.0':
+    resolution: {integrity: sha512-4cdEqCHlDILVCDCld1Ycy04/5d8ICCpRxE7Y3l2GBTo9EydI5ZUkVG243Y9wp/kZazTK9c4wvPZ5d6lCqS57tg==}
+    engines: {node: '>=22.19.x', pnpm: '>=10.x.x'}
 
   '@siemens/ix-react@0.0.0-pr-2198-20251023082407':
     resolution: {integrity: sha512-ilaf5ON5LYJk89I8QPXLi6K/fZwQ9S923bAWzivo1suQZWFSj1r/rbPSZpf2+nhInrIgIsq3a6+hnptniLzdag==}
@@ -8765,14 +8765,12 @@ snapshots:
 
   '@sideway/pinpoint@2.0.0': {}
 
-  '@siemens/ix-icons@3.0.0':
-    dependencies:
-      '@stencil/core': 4.31.0
+  '@siemens/ix-icons@3.2.0': {}
 
-  '@siemens/ix-react@0.0.0-pr-2198-20251023082407(@siemens/ix-icons@3.0.0)(@stencil/core@4.31.0)(@types/react@18.3.22)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)':
+  '@siemens/ix-react@0.0.0-pr-2198-20251023082407(@siemens/ix-icons@3.2.0)(@stencil/core@4.31.0)(@types/react@18.3.22)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)':
     dependencies:
-      '@siemens/ix': 0.0.0-pr-2198-20251023082407(@siemens/ix-icons@3.0.0)
-      '@siemens/ix-icons': 3.0.0
+      '@siemens/ix': 0.0.0-pr-2198-20251023082407(@siemens/ix-icons@3.2.0)
+      '@siemens/ix-icons': 3.2.0
       '@stencil/react-output-target': 1.2.0(@stencil/core@4.31.0)(@types/react@18.3.22)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
       react: 18.3.1
       react-dom: 18.3.1(react@18.3.1)
@@ -8781,10 +8779,10 @@ snapshots:
       - '@stencil/core'
       - '@types/react'
 
-  '@siemens/ix@0.0.0-pr-2198-20251023082407(@siemens/ix-icons@3.0.0)':
+  '@siemens/ix@0.0.0-pr-2198-20251023082407(@siemens/ix-icons@3.2.0)':
     dependencies:
       '@floating-ui/dom': 1.7.0
-      '@siemens/ix-icons': 3.0.0
+      '@siemens/ix-icons': 3.2.0
       animejs: 4.2.2
       luxon: 3.6.1
 
