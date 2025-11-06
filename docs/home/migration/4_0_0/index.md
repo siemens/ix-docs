@@ -120,7 +120,7 @@ To take over the changes, use the migration helper or the tables below to rename
 | `danger`       | `false`        | `true`       | `danger-tertiary`  |
 </div>
 
-For buttons **without an explicity set variant**, the default is used. As defaults differ between the button components, the renaming should be component-specific.
+For buttons **without an explicitly set variant**, the default is used. As defaults differ between the button components, the renaming should be component-specific.
 
 #### Button without set variant
 
