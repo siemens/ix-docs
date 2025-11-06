@@ -1,0 +1,5 @@
+import{m as s,g as m}from"./generic-render-Dg1fV67N.js";import"./sample-CrjnuCO3.js";const l={title:"Example/SplitButton",tags:[],render:d=>{const o=m("ix-split-button",d),r=document.createElement("ix-dropdown-item");r.label="Dropdown Item 1";const n=document.createElement("ix-dropdown-item");n.label="Dropdown Item 2";const a=document.createElement("ix-dropdown-item");a.label="Dropdown Item 3";const t=o.querySelector("ix-split-button");return t.appendChild(r),t.appendChild(n),t.appendChild(a),o},argTypes:s("ix-button",{variant:{options:["primary","secondary"],control:{type:"select"}},styles:{control:{type:"object"}}}),args:{},parameters:{design:{type:"figma",url:"https://www.figma.com/design/r2nqdNNXXZtPmWuVjIlM1Q/iX-Components---Brand-Dark?node-id=225-5535&m=dev"}}},e={args:{label:"Button"}};e.parameters={...e.parameters,docs:{...e.parameters?.docs,source:{originalSource:`{
+  args: {
+    label: 'Button'
+  }
+}`,...e.parameters?.docs?.source}}};const c=["Primary"];export{e as Primary,c as __namedExportsOrder,l as default};

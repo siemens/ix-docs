@@ -2,11 +2,75 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://ix.siemens.io/blog</id>
     <title>Siemens Industrial Experience Blog</title>
-    <updated>2025-10-01T00:00:00.000Z</updated>
+    <updated>2025-11-10T00:00:00.000Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://ix.siemens.io/blog"/>
     <subtitle>Siemens Industrial Experience Blog</subtitle>
     <icon>https://ix.siemens.io/img/favicon.png</icon>
+    <entry>
+        <title type="html"><![CDATA[Release V4.0.0]]></title>
+        <id>https://ix.siemens.io/blog/2025/11/10/release-4</id>
+        <link href="https://ix.siemens.io/blog/2025/11/10/release-4"/>
+        <updated>2025-11-10T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[banner]]></summary>
+        <content type="html"><![CDATA[<p><img decoding="async" loading="lazy" alt="banner" src="https://ix.siemens.io/assets/images/2510_blog_4-0-52c970429824a4272ffd494bdc16bed8.png" width="896" height="360" class="img_QgcI"></p>
+<p>The next chapter of the Industrial Experience Design System is here. This version brings together thoughtful feature enhancements and essential style refinements, offering greater flexibility while reinforcing design consistency.</p>
+<h1>How to start?</h1>
+<ul>
+<li>Install <code>@siemens/ix</code> (<code>@siemens/ix-angular</code>, <code>@siemens/ix-react</code>, <code>@siemens/ix-vue</code>) via the <code>latest</code> tag</li>
+<li>Review detailed changelog <a href="https://ix.siemens.io/docs/home/releases/changelog">here</a></li>
+<li>Make sure you're using the latest published version of our Figma library</li>
+</ul>
+<h1>Button update</h1>
+<p><img decoding="async" loading="lazy" alt="button" src="https://ix.siemens.io/assets/images/2510_blog_buttons-c20f235feeb70c247fe57cdf18739e2b.png" width="896" height="360" class="img_QgcI"></p>
+<p>The time of confusing button naming is officially behind us. With this release, we’ve introduced a clear and intuitive naming convention: primary, secondary, and tertiary <a href="https://ix.siemens.io/docs/components/button/guide">buttons</a>. Now labeled exactly as such. This change improves clarity, making it easier to choose the right button for the right context.</p>
+<p>To implement this improvement, we had to introduce a breaking change. Existing variant names will need to be updated manually. Please refer to our <a href="https://ix.siemens.io/docs/home/migration/4_0_0">migration guide</a> for detailed instructions.</p>
+<p>In line with brand consistency efforts, all buttons now feature slightly rounded corners, offering a more modern and approachable look. Additionally, we’ve added support for placing icons to the right of the label. Especially useful for “Next” actions, where a left-aligned arrow often felt visually off.</p>
+<h1>New app header options</h1>
+<p><img decoding="async" loading="lazy" alt="appheaderoptions" src="https://ix.siemens.io/assets/images/2510_blog_appheader-308e0d97bdf94c0a2cf8befddfd6ff49.png" width="896" height="360" class="img_QgcI"></p>
+<p>The <a href="https://ix.siemens.io/docs/components/application-header/guide">app header</a> is now more flexible than before. With the introduction of an additional secondary slot, teams can tailor the header to better fit their application needs.</p>
+<p>We’ve also updated the documentation to showcase all available configuration options, including:</p>
+<ul>
+<li>Displaying a user avatar</li>
+<li>Using a secondary slot</li>
+<li>Enabling the borderless variant</li>
+<li>Showing an app icon</li>
+<li>Adding a sub-label to the app name</li>
+</ul>
+<p>These enhancements come as additions to the existing header component, giving teams more options without disrupting current implementation.</p>
+<h1>Elevation principle</h1>
+<p><img decoding="async" loading="lazy" alt="elevation" src="https://ix.siemens.io/assets/images/2510_blog_elevation-2abf9df51d58ec925007aee984f27e5c.png" width="896" height="360" class="img_QgcI"></p>
+<p>Elevation helps create depth in the user interface. A simple elevation principle makes it easier for users to understand which elements sit above others, improving both hierarchy and interactivity.</p>
+<p>With this major release, we are reducing the use of semi-transparent colors in favor of solid tones. This change improves visual separation between layers and aligns with our goal of a consistent design language.</p>
+<p>The new colors are applied automatically when migrating to this version. Therefore, we recommend teams visually review their interfaces. To support this, our migration guide includes an overview where switching to outline variants is needed for good layer separation.</p>
+<h1>Angular 20</h1>
+<p><img decoding="async" loading="lazy" alt="angular20" src="https://ix.siemens.io/assets/images/2510_blog_angular-ea8bbb42ecf6707612c6a37c7e7c9543.png" width="896" height="360" class="img_QgcI"></p>
+<p>This release brings full compatibility with Angular 20 and up, helping teams keep their projects aligned with the latest framework improvements.</p>
+<p>To reflect this, the Angular specific peer dependencies have been updated to require at least version 20. Projects using this package will need to upgrade to Angular 20 or higher before migrating to the latest version of iX. See more in the <a href="https://ix.siemens.io/docs/home/migration/4_0_0">migration guide</a>.</p>
+<h1>AG Grid update</h1>
+<p><img decoding="async" loading="lazy" alt="aggrid" src="https://ix.siemens.io/assets/images/2510_blog_aggrid-e08da9e69d54ec6ae18d94e658dcce47.png" width="896" height="360" class="img_QgcI"></p>
+<p>We are now publishing a separate Figma library based on the <a href="https://www.figma.com/community/file/1360600846643230092" target="_blank" rel="noopener noreferrer">official AG Grid design system</a> styled with the iX theme. This gives designers direct access to AG Grid’s native components and layout logic. Developers benefit from AG Grid’s new <a href="https://blog.ag-grid.com/introducing-our-new-theming-api/" target="_blank" rel="noopener noreferrer">theming API</a>, which makes styling grids easier and more flexible. Together, this change makes design and development faster, clearer, and better aligned.</p>
+<h1>New section within UX writing guidelines: Formatting</h1>
+<p>We’ve just released a brand-new section in our <a href="https://ix.siemens.io/docs/guidelines/language/writing-style-guide-getting-started">UX writing guidelines</a>, designed to bring clarity, consistency, and user-friendliness to some of the most commonly used — and often overlooked — elements in digital communication. This update covers:</p>
+<ul>
+<li>Addresses</li>
+<li>Dates</li>
+<li>Measurements and units</li>
+<li>Money and currency</li>
+<li>Names and titles</li>
+<li>Numbers and percentages</li>
+<li>Software versions</li>
+<li>Time and time zones</li>
+</ul>
+<h1>Any questions or feedback?</h1>
+<p>Please reach out to us at <a href="mailto:team.ix.industry@siemens.com" target="_blank" rel="noopener noreferrer">team.ix.industry@siemens.com</a> and tell us about your migration experience.
+If you encounter any issues, we are here to support you every step of the way.</p>
+<p>We greatly appreciate your contributions.</p>]]></content>
+        <author>
+            <name>Felix Leist</name>
+        </author>
+        <category label="Release" term="Release"/>
+    </entry>
     <entry>
         <title type="html"><![CDATA[UXT Migration to Siemens Industrial Experience]]></title>
         <id>https://ix.siemens.io/blog/2025/09/31/uxt-eos</id>
@@ -59,11 +123,11 @@
 <h1>Time input and redesigned time picker</h1>
 <p><img decoding="async" loading="lazy" alt="Time input" src="https://ix.siemens.io/assets/images/2507_blog_timepicker-fcb658caf345b1f989c512684a56f91e.png" width="896" height="360" class="img_QgcI"></p>
 <p>The redesigned time picker introduces a smoother, more intuitive experience with scrollable values and one-click selection for hours, minutes, seconds, and milliseconds. This makes it easier and faster for users to select precise times, especially on touch devices. Learn more in the <a href="https://ix.siemens.io/docs/components/time-picker/guide">usage guide</a>.</p>
-<p>Built on top of the new time picker, the new time input component is fully form-ready and integrates seamlessly with our form infrastructure described in the <a href="https://ix.siemens.io/docs/components/forms-field/guide">forms field section</a>. It supports validation, accesibility, and consistent styling.</p>
+<p>Built on top of the new time picker, the new time input component is fully form-ready and integrates seamlessly with our form infrastructure described in the <a href="https://ix.siemens.io/docs/components/forms-field/guide">forms field section</a>. It supports validation, accessibility, and consistent styling.</p>
 <p>Learn more in the <a href="https://ix.siemens.io/docs/components/input-time/guide">usage guide</a>.</p>
 <h1>Progress indicator</h1>
 <p><img decoding="async" loading="lazy" alt="Progress indicator" src="https://ix.siemens.io/assets/images/2507_blog_progress-f280a82351452a95bded6da4b6a05d9a.png" width="896" height="360" class="img_QgcI"></p>
-<p>A long-awaited feature, the progress indicator is now available in both linear and circular variants. The linear variant is designed for horizontal layouts or when the progress value should be more visible. The circular variant is more suitable for compact or centered layouts, e.g. when it's replacing an icon.</p>
+<p>A long-awaited feature, the progress indicator is now available in both linear and circular variants. The linear variant is designed for horizontal layouts or when the progress value should be more visible. The circular variant is more suitable for compact or centered layouts, e.g. when it’s replacing an icon.</p>
 <p>Whether you're tracking file uploads, form completion, or background tasks, these indicators provide clear, accessible feedback to users. They’re fully customizable and easy to integrate.</p>
 <p>Learn more in the <a href="https://ix.siemens.io/docs/components/progress-indicator/code">usage guide</a>.</p>
 <h1>Improved initial render performance</h1>
