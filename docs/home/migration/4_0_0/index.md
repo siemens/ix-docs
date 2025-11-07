@@ -120,19 +120,9 @@ To take over the changes, use the migration helper or the tables below to rename
 | `danger`       | `false`        | `true`       | `danger-tertiary`  |
 </div>
 
-For buttons **without an explicity defined variant**, the default is used. As defaults differ between the button components, the renaming should be component-specific.
+For buttons **without an explicitly set variant**, the default is used. As defaults differ between the button components, the renaming should be component-specific.
 
-#### Button without defined variant
-
-<div class="table-full-width table-column-equal-width">
-| ❌ **Outline** | ❌ **Ghost** | ✅ **New variant** |
-| :-------------- | :------------ | :------------------ |
-| `false`        | `false`      | `primary`          |
-| `true`         | `false`      | `secondary`        |
-| `false`        | `true`       | `tertiary`         |
-</div>
-
-#### Dropdown button without defined variant
+#### Button without set variant
 
 <div class="table-full-width table-column-equal-width">
 | ❌ **Outline** | ❌ **Ghost** | ✅ **New variant** |
@@ -142,7 +132,17 @@ For buttons **without an explicity defined variant**, the default is used. As de
 | `false`        | `true`       | `tertiary`         |
 </div>
 
-#### Icon button without defined variant
+#### Dropdown button without set variant
+
+<div class="table-full-width table-column-equal-width">
+| ❌ **Outline** | ❌ **Ghost** | ✅ **New variant** |
+| :-------------- | :------------ | :------------------ |
+| `false`        | `false`      | `primary`          |
+| `true`         | `false`      | `secondary`        |
+| `false`        | `true`       | `tertiary`         |
+</div>
+
+#### Icon button without set variant
 
 <div class="table-full-width table-column-equal-width">
 | ❌ **Outline** | ❌ **Ghost** | ✅ **New variant** |
@@ -152,7 +152,7 @@ For buttons **without an explicity defined variant**, the default is used. As de
 | `false`        | `true`       | `subtle-tertiary`  |
 </div>
 
-#### Split button without defined variant
+#### Split button without set variant
 
 <div class="table-full-width table-column-equal-width">
 | ❌ **Outline** | ❌ **Ghost** | ✅ **New variant** |
@@ -162,7 +162,7 @@ For buttons **without an explicity defined variant**, the default is used. As de
 | `false`        | `true`       | `tertiary`         |
 </div>
 
-#### Toggle button and icon toggle button without defined variant
+#### Toggle button and icon toggle button without set variant
 
 <div class="table-full-width table-column-equal-width">
 | ❌ **Outline** | ❌ **Ghost** | ✅ **New variant** |
