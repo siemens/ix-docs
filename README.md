@@ -15,7 +15,7 @@
     <a href="https://ix.siemens.io"><strong>Explore the documentation »</strong></a>
     <br />
     <br />
-    <a href="https://ix.siemens.io/docs/installation/">Quickstart</a>
+    <a href="https://github.com/siemens/ix-docs/blob/main/CONTRIBUTING.md">Contributing</a>
     ·
     <a href="https://community.siemens.com/c/ix/">Community</a>
     ·
