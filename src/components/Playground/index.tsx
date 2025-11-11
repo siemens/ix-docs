@@ -90,7 +90,7 @@ function Playground(props: PlaygroundProps) {
   const iframeSrc = useBaseUrl(
     `/demo/v2/preview/html/preview-examples/${
       props.alternativePreviewName ?? props.name
-    }.html?no-margin=true&theme=theme-${theme}-${isDark ? 'dark' : 'light'}`
+    }.html?no-margin=true&theme=${theme}&colorSchema=${isDark ? 'dark' : 'light'}`
   );
   const [framework, setFramework] = useState<FrameworkTypes>(
     props.onlyFramework ?? 'angular'
