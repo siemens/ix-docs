@@ -19,7 +19,7 @@ Use inline [hyperlinks](https://developer.mozilla.org/de/docs/Web/HTML/Reference
 
 ## Options
 
-- **Target:** Define where a link opens (see [offical MDN documentation](https://developer.mozilla.org/de/docs/Web/HTML/Reference/Elements/a#target)):
+- **Target:** Define where a link opens (see [official MDN documentation](https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/a#target)):
     - `_self`: Opens the target in the same tab.
     - `_blank`: Opens the target in a new tab.
     - `_parent`: Opens the target in the parent frame.
