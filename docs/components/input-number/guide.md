@@ -24,6 +24,7 @@ The number input component is commonly used in forms, calculators and other area
 - **Feedback text**: See [form field](../forms-field).
 - **Show text as tooltip**: See [form field](../forms-field).
 - **Placeholder**: See [form field](../forms-field).
+- **Text alignment:** See [form field](../forms-field) (typically at end).
 - **Allowed characters pattern**: Specify the characters allowed for input. We typically use this to reject invalid characters, such as decimal points. When users type an invalid character, a shaking animation is immediately triggered.
 - **Pattern**: Define the expected input using regular expressions, such as an integer between 1 and 100. We often use this to validate the input when the user leaves the field or clicks submit.
 - **Min/Max**: Specify the minimum and maximum values that can be entered to ensure the input stays within the defined range. We typically use this option to prevent invalid entries and guide users towards acceptable values.

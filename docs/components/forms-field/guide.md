@@ -21,6 +21,7 @@ doc-type: 'tab-item'
 - **Field:** Use the appropriate field based on the type of input data, e.g. use [toggles](../toggle) for a binary choice.
 - **Helper text:** Use to help users understand the field better. We typically use this when there are input restrictions or more information is required.
 - **Show text as tooltip:** Display validation feedback either below the input field or as tooltip when the user hovers or focuses on the form field. Use a different text for the individual validation states that apply (see [validation](../forms-validation)).
+- **Text alignment:** Set individual fields to align at the start or at the end so inputs line up visually, e.g. a form with several [text input fields](../input) and a single [number input](../input-number).
 - **Counter:** Use a counter to show the number of characters entered into the field and the maximum number of characters allowed. We typically use it for [textarea](../textarea) fields.
 
 ## Behavior in context
