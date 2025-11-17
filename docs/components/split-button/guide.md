@@ -29,7 +29,7 @@ The options **loading** and **type** are not available for split buttons.
 
 ## States
 
-Split buttons have five states: Default, hover, active, disabled and focused. States are applied to left and the right part of the split button independently. The visual appearance and the behavior of the states is the same as the ix button and the ix dropdown button.
+Split buttons have five states: Default, hover, active, disabled and focused. States are applied to left and the right part of the split button independently. The visual appearance and the behavior of the states is the same as the [button](../button) and the [dropdown button](../dropdown-button).
 
 ## Dos and Don’ts
 
@@ -42,4 +42,4 @@ Split buttons have five states: Default, hover, active, disabled and focused. St
 - [Button](../button)
 - [Dropdown](../dropdown)
 - [Select](../select)
-- [Split button](../split-button)
+- [Dropdown button](../dropdown-button)
