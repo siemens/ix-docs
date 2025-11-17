@@ -26,7 +26,7 @@ The select component supports single or multiple selections and the editable var
 - **Helper text:** See [form field](../forms-field).
 - **Feedback text:** See [form field](../forms-field).
 - **Show clear button:** Select components can have a dedicated button to easily clear the selection. Hide the button when offering users other ways to reset, e.g. a default item like "none", or if you aim for simplified keyboard accessibility.
-- **List header:** Use an optional header to provide additional context or instructions about the items to help users understand the choices better.
+- **List header:** Use an optional header to provide additional context or instructions about the items to help users understand choices better.
 - **Information for no matches:** Set a message to be displayed when no item matches the inserted text.
 - **Editable:** When enabled, users can add new items to the list.
 - **Multiselect:** Allow users to select multiple items from the list.
