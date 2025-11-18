@@ -12,7 +12,7 @@ doc-type: 'tab-item'
 <br/>
 
 :::info
-Use inline [hyperlinks](https://developer.mozilla.org/de/docs/Web/HTML/Reference/Elements/a) for inline links `<a href="...">` instead of link buttons, e.g. within a paragraph. They are styled and ready to use out of the box.
+Use inline [hyperlinks](https://developer.mozilla.org/de/docs/Web/HTML/Reference/Elements/a) for inline links `<a href="...">` instead of link buttons, e.g. within a paragraph. They are styled and ready to use without additional configuration needed.
 :::
 
 <br/>
