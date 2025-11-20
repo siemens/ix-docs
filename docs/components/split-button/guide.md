@@ -17,11 +17,11 @@ All the variants, options and states of the [button](../button/index.mdx) and th
 
 ## Options
 
-- **Disabled:** The disabled option can be applied to the complete component. There is no option to disable each part of the split button independently.
 - **Label:** Set a label for the button component (left side). We typically use short labels that contain a verb.
 - **Placement:** Define where the flyout appears which is triggered when the dropdown button is active. You can choose between different directions (top, bottom, left, right) and two options for alignment with the button (start, end). When there is not enough space for the chosen setting, the placement is corrected automatically.
 - **Split icon:** We typically use a chevron icon on the dropdown button, but a custom icon can be set. A common alternative to the chevron is the "more-menu" icon.
-- The options **loading** and **type** are not available for split buttons.
+
+The options **loading** and **type** are not available for split buttons.
 
 ## Behavior in context
 
@@ -29,7 +29,7 @@ All the variants, options and states of the [button](../button/index.mdx) and th
 
 ## States
 
-Split buttons have five states: Default, hover, active, disabled and focused. States are applied to left and the right part of the split button independently except for the disabled state. The visual appearance and the behavior of the states is the same as the ix button and the ix dropdown button.
+Split buttons have five states: Default, hover, active, disabled and focused. States are applied to left and the right part of the split button independently. The visual appearance and the behavior of the states is the same as the [button](../button) and the [dropdown button](../dropdown-button).
 
 ## Dos and Don’ts
 
@@ -42,4 +42,4 @@ Split buttons have five states: Default, hover, active, disabled and focused. St
 - [Button](../button)
 - [Dropdown](../dropdown)
 - [Select](../select)
-- [Split button](../split-button)
+- [Dropdown button](../dropdown-button)

@@ -22,6 +22,7 @@ Input fields are commonly used in forms, search bars and other areas where data 
 - **Label:** See [form field](../forms-field).
 - **Slot options:** Add optional elements at the end and/or start of the input field, e.g. an icon, a button or a text option. We typically use slots for additional indications, options or information like a visibility toggle in a password field.
 - **Placeholder**: Use a placeholder to provide a hint about what to enter or additional relevant context while the input field is empty. We typically use a placeholder when the label is not visible or we need to provide additional context.
+- **Text alignment:** See [form field](../forms-field) (by default at start).
 - **Helper text:** See [form field](../forms-field).
 - **Counter:** See [form field](../forms-field).
 - **Feedback text**: See [form field](../forms-field).

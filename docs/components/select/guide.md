@@ -26,13 +26,14 @@ The select component supports single or multiple selections and the editable var
 - **Helper text:** See [form field](../forms-field).
 - **Feedback text:** See [form field](../forms-field).
 - **Show clear button:** Select components can have a dedicated button to easily clear the selection. Hide the button when offering users other ways to reset, e.g. a default item like "none", or if you aim for simplified keyboard accessibility.
-- **List header:** Use a header to provide additional context or instructions about the items to help users understand the choices better.
-  - **Hide list header:** Hide the header of the dropdown list when not required.
+- **List header:** Use an optional header to provide additional context or instructions about the items to help users understand choices better.
 - **Information for no matches:** Set a message to be displayed when no item matches the inserted text.
 - **Editable:** When enabled, users can add new items to the list.
 - **Multiselect:** Allow users to select multiple items from the list.
-- **Item label:** Set a short and concise label for dropdown items.
-- **Selected item:** Mark selected items in the dropdown with a check mark.
+  - **Collapse multiple selections:** When enabled, selected items are collapsed into a counter instead of showing all selected items.
+- **Items:**
+  - **Label:** Set a short and concise label for dropdown items.
+  - **Selected:** Mark selected items in the dropdown with a check mark.
 
 ## Behavior in context
 

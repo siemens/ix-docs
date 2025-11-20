@@ -26,6 +26,7 @@ Time inputs are typically used in forms, filters and scheduling tools to ensure 
 - **Feedback text**: See [form field](../forms-field).
 - **Show text as tooltip**: See [form field](../forms-field).
 - **Placeholder**: See [form field](../forms-field). We typically use a placeholder to show an example time format to assist users when the field is empty.
+- **Text alignment:** See [form field](../forms-field) (by default at start).
 - **Error message**: Feedback text when time is not parsable. We typically use this to inform users that the entered time format is incorrect and guide them to enter a valid time.
 - **Format**: Specify the time format to ensure that times are entered in a consistent and recognizable format. Default is ‘TT’ which is the localized 24-hour time with seconds (read more in the [UX writing guides](./../../guidelines/language/writing-style-guide-getting-started)).
   - **Columns**: Show the respective columns in the time picker (see [time picker](../time-picker)).
@@ -59,24 +60,13 @@ Time input has five states: Default, hover, disabled, read-only and focused.
 
 <DoAndDont>
   <DoAndDont.Do>
-    <DoAndDont.Item>
-      Do use consistent time formats throughout the application to avoid
-      confusion
-    </DoAndDont.Item>
-    <DoAndDont.Item>
-      Do add helper text to clarify the time format being used{' '}
-    </DoAndDont.Item>
-    <DoAndDont.Item>
-      Do ensure the time picker is accessible via keyboard
-    </DoAndDont.Item>
-    <DoAndDont.Item>
-      Do consider localization to adapt time formats to local conventions
-    </DoAndDont.Item>
+    <DoAndDont.Item>Do use consistent time formats throughout the application to avoid confusion</DoAndDont.Item>
+    <DoAndDont.Item>Do add helper text to clarify the time format being used{' '}</DoAndDont.Item>
+    <DoAndDont.Item>Do ensure the time picker is accessible via keyboard</DoAndDont.Item>
+    <DoAndDont.Item>Do consider localization to adapt time formats to local conventions</DoAndDont.Item>
   </DoAndDont.Do>
   <DoAndDont.Dont>
-    <DoAndDont.Item>
-      Don’t use the same input for start and end times, instead separate them
-    </DoAndDont.Item>
+    <DoAndDont.Item>Don’t use the same input for start and end times, instead separate them</DoAndDont.Item>
   </DoAndDont.Dont>
 </DoAndDont>
 
