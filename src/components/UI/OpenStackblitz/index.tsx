@@ -6,14 +6,14 @@
  * This source code is licensed under the MIT license found in the
  * LICENSE file in the root directory of this source tree.
  */
+import BrowserOnly from '@docusaurus/BrowserOnly';
+import useBaseUrl from '@docusaurus/useBaseUrl';
+import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
+import { iconElectricalEnergyFilled } from '@siemens/ix-icons/icons';
+import { FrameworkTypes } from '@site/src/hooks/use-framework';
+import { openStackBlitz } from '@site/src/lib/stackblitz';
 import React from 'react';
 import Button from '../Button';
-import { iconElectricalEnergyFilled } from '@siemens/ix-icons/icons';
-import useBaseUrl from '@docusaurus/useBaseUrl';
-import { openStackBlitz } from '@site/src/lib/stackblitz';
-import { FrameworkTypes } from '@site/src/hooks/use-framework';
-import BrowserOnly from '@docusaurus/BrowserOnly';
-import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 
 export default function OpenStackblitz(
   props: Readonly<{
@@ -24,7 +24,7 @@ export default function OpenStackblitz(
 ) {
   const context = useDocusaurusContext();
   const snippetsBaseUrl = useBaseUrl('/demo/v2/');
-  const runtimeBaseUrl = useBaseUrl('/runtime/v3');
+  const runtimeBaseUrl = useBaseUrl('/runtime/v4');
 
   return (
     <BrowserOnly>
