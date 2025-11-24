@@ -11,7 +11,7 @@ description: 'Our guidelines section provides comprehensive information to help 
 import { IxLayoutGrid, IxRow } from '@siemens/ix-react';
 import { CategoryButton } from '@site/src/components/CategoryButton';
 
-# 
+#
 
 <IxLayoutGrid style={{marginBottom: '3rem'}} no-margin>
   <IxRow style={{gap: '0.5rem', justifyContent: 'center'}}>
@@ -61,7 +61,10 @@ import { CategoryButton } from '@site/src/components/CategoryButton';
 </IxLayoutGrid>
 
 ## Design principles
-Elevating user experience with Industrial Experience design principles. In the fast-paced world of industrial technology, design principles serve as the cornerstone of innovation, guiding us to create seamless and intuitive applications. They provide designers and developers with a robust framework to make informed design decisions, ensuring each product aligns with our standards and brand identity. [Read more](./designprinciples)
+Elevating user experience with Industrial Experience design principles. Design principles guide our decisions and help create consistent, accessible and usable products. We now present a concise set of principles on the Getting started page and link to the full Product Design Principles website for further reading. [Read more](https://www.productdesignprinciples.example.com)
+
+### Where to find the principles in this site
+We consolidated the principles into the Getting started overview and linked them to the external Product Design Principles site to provide a single source of guidance. [Open Getting started](/docs/home/overview.md)
 
 ## Accessibility
 

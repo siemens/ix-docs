@@ -13,14 +13,22 @@
   padding: 0px;
   gap: 0.75rem;
 
+  color: var(--theme-color-std-text);
+
   min-width: 15.625rem;
   width: 15.625rem;
+
+  &:hover .GuidingPrincipleCard__Image {
+    transition: ease-in-out 0.15s;
+    background-color: var(--theme-color-primary--hover);
+  }
 
   .GuidingPrincipleCard__Image {
     display: block;
     position: relative;
     height: 13.9375rem;
     width: 100%;
-    background-color: #ff00002a;
+    background-color: var(--theme-color-primary);
+    border-radius: 0.5rem;
   }
 }

@@ -17,29 +17,34 @@ import './card-with-icon.css';
 
 <GuidingPrinciples></GuidingPrinciples>
 
-## Resources & assets
+## Figma library
 
-Siemens Industrial Experience provides and maintains a Figma design kit containing all components, design foundations and assets. Multiple code implementations are offered and maintained by our team. With guidelines on UX writing, pattern usage and more, Siemens Industrial Experience supports its users along the way. The comprehensive icon set contains more than 500 icons and is constantly growing.
+Our Figma library contains all tokens, components and blueprints ready for app design.
+
+- **Access:** The primary library is maintained in the Siemens AG Global Figma account. Siemens employees with a Figma license can search for "iX Design System".
+- **Guest access & classic theme:** Guest access and the classic (open-source) library are available upon request — please [contact us](support/contact-us).
+- **Brand & variables:** The library includes Siemens brand assets and Figma variables for easy theming. See [Theme Switching](theming/usage-designers.md) for details.
+
+## Development frameworks
+
+Choose a framework to add iX components to your project. Each link includes installation steps and integration notes.
 
 <CardList>
-  <Card link="home/getting-started/designers">Go to design kits</Card>
-  <Card link="icons/icon-library">Go to icon set</Card>
+<Card link="home/installation/angular"><AngularIcon className="Card_Icon" />Angular</Card>
+<Card link="home/installation/react"><ReactIcon className="Card_Icon" />React</Card>
+<Card link="home/installation/javascript"><WebComponentsIcon className="Card_Icon" />Web Components</Card>
+<Card link="home/installation/vue"><VueIcon className="Card_Icon" />Vue</Card>
+<Card link="home/installation/blazor"><BlazorIcon className="Card_Icon" />Blazor&nbsp;<span style={{fontSize: '0.8rem'}}>(experimental)</span></Card>
 </CardList>
 
-## Choose your framework
-
-<CardList>
-  <Card link="home/installation/angular"><AngularIcon className="Card_Icon" />Angular</Card>
-  <Card link="home/installation/react"><ReactIcon className="Card_Icon" />React</Card>
-  <Card link="home/installation/javascript"><WebComponentsIcon className="Card_Icon" />Web Components</Card>
-  <Card link="home/installation/vue"><VueIcon className="Card_Icon" />Vue</Card>
-  <Card link="home/installation/blazor"><BlazorIcon className="Card_Icon" />Blazor&nbsp;<span style={{fontSize: '0.8rem'}}>(experimental)</span></Card>
-</CardList>
+**IDE editor theme**: We provide a Visual Studio Code theme for Siemens employees and partners to preview the iX look-and-feel while coding (download available [here](https://code.siemens.com/siemens-ix/ix-for-vs-code/ix-theme-for-vs-code/-/releases) within Siemens).
 
 ## Contribute
 
-We welcome contributions from the community as Siemens Industrial Experience is continuously being improved. Send all your feedback, questions and contributions via GitHub.
+We welcome contributions from the community, as Siemens Industrial Experience is continuously being improved. Send all your feedback, questions and contributions via GitHub.
 
 <CardList>
   <Card link="https://www.github.com/siemens/ix"><GitHubIcon className="Card_Icon"/>Contribute</Card>
 </CardList>
+
+If you are unsure where to start, check the repository issues or open a discussion.

@@ -56,16 +56,10 @@ const sidebars: SidebarsConfig = {
       id: 'home/overview',
       className: 'doc-sidebar-item-bold',
     },
-    {
-      type: 'category',
+        {
+      type: 'doc',
+      id: 'home/getting-started/starter-app',
       className: 'doc-sidebar-item-bold',
-      label: 'Getting started',
-      items: [
-        'home/getting-started/developers',
-        'home/getting-started/designers',
-        'home/getting-started/starter-app',
-      ],
-      collapsed: true,
     },
     {
       type: 'category',
