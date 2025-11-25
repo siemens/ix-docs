@@ -8,6 +8,7 @@ no_single_tab: true
 description: 'Our guidelines section provides comprehensive information to help you create user-friendly and consistent designs. This section covers various aspects of design, ensuring that your work meets high standards of accessibility, responsiveness, and usability.'
 ---
 
+import GuidingLinks from '@site/src/components/GuidingPrinciples';
 import { IxLayoutGrid, IxRow } from '@siemens/ix-react';
 import { CategoryButton } from '@site/src/components/CategoryButton';
 
@@ -60,11 +61,13 @@ import { CategoryButton } from '@site/src/components/CategoryButton';
   </IxRow>
 </IxLayoutGrid>
 
-## Design principles
-Elevating user experience with Industrial Experience design principles. Design principles guide our decisions and help create consistent, accessible and usable products. We now present a concise set of principles on the Getting started page and link to the full Product Design Principles website for further reading. [Read more](https://www.productdesignprinciples.example.com)
+## Guiding principles for excellent design
 
-### Where to find the principles in this site
-We consolidated the principles into the Getting started overview and linked them to the external Product Design Principles site to provide a single source of guidance. [Open Getting started](/docs/home/overview.md)
+We've refined our approach into four core design principles to help you make your applications intuitive, efficient and valuable.
+
+<GuidingLinks></GuidingLinks>
+
+As a Siemens employee, get more details on our princples, checklists and real app examples for designers and developers [here](https://siemens.sharepoint.com/sites/design-principles?ovuser=38ae3bcd-9579-4fd4-adda-b42e1495d55a%2ckathrin.schalber.ext%40siemens.com&OR=Teams-HL&CT=1762176267027&clickparams=eyJBcHBOYW1lIjoiVGVhbXMtRGVza3RvcCIsIkFwcFZlcnNpb24iOiI0OS8yNTEwMTYxNjUwOSIsIkhhc0ZlZGVyYXRlZFVzZXIiOmZhbHNlfQ%3d%3d).
 
 ## Accessibility
 

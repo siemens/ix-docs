@@ -1,5 +1,5 @@
 ---
-sidebar_label: Overview
+sidebar_label: Getting started
 title: Welcome to Siemens Industrial Experience
 doc-type: 'banner'
 description: 'Siemens Industrial Experience is an open-source design system for designers and developers to consistently create the perfect digital experience for partners and customers within industrial contexts. It gives you access to a broad range of UI patterns, web-based code implementations, design tools, resources and content guidelines to accelerate collaboration between designers, developers and writers, helping to build efficient and consistent products.'
@@ -15,7 +15,7 @@ import GitHubIcon from '@site/static/img/github.svg';
 import BlazorIcon from '@site/static/img/blazor.svg';
 import './card-with-icon.css';
 
-<GuidingPrinciples></GuidingPrinciples>
+<GuidingLinks></GuidingLinks>
 
 ## Figma library
 
