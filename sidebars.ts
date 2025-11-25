@@ -908,11 +908,31 @@ const sidebars: SidebarsConfig = {
           ],
         }),
         createTabItem({
+          id: 'components/loading-modal/index',
+          label: 'Loading Modal',
+          items: [
+            {
+              id: 'components/loading-modal/code',
+              label: 'Code',
+            },
+          ],
+        }),
+        createTabItem({
           id: 'components/messagebar/index',
           label: 'Message bar',
           items: [
             {
               id: 'components/messagebar/code',
+              label: 'Code',
+            },
+          ],
+        }),
+        createTabItem({
+          id: 'components/message-modal/index',
+          label: 'Message Modal',
+          items: [
+            {
+              id: 'components/message-modal/code',
               label: 'Code',
             },
           ],
