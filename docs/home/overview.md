@@ -5,7 +5,7 @@ doc-type: 'banner'
 description: 'Siemens Industrial Experience is an open-source design system for designers and developers to consistently create the perfect digital experience for partners and customers within industrial contexts. It gives you access to a broad range of UI patterns, web-based code implementations, design tools, resources and content guidelines to accelerate collaboration between designers, developers and writers, helping to build efficient and consistent products.'
 ---
 
-import GuidingPrinciples from '@site/src/components/GuidingPrinciples';
+import { GuidingLinks } from '@site/src/components/GuidingPrinciples';
 import {Card, CardList} from '@site/src/components/Card';
 import AngularIcon from '@site/static/img/angular.svg';
 import ReactIcon from '@site/static/img/react.svg';

@@ -15,10 +15,17 @@
 
   color: var(--theme-color-std-text);
 
-  min-width: 15.625rem;
-  width: 15.625rem;
+  min-width: 12rem;
+  width: calc(50% - 36px);
 
-  &:hover .GuidingPrincipleCard__Image {
+  &:is(a) .GuidingPrincipleCard__Image{
+    background-color: var(--theme-color-primary);
+  }
+
+  &:is(div) .GuidingPrincipleCard__Image{
+    background-color: var(--theme-color-2);
+  }
+  &:is(a):hover .GuidingPrincipleCard__Image {
     transition: ease-in-out 0.15s;
     background-color: var(--theme-color-primary--hover);
   }
@@ -26,9 +33,11 @@
   .GuidingPrincipleCard__Image {
     display: block;
     position: relative;
-    height: 13.9375rem;
+    height: 12rem;
     width: 100%;
-    background-color: var(--theme-color-primary);
     border-radius: 0.5rem;
   }
+
+
 }
+
