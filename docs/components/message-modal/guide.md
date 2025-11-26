@@ -59,7 +59,7 @@ Note that the choice of button variant is independent from the modal variant, e.
 
 - **Title:** Use a clear, outcome-oriented title (e.g. "Delete item", see [writing guidelines](/docs/guidelines/language/dialogs-and-buttons)).
 - **Message:** Include if you need to provide additional information e.g. consequences (see [writing guidelines](/docs/guidelines/language/error-messages)).
-- **Confirm action:** Use precise action text such as "Delete," "Confirm," or "Continue."
+- **Confirm action:** Use precise action text, e.g. "Delete," "Confirm," or "Continue."
 - **Cancel action:** Use "Cancel" or "Close".
 - **Close on backdrop:** Allow closing by clicking the backdrop for informational messages but disable it for critical confirmations.
 - **Preserve context:** After closing, return users to the same screen state.
@@ -67,7 +67,7 @@ Note that the choice of button variant is independent from the modal variant, e.
 ## Behavior in context
 
 - Use for confirmations that are direct and reversible or for important information requiring acknowledgement
-- Make consequences explicit in the message and action labels (for example Delete permanently)
+- Make consequences explicit in the message and action labels (e.g. Delete permanently)
 - Ensure the primary action is keyboard accessible and focused by default
 - Use confirm dialogs sparingly and only when consequences are significant
 
