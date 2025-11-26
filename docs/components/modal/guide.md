@@ -25,7 +25,7 @@ Use them when a task requires immediate attention but the user should return to 
     - **Size**: Choose a fixed max-width, full width or full screen modal based on context and device:
         - **Fixed max-width (360-840px):** Use as default for most layouts. Note that on narrower screens or viewports the modal will scale down and become proportionally narrower to fit the available space.
         - **Full width:** Use for data-heavy interfaces on desktop, e.g. large datasets.
-        - **Full screen:** Since the modal container will stretch across full screen, covering the whole [application](../application), use for immersive experiences or multi-step workflows. Note that users have no visual connection to the app why we recommend to establish it in the title or content
+        - **Full screen:** Since the modal container will stretch across full screen, covering the whole [application](../application), use for immersive experiences or multi-step workflows. Note that users have no visual connection to the app, which is why we recommend to establish it in the title or content
     - **Backdrop**: Use a backdrop to focus attention and prevent background interaction.
     - **Animation**: By default, modals fade in. Disable for performance-sensitive contexts.
     - **Close on backdrop click**: Allow users to dismiss the modal by clicking the backdrop. We typically disable it for critical decisions requiring explicit confirmation.
@@ -34,13 +34,13 @@ Use them when a task requires immediate attention but the user should return to 
     - **Title**: Use a short, specific title that describes the task or decision.
     - **Icon and icon color:** Repeat icons from the trigger to establish a connection (e.g. if a button with label and icon opens the modal then reuse the same label and icon).
     - **Icon color:** Use [iX theme colors](../../styles/colors).
-    - **Hide close**: Only hide the close button for critical flows that require an explicit decision
-- **Modal footer:** We recommend to place each one primary, secondary and, if applicable, tertiary [button](../button) on the footer. Position them on the right side to follow the Z-shape reading pattern in LTR read languages.
+    - **Hide close**: We recommend only hiding the close button for critical flows that require an explicit decision
+- **Modal footer:** We recommend to place each one primary, secondary and, if applicable, tertiary [button](../button) on the footer. We also recommend positioning them on the right side to follow the Z-shape reading pattern in LTR read languages.
 
 ## Behavior in context
 
 - **Interaction:**
-    - Modals are opened by the system (e.g. when another process is finished) or by the user (e.g. when clicking on buttons)
+    - Modals are opened by the system (e.g. when another process is finished) or by users (e.g. when clicking on buttons)
     - Modals are closed:
         - when clicking on close or on buttons in the footer (typically cancel or confirm)
         - when pressing the Escape key
@@ -68,10 +68,10 @@ Modals have two states: Closed and opened.
     <DoAndDont.Item>Do provide a clear primary action that describes the result</DoAndDont.Item>
     <DoAndDont.Item>Do ensure keyboard and screen‑reader access to all controls</DoAndDont.Item>
     <DoAndDont.Item>Do preserve scroll position and page state when closing</DoAndDont.Item>
-    <DoAndDont.Item>Do return users to the previous state, not an unrelated page (preserve scroll position and page state)</DoAndDont.Item>
+    <DoAndDont.Item>Do return users to the previous state, not an unrelated page</DoAndDont.Item>
   </DoAndDont.Do>
   <DoAndDont.Dont>
-		<DoAndDont.Item>Don't use modals if a decision should be made (use [message modals](../message-modal) instead)</DoAndDont.Item>
+    <DoAndDont.Item>Don’t use modals if a decision should be made (use [message modals](../message-modal) instead)</DoAndDont.Item>
     <DoAndDont.Item>Don’t nest modals (e.g. to load more data, use [spinners](../spinner) within modal contents)</DoAndDont.Item>
     <DoAndDont.Item>Don’t auto close modals for irreversible actions</DoAndDont.Item>
     <DoAndDont.Item>Don’t overload the modal with unrelated content</DoAndDont.Item>

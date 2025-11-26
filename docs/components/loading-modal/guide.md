@@ -6,7 +6,7 @@ import DoAndDont from '@site/src/components/DoAndDont';
 
 # Loading modal - Usage
 
-Loading modals communicate that the system is performing an operation that takes time and that the user should wait. Use them for short blocking tasks (upload, processing) where the user must not interact with the page until completion.
+Loading modals communicate that the system is performing an operation that takes time and that users should wait. Use them for short blocking tasks (upload, processing) where users must not interact with the page until completion.
 
 ![Loading modal](https://www.figma.com/design/wEptRgAezDU1z80Cn3eZ0o/iX-Documentation-illustrations?node-id=7351-4017&t=WHbXyipgpGwQbVsV-4)
 
@@ -19,7 +19,7 @@ Loading modals communicate that the system is performing an operation that takes
 
 ## Behavior in context
 
-- **Interaction:** Loading modals are opened and closed by the system to prevent user interaction without any user interaction.
+- **Interaction:** Loading modals are opened and closed by the system to prevent user interaction.
 - **Overflow:** If the message exceeds the available width, it breaks into multiple lines.
 - **Placement:** Horizontally top-aligned, vertically centered.
 - **Responsiveness:** Loading modals adjust their width depending on the screen width.
@@ -32,11 +32,11 @@ Loading modals have two states: Closed and opened.
 
 <DoAndDont>
   <DoAndDont.Do>
-    <DoAndDont.Item>Use only if any user interaction needs to be blocked (otherwise use [spinners](../spinner) instead)</DoAndDont.Item>
-    <DoAndDont.Item>Use if user interaction needs to be blocked and the progress is unknown (otherwise use [progress indicators](../progress-indicator) placed in [custom modals](../modal) instead)</DoAndDont.Item>
+    <DoAndDont.Item>Do use only if any user interaction needs to be blocked (otherwise use [spinners](../spinner) instead)</DoAndDont.Item>
+    <DoAndDont.Item>Do use if user interaction needs to be blocked and the progress is unknown (otherwise use [progress indicators](../progress-indicator) placed in [custom modals](../modal) instead)</DoAndDont.Item>
   </DoAndDont.Do>
   <DoAndDont.Dont>
-    <DoAndDont.Item>Don’t block the user for long tasks without an alternative</DoAndDont.Item>
+    <DoAndDont.Item>Don’t block users for long tasks without an alternative</DoAndDont.Item>
     <DoAndDont.Item>Don’t show vague messages that leave users unsure what is happening</DoAndDont.Item>
   </DoAndDont.Dont>
 </DoAndDont>
