@@ -6,36 +6,36 @@ import DoAndDont from '@site/src/components/DoAndDont';
 
 # Custom modal - Usage
 
-Custom modals present rich, contextual content such as forms, complex workflows or nested interactions that require user focus. Use them when a task requires immediate attention but the user should return to the same place after closing the modal.
+Custom modals present rich, contextual content e.g. forms, complex workflows or nested interactions that require user focus.
 
-![Modal overview](https://www.figma.com/design/wEptRgAezDU1z80Cn3eZ0o/iX-Pattern-Illustrations?node-id=... )
+Use them when a task requires immediate attention but the user should return to the same place after closing the modal.
 
-1. Header
+![Modal overview](https://www.figma.com/design/wEptRgAezDU1z80Cn3eZ0o/iX-Documentation-illustrations?node-id=7350-2529&t=WHbXyipgpGwQbVsV-4)
+
+1. Title
 2. Close button
-3. Content
-4. Footer
+3. Modal header
+4. Modal content
+5. Modal footer
 
 ## Options
 
 - **Whole modal:**
     - **Centered**: Center content by default; use top alignment for tall dialogs that expand during interaction.
     - **Size**: Choose a fixed max-width, full width or full screen modal based on context and device:
-        - **Fixed max-width (360-840px):** Use as default for all kinds of different layouts. Note that
-        - **Full width:** Data-heavy interfaces on desktop, e.g. large datasets.
-        - **Full screen:** Immersive experiences or multi-step workflows. Note that users have no visual connection to the app, since the modal container will stretch across full screen, covering the whole [application](../application).
+        - **Fixed max-width (360-840px):** Use as default for most layouts. Note that on narrower screens or viewports the modal will scale down and become proportionally narrower to fit the available space.
+        - **Full width:** Use for data-heavy interfaces on desktop, e.g. large datasets.
+        - **Full screen:** Since the modal container will stretch across full screen, covering the whole [application](../application), use for immersive experiences or multi-step workflows. Note that users have no visual connection to the app why we recommend to establish it in the title or content
     - **Backdrop**: Use a backdrop to focus attention and prevent background interaction.
     - **Animation**: By default, modals fade in. Disable for performance-sensitive contexts.
     - **Close on backdrop click**: Allow users to dismiss the modal by clicking the backdrop. We typically disable it for critical decisions requiring explicit confirmation.
     - **Before dismiss**: Add follow-up actions when users try to close modals (e.g. add a confirmation prompt to avoid unintentional discarding of inputs when closing).
-    - **Container:** Similar to [dropdown triggers](../dropdown/code#property-trigger), defines which element opens the modal.
 - **Modal header:**
     - **Title**: Use a short, specific title that describes the task or decision.
-    - **Icon and icon color:** Repeat icons from the container (trigger) to establish a connection (e.g. if a button with label and icon opens the modal then reuse the same label and icon).
+    - **Icon and icon color:** Repeat icons from the trigger to establish a connection (e.g. if a button with label and icon opens the modal then reuse the same label and icon).
     - **Icon color:** Use [iX theme colors](../../styles/colors).
     - **Hide close**: Only hide the close button for critical flows that require an explicit decision
-- **Modal footer:**
-    - **Primary action**: Use an explicit primary action label that describes the outcome (for example "Save" or "Confirm").
-    - **Secondary actions**: Offer a clear secondary action (Cancel) and avoid multiple secondary options that compete with the primary action.
+- **Modal footer:** We recommend to place each one primary, secondary and, if applicable, tertiary [button](../button) on the footer. Position them on the right side to follow the Z-shape reading pattern in LTR read languages.
 
 ## Behavior in context
 
@@ -82,6 +82,5 @@ Modals have two states: Closed and opened.
 
 - [Message modal](../message-modal)
 - [Loading modal](../loading-modal)
-- [Modal - Code](../code)
 - [Forms field](../../forms-field)
 - [Accessibility](../../guidelines/accessibility)

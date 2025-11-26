@@ -41,6 +41,16 @@ Note that the choice of button variant is independent from the modal variant, e.
 | Question | Are you sure you want to delete this item permanently? | <IxButton variant="danger-primary">Delete</IxButton> <IxButton variant="primary-ghost">Cancel</IxButton> |
 | Question | Do you want to save your changes before leaving?       | <IxButton>Save changes</IxButton> <IxButton variant="secondary">Cancel</IxButton> <IxButton variant="tertiary">Discard</IxButton> |
 
+
+
+
+
+| Column A | Column B |
+|---|---|
+| [Error](https://www.figma.com/design/wEptRgAezDU1z80Cn3eZ0o/iX-Documentation-illustrations?node-id=7351-3560&t=WHbXyipgpGwQbVsV-4) | Title: A system error occurred<br/>Variant: Error<br/>Buttons: subtle primary button "Reload" and primary button "Try again" |
+| [Question delete](https://www.figma.com/design/wEptRgAezDU1z80Cn3eZ0o/iX-Documentation-illustrations?node-id=7351-3731&t=WHbXyipgpGwQbVsV-4) | Title: Are you sure you want to delete this item permanently?<br/>Variant: Question<br/>Buttons: primary danger button "Delete" and primary ghost button "Cancel" |
+| [Question discard](https://www.figma.com/design/wEptRgAezDU1z80Cn3eZ0o/iX-Documentation-illustrations?node-id=7351-3947&t=WHbXyipgpGwQbVsV-4) | Title: Do you want to save your changes before leaving?<br/>Variant: Question<br/>Buttons: primary button "Save changes", secondary button "Cancel" and tertiary button "Discard" |
+
 /*TODO Remove either bullet points or table*/
 
 :::
