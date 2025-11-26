@@ -46,6 +46,5 @@ Loading modals have two states: Closed and opened.
 - [Message modal](../message-modal)
 - [Custom modal](../modal)
 - [Progress indicator](../progress-indicator)
-- [Toasts](../../patterns/toasts)
-- [Progress indicators](../../components/progress)
+- [Toasts](../toast)
 - [Accessibility](../../guidelines/accessibility)

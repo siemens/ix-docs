@@ -82,5 +82,5 @@ Modals have two states: Closed and opened.
 
 - [Message modal](../message-modal)
 - [Loading modal](../loading-modal)
-- [Forms field](../../forms-field)
+- [Forms field](../forms-field)
 - [Accessibility](../../guidelines/accessibility)
