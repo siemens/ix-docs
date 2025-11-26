@@ -19,13 +19,6 @@ import { CategoryButton } from '@site/src/components/CategoryButton';
     <CategoryButton
       buttonWidth="8rem"
       imageWidth="5.5rem"
-      title="Design principles"
-      link="#design-principles">
-      ![](https://www.figma.com/design/wEptRgAezDU1z80Cn3eZ0o/iX-Documentation-illustrations?node-id=5186-244&t=gkh6VNlJun96I6Ac-11)
-    </CategoryButton>
-    <CategoryButton
-      buttonWidth="8rem"
-      imageWidth="5.5rem"
       title="Accessibility"
       link="#accessibility">
       ![](https://www.figma.com/design/wEptRgAezDU1z80Cn3eZ0o/iX-Documentation-illustrations?node-id=5186-198&t=gkh6VNlJun96I6Ac-11)

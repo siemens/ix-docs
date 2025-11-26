@@ -1078,7 +1078,6 @@ const sidebars: SidebarsConfig = {
 
   guidelines: [
     'guidelines/overview',
-    'guidelines/designprinciples',
     createTabItem({
       id: 'guidelines/accessibility/index',
       label: 'Accessibility',
