@@ -8,36 +8,51 @@
  */
 .GuidingPrincipleCard {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   align-items: flex-start;
   padding: 0px;
-  gap: 0.75rem;
+  gap: 1rem;
 
   color: var(--theme-color-std-text);
 
-  min-width: 12rem;
-  width: calc(50% - 36px);
+  min-width: 16rem;
+  width: calc(50% - 32px);
 
-  &:is(a) .GuidingPrincipleCard__Image{
-    background-color: var(--theme-color-primary);
+  .GuidingPrincipleCard__Image {
+    display: flex;
+    position: relative;
+    /* Keep this image area a fixed square so icons layout consistently */
+    width: 8rem;
+    height: 8rem;
+    min-width: 8rem;
+    min-height: 8rem;
+    flex: 0 0 8rem;
+    aspect-ratio: 1 / 1;
+    border-radius: 0.5rem;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
   }
 
   &:is(div) .GuidingPrincipleCard__Image{
     background-color: var(--theme-color-2);
   }
+
+  &:is(a) .GuidingPrincipleCard__Image{
+    background-color: var(--theme-color-primary);
+
+    svg, svg path, ix-icon, img{
+      fill: var(--theme-color-primary--contrast);
+      color: var(--theme-color-primary--contrast);
+      width: 4rem;
+      height: 4rem;
+    }
+  }
+
   &:is(a):hover .GuidingPrincipleCard__Image {
     transition: ease-in-out 0.15s;
     background-color: var(--theme-color-primary--hover);
   }
-
-  .GuidingPrincipleCard__Image {
-    display: block;
-    position: relative;
-    height: 12rem;
-    width: 100%;
-    border-radius: 0.5rem;
-  }
-
 
 }
 

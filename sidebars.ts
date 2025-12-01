@@ -91,14 +91,6 @@ const sidebars: SidebarsConfig = {
       type: 'category',
       className: 'doc-sidebar-item-bold',
 
-      label: 'Theme',
-      items: ['home/theming/usage-developers', 'home/theming/usage-designers'],
-      collapsed: true,
-    },
-    {
-      type: 'category',
-      className: 'doc-sidebar-item-bold',
-
       label: 'Releases',
       items: [
         'home/releases/roadmap',
@@ -1176,6 +1168,13 @@ const sidebars: SidebarsConfig = {
     'styles/shadows',
     'styles/elevation',
     'styles/animation',
+    {
+      type: 'category',
+      className: 'doc-sidebar-item-bold',
+      label: 'Theme',
+      items: ['styles/theming/usage-developers', 'styles/theming/usage-designers'],
+      collapsed: true,
+    },
   ],
 };
 
