@@ -52,7 +52,8 @@
     "/src/preview-examples/input-with-slots.html",
     "/src/preview-examples/number-input-with-slots.html",
     "/src/preview-examples/tabs-rounded.html",
-    "/src/preview-examples/time-input-with-slots.html"
+    "/src/preview-examples/time-input-with-slots.html",
+    "/src/preview-examples/tooltip-with-icon.html"
   ],
   "ix-avatar": [
     "/src/preview-examples/application-advanced.html",
@@ -200,6 +201,7 @@
     "/src/preview-examples/message-bar-removal.html",
     "/src/preview-examples/message-bar.html",
     "/src/preview-examples/message.html",
+    "/src/preview-examples/modal-close.html",
     "/src/preview-examples/modal-form-ix-button-submit.html",
     "/src/preview-examples/modal-sizes.html",
     "/src/preview-examples/modal.html",
@@ -210,6 +212,7 @@
     "/src/preview-examples/toast-custom.html",
     "/src/preview-examples/toast-position.html",
     "/src/preview-examples/toast.html",
+    "/src/preview-examples/tooltip-with-icon.html",
     "/src/preview-examples/tooltip.html",
     "/src/preview-examples/tree-custom.html",
     "/src/preview-examples/validation-select.html"
@@ -353,7 +356,8 @@
     "/src/preview-examples/form-checkbox-group-indeterminate.html",
     "/src/preview-examples/form-checkbox-group.html",
     "/src/preview-examples/form-checkbox-validation.html",
-    "/src/preview-examples/form-checkbox.html"
+    "/src/preview-examples/form-checkbox.html",
+    "/src/preview-examples/theme-switcher.html"
   ],
   "ix-checkbox-group": [
     "/src/preview-examples/form-checkbox-group-indeterminate.html",
@@ -449,14 +453,17 @@
     "/src/preview-examples/message-bar.html"
   ],
   "ix-modal-header": [
+    "/src/preview-examples/modal-close.html",
     "/src/preview-examples/modal-form-ix-button-submit.html",
     "/src/preview-examples/modal.html"
   ],
   "ix-modal-content": [
+    "/src/preview-examples/modal-close.html",
     "/src/preview-examples/modal-form-ix-button-submit.html",
     "/src/preview-examples/modal.html"
   ],
   "ix-modal-footer": [
+    "/src/preview-examples/modal-close.html",
     "/src/preview-examples/modal-form-ix-button-submit.html",
     "/src/preview-examples/modal.html"
   ],
@@ -560,6 +567,7 @@
     "/src/preview-examples/toggle.html"
   ],
   "ix-tooltip": [
+    "/src/preview-examples/tooltip-with-icon.html",
     "/src/preview-examples/tooltip.html"
   ],
   "ix-tree": [

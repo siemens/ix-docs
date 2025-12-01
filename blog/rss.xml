@@ -4,10 +4,21 @@
         <title>Siemens Industrial Experience Blog</title>
         <link>https://ix.siemens.io/blog</link>
         <description>Siemens Industrial Experience Blog</description>
-        <lastBuildDate>Mon, 10 Nov 2025 00:00:00 GMT</lastBuildDate>
+        <lastBuildDate>Mon, 01 Dec 2025 00:00:00 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <generator>https://github.com/jpmonette/feed</generator>
         <language>en</language>
+        <item>
+            <title><![CDATA[AI support with Siemens Design Language MCP Server]]></title>
+            <link>https://ix.siemens.io/blog/mcp</link>
+            <guid>https://ix.siemens.io/blog/mcp</guid>
+            <pubDate>Mon, 01 Dec 2025 00:00:00 GMT</pubDate>
+            <description><![CDATA[banner]]></description>
+            <content:encoded><![CDATA[<p><img decoding="async" loading="lazy" alt="banner" src="https://ix.siemens.io/assets/images/boost-productivity-f0ef52ffb6a81a61a5440c70dec32ada.svg" width="894" height="360" class="img_QgcI"></p>
+<p>Discover the new Siemens Design Language MCP Server — your gateway to machine-readable Siemens Design Language assets and standards. Streamline your workflow and boost productivity.</p>
+<p>Learn more in the <a href="https://ix.siemens.io/docs/home/mcp-server">technical documentation</a>.</p>]]></content:encoded>
+            <category>Release</category>
+        </item>
         <item>
             <title><![CDATA[Release V4.0.0]]></title>
             <link>https://ix.siemens.io/blog/2025/11/10/release-4</link>

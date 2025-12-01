@@ -449,12 +449,12 @@
     "ix-key-value",
     "ix-key-value-list"
   ],
+  "/src/preview-examples/key-value-with-custom-value.html": [
+    "ix-key-value"
+  ],
   "/src/preview-examples/key-value-list.html": [
     "ix-key-value",
     "ix-key-value-list"
-  ],
-  "/src/preview-examples/key-value-with-custom-value.html": [
-    "ix-key-value"
   ],
   "/src/preview-examples/key-value-with-icon.html": [
     "ix-key-value"
@@ -504,6 +504,12 @@
   ],
   "/src/preview-examples/message.html": [
     "ix-button"
+  ],
+  "/src/preview-examples/modal-close.html": [
+    "ix-button",
+    "ix-modal-content",
+    "ix-modal-footer",
+    "ix-modal-header"
   ],
   "/src/preview-examples/modal-form-ix-button-submit.html": [
     "ix-button",
@@ -686,6 +692,7 @@
   ],
   "/src/preview-examples/theme-switcher.html": [
     "ix-button",
+    "ix-checkbox",
     "ix-col",
     "ix-layout-grid",
     "ix-row",
@@ -769,6 +776,11 @@
   ],
   "/src/preview-examples/toggle.html": [
     "ix-toggle"
+  ],
+  "/src/preview-examples/tooltip-with-icon.html": [
+    "ix-button",
+    "ix-icon",
+    "ix-tooltip"
   ],
   "/src/preview-examples/tooltip.html": [
     "ix-button",

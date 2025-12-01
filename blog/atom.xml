@@ -2,11 +2,25 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://ix.siemens.io/blog</id>
     <title>Siemens Industrial Experience Blog</title>
-    <updated>2025-11-10T00:00:00.000Z</updated>
+    <updated>2025-12-01T00:00:00.000Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://ix.siemens.io/blog"/>
     <subtitle>Siemens Industrial Experience Blog</subtitle>
     <icon>https://ix.siemens.io/img/favicon.png</icon>
+    <entry>
+        <title type="html"><![CDATA[AI support with Siemens Design Language MCP Server]]></title>
+        <id>https://ix.siemens.io/blog/mcp</id>
+        <link href="https://ix.siemens.io/blog/mcp"/>
+        <updated>2025-12-01T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[banner]]></summary>
+        <content type="html"><![CDATA[<p><img decoding="async" loading="lazy" alt="banner" src="https://ix.siemens.io/assets/images/boost-productivity-f0ef52ffb6a81a61a5440c70dec32ada.svg" width="894" height="360" class="img_QgcI"></p>
+<p>Discover the new Siemens Design Language MCP Server — your gateway to machine-readable Siemens Design Language assets and standards. Streamline your workflow and boost productivity.</p>
+<p>Learn more in the <a href="https://ix.siemens.io/docs/home/mcp-server">technical documentation</a>.</p>]]></content>
+        <author>
+            <name>Lukas Maurer</name>
+        </author>
+        <category label="Release" term="Release"/>
+    </entry>
     <entry>
         <title type="html"><![CDATA[Release V4.0.0]]></title>
         <id>https://ix.siemens.io/blog/2025/11/10/release-4</id>

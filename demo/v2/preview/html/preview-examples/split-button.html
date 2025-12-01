@@ -14,18 +14,46 @@ LICENSE file in the root directory of this source tree.
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Split button example</title>
     
-    <script type="module" crossorigin src="../assets/split-button-BKnrh3nT.js"></script>
-    <link rel="modulepreload" crossorigin href="../assets/global-CTsFSACc.js">
-    <link rel="modulepreload" crossorigin href="../assets/init-D1W8HyUe.js">
-    <link rel="modulepreload" crossorigin href="../assets/ix-icon.entry-CpsZxuQT.js">
+    
+    <script type="module" crossorigin src="../assets/split-button-BLHgB6Qg.js"></script>
+    <link rel="modulepreload" crossorigin href="../assets/global-BkHs9YbB.js">
+    <link rel="modulepreload" crossorigin href="../assets/init-BY4076Vr.js">
+    <link rel="modulepreload" crossorigin href="../assets/ix-icon.entry-B7yXlqBM.js">
     <link rel="modulepreload" crossorigin href="../assets/index-B86ot3BK.js">
-    <link rel="stylesheet" href="../assets/global-C4VcfMUP.css">
+    <link rel="stylesheet" href="../assets/global-DdOw2HJU.css">
+    <link rel="stylesheet" href="../assets/split-button-BKhVDC0Q.css">
   </head>
   <body>
-    <ix-split-button label="Action text" split-icon="chevron-down-small">
-      <ix-dropdown-item label="Item 1"></ix-dropdown-item>
-      <ix-dropdown-item label="Item 2"></ix-dropdown-item>
-    </ix-split-button>
+    <div>
+      <ix-split-button label="Action text" split-icon="chevron-down-small">
+        <ix-dropdown-item label="Item 1"></ix-dropdown-item>
+        <ix-dropdown-item label="Item 2"></ix-dropdown-item>
+      </ix-split-button>
+      <ix-split-button
+        label="Action text"
+        split-icon="chevron-down-small"
+        disabled
+      >
+        <ix-dropdown-item label="Item 1"></ix-dropdown-item>
+        <ix-dropdown-item label="Item 2"></ix-dropdown-item>
+      </ix-split-button>
+      <ix-split-button
+        label="Action text"
+        split-icon="chevron-down-small"
+        disable-button
+      >
+        <ix-dropdown-item label="Item 1"></ix-dropdown-item>
+        <ix-dropdown-item label="Item 2"></ix-dropdown-item>
+      </ix-split-button>
+      <ix-split-button
+        label="Action text"
+        split-icon="chevron-down-small"
+        disable-dropdown-button
+      >
+        <ix-dropdown-item label="Item 1"></ix-dropdown-item>
+        <ix-dropdown-item label="Item 2"></ix-dropdown-item>
+      </ix-split-button>
+    </div>
     
   </body>
 </html>
