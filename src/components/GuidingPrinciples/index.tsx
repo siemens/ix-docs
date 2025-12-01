@@ -148,7 +148,7 @@ function DevelopmentFrameworks(){
       <GuidingPrincipleCard
       name="Web components"
       link="home/installation/javascript"
-      description="Discover how to create reusable components with Web Components."
+      description="Discover how to start developing with a set of web platform APIs."
       >
       <img src="/img/webcomponents.svg" alt="Web Components"/>
       </GuidingPrincipleCard>
