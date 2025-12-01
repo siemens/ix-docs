@@ -23,7 +23,7 @@ function GuidingPrincipleCard(
       <div className="GuidingPrincipleCard">
         <div className="GuidingPrincipleCard__Image">{props.children}</div>
         <div className="GuidingPrincipleCard__Content">
-          <IxTypography format="h2">{name}</IxTypography>
+          <IxTypography format="h3">{name}</IxTypography>
           <div className="GuidingPrincipleCard__Description">{description}</div>
         </div>
       </div>
@@ -34,7 +34,7 @@ function GuidingPrincipleCard(
     <a href={link} className="GuidingPrincipleCard">
       <div className="GuidingPrincipleCard__Image">{props.children}</div>
       <div className="GuidingPrincipleCard__Content">
-        <IxTypography format="h2">{name}</IxTypography>
+        <IxTypography format="h3">{name}</IxTypography>
         <div className="GuidingPrincipleCard__Description">{description}</div>
       </div>
     </a>
