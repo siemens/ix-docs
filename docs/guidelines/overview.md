@@ -56,11 +56,11 @@ import { CategoryButton } from '@site/src/components/CategoryButton';
 
 ## Guiding principles for excellent design
 
-At Siemens, our Product Design Principles serve as the cornerstone of innovation, guiding us to create seamless and intuitive applications. They provide our designers, developers and managers with a robust framework to make informed design decisions, ensuring each product aligns with our standards and brand identity. We've refined our approach into four core design principles. These help us make our applications intuitive, efficient and valuable.
+At Siemens, our Product Design Principles serve as the cornerstone of innovation, guiding us to create seamless and intuitive applications. They provide our designers, developers and managers with a robust framework to make informed design decisions, ensuring each product aligns with our standards and brand identity. We’ve refined our approach into four core design principles. These help us make our applications intuitive, efficient and valuable.
 
 <GuidingLinks></GuidingLinks>
 
-As a Siemens employee, get more details on our princples, checklists and real app examples for designers and developers [here](https://siemens.sharepoint.com/sites/design-principles).
+As a Siemens employee, get more details on our principles, checklists and real app examples for designers and developers [here](https://siemens.sharepoint.com/sites/design-principles).
 
 ## Accessibility
 
