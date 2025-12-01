@@ -1,8 +1,8 @@
 ---
 sidebar_label: Build with AI
-title: Model Context Protocol (MCP) server for iX
+title: Build with AI
 doc-type: 'banner'
-description: 'A Model Context Protocol (MCP) server that provides AI assistants (agents) with access to
+description: 'Use our Model Context Protocol (MCP) server that provides AI assistants (agents) with access to
 Siemens Industrial Experience design system and component API documentation
 through Retrieval-Augmented Generation (RAG). This enables more accurate and relevant assistance
 with design system and component library APIs.'
