@@ -4,7 +4,7 @@ authors: [lukasmaurer]
 tags: [release]
 ---
 
-# AI Support with Siemens Design Language MCP Server
+# AI support with Siemens Design Language MCP Server
 
 ![banner](./boost-productivity.png)
 
