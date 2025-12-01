@@ -151,6 +151,18 @@ const config: Config = {
             from: '/docs/migration/uxt',
             to: '/docs/home/migration/uxt',
           },
+          {
+            from: '/docs/home/theming/usage-developers',
+            to: '/docs/styles/theming/usage-developers',
+          },
+          {
+            from: '/docs/home/theming/usage-designers',
+            to: '/docs/styles/theming/usage-designers',
+          },
+          {
+            from: '/docs/home/theming',
+            to: '/docs/styles/theming/usage-developers',
+          },
         ]
       }
     ],
