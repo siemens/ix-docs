@@ -1,6 +1,7 @@
 ---
 doc-type: 'tab-item'
 ---
+
 # Link button - Usage
 
 ![Overview](https://www.figma.com/design/wEptRgAezDU1z80Cn3eZ0o/iX-Pattern-Illustrations?type=design&node-id=1506-4003&mode=design&t=5MYmq6zAbfw7xIkC-11)
@@ -8,20 +9,21 @@ doc-type: 'tab-item'
 1. Chevron
 2. Label
 
+<br/>
+
+:::info
+Use inline [hyperlinks](https://developer.mozilla.org/de/docs/Web/HTML/Reference/Elements/a) for inline links `<a href="...">` instead of link buttons, e.g. within a paragraph. They are styled and ready to use without additional configuration needed.
+:::
+
+<br/>
+
 ## Options
 
-- **Disabled:** Link buttons can be disabled (see also button states).
-- **Target:** To define where a link opens, there are four options:
-
-| Value     | Description                                       |
-| --- | ------------------------------------------------- |
-| `_self`   | opens the document in the same window/tab         |
-| `_blank`  | opens the document in a new window/tab            |
-| `_parent` | opens the document in the parent frame            |
-| `_top`    | opens the document in the full body of the window |
-
-(Reference: https://www.w3schools.com/html/html_links.asp)
-
+- **Target:** Define where a link opens (see [official MDN documentation](https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/a#target)):
+    - `_self`: Opens the target in the same tab.
+    - `_blank`: Opens the target in a new tab.
+    - `_parent`: Opens the target in the parent frame.
+    - `_top`: Opens the target in the full body of the window.
 - **URL:** Specify the link destination.
 
 ## Behavior in context
