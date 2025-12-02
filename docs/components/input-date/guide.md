@@ -29,6 +29,7 @@ The date input component is typically used in forms, filters and scheduling tool
 - **Feedback text**: See [form field](../forms-field).
 - **Show text as tooltip**: See [form field](../forms-field).
 - **Placeholder**: See [form field](../forms-field). We typically use a placeholder to show an example date format to assist users when the field is empty.
+- **Text alignment:** See [form field](../forms-field) (by default at start).
 - **Error message**: Feedback text when date is not parsable. We typically use this to inform users that the entered date format is incorrect and guide them to enter a valid date.
 - **Format**: Specify the date format, default ‘yyyy/LL/dd’ to ensure that dates are entered in a consistent and recognizable format.
 

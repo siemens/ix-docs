@@ -42,11 +42,13 @@ function replaceLibraryImports(
   project: Record<string, string>,
   version: string
 ) {
-  const packageJson = project['package.json'];
-  project['package.json'] = packageJson.replace(
-    /\"<VERSION>\"/g,
-    `"${version}"`
+  let packageJson = project["package.json"];
+  packageJson = packageJson.replace(
+    /"@siemens\/ix-echarts":\s*"<VERSION>"/g,
+    '"@siemens/ix-echarts": "^3.0.0"'
   );
+  packageJson = packageJson.replace(/\"<VERSION>\"/g, `"${version}"`);
+  project["package.json"] = packageJson;
 }
 
 async function openVueStackBlitz(

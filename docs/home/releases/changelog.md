@@ -4,6 +4,142 @@ description: ''
 title: Changelog
 doc-type: 'banner'
 ---
+## [@siemens/ix@4.1.0](https://github.com/siemens/ix/releases/tag/%40siemens/ix%404.1.0) (2025-12-01T08:25:27Z)
+### Minor Changes
+
+-   [#2213](https://github.com/siemens/ix/pull/2213) [`18969f0`](https://github.com/siemens/ix/commit/18969f056eb088f7ef92ae85a2150ee4036d3628) Thanks [@GayatriK2002](https://github.com/GayatriK2002)! - Correct non numeric page value or page value beyond the range of _ix-pagination_. Closes #2144
+
+-   [#2081](https://github.com/siemens/ix/pull/2081) [`1623c19`](https://github.com/siemens/ix/commit/1623c196cde78f8357b2060d28d8658ec4330b56) Thanks [@1307-Dev](https://github.com/1307-Dev)! - Added support for implicit form submission when pressing Enter in `ix-input`, `ix-number-input`, `ix-date-input` and `ix-time-input` forms
+
+-   [#2048](https://github.com/siemens/ix/pull/2048) [`0a23b64`](https://github.com/siemens/ix/commit/0a23b640efc3fc6f10921f29b51d9a1e5a48391e) Thanks [@varun-srinivasa](https://github.com/varun-srinivasa)! - Allow to individually disable button and dropdown button in **ix-split-button**s.
+
+-   [#2062](https://github.com/siemens/ix/pull/2062) [`95523d3`](https://github.com/siemens/ix/commit/95523d3f0db649e66ddc504b8a06d9ed039fe446) Thanks [@lzeiml](https://github.com/lzeiml)! - Add support for numbers in scientific notation (e.g. 1E-2) for **ix-number-input**.
+
+-   [#2062](https://github.com/siemens/ix/pull/2062) [`95523d3`](https://github.com/siemens/ix/commit/95523d3f0db649e66ddc504b8a06d9ed039fe446) Thanks [@lzeiml](https://github.com/lzeiml)! - Add temporary property `allowEmptyValueChange` to **ix-number-input**. Setting this property enables `valueChange` to emit null values.
+
+    Fixes #1968.
+
+-   [#1979](https://github.com/siemens/ix/pull/1979) [`73ebf49`](https://github.com/siemens/ix/commit/73ebf49f5d99b32e21545e544b89da23c54f33d2) Thanks [@hawacodes](https://github.com/hawacodes)! - `ix-select` automatically showing an 'All' chip when all items are selected in multiple mode and `collapse-multiple-selection=true` is provided
+
+### Patch Changes
+
+-   [#2156](https://github.com/siemens/ix/pull/2156) [`6a075cd`](https://github.com/siemens/ix/commit/6a075cd5f33da7dc6d1cbc9ef93f1c8b07a8fa92) Thanks [@lakshmi-priya-b](https://github.com/lakshmi-priya-b)! - Make sure arrow position is correct even after placement of **ix-tooltip** changes.
+
+    Fixes #2076 and #2099.
+
+-   [#2181](https://github.com/siemens/ix/pull/2181) [`1e58f0e`](https://github.com/siemens/ix/commit/1e58f0ecfae98125ff442e921132c846f0c2646f) Thanks [@GayatriK2002](https://github.com/GayatriK2002)! - add `text-alignment` property to input components
+
+-   [#2033](https://github.com/siemens/ix/pull/2033) [`a56c2e1`](https://github.com/siemens/ix/commit/a56c2e14820f288625c9253895ceb21ec3f29ccb) Thanks [@1307-Dev](https://github.com/1307-Dev)! - Prevent empty space if no icon is shown in **category-filter**.
+
+-   [#2171](https://github.com/siemens/ix/pull/2171) [`6bee493`](https://github.com/siemens/ix/commit/6bee4933f7ef777c3aa8db0c724185be57763e32) Thanks [@lakshmi-priya-b](https://github.com/lakshmi-priya-b)! - Prevent showing empty tooltip for inputs if `show-text-as-tooltip=true`. Closes #2147
+
+-   [#2275](https://github.com/siemens/ix/pull/2275) [`7c571f0`](https://github.com/siemens/ix/commit/7c571f064c7c04359f9cc67be6e3d39c144a5580) Thanks [@alexkaduk](https://github.com/alexkaduk)! - Always show underline for **ix-link-button** and HTML anchor tags.
+
+-   [#2208](https://github.com/siemens/ix/pull/2208) [`36b7634`](https://github.com/siemens/ix/commit/36b7634766b3bfbe41220636f62b1cb80742844f) Thanks [@lakshmi-priya-b](https://github.com/lakshmi-priya-b)! - Prevent emitting validityStateChange event if now actual validity is changed. Closes #2095
+
+-   [#2105](https://github.com/siemens/ix/pull/2105) [`d9268c2`](https://github.com/siemens/ix/commit/d9268c24431fb7bf84041b7ae83b10c2abcab2dd) Thanks [@lakshmi-priya-b](https://github.com/lakshmi-priya-b)! - Remove filter from dropdown and input when selecting an item in **ix-select**.
+
+-   [#2189](https://github.com/siemens/ix/pull/2189) [`9954ba9`](https://github.com/siemens/ix/commit/9954ba9f0e0ec12d58c76f628c3ee5e5170d21b8) Thanks [@lakshmi-priya-b](https://github.com/lakshmi-priya-b)! - Update padding and icon alignment of **ix-tooltip**.
+
+-   [#2044](https://github.com/siemens/ix/pull/2044) [`6fb28fa`](https://github.com/siemens/ix/commit/6fb28faee5266639d04b215305716e6191e87de7) Thanks [@Nadim901](https://github.com/Nadim901)! - Prevent `ix-menu-settings` and `ix-menu-about` to trigger tabChange event twice. Fixes #1596
+
+-   [#2080](https://github.com/siemens/ix/pull/2080) [`eb33537`](https://github.com/siemens/ix/commit/eb335371e8969318d379c1ea0891b9aba39a4a1c) Thanks [@GayatriK2002](https://github.com/GayatriK2002)! - Only focus input after user interaction with **ix-category-filter**.
+
+-   [#2269](https://github.com/siemens/ix/pull/2269) [`1cbe35f`](https://github.com/siemens/ix/commit/1cbe35f290d8e746b9900fdcf9b7b0bd05d850d3) Thanks [@alexkaduk](https://github.com/alexkaduk)! - Update layout for **ix-date-picker** and **ix-time-picker**.
+
+## [@siemens/ix-vue@4.1.0](https://github.com/siemens/ix/releases/tag/%40siemens/ix-vue%404.1.0) (2025-12-01T08:25:36Z)
+### Minor Changes
+
+-   [#2213](https://github.com/siemens/ix/pull/2213) [`18969f0`](https://github.com/siemens/ix/commit/18969f056eb088f7ef92ae85a2150ee4036d3628) Thanks [@GayatriK2002](https://github.com/GayatriK2002)! - Correct non numeric page value or page value beyond the range of _ix-pagination_. Closes #2144
+
+-   [#2081](https://github.com/siemens/ix/pull/2081) [`1623c19`](https://github.com/siemens/ix/commit/1623c196cde78f8357b2060d28d8658ec4330b56) Thanks [@1307-Dev](https://github.com/1307-Dev)! - Added support for implicit form submission when pressing Enter in `ix-input`, `ix-number-input`, `ix-date-input` and `ix-time-input` forms
+
+-   [#2048](https://github.com/siemens/ix/pull/2048) [`0a23b64`](https://github.com/siemens/ix/commit/0a23b640efc3fc6f10921f29b51d9a1e5a48391e) Thanks [@varun-srinivasa](https://github.com/varun-srinivasa)! - Allow to individually disable button and dropdown button in **ix-split-button**s.
+
+-   [#2062](https://github.com/siemens/ix/pull/2062) [`95523d3`](https://github.com/siemens/ix/commit/95523d3f0db649e66ddc504b8a06d9ed039fe446) Thanks [@lzeiml](https://github.com/lzeiml)! - Add support for numbers in scientific notation (e.g. 1E-2) for **ix-number-input**.
+
+-   [#2159](https://github.com/siemens/ix/pull/2159) [`6c74fdd`](https://github.com/siemens/ix/commit/6c74fdd90debee27309bb0168f42fe17c94a7717) Thanks [@1307-Dev](https://github.com/1307-Dev)! - Add dismissModal function to allow programmatic closing of **ix-modal**s.
+
+-   [#2062](https://github.com/siemens/ix/pull/2062) [`95523d3`](https://github.com/siemens/ix/commit/95523d3f0db649e66ddc504b8a06d9ed039fe446) Thanks [@lzeiml](https://github.com/lzeiml)! - Add temporary property `allowEmptyValueChange` to **ix-number-input**. Setting this property enables `valueChange` to emit null values.
+
+    Fixes #1968.
+
+-   [#1979](https://github.com/siemens/ix/pull/1979) [`73ebf49`](https://github.com/siemens/ix/commit/73ebf49f5d99b32e21545e544b89da23c54f33d2) Thanks [@hawacodes](https://github.com/hawacodes)! - `ix-select` automatically showing an 'All' chip when all items are selected in multiple mode and `collapse-multiple-selection=true` is provided
+
+### Patch Changes
+
+-   [#2181](https://github.com/siemens/ix/pull/2181) [`1e58f0e`](https://github.com/siemens/ix/commit/1e58f0ecfae98125ff442e921132c846f0c2646f) Thanks [@GayatriK2002](https://github.com/GayatriK2002)! - add `text-alignment` property to input components
+
+-   [#2208](https://github.com/siemens/ix/pull/2208) [`36b7634`](https://github.com/siemens/ix/commit/36b7634766b3bfbe41220636f62b1cb80742844f) Thanks [@lakshmi-priya-b](https://github.com/lakshmi-priya-b)! - Prevent emitting validityStateChange event if now actual validity is changed. Closes #2095
+
+-   Updated dependencies \[[`6a075cd`](https://github.com/siemens/ix/commit/6a075cd5f33da7dc6d1cbc9ef93f1c8b07a8fa92), [`18969f0`](https://github.com/siemens/ix/commit/18969f056eb088f7ef92ae85a2150ee4036d3628), [`1623c19`](https://github.com/siemens/ix/commit/1623c196cde78f8357b2060d28d8658ec4330b56), [`1e58f0e`](https://github.com/siemens/ix/commit/1e58f0ecfae98125ff442e921132c846f0c2646f), [`0a23b64`](https://github.com/siemens/ix/commit/0a23b640efc3fc6f10921f29b51d9a1e5a48391e), [`a56c2e1`](https://github.com/siemens/ix/commit/a56c2e14820f288625c9253895ceb21ec3f29ccb), [`95523d3`](https://github.com/siemens/ix/commit/95523d3f0db649e66ddc504b8a06d9ed039fe446), [`6bee493`](https://github.com/siemens/ix/commit/6bee4933f7ef777c3aa8db0c724185be57763e32), [`7c571f0`](https://github.com/siemens/ix/commit/7c571f064c7c04359f9cc67be6e3d39c144a5580), [`36b7634`](https://github.com/siemens/ix/commit/36b7634766b3bfbe41220636f62b1cb80742844f), [`d9268c2`](https://github.com/siemens/ix/commit/d9268c24431fb7bf84041b7ae83b10c2abcab2dd), [`9954ba9`](https://github.com/siemens/ix/commit/9954ba9f0e0ec12d58c76f628c3ee5e5170d21b8), [`6fb28fa`](https://github.com/siemens/ix/commit/6fb28faee5266639d04b215305716e6191e87de7), [`eb33537`](https://github.com/siemens/ix/commit/eb335371e8969318d379c1ea0891b9aba39a4a1c), [`95523d3`](https://github.com/siemens/ix/commit/95523d3f0db649e66ddc504b8a06d9ed039fe446), [`73ebf49`](https://github.com/siemens/ix/commit/73ebf49f5d99b32e21545e544b89da23c54f33d2), [`1cbe35f`](https://github.com/siemens/ix/commit/1cbe35f290d8e746b9900fdcf9b7b0bd05d850d3)]:
+    -   @siemens/ix@4.1.0
+
+## [@siemens/ix-react@4.1.0](https://github.com/siemens/ix/releases/tag/%40siemens/ix-react%404.1.0) (2025-12-01T08:25:30Z)
+### Minor Changes
+
+-   [#2213](https://github.com/siemens/ix/pull/2213) [`18969f0`](https://github.com/siemens/ix/commit/18969f056eb088f7ef92ae85a2150ee4036d3628) Thanks [@GayatriK2002](https://github.com/GayatriK2002)! - Correct non numeric page value or page value beyond the range of _ix-pagination_. Closes #2144
+
+-   [#2081](https://github.com/siemens/ix/pull/2081) [`1623c19`](https://github.com/siemens/ix/commit/1623c196cde78f8357b2060d28d8658ec4330b56) Thanks [@1307-Dev](https://github.com/1307-Dev)! - Added support for implicit form submission when pressing Enter in `ix-input`, `ix-number-input`, `ix-date-input` and `ix-time-input` forms
+
+-   [#2048](https://github.com/siemens/ix/pull/2048) [`0a23b64`](https://github.com/siemens/ix/commit/0a23b640efc3fc6f10921f29b51d9a1e5a48391e) Thanks [@varun-srinivasa](https://github.com/varun-srinivasa)! - Allow to individually disable button and dropdown button in **ix-split-button**s.
+
+-   [#2062](https://github.com/siemens/ix/pull/2062) [`95523d3`](https://github.com/siemens/ix/commit/95523d3f0db649e66ddc504b8a06d9ed039fe446) Thanks [@lzeiml](https://github.com/lzeiml)! - Add support for numbers in scientific notation (e.g. 1E-2) for **ix-number-input**.
+
+-   [#2159](https://github.com/siemens/ix/pull/2159) [`6c74fdd`](https://github.com/siemens/ix/commit/6c74fdd90debee27309bb0168f42fe17c94a7717) Thanks [@1307-Dev](https://github.com/1307-Dev)! - Add dismissModal function to allow programmatic closing of **ix-modal**s.
+
+-   [#2062](https://github.com/siemens/ix/pull/2062) [`95523d3`](https://github.com/siemens/ix/commit/95523d3f0db649e66ddc504b8a06d9ed039fe446) Thanks [@lzeiml](https://github.com/lzeiml)! - Add temporary property `allowEmptyValueChange` to **ix-number-input**. Setting this property enables `valueChange` to emit null values.
+
+    Fixes #1968.
+
+-   [#1979](https://github.com/siemens/ix/pull/1979) [`73ebf49`](https://github.com/siemens/ix/commit/73ebf49f5d99b32e21545e544b89da23c54f33d2) Thanks [@hawacodes](https://github.com/hawacodes)! - `ix-select` automatically showing an 'All' chip when all items are selected in multiple mode and `collapse-multiple-selection=true` is provided
+
+### Patch Changes
+
+-   [#2181](https://github.com/siemens/ix/pull/2181) [`1e58f0e`](https://github.com/siemens/ix/commit/1e58f0ecfae98125ff442e921132c846f0c2646f) Thanks [@GayatriK2002](https://github.com/GayatriK2002)! - add `text-alignment` property to input components
+
+-   [#2208](https://github.com/siemens/ix/pull/2208) [`36b7634`](https://github.com/siemens/ix/commit/36b7634766b3bfbe41220636f62b1cb80742844f) Thanks [@lakshmi-priya-b](https://github.com/lakshmi-priya-b)! - Prevent emitting validityStateChange event if now actual validity is changed. Closes #2095
+
+-   Updated dependencies \[[`6a075cd`](https://github.com/siemens/ix/commit/6a075cd5f33da7dc6d1cbc9ef93f1c8b07a8fa92), [`18969f0`](https://github.com/siemens/ix/commit/18969f056eb088f7ef92ae85a2150ee4036d3628), [`1623c19`](https://github.com/siemens/ix/commit/1623c196cde78f8357b2060d28d8658ec4330b56), [`1e58f0e`](https://github.com/siemens/ix/commit/1e58f0ecfae98125ff442e921132c846f0c2646f), [`0a23b64`](https://github.com/siemens/ix/commit/0a23b640efc3fc6f10921f29b51d9a1e5a48391e), [`a56c2e1`](https://github.com/siemens/ix/commit/a56c2e14820f288625c9253895ceb21ec3f29ccb), [`95523d3`](https://github.com/siemens/ix/commit/95523d3f0db649e66ddc504b8a06d9ed039fe446), [`6bee493`](https://github.com/siemens/ix/commit/6bee4933f7ef777c3aa8db0c724185be57763e32), [`7c571f0`](https://github.com/siemens/ix/commit/7c571f064c7c04359f9cc67be6e3d39c144a5580), [`36b7634`](https://github.com/siemens/ix/commit/36b7634766b3bfbe41220636f62b1cb80742844f), [`d9268c2`](https://github.com/siemens/ix/commit/d9268c24431fb7bf84041b7ae83b10c2abcab2dd), [`9954ba9`](https://github.com/siemens/ix/commit/9954ba9f0e0ec12d58c76f628c3ee5e5170d21b8), [`6fb28fa`](https://github.com/siemens/ix/commit/6fb28faee5266639d04b215305716e6191e87de7), [`eb33537`](https://github.com/siemens/ix/commit/eb335371e8969318d379c1ea0891b9aba39a4a1c), [`95523d3`](https://github.com/siemens/ix/commit/95523d3f0db649e66ddc504b8a06d9ed039fe446), [`73ebf49`](https://github.com/siemens/ix/commit/73ebf49f5d99b32e21545e544b89da23c54f33d2), [`1cbe35f`](https://github.com/siemens/ix/commit/1cbe35f290d8e746b9900fdcf9b7b0bd05d850d3)]:
+    -   @siemens/ix@4.1.0
+
+## [@siemens/ix-docs@4.1.0](https://github.com/siemens/ix/releases/tag/%40siemens/ix-docs%404.1.0) (2025-12-01T08:47:03Z)
+# @siemens/ix-docs
+
+## 4.0.0
+
+### Major Changes
+
+-   [#2238](https://github.com/siemens/ix/pull/2238) [`416b278`](https://github.com/siemens/ix/commit/416b278b00a28308829fced379bc9cae0a04caca) Thanks [@danielleroux](https://github.com/danielleroux)! - Init deployment of component documentation as markdown files
+
+## [@siemens/ix-angular@4.1.0](https://github.com/siemens/ix/releases/tag/%40siemens/ix-angular%404.1.0) (2025-12-01T08:25:33Z)
+### Minor Changes
+
+-   [#2213](https://github.com/siemens/ix/pull/2213) [`18969f0`](https://github.com/siemens/ix/commit/18969f056eb088f7ef92ae85a2150ee4036d3628) Thanks [@GayatriK2002](https://github.com/GayatriK2002)! - Correct non numeric page value or page value beyond the range of _ix-pagination_. Closes #2144
+
+-   [#2081](https://github.com/siemens/ix/pull/2081) [`1623c19`](https://github.com/siemens/ix/commit/1623c196cde78f8357b2060d28d8658ec4330b56) Thanks [@1307-Dev](https://github.com/1307-Dev)! - Added support for implicit form submission when pressing Enter in `ix-input`, `ix-number-input`, `ix-date-input` and `ix-time-input` forms
+
+-   [#2048](https://github.com/siemens/ix/pull/2048) [`0a23b64`](https://github.com/siemens/ix/commit/0a23b640efc3fc6f10921f29b51d9a1e5a48391e) Thanks [@varun-srinivasa](https://github.com/varun-srinivasa)! - Allow to individually disable button and dropdown button in **ix-split-button**s.
+
+-   [#2062](https://github.com/siemens/ix/pull/2062) [`95523d3`](https://github.com/siemens/ix/commit/95523d3f0db649e66ddc504b8a06d9ed039fe446) Thanks [@lzeiml](https://github.com/lzeiml)! - Add support for numbers in scientific notation (e.g. 1E-2) for **ix-number-input**.
+
+-   [#2159](https://github.com/siemens/ix/pull/2159) [`6c74fdd`](https://github.com/siemens/ix/commit/6c74fdd90debee27309bb0168f42fe17c94a7717) Thanks [@1307-Dev](https://github.com/1307-Dev)! - Add dismissModal function to allow programmatic closing of **ix-modal**s.
+
+-   [#2062](https://github.com/siemens/ix/pull/2062) [`95523d3`](https://github.com/siemens/ix/commit/95523d3f0db649e66ddc504b8a06d9ed039fe446) Thanks [@lzeiml](https://github.com/lzeiml)! - Add temporary property `allowEmptyValueChange` to **ix-number-input**. Setting this property enables `valueChange` to emit null values.
+
+    Fixes #1968.
+
+-   [#1979](https://github.com/siemens/ix/pull/1979) [`73ebf49`](https://github.com/siemens/ix/commit/73ebf49f5d99b32e21545e544b89da23c54f33d2) Thanks [@hawacodes](https://github.com/hawacodes)! - `ix-select` automatically showing an 'All' chip when all items are selected in multiple mode and `collapse-multiple-selection=true` is provided
+
+### Patch Changes
+
+-   [#2181](https://github.com/siemens/ix/pull/2181) [`1e58f0e`](https://github.com/siemens/ix/commit/1e58f0ecfae98125ff442e921132c846f0c2646f) Thanks [@GayatriK2002](https://github.com/GayatriK2002)! - add `text-alignment` property to input components
+
+-   [#2208](https://github.com/siemens/ix/pull/2208) [`36b7634`](https://github.com/siemens/ix/commit/36b7634766b3bfbe41220636f62b1cb80742844f) Thanks [@lakshmi-priya-b](https://github.com/lakshmi-priya-b)! - Prevent emitting validityStateChange event if now actual validity is changed. Closes #2095
+
+-   Updated dependencies \[[`6a075cd`](https://github.com/siemens/ix/commit/6a075cd5f33da7dc6d1cbc9ef93f1c8b07a8fa92), [`18969f0`](https://github.com/siemens/ix/commit/18969f056eb088f7ef92ae85a2150ee4036d3628), [`1623c19`](https://github.com/siemens/ix/commit/1623c196cde78f8357b2060d28d8658ec4330b56), [`1e58f0e`](https://github.com/siemens/ix/commit/1e58f0ecfae98125ff442e921132c846f0c2646f), [`0a23b64`](https://github.com/siemens/ix/commit/0a23b640efc3fc6f10921f29b51d9a1e5a48391e), [`a56c2e1`](https://github.com/siemens/ix/commit/a56c2e14820f288625c9253895ceb21ec3f29ccb), [`95523d3`](https://github.com/siemens/ix/commit/95523d3f0db649e66ddc504b8a06d9ed039fe446), [`6bee493`](https://github.com/siemens/ix/commit/6bee4933f7ef777c3aa8db0c724185be57763e32), [`7c571f0`](https://github.com/siemens/ix/commit/7c571f064c7c04359f9cc67be6e3d39c144a5580), [`36b7634`](https://github.com/siemens/ix/commit/36b7634766b3bfbe41220636f62b1cb80742844f), [`d9268c2`](https://github.com/siemens/ix/commit/d9268c24431fb7bf84041b7ae83b10c2abcab2dd), [`9954ba9`](https://github.com/siemens/ix/commit/9954ba9f0e0ec12d58c76f628c3ee5e5170d21b8), [`6fb28fa`](https://github.com/siemens/ix/commit/6fb28faee5266639d04b215305716e6191e87de7), [`eb33537`](https://github.com/siemens/ix/commit/eb335371e8969318d379c1ea0891b9aba39a4a1c), [`95523d3`](https://github.com/siemens/ix/commit/95523d3f0db649e66ddc504b8a06d9ed039fe446), [`73ebf49`](https://github.com/siemens/ix/commit/73ebf49f5d99b32e21545e544b89da23c54f33d2), [`1cbe35f`](https://github.com/siemens/ix/commit/1cbe35f290d8e746b9900fdcf9b7b0bd05d850d3)]:
+    -   @siemens/ix@4.1.0
+
 ## [@siemens/ix@4.0.0](https://github.com/siemens/ix/releases/tag/%40siemens/ix%404.0.0) (2025-11-06T16:26:46Z)
 ### Major Changes
 
@@ -1718,31 +1854,3 @@ doc-type: 'banner'
 
 -   Updated dependencies \[[`40e8c510e15dba741601b3b19b6025c024e170ef`](https://github.com/siemens/ix/commit/40e8c510e15dba741601b3b19b6025c024e170ef), [`838c19239ac8a85e2d644696cc1fd3a67f5509d5`](https://github.com/siemens/ix/commit/838c19239ac8a85e2d644696cc1fd3a67f5509d5), [`d0c4c9df8b269fc0206ffdce1c6c7ec4013028b6`](https://github.com/siemens/ix/commit/d0c4c9df8b269fc0206ffdce1c6c7ec4013028b6), [`278d51b7597afadd7fa765187e3cf9e8cd5385c6`](https://github.com/siemens/ix/commit/278d51b7597afadd7fa765187e3cf9e8cd5385c6), [`ff816a840b609491e1a647d64f6bad489ad214f0`](https://github.com/siemens/ix/commit/ff816a840b609491e1a647d64f6bad489ad214f0), [`df00884a5b65c7047ddc3506b8eaac66819c4ceb`](https://github.com/siemens/ix/commit/df00884a5b65c7047ddc3506b8eaac66819c4ceb), [`bc33e84a3ad378470dbbdff8dd85877c21355bae`](https://github.com/siemens/ix/commit/bc33e84a3ad378470dbbdff8dd85877c21355bae), [`8002d9a68ef8a5279d43726ecad28e85ad0ac53a`](https://github.com/siemens/ix/commit/8002d9a68ef8a5279d43726ecad28e85ad0ac53a)]:
     -   @siemens/ix@3.0.0-alpha.4
-
-## [@siemens/ix-react@3.0.0-alpha.4](https://github.com/siemens/ix/releases/tag/%40siemens/ix-react%403.0.0-alpha.4) (2025-04-10T06:34:56Z)
-### Patch Changes
-
--   Updated dependencies \[[`40e8c510e15dba741601b3b19b6025c024e170ef`](https://github.com/siemens/ix/commit/40e8c510e15dba741601b3b19b6025c024e170ef), [`838c19239ac8a85e2d644696cc1fd3a67f5509d5`](https://github.com/siemens/ix/commit/838c19239ac8a85e2d644696cc1fd3a67f5509d5), [`d0c4c9df8b269fc0206ffdce1c6c7ec4013028b6`](https://github.com/siemens/ix/commit/d0c4c9df8b269fc0206ffdce1c6c7ec4013028b6), [`278d51b7597afadd7fa765187e3cf9e8cd5385c6`](https://github.com/siemens/ix/commit/278d51b7597afadd7fa765187e3cf9e8cd5385c6), [`ff816a840b609491e1a647d64f6bad489ad214f0`](https://github.com/siemens/ix/commit/ff816a840b609491e1a647d64f6bad489ad214f0), [`df00884a5b65c7047ddc3506b8eaac66819c4ceb`](https://github.com/siemens/ix/commit/df00884a5b65c7047ddc3506b8eaac66819c4ceb), [`bc33e84a3ad378470dbbdff8dd85877c21355bae`](https://github.com/siemens/ix/commit/bc33e84a3ad378470dbbdff8dd85877c21355bae), [`8002d9a68ef8a5279d43726ecad28e85ad0ac53a`](https://github.com/siemens/ix/commit/8002d9a68ef8a5279d43726ecad28e85ad0ac53a)]:
-    -   @siemens/ix@3.0.0-alpha.4
-
-## [@siemens/ix-echarts@3.0.0-alpha.1](https://github.com/siemens/ix/releases/tag/%40siemens/ix-echarts%403.0.0-alpha.1) (2025-04-10T06:35:02Z)
-### Patch Changes
-
--   [#1642](https://github.com/siemens/ix/pull/1642) [`241a5ea96cbcf07c3f9684f630ac308902449e1b`](https://github.com/siemens/ix/commit/241a5ea96cbcf07c3f9684f630ac308902449e1b) Thanks [@danielleroux](https://github.com/danielleroux)! - Added missing dist folder to deployment
-
-## [@siemens/ix-angular@3.0.0-alpha.4](https://github.com/siemens/ix/releases/tag/%40siemens/ix-angular%403.0.0-alpha.4) (2025-04-10T06:34:53Z)
-### Patch Changes
-
--   Updated dependencies \[[`40e8c510e15dba741601b3b19b6025c024e170ef`](https://github.com/siemens/ix/commit/40e8c510e15dba741601b3b19b6025c024e170ef), [`838c19239ac8a85e2d644696cc1fd3a67f5509d5`](https://github.com/siemens/ix/commit/838c19239ac8a85e2d644696cc1fd3a67f5509d5), [`d0c4c9df8b269fc0206ffdce1c6c7ec4013028b6`](https://github.com/siemens/ix/commit/d0c4c9df8b269fc0206ffdce1c6c7ec4013028b6), [`278d51b7597afadd7fa765187e3cf9e8cd5385c6`](https://github.com/siemens/ix/commit/278d51b7597afadd7fa765187e3cf9e8cd5385c6), [`ff816a840b609491e1a647d64f6bad489ad214f0`](https://github.com/siemens/ix/commit/ff816a840b609491e1a647d64f6bad489ad214f0), [`df00884a5b65c7047ddc3506b8eaac66819c4ceb`](https://github.com/siemens/ix/commit/df00884a5b65c7047ddc3506b8eaac66819c4ceb), [`bc33e84a3ad378470dbbdff8dd85877c21355bae`](https://github.com/siemens/ix/commit/bc33e84a3ad378470dbbdff8dd85877c21355bae), [`8002d9a68ef8a5279d43726ecad28e85ad0ac53a`](https://github.com/siemens/ix/commit/8002d9a68ef8a5279d43726ecad28e85ad0ac53a)]:
-    -   @siemens/ix@3.0.0-alpha.4
-
-## [@siemens/ix-aggrid@3.0.0-alpha.1](https://github.com/siemens/ix/releases/tag/%40siemens/ix-aggrid%403.0.0-alpha.1) (2025-04-10T06:34:50Z)
-### Patch Changes
-
--   [#1642](https://github.com/siemens/ix/pull/1642) [`241a5ea96cbcf07c3f9684f630ac308902449e1b`](https://github.com/siemens/ix/commit/241a5ea96cbcf07c3f9684f630ac308902449e1b) Thanks [@danielleroux](https://github.com/danielleroux)! - Added missing dist folder to deployment
-
--   Updated dependencies \[[`40e8c510e15dba741601b3b19b6025c024e170ef`](https://github.com/siemens/ix/commit/40e8c510e15dba741601b3b19b6025c024e170ef), [`838c19239ac8a85e2d644696cc1fd3a67f5509d5`](https://github.com/siemens/ix/commit/838c19239ac8a85e2d644696cc1fd3a67f5509d5), [`d0c4c9df8b269fc0206ffdce1c6c7ec4013028b6`](https://github.com/siemens/ix/commit/d0c4c9df8b269fc0206ffdce1c6c7ec4013028b6), [`278d51b7597afadd7fa765187e3cf9e8cd5385c6`](https://github.com/siemens/ix/commit/278d51b7597afadd7fa765187e3cf9e8cd5385c6), [`ff816a840b609491e1a647d64f6bad489ad214f0`](https://github.com/siemens/ix/commit/ff816a840b609491e1a647d64f6bad489ad214f0), [`df00884a5b65c7047ddc3506b8eaac66819c4ceb`](https://github.com/siemens/ix/commit/df00884a5b65c7047ddc3506b8eaac66819c4ceb), [`bc33e84a3ad378470dbbdff8dd85877c21355bae`](https://github.com/siemens/ix/commit/bc33e84a3ad378470dbbdff8dd85877c21355bae), [`8002d9a68ef8a5279d43726ecad28e85ad0ac53a`](https://github.com/siemens/ix/commit/8002d9a68ef8a5279d43726ecad28e85ad0ac53a)]:
-    -   @siemens/ix@3.0.0-alpha.4
-
-## [@siemens/ix@3.0.0-alpha.3](https://github.com/siemens/ix/releases/tag/%40siemens/ix%403.0.0-alpha.3) (2025-03-27T10:29:18Z)
-

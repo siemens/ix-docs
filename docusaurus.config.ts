@@ -234,8 +234,8 @@ const config: Config = {
         {
           type: 'custom-news-pill',
           position: 'left',
-          label: 'Release 4.0 is here',
-          value: '/blog/2025/11/10/release-4',
+          label: 'Boost productivity with AI',
+          value: '/docs/home/mcp-server',
         },
         {
           type: 'custom-version-selection',
