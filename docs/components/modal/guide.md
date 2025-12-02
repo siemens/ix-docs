@@ -28,7 +28,7 @@ Use them when a task requires immediate attention but the user should return to 
 - **Backdrop**: Use a backdrop to focus attention and prevent background interaction.
 - **Animation**: By default, modals fade in. Disable for performance-sensitive contexts.
 - **Close on backdrop click**: Enable clicking on the backdrop to close modals for informational messages. Disable for critical decisions that require confirmation.
-- **Before dismiss**: Add follow-up actions when users try to close modals (e.g. add a confirmation prompt to avoid unintentional discarding of inputs when closing).
+- **Before dismiss**: Add follow-up actions when users try to close modals, e.g. add a confirmation prompt to avoid unintentional discarding of inputs when closing.
 - **Modal header:**
     - **Title**: Use a short, specific title that describes the task or decision.
     - **Icon and icon color:** Repeat icons from the trigger to establish a connection (e.g. if a button with label and icon opens the modal then reuse the same label and icon). Use [iX theme colors](../../styles/colors).
@@ -46,9 +46,9 @@ Use them when a task requires immediate attention but the user should return to 
     - Focus moves into the modal when it opens and returns to the trigger when it closes.
 - **Overflow:**
     - The modal height increases with content until reaching screen height, then a scrollbar appears.
-    - Footer remains sticky when content overflows (requires implementation).
+    - We recommend to implement a sticky footer when content overflows.
     - Avoid horizontal scrollbars by using a larger modal size and defining adaptive behaviors for different viewports.
-- **Placement:** Horizontally centered, vertically centered.
+- **Placement:** Horizontally centered, vertically centered or top-aligned.
 - **Responsiveness:**
     - Height: Except for `full-screen`, the height depends on its content.
     - Content: Needs to be built responsively to adapt with the container's width
