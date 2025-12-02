@@ -3,7 +3,6 @@ doc-type: 'tab-item'
 ---
 
 import DoAndDont from '@site/src/components/DoAndDont';
-
 import { IxButton } from '@siemens/ix-react';
 
 # Message modal - Usage
@@ -24,8 +23,8 @@ Message modals present short messages, confirmations or important alerts that re
 - **Error:** Use for system failures, validation issues or blocking errors.
 - **Info:** Use for neutral information, instructions or notifications.
 - **Question:** Use for confirmations requiring user decisions.
-- **Success:** Use for confirmation of completed actions when another action is needed (e.g. download backup, copy generated link).
-- **Warning:** Use for potential issues or action consequences (e.g. overwriting files).
+- **Success:** Use for completed actions when another action is needed, e.g. download backup, copy generated link.
+- **Warning:** Use for potential issues or action consequences, e.g. overwrite files.
 
 :::info
 
@@ -61,15 +60,19 @@ Note that the choice of button variant is independent from the modal variant, e.
 - **Message:** Include if you need to provide additional information e.g. consequences (see [writing guidelines](/docs/guidelines/language/error-messages)).
 - **Confirm action:** Use precise action text, e.g. "Delete," "Confirm," or "Continue."
 - **Cancel action:** Use "Cancel" or "Close".
-- **Close on backdrop:** Allow closing by clicking the backdrop for informational messages but disable it for critical confirmations.
+- **Close on backdrop click:** Enable clicking on the backdrop to close modals for informational messages. Disable for critical decisions that require confirmation.
 - **Preserve context:** After closing, return users to the same screen state.
 
 ## Behavior in context
 
-- Use for confirmations that are direct and reversible or for important information requiring acknowledgement
-- Make consequences explicit in the message and action labels (e.g. Delete permanently)
-- Ensure the primary action is keyboard accessible and focused by default
-- Use confirm dialogs sparingly and only when consequences are significant
+- **Interaction:**
+    - Message modals are opened by the system (e.g. after an error occurs) or by users (e.g. when clicking a delete button).
+    - Message modals are closed when clicking on close or on buttons in the footer (typically cancel or confirm).
+    - Focus moves into the modal when it opens and returns to the trigger when it closes.
+- **Usage:** Use for confirmations that are direct and reversible or for important information requiring acknowledgement.
+- **Communication:** Make consequences explicit in the message and action labels (e.g. "Delete permanently").
+- **Focus management:** Ensure the primary action is keyboard accessible and focused by default.
+- **Frequency:** Use confirm dialogs sparingly and only when consequences are significant.
 
 ## States
 

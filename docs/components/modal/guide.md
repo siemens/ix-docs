@@ -20,32 +20,30 @@ Use them when a task requires immediate attention but the user should return to 
 
 ## Options
 
-- **Whole modal:**
-    - **Centered**: Center content by default; use top alignment for tall dialogs that expand during interaction.
-    - **Size**: Choose a fixed max-width, full width or full screen modal based on context and device:
-        - **Fixed max-width (360-840px):** Use as default for most layouts. Note that on narrower screens or viewports the modal will scale down and become proportionally narrower to fit the available space.
-        - **Full width:** Use for data-heavy interfaces on desktop, e.g. large datasets.
-        - **Full screen:** Since the modal container will stretch across full screen, covering the whole [application](../application), use for immersive experiences or multi-step workflows. Note that users have no visual connection to the app, which is why we recommend to establish it in the title or content
-    - **Backdrop**: Use a backdrop to focus attention and prevent background interaction.
-    - **Animation**: By default, modals fade in. Disable for performance-sensitive contexts.
-    - **Close on backdrop click**: Allow users to dismiss the modal by clicking the backdrop. We typically disable it for critical decisions requiring explicit confirmation.
-    - **Before dismiss**: Add follow-up actions when users try to close modals (e.g. add a confirmation prompt to avoid unintentional discarding of inputs when closing).
+- **Centered**: Center content by default; use top alignment for tall dialogs that expand during interaction.
+- **Size**: Choose a fixed max-width, full width or full screen modal based on context and device:
+    - **Fixed max-width (360-840px):** Use as default for most layouts. Note that on narrower screens or viewports the modal will scale down and become proportionally narrower to fit the available space.
+    - **Full width:** Use for data-heavy interfaces on desktop, e.g. large datasets.
+    - **Full screen:** Since the modal container covers the whole [application](../application) (including [menu](../application-menu) and [header](../application-header)), use for immersive experiences or multi-step workflows. Note that users have no visual connection to the app, which is why we recommend to establish it in the title or content.
+- **Backdrop**: Use a backdrop to focus attention and prevent background interaction.
+- **Animation**: By default, modals fade in. Disable for performance-sensitive contexts.
+- **Close on backdrop click**: Enable clicking on the backdrop to close modals for informational messages. Disable for critical decisions that require confirmation.
+- **Before dismiss**: Add follow-up actions when users try to close modals (e.g. add a confirmation prompt to avoid unintentional discarding of inputs when closing).
 - **Modal header:**
     - **Title**: Use a short, specific title that describes the task or decision.
-    - **Icon and icon color:** Repeat icons from the trigger to establish a connection (e.g. if a button with label and icon opens the modal then reuse the same label and icon).
-    - **Icon color:** Use [iX theme colors](../../styles/colors).
-    - **Hide close**: We recommend only hiding the close button for critical flows that require an explicit decision
-- **Modal footer:** We recommend to place each one primary, secondary and, if applicable, tertiary [button](../button) on the footer. We also recommend positioning them on the right side to follow the Z-shape reading pattern in LTR read languages.
+    - **Icon and icon color:** Repeat icons from the trigger to establish a connection (e.g. if a button with label and icon opens the modal then reuse the same label and icon). Use [iX theme colors](../../styles/colors).
+    - **Hide close**: We recommend only hiding the close button for critical flows that require an explicit decision.
+- **Modal footer:** Place one primary, one secondary and optionally one tertiary [button](../button) on the right side to follow the Z-shape reading pattern in left-to-right languages.
 
 ## Behavior in context
 
 - **Interaction:**
-    - Modals are opened by the system (e.g. when another process is finished) or by users (e.g. when clicking on buttons)
+    - Modals are opened by the system (e.g. when another process is finished) or by users (e.g. when clicking on buttons).
     - Modals are closed:
-        - when clicking on close or on buttons in the footer (typically cancel or confirm)
-        - when pressing the Escape key
-        - If enabled, when clicking outside the modal (on the backdrop)
-    - Focus moves into the modal when it opens and returns to the trigger when it closes
+        - When clicking on close or on buttons in the footer (typically cancel or confirm).
+        - When pressing the Escape key.
+        - If enabled, when clicking outside the modal (on the backdrop).
+    - Focus moves into the modal when it opens and returns to the trigger when it closes.
 - **Overflow:**
     - The modal height increases with content until reaching screen height, then a scrollbar appears.
     - Footer remains sticky when content overflows (requires implementation).
