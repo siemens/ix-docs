@@ -17,8 +17,8 @@ import './card-with-icon.css';
 Our Figma library contains all tokens, components and blueprints ready for app design.
 
 - **Access:** The primary library is maintained in the Siemens AG Global Figma account. Siemens employees with a Figma license can search for "iX Design System".
-- **Guest access & classic theme:** Guest access and the classic (open-source) library are available upon request — please [contact us](support/contact-us).
-- **Brand & variables:** The library includes Siemens brand assets and Figma variables for easy theming. See [Designing with themes](../styles/theming/usage-designers.md) for details.
+- **Guest access and classic theme:** Guest access and the classic (open-source) library are available upon request — please [contact us](support/contact-us).
+- **Brand and variables:** The library includes Siemens brand assets and Figma variables for easy theming. See [Designing with themes](../styles/theming/usage-designers.md) for details.
 
 ## Development frameworks
 
@@ -26,7 +26,7 @@ Choose a framework to add iX components to your project. Each link includes inst
 
 <DevelopmentFrameworks></DevelopmentFrameworks>
 
-**IDE editor theme**: We provide a Visual Studio Code theme for Siemens employees and partners to preview the iX look-and-feel while coding (download available [here](https://code.siemens.com/siemens-ix/ix-for-vs-code/ix-theme-for-vs-code/-/releases) within Siemens).
+**IDE editor theme**: We provide a Visual Studio Code theme for Siemens employees and partners to preview the iX look and feel while coding (download available [here](https://code.siemens.com/siemens-ix/ix-for-vs-code/ix-theme-for-vs-code/-/releases) within Siemens).
 
 ## Contribute
 
