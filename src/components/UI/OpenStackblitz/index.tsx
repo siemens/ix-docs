@@ -24,7 +24,7 @@ export default function OpenStackblitz(
 ) {
   const context = useDocusaurusContext();
   const snippetsBaseUrl = useBaseUrl('/demo/v2/');
-  const runtimeBaseUrl = useBaseUrl('/runtime/v4');
+  const runtimeBaseUrl = useBaseUrl('/runtime');
 
   return (
     <BrowserOnly>
