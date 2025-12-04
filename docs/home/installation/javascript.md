@@ -1,11 +1,11 @@
 ---
 sidebar_position: 3
-sidebar_label: Web Components
-title: Web Components
+sidebar_label: Web components
+title: Web components
 doc-type: 'banner'
 component-tabs: ['']
 no_single_tab: true
-description: 'Web Components are a set of web platform APIs that allow you to create reusable and encapsulated custom elements. This section guides you through the steps to install and set up our design system using web components, ensuring a straightforward and flexible integration process.'
+description: 'Web components are a set of web platform APIs that allow you to create reusable and encapsulated custom elements. This section guides you through the steps to install and set up our design system using web components, ensuring a straightforward and flexible integration process.'
 ---
 
 import Tabs from '@theme/Tabs';

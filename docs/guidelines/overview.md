@@ -8,20 +8,14 @@ no_single_tab: true
 description: 'Our guidelines section provides comprehensive information to help you create user-friendly and consistent designs. This section covers various aspects of design, ensuring that your work meets high standards of accessibility, responsiveness, and usability.'
 ---
 
+import GuidingLinks from '@site/src/components/GuidingPrinciples';
 import { IxLayoutGrid, IxRow } from '@siemens/ix-react';
 import { CategoryButton } from '@site/src/components/CategoryButton';
 
-# 
+#
 
 <IxLayoutGrid style={{marginBottom: '3rem'}} no-margin>
   <IxRow style={{gap: '0.5rem', justifyContent: 'center'}}>
-    <CategoryButton
-      buttonWidth="8rem"
-      imageWidth="5.5rem"
-      title="Design principles"
-      link="#design-principles">
-      ![](https://www.figma.com/design/wEptRgAezDU1z80Cn3eZ0o/iX-Documentation-illustrations?node-id=5186-244&t=gkh6VNlJun96I6Ac-11)
-    </CategoryButton>
     <CategoryButton
       buttonWidth="8rem"
       imageWidth="5.5rem"
@@ -60,8 +54,13 @@ import { CategoryButton } from '@site/src/components/CategoryButton';
   </IxRow>
 </IxLayoutGrid>
 
-## Design principles
-Elevating user experience with Industrial Experience design principles. In the fast-paced world of industrial technology, design principles serve as the cornerstone of innovation, guiding us to create seamless and intuitive applications. They provide designers and developers with a robust framework to make informed design decisions, ensuring each product aligns with our standards and brand identity. [Read more](./designprinciples)
+## Guiding principles for excellent design
+
+At Siemens, our Product Design Principles serve as the cornerstone of innovation, guiding us to create seamless and intuitive applications. They provide our designers, developers and managers with a robust framework to make informed design decisions, ensuring each product aligns with our standards and brand identity. We’ve refined our approach into four core design principles. These help us make our applications intuitive, efficient and valuable.
+
+<GuidingLinks></GuidingLinks>
+
+As a Siemens employee, get more details on our principles, checklists and real app examples for designers and developers [here](https://siemens.sharepoint.com/sites/design-principles).
 
 ## Accessibility
 
