@@ -21,7 +21,7 @@ Use them when a task requires immediate attention but the user should return to 
 ## Options
 
 - **Centered**: Center content by default; use top alignment for tall dialogs that expand during interaction.
-- **Size**: Choose a fixed max-width, full width or full screen modal based on context and device:
+- **Size**: Choose an appropriate size based on context and device:
     - **Fixed max-width (360-840px):** Use as default for most layouts. Note that on narrower screens or viewports the modal will scale down and become proportionally narrower to fit the available space.
     - **Full width:** Use for data-heavy interfaces on desktop, e.g. large datasets.
     - **Full screen:** Since the modal container covers the whole [application](../application) (including [menu](../application-menu) and [header](../application-header)), use for immersive experiences or multi-step workflows. Note that users have no visual connection to the app, which is why we recommend to establish it in the title or content.
@@ -50,8 +50,8 @@ Use them when a task requires immediate attention but the user should return to 
     - Avoid horizontal scrollbars by using a larger modal size and defining adaptive behaviors for different viewports.
 - **Placement:** Horizontally centered, vertically centered or top-aligned.
 - **Responsiveness:**
-    - Height: Except for `full-screen`, the height depends on its content.
-    - Content: Needs to be built responsively to adapt with the container's width
+    - Height: Depends on its content except for `full-screen`.
+    - Content: Needs to be built responsively to adapt with the container's width.
 
 ## States
 
@@ -61,12 +61,11 @@ Modals have two states: Closed and opened.
 
 <DoAndDont>
   <DoAndDont.Do>
-    <DoAndDont.Item>Do keep titles short and task focused</DoAndDont.Item>
     <DoAndDont.Item>Do provide at least one visible way to close the modal</DoAndDont.Item>
     <DoAndDont.Item>Do provide a clear primary action that describes the result</DoAndDont.Item>
-    <DoAndDont.Item>Do ensure keyboard and screen‑reader access to all controls</DoAndDont.Item>
+    <DoAndDont.Item>Do ensure all controls are accessible by keyboard and screen‑reader</DoAndDont.Item>
     <DoAndDont.Item>Do preserve scroll position and page state when closing</DoAndDont.Item>
-    <DoAndDont.Item>Do return users to the previous state, not an unrelated page</DoAndDont.Item>
+    <DoAndDont.Item>Do return users to the previous state when cancelling, not an unrelated page</DoAndDont.Item>
   </DoAndDont.Do>
   <DoAndDont.Dont>
     <DoAndDont.Item>Don’t use modals if a decision should be made (use [message modals](../message-modal) instead)</DoAndDont.Item>

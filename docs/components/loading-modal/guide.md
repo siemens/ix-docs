@@ -19,7 +19,7 @@ Loading modals communicate that the system is performing an operation that takes
 
 ## Behavior in context
 
-- **Interaction:** Loading modals are opened and closed by the system to prevent user interaction.
+- **Interaction:** Loading modals open and close automatically to prevent user interaction.
 - **Overflow:** If the message exceeds the available width, it breaks into multiple lines.
 - **Placement:** Horizontally top-aligned, vertically centered.
 - **Responsiveness:** Loading modals adjust their width depending on the screen width.
@@ -32,8 +32,8 @@ Loading modals have two states: Closed and opened.
 
 <DoAndDont>
   <DoAndDont.Do>
-    <DoAndDont.Item>Do use only if any user interaction needs to be blocked (otherwise use [spinners](../spinner) instead)</DoAndDont.Item>
-    <DoAndDont.Item>Do use if user interaction needs to be blocked and the progress is unknown (otherwise use [progress indicators](../progress-indicator) placed in [custom modals](../modal) instead)</DoAndDont.Item>
+    <DoAndDont.Item>Do only use if any user interaction needs to be blocked, otherwise use [spinners](../spinner) instead</DoAndDont.Item>
+    <DoAndDont.Item>Do use if user interaction needs to be blocked and the progress is unknown, otherwise use [progress indicators](../progress-indicator) placed in [custom modals](../modal) instead</DoAndDont.Item>
   </DoAndDont.Do>
   <DoAndDont.Dont>
     <DoAndDont.Item>Don’t block users for long tasks without an alternative</DoAndDont.Item>

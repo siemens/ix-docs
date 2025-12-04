@@ -3,6 +3,7 @@ doc-type: 'tab-item'
 ---
 
 import DoAndDont from '@site/src/components/DoAndDont';
+
 import { IxButton } from '@siemens/ix-react';
 
 # Message modal - Usage
@@ -38,11 +39,11 @@ Message modals present short messages, confirmations or important alerts that re
 
 Note that the choice of button variant is independent from the modal variant, e.g.:
 
-| Visual | Content and buttons |
-|---|---|
-| ![Error](https://www.figma.com/design/wEptRgAezDU1z80Cn3eZ0o/iX-Documentation-illustrations?node-id=7351-3560&t=WHbXyipgpGwQbVsV-4) | **Title:** A system error occurred<br/>**Variant:** Error<br/>**Buttons:** Subtle primary button "Reload" and primary button "Try again" |
-| ![Question delete](https://www.figma.com/design/wEptRgAezDU1z80Cn3eZ0o/iX-Documentation-illustrations?node-id=7351-3731&t=WHbXyipgpGwQbVsV-4) | **Title:** Are you sure you want to delete this item permanently?<br/>**Variant:** Question<br/>**Buttons:** Primary danger button "Delete" and primary ghost button "Cancel" |
-| ![Question discard](https://www.figma.com/design/wEptRgAezDU1z80Cn3eZ0o/iX-Documentation-illustrations?node-id=7351-3947&t=WHbXyipgpGwQbVsV-4) | **Title:** Do you want to save your changes before leaving?<br/>**Variant:** Question<br/>**Buttons:** Primary button "Save changes", secondary button "Cancel" and tertiary button "Discard" |
+| Visual                                                                                               | Content and buttons                                                                                  |
+| ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- |
+| ![Error](https://www.figma.com/design/wEptRgAezDU1z80Cn3eZ0o/iX-Documentation-illustrations?node-id=7351-3560&t=WHbXyipgpGwQbVsV-4) | **Title:** A system error occurred<br>**Variant:** Error<br>**Buttons:** Subtle primary button "Reload" and primary button "Try again" |
+| ![Question delete](https://www.figma.com/design/wEptRgAezDU1z80Cn3eZ0o/iX-Documentation-illustrations?node-id=7351-3731&t=WHbXyipgpGwQbVsV-4) | **Title:** Deleting this item cannot be undone<br>**Variant:** Question<br>**Buttons:** Primary danger button "Delete" and primary ghost button "Cancel" |
+| ![Question discard](https://www.figma.com/design/wEptRgAezDU1z80Cn3eZ0o/iX-Documentation-illustrations?node-id=7351-3947&t=WHbXyipgpGwQbVsV-4) | **Title:** Do you want to save your changes before leaving?<br>**Variant:** Question<br>**Buttons:** Primary button "Save changes", secondary button "Cancel" and tertiary button "Discard" |
 
 Since our web component offers a predefined cancel and confirm action use [modals](../modal) if you intend to adapt the button arrangement or variants.
 
@@ -64,7 +65,7 @@ Message modals have two states: Closed and opened.
     <DoAndDont.Item>Do keep the message short and scannable</DoAndDont.Item>
   </DoAndDont.Do>
   <DoAndDont.Dont>
-    <DoAndDont.Item>Don’t use message modals for non-essential information (use toasts instead)</DoAndDont.Item>
+    <DoAndDont.Item>Don’t use message modals for non-essential information, use [toasts](../toast) instead</DoAndDont.Item>
     <DoAndDont.Item>Don’t hide confirm actions behind ambiguous labels</DoAndDont.Item>
   </DoAndDont.Dont>
 </DoAndDont>
