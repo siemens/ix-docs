@@ -6,9 +6,9 @@ import DoAndDont from '@site/src/components/DoAndDont';
 
 # Custom modal - Usage
 
-Custom modals present rich, contextual content e.g. forms, complex workflows or nested interactions that require user focus.
+Custom modals present rich, contextual content, e.g. forms, complex workflows or nested interactions that require the user's focus.
 
-Use them when a task requires immediate attention but the user should return to the same place after closing the modal.
+Use custom models when a task requires immediate attention and the user returns to the same place after closing the modal.
 
 ![Modal overview](https://www.figma.com/design/wEptRgAezDU1z80Cn3eZ0o/iX-Documentation-illustrations?node-id=7350-2529&t=WHbXyipgpGwQbVsV-4)
 
@@ -22,9 +22,9 @@ Use them when a task requires immediate attention but the user should return to 
 
 - **Centered**: Center content by default; use top alignment for tall dialogs that expand during interaction.
 - **Size**: Choose a fixed max-width, full width or full screen modal based on context and device:
-    - **Fixed max-width (360-840px):** Use as default for most layouts. Note that on narrower screens or viewports the modal will scale down and become proportionally narrower to fit the available space.
+    - **Fixed max-width (360-840px):** Use as default for most layouts. Note that on narrower screens or viewports, the modal scales down and becomes proportionally narrower to fit the available space.
     - **Full width:** Use for data-heavy interfaces on desktop, e.g. large datasets.
-    - **Full screen:** Since the modal container covers the whole [application](../application) (including [menu](../application-menu) and [header](../application-header)), use for immersive experiences or multi-step workflows. Note that users have no visual connection to the app, which is why we recommend to establish it in the title or content.
+    - **Full screen:** Since the modal container covers the whole [application](../application) (including [menu](../application-menu) and [header](../application-header)), use for immersive experiences or multi-step workflows. Note that users have no visual connection to the app which is why we recommend establishing it in the title or content.
 - **Backdrop**: Use a backdrop to focus attention and prevent background interaction.
 - **Animation**: By default, modals fade in. Disable for performance-sensitive contexts.
 - **Close on backdrop click**: Enable clicking on the backdrop to close modals for informational messages. Disable for critical decisions that require confirmation.
@@ -38,7 +38,7 @@ Use them when a task requires immediate attention but the user should return to 
 ## Behavior in context
 
 - **Interaction:**
-    - Modals are opened by the system (e.g. when another process is finished) or by users (e.g. when clicking on buttons).
+    - Modals are opened by the system (e.g. when another process finishes) or by users (e.g. when clicking buttons).
     - Modals are closed:
         - When clicking on close or on buttons in the footer (typically cancel or confirm).
         - When pressing the Escape key.
@@ -46,7 +46,7 @@ Use them when a task requires immediate attention but the user should return to 
     - Focus moves into the modal when it opens and returns to the trigger when it closes.
 - **Overflow:**
     - The modal height increases with content until reaching screen height, then a scrollbar appears.
-    - We recommend to implement a sticky footer when content overflows.
+    - We recommend implementing a sticky footer when content overflows.
     - Avoid horizontal scrollbars by using a larger modal size and defining adaptive behaviors for different viewports.
 - **Placement:** Horizontally centered, vertically centered or top-aligned.
 - **Responsiveness:**
@@ -70,7 +70,7 @@ Modals have two states: Closed and opened.
   </DoAndDont.Do>
   <DoAndDont.Dont>
     <DoAndDont.Item>Don’t use modals if a decision should be made (use [message modals](../message-modal) instead)</DoAndDont.Item>
-    <DoAndDont.Item>Don’t nest modals (e.g. to load more data, use [spinners](../spinner) within modal contents)</DoAndDont.Item>
+    <DoAndDont.Item>Don’t nest modals, e.g. to load more data, instead use [spinners](../spinner) within modal contents)</DoAndDont.Item>
     <DoAndDont.Item>Don’t auto close modals for irreversible actions</DoAndDont.Item>
     <DoAndDont.Item>Don’t overload the modal with unrelated content</DoAndDont.Item>
   </DoAndDont.Dont>
