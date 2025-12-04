@@ -104,4 +104,4 @@ import '@siemens/ix/dist/siemens-ix/theme/classic-dark.css';
 
 ## Working with themes during runtime
 
-<ThemeSwitcher />
+<ThemeSwitcher height="15rem" />
