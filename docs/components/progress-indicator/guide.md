@@ -70,4 +70,6 @@ For more information about writing effective helper texts or labels, see our [UX
 
 ## Related
 
+- [Loading modal](../loading-modal)
 - [Spinner](../spinner)
+- [Accessibility](../../guidelines/accessibility)
