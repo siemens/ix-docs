@@ -56,16 +56,10 @@ const sidebars: SidebarsConfig = {
       id: 'home/overview',
       className: 'doc-sidebar-item-bold',
     },
-    {
-      type: 'category',
+        {
+      type: 'doc',
+      id: 'home/getting-started/starter-app',
       className: 'doc-sidebar-item-bold',
-      label: 'Getting started',
-      items: [
-        'home/getting-started/developers',
-        'home/getting-started/designers',
-        'home/getting-started/starter-app',
-      ],
-      collapsed: true,
     },
     {
       type: 'category',
@@ -91,14 +85,6 @@ const sidebars: SidebarsConfig = {
         'home/installation/vue',
         'home/installation/blazor',
       ],
-      collapsed: true,
-    },
-    {
-      type: 'category',
-      className: 'doc-sidebar-item-bold',
-
-      label: 'Theme',
-      items: ['home/theming/usage-developers', 'home/theming/usage-designers'],
       collapsed: true,
     },
     {
@@ -1121,7 +1107,6 @@ const sidebars: SidebarsConfig = {
 
   guidelines: [
     'guidelines/overview',
-    'guidelines/designprinciples',
     createTabItem({
       id: 'guidelines/accessibility/index',
       label: 'Accessibility',
@@ -1220,6 +1205,13 @@ const sidebars: SidebarsConfig = {
     'styles/shadows',
     'styles/elevation',
     'styles/animation',
+    {
+      type: 'category',
+      className: 'doc-sidebar-item-bold',
+      label: 'Theme',
+      items: ['styles/theming/usage-developers', 'styles/theming/usage-designers'],
+      collapsed: true,
+    },
   ],
 };
 
