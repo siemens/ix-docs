@@ -18,3 +18,10 @@ kathrinschalber:
   image_url: https://github.com/kathrinschalber.png
   socials:
     github: kathrinschalber
+
+lukasmaurer:
+  name: Lukas Maurer
+  title: Maintainer of Siemens Industrial Experience
+  image_url: https://github.com/nuke-ellington.png
+  socials:
+    github: nuke-ellington

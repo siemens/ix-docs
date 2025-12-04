@@ -12,7 +12,7 @@
   "dependencies": {
     "@siemens/ix": "<VERSION>",
     "@siemens/ix-aggrid": "<VERSION>",
-    "@siemens/ix-echarts": "<VERSION>",
+    "@siemens/ix-echarts": "latest",
     "@siemens/ix-icons": "latest"
   },
   "devDependencies": {

@@ -134,6 +134,11 @@ const sidebars: SidebarsConfig = {
       ],
       collapsed: true,
     },
+    {
+      type: 'doc',
+      id: 'home/mcp-server',
+      className: 'doc-sidebar-item-bold',
+    }
   ],
   components: [
     {
