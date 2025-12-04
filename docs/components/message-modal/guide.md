@@ -6,7 +6,7 @@ import DoAndDont from '@site/src/components/DoAndDont';
 
 import { IxButton } from '@siemens/ix-react';
 
-# Message modal - Usage
+# Message modal - usage
 
 Message modals present short messages, confirmations or important alerts that require a decision or acknowledgment. Use them for confirmations, simple decisions and critical alerts that need user action before proceeding.
 
@@ -24,7 +24,7 @@ Message modals present short messages, confirmations or important alerts that re
 - **Error:** Use for system failures, validation issues or blocking errors.
 - **Info:** Use for neutral information, instructions or notifications.
 - **Question:** Use for confirmations requiring user decisions.
-- **Success:** Use for completed actions when another action is needed, e.g. download backup, copy generated link.
+- **Success:** Use for completed actions when another action is needed, e.g. download backup or copy generated link.
 - **Warning:** Use for potential issues or action consequences, e.g. overwrite files.
 
 ![Message modal variants](https://www.figma.com/design/wEptRgAezDU1z80Cn3eZ0o/iX-Documentation-illustrations?node-id=7376-535&t=APgwguIwWKMbj5sA-4)
@@ -34,7 +34,7 @@ Message modals present short messages, confirmations or important alerts that re
 - **Title:** Use a clear, outcome-oriented title (e.g. "Delete item", see [writing guidelines](/docs/guidelines/language/dialogs-and-buttons)).
 - **Message:** Include if you need to provide additional information e.g. consequences (see [writing guidelines](/docs/guidelines/language/error-messages)).
 - **Confirm action:** Use precise action text, e.g. "Delete", "Confirm", or "Continue".
-- **Cancel action:** Use "Cancel" or "Close". We recommend to return to the previous context the user was in.
+- **Cancel action:** Use "Cancel" or "Close". We recommend returning to the previous context the user was in.
 - **Close on backdrop click:** Enable clicking on the backdrop to close modals for informational messages. Disable for critical decisions that require confirmation.
 
 Note that the choice of button variant is independent from the modal variant, e.g.:
@@ -62,7 +62,7 @@ Message modals have two states: Closed and opened.
   <DoAndDont.Do>
     <DoAndDont.Item>Do use action labels that describe the result (avoid Yes or No)</DoAndDont.Item>
     <DoAndDont.Item>Do communicate consequences clearly for destructive actions</DoAndDont.Item>
-    <DoAndDont.Item>Do keep the message short and scannable</DoAndDont.Item>
+    <DoAndDont.Item>Do keep messages short and scannable</DoAndDont.Item>
   </DoAndDont.Do>
   <DoAndDont.Dont>
     <DoAndDont.Item>Don’t use message modals for non-essential information, use [toasts](../toast) instead</DoAndDont.Item>

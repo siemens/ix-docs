@@ -4,9 +4,9 @@ doc-type: 'tab-item'
 
 import DoAndDont from '@site/src/components/DoAndDont';
 
-# Loading modal - Usage
+# Loading modal - usage
 
-Loading modals communicate that the system is performing an operation that takes time and that users should wait. Use them for short blocking tasks (upload, processing) where users must not interact with the page until completion.
+Loading modals communicate that the system is performing an operation that takes time and that users should wait. Use them for short blocking tasks (upload, processing) where users should not interact with the page until completion.
 
 ![Loading modal](https://www.figma.com/design/wEptRgAezDU1z80Cn3eZ0o/iX-Documentation-illustrations?node-id=7351-4017&t=WHbXyipgpGwQbVsV-4)
 
