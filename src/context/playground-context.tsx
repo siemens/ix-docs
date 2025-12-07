@@ -8,10 +8,17 @@
  */
 import { createStorageSlot } from '@docusaurus/theme-common/internal';
 import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
+import { themeSwitcher } from '@siemens/ix';
 import { createContext, useCallback, useEffect, useState } from 'react';
 
 const variantStorage = createStorageSlot('docusaurus.playground.theme.variant');
 const themeStorage = createStorageSlot('docusaurus.playground.theme');
+
+const DEFAULT_VARIANT = 'dark';
+
+const getStoredVariant = () => variantStorage.get() || DEFAULT_VARIANT;
+const getStoredTheme = (defaultTheme: string) => themeStorage.get() || defaultTheme;
+const buildFullTheme = (theme: string, variant: string) => `theme-${theme}-${variant}`;
 
 export const PlaygroundContext = createContext<{
   variant: string;
@@ -19,7 +26,7 @@ export const PlaygroundContext = createContext<{
   onVariantChange?: (variant: string) => void;
   onThemeChange?: (theme: string) => void;
 }>({
-  variant: 'dark',
+  variant: DEFAULT_VARIANT,
   theme: 'brand',
 });
 
@@ -33,7 +40,11 @@ function useContextValue() {
       variant: variant,
     }));
     variantStorage.set(variant);
-  }, []);
+
+    const theme = getStoredTheme(defaultTheme);
+    const fullTheme = buildFullTheme(theme, variant);
+    themeSwitcher.setTheme(fullTheme);
+  }, [defaultTheme]);
 
   const cbOnThemeChange = useCallback((theme: string) => {
     setContext((prev) => ({
@@ -41,32 +52,42 @@ function useContextValue() {
       theme: theme,
     }));
     themeStorage.set(theme);
+
+    const variant = getStoredVariant();
+    const fullTheme = buildFullTheme(theme, variant);
+    themeSwitcher.setTheme(fullTheme);
   }, []);
 
   const [context, setContext] = useState({
-    variant: 'dark',
+    variant: DEFAULT_VARIANT,
     theme: defaultTheme,
     onVariantChange: cbOnVariantChange,
     onThemeChange: cbOnThemeChange,
   });
 
   useEffect(() => {
+    const storedVariant = getStoredVariant();
+    const storedTheme = getStoredTheme(defaultTheme);
+
     setContext((prev) => ({
       ...prev,
-      variant: variantStorage.get() || 'dark',
-      theme: themeStorage.get() || defaultTheme,
+      variant: storedVariant,
+      theme: storedTheme,
     }));
+
+    const fullTheme = buildFullTheme(storedTheme, storedVariant);
+    themeSwitcher.setTheme(fullTheme);
 
     variantStorage.listen(() => {
       setContext((prev) => ({
         ...prev,
-        variant: variantStorage.get() || 'dark',
+        variant: getStoredVariant(),
       }));
     });
     themeStorage.listen(() => {
       setContext((prev) => ({
         ...prev,
-        theme: themeStorage.get() || defaultTheme,
+        theme: getStoredTheme(defaultTheme),
       }));
     });
   }, [defaultTheme]);
