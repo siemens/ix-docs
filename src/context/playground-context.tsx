@@ -8,8 +8,11 @@
  */
 import { createStorageSlot } from '@docusaurus/theme-common/internal';
 import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
-import { themeSwitcher } from '@siemens/ix';
 import { createContext, useCallback, useEffect, useState } from 'react';
+
+// IMPORTANT: themeSwitcher will be loaded in useEffect (client-side only)
+// Module-level loading doesn't work reliably with Docusaurus SSR
+let themeSwitcherInstance: any = null;
 
 const variantStorage = createStorageSlot('docusaurus.playground.theme.variant');
 const themeStorage = createStorageSlot('docusaurus.playground.theme');
@@ -19,6 +22,13 @@ const DEFAULT_VARIANT = 'dark';
 const getStoredVariant = () => variantStorage.get() || DEFAULT_VARIANT;
 const getStoredTheme = (defaultTheme: string) => themeStorage.get() || defaultTheme;
 const buildFullTheme = (theme: string, variant: string) => `theme-${theme}-${variant}`;
+
+// Safe wrapper to call themeSwitcher only when available
+const safeSetTheme = (theme: string) => {
+  if (themeSwitcherInstance) {
+    themeSwitcherInstance.setTheme(theme);
+  }
+};
 
 export const PlaygroundContext = createContext<{
   variant: string;
@@ -43,9 +53,7 @@ function useContextValue() {
 
     const theme = getStoredTheme(defaultTheme);
     const fullTheme = buildFullTheme(theme, variant);
-    console.log('[PlaygroundContext] Variant changed:', { variant, theme, fullTheme });
-    themeSwitcher.setTheme(fullTheme);
-    console.log('[PlaygroundContext] After setTheme, getCurrentTheme():', themeSwitcher.getCurrentTheme());
+    safeSetTheme(fullTheme);
   }, [defaultTheme]);
 
   const cbOnThemeChange = useCallback((theme: string) => {
@@ -57,9 +65,7 @@ function useContextValue() {
 
     const variant = getStoredVariant();
     const fullTheme = buildFullTheme(theme, variant);
-    console.log('[PlaygroundContext] Theme changed:', { theme, variant, fullTheme });
-    themeSwitcher.setTheme(fullTheme);
-    console.log('[PlaygroundContext] After setTheme, getCurrentTheme():', themeSwitcher.getCurrentTheme());
+    safeSetTheme(fullTheme);
   }, []);
 
   const [context, setContext] = useState({
@@ -70,10 +76,26 @@ function useContextValue() {
   });
 
   useEffect(() => {
+    // Load themeSwitcher asynchronously on client-side only
+    const loadThemeSwitcher = async () => {
+      if (!themeSwitcherInstance && typeof window !== 'undefined') {
+        try {
+          const ix = await import('@siemens/ix');
+          themeSwitcherInstance = ix.themeSwitcher;
+          
+          // Apply the theme now that themeSwitcher is loaded
+          const currentVariant = getStoredVariant();
+          const currentTheme = getStoredTheme(defaultTheme);
+          const currentFullTheme = buildFullTheme(currentTheme, currentVariant);
+          safeSetTheme(currentFullTheme);
+        } catch (err) {
+          console.error('[PlaygroundContext] Failed to load @siemens/ix:', err);
+        }
+      }
+    };
+
     const storedVariant = getStoredVariant();
     const storedTheme = getStoredTheme(defaultTheme);
-
-    console.log('[PlaygroundContext] Initializing:', { storedVariant, storedTheme, defaultTheme });
 
     setContext((prev) => ({
       ...prev,
@@ -81,38 +103,32 @@ function useContextValue() {
       theme: storedTheme,
     }));
 
-    const fullTheme = buildFullTheme(storedTheme, storedVariant);
-    console.log('[PlaygroundContext] Setting initial theme:', fullTheme);
-    themeSwitcher.setTheme(fullTheme);
-    console.log('[PlaygroundContext] After initial setTheme, getCurrentTheme():', themeSwitcher.getCurrentTheme());
-    console.log('[PlaygroundContext] HTML class:', document.documentElement.className);
+    // Start loading themeSwitcher (async)
+    loadThemeSwitcher();
 
     const unsubscribeVariant = variantStorage.listen(() => {
       const newVariant = getStoredVariant();
       const currentTheme = getStoredTheme(defaultTheme);
       const newFullTheme = buildFullTheme(currentTheme, newVariant);
-      console.log('[PlaygroundContext] Storage variant changed:', { newVariant, currentTheme, newFullTheme });
       setContext((prev) => ({
         ...prev,
         variant: newVariant,
       }));
-      themeSwitcher.setTheme(newFullTheme);
+      safeSetTheme(newFullTheme);
     });
 
     const unsubscribeTheme = themeStorage.listen(() => {
       const newTheme = getStoredTheme(defaultTheme);
       const currentVariant = getStoredVariant();
       const newFullTheme = buildFullTheme(newTheme, currentVariant);
-      console.log('[PlaygroundContext] Storage theme changed:', { newTheme, currentVariant, newFullTheme });
       setContext((prev) => ({
         ...prev,
         theme: newTheme,
       }));
-      themeSwitcher.setTheme(newFullTheme);
+      safeSetTheme(newFullTheme);
     });
 
     return () => {
-      console.log('[PlaygroundContext] Cleaning up listeners');
       unsubscribeVariant();
       unsubscribeTheme();
     };
