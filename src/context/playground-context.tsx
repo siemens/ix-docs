@@ -26,11 +26,7 @@ const buildFullTheme = (theme: string, variant: string) => `theme-${theme}-${var
 // Safe wrapper to call themeSwitcher only when available
 const safeSetTheme = (theme: string) => {
   if (themeSwitcherInstance) {
-    console.log('[PlaygroundContext] Calling setTheme:', theme);
     themeSwitcherInstance.setTheme(theme);
-    console.log('[PlaygroundContext] getCurrentTheme():', themeSwitcherInstance.getCurrentTheme());
-  } else {
-    console.warn('[PlaygroundContext] themeSwitcher not available, cannot set theme:', theme);
   }
 };
 
@@ -84,20 +80,13 @@ function useContextValue() {
     const loadThemeSwitcher = async () => {
       if (!themeSwitcherInstance && typeof window !== 'undefined') {
         try {
-          console.log('[PlaygroundContext] Loading @siemens/ix...');
           const ix = await import('@siemens/ix');
-          console.log('[PlaygroundContext] Module loaded:', ix);
           themeSwitcherInstance = ix.themeSwitcher;
-          console.log('[PlaygroundContext] themeSwitcher:', themeSwitcherInstance);
-          
-          // Expose to window for debugging
-          (window as any).themeSwitcherInstance = themeSwitcherInstance;
           
           // Apply the theme now that themeSwitcher is loaded
           const currentVariant = getStoredVariant();
           const currentTheme = getStoredTheme(defaultTheme);
           const currentFullTheme = buildFullTheme(currentTheme, currentVariant);
-          console.log('[PlaygroundContext] Setting initial theme:', currentFullTheme);
           safeSetTheme(currentFullTheme);
         } catch (err) {
           console.error('[PlaygroundContext] Failed to load @siemens/ix:', err);
