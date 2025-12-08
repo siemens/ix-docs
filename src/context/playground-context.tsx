@@ -11,6 +11,7 @@ import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 import { createContext, useCallback, useEffect, useState } from 'react';
 
 // IMPORTANT: themeSwitcher will be loaded in useEffect (client-side only)
+
 // Module-level loading doesn't work reliably with Docusaurus SSR
 let themeSwitcherInstance: any = null;
 
