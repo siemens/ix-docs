@@ -33,11 +33,9 @@ function ApiFunction({
   parameters = [],
   children,
 }: ApiFunctionProps) {
-  const signature = parameters.length > 0
-    ? `${name}(${parameters.map(p =>
-        `${p.name}${p.optional ? '?' : ''}: ${decodeHTMLEntities(p.type)}`
-      ).join(', ')})`
-    : `${name}()`;
+    const signature = `${name}(${parameters
+    .map((p) => `${p.name}${p.optional ? '?' : ''}: ${decodeHTMLEntities(p.type)}`)
+    .join(', ')})`;
 
   return (
     <BrowserOnly>
