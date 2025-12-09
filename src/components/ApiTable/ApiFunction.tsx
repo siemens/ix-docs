@@ -21,6 +21,12 @@ export type ApiFunctionProps = {
   readonly singleFramework?: string;
 };
 
+function decodeHTMLEntities(text: string): string {
+  const textarea = document.createElement('textarea');
+  textarea.innerHTML = text;
+  return textarea.value;
+}
+
 function ApiFunction({
   name,
   returnType,
@@ -28,8 +34,8 @@ function ApiFunction({
   children,
 }: ApiFunctionProps) {
   const signature = parameters.length > 0
-    ? `${name}(${parameters.map(p => 
-        `${p.name}${p.optional ? '?' : ''}: ${p.type}`
+    ? `${name}(${parameters.map(p =>
+        `${p.name}${p.optional ? '?' : ''}: ${decodeHTMLEntities(p.type)}`
       ).join(', ')})`
     : `${name}()`;
 
@@ -44,7 +50,7 @@ function ApiFunction({
               anchorLabel={`Direct link to ${name}`}
               className="flex bg-[var(--theme-color-2)] text-[var(--theme-color-std-text)] p-4 border-solid border-0 border-b border-[var(--theme-color-soft-bdr)]"
             >
-              <div className="font-mono text-sm">{signature}</div>
+              <code className="font-mono text-sm">{signature}</code>
             </AnchorHeader>
 
             {children && (
@@ -69,12 +75,12 @@ function ApiFunction({
                     <div className="w-auto p-4 flex flex-col justify-center">
                       <div>
                         <span className="opacity-70 text-xs uppercase tracking-wider mr-2">Type:</span>
-                        <code className="p-1 text-sm">{param.type}</code>
+                        <code className="p-1 text-sm">{decodeHTMLEntities(param.type)}</code>
                       </div>
                       {param.defaultValue && (
                         <div className="mt-1">
                            <span className="opacity-70 text-xs uppercase tracking-wider mr-2">Default:</span>
-                           <code className="p-1 text-sm">{param.defaultValue}</code>
+                           <code className="p-1 text-sm">{decodeHTMLEntities(param.defaultValue)}</code>
                         </div>
                       )}
                     </div>
