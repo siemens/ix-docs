@@ -22,6 +22,9 @@ export type ApiFunctionProps = {
 };
 
 function decodeHTMLEntities(text: string): string {
+  if (typeof document === 'undefined') {
+    return text;
+  }
   const textarea = document.createElement('textarea');
   textarea.innerHTML = text;
   return textarea.value;
@@ -33,7 +36,7 @@ function ApiFunction({
   parameters = [],
   children,
 }: ApiFunctionProps) {
-    const signature = `${name}(${parameters
+  const signature = `${name}(${parameters
     .map((p) => `${p.name}${p.optional ? '?' : ''}: ${decodeHTMLEntities(p.type)}`)
     .join(', ')})`;
 
