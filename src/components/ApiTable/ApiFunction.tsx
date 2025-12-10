@@ -70,8 +70,7 @@ function ApiFunction({
                 {parameters.map((param, idx) => (
                   <div key={idx} className={clsx(styles.ApiTableText, 'api-row border-solid border-0 border-b border-[var(--theme-color-soft-bdr)]')}>
                     <div className="px-8 py-4 font-bold w-auto min-w-[150px] border-solid border-0 border-r border-[var(--theme-color-soft-bdr)]">
-                      {param.name}
-                      {param.optional && <span className="font-normal text-xs ml-1 opacity-70">(optional)</span>}
+                      {param.name}{param.optional && <span className="font-normal text-xs ml-1 opacity-70 whitespace-nowrap">(optional)</span>}
                     </div>
                     <div className="w-auto p-4 flex flex-col justify-center">
                       <div>
