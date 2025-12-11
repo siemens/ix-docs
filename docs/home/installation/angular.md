@@ -77,7 +77,7 @@ import { IxButton, IxDropdown, IxDropdownItem, IxDropdownTriggerDirective } from
 export default class StandaloneExample {}
 ```
 :::info
-When using iX form components in an Angular standalone setup, ensure you import `ix value accessor` from `@siemens/ix-angular/standalone` and include it in your component's imports array (refer to preview examples). This prevents 'No value accessor' errors.
+When using iX form components in an Angular standalone setup, we recommend importing `ix value accessor` from `@siemens/ix-angular/standalone` and include it in your component’s imports array (refer to preview examples). This prevents `No value accessor` errors.
 :::
 
 ### Module setup (legacy)
