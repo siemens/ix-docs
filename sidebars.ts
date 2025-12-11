@@ -454,6 +454,10 @@ const sidebars: SidebarsConfig = {
           id: 'components/modal/index',
           label: 'Modal',
           items: [
+                        {
+              id: 'components/modal/guide',
+              label: 'Usage',
+            },
             {
               id: 'components/modal/code',
               label: 'Code',
@@ -899,11 +903,39 @@ const sidebars: SidebarsConfig = {
           ],
         }),
         createTabItem({
+          id: 'components/loading-modal/index',
+          label: 'Loading modal',
+          items: [
+                        {
+              id: 'components/loading-modal/guide',
+              label: 'Usage',
+            },
+            {
+              id: 'components/loading-modal/code',
+              label: 'Code',
+            },
+          ],
+        }),
+        createTabItem({
           id: 'components/messagebar/index',
           label: 'Message bar',
           items: [
             {
               id: 'components/messagebar/code',
+              label: 'Code',
+            },
+          ],
+        }),
+        createTabItem({
+          id: 'components/message-modal/index',
+          label: 'Message modal',
+          items: [
+                        {
+              id: 'components/message-modal/guide',
+              label: 'Usage',
+            },
+            {
+              id: 'components/message-modal/code',
               label: 'Code',
             },
           ],
