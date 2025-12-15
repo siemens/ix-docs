@@ -8,7 +8,6 @@ no_single_tab: true
 description: Time and time-related guidelines help prevent misunderstandings and errors, especially in global operations where different time zones are involved. By standardizing how times and time zones are presented, users can easily interpret and coordinate schedules, leading to more efficient and reliable operations.
 ---
 
-import DoAndDont from '@site/src/components/DoAndDont';
 
 # Time and Time zones
 
@@ -16,208 +15,265 @@ import DoAndDont from '@site/src/components/DoAndDont';
 
 Use the 24-hour clock system (the ISO 8601 time standards) when backend localization is not possible.
 
-<DoAndDont>
-  <DoAndDont.Do>
-    <DoAndDont.Item>11:00</DoAndDont.Item>
-    <DoAndDont.Item>23:00</DoAndDont.Item>
-  </DoAndDont.Do>
-  <DoAndDont.Dont>
-    <DoAndDont.Item>11am</DoAndDont.Item>
-    <DoAndDont.Item>11PM</DoAndDont.Item>
-  </DoAndDont.Dont>
-</DoAndDont>
+<div class="dos-and-donts" markdown>
+<div class="dos" markdown>
+
+- 11:00
+- 23:00
+
+</div>
+<div class="donts" markdown>
+
+- 11am
+- 11PM
+
+</div>
+</div>
 
 Use colons (:) to split times between hours, minutes, and seconds.
 
-<DoAndDont>
-  <DoAndDont.Do>
-    <DoAndDont.Item>hh:mm:ss</DoAndDont.Item>
-  </DoAndDont.Do>
-  <DoAndDont.Dont>
-    <DoAndDont.Item>hh.mm.ss</DoAndDont.Item>
-  </DoAndDont.Dont>
-</DoAndDont>
+<div class="dos-and-donts" markdown>
+<div class="dos" markdown>
+
+- hh:mm:ss
+
+</div>
+<div class="donts" markdown>
+
+- hh.mm.ss
+
+</div>
+</div>
 
 Use periods (.) to add milliseconds and nanoseconds, not a colon (:) according to ISO standards.
 
-<DoAndDont>
-  <DoAndDont.Do>
-    <DoAndDont.Item>hh:mm:ss.mms</DoAndDont.Item>
-    <DoAndDont.Item>hh:mm:ss.sss (ISO 8601 standard)</DoAndDont.Item>
-    <DoAndDont.Item>0:00:00.920</DoAndDont.Item>
-  </DoAndDont.Do>
-  <DoAndDont.Dont>
-    <DoAndDont.Item>0:00:00:920</DoAndDont.Item>
-  </DoAndDont.Dont>
-</DoAndDont>
+<div class="dos-and-donts" markdown>
+<div class="dos" markdown>
+
+- hh:mm:ss.mms
+- hh:mm:ss.sss (ISO 8601 standard)
+- 0:00:00.920
+
+</div>
+<div class="donts" markdown>
+
+- 0:00:00:920
+
+</div>
+</div>
 
 ## Time ranges
 
 Use an en (–) dash to represent time ranges and intervals without spacing on either side of the dash.
 
-<DoAndDont>
-  <DoAndDont.Do>
-    <DoAndDont.Item>Routine maintenance: 08:00–11:00</DoAndDont.Item>
-  </DoAndDont.Do>
-  <DoAndDont.Dont>
-    <DoAndDont.Item>Packaging line active: 10:00-18:00</DoAndDont.Item>
-  </DoAndDont.Dont>
-</DoAndDont>
+<div class="dos-and-donts" markdown>
+<div class="dos" markdown>
+
+- Routine maintenance: 08:00–11:00
+
+</div>
+<div class="donts" markdown>
+
+- Packaging line active: 10:00-18:00
+
+</div>
+</div>
 
 Use "from" and "to" for time ranges with separate text or input fields.
 
-<DoAndDont>
-  <DoAndDont.Do>
-    <DoAndDont.Item>From: 14:00</DoAndDont.Item>
-    <DoAndDont.Item>To: 15:00</DoAndDont.Item>
-  </DoAndDont.Do>
-</DoAndDont>
+<div class="dos-and-donts" markdown>
+<div class="dos" markdown>
+
+- From: 14:00
+- To: 15:00
+
+</div>
+</div>
 
 ## Time duration
 
 Use numerals to write about durations with the full or abbreviated time unit (depending on space in the UI).
 
-<DoAndDont>
-  <DoAndDont.Do>
-    <DoAndDont.Item>Each shift lasts 8 hrs.</DoAndDont.Item>
-    <DoAndDont.Item>Routine maintenance takes approximately 1 hour 30 minutes.</DoAndDont.Item>
-    <DoAndDont.Item>Cooling period: 20 minutes</DoAndDont.Item>
-  </DoAndDont.Do>
-</DoAndDont>
+<div class="dos-and-donts" markdown>
+<div class="dos" markdown>
+
+- Each shift lasts 8 hrs.
+- Routine maintenance takes approximately 1 hour 30 minutes.
+- Cooling period: 20 minutes
+
+</div>
+</div>
 
 ## Time zones
 
 Write "time zone" as two words, not one word "timezone".
 
-<DoAndDont>
-  <DoAndDont.Do>
-    <DoAndDont.Item>Select time zone</DoAndDont.Item>
-  </DoAndDont.Do>
-  <DoAndDont.Dont>
-    <DoAndDont.Item>Select timezone</DoAndDont.Item>
-  </DoAndDont.Dont>
-</DoAndDont>
+<div class="dos-and-donts" markdown>
+<div class="dos" markdown>
+
+- Select time zone
+
+</div>
+<div class="donts" markdown>
+
+- Select timezone
+
+</div>
+</div>
 
 When writing out the full time zone, add the UTC offset in brackets afterwards.
 
-<DoAndDont>
-  <DoAndDont.Do>
-    <DoAndDont.Item>British Summer Time (UTC+1)</DoAndDont.Item>
-    <DoAndDont.Item>Central European Summer Time (UTC+2)</DoAndDont.Item>
-    <DoAndDont.Item>Eastern European Summer Time (UTC+3)</DoAndDont.Item>
-  </DoAndDont.Do>
-</DoAndDont>
+<div class="dos-and-donts" markdown>
+<div class="dos" markdown>
+
+- British Summer Time (UTC+1)
+- Central European Summer Time (UTC+2)
+- Eastern European Summer Time (UTC+3)
+
+</div>
+</div>
 
 Use abbreviated time zones with or without the UTC offset within the UI to save space.
 
-<DoAndDont>
-  <DoAndDont.Do>
-    <DoAndDont.Item>EST</DoAndDont.Item>
-    <DoAndDont.Item>EST (UTC +3)</DoAndDont.Item>
-  </DoAndDont.Do>
-</DoAndDont>
+<div class="dos-and-donts" markdown>
+<div class="dos" markdown>
+
+- EST
+- EST (UTC +3)
+
+</div>
+</div>
 
 Give time zones capital letters for each word.
 
-<DoAndDont>
-  <DoAndDont.Do>
-    <DoAndDont.Item>Eastern Standard Time</DoAndDont.Item>
-  </DoAndDont.Do>
-  <DoAndDont.Dont>
-    <DoAndDont.Item>eastern standard time</DoAndDont.Item>
-  </DoAndDont.Dont>
-</DoAndDont>
+<div class="dos-and-donts" markdown>
+<div class="dos" markdown>
+
+- Eastern Standard Time
+
+</div>
+<div class="donts" markdown>
+
+- eastern standard time
+
+</div>
+</div>
 
 Give abbreviated time zones capital letters.
 
-<DoAndDont>
-  <DoAndDont.Do>
-    <DoAndDont.Item>EST</DoAndDont.Item>
-  </DoAndDont.Do>
-  <DoAndDont.Dont>
-    <DoAndDont.Item>est</DoAndDont.Item>
-  </DoAndDont.Dont>
-</DoAndDont>
+<div class="dos-and-donts" markdown>
+<div class="dos" markdown>
+
+- EST
+
+</div>
+<div class="donts" markdown>
+
+- est
+
+</div>
+</div>
 
 Avoid punctuation when writing time zones.
 
-<DoAndDont>
-  <DoAndDont.Do>
-    <DoAndDont.Item>EST</DoAndDont.Item>
-  </DoAndDont.Do>
-  <DoAndDont.Dont>
-    <DoAndDont.Item>EST.</DoAndDont.Item>
-    <DoAndDont.Item>E.S.T.</DoAndDont.Item>
-  </DoAndDont.Dont>
-</DoAndDont>
+<div class="dos-and-donts" markdown>
+<div class="dos" markdown>
+
+- EST
+
+</div>
+<div class="donts" markdown>
+
+- EST.
+- E.S.T.
+
+</div>
+</div>
 
 Add a space between the time and the time zone.
 
-<DoAndDont>
-  <DoAndDont.Do>
-    <DoAndDont.Item>15:23 EST</DoAndDont.Item>
-  </DoAndDont.Do>
-  <DoAndDont.Dont>
-    <DoAndDont.Item>15:23EST</DoAndDont.Item>
-  </DoAndDont.Dont>
-</DoAndDont>
+<div class="dos-and-donts" markdown>
+<div class="dos" markdown>
+
+- 15:23 EST
+
+</div>
+<div class="donts" markdown>
+
+- 15:23EST
+
+</div>
+</div>
 
 Write location and UTC offset in this order: city, country (UTC offset).
 
-<DoAndDont>
-  <DoAndDont.Do>
-    <DoAndDont.Item>Berlin, Germany (UTC+1)</DoAndDont.Item>
-  </DoAndDont.Do>
-  <DoAndDont.Dont>
-    <DoAndDont.Item>(UTC+1) Berlin, Germany</DoAndDont.Item>
-  </DoAndDont.Dont>
-</DoAndDont>
+<div class="dos-and-donts" markdown>
+<div class="dos" markdown>
+
+- Berlin, Germany (UTC+1)
+
+</div>
+<div class="donts" markdown>
+
+- (UTC+1) Berlin, Germany
+
+</div>
+</div>
 
 Present multiple time zones clearly by using either "Local time" or "Your local time" for emphasis.
 
-<DoAndDont>
-  <DoAndDont.Do>
-    <DoAndDont.Item>Meeting time: 2025-04-08 14:00 (Berlin, UTC+01:00)<br/>
-Your local time: 2025-04-08 21:00 (Tokyo, UTC+09:00)</DoAndDont.Item>
-    <DoAndDont.Item>Support hours (New York): 09:00 - 17:00 (UTC-04:00)<br/>
-Your local time (Sydney): 23:00 - 07:00 (UTC+10:00)</DoAndDont.Item>
-    <DoAndDont.Item>Deadline (San Francisco): 2025-04-08 17:00 (UTC-07:00)<br/>
-Your Local Time (Berlin): 2025-04-09 02:00 (UTC+01:00)</DoAndDont.Item>
-  </DoAndDont.Do>
-</DoAndDont>
+<div class="dos-and-donts" markdown>
+<div class="dos" markdown>
+
+- Meeting time: 2025-04-08 14:00 (Berlin, UTC+01:00)<br/>Your local time: 2025-04-08 21:00 (Tokyo, UTC+09:00)
+- Support hours (New York): 09:00 - 17:00 (UTC-04:00)<br/>Your local time (Sydney): 23:00 - 07:00 (UTC+10:00)
+- Deadline (San Francisco): 2025-04-08 17:00 (UTC-07:00)<br/>Your Local Time (Berlin): 2025-04-09 02:00 (UTC+01:00)
+
+</div>
+</div>
 
 ## Time-related problematic words
 
 Use "current" for active, ongoing states and avoid "actual" when referring to time.
 
-<DoAndDont>
-  <DoAndDont.Do>
-    <DoAndDont.Item>Current temperature: 72°F</DoAndDont.Item>
-  </DoAndDont.Do>
-  <DoAndDont.Dont>
-    <DoAndDont.Item>Actual temperature: 72°F</DoAndDont.Item>
-  </DoAndDont.Dont>
-</DoAndDont>
+<div class="dos-and-donts" markdown>
+<div class="dos" markdown>
+
+- Current temperature: 72°F
+
+</div>
+<div class="donts" markdown>
+
+- Actual temperature: 72°F
+
+</div>
+</div>
 
 Use "latest" for the newest updates or versions and "last" for final items in a sequence.
 
-<DoAndDont>
-  <DoAndDont.Do>
-    <DoAndDont.Item>Latest firmware update: V2.1.5</DoAndDont.Item>
-    <DoAndDont.Item>Last firmware update before end of life: V2.1.5</DoAndDont.Item>
-  </DoAndDont.Do>
-</DoAndDont>
+<div class="dos-and-donts" markdown>
+<div class="dos" markdown>
+
+- Latest firmware update: V2.1.5
+- Last firmware update before end of life: V2.1.5
+
+</div>
+</div>
 
 Use "recent" for past events that have just happened.
 
-<DoAndDont>
-  <DoAndDont.Do>
-    <DoAndDont.Item>Recent alerts: 2 warnings</DoAndDont.Item>
-  </DoAndDont.Do>
-  <DoAndDont.Dont>
-    <DoAndDont.Item>Recent firmware update: V2.1.5</DoAndDont.Item>
-  </DoAndDont.Dont>
-</DoAndDont>
+<div class="dos-and-donts" markdown>
+<div class="dos" markdown>
+
+- Recent alerts: 2 warnings
+
+</div>
+<div class="donts" markdown>
+
+- Recent firmware update: V2.1.5
+
+</div>
+</div>
 
 ## Related
 

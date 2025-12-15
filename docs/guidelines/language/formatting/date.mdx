@@ -8,176 +8,224 @@ no_single_tab: true
 description: Accurate dates and times are essential in industrial settings, serving as the backbone for effective scheduling, seamless coordination, and overall efficiency. Deciding on the right format to convey this information is challenging due to varying guidelines across different regions and industries.
 ---
 
-import DoAndDont from '@site/src/components/DoAndDont';
-
 # Dates
 
 ## General rules
 
 Use the ISO 8601 date and time format standards when backend localization is not possible.
 
-<DoAndDont>
-  <DoAndDont.Do>
-    <DoAndDont.Item>2025-04-08 (April 8, 2025)</DoAndDont.Item>
-	<DoAndDont.Item>14:30:00 (24-hour format)</DoAndDont.Item>
-  </DoAndDont.Do>
-  <DoAndDont.Dont>
-    <DoAndDont.Item>2025/04/08</DoAndDont.Item>
-    <DoAndDont.Item>2:30 PM</DoAndDont.Item>
-  </DoAndDont.Dont>
-</DoAndDont>
+<div class="dos-and-donts" markdown>
+<div class="dos" markdown>
+
+- 2025-04-08 (April 8, 2025)
+- 14:30:00 (24-hour format)
+
+</div>
+<div class="donts" markdown>
+
+- 2025/04/08
+- 2:30 PM
+
+</div>
+</div>
 
 Add tooltips or in-line text to support users and clarify which format is being used.
 
-<DoAndDont>
-	<DoAndDont.Do>
-		<DoAndDont.Item>YYYY-MM-DD</DoAndDont.Item>
-		<DoAndDont.Item>24-hour format</DoAndDont.Item>
-		<DoAndDont.Item>Times are formatted in 24-hour format as HH:MM. For example, 2:30 PM is written as 14:30.</DoAndDont.Item>
-		<DoAndDont.Item>Dates and times include time zones. For example, April 8, 2025, at 2:30 PM in Berlin is written as 2025-04-08T14:30:00+02:00.</DoAndDont.Item>
-	</DoAndDont.Do>
-</DoAndDont>
+<div class="dos-and-donts" markdown>
+<div class="dos" markdown>
+
+- YYYY-MM-DD
+- 24-hour format
+- Times are formatted in 24-hour format as HH:MM. For example, 2:30 PM is written as 14:30.
+- Dates and times include time zones. For example, April 8, 2025, at 2:30 PM in Berlin is written as 2025-04-08T14:30:00+02:00.
+
+</div>
+</div>
 
 Avoid adding unnecessary punctuation to abbreviated dates.
 
-<DoAndDont>
-	<DoAndDont.Do>
-		<DoAndDont.Item>Jan</DoAndDont.Item>
-	</DoAndDont.Do>
-	<DoAndDont.Dont>
-		<DoAndDont.Item>Jan.</DoAndDont.Item>
-	</DoAndDont.Dont>
-</DoAndDont>
+<div class="dos-and-donts" markdown>
+<div class="dos" markdown>
+
+- Jan
+
+</div>
+<div class="donts" markdown>
+
+- Jan.
+
+</div>
+</div>
 
 ## Dates
 
 Write out full dates using commas to separate elements within longer texts and paragraphs.
 
-<DoAndDont>
-	<DoAndDont.Do>
-		<DoAndDont.Item>Monday, January 12, 2025</DoAndDont.Item>
-	</DoAndDont.Do>
-	<DoAndDont.Dont>
-		<DoAndDont.Item>Monday: January 12th: 2025</DoAndDont.Item>
-	</DoAndDont.Dont>
-</DoAndDont>
+<div class="dos-and-donts" markdown>
+<div class="dos" markdown>
+
+- Monday, January 12, 2025
+
+</div>
+<div class="donts" markdown>
+
+- Monday: January 12th: 2025
+
+</div>
+</div>
 
 Write out dates with the abbreviated form using dashes (hyphens) instead of slashes for better readability.
 
-<DoAndDont>
-	<DoAndDont.Do>
-		<DoAndDont.Item>Dec-26-2025</DoAndDont.Item>
-		<DoAndDont.Item>Apr-09-2025</DoAndDont.Item>
-	</DoAndDont.Do>
-	<DoAndDont.Dont>
-		<DoAndDont.Item>Apr/09/2025</DoAndDont.Item>
-		<DoAndDont.Item>Apr 09/2025</DoAndDont.Item>
-	</DoAndDont.Dont>
-</DoAndDont>
+<div class="dos-and-donts" markdown>
+<div class="dos" markdown>
+
+- Dec-26-2025
+- Apr-09-2025
+
+</div>
+<div class="donts" markdown>
+
+- Apr/09/2025
+- Apr 09/2025
+
+</div>
+</div>
 
 Write dates in tables using abbreviated months to avoid confusion and the need for further tooltips or explanation.
 
-<DoAndDont>
-	<DoAndDont.Do>
-		<DoAndDont.Item>Apr-09</DoAndDont.Item>
-	</DoAndDont.Do>
-	<DoAndDont.Dont>
-		<DoAndDont.Item>04-09</DoAndDont.Item>
-	</DoAndDont.Dont>
-</DoAndDont>
+<div class="dos-and-donts" markdown>
+<div class="dos" markdown>
 
-Avoid using “st” (as in 1st) or “th” (as in 5th) for a cleaner user interface.
+- Apr-09
 
-<DoAndDont>
-	<DoAndDont.Do>
-		<DoAndDont.Item>Monday, January 12, 2025</DoAndDont.Item>
-	</DoAndDont.Do>
-	<DoAndDont.Dont>
-		<DoAndDont.Item>Monday, January 12th, 2025</DoAndDont.Item>
-	</DoAndDont.Dont>
-</DoAndDont>
+</div>
+<div class="donts" markdown>
+
+- 04-09
+
+</div>
+</div>
+
+Avoid using "st" (as in 1st) or "th" (as in 5th) for a cleaner user interface.
+
+<div class="dos-and-donts" markdown>
+<div class="dos" markdown>
+
+- Monday, January 12, 2025
+
+</div>
+<div class="donts" markdown>
+
+- Monday, January 12th, 2025
+
+</div>
+</div>
 
 ## Days
 
-Start all days with a capital letter. Use three-letter abbreviations without punctuation when there isn’t enough space.
+Start all days with a capital letter. Use three-letter abbreviations without punctuation when there isn't enough space.
 
-<DoAndDont>
-	<DoAndDont.Do>
-		<DoAndDont.Item>Monday, Tuesday, Wednesday, etc.</DoAndDont.Item>
-		<DoAndDont.Item>Mon</DoAndDont.Item>
-	</DoAndDont.Do>
-	<DoAndDont.Dont>
-		<DoAndDont.Item>Mon.</DoAndDont.Item>
-	</DoAndDont.Dont>
-</DoAndDont>
+<div class="dos-and-donts" markdown>
+<div class="dos" markdown>
+
+- Monday, Tuesday, Wednesday, etc.
+- Mon
+
+</div>
+<div class="donts" markdown>
+
+- Mon.
+
+</div>
+</div>
 
 ## Weeks
 
 Avoid calendar weeks (CW) whenever possible as these are very specific to certain regions.
 
-<DoAndDont>
-	<DoAndDont.Do>
-		<DoAndDont.Item>Week 15 (April 7 – April 13, 2025)</DoAndDont.Item>
-	</DoAndDont.Do>
-	<DoAndDont.Dont>
-		<DoAndDont.Item>CW 15 (15th week of the year)</DoAndDont.Item>
-		<DoAndDont.Item>CW 15/2025 (15th calendar week year 2025)</DoAndDont.Item>
-		<DoAndDont.Item>Calendar week 05 in year 2025</DoAndDont.Item>
-	</DoAndDont.Dont>
-</DoAndDont>
+<div class="dos-and-donts" markdown>
+<div class="dos" markdown>
+
+- Week 15 (April 7 – April 13, 2025)
+
+</div>
+<div class="donts" markdown>
+
+- CW 15 (15th week of the year)
+- CW 15/2025 (15th calendar week year 2025)
+- Calendar week 05 in year 2025
+
+</div>
+</div>
 
 ## Months
 
-Start all months with a capital letter. Use abbreviations without punctuation when there isn’t enough space.
+Start all months with a capital letter. Use abbreviations without punctuation when there isn't enough space.
 
-<DoAndDont>
-	<DoAndDont.Do>
-		<DoAndDont.Item>January, February, March, etc.</DoAndDont.Item>
-		<DoAndDont.Item>Jan</DoAndDont.Item>
-	</DoAndDont.Do>
-	<DoAndDont.Dont>
-		<DoAndDont.Item>Jan.</DoAndDont.Item>
-	</DoAndDont.Dont>
-</DoAndDont>
+<div class="dos-and-donts" markdown>
+<div class="dos" markdown>
+
+- January, February, March, etc.
+- Jan
+
+</div>
+<div class="donts" markdown>
+
+- Jan.
+
+</div>
+</div>
 
 ## Years
 
 Use the four-digit format and never abbreviate in industrial applications.
 
-<DoAndDont>
-	<DoAndDont.Do>
-		<DoAndDont.Item>2023</DoAndDont.Item>
-	</DoAndDont.Do>
-	<DoAndDont.Dont>
-		<DoAndDont.Item>’23</DoAndDont.Item>
-	</DoAndDont.Dont>
-</DoAndDont>
+<div class="dos-and-donts" markdown>
+<div class="dos" markdown>
+
+- 2023
+
+</div>
+<div class="donts" markdown>
+
+- '23
+
+</div>
+</div>
 
 ## Decades
 
 Use plural -s when talking about decades.
 
-<DoAndDont>
-	<DoAndDont.Do>
-		<DoAndDont.Item>1980s</DoAndDont.Item>
-	</DoAndDont.Do>
-	<DoAndDont.Dont>
-		<DoAndDont.Item>1980’s</DoAndDont.Item>
-	</DoAndDont.Dont>
-</DoAndDont>
+<div class="dos-and-donts" markdown>
+<div class="dos" markdown>
+
+- 1980s
+
+</div>
+<div class="donts" markdown>
+
+- 1980's
+
+</div>
+</div>
 
 ## Centuries
 
-Use “th” and “nd” to reference centuries with ordinal numbers (sequencing) without using superscript.
+Use "th" and "nd" to reference centuries with ordinal numbers (sequencing) without using superscript.
 
-<DoAndDont>
-	<DoAndDont.Do>
-		<DoAndDont.Item>Welcome to the 21st century of industrial innovation! Our app uses AI to deliver efficiency in your operations.</DoAndDont.Item>
-	</DoAndDont.Do>
-	<DoAndDont.Dont>
-		<DoAndDont.Item>Welcome to the 21<sup>st</sup> century of industrial innovation! Our app uses AI to deliver efficiency in your operations.</DoAndDont.Item>
-	</DoAndDont.Dont>
-</DoAndDont>
+<div class="dos-and-donts" markdown>
+<div class="dos" markdown>
+
+- Welcome to the 21st century of industrial innovation! Our app uses AI to deliver efficiency in your operations.
+
+</div>
+<div class="donts" markdown>
+
+- Welcome to the 21<sup>st</sup> century of industrial innovation! Our app uses AI to deliver efficiency in your operations.
+
+</div>
+</div>
 
 ## Related
 

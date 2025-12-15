@@ -9,7 +9,6 @@ no_single_tab: true
 description: Although AI chatbots are continuously evolving, many common words within the UI remain the same and have become the norm for agents and chatbots.
 ---
 
-import DoAndDont from "@site/src/components/DoAndDont";
 import React from "react";
 import { IxIcon } from "@siemens/ix-react";
 import { iconThumbUp, iconThumbDown } from "@siemens/ix-icons/icons";
@@ -30,130 +29,152 @@ Use any of the five messages depending on your product and use case.
 - **With username:** Hello Felix, how can I help you today?
 - **With product and username:** Hello Sara, I'm  [Copilot name]. How can I help you today?
 
-<DoAndDont>
-  <DoAndDont.Dont>
-    <DoAndDont.Item>Well, hello! I’m your friendly chatbot.</DoAndDont.Item>
-    <DoAndDont.Item>Welcome to chatbot. State your issue now.</DoAndDont.Item>
-    <DoAndDont.Item>What do you want?</DoAndDont.Item>
-  </DoAndDont.Dont>
-</DoAndDont>
+<div class="dos-and-donts" markdown>
+<div class="donts" markdown>
+
+- Well, hello! I'm your friendly chatbot.
+- Welcome to chatbot. State your issue now.
+- What do you want?
+
+</div>
+</div>
 
 ## Placeholder text for chat window 
 
 Use these universal, non-specific options to encourage solution and technology-focused input. Avoid generic, open placeholders that encourage off-topic queries.
 
-<DoAndDont>
-  <DoAndDont.Do>
-    <DoAndDont.Item>Enter your query here…</DoAndDont.Item>
-    <DoAndDont.Item>Enter a command, question or topic…</DoAndDont.Item>
-    <DoAndDont.Item>
-      Enter a command, question or topic to begin…
-    </DoAndDont.Item>
-  </DoAndDont.Do>
-  <DoAndDont.Dont>
-    <DoAndDont.Item>Ask me anything…</DoAndDont.Item>
-    <DoAndDont.Item>Start typing…</DoAndDont.Item>
-    <DoAndDont.Item>What’s on your mind?</DoAndDont.Item>
-  </DoAndDont.Dont>
-</DoAndDont>
+<div class="dos-and-donts" markdown>
+<div class="dos" markdown>
+
+- Enter your query here…
+- Enter a command, question or topic…
+- Enter a command, question or topic to begin…
+
+</div>
+<div class="donts" markdown>
+
+- Ask me anything…
+- Start typing…
+- What's on your mind?
+
+</div>
+</div>
 
 Use alternative placeholder text when your chatbot has a single use case.
 
-<DoAndDont>
-  <DoAndDont.Do>
-    <DoAndDont.Item>Search technical documentation…</DoAndDont.Item>
-    <DoAndDont.Item>Enter error code…</DoAndDont.Item>
-    <DoAndDont.Item>Search parts catalog…</DoAndDont.Item>
-  </DoAndDont.Do>
-</DoAndDont>
+<div class="dos-and-donts" markdown>
+<div class="dos" markdown>
+
+- Search technical documentation…
+- Enter error code…
+- Search parts catalog…
+
+</div>
+</div>
 
 ## Response progress indicator 
 
 Always use “generate” as the main progress indicator verb with ellipses (...).
 
-<DoAndDont>
-  <DoAndDont.Do>
-    <DoAndDont.Item>Generating…</DoAndDont.Item>
-  </DoAndDont.Do>
-  <DoAndDont.Dont>
-    <DoAndDont.Item>Generating response</DoAndDont.Item>
-    <DoAndDont.Item>Creating response…</DoAndDont.Item>
-  </DoAndDont.Dont>
-</DoAndDont>
+<div class="dos-and-donts" markdown>
+<div class="dos" markdown>
+
+- Generating…
+
+</div>
+<div class="donts" markdown>
+
+- Generating response
+- Creating response…
+
+</div>
+</div>
 
 Use “generate” to match the action verb to stop the chatbot responding or ask the chatbot to continue responding without ellipses.
 
-<DoAndDont>
-  <DoAndDont.Do>
-    <DoAndDont.Item>Stop generating</DoAndDont.Item>
-    <DoAndDont.Item>Continue generating</DoAndDont.Item>
-  </DoAndDont.Do>
-  <DoAndDont.Dont>
-    <DoAndDont.Item>Stop generating…</DoAndDont.Item>
-    <DoAndDont.Item>Continue generating…</DoAndDont.Item>
-  </DoAndDont.Dont>
-</DoAndDont>
+<div class="dos-and-donts" markdown>
+<div class="dos" markdown>
+
+- Stop generating
+- Continue generating
+
+</div>
+<div class="donts" markdown>
+
+- Stop generating…
+- Continue generating…
+
+</div>
+</div>
 
 ## Speech to text (STT) / voice recording 
 
 Use a tooltip on hover to clarify any recording limitations and tell users how to stop recording.
 
-<DoAndDont>
-  <DoAndDont.Do>
-    <DoAndDont.Item>Click to start and stop voice recording.</DoAndDont.Item>
-    <DoAndDont.Item>
-      Click to start and stop voice recording (max 2 minutes).
-    </DoAndDont.Item>
-  </DoAndDont.Do>
-</DoAndDont>
+<div class="dos-and-donts" markdown>
+<div class="dos" markdown>
+
+- Click to start and stop voice recording.
+- Click to start and stop voice recording (max 2 minutes).
+
+</div>
+</div>
 
 Use “Recording…” as feedback to show the feature is working.
 
-<DoAndDont>
-  <DoAndDont.Do>
-    <DoAndDont.Item>Recording…</DoAndDont.Item>
-  </DoAndDont.Do>
-  <DoAndDont.Do>
-    <DoAndDont.Item>I’m listening…</DoAndDont.Item>
-  </DoAndDont.Do>
-</DoAndDont>
+<div class="dos-and-donts" markdown>
+<div class="dos" markdown>
+
+- Recording…
+
+</div>
+<div class="donts" markdown>
+
+- I'm listening…
+
+</div>
+</div>
 
 ## Asking for feedback  
 
 Use thumbs up and down icons to request feedback.
 
-<DoAndDont>
-  <DoAndDont.Do>
-    <DoAndDont.Item>
-      Thumbs up icon (<IxIcon name={iconThumbUp} size="16"></IxIcon>)
-    </DoAndDont.Item>
-    <DoAndDont.Item>
-      Thumbs down icon (<IxIcon name={iconThumbDown} size="16"></IxIcon>)
-    </DoAndDont.Item>
-  </DoAndDont.Do>
-  <DoAndDont.Dont>
-    <DoAndDont.Item>Helpful</DoAndDont.Item>
-    <DoAndDont.Item>Not helpful</DoAndDont.Item>
-  </DoAndDont.Dont>
-</DoAndDont>
+<div class="dos-and-donts" markdown>
+<div class="dos" markdown>
+
+- Thumbs up icon (<IxIcon name={iconThumbUp} size="16"></IxIcon>)
+- Thumbs down icon (<IxIcon name={iconThumbDown} size="16"></IxIcon>)
+
+</div>
+<div class="donts" markdown>
+
+- Helpful
+- Not helpful
+
+</div>
+</div>
 
 ## Time indicators for chat history  
 
 Use “last” instead of “previous” and “prior” for time-related terminology in chat history.
 
-<DoAndDont>
-  <DoAndDont.Do>
-    <DoAndDont.Item>Today</DoAndDont.Item>
-    <DoAndDont.Item>Yesterday</DoAndDont.Item>
-    <DoAndDont.Item>Last 7 days</DoAndDont.Item>
-    <DoAndDont.Item>Last 30 days</DoAndDont.Item>
-    <DoAndDont.Item>Older</DoAndDont.Item>
-  </DoAndDont.Do>
-  <DoAndDont.Dont>
-    <DoAndDont.Item>Previous 7 days </DoAndDont.Item>
-    <DoAndDont.Item>Prior week</DoAndDont.Item>
-  </DoAndDont.Dont>
-</DoAndDont>
+<div class="dos-and-donts" markdown>
+<div class="dos" markdown>
+
+- Today
+- Yesterday
+- Last 7 days
+- Last 30 days
+- Older
+
+</div>
+<div class="donts" markdown>
+
+- Previous 7 days
+- Prior week
+
+</div>
+</div>
 
 ## Tooltip options for chat history (from simple to complex) 
 
@@ -167,31 +188,35 @@ Use “last” instead of “previous” and “prior” for time-related termin
 
 Use the following action wording for consistency within all our chatbots.
 
-<DoAndDont>
-  <DoAndDont.Do>
-    <DoAndDont.Item>New chat</DoAndDont.Item>
-    <DoAndDont.Item>Send</DoAndDont.Item>
-    <DoAndDont.Item>Generate new prompts</DoAndDont.Item>
-    <DoAndDont.Item>Refresh prompts</DoAndDont.Item>
-    <DoAndDont.Item>Show more prompts</DoAndDont.Item>
-    <DoAndDont.Item>Attach files</DoAndDont.Item>
-    <DoAndDont.Item>Upload files</DoAndDont.Item>
-    <DoAndDont.Item>Share</DoAndDont.Item>
-    <DoAndDont.Item>Copy</DoAndDont.Item>
-    <DoAndDont.Item>Expand</DoAndDont.Item>
-    <DoAndDont.Item>Collapse</DoAndDont.Item>
-    <DoAndDont.Item>Maximize chat window</DoAndDont.Item>
-    <DoAndDont.Item>Minimize chat window</DoAndDont.Item>
-    <DoAndDont.Item>Close chat window</DoAndDont.Item>
-  </DoAndDont.Do>
-  <DoAndDont.Dont>
-    <DoAndDont.Item>Clear chat</DoAndDont.Item>
-    <DoAndDont.Item>Submit</DoAndDont.Item>
-    <DoAndDont.Item>Give me another</DoAndDont.Item>
-    <DoAndDont.Item>Show me others</DoAndDont.Item>
-    <DoAndDont.Item>Import files</DoAndDont.Item>
-  </DoAndDont.Dont>
-</DoAndDont>
+<div class="dos-and-donts" markdown>
+<div class="dos" markdown>
+
+- New chat
+- Send
+- Generate new prompts
+- Refresh prompts
+- Show more prompts
+- Attach files
+- Upload files
+- Share
+- Copy
+- Expand
+- Collapse
+- Maximize chat window
+- Minimize chat window
+- Close chat window
+
+</div>
+<div class="donts" markdown>
+
+- Clear chat
+- Submit
+- Give me another
+- Show me others
+- Import files
+
+</div>
+</div>
 
 ## Example action buttons for industrial applications 
 
@@ -210,15 +235,19 @@ Book webinar
 
 Use “sources” as the text label to indicate where the generated information is from.
 
-<DoAndDont>
-  <DoAndDont.Do>
-    <DoAndDont.Item>Sources</DoAndDont.Item>
-  </DoAndDont.Do>
-  <DoAndDont.Dont>
-    <DoAndDont.Item>Resources</DoAndDont.Item>
-    <DoAndDont.Item>Sources and references</DoAndDont.Item>
-  </DoAndDont.Dont>
-</DoAndDont>
+<div class="dos-and-donts" markdown>
+<div class="dos" markdown>
+
+- Sources
+
+</div>
+<div class="donts" markdown>
+
+- Resources
+- Sources and references
+
+</div>
+</div>
 
 Avoid mixing terms (resources, sources) and instead label the source format, e.g. website, pdf, etc.
 
@@ -226,30 +255,34 @@ Avoid mixing terms (resources, sources) and instead label the source format, e.g
 
 Use clear wording to differentiate between multiple bots when displaying output.
 
-<DoAndDont>
-  <DoAndDont.Do>
-    <DoAndDont.Item>Responses generated by agent X</DoAndDont.Item>
-    <DoAndDont.Item>
-      Responses generated by: agent X (with agent selection dropdown)
-    </DoAndDont.Item>
-  </DoAndDont.Do>
-</DoAndDont>
+<div class="dos-and-donts" markdown>
+<div class="dos" markdown>
+
+- Responses generated by agent X
+- Responses generated by: agent X (with agent selection dropdown)
+
+</div>
+</div>
 
 ## Punctuation 
 
 Avoid punctuation, such as exclamation marks for buttons, hover text, titles and tags.
 
-<DoAndDont>
-  <DoAndDont.Do>
-    <DoAndDont.Item>Show more</DoAndDont.Item>
-    <DoAndDont.Item>Send</DoAndDont.Item>
-    <DoAndDont.Item>Stop</DoAndDont.Item>
-  </DoAndDont.Do>
-  <DoAndDont.Dont>
-    <DoAndDont.Item>Show more!</DoAndDont.Item>
-    <DoAndDont.Item>Send?</DoAndDont.Item>
-  </DoAndDont.Dont>
-</DoAndDont>
+<div class="dos-and-donts" markdown>
+<div class="dos" markdown>
+
+- Show more
+- Send
+- Stop
+
+</div>
+<div class="donts" markdown>
+
+- Show more!
+- Send?
+
+</div>
+</div>
 
 ## Problematic wording to avoid 
 
@@ -257,36 +290,38 @@ Most problematic wording involves the bot expressing itself as a human with huma
 
 Use “generating” not “thinking” as chatbots don’t perform cognitive processes.
 
-<DoAndDont>
-  <DoAndDont.Dont>
-    <DoAndDont.Item>Thinking…</DoAndDont.Item>
-    <DoAndDont.Item>Thinking about the best response…</DoAndDont.Item>
-  </DoAndDont.Dont>
-</DoAndDont>
+<div class="dos-and-donts" markdown>
+<div class="donts" markdown>
+
+- Thinking…
+- Thinking about the best response…
+
+</div>
+</div>
 
 Avoid prompting emotional language like “I’m afraid…” in industrial chatbots.
 
-<DoAndDont>
-  <DoAndDont.Dont>
-    <DoAndDont.Item>
-      I’m afraid that I can’t help you right now as I’m assessing the data.
-    </DoAndDont.Item>
-    <DoAndDont.Item>I understand what you mean.</DoAndDont.Item>
-  </DoAndDont.Dont>
-</DoAndDont>
+<div class="dos-and-donts" markdown>
+<div class="donts" markdown>
+
+- I'm afraid that I can't help you right now as I'm assessing the data.
+- I understand what you mean.
+
+</div>
+</div>
 
 Avoid technical, robotic phrases like “Please stand by…” as these are outdated, passive and unhelpful.
 
-<DoAndDont>
-  <DoAndDont.Dont>
-    <DoAndDont.Item>
-      Please stand by while I process your request.
-    </DoAndDont.Item>
-    <DoAndDont.Item>Please wait while I prepare a response.</DoAndDont.Item>
-    <DoAndDont.Item>Please be patient.</DoAndDont.Item>
-    <DoAndDont.Item>Bear with me.</DoAndDont.Item>
-  </DoAndDont.Dont>
-</DoAndDont>
+<div class="dos-and-donts" markdown>
+<div class="donts" markdown>
+
+- Please stand by while I process your request.
+- Please wait while I prepare a response.
+- Please be patient.
+- Bear with me.
+
+</div>
+</div>
 
 ## Dos and Don’ts 
 

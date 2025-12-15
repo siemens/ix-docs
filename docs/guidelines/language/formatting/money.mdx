@@ -7,77 +7,95 @@ no_single_tab: true
 description: 'Understanding money and currency is important for designing user interfaces that facilitate financial transactions, licensing, display prices, and manage currency conversions. This requires attention to details like currency symbols, formatting standards, and localization to ensure precision and user-friendliness.'
 ---
 
-import DoAndDont from '@site/src/components/DoAndDont';
-
 # Money and currencies
 
 ## General rules
 
 Place the currency symbol before the amount in English and use the same formatting style throughout.
 
-<DoAndDont>
-  <DoAndDont.Do>
-    <DoAndDont.Item>£320</DoAndDont.Item>
-  </DoAndDont.Do>
-  <DoAndDont.Dont>
-  	<DoAndDont.Item>320£</DoAndDont.Item>
-    <DoAndDont.Item>£320/£320.00/Three hundred and twenty pounds/320 pounds (mixed styles) </DoAndDont.Item>
-  </DoAndDont.Dont>
-</DoAndDont>
+<div class="dos-and-donts" markdown>
+<div class="dos" markdown>
+
+- £320
+
+</div>
+<div class="donts" markdown>
+
+- 320£
+- £320/£320.00/Three hundred and twenty pounds/320 pounds (mixed styles)
+
+</div>
+</div>
 
 Use decimal points for cents or smaller units within English user interfaces.
 
-<DoAndDont>
-  <DoAndDont.Do>
-    <DoAndDont.Item>€999.50</DoAndDont.Item>
-    <DoAndDont.Item>$400,456.50</DoAndDont.Item>
-  </DoAndDont.Do>
-  <DoAndDont.Dont>
-    <DoAndDont.Item>€999,50</DoAndDont.Item>
-	<DoAndDont.Item>$400.456,50</DoAndDont.Item>
-  </DoAndDont.Dont>
-</DoAndDont>
+<div class="dos-and-donts" markdown>
+<div class="dos" markdown>
+
+- €999.50
+- $400,456.50
+
+</div>
+<div class="donts" markdown>
+
+- €999,50
+- $400.456,50
+
+</div>
+</div>
 
 Never add a space between the currency symbol and the amount.
 
-<DoAndDont>
-  <DoAndDont.Do>
-    <DoAndDont.Item>$100</DoAndDont.Item>
-  </DoAndDont.Do>
-  <DoAndDont.Dont>
-    <DoAndDont.Item>$ 100</DoAndDont.Item>
-  </DoAndDont.Dont>
-</DoAndDont>
+<div class="dos-and-donts" markdown>
+<div class="dos" markdown>
+
+- $100
+
+</div>
+<div class="donts" markdown>
+
+- $ 100
+
+</div>
+</div>
 
 Use the ISO currency code before the number without a space.
 
-<DoAndDont>
-  <DoAndDont.Do>
-    <DoAndDont.Item>USD400</DoAndDont.Item>
-  </DoAndDont.Do>
-  <DoAndDont.Dont>
-    <DoAndDont.Item>300USD</DoAndDont.Item>
-  </DoAndDont.Dont>
-</DoAndDont>
+<div class="dos-and-donts" markdown>
+<div class="dos" markdown>
+
+- USD400
+
+</div>
+<div class="donts" markdown>
+
+- 300USD
+
+</div>
+</div>
 
 Use numbers and currency symbols within the UI when talking about marketing and pricing.
 
-<DoAndDont>
-  <DoAndDont.Do>
-    <DoAndDont.Item>Thank you. Your payment of $50 has been processed.</DoAndDont.Item>
-    <DoAndDont.Item>Invest in our new soft sensors for $6,000 to boost your production efficiency.</DoAndDont.Item>
-	<DoAndDont.Item>Spare parts cost estimation for 2025 is $125,999.</DoAndDont.Item>
-	<DoAndDont.Item>The subscription costs $10 per month.</DoAndDont.Item>
-  </DoAndDont.Do>
-</DoAndDont>
+<div class="dos-and-donts" markdown>
+<div class="dos" markdown>
+
+- Thank you. Your payment of $50 has been processed.
+- Invest in our new soft sensors for $6,000 to boost your production efficiency.
+- Spare parts cost estimation for 2025 is $125,999.
+- The subscription costs $10 per month.
+
+</div>
+</div>
 
 Write out the full word in formal and legal documents.
 
-<DoAndDont>
-  <DoAndDont.Do>
-    <DoAndDont.Item>The total amount shall not exceed four thousand dollars.</DoAndDont.Item>
-  </DoAndDont.Do>
-</DoAndDont>
+<div class="dos-and-donts" markdown>
+<div class="dos" markdown>
+
+- The total amount shall not exceed four thousand dollars.
+
+</div>
+</div>
 
 ## Using currency symbols (¥) or codes (JPY)
 
