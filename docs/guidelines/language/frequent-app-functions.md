@@ -19,13 +19,13 @@ description: 'Get tips for naming common app functions clearly and effectively. 
 - Cockpit
 
 <div class="dos-and-donts" markdown>
-  <div class="donts" markdown>
+<div class="donts" markdown>
 
-  - Console
-  - Dash
-  - Control panel
+- Console
+- Dash
+- Control panel
 
-  </div>
+</div>
 </div>
 
 ## Analytics
@@ -35,12 +35,12 @@ description: 'Get tips for naming common app functions clearly and effectively. 
 - Anomaly detection
 
 <div class="dos-and-donts" markdown>
-  <div class="donts" markdown>
+<div class="donts" markdown>
 
-  - Assessment
-  - Examination
+- Assessment
+- Examination
 
-  </div>
+</div>
 </div>
 
 ## Monitoring and scheduling
@@ -54,11 +54,11 @@ description: 'Get tips for naming common app functions clearly and effectively. 
 - Remove from watchlist
 
 <div class="dos-and-donts" markdown>
-  <div class="donts" markdown>
+<div class="donts" markdown>
 
-  - Watch list
+- Watch list
 
-  </div>
+</div>
 </div>
 
 ## Detail view
@@ -70,12 +70,12 @@ description: 'Get tips for naming common app functions clearly and effectively. 
 - Details
 
 <div class="dos-and-donts" markdown>
-  <div class="donts" markdown>
+<div class="donts" markdown>
 
-  - Facts
-  - Specifics
+- Facts
+- Specifics
 
-  </div>
+</div>
 </div>
 
 ### Asset properties
@@ -121,11 +121,11 @@ description: 'Get tips for naming common app functions clearly and effectively. 
 - Drag files here or select files
 
 <div class="dos-and-donts" markdown>
-  <div class="donts" markdown>
+<div class="donts" markdown>
 
-  - Drag and drop here or browse
+- Drag and drop here or browse
 
-  </div>
+</div>
 </div>
 
 ## Comments
@@ -139,11 +139,11 @@ description: 'Get tips for naming common app functions clearly and effectively. 
 - Write your comments here
 
 <div class="dos-and-donts" markdown>
-  <div class="donts" markdown>
+<div class="donts" markdown>
 
-  - Write a comment
+- Write a comment
 
-  </div>
+</div>
 </div>
 
 ## Grid and list actions
@@ -169,13 +169,13 @@ description: 'Get tips for naming common app functions clearly and effectively. 
 - Notify me when X occurs
 
 <div class="dos-and-donts" markdown>
-  <div class="donts" markdown>
+<div class="donts" markdown>
 
-  - Error
-  - Issue
-  - Problem
+- Error
+- Issue
+- Problem
 
-  </div>
+</div>
 </div>
 
 ## Event types
@@ -205,14 +205,14 @@ description: 'Get tips for naming common app functions clearly and effectively. 
 - Detected
 
 <div class="dos-and-donts" markdown>
-  <div class="donts" markdown>
+<div class="donts" markdown>
 
-  - Unacklowedged
-  - Unack.
-  - Unackn.
-  - Unacknl.
+- Unacklowedged
+- Unack.
+- Unackn.
+- Unacknl.
 
-  </div>
+</div>
 </div>
 
 ## Event actions

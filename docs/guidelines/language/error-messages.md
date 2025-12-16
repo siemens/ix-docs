@@ -45,26 +45,26 @@ description: 'Learn how to write error messages, warnings, and notifications tha
 - An error message alerts user of a problem that exists and must be addressed
 
 <div class="dos-and-donts" markdown>
-  <div class="dos" markdown>
+<div class="dos" markdown>
 
-  - System error: You're offline. Check your connection and try again.
-  - File error: We cannot upload this file. Try uploading again.
-  - Permission error: To carry out this task, you need more permissions. Contact admin to change permissions.
+- System error: You're offline. Check your connection and try again.
+- File error: We cannot upload this file. Try uploading again.
+- Permission error: To carry out this task, you need more permissions. Contact admin to change permissions.
 
-  </div>
-  <div class="donts" markdown>
+</div>
+<div class="donts" markdown>
 
-  - What did you do!?
-  - The email address you entered does not match the required format. Please enter your email address using the standard format.
-  - You have failed to delete the device.
-  - Error 404
-  - Value out of range.
-  - File not found.
-  - Title: Input error
-  - Explanation: Input error detected.
-  - Action: Try again.
+- What did you do!?
+- The email address you entered does not match the required format. Please enter your email address using the standard format.
+- You have failed to delete the device.
+- Error 404
+- Value out of range.
+- File not found.
+- Title: Input error
+- Explanation: Input error detected.
+- Action: Try again.
 
-  </div>
+</div>
 </div>
 
 ## Warning messages
@@ -72,13 +72,13 @@ description: 'Learn how to write error messages, warnings, and notifications tha
 - A warning message alerts users of a condition that may cause a problem in the future
 
 <div class="dos-and-donts" markdown>
-  <div class="dos" markdown>
+<div class="dos" markdown>
 
-  - Title: You have not saved all documents
-  - Explanation: You have to save all documents
-  - Action: (OK button)
+- Title: You have not saved all documents
+- Explanation: You have to save all documents
+- Action: (OK button)
 
-  </div>
+</div>
 </div>
 
 ## Notifications
@@ -86,16 +86,16 @@ description: 'Learn how to write error messages, warnings, and notifications tha
 - Notifications are informative and no actions are required from the user
 
 <div class="dos-and-donts" markdown>
-  <div class="dos" markdown>
+<div class="dos" markdown>
 
-  - Access Point 2 is connected.
-  - Changes are saved automatically.
+- Access Point 2 is connected.
+- Changes are saved automatically.
 
-  </div>
-  <div class="donts" markdown>
+</div>
+<div class="donts" markdown>
 
-  - Access Point connection failed. Try again.
-  - No rows to show.
+- Access Point connection failed. Try again.
+- No rows to show.
 
-  </div>
+</div>
 </div>

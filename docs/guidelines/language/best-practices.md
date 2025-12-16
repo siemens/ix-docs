@@ -19,22 +19,22 @@ description: 'Familiarize yourself with general best practices for UX writing to
 - Confirmation messages: Use the same verb as the transitional text
 
 <div class="dos-and-donts" markdown>
-  <div class="dos" markdown>
+<div class="dos" markdown>
 
-  - Updating user roles…
-  - Submitting log files…
-  - Saving project… > Project saved
-  - Training models… > Models trained
+- Updating user roles…
+- Submitting log files…
+- Saving project… > Project saved
+- Training models… > Models trained
 
-  </div>
-  <div class="donts" markdown>
+</div>
+<div class="donts" markdown>
 
-  - Getting ready…
-  - Chopping fruit…
-  - Saving project… > Project uploaded
-  - Training models… > Training done
+- Getting ready…
+- Chopping fruit…
+- Saving project… > Project uploaded
+- Training models… > Training done
 
-  </div>
+</div>
 </div>
 
 ## Error messages
@@ -50,19 +50,19 @@ description: 'Familiarize yourself with general best practices for UX writing to
 - Use … to show an action is required, i.e. fill this in …
 
 <div class="dos-and-donts" markdown>
-  <div class="dos" markdown>
+<div class="dos" markdown>
 
-  - System error: You're offline. Check your connection and try again.
-  - File error: We cannot upload this file. Try uploading again.
-  - Permission error: To carry out this task, you need more permissions. Contact admin to change permissions.
+- System error: You're offline. Check your connection and try again.
+- File error: We cannot upload this file. Try uploading again.
+- Permission error: To carry out this task, you need more permissions. Contact admin to change permissions.
 
-  </div>
-  <div class="donts" markdown>
+</div>
+<div class="donts" markdown>
 
-  - What did you do!?
-  - The email address you entered does not match the required format. Please enter your email address using the standard format.
+- What did you do!?
+- The email address you entered does not match the required format. Please enter your email address using the standard format.
 
-  </div>
+</div>
 </div>
 
 ## Empty-state text
@@ -78,20 +78,20 @@ description: 'Familiarize yourself with general best practices for UX writing to
 - Use wording to show users how to resolve the empty state, e.g. with an action, click, etc.
 
 <div class="dos-and-donts" markdown>
-  <div class="dos" markdown>
+<div class="dos" markdown>
 
-  - Allocate users in User management.
-  - To show rows, select a project.
-  - To save a project, select Save in Project detail list.
+- Allocate users in User management.
+- To show rows, select a project.
+- To save a project, select Save in Project detail list.
 
-  </div>
-  <div class="donts" markdown>
+</div>
+<div class="donts" markdown>
 
-  - No allocated users.
-  - No rows to show.
-  - No projects saved.
+- No allocated users.
+- No rows to show.
+- No projects saved.
 
-  </div>
+</div>
 </div>
 
 ## Restoring behavior of items
@@ -105,16 +105,16 @@ description: 'Familiarize yourself with general best practices for UX writing to
 - Do not use Delete and Remove as synonym
 
 <div class="dos-and-donts" markdown>
-  <div class="dos" markdown>
+<div class="dos" markdown>
 
-  - Create a chart and delete a chart
-  - Add a sensor to a chart and remove a sensor from chart
+- Create a chart and delete a chart
+- Add a sensor to a chart and remove a sensor from chart
 
-  </div>
-  <div class="donts" markdown>
+</div>
+<div class="donts" markdown>
 
-  - Create a chart and remove it
-  - Add a sensor and delete the sensor
+- Create a chart and remove it
+- Add a sensor and delete the sensor
 
-  </div>
+</div>
 </div>

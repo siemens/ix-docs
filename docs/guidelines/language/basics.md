@@ -37,24 +37,24 @@ description: "Dive into the fundamental principles of UX writing, where you'll l
 - Avoid using negative contractions as they can appear too informal
 
 <div class="dos-and-donts" markdown>
-  <div class="dos" markdown>
+<div class="dos" markdown>
 
-  - their, them, theirs, salesperson
-  - Welcome to this application
-  - X appears when detail view has selected events
-  - cannot, will not
-  - you'll, we've
+- their, them, theirs, salesperson
+- Welcome to this application
+- X appears when detail view has selected events
+- cannot, will not
+- you'll, we've
 
-  </div>
-  <div class="donts" markdown>
+</div>
+<div class="donts" markdown>
 
-  - his, hers, him, salesman
-  - Hey there!
-  - X doesn't appear if detail view has no selected events
-  - can't, won't
-  - you will, we have
+- his, hers, him, salesman
+- Hey there!
+- X doesn't appear if detail view has no selected events
+- can't, won't
+- you will, we have
 
-  </div>
+</div>
 </div>
 
 ## Length
@@ -80,57 +80,57 @@ description: "Dive into the fundamental principles of UX writing, where you'll l
 - Capitalize named app functions and UI elements: Go to Settings, Allocate users in User management, Press OK
 
 <div class="dos-and-donts" markdown>
-  <div class="dos" markdown>
+<div class="dos" markdown>
 
-  - Go to Settings
-  - Press OK
-  - Log in
-  - For more information, see Siemens Industry Online Support.
+- Go to Settings
+- Press OK
+- Log in
+- For more information, see Siemens Industry Online Support.
 
-  </div>
-  <div class="donts" markdown>
+</div>
+<div class="donts" markdown>
 
-  - Go To Settings
-  - Press OK
-  - LOG IN
-  - For more information, see Siemens industry online support.
+- Go To Settings
+- Press OK
+- LOG IN
+- For more information, see Siemens industry online support.
 
-  </div>
+</div>
 </div>
 
 ## Common UX wording mistakes
 
 <div class="dos-and-donts" markdown>
-  <div class="dos" markdown>
+<div class="dos" markdown>
 
-  - time zone
-  - log file
-  - log in (as an action)
-  - login (as a noun)
-  - equipment
-  - feedback
-  - training
-  - current
-  - avoid "shall"
-  - Siemens has
-  - 34 million / 35 billion
-  - 34 million
+- time zone
+- log file
+- log in (as an action)
+- login (as a noun)
+- equipment
+- feedback
+- training
+- current
+- avoid "shall"
+- Siemens has
+- 34 million / 35 billion
+- 34 million
 
-  </div>
-  <div class="donts" markdown>
+</div>
+<div class="donts" markdown>
 
-  - timezone
-  - logfile
-  - login
-  - log in
-  - equipments
-  - feedbacks
-  - trainings
-  - actual
-  - user shall manage users
-  - Siemens have
-  - 34' / 35"
-  - 34 millions
+- timezone
+- logfile
+- login
+- log in
+- equipments
+- feedbacks
+- trainings
+- actual
+- user shall manage users
+- Siemens have
+- 34' / 35"
+- 34 millions
 
-  </div>
+</div>
 </div>

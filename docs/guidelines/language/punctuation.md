@@ -86,36 +86,36 @@ Always consider whether necessary
 - Numbers: Use No. as an abbreviation for number, no spacing between abbreviated No. and number: No.8
 
 <div class="dos-and-donts" markdown>
-  <div class="dos" markdown>
+<div class="dos" markdown>
 
-  - 11am
-  - Monday, January 12, 2021
-  - €999.50
-  - €2.5 million
-  - $400,456.50
-  - £320
-  - 30 mm
-  - 10 oz
-  - 10-40%
-  - No.7
-  - Number 7
+- 11am
+- Monday, January 12, 2021
+- €999.50
+- €2.5 million
+- $400,456.50
+- £320
+- 30 mm
+- 10 oz
+- 10-40%
+- No.7
+- Number 7
 
-  </div>
-  <div class="donts" markdown>
+</div>
+<div class="donts" markdown>
 
-  - 11 a.m.
-  - Monday, 12 January 2021
-  - €999,50
-  - €2,5 million
-  - $400.456,50
-  - 320£
-  - 30 mms
-  - 10 oz.
-  - 10–40%
-  - #7
-  - Num 7
+- 11 a.m.
+- Monday, 12 January 2021
+- €999,50
+- €2,5 million
+- $400.456,50
+- 320£
+- 30 mms
+- 10 oz.
+- 10–40%
+- #7
+- Num 7
 
-  </div>
+</div>
 </div>
 
 ## Spacing
@@ -131,22 +131,22 @@ Always consider whether necessary
 - Add a space before unit of measurement
 
 <div class="dos-and-donts" markdown>
-  <div class="dos" markdown>
+<div class="dos" markdown>
 
-  - 50%
-  - 11am
-  - Tuesday: no data
-  - Browse…
+- 50%
+- 11am
+- Tuesday: no data
+- Browse…
 
-  </div>
-  <div class="donts" markdown>
+</div>
+<div class="donts" markdown>
 
-  - 50 %
-  - 11 am
-  - Tuesday: no data
-  - Browse …
+- 50 %
+- 11 am
+- Tuesday: no data
+- Browse …
 
-  </div>
+</div>
 </div>
 
 ## Lists
@@ -162,20 +162,20 @@ Always consider whether necessary
 - Make lists parallel, i.e. all items / bullets have the same look, length, feel, punctuation, capitalization
 
 <div class="dos-and-donts" markdown>
-  <div class="dos" markdown>
+<div class="dos" markdown>
 
-  - Activate comments within your smartphone to
-    - Write comments
-    - Respond to comments
-    - Approve work orders
+- Activate comments within your smartphone to
+  - Write comments
+  - Respond to comments
+  - Approve work orders
 
-  </div>
-  <div class="donts" markdown>
+</div>
+<div class="donts" markdown>
 
-  - Activate comments within your smartphone to
-    - Write comments
-    - Respond to comments
-    - Approve work orders by adding your fingerprint to your user management section in your smartphone.
+- Activate comments within your smartphone to
+  - Write comments
+  - Respond to comments
+  - Approve work orders by adding your fingerprint to your user management section in your smartphone.
 
-  </div>
+</div>
 </div>

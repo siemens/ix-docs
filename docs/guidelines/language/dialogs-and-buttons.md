@@ -25,20 +25,20 @@ description: 'Discover guidelines for writing dialogs and button labels to ensur
 - Only use ‘OK’ as an option if you cannot find an appropriate verb
 
 <div class="dos-and-donts" markdown>
-  <div class="dos" markdown>
+<div class="dos" markdown>
 
-  - Title: Add user  / Buttons: Cancel, Add
-  - Title: Delete file  / Buttons: Cancel, Delete
-  - Title: Edit details  / Buttons: Cancel, Save
+- Title: Add user  / Buttons: Cancel, Add
+- Title: Delete file  / Buttons: Cancel, Delete
+- Title: Edit details  / Buttons: Cancel, Save
 
-  </div>
-  <div class="donts" markdown>
+</div>
+<div class="donts" markdown>
 
-  - Title: Add user  / Buttons: Cancel, OK
-  - Title: Are you sure  / Buttons: Cancel, Delete
-  - Title: Edit details  / Buttons: Cancel, Edit
+- Title: Add user  / Buttons: Cancel, OK
+- Title: Are you sure  / Buttons: Cancel, Delete
+- Title: Edit details  / Buttons: Cancel, Edit
 
-  </div>
+</div>
 </div>
 
 ## Primary and secondary actions
@@ -48,14 +48,14 @@ description: 'Discover guidelines for writing dialogs and button labels to ensur
 - Primary actions can either be positive (Send, Save) or negative (Delete)
 
 <div class="dos-and-donts" markdown>
-  <div class="dos" markdown>
+<div class="dos" markdown>
 
-  - Cancel, Save
+- Cancel, Save
 
-  </div>
-  <div class="donts" markdown>
+</div>
+<div class="donts" markdown>
 
-  - Save, Cancel
+- Save, Cancel
 
-  </div>
+</div>
 </div>

@@ -17,41 +17,41 @@ description: "Discover the importance of proper grammar and vocabulary in UX wri
 - Only use simple verb forms in the past or future when necessary
 
 <div class="dos-and-donts" markdown>
-  <div class="dos" markdown>
+<div class="dos" markdown>
 
-  - click, browse, upload
-  - file loads, file loaded
+- click, browse, upload
+- file loads, file loaded
 
-  </div>
-  <div class="donts" markdown>
+</div>
+<div class="donts" markdown>
 
-  - clicking, being clicked, was clicking
-  - file is going to be loaded, file has been loaded
+- clicking, being clicked, was clicking
+- file is going to be loaded, file has been loaded
 
-  </div>
+</div>
 </div>
 
 ## Active voice
 
 <div class="dos-and-donts" markdown>
-  <div class="dos" markdown>
+<div class="dos" markdown>
 
-  - Configuration file opens.
-  - Admin provides read-only access.
-  - Measure performance.
-  - Click submit.
-  - Calculate the data.
+- Configuration file opens.
+- Admin provides read-only access.
+- Measure performance.
+- Click submit.
+- Calculate the data.
 
-  </div>
-  <div class="donts" markdown>
+</div>
+<div class="donts" markdown>
 
-  - The configuration file is opened.
-  - Read-only access is provided by Admin.
-  - Performance is measured.
-  - Submit is clicked by user.
-  - The data is calculated by application.
+- The configuration file is opened.
+- Read-only access is provided by Admin.
+- Performance is measured.
+- Submit is clicked by user.
+- The data is calculated by application.
 
-  </div>
+</div>
 </div>
 
 ## UI terminology
@@ -63,18 +63,18 @@ description: "Discover the importance of proper grammar and vocabulary in UX wri
 - Basic terminology: checkbox, drop-down, field, icon, menu, link, radio button, window
 
 <div class="dos-and-donts" markdown>
-  <div class="dos" markdown>
+<div class="dos" markdown>
 
-  - click
-  - hover
+- click
+- hover
 
-  </div>
-  <div class="donts" markdown>
+</div>
+<div class="donts" markdown>
 
-  - press
-  - mouse over
+- press
+- mouse over
 
-  </div>
+</div>
 </div>
 
 ## Idioms and phrasal verbs
@@ -86,22 +86,22 @@ description: "Discover the importance of proper grammar and vocabulary in UX wri
 - Avoid cultural references
 
 <div class="dos-and-donts" markdown>
-  <div class="dos" markdown>
+<div class="dos" markdown>
 
-  - remove
-  - calculate
-  - continue
-  - mobile device
+- remove
+- calculate
+- continue
+- mobile device
 
-  </div>
-  <div class="donts" markdown>
+</div>
+<div class="donts" markdown>
 
-  - get rid of
-  - add up
-  - carry on
-  - Apple, Android, iOS, smartphone
+- get rid of
+- add up
+- carry on
+- Apple, Android, iOS, smartphone
 
-  </div>
+</div>
 </div>
 
 ## Jargon, buzz words and terms
@@ -125,22 +125,22 @@ description: "Discover the importance of proper grammar and vocabulary in UX wri
 - Never make up your own acronyms: https://www.acronymfinder.com/
 
 <div class="dos-and-donts" markdown>
-  <div class="dos" markdown>
+<div class="dos" markdown>
 
-  - light emitting diodes (LEDs)
-  - APS
-  - EU
-  - I/O component, I/O list, I/O module
+- light emitting diodes (LEDs)
+- APS
+- EU
+- I/O component, I/O list, I/O module
 
-  </div>
-  <div class="donts" markdown>
+</div>
+<div class="donts" markdown>
 
-  - Light Emitting Diodes (LEDS)
-  - A.P.S.
-  - E.U.
-  - IO component, i/o list, I-O module
+- Light Emitting Diodes (LEDS)
+- A.P.S.
+- E.U.
+- IO component, i/o list, I-O module
 
-  </div>
+</div>
 </div>
 
 ## Time based vocabulary: Last, latest and recent
@@ -152,18 +152,18 @@ description: "Discover the importance of proper grammar and vocabulary in UX wri
 - Recent is more time focused and is similar to latest. It means that it happened a short time ago.
 
 <div class="dos-and-donts" markdown>
-  <div class="dos" markdown>
+<div class="dos" markdown>
 
-  - Latest update
-  - Latest summary
-  - Recent events
+- Latest update
+- Latest summary
+- Recent events
 
-  </div>
-  <div class="donts" markdown>
+</div>
+<div class="donts" markdown>
 
-  - Last update
-  - Last summary
-  - Last events
+- Last update
+- Last summary
+- Last events
 
-  </div>
+</div>
 </div>

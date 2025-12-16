@@ -19,12 +19,12 @@ description: 'Explore best practices for writing main menu functions to ensure i
 - Forgot password?
 
 <div class="dos-and-donts" markdown>
-  <div class="donts" markdown>
+<div class="donts" markdown>
 
-  - Sign in / Sign up
-  - Login (as it is a noun, not a verb)
+- Sign in / Sign up
+- Login (as it is a noun, not a verb)
 
-  </div>
+</div>
 </div>
 
 ## User management
@@ -50,14 +50,14 @@ description: 'Explore best practices for writing main menu functions to ensure i
 - Edit account
 
 <div class="dos-and-donts" markdown>
-  <div class="donts" markdown>
+<div class="donts" markdown>
 
-  - id / identification
-  - E-mail
-  - Add a user / Delete a user / Add permission
-  - Surname / Initial name / Given name
+- id / identification
+- E-mail
+- Add a user / Delete a user / Add permission
+- Surname / Initial name / Given name
 
-  </div>
+</div>
 </div>
 
 ## Roles
@@ -107,11 +107,11 @@ description: 'Explore best practices for writing main menu functions to ensure i
 - Expired licenses
 
 <div class="dos-and-donts" markdown>
-  <div class="donts" markdown>
+<div class="donts" markdown>
 
-  - licence
+- licence
 
-  </div>
+</div>
 </div>
 
 ## About & legal information
@@ -141,11 +141,11 @@ description: 'Explore best practices for writing main menu functions to ensure i
 - © Siemens AG 20XX
 
 <div class="dos-and-donts" markdown>
-  <div class="donts" markdown>
+<div class="donts" markdown>
 
-  - V1
+- V1
 
-  </div>
+</div>
 </div>
 
 ## Service & Support
@@ -159,12 +159,12 @@ description: 'Explore best practices for writing main menu functions to ensure i
 - FAQ
 
 <div class="dos-and-donts" markdown>
-  <div class="donts" markdown>
+<div class="donts" markdown>
 
-  - Documentation
-  - User manual
+- Documentation
+- User manual
 
-  </div>
+</div>
 </div>
 
 ## Workspace
@@ -176,12 +176,12 @@ description: 'Explore best practices for writing main menu functions to ensure i
 - KPIs
 
 <div class="dos-and-donts" markdown>
-  <div class="donts" markdown>
+<div class="donts" markdown>
 
-  - KPI's settings
-  - KPIS settings
+- KPI's settings
+- KPIS settings
 
-  </div>
+</div>
 </div>
 
 ## Resetting
