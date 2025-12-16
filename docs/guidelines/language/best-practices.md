@@ -8,8 +8,6 @@ no_single_tab: true
 description: 'Familiarize yourself with general best practices for UX writing to maintain consistency and clarity across all your content. This section offers overarching guidelines that apply to various aspects of UX writing.'
 ---
 
-import DoAndDont from '@site/src/components/DoAndDont';
-
 #
 
 ## Transitional text to show something is happening
@@ -20,20 +18,24 @@ import DoAndDont from '@site/src/components/DoAndDont';
 
 - Confirmation messages: Use the same verb as the transitional text
 
-<DoAndDont>
-  <DoAndDont.Do>
-    <DoAndDont.Item>Updating user roles…</DoAndDont.Item>
-    <DoAndDont.Item>Submitting log files…</DoAndDont.Item>
-    <DoAndDont.Item>Saving project… > Project saved</DoAndDont.Item>
-    <DoAndDont.Item>Training models… > Models trained</DoAndDont.Item>
-  </DoAndDont.Do>
-  <DoAndDont.Dont>
-    <DoAndDont.Item>Getting ready…</DoAndDont.Item>
-    <DoAndDont.Item>Chopping fruit…</DoAndDont.Item>
-    <DoAndDont.Item>Saving project… > Project uploaded</DoAndDont.Item>
-    <DoAndDont.Item>Training models… > Training done</DoAndDont.Item>
-  </DoAndDont.Dont>
-</DoAndDont>
+<div class="dos-and-donts" markdown>
+  <div class="dos" markdown>
+
+  - Updating user roles…
+  - Submitting log files…
+  - Saving project… > Project saved
+  - Training models… > Models trained
+
+  </div>
+  <div class="donts" markdown>
+
+  - Getting ready…
+  - Chopping fruit…
+  - Saving project… > Project uploaded
+  - Training models… > Training done
+
+  </div>
+</div>
 
 ## Error messages
 
@@ -47,17 +49,21 @@ import DoAndDont from '@site/src/components/DoAndDont';
 
 - Use … to show an action is required, i.e. fill this in …
 
-<DoAndDont>
-  <DoAndDont.Do>
-    <DoAndDont.Item>System error: You’re offline. Check your connection and try again.</DoAndDont.Item>
-    <DoAndDont.Item>File error: We cannot upload this file. Try uploading again.</DoAndDont.Item>
-    <DoAndDont.Item>Permission error: To carry out this task, you need more permissions. Contact admin to change permissions.</DoAndDont.Item>
-  </DoAndDont.Do>
-  <DoAndDont.Dont>
-    <DoAndDont.Item>What did you do!?</DoAndDont.Item>
-    <DoAndDont.Item>The email address you entered does not match the required format. Please enter your email address using the standard format.</DoAndDont.Item>
-  </DoAndDont.Dont>
-</DoAndDont>
+<div class="dos-and-donts" markdown>
+  <div class="dos" markdown>
+
+  - System error: You're offline. Check your connection and try again.
+  - File error: We cannot upload this file. Try uploading again.
+  - Permission error: To carry out this task, you need more permissions. Contact admin to change permissions.
+
+  </div>
+  <div class="donts" markdown>
+
+  - What did you do!?
+  - The email address you entered does not match the required format. Please enter your email address using the standard format.
+
+  </div>
+</div>
 
 ## Empty-state text
 
@@ -71,18 +77,22 @@ import DoAndDont from '@site/src/components/DoAndDont';
 
 - Use wording to show users how to resolve the empty state, e.g. with an action, click, etc.
 
-<DoAndDont>
-  <DoAndDont.Do>
-    <DoAndDont.Item>Allocate users in User management.</DoAndDont.Item>
-    <DoAndDont.Item>To show rows, select a project.</DoAndDont.Item>
-    <DoAndDont.Item>To save a project, select Save in Project detail list.</DoAndDont.Item>
-  </DoAndDont.Do>
-  <DoAndDont.Dont>
-    <DoAndDont.Item>No allocated users.</DoAndDont.Item>
-    <DoAndDont.Item>No rows to show.</DoAndDont.Item>
-    <DoAndDont.Item>No projects saved.</DoAndDont.Item>
-  </DoAndDont.Dont>
-</DoAndDont>
+<div class="dos-and-donts" markdown>
+  <div class="dos" markdown>
+
+  - Allocate users in User management.
+  - To show rows, select a project.
+  - To save a project, select Save in Project detail list.
+
+  </div>
+  <div class="donts" markdown>
+
+  - No allocated users.
+  - No rows to show.
+  - No projects saved.
+
+  </div>
+</div>
 
 ## Restoring behavior of items
 
@@ -94,13 +104,17 @@ import DoAndDont from '@site/src/components/DoAndDont';
 
 - Do not use Delete and Remove as synonym
 
-<DoAndDont>
-  <DoAndDont.Do>
-    <DoAndDont.Item>Create a chart and delete a chart</DoAndDont.Item>
-    <DoAndDont.Item>Add a sensor to a chart and remove a sensor from chart</DoAndDont.Item>
-  </DoAndDont.Do>
-  <DoAndDont.Dont>
-    <DoAndDont.Item>Create a chart and remove it</DoAndDont.Item>
-    <DoAndDont.Item>Add a sensor and delete the sensor</DoAndDont.Item>
-  </DoAndDont.Dont>
-</DoAndDont>
+<div class="dos-and-donts" markdown>
+  <div class="dos" markdown>
+
+  - Create a chart and delete a chart
+  - Add a sensor to a chart and remove a sensor from chart
+
+  </div>
+  <div class="donts" markdown>
+
+  - Create a chart and remove it
+  - Add a sensor and delete the sensor
+
+  </div>
+</div>

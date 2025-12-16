@@ -8,8 +8,6 @@ no_single_tab: true
 description: "Discover the importance of proper grammar and vocabulary in UX writing. This subchapter will guide you on how to use language effectively to create professional and easily understandable content."
 ---
 
-import DoAndDont from '@site/src/components/DoAndDont';
-
 #
 
 ## Grammar tenses
@@ -18,35 +16,43 @@ import DoAndDont from '@site/src/components/DoAndDont';
 
 - Only use simple verb forms in the past or future when necessary
 
-<DoAndDont>
-  <DoAndDont.Do>
-    <DoAndDont.Item>click, browse, upload</DoAndDont.Item>
-    <DoAndDont.Item>file loads, file loaded</DoAndDont.Item>
-  </DoAndDont.Do>
-  <DoAndDont.Dont>
-    <DoAndDont.Item>clicking, being clicked, was clicking</DoAndDont.Item>
-    <DoAndDont.Item>file is going to be loaded, file has been loaded</DoAndDont.Item>
-  </DoAndDont.Dont>
-</DoAndDont>
+<div class="dos-and-donts" markdown>
+  <div class="dos" markdown>
+
+  - click, browse, upload
+  - file loads, file loaded
+
+  </div>
+  <div class="donts" markdown>
+
+  - clicking, being clicked, was clicking
+  - file is going to be loaded, file has been loaded
+
+  </div>
+</div>
 
 ## Active voice
 
-<DoAndDont>
-  <DoAndDont.Do>
-    <DoAndDont.Item>Configuration file opens.</DoAndDont.Item>
-    <DoAndDont.Item>Admin provides read-only access.</DoAndDont.Item>
-    <DoAndDont.Item>Measure performance.</DoAndDont.Item>
-    <DoAndDont.Item>Click submit.</DoAndDont.Item>
-    <DoAndDont.Item>Calculate the data.</DoAndDont.Item>
-  </DoAndDont.Do>
-  <DoAndDont.Dont>
-    <DoAndDont.Item>The configuration file is opened.</DoAndDont.Item>
-    <DoAndDont.Item>Read-only access is provided by Admin.</DoAndDont.Item>
-    <DoAndDont.Item>Performance is measured.</DoAndDont.Item>
-    <DoAndDont.Item>Submit is clicked by user.</DoAndDont.Item>
-    <DoAndDont.Item>The data is calculated by application.</DoAndDont.Item>
-  </DoAndDont.Dont>
-</DoAndDont>
+<div class="dos-and-donts" markdown>
+  <div class="dos" markdown>
+
+  - Configuration file opens.
+  - Admin provides read-only access.
+  - Measure performance.
+  - Click submit.
+  - Calculate the data.
+
+  </div>
+  <div class="donts" markdown>
+
+  - The configuration file is opened.
+  - Read-only access is provided by Admin.
+  - Performance is measured.
+  - Submit is clicked by user.
+  - The data is calculated by application.
+
+  </div>
+</div>
 
 ## UI terminology
 
@@ -56,16 +62,20 @@ import DoAndDont from '@site/src/components/DoAndDont';
 
 - Basic terminology: checkbox, drop-down, field, icon, menu, link, radio button, window
 
-<DoAndDont>
-  <DoAndDont.Do>
-    <DoAndDont.Item>click</DoAndDont.Item>
-    <DoAndDont.Item>hover</DoAndDont.Item>
-  </DoAndDont.Do>
-  <DoAndDont.Dont>
-    <DoAndDont.Item>press</DoAndDont.Item>
-    <DoAndDont.Item>mouse over</DoAndDont.Item>
-  </DoAndDont.Dont>
-</DoAndDont>
+<div class="dos-and-donts" markdown>
+  <div class="dos" markdown>
+
+  - click
+  - hover
+
+  </div>
+  <div class="donts" markdown>
+
+  - press
+  - mouse over
+
+  </div>
+</div>
 
 ## Idioms and phrasal verbs
 
@@ -75,20 +85,24 @@ import DoAndDont from '@site/src/components/DoAndDont';
 
 - Avoid cultural references
 
-<DoAndDont>
-  <DoAndDont.Do>
-    <DoAndDont.Item>remove</DoAndDont.Item>
-    <DoAndDont.Item>calculate</DoAndDont.Item>
-    <DoAndDont.Item>continue</DoAndDont.Item>
-    <DoAndDont.Item>mobile device</DoAndDont.Item>
-  </DoAndDont.Do>
-  <DoAndDont.Dont>
-    <DoAndDont.Item>get rid of</DoAndDont.Item>
-    <DoAndDont.Item>add up</DoAndDont.Item>
-    <DoAndDont.Item>carry on</DoAndDont.Item>
-    <DoAndDont.Item>Apple, Android, iOS, smartphone</DoAndDont.Item>
-  </DoAndDont.Dont>
-</DoAndDont>
+<div class="dos-and-donts" markdown>
+  <div class="dos" markdown>
+
+  - remove
+  - calculate
+  - continue
+  - mobile device
+
+  </div>
+  <div class="donts" markdown>
+
+  - get rid of
+  - add up
+  - carry on
+  - Apple, Android, iOS, smartphone
+
+  </div>
+</div>
 
 ## Jargon, buzz words and terms
 
@@ -110,20 +124,24 @@ import DoAndDont from '@site/src/components/DoAndDont';
 
 - Never make up your own acronyms: https://www.acronymfinder.com/
 
-<DoAndDont>
-  <DoAndDont.Do>
-    <DoAndDont.Item>light emitting diodes (LEDs)</DoAndDont.Item>
-    <DoAndDont.Item>APS</DoAndDont.Item>
-    <DoAndDont.Item>EU</DoAndDont.Item>
-    <DoAndDont.Item>I/O component, I/O list, I/O module</DoAndDont.Item>
-  </DoAndDont.Do>
-  <DoAndDont.Dont>
-    <DoAndDont.Item>Light Emitting Diodes (LEDS)</DoAndDont.Item>
-    <DoAndDont.Item>A.P.S.</DoAndDont.Item>
-    <DoAndDont.Item>E.U.</DoAndDont.Item>
-    <DoAndDont.Item>IO component, i/o list, I-O module</DoAndDont.Item>
-  </DoAndDont.Dont>
-</DoAndDont>
+<div class="dos-and-donts" markdown>
+  <div class="dos" markdown>
+
+  - light emitting diodes (LEDs)
+  - APS
+  - EU
+  - I/O component, I/O list, I/O module
+
+  </div>
+  <div class="donts" markdown>
+
+  - Light Emitting Diodes (LEDS)
+  - A.P.S.
+  - E.U.
+  - IO component, i/o list, I-O module
+
+  </div>
+</div>
 
 ## Time based vocabulary: Last, latest and recent
 
@@ -133,15 +151,19 @@ import DoAndDont from '@site/src/components/DoAndDont';
 
 - Recent is more time focused and is similar to latest. It means that it happened a short time ago.
 
-<DoAndDont>
-  <DoAndDont.Do>
-    <DoAndDont.Item>Latest update</DoAndDont.Item>
-    <DoAndDont.Item>Latest summary</DoAndDont.Item>
-    <DoAndDont.Item>Recent events</DoAndDont.Item>
-  </DoAndDont.Do>
-  <DoAndDont.Dont>
-    <DoAndDont.Item>Last update</DoAndDont.Item>
-    <DoAndDont.Item>Last summary</DoAndDont.Item>
-    <DoAndDont.Item>Last events</DoAndDont.Item>
-  </DoAndDont.Dont>
-</DoAndDont>
+<div class="dos-and-donts" markdown>
+  <div class="dos" markdown>
+
+  - Latest update
+  - Latest summary
+  - Recent events
+
+  </div>
+  <div class="donts" markdown>
+
+  - Last update
+  - Last summary
+  - Last events
+
+  </div>
+</div>
