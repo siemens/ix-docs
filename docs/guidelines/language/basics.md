@@ -43,15 +43,15 @@ description: "Dive into the fundamental principles of UX writing, where you'll l
 - Welcome to this application
 - X appears when detail view has selected events
 - cannot, will not
-- you'll, we've
+- you’ll, we’ve
 
 </div>
 <div class="donts" markdown>
 
 - his, hers, him, salesman
 - Hey there!
-- X doesn't appear if detail view has no selected events
-- can't, won't
+- X doesn’t appear if detail view has no selected events
+- can’t, won’t
 - you will, we have
 
 </div>
@@ -129,7 +129,7 @@ description: "Dive into the fundamental principles of UX writing, where you'll l
 - actual
 - user shall manage users
 - Siemens have
-- 34' / 35"
+- 34’ / 35“
 - 34 millions
 
 </div>

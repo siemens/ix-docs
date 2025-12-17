@@ -47,7 +47,7 @@ description: 'Learn how to write error messages, warnings, and notifications tha
 <div class="dos-and-donts" markdown>
 <div class="dos" markdown>
 
-- System error: You're offline. Check your connection and try again.
+- System error: You’re offline. Check your connection and try again.
 - File error: We cannot upload this file. Try uploading again.
 - Permission error: To carry out this task, you need more permissions. Contact admin to change permissions.
 
