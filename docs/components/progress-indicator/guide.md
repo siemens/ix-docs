@@ -2,8 +2,6 @@
 doc-type: 'tab-item'
 ---
 
-import DoAndDont from '@site/src/components/DoAndDont';
-
 # Progress indicator - Usage
 
 Progress indicators inform users about the status of ongoing measurable processes, e.g. loading data, submitting forms or processing non-blocking operations (for indeterminate processes use [spinners](../spinner/index.mdx) instead).
@@ -54,18 +52,22 @@ For more information about writing effective helper texts or labels, see our [UX
 
 ## Dos and Don’ts
 
-<DoAndDont>
-  <DoAndDont.Do>
-    <DoAndDont.Item>Do use progress indicators consistently for similar processes</DoAndDont.Item>
-    <DoAndDont.Item>Do use progress indicators for determinate processes where progress can be measured (otherwise use [spinners](../spinner/index.mdx))</DoAndDont.Item>
-    <DoAndDont.Item>Do use linear progress indicators in horizontal layouts and circular indicators in compact spaces or centered layouts</DoAndDont.Item>
-	<DoAndDont.Item>Do keep your slot content short, especially for the centered alignment (use helper texts and labels for lengthier content)</DoAndDont.Item>
-  </DoAndDont.Do>
-  <DoAndDont.Dont>
-    <DoAndDont.Item>Don’t use progress indicators for operations shorter than one second</DoAndDont.Item>
-    <DoAndDont.Item>Don’t only indicate progress completion with the indicator without clear task messages, e.g. success toasts or displaying the loaded content</DoAndDont.Item>
-  </DoAndDont.Dont>
-</DoAndDont>
+<div class="dos-and-donts" markdown>
+<div class="dos" markdown>
+
+- Do use progress indicators consistently for similar processes
+- Do use progress indicators for determinate processes where progress can be measured (otherwise use [spinners](../spinner/index.mdx))
+- Do use linear progress indicators in horizontal layouts and circular indicators in compact spaces or centered layouts
+- Do keep your slot content short, especially for the centered alignment (use helper texts and labels for lengthier content)
+
+</div>
+<div class="donts" markdown>
+
+- Don't use progress indicators for operations shorter than one second
+- Don't only indicate progress completion with the indicator without clear task messages, e.g. success toasts or displaying the loaded content
+
+</div>
+</div>
 
 
 ## Related

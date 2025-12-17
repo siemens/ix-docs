@@ -8,8 +8,6 @@ no_single_tab: true
 description: 'Discover guidelines for writing dialogs and button labels to ensure clear and actionable instructions. This section helps you create effective prompts and calls to action that enhance user interaction.'
 ---
 
-import DoAndDont from '@site/src/components/DoAndDont';
-
 #
 
 ## Clear title and button options
@@ -26,18 +24,22 @@ import DoAndDont from '@site/src/components/DoAndDont';
 
 - Only use ‘OK’ as an option if you cannot find an appropriate verb
 
-<DoAndDont>
-  <DoAndDont.Do>
-    <DoAndDont.Item>Title: Add user  / Buttons: Cancel, Add</DoAndDont.Item>
-    <DoAndDont.Item>Title: Delete file  / Buttons: Cancel, Delete</DoAndDont.Item>
-    <DoAndDont.Item>Title: Edit details  / Buttons: Cancel, Save</DoAndDont.Item>
-  </DoAndDont.Do>
-  <DoAndDont.Dont>
-    <DoAndDont.Item>Title: Add user  / Buttons: Cancel, OK</DoAndDont.Item>
-    <DoAndDont.Item>Title: Are you sure  / Buttons: Cancel, Delete</DoAndDont.Item>
-    <DoAndDont.Item>Title: Edit details  / Buttons: Cancel, Edit</DoAndDont.Item>
-  </DoAndDont.Dont>
-</DoAndDont>
+<div class="dos-and-donts" markdown>
+<div class="dos" markdown>
+
+- Title: Add user  / Buttons: Cancel, Add
+- Title: Delete file  / Buttons: Cancel, Delete
+- Title: Edit details  / Buttons: Cancel, Save
+
+</div>
+<div class="donts" markdown>
+
+- Title: Add user  / Buttons: Cancel, OK
+- Title: Are you sure  / Buttons: Cancel, Delete
+- Title: Edit details  / Buttons: Cancel, Edit
+
+</div>
+</div>
 
 ## Primary and secondary actions
 
@@ -45,11 +47,15 @@ import DoAndDont from '@site/src/components/DoAndDont';
 
 - Primary actions can either be positive (Send, Save) or negative (Delete)
 
-<DoAndDont>
-  <DoAndDont.Do>
-    <DoAndDont.Item>Cancel, Save</DoAndDont.Item>
-  </DoAndDont.Do>
-  <DoAndDont.Dont>
-    <DoAndDont.Item>Save, Cancel</DoAndDont.Item>
-  </DoAndDont.Dont>
-</DoAndDont>
+<div class="dos-and-donts" markdown>
+<div class="dos" markdown>
+
+- Cancel, Save
+
+</div>
+<div class="donts" markdown>
+
+- Save, Cancel
+
+</div>
+</div>
