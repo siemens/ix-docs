@@ -162,17 +162,21 @@ Always consider whether necessary
 - Make lists parallel, i.e. all items / bullets have the same look, length, feel, punctuation, capitalization
 
 <div class="dos-and-donts" markdown>
+
 <div class="dos" markdown>
 
-- Activate comments within your smartphone to
+  #### Activate comments within your smartphone to
+
   - Write comments
   - Respond to comments
   - Approve work orders
 
 </div>
+
 <div class="donts" markdown>
 
-- Activate comments within your smartphone to
+  #### Activate comments within your smartphone to
+
   - Write comments
   - Respond to comments
   - Approve work orders by adding your fingerprint to your user management section in your smartphone.
