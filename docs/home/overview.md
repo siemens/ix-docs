@@ -16,7 +16,7 @@ import './card-with-icon.css';
 
 Our Figma library contains all tokens, components and blueprints ready for app design.
 
-- **Access:** The primary library is maintained in the Siemens AG Global Figma account. Siemens employees with a Figma license can search for "iX Design System".
+- **Access:** The primary library is maintained in the [Siemens AG Global Figma account](https://siemens-ix.code.siemens.io/ix-brand-theme/). Siemens employees with a Figma license can search for "iX Design System".
 - **Guest access and classic theme:** Guest access and the classic (open-source) library are available upon request — please [contact us](support/contact-us).
 - **Brand and variables:** The library includes Siemens brand assets and Figma variables for easy theming. See [Designing with themes](../styles/theming/usage-designers.md) for details.
 
