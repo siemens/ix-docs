@@ -177,7 +177,7 @@ We recommend to visually review your changes. Ensure that `subtle-*` variants ar
 ### ix-flip-tile
 
 - Renamed `state` to `variant`.
-- Renamed `FlipTileState` to `FlipTileVariant`
+- Renamed `FlipTileState` to `FlipTileVariant`.
 
 ### ix-message-bar
 
