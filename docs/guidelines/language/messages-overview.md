@@ -1,14 +1,4 @@
 
----
-sidebar_position: 7
-sidebar_label: Messages
-title: Messages overview
-doc-type: 'banner'
-component-tabs: ['']
-no_single_tab: true
-description: 'Explore best practices for writing main menu functions to ensure intuitive navigation. This section provides tips on how to label and organize menu items so users can easily find what they need.'
----
-
 
 # Messages overview
 
