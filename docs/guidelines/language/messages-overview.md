@@ -1,4 +1,15 @@
 
+---
+sidebar_position: 7
+sidebar_label: Messages
+title: Messages overview
+doc-type: 'banner'
+component-tabs: ['']
+no_single_tab: true
+description: 'Explore best practices for writing main menu functions to ensure intuitive navigation. This section provides tips on how to label and organize menu items so users can easily find what they need.'
+---
+
+
 # Messages overview
 
 The ability to design effective messages is essential for intuitive, user-friendly interfaces that inform and support users. This page explains general UX writing rules and how to choose the right message type for your needs.
@@ -9,11 +20,11 @@ First define your use case and message type from the list below, then use this o
 
 | Message type                       | Usage                                                                                                                              | Best practice example                                                                                                                            |
 | :--------------------------------- | :--------------------------------------------------------------------------------------------------------------------------------- | :----------------------------------------------------------------------------------------------------------------------------------------------- |
-| Error messages                     | Notify users of operational issues that have already happened and require their immediate action to resolve.                       | Heading: No data received<br>Description: Unable to receive data as sensor is inactive.<br>Instructions: Check sensor                           |
-| Warning messages                   | Alert users to a potential problem or risk. Advises caution or suggests different actions to prevent unwanted future consequences. | Heading: Temperature approaching threshold<br>Description: Temperature in Zone 3 approaching 30° threshold.<br>Instructions: Check zone         |
+| Error messages                     | Notify users of operational issues that have already happened and require their immediate action to resolve.                       | Heading: No data received<br/>Description: Unable to receive data as sensor is inactive.<br/>Instructions: Check sensor                           |
+| Warning messages                   | Alert users to a potential problem or risk. Advises caution or suggests different actions to prevent unwanted future consequences. | Heading: Temperature approaching threshold<br/>Description: Temperature in Zone 3 approaching 30° threshold.<br/>Instructions: Check zone         |
 | Non-critical information messages  | Inform users about general information. Often no action is required.                                                               | System backup completed at 21:00 CET.                                                                                                            |
-| Empty-state messages               | Tell users the empty space is intentional, i.e. not an error, and how it can be filled.                                            | Heading: No zones created<br>Description: Create zones to display on dashboard.<br>Button: Create zone                                           |
-| Toast messages                     | Give short and often quickly disappearing feedback to a user action.                                                               | Heading: Asset deleted<br>Description: Valve 4a/203/22                                                                                           |
+| Empty-state messages               | Tell users the empty space is intentional, i.e. not an error, and how it can be filled.                                            | Heading: No zones created<br/>Description: Create zones to display on dashboard.<br/>Button: Create zone                                           |
+| Toast messages                     | Give short and often quickly disappearing feedback to a user action.                                                               | Heading: Asset deleted<br/>Description: Valve 4a/203/22                                                                                           |
 | Tooltips                           | Provide brief additional information about the tool with contextual help. Answer the question, “What is this?”                     | Shows machine activity and operator actions.                                                                                                     |
 | Infotips                           | Provide more detailed explanations or guidance regarding user actions. Answer the question, “Why is this here and what does it do?” | Hover over icons or labels to see more details about their function or status.                                                                   |
 | Time-related messages | Provide specific timeframes with actionable guidance.                                                                              | System maintenance scheduled for 22 August, 02:00–04:00 CEST.                                                                                    |
