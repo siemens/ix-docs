@@ -1,3 +1,12 @@
+---
+sidebar_position: 7
+sidebar_label: Messages
+title: Overview
+doc-type: 'banner'
+components-tabs: ['']
+no_single_tab: true
+description: 'Explore the messages section for writing all types of messages including error messages, warnings and toasts.'
+---
 
 
 # Messages overview
