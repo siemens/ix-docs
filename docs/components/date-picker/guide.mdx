@@ -1,0 +1,72 @@
+---
+doc-type: 'tab-item'
+---
+
+# Date picker - Usage
+
+Date pickers provide a versatile calendar that can be used as a standalone element or within a dropdown for date input, offering a seamless way to select dates.
+
+![Date picker anatomy](https://www.figma.com/design/wEptRgAezDU1z80Cn3eZ0o/iX-Documentation-illustrations?node-id=XXXX-XXXX&t=XXXXXXXXXXXXXXXX-4)
+
+1. Date picker container
+2. Month and year header with navigation
+3. Weekday labels
+4. Calendar days
+5. Selected date or date range
+6. Confirm [button](../button)
+
+## Options
+
+- **Value**: The selected date value. In range mode, both start and end dates can be defined.
+- **Single selection**: By default, date pickers support range selection. Enable single selection mode when only one date needs to be selected.
+- **Format**: Define the date format using tokens (e.g., 'yyyy/LL/dd'). This determines how dates are displayed and returned by the component.
+- **Locale**: Set the locale identifier (e.g., 'en' or 'de') to translate weekday and month labels. The locale also determines the default order of weekdays based on regional conventions.
+- **Week start**: Define which day the week starts on, based on the locale's weekdays array. This allows customization beyond the default locale settings.
+- **Week numbers**: Show week numbers on the left side of the calendar when needed for reference.
+- **Min and max dates**: Restrict the selectable date range by defining the earliest and latest dates users can choose.
+- **Corners**: By default, date pickers show rounded corners to be consistent with the [dropdown](../dropdown). Use straight, left or right corners to combine with other components.
+- **Button text**: Customize the text of the confirmation button to match your application's language and context.
+
+## Behavior in context
+
+- **Range selection**: When in range mode, users select a start date first, then an end date. The period between both dates is visually highlighted to provide clear feedback.
+- **Month navigation**: Users can navigate between months using the previous and next buttons in the header. This allows quick access to dates outside the current view.
+- **Interaction**: Users can navigate through the date picker using the keyboard. The following keys are supported:
+  - **Tab**: Navigate between areas of the date picker (header, body, footer).
+  - **Arrow keys**: Move through dates in the calendar.
+  - **Enter or click**: Select the highlighted date.
+  - **Escape**: Close the date picker when used in a dropdown.
+
+## States
+
+Individual calendar dates within a date picker have multiple states: Default, hover, active, disabled, selected and focused. Dates outside the allowed range appear in a disabled state and cannot be selected.
+
+![Date picker states](https://www.figma.com/design/wEptRgAezDU1z80Cn3eZ0o/iX-Documentation-illustrations?node-id=XXXX-XXXX&t=XXXXXXXXXXXXXXXX-4)
+
+## Dos and Don'ts
+
+<div class="dos-and-donts" markdown>
+<div class="dos" markdown>
+
+- Do use date pickers to ensure accurate date selection
+- Do provide clear labels when the date picker is used in a form context
+- Do ensure the date picker is accessible via keyboard navigation
+- Do use range selection for date periods like booking dates or report timeframes
+- Do set min and max dates to prevent invalid date selections
+
+</div>
+<div class="donts" markdown>
+
+- Don't use date pickers for dates that are far in the past or future, use [date inputs](../input) instead
+- Don't clutter the date picker interface with unnecessary options
+- Don't forget to handle empty or invalid date states in your validation logic
+
+</div>
+</div>
+
+## Related
+
+- [Date input](../input)
+- [Date time picker](../date-time-picker)
+- [Time picker](../time-picker)
+- [Dropdown](../dropdown)
