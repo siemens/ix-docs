@@ -10,7 +10,7 @@ description: "Icons are graphical representations of terms, functions or objects
 ---
 
 import IconTable from '@site/src/components/IconTable';
-import { IconExamplesClarity, IconExamplesStatus } from '@site/src/components/IconTable';
+import { IconExamplesClarity, IconExamplesStatus, IconExamplesMenu } from '@site/src/components/IconTable';
 
 #
 
@@ -23,6 +23,24 @@ import { IconExamplesClarity, IconExamplesStatus } from '@site/src/components/I
 Examples
 
 <IconTable data={IconExamplesClarity}></IconTable>
+
+## Menu icons
+
+We use distinct icons to signal different types of menus.
+
+<IconTable data={IconExamplesMenu}></IconTable>
+
+The illustration demonstrates the standard layout, featuring the apps icon in the header and an open context menu for a list item.
+
+![Menu icons](https://www.figma.com/design/wEptRgAezDU1z80Cn3eZ0o/iX-Documentation-illustrations?node-id=7420-16011&t=HOxEXsgRcyJFe982-4)
+
+Upon resizing to a smaller screen, the layout adapts:
+- the left navigation collapses into a menu icon in the header
+- the apps icon then relocates into this expandable menu
+- actions previously visible in the header are now accessible via a dropdown, indicated by the more menu icon
+
+![Menu icons small screens](https://www.figma.com/design/wEptRgAezDU1z80Cn3eZ0o/iX-Documentation-illustrations?node-id=7428-36686&t=HOxEXsgRcyJFe982-4)
+
 
 ## Status icons
 

@@ -11,11 +11,15 @@ import { IxIcon } from "@siemens/ix-react";
 import styles from "./styles.module.css";
 import {
   iconAlarm,
+  iconAppMenu,
+  iconApps,
   iconCogwheel,
+  iconContextMenu,
   iconDownload,
   iconError,
   iconHome,
   iconInfo,
+  iconMoreMenu,
   iconPen,
   iconSearch,
   iconSuccess,
@@ -127,5 +131,28 @@ export const IconExamplesStatus = [
     color: "color-info",
     name: "info",
     description: "Use for info states",
+  },
+];
+
+export const IconExamplesMenu = [
+  {
+    icon: iconAppMenu,
+    name: "app-menu",
+    description: "Use for main navigation",
+  },
+  {
+    icon: iconApps,
+    name: "apps",
+    description: "Use for app switcher",
+  },
+  {
+    icon: iconContextMenu,
+    name: "context-menu",
+    description: "Use for item-specific actions, e.g. list item",
+  },
+  {
+    icon: iconMoreMenu,
+    name: "more-menu",
+    description: "Use for additional options, e.g. in toolbars",
   },
 ];
