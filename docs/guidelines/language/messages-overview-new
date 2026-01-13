@@ -1,3 +1,13 @@
+---
+sidebar_position: 7
+sidebar_label: Best practices
+title: Best practices
+doc-type: 'banner'
+component-tabs: ['']
+no_single_tab: true
+description: 'Familiarize yourself with general best practices for UX writing to maintain consistency and clarity across all your content. This section offers overarching guidelines that apply to various aspects of UX writing.'
+---
+
 # Messages overview
 
 The ability to design effective messages is essential for intuitive, user-friendly interfaces that inform and support users. This page explains general UX writing rules and how to choose the right message type for your needs.
@@ -17,9 +27,10 @@ First define your use case and message type from the list below, then use this o
 | Infotips                           | Provide more detailed explanations or guidance regarding user actions. Answer the question, “Why is this here and what does it do?” | Hover over icons or labels to see more details about their function or status.                                                                   |
 | Time-related messages | Provide specific timeframes with actionable guidance.                                                                              | System maintenance scheduled for 22 August, 02:00–04:00 CEST.                                                                                    |
 
-Use sentence casing for all message descriptions (except toast messages) and add full stops.r<div class="dos-and-donts" markdown>
+Use sentence casing for all message descriptions (except toast messages) and add full stops.  
+<div class="dos-and-donts" markdown>
  <div class="dos" markdown>
-  - Create zones from your dashboard.  
+  - Create zones from your dashboard.
   - You have no new notifications.
  </div>
  <div class="donts" markdown>
