@@ -1,71 +1,102 @@
 ---
 doc-type: 'tab-item'
+formReady: true
 ---
 
 # Date time input - Usage
 
-Date pickers provide a versatile calendar that can be used as a standalone element or within a dropdown for date input, offering a seamless way to select dates.
+The date time input component is typically used in forms, filters and scheduling tools to ensure consistent and accurate date and time entries. By standardizing date time input, it helps maintain data integrity and improves the user experience in applications requiring precise date and time information.
 
-![Date picker anatomy](https://www.figma.com/design/wEptRgAezDU1z80Cn3eZ0o/iX-Documentation-illustrations?node-id=7436-1700&t=BStIEA03mmCLaHAL-4)
+![Date time input overview](https://www.figma.com/design/wEptRgAezDU1z80Cn3eZ0o/iX-Documentation-illustrations?node-id=7441-86110&t=BStIEA03mmCLaHAL-4)
 
-1. Month and year navigation
-2. Weekday labels
-3. Calendar weeks
-4. Selected date or date range
-5. Confirm [button](../button)
+1. Label
+2. Required field indicator
+3. Current date and time value
+4. Calendar [icon button](../icon-button)
+5. [Input field](../input)
+6. [Date time picker](../date-time-picker)
+7. Month and year navigation
+8. Weekday labels
+9. Selected date or date range
+10. Time picker
+11. Confirm [button](../button)
 
 ## Options
 
-- **Value**: The selected date value. In range mode, both start and end dates can be defined.
-- **Single selection**: By default, date pickers support range selection. Enable single selection mode when only one date needs to be selected.
-- **Format**: Define the date format using tokens (e.g., 'yyyy/LL/dd'). This determines how dates are displayed and returned by the component.
+- **Label**: See [form field](../forms-field).
+- **Required**: See [form field](../forms-field).
+- **Helper text**: See [form field](../forms-field).
+- **Feedback text**: See [form field](../forms-field).
+- **Show text as tooltip**: See [form field](../forms-field).
+- **Placeholder**: See [form field](../forms-field). We typically use a placeholder to show an example date time format to assist users when the field is empty.
+- **Text alignment**: See [form field](../forms-field) (by default at start).
+- **Error message**: Feedback text when date or time is not parsable. We typically use this to inform users that the entered date time format is incorrect and guide them to enter a valid date and time.
+- **Date format**: Specify the date format, default 'yyyy/LL/dd' to ensure that dates are entered in a consistent and recognizable format.
+- **Time format**: Specify the time format to ensure that times are entered in a consistent and recognizable format. Default is 'TT' which is the localized 24-hour time with seconds (read more in the [UX writing guides](./../../guidelines/language/writing-style-guide-getting-started)).
 - **Locale**: Set the locale identifier (e.g., 'en' or 'de') to translate weekday and month labels. The locale also determines the default order of weekdays based on regional conventions.
-- **Week start**: Define which day the week starts on, based on the locale's weekdays array. This allows customization beyond the default locale settings.
-- **Week numbers**: Show week numbers on the left side of the calendar when needed for reference.
+- **Single selection**: By default, date time pickers support range selection. Enable single selection mode when only one date and time needs to be selected.
+- **Range selection**: Select both start and end dates with a single time value.
 - **Min and max dates**: Restrict the selectable date range by defining the earliest and latest dates users can choose.
-- **Corners**: By default, date pickers show rounded corners to be consistent with the [dropdown](../dropdown). Use straight, left or right corners to combine with other components.
-- **Button text**: Customize the text of the confirmation button to match your application's language and context.
+- **Week numbers**: Show week numbers on the left side of the calendar when needed for reference.
+- **Time reference**: Show time reference input for AM/PM notation when using 12-hour time format.
+- **Date time picker**:
+  - **Corners**: See [date time picker](../date-time-picker).
+  - **Button text**: Customize the text of the confirmation button to match your application's language and context.
+  - **Time label**: Customize the label above the time picker (default: 'Time') to match your application's language.
 
 ## Behavior in context
 
-- **Range selection**: When in range mode, users select a start date first, then an end date. The period between both dates is visually highlighted to provide clear feedback.
-- **Month navigation**: Users can navigate between months using the previous and next buttons in the header. This allows quick access to dates outside the current view.
-- **Interaction**: Users can navigate through the date picker using the keyboard. The following keys are supported:
-  - **Tab**: Navigate between areas of the date picker (header, body, footer).
-  - **Arrow keys**: Move through dates in the calendar.
-  - **Enter or click**: Select the highlighted date.
-  - **Escape**: Close the date picker when used in a dropdown.
+- **Interaction**:
+  - Click or focus opens the date time picker.
+  - Use mouse or keyboard arrows to navigate to the desired date and adjust the time.
+  - Confirm closes the date time picker and applies the selection.
+  - Typing a valid date and time into input field closes the picker.
+  - Escape key closes the date time picker.
+- **Validation**:
+  - Use feedback text for validation types valid, info, warning and invalid.
+  - Invalid feedback is automatically provided if the entered date or time is not parsable.
+  - Refer to the [validation](../forms-validation) chapter for detailed guidelines.
+- **Overflow**: The input field should be wide enough to display the full date and time without truncation.
+- **Alignment**: Date time inputs are always aligned to the left.
+- **Combined selection**: Users select both a date and a time before confirming their choice. The selection is only finalized when the confirmation button is clicked.
 
 ## States
 
-Individual calendar dates within a date picker have five states: Default, hover, active, disabled and focused. Dates outside the allowed range appear in a disabled state and cannot be selected.
+Date time input has five states: Default, hover, disabled, read-only and focused.
 
-![Date picker states](https://www.figma.com/design/wEptRgAezDU1z80Cn3eZ0o/iX-Documentation-illustrations?node-id=7436-1708&t=BStIEA03mmCLaHAL-4)
+![Date time input states](https://www.figma.com/design/wEptRgAezDU1z80Cn3eZ0o/iX-Documentation-illustrations?node-id=7441-86123&t=BStIEA03mmCLaHAL-4)
 
 ## Dos and Don'ts
 
 <div class="dos-and-donts" markdown>
 <div class="dos" markdown>
 
-- Do use date pickers to ensure accurate date selection
-- Do provide clear labels when the date picker is used in a form context
-- Do ensure the date picker is accessible via keyboard navigation
-- Do use range selection for date periods like booking dates or report timeframes
-- Do set min and max dates to prevent invalid date selections
+- Do use consistent date and time formats throughout the application to avoid confusion
+- Do provide clear instructions on the expected format, such as "Enter the date time in yyyy/mm/dd HH:mm format"
+- Do ensure the date time picker is accessible via keyboard
+- Do consider localization to adapt date and time formats to local conventions
+- Do use separate inputs for start and end date times when defining time ranges
 
 </div>
 <div class="donts" markdown>
 
-- Don't use date pickers for dates that are far in the past or future, use [date inputs](../input) instead
-- Don't clutter the date picker interface with unnecessary options
-- Don't forget to handle empty or invalid date states in your validation logic
+- Don't use date time inputs when only a date or only a time is needed, use [date input](../input-date) or [time input](../input-time) instead
+- Don't use ambiguous formats without providing clear context or helper text
+- Don't allow free text without validation or formatting guidance
+- Don't forget to validate both date and time inputs in your form logic
 
 </div>
 </div>
 
 ## Related
 
-- [Date input](../input)
+- [Date input](../input-date)
+- [Time input](../input-time)
 - [Date time picker](../date-time-picker)
+- [Date picker](../date-picker)
 - [Time picker](../time-picker)
+- [Forms field](../forms-field)
+- [Validation](../forms-validation)
 - [Dropdown](../dropdown)
+- [Input](../input)
+- [Select](../select)

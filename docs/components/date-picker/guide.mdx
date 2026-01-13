@@ -18,13 +18,13 @@ Date pickers provide a versatile calendar that can be used as a standalone eleme
 
 - **Value**: The selected date value. In range mode, both start and end dates can be defined.
 - **Single selection**: By default, date pickers support range selection. Enable single selection mode when only one date needs to be selected.
-- **Format**: Define the date format using tokens (e.g., 'yyyy/LL/dd'). This determines how dates are displayed and returned by the component.
-- **Locale**: Set the locale identifier (e.g., 'en' or 'de') to translate weekday and month labels. The locale also determines the default order of weekdays based on regional conventions.
-- **Week start**: Define which day the week starts on, based on the locale's weekdays array. This allows customization beyond the default locale settings.
+- **Format**: Define the date format using tokens (e.g. 'yyyy/LL/dd'). This determines how dates are displayed and returned by the component.
+- **Locale**: Set the locale identifier (e.g. 'en' or 'de') to translate weekday and month labels and the default week start.
+- **Week start**: Define which day the week starts on, based on the locale’s weekdays array. This allows customization beyond the default locale settings.
 - **Week numbers**: Show week numbers on the left side of the calendar when needed for reference.
 - **Min and max dates**: Restrict the selectable date range by defining the earliest and latest dates users can choose.
 - **Corners**: By default, date pickers show rounded corners to be consistent with the [dropdown](../dropdown). Use straight, left or right corners to combine with other components.
-- **Button text**: Customize the text of the confirmation button to match your application's language and context.
+- **Button text**: Customize the text of the confirmation button to match your application’s language and context.
 
 ## Behavior in context
 
@@ -42,7 +42,7 @@ Individual calendar dates within a date picker have five states: Default, hover,
 
 ![Date picker states](https://www.figma.com/design/wEptRgAezDU1z80Cn3eZ0o/iX-Documentation-illustrations?node-id=7436-1708&t=BStIEA03mmCLaHAL-4)
 
-## Dos and Don'ts
+## Dos and Don’ts
 
 <div class="dos-and-donts" markdown>
 <div class="dos" markdown>
@@ -56,9 +56,9 @@ Individual calendar dates within a date picker have five states: Default, hover,
 </div>
 <div class="donts" markdown>
 
-- Don't use date pickers for dates that are far in the past or future, use [date inputs](../input) instead
-- Don't clutter the date picker interface with unnecessary options
-- Don't forget to handle empty or invalid date states in your validation logic
+- Don’t use date pickers for dates that are far in the past or future, use [date inputs](../input) instead
+- Don’t clutter the date picker interface with unnecessary options
+- Don’t forget to handle empty or invalid date states in your validation logic
 
 </div>
 </div>
