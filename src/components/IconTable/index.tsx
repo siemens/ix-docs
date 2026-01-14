@@ -16,6 +16,7 @@ import {
   iconCogwheel,
   iconContextMenu,
   iconDownload,
+  iconDragGripper,
   iconError,
   iconHome,
   iconInfo,
@@ -154,5 +155,10 @@ export const IconExamplesMenu = [
     icon: iconMoreMenu,
     name: "more-menu",
     description: "Use for additional options, e.g. in toolbars",
+  },
+  {
+    icon: iconDragGripper,
+    name: "drag-gripper",
+    description: "Not a menu icon, use for drag-and-drop interactions to reorder items",
   },
 ];
