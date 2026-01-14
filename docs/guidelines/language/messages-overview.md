@@ -5,13 +5,13 @@ title: Overview
 doc-type: 'banner'
 components-tabs: ['']
 no_single_tab: true
-description: 'Explore the messages section for writing all types of messages including error messages, warnings and toasts.'
+description: 'The ability to design effective messages is essential for intuitive, user-friendly interfaces that inform and support users. This page explains general UX writing rules and how to choose the right message type for your needs.'
 ---
 
 
 # 
 
-The ability to design effective messages is essential for intuitive, user-friendly interfaces that inform and support users. This page explains general UX writing rules and how to choose the right message type for your needs.
+
 
 ## General rules
 
