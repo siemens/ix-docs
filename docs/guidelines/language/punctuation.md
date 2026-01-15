@@ -8,8 +8,6 @@ no_single_tab: true
 description: 'Master the use of punctuation to improve the readability and comprehension of your text. This section covers the rules and best practices for using punctuation marks to ensure your writing is clear and precise.'
 ---
 
-import DoAndDont from '@site/src/components/DoAndDont';
-
 #
 
 ## Minimalist punctuation
@@ -87,34 +85,38 @@ Always consider whether necessary
 
 - Numbers: Use No. as an abbreviation for number, no spacing between abbreviated No. and number: No.8
 
-<DoAndDont>
-  <DoAndDont.Do>
-    <DoAndDont.Item>11am</DoAndDont.Item>
-    <DoAndDont.Item>Monday, January 12, 2021</DoAndDont.Item>
-    <DoAndDont.Item>€999.50</DoAndDont.Item>
-    <DoAndDont.Item>€2.5 million</DoAndDont.Item>
-    <DoAndDont.Item>$400,456.50</DoAndDont.Item>
-    <DoAndDont.Item>£320</DoAndDont.Item>
-    <DoAndDont.Item>30 mm</DoAndDont.Item>
-    <DoAndDont.Item>10 oz</DoAndDont.Item>
-    <DoAndDont.Item>10-40%</DoAndDont.Item>
-    <DoAndDont.Item>No.7</DoAndDont.Item>
-    <DoAndDont.Item>Number 7</DoAndDont.Item>
-  </DoAndDont.Do>
-  <DoAndDont.Dont>
-    <DoAndDont.Item>11 a.m.</DoAndDont.Item>
-    <DoAndDont.Item>Monday, 12 January 2021</DoAndDont.Item>
-    <DoAndDont.Item>€999,50</DoAndDont.Item>
-    <DoAndDont.Item>€2,5 million</DoAndDont.Item>
-    <DoAndDont.Item>$400.456,50</DoAndDont.Item>
-    <DoAndDont.Item>320£</DoAndDont.Item>
-    <DoAndDont.Item>30 mms</DoAndDont.Item>
-    <DoAndDont.Item>10 oz.</DoAndDont.Item>
-    <DoAndDont.Item>10–40%</DoAndDont.Item>
-    <DoAndDont.Item>#7</DoAndDont.Item>
-    <DoAndDont.Item>Num 7</DoAndDont.Item>
-  </DoAndDont.Dont>
-</DoAndDont>
+<div class="dos-and-donts" markdown>
+<div class="dos" markdown>
+
+- 11am
+- Monday, January 12, 2021
+- €999.50
+- €2.5 million
+- $400,456.50
+- £320
+- 30 mm
+- 10 oz
+- 10-40%
+- No.7
+- Number 7
+
+</div>
+<div class="donts" markdown>
+
+- 11 a.m.
+- Monday, 12 January 2021
+- €999,50
+- €2,5 million
+- $400.456,50
+- 320£
+- 30 mms
+- 10 oz.
+- 10–40%
+- #7
+- Num 7
+
+</div>
+</div>
 
 ## Spacing
 
@@ -128,20 +130,24 @@ Always consider whether necessary
 
 - Add a space before unit of measurement
 
-<DoAndDont>
-  <DoAndDont.Do>
-    <DoAndDont.Item>50%</DoAndDont.Item>
-    <DoAndDont.Item>11am</DoAndDont.Item>
-    <DoAndDont.Item>Tuesday: no data</DoAndDont.Item>
-    <DoAndDont.Item>Browse…</DoAndDont.Item>
-  </DoAndDont.Do>
-  <DoAndDont.Dont>
-    <DoAndDont.Item>50 %</DoAndDont.Item>
-    <DoAndDont.Item>11 am</DoAndDont.Item>
-    <DoAndDont.Item>Tuesday: no data</DoAndDont.Item>
-    <DoAndDont.Item>Browse …</DoAndDont.Item>
-  </DoAndDont.Dont>
-</DoAndDont>
+<div class="dos-and-donts" markdown>
+<div class="dos" markdown>
+
+- 50%
+- 11am
+- Tuesday: no data
+- Browse…
+
+</div>
+<div class="donts" markdown>
+
+- 50 %
+- 11 am
+- Tuesday: no data
+- Browse …
+
+</div>
+</div>
 
 ## Lists
 
@@ -155,25 +161,25 @@ Always consider whether necessary
 
 - Make lists parallel, i.e. all items / bullets have the same look, length, feel, punctuation, capitalization
 
-<DoAndDont>
-  <DoAndDont.Do>
-    <DoAndDont.Item>
-      Activate comments within your smartphone to
-      <ul>
-        <li> Write comments</li>
-        <li> Respond to comments</li>
-        <li> Approve work orders</li>
-      </ul>
-    </DoAndDont.Item>
-  </DoAndDont.Do>
-  <DoAndDont.Dont>
-    <DoAndDont.Item>
-      Activate comments within your smartphone to
-      <ul>
-        <li>Write comments</li>
-        <li>Respond to comments</li>
-        <li>Approve work orders by adding your fingerprint to your user management section in your smartphone.</li>
-      </ul>
-    </DoAndDont.Item>
-  </DoAndDont.Dont>
-</DoAndDont>
+<div class="dos-and-donts" markdown>
+
+<div class="dos" markdown>
+
+  #### Activate comments within your smartphone to
+
+  - Write comments
+  - Respond to comments
+  - Approve work orders
+
+</div>
+
+<div class="donts" markdown>
+
+  #### Activate comments within your smartphone to
+
+  - Write comments
+  - Respond to comments
+  - Approve work orders by adding your fingerprint to your user management section in your smartphone.
+
+</div>
+</div>

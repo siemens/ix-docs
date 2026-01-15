@@ -8,8 +8,6 @@ no_single_tab: true
 description: 'Get tips for naming common app functions clearly and effectively. This subchapter focuses on how to describe frequent actions and features in a way that users can quickly understand and use.'
 ---
 
-import DoAndDont from '@site/src/components/DoAndDont';
-
 #
 
 ## Overview
@@ -20,13 +18,15 @@ import DoAndDont from '@site/src/components/DoAndDont';
 
 - Cockpit
 
-<DoAndDont>
-  <DoAndDont.Dont>
-    <DoAndDont.Item>Console</DoAndDont.Item>
-    <DoAndDont.Item>Dash</DoAndDont.Item>
-    <DoAndDont.Item>Control panel</DoAndDont.Item>
-  </DoAndDont.Dont>
-</DoAndDont>
+<div class="dos-and-donts" markdown>
+<div class="donts" markdown>
+
+- Console
+- Dash
+- Control panel
+
+</div>
+</div>
 
 ## Analytics
 
@@ -34,12 +34,14 @@ import DoAndDont from '@site/src/components/DoAndDont';
 
 - Anomaly detection
 
-<DoAndDont>
-  <DoAndDont.Dont>
-    <DoAndDont.Item>Assessment</DoAndDont.Item>
-    <DoAndDont.Item>Examination</DoAndDont.Item>
-  </DoAndDont.Dont>
-</DoAndDont>
+<div class="dos-and-donts" markdown>
+<div class="donts" markdown>
+
+- Assessment
+- Examination
+
+</div>
+</div>
 
 ## Monitoring and scheduling
 
@@ -51,11 +53,13 @@ import DoAndDont from '@site/src/components/DoAndDont';
 
 - Remove from watchlist
 
-<DoAndDont>
-  <DoAndDont.Dont>
-    <DoAndDont.Item>Watch list</DoAndDont.Item>
-  </DoAndDont.Dont>
-</DoAndDont>
+<div class="dos-and-donts" markdown>
+<div class="donts" markdown>
+
+- Watch list
+
+</div>
+</div>
 
 ## Detail view
 
@@ -65,12 +69,14 @@ import DoAndDont from '@site/src/components/DoAndDont';
 
 - Details
 
-<DoAndDont>
-  <DoAndDont.Dont>
-    <DoAndDont.Item>Facts</DoAndDont.Item>
-    <DoAndDont.Item>Specifics</DoAndDont.Item>
-  </DoAndDont.Dont>
-</DoAndDont>
+<div class="dos-and-donts" markdown>
+<div class="donts" markdown>
+
+- Facts
+- Specifics
+
+</div>
+</div>
 
 ### Asset properties
 
@@ -114,11 +120,13 @@ import DoAndDont from '@site/src/components/DoAndDont';
 
 - Drag files here or select files
 
-<DoAndDont>
-  <DoAndDont.Dont>
-    <DoAndDont.Item>Drag and drop here or browse</DoAndDont.Item>
-  </DoAndDont.Dont>
-</DoAndDont>
+<div class="dos-and-donts" markdown>
+<div class="donts" markdown>
+
+- Drag and drop here or browse
+
+</div>
+</div>
 
 ## Comments
 
@@ -130,11 +138,13 @@ import DoAndDont from '@site/src/components/DoAndDont';
 
 - Write your comments here
 
-<DoAndDont>
-  <DoAndDont.Dont>
-    <DoAndDont.Item>Write a comment</DoAndDont.Item>
-  </DoAndDont.Dont>
-</DoAndDont>
+<div class="dos-and-donts" markdown>
+<div class="donts" markdown>
+
+- Write a comment
+
+</div>
+</div>
 
 ## Grid and list actions
 
@@ -158,13 +168,15 @@ import DoAndDont from '@site/src/components/DoAndDont';
 
 - Notify me when X occurs
 
-<DoAndDont>
-  <DoAndDont.Dont>
-    <DoAndDont.Item>Error</DoAndDont.Item>
-    <DoAndDont.Item>Issue</DoAndDont.Item>
-    <DoAndDont.Item>Problem</DoAndDont.Item>
-  </DoAndDont.Dont>
-</DoAndDont>
+<div class="dos-and-donts" markdown>
+<div class="donts" markdown>
+
+- Error
+- Issue
+- Problem
+
+</div>
+</div>
 
 ## Event types
 
@@ -192,14 +204,16 @@ import DoAndDont from '@site/src/components/DoAndDont';
 
 - Detected
 
-<DoAndDont>
-  <DoAndDont.Dont>
-    <DoAndDont.Item>Unacklowedged</DoAndDont.Item>
-    <DoAndDont.Item>Unack.</DoAndDont.Item>
-    <DoAndDont.Item>Unackn.</DoAndDont.Item>
-    <DoAndDont.Item>Unacknl.</DoAndDont.Item>
-  </DoAndDont.Dont>
-</DoAndDont>
+<div class="dos-and-donts" markdown>
+<div class="donts" markdown>
+
+- Unacklowedged
+- Unack.
+- Unackn.
+- Unacknl.
+
+</div>
+</div>
 
 ## Event actions
 
