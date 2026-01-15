@@ -1,0 +1,200 @@
+---
+sidebar_position: 5
+sidebar_label: Toast messages
+title: Toast messages
+doc-type: 'banner'
+component-tabs: ['']
+no_single_tab: true
+description: Toast messages briefly inform users about the outcome of an action. Typically displayed near the bottom or top of the interface, they often close automatically without requiring user interaction.
+---
+
+#
+
+## Best practice template
+
+This section focuses on messages that give feedback to user actions and often automatically close. For system event messages with different levels of criticality, please see the status and event section of this guide.
+
+Although always short, toast messages vary in length and complexity:
+
+* One-line messages briefly inform users about the outcome of their action.
+* Two-line messages have a heading and description to provide more context or details.
+* Three-line messages include a heading, a description, and actions.
+
+| Anatomy | Content | Structure and examples |
+|---------|---------|------------------------|
+| **1. Heading** | Tell users the exact outcome of their action (for system toast messages, see the status and event section). | Noun + simple past tense verb:<br>Data downloaded</br><br>Asset deleted</br><br>Device deleted</br><br>Connection restored</br><br/>Scan cancelled<br/><br>Asset not offboarded</br> |
+| **2. Description** | Provide additional, relevant information. | Heading: Maintenance scheduled<br/>Description: Exchange filer in room 500 on August 10.<br/><br/>Heading: File 4a.ext not uploaded<br/>Description: File 4a.ext exceeds 25 MB |
+| **3. Action** | Give users the ability to undo the action or provide a link to further information. | Action verb + noun:<br/><br/>Heading: Asset deleted<br/>Description: Asset 4a_203/22<br/>Action: Undo<br/><br/>Heading: Scan scheduled<br/>Description: Scan gateway ANC_GW February 12<br/>Action: Open schedule<br/><br/>Heading: Asset not onboarded<br/>Description: Failed to reach Asset 4a<br/>Action: Try again |
+
+## General rules
+
+### Use simple past tense verbs to state what happened.
+
+<div class="dos-and-donts" markdown>
+<div class="dos" markdown>
+Assets uploaded
+</div>
+</div>
+
+<div class="dos-and-donts" markdown>
+<div class="donts" markdown>
+Assets have been uploaded
+</div>
+</div>
+
+### Use "not" or "failed to" with the verb to signal failure.
+
+<div class="dos-and-donts" markdown>
+<div class="dos" markdown>
+File not imported
+</div>
+</div>
+
+<div class="dos-and-donts" markdown>
+<div class="dos" markdown>
+Failed to import file
+</div>
+</div>
+
+<div class="dos-and-donts" markdown>
+<div class="donts" markdown>
+File type not recognized
+</div>
+</div>
+
+### Use present progressive verbs for background or ongoing actions.
+
+<div class="dos-and-donts" markdown>
+<div class="dos" markdown>
+Update application → Updating application… → Application updated
+</div>
+</div>
+
+### Use the same verbs and nouns from the dialog and button that initiated the toast message.
+
+<div class="dos-and-donts" markdown>
+<div class="dos" markdown>
+Upload file → File uploaded
+</div>
+</div>
+
+<div class="dos-and-donts" markdown>
+<div class="donts" markdown>
+Upload file → File added
+</div>
+</div>
+
+<div class="dos-and-donts" markdown>
+<div class="dos" markdown>
+Connect → Gateway connected
+</div>
+</div>
+
+<div class="dos-and-donts" markdown>
+<div class="donts" markdown>
+Connect → Gateway established
+</div>
+</div>
+
+### Avoid punctuation as this takes up extra space and adds to visual clutter.
+
+<div class="dos-and-donts" markdown>
+<div class="dos" markdown>
+Scan finished
+</div>
+</div>
+
+<div class="dos-and-donts" markdown>
+<div class="donts" markdown>
+Scan finished.
+</div>
+</div>
+
+<div class="dos-and-donts" markdown>
+<div class="donts" markdown>
+Scan not finished!
+</div>
+</div>
+
+### Avoid adding additional words or verbs such as "you", "your", "is" or "was".
+
+<div class="dos-and-donts" markdown>
+<div class="dos" markdown>
+Maintenance scheduled
+</div>
+</div>
+
+<div class="dos-and-donts" markdown>
+<div class="donts" markdown>
+Your maintenance was scheduled
+</div>
+</div>
+
+<div class="dos-and-donts" markdown>
+<div class="dos" markdown>
+Asset onboarded
+</div>
+</div>
+
+<div class="dos-and-donts" markdown>
+<div class="donts" markdown>
+Onboarding for asset was successfully completed
+</div>
+</div>
+
+### Avoid generic toast messages, such as "successful", "unsuccessful", "error" and "failure".
+
+<div class="dos-and-donts" markdown>
+<div class="dos" markdown>
+Connected
+</div>
+</div>
+
+<div class="dos-and-donts" markdown>
+<div class="donts" markdown>
+Successful
+</div>
+</div>
+
+<div class="dos-and-donts" markdown>
+<div class="dos" markdown>
+Failed to connect
+</div>
+</div>
+
+<div class="dos-and-donts" markdown>
+<div class="donts" markdown>
+Failed
+</div>
+</div>
+
+### Avoid using "successful" and "successfully" as this adds to the reading load and effort.
+
+<div class="dos-and-donts" markdown>
+<div class="dos" markdown>
+Connected
+</div>
+</div>
+
+<div class="dos-and-donts" markdown>
+<div class="donts" markdown>
+Connection successfully established
+</div>
+</div>
+
+<div class="dos-and-donts" markdown>
+<div class="donts" markdown>
+Connection established successfully
+</div>
+</div>
+
+## Dos and Don'ts
+
+* Do add extra time when there is an action option
+* Do use consistent wording to help users scan toast messages easier
+* Don't use full sentences or complex verb forms
+* Don't add an action unless absolutely necessary
+
+## Related
+
+
