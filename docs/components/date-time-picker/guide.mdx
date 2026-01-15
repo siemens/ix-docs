@@ -14,34 +14,32 @@ Date time pickers offer an interface for selecting both dates and times, which c
 
 ## Options
 
-- **Value**: The selected date value. In range mode, both start and end dates can be defined using the from and to properties.
-- **Single selection**: By default, date time pickers support range selection. Enable single selection mode when only one date needs to be selected.
-- **Format**: Choose the date and time format (e.g. 'yyyy/LL/dd', 'HH:mm:ss').
-- **Locale**: Set the locale identifier (e.g., 'en' or 'de') to translate weekday and month labels and the default week start.
-- **Week start**: Define which day the week starts on, based on the locale’s weekdays array. This allows customization beyond the default locale settings.
-- **Week numbers**: Show week numbers on the left side of the calendar when needed for reference.
-- **Time reference**: Show time reference input for AM/PM notation when using 12-hour time format.
-- **Min and max dates**: Restrict the selectable date range by defining the earliest and latest dates users can choose.
-- **Button text**: Customize the text of the confirmation button to match your application’s language and context.
-- **Time label**: Customize the label above the time picker (default: 'Time') to match your application’s language.
+- **Value**: See [date picker](../date-picker) and [time picker](../time-picker).
+- **Single selection**: See [date picker](../date-picker).
+- **Format**: Choose the date and time format (e.g. `yyyy/LL/dd` and `HH:mm:ss`).
+- **Min and max dates**: See [date picker](../date-picker).
+- **Date picker appearance**: See [date picker](../date-picker).
+  - **Week start**: Define which day the week starts on. By default, it will be defined based on the locale.
+  - **Week numbers**: Show calendar weeks on the left side of the calendar when needed for reference.
+- **Time picker appearance**: See [time picker](../time-picker).
+  - **Time reference**: Show time reference input for AM/PM notation when using 12-hour time format.
+  - **Header**: Customize the header of the time picker.
+- **Corners**: By default, date time pickers show rounded corners to be consistent with the [dropdown](../dropdown). Use straight, left or right corners to combine with other components.
 
 ## Behavior in context
 
 - **Combined selection**: Users select both a date and a time before confirming their choice. The selection is only finalized when the confirmation button is clicked.
-- **Range selection**: When in range mode, users select a start date first, then an end date. The period between both dates is visually highlighted to provide clear feedback. The time applies to the complete selection.
+- **Range selection**: In range mode, users select a date range with a single time value applied to both the start and end dates. For different timestamps (dates with different times) use separate date time pickers for start and end.
 - **Month navigation**: Users can navigate between months using the previous and next buttons in the header. This allows quick access to dates outside the current view.
-- **Time adjustment**: Users can modify the time using the time picker input field. The format follows the specified time format string.
 - **Interaction**: Users can navigate through the date time picker using the keyboard. The following keys are supported:
   - **Tab**: Navigate between areas of the picker (header, body, time input, footer).
-  - **Arrow keys**: Move through dates in the calendar.
-  - **Enter or click**: Select the highlighted date or confirm the selection.
-  - **Escape**: Close the date time picker when used in a dropdown.
+  - **Arrow keys**: Move through dates in the date picker and times in the time picker.
+  - **Enter or click**: Select the highlighted date or time.
+  - **Escape**: Close the date time picker when used in a dropdown. If the header dropdown for month/year selection is open, it closes first.
 
 ## States
 
-Individual calendar dates within a date time picker have five states: Default, hover, active, disabled and focused. Dates outside the allowed range appear in a disabled state and cannot be selected.
-
-![Date time picker states](https://www.figma.com/design/wEptRgAezDU1z80Cn3eZ0o/iX-Documentation-illustrations?node-id=7436-1708&t=BStIEA03mmCLaHAL-4)
+Individual calendar dates within a date time picker have five states: Default, hover, active, disabled and focused. Dates outside the allowed range appear in a disabled state and cannot be selected (see [date picker states](../date-picker#states) and [time picker states](../time-picker#states) for reference).
 
 ## Dos and Don’ts
 
@@ -49,7 +47,6 @@ Individual calendar dates within a date time picker have five states: Default, h
 <div class="dos" markdown>
 
 - Do use date time pickers when both date and time information are required
-- Do provide clear labels when the date time picker is used in a form context
 - Do ensure the date time picker is accessible via keyboard navigation
 - Do use range selection for time periods like booking appointments or scheduling events
 - Do set appropriate min and max dates to prevent invalid selections
@@ -57,7 +54,7 @@ Individual calendar dates within a date time picker have five states: Default, h
 </div>
 <div class="donts" markdown>
 
-- Don’t use date time pickers when only a date or only a time is needed, use [date picker](../date-picker) or [time picker](../time-picker) instead
+- Don’t use date time pickers when only a date or only a time is needed (use [date pickers](../date-picker) or [time pickers](../time-picker) instead)
 - Don’t forget to validate both date and time inputs in your form logic
 - Don’t use date time pickers for dates that are far in the past or future without setting appropriate min and max constraints
 - Don’t clutter the interface with unnecessary time precision when approximate times are sufficient
@@ -71,3 +68,4 @@ Individual calendar dates within a date time picker have five states: Default, h
 - [Time picker](../time-picker)
 - [Date time input](../input)
 - [Writing guidelines for date and time](../../guidelines/language/formatting/date.mdx)
+- [W3C date picker accessibility reference](https://www.w3.org/WAI/ARIA/apg/patterns/combobox/examples/combobox-datepicker/)

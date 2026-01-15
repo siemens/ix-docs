@@ -31,18 +31,9 @@ The date time input component is typically used in forms, filters and scheduling
 - **Placeholder**: See [form field](../forms-field). We typically use a placeholder to show an example date time format to assist users when the field is empty.
 - **Text alignment**: See [form field](../forms-field) (by default at start).
 - **Error message**: Feedback text when date or time is not parsable. We typically use this to inform users that the entered date time format is incorrect and guide them to enter a valid date and time.
-- **Date format**: Specify the date format, default 'yyyy/LL/dd' to ensure that dates are entered in a consistent and recognizable format.
-- **Time format**: Specify the time format to ensure that times are entered in a consistent and recognizable format. Default is 'TT' which is the localized 24-hour time with seconds (read more in the [UX writing guides](./../../guidelines/language/writing-style-guide-getting-started)).
-- **Locale**: Set the locale identifier (e.g., 'en' or 'de') to translate weekday and month labels. The locale also determines the default order of weekdays based on regional conventions.
-- **Single selection**: By default, date time pickers support range selection. Enable single selection mode when only one date and time needs to be selected.
-- **Range selection**: Select both start and end dates with a single time value.
+- **Format**: Specify the date and time format (default ‘yyyy/LL/dd TT’ which results in 2014/08/06 13:07:04) to ensure that dates are entered in a consistent and recognizable format.
 - **Min and max dates**: Restrict the selectable date range by defining the earliest and latest dates users can choose.
-- **Week numbers**: Show week numbers on the left side of the calendar when needed for reference.
-- **Time reference**: Show time reference input for AM/PM notation when using 12-hour time format.
-- **Date time picker**:
-  - **Corners**: See [date time picker](../date-time-picker).
-  - **Button text**: Customize the text of the confirmation button to match your application's language and context.
-  - **Time label**: Customize the label above the time picker (default: 'Time') to match your application's language.
+- **Date time picker appearance**: See [date time picker](../date-time-picker).
 
 ## Behavior in context
 
@@ -57,7 +48,7 @@ The date time input component is typically used in forms, filters and scheduling
   - Invalid feedback is automatically provided if the entered date or time is not parsable.
   - Refer to the [validation](../forms-validation) chapter for detailed guidelines.
 - **Overflow**: The input field should be wide enough to display the full date and time without truncation.
-- **Alignment**: Date time inputs are always aligned to the left.
+- **Alignment**: Date time inputs are aligned to the left by default.
 - **Combined selection**: Users select both a date and a time before confirming their choice. The selection is only finalized when the confirmation button is clicked.
 
 ## States
@@ -73,17 +64,13 @@ Date time input has five states: Default, hover, disabled, read-only and focused
 
 - Do use consistent date and time formats throughout the application to avoid confusion
 - Do provide clear instructions on the expected format, such as "Enter the date time in yyyy/mm/dd HH:mm format"
-- Do ensure the date time picker is accessible via keyboard
 - Do consider localization to adapt date and time formats to local conventions
 - Do use separate inputs for start and end date times when defining time ranges
 
 </div>
 <div class="donts" markdown>
 
-- Don't use date time inputs when only a date or only a time is needed, use [date input](../input-date) or [time input](../input-time) instead
-- Don't use ambiguous formats without providing clear context or helper text
-- Don't allow free text without validation or formatting guidance
-- Don't forget to validate both date and time inputs in your form logic
+- Don't use date time inputs when only a date or only a time is needed (use [date input](../input-date) or [time input](../input-time) instead)
 
 </div>
 </div>
@@ -97,3 +84,4 @@ Date time input has five states: Default, hover, disabled, read-only and focused
 - [Forms field](../forms-field)
 - [Validation](../forms-validation)
 - [Writing guidelines for date and time](../../guidelines/language/formatting/date.mdx)
+- [W3C date picker accessibility reference](https://www.w3.org/WAI/ARIA/apg/patterns/combobox/examples/combobox-datepicker/)

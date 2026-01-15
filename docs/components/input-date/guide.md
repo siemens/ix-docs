@@ -73,3 +73,4 @@ Date input has five states: Default, hover, disabled, read-only and focused.
 - [Dropdown](../dropdown)
 - [Input](../input)
 - [Select](../select)
+- [W3C date picker accessibility reference](https://www.w3.org/WAI/ARIA/apg/patterns/combobox/examples/combobox-datepicker/)
