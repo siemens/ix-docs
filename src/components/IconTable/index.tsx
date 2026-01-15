@@ -16,7 +16,6 @@ import {
   iconCogwheel,
   iconContextMenu,
   iconDownload,
-  iconDragGripper,
   iconError,
   iconHome,
   iconInfo,
