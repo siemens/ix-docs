@@ -32,7 +32,7 @@ import {
 } from "@siemens/ix-icons/icons";
 
 const IconTable: React.FC<{
-  data: { icon: string; color?: string; name: string; description: string }[];
+  data: { icon: string; color?: string; name: string; description: React.ReactNode }[];
 }> = ({ data }) => {
   return (
     <table className={styles.IconTable}>
@@ -40,9 +40,13 @@ const IconTable: React.FC<{
         {data.map((item) => (
           <tr key={item.name}>
             <td className={styles.IconCell}>
-              <IxIcon name={item.icon} color={item.color ?? "color-std-text"} />
+              <a href={`/docs/icons/icon-library#${item.name}`}>
+                <IxIcon name={item.icon} color={item.color ?? "color-std-text"} />
+              </a>
             </td>
-            <td className={styles.NameCell}>{item.name}</td>
+            <td className={styles.NameCell}>
+              <a href={`/docs/icons/icon-library#${item.name}`}>{item.name}</a>
+            </td>
             <td>{item.description}</td>
           </tr>
         ))}
@@ -139,26 +143,33 @@ export const IconExamplesMenu = [
   {
     icon: iconAppMenu,
     name: "app-menu",
-    description: "Use for main navigation",
+    description: (
+      <>
+        Use for <a href="/docs/components/application-menu/guide">application menu</a>
+      </>
+    ),
   },
   {
     icon: iconApps,
     name: "apps",
-    description: "Use for app switcher",
+    description: (
+      <>
+        Use for <a href="/docs/components/application-header/guide#application-switch">application switch</a>
+      </>
+    ),
   },
   {
     icon: iconContextMenu,
     name: "context-menu",
-    description: "Use for item-specific actions, e.g. list item",
+    description: (
+      <>
+        Use for item-specific actions, e.g. <a href="/docs/components/event-list/code">event list</a> items
+      </>
+    ),
   },
   {
     icon: iconMoreMenu,
     name: "more-menu",
     description: "Use for additional options, e.g. in toolbars",
-  },
-  {
-    icon: iconDragGripper,
-    name: "drag-gripper",
-    description: "Not a menu icon, use for drag-and-drop interactions to reorder items",
   },
 ];
