@@ -52,8 +52,8 @@ For more information about writing effective helper texts or labels, see our [UX
 
 ## Dos and Don’ts
 
-<div class="dos-and-donts" markdown>
-<div class="dos" markdown>
+<div className="dos-and-donts" markdown="true">
+<div className="dos" markdown="true">
 
 - Do use progress indicators consistently for similar processes
 - Do use progress indicators for determinate processes where progress can be measured (otherwise use [spinners](../spinner/index.mdx))
@@ -61,7 +61,7 @@ For more information about writing effective helper texts or labels, see our [UX
 - Do keep your slot content short, especially for the centered alignment (use helper texts and labels for lengthier content)
 
 </div>
-<div class="donts" markdown>
+<div className="donts" markdown="true">
 
 - Don't use progress indicators for operations shorter than one second
 - Don't only indicate progress completion with the indicator without clear task messages, e.g. success toasts or displaying the loaded content
