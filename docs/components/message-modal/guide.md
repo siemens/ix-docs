@@ -2,8 +2,6 @@
 doc-type: 'tab-item'
 ---
 
-import DoAndDont from '@site/src/components/DoAndDont';
-
 import { IxButton } from '@siemens/ix-react';
 
 # Message modal - usage
@@ -58,17 +56,21 @@ Message modals have two states: Closed and opened.
 
 ## Dos and Don’ts
 
-<DoAndDont>
-  <DoAndDont.Do>
-    <DoAndDont.Item>Do use action labels that describe the result (avoid Yes or No)</DoAndDont.Item>
-    <DoAndDont.Item>Do communicate consequences clearly for destructive actions</DoAndDont.Item>
-    <DoAndDont.Item>Do keep messages short and scannable</DoAndDont.Item>
-  </DoAndDont.Do>
-  <DoAndDont.Dont>
-    <DoAndDont.Item>Don’t use message modals for non-essential information, use [toasts](../toast) instead</DoAndDont.Item>
-    <DoAndDont.Item>Don’t hide confirm actions behind ambiguous labels</DoAndDont.Item>
-  </DoAndDont.Dont>
-</DoAndDont>
+<div className="dos-and-donts" markdown="true">
+<div className="dos" markdown="true">
+
+- Do use action labels that describe the result (avoid Yes or No)
+- Do communicate consequences clearly for destructive actions
+- Do keep messages short and scannable
+
+</div>
+<div className="donts" markdown="true">
+
+- Don’t use message modals for non-essential information, use [toasts](../toast) instead
+- Don’t hide confirm actions behind ambiguous labels
+
+</div>
+</div>
 
 ## Related
 

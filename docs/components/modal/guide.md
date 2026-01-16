@@ -2,8 +2,6 @@
 doc-type: 'tab-item'
 ---
 
-import DoAndDont from '@site/src/components/DoAndDont';
-
 # Custom modal - Usage
 
 Custom modals present rich, contextual content, e.g. forms, complex workflows or nested interactions that require the user's focus.
@@ -59,21 +57,25 @@ Modals have two states: Closed and opened.
 
 ## Dos and Don’ts
 
-<DoAndDont>
-  <DoAndDont.Do>
-    <DoAndDont.Item>Do provide at least one visible way to close the modal</DoAndDont.Item>
-    <DoAndDont.Item>Do provide a clear primary action that describes the result</DoAndDont.Item>
-    <DoAndDont.Item>Do ensure all controls are accessible by keyboard and screen‑reader</DoAndDont.Item>
-    <DoAndDont.Item>Do preserve scroll position and page state when closing</DoAndDont.Item>
-    <DoAndDont.Item>Do return users to the previous state when cancelling, not an unrelated page</DoAndDont.Item>
-  </DoAndDont.Do>
-  <DoAndDont.Dont>
-    <DoAndDont.Item>Don’t use modals if a decision should be made (use [message modals](../message-modal) instead)</DoAndDont.Item>
-    <DoAndDont.Item>Don’t nest modals, e.g. to load more data, instead use [spinners](../spinner) within modal contents)</DoAndDont.Item>
-    <DoAndDont.Item>Don’t auto close modals for irreversible actions</DoAndDont.Item>
-    <DoAndDont.Item>Don’t overload the modal with unrelated content</DoAndDont.Item>
-  </DoAndDont.Dont>
-</DoAndDont>
+<div className="dos-and-donts" markdown="true">
+<div className="dos" markdown="true">
+
+- Do provide at least one visible way to close the modal
+- Do provide a clear primary action that describes the result
+- Do ensure all controls are accessible by keyboard and screen‑reader
+- Do preserve scroll position and page state when closing
+- Do return users to the previous state when cancelling, not an unrelated page
+
+</div>
+<div className="donts" markdown="true">
+
+- Don’t use modals if a decision should be made (use [message modals](../message-modal) instead)
+- Don’t nest modals, e.g. to load more data, instead use [spinners](../spinner) within modal contents)
+- Don’t auto close modals for irreversible actions
+- Don’t overload the modal with unrelated content
+
+</div>
+</div>
 
 ## Related
 

@@ -2,8 +2,6 @@
 doc-type: 'tab-item'
 ---
 
-import DoAndDont from '@site/src/components/DoAndDont';
-
 # Loading modal - usage
 
 Loading modals communicate that the system is performing an operation that takes time and that users should wait. Use them for short blocking tasks (upload, processing) where users should not interact with the page until completion.
@@ -30,16 +28,20 @@ Loading modals have two states: Closed and opened.
 
 ## Dos and Don’ts
 
-<DoAndDont>
-  <DoAndDont.Do>
-    <DoAndDont.Item>Do only use if any user interaction needs to be blocked, otherwise use [spinners](../spinner) instead</DoAndDont.Item>
-    <DoAndDont.Item>Do use if user interaction needs to be blocked and the progress is unknown, otherwise use [progress indicators](../progress-indicator) placed in [custom modals](../modal) instead</DoAndDont.Item>
-  </DoAndDont.Do>
-  <DoAndDont.Dont>
-    <DoAndDont.Item>Don’t block users for long tasks without an alternative</DoAndDont.Item>
-    <DoAndDont.Item>Don’t show vague messages that leave users unsure what is happening</DoAndDont.Item>
-  </DoAndDont.Dont>
-</DoAndDont>
+<div className="dos-and-donts" markdown="true">
+<div className="dos" markdown="true">
+
+- Do only use if any user interaction needs to be blocked, otherwise use [spinners](../spinner) instead
+- Do use if user interaction needs to be blocked and the progress is unknown, otherwise use [progress indicators](../progress-indicator) placed in [custom modals](../modal) instead
+
+</div>
+<div className="donts" markdown="true">
+
+- Don’t block users for long tasks without an alternative
+- Don’t show vague messages that leave users unsure what is happening
+
+</div>
+</div>
 
 ## Related
 
