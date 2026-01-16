@@ -36,19 +36,22 @@ const IconTable: React.FC<{
   return (
     <table className={styles.IconTable}>
       <tbody>
-        {data.map((item) => (
-          <tr key={item.name}>
-            <td className={styles.IconCell}>
-              <a href={`/docs/icons/icon-library#${item.name}`}>
-                <IxIcon name={item.icon} color={item.color ?? "color-std-text"} />
-              </a>
-            </td>
-            <td className={styles.NameCell}>
-              <a href={`/docs/icons/icon-library#${item.name}`}>{item.name}</a>
-            </td>
-            <td>{item.description}</td>
-          </tr>
-        ))}
+        {data.map((item) => {
+          const href = `/docs/icons/icon-library#${item.name}`;
+          return (
+            <tr key={item.name}>
+              <td className={styles.IconCell}>
+                <a href={href}>
+                  <IxIcon name={item.icon} color={item.color ?? "color-std-text"} />
+                </a>
+              </td>
+              <td className={styles.NameCell}>
+                <a href={href}>{item.name}</a>
+              </td>
+              <td>{item.description}</td>
+            </tr>
+          );
+        })}
       </tbody>
     </table>
   );
