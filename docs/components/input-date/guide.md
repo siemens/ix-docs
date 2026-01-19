@@ -5,8 +5,6 @@ formReady: true
 
 # Date input - Usage
 
-The date input component is typically used in forms, filters and scheduling tools to ensure consistent and accurate date entries. By standardizing date input, it helps maintain data integrity and improves the user experience in applications requiring precise date information.
-
 ![Date input overview](https://www.figma.com/design/wEptRgAezDU1z80Cn3eZ0o/iX-Pattern-Illustrations?node-id=3629-6200&t=ADQCetGKOEH1WG2r-4)
 
 1. Label
