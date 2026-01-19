@@ -29,14 +29,14 @@ formReady: true
 - **Placeholder**: See [form field](../forms-field/guide#options). We typically use a placeholder to show an example date time format to assist users when the field is empty.
 - **Text alignment**: See [form field](../forms-field/guide#options) (by default at start).
 - **Error message**: Feedback text when date or time is not parsable. We typically use this to inform users that the entered date time format is incorrect and guide them to enter a valid date and time.
-- **Format**: Specify the date and time format (default ‘yyyy/LL/dd TT’ which results in 2014/08/06 13:07:04) to ensure that dates are entered in a consistent and recognizable format.
+- **Format**: Define the date and time format, e.g. `yyyy/LL/dd TT` for 2024/06/15 13:07:04.
 - **Min and max dates**: Restrict the selectable date range by defining the earliest and latest dates users can choose.
 - **Date time picker appearance**: See [date time picker](../date-time-picker#options).
 
 ## Behavior in context
 
 - **Interaction**:
-  - Click or focus opens the date time picker.
+  - Click opens date time pickers. Via keyboard focus followed by arrow down key also opens it.
   - Use mouse or keyboard arrows to navigate to the desired date and adjust the time.
   - Confirm closes the date time picker and applies the selection.
   - Typing a valid date and time into input field closes the picker.

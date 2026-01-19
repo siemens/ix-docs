@@ -29,7 +29,7 @@ formReady: true
 - **Placeholder**: See [form field](../forms-field/guide#options). We typically use a placeholder to show an example date format to assist users when the field is empty.
 - **Text alignment:** See [form field](../forms-field/guide#options) (by default at start).
 - **Error message**: Feedback text when date is not parsable. We typically use this to inform users that the entered date format is incorrect and guide them to enter a valid date.
-- **Format**: Specify the date format, default ‘yyyy/LL/dd’ to ensure that dates are entered in a consistent and recognizable format.
+- **Format**: Specify the date format, default `yyyy/LL/dd` to ensure that dates are entered in a consistent and recognizable format.
 
 ## Behavior in context
 
