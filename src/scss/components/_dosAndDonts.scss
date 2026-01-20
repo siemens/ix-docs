@@ -29,18 +29,17 @@
       gap: 1rem;
 
       li {
-        display: flex;
-        align-items: flex-start;
-        gap: 0.75rem;
         position: relative;
+        padding-left: calc(24px + 0.75rem);
         margin-top: 0 !important;
 
         &::before {
           content: '';
-          min-width: 24px;
+          position: absolute;
+          left: 0;
+          top: 0;
           width: 24px;
           height: 24px;
-          display: inline-block;
           background-size: 24px 24px;
           background-repeat: no-repeat;
           background-position: center;
