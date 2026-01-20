@@ -35,6 +35,26 @@ Provide all iX icons as asset folder via `angular.json`.
 ],
 ```
 
+To avoid unwanted console warnings, you also have to configure the domain of the asset path using the `meta`-tag:
+
+```html
+<html>
+  <head>
+    <!-- Some other tags -->
+    <meta name="ix-icons:path" content="/svg" />
+  </head>
+  <body></body>
+</html>
+```
+
+Or using the `setAssetPath`-function:
+
+```ts
+import { setAssetPath } from '@siemens/ix-icons/components';
+
+setAssetPath('/svg');
+```
+
 It is also possible to import individual icons without an asset folder via [addIcons](#reference-icons-by-name).
 
 Then you can reference iX icons by name anywhere in your application.
