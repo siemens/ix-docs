@@ -60,7 +60,7 @@ Absolutely! Please add requests for the future in [Github](https://github.com/si
 </Accordion>
 
 <Accordion title="How can I detect when iX components are ready?" id="component-ready">
-iX components receive a `hydrated` class when they're fully initialized. Use the `componentOnReady()` method to wait for hydration:
+iX components receive a `hydrated` class when they’re fully initialized. Use the `componentOnReady()` method to wait for hydration:
 
 ```javascript
 const button = document.querySelector('ix-button');
@@ -78,7 +78,7 @@ For multiple components:
 const button = document.querySelector('ix-button');
 const input = document.querySelector('ix-input');
 
-const elements = [button, input].filter(el => el !== null);
+const elements = [button, input].filter(Boolean);
 
 if (elements.length > 0) {
   Promise.all(elements.map(el => el.componentOnReady())).then(() => {
@@ -86,6 +86,10 @@ if (elements.length > 0) {
   });
 }
 ```
+
+**Note:** The `appload` event mentioned in Stencil documentation is not available in iX. Use `componentOnReady()` instead.
+
+Learn more about [componentOnReady() in Stencil docs](https://stenciljs.com/docs/api#componentonready).
 </Accordion>
 
 <Accordion title="How can I prevent flash of undefined custom elements (FOUCE)?" id="fouce-prevention" showBorderBottom>
@@ -99,7 +103,7 @@ ix-input:not(.hydrated) {
   visibility: hidden;
 }
 
-/* Or hide all ix- elements */
+/* Or hide all ix-elements */
 *[class*="ix-"]:not(.hydrated) {
   visibility: hidden;
 }
@@ -131,7 +135,7 @@ Our codebase is openly and freely accessible for anyone to view, modify and dist
 </div>
 
 <Accordion title="Where are the component Figma files and how can I access them?" id="figma-files">
-[Here](/docs/home/overview#figma-library) you will find information on how to get Figma and how to access the most important Industrial Experience libraries. Remember, the Siemens brand library contains Siemens-specific brand elements and is only accessible to Siemens employees and business partners. For the classic theme, we don't have updated Figma files, but you can use the code components.
+[Here](/docs/home/overview#figma-library) you will find information on how to get Figma and how to access the most important Industrial Experience libraries. Remember, the Siemens brand library contains Siemens-specific brand elements and is only accessible to Siemens employees and business partners. For the classic theme, we don’t have updated Figma files, but you can use the code components.
 </Accordion>
 
 <Accordion title="Do we meet the WCAG and accessibility levels?" id="a11y-maturity-levels">
