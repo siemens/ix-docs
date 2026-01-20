@@ -35,7 +35,7 @@ Provide all iX icons as asset folder via `angular.json`.
 ],
 ```
 
-To avoid unwanted console warnings, you also have to configure the domain of the asset path using the `meta`-tag:
+To avoid unwanted console warnings, we recommend you also configure the domain of the asset path using the `meta`-tag:
 
 ```html
 <html>
