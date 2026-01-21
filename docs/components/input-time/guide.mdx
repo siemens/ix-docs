@@ -3,8 +3,6 @@ doc-type: 'tab-item'
 formReady: true
 ---
 
-import DoAndDont from '@site/src/components/DoAndDont';
-
 # Time input - Usage
 
 Time inputs are typically used in forms, filters and scheduling tools to ensure consistent and accurate time entries. Standardizing time inputs ensures data integrity and improves the user experience in applications requiring precise time information.
@@ -58,17 +56,21 @@ Time input has five states: Default, hover, disabled, read-only and focused.
 
 ## Dos and Don’ts
 
-<DoAndDont>
-  <DoAndDont.Do>
-    <DoAndDont.Item>Do use consistent time formats throughout the application to avoid confusion</DoAndDont.Item>
-    <DoAndDont.Item>Do add helper text to clarify the time format being used{' '}</DoAndDont.Item>
-    <DoAndDont.Item>Do ensure the time picker is accessible via keyboard</DoAndDont.Item>
-    <DoAndDont.Item>Do consider localization to adapt time formats to local conventions</DoAndDont.Item>
-  </DoAndDont.Do>
-  <DoAndDont.Dont>
-    <DoAndDont.Item>Don’t use the same input for start and end times, instead separate them</DoAndDont.Item>
-  </DoAndDont.Dont>
-</DoAndDont>
+<div className="dos-and-donts" markdown="true">
+<div className="dos" markdown="true">
+
+- Do use consistent time formats throughout the application to avoid confusion
+- Do add helper text to clarify the time format being used
+- Do ensure the time picker is accessible via keyboard
+- Do consider localization to adapt time formats to local conventions
+
+</div>
+<div className="donts" markdown="true">
+
+- Don’t use the same input for start and end times, instead separate them
+
+</div>
+</div>
 
 ## Related
 

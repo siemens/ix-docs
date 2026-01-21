@@ -8,8 +8,6 @@ no_single_tab: true
 description: 'Learn how to write error messages, warnings, and notifications that are helpful and user-friendly. This subchapter provides strategies for communicating issues and alerts in a way that guides users towards solutions.'
 ---
 
-import DoAndDont from '@site/src/components/DoAndDont';
-
 #
 
 ## General rules for messaging
@@ -46,48 +44,58 @@ import DoAndDont from '@site/src/components/DoAndDont';
 
 - An error message alerts user of a problem that exists and must be addressed
 
-<DoAndDont>
-  <DoAndDont.Do>
-    <DoAndDont.Item>System error: You’re offline. Check your connection and try again.</DoAndDont.Item>
-    <DoAndDont.Item>File error: We cannot upload this file. Try uploading again.</DoAndDont.Item>
-    <DoAndDont.Item>Permission error: To carry out this task, you need more permissions. Contact admin to change permissions.</DoAndDont.Item>
-  </DoAndDont.Do>
-  <DoAndDont.Dont>
-    <DoAndDont.Item>What did you do!?</DoAndDont.Item>
-    <DoAndDont.Item>The email address you entered does not match the required format. Please enter your email address using the standard format.</DoAndDont.Item>
-    <DoAndDont.Item>You have failed to delete the device.</DoAndDont.Item>
-    <DoAndDont.Item>Error 404</DoAndDont.Item>
-    <DoAndDont.Item>Value out of range.</DoAndDont.Item>
-    <DoAndDont.Item>File not found.</DoAndDont.Item>
-    <DoAndDont.Item>Title: Input error</DoAndDont.Item>
-    <DoAndDont.Item>Explanation: Input error detected.</DoAndDont.Item>
-    <DoAndDont.Item>Action: Try again.</DoAndDont.Item>
-  </DoAndDont.Dont>
-</DoAndDont>
+<div className="dos-and-donts" markdown="true">
+<div className="dos" markdown="true">
+
+- System error: You’re offline. Check your connection and try again.
+- File error: We cannot upload this file. Try uploading again.
+- Permission error: To carry out this task, you need more permissions. Contact admin to change permissions.
+
+</div>
+<div className="donts" markdown="true">
+
+- What did you do!?
+- The email address you entered does not match the required format. Please enter your email address using the standard format.
+- You have failed to delete the device.
+- Error 404
+- Value out of range.
+- File not found.
+- Title: Input error
+- Explanation: Input error detected.
+- Action: Try again.
+
+</div>
+</div>
 
 ## Warning messages
 
 - A warning message alerts users of a condition that may cause a problem in the future
 
-<DoAndDont>
-  <DoAndDont.Do>
-    <DoAndDont.Item>Title: You have not saved all documents</DoAndDont.Item>
-    <DoAndDont.Item>Explanation: You have to save all documents</DoAndDont.Item>
-    <DoAndDont.Item>Action: (OK button)</DoAndDont.Item>
-  </DoAndDont.Do>
-</DoAndDont>
+<div className="dos-and-donts" markdown="true">
+<div className="dos" markdown="true">
+
+- Title: You have not saved all documents
+- Explanation: You have to save all documents
+- Action: (OK button)
+
+</div>
+</div>
 
 ## Notifications
 
 - Notifications are informative and no actions are required from the user
 
-<DoAndDont>
-  <DoAndDont.Do>
-    <DoAndDont.Item>Access Point 2 is connected.</DoAndDont.Item>
-    <DoAndDont.Item>Changes are saved automatically.</DoAndDont.Item>
-  </DoAndDont.Do>
-  <DoAndDont.Dont>
-    <DoAndDont.Item>Access Point connection failed. Try again.</DoAndDont.Item>
-    <DoAndDont.Item>No rows to show.</DoAndDont.Item>
-  </DoAndDont.Dont>
-</DoAndDont>
+<div className="dos-and-donts" markdown="true">
+<div className="dos" markdown="true">
+
+- Access Point 2 is connected.
+- Changes are saved automatically.
+
+</div>
+<div className="donts" markdown="true">
+
+- Access Point connection failed. Try again.
+- No rows to show.
+
+</div>
+</div>

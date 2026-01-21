@@ -8,8 +8,6 @@ no_single_tab: true
 description: 'Explore best practices for writing main menu functions to ensure intuitive navigation. This section provides tips on how to label and organize menu items so users can easily find what they need.'
 ---
 
-import DoAndDont from '@site/src/components/DoAndDont';
-
 #
 
 ## Welcome page
@@ -20,12 +18,14 @@ import DoAndDont from '@site/src/components/DoAndDont';
 
 - Forgot password?
 
-<DoAndDont>
-  <DoAndDont.Dont>
-    <DoAndDont.Item>Sign in / Sign up</DoAndDont.Item>
-    <DoAndDont.Item>Login (as it is a noun, not a verb)</DoAndDont.Item>
-  </DoAndDont.Dont>
-</DoAndDont>
+<div className="dos-and-donts" markdown="true">
+<div className="donts" markdown="true">
+
+- Sign in / Sign up
+- Login (as it is a noun, not a verb)
+
+</div>
+</div>
 
 ## User management
 
@@ -49,14 +49,16 @@ import DoAndDont from '@site/src/components/DoAndDont';
 
 - Edit account
 
-<DoAndDont>
-  <DoAndDont.Dont>
-    <DoAndDont.Item>id / identification</DoAndDont.Item>
-    <DoAndDont.Item>E-mail</DoAndDont.Item>
-    <DoAndDont.Item>Add a user / Delete a user / Add permission</DoAndDont.Item>
-    <DoAndDont.Item>Surname / Initial name / Given name</DoAndDont.Item>
-  </DoAndDont.Dont>
-</DoAndDont>
+<div className="dos-and-donts" markdown="true">
+<div className="donts" markdown="true">
+
+- id / identification
+- E-mail
+- Add a user / Delete a user / Add permission
+- Surname / Initial name / Given name
+
+</div>
+</div>
 
 ## Roles
 
@@ -104,11 +106,13 @@ import DoAndDont from '@site/src/components/DoAndDont';
 
 - Expired licenses
 
-<DoAndDont>
-  <DoAndDont.Dont>
-    <DoAndDont.Item>licence</DoAndDont.Item>
-  </DoAndDont.Dont>
-</DoAndDont>
+<div className="dos-and-donts" markdown="true">
+<div className="donts" markdown="true">
+
+- licence
+
+</div>
+</div>
 
 ## About & legal information
 
@@ -136,11 +140,13 @@ import DoAndDont from '@site/src/components/DoAndDont';
 
 - © Siemens AG 20XX
 
-<DoAndDont>
-  <DoAndDont.Dont>
-    <DoAndDont.Item>V1</DoAndDont.Item>
-  </DoAndDont.Dont>
-</DoAndDont>
+<div className="dos-and-donts" markdown="true">
+<div className="donts" markdown="true">
+
+- V1
+
+</div>
+</div>
 
 ## Service & Support
 
@@ -152,12 +158,14 @@ import DoAndDont from '@site/src/components/DoAndDont';
 
 - FAQ
 
-<DoAndDont>
-  <DoAndDont.Dont>
-    <DoAndDont.Item>Documentation</DoAndDont.Item>
-    <DoAndDont.Item>User manual</DoAndDont.Item>
-  </DoAndDont.Dont>
-</DoAndDont>
+<div className="dos-and-donts" markdown="true">
+<div className="donts" markdown="true">
+
+- Documentation
+- User manual
+
+</div>
+</div>
 
 ## Workspace
 
@@ -167,12 +175,14 @@ import DoAndDont from '@site/src/components/DoAndDont';
 
 - KPIs
 
-<DoAndDont>
-  <DoAndDont.Dont>
-    <DoAndDont.Item>KPI's settings</DoAndDont.Item>
-    <DoAndDont.Item>KPIS settings</DoAndDont.Item>
-  </DoAndDont.Dont>
-</DoAndDont>
+<div className="dos-and-donts" markdown="true">
+<div className="donts" markdown="true">
+
+- KPI's settings
+- KPIS settings
+
+</div>
+</div>
 
 ## Resetting
 

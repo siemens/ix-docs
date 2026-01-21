@@ -8,80 +8,96 @@ no_single_tab: true
 description: In industrial applications, writing addresses clearly and consistently ensures efficient communication and accurate delivery of materials. Properly written addresses and awareness of regional differences help avoid delays and errors, enhancing overall operational efficiency.
 ---
 
-import DoAndDont from '@site/src/components/DoAndDont';
-
 ## General rules
 
 Use specific text field labels for different parts of the address.
 
-<DoAndDont>
-  <DoAndDont.Do>
-    <DoAndDont.Item>Number | Street | State | ZIP code | Country</DoAndDont.Item>
-  </DoAndDont.Do>
-  <DoAndDont.Dont>
-    <DoAndDont.Item>Address line 1, Address line 2, Address line 3</DoAndDont.Item>
-  </DoAndDont.Dont>
-</DoAndDont>
+<div className="dos-and-donts" markdown="true">
+<div className="dos" markdown="true">
+
+- Number | Street | State | ZIP code | Country
+
+</div>
+<div className="donts" markdown="true">
+
+- Address line 1, Address line 2, Address line 3
+
+</div>
+</div>
 
 Ensure special and international characters are accepted for international addresses.
 
-<DoAndDont>
-  <DoAndDont.Do>
-    <DoAndDont.Item>12-142 Elm St</DoAndDont.Item>
-    <DoAndDont.Item>#8C (unit or suite number)</DoAndDont.Item>
-    <DoAndDont.Item>Straße (street in German)</DoAndDont.Item>
-    <DoAndDont.Item>VI (unit for floor in German)</DoAndDont.Item>
-    <DoAndDont.Item>München (for Munich)</DoAndDont.Item>
-  </DoAndDont.Do>
-</DoAndDont>
+<div className="dos-and-donts" markdown="true">
+<div className="dos" markdown="true">
+
+- 12-142 Elm St
+- #8C (unit or suite number)
+- Straße (street in German)
+- VI (unit for floor in German)
+- München (for Munich)
+
+</div>
+</div>
 
 Use commas to separate names, streets, states and countries to prevent errors when there is only one text field.
 
-<DoAndDont>
-  <DoAndDont.Do>
-    <DoAndDont.Item>John Doe, 123 Maple Street, Springfield, California, 62704, United States</DoAndDont.Item>
-  </DoAndDont.Do>
-</DoAndDont>
+<div className="dos-and-donts" markdown="true">
+<div className="dos" markdown="true">
+
+- John Doe, 123 Maple Street, Springfield, California, 62704, United States
+
+</div>
+</div>
 
 ## States, provinces and regions
 
 Use a comma between cities and states and other regions, e.g. cities within Cantons.
 
-<DoAndDont>
-  <DoAndDont.Do>
-    <DoAndDont.Item>Springfield, Illinois</DoAndDont.Item>
-    <DoAndDont.Item>Munich, Bavaria</DoAndDont.Item>
-    <DoAndDont.Item>Thun, Bern</DoAndDont.Item>
-  </DoAndDont.Do>
-</DoAndDont>
+<div className="dos-and-donts" markdown="true">
+<div className="dos" markdown="true">
+
+- Springfield, Illinois
+- Munich, Bavaria
+- Thun, Bern
+
+</div>
+</div>
 
 Use capital letters for abbreviated states without a full stop.
 
-<DoAndDont>
-  <DoAndDont.Do>
-    <DoAndDont.Item>IL</DoAndDont.Item>
-  </DoAndDont.Do>
-  <DoAndDont.Dont>
-    <DoAndDont.Item>Il.</DoAndDont.Item>
-  </DoAndDont.Dont>
-</DoAndDont>
+<div className="dos-and-donts" markdown="true">
+<div className="dos" markdown="true">
+
+- IL
+
+</div>
+<div className="donts" markdown="true">
+
+- Il.
+
+</div>
+</div>
 
 ## ZIP codes
 
 Use the correct regional format for ZIP codes, including any necessary spaces or hyphens.
 
-<DoAndDont>
-  <DoAndDont.Do>
-    <DoAndDont.Item>90210 (US)</DoAndDont.Item>
-    <DoAndDont.Item>SW1A 2AA (UK)</DoAndDont.Item>
-    <DoAndDont.Item>123-4567 (Japan)</DoAndDont.Item>
-  </DoAndDont.Do>
-  <DoAndDont.Dont>
-    <DoAndDont.Item>90 21 0 (US)</DoAndDont.Item>
-    <DoAndDont.Item>SW1A2AA (UK)</DoAndDont.Item>
-    <DoAndDont.Item>1234567 (Japan)</DoAndDont.Item>
-  </DoAndDont.Dont>
-</DoAndDont>
+<div className="dos-and-donts" markdown="true">
+<div className="dos" markdown="true">
+
+- 90210 (US)
+- SW1A 2AA (UK)
+- 123-4567 (Japan)
+
+</div>
+<div className="donts" markdown="true">
+
+- 90 21 0 (US)
+- SW1A2AA (UK)
+- 1234567 (Japan)
+
+</div>
+</div>
 
 ## Streets
 
@@ -103,69 +119,85 @@ Use common abbreviations for street types without full stops to avoid visual clu
 
 Add floor numbers either before or after the word and note different international floor counting systems.
 
-<DoAndDont>
-  <DoAndDont.Do>
-    <DoAndDont.Item>Floor 3</DoAndDont.Item>
-    <DoAndDont.Item>3rd floor</DoAndDont.Item>
-    <DoAndDont.Item>Ground floor (UK/Europe)</DoAndDont.Item>
-    <DoAndDont.Item>First floor (US)</DoAndDont.Item>
-    <DoAndDont.Item>Floor G (international)</DoAndDont.Item>
-  </DoAndDont.Do>
-  <DoAndDont.Dont>
-    <DoAndDont.Item>Floor 3rd</DoAndDont.Item>
-  </DoAndDont.Dont>
-</DoAndDont>
+<div className="dos-and-donts" markdown="true">
+<div className="dos" markdown="true">
+
+- Floor 3
+- 3rd floor
+- Ground floor (UK/Europe)
+- First floor (US)
+- Floor G (international)
+
+</div>
+<div className="donts" markdown="true">
+
+- Floor 3rd
+
+</div>
+</div>
 
 Use numbers and letters after buildings, suites, apartments, rooms and floors.
 
-<DoAndDont>
-  <DoAndDont.Do>
-    <DoAndDont.Item>Building A</DoAndDont.Item>
-    <DoAndDont.Item>Building part</DoAndDont.Item>
-    <DoAndDont.Item>Room segment</DoAndDont.Item>
-    <DoAndDont.Item>Bldg A</DoAndDont.Item>
-    <DoAndDont.Item>Suite 3B</DoAndDont.Item>
-  </DoAndDont.Do>
-</DoAndDont>
+<div className="dos-and-donts" markdown="true">
+<div className="dos" markdown="true">
+
+- Building A
+- Building part
+- Room segment
+- Bldg A
+- Suite 3B
+
+</div>
+</div>
 
 ## Production lines
 
 Use "Line" or add a description, e.g. "Assembly line" and use "Zone" or "Area" for larger facilities.
 
-<DoAndDont>
-  <DoAndDont.Do>
-    <DoAndDont.Item>Assembly line 2</DoAndDont.Item>
-    <DoAndDont.Item>Line B</DoAndDont.Item>
-    <DoAndDont.Item>Zone C</DoAndDont.Item>
-    <DoAndDont.Item>Area 8</DoAndDont.Item>
-  </DoAndDont.Do>
-</DoAndDont>
+<div className="dos-and-donts" markdown="true">
+<div className="dos" markdown="true">
+
+- Assembly line 2
+- Line B
+- Zone C
+- Area 8
+
+</div>
+</div>
 
 ## Coordinates
 
 Use clear labels when possible with "Latitude" first, then "Longitude".
 
-<DoAndDont>
-  <DoAndDont.Do>
-    <DoAndDont.Item>Latitude: 48.14389° | Longitude: 11.57633°</DoAndDont.Item>
-  </DoAndDont.Do>
-</DoAndDont>
+<div className="dos-and-donts" markdown="true">
+<div className="dos" markdown="true">
+
+- Latitude: 48.14389° | Longitude: 11.57633°
+
+</div>
+</div>
 
 Use plus (+), minus (-), a comma and a space when adding both in one text field.
 
-<DoAndDont>
-  <DoAndDont.Do>
-    <DoAndDont.Item>+48.14389°, +11.57633°</DoAndDont.Item>
-  </DoAndDont.Do>
-</DoAndDont>
+<div className="dos-and-donts" markdown="true">
+<div className="dos" markdown="true">
+
+- +48.14389°, +11.57633°
+
+</div>
+</div>
 
 Use the correct degree symbol (Unicode U+00B0).
 
-<DoAndDont>
-  <DoAndDont.Do>
-    <DoAndDont.Item>°</DoAndDont.Item>
-  </DoAndDont.Do>
-  <DoAndDont.Dont>
-    <DoAndDont.Item>o</DoAndDont.Item>
-  </DoAndDont.Dont>
-</DoAndDont>
+<div className="dos-and-donts" markdown="true">
+<div className="dos" markdown="true">
+
+- °
+
+</div>
+<div className="donts" markdown="true">
+
+- o
+
+</div>
+</div>

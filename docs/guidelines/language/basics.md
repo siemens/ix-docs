@@ -8,8 +8,6 @@ no_single_tab: true
 description: "Dive into the fundamental principles of UX writing, where you'll learn how to create text that enhances user experience by being clear, concise, and user-friendly. This section lays the groundwork for all your UX writing endeavors."
 ---
 
-import DoAndDont from '@site/src/components/DoAndDont';
-
 #
 
 ## Style
@@ -38,22 +36,26 @@ import DoAndDont from '@site/src/components/DoAndDont';
 
 - Avoid using negative contractions as they can appear too informal
 
-<DoAndDont>
-  <DoAndDont.Do>
-    <DoAndDont.Item>their, them, theirs, salesperson</DoAndDont.Item>
-    <DoAndDont.Item>Welcome to this application</DoAndDont.Item>
-    <DoAndDont.Item>X appears when detail view has selected events</DoAndDont.Item>
-    <DoAndDont.Item>cannot, will not</DoAndDont.Item>
-    <DoAndDont.Item>you’ll, we’ve</DoAndDont.Item>
-  </DoAndDont.Do>
-  <DoAndDont.Dont>
-    <DoAndDont.Item>his, hers, him, salesman</DoAndDont.Item>
-    <DoAndDont.Item>Hey there!</DoAndDont.Item>
-    <DoAndDont.Item>X doesn’t appear if detail view has no selected events</DoAndDont.Item>
-    <DoAndDont.Item>can’t, won’t</DoAndDont.Item>
-    <DoAndDont.Item>you will, we have</DoAndDont.Item>
-  </DoAndDont.Dont>
-</DoAndDont>
+<div className="dos-and-donts" markdown="true">
+<div className="dos" markdown="true">
+
+- their, them, theirs, salesperson
+- Welcome to this application
+- X appears when detail view has selected events
+- cannot, will not
+- you’ll, we’ve
+
+</div>
+<div className="donts" markdown="true">
+
+- his, hers, him, salesman
+- Hey there!
+- X doesn’t appear if detail view has no selected events
+- can’t, won’t
+- you will, we have
+
+</div>
+</div>
 
 ## Length
 
@@ -77,50 +79,58 @@ import DoAndDont from '@site/src/components/DoAndDont';
 
 - Capitalize named app functions and UI elements: Go to Settings, Allocate users in User management, Press OK
 
-<DoAndDont>
-  <DoAndDont.Do>
-    <DoAndDont.Item>Go to Settings</DoAndDont.Item>
-    <DoAndDont.Item>Press OK</DoAndDont.Item>
-    <DoAndDont.Item>Log in</DoAndDont.Item>
-    <DoAndDont.Item>For more information, see Siemens Industry Online Support.</DoAndDont.Item>
-  </DoAndDont.Do>
-  <DoAndDont.Dont>
-    <DoAndDont.Item>Go To Settings</DoAndDont.Item>
-    <DoAndDont.Item>Press OK</DoAndDont.Item>
-    <DoAndDont.Item>LOG IN</DoAndDont.Item>
-    <DoAndDont.Item>For more information, see Siemens industry online support.</DoAndDont.Item>
-  </DoAndDont.Dont>
-</DoAndDont>
+<div className="dos-and-donts" markdown="true">
+<div className="dos" markdown="true">
+
+- Go to Settings
+- Press OK
+- Log in
+- For more information, see Siemens Industry Online Support.
+
+</div>
+<div className="donts" markdown="true">
+
+- Go To Settings
+- Press OK
+- LOG IN
+- For more information, see Siemens industry online support.
+
+</div>
+</div>
 
 ## Common UX wording mistakes
 
-<DoAndDont>
-  <DoAndDont.Do>
-    <DoAndDont.Item>time zone</DoAndDont.Item>
-    <DoAndDont.Item>log file</DoAndDont.Item>
-    <DoAndDont.Item>log in (as an action)</DoAndDont.Item>
-    <DoAndDont.Item>login (as a noun)</DoAndDont.Item>
-    <DoAndDont.Item>equipment</DoAndDont.Item>
-    <DoAndDont.Item>feedback</DoAndDont.Item>
-    <DoAndDont.Item>training</DoAndDont.Item>
-    <DoAndDont.Item>current</DoAndDont.Item>
-    <DoAndDont.Item>avoid "shall"</DoAndDont.Item>
-    <DoAndDont.Item>Siemens has</DoAndDont.Item>
-    <DoAndDont.Item>34 million / 35 billion</DoAndDont.Item>
-    <DoAndDont.Item>34 million</DoAndDont.Item>
-  </DoAndDont.Do>
-  <DoAndDont.Dont>
-    <DoAndDont.Item>timezone</DoAndDont.Item>
-    <DoAndDont.Item>logfile</DoAndDont.Item>
-    <DoAndDont.Item>login</DoAndDont.Item>
-    <DoAndDont.Item>log in</DoAndDont.Item>
-    <DoAndDont.Item>equipments</DoAndDont.Item>
-    <DoAndDont.Item>feedbacks</DoAndDont.Item>
-    <DoAndDont.Item>trainings</DoAndDont.Item>
-    <DoAndDont.Item>actual</DoAndDont.Item>
-    <DoAndDont.Item>user shall manage users</DoAndDont.Item>
-    <DoAndDont.Item>Siemens have</DoAndDont.Item>
-    <DoAndDont.Item>34’ / 35“</DoAndDont.Item>
-    <DoAndDont.Item>34 millions</DoAndDont.Item>
-  </DoAndDont.Dont>
-</DoAndDont>
+<div className="dos-and-donts" markdown="true">
+<div className="dos" markdown="true">
+
+- time zone
+- log file
+- log in (as an action)
+- login (as a noun)
+- equipment
+- feedback
+- training
+- current
+- avoid "shall"
+- Siemens has
+- 34 million / 35 billion
+- 34 million
+
+</div>
+<div className="donts" markdown="true">
+
+- timezone
+- logfile
+- login
+- log in
+- equipments
+- feedbacks
+- trainings
+- actual
+- user shall manage users
+- Siemens have
+- 34’ / 35“
+- 34 millions
+
+</div>
+</div>
