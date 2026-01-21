@@ -86,10 +86,11 @@ if (elements.length > 0) {
   });
 }
 ```
+:::info
+The `appload` event mentioned in Stencil documentation is not available in iX. Use `componentOnReady()` instead.
+:::
 
-**Note:** The `appload` event mentioned in Stencil documentation is not available in iX. Use `componentOnReady()` instead.
-
-Learn more about [componentOnReady() in Stencil docs](https://stenciljs.com/docs/api#componentonready).
+Learn more about [componentOnReady()](https://stenciljs.com/docs/api#componentonready) in Stencil docs.
 </Accordion>
 
 <Accordion title="How can I prevent flash of undefined custom elements (FOUCE)?" id="fouce-prevention" showBorderBottom>
