@@ -76,6 +76,18 @@ import { IxButton, IxDropdown, IxDropdownItem, IxDropdownTriggerDirective } from
 })
 export default class StandaloneExample {}
 ```
+:::info
+When using iX form components in an Angular standalone setup, we recommend importing the appropriate value accessor directives from `@siemens/ix-angular/standalone` and include them in your component’s imports array (refer to preview examples). This prevents `No value accessor` errors.
+
+Available value accessors:
+- `IxTextValueAccessorDirective` - For `ix-input`, `ix-number-input`, `ix-textarea`
+- `IxSelectValueAccessorDirective` - For `ix-select`
+- `IxRadioValueAccessorDirective` - For `ix-radio`
+- `IxBooleanValueAccessorDirective` - For `ix-checkbox`, `ix-toggle`
+- `IxDateValueAccessorDirective` - For `ix-date-input`
+- `IxTimeValueAccessorDirective` - For `ix-time-input`
+
+:::
 
 ### Module setup (legacy)
 
