@@ -16,8 +16,8 @@ formReady: true
 7. Month and year selection
 8. Weekdays
 9. Week numbers
-10. Indicator for current day
-11. Indicator for selected day
+10. Current day
+11. Selected date or date range
 
 ## Options
 
