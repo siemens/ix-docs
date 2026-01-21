@@ -131,7 +131,7 @@ function DevelopmentFrameworks(){
     <div className="GuidingPrinciples">
       <GuidingPrincipleCard
       name="React"
-      link="home/installation/react"
+      link="/docs/home/installation/react"
       description="Get started with React and build dynamic user interfaces."
       >
       <img src="/img/react.svg" alt="React"/>
@@ -139,7 +139,7 @@ function DevelopmentFrameworks(){
 
       <GuidingPrincipleCard
       name="Angular"
-      link="home/installation/angular"
+      link="/docs/home/installation/angular"
       description="Learn how to set up Angular for robust web applications."
       >
       <img src="/img/angular.svg" alt="Angular" />
@@ -147,7 +147,7 @@ function DevelopmentFrameworks(){
 
       <GuidingPrincipleCard
       name="Web components"
-      link="home/installation/javascript"
+      link="/docs/home/installation/javascript"
       description="Discover how to start developing with a set of web platform APIs."
       >
       <img src="/img/webcomponents.svg" alt="Web Components"/>
@@ -155,7 +155,7 @@ function DevelopmentFrameworks(){
 
       <GuidingPrincipleCard
       name="Vue"
-      link="home/installation/vue"
+      link="/docs/home/installation/vue"
       description="Start building with Vue for a progressive framework experience."
       >
       <img src="/img/vue.svg" alt="Vue"/>
@@ -163,7 +163,7 @@ function DevelopmentFrameworks(){
 
       <GuidingPrincipleCard
       name="Blazor (experimental)"
-      link="home/installation/blazor"
+      link="/docs/home/installation/blazor"
       description="Utilize Blazor for building interactive web UIs with C#."
       >
       <img src="/img/blazor.svg" alt="Blazor"/>
