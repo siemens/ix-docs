@@ -44,15 +44,15 @@ description: 'Learn how to write error messages, warnings, and notifications tha
 
 - An error message alerts user of a problem that exists and must be addressed
 
-<div class="dos-and-donts" markdown>
-<div class="dos" markdown>
+<div className="dos-and-donts" markdown="true">
+<div className="dos" markdown="true">
 
 - System error: You’re offline. Check your connection and try again.
 - File error: We cannot upload this file. Try uploading again.
 - Permission error: To carry out this task, you need more permissions. Contact admin to change permissions.
 
 </div>
-<div class="donts" markdown>
+<div className="donts" markdown="true">
 
 - What did you do!?
 - The email address you entered does not match the required format. Please enter your email address using the standard format.
@@ -71,8 +71,8 @@ description: 'Learn how to write error messages, warnings, and notifications tha
 
 - A warning message alerts users of a condition that may cause a problem in the future
 
-<div class="dos-and-donts" markdown>
-<div class="dos" markdown>
+<div className="dos-and-donts" markdown="true">
+<div className="dos" markdown="true">
 
 - Title: You have not saved all documents
 - Explanation: You have to save all documents
@@ -85,14 +85,14 @@ description: 'Learn how to write error messages, warnings, and notifications tha
 
 - Notifications are informative and no actions are required from the user
 
-<div class="dos-and-donts" markdown>
-<div class="dos" markdown>
+<div className="dos-and-donts" markdown="true">
+<div className="dos" markdown="true">
 
 - Access Point 2 is connected.
 - Changes are saved automatically.
 
 </div>
-<div class="donts" markdown>
+<div className="donts" markdown="true">
 
 - Access Point connection failed. Try again.
 - No rows to show.
