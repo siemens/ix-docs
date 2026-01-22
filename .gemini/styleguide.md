@@ -35,6 +35,7 @@ Note that the headings should be like that.
 - Apostrophe: Always use the symbol ’ (U+2019, "right single quotation mark"), not '
 - Use sentence case always: Start with a big letter and then only proper nouns are capitalized.
 - Avoid oxford comma whenever possible, e.g. before "and" and "or". For complex sentences where it's needed for understanding, try to simplify it.
+- Ellipses: always use the symbol … (Unicode U+2026 instead of adding three full stops. Mac Option+/Windows ALT+0133).
 
 ### File structure
 
