@@ -50,5 +50,7 @@ Toasts are UI elements where an event causes a small text field to appear on scr
 
 ## Related
 
-- [Modal](../modal)
+- [Message modal](../message-modal)
 - [Message bar](../messagebar)
+- [Modal](../modal)
+- [Accessibility](../../guidelines/accessibility)

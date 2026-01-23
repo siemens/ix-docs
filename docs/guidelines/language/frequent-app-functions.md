@@ -18,8 +18,8 @@ description: 'Get tips for naming common app functions clearly and effectively. 
 
 - Cockpit
 
-<div class="dos-and-donts" markdown>
-<div class="donts" markdown>
+<div className="dos-and-donts" markdown="true">
+<div className="donts" markdown="true">
 
 - Console
 - Dash
@@ -34,8 +34,8 @@ description: 'Get tips for naming common app functions clearly and effectively. 
 
 - Anomaly detection
 
-<div class="dos-and-donts" markdown>
-<div class="donts" markdown>
+<div className="dos-and-donts" markdown="true">
+<div className="donts" markdown="true">
 
 - Assessment
 - Examination
@@ -53,8 +53,8 @@ description: 'Get tips for naming common app functions clearly and effectively. 
 
 - Remove from watchlist
 
-<div class="dos-and-donts" markdown>
-<div class="donts" markdown>
+<div className="dos-and-donts" markdown="true">
+<div className="donts" markdown="true">
 
 - Watch list
 
@@ -69,8 +69,8 @@ description: 'Get tips for naming common app functions clearly and effectively. 
 
 - Details
 
-<div class="dos-and-donts" markdown>
-<div class="donts" markdown>
+<div className="dos-and-donts" markdown="true">
+<div className="donts" markdown="true">
 
 - Facts
 - Specifics
@@ -120,8 +120,8 @@ description: 'Get tips for naming common app functions clearly and effectively. 
 
 - Drag files here or select files
 
-<div class="dos-and-donts" markdown>
-<div class="donts" markdown>
+<div className="dos-and-donts" markdown="true">
+<div className="donts" markdown="true">
 
 - Drag and drop here or browse
 
@@ -138,8 +138,8 @@ description: 'Get tips for naming common app functions clearly and effectively. 
 
 - Write your comments here
 
-<div class="dos-and-donts" markdown>
-<div class="donts" markdown>
+<div className="dos-and-donts" markdown="true">
+<div className="donts" markdown="true">
 
 - Write a comment
 
@@ -168,8 +168,8 @@ description: 'Get tips for naming common app functions clearly and effectively. 
 
 - Notify me when X occurs
 
-<div class="dos-and-donts" markdown>
-<div class="donts" markdown>
+<div className="dos-and-donts" markdown="true">
+<div className="donts" markdown="true">
 
 - Error
 - Issue
@@ -204,8 +204,8 @@ description: 'Get tips for naming common app functions clearly and effectively. 
 
 - Detected
 
-<div class="dos-and-donts" markdown>
-<div class="donts" markdown>
+<div className="dos-and-donts" markdown="true">
+<div className="donts" markdown="true">
 
 - Unacklowedged
 - Unack.

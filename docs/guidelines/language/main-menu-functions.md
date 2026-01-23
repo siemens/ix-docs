@@ -18,8 +18,8 @@ description: 'Explore best practices for writing main menu functions to ensure i
 
 - Forgot password?
 
-<div class="dos-and-donts" markdown>
-<div class="donts" markdown>
+<div className="dos-and-donts" markdown="true">
+<div className="donts" markdown="true">
 
 - Sign in / Sign up
 - Login (as it is a noun, not a verb)
@@ -49,8 +49,8 @@ description: 'Explore best practices for writing main menu functions to ensure i
 
 - Edit account
 
-<div class="dos-and-donts" markdown>
-<div class="donts" markdown>
+<div className="dos-and-donts" markdown="true">
+<div className="donts" markdown="true">
 
 - id / identification
 - E-mail
@@ -106,8 +106,8 @@ description: 'Explore best practices for writing main menu functions to ensure i
 
 - Expired licenses
 
-<div class="dos-and-donts" markdown>
-<div class="donts" markdown>
+<div className="dos-and-donts" markdown="true">
+<div className="donts" markdown="true">
 
 - licence
 
@@ -140,8 +140,8 @@ description: 'Explore best practices for writing main menu functions to ensure i
 
 - © Siemens AG 20XX
 
-<div class="dos-and-donts" markdown>
-<div class="donts" markdown>
+<div className="dos-and-donts" markdown="true">
+<div className="donts" markdown="true">
 
 - V1
 
@@ -158,8 +158,8 @@ description: 'Explore best practices for writing main menu functions to ensure i
 
 - FAQ
 
-<div class="dos-and-donts" markdown>
-<div class="donts" markdown>
+<div className="dos-and-donts" markdown="true">
+<div className="donts" markdown="true">
 
 - Documentation
 - User manual
@@ -175,8 +175,8 @@ description: 'Explore best practices for writing main menu functions to ensure i
 
 - KPIs
 
-<div class="dos-and-donts" markdown>
-<div class="donts" markdown>
+<div className="dos-and-donts" markdown="true">
+<div className="donts" markdown="true">
 
 - KPI's settings
 - KPIS settings
