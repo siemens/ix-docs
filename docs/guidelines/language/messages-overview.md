@@ -13,13 +13,13 @@ description: 'The ability to design effective messages is essential for intuitiv
 
 
 
-## General rules
+## Message types
 
 First define your use case and message type from the list below, then use this overview and the other sections for message-specific guidance and examples.
 
 | Message type                       | Usage                                                                                                                              | Best practice example                                                                                                                            |
 | :--------------------------------- | :--------------------------------------------------------------------------------------------------------------------------------- | :----------------------------------------------------------------------------------------------------------------------------------------------- |
-| Error messages                     | Notify users of operational issues that have already happened and require their immediate action to resolve.                       | Heading: No data received<br/>Description: Unable to receive data as sensor is inactive.<br/>Instructions: Check sensor                           |
+| Error messages                     | Notify users of operational issues that have already happened and require their immediate action to resolve.                       | **Heading:** No data received<br/**Description:** Unable to receive data as sensor is inactive.<br/>Instructions: Check sensor                           |
 | Warning messages                   | Alert users to a potential problem or risk. Advises caution or suggests different actions to prevent unwanted future consequences. | Heading: Temperature approaching threshold<br/>Description: Temperature in Zone 3 approaching 30° threshold.<br/>Instructions: Check zone         |
 | Non-critical information messages  | Inform users about general information. Often no action is required.                                                               | System backup completed at 21:00 CET.                                                                                                            |
 | Empty-state messages               | Tell users the empty space is intentional, i.e. not an error, and how it can be filled.                                            | Heading: No zones created<br/>Description: Create zones to display on dashboard.<br/>Button: Create zone                                           |
@@ -27,6 +27,9 @@ First define your use case and message type from the list below, then use this o
 | Tooltips                           | Provide brief additional information about the tool with contextual help. Answer the question, “What is this?”                     | Shows machine activity and operator actions.                                                                                                     |
 | Infotips                           | Provide more detailed explanations or guidance regarding user actions. Answer the question, “Why is this here and what does it do?” | Hover over icons or labels to see more details about their function or status.                                                                   |
 | Time-related messages | Provide specific timeframes with actionable guidance.                                                                              | System maintenance scheduled for 22 August, 02:00–04:00 CEST.                                                                                    |
+  
+
+## General rules 
 
 Use sentence casing for all message descriptions (except toast messages) and add full stops.  
 <div class="dos-and-donts" markdown>
@@ -35,7 +38,7 @@ Use sentence casing for all message descriptions (except toast messages) and add
   - You have no new notifications.
  </div>
  <div class="donts" markdown>
-  - Add regions from your Dashboard
+  - Add regions from your dashboard
  </div>
 </div>
 
@@ -70,13 +73,15 @@ Use urgent wording to signal serious and irreversible consequences from ignoring
  </div>
 </div>
 
-Use the same key words in your messaging, but do not repeat the heading and description.
+Use the same key words in your messaging, but do not repeat headings and descriptions.
 <div class="dos-and-donts" markdown>
  <div class="dos" markdown>
-  - Bad request: Sorry, we could not process your request. Check and try again.
+  - Heading:Bad request
+  Description: Sorry, we could not process your request. Check and try again.
  </div>
  <div class="donts" markdown>
-  - Bad request. Sorry, bad request.
+  - Heading: Bad request.  
+  Description: Sorry, bad request.
  </div>
 </div>
 
@@ -135,7 +140,7 @@ Allow users to go back to change actions and avoid “OK” which is often under
 *   Do first classify what kind of message is required
 *   Do make a record or changelog of your messages for consistency and changes
 *   Don’t over communicate with irrelevant or unrelated information
-*   Don’t repeat the exact same wording in both the Heading and description
+*   Don’t repeat the exact same wording in both the heading and description
 
 ## Related
 
