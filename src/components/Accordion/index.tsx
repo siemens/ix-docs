@@ -21,6 +21,7 @@ export default function Accordion(
   }>
 ) {
   const [expanded, setExpanded] = useState<boolean>(false);
+
   const panelId = `accordion-${props.id || uniqueId++}-panel`;
 
   function onHeaderKeyDown(e: React.KeyboardEvent<HTMLHeadingElement>) {

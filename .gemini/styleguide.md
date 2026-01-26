@@ -11,8 +11,12 @@
 
 Typical structure:
 1. Basic
-2. Further examples
+2. (Further examples)
 3. API for {component}
+    - Properties
+    - Events (optional)
+    - Slots (optional)
+Note that the headings should be like that.
 
 ## Guidelines for guide.md files
 
@@ -30,6 +34,10 @@ Typical structure:
 
 - Apostrophe: Always use the symbol ’ (U+2019, "right single quotation mark"), not '
 - Use sentence case always: Start with a big letter and then only proper nouns are capitalized.
+- Avoid oxford comma whenever possible, e.g. before "and" and "or". For complex sentences where it's needed for understanding, try to simplify it.
+- Ellipses: always use the symbol … (Unicode U+2026 instead of adding three full stops. Mac Option+/Windows ALT+0133).
+- Quotation marks left (opening marks): always use the symbol " (Unicode U+201C) for the left double quote.
+- Quotation marks right (closing marks): always use the symbol " (Unicode U+201D) for the right double quote.
 
 ### File structure
 
@@ -69,6 +77,16 @@ Note that **not** all sections need to be filled out, e.g. if there are no varia
 
 - Naming of options: Stick to spelling of code section but avoid technical jargon, e.g. if code is "i18nPlainText", in description write "Plain text"
 - The option name and the colon is bold, e.g. "**Label:**"
+
+#### Behavior in context section
+
+- Often have following bullet points:
+    - Interaction
+    - Overflow
+    - Alignment
+    - Responsiveness
+    - Placement
+- Title is "Behavior in context" (not "Behavior")
 
 #### Dos and Don’ts section
 

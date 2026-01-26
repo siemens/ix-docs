@@ -36,8 +36,8 @@ description: "Dive into the fundamental principles of UX writing, where you'll l
 
 - Avoid using negative contractions as they can appear too informal
 
-<div class="dos-and-donts" markdown>
-<div class="dos" markdown>
+<div className="dos-and-donts" markdown="true">
+<div className="dos" markdown="true">
 
 - their, them, theirs, salesperson
 - Welcome to this application
@@ -46,7 +46,7 @@ description: "Dive into the fundamental principles of UX writing, where you'll l
 - you’ll, we’ve
 
 </div>
-<div class="donts" markdown>
+<div className="donts" markdown="true">
 
 - his, hers, him, salesman
 - Hey there!
@@ -79,8 +79,8 @@ description: "Dive into the fundamental principles of UX writing, where you'll l
 
 - Capitalize named app functions and UI elements: Go to Settings, Allocate users in User management, Press OK
 
-<div class="dos-and-donts" markdown>
-<div class="dos" markdown>
+<div className="dos-and-donts" markdown="true">
+<div className="dos" markdown="true">
 
 - Go to Settings
 - Press OK
@@ -88,7 +88,7 @@ description: "Dive into the fundamental principles of UX writing, where you'll l
 - For more information, see Siemens Industry Online Support.
 
 </div>
-<div class="donts" markdown>
+<div className="donts" markdown="true">
 
 - Go To Settings
 - Press OK
@@ -100,8 +100,8 @@ description: "Dive into the fundamental principles of UX writing, where you'll l
 
 ## Common UX wording mistakes
 
-<div class="dos-and-donts" markdown>
-<div class="dos" markdown>
+<div className="dos-and-donts" markdown="true">
+<div className="dos" markdown="true">
 
 - time zone
 - log file
@@ -117,7 +117,7 @@ description: "Dive into the fundamental principles of UX writing, where you'll l
 - 34 million
 
 </div>
-<div class="donts" markdown>
+<div className="donts" markdown="true">
 
 - timezone
 - logfile

@@ -85,8 +85,8 @@ Always consider whether necessary
 
 - Numbers: Use No. as an abbreviation for number, no spacing between abbreviated No. and number: No.8
 
-<div class="dos-and-donts" markdown>
-<div class="dos" markdown>
+<div className="dos-and-donts" markdown="true">
+<div className="dos" markdown="true">
 
 - 11am
 - Monday, January 12, 2021
@@ -101,7 +101,7 @@ Always consider whether necessary
 - Number 7
 
 </div>
-<div class="donts" markdown>
+<div className="donts" markdown="true">
 
 - 11 a.m.
 - Monday, 12 January 2021
@@ -130,8 +130,8 @@ Always consider whether necessary
 
 - Add a space before unit of measurement
 
-<div class="dos-and-donts" markdown>
-<div class="dos" markdown>
+<div className="dos-and-donts" markdown="true">
+<div className="dos" markdown="true">
 
 - 50%
 - 11am
@@ -139,7 +139,7 @@ Always consider whether necessary
 - Browse…
 
 </div>
-<div class="donts" markdown>
+<div className="donts" markdown="true">
 
 - 50 %
 - 11 am
@@ -161,9 +161,9 @@ Always consider whether necessary
 
 - Make lists parallel, i.e. all items / bullets have the same look, length, feel, punctuation, capitalization
 
-<div class="dos-and-donts" markdown>
+<div className="dos-and-donts" markdown="true">
 
-<div class="dos" markdown>
+<div className="dos" markdown="true">
 
   #### Activate comments within your smartphone to
 
@@ -173,7 +173,7 @@ Always consider whether necessary
 
 </div>
 
-<div class="donts" markdown>
+<div className="donts" markdown="true">
 
   #### Activate comments within your smartphone to
 
