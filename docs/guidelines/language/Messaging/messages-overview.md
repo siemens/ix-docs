@@ -1,5 +1,4 @@
 ---
-sidebar_position: 7
 sidebar_label: Messages
 title: Overview
 doc-type: 'banner'
@@ -11,6 +10,7 @@ description: 'The ability to design effective messages is essential for intuitiv
 
 # 
 
+## General rules
 
 
 ## Message types

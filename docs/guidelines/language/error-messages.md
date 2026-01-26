@@ -1,5 +1,5 @@
 ---
-sidebar_position: 8
+sidebar_position: 10
 sidebar_label: Errors, warnings and notifications
 title: Errors, warnings and notifications
 doc-type: 'banner'
