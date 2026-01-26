@@ -77,7 +77,7 @@ Use urgent wording to signal serious and irreversible consequences from ignoring
 Use the same key words in your messaging, but do not repeat headings and descriptions.
 <div class="dos-and-donts" markdown>
  <div class="dos" markdown>
-  - **Heading:** Bad request.<br> 
+  - **Heading:** Bad request.<br /> 
   **Description:** Sorry, we could not process your request. Check and try again.
  </div>
  <div class="donts" markdown>
