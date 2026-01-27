@@ -6,6 +6,9 @@ doc-type: 'banner'
 component-tabs: ['']
 no_single_tab: true
 description: Tooltips are small, informative pop-up elements that often appear when a user hovers over or focuses on a user interface element. They provide helpful context or explanations without cluttering the main interface, making them a valuable tool for enhancing usability and guiding users through complex features.
+import React from "react";
+import { IxIcon } from "@siemens/ix-react";
+import { iconEditDocument } from "@siemens/ix-icons/icons";
 ---
 
 #
@@ -16,19 +19,9 @@ description: Tooltips are small, informative pop-up elements that often appear w
 
 <div class="dos-and-donts" markdown>
 <div class="dos" markdown>
-Edit
-</div>
-</div>
-
-<div class="dos-and-donts" markdown>
-<div class="dos" markdown>
-Delete
-</div>
-</div>
-
-<div class="dos-and-donts" markdown>
-<div class="dos" markdown>
-Log out
+- Edit
+- Delete
+- Log out
 </div>
 </div>
 
@@ -36,25 +29,25 @@ Log out
 
 <div class="dos-and-donts" markdown>
 <div class="dos" markdown>
-Edit
+- Edit
 </div>
 </div>
 
 <div class="dos-and-donts" markdown>
 <div class="donts" markdown>
-Edit.
+- Edit.
 </div>
 </div>
 
 <div class="dos-and-donts" markdown>
 <div class="dos" markdown>
-Open file
+- Open file
 </div>
 </div>
 
 <div class="dos-and-donts" markdown>
 <div class="donts" markdown>
-Open file.
+- Open file.
 </div>
 </div>
 
@@ -62,13 +55,13 @@ Open file.
 
 <div class="dos-and-donts" markdown>
 <div class="dos" markdown>
-Add users to project.
+- Add users to project.
 </div>
 </div>
 
 <div class="dos-and-donts" markdown>
 <div class="donts" markdown>
-Add new users to project
+- Add new users to project
 </div>
 </div>
 
@@ -76,13 +69,13 @@ Add new users to project
 
 <div class="dos-and-donts" markdown>
 <div class="dos" markdown>
-Create KPI tables.
+- Create KPI tables.
 </div>
 </div>
 
 <div class="dos-and-donts" markdown>
 <div class="donts" markdown>
-Tables are created.
+- Tables are created.
 </div>
 </div>
 
@@ -90,13 +83,13 @@ Tables are created.
 
 <div class="dos-and-donts" markdown>
 <div class="dos" markdown>
-Share with team members.
+- Share with team members.
 </div>
 </div>
 
 <div class="dos-and-donts" markdown>
 <div class="donts" markdown>
-Projects can be shared with team members who work with you.
+- Projects can be shared with team members who work with you.
 </div>
 </div>
 
@@ -104,14 +97,14 @@ Projects can be shared with team members who work with you.
 
 <div class="dos-and-donts" markdown>
 <div class="dos" markdown>
-Cycle time input
+- Cycle time input<br/>
 Set the duration of each production cycle in seconds.
 </div>
 </div>
 
 <div class="dos-and-donts" markdown>
 <div class="dos" markdown>
-Log history
+- Log history<br/>
 View historical logs of machine activity and operator actions.
 </div>
 </div>
@@ -120,13 +113,13 @@ View historical logs of machine activity and operator actions.
 
 <div class="dos-and-donts" markdown>
 <div class="dos" markdown>
-Edit (as icon<ix-icon name="edit-document"></ix-icon>) Tooltip: Edit
+- Edit (as icon<IxIcon name={iconEditDocument} size="16"></IxIcon>) Tooltip: Edit
 </div>
 </div>
 
 <div class="dos-and-donts" markdown>
 <div class="donts" markdown>
-Edit (as text) Tooltip: Edit
+- Edit (as text) Tooltip: Edit
 </div>
 </div>
 

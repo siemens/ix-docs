@@ -8,7 +8,7 @@ description: 'The ability to design effective messages is essential for intuitiv
 ---
 
 
-# 
+#
 
 ## General rules
 
@@ -18,7 +18,7 @@ description: 'The ability to design effective messages is essential for intuitiv
 First define your use case and message type from the list below, then use this overview and the other sections for message-specific guidance and examples.
 
 
-  
+
  | Message type                       | Usage                                                                                                                              | Best practice example                                                                                                                            |
 | :--------------------------------- | :--------------------------------------------------------------------------------------------------------------------------------- | :----------------------------------------------------------------------------------------------------------------------------------------------- |
 | Error messages                     | Notify users of operational issues that have already happened and require their immediate action to resolve.                       | **Heading:** No data received<br/>**Description:** Unable to receive data as sensor is inactive.<br/>**Instructions:** Check sensor              |
@@ -28,11 +28,11 @@ First define your use case and message type from the list below, then use this o
 | Toast messages                     | Give short and often quickly disappearing feedback to a user action.                                                               | **Heading:** Asset deleted<br/>**Description:** Valve 4a/203/22                                                                                  |
 | Tooltips                           | Provide brief additional information about the tool with contextual help. Answer the question, “What is this?”                     | Shows machine activity and operator actions.                                                                                                     |
 | Infotips                           | Provide more detailed explanations or guidance regarding user actions. Answer the question, “Why is this here and what does it do?” | Hover over icons or labels to see more details about their function or status.                                                                   |
-| Time-related messages              | Provide specific timeframes with actionable guidance.                                                                              | System maintenance scheduled for 22 August, 02:00–04:00 CEST.                                                                                    | 
+| Time-related messages              | Provide specific timeframes with actionable guidance.                                                                              | System maintenance scheduled for 22 August, 02:00–04:00 CEST.                                                                                    |
 
-## General rules 
+## General rules
 
-Use sentence casing for all message descriptions (except toast messages) and add full stops.  
+Use sentence casing for all message descriptions (except toast messages) and add full stops.
 <div class="dos-and-donts" markdown>
  <div class="dos" markdown>
   - Create zones from your dashboard.
@@ -77,11 +77,11 @@ Use urgent wording to signal serious and irreversible consequences from ignoring
 Use the same key words in your messaging, but do not repeat headings and descriptions.
 <div class="dos-and-donts" markdown>
  <div class="dos" markdown>
-  - **Heading:** Bad request.<br /> 
+  - **Heading:** Bad request.<br />
   **Description:** Sorry, we could not process your request. Check and try again.
  </div>
  <div class="donts" markdown>
-  - **Heading:** Bad request.  
+  - **Heading:** Bad request.<br/>
   **Description:** Sorry, bad request.
  </div>
 </div>
@@ -146,7 +146,7 @@ Allow users to go back to change actions and avoid “OK” which is often under
 ## Related
 
 *   [Icon usage](https://ix.siemens.io/docs/icons/icon-usage#status-icons)
-*   Warning messages LINK TO BE ADDED 
+*   Warning messages LINK TO BE ADDED
 *   Error pages LINK TO BE ADDED
 *   Empty-state messages LINK TO BE ADDED
 *   Error messages LINK TO BE ADDED
