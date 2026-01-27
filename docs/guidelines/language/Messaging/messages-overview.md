@@ -33,40 +33,40 @@ First define your use case and message type from the list below, then use this o
 ## General rules
 
 Use sentence casing for all message descriptions (except toast messages) and add full stops.
-<div class="dos-and-donts" markdown>
- <div class="dos" markdown>
+<div class="dos-and-donts" markdown="true">
+ <div class="dos" markdown="true">
   - Create zones from your dashboard.
   - You have no new notifications.
  </div>
- <div class="donts" markdown>
+ <div class="donts" markdown="true">
   - Add regions from your dashboard
  </div>
 </div>
 
 Avoid overcommunicating by only adding relevant, beneficial information to your messages.
-<div className="dos-and-donts" markdown>
- <div className="dos" markdown>
+<div className="dos-and-donts" markdown="true">
+ <div className="dos" markdown="true">
   - We received your error report and will process it within 24 to 48 hours.
  </div>
- <div className="donts" markdown>
+ <div className="donts" markdown="true">
   - The support team has received your bug report but they only work from 9-5 CEST time at the moment and there is a skeleton crew working over the summer.
  </div>
 </div>
 
 Provide specifics, e.g. objects, values, reasons and solutions, instead of generic messaging.
-<div className="dos-and-donts" markdown>
- <div className="dos" markdown>
+<div className="dos-and-donts" markdown="true">
+ <div className="dos" markdown="true">
   - Failed to upload file due to connection error.
  </div>
- <div className="donts" markdown>
+ <div className="donts" markdown="true">
   - Something happened.
   - An error occurred.
  </div>
 </div>
 
 Use urgent wording to signal serious and irreversible consequences from ignoring messages.
-<div className="dos-and-donts" markdown>
- <div className="dos" markdown>
+<div className="dos-and-donts" markdown="true">
+ <div className="dos" markdown="true">
   - Immediate software update required to save data securely.
   - Update software now to save data.
   - Contact support by 14:00 CET to avoid shutdown.
@@ -75,46 +75,46 @@ Use urgent wording to signal serious and irreversible consequences from ignoring
 </div>
 
 Use the same key words in your messaging, but do not repeat headings and descriptions.
-<div className="dos-and-donts" markdown>
- <div className="dos" markdown>
+<div className="dos-and-donts" markdown="true">
+ <div className="dos" markdown="true">
   - **Heading:** Bad request.<br />
   **Description:** Sorry, we could not process your request. Check and try again.
  </div>
- <div className="donts" markdown>
+ <div className="donts" markdown="true">
   - **Heading:** Bad request.<br/>
   **Description:** Sorry, bad request.
  </div>
 </div>
 
 Use the same grammar patterns across all your messaging within your product.
-<div className="dos-and-donts" markdown>
- <div className="dos" markdown>
+<div className="dos-and-donts" markdown="true">
+ <div className="dos" markdown="true">
   - No assets added. / No dashboards created. / No data downloaded.
  </div>
- <div className="donts" markdown>
+ <div className="donts" markdown="true">
   - No assets added. / You haven’t added any assets. / You have no assets yet.
  </div>
 </div>
 
 Avoid asking patronizing “Are you sure…?” questions to your expert users.
-<div className="dos-and-donts" markdown>
- <div className="dos" markdown>
+<div className="dos-and-donts" markdown="true">
+ <div className="dos" markdown="true">
   - Deleting this file removes all dependencies.
  </div>
- <div className="donts" markdown>
+ <div className="donts" markdown="true">
   - Are you sure you want to delete this file?
  </div>
 </div>
 
 Use action labels that match the action of the message without mixing verbs or using synonyms.
-<div className="dos-and-donts" markdown>
- <div className="dos" markdown>
+<div className="dos-and-donts" markdown="true">
+ <div className="dos" markdown="true">
   - Close
   - Save
   - Continue
   - Delete
  </div>
- <div className="donts" markdown>
+ <div className="donts" markdown="true">
   - OK
   - Confirm
  </div>
@@ -122,14 +122,14 @@ Use action labels that match the action of the message without mixing verbs or u
 
 Allow users to go back to change actions and avoid “OK” which is often understood as “Yes”.
 
-<div className="dos-and-donts" markdown>
- <div className="dos" markdown>
+<div className="dos-and-donts" markdown="true">
+ <div className="dos" markdown="true">
   - **Heading:** Unsaved changes
   - **Description:** You are about to leave the page. Unsaved changes will be lost.
   - **Button:** Exit without saving
   - **Button:** Go back
  </div>
- <div className="donts" markdown>
+ <div className="donts" markdown="true">
   - **Description:** Are you sure you want to cancel?
   - **Button:** OK
   - **Button:** Cancel
