@@ -36,11 +36,11 @@ Get tips for naming common app functions clearly and effectively. This subchapte
 
 ## Best practice
 
-Familiarize yourself with general best practices for UX writing to maintain consistency and clarity across all your content. This section offers overarching guidelines that apply to various aspects of UX writing. [Read more](./best-practices)
+Familiarize yourself with general best practices for UX writing to maintain consistency and clarity across all your content. This section offers overarching guidelines that apply to various aspects of UX writing.
 
 ## Errors, warnings and notifications
 
-Learn how to write error messages, warnings, and notifications that are helpful and user-friendly. This subchapter provides strategies for communicating issues and alerts in a way that guides users towards solutions. [Read more](./error-messages)
+Learn how to write error messages, warnings, and notifications that are helpful and user-friendly. This subchapter provides strategies for communicating issues and alerts in a way that guides users towards solutions. 
 
 ## Dialogs and buttons
 
