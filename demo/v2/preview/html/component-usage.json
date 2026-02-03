@@ -35,6 +35,13 @@
     "ix-menu",
     "ix-menu-item"
   ],
+  "/src/preview-examples/application-header.html": [
+    "ix-application-header",
+    "ix-avatar",
+    "ix-dropdown-button",
+    "ix-dropdown-item",
+    "ix-icon-button"
+  ],
   "/src/preview-examples/application-breakpoints.html": [
     "ix-application",
     "ix-application-header",
@@ -48,13 +55,6 @@
     "ix-radio",
     "ix-radio-group"
   ],
-  "/src/preview-examples/application-header.html": [
-    "ix-application-header",
-    "ix-avatar",
-    "ix-dropdown-button",
-    "ix-dropdown-item",
-    "ix-icon-button"
-  ],
   "/src/preview-examples/application.html": [
     "ix-application",
     "ix-application-header",
@@ -63,11 +63,11 @@
     "ix-menu",
     "ix-menu-item"
   ],
-  "/src/preview-examples/aria-label-properties.html": [
-    "ix-date-picker"
-  ],
   "/src/preview-examples/avatar-image.html": [
     "ix-avatar"
+  ],
+  "/src/preview-examples/aria-label-properties.html": [
+    "ix-date-picker"
   ],
   "/src/preview-examples/avatar-initials.html": [
     "ix-avatar"
@@ -75,14 +75,14 @@
   "/src/preview-examples/avatar.html": [
     "ix-avatar"
   ],
+  "/src/preview-examples/blind-variants.html": [
+    "ix-blind"
+  ],
   "/src/preview-examples/blind-header-actions.html": [
     "ix-blind",
     "ix-dropdown",
     "ix-dropdown-item",
     "ix-icon-button"
-  ],
-  "/src/preview-examples/blind-variants.html": [
-    "ix-blind"
   ],
   "/src/preview-examples/blind.html": [
     "ix-blind"
@@ -91,11 +91,11 @@
     "ix-breadcrumb",
     "ix-breadcrumb-item"
   ],
-  "/src/preview-examples/breadcrumb.html": [
+  "/src/preview-examples/breadcrumb-truncate.html": [
     "ix-breadcrumb",
     "ix-breadcrumb-item"
   ],
-  "/src/preview-examples/breadcrumb-truncate.html": [
+  "/src/preview-examples/breadcrumb.html": [
     "ix-breadcrumb",
     "ix-breadcrumb-item"
   ],
@@ -111,10 +111,10 @@
   "/src/preview-examples/button-ghost.html": [
     "ix-button"
   ],
-  "/src/preview-examples/button-grey-ghost.html": [
+  "/src/preview-examples/button-grey-secondary.html": [
     "ix-button"
   ],
-  "/src/preview-examples/button-grey-secondary.html": [
+  "/src/preview-examples/button-grey-ghost.html": [
     "ix-button"
   ],
   "/src/preview-examples/button-grey.html": [
@@ -127,19 +127,19 @@
     "ix-button",
     "ix-icon-button"
   ],
-  "/src/preview-examples/button-secondary.html": [
+  "/src/preview-examples/button-text-icon.html": [
     "ix-button"
   ],
-  "/src/preview-examples/button-text-icon.html": [
+  "/src/preview-examples/button-secondary.html": [
     "ix-button"
   ],
   "/src/preview-examples/button-with-icon.html": [
     "ix-icon-button"
   ],
-  "/src/preview-examples/button-with-link.html": [
+  "/src/preview-examples/buttons.html": [
     "ix-button"
   ],
-  "/src/preview-examples/buttons.html": [
+  "/src/preview-examples/button-with-link.html": [
     "ix-button"
   ],
   "/src/preview-examples/card-list.html": [
@@ -253,11 +253,6 @@
     "ix-dropdown",
     "ix-dropdown-item"
   ],
-  "/src/preview-examples/dropdown-submenu.html": [
-    "ix-button",
-    "ix-dropdown",
-    "ix-dropdown-item"
-  ],
   "/src/preview-examples/dropdown-quick-actions.html": [
     "ix-button",
     "ix-divider",
@@ -265,6 +260,11 @@
     "ix-dropdown-item",
     "ix-dropdown-quick-actions",
     "ix-icon-button"
+  ],
+  "/src/preview-examples/dropdown-submenu.html": [
+    "ix-button",
+    "ix-dropdown",
+    "ix-dropdown-item"
   ],
   "/src/preview-examples/dropdown.html": [
     "ix-button",
@@ -378,38 +378,28 @@
     "ix-group",
     "ix-group-item"
   ],
-  "/src/preview-examples/group-header-suppressed.html": [
-    "ix-group",
-    "ix-group-item"
-  ],
   "/src/preview-examples/group.html": [
     "ix-group",
     "ix-group-item"
   ],
-  "/src/preview-examples/icon-toggle-button-primary-ghost.html": [
-    "ix-icon-toggle-button",
-    "ix-layout-grid",
-    "ix-row"
-  ],
-  "/src/preview-examples/icon-toggle-button-primary-outline.html": [
-    "ix-icon-toggle-button",
-    "ix-layout-grid",
-    "ix-row"
-  ],
-  "/src/preview-examples/icon-toggle-button-secondary-ghost.html": [
-    "ix-icon-toggle-button",
-    "ix-layout-grid",
-    "ix-row"
-  ],
-  "/src/preview-examples/icon-toggle-button-secondary-outline.html": [
-    "ix-icon-toggle-button",
-    "ix-layout-grid",
-    "ix-row"
+  "/src/preview-examples/group-header-suppressed.html": [
+    "ix-group",
+    "ix-group-item"
   ],
   "/src/preview-examples/icon-toggle-button-secondary.html": [
-    "ix-icon-toggle-button",
-    "ix-layout-grid",
-    "ix-row"
+    "ix-icon-toggle-button"
+  ],
+  "/src/preview-examples/icon-toggle-button-subtle-primary.html": [
+    "ix-icon-toggle-button"
+  ],
+  "/src/preview-examples/icon-toggle-button-subtle-secondary.html": [
+    "ix-icon-toggle-button"
+  ],
+  "/src/preview-examples/icon-toggle-button-subtle-tertiary.html": [
+    "ix-icon-toggle-button"
+  ],
+  "/src/preview-examples/icon-toggle-button-tertiary.html": [
+    "ix-icon-toggle-button"
   ],
   "/src/preview-examples/input-disabled.html": [
     "ix-input"
@@ -434,12 +424,12 @@
     "ix-input",
     "ix-typography"
   ],
-  "/src/preview-examples/input.html": [
-    "ix-input"
-  ],
   "/src/preview-examples/key-value-list-striped.html": [
     "ix-key-value",
     "ix-key-value-list"
+  ],
+  "/src/preview-examples/input.html": [
+    "ix-input"
   ],
   "/src/preview-examples/key-value-list-with-custom-value.html": [
     "ix-key-value",
@@ -574,6 +564,9 @@
   "/src/preview-examples/pill.html": [
     "ix-pill"
   ],
+  "/src/preview-examples/progress-indicator-circular-sizes.html": [
+    "ix-progress-indicator"
+  ],
   "/src/preview-examples/popover-news.html": [
     "ix-application",
     "ix-application-header",
@@ -581,9 +574,6 @@
     "ix-menu-about",
     "ix-menu-about-item",
     "ix-menu-about-news"
-  ],
-  "/src/preview-examples/progress-indicator-circular-sizes.html": [
-    "ix-progress-indicator"
   ],
   "/src/preview-examples/progress-indicator-circular-status.html": [
     "ix-progress-indicator"
@@ -649,11 +639,11 @@
   "/src/preview-examples/slider-trace.html": [
     "ix-slider"
   ],
-  "/src/preview-examples/slider.html": [
-    "ix-slider"
-  ],
   "/src/preview-examples/spinner-large.html": [
     "ix-spinner"
+  ],
+  "/src/preview-examples/slider.html": [
+    "ix-slider"
   ],
   "/src/preview-examples/spinner.html": [
     "ix-spinner"
@@ -744,22 +734,22 @@
     "ix-button",
     "ix-toast-container"
   ],
-  "/src/preview-examples/toggle-button-primary-ghost.html": [
-    "ix-toggle-button"
-  ],
-  "/src/preview-examples/toggle-button-primary-outline.html": [
-    "ix-toggle-button"
-  ],
   "/src/preview-examples/toggle-button-primary.html": [
     "ix-toggle-button"
   ],
-  "/src/preview-examples/toggle-button-secondary-ghost.html": [
-    "ix-toggle-button"
-  ],
-  "/src/preview-examples/toggle-button-secondary-outline.html": [
-    "ix-toggle-button"
-  ],
   "/src/preview-examples/toggle-button-secondary.html": [
+    "ix-toggle-button"
+  ],
+  "/src/preview-examples/toggle-button-subtle-secondary.html": [
+    "ix-toggle-button"
+  ],
+  "/src/preview-examples/toggle-button-subtle-primary.html": [
+    "ix-toggle-button"
+  ],
+  "/src/preview-examples/toggle-button-subtle-tertiary.html": [
+    "ix-toggle-button"
+  ],
+  "/src/preview-examples/toggle-button-tertiary.html": [
     "ix-toggle-button"
   ],
   "/src/preview-examples/toggle-checked.html": [
@@ -793,13 +783,13 @@
   "/src/preview-examples/tree.html": [
     "ix-tree"
   ],
-  "/src/preview-examples/upload.html": [
-    "ix-upload"
-  ],
   "/src/preview-examples/validation-select.html": [
     "ix-button",
     "ix-select",
     "ix-select-item"
+  ],
+  "/src/preview-examples/upload.html": [
+    "ix-upload"
   ],
   "/src/preview-examples/vertical-tabs-with-avatar.html": [
     "ix-menu",

@@ -13,54 +13,37 @@ LICENSE file in the root directory of this source tree.
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Icon toggle button secondary example</title>
-    
-    
-    <script type="module" crossorigin src="../assets/icon-toggle-button-secondary-D1l3IqIs.js"></script>
-    <link rel="modulepreload" crossorigin href="../assets/global-CJeEgyUn.js">
-    <link rel="modulepreload" crossorigin href="../assets/init-DlgoXen4.js">
-    <link rel="modulepreload" crossorigin href="../assets/ix-icon.entry-DkCgv7Zc.js">
-    <link rel="modulepreload" crossorigin href="../assets/index-B86ot3BK.js">
-    <link rel="stylesheet" href="../assets/global-DdOw2HJU.css">
-    <link rel="stylesheet" href="../assets/icon-toggle-button-primary-ghost-DJd4mTsI.css">
+    <script type="module" crossorigin src="../assets/icon-toggle-button-secondary-CfJdkGH-.js"></script>
+    <link rel="modulepreload" crossorigin href="../assets/global-X2k8gwUL.js">
+    <link rel="modulepreload" crossorigin href="../assets/init-BwA_PJxl.js">
+    <link rel="modulepreload" crossorigin href="../assets/ix-icon.entry-CAC9hLPU.js">
+    <link rel="modulepreload" crossorigin href="../assets/index-CtK4JYCE.js">
+    <link rel="stylesheet" crossorigin href="../assets/global-D_T-tGgV.css">
+    <link rel="stylesheet" crossorigin href="../assets/icon-toggle-button-secondary-DwBons1q.css">
   </head>
   <body>
-    <ix-layout-grid>
-      <ix-row>
-        <ix-icon-toggle-button icon="checkboxes"></ix-icon-toggle-button>
-        <ix-icon-toggle-button
-          icon="checkboxes"
-          pressed
+   <div class="button-container">
+      <ix-icon-toggle-button
+        variant="secondary"
+        id="boldButton"
+        icon="text-bold"
         ></ix-icon-toggle-button>
-        <ix-icon-toggle-button
-          icon="checkboxes"
-          disabled
-        ></ix-icon-toggle-button>
-        <ix-icon-toggle-button
-          icon="checkboxes"
-          disabled
-          loading
-        ></ix-icon-toggle-button>
-      </ix-row>
-      <ix-row>
-        <ix-icon-toggle-button icon="checkboxes" oval></ix-icon-toggle-button>
-        <ix-icon-toggle-button
-          icon="checkboxes"
-          pressed
-          oval
-        ></ix-icon-toggle-button>
-        <ix-icon-toggle-button
-          icon="checkboxes"
-          disabled
-          oval
-        ></ix-icon-toggle-button>
-        <ix-icon-toggle-button
-          icon="checkboxes"
-          disabled
-          loading
-          oval
-        ></ix-icon-toggle-button>
-      </ix-row>
-    </ix-layout-grid>
-    
+      <ix-icon-toggle-button
+        variant="secondary"
+        disabled
+        icon="text-italic"
+        ></ix-icon-toggle-button
+      >
+      <ix-icon-toggle-button
+        variant="secondary"
+        id="underlineButton"
+        icon="text-underline"
+        pressed
+        ></ix-icon-toggle-button
+      >
+      <ix-icon-toggle-button variant="secondary" disabled loading>
+      </ix-icon-toggle-button>
+    </div>
+    <p id="loremIpsum">Lorem ipsum text</p>
   </body>
 </html>

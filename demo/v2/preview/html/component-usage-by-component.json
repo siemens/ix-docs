@@ -121,6 +121,16 @@
     "/src/preview-examples/split-button-icons.html",
     "/src/preview-examples/split-button.html"
   ],
+  "ix-icon-button": [
+    "/src/preview-examples/application-header.html",
+    "/src/preview-examples/blind-header-actions.html",
+    "/src/preview-examples/button-loading.html",
+    "/src/preview-examples/button-with-icon.html",
+    "/src/preview-examples/content-header-no-back.html",
+    "/src/preview-examples/custom-field.html",
+    "/src/preview-examples/dropdown-quick-actions.html",
+    "/src/preview-examples/tile.html"
+  ],
   "ix-radio-group": [
     "/src/preview-examples/application-breakpoints.html",
     "/src/preview-examples/radio-group.html",
@@ -132,16 +142,6 @@
     "/src/preview-examples/radio-group.html",
     "/src/preview-examples/radio-validation.html",
     "/src/preview-examples/radio.html"
-  ],
-  "ix-icon-button": [
-    "/src/preview-examples/application-header.html",
-    "/src/preview-examples/blind-header-actions.html",
-    "/src/preview-examples/button-loading.html",
-    "/src/preview-examples/button-with-icon.html",
-    "/src/preview-examples/content-header-no-back.html",
-    "/src/preview-examples/custom-field.html",
-    "/src/preview-examples/dropdown-quick-actions.html",
-    "/src/preview-examples/tile.html"
   ],
   "ix-date-picker": [
     "/src/preview-examples/aria-label-properties.html",
@@ -378,11 +378,6 @@
     "/src/preview-examples/grid-padding.html",
     "/src/preview-examples/grid-size.html",
     "/src/preview-examples/grid.html",
-    "/src/preview-examples/icon-toggle-button-primary-ghost.html",
-    "/src/preview-examples/icon-toggle-button-primary-outline.html",
-    "/src/preview-examples/icon-toggle-button-secondary-ghost.html",
-    "/src/preview-examples/icon-toggle-button-secondary-outline.html",
-    "/src/preview-examples/icon-toggle-button-secondary.html",
     "/src/preview-examples/pill-variants.html",
     "/src/preview-examples/theme-switcher.html"
   ],
@@ -391,11 +386,6 @@
     "/src/preview-examples/grid-padding.html",
     "/src/preview-examples/grid-size.html",
     "/src/preview-examples/grid.html",
-    "/src/preview-examples/icon-toggle-button-primary-ghost.html",
-    "/src/preview-examples/icon-toggle-button-primary-outline.html",
-    "/src/preview-examples/icon-toggle-button-secondary-ghost.html",
-    "/src/preview-examples/icon-toggle-button-secondary-outline.html",
-    "/src/preview-examples/icon-toggle-button-secondary.html",
     "/src/preview-examples/pill-variants.html",
     "/src/preview-examples/theme-switcher.html"
   ],
@@ -420,11 +410,11 @@
     "/src/preview-examples/group.html"
   ],
   "ix-icon-toggle-button": [
-    "/src/preview-examples/icon-toggle-button-primary-ghost.html",
-    "/src/preview-examples/icon-toggle-button-primary-outline.html",
-    "/src/preview-examples/icon-toggle-button-secondary-ghost.html",
-    "/src/preview-examples/icon-toggle-button-secondary-outline.html",
-    "/src/preview-examples/icon-toggle-button-secondary.html"
+    "/src/preview-examples/icon-toggle-button-secondary.html",
+    "/src/preview-examples/icon-toggle-button-subtle-primary.html",
+    "/src/preview-examples/icon-toggle-button-subtle-secondary.html",
+    "/src/preview-examples/icon-toggle-button-subtle-tertiary.html",
+    "/src/preview-examples/icon-toggle-button-tertiary.html"
   ],
   "ix-key-value-list": [
     "/src/preview-examples/key-value-list-striped.html",
@@ -487,9 +477,6 @@
     "/src/preview-examples/pane-layout.html",
     "/src/preview-examples/pane.html"
   ],
-  "ix-menu-about-news": [
-    "/src/preview-examples/popover-news.html"
-  ],
   "ix-progress-indicator": [
     "/src/preview-examples/progress-indicator-circular-sizes.html",
     "/src/preview-examples/progress-indicator-circular-status.html",
@@ -497,6 +484,9 @@
     "/src/preview-examples/progress-indicator-linear-sizes.html",
     "/src/preview-examples/progress-indicator-linear-status.html",
     "/src/preview-examples/progress-indicator.html"
+  ],
+  "ix-menu-about-news": [
+    "/src/preview-examples/popover-news.html"
   ],
   "ix-menu-settings-item": [
     "/src/preview-examples/settings.html"
@@ -552,12 +542,12 @@
     "/src/preview-examples/toast.html"
   ],
   "ix-toggle-button": [
-    "/src/preview-examples/toggle-button-primary-ghost.html",
-    "/src/preview-examples/toggle-button-primary-outline.html",
     "/src/preview-examples/toggle-button-primary.html",
-    "/src/preview-examples/toggle-button-secondary-ghost.html",
-    "/src/preview-examples/toggle-button-secondary-outline.html",
-    "/src/preview-examples/toggle-button-secondary.html"
+    "/src/preview-examples/toggle-button-secondary.html",
+    "/src/preview-examples/toggle-button-subtle-primary.html",
+    "/src/preview-examples/toggle-button-subtle-secondary.html",
+    "/src/preview-examples/toggle-button-subtle-tertiary.html",
+    "/src/preview-examples/toggle-button-tertiary.html"
   ],
   "ix-toggle": [
     "/src/preview-examples/toggle-checked.html",

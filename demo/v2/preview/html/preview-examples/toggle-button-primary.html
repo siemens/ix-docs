@@ -13,22 +13,34 @@ LICENSE file in the root directory of this source tree.
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Toggle button primary example</title>
-    
-    <script type="module" crossorigin src="../assets/toggle-button-primary-CvFyY5SK.js"></script>
-    <link rel="modulepreload" crossorigin href="../assets/global-CJeEgyUn.js">
-    <link rel="modulepreload" crossorigin href="../assets/init-DlgoXen4.js">
-    <link rel="stylesheet" href="../assets/global-DdOw2HJU.css">
-    <link rel="stylesheet" href="../assets/toggle-button-primary-ghost-BgaO7dH9.css">
+    <script type="module" crossorigin src="../assets/toggle-button-primary-BVJpVMU_.js"></script>
+    <link rel="modulepreload" crossorigin href="../assets/global-X2k8gwUL.js">
+    <link rel="modulepreload" crossorigin href="../assets/init-BwA_PJxl.js">
+    <link rel="modulepreload" crossorigin href="../assets/ix-icon.entry-CAC9hLPU.js">
+    <link rel="modulepreload" crossorigin href="../assets/index-CtK4JYCE.js">
+    <link rel="stylesheet" crossorigin href="../assets/global-D_T-tGgV.css">
+    <link rel="stylesheet" crossorigin href="../assets/toggle-button-primary-Y2SHNDRH.css">
   </head>
   <body>
-    <div>
-      <ix-toggle-button variant="primary">Normal</ix-toggle-button>
-      <ix-toggle-button variant="primary" pressed>Pressed</ix-toggle-button>
-      <ix-toggle-button variant="primary" disabled>Disabled</ix-toggle-button>
+    <div class="button-container">
+      <ix-toggle-button id="boldButton" variant="primary" icon="text-bold"
+        >Bold</ix-toggle-button
+      >
+      <ix-toggle-button variant="primary" disabled icon="text-italic"
+        >Italic</ix-toggle-button
+      >
+      <ix-toggle-button
+        id="underlineButton"
+        variant="primary"
+        icon="text-underline"
+        pressed
+        >Underline</ix-toggle-button
+      >
       <ix-toggle-button variant="primary" disabled loading>
-        Loading
+        Strikethrough
       </ix-toggle-button>
     </div>
-    
+    <p id="loremIpsum">Lorem ipsum text</p>
+
   </body>
 </html>

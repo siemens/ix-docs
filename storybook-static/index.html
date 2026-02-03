@@ -56,9 +56,11 @@
     
     <link href="./sb-addons/a11y-4/manager-bundle.js" rel="modulepreload" />
     
-    <link href="./sb-addons/docs-5/manager-bundle.js" rel="modulepreload" />
+    <link href="./sb-addons/vitest-5/manager-bundle.js" rel="modulepreload" />
     
-    <link href="./sb-addons/storybook-6/manager-bundle.js" rel="modulepreload" />
+    <link href="./sb-addons/docs-6/manager-bundle.js" rel="modulepreload" />
+    
+    <link href="./sb-addons/storybook-7/manager-bundle.js" rel="modulepreload" />
        
 
     <style>
@@ -114,30 +116,21 @@
         
       
         
-          window['TAGS_OPTIONS'] = {
-  "dev-only": {
-    "excludeFromDocsStories": true
-  },
-  "docs-only": {
-    "excludeFromSidebar": true
-  },
-  "test-only": {
-    "excludeFromSidebar": true,
-    "excludeFromDocsStories": true
-  }
-};
+          window['TAGS_OPTIONS'] = {};
+        
+      
+        
+          window['STORYBOOK_BUILDER'] = "vite";
+        
+      
+        
+          window['STORYBOOK_FRAMEWORK'] = "web-components-vite";
         
       
         
           window['STORYBOOK_RENDERER'] = "web-components";
         
       
-        
-          window['STORYBOOK_BUILDER'] = "@storybook/builder-vite";
-        
-      
-        
-          window['STORYBOOK_FRAMEWORK'] = "/home/runner/work/ix/ix/node_modules/.pnpm/@storybook+web-components-vite@9.0.18_lit@3.2.1_storybook@9.0.18_@testing-library+dom@1_1fd5bbef53a7256c7ee8a8f4d3602457/node_modules/@storybook/web-components-vite";
         
       
     </script>
@@ -157,9 +150,11 @@
       
         import './sb-addons/a11y-4/manager-bundle.js';
       
-        import './sb-addons/docs-5/manager-bundle.js';
+        import './sb-addons/vitest-5/manager-bundle.js';
       
-        import './sb-addons/storybook-6/manager-bundle.js';
+        import './sb-addons/docs-6/manager-bundle.js';
+      
+        import './sb-addons/storybook-7/manager-bundle.js';
       
 
       import './sb-manager/runtime.js';
