@@ -121,16 +121,6 @@
     "/src/preview-examples/split-button-icons.html",
     "/src/preview-examples/split-button.html"
   ],
-  "ix-icon-button": [
-    "/src/preview-examples/application-header.html",
-    "/src/preview-examples/blind-header-actions.html",
-    "/src/preview-examples/button-loading.html",
-    "/src/preview-examples/button-with-icon.html",
-    "/src/preview-examples/content-header-no-back.html",
-    "/src/preview-examples/custom-field.html",
-    "/src/preview-examples/dropdown-quick-actions.html",
-    "/src/preview-examples/tile.html"
-  ],
   "ix-radio-group": [
     "/src/preview-examples/application-breakpoints.html",
     "/src/preview-examples/radio-group.html",
@@ -142,6 +132,16 @@
     "/src/preview-examples/radio-group.html",
     "/src/preview-examples/radio-validation.html",
     "/src/preview-examples/radio.html"
+  ],
+  "ix-icon-button": [
+    "/src/preview-examples/application-header.html",
+    "/src/preview-examples/blind-header-actions.html",
+    "/src/preview-examples/button-loading.html",
+    "/src/preview-examples/button-with-icon.html",
+    "/src/preview-examples/content-header-no-back.html",
+    "/src/preview-examples/custom-field.html",
+    "/src/preview-examples/dropdown-quick-actions.html",
+    "/src/preview-examples/tile.html"
   ],
   "ix-date-picker": [
     "/src/preview-examples/aria-label-properties.html",
