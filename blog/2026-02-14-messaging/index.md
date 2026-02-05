@@ -18,11 +18,11 @@ As reaction to repeatedly asked questions about toast messages and especially th
 
 ![banner](./2602_blog_messaging_toast.svg)
 
-[Toast](/docs/components/toast/guide) notifications are quick, non-intrusive pop-ups that provide simple feedback on a process. They are excellent for immediate confirmations such as a successful deletion.
+[Toast](/docs/components/toast/guide) notifications are quick, non-intrusive pop-ups that provide simple feedback on a process. They are excellent for immediate confirmations, e.g. a successful deletion.
 
 However, toasts can often be:
 
-- Missed: Especially if a modal dialog is open, or if the user's attention is elsewhere.
+- Missed: Especially if a modal dialog is open, or if the user’s attention is elsewhere.
 - Disruptive: While generally non-blocking, a rapid succession of toasts can be overwhelming.
 - Lacking context: Toasts are designed for brevity, making it challenging to convey detailed information.
 
@@ -32,7 +32,7 @@ This is why, for most scenarios requiring user attention or detailed information
 
 We already offer a set of components designed to handle various messaging needs. Let's explore the alternatives to toast notifications and understand when to use each one.
 
-### Message modal: For critical information and required Interaction
+### Message modal: For critical information and required interaction
 
 ![banner](./2602_blog_messaging_messagemodal.svg)
 
@@ -43,7 +43,7 @@ We already offer a set of components designed to handle various messaging needs.
 Examples:
 
 - Confirming a permanent deletion.
-- Alerting the user to an unsaved changes before navigating away.
+- Alerting the user to a unsaved changes before navigating away.
 - Displaying a critical system error that requires immediate resolution.
 
 ### Message bar: For persistent, system-wide or page-specific messages
