@@ -122,16 +122,16 @@ Allow users to go back to change actions and avoid “OK” which is often under
 
 <div className="dos-and-donts" markdown="true">
  <div className="dos" markdown="true">
-  - **Heading:** Unsaved changes <br />
-  **Description:** You are about to leave the page. Unsaved changes will be lost.<br />
-  **Button:** Exit without saving <br />
-  **Button:** Go back
+  - Heading: Unsaved changes <br />
+  Description: You are about to leave the page. Unsaved changes will be lost.<br />
+  Button: Exit without saving <br />
+  Button: Go back
  </div>
  <div className="donts" markdown="true">
-  - **Description:** Are you sure you want to cancel? <br />
-  **Button:** OK <br />
-  **Button:** Cancel <br />
-  **Button:** Yes 
+  - Description: Are you sure you want to cancel? <br />
+  Button: OK <br />
+  Button: Cancel <br />
+  Button: Yes 
  </div>
 </div>
 
@@ -144,7 +144,7 @@ Allow users to go back to change actions and avoid “OK” which is often under
 ## Related
 
 *   [Icon usage](https://ix.siemens.io/docs/icons/icon-usage#status-icons)
-*   Warning messages LINK TO BE ADDED
-*   Error pages LINK TO BE ADDED
-*   Empty-state messages LINK TO BE ADDED
-*   Error messages LINK TO BE ADDED
+*   Warning messages 
+*   Error pages 
+*   Empty-state messages 
+*   Error messages 
