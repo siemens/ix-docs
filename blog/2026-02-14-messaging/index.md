@@ -64,7 +64,7 @@ Examples:
 
 ![banner](./2602_blog_messaging_messagebar.svg)
 
-<strong>When to use it:</strong> [Message bars](/docs/components/messagebar/code) (often referred to as banners) are ideal for important, non-blocking messages that need to persist until dismissed or resolved. These messages can be system-wide (affecting the entire application) or page-specific (relevant to a particular view). See our UX writing section on [non-critical information and time-related messages](/docs/guidelines/language/writing-style-guide-getting-started).
+<strong>When to use it:</strong> Banners are ideal for important, non-blocking messages that need to persist until dismissed or resolved. These messages can be system-wide (affecting the entire application) or page-specific (relevant to a particular view). In our design system the [message bar](/docs/components/messagebar/code) component is used for banner notifications. See our UX writing section on [time-related messages](/docs/guidelines/language/writing-style-guide-getting-started).
 
 <strong>Why it's better than a toast:</strong> Unlike toasts, banners remain visible until the user takes action or the condition is resolved. This persistence ensures that important information, like a lost connection or planned maintenance, is not missed.
 
@@ -78,7 +78,7 @@ Examples:
 
 ![banner](./2602_blog_messaging_messagemodal.svg)
 
-<strong>When to use it:</strong> [Message modals](/docs/components/message-modal/guide) are your choice for critical information that demands immediate user attention and interaction. Think of scenarios where a user needs to confirm an action, acknowledge a severe error that blocks further progress, or make a crucial decision. See our UX writing section on [error and warning messages](/docs/guidelines/language/writing-style-guide-getting-started).
+<strong>When to use it:</strong> Modals are your choice for critical information that demands immediate user attention and interaction. [Modal messages](/docs/components/message-modal/guide) are recommended for scenarios where a user needs to confirm an action, acknowledge a severe error that blocks further progress, or make a crucial decision. See our UX writing section on [error and warning messages](/docs/guidelines/language/writing-style-guide-getting-started).
 
 <strong>Why it's better than a toast:</strong> Modals overlay the entire application, ensuring the user's focus is entirely on the message. They prevent further interaction with the underlying content until dismissed, guaranteeing that critical information is seen and acted upon.
 
