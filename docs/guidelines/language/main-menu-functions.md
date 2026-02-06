@@ -1,5 +1,5 @@
 ---
-sidebar_position: 5
+sidebar_position: 7
 sidebar_label: Main menu functions and labels
 title: Main menu functions and labels
 doc-type: 'banner'
