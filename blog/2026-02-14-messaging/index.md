@@ -8,9 +8,9 @@ tags: [ux]
 
 ![banner](./2602_blog_messaging1.svg)
 
-Effective communication with users is of highest priority. Providing timely, clear, and contextual feedback within our applications is crucial for a smooth and intuitive user experience. While toast notifications have their place, relying on them exclusively can sometimes lead to missed information or user frustration.
+Effective communication with users is of the highest priority. Providing timely, clear, and contextual feedback within our applications is crucial for a smooth and intuitive user experience. While toast messages have their place, relying on them exclusively can sometimes lead to missed information or user frustration.
 
-As reaction to repeatedly asked questions about toast messages and especially the interplay with modal dialogs, we want to guide you through our recommended best practices for displaying messages.
+In response to your questions about toast messages, and especially their interplay with modal dialogs, we want to guide you through our recommended best practices for displaying messages.
 
 <!-- truncate -->
 
@@ -22,7 +22,7 @@ As reaction to repeatedly asked questions about toast messages and especially th
 
 However, toasts can often be:
 
-- Missed: Especially if a modal dialog is open, or if the user’s attention is elsewhere.
+- Missed: Especially if a modal dialog is open or if the user’s attention is elsewhere.
 - Disruptive: While generally non-blocking, a rapid succession of toasts can be overwhelming.
 - Lacking context: Toasts are designed for brevity, making it challenging to convey detailed information.
 
@@ -36,7 +36,7 @@ We already offer a set of components designed to handle various messaging needs.
 
 ![banner](./2602_blog_messaging_messagemodal.svg)
 
-<strong>When to use it:</strong> [Message modals](/docs/components/message-modal/guide) are your choice for critical information that demands immediate user attention and interaction. Think of scenarios where a user needs to confirm an action, acknowledge a severe error that blocks further progress, or make a crucial decision.
+<strong>When to use it:</strong> [Message modals](/docs/components/message-modal/guide) are your choice for critical information that demands immediate user attention and interaction. Think of scenarios where a user needs to confirm an action, acknowledge a severe error that blocks further progress, or make a crucial decision. See our UX writing section on [error and warning messages](/docs/guidelines/language/writing-style-guide-getting-started).
 
 <strong>Why it's better than a toast:</strong> Modals overlay the entire application, ensuring the user's focus is entirely on the message. They prevent further interaction with the underlying content until dismissed, guaranteeing that critical information is seen and acted upon.
 
@@ -50,7 +50,7 @@ Examples:
 
 ![banner](./2602_blog_messaging_messagebar.svg)
 
-<strong>When to use it:</strong> [Message bars](/docs/components/messagebar/code) (often referred to as banners) are ideal for important, non-blocking messages that need to persist until dismissed or resolved. These messages can be system-wide (affecting the entire application) or page-specific (relevant to a particular view).
+<strong>When to use it:</strong> [Message bars](/docs/components/messagebar/code) (often referred to as banners) are ideal for important, non-blocking messages that need to persist until dismissed or resolved. These messages can be system-wide (affecting the entire application) or page-specific (relevant to a particular view). See our UX writing section on [non-critical information and time-related messages](/docs/guidelines/language/writing-style-guide-getting-started).
 
 <strong>Why it's better than a toast:</strong> Unlike toasts, message bars remain visible until the user takes action or the condition is resolved. This persistence ensures that important information, like a lost connection or planned maintenance, is not missed.
 
@@ -64,7 +64,7 @@ Examples:
 
 ![banner](./2602_blog_messaging_inlinemessage.svg)
 
-<strong>When to use it:</strong> Inline messages appear within a specific section or component of a page, rather than spanning the entire width. We are planning to provide a component that is optimized for inline use, until then we recommend using the [message bars](/docs/components/messagebar/code).
+<strong>When to use it:</strong> Inline messages appear within a specific section or component of a page, rather than spanning the entire width. We are planning on providing a component that is optimized for inline use in future but until then, we recommend using the [message bars](/docs/components/messagebar/code).
 
 <strong>Why it's better than a toast:</strong> An inline message bar provides contextual feedback directly where it's most relevant, without disrupting the overall page flow. It's less intrusive than a full banner but more persistent and noticeable than a toast for localized issues, especially when other UI elements (like modals) are present.
 
@@ -86,14 +86,13 @@ Examples:
 
 - "Invalid email format."
 - "Password too short (minimum 8 characters)."
-- "Field is required."
-- "Username already taken."
+- "Required field."
 
 ### Notification history: Persistent record of events
 
 ![banner](./2602_blog_messaging_notificationhistory.svg)
 
-Users might always miss a critical message or need to refer back to past notifications. A dedicated notification history provides a persistent record of important events and messages.
+Users might miss a critical message or need to refer back to past notifications. A dedicated notification history provides a persistent record of important events and messages.
 
 <strong>When to use it:</strong> This is particularly valuable for applications where:
 
@@ -113,5 +112,5 @@ Users might always miss a critical message or need to refer back to past notific
 
 ## More on messaging
 
-- We highly recommend the <strong>UX writing</strong> chapter on how to effectively phrase your messages depending on the context, e.g. warning messages.
+- We highly recommend the [UX writing](/docs/guidelines/language/writing-style-guide-getting-started) chapter on how to effectively phrase your messages depending on the context, e.g. warning messages.
 - The <strong>UX Design Pattern</strong> team is currently working on a detailed overview of messaging patterns. Follow them on [Viva Engage](https://engage.cloud.microsoft/main/org/siemens.com/groups/eyJfdHlwZSI6Ikdyb3VwIiwiaWQiOiIyMzcxMzg0NTI0ODAifQ/new) to stay tuned.
