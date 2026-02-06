@@ -18,7 +18,7 @@ In response to your questions about toast messages, and especially their interpl
 
 ![banner](./2602_blog_messaging_toast.svg)
 
-[Toast](/docs/components/toast/guide) notifications are quick, non-intrusive pop-ups that provide simple feedback on a process. They are excellent for immediate confirmations, e.g. a successful deletion.
+[Toast](/docs/components/toast/guide) notifications are quick, non-intrusive pop-ups that provide simple feedback on a process. They are excellent for immediate low-priority confirmations, e.g. a successful deletion.
 
 However, toasts can often be:
 
@@ -30,49 +30,7 @@ This is why, for most scenarios requiring user attention or detailed information
 
 # When to use what
 
-We already offer a set of components designed to handle various messaging needs. Let's explore the alternatives to toast notifications and understand when to use each one.
-
-### Message modal: For critical information and required interaction
-
-![banner](./2602_blog_messaging_messagemodal.svg)
-
-<strong>When to use it:</strong> [Message modals](/docs/components/message-modal/guide) are your choice for critical information that demands immediate user attention and interaction. Think of scenarios where a user needs to confirm an action, acknowledge a severe error that blocks further progress, or make a crucial decision. See our UX writing section on [error and warning messages](/docs/guidelines/language/writing-style-guide-getting-started).
-
-<strong>Why it's better than a toast:</strong> Modals overlay the entire application, ensuring the user's focus is entirely on the message. They prevent further interaction with the underlying content until dismissed, guaranteeing that critical information is seen and acted upon.
-
-Examples:
-
-- Confirming a permanent deletion.
-- Alerting the user to a unsaved changes before navigating away.
-- Displaying a critical system error that requires immediate resolution.
-
-### Message bar: For persistent, system-wide or page-specific messages
-
-![banner](./2602_blog_messaging_messagebar.svg)
-
-<strong>When to use it:</strong> [Message bars](/docs/components/messagebar/code) (often referred to as banners) are ideal for important, non-blocking messages that need to persist until dismissed or resolved. These messages can be system-wide (affecting the entire application) or page-specific (relevant to a particular view). See our UX writing section on [non-critical information and time-related messages](/docs/guidelines/language/writing-style-guide-getting-started).
-
-<strong>Why it's better than a toast:</strong> Unlike toasts, message bars remain visible until the user takes action or the condition is resolved. This persistence ensures that important information, like a lost connection or planned maintenance, is not missed.
-
-Examples:
-
-- "Connection lost. Reconnecting..."
-- "System maintenance scheduled for August 22nd, 02:00-04:00 CEST."
-- "Your trial period ends in 7 days."
-
-### Inline message bar: Feedback within components (planned)
-
-![banner](./2602_blog_messaging_inlinemessage.svg)
-
-<strong>When to use it:</strong> Inline messages appear within a specific section or component of a page, rather than spanning the entire width. We are planning on providing a component that is optimized for inline use in future but until then, we recommend using the [message bars](/docs/components/messagebar/code).
-
-<strong>Why it's better than a toast:</strong> An inline message bar provides contextual feedback directly where it's most relevant, without disrupting the overall page flow. It's less intrusive than a full banner but more persistent and noticeable than a toast for localized issues, especially when other UI elements (like modals) are present.
-
-Examples:
-
-- Above a form, indicating validation errors for multiple fields.
-- Within a data table, showing a message about filtering results.
-- Inside a specific widget, providing status updates.
+We already offer a set of components designed to handle various messaging needs. Let's explore the alternatives to toast messages and understand when to use each one from contextual feedback to required decision making.
 
 ### Input field feedback texts: Immediate, contextual validation
 
@@ -88,11 +46,53 @@ Examples:
 - "Password too short (minimum 8 characters)."
 - "Required field."
 
-### Notification history: Persistent record of events
+### Inline notification: Feedback within components (planned)
+
+![banner](./2602_blog_messaging_inlinemessage.svg)
+
+<strong>When to use it:</strong> Inline notifications appear within a specific section or component of a page, rather than spanning the entire width. We are planning on providing a component that is optimized for inline use in future.
+
+<strong>Why it's better than a toast:</strong> An inline notification provides contextual feedback directly where it's most relevant, without disrupting the overall page flow. It's less intrusive than a full banner but more persistent and noticeable than a toast for localized issues, especially when other UI elements (like modals) are present.
+
+Examples:
+
+- Above a form, indicating validation errors for multiple fields.
+- Within a data table, showing a message about filtering results.
+- Inside a specific widget, providing status updates.
+
+### Banner: For persistent, system-wide or page-specific messages
+
+![banner](./2602_blog_messaging_messagebar.svg)
+
+<strong>When to use it:</strong> [Message bars](/docs/components/messagebar/code) (often referred to as banners) are ideal for important, non-blocking messages that need to persist until dismissed or resolved. These messages can be system-wide (affecting the entire application) or page-specific (relevant to a particular view). See our UX writing section on [non-critical information and time-related messages](/docs/guidelines/language/writing-style-guide-getting-started).
+
+<strong>Why it's better than a toast:</strong> Unlike toasts, banners remain visible until the user takes action or the condition is resolved. This persistence ensures that important information, like a lost connection or planned maintenance, is not missed.
+
+Examples:
+
+- "Connection lost. Reconnecting..."
+- "System maintenance scheduled for August 22nd, 02:00-04:00 CEST."
+- "Your trial period ends in 7 days."
+
+### Modal: For critical information and required interaction
+
+![banner](./2602_blog_messaging_messagemodal.svg)
+
+<strong>When to use it:</strong> [Message modals](/docs/components/message-modal/guide) are your choice for critical information that demands immediate user attention and interaction. Think of scenarios where a user needs to confirm an action, acknowledge a severe error that blocks further progress, or make a crucial decision. See our UX writing section on [error and warning messages](/docs/guidelines/language/writing-style-guide-getting-started).
+
+<strong>Why it's better than a toast:</strong> Modals overlay the entire application, ensuring the user's focus is entirely on the message. They prevent further interaction with the underlying content until dismissed, guaranteeing that critical information is seen and acted upon.
+
+Examples:
+
+- Confirming a permanent deletion.
+- Alerting the user to a unsaved changes before navigating away.
+- Displaying a critical system error that requires immediate resolution.
+
+### Notification management: Persistent record of events
 
 ![banner](./2602_blog_messaging_notificationhistory.svg)
 
-Users might miss a critical message or need to refer back to past notifications. A dedicated notification history provides a persistent record of important events and messages.
+Users might miss a critical message or need to refer back to past notifications. A dedicated notification management provides a persistent record of important events and messages.
 
 <strong>When to use it:</strong> This is particularly valuable for applications where:
 
@@ -100,14 +100,14 @@ Users might miss a critical message or need to refer back to past notifications.
 - Users need to catch up: After being away from the application, users can quickly review what they missed.
 - Complex workflows: Where multiple actions trigger various messages.
 
-<strong>How it adds value:</strong> A notification history is often presented as an [event list](/docs/components/event-list/code) on a separate page, within a dedicated dialog, or accessible via a notification icon. It ensures that no critical information is permanently lost. It complements all other messaging patterns by offering a centralized archive, allowing users to review, filter, and act upon past notifications. This significantly enhances user control and confidence in the application.
+<strong>How it adds value:</strong> A notification management is often presented as an [event list](/docs/components/event-list/code) on a separate page, within a dedicated dialog, or accessible via a notification icon. It ensures that no critical information is permanently lost. It complements all other messaging patterns by offering a centralized archive, allowing users to review, filter, and act upon past notifications. This significantly enhances user control and confidence in the application.
 
 ## Key takeaways for effective messaging
 
 - <strong>Prioritize clarity and context:</strong> Always choose the messaging pattern that best communicates the information clearly and in the most relevant context.
 - <strong>Reserve toasts for small feedback:</strong> Use toasts for quick, non-critical confirmations that don't require immediate user action or detailed explanation.
-- <strong>Embrace alternatives:</strong> Leverage message modals for critical interactions, message bars for persistent alerts, and input field feedback for direct validation.
-- <strong>Provide a notification history:</strong> For important events and messages, offer a persistent record that users can access and review.
+- <strong>Embrace alternatives:</strong> Leverage input field feedback for direct validation, inline notifications for contextual feedback, banners for persistent alerts, and modals for critical interactions.
+- <strong>Provide a notification management:</strong> For important events and messages, offer a persistent record that users can access and review.
 - <strong>Stay aligned:</strong> You can always refer to our component usage guides for the most up-to-date guidance and examples.
 
 ## More on messaging
