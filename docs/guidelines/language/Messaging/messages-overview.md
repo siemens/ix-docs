@@ -1,5 +1,6 @@
 ---
-sidebar_label: Messages
+sidebar_position: 1
+sidebar_label: Overview
 title: Overview
 doc-type: 'banner'
 components-tabs: ['']
@@ -9,9 +10,6 @@ description: 'The ability to design effective messages is essential for intuitiv
 
 
 #
-
-## General rules
-
 
 ## Message types
 
@@ -33,12 +31,12 @@ First define your use case and message type from the list below, then use this o
 ## General rules
 
 Use sentence casing for all message descriptions (except toast messages) and add full stops.
-<div class="dos-and-donts" markdown="true">
- <div class="dos" markdown="true">
+<div className="dos-and-donts" markdown="true">
+ <div className="dos" markdown="true">
   - Create zones from your dashboard.
   - You have no new notifications.
  </div>
- <div class="donts" markdown="true">
+ <div className="donts" markdown="true">
   - Add regions from your dashboard
  </div>
 </div>
@@ -49,7 +47,7 @@ Avoid overcommunicating by only adding relevant, beneficial information to your 
   - We received your error report and will process it within 24 to 48 hours.
  </div>
  <div className="donts" markdown="true">
-  - The support team has received your bug report but they only work from 9-5 CEST time at the moment and there is a skeleton crew working over the summer.
+  - The support team has received your bug report but they only work from 9–5 CEST time at the moment and there is a skeleton crew working over the summer.
  </div>
 </div>
 
@@ -70,19 +68,19 @@ Use urgent wording to signal serious and irreversible consequences from ignoring
   - Immediate software update required to save data securely.
   - Update software now to save data.
   - Contact support by 14:00 CET to avoid shutdown.
-  - Urgent: Order spare part replacement by August 31st for valve 532/a
+  - Urgent: Order spare part replacement by August 31st for valve 532/a.
  </div>
 </div>
 
 Use the same key words in your messaging, but do not repeat headings and descriptions.
 <div className="dos-and-donts" markdown="true">
  <div className="dos" markdown="true">
-  - **Heading:** Bad request.<br />
-  **Description:** Sorry, we could not process your request. Check and try again.
+  - **Heading:** Bad request<br />
+  **Description:** We could not process your request. Check and try again.
  </div>
  <div className="donts" markdown="true">
-  - **Heading:** Bad request.<br/>
-  **Description:** Sorry, bad request.
+  - **Heading:** Bad request<br/>
+  **Description:** Bad request.
  </div>
 </div>
 
@@ -124,16 +122,16 @@ Allow users to go back to change actions and avoid “OK” which is often under
 
 <div className="dos-and-donts" markdown="true">
  <div className="dos" markdown="true">
-  - **Heading:** Unsaved changes
-  - **Description:** You are about to leave the page. Unsaved changes will be lost.
-  - **Button:** Exit without saving
-  - **Button:** Go back
+  - **Heading:** Unsaved changes <br />
+  **Description:** You are about to leave the page. Unsaved changes will be lost.<br />
+  **Button:** Exit without saving <br />
+  **Button:** Go back
  </div>
  <div className="donts" markdown="true">
-  - **Description:** Are you sure you want to cancel?
-  - **Button:** OK
-  - **Button:** Cancel
-  - **Button:** Yes
+  - **Description:** Are you sure you want to cancel? <br />
+  **Button:** OK <br />
+  **Button:** Cancel <br />
+  **Button:** Yes 
  </div>
 </div>
 
