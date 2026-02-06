@@ -26,21 +26,23 @@ Master the use of punctuation to improve the readability and comprehension of yo
 
 Learn the guidelines for using proper nouns correctly in your text. This subchapter will help you understand when and how to capitalize names, brands, and other specific terms to maintain consistency and professionalism. [Read more](./proper-nouns)
 
+## Formatting 
+
+Discover how we address formatting themes such as writing addresses, dates, measurements and units, names and titles, and money and currency. This section helps you address common formatting wording issues to enhance overall user efficiency. [Read more]( https://ix.siemens.io/docs/guidelines/language/formatting/addresses)
+
+
 ## Main menu functions
 
 Explore best practices for writing main menu functions to ensure intuitive navigation. This section provides tips on how to label and organize menu items so users can easily find what they need. [Read more](./main-menu-functions)
+
+## Messages
+
+Learn when and how to write all types of messages including warnings, errors, infotips, tooltips and notifications that are helpful and user-friendly. This subchapter provides strategies for communicating issues in a way that guides users towards solutions. [Read more](./messaging/messages-overview.md) 
 
 ## Frequent app functions
 
 Get tips for naming common app functions clearly and effectively. This subchapter focuses on how to describe frequent actions and features in a way that users can quickly understand and use. [Read more](./frequent-app-functions)
 
-## Best practice
-
-Familiarize yourself with general best practices for UX writing to maintain consistency and clarity across all your content. This section offers overarching guidelines that apply to various aspects of UX writing.
-
-## Errors, warnings and notifications
-
-Learn how to write error messages, warnings, and notifications that are helpful and user-friendly. This subchapter provides strategies for communicating issues and alerts in a way that guides users towards solutions. 
 
 ## Dialogs and buttons
 

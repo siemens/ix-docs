@@ -144,7 +144,6 @@ Allow users to go back to change actions and avoid “OK” which is often under
 ## Related
 
 *   [Icon usage](https://ix.siemens.io/docs/icons/icon-usage#status-icons)
-*   Warning messages 
-*   Error pages 
-*   Empty-state messages 
-*   Error messages 
+*   [Warning messages](./warning-messages.mdx)
+*   [Error messages](./error-messages-new.mdx)
+*   [Empty-state messages](./empty-state-messages.mdx) 
