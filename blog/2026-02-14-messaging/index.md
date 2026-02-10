@@ -18,7 +18,7 @@ In response to your questions about toast messages, and especially their interpl
 
 ![banner](./2602_blog_messaging_toast.svg)
 
-[Toast](/docs/components/toast/guide) notifications are quick, non-intrusive pop-ups that provide simple feedback on a process. They are excellent for immediate low-priority confirmations, e.g. a successful deletion.
+[Toast](/docs/components/toast/guide) notifications are quick, non-intrusive pop-ups that provide simple feedback on a user action. They are excellent for immediate low-priority confirmations, e.g. a successful deletion.
 
 However, toasts can often be:
 
