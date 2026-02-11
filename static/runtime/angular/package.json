@@ -7,32 +7,32 @@
   },
   "private": true,
   "dependencies": {
-    "@angular/animations": "^18.0.0",
-    "@angular/common": "^18.0.0",
-    "@angular/compiler": "^18.0.0",
-    "@angular/core": "^18.0.0",
-    "@angular/forms": "^18.0.0",
-    "@angular/platform-browser": "^18.0.0",
-    "@angular/platform-browser-dynamic": "^18.0.0",
-    "@angular/router": "^18.0.0",
+    "@angular/animations": "^20.1.0",
+    "@angular/common": "^20.1.0",
+    "@angular/compiler": "^20.1.0",
+    "@angular/core": "^20.1.0",
+    "@angular/forms": "^20.1.0",
+    "@angular/platform-browser": "^20.1.0",
+    "@angular/platform-browser-dynamic": "^20.1.0",
+    "@angular/router": "^20.1.0",
     "@siemens/ix": "<VERSION>",
     "@siemens/ix-angular": "<VERSION>",
     "@siemens/ix-aggrid": "<VERSION>",
     "@siemens/ix-echarts": "latest",
     "@siemens/ix-icons": "latest",
-    "ag-grid-angular": "^33.0.0",
-    "ag-grid-community": "^33.0.0",
+    "ag-grid-angular": "^33.1.1",
+    "ag-grid-community": "^33.1.1",
     "echarts": "5.4.3",
     "echarts-gl": "^2.0.9",
     "ngx-echarts": "^18.0.0",
     "rxjs": "~7.8.1",
     "tslib": "^2.6.3",
-    "zone.js": "~0.14.8"
+    "zone.js": "~0.15.0"
   },
   "devDependencies": {
-    "@angular-devkit/build-angular": "^18.0.0",
-    "@angular/cli": "^18.0.0",
-    "@angular/compiler-cli": "^18.0.0",
-    "typescript": "~5.4.5"
+    "@angular-devkit/build-angular": "^20.1.0",
+    "@angular/cli": "^20.1.4",
+    "@angular/compiler-cli": "^20.1.0",
+    "typescript": "~5.8.2"
   }
 }
