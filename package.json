@@ -36,7 +36,7 @@
     "@cmfcmf/docusaurus-search-local": "^1.2.0",
     "@docusaurus/module-type-aliases": "3.7.0",
     "@docusaurus/tsconfig": "3.7.0",
-    "@docusaurus/types": "3.7.0",
+    "@docusaurus/types": "3.9.2",
     "@dotenvx/dotenvx": "^1.44.0",
     "@octokit/rest": "^22.0.0",
     "@types/adm-zip": "^0.5.7",
