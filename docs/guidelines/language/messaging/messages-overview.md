@@ -145,5 +145,5 @@ Allow users to go back to change actions and avoid “OK” which is often under
 
 *   [Icon usage](../../../icons/icon-usage.mdx)
 *   [Warning messages](./warning-messages.mdx)
-*   [Error messages](./error-messages-new.mdx)
+*   [Error messages](./error-messages.mdx)
 *   [Empty-state messages](./empty-state-messages.mdx) 
