@@ -34,7 +34,7 @@ We already offer a set of components designed to handle various messaging needs.
 <div class="table-full-width table-column-equal-width">
 | **Option** | **When to use** |
 | :-------------- | :-------------- | 
-| **[Toast message](#the-problem-with-over-toasting)**    | Low-priority confirmations   |
+| **Toast message**    | Low-priority confirmations   |
 | **[Input field feedback text](#input-field-feedback-text)**    | Immediate, field-level validation   |
 | **[Inline notification](#inline-notification-planned)**    | Noticeable, contextual feedback   |
 | **[Message bar as banner](#message-bar-as-banner)**    | Important and persistent non-blocking messages   |
