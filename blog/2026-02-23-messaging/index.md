@@ -94,7 +94,7 @@ Examples:
 Examples:
 
 - Confirming a permanent deletion.
-- Alerting the user about a unsaved changes before navigating away.
+- Alerting the user about unsaved changes before navigating away.
 - Displaying a critical system error that requires immediate resolution.
 
 ### Notification management
