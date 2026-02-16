@@ -28,7 +28,7 @@ Learn the guidelines for using proper nouns correctly in your text. This subchap
 
 ## Formatting 
 
-Discover how we address formatting themes such as writing addresses, dates, measurements and units, names and titles, and money and currency. This section helps you address common formatting wording issues to enhance overall user efficiency. [Read more]( https://ix.siemens.io/docs/guidelines/language/formatting/addresses)
+Discover how we address formatting themes such as writing addresses, dates, measurements and units, names and titles, and money and currency. This section helps you address common formatting wording issues to enhance overall user efficiency. [Read more]( ./formatting/addresses.mdx)
 
 
 ## Main menu functions
