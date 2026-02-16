@@ -14,8 +14,6 @@ In response to your questions about toast messages, and especially their interpl
 
 <!-- truncate -->
 
-<a id="messaging-toast"></a>
-
 # The problem with over toasting
 
 ![Problem with toasts](./2602_blog_messaging_toast.svg)
@@ -36,14 +34,12 @@ We already offer a set of components designed to handle various messaging needs.
 <div class="table-full-width table-column-equal-width">
 | **Option** | **When to use** |
 | :-------------- | :-------------- | 
-| **[Toast message](#messaging-toast)**    | Low-priority confirmations   |
-| **[Input field feedback text](#messaging-input-field-feedback)**    | Immediate, field-level validation   |
-| **[Inline notification](#messaging-inline-notification)**    | Noticeable, contextual feedback   |
-| **[Message bar as banner](#messaging-message-bar-banner)**    | Important and persistent non-blocking messages   |
-| **[Modal](#messaging-modal)**    | Critical information demanding user interaction   |
+| **[Toast message](#the-problem-with-over-toasting)**    | Low-priority confirmations   |
+| **[Input field feedback text](#input-field-feedback-text)**    | Immediate, field-level validation   |
+| **[Inline notification](#inline-notification-planned)**    | Noticeable, contextual feedback   |
+| **[Message bar as banner](#message-bar-as-banner)**    | Important and persistent non-blocking messages   |
+| **[Modal](#modal)**    | Critical information demanding user interaction   |
 </div>
-
-<a id="messaging-input-field-feedback"></a>
 
 ### Input field feedback text
 
@@ -59,8 +55,6 @@ Examples:
 - Password too short (minimum 8 characters).
 - Required field.
 
-<a id="messaging-inline-notification"></a>
-
 ### Inline notification (planned)
 
 ![Inline notification](./2602_blog_messaging_inlinemessage.svg)
@@ -75,8 +69,6 @@ Examples:
 - Within a data table, showing a message about filtering results.
 - Inside a specific widget, providing status updates.
 
-<a id="messaging-message-bar-banner"></a>
-
 ### Message bar as banner
 
 ![Message bar](./2602_blog_messaging_messagebar.svg)
@@ -90,8 +82,6 @@ Examples:
 - Connection lost. Reconnecting…
 - System maintenance scheduled for August 22nd, 02:00-04:00 CEST.
 - Your trial period ends in 7 days.
-
-<a id="messaging-modal"></a>
 
 ### Modal
 
