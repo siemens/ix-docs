@@ -976,6 +976,10 @@ const sidebars: SidebarsConfig = {
               id: 'components/toast/code',
               label: 'Code',
             },
+            {
+              id: 'components/toast/language',
+              label: 'Language',
+            },
           ],
         }),
         createTabItem({
