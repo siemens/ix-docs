@@ -152,12 +152,18 @@ async function downloadLatestArtifact(branch: string) {
   let branchName = branch;
   if (branch.startsWith('pull/')) {
     const prNumber = parseInt(branch.split('/')[1], 10);
-    const { data: pr } = await octokit.pulls.get({
-      owner,
-      repo,
-      pull_number: prNumber,
-    });
-    branchName = pr.head.ref;
+    try {
+      const { data: pr } = await octokit.pulls.get({
+        owner,
+        repo,
+        pull_number: prNumber,
+      });
+      branchName = pr.head.ref;
+    } catch (error) {
+      console.log(`PR #${prNumber} not found in ${owner}/${repo}`);
+      console.log('Falling back to main branch artifacts (docs-only PR)');
+      return downloadLatestArtifact('main');
+    }
   }
 
   const eventRuns = await Promise.all([
