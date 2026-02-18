@@ -900,6 +900,10 @@ const sidebars: SidebarsConfig = {
               id: 'components/empty-state/code',
               label: 'Code',
             },
+            {
+              id: 'components/empty-state/uxwriting',
+              label: 'UX Writing',
+            },
           ],
         }),
         createTabItem({
@@ -989,6 +993,10 @@ const sidebars: SidebarsConfig = {
             {
               id: 'components/tooltip/code',
               label: 'Code',
+            },
+            {
+              id: 'components/tooltip/uxwriting',
+              label: 'UX Writing',
             },
           ],
         }),
