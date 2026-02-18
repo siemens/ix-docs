@@ -106,6 +106,20 @@ async function main() {
     console.log(`Reason: SKIP_PREPARE is set to "${process.env.SKIP_PREPARE}"`);
     return;
   }
+  
+  // Debug: Log environment variables
+  console.log('========================================');
+  console.log('===      ENVIRONMENT VARIABLES       ===');
+  console.log('========================================');
+  console.log(`CONTEXT: ${process.env.CONTEXT}`);
+  console.log(`BRANCH: ${process.env.BRANCH}`);
+  console.log(`HEAD: ${process.env.HEAD}`);
+  console.log(`REVIEW_ID: ${process.env.REVIEW_ID}`);
+  console.log(`DOCS_BRANCH: ${process.env.DOCS_BRANCH}`);
+  console.log(`DOCS_BRANCH_TYPE: ${process.env.DOCS_BRANCH_TYPE}`);
+  console.log(`DOCS_PR_NUMBER: ${process.env.DOCS_PR_NUMBER}`);
+  console.log('========================================');
+  
   const defaults = await getDefaults();
 
   console.log('Script will start with the following defaults:');
