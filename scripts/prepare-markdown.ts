@@ -54,23 +54,48 @@ async function getDefaults(): Promise<BranchConfig> {
     prNumber: '',
   };
 
+  // Check for GitHub Actions environment variables first
   if (
-    !(
-      process.env.DOCS_BRANCH &&
-      process.env.DOCS_BRANCH_TYPE &&
-      process.env.DOCS_PR_NUMBER !== undefined
-    )
+    process.env.DOCS_BRANCH &&
+    process.env.DOCS_BRANCH_TYPE &&
+    process.env.DOCS_PR_NUMBER !== undefined
   ) {
-    throw new Error(
-      'DOCS_BRANCH, DOCS_BRANCH_TYPE and DOCS_PR_NUMBER environment variables are required in CI.'
-    );
+    defaults.branch = process.env.DOCS_BRANCH;
+    defaults.branchType = process.env.DOCS_BRANCH_TYPE;
+    defaults.prNumber = process.env.DOCS_PR_NUMBER;
+    return defaults;
   }
 
-  defaults.branch = process.env.DOCS_BRANCH;
-  defaults.branchType = process.env.DOCS_BRANCH_TYPE;
-  defaults.prNumber = process.env.DOCS_PR_NUMBER;
+  // Check for Netlify environment variables
+  if (process.env.CONTEXT === 'deploy-preview' && process.env.REVIEW_ID) {
+    defaults.branch = process.env.HEAD || process.env.BRANCH || 'main';
+    defaults.branchType = 'pull request';
+    defaults.prNumber = process.env.REVIEW_ID;
+    return defaults;
+  }
 
-  return defaults;
+  // Check for Netlify branch deploy
+  if (process.env.CONTEXT === 'branch-deploy' && process.env.BRANCH) {
+    defaults.branch = process.env.BRANCH;
+    defaults.branchType = 'branch';
+    defaults.prNumber = '';
+    return defaults;
+  }
+
+  // Check for Netlify production
+  if (process.env.CONTEXT === 'production') {
+    defaults.branch = 'main';
+    defaults.branchType = 'main';
+    defaults.prNumber = '';
+    return defaults;
+  }
+
+  // If no environment variables are set, throw error
+  throw new Error(
+    'Required environment variables not found. Expected either: ' +
+    '(DOCS_BRANCH, DOCS_BRANCH_TYPE, DOCS_PR_NUMBER) for CI or ' +
+    '(CONTEXT, BRANCH/HEAD, REVIEW_ID) for Netlify.'
+  );
 }
 
 async function main() {
