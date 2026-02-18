@@ -169,8 +169,14 @@ async function downloadLatestArtifact(branch: string) {
     runs.filter((run) => run.name === 'Build' || run.name === 'Pull Request')
       .length === 0
   ) {
-    const message = `No workflow runs found for this branch. ${branchName}`;
-    throw new Error(message);
+    if (branchName === 'main') {
+      const message = `No workflow runs found for main branch. ${branchName}`;
+      throw new Error(message);
+    }
+    console.log(`No workflow runs found for branch: ${branchName}`);
+    console.log('Falling back to main branch artifacts (docs-only PR)');
+    // Recursively call with main branch for docs-only PRs
+    return downloadLatestArtifact('main');
   }
   const runId = runs.filter(
     (run) => run.name === 'Build' || run.name === 'Pull Request'
