@@ -1023,7 +1023,7 @@ const sidebars: SidebarsConfig = {
         }),
         createTabItem({
           id: 'components/html-grid/index',
-          label: 'HTML grid',
+          label: 'HTML table',
           items: [
             {
               id: 'components/html-grid/code',
