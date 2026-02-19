@@ -89,7 +89,7 @@ Examples:
 
 ![Modal](./2602_blog_messaging_messagemodal.svg)
 
-<strong>When to use it:</strong> Modals are your choice for critical information that demands immediate user attention and interaction. [Modal messages](/docs/components/message-modal/guide) are recommended for scenarios where a user needs to confirm an action, acknowledge a severe error that blocks further progress, or make a crucial decision. See our UX writing section on [messaging](docs/guidelines/language/messaging/messages-overview).
+<strong>When to use it:</strong> Modals are your choice for critical information that demands immediate user attention and interaction. [Modal messages](/docs/components/message-modal/guide) are recommended for scenarios where a user needs to confirm an action, acknowledge a severe error that blocks further progress, or make a crucial decision. See our UX writing section on [messaging](/docs/guidelines/language/messaging/messages-overview).
 
 <strong>Why it’s better than a toast:</strong> Modals overlay the entire application, ensuring the user’s focus is entirely on the message. They prevent further interaction with the underlying content until dismissed, guaranteeing that critical information is seen and acted upon.
 
@@ -123,5 +123,5 @@ Users might miss a critical message or need to refer back to past notifications.
 
 ## More on messaging
 
-- We highly recommend the [UX writing](docs/guidelines/language/messaging/messages-overview) chapter on how to effectively phrase your messages depending on the context, e.g. warning messages.
+- We highly recommend the [UX writing](/docs/guidelines/language/messaging/messages-overview) chapter on how to effectively phrase your messages depending on the context, e.g. warning messages.
 - The <strong>UX Design Pattern</strong> team is currently working on a detailed overview of messaging patterns. Follow them on [Viva Engage](https://engage.cloud.microsoft/main/org/siemens.com/groups/eyJfdHlwZSI6Ikdyb3VwIiwiaWQiOiIyMzcxMzg0NTI0ODAifQ/new) to stay tuned.
