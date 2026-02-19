@@ -902,7 +902,7 @@ const sidebars: SidebarsConfig = {
             },
             {
               id: 'components/empty-state/uxwriting',
-              label: 'UX Writing',
+              label: 'Language',
             },
           ],
         }),
@@ -996,7 +996,7 @@ const sidebars: SidebarsConfig = {
             },
             {
               id: 'components/tooltip/uxwriting',
-              label: 'UX Writing',
+              label: 'Language',
             },
           ],
         }),
