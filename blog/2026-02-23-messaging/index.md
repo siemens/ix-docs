@@ -8,7 +8,7 @@ tags: [ux]
 
 ![Effective messaging approaches](./2602_blog_messaging1.svg)
 
-Effective communication with users is of the highest priority. Providing timely, clear, and contextual feedback within our applications is crucial for a smooth and intuitive user experience. While toast messages have their place, relying on them exclusively can sometimes lead to missed information or user frustration.
+Effective communication with users is of the highest priority. Providing timely, clear and contextual feedback within our applications is crucial for a smooth and intuitive user experience. While toast messages have their place, relying on them exclusively can sometimes lead to missed information or user frustration.
 
 In response to your questions about toast messages, and especially their interplay with modal dialogs, we want to guide you through our recommended best practices for displaying messages.
 
@@ -73,21 +73,23 @@ Examples:
 
 ![Message bar](./2602_blog_messaging_messagebar.svg)
 
-<strong>When to use it:</strong> Banners are ideal for important, non-blocking messages that need to persist until dismissed or resolved. These messages can be system-wide (affecting the entire application) or page-specific (relevant to a particular view). In our design system the [message bar](/docs/components/messagebar/code) component is used for banner notifications. See our UX writing section on [time-related messages](/docs/guidelines/language/writing-style-guide-getting-started).
+<strong>When to use it:</strong> Banners are ideal for important, non-blocking messages that need to persist until dismissed or resolved. These messages can be system-wide (affecting the entire application) or page-specific (relevant to a particular view). In our design system the [message bar](/docs/components/messagebar/code) component is used for banner notifications. See our UX writing section on 
+[time-related messages](/docs/guidelines/language/messaging/time-related-messages).
+
 
 <strong>Why it’s better than a toast:</strong> Unlike toasts, banners remain visible until the user takes action or the condition is resolved. This persistence ensures that important information, like a lost connection or planned maintenance, is not missed.
 
 Examples:
 
 - Connection lost. Reconnecting…
-- System maintenance scheduled for August 22nd, 02:00-04:00 CEST.
+- System maintenance scheduled for August 22nd, 02:00-04:00.
 - Your trial period ends in 7 days.
 
 ### Modal
 
 ![Modal](./2602_blog_messaging_messagemodal.svg)
 
-<strong>When to use it:</strong> Modals are your choice for critical information that demands immediate user attention and interaction. [Modal messages](/docs/components/message-modal/guide) are recommended for scenarios where a user needs to confirm an action, acknowledge a severe error that blocks further progress, or make a crucial decision. See our UX writing section on [error and warning messages](/docs/guidelines/language/writing-style-guide-getting-started).
+<strong>When to use it:</strong> Modals are your choice for critical information that demands immediate user attention and interaction. [Modal messages](/docs/components/message-modal/guide) are recommended for scenarios where a user needs to confirm an action, acknowledge a severe error that blocks further progress, or make a crucial decision. See our UX writing section on [messaging](docs/guidelines/language/messaging/messages-overview).
 
 <strong>Why it’s better than a toast:</strong> Modals overlay the entire application, ensuring the user’s focus is entirely on the message. They prevent further interaction with the underlying content until dismissed, guaranteeing that critical information is seen and acted upon.
 
@@ -109,7 +111,7 @@ Users might miss a critical message or need to refer back to past notifications.
 - Users need to catch up: After being away from the application, users can quickly review what they missed.
 - Complex workflows: Where multiple actions trigger various messages.
 
-<strong>How it adds value:</strong> A notification management is often presented as an [event list](/docs/components/event-list/code) on a separate page, within a dedicated dialog, or accessible via a notification icon. It ensures that no critical information is permanently lost. It complements all other messaging patterns by offering a centralized archive, allowing users to review, filter, and act upon past notifications. This significantly enhances user control and confidence in the application.
+<strong>How it adds value:</strong> A notification management is often presented as an [event list](/docs/components/event-list/code) on a separate page, within a dedicated dialog, or accessible via a notification icon. It ensures that no critical information is permanently lost. It complements all other messaging patterns by offering a centralized archive, allowing users to review, filter and act upon past notifications. This significantly enhances user control and confidence in the application.
 
 ## Key takeaways
 
@@ -121,5 +123,5 @@ Users might miss a critical message or need to refer back to past notifications.
 
 ## More on messaging
 
-- We highly recommend the [UX writing](/docs/guidelines/language/writing-style-guide-getting-started) chapter on how to effectively phrase your messages depending on the context, e.g. warning messages.
+- We highly recommend the [UX writing](docs/guidelines/language/messaging/messages-overview) chapter on how to effectively phrase your messages depending on the context, e.g. warning messages.
 - The <strong>UX Design Pattern</strong> team is currently working on a detailed overview of messaging patterns. Follow them on [Viva Engage](https://engage.cloud.microsoft/main/org/siemens.com/groups/eyJfdHlwZSI6Ikdyb3VwIiwiaWQiOiIyMzcxMzg0NTI0ODAifQ/new) to stay tuned.
