@@ -31,3 +31,6 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           CSC: ${{ secrets.CSC }}
           BRAND_URL: ${{ vars.BRAND_URL }}
+          DOCS_BRANCH: ${{ github.head_ref }}
+          DOCS_BRANCH_TYPE: 'pull request'
+          DOCS_PR_NUMBER: ${{ github.event.pull_request.number }}

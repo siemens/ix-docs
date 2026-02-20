@@ -1,0 +1,111 @@
+---
+sidebar_position: 6
+sidebar_label: Tooltips
+title: Tooltips
+doc-type: 'banner'
+component-tabs: ['']
+no_single_tab: true
+description: Tooltips are small, informative pop-up elements that often appear when a user hovers over or focuses on a user interface element. They provide helpful context or explanations without cluttering the main interface, making them a valuable tool for enhancing usability and guiding users through complex features.
+---
+
+import React from "react";
+import { IxIcon } from "@siemens/ix-react";
+import { iconEditDocument } from "@siemens/ix-icons/icons";
+
+#
+
+## General rules
+
+Use tooltips to define icons and show control names.
+
+<div className="dos-and-donts" markdown="true">
+<div className="dos" markdown="true">
+- Edit
+- Delete
+- Log out
+</div>
+</div>
+
+Avoid punctuation or periods for tool names or icons.
+
+<div className="dos-and-donts" markdown="true">
+<div className="dos" markdown="true">
+- Edit
+- Open file
+</div>
+<div className="donts" markdown="true">
+- Edit.
+- Open file.
+</div>
+</div>
+
+
+Use sentence case and a period if the tooltip is a complete sentence or multiple sentences.
+
+<div className="dos-and-donts" markdown="true">
+<div className="dos" markdown="true">
+- Add users to project.
+</div>
+<div className="donts" markdown="true">
+- Add new users to project
+</div>
+</div>
+
+Use verbs to start your tooltip and avoid passive voice.
+
+<div className="dos-and-donts" markdown="true">
+<div className="dos" markdown="true">
+- Create KPI tables.
+</div>
+<div className="donts" markdown="true">
+- Tables are created.
+</div>
+</div>
+
+Avoid complicated sentence constructions, e.g. no relative clauses.
+
+<div className="dos-and-donts" markdown="true">
+<div className="dos" markdown="true">
+- Share with team members.
+</div>
+<div className="donts" markdown="true">
+- Projects can be shared with team members who work with you.
+</div>
+</div>
+
+Use a heading with a short description for longer tooltips.
+
+<div className="dos-and-donts" markdown="true">
+<div className="dos" markdown="true">
+- Heading: Cycle time input<br/>
+Description: Set the duration of each production cycle in seconds.<br/>
+- Heading: Log history<br/>
+Description: View historical logs of machine activity and operator actions.
+</div>
+</div>
+
+Avoid repeating text already visible and readable on the screen.
+
+<div className="dos-and-donts" markdown="true">
+<div className="dos" markdown="true">
+- Edit (as icon<IxIcon name={iconEditDocument} size="16"></IxIcon>) <br/>Tooltip: Edit
+</div>
+<div className="donts" markdown="true">
+- Edit (as text) <br/>Tooltip: Edit
+</div>
+</div>
+
+## Dos and Don'ts
+
+* Do write tooltips to give more context about complex features
+* Do write tooltips to support beginners
+* Don’t use tooltips to convey lengthy or critical information
+* Don’t add irrelevant information, instead focus on context
+
+## Related
+
+* [Toast messages](./toast-messages.mdx)
+* [Infotips (component)](../../../components/tooltip/code.mdx#a11y)
+* [Non-critical information messages](./non-critical-information-messages.mdx)
+* [Messages overview](./messages-overview.md)
+
