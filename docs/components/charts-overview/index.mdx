@@ -1,6 +1,7 @@
 ---
----
 doc-type: 'banner'
+sidebar_position: 1
+sidebar_label: Overview
 description: 'Charts are essential tools for visualizing data, making complex information more accessible and easier to understand.'
 title: 'Overview'
 deprecated:
@@ -20,14 +21,14 @@ ECharts is a third-party library distributed under [Apache License 2.0](https://
 
 ## Attributes
 
-| Name           | Description                                                                                                                                                                      [...]
-| -------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------[...]
-| **Axes**       | Axes are used to display the data in a chart. They are the horizontal and vertical lines that form the chart's grid. Axes are labeled to indicate what data they represent.      [...]
-| **Scale**      | Scales are used to map data values to a visual representation. The scale type is determined by the type of data being visualized.                                                [...]
-| **Labels**     | Labels are used to describe the dimensions represented, often including units of measurement, e.g. “Distance traveled (m)”.                                                  [...]
-| **Grid lines** | Grid lines help to visually align data points within the chart.                                                                                                                  [...]
-| **Legend**     | Legends explain the symbols, colors or patterns used in the chart to represent different data sets. You can toggle the visibility of the data series by clicking on the date in t[...]
-| **Tooltip**    | Tooltips provide more details about data while hovering over the area.                                                                                                           [...]
+| Name           | Description
+| -------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+| **Axes**       | Axes are used to display the data in a chart. They are the horizontal and vertical lines that form the chart's grid. Axes are labeled to indicate what data they represent.
+| **Scale**      | Scales are used to map data values to a visual representation. The scale type is determined by the type of data being visualized.
+| **Labels**     | Labels are used to describe the dimensions represented, often including units of measurement, e.g. “Distance traveled (m)”.
+| **Grid lines** | Grid lines help to visually align data points within the chart.
+| **Legend**     | Legends explain the symbols, colors or patterns used in the chart to represent different data sets. You can toggle the visibility of the data series by clicking on the date in the legend.
+| **Tooltip**    | Tooltips provide more details about data while hovering over the area.
 
 ## Installation
 
@@ -38,7 +39,7 @@ npm install --save @siemens/ix-echarts
 ```
 
 1. Import the `registerTheme` function from our module.
-2. Invoke this function, passing in your `echarts` instance as an argument. You do not need to provide the `echarts` instance if it’s provided globally in your `window` object when using vanilla[...]
+2. Invoke this function, passing in your `echarts` instance as an argument. You do not need to provide the `echarts` instance if it’s provided globally in your `window` object when using vanilla JavaScript.
 3. Once this is done, you’ll be able to utilize the `brand-dark`, `brand-light`, `classic-dark` and `classic-light` themes for your chart.
 
 ```typescript
@@ -77,11 +78,11 @@ Example: last year and current year.
 
 ## Loading indicators
 
-A loading indicator provides users with visual feedback that the chart is being processed and will be displayed shortly. The loading indicator should be displayed when the chart is loading data or[...]
+A loading indicator provides users with visual feedback that the chart is being processed and will be displayed shortly. The loading indicator should be displayed when the chart is loading data or performing a long-running operation.
 
 ## Empty states
 
-An empty state occurs when a user first opens an application, no data is available, or the user has filtered out all data. The empty state should be visually distinct from the loading state and [...]
+An empty state occurs when a user first opens an application, no data is available, or the user has filtered out all data. The empty state should be visually distinct from the loading state and should provide a clear message to the user. This message should explain why the empty state is being displayed and provide guidance on how to proceed.
 
 <EchartsEmptyStatePlayground height="40rem" />
 
