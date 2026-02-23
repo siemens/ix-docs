@@ -56,7 +56,7 @@ const sidebars: SidebarsConfig = {
       id: 'home/overview',
       className: 'doc-sidebar-item-bold',
     },
-        {
+    {
       type: 'doc',
       id: 'home/getting-started/starter-app',
       className: 'doc-sidebar-item-bold',
@@ -124,7 +124,7 @@ const sidebars: SidebarsConfig = {
       type: 'doc',
       id: 'home/mcp-server',
       className: 'doc-sidebar-item-bold',
-    }
+    },
   ],
   components: [
     {
@@ -454,7 +454,7 @@ const sidebars: SidebarsConfig = {
           id: 'components/modal/index',
           label: 'Modal',
           items: [
-                        {
+            {
               id: 'components/modal/guide',
               label: 'Usage',
             },
@@ -902,7 +902,7 @@ const sidebars: SidebarsConfig = {
             },
             {
               id: 'components/empty-state/uxwriting',
-              label: 'Language',
+              label: 'Writing',
             },
           ],
         }),
@@ -910,7 +910,7 @@ const sidebars: SidebarsConfig = {
           id: 'components/loading-modal/index',
           label: 'Loading modal',
           items: [
-                        {
+            {
               id: 'components/loading-modal/guide',
               label: 'Usage',
             },
@@ -934,7 +934,7 @@ const sidebars: SidebarsConfig = {
           id: 'components/message-modal/index',
           label: 'Message modal',
           items: [
-                        {
+            {
               id: 'components/message-modal/guide',
               label: 'Usage',
             },
@@ -982,7 +982,7 @@ const sidebars: SidebarsConfig = {
             },
             {
               id: 'components/toast/language',
-              label: 'Language',
+              label: 'Writing',
             },
           ],
         }),
@@ -996,7 +996,7 @@ const sidebars: SidebarsConfig = {
             },
             {
               id: 'components/tooltip/uxwriting',
-              label: 'Language',
+              label: 'Writing',
             },
           ],
         }),
@@ -1221,7 +1221,10 @@ const sidebars: SidebarsConfig = {
       type: 'category',
       className: 'doc-sidebar-item-bold',
       label: 'Theme',
-      items: ['styles/theming/usage-developers', 'styles/theming/usage-designers'],
+      items: [
+        'styles/theming/usage-developers',
+        'styles/theming/usage-designers',
+      ],
       collapsed: true,
     },
   ],
