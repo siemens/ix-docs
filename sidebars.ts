@@ -56,7 +56,7 @@ const sidebars: SidebarsConfig = {
       id: 'home/overview',
       className: 'doc-sidebar-item-bold',
     },
-        {
+    {
       type: 'doc',
       id: 'home/getting-started/starter-app',
       className: 'doc-sidebar-item-bold',
@@ -124,7 +124,7 @@ const sidebars: SidebarsConfig = {
       type: 'doc',
       id: 'home/mcp-server',
       className: 'doc-sidebar-item-bold',
-    }
+    },
   ],
   components: [
     {
@@ -454,7 +454,7 @@ const sidebars: SidebarsConfig = {
           id: 'components/modal/index',
           label: 'Modal',
           items: [
-                        {
+            {
               id: 'components/modal/guide',
               label: 'Usage',
             },
@@ -900,13 +900,17 @@ const sidebars: SidebarsConfig = {
               id: 'components/empty-state/code',
               label: 'Code',
             },
+            {
+              id: 'components/empty-state/uxwriting',
+              label: 'Writing',
+            },
           ],
         }),
         createTabItem({
           id: 'components/loading-modal/index',
           label: 'Loading modal',
           items: [
-                        {
+            {
               id: 'components/loading-modal/guide',
               label: 'Usage',
             },
@@ -930,7 +934,7 @@ const sidebars: SidebarsConfig = {
           id: 'components/message-modal/index',
           label: 'Message modal',
           items: [
-                        {
+            {
               id: 'components/message-modal/guide',
               label: 'Usage',
             },
@@ -976,6 +980,10 @@ const sidebars: SidebarsConfig = {
               id: 'components/toast/code',
               label: 'Code',
             },
+            {
+              id: 'components/toast/language',
+              label: 'Writing',
+            },
           ],
         }),
         createTabItem({
@@ -985,6 +993,10 @@ const sidebars: SidebarsConfig = {
             {
               id: 'components/tooltip/code',
               label: 'Code',
+            },
+            {
+              id: 'components/tooltip/uxwriting',
+              label: 'Writing',
             },
           ],
         }),
@@ -1023,7 +1035,7 @@ const sidebars: SidebarsConfig = {
         }),
         createTabItem({
           id: 'components/html-grid/index',
-          label: 'HTML grid',
+          label: 'HTML table',
           items: [
             {
               id: 'components/html-grid/code',
@@ -1209,7 +1221,10 @@ const sidebars: SidebarsConfig = {
       type: 'category',
       className: 'doc-sidebar-item-bold',
       label: 'Theme',
-      items: ['styles/theming/usage-developers', 'styles/theming/usage-designers'],
+      items: [
+        'styles/theming/usage-developers',
+        'styles/theming/usage-designers',
+      ],
       collapsed: true,
     },
   ],
