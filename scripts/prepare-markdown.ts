@@ -62,7 +62,7 @@ async function getDefaults(): Promise<BranchConfig> {
     )
   ) {
     throw new Error(
-      'DOCS_BRANCH, DOCS_BRANCH_TYPE and DOCS_PR_NUMBER environment variables are required in CI.'
+      'DOCS_BRANCH, DOCS_BRANCH_TYPE and DOCS_PR_NUMBER environment variables are required in CI.',
     );
   }
 
@@ -160,7 +160,7 @@ async function downloadLatestArtifact(branch: string) {
     .flatMap((run) => run.data.workflow_runs)
     .sort(
       (a, b) =>
-        new Date(b.created_at).getTime() - new Date(a.created_at).getTime()
+        new Date(b.created_at).getTime() - new Date(a.created_at).getTime(),
     );
 
   if (
@@ -173,7 +173,7 @@ async function downloadLatestArtifact(branch: string) {
     throw new Error(message);
   }
   const runId = runs.filter(
-    (run) => run.name === 'Build' || run.name === 'Pull Request'
+    (run) => run.name === 'Build' || run.name === 'Pull Request',
   )[0].id;
 
   // Get artifacts for the run
@@ -189,7 +189,7 @@ async function downloadLatestArtifact(branch: string) {
   }
 
   const artifact = artifactsData.artifacts.find((artifact) =>
-    artifact.name.startsWith('documentation-')
+    artifact.name.startsWith('documentation-'),
   );
 
   if (!artifact) {
@@ -198,7 +198,7 @@ async function downloadLatestArtifact(branch: string) {
 
   console.log(
     `Downloading artifact: ${artifact.name} (ID: ${artifact.id})`,
-    artifact
+    artifact,
   );
 
   // Download the artifact zip
