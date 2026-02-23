@@ -54,48 +54,23 @@ async function getDefaults(): Promise<BranchConfig> {
     prNumber: '',
   };
 
-  // Check for GitHub Actions environment variables first
   if (
-    process.env.DOCS_BRANCH &&
-    process.env.DOCS_BRANCH_TYPE &&
-    process.env.DOCS_PR_NUMBER !== undefined
+    !(
+      process.env.DOCS_BRANCH &&
+      process.env.DOCS_BRANCH_TYPE &&
+      process.env.DOCS_PR_NUMBER !== undefined
+    )
   ) {
-    defaults.branch = process.env.DOCS_BRANCH;
-    defaults.branchType = process.env.DOCS_BRANCH_TYPE;
-    defaults.prNumber = process.env.DOCS_PR_NUMBER;
-    return defaults;
+    throw new Error(
+      'DOCS_BRANCH, DOCS_BRANCH_TYPE and DOCS_PR_NUMBER environment variables are required in CI.',
+    );
   }
 
-  // Check for Netlify environment variables
-  if (process.env.CONTEXT === 'deploy-preview' && process.env.REVIEW_ID) {
-    defaults.branch = process.env.HEAD || process.env.BRANCH || 'main';
-    defaults.branchType = 'pull request';
-    defaults.prNumber = process.env.REVIEW_ID;
-    return defaults;
-  }
+  defaults.branch = process.env.DOCS_BRANCH;
+  defaults.branchType = process.env.DOCS_BRANCH_TYPE;
+  defaults.prNumber = process.env.DOCS_PR_NUMBER;
 
-  // Check for Netlify branch deploy
-  if (process.env.CONTEXT === 'branch-deploy' && process.env.BRANCH) {
-    defaults.branch = process.env.BRANCH;
-    defaults.branchType = 'branch';
-    defaults.prNumber = '';
-    return defaults;
-  }
-
-  // Check for Netlify production
-  if (process.env.CONTEXT === 'production') {
-    defaults.branch = 'main';
-    defaults.branchType = 'main';
-    defaults.prNumber = '';
-    return defaults;
-  }
-
-  // If no environment variables are set, throw error
-  throw new Error(
-    'Required environment variables not found. Expected either: ' +
-    '(DOCS_BRANCH, DOCS_BRANCH_TYPE, DOCS_PR_NUMBER) for CI or ' +
-    '(CONTEXT, BRANCH/HEAD, REVIEW_ID) for Netlify.'
-  );
+  return defaults;
 }
 
 async function main() {
@@ -106,20 +81,6 @@ async function main() {
     console.log(`Reason: SKIP_PREPARE is set to "${process.env.SKIP_PREPARE}"`);
     return;
   }
-  
-  // Debug: Log environment variables
-  console.log('========================================');
-  console.log('===      ENVIRONMENT VARIABLES       ===');
-  console.log('========================================');
-  console.log(`CONTEXT: ${process.env.CONTEXT}`);
-  console.log(`BRANCH: ${process.env.BRANCH}`);
-  console.log(`HEAD: ${process.env.HEAD}`);
-  console.log(`REVIEW_ID: ${process.env.REVIEW_ID}`);
-  console.log(`DOCS_BRANCH: ${process.env.DOCS_BRANCH}`);
-  console.log(`DOCS_BRANCH_TYPE: ${process.env.DOCS_BRANCH_TYPE}`);
-  console.log(`DOCS_PR_NUMBER: ${process.env.DOCS_PR_NUMBER}`);
-  console.log('========================================');
-  
   const defaults = await getDefaults();
 
   console.log('Script will start with the following defaults:');
@@ -166,18 +127,12 @@ async function downloadLatestArtifact(branch: string) {
   let branchName = branch;
   if (branch.startsWith('pull/')) {
     const prNumber = parseInt(branch.split('/')[1], 10);
-    try {
-      const { data: pr } = await octokit.pulls.get({
-        owner,
-        repo,
-        pull_number: prNumber,
-      });
-      branchName = pr.head.ref;
-    } catch (error) {
-      console.log(`PR #${prNumber} not found in ${owner}/${repo}`);
-      console.log('Falling back to main branch artifacts (docs-only PR)');
-      return downloadLatestArtifact('main');
-    }
+    const { data: pr } = await octokit.pulls.get({
+      owner,
+      repo,
+      pull_number: prNumber,
+    });
+    branchName = pr.head.ref;
   }
 
   const eventRuns = await Promise.all([
@@ -205,7 +160,7 @@ async function downloadLatestArtifact(branch: string) {
     .flatMap((run) => run.data.workflow_runs)
     .sort(
       (a, b) =>
-        new Date(b.created_at).getTime() - new Date(a.created_at).getTime()
+        new Date(b.created_at).getTime() - new Date(a.created_at).getTime(),
     );
 
   if (
@@ -214,17 +169,11 @@ async function downloadLatestArtifact(branch: string) {
     runs.filter((run) => run.name === 'Build' || run.name === 'Pull Request')
       .length === 0
   ) {
-    if (branchName === 'main') {
-      const message = `No workflow runs found for main branch. ${branchName}`;
-      throw new Error(message);
-    }
-    console.log(`No workflow runs found for branch: ${branchName}`);
-    console.log('Falling back to main branch artifacts (docs-only PR)');
-    // Recursively call with main branch for docs-only PRs
-    return downloadLatestArtifact('main');
+    const message = `No workflow runs found for this branch. ${branchName}`;
+    throw new Error(message);
   }
   const runId = runs.filter(
-    (run) => run.name === 'Build' || run.name === 'Pull Request'
+    (run) => run.name === 'Build' || run.name === 'Pull Request',
   )[0].id;
 
   // Get artifacts for the run
@@ -240,7 +189,7 @@ async function downloadLatestArtifact(branch: string) {
   }
 
   const artifact = artifactsData.artifacts.find((artifact) =>
-    artifact.name.startsWith('documentation-')
+    artifact.name.startsWith('documentation-'),
   );
 
   if (!artifact) {
@@ -249,7 +198,7 @@ async function downloadLatestArtifact(branch: string) {
 
   console.log(
     `Downloading artifact: ${artifact.name} (ID: ${artifact.id})`,
-    artifact
+    artifact,
   );
 
   // Download the artifact zip
