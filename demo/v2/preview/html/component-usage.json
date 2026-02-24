@@ -35,6 +35,13 @@
     "ix-menu",
     "ix-menu-item"
   ],
+  "/src/preview-examples/application-header.html": [
+    "ix-application-header",
+    "ix-avatar",
+    "ix-dropdown-button",
+    "ix-dropdown-item",
+    "ix-icon-button"
+  ],
   "/src/preview-examples/application-breakpoints.html": [
     "ix-application",
     "ix-application-header",
@@ -48,13 +55,6 @@
     "ix-radio",
     "ix-radio-group"
   ],
-  "/src/preview-examples/application-header.html": [
-    "ix-application-header",
-    "ix-avatar",
-    "ix-dropdown-button",
-    "ix-dropdown-item",
-    "ix-icon-button"
-  ],
   "/src/preview-examples/application.html": [
     "ix-application",
     "ix-application-header",
@@ -63,11 +63,11 @@
     "ix-menu",
     "ix-menu-item"
   ],
-  "/src/preview-examples/aria-label-properties.html": [
-    "ix-date-picker"
-  ],
   "/src/preview-examples/avatar-image.html": [
     "ix-avatar"
+  ],
+  "/src/preview-examples/aria-label-properties.html": [
+    "ix-date-picker"
   ],
   "/src/preview-examples/avatar-initials.html": [
     "ix-avatar"
@@ -75,14 +75,14 @@
   "/src/preview-examples/avatar.html": [
     "ix-avatar"
   ],
+  "/src/preview-examples/blind-variants.html": [
+    "ix-blind"
+  ],
   "/src/preview-examples/blind-header-actions.html": [
     "ix-blind",
     "ix-dropdown",
     "ix-dropdown-item",
     "ix-icon-button"
-  ],
-  "/src/preview-examples/blind-variants.html": [
-    "ix-blind"
   ],
   "/src/preview-examples/blind.html": [
     "ix-blind"
@@ -111,10 +111,10 @@
   "/src/preview-examples/button-ghost.html": [
     "ix-button"
   ],
-  "/src/preview-examples/button-grey-ghost.html": [
+  "/src/preview-examples/button-grey-secondary.html": [
     "ix-button"
   ],
-  "/src/preview-examples/button-grey-secondary.html": [
+  "/src/preview-examples/button-grey-ghost.html": [
     "ix-button"
   ],
   "/src/preview-examples/button-grey.html": [
@@ -127,19 +127,19 @@
     "ix-button",
     "ix-icon-button"
   ],
-  "/src/preview-examples/button-secondary.html": [
+  "/src/preview-examples/button-text-icon.html": [
     "ix-button"
   ],
-  "/src/preview-examples/button-text-icon.html": [
+  "/src/preview-examples/button-secondary.html": [
     "ix-button"
   ],
   "/src/preview-examples/button-with-icon.html": [
     "ix-icon-button"
   ],
-  "/src/preview-examples/button-with-link.html": [
+  "/src/preview-examples/buttons.html": [
     "ix-button"
   ],
-  "/src/preview-examples/buttons.html": [
+  "/src/preview-examples/button-with-link.html": [
     "ix-button"
   ],
   "/src/preview-examples/card-list.html": [
@@ -378,11 +378,11 @@
     "ix-group",
     "ix-group-item"
   ],
-  "/src/preview-examples/group-header-suppressed.html": [
+  "/src/preview-examples/group.html": [
     "ix-group",
     "ix-group-item"
   ],
-  "/src/preview-examples/group.html": [
+  "/src/preview-examples/group-header-suppressed.html": [
     "ix-group",
     "ix-group-item"
   ],
@@ -424,12 +424,12 @@
     "ix-input",
     "ix-typography"
   ],
-  "/src/preview-examples/input.html": [
-    "ix-input"
-  ],
   "/src/preview-examples/key-value-list-striped.html": [
     "ix-key-value",
     "ix-key-value-list"
+  ],
+  "/src/preview-examples/input.html": [
+    "ix-input"
   ],
   "/src/preview-examples/key-value-list-with-custom-value.html": [
     "ix-key-value",
@@ -446,13 +446,13 @@
   "/src/preview-examples/key-value-with-custom-value.html": [
     "ix-key-value"
   ],
+  "/src/preview-examples/key-value-with-icon.html": [
+    "ix-key-value"
+  ],
   "/src/preview-examples/key-value-with-label-left.html": [
     "ix-key-value"
   ],
   "/src/preview-examples/key-value.html": [
-    "ix-key-value"
-  ],
-  "/src/preview-examples/key-value-with-icon.html": [
     "ix-key-value"
   ],
   "/src/preview-examples/kpi.html": [
@@ -587,11 +587,11 @@
   "/src/preview-examples/progress-indicator-linear-status.html": [
     "ix-progress-indicator"
   ],
-  "/src/preview-examples/push-card.html": [
-    "ix-push-card"
-  ],
   "/src/preview-examples/progress-indicator.html": [
     "ix-progress-indicator"
+  ],
+  "/src/preview-examples/push-card.html": [
+    "ix-push-card"
   ],
   "/src/preview-examples/radio-disabled.html": [
     "ix-radio"
@@ -639,11 +639,11 @@
   "/src/preview-examples/slider-trace.html": [
     "ix-slider"
   ],
-  "/src/preview-examples/slider.html": [
-    "ix-slider"
-  ],
   "/src/preview-examples/spinner-large.html": [
     "ix-spinner"
+  ],
+  "/src/preview-examples/slider.html": [
+    "ix-slider"
   ],
   "/src/preview-examples/spinner.html": [
     "ix-spinner"
@@ -740,10 +740,10 @@
   "/src/preview-examples/toggle-button-secondary.html": [
     "ix-toggle-button"
   ],
-  "/src/preview-examples/toggle-button-subtle-primary.html": [
+  "/src/preview-examples/toggle-button-subtle-secondary.html": [
     "ix-toggle-button"
   ],
-  "/src/preview-examples/toggle-button-subtle-secondary.html": [
+  "/src/preview-examples/toggle-button-subtle-primary.html": [
     "ix-toggle-button"
   ],
   "/src/preview-examples/toggle-button-subtle-tertiary.html": [
@@ -783,13 +783,13 @@
   "/src/preview-examples/tree.html": [
     "ix-tree"
   ],
-  "/src/preview-examples/upload.html": [
-    "ix-upload"
-  ],
   "/src/preview-examples/validation-select.html": [
     "ix-button",
     "ix-select",
     "ix-select-item"
+  ],
+  "/src/preview-examples/upload.html": [
+    "ix-upload"
   ],
   "/src/preview-examples/vertical-tabs-with-avatar.html": [
     "ix-menu",
@@ -801,11 +801,11 @@
     "ix-menu",
     "ix-menu-item"
   ],
-  "/src/preview-examples/workflow.html": [
+  "/src/preview-examples/workflow-vertical.html": [
     "ix-workflow-step",
     "ix-workflow-steps"
   ],
-  "/src/preview-examples/workflow-vertical.html": [
+  "/src/preview-examples/workflow.html": [
     "ix-workflow-step",
     "ix-workflow-steps"
   ]

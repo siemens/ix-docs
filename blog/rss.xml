@@ -4,10 +4,98 @@
         <title>Siemens Industrial Experience Blog</title>
         <link>https://ix.siemens.io/blog</link>
         <description>Siemens Industrial Experience Blog</description>
-        <lastBuildDate>Mon, 01 Dec 2025 00:00:00 GMT</lastBuildDate>
+        <lastBuildDate>Mon, 23 Feb 2026 00:00:00 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <generator>https://github.com/jpmonette/feed</generator>
         <language>en</language>
+        <item>
+            <title><![CDATA[Beyond the toast: Mastering messaging and feedback]]></title>
+            <link>https://ix.siemens.io/blog/messaging</link>
+            <guid>https://ix.siemens.io/blog/messaging</guid>
+            <pubDate>Mon, 23 Feb 2026 00:00:00 GMT</pubDate>
+            <description><![CDATA[Effective messaging approaches]]></description>
+            <content:encoded><![CDATA[<p><img decoding="async" loading="lazy" alt="Effective messaging approaches" src="https://ix.siemens.io/assets/images/2602_blog_messaging1-8c71488ca106f4b17176e2ecc9c37575.svg" width="896" height="360" class="img_QgcI"></p>
+<p>Effective communication with users is of the highest priority. Providing timely, clear and contextual feedback within our applications is crucial for a smooth and intuitive user experience. While toast messages have their place, relying on them exclusively can sometimes lead to missed information or user frustration.</p>
+<p>In response to your questions about toast messages, and especially their interplay with modal dialogs, we want to guide you through our recommended best practices for displaying messages.</p>
+<h1>The problem with over toasting</h1>
+<p><img decoding="async" loading="lazy" alt="Problem with toasts" src="https://ix.siemens.io/assets/images/2602_blog_messaging_toast-2ceeaffbc2ec82ead8127aec9303b79b.svg" width="896" height="360" class="img_QgcI"></p>
+<p><a href="https://ix.siemens.io/docs/components/toast/guide">Toasts</a> are quick, non-intrusive pop-ups that provide simple feedback on a user action. They are excellent for immediate low-priority confirmations, e.g. a successful deletion.</p>
+<p>However, toasts can often be:</p>
+<ul>
+<li><strong>Missed</strong> when a modal is open or the user’s attention is elsewhere.</li>
+<li><strong>Overwhelming</strong> when several toasts appear in quick succession.</li>
+<li><strong>Lacking context</strong> due to their intentionally brief messaging.</li>
+</ul>
+<p>This is why, for most scenarios requiring user attention or detailed information, we recommend exploring more robust messaging patterns.</p>
+<h1>When to use what</h1>
+<p>We already offer a set of components designed to handle various messaging needs. Let’s explore the alternatives to toast messages and understand when to use each one from contextual feedback to required decision making.</p>
+<div class="table-full-width table-column-equal-width"><table><thead><tr><th style="text-align:left"><strong>Option</strong></th><th style="text-align:left"><strong>When to use</strong></th></tr></thead><tbody><tr><td style="text-align:left"><strong>Toast message</strong></td><td style="text-align:left">Low-priority confirmations</td></tr><tr><td style="text-align:left"><strong><a href="https://ix.siemens.io/blog/messaging#input-field-feedback-text">Input field feedback text</a></strong></td><td style="text-align:left">Immediate, field-level validation</td></tr><tr><td style="text-align:left"><strong><a href="https://ix.siemens.io/blog/messaging#inline-notification-planned">Inline notification</a></strong></td><td style="text-align:left">Noticeable, contextual feedback</td></tr><tr><td style="text-align:left"><strong><a href="https://ix.siemens.io/blog/messaging#message-bar-as-banner">Message bar as banner</a></strong></td><td style="text-align:left">Important and persistent non-blocking messages</td></tr><tr><td style="text-align:left"><strong><a href="https://ix.siemens.io/blog/messaging#modal">Modal</a></strong></td><td style="text-align:left">Critical information demanding user interaction</td></tr></tbody></table></div>
+<h3 class="anchor anchorWithStickyNavbar_loeA" id="input-field-feedback-text">Input field feedback text<a href="https://ix.siemens.io/blog/messaging#input-field-feedback-text" class="hash-link" aria-label="Direct link to Input field feedback text" title="Direct link to Input field feedback text">​</a></h3>
+<p><img decoding="async" loading="lazy" alt="Input feedback" src="https://ix.siemens.io/assets/images/2602_blog_messaging_inputfeedback-224773cb6139e3769a880f70b0324965.svg" width="896" height="360" class="img_QgcI"></p>
+<p><strong>When to use it:</strong> For immediate and highly contextual feedback related to user <a href="https://ix.siemens.io/docs/components/forms-validation/guide">input fields</a>, direct feedback texts are the recommended choice. These messages appear below the input field.</p>
+<p><strong>Why it’s better than a toast:</strong> Input field feedback is directly tied to the user’s action. It helps users correct errors and prevents frustration. A toast would be too far removed from the input field to be effective here.</p>
+<p>Examples:</p>
+<ul>
+<li>Invalid email format.</li>
+<li>Password too short (minimum 8 characters).</li>
+<li>Required field.</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_loeA" id="inline-notification-planned">Inline notification (planned)<a href="https://ix.siemens.io/blog/messaging#inline-notification-planned" class="hash-link" aria-label="Direct link to Inline notification (planned)" title="Direct link to Inline notification (planned)">​</a></h3>
+<p><img decoding="async" loading="lazy" alt="Inline notification" src="https://ix.siemens.io/assets/images/2602_blog_messaging_inlinemessage-9fac1b0a1f2912a26894f71ba588c980.svg" width="896" height="360" class="img_QgcI"></p>
+<p><strong>When to use it:</strong> Inline notifications appear within a specific section or component of a page, rather than spanning the entire width. We are planning on providing a component that is optimized for inline use in future.</p>
+<p><strong>Why it’s better than a toast:</strong> An inline notification provides contextual feedback directly where it’s most relevant, without disrupting the overall page flow. It’s less intrusive than a full banner but more persistent and noticeable than a toast for localized issues, especially when other UI elements (like modals) are present.</p>
+<p>Examples:</p>
+<ul>
+<li>Above a form, indicating validation errors for multiple fields.</li>
+<li>Within a data table, showing a message about filtering results.</li>
+<li>Inside a specific widget, providing status updates.</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_loeA" id="message-bar-as-banner">Message bar as banner<a href="https://ix.siemens.io/blog/messaging#message-bar-as-banner" class="hash-link" aria-label="Direct link to Message bar as banner" title="Direct link to Message bar as banner">​</a></h3>
+<p><img decoding="async" loading="lazy" alt="Message bar" src="https://ix.siemens.io/assets/images/2602_blog_messaging_messagebar-8a40fcb7aecab4a298eb90e2b33984cb.svg" width="896" height="360" class="img_QgcI"></p>
+<p><strong>When to use it:</strong> Banners are ideal for important, non-blocking messages that need to persist until dismissed or resolved. These messages can be system-wide (affecting the entire application) or page-specific (relevant to a particular view). In our design system the <a href="https://ix.siemens.io/docs/components/messagebar/code">message bar</a> component is used for banner notifications. See our UX writing section on
+<a href="https://ix.siemens.io/docs/guidelines/language/messaging/time-related-messages">time-related messages</a>.</p>
+<p><strong>Why it’s better than a toast:</strong> Unlike toasts, banners remain visible until the user takes action or the condition is resolved. This persistence ensures that important information, like a lost connection or planned maintenance, is not missed.</p>
+<p>Examples:</p>
+<ul>
+<li>Connection lost. Reconnecting…</li>
+<li>System maintenance scheduled for August 22nd, 02:00-04:00.</li>
+<li>Your trial period ends in 7 days.</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_loeA" id="modal">Modal<a href="https://ix.siemens.io/blog/messaging#modal" class="hash-link" aria-label="Direct link to Modal" title="Direct link to Modal">​</a></h3>
+<p><img decoding="async" loading="lazy" alt="Modal" src="https://ix.siemens.io/assets/images/2602_blog_messaging_messagemodal-76b3383387b73d611bf158716eea7204.svg" width="896" height="360" class="img_QgcI"></p>
+<p><strong>When to use it:</strong> Modals are your choice for critical information that demands immediate user attention and interaction. <a href="https://ix.siemens.io/docs/components/message-modal/guide">Modal messages</a> are recommended for scenarios where a user needs to confirm an action, acknowledge a severe error that blocks further progress, or make a crucial decision. See our UX writing section on <a href="https://ix.siemens.io/docs/guidelines/language/messaging/messages-overview">messaging</a>.</p>
+<p><strong>Why it’s better than a toast:</strong> Modals overlay the entire application, ensuring the user’s focus is entirely on the message. They prevent further interaction with the underlying content until dismissed, guaranteeing that critical information is seen and acted upon.</p>
+<p>Examples:</p>
+<ul>
+<li>Confirming a permanent deletion.</li>
+<li>Alerting the user about unsaved changes before navigating away.</li>
+<li>Displaying a critical system error that requires immediate resolution.</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_loeA" id="notification-management">Notification management<a href="https://ix.siemens.io/blog/messaging#notification-management" class="hash-link" aria-label="Direct link to Notification management" title="Direct link to Notification management">​</a></h3>
+<p><img decoding="async" loading="lazy" alt="Notification management" src="https://ix.siemens.io/assets/images/2602_blog_messaging_notificationhistory-8e7c0d0ad1bf60db3b1d24e741c4209e.svg" width="896" height="360" class="img_QgcI"></p>
+<p>Users might miss a critical message or need to refer back to past notifications. A dedicated notification management provides a persistent record of important events and messages.</p>
+<p><strong>When to use it:</strong> This is valuable for applications where:</p>
+<ul>
+<li>Users need to see a log of system actions or changes.</li>
+<li>Users need to catch up: After being away from the application, users can quickly review what they missed.</li>
+<li>Complex workflows: Where multiple actions trigger various messages.</li>
+</ul>
+<p><strong>How it adds value:</strong> A notification management is often presented as an <a href="https://ix.siemens.io/docs/components/event-list/code">event list</a> on a separate page, within a dedicated dialog, or accessible via a notification icon. It ensures that no critical information is permanently lost. It complements all other messaging patterns by offering a centralized archive, allowing users to review, filter and act upon past notifications. This significantly enhances user control and confidence in the application.</p>
+<h2 class="anchor anchorWithStickyNavbar_loeA" id="key-takeaways">Key takeaways<a href="https://ix.siemens.io/blog/messaging#key-takeaways" class="hash-link" aria-label="Direct link to Key takeaways" title="Direct link to Key takeaways">​</a></h2>
+<ul>
+<li><strong>Prioritize clarity and context:</strong> Always choose the messaging pattern that best communicates the information clearly and in the most relevant context.</li>
+<li><strong>Reserve toasts for small feedback:</strong> Use toasts for quick, non-critical confirmations that don’t require immediate user action or detailed explanation.</li>
+<li><strong>Embrace alternatives:</strong> Leverage input field feedback for direct validation, inline notifications for contextual feedback, banners for persistent alerts, and modals for critical interactions.</li>
+<li><strong>Provide a notification management:</strong> For important events and messages, offer a persistent record that users can access and review.</li>
+<li><strong>Stay aligned:</strong> You can always refer to our component usage guides for the most up-to-date guidance and examples.</li>
+</ul>
+<h2 class="anchor anchorWithStickyNavbar_loeA" id="more-on-messaging">More on messaging<a href="https://ix.siemens.io/blog/messaging#more-on-messaging" class="hash-link" aria-label="Direct link to More on messaging" title="Direct link to More on messaging">​</a></h2>
+<ul>
+<li>We highly recommend the <a href="https://ix.siemens.io/docs/guidelines/language/messaging/messages-overview">UX writing</a> chapter on how to effectively phrase your messages depending on the context, e.g. warning messages.</li>
+<li>The <strong>UX Design Pattern</strong> team is currently working on a detailed overview of messaging patterns. Follow them on <a href="https://engage.cloud.microsoft/main/org/siemens.com/groups/eyJfdHlwZSI6Ikdyb3VwIiwiaWQiOiIyMzcxMzg0NTI0ODAifQ/new" target="_blank" rel="noopener noreferrer">Viva Engage</a> to stay tuned.</li>
+</ul>]]></content:encoded>
+            <category>ux</category>
+        </item>
         <item>
             <title><![CDATA[AI support with Siemens Design Language MCP Server]]></title>
             <link>https://ix.siemens.io/blog/mcp</link>
