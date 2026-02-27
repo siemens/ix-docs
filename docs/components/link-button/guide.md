@@ -1,0 +1,41 @@
+# Link button - Usage
+
+> ![Overview](https://www.figma.com/design/wEptRgAezDU1z80Cn3eZ0o/iX-Pattern-Illustrations?type=design&node-id=1506-4003&mode=design&t=5MYmq6zAbfw7xIkC-11)
+
+# Link button - Usage
+
+![Overview](https://www.figma.com/design/wEptRgAezDU1z80Cn3eZ0o/iX-Pattern-Illustrations?type=design&node-id=1506-4003&mode=design&t=5MYmq6zAbfw7xIkC-11)
+
+1. Chevron
+2. Label
+
+:::info
+Use inline [hyperlinks](https://developer.mozilla.org/de/docs/Web/HTML/Reference/Elements/a) for inline links `` instead of link buttons, e.g. within a paragraph. They are styled and ready to use without additional configuration needed.
+:::
+
+## Options
+
+- **Target:** Define where a link opens (see [official MDN documentation](https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/a#target)):
+    - `_self`: Opens the target in the same tab.
+    - `_blank`: Opens the target in a new tab.
+    - `_parent`: Opens the target in the parent frame.
+    - `_top`: Opens the target in the full body of the window.
+- **URL:** Specify the link destination.
+
+## Behavior in context
+
+- **Interaction:** Link buttons can be triggered by pressing anywhere within the button area. When link buttons are focused, they can be triggered by pressing `Enter`.
+- **Placement:** We typically place link buttons below or next to related content but not within paragraphs. It's also possible to place multiple link buttons on top of each other to create link lists.
+- **Line length:** Link buttons cannot support line break or text truncation. Link button texts are displayed in one line. If there is not enough space, the complete link text is not visible.
+
+## States
+
+Link buttons take five states: Default, hover, active, disabled and focused. On hover, the link destination is shown. In a disabled state, link buttons are visually displayed but don’t offer any user interaction.
+
+![States](https://www.figma.com/design/wEptRgAezDU1z80Cn3eZ0o/iX-Pattern-Illustrations?type=design&node-id=1507-9250&mode=design&t=5MYmq6zAbfw7xIkC-11)
+
+## Dos and Don’ts
+
+- Do use link buttons for navigation
+- Don’t use link buttons to indicate actions
+- Don’t place link buttons within a paragraph

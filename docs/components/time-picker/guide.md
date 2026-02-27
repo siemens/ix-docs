@@ -1,0 +1,53 @@
+# Time picker - Usage
+
+> Time pickers are primarily used within [time inputs](../input-time) but can also be utilized standalone in applications where direct time selection is required.
+
+# Time picker - Usage
+
+Time pickers are primarily used within [time inputs](../input-time) but can also be utilized standalone in applications where direct time selection is required.
+
+![Time picker anatomy](https://www.figma.com/design/wEptRgAezDU1z80Cn3eZ0o/iX-Documentation-illustrations?node-id=5730-2889&t=X5f645XuQl3ZV8XD-4)
+
+1. Time picker container
+2. Time unit (column) headers
+3. Selected time
+4. AM/PM select (12-hour format only)
+5. Confirm [button](../button)
+
+## Options
+
+- **Value**: The selected time value.
+- **Format**: Choose which time units to display, depending on your needs (hours, minutes, seconds, milliseconds). Additionally, define a 12- or 24-hour format. We recommend to use a 24-hour format for universal readability (read more in the [UX writing guides](./../../guidelines/language/writing-style-guide-getting-started)).
+  - **Columns**: Hide hours, minutes, seconds and milliseconds columns when not needed.
+  - **Intervals**: Define an interval for every unit to restrict allowed values and provide a faster selection. For example 2 hours, 15 minutes, 30 seconds, 100 milliseconds.
+- **Header**: Define a header text that conveys the context of the time selection. Hide it when there is already a related headline in your UI.
+- **Corners**: By default, the time picker shows rounded corners to be consistent with the [dropdown](../dropdown). Use straight, left or right corners to combine with other components.
+- **Standalone appearance**: Shows a flat design without a shadow. We typically use it for inline placement.
+
+## Behavior in context
+
+- **Interaction**: Users can navigate through the time picker using the keyboard. The following keys are supported:
+  - **Tab**: Navigate between areas of the time picker (header, body, footer).
+  - **Arrow keys or scroll**: Move through time options.
+  - **Enter or click**: Select the highlighted time.
+
+## States
+
+An individual time item of a time picker has five states: Default, hover, active, disabled and focused.
+
+![Time picker states](https://www.figma.com/design/wEptRgAezDU1z80Cn3eZ0o/iX-Documentation-illustrations?node-id=5730-2897&t=ZhOOQlwBUWtHJWDA-4)
+
+## Dos and Don’ts
+
+- Do use the time picker to ensure accurate time selection (we recommend to use [time inputs](../input-time) for that reason)
+- Do provide clear instructions and labels for users
+- Do ensure the time picker is accessible via keyboard
+
+- Don’t clutter the time picker with unnecessary options
+
+## Related
+
+- [Time input](../input-time)
+- [Date picker](../date-picker)
+- [Date time picker](../date-time-picker)
+- [Dropdown](../dropdown)

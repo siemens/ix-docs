@@ -1,0 +1,63 @@
+# Icon usage
+
+> Icons are graphical representations of terms, functions or objects. Ideally, we use them together with a descriptive text to make it easier for users to learn their meaning. 
+
+import IconTable from '@site/src/components/IconTable';
+import { IconExamplesClarity, IconExamplesStatus, IconExamplesMenu } from '@site/src/components/IconTable';
+
+#
+
+## Clarity and contextual relevance
+
+- Icons should be easily recognizable and understandable.
+- Use icons that are contextually appropriate and convey the intended message.
+- Avoid using icons that could be misinterpreted or confusing.
+
+Examples
+
+<IconTable data={IconExamplesClarity}></IconTable>
+
+## Menu icons
+
+We use distinct icons to signal different types of menus:
+
+<IconTable data={IconExamplesMenu}></IconTable>
+
+The drag-gripper icon is visually similar but isn't a menu icon and should be used for drag-and-drop interactions to reorder items.
+
+### Example of menu icons
+
+The illustration demonstrates the standard layout, featuring the apps icon in the [application header](../components/application-header/guide.md) and an open context menu for an event list item.
+
+![Menu icons](https://www.figma.com/design/wEptRgAezDU1z80Cn3eZ0o/iX-Documentation-illustrations?node-id=7420-16011&t=HOxEXsgRcyJFe982-4)
+
+Upon resizing to a smaller screen, the [layout adapts](../components/application-header/guide#behavior):
+- The left navigation collapses into a menu icon in the application header.
+- The app switch icon then relocates into the expandable menu.
+- Actions previously visible in the application header move into a dropdown, indicated by the more menu icon.
+
+![Menu icons small screens](https://www.figma.com/design/wEptRgAezDU1z80Cn3eZ0o/iX-Documentation-illustrations?node-id=7428-36686&t=HOxEXsgRcyJFe982-4)
+
+## Status icons
+
+- We provide a set of standard icons to convey status.
+- These icons follow a criticality hierarchy and should be used with the corresponding colors: alarm, critical, warning, success, and info.
+- To ensure consistency across different applications, do not use these icons outside of their intended use cases.
+
+Examples
+
+<IconTable data={IconExamplesStatus}></IconTable>
+
+## Icons within components
+
+- Most of our components come with built-in icons or offer an optional icon slot.
+- Ensure consistent use of components, either with or without icons, within the same context.
+
+![Icons within components](https://www.figma.com/design/wEptRgAezDU1z80Cn3eZ0o/iX-Documentation-illustrations?node-id=5259-16957&t=ulQZQESQGAMR3uyt-4)
+
+## Standalone icons
+
+- A standalone icon, without textual description, has to be paired with a tooltip that describes the meaning of the icon.
+- Make sure a description can be read out by screen readers.
+
+![Standalone icons](https://www.figma.com/design/wEptRgAezDU1z80Cn3eZ0o/iX-Documentation-illustrations?node-id=5259-17161&t=ulQZQESQGAMR3uyt-4)

@@ -1,0 +1,9 @@
+# Tooltip - Language
+
+> import TooltipContent from '@site/docs/guidelines/language/messaging/tooltips.mdx';
+
+import TooltipContent from '@site/docs/guidelines/language/messaging/tooltips.mdx';
+
+# Tooltip - Language
+
+<TooltipContent />
