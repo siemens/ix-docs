@@ -1,0 +1,69 @@
+---
+doc-type: 'tab-item'
+---
+
+# Date time picker - Usage
+
+![Date time picker anatomy](https://www.figma.com/design/wEptRgAezDU1z80Cn3eZ0o/iX-Documentation-illustrations?node-id=7440-82856&t=BStIEA03mmCLaHAL-4)
+
+1. [Date picker](../date-picker)
+2. [Time picker](../time-picker)
+3. Confirm [button](../button)
+
+## Options
+
+- **Value**: See [date picker](../date-picker/guide#options) and [time picker](../time-picker/guide#options).
+- **Single selection**: See [date picker](../date-picker/guide#options).
+- **Format**: Choose the date and time format, e.g. `yyyy/LL/dd` and `HH:mm:ss`.
+- **Min and max dates**: See [date picker](../date-picker/guide#options).
+- **Date picker appearance**: See [date picker](../date-picker/guide#options).
+  - **Week start**: Define which day the week starts on. By default, it will be defined based on the locale.
+  - **Week numbers**: Show calendar weeks on the left side of the calendar when needed for reference.
+- **Time picker appearance**: See [time picker](../time-picker/guide#options).
+  - **Time reference**: Show time reference input for AM/PM notation when using 12-hour time format.
+  - **Header**: Customize the header of the time picker.
+- **Corners**: By default, date time pickers show rounded corners to be consistent with the [dropdown](../dropdown). Use straight, left or right corners to combine with other components.
+
+## Behavior in context
+
+- **Combined selection**: Users select both a date and a time before confirming their choice. The selection is only finalized when the confirmation button is clicked.
+- **Range selection**: Range mode allows users to select a start and end date while using one shared time value for both. If start and end need different times, use two separate date time pickers instead.
+- **Month navigation**: Users can navigate between months using the previous and next buttons in the header. This allows quick access to dates outside the current view.
+- **Interaction**: Users can navigate through the date time picker using the keyboard. The following keys are supported:
+  - **Tab**: Navigate between areas of the picker (header, body, time input, footer).
+  - **Arrow keys**: Move through dates in the date picker and times in the time picker.
+  - **Enter or click**: Select the highlighted date or time.
+  - **Escape**: Close the date time picker when used in a dropdown. If the header dropdown for month/year selection is open, it closes first.
+
+## States
+
+Individual calendar dates within a date time picker have five states: Default, hover, active, disabled and focused. Dates outside the allowed range appear in a disabled state and cannot be selected (see [date picker](../date-picker/guide#states) and [time picker](../time-picker/guide#states) for reference).
+
+## Dos and Don’ts
+
+<div class="dos-and-donts" markdown>
+<div class="dos" markdown>
+
+- Do use date time pickers when both date and time information are required
+- Do ensure the date time picker is accessible via keyboard navigation
+- Do use range selection for time periods like booking appointments or scheduling events
+- Do set appropriate min and max dates to prevent invalid selections
+
+</div>
+<div class="donts" markdown>
+
+- Don’t use date time pickers when only a date or only a time is needed (use [date pickers](../date-picker) or [time pickers](../time-picker) instead)
+- Don’t forget to validate both date and time inputs in your form logic
+- Don’t use date time pickers for dates that are far in the past or future without setting appropriate min and max constraints
+- Don’t clutter the interface with unnecessary time precision when approximate times are sufficient
+
+</div>
+</div>
+
+## Related
+
+- [Date picker](../date-picker)
+- [Time picker](../time-picker)
+- [Date time input](../input-date-time)
+- [Writing guidelines for date and time](../../guidelines/language/formatting/date.mdx)
+- [W3C date picker accessibility reference](https://www.w3.org/WAI/ARIA/apg/patterns/combobox/examples/combobox-datepicker/)

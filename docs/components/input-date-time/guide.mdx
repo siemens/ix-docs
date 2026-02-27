@@ -1,0 +1,87 @@
+---
+doc-type: 'tab-item'
+formReady: true
+---
+
+# Date time input - Usage
+
+![Date time input overview](https://www.figma.com/design/wEptRgAezDU1z80Cn3eZ0o/iX-Documentation-illustrations?node-id=7441-86110&t=BStIEA03mmCLaHAL-4)
+
+1. Label
+2. Required field indicator
+3. Current date and time value
+4. Calendar [icon button](../icon-button)
+5. [Input field](../input)
+6. [Date time picker](../date-time-picker)
+7. Month and year navigation
+8. Weekday labels
+9. Selected date or date range
+10. Time picker
+11. Confirm [button](../button)
+
+## Options
+
+- **Label**: See [form field](../forms-field/guide#options).
+- **Required**: See [form field](../forms-field/guide#options).
+- **Helper text**: See [form field](../forms-field/guide#options).
+- **Feedback text**: See [form field](../forms-field/guide#options).
+- **Show text as tooltip**: See [form field](../forms-field/guide#options).
+- **Placeholder**: See [form field](../forms-field/guide#options). We typically use a placeholder to show an example date time format to assist users when the field is empty.
+- **Text alignment**: See [form field](../forms-field/guide#options) (by default at start).
+- **Error message**: Feedback text when date or time is not parsable. We typically use this to inform users that the entered date time format is incorrect and guide them to enter a valid date and time.
+- **Format**: Choose the date and time format, e.g. `yyyy/LL/dd` and `HH:mm:ss`.
+- **Min and max dates**: Restrict the selectable date range by defining the earliest and latest dates users can choose.
+- **Date time picker appearance**: See [date time picker](../date-time-picker/guide#options).
+  - **Week start**: Define which day the week starts on. By default, it will be defined based on the locale.
+  - **Week numbers**: Show calendar weeks on the left side of the calendar when needed for reference.
+
+## Behavior in context
+
+- **Interaction**:
+  - Click opens date time pickers. Via keyboard focus followed by arrow down key also opens it.
+  - Use mouse or keyboard arrows to navigate to the desired date and adjust the time.
+  - Confirm closes the date time picker and applies the selection.
+  - Typing a valid date and time into input field closes the picker.
+  - Escape key closes the date time picker.
+- **Validation**:
+  - Use feedback text for validation types valid, info, warning and invalid.
+  - Invalid feedback is automatically provided if the entered date or time is not parsable.
+  - Refer to the [validation](../forms-validation) chapter for detailed guidelines.
+- **Overflow**: The input field should be wide enough to display the full date and time without truncation.
+- **Alignment**: Date time inputs are aligned to the left by default.
+- **Combined selection**: Users select both a date and a time before confirming their choice. The selection is only finalized when the confirmation button is clicked.
+
+## States
+
+Date time input has five states: Default, hover, disabled, read-only and focused.
+
+![Date time input states](https://www.figma.com/design/wEptRgAezDU1z80Cn3eZ0o/iX-Documentation-illustrations?node-id=7441-86123&t=BStIEA03mmCLaHAL-4)
+
+## Dos and Don'ts
+
+<div class="dos-and-donts" markdown>
+<div class="dos" markdown>
+
+- Do use consistent date and time formats throughout the application to avoid confusion
+- Do provide clear instructions on the expected format, such as "Enter the date time in yyyy/mm/dd HH:mm format"
+- Do consider localization to adapt date and time formats to local conventions
+- Do use separate inputs for start and end date times when defining time ranges
+
+</div>
+<div class="donts" markdown>
+
+- Don't use date time inputs when only a date or only a time is needed (use [date input](../input-date) or [time input](../input-time) instead)
+
+</div>
+</div>
+
+## Related
+
+- [Time picker](../time-picker)
+- [Date time picker](../date-time-picker)
+- [Time input](../input-time)
+- [Date input](../input-date)
+- [Forms field](../forms-field)
+- [Validation](../forms-validation)
+- [Writing guidelines for date and time](../../guidelines/language/formatting/date.mdx)
+- [W3C date picker accessibility reference](https://www.w3.org/WAI/ARIA/apg/patterns/combobox/examples/combobox-datepicker/)
