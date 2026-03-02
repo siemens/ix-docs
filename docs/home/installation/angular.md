@@ -13,7 +13,7 @@ import TabItem from '@theme/TabItem';
 
 ### Peer dependencies
 
-Both `@angular/core` and `@angular/forms` are peer dependencies which must be installed before iX.
+Both `@angular/core` and `@angular/forms` are peer dependencies that you must install before iX.
 
 For the exact version requirements, see the [peerDependencies in package.json](https://github.com/siemens/ix/blob/main/packages/angular/package.json#L22-L26).
 
