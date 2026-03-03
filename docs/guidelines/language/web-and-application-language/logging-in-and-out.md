@@ -5,8 +5,6 @@ title: Logging in and out
 description: Consistent login/logout text reduces confusion, builds trust, and improves usability across all user interactions. It is also critical for accurate translation and localization for international software.
 ---
 
-#
-
 ## General rules
 
 Use “log in” and “log out” as the action verbs instead of sign in/out for consistency.

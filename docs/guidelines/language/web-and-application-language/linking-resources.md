@@ -13,8 +13,6 @@ import { iconVideoFile } from "@siemens/ix-icons/icons";
 import { iconPdfDocument } from "@siemens/ix-icons/icons";
 import { IxLinkButton } from '@siemens/ix-react';
 
-#
-
 ## General rules for external links
 
 Use brief, meaningful link text to explain the function of the target web page or resource.

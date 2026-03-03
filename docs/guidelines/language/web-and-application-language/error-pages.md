@@ -5,8 +5,6 @@ title: Error pages
 description: Well written error pages transform a potentially frustrating user experience into a clear, helpful one using simple and empathetic words to explain the problem and guide users to the next step.
 ---
 
-#
-
 ## Error pages template
 
 We follow these templates when creating our main error pages. Although some of the call-to-action examples are use case-dependent and not always technically feasible, aim for ensuring users can move forward from the error page.

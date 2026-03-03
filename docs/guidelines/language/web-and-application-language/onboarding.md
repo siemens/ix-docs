@@ -5,8 +5,6 @@ title: Onboarding
 description: Clear onboarding guidance helps users get started quickly, build confidence, and unlock value from day one. Use step-by-step instructions, highlight key features and provide actionable tips to ensure a smooth, engaging experience.
 ---
 
-#
-
 ## General rules
 
 We follow this three-step approach when writing our onboarding messages.

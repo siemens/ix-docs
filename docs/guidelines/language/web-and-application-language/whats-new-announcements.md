@@ -5,8 +5,6 @@ title: What’s new announcements
 description: “What’s new” announcements contain text that highlight recent updates, new features or important changes in the latest version of the application. Its purpose is to inform users about enhancements and guide them in utilizing new functionalities effectively.
 ---
 
-#
-
 ## General rules
 
 We follow this three-step approach when creating our updates. They explain what’s new, its purpose and benefit to users, and a possible further action. Although not every dialog requires all three steps, we aim for this whenever possible.
