@@ -1,0 +1,23 @@
+/*
+ * COPYRIGHT (c) Siemens AG 2018-2026 ALL RIGHTS RESERVED.
+ */
+.copy-cli-command {
+  display: flex;
+  justify-self: flex-end;
+  height: 1.5rem;
+  padding: 0.25rem 0.5rem;
+  align-items: center;
+  gap: 0.25rem;
+  border-radius: 1rem;
+  background: var(--theme-color-primary);
+  border: none;
+  color: var(--theme-color-inv-std-text);
+}
+
+.copy-cli-command:hover {
+  background: var(--theme-color-primary--hover);
+}
+
+.copy-cli-command:active {
+  background: var(--theme-color-primary--active);
+}

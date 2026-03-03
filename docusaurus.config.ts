@@ -244,6 +244,12 @@ const config: Config = {
         },
         {
           type: 'docSidebar',
+          sidebarId: 'blocks',
+          position: 'left',
+          label: 'Blocks',
+        },
+        {
+          type: 'docSidebar',
           sidebarId: 'icons',
           position: 'left',
           label: 'Icons',

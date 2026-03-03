@@ -14,6 +14,7 @@ import {
   getDisplayNameFrameworkTypes,
   useFramework,
 } from '@site/src/hooks/use-framework';
+import { useAvailableFrameworkSelection } from '@site/src/context/framework-selection-context';
 import React, { useEffect, useState } from 'react';
 import Button from '../Button';
 
@@ -28,12 +29,29 @@ function FrameworkSelection(
     onFrameworkChange?: (framework: FrameworkTypes) => void;
   }>
 ) {
+  const availableFrameworks = useAvailableFrameworkSelection();
   const { framework, setFramework } = useFramework();
   const [ref, setRef] = useState<HTMLButtonElement>(null);
+  const selectedFramework = availableFrameworks.includes(framework)
+    ? framework
+    : availableFrameworks[0];
 
   useEffect(() => {
-    props.onFrameworkChange && props.onFrameworkChange(framework);
-  }, [framework]);
+    if (!availableFrameworks.includes(framework) && selectedFramework) {
+      setFramework(selectedFramework);
+    }
+  }, [availableFrameworks, framework, selectedFramework, setFramework]);
+
+  useEffect(() => {
+    if (selectedFramework) {
+      props.onFrameworkChange && props.onFrameworkChange(selectedFramework);
+    }
+  }, [selectedFramework]);
+
+  if (!selectedFramework) {
+    return null;
+  }
+
   return (
     <>
       <Button ref={setRef} className={'dropdown-button'}>
@@ -42,7 +60,7 @@ function FrameworkSelection(
           size: '16',
         })}
         <span className="ButtonText">
-          {getDisplayNameFrameworkTypes(framework)}
+          {getDisplayNameFrameworkTypes(selectedFramework)}
         </span>
         {React.createElement('ix-icon', {
           name: iconChevronDownSmall,
@@ -51,21 +69,14 @@ function FrameworkSelection(
       </Button>
       {ref && (
         <IxDropdown trigger={ref}>
-          <IxDropdownItem onClick={() => setFramework('angular')}>
-            Angular
-          </IxDropdownItem>
-          <IxDropdownItem onClick={() => setFramework('angular_standalone')}>
-            Angular Standalone
-          </IxDropdownItem>
-          <IxDropdownItem onClick={() => setFramework('react')}>
-            React
-          </IxDropdownItem>
-          <IxDropdownItem onClick={() => setFramework('vue')}>
-            Vue
-          </IxDropdownItem>
-          <IxDropdownItem onClick={() => setFramework('html')}>
-            HTML
-          </IxDropdownItem>
+          {availableFrameworks.map((availableFramework) => (
+            <IxDropdownItem
+              key={availableFramework}
+              onClick={() => setFramework(availableFramework)}
+            >
+              {getDisplayNameFrameworkTypes(availableFramework)}
+            </IxDropdownItem>
+          ))}
         </IxDropdown>
       )}
     </>

@@ -43,6 +43,10 @@
   background-color: var(--theme-color-1);
 }
 
+.previewWithFooter {
+  border-radius: 0;
+}
+
 .preview.code {
   height: calc(var(--preview-height) + 3rem);
 }
@@ -77,4 +81,13 @@
   align-items: center;
   width: 100%;
   overflow: hidden;
+}
+
+.footer {
+  border-right: 1px solid var(--theme-color-soft-bdr, rgba(235, 240, 245, 0.4));
+  border-bottom: 1px solid var(--theme-color-soft-bdr, rgba(235, 240, 245, 0.4));
+  border-left: 1px solid var(--theme-color-soft-bdr, rgba(235, 240, 245, 0.4));
+  border-radius: 0rem 0rem 0.5rem 0.5rem;
+  padding: 0.75rem 1.5rem;
+  background-color: var(--theme-color-1);
 }

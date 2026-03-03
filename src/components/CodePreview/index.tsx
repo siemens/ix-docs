@@ -39,11 +39,11 @@ export type CodePreviewFiles = {
 };
 
 export type SourceFiles = {
-  angular?: Record<string, JSX.Element>;
-  angular_standalone?: Record<string, JSX.Element>;
-  react?: Record<string, JSX.Element>;
-  vue?: Record<string, JSX.Element>;
-  html?: Record<string, JSX.Element>;
+  angular?: Record<string, React.FC>;
+  angular_standalone?: Record<string, React.FC>;
+  react?: Record<string, React.FC>;
+  vue?: Record<string, React.FC>;
+  html?: Record<string, React.FC>;
 };
 
 export type CodePreviewProps = {
