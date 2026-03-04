@@ -103,19 +103,41 @@ export default function BlockPlayground(
     );
   }, [data]);
 
-  if (isLoading) {
-    return <CodeBlock language="text">Loading source...</CodeBlock>;
-  }
+  const fallbackMessage = isLoading
+    ? 'Loading source...'
+    : error?.message ?? null;
 
-  if (error) {
-    return <CodeBlock language="text">{error.message}</CodeBlock>;
-  }
+  const fallbackFiles = useMemo<CodePreviewFiles>(() => {
+    if (!fallbackMessage) {
+      return files;
+    }
+
+    return {
+      html: {
+        'status.txt': '',
+      },
+    };
+  }, [fallbackMessage, files]);
+
+  const fallbackSource = useMemo<SourceFiles>(() => {
+    if (!fallbackMessage) {
+      return source;
+    }
+
+    return {
+      html: {
+        'status.txt': () => (
+          <CodeBlock language="text">{fallbackMessage}</CodeBlock>
+        ),
+      },
+    };
+  }, [fallbackMessage, source]);
 
   return (
     <Playground
       name={props.name}
-      source={source}
-      files={files}
+      source={fallbackSource}
+      files={fallbackFiles}
       previewUrl={data?.previewUrl}
       height={props.height}
     >
