@@ -81,18 +81,21 @@ function CodeActions(
     availableFrameworks: FrameworkTypes[];
     framework: FrameworkTypes;
     files?: Record<string, string>;
+    disableStackblitz?: boolean;
     onFrameworkChange: (framework: FrameworkTypes) => void;
   }>,
 ) {
   return (
     <>
-      <div className="DesktopOnly">
-        <OpenStackblitz
-          framework={props.framework}
-          files={props.files ?? {}}
-          mount={props.mount}
-        />
-      </div>
+      {!props.disableStackblitz && (
+        <div className="DesktopOnly">
+          <OpenStackblitz
+            framework={props.framework}
+            files={props.files ?? {}}
+            mount={props.mount}
+          />
+        </div>
+      )}
       {!props.hideFrameworkSelection && (
         <FrameworkSelectionProvider frameworks={props.availableFrameworks}>
           <FrameworkSelection onFrameworkChange={props.onFrameworkChange} />
@@ -108,6 +111,7 @@ export type PlaygroundProps = Readonly<{
   previewUrl?: string;
   files: CodePreviewFiles;
   source: SourceFiles;
+  disableStackblitz?: boolean;
   height?: string;
   noPreview?: boolean;
   onlyFramework?: FrameworkTypes;
@@ -200,6 +204,7 @@ function Playground(props: PlaygroundProps) {
                     availableFrameworks={availableFrameworks}
                     onFrameworkChange={setFramework}
                     framework={framework}
+                    disableStackblitz={props.disableStackblitz}
                     files={props.files[framework]}
                   />
                 )}

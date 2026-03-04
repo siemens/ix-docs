@@ -105,7 +105,7 @@ export default function BlockPlayground(
 
   const fallbackMessage = isLoading
     ? 'Loading source...'
-    : error?.message ?? null;
+    : (error?.message ?? null);
 
   const fallbackFiles = useMemo<CodePreviewFiles>(() => {
     if (!fallbackMessage) {
@@ -140,6 +140,7 @@ export default function BlockPlayground(
       files={fallbackFiles}
       previewUrl={data?.previewUrl}
       height={props.height}
+      disableStackblitz
     >
       <Playground.Footer>
         <button
