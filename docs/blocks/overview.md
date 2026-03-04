@@ -3,8 +3,6 @@ sidebar_position: 1
 sidebar_label: Overview
 title: Building blocks
 doc-type: 'banner'
-component-tabs: ['']
-no_single_tab: true
 description: 'Blocks are curated, copy‑paste code examples that show how multiple iX components work together in real UI scenarios. Blocks bridge the gap between individual components and larger patterns, giving users practical, ready‑to-use starting points instead of relying on an overloaded starter app.'
 ---
 
