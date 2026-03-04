@@ -19,14 +19,14 @@ Use brief, meaningful link text to explain the function of the target web page o
 <div className="dos-and-donts" markdown>
 <div className="dos" markdown>
 - SIMATIC S7-1500 firmware updates <IxIcon name={iconOpenExternal} size="16"></IxIcon>
-- [SIMATIC S7-1500 firmware updates](#)![external]<IxIcon name={iconOpenExternal} size="16"></IxIcon>
-- [Roles and permissions in the documentation](#)![external]<IxIcon name={iconOpenExternal} size="16"></IxIcon>
-- [Demonstration projects](#)![external application]<IxIcon name={iconApplicationScreen} size="16"></IxIcon>
+- [SIMATIC S7-1500 firmware updates](#)<IxIcon name={iconOpenExternal} size="16" aria-label="external" role="img"></IxIcon>
+- [Roles and permissions in the documentation](#)<IxIcon name={iconOpenExternal} size="16" aria-label="external" role="img"></IxIcon>
+- [Demonstration projects](#)<IxIcon name={iconApplicationScreen} size="16" aria-label="external application" role="img"></IxIcon>
 </div>
 <div className="donts" markdown>
 - [Learn about the latest SIMATIC S7-1500 firmware updates on the Siemens homepage](#)
 - [https://www.siemens.com/s7-1500-firmware](#)
-- Remote access(#)
+- [Remote access](#)
 </div>
 </div>
 
@@ -34,8 +34,8 @@ Pair link text with universal icons, e.g. the open-external or application-scree
 
 <div className="dos-and-donts" markdown>
 <div className="dos" markdown>
-- [Siemens Digital ID](#)![external]<IxIcon name={iconOpenExternal} size="16"></IxIcon>
-- [Manage your software licenses in one place](#)![external application]<IxIcon name={iconApplicationScreen} size="16"></IxIcon>
+- [Siemens Digital ID](#)<IxIcon name={iconOpenExternal} size="16" aria-label="external" role="img"></IxIcon>
+- [Manage your software licenses in one place](#)<IxIcon name={iconApplicationScreen} size="16" aria-label="external application" role="img"></IxIcon>
 </div>
 </div>
 
@@ -43,7 +43,7 @@ Use descriptive link text instead of long, full URLs and remove the prefix ([htt
 
 <div className="dos-and-donts" markdown>
 <div className="dos" markdown>
-- [Siemens homepage](#)![external]<IxIcon name={iconOpenExternal} size="16"></IxIcon>
+- [Siemens homepage](#)<IxIcon name={iconOpenExternal} size="16" aria-label="external" role="img"></IxIcon>
 - [acronymfinder.com](#)<IxIcon name={iconOpenExternal} size="16"></IxIcon>
 </div>
 <div className="donts" markdown>
@@ -81,9 +81,9 @@ Use brief, meaningful resource texts and explain the function and type of the re
 
 <div className="dos-and-donts" markdown>
 <div className="dos" markdown>
-- [Generative AI chat privacy information](#)(as icon<IxIcon name={iconPdfDocument} size="16"></IxIcon>)
-- [Interface module IM 155-5 MF HF Equipment Manual](#)(as icon<IxIcon name={iconPdfDocument} size="16"></IxIcon>)
-- [Siemens Industrial Copilots with Agentic AI](#)(as icon<IxIcon name={iconVideoFile} size="16"></IxIcon>)
+- [Generative AI chat privacy information](#)<IxIcon name={iconPdfDocument} size="16"></IxIcon>
+- [Interface module IM 155-5 MF HF Equipment Manual](#)<IxIcon name={iconPdfDocument} size="16"></IxIcon>
+- [Siemens Industrial Copilots with Agentic AI](#)<IxIcon name={iconVideoFile} size="16"></IxIcon>
 </div>
 <div className="donts" markdown>
 - [example.siemens.com/downloads/file.pdf](#)
@@ -95,8 +95,8 @@ Pair resource text with icons, e.g. PDF-document or video-file icons.
 
 <div className="dos-and-donts" markdown>
 <div className="dos" markdown>
-- [Siemens Data Privacy Organization](#)(as icon<IxIcon name={iconPdfDocument} size="16"></IxIcon>)
-- [Siemens Industrial Copilots with Agentic AI](#)(as icon<IxIcon name={iconVideoFile} size="16"></IxIcon>)
+- [Siemens Data Privacy Organization](#)<IxIcon name={iconPdfDocument} size="16"></IxIcon>
+- [Siemens Industrial Copilots with Agentic AI](#)<IxIcon name={iconVideoFile} size="16"></IxIcon>
 </div>
 </div>
 
@@ -106,7 +106,7 @@ Pair the download of resources with both file type and size whenever possible.
 
 <div className="dos-and-donts" markdown>
 <div className="dos" markdown>
-- [Download User Manual (54 MB)](#)(as icon<IxIcon name={iconPdfDocument} size="16"></IxIcon>)
+- [Download User Manual (54 MB)](#)<IxIcon name={iconPdfDocument} size="16"></IxIcon>
 </div>
 </div>
 
@@ -116,12 +116,12 @@ Describe link behavior and type in ALT-texts instead of repeating icon and visib
 
 <div className="dos-and-donts" markdown>
 <div className="dos" markdown>
-- Link text: Visit our [homepage](#)![external](as icon<IxIcon name={iconOpenExternal} size="16"></IxIcon>)<br/>ALT-text: external
-- Resource text: [Function Manual](#)![PDF](as icon<IxIcon name={iconPdfDocument} size="16"></IxIcon>)<br/>ALT-texts: external PDF
-- Resource text: [Siemens Industrial Copilots with Agentic AI](#)![video](as icon<IxIcon name={iconVideoFile} size="16"></IxIcon>)<br/>ALT-texts: external video in new tab
+- Link text: Visit our [homepage](#)<IxIcon name={iconOpenExternal} size="16" aria-label="external" role="img"></IxIcon><br/>ALT-text: external
+- Resource text: [Function Manual](#)<IxIcon name={iconPdfDocument} size="16" aria-label="PDF" role="img"></IxIcon><br/>ALT-texts: external PDF
+- Resource text: [Siemens Industrial Copilots with Agentic AI](#)<IxIcon name={iconVideoFile} size="16" aria-label="video" role="img"></IxIcon><br/>ALT-texts: external video in new tab
 </div>
 <div className="donts" markdown>
-- Link text: Visit our [homepage](#)![external](as icon<IxIcon name={iconOpenExternal} size="16"></IxIcon>)<br/>ALT-text: Visit our homepage.
+- Link text: Visit our [homepage](#)<IxIcon name={iconOpenExternal} size="16" aria-label="external" role="img"></IxIcon><br/>ALT-text: Visit our homepage.
 </div>
 </div>
 
@@ -129,10 +129,10 @@ Describe link behavior and type in ALT-texts instead of repeating icon and visib
 
 | Icon | ALT-text |
 |------|----------|
-| ![external](as icon<IxIcon name={iconOpenExternal} size="16"></IxIcon>) | external<br/>ALT-text: open external link in new tab |
-| ![external application](as icon<IxIcon name={iconApplicationScreen} size="16"></IxIcon>) | external application<br/>ALT-text: open external application |
-| ![PDF](as icon<IxIcon name={iconPdfDocument} size="16"></IxIcon>) | PDF<br/>ALT-text: external PDF |
-| ![video](as icon<IxIcon name={iconVideoFile} size="16"></IxIcon>) | video |
+| <IxIcon name={iconOpenExternal} size="16" aria-label="external" role="img"></IxIcon> | external<br/>ALT-text: open external link in new tab |
+| <IxIcon name={iconApplicationScreen} size="16" aria-label="external application" role="img"></IxIcon> | external application<br/>ALT-text: open external application |
+| <IxIcon name={iconPdfDocument} size="16" aria-label="PDF" role="img"></IxIcon> | PDF<br/>ALT-text: external PDF |
+| <IxIcon name={iconVideoFile} size="16" aria-label="video" role="img"></IxIcon> | video |
 
 ## Language
 
@@ -140,8 +140,8 @@ Specify the language when the resource language differs from the app language. (
 
 <div className="dos-and-donts" markdown>
 <div className="dos" markdown>
-- [Application Function Manual (German)](#)![external](as icon<IxIcon name={iconOpenExternal} size="16"></IxIcon>)
-- [German web page of Siemens (German)](#)![external](as icon<IxIcon name={iconOpenExternal} size="16"></IxIcon>)
+- [Application Function Manual (German)](#)<IxIcon name={iconOpenExternal} size="16" aria-label="external" role="img"></IxIcon>
+- [German web page of Siemens (German)](#)<IxIcon name={iconOpenExternal} size="16" aria-label="external" role="img"></IxIcon>
 </div>
 </div>
 
@@ -152,7 +152,7 @@ Separate external links from body text with lists to avoid disrupting user readi
 <div className="dos-and-donts" markdown>
 <div className="dos" markdown>
 - Our platform integrates with various tools to enhance productivity.<br/><br/>
-External resources:<br/> - [Documentation portal](#)![external](as icon<IxIcon name={iconOpenExternal} size="16"></IxIcon>)<br/>- [GitHub repository](#)![external](as icon<IxIcon name={iconOpenExternal} size="16"></IxIcon>)<br/>- [Support community](#)![external](as icon<IxIcon name={iconOpenExternal} size="16"></IxIcon>)
+External resources:<br/> - [Documentation portal](#)<IxIcon name={iconOpenExternal} size="16" aria-label="external" role="img"></IxIcon><br/>- [GitHub repository](#)<IxIcon name={iconOpenExternal} size="16" aria-label="external" role="img"></IxIcon><br/>- [Support community](#)<IxIcon name={iconOpenExternal} size="16" aria-label="external" role="img"></IxIcon>
 </div>
 </div>
 
@@ -160,10 +160,10 @@ Split external links from body text with separate paragraphs for faster scanning
 
 <div className="dos-and-donts" markdown>
 <div className="dos" markdown>
-- Our new automation system improves efficiency by 40% and reduces downtime through predictive maintenance algorithms.<br/><br/>[Efficiency report](#)![external](as icon<IxIcon name={iconOpenExternal} size="16"></IxIcon>)
+- Our new automation system improves efficiency by 40% and reduces downtime through predictive maintenance algorithms.<br/><br/>[Efficiency report](#)<IxIcon name={iconOpenExternal} size="16" aria-label="external" role="img"></IxIcon>
 </div>
 <div className="donts" markdown>
-- For more technical details, visit [Automation Whitepaper](#)![external](as icon<IxIcon name={iconOpenExternal} size="16"></IxIcon>).
+- For more technical details, visit [Automation Whitepaper](#)<IxIcon name={iconOpenExternal} size="16" aria-label="external" role="img"></IxIcon>.
 </div>
 </div>
 
@@ -201,6 +201,6 @@ Ensure email addresses and phone numbers are clickable.
 
 * [Link buttons (component)](/docs/components/link-button/guide)
 * [Numbers and percentages](/docs/guidelines/language/formatting/numbers)
-* [WCAG 2.4.4 (Link Purpose In Context)](https://www.w3.org/WAI/WCAG22/Understanding/link-purpose-in-context.html)![external](as icon<IxIcon name={iconOpenExternal} size="16"></IxIcon>)
-* [WCAG 1.1.1 (Non-text Content)](https://www.w3.org/WAI/WCAG21/Understanding/non-text-content.html)![external](as icon<IxIcon name={iconOpenExternal} size="16"></IxIcon>)
-* [WCAG 3.1.2 (Language of Parts)](https://www.w3.org/WAI/WCAG22/Understanding/language-of-parts.html)![external](as icon<IxIcon name={iconOpenExternal} size="16"></IxIcon>)
+* [WCAG 2.4.4 (Link Purpose In Context)](https://www.w3.org/WAI/WCAG22/Understanding/link-purpose-in-context.html)<IxIcon name={iconOpenExternal} size="16" aria-label="external" role="img"></IxIcon>
+* [WCAG 1.1.1 (Non-text Content)](https://www.w3.org/WAI/WCAG21/Understanding/non-text-content.html)<IxIcon name={iconOpenExternal} size="16" aria-label="external" role="img"></IxIcon>
+* [WCAG 3.1.2 (Language of Parts)](https://www.w3.org/WAI/WCAG22/Understanding/language-of-parts.html)<IxIcon name={iconOpenExternal} size="16" aria-label="external" role="img"></IxIcon>
