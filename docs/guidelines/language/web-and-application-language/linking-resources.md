@@ -11,7 +11,6 @@ import { iconOpenExternal } from "@siemens/ix-icons/icons";
 import { iconApplicationScreen } from "@siemens/ix-icons/icons";
 import { iconVideoFile } from "@siemens/ix-icons/icons";
 import { iconPdfDocument } from "@siemens/ix-icons/icons";
-import { IxLinkButton } from '@siemens/ix-react';
 
 ## General rules for external links
 
@@ -19,12 +18,10 @@ Use brief, meaningful link text to explain the function of the target web page o
 
 <div className="dos-and-donts" markdown>
 <div className="dos" markdown>
-export default () => {
-  return <IxLinkButton url="#">SIMATIC S7-1500 firmware updates</IxLinkButton>;
-};![external](as icon<IxIcon name={iconOpenExternal} size="16"></IxIcon>)
-- [SIMATIC S7-1500 firmware updates](#)![external](as icon<IxIcon name={iconOpenExternal} size="16"></IxIcon>)
-- [Roles and permissions in the documentation](#)![external](as icon<IxIcon name={iconOpenExternal} size="16"></IxIcon>)
-- [Demonstration projects](#)![external application](as icon<IxIcon name={iconApplicationScreen} size="16"></IxIcon>)
+- SIMATIC S7-1500 firmware updates <IxIcon name={iconOpenExternal} size="16"></IxIcon>
+- [SIMATIC S7-1500 firmware updates](#)![external]<IxIcon name={iconOpenExternal} size="16"></IxIcon>
+- [Roles and permissions in the documentation](#)![external]<IxIcon name={iconOpenExternal} size="16"></IxIcon>
+- [Demonstration projects](#)![external application]<IxIcon name={iconApplicationScreen} size="16"></IxIcon>
 </div>
 <div className="donts" markdown>
 - [Learn about the latest SIMATIC S7-1500 firmware updates on the Siemens homepage](#)
@@ -37,8 +34,8 @@ Pair link text with universal icons, e.g. the open-external or application-scree
 
 <div className="dos-and-donts" markdown>
 <div className="dos" markdown>
-- [Siemens Digital ID](#)![external](as icon<IxIcon name={iconOpenExternal} size="16"></IxIcon>)
-- [Manage your software licenses in one place](#)![external application](as icon<IxIcon name={iconApplicationScreen} size="16"></IxIcon>)
+- [Siemens Digital ID](#)![external]<IxIcon name={iconOpenExternal} size="16"></IxIcon>
+- [Manage your software licenses in one place](#)![external application]<IxIcon name={iconApplicationScreen} size="16"></IxIcon>
 </div>
 </div>
 
@@ -46,8 +43,8 @@ Use descriptive link text instead of long, full URLs and remove the prefix ([htt
 
 <div className="dos-and-donts" markdown>
 <div className="dos" markdown>
-- [Siemens homepage](#)![external](as icon<IxIcon name={iconOpenExternal} size="16"></IxIcon>)
-- [acronymfinder.com](#)(as icon<IxIcon name={iconOpenExternal} size="16"></IxIcon>)
+- [Siemens homepage](#)![external]<IxIcon name={iconOpenExternal} size="16"></IxIcon>
+- [acronymfinder.com](#)<IxIcon name={iconOpenExternal} size="16"></IxIcon>
 </div>
 <div className="donts" markdown>
 - [https://www.siemens.com/s9-1600-firmware](#)
