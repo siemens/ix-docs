@@ -25,7 +25,7 @@ import {
 function getAvailableFrameworks(
   files: CodePreviewFiles,
   source: SourceFiles,
-  onlyFramework?: FrameworkTypes
+  onlyFramework?: FrameworkTypes,
 ) {
   if (onlyFramework) {
     return [onlyFramework];
@@ -122,8 +122,9 @@ function Playground(props: PlaygroundProps) {
   const defaultTheme = useDefaultTheme();
   const { playgroundThemeVariant } = usePlaygroundThemeVariant();
   const availableFrameworks = useMemo(
-    () => getAvailableFrameworks(props.files, props.source, props.onlyFramework),
-    [props.files, props.onlyFramework, props.source]
+    () =>
+      getAvailableFrameworks(props.files, props.source, props.onlyFramework),
+    [props.files, props.onlyFramework, props.source],
   );
   const fallbackFramework = availableFrameworks[0] ?? 'angular';
   const [isDark, setIsDark] = useState(playgroundThemeVariant === 'dark');
@@ -134,7 +135,11 @@ function Playground(props: PlaygroundProps) {
       props.alternativePreviewName ?? props.name
     }.html?no-margin=true&theme=${theme}&colorSchema=${isDark ? 'dark' : 'light'}`,
   );
-  const iframeSrc = props.previewUrl ?? defaultIframeSrc;
+  const iframeSrc = props.previewUrl
+    ? `${props.previewUrl}${props.previewUrl.includes('?') ? '&' : '?'}theme=${theme}&colorSchema=${
+        isDark ? 'dark' : 'light'
+      }`
+    : defaultIframeSrc;
   const [framework, setFramework] = useState<FrameworkTypes>(
     props.onlyFramework ?? fallbackFramework,
   );
