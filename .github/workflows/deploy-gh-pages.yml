@@ -72,6 +72,7 @@ jobs:
         if: ${{ inputs.create_release == true }}
         uses: softprops/action-gh-release@a06a81a03ee405af7f2048a818ed3f03bbf83c7b # v2.5.0
         with:
+          tag_name: deployment-${{ steps.release_meta.outputs.release_version }}
           name: ${{ steps.release_meta.outputs.release_version }}
           body: |
             Automated release created from `deploy-gh-pages.yml`.
