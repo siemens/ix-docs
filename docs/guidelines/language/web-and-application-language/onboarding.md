@@ -52,8 +52,8 @@ Break onboarding into small, manageable steps with bullet points, pagination or 
 <div className="dos-and-donts" markdown>
 <div className="dos" markdown>
 - Set up your notifications:
-	- Select the notifications you want
-	- Set quiet hours to avoid interruptions
+	Select the notifications you want<br/>
+	Set quiet hours to avoid interruptions
 </div>
 <div className="donts" markdown>
 - Getting started with smart notifications. You can now choose what types of alerts you want, set quiet hours, and customize how you receive notifications so you’re not overwhelmed.

@@ -9,7 +9,7 @@ description: Well written error pages transform a potentially frustrating user e
 
 We follow these templates when creating our main error pages. Although some of the call-to-action examples are use case-dependent and not always technically feasible, aim for ensuring users can move forward from the error page.
 
-| HTTP code | Title | Description | Call to actions (CTA) |
+| HTTP code | Title | Description | Call-to-actions (CTA) |
 |-----------|-------|-------------|----------------------|
 | 400 | Bad request | Failed to process the request. Check your request and try again. | Go back<br/>Try again<br/>Open homepage |
 | 401 | Unauthorized | Authorization is required to access this page. Check your credentials and try again. | Log in<br/>Go back<br/>Try again |

@@ -42,8 +42,8 @@ Use paragraphs or bullet points to present or highlight one point at a time inst
 <div className="dos-and-donts" markdown>
 <div className="dos" markdown>
 - What’s new in the dashboard
-	- Edit your dashboards with new filter options.
-	- Set up dashboards into zones to better itemize your assets.
+	Edit your dashboards with new filter options.
+	Set up dashboards into zones to better itemize your assets.
 </div>
 <div className="donts" markdown>
 - What’s new in the dashboard
