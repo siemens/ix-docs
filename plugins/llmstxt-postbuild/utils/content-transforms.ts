@@ -125,6 +125,52 @@ export function replaceSinceTags(content: string) {
   );
 }
 
+function buildTypographySnippetBlock(format: string) {
+  return [
+    'HTML:',
+    '```html',
+    `<ix-typography format="${format}"></ix-typography>`,
+    '```',
+    '',
+    'Angular:',
+    '```html',
+    `<ix-typography format="${format}"></ix-typography>`,
+    '```',
+    '',
+    'Angular standalone:',
+    '```html',
+    `<ix-typography format="${format}"></ix-typography>`,
+    '```',
+    '',
+    'React:',
+    '```jsx',
+    `<IxTypography format="${format}"></IxTypography>`,
+    '```',
+    '',
+    'Vue:',
+    '```vue',
+    `<IxTypography format="${format}"></IxTypography>`,
+    '```',
+  ].join('\n');
+}
+
+export function replaceTypographyTablesWithMarkdown(content: string) {
+  const typographyTableRegex =
+    /<TypographyTable\b[^>]*typographyName=("([^"]+)"|'([^']+)')[^>]*\/?>(?:<\/TypographyTable>)?/g;
+
+  return content.replace(
+    typographyTableRegex,
+    (_fullMatch, _attr, doubleQuoted, singleQuoted) => {
+      const format = doubleQuoted ?? singleQuoted;
+      if (!format) {
+        return _fullMatch;
+      }
+
+      return buildTypographySnippetBlock(format);
+    },
+  );
+}
+
 function cleanApiValue(value: string) {
   return value
     .replace(/<ReactMarkdown>/g, '')
