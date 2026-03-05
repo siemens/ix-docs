@@ -66,7 +66,7 @@ jobs:
             exit 1
           fi
 
-          tar -czf "artifacts/build-markdown-${{ steps.release_meta.outputs.release_version }}.tar.gz" -T artifacts/markdown-files.txt
+          tar -czf "artifacts/llmstxt.tar.gz" -T artifacts/markdown-files.txt
 
       - name: Create GitHub release with markdown bundle
         if: ${{ inputs.create_release == true }}
@@ -76,7 +76,7 @@ jobs:
           body: |
             Automated release created from `deploy-gh-pages.yml`.
             Deployment version: `${{ github.event.inputs.version }}`
-          files: artifacts/build-markdown-${{ steps.release_meta.outputs.release_version }}.tar.gz
+          files: artifacts/llmstxt.tar.gz
           draft: true
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
