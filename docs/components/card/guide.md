@@ -1,5 +1,6 @@
 ---
 doc-type: 'tab-item'
+description: 'Usage guide for the ix-action-card, ix-push-card, ix-card'
 ---
 # Card - Usage
 
