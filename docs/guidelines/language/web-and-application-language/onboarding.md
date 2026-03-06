@@ -2,7 +2,10 @@
 sidebar_position: 2
 sidebar_label: Onboarding
 title: Onboarding
-description: Clear onboarding guidance helps users get started quickly, build confidence, and unlock value from day one. Use step-by-step instructions, highlight key features and provide actionable tips to ensure a smooth, engaging experience.
+doc-type: 'banner'
+component-tabs: ['']
+no_single_tab: true
+description: 'Clear onboarding guidance helps users get started quickly, build confidence, and unlock value from day one. Use step-by-step instructions, highlight key features and provide actionable tips to ensure a smooth, engaging experience.'
 ---
 
 #
@@ -54,8 +57,8 @@ Break onboarding into small, manageable steps with bullet points, pagination or 
 <div className="dos-and-donts" markdown>
 <div className="dos" markdown>
 - Set up your notifications:<br/>
-	* Select the notifications you want<br/>
-	* Set quiet hours to avoid interruptions
+	- Select the notifications you want<br/>
+	- Set quiet hours to avoid interruptions
 </div>
 <div className="donts" markdown>
 - Getting started with smart notifications. You can now choose what types of alerts you want, set quiet hours, and customize how you receive notifications so you’re not overwhelmed.

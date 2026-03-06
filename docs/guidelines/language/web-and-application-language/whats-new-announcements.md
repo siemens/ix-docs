@@ -2,7 +2,10 @@
 sidebar_position: 1
 sidebar_label: What’s new announcements
 title: What’s new announcements
-description: “What’s new” announcements contain text that highlight recent updates, new features or important changes in the latest version of the application. Its purpose is to inform users about enhancements and guide them in utilizing new functionalities effectively.
+doc-type: 'banner'
+component-tabs: ['']
+no_single_tab: true
+description: '“What’s new” announcements contain text that highlight recent updates, new features or important changes in the latest version of the application. Its purpose is to inform users about enhancements and guide them in utilizing new functionalities effectively.'
 ---
 
 #
@@ -44,8 +47,8 @@ Use paragraphs or bullet points to present or highlight one point at a time inst
 <div className="dos-and-donts" markdown>
 <div className="dos" markdown>
 - What’s new in the dashboard<br/>
-	* Edit your dashboards with new filter options.<br/>
-	* Set up dashboards into zones to better itemize your assets.
+	- Edit your dashboards with new filter options.<br/>
+	- Set up dashboards into zones to better itemize your assets.
 </div>
 <div className="donts" markdown>
 - What’s new in the dashboard

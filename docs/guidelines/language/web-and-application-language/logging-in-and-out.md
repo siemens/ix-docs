@@ -2,14 +2,17 @@
 sidebar_position: 5
 sidebar_label: Logging in and out
 title: Logging in and out
-description: Consistent login/logout text reduces confusion, builds trust, and improves usability across all user interactions. It is also critical for accurate translation and localization for international software.
+doc-type: 'banner'
+component-tabs: ['']
+no_single_tab: true
+description: 'Consistent login/logout text reduces confusion, builds trust, and improves usability across all user interactions. It is also critical for accurate translation and localization for international software.'
 ---
 
 #
 
 ## General rules
 
-Use “log in” and “log out” as the action verbs instead of sign in or out for consistency.
+Use “log in” and “log out” as the action verbs instead of “sign in” or “sign out” for consistency.
 
 <div className="dos-and-donts" markdown>
 <div className="dos" markdown>
@@ -23,7 +26,7 @@ Use “log in” and “log out” as the action verbs instead of sign in or out
 </div>
 </div>
 
-Use “login” and “logout” as the nouns instead of signoff or logoff for consistency.
+Use “login” and “logout” as the nouns instead of “signoff” or “logoff” for consistency.
 
 <div className="dos-and-donts" markdown>
 <div className="dos" markdown>

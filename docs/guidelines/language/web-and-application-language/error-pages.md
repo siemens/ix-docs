@@ -2,7 +2,10 @@
 sidebar_position: 3
 sidebar_label: Error pages
 title: Error pages
-description: Well written error pages transform a potentially frustrating user experience into a clear, helpful one using simple and empathetic words to explain the problem and guide users to the next step.
+doc-type: 'banner'
+component-tabs: ['']
+no_single_tab: true
+description: 'Well written error pages transform a potentially frustrating user experience into a clear, helpful one using simple and empathetic words to explain the problem and guide users to the next step.'
 ---
 
 #
