@@ -1,5 +1,6 @@
 ---
 doc-type: 'tab-item'
+description: 'Accessibility ensures that digital products are usable by everyone, including people with disabilities. It is crucial for creating inclusive solutions that meet diverse needs and comply with standards like WCAG, enhancing the overall user experience.'
 ---
 
 ## Our commitment as a design system
@@ -21,6 +22,7 @@ Web Content Accessibility Guidelines (WCAG) explains how to make web content mor
 The four main guiding principles of accessibility within WCAG are perceivable, operable, understandable, and robust. These overarching principles contain clear guidelines for creating and presenting WCAG-compliant digital content.
 
 There are three levels of conformance:
+
 - Level A is the minimum level.
 - Level AA includes all Level A and AA requirements. **We strive to meet Level AA.**
 - Level AAA includes all Level A, AA, and AAA requirements.
@@ -46,11 +48,11 @@ Provide text alternatives for non-text content. It allows content to be adapted 
 
 **Example**: Use ARIA tags to ensure that your content is accessible and understandable to all users, including those using assistive technologies.
 
-| ARIA tag | Description |
-| :----------------- | :------------ |
-| `aria-label` | Provides an accessible name for an element. |
+| ARIA tag           | Description                                                                                                                                      |
+| :----------------- | :----------------------------------------------------------------------------------------------------------------------------------------------- |
+| `aria-label`       | Provides an accessible name for an element.                                                                                                      |
 | `aria-labelledby`  | Identifies one or more elements that provide the accessible name for an element. It is often used when the label is already present on the page. |
-| `aria-describedby` | Identifies the element that provides a description for the element it is applied to. |
+| `aria-describedby` | Identifies the element that provides a description for the element it is applied to.                                                             |
 
 ### Create adaptable content
 
