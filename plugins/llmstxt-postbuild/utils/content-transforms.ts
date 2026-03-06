@@ -121,7 +121,7 @@ export function replaceSinceTags(content: string) {
     (_fullMatch, _messageAttr, doubleQuotedValue, singleQuotedValue) => {
       const version = doubleQuotedValue ?? singleQuotedValue;
       return `Example is supported since version ${version}`;
-    },
+    }
   );
 }
 
@@ -167,33 +167,28 @@ export function replaceTypographyTablesWithMarkdown(content: string) {
       }
 
       return buildTypographySnippetBlock(format);
-    },
+    }
   );
 }
 
 function cleanApiValue(value: string) {
-  return value
+  let cleanedValue = value
     .replace(/<ReactMarkdown>/g, '')
     .replace(/<\/ReactMarkdown>/g, '')
     .replace(/\{`([\s\S]*?)`\}/g, '$1')
-    .replace(
-      /<SinceTag\s+message=("([^"]+)"|'([^']+)')\s*\/>/g,
-      (_m, _a, d, s) => {
-        const version = d ?? s;
-        return `Example is supported since version ${version}`;
-      },
-    )
     .replace(/<DeprecatedTag\s*\/?>/g, 'Deprecated')
     .replace(/<[^>]+>/g, ' ')
-    .replace(/\s+/g, ' ')
-    .trim();
+    .replace(/\s+/g, ' ');
+
+  cleanedValue = replaceSinceTags(cleanedValue);
+  return cleanedValue.trim();
 }
 
 function parseApiTableBlock(block: string) {
   const row: Record<string, string> = {};
 
   const headerMatch = block.match(
-    /<ApiTable\.(\w+)Header\b[^>]*name=("([^"]+)"|'([^']+)')[^>]*>([\s\S]*?)<\/ApiTable\.\1Header>/,
+    /<ApiTable\.(\w+)Header\b[^>]*name=("([^"]+)"|'([^']+)')[^>]*>([\s\S]*?)<\/ApiTable\.\1Header>/
   );
 
   if (headerMatch) {
@@ -247,7 +242,7 @@ function rowsToMarkdownTable(rows: Array<Record<string, string>>) {
   }
 
   const orderedColumns = preferredOrder.filter((key) =>
-    existingColumns.has(key),
+    existingColumns.has(key)
   );
   const remainingColumns = [...existingColumns]
     .filter((key) => !orderedColumns.includes(key))
@@ -262,7 +257,7 @@ function rowsToMarkdownTable(rows: Array<Record<string, string>>) {
   const separator = `| ${columns.map(() => '---').join(' | ')} |`;
   const body = rows.map((row) => {
     const values = columns.map((column) =>
-      escapeMarkdownTableValue((row[column] ?? '').trim()),
+      escapeMarkdownTableValue((row[column] ?? '').trim())
     );
     return `| ${values.join(' | ')} |`;
   });
@@ -275,7 +270,7 @@ export function replaceApiTablesWithMarkdown(content: string) {
 
   return content.replace(apiTableGroupRegex, (group) => {
     const blocks = [...group.matchAll(/<ApiTable\b[\s\S]*?<\/ApiTable>/g)].map(
-      (match) => match[0],
+      (match) => match[0]
     );
 
     const rows = blocks
@@ -293,14 +288,14 @@ export function replaceApiTablesWithMarkdown(content: string) {
 
 function extractAttributeValue(block: string, attribute: string) {
   const match = block.match(
-    new RegExp(`${attribute}\\s*=\\s*("([^"]*)"|'([^']*)')`),
+    new RegExp(`${attribute}\\s*=\\s*("([^"]*)"|'([^']*)')`)
   );
   return match?.[2] ?? match?.[3] ?? null;
 }
 
 function parseApiFunctionParameters(block: string) {
   const paramsBlockMatch = block.match(
-    /parameters\s*=\s*\{?\s*\[([\s\S]*?)\]\s*\}?/,
+    /parameters\s*=\s*\{?\s*\[([\s\S]*?)\]\s*\}?/
   );
   if (!paramsBlockMatch) {
     return '';
