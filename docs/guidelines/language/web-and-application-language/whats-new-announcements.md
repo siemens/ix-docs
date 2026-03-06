@@ -5,15 +5,17 @@ title: What’s new announcements
 description: “What’s new” announcements contain text that highlight recent updates, new features or important changes in the latest version of the application. Its purpose is to inform users about enhancements and guide them in utilizing new functionalities effectively.
 ---
 
+#
+
 ## General rules
 
 We follow this three-step approach when creating our updates. They explain what’s new, its purpose and benefit to users, and a possible further action. Although not every dialog requires all three steps, we aim for this whenever possible.
 
-| Anatomy | Content | Structure and examples |
-| --- | --- | --- |
-| 1. Heading | Clearly state aim and purpose for the dialog, such as the theme, date, feature or version. | What’s new + topic:<br/><br/>What’s new in Version 2.5<br/>What’s new in October<br/>What’s new for 2025<br/>What’s new in dashboards |
-| 2. Description | Provide its purpose and benefits with information about key features. | Title: What’s new in Version 2.5<br/><br/>Description: Receive instant notifications for critical events and system updates to stay informed and respond quickly to important changes. |
-| 3. Action | Provide links or buttons to more detailed information (usually with a verb). | Title: What’s new in Version 2.5<br/><br/>Description: New reporting tools provide deeper insights with advanced filtering options and export capabilities.<br/>Action: Learn more |
+| Step | Purpose | Content | Structure and examples |
+| --- | --- | --- | --- |
+| 1. | Heading | Clearly state aim and purpose for the dialog, such as the theme, date, feature or version. | What’s new + topic:<br/><br/>What’s new in Version 2.5<br/>What’s new in October<br/>What’s new for 2025<br/>What’s new in dashboards |
+| 2. | Description | Provide its purpose and benefits with information about key features. | **Description**: Receive instant notifications for critical events and system updates to stay informed and respond quickly to important changes. |
+| 3. | Action | Provide links or buttons to more detailed information (usually with a verb). | **Action**: Learn more |
 
 Use the wording “What’s new…” for the heading without a question mark (?) or period.
 
@@ -41,9 +43,9 @@ Use paragraphs or bullet points to present or highlight one point at a time inst
 
 <div className="dos-and-donts" markdown>
 <div className="dos" markdown>
-- What’s new in the dashboard
-	Edit your dashboards with new filter options.
-	Set up dashboards into zones to better itemize your assets.
+- What’s new in the dashboard<br/>
+	* Edit your dashboards with new filter options.<br/>
+	* Set up dashboards into zones to better itemize your assets.
 </div>
 <div className="donts" markdown>
 - What’s new in the dashboard

@@ -5,9 +5,11 @@ title: Logging in and out
 description: Consistent login/logout text reduces confusion, builds trust, and improves usability across all user interactions. It is also critical for accurate translation and localization for international software.
 ---
 
+#
+
 ## General rules
 
-Use “log in” and “log out” as the action verbs instead of sign in/out for consistency.
+Use “log in” and “log out” as the action verbs instead of sign in or out for consistency.
 
 <div className="dos-and-donts" markdown>
 <div className="dos" markdown>
@@ -21,7 +23,7 @@ Use “log in” and “log out” as the action verbs instead of sign in/out fo
 </div>
 </div>
 
-Use “login” and “logout” as the nouns instead of signoff/logoff for consistency.
+Use “login” and “logout” as the nouns instead of signoff or logoff for consistency.
 
 <div className="dos-and-donts" markdown>
 <div className="dos" markdown>
@@ -101,19 +103,19 @@ Clearly explain password policy to avoid frustration or user friction.
 
 <div className="dos-and-donts" markdown>
 <div className="dos" markdown>
-- At least 12 characters
-- At least 1 uppercase letter (A-Z)
-- At least 1 number
-- At least 1 special character (!@#$%^&*)
+- At least 12 characters<br/>
+At least 1 uppercase letter (A-Z)<br/>
+At least 1 number<br/>
+At least 1 special character (!@#$%^&*)
 </div>
 <div className="dos" markdown>
-- Minimum 12 characters
-- Minimum 1 uppercase letter (A-Z)
-- Minimum 1 number
-- Minimum 1 special character (!@#$%^&*)
+- Minimum 12 characters<br/>
+Minimum 1 uppercase letter (A-Z)<br/>
+Minimum 1 number<br/>
+Minimum 1 special character (!@#$%^&*)
 </div>
 <div className="donts" markdown>
-- Your password does not meet the criteria.
+- Ensure you meet the password criteria.
 </div>
 </div>
 

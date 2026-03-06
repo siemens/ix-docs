@@ -5,11 +5,13 @@ title: Error pages
 description: Well written error pages transform a potentially frustrating user experience into a clear, helpful one using simple and empathetic words to explain the problem and guide users to the next step.
 ---
 
+#
+
 ## Error pages template
 
 We follow these templates when creating our main error pages. Although some of the call-to-action examples are use case-dependent and not always technically feasible, aim for ensuring users can move forward from the error page.
 
-| HTTP code | Title | Description | Call-to-actions (CTA) |
+| HTTP code | Heading | Description | Call-to-actions (CTA) |
 |-----------|-------|-------------|----------------------|
 | 400 | Bad request | Failed to process the request. Check your request and try again. | Go back<br/>Try again<br/>Open homepage |
 | 401 | Unauthorized | Authorization is required to access this page. Check your credentials and try again. | Log in<br/>Go back<br/>Try again |
@@ -40,7 +42,7 @@ Use language suitable for all target users, including non-native English speaker
 </div>
 </div>
 
-Avoid jokes, memes, emojis, or casual wording in error pages for industrial applications.
+Avoid jokes, memes, emojis or casual wording in error pages for industrial applications.
 
 <div className="dos-and-donts" markdown>
 <div className="dos" markdown>
@@ -64,8 +66,8 @@ Use sentence casing within the description with minimal punctuation and formatti
 
 ## Dos and Don’ts
 
-* Do give users a way out so the error page is not a dead end with only “Try again.”
-* Do adapt your recommended actions depending on your use case and what is technically possible.
+* Do give users a way out so the error page is not a dead end with only “Try again.” or “Try again later.”
+* Do adapt your recommended actions depending on your use case and what is technically possible
 * Don’t say your team is working on a solution to the error unless this is true
 
 ## Related

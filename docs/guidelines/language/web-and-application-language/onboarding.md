@@ -5,15 +5,17 @@ title: Onboarding
 description: Clear onboarding guidance helps users get started quickly, build confidence, and unlock value from day one. Use step-by-step instructions, highlight key features and provide actionable tips to ensure a smooth, engaging experience.
 ---
 
+#
+
 ## General rules
 
 We follow this three-step approach when writing our onboarding messages.
 
-| Anatomy | Content | Structure and examples |
-| --- | --- | --- |
-| 1. Heading | Welcome your new user and clearly state the purpose of the onboarding dialog. | Welcome [user name] to [application name] |
-| 2. Description | Set expectations and explain briefly what the application is about.<br/>Keep it short and focused on value.<br/>Highlight key features or benefits of the application.<br/>Let users know how long the onboarding process takes. | Discover how to make the most of your experience.<br/>We’ll guide you through key features and help you get set up in just a few minutes. |
-| 3. Action | Provide clear next steps with buttons or links. Use action verbs and keep it simple. | Get started<br/>Learn now<br/>Getting started<br/>Explore the app |
+| Step | Purpose | Content | Structure and examples |
+| --- | --- | --- | --- |
+| 1. | Heading | Welcome your new user and clearly state the purpose of the onboarding dialog. | Welcome [user name] to [application name] |
+| 2. | Description | Set expectations and explain briefly what the application is about.<br/>Keep it short and focused on value.<br/>Highlight key features or benefits of the application.<br/>Let users know how long the onboarding process takes. | Discover how to make the most of your experience.<br/>We’ll guide you through key features and help you get set up in just a few minutes. |
+| 3. | Action | Provide clear next steps with buttons or links. Use action verbs and keep it simple. | Get started<br/>Learn now<br/>Getting started<br/>Explore the app |
 
 Welcome users in the onboarding component only once with a friendly yet professional tone.
 
@@ -51,9 +53,9 @@ Break onboarding into small, manageable steps with bullet points, pagination or 
 
 <div className="dos-and-donts" markdown>
 <div className="dos" markdown>
-- Set up your notifications:
-	Select the notifications you want<br/>
-	Set quiet hours to avoid interruptions
+- Set up your notifications:<br/>
+	* Select the notifications you want<br/>
+	* Set quiet hours to avoid interruptions
 </div>
 <div className="donts" markdown>
 - Getting started with smart notifications. You can now choose what types of alerts you want, set quiet hours, and customize how you receive notifications so you’re not overwhelmed.
