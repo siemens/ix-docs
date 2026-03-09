@@ -1,5 +1,6 @@
 ---
 doc-type: 'tab-item'
+description: 'Usage guide for the ix-validation-tooltip'
 ---
 # Forms validation - Usage
 

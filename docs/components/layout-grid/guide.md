@@ -1,5 +1,6 @@
 ---
 doc-type: 'tab-item'
+description: 'Usage guide for the ix-layout-grid, ix-col'
 ---
 # Layout grid - Usage
 
