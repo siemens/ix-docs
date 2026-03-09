@@ -1,5 +1,6 @@
 ---
 doc-type: 'tab-item'
+description: 'Usage guide for the ix-menu-about, ix-menu-about-item'
 ---
 
 # About and legal - Usage
