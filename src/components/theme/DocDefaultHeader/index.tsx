@@ -10,8 +10,9 @@ import { iconAi, iconCheck, iconSingleCheck } from '@siemens/ix-icons/icons';
 import { IxButton, IxTooltip } from '@siemens/ix-react';
 import { DeprecatedTag, RedirectTag } from '@site/src/components/UI/Tags';
 import clsx from 'clsx';
-import { useCallback, useEffect, useState } from 'react';
+import { useCallback, useEffect, useMemo, useState } from 'react';
 import styles from './styles.module.css';
+import AskAI from '../AskAI';
 
 function Separator() {
   const [isScrolling, setIsScrolling] = useState(false);
@@ -38,32 +39,15 @@ export default function DocDefaultHeader(props: {
   const { description, title, frontMatter, id } = props;
   const { siteConfig } = useDocusaurusContext();
   const pathname = useLocalPathname();
-  const [isCopied, setIsCopied] = useState(false);
 
-  useEffect(() => {
-    if (!isCopied) {
-      return;
-    }
-
-    const timeoutId = window.setTimeout(() => {
-      setIsCopied(false);
-    }, 1500);
-
-    return () => {
-      window.clearTimeout(timeoutId);
-    };
-  }, [isCopied]);
-
-  const copyPrompt = useCallback(async () => {
-    const prompt = `Use web browsing to access links and information ${siteConfig.url + pathname + '.md'}
+  const prompt = useMemo(
+    () => `Use web browsing to access links and information ${siteConfig.url + pathname + '.md'}
 
 If you need additional information you find a overview of all content here: https://ix.siemens.io/llms.txt
 
-I want to ask some questions`;
-
-    await navigator.clipboard.writeText(prompt);
-    setIsCopied(true);
-  }, [pathname, siteConfig.url]);
+I want to ask some questions`,
+    [pathname, siteConfig.url]
+  );
 
   return (
     <>
@@ -78,17 +62,9 @@ I want to ask some questions`;
             title={title}
           ></a>
         </h1>
-
-        <IxButton
-          id="copy-prompt"
-          icon={isCopied ? iconSingleCheck : iconAi}
-          variant="tertiary"
-          className={styles.copy_prompt}
-          onClick={copyPrompt}
-        >
-          {isCopied ? 'Copied!' : 'Ask AI'}
-        </IxButton>
+        <AskAI prompt={prompt} />
       </div>
+
       <IxTooltip for="#copy-prompt">
         Copy a prompt to ask an AI assistant about this page.
       </IxTooltip>

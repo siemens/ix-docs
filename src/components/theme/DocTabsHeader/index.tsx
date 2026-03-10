@@ -10,12 +10,13 @@ import {
   RedirectTag,
 } from '@site/src/components/UI/Tags';
 import clsx from 'clsx';
-import { useCallback, useState } from 'react';
+import { useCallback, useMemo, useState } from 'react';
 import styles from './styles.module.css';
-import { IxButton } from '@siemens/ix-react';
+import { IxButton, IxTooltip } from '@siemens/ix-react';
 import { iconAi } from '@siemens/ix-icons/icons';
 import useBaseUrl from '@docusaurus/useBaseUrl';
 import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
+import AskAI from '../AskAI';
 
 function Tabs({ children }) {
   const [isScrolling, setIsScrolling] = useState(false);
@@ -64,19 +65,18 @@ export default function DocTabsHeader(
   }>
 ) {
   const { description, tabs, title, frontMatter, id } = props;
-
   const { siteConfig } = useDocusaurusContext();
 
-  const copyPrompt = useCallback(() => {
-    const prompt = `Use web browsing to access links and information:
+  const prompt = useMemo(
+    () => `Use web browsing to access links and information:
 
 ${tabs.map((tab) => `- ${siteConfig.url}${tab.href}.md`).join('\n')}
 
 If you need additional information you find a overview of all content here: https://ix.siemens.io/llms.txt
 
-I want to ask some questions`;
-    navigator.clipboard.writeText(prompt);
-  }, [tabs]);
+I want to ask some questions`,
+    [tabs, siteConfig.url]
+  );
 
   return (
     <>
@@ -91,16 +91,12 @@ I want to ask some questions`;
             title={title}
           ></a>
         </h1>
-        <IxButton
-          icon={iconAi}
-          variant="tertiary"
-          className={styles.copy_prompt}
-          onClick={copyPrompt}
-        >
-          Copy prompt
-        </IxButton>
+        <AskAI prompt={prompt} />
       </div>
 
+      <IxTooltip for="#copy-prompt">
+        Copy a prompt to ask an AI assistant about this page.
+      </IxTooltip>
       {description && (
         <div className={clsx(styles.componentHeroHeader, 'HeroHeader')}>
           <div className={styles.Tags}>
