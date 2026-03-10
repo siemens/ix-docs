@@ -3,9 +3,9 @@
  */
 
 import { iconAi, iconSingleCheck } from '@siemens/ix-icons/icons';
-import { IxButton, IxTooltip } from '@siemens/ix-react';
-import styles from './styles.module.css';
+import { IxButton } from '@siemens/ix-react';
 import { useCallback, useEffect, useState } from 'react';
+import styles from './styles.module.css';
 
 export default function AskAI(props: { prompt: string }) {
   const [isCopied, setIsCopied] = useState(false);
@@ -40,7 +40,6 @@ export default function AskAI(props: { prompt: string }) {
       >
         {isCopied ? 'Copied!' : 'Ask AI'}
       </IxButton>
-
     </>
   );
 }

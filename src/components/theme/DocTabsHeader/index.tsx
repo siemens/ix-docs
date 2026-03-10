@@ -4,6 +4,8 @@
 import type { PropSidebarItemLink } from '@docusaurus/plugin-content-docs';
 import { useHistory, useLocation } from '@docusaurus/router';
 import { useScrollPosition } from '@docusaurus/theme-common/internal';
+import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
+import { IxTooltip } from '@siemens/ix-react';
 import {
   DeprecatedTag,
   FormReady,
@@ -11,12 +13,8 @@ import {
 } from '@site/src/components/UI/Tags';
 import clsx from 'clsx';
 import { useCallback, useMemo, useState } from 'react';
-import styles from './styles.module.css';
-import { IxButton, IxTooltip } from '@siemens/ix-react';
-import { iconAi } from '@siemens/ix-icons/icons';
-import useBaseUrl from '@docusaurus/useBaseUrl';
-import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 import AskAI from '../AskAI';
+import styles from './styles.module.css';
 
 function Tabs({ children }) {
   const [isScrolling, setIsScrolling] = useState(false);

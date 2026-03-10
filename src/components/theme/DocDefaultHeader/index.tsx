@@ -6,13 +6,12 @@ import {
   useScrollPosition,
 } from '@docusaurus/theme-common/internal';
 import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
-import { iconAi, iconCheck, iconSingleCheck } from '@siemens/ix-icons/icons';
-import { IxButton, IxTooltip } from '@siemens/ix-react';
+import { IxTooltip } from '@siemens/ix-react';
 import { DeprecatedTag, RedirectTag } from '@site/src/components/UI/Tags';
 import clsx from 'clsx';
-import { useCallback, useEffect, useMemo, useState } from 'react';
-import styles from './styles.module.css';
+import { useMemo, useState } from 'react';
 import AskAI from '../AskAI';
+import styles from './styles.module.css';
 
 function Separator() {
   const [isScrolling, setIsScrolling] = useState(false);
