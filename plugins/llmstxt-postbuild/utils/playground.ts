@@ -4,11 +4,11 @@ import type { FilesMap } from '../types';
 import { fileExists } from './filesystem';
 
 const FRAMEWORK_TITLES: Record<string, string> = {
-  react: 'React',
-  angular: 'Angular',
-  angular_standalone: 'Angular Standalone',
-  vue: 'Vue',
-  html: 'HTML',
+  react: 'React Examples',
+  angular: 'Angular Examples',
+  angular_standalone: 'Angular Standalone Examples',
+  vue: 'Vue Examples',
+  html: 'HTML Examples',
 };
 
 const FRAMEWORK_ORDER = [
