@@ -7,7 +7,7 @@ import { IxButton } from '@siemens/ix-react';
 import { useCallback, useEffect, useState } from 'react';
 import styles from './styles.module.css';
 
-export default function AskAI(props: { prompt: string }) {
+export default function AskAI(props: { id: string; prompt: string }) {
   const [isCopied, setIsCopied] = useState(false);
 
   const copyPrompt = useCallback(async () => {
@@ -32,7 +32,7 @@ export default function AskAI(props: { prompt: string }) {
   return (
     <>
       <IxButton
-        id="copy-prompt"
+        id={props.id}
         icon={isCopied ? iconSingleCheck : iconAi}
         variant="tertiary"
         className={styles.copy_prompt}

@@ -45,10 +45,6 @@
   margin: 0;
 }
 
-.copy_prompt {
-  margin-right: 0.5rem;
-}
-
 .Tabs {
   display: flex;
   flex-direction: row;

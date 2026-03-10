@@ -61,7 +61,7 @@ I want to ask some questions`,
             title={title}
           ></a>
         </h1>
-        <AskAI prompt={prompt} />
+        <AskAI id="copy-prompt" prompt={prompt} />
       </div>
 
       <IxTooltip for="#copy-prompt">
