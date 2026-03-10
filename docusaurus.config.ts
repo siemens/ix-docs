@@ -11,7 +11,7 @@ dotenv();
 
 function getAnnouncementBarConfig() {
   const latestVersion = versionDeployment.versions.find(
-    (version) => version.id === versionDeployment.currentVersion,
+    (version) => version.id === versionDeployment.currentVersion
   );
 
   if (versionDeployment.currentVersion !== versionDeployment.latestVersion) {
@@ -72,7 +72,7 @@ remarkPlugins.push(
     error_image: path.join('..', 'img', 'figma_error.png'),
     apiToken: process.env.FIGMA_API_TOKEN!,
     rimraf: false,
-  }),
+  })
 );
 
 const config: Config = {
