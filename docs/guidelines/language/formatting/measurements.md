@@ -126,4 +126,4 @@ Use "px" in lower case to abbreviate pixels with a space for readability without
 - [Key value](../../../components/key-value/index.mdx)
 - [AG Grid](../../../components/grid/index.mdx)
 - [HTML Table](../../../components/html-grid/index.mdx)
-- [Charts](../../../components/charts-overview/index.mdx)
+- [Charts](../../../components/charts-overview/overview.mdx)

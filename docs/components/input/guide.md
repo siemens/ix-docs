@@ -1,6 +1,6 @@
 # Input - Usage
 
-> Input fields are commonly used in forms, search bars and other areas where data input is required.
+> Usage guide for the ix-input
 
 # Input - Usage
 

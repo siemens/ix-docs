@@ -1,6 +1,6 @@
 # Content header - Usage
 
-> The content header helps users understand what the page is about. We typically use it at the very top of the page to show a clear page hierarchy.
+> Usage guide for the ix-content-header
 
 # Content header - Usage
 

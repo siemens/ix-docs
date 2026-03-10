@@ -1,6 +1,6 @@
 # Category filter - Usage
 
-> The category filter component enhances data navigation and user experience. We typically use a category filter to efficiently navigate large data sets, and it’s particularly useful for complex data scenarios. The filter also enhances the user experience by providing autocomplete suggestions and customizable filter conditions.
+> Usage guide for the ix-category-filter
 
 # Category filter - Usage
 

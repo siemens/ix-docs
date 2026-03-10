@@ -1,6 +1,6 @@
 # Forms validation - Usage
 
-> ![Invalid state](https://www.figma.com/design/wEptRgAezDU1z80Cn3eZ0o/iX-Pattern-Illustrations?node-id=2767-5955&t=IIgjTqoOEP524yAH-4)
+> Usage guide for the ix-validation-tooltip
 
 # Forms validation - Usage
 

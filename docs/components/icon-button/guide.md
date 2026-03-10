@@ -1,6 +1,6 @@
 # Icon button - Usage
 
-> Icon buttons are button elements containing only an icon and no text. Due to their small size, icon buttons are often used in complex layouts. We only use icon buttons if a well-known icon is available or the meaning of the icon metaphor is clear from the context.
+> Usage guide for the ix-icon-button
 
 # Icon button - Usage
 

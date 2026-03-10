@@ -1,6 +1,6 @@
 # Select - Usage
 
-> The select component supports single or multiple selections and the editable variant allows users to add new items. We typically use select components in forms, filters and settings where users need to choose from predefined options.
+> Usage guide for the ix-select, ix-select-item
 
 # Select - Usage
 

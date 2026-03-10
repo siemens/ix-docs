@@ -18,8 +18,10 @@ Use a specific time or time frame whenever possible.
 Use the user’s time zone when providing any kind of time indication.
 
   
-    - Failed to synchronize data. Synchronized at 12:45 BST. - System
-    maintenance scheduled for Wednesday, August 22: 02:00–04:00 BST
+
+    - Failed to synchronize data. Synchronized at 12:45 BST.
+    - System maintenance scheduled for Wednesday, August 22: 02:00–04:00 BST
+
   
 
 When necessary, add time zones with the UTC in brackets.
@@ -36,8 +38,12 @@ Avoid generic time-related terms like later, soon, sometime, etc.
     - Update starts Tuesday, October 1, 2026: 02:00–04:00
   
   
-    - Update starts soon. - Update starts later today. - Update takes a few
-    moments. - Update takes a while.
+
+    - Update starts soon.
+    - Update starts later today.
+    - Update takes a few moments.
+    - Update takes a while.
+
   
 
 Use "will" to indicate certainty and avoid "may" or "might" which sound uncertain.
@@ -46,7 +52,10 @@ Use "will" to indicate certainty and avoid "may" or "might" which sound uncertai
     - Update will take a few minutes.
   
   
-    - Update may take a few minutes. - Update might take a few minutes.
+
+    - Update may take a few minutes.
+    - Update might take a few minutes.
+
   
 
 Avoid adding messages when the process takes less than ten seconds.
@@ -58,8 +67,11 @@ Avoid adding messages when the process takes less than ten seconds.
 Use countdowns to alert users to time-sensitive information.
 
   
-    - Session expiring in 04:25 minutes. - Automatic logout in 03:45 minutes. -
-    Meeting starts in 5 minutes.
+
+    - Session expiring in 04:25 minutes.
+    - Automatic logout in 03:45 minutes.
+    - Meeting starts in 5 minutes.
+
   
   
     - Migration starts in 1 hour.
@@ -68,8 +80,11 @@ Use countdowns to alert users to time-sensitive information.
 Use consistent wording in the UI and add specific volumes with progress indicators.
 
   
-    - Data volume: 45/300 MB - Saving data… 50 of 300 MB saved - System update:
-    45% complete
+
+    - Data volume: 45/300 MB
+    - Saving data… 50 of 300 MB saved
+    - System update: 45% complete
+
   
 
 ## Rules for unknown time frames
@@ -77,16 +92,19 @@ Use consistent wording in the UI and add specific volumes with progress indicato
 Use a realistic time range or an estimated time window if possible.
 
   
-    - The system update can take a few hours. - The update will finish within
-    the next 60 minutes.
+
+    - The system update can take a few hours.
+    - The update will finish within the next 60 minutes.
+
   
 
 Be transparent and use passive voice when you need to be unspecific.
 
   
-    - Due to the size of the data migration, it is estimated to take between 4-6
-    hours. - Data is being fetched from multiple sources, and the completion
-    time varies depending on system conditions.
+
+    - Due to the size of the data migration, it is estimated to take between 4-6 hours.
+    - Data is being fetched from multiple sources, and the completion time varies depending on system conditions.
+
   
   
     - Due to the size of the migration, we have no idea when it will finish.
@@ -97,26 +115,37 @@ Be transparent and use passive voice when you need to be unspecific.
 Inform users whether or not they can continue working during a process.
 
   
-    - The application will not be available during the update. We’ll notify you
-    when it’s ready. - The application is not available during the update. - You
-    can continue working until the update begins. - Installation files are
-    downloaded in the background.
+
+    - The application will not be available during the update. We’ll notify you when it’s ready.
+    - The application is not available during the update.
+    - You can continue working until the update begins.
+    - Installation files are downloaded in the background.
+
   
 
 Clearly communicate any consequences related to user actions (or inaction).
 
   
-    - You can only postpone this update once. - An update is scheduled to
-    automatically install tonight. - The installation will be updated tonight. -
-    Update must be installed before Friday, September 12, 2026. - The device
-    will restart during the update.
+
+    - You can only postpone this update once.
+    - An update is scheduled to automatically install tonight.
+    - The installation will be updated tonight.
+    - Update must be installed before Friday, September 12, 2026.
+    - The device will restart during the update.
+
   
 
 Provide clear, actionable choices for next steps and user autonomy.
 
   
-    - Postpone - Remind me tomorrow - Update now - More information - Stop -
-    Pause
+
+    - Postpone
+    - Remind me tomorrow
+    - Update now
+    - More information
+    - Stop
+    - Pause
+
   
 
 ## Dos and Don’ts

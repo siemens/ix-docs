@@ -99,4 +99,477 @@ import '@siemens/ix/dist/siemens-ix/theme/classic-dark.css';
 
 ## Working with themes during runtime
 
-<ThemeSwitcher height="15rem" />
+### React Examples
+
+#### theme-switcher.tsx
+```tsx
+import './theme-switcher.scoped.css';
+
+import { themeSwitcher, ThemeVariant } from '@siemens/ix';
+import {
+  IxButton,
+  IxCheckbox,
+  IxCol,
+  IxLayoutGrid,
+  IxRow,
+  IxSelect,
+  IxSelectItem,
+} from '@siemens/ix-react';
+import { useEffect, useState } from 'react';
+
+export default () => {
+  const [variants] = useState<ThemeVariant[]>(['light', 'dark']);
+  const [selectedVariant, setSelectedVariant] = useState<ThemeVariant>('dark');
+  const [useSystemTheme, setUseSystemTheme] = useState(false);
+
+  useEffect(() => {
+    themeSwitcher.setTheme('classic');
+    themeSwitcher.setVariant(selectedVariant);
+  }, []);
+
+  const onValueChange = (event: CustomEvent<string | string[]>) => {
+    if (useSystemTheme) {
+      return;
+    }
+
+    const newVariant = event.detail as ThemeVariant;
+
+    themeSwitcher.setVariant(newVariant);
+    setSelectedVariant(newVariant);
+  };
+
+  const toggle = () => {
+    if (useSystemTheme) {
+      return;
+    }
+
+    themeSwitcher.toggleMode();
+
+    const newVariant = selectedVariant === 'light' ? 'dark' : 'light';
+
+    setSelectedVariant(newVariant);
+  };
+
+  const onCheckedChange = (event: CustomEvent<boolean>) => {
+    const checked = event.detail;
+
+    setUseSystemTheme(checked);
+
+    if (checked) {
+      themeSwitcher.setVariant();
+    } else {
+      themeSwitcher.setVariant(selectedVariant);
+    }
+  };
+
+  return (
+    <IxLayoutGrid className="theme-switcher">
+      <IxRow>
+        <IxCol size="2">
+          <span>Light/Dark</span>
+        </IxCol>
+        <IxCol>
+          <IxButton onClick={toggle} disabled={useSystemTheme}>
+            Toggle mode
+          </IxButton>
+        </IxCol>
+      </IxRow>
+
+      <IxRow>
+        <IxCol size="2">Theme</IxCol>
+        <IxCol>
+          <IxSelect
+            value={selectedVariant}
+            onValueChange={onValueChange}
+            disabled={useSystemTheme}
+          >
+            {variants.map((variant) => (
+              <IxSelectItem
+                key={variant}
+                label={variant}
+                value={variant}
+              ></IxSelectItem>
+            ))}
+          </IxSelect>
+        </IxCol>
+      </IxRow>
+
+      <IxRow>
+        <IxCol size="2"></IxCol>
+        <IxCol>
+          <IxCheckbox label="Use system" onCheckedChange={onCheckedChange} />
+        </IxCol>
+      </IxRow>
+    </IxLayoutGrid>
+  );
+};
+```
+
+#### theme-switcher.scoped.css
+```css
+.theme-switcher ix-col {
+  display: flex;
+  align-items: center;
+  height: 2.5rem;
+}
+```
+
+### Angular Examples
+
+#### theme-switcher.ts
+```ts
+import { Component, OnInit } from '@angular/core';
+import { themeSwitcher, ThemeVariant } from '@siemens/ix';
+
+@Component({
+  standalone: false,
+  selector: 'app-example',
+  templateUrl: './theme-switcher.html',
+  styleUrls: ['./theme-switcher.css'],
+})
+export default class ThemeSwitcher implements OnInit {
+  variants: ThemeVariant[] = ['light', 'dark'];
+  selectedVariant: ThemeVariant = 'dark';
+  useSystemTheme = false;
+
+  ngOnInit() {
+    themeSwitcher.setTheme('classic');
+    themeSwitcher.setVariant(this.selectedVariant);
+  }
+
+  onValueChange(event: Event) {
+    if (this.useSystemTheme) {
+      return;
+    }
+
+    const customEvent = event as CustomEvent<string>;
+    const newVariant = customEvent.detail as ThemeVariant;
+
+    themeSwitcher.setVariant(newVariant);
+
+    this.selectedVariant = newVariant;
+  }
+
+  toggleMode() {
+    if (this.useSystemTheme) {
+      return;
+    }
+
+    themeSwitcher.toggleMode();
+
+    this.selectedVariant = this.selectedVariant === 'light' ? 'dark' : 'light';
+  }
+
+  onSystemMode(event: CustomEvent<boolean>) {
+    const checked = event.detail;
+    this.useSystemTheme = checked;
+
+    if (checked) {
+      themeSwitcher.setVariant();
+    } else {
+      themeSwitcher.setVariant(this.selectedVariant);
+    }
+  }
+}
+```
+
+#### theme-switcher.html
+```html
+<ix-layout-grid class="theme-switcher">
+  <ix-row>
+    <ix-col size="2">
+      <span>Light/Dark</span>
+    </ix-col>
+    <ix-col>
+      <ix-button (click)="toggleMode()" [disabled]="useSystemTheme">
+        Toggle mode
+      </ix-button>
+    </ix-col>
+  </ix-row>
+
+  <ix-row>
+    <ix-col size="2">Theme</ix-col>
+    <ix-col>
+      <ix-select
+        [value]="selectedVariant"
+        (valueChange)="onValueChange($event)"
+        [disabled]="useSystemTheme"
+        placeholder="Select a theme"
+      >
+        <ix-select-item
+          *ngFor="let variant of variants"
+          [label]="variant"
+          [value]="variant"
+        ></ix-select-item>
+      </ix-select>
+    </ix-col>
+  </ix-row>
+
+  <ix-row>
+    <ix-col size="2"></ix-col>
+    <ix-col>
+      <ix-checkbox
+        label="Use system"
+        (checkedChange)="onSystemMode($event)"
+      ></ix-checkbox>
+    </ix-col>
+  </ix-row>
+</ix-layout-grid>
+```
+
+#### theme-switcher.css
+```css
+.theme-switcher ix-col {
+  display: flex;
+  align-items: center;
+  height: 2.5rem;
+}
+```
+
+### Angular Standalone Examples
+
+#### theme-switcher.ts
+```ts
+import { NgForOf } from '@angular/common';
+import { Component, OnInit } from '@angular/core';
+
+import {
+  IxButton,
+  IxCheckbox,
+  IxCol,
+  IxLayoutGrid,
+  IxRow,
+  IxSelect,
+  IxSelectItem,
+  IxSelectValueAccessorDirective,
+} from '@siemens/ix-angular/standalone';
+
+import { themeSwitcher, ThemeVariant } from '@siemens/ix';
+
+@Component({
+  selector: 'app-example',
+  imports: [
+    IxLayoutGrid,
+    IxRow,
+    IxCol,
+    IxButton,
+    IxCheckbox,
+    IxSelect,
+    IxSelectItem,
+    IxSelectValueAccessorDirective,
+    NgForOf,
+  ],
+  templateUrl: './theme-switcher.html',
+  styleUrls: ['./theme-switcher.css'],
+})
+export default class ThemeSwitcher implements OnInit {
+  variants: ThemeVariant[] = ['light', 'dark'];
+  selectedVariant: ThemeVariant = 'dark';
+  useSystemTheme = false;
+
+  ngOnInit() {
+    themeSwitcher.setTheme('classic');
+    themeSwitcher.setVariant(this.selectedVariant);
+  }
+
+  onValueChange(event: Event) {
+    if (this.useSystemTheme) {
+      return;
+    }
+
+    const customEvent = event as CustomEvent<string>;
+    const newVariant = customEvent.detail as ThemeVariant;
+
+    themeSwitcher.setVariant(newVariant);
+
+    this.selectedVariant = newVariant;
+  }
+
+  toggleMode() {
+    if (this.useSystemTheme) {
+      return;
+    }
+
+    themeSwitcher.toggleMode();
+
+    this.selectedVariant = this.selectedVariant === 'light' ? 'dark' : 'light';
+  }
+
+  onSystemMode(event: CustomEvent<boolean>) {
+    const checked = event.detail;
+    this.useSystemTheme = checked;
+
+    if (checked) {
+      themeSwitcher.setVariant();
+    } else {
+      themeSwitcher.setVariant(this.selectedVariant);
+    }
+  }
+}
+```
+
+#### theme-switcher.html
+```html
+<ix-layout-grid class="theme-switcher">
+  <ix-row>
+    <ix-col size="2">
+      <span>Light/Dark</span>
+    </ix-col>
+    <ix-col>
+      <ix-button (click)="toggleMode()" [disabled]="useSystemTheme">
+        Toggle mode
+      </ix-button>
+    </ix-col>
+  </ix-row>
+
+  <ix-row>
+    <ix-col size="2">Theme</ix-col>
+    <ix-col>
+      <ix-select
+        [value]="selectedVariant"
+        (valueChange)="onValueChange($event)"
+        [disabled]="useSystemTheme"
+        placeholder="Select a theme"
+      >
+        <ix-select-item
+          *ngFor="let variant of variants"
+          [label]="variant"
+          [value]="variant"
+        ></ix-select-item>
+      </ix-select>
+    </ix-col>
+  </ix-row>
+
+  <ix-row>
+    <ix-col size="2"></ix-col>
+    <ix-col>
+      <ix-checkbox
+        label="Use system"
+        (checkedChange)="onSystemMode($event)"
+      ></ix-checkbox>
+    </ix-col>
+  </ix-row>
+</ix-layout-grid>
+```
+
+#### theme-switcher.css
+```css
+.theme-switcher ix-col {
+  display: flex;
+  align-items: center;
+  height: 2.5rem;
+}
+```
+
+### Vue Examples
+
+#### theme-switcher.vue
+```vue
+<script setup lang="ts">
+import { themeSwitcher, type ThemeVariant } from '@siemens/ix';
+import {
+  IxButton,
+  IxCheckbox,
+  IxCol,
+  IxLayoutGrid,
+  IxRow,
+  IxSelect,
+  IxSelectItem,
+} from '@siemens/ix-vue';
+import { onMounted, ref } from 'vue';
+
+const variants = ref<ThemeVariant[]>(['light', 'dark']);
+const selectedVariant = ref<ThemeVariant>('dark');
+const useSystemTheme = ref(false);
+
+onMounted(() => {
+  themeSwitcher.setTheme('classic');
+  themeSwitcher.setVariant(selectedVariant.value);
+});
+
+const valueChange = (event: CustomEvent<string | string[]>) => {
+  if (useSystemTheme.value) {
+    return;
+  }
+
+  const newVariant = event.detail as ThemeVariant;
+
+  themeSwitcher.setVariant(newVariant);
+
+  selectedVariant.value = newVariant;
+};
+
+const toggle = () => {
+  if (useSystemTheme.value) {
+    return;
+  }
+
+  themeSwitcher.toggleMode();
+
+  selectedVariant.value = selectedVariant.value === 'light' ? 'dark' : 'light';
+};
+
+const systemChange = (event: CustomEvent<boolean>) => {
+  const checked = event.detail;
+  useSystemTheme.value = checked;
+
+  if (checked) {
+    themeSwitcher.setVariant();
+  } else {
+    themeSwitcher.setVariant(selectedVariant.value);
+  }
+};
+</script>
+
+<style scoped src="./theme-switcher.css"></style>
+
+<template>
+  <IxLayoutGrid class="theme-switcher">
+    <IxRow>
+      <IxCol :size="'2'">
+        <span>Light/Dark</span>
+      </IxCol>
+      <IxCol>
+        <IxButton @click="toggle" :disabled="useSystemTheme">
+          Toggle mode
+        </IxButton>
+      </IxCol>
+    </IxRow>
+
+    <IxRow>
+      <IxCol :size="'2'">Theme</IxCol>
+      <IxCol>
+        <IxSelect
+          :value="selectedVariant"
+          @valueChange="valueChange"
+          :disabled="useSystemTheme"
+          placeholder="Select a theme"
+        >
+          <IxSelectItem
+            v-for="variant in variants"
+            :key="variant"
+            :label="variant"
+            :value="variant"
+          />
+        </IxSelect>
+      </IxCol>
+    </IxRow>
+
+    <IxRow>
+      <IxCol :size="'2'"></IxCol>
+      <IxCol>
+        <IxCheckbox label="Use system" @checkedChange="systemChange" />
+      </IxCol>
+    </IxRow>
+  </IxLayoutGrid>
+</template>
+```
+
+#### theme-switcher.css
+```css
+.theme-switcher ix-col {
+  display: flex;
+  align-items: center;
+  height: 2.5rem;
+}
+```

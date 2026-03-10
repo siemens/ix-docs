@@ -1,6 +1,6 @@
 # Checkbox - Usage
 
-> Checkboxes are commonly used when there are multiple options that can be selected or used to easily enable or disable a setting. They are often utilized in forms where users can choose multiple options, such as selecting items or categories that apply to a specific product or service.
+> Usage guide for the ix-checkbox, ix-checkbox-group
 
 # Checkbox - Usage
 

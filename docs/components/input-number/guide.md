@@ -1,6 +1,6 @@
 # Number input - Usage
 
-> The number input component is commonly used in forms, calculators and other areas where precise numerical input is required. We typically use the number input component to ensure accurate and efficient data entry.
+> Usage guide for the ix-number-input
 
 # Number input - Usage
 

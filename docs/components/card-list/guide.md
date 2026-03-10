@@ -1,6 +1,6 @@
 # Card list - Usage
 
-> Card list content can be hidden or revealed by clicking on a control element. We typically use card lists on dashboards to show a huge amount of information in an organized and hierarchical way.
+> Usage guide for the ix-card-list
 
 # Card list - Usage
 

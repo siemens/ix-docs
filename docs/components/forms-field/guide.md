@@ -1,6 +1,6 @@
 # Forms field - Usage
 
-> ![Field](https://www.figma.com/design/wEptRgAezDU1z80Cn3eZ0o/iX-Pattern-Illustrations?node-id=2781-323&t=pKzFQBhaXmjTsR8P-4)
+> Usage guide for the ix-validation-tooltip
 
 # Forms field - Usage
 

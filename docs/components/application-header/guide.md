@@ -1,6 +1,6 @@
 # Application header - Usage
 
-> In its simplest version, application headers only show the company logo and the application name.
+> Usage guide for the ix-application-header
 
 # Application header - Usage
 

@@ -1,6 +1,6 @@
 # Dropdown - Usage
 
-> Dropdown containers allow users to select one option from a list. Selecting one of the items in the dropdown performs the action.
+> Usage guide for the ix-dropdown, ix-dropdown-item
 
 # Dropdown - Usage
 

@@ -1,6 +1,6 @@
 # Textarea - Usage
 
-> The textarea component is typically used in scenarios such as feedback forms, comment sections and message composition. Its ability to handle extensive text input makes it a versatile tool for collecting detailed user information.
+> Usage guide for the ix-textarea
 
 # Textarea - Usage
 

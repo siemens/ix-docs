@@ -1,6 +1,6 @@
 # Application menu - Usage
 
-> The navigation menu is an essential part of your application. It offers a way to directly navigate to the main application parts and it can give your users access to legal and version information, and access to settings.
+> Usage guide for the ix-menu-settings, ix-menu, ix-menu-item, ix-menu-category, ix-menu-avatar, ix-menu-avatar-item
 
 # Application menu - Usage
 

@@ -1,6 +1,6 @@
 # Pill - Usage
 
-> Pills typically contain a concise label and sometimes an icon. They are not clickable or closable, making them ideal for presenting static information succinctly within an application.
+> Usage guide for the ix-pill
 
 # Pill - Usage
 

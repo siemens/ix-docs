@@ -1,6 +1,6 @@
 # Date input - Usage
 
-> The date input component is typically used in forms, filters and scheduling tools to ensure consistent and accurate date entries. By standardizing date input, it helps maintain data integrity and improves the user experience in applications requiring precise date information.
+> Usage guide for the ix-date-input
 
 # Date input - Usage
 

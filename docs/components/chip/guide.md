@@ -1,6 +1,6 @@
 # Chip - Usage
 
-> Chips typically contain a concise label and sometimes an icon, and they are both clickable and closable.
+> Usage guide for the ix-chip
 
 # Chip - Usage
 

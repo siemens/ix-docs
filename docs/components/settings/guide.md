@@ -1,6 +1,6 @@
 # Settings - Usage
 
-> The settings component appears when users click on the "settings" icon (1). It overlays the current content and closing this overlay brings users back to the original content.
+> Usage guide for the ix-menu-settings, ix-menu-settings-item
 
 # Settings - Usage
 

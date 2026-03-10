@@ -1,6 +1,6 @@
 # Forms layout - Usage
 
-> ![Form layout examples](https://www.figma.com/design/wEptRgAezDU1z80Cn3eZ0o/iX-Pattern-Illustrations?node-id=3046-516&t=kneyH2DQ9aKpFhdv-4)
+> Usage guide for the ix-validation-tooltip
 
 # Forms layout - Usage
 

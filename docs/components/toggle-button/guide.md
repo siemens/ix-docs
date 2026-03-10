@@ -1,6 +1,6 @@
 # Toggle button - Usage
 
-> Toggle buttons with and without text labels are available. We typically use toggle buttons to switch between states or modes. They are ideal for scenarios where a setting can be turned on or off, or where a selection can be toggled independently of others.
+> Usage guide for the ix-icon-toggle-button, ix-toggle-button
 
 # Toggle button - Usage
 

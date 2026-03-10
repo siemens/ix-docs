@@ -1,6 +1,6 @@
 # Progress indicator - Usage
 
-> Progress indicators inform users about the status of ongoing measurable processes, e.g. loading data, submitting forms or processing non-blocking operations (for indeterminate processes use [spinners](../spinner/index.mdx) instead).
+> Usage guide for the ix-progress-indicator
 
 # Progress indicator - Usage
 

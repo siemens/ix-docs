@@ -1,6 +1,6 @@
 # Loading modal - usage
 
-> Loading modals communicate that the system is performing an operation that takes time and that users should wait. Use them for short blocking tasks (upload, processing) where users should not interact with the page until completion.
+> Usage guide for the ix-modal
 
 # Loading modal - usage
 

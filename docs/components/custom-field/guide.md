@@ -1,6 +1,6 @@
 # Custom field - Usage
 
-> The custom field's properties allow you to control the validation state of the field and the helper text. It's a versatile tool to create your own form fields that can be used in combination with the 'Form' components to create complex forms.
+> Usage guide for the ix-custom-field
 
 # Custom field - Usage
 

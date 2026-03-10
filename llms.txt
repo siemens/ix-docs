@@ -6,55 +6,131 @@ This file contains links to documentation sections following the llmstxt.org sta
 
 ## Table of Contents
 
-- [About and legal - Usage](https://ix.siemens.io//docs/components/about-and-legal/guide.md): The About and legal component appears when users click on the "About and legal" item (1) and overlays the current content. Closing this overlay bri...
-- [Application - Usage](https://ix.siemens.io//docs/components/application/guide.md): Application is a technical and infrastructural component without a direct visual appearance. It lays out the top-level app elements like the [heade...
-- [Application header - Usage](https://ix.siemens.io//docs/components/application-header/guide.md): In its simplest version, application headers only show the company logo and the application name.
-- [Application menu - Usage](https://ix.siemens.io//docs/components/application-menu/guide.md): The navigation menu is an essential part of your application. It offers a way to directly navigate to the main application parts and it can give yo...
-- [Avatar - Usage](https://ix.siemens.io//docs/components/avatar/guide.md): Avatars are visual or textual representations of individual identities, most often used to represent users logged into a system. Identity providers...
-- [Blind - Usage](https://ix.siemens.io//docs/components/blind/guide.md): Blinds are UI controls that allow the users to hide or reveal content by clicking on a control element. Blinds can display a large amount of conten...
-- [Breadcrumb - Usage](https://ix.siemens.io//docs/components/breadcrumb/guide.md): Breadcrumb navigation is a UI control that allows users to track their location within an application and easily navigate to previous or child pages.
-- [Button - Usage](https://ix.siemens.io//docs/components/button/guide.md): Buttons initiate actions, apply actions to selected objects and activate/deactivate functions. We typically use buttons to trigger an immediate act...
-- [Card - Usage](https://ix.siemens.io//docs/components/card/guide.md): Cards make it easy for users to quickly scan small chunks of information. We typically use cards to create dashboards or modular, flexible designs ...
-- [Card list - Usage](https://ix.siemens.io//docs/components/card-list/guide.md): Card list content can be hidden or revealed by clicking on a control element. We typically use card lists on dashboards to show a huge amount of in...
-- [Category filter - Usage](https://ix.siemens.io//docs/components/category-filter/guide.md): The category filter component enhances data navigation and user experience. We typically use a category filter to efficiently navigate large data s...
-- [Checkbox - Usage](https://ix.siemens.io//docs/components/checkbox/guide.md): Checkboxes are commonly used when there are multiple options that can be selected or used to easily enable or disable a setting. They are often uti...
-- [Chip - Usage](https://ix.siemens.io//docs/components/chip/guide.md): Chips typically contain a concise label and sometimes an icon, and they are both clickable and closable.
-- [Content - Usage](https://ix.siemens.io//docs/components/content/guide.md): ![application content](https://www.figma.com/design/wEptRgAezDU1z80Cn3eZ0o/iX-Pattern-Illustrations?type=design&node-id=1759-25130&mode=design&t=UP...
-- [Content header - Usage](https://ix.siemens.io//docs/components/content-header/guide.md): The content header helps users understand what the page is about. We typically use it at the very top of the page to show a clear page hierarchy.
-- [Custom field - Usage](https://ix.siemens.io//docs/components/custom-field/guide.md): The custom field's properties allow you to control the validation state of the field and the helper text. It's a versatile tool to create your own ...
-- [Dropdown - Usage](https://ix.siemens.io//docs/components/dropdown/guide.md): Dropdown containers allow users to select one option from a list. Selecting one of the items in the dropdown performs the action.
-- [Dropdown button - Usage](https://ix.siemens.io//docs/components/dropdown-button/guide.md): Dropdown buttons are button elements that allow users to select an action from a list of options by clicking on a button and revealing a dropdown. ...
-- [Empty State - Language](https://ix.siemens.io//docs/components/empty-state/uxwriting.md): import EmptyStateContent from '@site/docs/guidelines/language/messaging/empty-state-messages.mdx';
-- [Forms field - Usage](https://ix.siemens.io//docs/components/forms-field/guide.md): ![Field](https://www.figma.com/design/wEptRgAezDU1z80Cn3eZ0o/iX-Pattern-Illustrations?node-id=2781-323&t=pKzFQBhaXmjTsR8P-4)
-- [Forms layout - Usage](https://ix.siemens.io//docs/components/forms-layout/guide.md): ![Form layout examples](https://www.figma.com/design/wEptRgAezDU1z80Cn3eZ0o/iX-Pattern-Illustrations?node-id=3046-516&t=kneyH2DQ9aKpFhdv-4)
-- [Forms validation - Usage](https://ix.siemens.io//docs/components/forms-validation/guide.md): ![Invalid state](https://www.figma.com/design/wEptRgAezDU1z80Cn3eZ0o/iX-Pattern-Illustrations?node-id=2767-5955&t=IIgjTqoOEP524yAH-4)
-- [Icon button - Usage](https://ix.siemens.io//docs/components/icon-button/guide.md): Icon buttons are button elements containing only an icon and no text. Due to their small size, icon buttons are often used in complex layouts. We o...
-- [Input - Usage](https://ix.siemens.io//docs/components/input/guide.md): Input fields are commonly used in forms, search bars and other areas where data input is required.
-- [Date input - Usage](https://ix.siemens.io//docs/components/input-date/guide.md): The date input component is typically used in forms, filters and scheduling tools to ensure consistent and accurate date entries. By standardizing ...
-- [Number input - Usage](https://ix.siemens.io//docs/components/input-number/guide.md): The number input component is commonly used in forms, calculators and other areas where precise numerical input is required. We typically use the n...
+- [3D chart](https://ix.siemens.io//docs/components/3d/overview.md): 3D charts are a powerful way to visualize data in three dimensions. They provide a more immersive and interactive experience compared to traditiona...
+- [About and legal - Code](https://ix.siemens.io//docs/components/about-and-legal/code.md): Code examples and API documentation for the ix-menu-about, ix-menu-about-item
+- [About and legal - Usage](https://ix.siemens.io//docs/components/about-and-legal/guide.md): Usage guide for the ix-menu-about, ix-menu-about-item
+- [Application - Code](https://ix.siemens.io//docs/components/application/code.md): Code examples and API documentation for the ix-application
+- [Application - Usage](https://ix.siemens.io//docs/components/application/guide.md): Usage guide for the ix-application
+- [Application header - Code](https://ix.siemens.io//docs/components/application-header/code.md): Code examples and API documentation for the ix-application-header
+- [Application header - Usage](https://ix.siemens.io//docs/components/application-header/guide.md): Usage guide for the ix-application-header
+- [Application menu - Code](https://ix.siemens.io//docs/components/application-menu/code.md): Code examples and API documentation for the ix-menu-settings, ix-menu, ix-menu-item, ix-menu-category, ix-menu-avatar, ix-menu-avatar-item
+- [Application menu - Usage](https://ix.siemens.io//docs/components/application-menu/guide.md): Usage guide for the ix-menu-settings, ix-menu, ix-menu-item, ix-menu-category, ix-menu-avatar, ix-menu-avatar-item
+- [Avatar - Code](https://ix.siemens.io//docs/components/avatar/code.md): Code examples and API documentation for the ix-avatar
+- [Avatar - Usage](https://ix.siemens.io//docs/components/avatar/guide.md): Usage guide for the ix-avatar
+- [Bar chart](https://ix.siemens.io//docs/components/bar-chart/overview.md): Bar charts display data using rectangular bars. The length of each bar is proportional to the value it represents. Bar charts are commonly used to ...
+- [Blind - Code](https://ix.siemens.io//docs/components/blind/code.md): Code examples and API documentation for the ix-blind
+- [Blind - Usage](https://ix.siemens.io//docs/components/blind/guide.md): Usage guide for the ix-blind
+- [Breadcrumb - Code](https://ix.siemens.io//docs/components/breadcrumb/code.md): Code examples and API documentation for the ix-breadcrumb, ix-breadcrumb-item
+- [Breadcrumb - Usage](https://ix.siemens.io//docs/components/breadcrumb/guide.md): Usage guide for the ix-breadcrumb, ix-breadcrumb-item
+- [Button - Code](https://ix.siemens.io//docs/components/button/code.md): Code examples and API documentation for the ix-button
+- [Button - Usage](https://ix.siemens.io//docs/components/button/guide.md): Usage guide for the ix-button
+- [Card - Code](https://ix.siemens.io//docs/components/card/code.md): Code examples and API documentation for the ix-action-card, ix-push-card, ix-card
+- [Card - Usage](https://ix.siemens.io//docs/components/card/guide.md): Usage guide for the ix-action-card, ix-push-card, ix-card
+- [Card list - Code](https://ix.siemens.io//docs/components/card-list/code.md): Code examples and API documentation for the ix-card-list
+- [Card list - Usage](https://ix.siemens.io//docs/components/card-list/guide.md): Usage guide for the ix-card-list
+- [Category filter - Code](https://ix.siemens.io//docs/components/category-filter/code.md): Code examples and API documentation for the ix-category-filter
+- [Category filter - Usage](https://ix.siemens.io//docs/components/category-filter/guide.md): Usage guide for the ix-category-filter
+- [Overview](https://ix.siemens.io//docs/components/charts-overview/overview.md): Charts are essential tools for visualizing data, making complex information more accessible and easier to understand.
+- [Checkbox - Code](https://ix.siemens.io//docs/components/checkbox/code.md): Code examples and API documentation for the ix-checkbox, ix-checkbox-group
+- [Checkbox - Usage](https://ix.siemens.io//docs/components/checkbox/guide.md): Usage guide for the ix-checkbox, ix-checkbox-group
+- [Chip - Code](https://ix.siemens.io//docs/components/chip/code.md): Code examples and API documentation for the ix-chip
+- [Chip - Usage](https://ix.siemens.io//docs/components/chip/guide.md): Usage guide for the ix-chip
+- [Content - Code](https://ix.siemens.io//docs/components/content/code.md): Code examples and API documentation for the ix-content
+- [Content - Usage](https://ix.siemens.io//docs/components/content/guide.md): Usage guide for the ix-content
+- [Content header - Code](https://ix.siemens.io//docs/components/content-header/code.md): Code examples and API documentation for the ix-content-header
+- [Content header - Usage](https://ix.siemens.io//docs/components/content-header/guide.md): Usage guide for the ix-content-header
+- [Custom field - Code](https://ix.siemens.io//docs/components/custom-field/code.md): Code examples and API documentation for the ix-custom-field
+- [Custom field - Usage](https://ix.siemens.io//docs/components/custom-field/guide.md): Usage guide for the ix-custom-field
+- [Date dropdown - Code](https://ix.siemens.io//docs/components/date-dropdown/code.md): Code examples and API documentation for the ix-date-dropdown
+- [Date picker - Code](https://ix.siemens.io//docs/components/date-picker/code.md): Code examples and API documentation for the ix-date-picker
+- [Date time picker - Code](https://ix.siemens.io//docs/components/date-time-picker/code.md): Code examples and API documentation for the ix-datetime-picker
+- [Dropdown - Code](https://ix.siemens.io//docs/components/dropdown/code.md): Code examples and API documentation for the ix-dropdown, ix-dropdown-item
+- [Dropdown - Usage](https://ix.siemens.io//docs/components/dropdown/guide.md): Usage guide for the ix-dropdown, ix-dropdown-item
+- [Dropdown button - Code](https://ix.siemens.io//docs/components/dropdown-button/code.md): Code examples and API documentation for the ix-dropdown-button
+- [Dropdown button - Usage](https://ix.siemens.io//docs/components/dropdown-button/guide.md): Usage guide for the ix-dropdown-button
+- [Empty state - Code](https://ix.siemens.io//docs/components/empty-state/code.md): Code examples and API documentation for the ix-empty-state
+- [Empty state - Language](https://ix.siemens.io//docs/components/empty-state/uxwriting.md): Language guide for the ix-empty-state
+- [Event list - Code](https://ix.siemens.io//docs/components/event-list/code.md): Code examples and API documentation for the ix-event-list, ix-event-list-item
+- [Expanding search - Code](https://ix.siemens.io//docs/components/expanding-search/code.md): Code examples and API documentation for the ix-expanding-search
+- [Flip - Code](https://ix.siemens.io//docs/components/flip/code.md): Code examples and API documentation for the ix-flip-tile
+- [Forms field - Code](https://ix.siemens.io//docs/components/forms-field/code.md): Code examples and API documentation for the ix-validation-tooltip
+- [Forms field - Usage](https://ix.siemens.io//docs/components/forms-field/guide.md): Usage guide for the ix-validation-tooltip
+- [Forms layout - Code](https://ix.siemens.io//docs/components/forms-layout/code.md): Code examples and API documentation for the ix-validation-tooltip
+- [Forms layout - Usage](https://ix.siemens.io//docs/components/forms-layout/guide.md): Usage guide for the ix-validation-tooltip
+- [Forms validation - Code](https://ix.siemens.io//docs/components/forms-validation/code.md): Code examples and API documentation for the ix-validation-tooltip
+- [Forms validation - Usage](https://ix.siemens.io//docs/components/forms-validation/guide.md): Usage guide for the ix-validation-tooltip
+- [Gauge chart](https://ix.siemens.io//docs/components/gauge-chart/overview.md): Gauge charts are a type of chart that displays data using a dial or needle to indicate a value within a specific range. Gauge charts are commonly u...
+- [Angular data grid - Code](https://ix.siemens.io//docs/components/grid/code.md): Code examples and API documentation for the ix-aggrid
+- [Development](https://ix.siemens.io//docs/components/group/code.md): Code examples and API documentation for the ix-group, ix-group-item
+- [HTML table - Code](https://ix.siemens.io//docs/components/html-grid/code.md): Code examples and API documentation for the html-table
+- [Icon button - Code](https://ix.siemens.io//docs/components/icon-button/code.md): Code examples and API documentation for the ix-icon-button
+- [Icon button - Usage](https://ix.siemens.io//docs/components/icon-button/guide.md): Usage guide for the ix-icon-button
+- [Input - Code](https://ix.siemens.io//docs/components/input/code.md): Code examples and API documentation for the ix-input
+- [Input - Usage](https://ix.siemens.io//docs/components/input/guide.md): Usage guide for the ix-input
+- [Date input - Code](https://ix.siemens.io//docs/components/input-date/code.md): Code examples and API documentation for the ix-date-input
+- [Date input - Usage](https://ix.siemens.io//docs/components/input-date/guide.md): Usage guide for the ix-date-input
+- [Number input - Code](https://ix.siemens.io//docs/components/input-number/code.md): Code examples and API documentation for the ix-number-input
+- [Number input - Usage](https://ix.siemens.io//docs/components/input-number/guide.md): Usage guide for the ix-number-input
+- [Time input - Code](https://ix.siemens.io//docs/components/input-time/code.md): Code examples and API documentation for the ix-time-input
 - [Time input - Usage](https://ix.siemens.io//docs/components/input-time/guide.md): Time inputs are typically used in forms, filters and scheduling tools to ensure consistent and accurate time entries. Standardizing time inputs ens...
-- [Layout grid - Usage](https://ix.siemens.io//docs/components/layout-grid/guide.md): With layout grids, a two-dimensional layout system is available to create responsive layouts. Our layout grids are made of three elements: a grid, ...
-- [Link button - Usage](https://ix.siemens.io//docs/components/link-button/guide.md): ![Overview](https://www.figma.com/design/wEptRgAezDU1z80Cn3eZ0o/iX-Pattern-Illustrations?type=design&node-id=1506-4003&mode=design&t=5MYmq6zAbfw7xI...
-- [Loading modal - usage](https://ix.siemens.io//docs/components/loading-modal/guide.md): Loading modals communicate that the system is performing an operation that takes time and that users should wait. Use them for short blocking tasks...
+- [Key value - Code](https://ix.siemens.io//docs/components/key-value/code.md): Code examples and API documentation for the ix-key-value
+- [Key value list - Code](https://ix.siemens.io//docs/components/key-value-list/code.md): Code examples and API documentation for the ix-key-value-list
+- [KPI - Code](https://ix.siemens.io//docs/components/kpi/code.md): Code examples and API documentation for the ix-kpi
+- [Layout auto - Code](https://ix.siemens.io//docs/components/layout-auto/code.md): Code examples and API documentation for the ix-layout-auto
+- [Layout grid - Code](https://ix.siemens.io//docs/components/layout-grid/code.md): Code examples and API documentation for the ix-layout-grid, ix-col
+- [Layout grid - Usage](https://ix.siemens.io//docs/components/layout-grid/guide.md): Usage guide for the ix-layout-grid, ix-col
+- [Line chart](https://ix.siemens.io//docs/components/line-chart/overview.md): Line charts display data as a series of data points connected by straight line segments. Line charts are commonly used to visualize trends over tim...
+- [Link button - Code](https://ix.siemens.io//docs/components/link-button/code.md): Code examples and API documentation for the ix-link-button
+- [Link button - Usage](https://ix.siemens.io//docs/components/link-button/guide.md): Usage guide for the ix-link-button
+- [Loading modal - code](https://ix.siemens.io//docs/components/loading-modal/code.md): Code examples and API documentation for the ix-modal
+- [Loading modal - usage](https://ix.siemens.io//docs/components/loading-modal/guide.md): Usage guide for the ix-modal
+- [Code](https://ix.siemens.io//docs/components/message-modal/code.md): Code examples and API documentation for the ix-modal
 - [Message modal - usage](https://ix.siemens.io//docs/components/message-modal/guide.md): import { IxButton } from '@siemens/ix-react';
+- [Message bar - Code](https://ix.siemens.io//docs/components/messagebar/code.md): Code examples and API documentation for the ix-message-bar
+- [Modal - Code](https://ix.siemens.io//docs/components/modal/code.md): Code examples and API documentation for the ix-modal-header
 - [Custom modal - Usage](https://ix.siemens.io//docs/components/modal/guide.md): Custom modal - Usage
 - [Components overview](https://ix.siemens.io//docs/components/overview.md): Our design system clusters components into intuitive categories, making it easy to find the right tools for your app design. Explore each section t...
-- [Panes - Usage](https://ix.siemens.io//docs/components/panes/guide.md): Panes have a header and a content area. When collapsed, panes are either hidden or reduced to a bar. In our applications, we often include contextu...
-- [Pill - Usage](https://ix.siemens.io//docs/components/pill/guide.md): Pills typically contain a concise label and sometimes an icon. They are not clickable or closable, making them ideal for presenting static informat...
-- [Popover news - Usage](https://ix.siemens.io//docs/components/popover-news/guide.md): Use the popover news component to present news and information when the application starts like release notes, new app features or marketing-relate...
-- [Progress indicator - Usage](https://ix.siemens.io//docs/components/progress-indicator/guide.md): Progress indicators inform users about the status of ongoing measurable processes, e.g. loading data, submitting forms or processing non-blocking o...
-- [Radio - Usage](https://ix.siemens.io//docs/components/radio/guide.md): Radio buttons are presented in groups to signify that only one selection is allowed at a time. Selecting a radio button automatically deselects any...
-- [Select - Usage](https://ix.siemens.io//docs/components/select/guide.md): The select component supports single or multiple selections and the editable variant allows users to add new items. We typically use select compone...
-- [Settings - Usage](https://ix.siemens.io//docs/components/settings/guide.md): The settings component appears when users click on the "settings" icon (1). It overlays the current content and closing this overlay brings users b...
-- [Split button - Usage](https://ix.siemens.io//docs/components/split-button/guide.md): Split buttons consist of two parts: a button labeled with text and/or an icon on the left and a dropdown button labeled with an icon on the right. ...
-- [Textarea - Usage](https://ix.siemens.io//docs/components/textarea/guide.md): The textarea component is typically used in scenarios such as feedback forms, comment sections and message composition. Its ability to handle exten...
+- [Pagination - Code](https://ix.siemens.io//docs/components/pagination/code.md): Code examples and API documentation for the ix-pagination
+- [Panes - Code](https://ix.siemens.io//docs/components/panes/code.md): Code examples and API documentation for the ix-pane, ix-pane-layout
+- [Panes - Usage](https://ix.siemens.io//docs/components/panes/guide.md): Usage guide for the ix-pane, ix-pane-layout
+- [Pie chart](https://ix.siemens.io//docs/components/pie-chart/overview.md): Pie charts display data using a circular graph. The length of each slice is proportional to the value it represents. Pie charts are commonly used t...
+- [Pill - Code](https://ix.siemens.io//docs/components/pill/code.md): Code examples and API documentation for the ix-pill
+- [Pill - Usage](https://ix.siemens.io//docs/components/pill/guide.md): Usage guide for the ix-pill
+- [Popover news - Code](https://ix.siemens.io//docs/components/popover-news/code.md): Code examples and API documentation for the ix-menu-about-news
+- [Popover news - Usage](https://ix.siemens.io//docs/components/popover-news/guide.md): Usage guide for the ix-menu-about-news
+- [Progress-Indicator - Code](https://ix.siemens.io//docs/components/progress-indicator/code.md): Code examples and API documentation for the ix-progress-indicator
+- [Progress indicator - Usage](https://ix.siemens.io//docs/components/progress-indicator/guide.md): Usage guide for the ix-progress-indicator
+- [Radio - Code](https://ix.siemens.io//docs/components/radio/code.md): Code examples and API documentation for the ix-radio, ix-radio-group
+- [Radio - Usage](https://ix.siemens.io//docs/components/radio/guide.md): Usage guide for the ix-radio, ix-radio-group
+- [Select - Code](https://ix.siemens.io//docs/components/select/code.md): Code examples and API documentation for the ix-select, ix-select-item
+- [Select - Usage](https://ix.siemens.io//docs/components/select/guide.md): Usage guide for the ix-select, ix-select-item
+- [Settings - Code](https://ix.siemens.io//docs/components/settings/code.md): Code examples and API documentation for the ix-menu-settings, ix-menu-settings-item
+- [Settings - Usage](https://ix.siemens.io//docs/components/settings/guide.md): Usage guide for the ix-menu-settings, ix-menu-settings-item
+- [Slider - Code](https://ix.siemens.io//docs/components/slider/code.md): Code examples and API documentation for the ix-slider
+- [Special chart](https://ix.siemens.io//docs/components/special-chart/overview.md): ECharts offer a wide variety of different chart types and features. The following page deals with some of the more special chart types and features.
+- [Spinner - Code](https://ix.siemens.io//docs/components/spinner/code.md): Code examples and API documentation for the ix-spinner
+- [Split button - Code](https://ix.siemens.io//docs/components/split-button/code.md): Code examples and API documentation for the ix-split-button
+- [Split button - Usage](https://ix.siemens.io//docs/components/split-button/guide.md): Usage guide for the ix-split-button
+- [Tabs - Code](https://ix.siemens.io//docs/components/tabs/code.md): Code examples and API documentation for the ix-tabs, ix-tab-item
+- [Textarea - Code](https://ix.siemens.io//docs/components/textarea/code.md): Code examples and API documentation for the ix-textarea
+- [Textarea - Usage](https://ix.siemens.io//docs/components/textarea/guide.md): Usage guide for the ix-textarea
+- [Tile - Code](https://ix.siemens.io//docs/components/tile/code.md): Code examples and API documentation for the ix-tile
+- [Time picker - Code](https://ix.siemens.io//docs/components/time-picker/code.md): Code examples and API documentation for the ix-time-picker
 - [Time picker - Usage](https://ix.siemens.io//docs/components/time-picker/guide.md): Time pickers are primarily used within [time inputs](../input-time) but can also be utilized standalone in applications where direct time selection...
-- [Toast - Usage](https://ix.siemens.io//docs/components/toast/guide.md): Toasts are UI elements where an event causes a small text field to appear on screen. Toasts are informative, last for a few seconds only, and take ...
-- [Toast - Language](https://ix.siemens.io//docs/components/toast/language.md): import ToastMessagesContent from '@site/docs/guidelines/language/messaging/toast-messages.mdx';
-- [Toggle - Usage](https://ix.siemens.io//docs/components/toggle/guide.md): A toggle is a user interface element that enables users to switch between two states, such as on/off or enable/disable. It consists of a switch tha...
-- [Toggle button - Usage](https://ix.siemens.io//docs/components/toggle-button/guide.md): Toggle buttons with and without text labels are available. We typically use toggle buttons to switch between states or modes. They are ideal for sc...
-- [Tooltip - Language](https://ix.siemens.io//docs/components/tooltip/uxwriting.md): import TooltipContent from '@site/docs/guidelines/language/messaging/tooltips.mdx';
-- [Overview](https://ix.siemens.io//docs/guidelines/accessibility/overview.md): We are committed that our deliverables qualify for building solutions that are accessible for everyone. We strive to meet **WCAG AA standards** by ...
+- [Toast - Code](https://ix.siemens.io//docs/components/toast/code.md): Code examples and API documentation for the ix-toast, ix-toast-container
+- [Toast - Usage](https://ix.siemens.io//docs/components/toast/guide.md): Usage guide for the ix-toast, ix-toast-container
+- [Toast - Language](https://ix.siemens.io//docs/components/toast/language.md): Language guide for the ix-toast
+- [Toggle - Code](https://ix.siemens.io//docs/components/toggle/code.md): Code examples and API documentation for the ix-toggle
+- [Toggle - Usage](https://ix.siemens.io//docs/components/toggle/guide.md): Usage guide for the ix-toggle
+- [Toggle button - Code](https://ix.siemens.io//docs/components/toggle-button/code.md): Code examples and API documentation for the ix-icon-toggle-button, ix-toggle-button
+- [Toggle button - Usage](https://ix.siemens.io//docs/components/toggle-button/guide.md): Usage guide for the ix-icon-toggle-button, ix-toggle-button
+- [Tooltip - Code](https://ix.siemens.io//docs/components/tooltip/code.md): Code examples and API documentation for the ix-tooltip
+- [Tooltip - Language](https://ix.siemens.io//docs/components/tooltip/uxwriting.md): Language guide for the ix-tooltip
+- [Tree - Code](https://ix.siemens.io//docs/components/tree/code.md): Code examples and API documentation for the ix-tree, ix-tree-item
+- [Upload - Code](https://ix.siemens.io//docs/components/upload/code.md): Code examples and API documentation for the ix-upload
+- [Workflow - Code](https://ix.siemens.io//docs/components/workflow/code.md): Code examples and API documentation for the ix-workflow-step, ix-workflow-steps
+- [Code](https://ix.siemens.io//docs/guidelines/accessibility/code.md): Developer-focused accessibility guidance for ix design system, with practical code examples and implementation patterns to meet WCAG requirements a...
+- [Overview](https://ix.siemens.io//docs/guidelines/accessibility/overview.md): Accessibility ensures that digital products are usable by everyone, including people with disabilities. It is crucial for creating inclusive soluti...
 - [Consistent](https://ix.siemens.io//docs/guidelines/cli/consistent.md): CLIs are the same across the whole product, follow our conventions and use our recommended frameworks.
 - [Efficient](https://ix.siemens.io//docs/guidelines/cli/efficient.md): Commands are scannable, giving users just the right amount of information at the right time.
 - [Getting started with CLI design](https://ix.siemens.io//docs/guidelines/cli/getting-started.md): This guide provides support for CLI creators at Siemens to offer consistent and clear commands that can be easily understood by our customers.
@@ -118,6 +194,9 @@ This file contains links to documentation sections following the llmstxt.org sta
 - [React](https://ix.siemens.io//docs/home/installation/react.md): React is a widely-used library for building user interfaces, particularly single-page applications. This section  guides you through the steps to i...
 - [Vue](https://ix.siemens.io//docs/home/installation/vue.md): Vue is a progressive framework for building user interfaces, known for its simplicity and flexibility. This section  guides you through the steps t...
 - [Build with AI](https://ix.siemens.io//docs/home/mcp-server.md): Use our Model Context Protocol (MCP) server that provides AI assistants (agents) with access to Siemens Industrial Experience design system and com...
+- [Upgrade to V2](https://ix.siemens.io//docs/home/migration/2_0_0/index.md): Welcome to the migration guide for upgrading from Siemens Industrial Experience design system V1 to V2. This guide introduces all major changes. Th...
+- [Upgrade to V3](https://ix.siemens.io//docs/home/migration/3_0_0/index.md): Welcome to the migration guide for upgrading from Siemens Industrial Experience design system V2 to V3. This guide introduces all major changes.
+- [Upgrade to V4](https://ix.siemens.io//docs/home/migration/4_0_0/index.md): Welcome to the migration guide for upgrading from Siemens Industrial Experience design system V3 to V4. This guide supports you through all the maj...
 - [Migration from Core UI 6.5.0](https://ix.siemens.io//docs/home/migration/core-ui.md): Core UI was the predecessor to the Siemens Industrial Experience design system. This section provides detailed instructions on how to migrate from ...
 - [Migration from UXT 2.7.0](https://ix.siemens.io//docs/home/migration/uxt.md): For a quick and easy migration without changing your code base, the iX-UXT CSS Theme is prepared for app developers using the CSS from UXT (User Ex...
 - [Welcome to Siemens Industrial Experience](https://ix.siemens.io//docs/home/overview.md): Siemens Industrial Experience is an open-source design system for designers and developers to consistently create the perfect digital experience fo...
@@ -130,6 +209,8 @@ This file contains links to documentation sections following the llmstxt.org sta
 - [Developing with icons](https://ix.siemens.io//docs/icons/developing-with-icons.md): The integration of icons into the code varies by framework. To accommodate the diverse range of potential use cases, external icons can be integrat...
 - [Icon library](https://ix.siemens.io//docs/icons/icon-library.md): The Siemens Industrial Experience design system comes with an extensive set of icons made for the industrial context. These icons are designed as i...
 - [Icon usage](https://ix.siemens.io//docs/icons/icon-usage.md): Icons are graphical representations of terms, functions or objects. Ideally, we use them together with a descriptive text to make it easier for use...
+- [Drawer - Code](https://ix.siemens.io//docs/legacy/drawer/code.md): import PropsApi from '@site/docs/autogenerated/api/ix-drawer/api.mdx';
+- [Drawer](https://ix.siemens.io//docs/legacy/drawer/index.md): Drawers are containers that open on the click of a button to show additional content.
 - [Animations](https://ix.siemens.io//docs/styles/animation.md): We use meaningful animations to make applications appear physically tangible. This way UIs become predictable and interactions easier to follow alo...
 - [Borders](https://ix.siemens.io//docs/styles/borders.md): Borders serve as essential visual elements that define boundaries, create structure, and enhance the clarity of user interfaces.
 - [Color palette](https://ix.siemens.io//docs/styles/colors.md): The color palette in our design system provides a comprehensive guide to the use of colors, ensuring consistency and accessibility across all compo...
@@ -137,4 +218,6 @@ This file contains links to documentation sections following the llmstxt.org sta
 - [Shadows](https://ix.siemens.io//docs/styles/shadows.md): Shadows serve as crucial visual elements that add depth, create dimension, and enhance the perception of hierarchy within your application.
 - [Designing with themes](https://ix.siemens.io//docs/styles/theming/usage-designers.md): Siemens Industrial Experience supports theming for all of its components. Our Figma library includes all four embedded themes: Brand dark, Brand li...
 - [Developing with themes](https://ix.siemens.io//docs/styles/theming/usage-developers.md): Siemens Industrial Experience supports theming for all of its components. Everyone can use the two embedded themes that already ship with Siemens I...
+- [Typography - Code](https://ix.siemens.io//docs/styles/typography/code.md): import Api from '@site/docs/autogenerated/api/ix-typography/api.mdx';
 - [Typography - Usage](https://ix.siemens.io//docs/styles/typography/guide.md): import TypographyTable from '@site/src/components/TypographyTable';
+- [Typography](https://ix.siemens.io//docs/styles/typography/index.md): Typography is a crucial element of our design system, ensuring readability and visual harmony across all applications. This section offers an overv...

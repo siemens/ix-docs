@@ -1,6 +1,6 @@
 # Card - Usage
 
-> Cards make it easy for users to quickly scan small chunks of information. We typically use cards to create dashboards or modular, flexible designs that adapt seamlessly to various screen sizes. Additionally, cards can be used to draw attention to important content and serve as an entry point to deeper levels of navigation or detailed views.
+> Usage guide for the ix-action-card, ix-push-card, ix-card
 
 # Card - Usage
 

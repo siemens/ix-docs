@@ -1,6 +1,6 @@
 # About and legal - Usage
 
-> The About and legal component appears when users click on the "About and legal" item (1) and overlays the current content. Closing this overlay brings users back to the original content.
+> Usage guide for the ix-menu-about, ix-menu-about-item
 
 # About and legal - Usage
 

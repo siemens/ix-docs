@@ -1,6 +1,6 @@
 # Layout grid - Usage
 
-> With layout grids, a two-dimensional layout system is available to create responsive layouts. Our layout grids are made of three elements: a grid, row(s) and column(s). The layout grid adapts to screen size and orientation.
+> Usage guide for the ix-layout-grid, ix-col
 
 # Layout grid - Usage
 

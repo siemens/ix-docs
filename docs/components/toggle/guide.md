@@ -1,6 +1,6 @@
 # Toggle - Usage
 
-> A toggle is a user interface element that enables users to switch between two states, such as on/off or enable/disable. It consists of a switch that can be slid or clicked to change its state. They offer a visually clear representation of the current state and allow users to easily toggle between different settings. We typically use toggles in settings, preferences, and other areas where users need to switch between two states quickly and easily.
+> Usage guide for the ix-toggle
 
 # Toggle - Usage
 

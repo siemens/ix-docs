@@ -1,7 +1,6 @@
 # Breadcrumb - Usage
 
-> Breadcrumb navigation is a UI control that allows users to track their location within an application and easily navigate to previous or child pages.
-Breadcrumbs make the structure of applications transparent to users. We typically use breadcrumbs in applications that have a deep hierarchy of pages or content. This helps users understand where they are within applications, and makes it easier to navigate to pages further along the navigation tree. As a general rule, we use breadcrumbs for information architecture with more than two levels, but not as a replacement for an application's main navigation. If the information structure is extremely complex, we often consider using a tree instead of a breadcrumb.
+> Usage guide for the ix-breadcrumb, ix-breadcrumb-item
 
 # Breadcrumb - Usage
 

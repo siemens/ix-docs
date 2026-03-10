@@ -1,6 +1,6 @@
 # Toast - Language
 
-> import ToastMessagesContent from '@site/docs/guidelines/language/messaging/toast-messages.mdx';
+> Language guide for the ix-toast
 
 import ToastMessagesContent from '@site/docs/guidelines/language/messaging/toast-messages.mdx';
 
