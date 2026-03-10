@@ -1,10 +1,16 @@
 /*
  * COPYRIGHT (c) Siemens AG 2018-2024 ALL RIGHTS RESERVED.
  */
-import { useScrollPosition } from '@docusaurus/theme-common/internal';
+import {
+  useLocalPathname,
+  useScrollPosition,
+} from '@docusaurus/theme-common/internal';
+import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
+import { iconAi, iconCheck, iconSingleCheck } from '@siemens/ix-icons/icons';
+import { IxButton, IxTooltip } from '@siemens/ix-react';
 import { DeprecatedTag, RedirectTag } from '@site/src/components/UI/Tags';
 import clsx from 'clsx';
-import { useState } from 'react';
+import { useCallback, useEffect, useState } from 'react';
 import styles from './styles.module.css';
 
 function Separator() {
@@ -30,20 +36,62 @@ export default function DocDefaultHeader(props: {
   frontMatter: any;
 }) {
   const { description, title, frontMatter, id } = props;
+  const { siteConfig } = useDocusaurusContext();
+  const pathname = useLocalPathname();
+  const [isCopied, setIsCopied] = useState(false);
+
+  useEffect(() => {
+    if (!isCopied) {
+      return;
+    }
+
+    const timeoutId = window.setTimeout(() => {
+      setIsCopied(false);
+    }, 1500);
+
+    return () => {
+      window.clearTimeout(timeoutId);
+    };
+  }, [isCopied]);
+
+  const copyPrompt = useCallback(async () => {
+    const prompt = `Use web browsing to access links and information ${siteConfig.url + pathname + '.md'}
+
+If you need additional information you find a overview of all content here: https://ix.siemens.io/llms.txt
+
+I want to ask some questions`;
+
+    await navigator.clipboard.writeText(prompt);
+    setIsCopied(true);
+  }, [pathname, siteConfig.url]);
 
   return (
     <>
-      <h1 className={styles.sticky_h1}>
-        {title}
+      <div className={styles.sticky_h1}>
+        <h1>
+          {title}
 
-        <a
-          href={`#${id.replaceAll('/', '-')}`}
-          className="hash-link"
-          aria-label={title}
-          title={title}
-        ></a>
-      </h1>
+          <a
+            href={`#${id.replaceAll('/', '-')}`}
+            className="hash-link"
+            aria-label={title}
+            title={title}
+          ></a>
+        </h1>
 
+        <IxButton
+          id="copy-prompt"
+          icon={isCopied ? iconSingleCheck : iconAi}
+          variant="tertiary"
+          className={styles.copy_prompt}
+          onClick={copyPrompt}
+        >
+          {isCopied ? 'Copied!' : 'Ask AI'}
+        </IxButton>
+      </div>
+      <IxTooltip for="#copy-prompt">
+        Copy a prompt to ask an AI assistant about this page.
+      </IxTooltip>
       {description && (
         <div className={clsx(styles.componentHeroHeader, 'HeroHeader')}>
           <div className={styles.Tags}>

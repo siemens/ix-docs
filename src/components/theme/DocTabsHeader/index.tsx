@@ -4,10 +4,18 @@
 import type { PropSidebarItemLink } from '@docusaurus/plugin-content-docs';
 import { useHistory, useLocation } from '@docusaurus/router';
 import { useScrollPosition } from '@docusaurus/theme-common/internal';
-import { DeprecatedTag, FormReady, RedirectTag } from '@site/src/components/UI/Tags';
+import {
+  DeprecatedTag,
+  FormReady,
+  RedirectTag,
+} from '@site/src/components/UI/Tags';
 import clsx from 'clsx';
 import { useCallback, useState } from 'react';
 import styles from './styles.module.css';
+import { IxButton } from '@siemens/ix-react';
+import { iconAi } from '@siemens/ix-icons/icons';
+import useBaseUrl from '@docusaurus/useBaseUrl';
+import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 
 function Tabs({ children }) {
   const [isScrolling, setIsScrolling] = useState(false);
@@ -57,18 +65,41 @@ export default function DocTabsHeader(
 ) {
   const { description, tabs, title, frontMatter, id } = props;
 
+  const { siteConfig } = useDocusaurusContext();
+
+  const copyPrompt = useCallback(() => {
+    const prompt = `Use web browsing to access links and information:
+
+${tabs.map((tab) => `- ${siteConfig.url}${tab.href}.md`).join('\n')}
+
+If you need additional information you find a overview of all content here: https://ix.siemens.io/llms.txt
+
+I want to ask some questions`;
+    navigator.clipboard.writeText(prompt);
+  }, [tabs]);
+
   return (
     <>
-      <h1 className={styles.sticky_h1}>
-        {title}
+      <div className={styles.sticky_h1}>
+        <h1>
+          {title}
 
-        <a
-          href={`#${id.replaceAll('/', '-')}`}
-          className="hash-link"
-          aria-label={title}
-          title={title}
-        ></a>
-      </h1>
+          <a
+            href={`#${id.replaceAll('/', '-')}`}
+            className="hash-link"
+            aria-label={title}
+            title={title}
+          ></a>
+        </h1>
+        <IxButton
+          icon={iconAi}
+          variant="tertiary"
+          className={styles.copy_prompt}
+          onClick={copyPrompt}
+        >
+          Copy prompt
+        </IxButton>
+      </div>
 
       {description && (
         <div className={clsx(styles.componentHeroHeader, 'HeroHeader')}>
@@ -97,7 +128,7 @@ export default function DocTabsHeader(
                   }
                 }
               )}
-              {frontMatter.formReady && (<FormReady />)}
+            {frontMatter.formReady && <FormReady />}
           </div>
           <p className={styles.Description}>{description}</p>
         </div>
