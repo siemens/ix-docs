@@ -39,7 +39,7 @@ Pair link text with universal icons, e.g. the open-external or application-scree
 <div className="dos-and-donts" markdown>
 <div className="dos" markdown>
 - <IxLinkButton>Company Digital ID <IxIcon name={iconOpenExternal} size="16" aria-label="external" role="img"></IxIcon></IxLinkButton>
-- <IxLinkButton>Manage your software licenses in one place <IxIcon name={iconApplicationScreen} size="16" aria-label="external Application" role="img"></IxIcon></IxLinkButton>
+- <IxLinkButton>Manage your software licenses in one place <IxIcon name={iconApplicationScreen} size="16" aria-label="external application" role="img"></IxIcon></IxLinkButton>
 </div>
 </div>
 
@@ -209,6 +209,6 @@ Ensure email addresses and phone numbers are clickable.
 * [Link buttons (component)](/docs/components/link-button/guide)
 * [Icon library](/docs/icons/icon-library.mdx)
 * [Numbers and percentages](/docs/guidelines/language/formatting/numbers)
-* <IxLinkButton>WCAG 2.4.4 (Link Purpose In Context) <IxIcon name={iconOpenExternal} size="16" aria-label="external" role="img"></IxIcon></IxLinkButton>
-* <IxLinkButton>WCAG 1.1.1 (Non-text Content) <IxIcon name={iconOpenExternal} size="16" aria-label="external" role="img"></IxIcon></IxLinkButton>
-* <IxLinkButton>WCAG 3.1.2 (Language of Parts) <IxIcon name={iconOpenExternal} size="16" aria-label="external" role="img"></IxIcon></IxLinkButton>
+<IxLinkButton>WCAG 2.4.4 (Link Purpose In Context) <IxIcon name={iconOpenExternal} size="16" aria-label="external" role="img"></IxIcon></IxLinkButton><br/>
+<IxLinkButton>WCAG 1.1.1 (Non-text Content) <IxIcon name={iconOpenExternal} size="16" aria-label="external" role="img"></IxIcon></IxLinkButton><br/>
+<IxLinkButton>WCAG 3.1.2 (Language of Parts) <IxIcon name={iconOpenExternal} size="16" aria-label="external" role="img"></IxIcon></IxLinkButton>
