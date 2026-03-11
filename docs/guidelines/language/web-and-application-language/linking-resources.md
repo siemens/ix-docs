@@ -28,6 +28,10 @@ Use brief, meaningful link text to explain the function of the target web page o
 - <IxLinkButton>Demonstration projects<IxIcon name={iconOpenExternal} size="16" aria-label="external" role="img"></IxIcon></IxLinkButton>
 </div>
 <div className="donts" markdown>
+- <IxLinkButton>Learn about the latest SIMATIC S7-1500 firmware updates on the Siemens homepage</IxLinkButton>
+- <IxLinkButton>https://www.company.com/s7-1500-firmware</IxLinkButton>
+- <IxLinkButton>Remote access</IxLinkButton>
+Learn about the latest SIMATIC S7-1500 firmware updates on the Siemens homepage
 - [Learn about the latest SIMATIC S7-1500 firmware updates on the Siemens homepage](#)
 - [https://www.company.com/s7-1500-firmware](#)
 - [Remote access](#)

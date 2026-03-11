@@ -1,5 +1,5 @@
 ---
-sidebar_position: 2
+sidebar_position: 1
 sidebar_label: Onboarding
 title: Onboarding
 doc-type: 'banner'
@@ -57,8 +57,8 @@ Break onboarding into small, manageable steps with bullet points, pagination or 
 <div className="dos-and-donts" markdown>
 <div className="dos" markdown>
 - Set up your notifications:<br/>
-	- Select the notifications you want<br/>
-	- Set quiet hours to avoid interruptions
+	&nbsp;&nbsp;&bull; Select the notifications you want<br/>
+	&nbsp;&nbsp;&bull; Set quiet hours to avoid interruptions
 </div>
 <div className="donts" markdown>
 - Getting started with smart notifications. You can now choose what types of alerts you want, set quiet hours, and customize how you receive notifications so you’re not overwhelmed.

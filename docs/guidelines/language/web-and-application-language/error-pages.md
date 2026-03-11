@@ -1,5 +1,5 @@
 ---
-sidebar_position: 3
+sidebar_position: 5
 sidebar_label: Error pages
 title: Error pages
 doc-type: 'banner'

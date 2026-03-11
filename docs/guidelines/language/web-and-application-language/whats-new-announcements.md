@@ -1,5 +1,5 @@
 ---
-sidebar_position: 1
+sidebar_position: 3
 sidebar_label: What’s new announcements
 title: What’s new announcements
 doc-type: 'banner'
@@ -47,8 +47,8 @@ Use paragraphs or bullet points to present or highlight one point at a time inst
 <div className="dos-and-donts" markdown>
 <div className="dos" markdown>
 - What’s new in the dashboard<br/>
-&nbsp;&nbsp;&bull; Edit your dashboards with new filter options.<br/>
-&nbsp;&nbsp;&bull; Set up dashboards into zones to better itemize your assets.
+&nbsp;&nbsp;&bull; Edit with new filter options.<br/>
+&nbsp;&nbsp;&bull; Set up zones to itemize your assets.
 </div>
 <div className="donts" markdown>
 - What’s new in the dashboard
