@@ -1,11 +1,13 @@
 # Icon usage
 
-> Icons are graphical representations of terms, functions or objects. Ideally, we use them together with a descriptive text to make it easier for users to learn their meaning. 
+> Icons are graphical representations of terms, functions or objects. Ideally, we use them together with a descriptive text to make it easier for users to learn their meaning.
 
 import IconTable from '@site/src/components/IconTable';
-import { IconExamplesClarity, IconExamplesStatus, IconExamplesMenu } from '@site/src/components/IconTable';
-
-#
+import {
+  IconExamplesClarity,
+  IconExamplesStatus,
+  IconExamplesMenu,
+} from '@site/src/components/IconTable';
 
 ## Clarity and contextual relevance
 
@@ -32,6 +34,7 @@ The illustration demonstrates the standard layout, featuring the apps icon in th
 ![Menu icons](https://www.figma.com/design/wEptRgAezDU1z80Cn3eZ0o/iX-Documentation-illustrations?node-id=7420-16011&t=HOxEXsgRcyJFe982-4)
 
 Upon resizing to a smaller screen, the [layout adapts](../components/application-header/guide#behavior):
+
 - The left navigation collapses into a menu icon in the application header.
 - The app switch icon then relocates into the expandable menu.
 - Actions previously visible in the application header move into a dropdown, indicated by the more menu icon.
