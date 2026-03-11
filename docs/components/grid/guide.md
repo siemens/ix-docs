@@ -4,7 +4,7 @@ doc-type: 'tab-item'
 
 # Data Grid (AG Grid) - Usage
 
-Data grids display, organize, and manipulate large, complex datasets with advanced sorting, filtering, grouping, inline editing, and bulk operations. In our applications, we use data grids for sophisticated data analysis and bulk data management. Typically, we use data grids when users work with hundreds or thousands of records, but don't use them for simple datasets or mobile-first designs.
+Data grids display, organize, and manipulate large, complex datasets with advanced sorting, filtering, grouping, inline editing, and bulk operations. In our applications, we use data grids for sophisticated data analysis and bulk data management. Typically, we use data grids when users work with hundreds or thousands of records, but don’t use them for simple datasets or mobile-first designs.
 
 ![Data grid overview](https://www.figma.com/design/wEptRgAezDU1z80Cn3eZ0o/iX-Documentation-illustrations?node-id=7694-2867&t=88rD8RIqPEX6oMWs-4)
 
@@ -72,11 +72,11 @@ Data grids have multiple states: default, sorted, filtered, selected, loading, g
 - Do keep selection and row-click behavior independent to avoid confusion
 - Do support full keyboard navigation and offer shortcuts for common actions
 - Do design responsive layouts that adapt to different screen sizes
-- Don't overload tables with too many columns; use column selection and sensible defaults
-- Don't mix selection with navigation (e.g., checkbox click should select, not navigate)
-- Don't use complex nested menus or hidden actions that require discovery
-- Don't embed heavily interactive components within grid cells
-- Don't rely solely on color for status; use icons, labels, or badges
+- Don’t overload tables with too many columns; use column selection and sensible defaults
+- Don’t mix selection with navigation (e.g., checkbox click should select, not navigate)
+- Don’t use complex nested menus or hidden actions that require discovery
+- Don’t embed heavily interactive components within grid cells
+- Don’t rely solely on color for status; use icons, labels, or badges
 
 ## Related
 

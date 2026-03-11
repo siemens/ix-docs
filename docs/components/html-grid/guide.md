@@ -4,7 +4,7 @@ doc-type: 'tab-item'
 
 # HTML Table - Usage
 
-HTML tables display structured, tabular data enabling users to compare, sort, and filter information. In our applications, we use tables to present datasets where users need to quickly locate items and perform actions. Typically, we use tables for comparing data across rows and columns, but don't use them for complex layouts or when important information needs emphasis.
+HTML tables display structured, tabular data enabling users to compare, sort, and filter information. In our applications, we use tables to present datasets where users need to quickly locate items and perform actions. Typically, we use tables for comparing data across rows and columns, but don’t use them for complex layouts or when important information needs emphasis.
 
 ![Table overview](https://www.figma.com/design/wEptRgAezDU1z80Cn3eZ0o/iX-Documentation-illustrations?node-id=7694-3505&t=88rD8RIqPEX6oMWs-4)
 
@@ -55,9 +55,9 @@ Tables have multiple states: default, sorted, filtered, selected, loading, and n
 - Do provide clear visual feedback for selection, sorting, and filtering states
 - Do design tables to adapt responsively to different screen sizes
 - Do support keyboard navigation for full accessibility
-- Don't use tables for unstructured or hierarchical data, use [lists](../list) instead
-- Don't embed complex interactions within cells
-- Don't rely solely on color for status; use icons or labels for clarity
+- Don’t use tables for unstructured or hierarchical data, use [lists](../list) instead
+- Don’t embed complex interactions within cells
+- Don’t rely solely on color for status; use icons or labels for clarity
 
 ## Related
 
