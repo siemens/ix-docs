@@ -28,13 +28,9 @@ Use brief, meaningful link text to explain the function of the target web page o
 - <IxLinkButton>Demonstration projects<IxIcon name={iconOpenExternal} size="16" aria-label="external" role="img"></IxIcon></IxLinkButton>
 </div>
 <div className="donts" markdown>
-- <IxLinkButton>Learn about the latest SIMATIC S7-1500 firmware updates on the Siemens homepage</IxLinkButton>
+- <IxLinkButton>Learn about the latest SIMATIC S7-1500 firmware updates on the homepage</IxLinkButton>
 - <IxLinkButton>https://www.company.com/s7-1500-firmware</IxLinkButton>
 - <IxLinkButton>Remote access</IxLinkButton>
-Learn about the latest SIMATIC S7-1500 firmware updates on the Siemens homepage
-- [Learn about the latest SIMATIC S7-1500 firmware updates on the Siemens homepage](#)
-- [https://www.company.com/s7-1500-firmware](#)
-- [Remote access](#)
 </div>
 </div>
 
@@ -42,8 +38,8 @@ Pair link text with universal icons, e.g. the open-external or application-scree
 
 <div className="dos-and-donts" markdown>
 <div className="dos" markdown>
-- [Company Digital ID](#) <IxIcon name={iconOpenExternal} size="16" aria-label="external" role="img"></IxIcon>
-- [Manage your software licenses in one place](#) <IxIcon name={iconApplicationScreen} size="16" aria-label="external application" role="img"></IxIcon>
+- <IxLinkButton>Company Digital ID<IxIcon name={iconOpenExternal} size="16" aria-label="external" role="img"></IxIcon></IxLinkButton>
+- <IxLinkButton>Manage your software licenses in one place<IxIcon name={iconApplicationScreen} size="16" aria-label="external Application" role="img"></IxIcon></IxLinkButton>
 </div>
 </div>
 
@@ -55,8 +51,8 @@ Use descriptive link text instead of long, full URLs and remove the prefix ([htt
 - <IxLinkButton>acronymfinder.com<IxIcon name={iconOpenExternal} size="16" aria-label="external" role="img"></IxIcon></IxLinkButton>
 </div>
 <div className="donts" markdown>
-- [https://www.company.com/s9-1600-firmware](#)
-- [https://support.company.com/us/en/view/107826255](#)
+- <IxLinkButton>https://www.company.com/s9-1600-firmware</IxLinkButton>
+- <IxLinkButton>https://support.company.com/us/en/view/107826255</IxLinkButton>
 </div>
 </div>
 
@@ -65,11 +61,11 @@ Avoid generic link text, e.g. "click here" without context or information regard
 <div className="dos-and-donts" markdown>
 <div className="dos" markdown>
 - The details regarding the collection and use of Analytics Data are described in Software Analytics Notice contained in the Application Function Manual.<br/>
-[Open Application Function Manual](#)
+- <IxLinkButton>Open Application Function Manual</IxLinkButton>
 </div>
 <div className="donts" markdown>
-- [Click here](#)
-- [Read more](#)
+- <IxLinkButton>Click here</IxLinkButton>
+- <IxLinkButton>Read more</IxLinkButton>
 </div>
 </div>
 
@@ -77,10 +73,10 @@ Use unique link text for each link destination so assistive technology users can
 
 <div className="dos-and-donts" markdown>
 <div className="dos" markdown>
-- [Open Assembly Manual](#) / [Open Demonstration Project App](#) / [Explore Manual](#)
+- - <IxLinkButton>Open Assembly Manual</IxLinkButton> / <IxLinkButton>Open Demonstration Project App</IxLinkButton> / <IxLinkButton>Explore Manual</IxLinkButton>
 </div>
 <div className="donts" markdown>
-- [Click here](#). / [Click here](#). / [Click here](#).
+- <IxLinkButton>Click here.</IxLinkButton> / <IxLinkButton>Click here.</IxLinkButton> / <IxLinkButton>Click here.</IxLinkButton>
 </div>
 </div>
 
@@ -90,13 +86,13 @@ Use brief, meaningful resource texts and explain the function and type of the re
 
 <div className="dos-and-donts" markdown>
 <div className="dos" markdown>
-- [Generative AI chat privacy information](#) <IxIcon name={iconPdfDocument} size="16"></IxIcon>
-- [Interface module IM 155-5 MF HF Equipment Manual](#) <IxIcon name={iconPdfDocument} size="16"></IxIcon>
-- [Industrial Copilots with Agentic AI](#) <IxIcon name={iconVideoFile} size="16"></IxIcon>
+- <IxLinkButton>Generative AI chat privacy information</IxLinkButton> <IxIcon name={iconPdfDocument} size="16"></IxIcon>
+- <IxLinkButton>Interface module IM 155-5 MF HF Equipment Manual</IxLinkButton> <IxIcon name={iconPdfDocument} size="16"></IxIcon>
+- <IxLinkButton>Industrial Copilots with Agentic AI</IxLinkButton> <IxIcon name={iconVideoFile} size="16"></IxIcon>
 </div>
 <div className="donts" markdown>
-- [example.company.com/downloads/file.pdf](#)
-- [You can read more in the User Documentation](#)
+- <IxLinkButton>example.company.com/downloads/file.pdf</IxLinkButton>
+- <IxLinkButton>You can read more in the User Documentation</IxLinkButton>
 </div>
 </div>
 
@@ -104,8 +100,8 @@ Pair resource text with icons, e.g. PDF-document or video-file icons.
 
 <div className="dos-and-donts" markdown>
 <div className="dos" markdown>
-- [Data Privacy Organization](#) <IxIcon name={iconPdfDocument} size="16"></IxIcon>
-- [Industrial Copilots with Agentic AI](#)<IxIcon name={iconVideoFile} size="16"></IxIcon>
+- <IxLinkButton>Data Privacy Organization</IxLinkButton> <IxIcon name={iconPdfDocument} size="16"></IxIcon>
+- <IxLinkButton>Industrial Copilots with Agentic AI</IxLinkButton> <IxIcon name={iconVideoFile} size="16"></IxIcon>
 </div>
 </div>
 
@@ -115,7 +111,7 @@ Pair the download of resources with both file type and size whenever possible.
 
 <div className="dos-and-donts" markdown>
 <div className="dos" markdown>
-- [Download User Manual (54 MB)](#) <IxIcon name={iconPdfDocument} size="16"></IxIcon>
+- <IxLinkButton>Download User Manual (54 MB)</IxLinkButton> <IxIcon name={iconPdfDocument} size="16"></IxIcon>
 </div>
 </div>
 
@@ -125,12 +121,12 @@ Describe link behavior and type in ALT-texts instead of repeating icon and visib
 
 <div className="dos-and-donts" markdown>
 <div className="dos" markdown>
-- Link text: Visit our [homepage](#) <IxIcon name={iconOpenExternal} size="16" aria-label="external" role="img"></IxIcon><br/>ALT-text: external
-- Resource text: [Function Manual](#) <IxIcon name={iconPdfDocument} size="16" aria-label="PDF" role="img"></IxIcon><br/>ALT-text: external PDF
-- Resource text: [Industrial Copilots with Agentic AI](#) <IxIcon name={iconVideoFile} size="16" aria-label="video" role="img"></IxIcon><br/>ALT-text: external video in new tab
+- Link text: Visit our <IxLinkButton>homepage</IxLinkButton> <IxIcon name={iconOpenExternal} size="16" aria-label="external" role="img"></IxIcon><br/>ALT-text: external
+- Resource text: <IxLinkButton>Function Manual</IxLinkButton> <IxIcon name={iconPdfDocument} size="16" aria-label="PDF" role="img"></IxIcon><br/>ALT-text: external PDF
+- Resource text: <IxLinkButton>Industrial Copilots with Agentic AI</IxLinkButton> <IxIcon name={iconVideoFile} size="16" aria-label="video" role="img"></IxIcon><br/>ALT-text: external video in new tab
 </div>
 <div className="donts" markdown>
-- Link text: Visit our [homepage](#) <IxIcon name={iconOpenExternal} size="16" aria-label="external" role="img"></IxIcon><br/>ALT-text: Visit our homepage.
+- Link text: Visit our <IxLinkButton>homepage</IxLinkButton> <IxIcon name={iconOpenExternal} size="16" aria-label="external" role="img"></IxIcon><br/>ALT-text: Visit our homepage.
 </div>
 </div>
 
@@ -149,8 +145,8 @@ Specify the language when the resource language differs from the app language (W
 
 <div className="dos-and-donts" markdown>
 <div className="dos" markdown>
-- [Application Function Manual (German)](#) <IxIcon name={iconOpenExternal} size="16" aria-label="external" role="img"></IxIcon>
-- [German web page (German)](#) <IxIcon name={iconOpenExternal} size="16" aria-label="external" role="img"></IxIcon>
+- <IxLinkButton>Application Function Manual (German)</IxLinkButton> <IxIcon name={iconOpenExternal} size="16" aria-label="external" role="img"></IxIcon>
+- <IxLinkButton>German web page (German)</IxLinkButton> <IxIcon name={iconOpenExternal} size="16" aria-label="external" role="img"></IxIcon>
 </div>
 </div>
 
@@ -161,7 +157,9 @@ Separate external links from body text with lists to avoid disrupting user readi
 <div className="dos-and-donts" markdown>
 <div className="dos" markdown>
 - Our platform integrates with various tools to enhance productivity.<br/><br/>
-External resources:<br/> - [Documentation portal](#) <IxIcon name={iconOpenExternal} size="16" aria-label="external" role="img"></IxIcon><br/>- [GitHub repository](#) <IxIcon name={iconOpenExternal} size="16" aria-label="external" role="img"></IxIcon><br/>- [Support community](#)<IxIcon name={iconOpenExternal} size="16" aria-label="external" role="img"></IxIcon>
+External resources:<br/> - <IxLinkButton>Documentation portal</IxLinkButton> <IxIcon name={iconOpenExternal} size="16" aria-label="external" role="img"></IxIcon><br/>
+- <IxLinkButton>GitHub repository</IxLinkButton> <IxIcon name={iconOpenExternal} size="16" aria-label="external" role="img"></IxIcon><br>
+- <IxLinkButton>Support community</IxLinkButton> <IxIcon name={iconOpenExternal} size="16" aria-label="external" role="img"></IxIcon>
 </div>
 </div>
 
@@ -169,10 +167,10 @@ Split external links from body text with separate paragraphs for faster scanning
 
 <div className="dos-and-donts" markdown>
 <div className="dos" markdown>
-- Our new automation system improves efficiency by 40% and reduces downtime through predictive maintenance algorithms.<br/><br/>[Efficiency report](#) <IxIcon name={iconOpenExternal} size="16" aria-label="external" role="img"></IxIcon>
+- Our new automation system improves efficiency by 40% and reduces downtime through predictive maintenance algorithms.<br/><br/><IxLinkButton>Efficiency report</IxLinkButton> <IxIcon name={iconOpenExternal} size="16" aria-label="external" role="img"></IxIcon>
 </div>
 <div className="donts" markdown>
-- For more technical details, visit [Automation Whitepaper](#) <IxIcon name={iconOpenExternal} size="16" aria-label="external" role="img"></IxIcon>.
+- For more technical details, visit <IxLinkButton>Automation Whitepaper</IxLinkButton> <IxIcon name={iconOpenExternal} size="16" aria-label="external" role="img"></IxIcon>.
 </div>
 </div>
 
