@@ -55,7 +55,7 @@ Tables have multiple states: default, sorted, filtered, selected, loading, and n
 - Do provide clear visual feedback for selection, sorting, and filtering states
 - Do design tables to adapt responsively to different screen sizes
 - Do support keyboard navigation for full accessibility
-- Don’t use tables for unstructured or hierarchical data, use [lists](../list) instead
+- Don’t use tables for unstructured or hierarchical data, use [event lists](../event-list) or [trees](../tree) instead
 - Don’t embed complex interactions within cells
 - Don’t rely solely on color for status; use icons or labels for clarity
 
