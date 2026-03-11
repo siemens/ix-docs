@@ -1,5 +1,6 @@
 ---
 doc-type: 'tab-item'
+description: 'Usage guide for the ix-menu-settings, ix-menu, ix-menu-item, ix-menu-category, ix-menu-avatar, ix-menu-avatar-item'
 ---
 # Application menu - Usage
 
