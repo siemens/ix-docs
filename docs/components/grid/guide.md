@@ -6,7 +6,7 @@ doc-type: 'tab-item'
 
 Data grids display, organize, and manipulate large, complex datasets with advanced sorting, filtering, grouping, inline editing, and bulk operations. In our applications, we use data grids for sophisticated data analysis and bulk data management. Typically, we use data grids when users work with hundreds or thousands of records, but don't use them for simple datasets or mobile-first designs.
 
-![Data grid overview](https://www.figma.com/design/wEptRgAezDU1z80Cn3eZ0o/iX-Pattern-Illustrations?type=design&node-id=1680-22044&mode=design&t=iP7h44Wf17P209P7-4)
+![Data grid overview](https://www.figma.com/design/wEptRgAezDU1z80Cn3eZ0o/iX-Documentation-illustrations?node-id=7694-2867&t=88rD8RIqPEX6oMWs-4)
 
 1. Column headers with sorting and filtering
 2. Row with checkbox selection
@@ -63,7 +63,7 @@ Users click a settings icon (gear or funnel) to show or hide columns. Provide a 
 
 ## States
 
-Data grids have multiple states: sorted, filtered, selected, empty, loading, no results, grouped, and edit mode. When no data is present, display a clear message. Show skeleton loaders or spinners while fetching data. When filters yield no results, display guidance on adjusting filters. Sorted columns display directional indicators (↑ or ↓), and filtered states show badges. Selected rows have a distinct background color with bulk action buttons in the toolbar. Grouped sections show with expand/collapse indicators. Cells in edit mode display input controls; non-editable content is grayed out. When a detail view is open, the row being detailed is highlighted and the detail panel is visible.
+Data grids have multiple states: default, sorted, filtered, selected, loading, grouped, and edit mode. In a default state, data grids display rows and columns with minimal visual interaction. In a sorted state, active sort columns display directional indicators (↑ or ↓). In a filtered state, active filters show badges and match counts. In a selected state, rows are highlighted with bulk action buttons displayed in the toolbar. In a loading state, skeleton loaders or spinners indicate data is being fetched. In a grouped state, sections show with expand/collapse indicators. In an edit mode state, cells display input controls while non-editable content is grayed out.
 
 ## Dos and Don'ts
 

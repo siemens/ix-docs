@@ -6,7 +6,7 @@ doc-type: 'tab-item'
 
 HTML tables display structured, tabular data enabling users to compare, sort, and filter information. In our applications, we use tables to present datasets where users need to quickly locate items and perform actions. Typically, we use tables for comparing data across rows and columns, but don't use them for complex layouts or when important information needs emphasis.
 
-![Table overview](https://www.figma.com/design/wEptRgAezDU1z80Cn3eZ0o/iX-Pattern-Illustrations?type=design&node-id=1680-22044&mode=design&t=iP7h44Wf17P209P7-4)
+![Table overview](https://www.figma.com/design/wEptRgAezDU1z80Cn3eZ0o/iX-Documentation-illustrations?node-id=7694-3505&t=88rD8RIqPEX6oMWs-4)
 
 1. Table header
 2. Rows
@@ -40,14 +40,14 @@ Optional checkboxes let users select rows independently of row clicks. We usuall
 
 ### Interaction
 
-- **Row clicks**: Define whether clicking a row triggers a detail view, selection, or another action. Don't mix these behaviors.
+- **Row clicks**: Define whether clicking a row triggers a detail view, selection, or another action. We recommend not mixing these behaviors.
 - **Hover feedback**: Rows show visual feedback on hover, indicating interactivity.
 - **Action visibility**: Action buttons appear on row hover or selection with increasing prominence.
 - **Keyboard support**: Support Tab, Enter, and Arrow keys for navigation.
 
 ## States
 
-Tables have several key states: sorted, filtered, selected, empty, loading, and no results. When no data is present, display a clear message. Show skeleton loaders or spinners while fetching data. When filters yield no results, display guidance on adjusting filters. Sorted columns display directional indicators, and filtered states show badges or active filter indicators. Selected rows have a distinct background color, and hover states provide visual feedback on interactivity.
+Tables have multiple states: default, sorted, filtered, selected, loading, and no results. In a default state, tables display rows and columns with minimal visual interaction. In a sorted state, active sort columns display directional indicators (↑ or ↓). In a filtered state, active filters show badges or indicators. In a selected state, rows are highlighted with a distinct background color. In a loading state, skeleton loaders or spinners indicate data is being fetched. In a no results state, clear messages guide users to adjust their filters or search criteria.
 
 ## Dos and Don'ts
 
