@@ -9,7 +9,7 @@ description: 'External links point users to information outside the application 
 ---
 
 import React from "react";
-import { IxIcon } from "@siemens/ix-react";
+import { IxIcon, IxLinkButton } from "@siemens/ix-react";
 import { iconOpenExternal } from "@siemens/ix-icons/icons";
 import { iconApplicationScreen } from "@siemens/ix-icons/icons";
 import { iconVideoFile } from "@siemens/ix-icons/icons";
@@ -23,9 +23,9 @@ Use brief, meaningful link text to explain the function of the target web page o
 
 <div className="dos-and-donts" markdown>
 <div className="dos" markdown>
-- [SIMATIC S7-1500 firmware updates](#) <IxIcon name={iconOpenExternal} size="16" aria-label="external" role="img"></IxIcon>
-- [Roles and permissions in the documentation](#) <IxIcon name={iconOpenExternal} size="16" aria-label="external" role="img"></IxIcon>
-- [Demonstration projects](#) <IxIcon name={iconApplicationScreen} size="16" aria-label="external application" role="img"></IxIcon>
+- <IxLinkButton>SIMATIC S7-1500 firmware updates<IxIcon name={iconOpenExternal} size="16" aria-label="external" role="img"></IxIcon></IxLinkButton>
+- <IxLinkButton>Roles and permissions in the documentation<IxIcon name={iconOpenExternal} size="16" aria-label="external" role="img"></IxIcon></IxLinkButton>
+- <IxLinkButton>Demonstration projects<IxIcon name={iconOpenExternal} size="16" aria-label="external" role="img"></IxIcon></IxLinkButton>
 </div>
 <div className="donts" markdown>
 - [Learn about the latest SIMATIC S7-1500 firmware updates on the Siemens homepage](#)
@@ -47,12 +47,12 @@ Use descriptive link text instead of long, full URLs and remove the prefix ([htt
 
 <div className="dos-and-donts" markdown>
 <div className="dos" markdown>
-- [Company homepage](#) <IxIcon name={iconOpenExternal} size="16" aria-label="external" role="img"></IxIcon>
-- [acronymfinder.com](#) <IxIcon name={iconOpenExternal} size="16"></IxIcon>
+- <IxLinkButton>Company homepage<IxIcon name={iconOpenExternal} size="16" aria-label="external" role="img"></IxIcon></IxLinkButton>
+- <IxLinkButton>acronymfinder.com<IxIcon name={iconOpenExternal} size="16" aria-label="external" role="img"></IxIcon></IxLinkButton>
 </div>
 <div className="donts" markdown>
 - [https://www.company.com/s9-1600-firmware](#)
-- [https://support.industry.company.com/cs/us/en/view/107826255](#)
+- [https://support.company.com/us/en/view/107826255](#)
 </div>
 </div>
 
@@ -193,14 +193,14 @@ Ensure email addresses and phone numbers are clickable.
 </div>
 </div>
 
-## Dos and Don’ts
+## Dos and Donï¿½ts
 
 * Do add link text for transparency
 * Do pair link and resource icons with clear texts
 * Do use icons to visualize what will open, e.g. external link, PDF, etc.
 * Do use ALT-text to explain icons
-* Don’t include https://, http: or www in URL text
-* Don’t add links in headings or sub-headings
+* Donï¿½t include https://, http: or www in URL text
+* Donï¿½t add links in headings or sub-headings
 
 ## Related
 
