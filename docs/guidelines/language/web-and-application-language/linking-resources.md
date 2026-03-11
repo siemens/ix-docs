@@ -29,7 +29,7 @@ Use brief, meaningful link text to explain the function of the target web page o
 </div>
 <div className="donts" markdown>
 - <IxLinkButton>Learn about the latest device firmware updates</IxLinkButton>
-- <IxLinkButton>https://www.company.com/s7-1500-firmware</IxLinkButton>
+- https://www.company.com/s7-1500-firmware
 - <IxLinkButton>Remote access</IxLinkButton>
 </div>
 </div>
@@ -43,16 +43,16 @@ Pair link text with universal icons, e.g. the open-external or application-scree
 </div>
 </div>
 
-Use descriptive link text instead of long, full URLs and remove the prefix ([https://www.](#)).
+Use descriptive link text instead of long, full URLs and remove the prefix [https://www.](#).
 
 <div className="dos-and-donts" markdown>
 <div className="dos" markdown>
 - <IxLinkButton>Company homepage <IxIcon name={iconOpenExternal} size="16" aria-label="external" role="img"></IxIcon></IxLinkButton>
-- <IxLinkButton>acronymfinder.com<IxIcon name={iconOpenExternal} size="16" aria-label="external" role="img"></IxIcon></IxLinkButton>
+- <IxLinkButton>acronymfinder.com <IxIcon name={iconOpenExternal} size="16" aria-label="external" role="img"></IxIcon></IxLinkButton>
 </div>
 <div className="donts" markdown>
-- <IxLinkButton>https://www.company.com/s9-1600-firmware</IxLinkButton>
-- <IxLinkButton>https://support.company.com/us/en/view/107826255</IxLinkButton>
+- https://www.company.com/s9-1600-firmware<br/>
+https://support.company.com/us/en/view/107826255
 </div>
 </div>
 
@@ -86,9 +86,9 @@ Use brief, meaningful resource texts and explain the function and type of the re
 
 <div className="dos-and-donts" markdown>
 <div className="dos" markdown>
-- <IxLinkButton>Generative AI chat privacy information <IxIcon name={iconPdfDocument} size="16"></IxIcon></IxLinkButton>
-- <IxLinkButton>Interface module IM 155-5 MF HF Equipment Manual <IxIcon name={iconPdfDocument} size="16"></IxIcon></IxLinkButton>
-- <IxLinkButton>Industrial Copilots with Agentic AI <IxIcon name={iconVideoFile} size="16"></IxIcon></IxLinkButton>
+- <IxLinkButton>Generative AI chat privacy information <IxIcon name={iconPdfDocument} size="16" aria-label="PDF" role="img"></IxIcon></IxLinkButton>
+- <IxLinkButton>Interface module IM 155-5 MF HF Equipment Manual <IxIcon name={iconPdfDocument} size="16" aria-label="PDF" role="img"></IxIcon></IxLinkButton>
+- <IxLinkButton>Industrial Copilots with Agentic AI <IxIcon name={iconVideoFile} size="16" aria-label="video" role="img"></IxIcon></IxLinkButton>
 </div>
 <div className="donts" markdown>
 - <IxLinkButton>example.company.com/downloads/file.pdf</IxLinkButton>
@@ -100,8 +100,8 @@ Pair resource text with icons, e.g. PDF-document or video-file icons.
 
 <div className="dos-and-donts" markdown>
 <div className="dos" markdown>
-- <IxLinkButton>Data Privacy Organization <IxIcon name={iconPdfDocument} size="16"></IxIcon></IxLinkButton>
-- <IxLinkButton>Industrial Copilots with Agentic AI <IxIcon name={iconVideoFile} size="16"></IxIcon></IxLinkButton>
+- <IxLinkButton>Data Privacy Organization <IxIcon name={iconPdfDocument} size="16" aria-label="PDF" role="img"></IxIcon></IxLinkButton>
+- <IxLinkButton>Industrial Copilots with Agentic AI <IxIcon name={iconVideoFile} size="16" aria-label="video" role="img"></IxIcon></IxLinkButton>
 </div>
 </div>
 
@@ -111,7 +111,7 @@ Pair the download of resources with both file type and size whenever possible.
 
 <div className="dos-and-donts" markdown>
 <div className="dos" markdown>
-- <IxLinkButton>Download User Manual (54 MB) <IxIcon name={iconPdfDocument} size="16"></IxIcon></IxLinkButton>
+- <IxLinkButton>Download User Manual (54 MB) <IxIcon name={iconPdfDocument} size="16" aria-label="PDF" role="img"></IxIcon></IxLinkButton>
 </div>
 </div>
 
@@ -167,7 +167,7 @@ Split external links from body text with separate paragraphs for faster scanning
 
 <div className="dos-and-donts" markdown>
 <div className="dos" markdown>
-- Our new automation system improves efficiency by 40% and reduces downtime through predictive maintenance algorithms.<br/><br/><IxLinkButton>Efficiency report <IxIcon name={iconOpenExternal} size="16" aria-label="external" role="img"></IxIcon></IxLinkButton>
+- Our new automation system improves efficiency by 40% and reduces downtime through predictive maintenance algorithms.<br/><IxLinkButton>Efficiency report <IxIcon name={iconOpenExternal} size="16" aria-label="external" role="img"></IxIcon></IxLinkButton>
 </div>
 <div className="donts" markdown>
 - For more technical details, visit <IxLinkButton>Automation Whitepaper <IxIcon name={iconOpenExternal} size="16" aria-label="external" role="img"></IxIcon></IxLinkButton>.
