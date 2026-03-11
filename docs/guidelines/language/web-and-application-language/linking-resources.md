@@ -158,7 +158,7 @@ Separate external links from body text with lists to avoid disrupting user readi
 <div className="dos" markdown>
 - Our platform integrates with various tools to enhance productivity.<br/><br/>
 External resources:<br/> - <IxLinkButton>Documentation portal</IxLinkButton> <IxIcon name={iconOpenExternal} size="16" aria-label="external" role="img"></IxIcon><br/>
-- <IxLinkButton>GitHub repository</IxLinkButton> <IxIcon name={iconOpenExternal} size="16" aria-label="external" role="img"></IxIcon><br>
+- <IxLinkButton>GitHub repository</IxLinkButton> <IxIcon name={iconOpenExternal} size="16" aria-label="external" role="img"></IxIcon><br/>
 - <IxLinkButton>Support community</IxLinkButton> <IxIcon name={iconOpenExternal} size="16" aria-label="external" role="img"></IxIcon>
 </div>
 </div>
