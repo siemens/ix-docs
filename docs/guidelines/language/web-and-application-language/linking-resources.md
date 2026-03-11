@@ -15,8 +15,6 @@ import { iconApplicationScreen } from "@siemens/ix-icons/icons";
 import { iconVideoFile } from "@siemens/ix-icons/icons";
 import { iconPdfDocument } from "@siemens/ix-icons/icons";
 
-const plainLinkStyle = { color: "#00e5aa" };
-
 #
 
 ## General rules for external links
@@ -45,7 +43,7 @@ Pair link text with universal icons, e.g. the open-external or application-scree
 </div>
 </div>
 
-Use descriptive link text instead of long, full URLs and remove the prefix (<a href="#" style={plainLinkStyle}>https://www.</a>).
+Use descriptive link text instead of long, full URLs and remove the prefix ([https://www.](#)).
 
 <div className="dos-and-donts" markdown>
 <div className="dos" markdown>
@@ -182,7 +180,7 @@ Avoid adding the "mailto" text and for email addresses as this is no longer adde
 
 <div className="dos-and-donts" markdown>
 <div className="donts" markdown>
-- <a href="#" style={plainLinkStyle}>mailto: name@examples.com</a>
+- [mailto: name@examples.com](#)
 </div>
 </div>
 
@@ -190,7 +188,7 @@ Ensure email addresses and phone numbers are clickable.
 
 <div className="dos-and-donts" markdown>
 <div className="dos" markdown>
-- You can reach us at the following telephone number <a href="#" style={plainLinkStyle}>+1 555-0100</a>
+- You can reach us at the following telephone number [+1 555-0100](#)
 </div>
 <div className="donts" markdown>
 - 555 0100
