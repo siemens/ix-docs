@@ -208,7 +208,7 @@ Ensure email addresses and phone numbers are clickable.
 
 * [Link buttons (component)](/docs/components/link-button/guide)
 * [Icon library](/docs/icons/icon-library.mdx)
-* [Numbers and percentages](/docs/guidelines/language/formatting/numbers)
-<IxLinkButton>WCAG 2.4.4 (Link Purpose In Context) <IxIcon name={iconOpenExternal} size="16" aria-label="external" role="img"></IxIcon></IxLinkButton><br/>
-<IxLinkButton>WCAG 1.1.1 (Non-text Content) <IxIcon name={iconOpenExternal} size="16" aria-label="external" role="img"></IxIcon></IxLinkButton><br/>
+* [Numbers and percentages](/docs/guidelines/language/formatting/numbers)<br/><br/>
+<IxLinkButton>WCAG 2.4.4 (Link Purpose In Context) <IxIcon name={iconOpenExternal} size="16" aria-label="external" role="img"></IxIcon></IxLinkButton><br/><br/>
+<IxLinkButton>WCAG 1.1.1 (Non-text Content) <IxIcon name={iconOpenExternal} size="16" aria-label="external" role="img"></IxIcon></IxLinkButton><br/><br/>
 <IxLinkButton>WCAG 3.1.2 (Language of Parts) <IxIcon name={iconOpenExternal} size="16" aria-label="external" role="img"></IxIcon></IxLinkButton>
