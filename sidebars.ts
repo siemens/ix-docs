@@ -1028,9 +1028,14 @@ const sidebars: SidebarsConfig = {
           label: 'Data grid',
           items: [
             {
+              id: 'components/grid/guide',
+              label: 'Usage',
+            },
+            {
               id: 'components/grid/code',
               label: 'Code',
-            },
+            }
+
           ],
         }),
         createTabItem({
@@ -1038,9 +1043,13 @@ const sidebars: SidebarsConfig = {
           label: 'HTML table',
           items: [
             {
+              id: 'components/html-grid/guide',
+              label: 'Usage',
+            },
+            {
               id: 'components/html-grid/code',
               label: 'Code',
-            },
+            }
           ],
         }),
         createTabItem({
