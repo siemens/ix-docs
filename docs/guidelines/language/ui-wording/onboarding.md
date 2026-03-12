@@ -131,5 +131,5 @@ Provide a clear way for users to dismiss or postpone onboarding without confusio
 
 ## Related
 
-* [What’s new](#)
+* [What’s new announcements](#)
 * [Logging in and out](#)
