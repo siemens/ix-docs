@@ -8,9 +8,7 @@ no_single_tab: true
 description: 'UX writing principles guide the creation of guidelines and help writers make microcopy decisions every day when creating UI text for industrial applications. We follow these principles to support our daily UX writing activities.'
 ---
 
-#
-
-## Trust
+![Trust](https://www.figma.com/design/wEptRgAezDU1z80Cn3eZ0o/iX-Documentation-illustrations?node-id=7675-10143&t=XEKsbqtBj1TvyDOK-4)
 
 | What | Why | How |
 | --- | --- | --- |
