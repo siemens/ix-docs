@@ -122,6 +122,10 @@ function PlaygroundFooter(props: Readonly<{ children: React.ReactNode }>) {
   return <div className={styles.footer}>{props.children}</div>;
 }
 
+function PlaygroundSubHeader(props: Readonly<{ children: React.ReactNode }>) {
+  return <div className={styles.subHeader}>{props.children}</div>;
+}
+
 function Playground(props: PlaygroundProps) {
   const defaultTheme = useDefaultTheme();
   const { playgroundThemeVariant } = usePlaygroundThemeVariant();
@@ -160,6 +164,36 @@ function Playground(props: PlaygroundProps) {
       setFramework(fallbackFramework);
     }
   }, [availableFrameworks, fallbackFramework, framework]);
+
+  const slots = useMemo(() => {
+    const children = React.Children.toArray(props.children);
+
+    return children.reduce(
+      (accumulator, child) => {
+        if (!React.isValidElement(child)) {
+          return accumulator;
+        }
+
+        if (child.type === PlaygroundSubHeader) {
+          accumulator.subHeader = child;
+          return accumulator;
+        }
+
+        if (child.type === PlaygroundFooter) {
+          accumulator.footer = child;
+          return accumulator;
+        }
+
+        accumulator.rest.push(child);
+        return accumulator;
+      },
+      {
+        subHeader: null as React.ReactElement | null,
+        footer: null as React.ReactElement | null,
+        rest: [] as React.ReactElement[],
+      },
+    );
+  }, [props.children]);
 
   return (
     <ThemeContext.Provider value={{ currentTheme: theme, isDarkColor: isDark }}>
@@ -211,10 +245,11 @@ function Playground(props: PlaygroundProps) {
               </div>
             </div>
           </div>
+          {slots.subHeader}
           <div
             className={clsx(styles.preview, {
               [styles.code]: isPreview,
-              [styles.previewWithFooter]: !!props.children,
+              [styles.previewWithFooter]: !!slots.footer,
             })}
             style={{ ['--preview-height']: props.height } as any}
           >
@@ -228,7 +263,8 @@ function Playground(props: PlaygroundProps) {
               <SourceCode />
             )}
           </div>
-          {props.children}
+          {slots.footer}
+          {slots.rest}
         </div>
       </ColorContainerFix>
     </ThemeContext.Provider>
@@ -237,6 +273,7 @@ function Playground(props: PlaygroundProps) {
 
 type PlaygroundComponent = ((props: PlaygroundProps) => JSX.Element) & {
   Footer: typeof PlaygroundFooter;
+  SubHeader: typeof PlaygroundSubHeader;
 };
 
 const BrowserPlayground = ((props: PlaygroundProps) => {
@@ -244,5 +281,6 @@ const BrowserPlayground = ((props: PlaygroundProps) => {
 }) as PlaygroundComponent;
 
 BrowserPlayground.Footer = PlaygroundFooter;
+BrowserPlayground.SubHeader = PlaygroundSubHeader;
 
 export default BrowserPlayground;

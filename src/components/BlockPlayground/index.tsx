@@ -142,7 +142,7 @@ export default function BlockPlayground(
       height={props.height}
       disableStackblitz
     >
-      <Playground.Footer>
+      <Playground.SubHeader>
         <button
           className={styles['copy-cli-command']}
           onClick={() => {
@@ -163,9 +163,14 @@ export default function BlockPlayground(
           }}
         >
           <IxIcon name={isCopied ? iconCheck : iconCopy} size="16" />
-          npx @siemens/ix-cli@latest add {props.name}
+          <span className={styles['cli-text-container']}>
+            <span className={styles['cli-text-short']}>Add to your project</span>
+            <span className={styles['cli-text-full']}>
+              npx @siemens/ix-cli@latest add {props.name}
+            </span>
+          </span>
         </button>
-      </Playground.Footer>
+      </Playground.SubHeader>
     </Playground>
   );
 }
