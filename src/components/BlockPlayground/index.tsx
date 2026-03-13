@@ -174,7 +174,7 @@ export default function BlockPlayground(
             <IxIcon name={isCopied ? iconCheck : iconCopy} size="16" />
             <span className={styles['cli-text-container']}>
               <span className={styles['cli-text-short']}>
-                npx ix-cli add {props.name}
+                npx @siemens/ix-cli@latest add {props.name}
               </span>
             </span>
           </button>
