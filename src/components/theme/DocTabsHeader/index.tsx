@@ -4,9 +4,16 @@
 import type { PropSidebarItemLink } from '@docusaurus/plugin-content-docs';
 import { useHistory, useLocation } from '@docusaurus/router';
 import { useScrollPosition } from '@docusaurus/theme-common/internal';
-import { DeprecatedTag, FormReady, RedirectTag } from '@site/src/components/UI/Tags';
+import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
+import { IxTooltip } from '@siemens/ix-react';
+import {
+  DeprecatedTag,
+  FormReady,
+  RedirectTag,
+} from '@site/src/components/UI/Tags';
 import clsx from 'clsx';
-import { useCallback, useState } from 'react';
+import { useCallback, useMemo, useState } from 'react';
+import AskAI from '../AskAI';
 import styles from './styles.module.css';
 
 function Tabs({ children }) {
@@ -56,20 +63,38 @@ export default function DocTabsHeader(
   }>
 ) {
   const { description, tabs, title, frontMatter, id } = props;
+  const { siteConfig } = useDocusaurusContext();
+
+  const prompt = useMemo(
+    () => `Use web browsing to access links and information:
+
+${tabs.map((tab) => `- ${siteConfig.url}${tab.href}.md`).join('\n')}
+
+If you need additional information you find a overview of all content here: https://ix.siemens.io/llms.txt
+
+I want to ask some questions`,
+    [tabs, siteConfig.url]
+  );
 
   return (
     <>
-      <h1 className={styles.sticky_h1}>
-        {title}
+      <div className={styles.sticky_h1}>
+        <h1>
+          {title}
 
-        <a
-          href={`#${id.replaceAll('/', '-')}`}
-          className="hash-link"
-          aria-label={title}
-          title={title}
-        ></a>
-      </h1>
+          <a
+            href={`#${id.replaceAll('/', '-')}`}
+            className="hash-link"
+            aria-label={title}
+            title={title}
+          ></a>
+        </h1>
+        <AskAI id="copy-prompt" prompt={prompt} />
+      </div>
 
+      <IxTooltip for="#copy-prompt">
+        Copy a prompt to ask an AI assistant about this page.
+      </IxTooltip>
       {description && (
         <div className={clsx(styles.componentHeroHeader, 'HeroHeader')}>
           <div className={styles.Tags}>
@@ -97,7 +122,7 @@ export default function DocTabsHeader(
                   }
                 }
               )}
-              {frontMatter.formReady && (<FormReady />)}
+            {frontMatter.formReady && <FormReady />}
           </div>
           <p className={styles.Description}>{description}</p>
         </div>
