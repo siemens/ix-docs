@@ -25,3 +25,7 @@ Every block is:
 - **Blocks sit in the middle**: they are ready-made compositions of multiple components that demonstrate the implementation.
 
 Patterns guide the intent. Blocks show how to build it. Components are the raw materials.
+
+## What is Siemens ix-cli?
+
+The Siemens ix-cli is a command-line interface tool that allows you to easily add iX blocks to your project. With a simple command, you can quickly integrate pre-built blocks into your application, saving you time and effort in development.

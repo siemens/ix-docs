@@ -47,13 +47,15 @@ function detectLanguage(fileName: string) {
 }
 
 export default function BlockPlayground(
-  props: Readonly<{ name: string; height: string }>,
+  props: Readonly<{ name: string; height: string }>
 ) {
   const [isCopied, setIsCopied] = useState(false);
   const copiedTimeoutRef = useRef<ReturnType<typeof setTimeout> | null>(null);
   const { data, isLoading, error } = useBlockSource(props.name);
 
-  const cliUrl = useBaseUrl(`docs/examples/blocks/cli`);
+  const cliUrl = useBaseUrl(
+    `docs/examples/blocks/overview#what-is-siemens-ix-cli`
+  );
 
   useEffect(() => {
     return () => {
@@ -69,7 +71,7 @@ export default function BlockPlayground(
     }
 
     return mapRegistrySourcePathToPlayground(
-      data.sourcePath,
+      data.sourcePath
     ) as CodePreviewFiles;
   }, [data]);
 
@@ -98,12 +100,12 @@ export default function BlockPlayground(
 
             return fileAccumulator;
           },
-          {} as Record<string, FC>,
+          {} as Record<string, FC>
         );
 
         return accumulator;
       },
-      {} as SourceFiles,
+      {} as SourceFiles
     );
   }, [data]);
 
@@ -154,7 +156,7 @@ export default function BlockPlayground(
             className={styles['copy-cli-command']}
             onClick={() => {
               navigator.clipboard.writeText(
-                `npx @siemens/ix-cli@latest add ${props.name}`,
+                `npx @siemens/ix-cli@latest add ${props.name}`
               );
 
               if (copiedTimeoutRef.current) {

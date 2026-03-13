@@ -71,6 +71,9 @@ export const figmaPlugin = (config: FigmaConfig) => {
 
   const transformer = async (ast: any, vFile: any) => {
     visit(ast, 'image', (node: any) => {
+      if (!node.url.includes('figma.com')) {
+        return;
+      }
       const originalUrl = node.url;
 
       const { fileName, nodeId } = getFigmaMeta(node);
