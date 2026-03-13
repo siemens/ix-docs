@@ -14,7 +14,7 @@ table tbody td {
 }
 table + p > img {
   display: block;
-  margin-top: 1.5rem;
+  margin-top: 2.5rem;
 }
 `}</style>
 
