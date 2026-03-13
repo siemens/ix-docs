@@ -76,4 +76,3 @@ Use sentence casing within the description with minimal punctuation and formatti
 ## Related
 
 * [Error messages](../messaging/error-messages.mdx)
-* [Voice and tone](#)
