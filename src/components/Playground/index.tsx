@@ -8,7 +8,7 @@ import { FrameworkTypes } from '@site/src/hooks/use-framework';
 import { usePlaygroundThemeVariant } from '@site/src/hooks/use-playground-theme';
 import CodeBlock from '@theme/CodeBlock';
 import clsx from 'clsx';
-import React, { useEffect, useMemo, useState } from 'react';
+import React, { useContext, useEffect, useMemo, useState } from 'react';
 import CodePreview, { CodePreviewFiles, SourceFiles } from '../CodePreview';
 import FrameworkSelection from '../UI/FrameworkSelection';
 import OpenStackblitz from '../UI/OpenStackblitz';
@@ -52,6 +52,7 @@ function PreviewActions(
     onChangeTheme: (theme: string) => void;
   }>,
 ) {
+  const ctx = useContext(ThemeContext);
   return (
     <>
       <a
@@ -66,10 +67,12 @@ function PreviewActions(
           name: iconOpenExternal,
           size: '16',
         })}
-        <span className="ButtonText">Full preview</span>
+        {!ctx.hideActionBarText && (
+          <span className="ButtonText">Full preview</span>
+        )}
       </a>
-      <ThemeSelection onThemeChange={props.onChangeTheme} />
       <ThemeVariantToggle />
+      <ThemeSelection onThemeChange={props.onChangeTheme} />
     </>
   );
 }
@@ -111,6 +114,7 @@ export type PlaygroundProps = Readonly<{
   previewUrl?: string;
   files: CodePreviewFiles;
   source: SourceFiles;
+  hideActionBarText?: boolean;
   disableStackblitz?: boolean;
   height?: string;
   noPreview?: boolean;
@@ -196,7 +200,13 @@ function Playground(props: PlaygroundProps) {
   }, [props.children]);
 
   return (
-    <ThemeContext.Provider value={{ currentTheme: theme, isDarkColor: isDark }}>
+    <ThemeContext.Provider
+      value={{
+        currentTheme: theme,
+        isDarkColor: isDark,
+        hideActionBarText: props.hideActionBarText,
+      }}
+    >
       <ColorContainerFix>
         <div className={styles.playground}>
           <div className={styles.toolbar}>
@@ -242,10 +252,11 @@ function Playground(props: PlaygroundProps) {
                     files={props.files[framework]}
                   />
                 )}
+
+                {slots.subHeader}
               </div>
             </div>
           </div>
-          {slots.subHeader}
           <div
             className={clsx(styles.preview, {
               [styles.code]: isPreview,

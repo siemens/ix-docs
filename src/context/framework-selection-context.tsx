@@ -18,11 +18,11 @@ export const DEFAULT_FRAMEWORK_SELECTION: FrameworkTypes[] = [
 ];
 
 const FrameworkSelectionContext = createContext<FrameworkTypes[]>(
-  DEFAULT_FRAMEWORK_SELECTION
+  DEFAULT_FRAMEWORK_SELECTION,
 );
 
 export function FrameworkSelectionProvider(
-  props: PropsWithChildren<{ frameworks: FrameworkTypes[] }>
+  props: PropsWithChildren<{ frameworks: FrameworkTypes[] }>,
 ) {
   const frameworks =
     props.frameworks.length > 0

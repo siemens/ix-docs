@@ -15,8 +15,9 @@ import {
   useFramework,
 } from '@site/src/hooks/use-framework';
 import { useAvailableFrameworkSelection } from '@site/src/context/framework-selection-context';
-import React, { useEffect, useState } from 'react';
+import React, { useContext, useEffect, useState } from 'react';
 import Button from '../Button';
+import { ThemeContext } from '../../ContainerFix';
 
 export default function (props: {
   onFrameworkChange?: (framework: FrameworkTypes) => void;
@@ -27,11 +28,13 @@ export default function (props: {
 function FrameworkSelection(
   props: Readonly<{
     onFrameworkChange?: (framework: FrameworkTypes) => void;
-  }>
+  }>,
 ) {
   const availableFrameworks = useAvailableFrameworkSelection();
   const { framework, setFramework } = useFramework();
   const [ref, setRef] = useState<HTMLButtonElement>(null);
+  const ctx = useContext(ThemeContext);
+
   const selectedFramework = availableFrameworks.includes(framework)
     ? framework
     : availableFrameworks[0];
@@ -59,9 +62,11 @@ function FrameworkSelection(
           name: iconCode,
           size: '16',
         })}
-        <span className="ButtonText">
-          {getDisplayNameFrameworkTypes(selectedFramework)}
-        </span>
+        {!ctx.hideActionBarText && (
+          <span className="ButtonText">
+            {getDisplayNameFrameworkTypes(selectedFramework)}
+          </span>
+        )}
         {React.createElement('ix-icon', {
           name: iconChevronDownSmall,
           size: '16',

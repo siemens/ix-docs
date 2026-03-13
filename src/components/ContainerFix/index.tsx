@@ -14,11 +14,13 @@ import {
 export type ThemeContextType = {
   currentTheme: string;
   isDarkColor: boolean;
+  hideActionBarText: boolean;
 };
 
 export const ThemeContext = createContext<ThemeContextType>({
   currentTheme: 'brand',
   isDarkColor: true,
+  hideActionBarText: false,
 });
 
 export const ColorContainerFix = forwardRef<
@@ -41,7 +43,7 @@ export const ColorContainerFix = forwardRef<
     themeContainer.setAttribute('data-ix-theme', theme);
     themeContainer.setAttribute(
       'data-ix-color-schema',
-      isDarkColor ? 'dark' : 'light'
+      isDarkColor ? 'dark' : 'light',
     );
   }, [theme, isDarkColor]);
 

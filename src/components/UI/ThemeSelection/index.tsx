@@ -14,9 +14,10 @@ import {
 } from '@siemens/ix-icons/icons';
 import { IxDropdown, IxDropdownItem } from '@siemens/ix-react';
 import { usePlaygroundTheme } from '@site/src/hooks/use-playground-theme';
-import React, { useEffect, useState } from 'react';
+import React, { useContext, useEffect, useState } from 'react';
 import Button from '../Button';
 import styles from './ThemeSelection.module.css';
+import { ThemeContext } from '../../ContainerFix';
 
 const brandTheme = 'brand';
 const classicTheme = 'classic';
@@ -57,6 +58,7 @@ export function ThemeSelection(props: Readonly<ThemeSelectionProps>) {
     props.onThemeChange?.(activeTheme);
   }, [activeTheme]);
 
+  const ctx = useContext(ThemeContext);
   return (
     <>
       <Button ref={setRef} className="dropdown-button">
@@ -64,7 +66,9 @@ export function ThemeSelection(props: Readonly<ThemeSelectionProps>) {
           name: iconDrawingDocument,
           size: '16',
         })}
-        <span className="ButtonText">{displayTheme}</span>
+        {!ctx.hideActionBarText && (
+          <span className={styles.buttonText}>{displayTheme}</span>
+        )}
         {React.createElement('ix-icon', {
           name: iconChevronDownSmall,
           size: '16',

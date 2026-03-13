@@ -93,8 +93,12 @@
 }
 
 .subHeader {
-  position: absolute;
-  z-index: 1;
-  top: 3.5rem;
-  right: 1rem;
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: flex-end;
+  /* width: 11.5rem;
+  flex: 0 0 11.5rem; */
+  margin-left: 0.5rem;
+  overflow: visible;
 }

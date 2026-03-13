@@ -3,7 +3,6 @@
  */
 .copy-cli-command {
   display: flex;
-  justify-self: flex-end;
   height: 1.5rem;
   padding: 0.25rem 0.5rem;
   align-items: center;
@@ -12,56 +11,15 @@
   background: var(--theme-color-primary);
   border: none;
   color: var(--theme-color-inv-std-text);
+  position: relative;
+  overflow: visible;
+  width: max-content;
 }
 
 .cli-text-container {
   display: flex;
   align-items: center;
   overflow: hidden;
-}
-
-.cli-text-short {
-  display: inline-block;
-  white-space: nowrap;
-  overflow: hidden;
-  max-width: 16rem;
-  opacity: 1;
-  transform: translateY(0);
-  transition:
-    max-width 220ms ease,
-    opacity 180ms ease,
-    transform 180ms ease;
-  transition-delay: 150ms;
-}
-
-.cli-text-full {
-  display: inline-block;
-  white-space: nowrap;
-  overflow: hidden;
-  max-width: 0;
-  opacity: 0;
-  transform: translateY(2px);
-  transition:
-    max-width 220ms ease,
-    opacity 180ms ease,
-    transform 180ms ease;
-  transition-delay: 250ms;
-}
-
-.copy-cli-command:hover .cli-text-short,
-.copy-cli-command:focus-visible .cli-text-short {
-  transition-delay: 0ms;
-  max-width: 0;
-  opacity: 0;
-  transform: translateY(-2px);
-}
-
-.copy-cli-command:hover .cli-text-full,
-.copy-cli-command:focus-visible .cli-text-full {
-  transition-delay: 0ms;
-  max-width: 32rem;
-  opacity: 1;
-  transform: translateY(0);
 }
 
 .copy-cli-command:hover {

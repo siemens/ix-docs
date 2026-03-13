@@ -8,20 +8,22 @@
  */
 
 import { iconMoon, iconSun } from '@siemens/ix-icons/icons';
-import React from 'react';
+import React, { useContext } from 'react';
 import Button from '../Button';
 import { usePlaygroundThemeVariant } from '@site/src/hooks/use-playground-theme';
 import BrowserOnly from '@docusaurus/BrowserOnly';
+import { ThemeContext } from '../../ContainerFix';
 
 function ThemeVariantToggle() {
   const { playgroundThemeVariant, setPlaygroundThemeVariant } =
     usePlaygroundThemeVariant();
+  const ctx = useContext(ThemeContext);
 
   return (
     <Button
       onClick={() => {
         setPlaygroundThemeVariant(
-          playgroundThemeVariant === 'light' ? 'dark' : 'light'
+          playgroundThemeVariant === 'light' ? 'dark' : 'light',
         );
       }}
     >
@@ -29,9 +31,11 @@ function ThemeVariantToggle() {
         name: playgroundThemeVariant === 'light' ? iconSun : iconMoon,
         size: '16',
       })}
-      <span className="ButtonText">
-        {playgroundThemeVariant === 'light' ? 'Light' : 'Dark'}
-      </span>
+      {!ctx.hideActionBarText && (
+        <span className="ButtonText">
+          {playgroundThemeVariant === 'light' ? 'Light' : 'Dark'}
+        </span>
+      )}
     </Button>
   );
 }

@@ -13,8 +13,10 @@ import CodeBlock from '@theme/CodeBlock';
 import { useEffect, useMemo, useRef, useState, type FC } from 'react';
 import { CodePreviewFiles, SourceFiles } from '../CodePreview';
 import styles from './block.module.css';
-import { IxIcon } from '@siemens/ix-react';
+import { IxIcon, IxTooltip } from '@siemens/ix-react';
 import { iconCheck, iconCopy } from '@siemens/ix-icons/icons';
+import Link from '@docusaurus/Link';
+import useBaseUrl from '@docusaurus/useBaseUrl';
 
 function detectLanguage(fileName: string) {
   if (fileName.endsWith('.tsx') || fileName.endsWith('.ts')) {
@@ -50,6 +52,8 @@ export default function BlockPlayground(
   const [isCopied, setIsCopied] = useState(false);
   const copiedTimeoutRef = useRef<ReturnType<typeof setTimeout> | null>(null);
   const { data, isLoading, error } = useBlockSource(props.name);
+
+  const cliUrl = useBaseUrl(`docs/examples/blocks/cli`);
 
   useEffect(() => {
     return () => {
@@ -134,43 +138,51 @@ export default function BlockPlayground(
   }, [fallbackMessage, source]);
 
   return (
-    <Playground
-      name={props.name}
-      source={fallbackSource}
-      files={fallbackFiles}
-      previewUrl={data?.previewUrl}
-      height={props.height}
-      disableStackblitz
-    >
-      <Playground.SubHeader>
-        <button
-          className={styles['copy-cli-command']}
-          onClick={() => {
-            navigator.clipboard.writeText(
-              `npx @siemens/ix-cli@latest add ${props.name}`,
-            );
+    <>
+      <Playground
+        name={props.name}
+        source={fallbackSource}
+        files={fallbackFiles}
+        previewUrl={data?.previewUrl}
+        height={props.height}
+        disableStackblitz
+        hideActionBarText={true}
+      >
+        <Playground.SubHeader>
+          <button
+            id={`copy-cli-command-${props.name}`}
+            className={styles['copy-cli-command']}
+            onClick={() => {
+              navigator.clipboard.writeText(
+                `npx @siemens/ix-cli@latest add ${props.name}`,
+              );
 
-            if (copiedTimeoutRef.current) {
-              clearTimeout(copiedTimeoutRef.current);
-            }
+              if (copiedTimeoutRef.current) {
+                clearTimeout(copiedTimeoutRef.current);
+              }
 
-            setIsCopied(true);
+              setIsCopied(true);
 
-            copiedTimeoutRef.current = setTimeout(() => {
-              setIsCopied(false);
-              copiedTimeoutRef.current = null;
-            }, 3000);
-          }}
-        >
-          <IxIcon name={isCopied ? iconCheck : iconCopy} size="16" />
-          <span className={styles['cli-text-container']}>
-            <span className={styles['cli-text-short']}>Add to your project</span>
-            <span className={styles['cli-text-full']}>
-              npx @siemens/ix-cli@latest add {props.name}
+              copiedTimeoutRef.current = setTimeout(() => {
+                setIsCopied(false);
+                copiedTimeoutRef.current = null;
+              }, 3000);
+            }}
+          >
+            <IxIcon name={isCopied ? iconCheck : iconCopy} size="16" />
+            <span className={styles['cli-text-container']}>
+              <span className={styles['cli-text-short']}>
+                npx ix-cli add {props.name}
+              </span>
             </span>
-          </span>
-        </button>
-      </Playground.SubHeader>
-    </Playground>
+          </button>
+          <IxTooltip for={`#copy-cli-command-${props.name}`} interactive>
+            Copy the <Link to={cliUrl}>ix-cli</Link> command to the clipboard.
+            You can use this command to add the block to your project using the{' '}
+            <Link to={cliUrl}>ix-cli</Link>.
+          </IxTooltip>
+        </Playground.SubHeader>
+      </Playground>
+    </>
   );
 }
