@@ -12,10 +12,6 @@ description: 'UX writing principles guide the creation of guidelines and help wr
 table tbody td {
   vertical-align: top;
 }
-table + p > img {
-  display: block;
-  margin-top: 2.5rem;
-}
 `}</style>
 
 ![Trust](https://www.figma.com/design/wEptRgAezDU1z80Cn3eZ0o/iX-Documentation-illustrations?node-id=7675-10143&t=XEKsbqtBj1TvyDOK-4)
