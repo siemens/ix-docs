@@ -16,7 +16,7 @@ We follow this three-step approach when creating our updates. They explain what�
 
 | Step | Purpose | Content | Structure and examples |
 | --- | --- | --- | --- |
-| 1. | Heading | Clearly state aim and purpose for the dialog, such as the theme, date, feature or version. | **Heading** What’s new + topic:<br/>What’s new in Version 2.5<br/>What’s new in October<br/>What’s new for 2025<br/>What’s new in dashboards |
+| 1. | Heading | Clearly state aim and purpose for the dialog, such as the theme, date, feature or version. | **Heading**: What’s new + topic:<br/>What’s new in Version 2.5<br/>What’s new in October<br/>What’s new for 2025<br/>What’s new in dashboards |
 | 2. | Description | Provide its purpose and benefits with information about key features. | **Description**: Receive instant notifications for critical events and system updates to stay informed and respond quickly to important changes. |
 | 3. | Action | Provide links or buttons to more detailed information (usually with a verb). | **Action**: Learn more |
 
