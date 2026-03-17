@@ -25,7 +25,7 @@ Use custom models when a task requires immediate attention and the user returns 
     - **Full screen:** Since the modal container covers the whole [application](../application) (including [menu](../application-menu) and [header](../application-header)), use for immersive experiences or multi-step workflows. Note that users have no visual connection to the app which is why we recommend establishing it in the title or content.
 - **Backdrop**: Use a backdrop to focus attention and prevent background interaction.
 - **Animation**: By default, modals fade in. Disable for performance-sensitive contexts.
-- **Is non-blocking**: Use to allow interaction with the background content while the modal is open, e.g. to copy data from the page into the modal. Note that this option does not disable the backdrop, so users can still click on it to close the modal.
+- **Is non-blocking**: Hides the backdrop. Use to allow interaction with the background content while the modal is open, e.g. to copy data from the page into the modal.
 - **Close on backdrop click**: Enable clicking on the backdrop to close modals for informational messages. Disable for critical decisions that require confirmation.
 - **Before dismiss**: Add follow-up actions when users try to close modals, e.g. add a confirmation prompt to avoid unintentional discarding of inputs when closing.
 - **Modal header:**
@@ -47,7 +47,7 @@ Use custom models when a task requires immediate attention and the user returns 
     - The modal height increases with content until reaching screen height, then a scrollbar appears.
     - We recommend implementing a sticky footer when content overflows.
     - Avoid horizontal scrollbars by using a larger modal size and defining adaptive behaviors for different viewports.
-- **Placement:** Horizontally centered, vertically centered or top-aligned.
+- **Placement:** Vertically centered or top-aligned, horizontally centered.
 - **Responsiveness:**
     - Height: Depends on its content except for `full-screen`.
     - Content: Needs to be built responsively to adapt with the container's width.

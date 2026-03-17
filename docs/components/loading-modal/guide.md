@@ -21,7 +21,7 @@ Loading modals communicate that the system is performing an operation that takes
 
 - **Interaction:** Loading modals open and close automatically to prevent user interaction.
 - **Overflow:** If the message exceeds the available width, it breaks into multiple lines.
-- **Placement:** Horizontally centered, vertically centered or top-aligned.
+- **Placement:** Vertically centered or top-aligned, horizontally centered.
 - **Responsiveness:** Loading modals adjust their width depending on the screen width.
 
 ## States
