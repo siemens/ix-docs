@@ -30,19 +30,13 @@ Learn the guidelines for using proper nouns correctly in your text. This subchap
 
 Discover how we address formatting themes such as writing addresses, dates, measurements and units, names and titles, and money and currency. This section helps you address common formatting wording issues to enhance overall user efficiency. [Read more]( ./formatting/addresses.mdx)
 
+## Menu functions and UI labels
 
-## Main menu functions
-
-Explore best practices for writing main menu functions to ensure intuitive navigation. This section provides tips on how to label and organize menu items so users can easily find what they need. [Read more](./main-menu-functions)
+Explore best practices for writing common menu functions, such as logging in and welcoming and onboarding users. This section also includes how to label common UI labels, such as buttons, so users can easily navigate workflows.[Read more](#)
 
 ## Messages
 
 Learn when and how to write all types of messages including warnings, errors, infotips, tooltips and notifications that are helpful and user-friendly. This subchapter provides strategies for communicating issues in a way that guides users towards solutions. [Read more](./messaging/messages-overview.md) 
-
-## Frequent app functions
-
-Get tips for naming common app functions clearly and effectively. This subchapter focuses on how to describe frequent actions and features in a way that users can quickly understand and use. [Read more](./frequent-app-functions)
-
 
 ## Dialogs and buttons
 
