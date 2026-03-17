@@ -1,5 +1,5 @@
 ---
-sidebar_position: 5
+sidebar_position: 2.1
 sidebar_label: Error pages
 title: Error pages
 doc-type: 'banner'
@@ -77,4 +77,4 @@ Use sentence casing within the description with minimal punctuation and formatti
 
 ## Related
 
-* [Error messages](../messaging/error-messages.mdx)
+* [Error messages](./error-messages.mdx)

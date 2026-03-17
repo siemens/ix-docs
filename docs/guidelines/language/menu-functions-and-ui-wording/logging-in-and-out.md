@@ -182,7 +182,7 @@ Use “email” or “email address” as both are acceptable.
 </div>
 </div>
 
-Use * consistently to indicate [required fields](../../../../components/forms-field/code.mdx#required-indicator) depending on space limitations.
+Use * consistently to indicate [required fields](../../../components/forms-field/code.mdx#required-indicator) depending on space limitations.
 
 <div className="dos-and-donts" markdown>
 <div className="dos" markdown>
