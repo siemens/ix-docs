@@ -32,7 +32,7 @@ Discover how we address formatting themes such as writing addresses, dates, meas
 
 ## Menu functions and UI labels
 
-Explore best practices for writing common menu functions, such as logging in and welcoming and onboarding users. This section also includes how to label common UI labels, such as buttons, so users can easily navigate workflows.[Read more](#)
+Explore best practices for writing common menu functions, e.g. logging in and welcoming and onboarding users. This section also includes how to label common UI labels, e.g. buttons, so users can easily navigate workflows. [Read more](#)
 
 ## Messages
 
