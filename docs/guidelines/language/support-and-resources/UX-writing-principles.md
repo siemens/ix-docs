@@ -9,6 +9,22 @@ description: 'UX writing principles guide the creation of guidelines and help wr
 ---
 
 <style>{`
+table {
+  table-layout: fixed;
+  width: 100%;
+}
+table thead th:nth-child(1),
+table tbody td:nth-child(1) {
+  width: 33%;
+}
+table thead th:nth-child(2),
+table tbody td:nth-child(2) {
+  width: 33%;
+}
+table thead th:nth-child(3),
+table tbody td:nth-child(3) {
+  width: 34%;
+}
 table tbody td {
   vertical-align: top;
 }
