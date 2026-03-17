@@ -1,5 +1,6 @@
 ---
 doc-type: 'tab-item'
+description: 'Usage guide for the ix-dropdown, ix-dropdown-item'
 ---
 # Dropdown - Usage
 

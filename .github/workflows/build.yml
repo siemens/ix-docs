@@ -25,3 +25,12 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           CSC: ${{ secrets.CSC }}
           BRAND_URL: ${{ vars.BRAND_URL }}
+
+      - name: Upload markdown artifacts
+        uses: actions/upload-artifact@v4
+        with:
+          name: build-markdown-${{ github.run_id }}
+          path: |
+            build/docs/*.md
+            build/docs/**/*.md
+          if-no-files-found: error
