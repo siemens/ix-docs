@@ -1,5 +1,6 @@
 ---
 doc-type: 'tab-item'
+description: 'Usage guide for the ix-icon-toggle-button, ix-toggle-button'
 ---
 # Toggle button - Usage
 
