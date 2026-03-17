@@ -14,7 +14,7 @@ description: 'Well written error pages transform a potentially frustrating user 
 
 We follow these templates when creating our main error pages. Although some of the call-to-action examples are use case-dependent and not always technically feasible, aim for ensuring users can move forward from the error page.
 
-| HTTP code | Heading | Description | Call-to-actions (CTA) |
+| HTTP code | Heading | Description | Actions |
 |-----------|-------|-------------|----------------------|
 | 400 | Bad request | Failed to process the request. Check your request and try again. | Go back<br/>Try again<br/>Open homepage |
 | 401 | Unauthorized | Authorization is required to access this page. Check your credentials and try again. | Log in<br/>Go back<br/>Try again |
@@ -22,6 +22,8 @@ We follow these templates when creating our main error pages. Although some of t
 | | | Use case 2: You do not have access to this page. Request access here or return to homepage. | Request access<br/>Go back<br/>Open homepage |
 | 404 | Not found | We’re not able to find that page. It may have been deleted or moved. | Report issue<br/>Open homepage<br/>Search app |
 | 500 | Internal server error | This page is not available right now. Try refreshing the page or try again later. | Reload<br/>Go back<br/>Open homepage |
+
+## General rules 
 
 Use the official code and definition so users can search for code terms and information themselves.
 

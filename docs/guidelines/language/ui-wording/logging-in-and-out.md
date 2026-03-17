@@ -106,12 +106,6 @@ Clearly explain password policy to avoid frustration or user friction.
 
 <div className="dos-and-donts" markdown>
 <div className="dos" markdown>
-- At least 12 characters<br/>
-At least 1 uppercase letter (A-Z)<br/>
-At least 1 number<br/>
-At least 1 special character (!@#$%^&*)
-</div>
-<div className="dos" markdown>
 - Minimum 12 characters<br/>
 Minimum 1 uppercase letter (A-Z)<br/>
 Minimum 1 number<br/>
@@ -188,12 +182,11 @@ Use “email” or “email address” as both are acceptable.
 </div>
 </div>
 
-Use * or “(required)” consistently to indicate mandatory fields depending on space limitations.
+Use * consistently to indicate [required fields](docs/components/forms-field/code#required-indicator) depending on space limitations.
 
 <div className="dos-and-donts" markdown>
 <div className="dos" markdown>
 - First name*
-- First name (required)
 </div>
 </div>
 
@@ -278,3 +271,4 @@ Use specific authentication terms and use them consistently within workflows to 
 ## Related
 
 * [Onboarding](./onboarding.md)
+* [Names and titles](../formatting/names-titles.mdx)
