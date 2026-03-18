@@ -75,7 +75,7 @@ Teams submit content proposals to the UX writing team. Proposals are reviewed an
 
 ### Quality standards
 
-All product microcopy must follow the style guide and use approved terminology. Content reviews are conducted during design critiques and before release to ensure compliance.
+All product microcopy must follow the style guide and use approved terminology. Teams conduct content reviews during design critiques and before release to ensure compliance.
 
 ### Maintenance
 
