@@ -2,7 +2,6 @@
 sidebar_position: 3
 sidebar_label: UX writer role
 title: UX writer role
-title: UX Writer role
 doc-type: 'banner'
 component-tabs: ['']
 no_single_tab: true
@@ -13,15 +12,19 @@ description: UX writers shape the language that bring our digital products to li
 
 ## UX writer role
 
-UX writers strengthen usability, reduce friction and ensure every interaction across our software feels supportive and human-centered.<br/>
+UX writers strengthen usability, reduce friction and ensure every interaction across our software feels supportive and human-centered.
+
 They shape in product language that supports a clear, seamless and intuitive user experience.
-They create user interface microcopy such as buttons, labels, tooltips, warnings, onboarding and chatbot messages to guide users through workflows.<br/>
+They create user interface microcopy such as buttons, labels, tooltips, warnings, onboarding and chatbot messages to guide users through workflows.
+
 They see UX writing as focused on interactions, are part of the design team and coordinate with multiple stakeholders.
 
 ## UX writing is designing
 
-UX writing is an integral part of design, not an afterthought. Writers participate throughout the design process, from early research to final implementation, shaping how users understand and interact with the product.<br/>
-Writers collaborate closely with UX/UI designers, researchers and product teams to ensure wording supports interactions and functionality. This partnership extends to developers, who help implement terminology and microcopy accurately.<br/>
+UX writing is an integral part of design, not an afterthought. Writers participate throughout the design process, from early research to final implementation, shaping how users understand and interact with the product.
+
+Writers collaborate closely with UX/UI designers, researchers and product teams to ensure wording supports interactions and functionality. This partnership extends to developers, who help implement terminology and microcopy accurately.
+
 User research provides the foundation: understanding user terminology, mental models and pain points ensures language matches expectations. Through ongoing iteration, validated by usability testing, analytics and qualitative feedback, UX writers continuously refine the effectiveness of their wording.
 
 ## UX writing scope and collaboration
@@ -52,7 +55,7 @@ Support writers to understand the technical processes behind the software to “
 
 Design systems provide components, shared patterns and guidelines for consistent product language. They are used when writing microcopy, validate terminology before implementation and apply established patterns for consistency.
 
-### What's included
+### What’s included
 
 * Voice and tone framework
 * Component guidelines (menus, dialogs, buttons, warnings, notifications)
@@ -88,10 +91,12 @@ New UX writers should complete an onboarding program covering the style guide, d
 
 ## UX writing in agile projects
 
-Integrate UX writing throughout all Scrum phases to allow product language to evolve with the design.<br/>
+Integrate UX writing throughout all Scrum phases to allow product language to evolve with the design.
+
 * Sprint planning: Identify content needs and terminology early in ideation
 * Daily standups: Stay aligned on interaction changes that affect microcopy
 * Refinement: Collaborate with designers and product owners on wording decisions
 * Development: Ensure accurate implementation and consistency
-* Retrospectives: Refine the writing process based on team feedback<br/>
+* Retrospectives: Refine the writing process based on team feedback
+
 Continuous collaboration prevents terminology gaps, reduces rework and improves clarity throughout the product.
