@@ -275,4 +275,5 @@ const Home: React.FC = () => {
     </BrowserOnly>
   );
 };
+
 export default Home;
