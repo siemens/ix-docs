@@ -9,7 +9,6 @@ on:
 
 jobs:
   validate-env:
-    needs: build
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
@@ -23,6 +22,7 @@ jobs:
           fi
 
   build:
+    needs: validate-env
     runs-on: ubuntu-latest
     permissions:
       contents: read
