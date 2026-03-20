@@ -8,6 +8,16 @@ import versionDeployment from './version-deployment.json' with { type: 'json ' }
 import llmstxtPostbuildPlugin from './plugins/llmstxt-postbuild/plugin';
 
 dotenv();
+dotenv({
+  path: path.join(__dirname, '.env.production'),
+});
+
+const deploymentType = process.env.DOCS_DEPLOYMENT_TYPE || 'docs';
+
+if (deploymentType === 'storybook') {
+  console.log('Using Storybook deployment configuration');
+  process.exit(0);
+}
 
 function getAnnouncementBarConfig() {
   const latestVersion = versionDeployment.versions.find(

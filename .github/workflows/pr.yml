@@ -12,7 +12,33 @@ concurrency:
   cancel-in-progress: true
 
 jobs:
+  validate-env:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Fail if storybook deployment type is configured
+        run: |
+          matches="$(grep -R --include='.env*' -nE '^[[:space:]]*DOCS_DEPLOYMENT_TYPE[[:space:]]*=[[:space:]]*"storybook"[[:space:]]*$' . || true)"
+
+          if [ -n "$matches" ]; then
+            while IFS=: read -r file line _; do
+              echo "::error file=$file,line=$line,title=Invalid DOCS_DEPLOYMENT_TYPE::Remove DOCS_DEPLOYMENT_TYPE=\"storybook\" from committed .env files for this pipeline."
+            done <<< "$matches"
+
+            {
+              echo "### Invalid environment configuration"
+              echo ""
+              echo "Found committed .env entries setting DOCS_DEPLOYMENT_TYPE=\"storybook\"."
+              echo "Remove those entries before merging this pull request."
+            } >> "$GITHUB_STEP_SUMMARY"
+
+            exit 1
+          fi
+
   build:
+    needs: validate-env
     runs-on: ubuntu-latest
     permissions:
       contents: read

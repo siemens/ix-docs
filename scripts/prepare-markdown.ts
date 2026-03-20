@@ -32,20 +32,14 @@ dotenv({
 const __temp = path.join(os.tmpdir(), 'ix-docs');
 const __promptDefaults = path.join(__temp, 'defaults.json');
 
+const __build = path.join(__dirname, 'build');
+const __storybookStatic = path.join(__dirname, 'static', 'storybook-static');
+
 type BranchConfig = {
   branch: string;
   branchType: 'main' | 'pull request' | (string & {});
   prNumber: string;
 };
-
-async function getDefaultFile() {
-  if (!(await fs.exists(__promptDefaults))) {
-    return {};
-  }
-
-  const defaults = JSON.parse(await fs.readFile(__promptDefaults, 'utf8'));
-  return defaults;
-}
 
 async function getDefaults(): Promise<BranchConfig> {
   let defaults: BranchConfig = {
@@ -62,7 +56,7 @@ async function getDefaults(): Promise<BranchConfig> {
     )
   ) {
     throw new Error(
-      'DOCS_BRANCH, DOCS_BRANCH_TYPE and DOCS_PR_NUMBER environment variables are required in CI.',
+      'DOCS_BRANCH, DOCS_BRANCH_TYPE and DOCS_PR_NUMBER environment variables are required in CI.'
     );
   }
 
@@ -88,10 +82,27 @@ async function main() {
   console.log(`Branch Type: ${defaults.branchType}`);
   console.log(`PR Number: ${defaults.prNumber}`);
 
-  await copyTheme();
-
   const branch = getBranch(defaults);
   await downloadLatestArtifact(branch);
+
+  if (process.env.DOCS_DEPLOYMENT_TYPE === 'storybook') {
+    await copyStorybookBuild();
+    return;
+  }
+  await copyTheme();
+}
+
+async function copyStorybookBuild() {
+  if (!fs.existsSync(__storybookStatic)) {
+    console.error(
+      `Cannot copy Storybook build. Source folder not found: ${__storybookStatic}`
+    );
+    process.exit(1);
+  }
+
+  await fs.remove(__build);
+  await fs.copy(__storybookStatic, __build);
+  console.log(`Copied Storybook build to ${__build}`);
 }
 
 function getBranch(config: BranchConfig) {
@@ -160,7 +171,7 @@ async function downloadLatestArtifact(branch: string) {
     .flatMap((run) => run.data.workflow_runs)
     .sort(
       (a, b) =>
-        new Date(b.created_at).getTime() - new Date(a.created_at).getTime(),
+        new Date(b.created_at).getTime() - new Date(a.created_at).getTime()
     );
 
   if (
@@ -173,7 +184,7 @@ async function downloadLatestArtifact(branch: string) {
     throw new Error(message);
   }
   const runId = runs.filter(
-    (run) => run.name === 'Build' || run.name === 'Pull Request',
+    (run) => run.name === 'Build' || run.name === 'Pull Request'
   )[0].id;
 
   // Get artifacts for the run
@@ -189,7 +200,7 @@ async function downloadLatestArtifact(branch: string) {
   }
 
   const artifact = artifactsData.artifacts.find((artifact) =>
-    artifact.name.startsWith('documentation-'),
+    artifact.name.startsWith('documentation-')
   );
 
   if (!artifact) {
@@ -198,7 +209,7 @@ async function downloadLatestArtifact(branch: string) {
 
   console.log(
     `Downloading artifact: ${artifact.name} (ID: ${artifact.id})`,
-    artifact,
+    artifact
   );
 
   // Download the artifact zip
