@@ -8,6 +8,20 @@ on:
   workflow_dispatch:
 
 jobs:
+  validate-env:
+    needs: build
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Fail if storybook deployment type is configured
+        run: |
+          if grep -R --include='.env*' -nE '^[[:space:]]*DOCS_DEPLOYMENT_TYPE[[:space:]]*=[[:space:]]*"storybook"[[:space:]]*$' .; then
+            echo "DOCS_DEPLOYMENT_TYPE=storybook must not be committed in .env files for this pipeline." >&2
+            exit 1
+          fi
+
   build:
     runs-on: ubuntu-latest
     permissions:

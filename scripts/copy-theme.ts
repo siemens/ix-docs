@@ -21,6 +21,8 @@ dotenv({
 
 const __dirname = path.resolve();
 const __node_modules = path.join(__dirname, 'node_modules');
+const __build = path.join(__dirname, 'build');
+const __storybookStatic = path.join(__dirname, 'static', 'storybook-static');
 
 const __docs = path.join(__dirname, 'docs');
 const __changelog = path.join(__docs, 'home', 'releases', 'changelog.md');
@@ -151,7 +153,25 @@ async function generateChangelog() {
   await fs.writeFile(__changelog, changelog);
 }
 
+async function copyStorybookBuild() {
+  if (!fs.existsSync(__storybookStatic)) {
+    console.error(
+      `Cannot copy Storybook build. Source folder not found: ${__storybookStatic}`
+    );
+    process.exit(1);
+  }
+
+  await fs.remove(__build);
+  await fs.copy(__storybookStatic, __build);
+  console.log(`Copied Storybook build to ${__build}`);
+}
+
 export default async function main() {
+  if (process.env.DOCS_DEPLOYMENT_TYPE === 'storybook') {
+    await copyStorybookBuild();
+    return;
+  }
+
   await downloadTheme();
   await generateChangelog();
   copyTheme();

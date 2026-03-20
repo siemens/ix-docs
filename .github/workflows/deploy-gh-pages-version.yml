@@ -24,6 +24,13 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
+      - name: Fail fast if storybook deployment type is configured
+        run: |
+          if grep -R --include='.env*' -nE '^[[:space:]]*DOCS_DEPLOYMENT_TYPE[[:space:]]*=[[:space:]]*"storybook"[[:space:]]*$' .; then
+            echo "DOCS_DEPLOYMENT_TYPE=storybook is not allowed for deploy pipeline." >&2
+            exit 1
+          fi
+
       - uses: ./.github/workflows/actions/turbo
 
       - name: Remove Pull Request Env
