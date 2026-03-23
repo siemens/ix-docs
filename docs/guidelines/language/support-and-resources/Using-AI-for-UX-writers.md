@@ -1,5 +1,5 @@
 ---
-sidebar_position: 1
+sidebar_position: 2
 sidebar_label: Using AI for UX writers
 title: Using AI for UX writers
 doc-type: 'banner'
