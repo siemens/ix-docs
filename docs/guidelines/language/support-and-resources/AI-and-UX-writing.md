@@ -14,7 +14,7 @@ description: "UX writers should use chatbots or agents to rapidly generate and r
 
 When writing to a set of guidelines and with a clear brand voice, creating chatbots to support your writing can give writers more time for user research. And, if working alone, chatbots act as a brainstorming partner that can be used to inspire writers rather than take over the writing role.
 
-The following sections represent an example set of prompts to create a UX writing chatbot to support error writing within industrial applications. The [Error messages](../../../guidelines/language/messaging/) section was used to create the prompts to ensure the output aligned with our own writing and brand guidelines. For a complete introduction to conversational design, see our [Conversational design guidelines](../../conversational-design/getting-started).
+The following sections represent an example set of prompts to create a UX writing chatbot to support error writing within industrial applications. The [Error messages](../messaging/messages-overview) section was used to create the prompts to ensure the output aligned with our own writing and brand guidelines. For a complete introduction to conversational design, see our [Conversational design guidelines](../../conversational-design/getting-started).
 
 ## What you can do with these prompts
 
