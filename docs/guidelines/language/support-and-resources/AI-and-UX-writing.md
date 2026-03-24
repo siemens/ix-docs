@@ -89,7 +89,7 @@ Output:
 
 Use these simple techniques to use your chatbot as a writing partner. Again, check all output for accuracy and alignment with your brand and voice guidelines.
 
-1.	Microcopy brainstorming for elements and components <br/>
+1. Microcopy brainstorming for elements and components
 “Suggest 3 microcopy options for this [password field].”
 
 2.	Tone and voice alignment with your brand <br/>
