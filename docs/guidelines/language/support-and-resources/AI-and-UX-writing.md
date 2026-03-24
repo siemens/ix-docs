@@ -23,7 +23,7 @@ The following sections represent an example set of prompts to create a UX writin
 3. Use these prompts as an example to create more chatbots, e.g. ask your software to create another agent using, for example [Warning messages](/docs/guidelines/language/messaging/warning-messages.mdx) as the input using this template as an example to copy.
 4. Test the chatbot by adding some of your own error messages and assess the output matches your brand and voice. Remember to continue to add prompts and always check for accuracy.
 
-**Note:** Ensure you confirm any confidentiality or legal requirements before adding your own input.
+**Note:** We recommend confirming any confidentiality or legal requirements before adding your own input.
 
 ## Chatbot prompts
 
