@@ -92,7 +92,7 @@ Use these simple techniques to use your chatbot as a writing partner. Again, che
 1. Microcopy brainstorming for elements and components
 “Suggest 3 microcopy options for this [password field].”
 
-2.	Tone and voice alignment with your brand <br/>
+2. Tone and voice alignment with your brand
 “Rewrite this [error message] to sound more open, authentic and engaging.”
 
 3.	Alternatives and variations <br/>
