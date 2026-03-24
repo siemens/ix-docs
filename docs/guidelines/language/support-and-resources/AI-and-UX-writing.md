@@ -98,7 +98,7 @@ Use these simple techniques to use your chatbot as a writing partner. Again, che
 3. Alternatives and variations
 “Give me suitable alternatives to this UI text for an industrial application.”
 
-4.	Localization and simplification <br/>
+4. Localization and simplification
 “Rewrite this text with easier language that’s globally understandable.”
 
 ## Related
