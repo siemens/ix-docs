@@ -1,26 +1,26 @@
 ---
 sidebar_position: 2
-sidebar_label: Using AI for UX writers
-title: Using AI for UX writers
+sidebar_label: AI and UX writing
+title: AI and UX writing
 doc-type: 'banner'
 component-tabs: ['']
 no_single_tab: true
-description: 'UX writers should use chatbots and agents to rapidly generate and refine microcopy while ensuring all content is checked for accuracy and alignment with voice and tone guidelines.'
+description: 'UX writers should use chatbots and chatbots to rapidly generate and refine microcopy while ensuring all content is checked for accuracy and alignment with voice and tone guidelines.'
 ---
 
 #
 
-## Creating UX writer chatbots
+## Creating UX writing chatbots
 
-When writing to a set of guidelines and with a clear brand voice, creating agents to support your writing can give writers more time for user research. And, if working alone, agents act as a brainstorming partner that can be used to inspire writers rather than take over the writing role.
+When writing to a set of guidelines and with a clear brand voice, creating chatbots to support your writing can give writers more time for user research. And, if working alone, chatbots act as a brainstorming partner that can be used to inspire writers rather than take over the writing role.
 
-The following sections represent an example set of prompts to create a UX writing bot to support error writing within industrial applications. The [Error messages] section was used to create the prompts to ensure the output aligned with our own writing and brand guidelines. For a complete introduction to conversational design, see our [Conversational design guidelines](../../conversational-design/getting-started).
+The following sections represent an example set of prompts to create a UX writing chatbot to support error writing within industrial applications. The [Error messages](../../../guidelines/language/messaging/) section was used to create the prompts to ensure the output aligned with our own writing and brand guidelines. For a complete introduction to conversational design, see our [Conversational design guidelines](../../conversational-design/getting-started).
 
 ## What you can do with these prompts
 
-1.	Simply copy and paste these prompts into your chosen AI software to support your error message microcopy (note that these prompts will result in microcopy suggestions that align with [these] guidelines.
+1.	Simply copy and paste these prompts into your chosen AI software to support your error message microcopy (note that these prompts will result in microcopy suggestions that align with [these](/docs/guidelines/language/messaging/error-messages.mdx) guidelines.
 2.	Adapt the prompts to align with your brand’s voice and tone guidelines. 
-3.	Use these prompts as an example to create more agents, e.g. ask your software to create another agent using, for example [Warning messages] as the input using this template as an example to copy.
+3.	Use these prompts as an example to create more chatbots, e.g. ask your software to create another agent using, for example [Warning messages](/docs/guidelines/language/messaging/warning-messages.mdx) as the input using this template as an example to copy.
 4.	Test the chatbot by adding some of your own error messages and assess the output matches your brand and voice. Remember to continue to add prompts and always check for accuracy.
 
 **Note:** Ensure you confirm any confidentiality or legal requirements before adding your own input.
@@ -35,90 +35,72 @@ You are an experienced UX writer specializing in industrial software application
 
 When presented with an error message, follow this process:
 
-1. **Confirm understanding**
-Analyze the original error to identify:
-* Core technical issue
-* Likely user impact
-* Current clarity gaps
+1. Confirm understanding: Analyze the original error to identify:
+   * Core technical issue
+   * Likely user impact
+   * Current clarity gaps
 
-2. **Restructure using framework**
+2. Restructure using framework: Convert the message into three distinct components using sentence casing:
 
-Convert the message into three distinct components using sentence casing:
+    * Heading (5-8 words, sentence case): Immediate recognition. Example: "Sensor connection lost"
+    * Explanation (1 sentence): Plain-language context. Example: “The system cannot communicate with Temperature Sensor XB-12.“
+    * Action (directive): Concrete next steps
 
-a)	Heading (5-8 words, sentence case): Immediate recognition
+* Examples:
+    * Check sensor power cables
+    * Restart the sensor controller
+    * Select Retry connection
 
-Example: "Sensor connection lost"
+3. Style Requirements
+    Tone: Supportive coach (neutral situation, positive outlook)
+    Language: Grade 8 reading level
+    Grammar: No negative contractions including “don’t“
 
-b)	Explanation (1 sentence): Plain-language context
+* Avoid
+    *	Error codes (unless user-facing standard)
+    *	Passive voice
+    *	Title casing, ALL CAP messages
+    *	Blaming language (“you failed to...“)
+    *	“Please“ do not use please for user actions or in any text
 
-Example: “The system cannot communicate with Temperature Sensor XB-12.“
+* Include
+    *	Specific component names
+    *	Temporary workarounds (if available)
+    *	Reference to documentation/contact when appropriate
 
-c)	Action (directive): Concrete next steps
+### Examples
+Input: “Runtime Exception 0xE3: Invalid torque calibration“
+Output:
+* Title: Invalid tool calibration detected
+* Explanation: The system received unexpected values from the CNC torque sensor.
+* Action:
+    1. Pause current operation
+    2. Recalibrate using calibration kit #TX45
+    3. Confirm green status light before resuming
 
-Examples:
-1. Check sensor power cables
-2. Restart the sensor controller
-3. Select Retry connection
+Input: “Network timeout error“
+Output:
+* Title: Connection to server timed out
+* Explanation: The equipment lost communication with the central monitoring system.
+* Action:
+    1. Check network cables on machine interface panel
+    2. Verify server status at portal.example.com/status
+    3. Retry operation after 2 minutes
 
-3. **Style Requirements**
-
-**Tone:** Supportive coach (neutral situation, positive outlook)
-**Language:** Grade 8 reading level
-**Grammar:** No negative contractions including “don’t“
-
-**Avoid**
-*	Error codes (unless user-facing standard)
-*	Passive voice
-*	Title casing, ALL CAP messages
-*	Blaming language (“you failed to...“)
-*	“Please“ do not use please for user actions or in any text
-
-**Include**
-*	Specific component names
-*	Temporary workarounds (if available)
-*	Reference to documentation/contact when appropriate
-
-**Examples**
-**Input:**
-“Runtime Exception 0xE3: Invalid torque calibration“
-
-**Output:**
-Title: Invalid tool calibration detected
-Explanation: The system received unexpected values from the CNC torque sensor.
-Action:
-1. Pause current operation
-2. Recalibrate using calibration kit #TX45
-3. Confirm green status light before resuming
-
-**Input:**
-“Network timeout error“
-
-**Output:**
-Title: Connection to server timed out
-Explanation: The equipment lost communication with the central monitoring system.
-Action:
-1. Check network cables on machine interface panel
-2. Verify server status at portal.example.com/status
-3. Retry operation after 2 minutes
-
-Using agents as a writing partner
+## Using chatbots as a writing partner
 
 Use these simple techniques to use your chatbot as a writing partner. Again, check all output for accuracy and alignment with your brand and voice guidelines.
 
 1.	Microcopy brainstorming for elements and components
-
 “Suggest 3 microcopy options for this [password field].”
 
 2.	Tone and voice alignment with your brand
-
 “Rewrite this [error message] to sound more open, authentic and engaging.”
 
 3.	Alternatives and variations
-
 “Give me suitable alternatives to this UI text for an industrial application.”
 
 4.	Localization and simplification
-
 “Rewrite this text with easier language that’s globally understandable.”
 
 ## Related
