@@ -194,7 +194,7 @@ Basic interactions form the foundation of how users engage with your application
 |-----------|-------------|----------|
 | add vs. create | Add: Insert an item (into a list or collection).<br/><br/>Create: Make a new item from scratch. | Add a sensor to the monitoring list.<br/><br/>Create a new maintenance schedule. |
 | start vs. activate | Start: Begin a process, operation, or activity.<br/><br/>Activate: Enable something so it becomes ready for use or functional. | Start the production line.<br/><br/>Activate the emergency shutdown system. |
-| authenticate vs. authorize | Authenticate: Provide credentials for access.<br/><br/>Authorize: Grant permissions or access. | Authenticate with your employee ID<br/><br/>Authorize access to the control panel. |
+| authenticate vs. authorize | Authenticate: Provide credentials for access.<br/><br/>Authorize: Grant permissions or access. | Authenticate with your employee ID.<br/><br/>Authorize access to the control panel. |
 | browse vs. select vs. choose | Browse: Look through files, folders or items to find something.<br/><br/>Select: Choose an item from a list or collection.<br/><br/>Choose: Not recommended. Use "select" instead. | Browse available equipment models.<br/><br/>Select a machine from the list. |
 | edit vs. configure | Edit: Change or adjust existing content (text, notes, values).<br/><br/>Configure: Adjust settings, options or parameters (behavior, rules, preferences). | Edit maintenance notes.<br/><br/>Configure alarm thresholds. |
 | upload vs. import | Upload: Transfer or store data to the cloud.<br/><br/>Import: Transfer and process data or files into the application. | Upload calibrations certificates.<br/><br/>Import sensor data from CSV. |
