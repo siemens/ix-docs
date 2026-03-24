@@ -5,7 +5,7 @@ title: UI terminology
 doc-type: 'banner'
 component-tabs: ['']
 no_single_tab: true
-description: 'Using well defined terms helps users understand actions, navigate systems confidently and avoid confusion. Establishing shared vocabulary across teams and products streamlines collaboration, reduces misunderstandings and ensures a cohesive user experience.'
+description: 'Using well-defined terms helps users understand actions, navigate systems confidently and avoid confusion. Establishing shared vocabulary across teams and products streamlines collaboration, reduces misunderstandings and ensures a cohesive user experience.'
 ---
 
 #
@@ -212,7 +212,6 @@ Many actions come in natural pairs or opposites. Using the right pairs help user
 
 ### Common opposites
 
-| Common opposites |
 |--------|----------|
 | Add | Remove |
 | Activate | Deactivate |
