@@ -2,10 +2,10 @@
 sidebar_position: 2
 sidebar_label: AI and UX writing
 title: AI and UX writing
-doc-type: 'banner'
-component-tabs: ['']
+doc-type: "banner"
+component-tabs: [""]"
 no_single_tab: true
-description: 'UX writers should use chatbots and chatbots to rapidly generate and refine microcopy while ensuring all content is checked for accuracy and alignment with voice and tone guidelines.'
+description: "UX writers should use chatbots or agents to rapidly generate and refine microcopy while ensuring all content is checked for accuracy and alignment with voice and tone guidelines."
 ---
 
 #
@@ -44,32 +44,28 @@ When presented with an error message, follow this process:
 
     * Heading (5-8 words, sentence case): Immediate recognition. Example: "Sensor connection lost"
     * Explanation (1 sentence): Plain-language context. Example: “The system cannot communicate with Temperature Sensor XB-12.“
-    * Action (directive): Concrete next steps
+    * Action (directive): Concrete next steps. Examples: "Check sensor power cables" "Restart the sensor controller" "Select Retry connection"
 
-* Examples:
-    * Check sensor power cables
-    * Restart the sensor controller
-    * Select Retry connection
+3. Style requirements
+   * Tone: Supportive coach (neutral situation, positive outlook)
+   * Language: Grade 8 reading level
+   * Grammar: No negative contractions including “don’t“
 
-3. Style Requirements
-    Tone: Supportive coach (neutral situation, positive outlook)
-    Language: Grade 8 reading level
-    Grammar: No negative contractions including “don’t“
-
-* Avoid
+4. Avoid
     *	Error codes (unless user-facing standard)
     *	Passive voice
     *	Title casing, ALL CAP messages
     *	Blaming language (“you failed to...“)
     *	“Please“ do not use please for user actions or in any text
 
-* Include
+5. Include
     *	Specific component names
     *	Temporary workarounds (if available)
     *	Reference to documentation/contact when appropriate
 
 ### Examples
-Input: “Runtime Exception 0xE3: Invalid torque calibration“
+Input: “Runtime Exception 0xE3: Invalid torque calibration“ <br/>
+<br/> 
 Output:
 * Title: Invalid tool calibration detected
 * Explanation: The system received unexpected values from the CNC torque sensor.
@@ -78,7 +74,8 @@ Output:
     2. Recalibrate using calibration kit #TX45
     3. Confirm green status light before resuming
 
-Input: “Network timeout error“
+Input: “Network timeout error“<br/>
+<br/>
 Output:
 * Title: Connection to server timed out
 * Explanation: The equipment lost communication with the central monitoring system.
@@ -91,19 +88,19 @@ Output:
 
 Use these simple techniques to use your chatbot as a writing partner. Again, check all output for accuracy and alignment with your brand and voice guidelines.
 
-1.	Microcopy brainstorming for elements and components
+1.	Microcopy brainstorming for elements and components <br/>
 “Suggest 3 microcopy options for this [password field].”
 
-2.	Tone and voice alignment with your brand
+2.	Tone and voice alignment with your brand <br/>
 “Rewrite this [error message] to sound more open, authentic and engaging.”
 
-3.	Alternatives and variations
+3.	Alternatives and variations <br/>
 “Give me suitable alternatives to this UI text for an industrial application.”
 
-4.	Localization and simplification
+4.	Localization and simplification <br/>
 “Rewrite this text with easier language that’s globally understandable.”
 
 ## Related
 
-[Error messages](../messaging/error-messages.mdx)
-[Conversational design guidelines](../../conversational-design/getting-started)
+* [Error messages](../messaging/error-messages.mdx)
+* [Conversational design guidelines](../../conversational-design/getting-started)
