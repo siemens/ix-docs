@@ -5,14 +5,14 @@ title: UI terminology
 doc-type: 'banner'
 component-tabs: ['']
 no_single_tab: true
-description: 'Using well-defined terms helps users understand actions, navigate systems confidently and avoid confusion. Establishing shared vocabulary across teams and products streamlines collaboration, reduces misunderstandings and ensures a cohesive user experience.'
+description: 'Using well-defined terms help users understand actions, navigate systems confidently and avoid confusion. Establishing shared vocabulary across teams streamlines collaboration, reduces misunderstandings and ensures a cohesive user experience.'
 ---
 
 #
 
 ## General rules
 
-Always consider the difference between user actions within a desktop environment based on mouse or keyboard usage and mobile devices based on touch gestures.
+Always consider the difference between user actions within a desktop environment, based on mouse or keyboard usage, and mobile devices based on touch gestures.
 
 <div className="dos-and-donts" markdown>
 <div className="dos" markdown>
@@ -127,8 +127,8 @@ Capitalize special keys and directions.
 
 <div className="dos-and-donts" markdown>
 <div className="dos" markdown>
-- Enter, Tab, Shift, Ctrl, Alt
-- Up Arrow, Down Arrow, Left Arrow, Right Arrow
+- Enter / Tab / Shift / Ctrl / Alt
+- Up Arrow / Down Arrow / Left Arrow / Right Arrow
 </div>
 </div>
 
@@ -161,27 +161,13 @@ Avoid mixing terms within the same products and portfolios.
 <div className="dos-and-donts" markdown>
 <div className="dos" markdown>
 - To enable automatic updates, select the checkbox to activate Auto update.
-</div>
-<div className="donts" markdown>
-- To enable automatic updates, select the box to activate Auto update.
-</div>
-</div>
-
-<div className="dos-and-donts" markdown>
-<div className="dos" markdown>
 - Click this image
-</div>
-<div className="donts" markdown>
-- Click this picture
-</div>
-</div>
-
-<div className="dos-and-donts" markdown>
-<div className="dos" markdown>
 - The link opens in a new window.
 - The link opens in a new tab.
 </div>
 <div className="donts" markdown>
+- To enable automatic updates, select the box to activate Auto update.
+- Click this picture
 - The link opens in a new browser.
 </div>
 </div>
@@ -203,30 +189,31 @@ Basic interactions form the foundation of how users engage with your application
 | refresh vs. reload vs. reset | Refresh: Retrieve and apply new or updated data.<br/><br/>Reload: Reinitialize whole pages or views. No new data.<br/><br/>Reset: Restore something to its original or default state. | Refresh the dashboard to see current readings.<br/><br/>Reload the monitoring interface.<br/><br/>Reset the machine to factory settings. |
 | renew vs. update | Renew: Extend the validity or duration of something.<br/><br/>Update: Make it current by changing something. | Renew your safety certifications.<br/>Renew your subscription.<br/><br/>Update the firmware to the latest build. |
 | open vs. go to | Open: Display a file, list item or feature.<br/><br/>Go to: Not recommended. Use "open" instead. | Open user management settings. |
-| reject vs. deny | Reject: Decline or not accept something (decision-based, one-time decision).<br/><br/>Deny: Refuse or block something (policy-based decision). | Reject or accept maintenance request. |
+| reject vs. deny | Reject: Decline or not accept something (decision-based, one-time decision).<br/><br/>Deny: Refuse or block something (policy-based decision). Not recommended. Use “reject” instead. | Reject or accept maintenance request. |
 | delete vs. remove | Delete: Permanently erase an item, including its data.<br/><br/>Remove: Take something out of a list or collection without deleting its data. | Delete all obsolete work orders.<br/><br/>Remove the sensor from the active monitoring list. |
 
 ## Common opposite and paired terminology
 
-Many actions come in natural pairs or opposites. Using the right pairs help users clearly understand what each action does.
+Many actions come in natural pairs or opposites. Using the right pairs help users understand what each action does.
 
 ### Common opposites
 
+|  |  |
 |--------|----------|
-| Add | Remove |
-| Activate | Deactivate |
-| Block | Unblock / Allow |
-| Create | Delete |
-| Download | Upload |
-| Enable | Disable |
-| Expand | Collapse |
-| Export | Import |
-| Log in | Log out |
-| Open | Close |
-| Minimize | Maximize |
-| Start | Stop |
-| Undo | Redo |
-| Zoom in | Zoom out |
+| add | remove |
+| activate | deactivate |
+| block | unblock / allow |
+| create | delete |
+| download | upload |
+| enable | disable |
+| expand | collapse |
+| export | import |
+| log in | log out |
+| open | close |
+| minimize | maximize |
+| start | stop |
+| undo | redo |
+| zoom in | zoom out |
 
 ## Dos and Don’ts
 
@@ -238,6 +225,5 @@ Many actions come in natural pairs or opposites. Using the right pairs help user
 ## Related
 
 * [Button (component)](../../../components/button/)
-* [Button labels](#)
 * [Search and filter](#)
 * [Logging in and out](./logging-in-and-out.md)
