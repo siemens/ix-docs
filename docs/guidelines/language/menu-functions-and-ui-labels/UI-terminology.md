@@ -233,7 +233,7 @@ Many actions come in natural pairs or opposites. Using the right pairs help user
 * Do maintain the same terms for the same actions across all screens
 * Do use specific and standardized component names
 * Do consider the user environment, e.g. mobile, desktop, touchscreen
-* Don't use unclear or vague terms, e.g. field, instead of text field
+* Don’t use unclear or vague terms, e.g. field, instead of text field
 
 ## Related
 
