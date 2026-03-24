@@ -3,7 +3,7 @@ sidebar_position: 2
 sidebar_label: AI and UX writing
 title: AI and UX writing
 doc-type: "banner"
-component-tabs: [""]"
+component-tabs: [""]
 no_single_tab: true
 description: "UX writers should use chatbots or agents to rapidly generate and refine microcopy while ensuring all content is checked for accuracy and alignment with voice and tone guidelines."
 ---
