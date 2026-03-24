@@ -228,7 +228,7 @@ Many actions come in natural pairs or opposites. Using the right pairs help user
 | Undo | Redo |
 | Zoom in | Zoom out |
 
-## Dos and Don'ts
+## Dos and Don’ts
 
 * Do maintain the same terms for the same actions across all screens
 * Do use specific and standardized component names
