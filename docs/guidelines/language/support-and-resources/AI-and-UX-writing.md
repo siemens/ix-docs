@@ -95,7 +95,7 @@ Use these simple techniques to use your chatbot as a writing partner. Again, che
 2. Tone and voice alignment with your brand
 “Rewrite this [error message] to sound more open, authentic and engaging.”
 
-3.	Alternatives and variations <br/>
+3. Alternatives and variations
 “Give me suitable alternatives to this UI text for an industrial application.”
 
 4.	Localization and simplification <br/>
