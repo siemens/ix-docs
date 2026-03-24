@@ -74,8 +74,9 @@ Output:
     2. Recalibrate using calibration kit #TX45
     3. Confirm green status light before resuming
 
-Input: “Network timeout error“<br/>
-<br/>
+Input: “Network timeout error“
+
+Output:
 Output:
 * Title: Connection to server timed out
 * Explanation: The equipment lost communication with the central monitoring system.
