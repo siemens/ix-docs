@@ -31,7 +31,7 @@ Use clear and precise terms that leave no room for misunderstandings.
 </div>
 </div>
 
-Use "select" for multi-platform applications where the input method varies (tap, click, etc.).
+Use “select” for multi-platform applications where the input method varies (tap, click, etc.).
 
 <div className="dos-and-donts" markdown>
 <div className="dos" markdown>
