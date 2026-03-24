@@ -19,9 +19,9 @@ The following sections represent an example set of prompts to create a UX writin
 ## What you can do with these prompts
 
 1.	Simply copy and paste these prompts into your chosen AI software to support your error message microcopy (note that these prompts will result in microcopy suggestions that align with [these](/docs/guidelines/language/messaging/error-messages.mdx) guidelines.
-2.	Adapt the prompts to align with your brand’s voice and tone guidelines. 
-3.	Use these prompts as an example to create more chatbots, e.g. ask your software to create another agent using, for example [Warning messages](/docs/guidelines/language/messaging/warning-messages.mdx) as the input using this template as an example to copy.
-4.	Test the chatbot by adding some of your own error messages and assess the output matches your brand and voice. Remember to continue to add prompts and always check for accuracy.
+2. Adapt the prompts to align with your brand’s voice and tone guidelines.
+3. Use these prompts as an example to create more chatbots, e.g. ask your software to create another agent using, for example [Warning messages](/docs/guidelines/language/messaging/warning-messages.mdx) as the input using this template as an example to copy.
+4. Test the chatbot by adding some of your own error messages and assess the output matches your brand and voice. Remember to continue to add prompts and always check for accuracy.
 
 **Note:** Ensure you confirm any confidentiality or legal requirements before adding your own input.
 
