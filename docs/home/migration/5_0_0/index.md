@@ -21,7 +21,7 @@ The category filter has been significantly reworked to support full operand-base
 - **Chip overflow**: Excess chips are hidden and accessible via a "+N more" dropdown
 - **New states**: `isLoading` and `hasError` props for async data scenarios
 - **Disable free-text search**: `disableSearch` prop to restrict users to category-only filters
-- **Keyboard navigation**: Full arrow key, Enter, Backspace, and Escape support in the dropdown
+- **Keyboard navigation**: Full arrow key, Enter, Backspace and Escape support in the dropdown
 
 ### Changed properties
 
