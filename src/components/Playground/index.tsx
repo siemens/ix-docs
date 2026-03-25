@@ -4,11 +4,12 @@
 import BrowserOnly from '@docusaurus/BrowserOnly';
 import useBaseUrl from '@docusaurus/useBaseUrl';
 import { iconOpenExternal } from '@siemens/ix-icons/icons';
+import { IxSpinner } from '@siemens/ix-react';
 import { FrameworkTypes } from '@site/src/hooks/use-framework';
 import { usePlaygroundThemeVariant } from '@site/src/hooks/use-playground-theme';
 import CodeBlock from '@theme/CodeBlock';
 import clsx from 'clsx';
-import React, { useContext, useEffect, useMemo, useState } from 'react';
+import React, { useContext, useEffect, useMemo, useRef, useState } from 'react';
 import CodePreview, { CodePreviewFiles, SourceFiles } from '../CodePreview';
 import FrameworkSelection from '../UI/FrameworkSelection';
 import OpenStackblitz from '../UI/OpenStackblitz';
@@ -22,10 +23,14 @@ import {
   FrameworkSelectionProvider,
 } from '@site/src/context/framework-selection-context';
 
+const PREVIEW_OVERLAY_EVENT = 'ix-preview-loading-overlay';
+const PREVIEW_OVERLAY_SOURCE = 'ix-react-blocks';
+const DEFAULT_PREPARING_MESSAGE = 'Prepare preview';
+
 function getAvailableFrameworks(
   files: CodePreviewFiles,
   source: SourceFiles,
-  onlyFramework?: FrameworkTypes,
+  onlyFramework?: FrameworkTypes
 ) {
   if (onlyFramework) {
     return [onlyFramework];
@@ -50,7 +55,7 @@ function PreviewActions(
   props: Readonly<{
     openExternalUrl: string;
     onChangeTheme: (theme: string) => void;
-  }>,
+  }>
 ) {
   const ctx = useContext(ThemeContext);
   return (
@@ -60,7 +65,7 @@ function PreviewActions(
         target="_blank"
         className={clsx(
           'flex gap-1 text-[var(--theme-color-soft-text)] flex-nowrap text-nowrap pr-2',
-          styles.openExternal,
+          styles.openExternal
         )}
       >
         {React.createElement('ix-icon', {
@@ -86,7 +91,7 @@ function CodeActions(
     files?: Record<string, string>;
     disableStackblitz?: boolean;
     onFrameworkChange: (framework: FrameworkTypes) => void;
-  }>,
+  }>
 ) {
   return (
     <>
@@ -119,6 +124,7 @@ export type PlaygroundProps = Readonly<{
   height?: string;
   noPreview?: boolean;
   onlyFramework?: FrameworkTypes;
+  showPreparing?: boolean;
   children?: React.ReactNode;
 }>;
 
@@ -133,10 +139,12 @@ function PlaygroundSubHeader(props: Readonly<{ children: React.ReactNode }>) {
 function Playground(props: PlaygroundProps) {
   const defaultTheme = useDefaultTheme();
   const { playgroundThemeVariant } = usePlaygroundThemeVariant();
+  const iframeRef = useRef<HTMLIFrameElement | null>(null);
+  const hasReceivedPreparingEventRef = useRef(false);
   const availableFrameworks = useMemo(
     () =>
       getAvailableFrameworks(props.files, props.source, props.onlyFramework),
-    [props.files, props.onlyFramework, props.source],
+    [props.files, props.onlyFramework, props.source]
   );
   const fallbackFramework = availableFrameworks[0] ?? 'angular';
   const [isDark, setIsDark] = useState(playgroundThemeVariant === 'dark');
@@ -145,15 +153,26 @@ function Playground(props: PlaygroundProps) {
   const defaultIframeSrc = useBaseUrl(
     `/demo/v2/preview/html/preview-examples/${
       props.alternativePreviewName ?? props.name
-    }.html?no-margin=true&theme=${theme}&colorSchema=${isDark ? 'dark' : 'light'}`,
+    }.html?no-margin=true&theme=${theme}&colorSchema=${isDark ? 'dark' : 'light'}`
   );
   const iframeSrc = props.previewUrl
     ? `${props.previewUrl}${props.previewUrl.includes('?') ? '&' : '?'}theme=${theme}&colorSchema=${
         isDark ? 'dark' : 'light'
       }`
     : defaultIframeSrc;
+  const iframeOrigin = useMemo(() => {
+    try {
+      return new URL(iframeSrc, window.location.href).origin;
+    } catch {
+      return null;
+    }
+  }, [iframeSrc]);
   const [framework, setFramework] = useState<FrameworkTypes>(
-    props.onlyFramework ?? fallbackFramework,
+    props.onlyFramework ?? fallbackFramework
+  );
+  const [isPreparing, setIsPreparing] = useState(Boolean(props.showPreparing));
+  const [preparingMessage, setPreparingMessage] = useState(
+    DEFAULT_PREPARING_MESSAGE
   );
   const [SourceCode, setSourceCode] = useState<React.FC>(() => () => (
     <CodeBlock>Nothing to see here 🥸</CodeBlock>
@@ -168,6 +187,64 @@ function Playground(props: PlaygroundProps) {
       setFramework(fallbackFramework);
     }
   }, [availableFrameworks, fallbackFramework, framework]);
+
+  useEffect(() => {
+    if (!props.showPreparing) {
+      setIsPreparing(false);
+      setPreparingMessage(DEFAULT_PREPARING_MESSAGE);
+      hasReceivedPreparingEventRef.current = false;
+
+      return;
+    }
+
+    hasReceivedPreparingEventRef.current = false;
+    setIsPreparing(true);
+    setPreparingMessage(DEFAULT_PREPARING_MESSAGE);
+  }, [iframeSrc, props.showPreparing]);
+
+  useEffect(() => {
+    if (!props.showPreparing) {
+      return;
+    }
+
+    const onMessage = (event: MessageEvent) => {
+      if (event.source !== iframeRef.current?.contentWindow) {
+        return;
+      }
+
+      if (iframeOrigin && event.origin !== iframeOrigin) {
+        return;
+      }
+
+      if (!event.data || typeof event.data !== 'object') {
+        return;
+      }
+
+      if (event.data.type !== PREVIEW_OVERLAY_EVENT) {
+        return;
+      }
+
+      if (event.data.source !== PREVIEW_OVERLAY_SOURCE) {
+        return;
+      }
+
+      hasReceivedPreparingEventRef.current = true;
+
+      const nextMessage =
+        typeof event.data.message === 'string' && event.data.message.trim()
+          ? event.data.message
+          : DEFAULT_PREPARING_MESSAGE;
+
+      setIsPreparing(Boolean(event.data.visible));
+      setPreparingMessage(nextMessage);
+    };
+
+    window.addEventListener('message', onMessage);
+
+    return () => {
+      window.removeEventListener('message', onMessage);
+    };
+  }, [iframeOrigin, props.showPreparing]);
 
   const slots = useMemo(() => {
     const children = React.Children.toArray(props.children);
@@ -195,7 +272,7 @@ function Playground(props: PlaygroundProps) {
         subHeader: null as React.ReactElement | null,
         footer: null as React.ReactElement | null,
         rest: [] as React.ReactElement[],
-      },
+      }
     );
   }, [props.children]);
 
@@ -265,11 +342,38 @@ function Playground(props: PlaygroundProps) {
             style={{ ['--preview-height']: props.height } as any}
           >
             {isPreview ? (
-              <iframe
-                title={`Preview for ${props.name}`}
-                src={iframeSrc}
-                className={styles.iframe}
-              ></iframe>
+              <>
+                <iframe
+                  ref={iframeRef}
+                  title={`Preview for ${props.name}`}
+                  src={iframeSrc}
+                  onLoad={() => {
+                    if (!props.showPreparing) {
+                      return;
+                    }
+
+                    if (hasReceivedPreparingEventRef.current) {
+                      return;
+                    }
+
+                    setIsPreparing(false);
+                    setPreparingMessage(DEFAULT_PREPARING_MESSAGE);
+                  }}
+                  className={clsx(styles.iframe, {
+                    [styles.iframeHidden]: isPreparing,
+                  })}
+                ></iframe>
+                {isPreparing && (
+                  <div className={styles.preparingOverlay}>
+                    <div className={styles.preparingOverlayContent}>
+                      <IxSpinner size="large"></IxSpinner>
+                      <span className={styles.preparingOverlayText}>
+                        {preparingMessage}
+                      </span>
+                    </div>
+                  </div>
+                )}
+              </>
             ) : (
               <SourceCode />
             )}

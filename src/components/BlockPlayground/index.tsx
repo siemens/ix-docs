@@ -47,8 +47,13 @@ function detectLanguage(fileName: string) {
 }
 
 export default function BlockPlayground(
-  props: Readonly<{ name: string; height: string }>
+  props: Readonly<{
+    name: string;
+    height: string;
+    showPreparing?: boolean;
+  }>
 ) {
+  const showPrepare = props.showPreparing ?? false;
   const [isCopied, setIsCopied] = useState(false);
   const copiedTimeoutRef = useRef<ReturnType<typeof setTimeout> | null>(null);
   const { data, isLoading, error } = useBlockSource(props.name);
@@ -147,6 +152,7 @@ export default function BlockPlayground(
         files={fallbackFiles}
         previewUrl={data?.previewUrl}
         height={props.height}
+        showPreparing={showPrepare}
         disableStackblitz
         hideActionBarText={true}
       >
