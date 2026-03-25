@@ -38,7 +38,7 @@ Use links and key points when referencing terms of use or compliance documents.
 
 <div className="dos-and-donts" markdown>
 <div className="dos" markdown>
-- By using this software, you agree to our Terms of Use.<br/>Key points: Install maximum 5 devices; commercial use requires a separate license. [View full terms]
+- By using this software, you agree to our Terms of Use.<br/>Key points: Install maximum 5 devices; commercial use requires a separate license. [View full terms](#)
 </div>
 <div className="donts" markdown>
 - By using this software, you agree to our Terms of Service.
@@ -107,7 +107,7 @@ Use hyphens to connect descriptive words before nouns.
 
 ## License types
 
-Note licenses can be both proper nouns and common nouns (Per Product License vs. per product license) depending on the context, e.g. legal contracts often consider license types as proper nouns. When unsure, we recommend using sentence case.
+Note licenses can be both proper nouns and common nouns (per Product License vs. per product license) depending on the context, e.g. legal contracts often consider license types as proper nouns. When unsure, we recommend using sentence case.
 
 | License type | Definition | Example |
 | --- | --- | --- |
@@ -115,7 +115,7 @@ Note licenses can be both proper nouns and common nouns (Per Product License vs.
 | Free | No-cost version with basic features. | Status indicator: Free license active |
 | Trial | Full-featured version with time limit. | Warning: 14 days remaining in trial |
 | Promo package | Special promotional bundle or discount offer. | Popup: Get 3 modules for the price of 2 |
-| Floating/Concurrent | Shared licenses with multiple users or limited simultaneous users. | Dashboard: 5 of 10 licenses in use |
+| Floating / Concurrent | Shared licenses with multiple users or limited simultaneous users. | Dashboard: 5 of 10 licenses in use |
 | Named user | License assigned to a specific individual. | Heading: Licensed to [user name] |
 | Backup | Redundant license for failure or continuity. | Status indicator: Backup license available |
 | Test | License for testing only. | Watermark: Test environment: Not for production use |
@@ -235,7 +235,7 @@ Use “ID” for identification and tracking and “key” for activation or acc
 - Enter your license key number.
 </div>
 <div className="donts" markdown>
-- Enter your license key ID
+- Enter your license key ID.
 </div>
 </div>
 
@@ -327,7 +327,7 @@ Use “requirement” to refer to what a user needs to run the software.
 
 <div className="dos-and-donts" markdown>
 <div className="dos" markdown>
-- License requirements: Active subscription and internet connection
+- License requirements: Active subscription and internet connection.
 - This feature requires an active maintenance agreement.
 </div>
 </div>
@@ -348,7 +348,7 @@ Use the standard term “activate” and “assign” instead of the non-standar
 
 <div className="dos-and-donts" markdown>
 <div className="dos" markdown>
-- Activate license now
+- Activate license now.
 - Assign licenses to your team in your dashboard.
 </div>
 </div>

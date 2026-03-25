@@ -105,16 +105,16 @@ Avoid easily misunderstood permissions such as “view”, be specific about wha
 
 <div className="dos-and-donts" markdown>
 <div className="dos" markdown>
-- Record / Log / Configure / Override
-- Adjust / Review / Modify / Correct
-- Monitor / Review / Inspect
-- Track / Display / Observe
+- record / log / configure / override
+- adjust / review / modify / correct
+- monitor / review / inspect
+- track / display / observe
 </div>
 <div className="donts" markdown>
-- Write
-- Edit
-- Read-only
-- View
+- write
+- edit
+- read-only
+- view
 </div>
 </div>
 
@@ -169,8 +169,8 @@ Although often used interchangeably, the terms “account”, “user” and “
 
 | Word | Definition | Usage and context |
 | --- | --- | --- |
-| account | A digital key that gives users access to a system or service. | Includes login credentials (username or email and password), permissions and sometimes billing or subscription details.<br/><br/>Use when talking about access, permissions and authentication. |
-| user | The person or system working within software using an account. | Represents the person or system behind the account.<br/><br/>Use when talking about actions and roles in the system. |
+| account | A digital key that gives users access to a system or service. | Includes login credentials (username / email and password), permissions and sometimes billing or subscription details.<br/><br/>Use when talking about access, permissions and authentication. |
+| user | The person or system working within software using an account. | Represents the person or system / maschine behind the account.<br/><br/>Use when talking about actions and roles in the system. |
 | profile | Personalized or system-specific settings and information. | Includes details like name, photo, job title, preferences, language, time zone and other customizable settings.<br/><br/>Use when talking about personal information and preferences. |
 
 ## Common wording pairs
@@ -300,5 +300,5 @@ Avoid using “revoke” with people and users as direct objects.
 
 ## Related
 
-* [UI terminology](./UI-terminology.md)
+* [UI terminology](#)
 * [License management](#)
