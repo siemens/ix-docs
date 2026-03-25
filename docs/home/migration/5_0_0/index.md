@@ -1,7 +1,7 @@
 ---
 sidebar_position: 0
-sidebar_title: Upgrade to V4
-title: Upgrade to V4
+sidebar_title: Upgrade to V5
+title: Upgrade to V5
 doc-type: banner
 description: Welcome to the migration guide for upgrading from Siemens Industrial Experience design system V4 to V5. This guide supports you through all the major changes.
 ---
