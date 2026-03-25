@@ -12,7 +12,7 @@ import ButtonMigrationHelper from '@site/src/components/ButtonMigrationHelper/Bu
 
 ## ix-category-filter
 
-The category filter has been significantly reworked to support full operand-based filtering, a cleaner data model, and better UX (chip overflow handling, loading/error states, keyboard navigation).
+The category filter has been significantly reworked to support full operand-based filtering, a cleaner data model and better UX (chip overflow handling, loading/error states, keyboard navigation).
 
 ### Improvements
 
