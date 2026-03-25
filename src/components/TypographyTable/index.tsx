@@ -16,7 +16,6 @@ import {
 import { IxIcon, IxTypography } from '@siemens/ix-react';
 import ApiTable, { AnchorHeader } from '@site/src/components/ApiTable';
 import { useFramework } from '@site/src/hooks/use-framework';
-import { capitalize } from '@site/src/lib/utils/string-format';
 import CodeBlock from '@theme/CodeBlock';
 import clsx from 'clsx';
 import {
@@ -116,6 +115,11 @@ function BrowserOnlyTypographyTable({ children, typographyName }) {
 
   const themeRef = useRef<HTMLDivElement>();
 
+  /** Lowercase `--custom-property` token names in a resolved value (e.g. font stack). */
+  function normalizeTokenNamesInDisplay(value: string) {
+    return value.replace(/--[\w-]+/g, (token) => token.toLowerCase());
+  }
+
   function getCustomCSSValue(name: string) {
     const themeContainer = themeRef.current;
     if (!themeContainer) {
@@ -123,9 +127,9 @@ function BrowserOnlyTypographyTable({ children, typographyName }) {
     }
 
     const computedStyle = getComputedStyle(themeContainer);
-    const colorHex = computedStyle.getPropertyValue(name);
+    const raw = computedStyle.getPropertyValue(name);
 
-    return colorHex.toUpperCase();
+    return raw.trim();
   }
 
   useEffect(() => {
@@ -140,7 +144,7 @@ function BrowserOnlyTypographyTable({ children, typographyName }) {
     );
 
     let [_, fontWeight, fontSize, lineHeight, fontFamily] = regexResult;
-    const displayName = capitalize(typographyName, true);
+    const displayName = typographyName;
 
     if (!lineHeight.includes('%')) {
       lineHeight = (parseFloat(lineHeight) * 100).toString();
@@ -149,7 +153,7 @@ function BrowserOnlyTypographyTable({ children, typographyName }) {
     return {
       displayName,
       name,
-      fontFamily,
+      fontFamily: normalizeTokenNamesInDisplay(fontFamily),
       fontSize,
       fontWeight,
       lineHeight,
