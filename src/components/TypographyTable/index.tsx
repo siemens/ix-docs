@@ -280,7 +280,9 @@ function TypographyStyle() {
               styles.typographyColumnChildName
             )}
           >
-            <code>{typography.fontFamily}</code>
+            <code className={styles.typographyFontFamilyValue}>
+              {typography.fontFamily.toLowerCase()}
+            </code>
           </div>
         </div>
       </TypographyTable.Text>
@@ -293,7 +295,9 @@ function TypographyStyle() {
               styles.typographyColumnChildName
             )}
           >
-            <code>{typography.fontSize}</code>
+            <code className={styles.typographyFontSizeValue}>
+              {typography.fontSize}
+            </code>
           </div>
         </div>
       </TypographyTable.Text>

@@ -21,19 +21,28 @@
 }
 
 .sticky_h1 {
+  display: flex;
+  flex-wrap: nowrap;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+
   background-color: var(--ix-docs-hero-background);
   padding-left: var(--default-content-padding-left);
   padding-top: 2rem;
   position: sticky;
   top: 3rem;
   z-index: 2;
-  margin: 0;
   padding-bottom: 1rem;
   overflow: hidden;
   white-space: nowrap;
   text-overflow: ellipsis;
   padding-right: 0.5rem;
   font-size: 2.5rem;
+}
+
+.sticky_h1 h1 {
+  margin: 0;
 }
 
 .Tabs {
