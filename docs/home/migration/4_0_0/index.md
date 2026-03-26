@@ -174,6 +174,14 @@ For buttons **without an explicitly set variant**, the default is used. As defau
 
 We recommend to visually review your changes. Ensure that `subtle-*` variants are not mixed with the default variant.
 
+### ix-flip-tile
+
+- Renamed `state` to `variant`.
+- Renamed `FlipTileState` to `FlipTileVariant`.
+
+### ix-message-bar
+
+- Renamed `dismissible` to `persistent` and changed default to false.
 
 ### ix-pane
 

@@ -13,12 +13,14 @@ import TabItem from '@theme/TabItem';
 
 ### Peer dependencies
 
-Both `@angular/core` and `@angular/forms` are peer dependencies which means they must be installed before iX.
+Both `@angular/core` and `@angular/forms` are peer dependencies that you must install before iX.
+
+For the exact version requirements, see the [peerDependencies in package.json](https://github.com/siemens/ix/blob/main/packages/angular/package.json) (search for `peerDependencies` in that file).
 
 ```json
 "peerDependencies": {
-  "@angular/core": ">=18.2.13",
-  "@angular/forms": ">=18.2.13",
+  "@angular/core": ">=20",
+  "@angular/forms": ">=20",
 }
 ```
 
@@ -76,6 +78,18 @@ import { IxButton, IxDropdown, IxDropdownItem, IxDropdownTriggerDirective } from
 })
 export default class StandaloneExample {}
 ```
+:::info
+When using iX form components in an Angular standalone setup, we recommend importing the appropriate value accessor directives from `@siemens/ix-angular/standalone` and include them in your component’s imports array (refer to preview examples). This prevents `No value accessor` errors.
+
+Available value accessors:
+- `IxTextValueAccessorDirective` - For `ix-input`, `ix-number-input`, `ix-textarea`
+- `IxSelectValueAccessorDirective` - For `ix-select`
+- `IxRadioValueAccessorDirective` - For `ix-radio`
+- `IxBooleanValueAccessorDirective` - For `ix-checkbox`, `ix-toggle`
+- `IxDateValueAccessorDirective` - For `ix-date-input`
+- `IxTimeValueAccessorDirective` - For `ix-time-input`
+
+:::
 
 ### Module setup (legacy)
 

@@ -11,11 +11,15 @@ import { IxIcon } from "@siemens/ix-react";
 import styles from "./styles.module.css";
 import {
   iconAlarm,
+  iconAppMenu,
+  iconApps,
   iconCogwheel,
+  iconContextMenu,
   iconDownload,
   iconError,
   iconHome,
   iconInfo,
+  iconMoreMenu,
   iconPen,
   iconSearch,
   iconSuccess,
@@ -27,20 +31,27 @@ import {
 } from "@siemens/ix-icons/icons";
 
 const IconTable: React.FC<{
-  data: { icon: string; color?: string; name: string; description: string }[];
+  data: { icon: string; color?: string; name: string; description: React.ReactNode }[];
 }> = ({ data }) => {
   return (
     <table className={styles.IconTable}>
       <tbody>
-        {data.map((item) => (
-          <tr key={item.name}>
-            <td className={styles.IconCell}>
-              <IxIcon name={item.icon} color={item.color ?? "color-std-text"} />
-            </td>
-            <td className={styles.NameCell}>{item.name}</td>
-            <td>{item.description}</td>
-          </tr>
-        ))}
+        {data.map((item) => {
+          const href = `/docs/icons/icon-library#${item.name}`;
+          return (
+            <tr key={item.name}>
+              <td className={styles.IconCell}>
+                <a href={href}>
+                  <IxIcon name={item.icon} color={item.color ?? "color-std-text"} />
+                </a>
+              </td>
+              <td className={styles.NameCell}>
+                <a href={href}>{item.name}</a>
+              </td>
+              <td>{item.description}</td>
+            </tr>
+          );
+        })}
       </tbody>
     </table>
   );
@@ -127,5 +138,40 @@ export const IconExamplesStatus = [
     color: "color-info",
     name: "info",
     description: "Use for info states",
+  },
+];
+
+export const IconExamplesMenu = [
+  {
+    icon: iconAppMenu,
+    name: "app-menu",
+    description: (
+      <>
+        Use for <a href="/docs/components/application-menu/guide">application menu</a>
+      </>
+    ),
+  },
+  {
+    icon: iconApps,
+    name: "apps",
+    description: (
+      <>
+        Use for <a href="/docs/components/application-header/guide#application-switch">application switch</a>
+      </>
+    ),
+  },
+  {
+    icon: iconContextMenu,
+    name: "context-menu",
+    description: (
+      <>
+        Use for item-specific actions, e.g. <a href="/docs/components/event-list/code">event list</a> items
+      </>
+    ),
+  },
+  {
+    icon: iconMoreMenu,
+    name: "more-menu",
+    description: "Use for additional options, e.g. in toolbars",
   },
 ];

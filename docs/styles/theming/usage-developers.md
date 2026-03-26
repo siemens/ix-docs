@@ -32,7 +32,7 @@ The default is `classic` in `dark` mode. To enable light mode, set the `data-ix-
 </html>
 ```
 
-The CSS class based theme configuration is still supported, but will be removed in version 4.0.0:
+The CSS class based theme configuration is still supported, but will be removed in version 5.0.0:
 
 The default theme is `theme-classic-dark`. To set a different theme, change the `class` attribute of the `<body>` tag to contain e.g. `theme-classic-light` instead of `theme-classic-dark`.
 

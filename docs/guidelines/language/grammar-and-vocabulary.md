@@ -16,14 +16,14 @@ description: "Discover the importance of proper grammar and vocabulary in UX wri
 
 - Only use simple verb forms in the past or future when necessary
 
-<div class="dos-and-donts" markdown>
-<div class="dos" markdown>
+<div className="dos-and-donts" markdown="true">
+<div className="dos" markdown="true">
 
 - click, browse, upload
 - file loads, file loaded
 
 </div>
-<div class="donts" markdown>
+<div className="donts" markdown="true">
 
 - clicking, being clicked, was clicking
 - file is going to be loaded, file has been loaded
@@ -33,8 +33,8 @@ description: "Discover the importance of proper grammar and vocabulary in UX wri
 
 ## Active voice
 
-<div class="dos-and-donts" markdown>
-<div class="dos" markdown>
+<div className="dos-and-donts" markdown="true">
+<div className="dos" markdown="true">
 
 - Configuration file opens.
 - Admin provides read-only access.
@@ -43,7 +43,7 @@ description: "Discover the importance of proper grammar and vocabulary in UX wri
 - Calculate the data.
 
 </div>
-<div class="donts" markdown>
+<div className="donts" markdown="true">
 
 - The configuration file is opened.
 - Read-only access is provided by Admin.
@@ -62,14 +62,14 @@ description: "Discover the importance of proper grammar and vocabulary in UX wri
 
 - Basic terminology: checkbox, drop-down, field, icon, menu, link, radio button, window
 
-<div class="dos-and-donts" markdown>
-<div class="dos" markdown>
+<div className="dos-and-donts" markdown="true">
+<div className="dos" markdown="true">
 
 - click
 - hover
 
 </div>
-<div class="donts" markdown>
+<div className="donts" markdown="true">
 
 - press
 - mouse over
@@ -85,8 +85,8 @@ description: "Discover the importance of proper grammar and vocabulary in UX wri
 
 - Avoid cultural references
 
-<div class="dos-and-donts" markdown>
-<div class="dos" markdown>
+<div className="dos-and-donts" markdown="true">
+<div className="dos" markdown="true">
 
 - remove
 - calculate
@@ -94,7 +94,7 @@ description: "Discover the importance of proper grammar and vocabulary in UX wri
 - mobile device
 
 </div>
-<div class="donts" markdown>
+<div className="donts" markdown="true">
 
 - get rid of
 - add up
@@ -124,8 +124,8 @@ description: "Discover the importance of proper grammar and vocabulary in UX wri
 
 - Never make up your own acronyms: https://www.acronymfinder.com/
 
-<div class="dos-and-donts" markdown>
-<div class="dos" markdown>
+<div className="dos-and-donts" markdown="true">
+<div className="dos" markdown="true">
 
 - light emitting diodes (LEDs)
 - APS
@@ -133,7 +133,7 @@ description: "Discover the importance of proper grammar and vocabulary in UX wri
 - I/O component, I/O list, I/O module
 
 </div>
-<div class="donts" markdown>
+<div className="donts" markdown="true">
 
 - Light Emitting Diodes (LEDS)
 - A.P.S.
@@ -151,15 +151,15 @@ description: "Discover the importance of proper grammar and vocabulary in UX wri
 
 - Recent is more time focused and is similar to latest. It means that it happened a short time ago.
 
-<div class="dos-and-donts" markdown>
-<div class="dos" markdown>
+<div className="dos-and-donts" markdown="true">
+<div className="dos" markdown="true">
 
 - Latest update
 - Latest summary
 - Recent events
 
 </div>
-<div class="donts" markdown>
+<div className="donts" markdown="true">
 
 - Last update
 - Last summary

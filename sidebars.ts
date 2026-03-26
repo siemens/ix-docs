@@ -56,7 +56,7 @@ const sidebars: SidebarsConfig = {
       id: 'home/overview',
       className: 'doc-sidebar-item-bold',
     },
-        {
+    {
       type: 'doc',
       id: 'home/getting-started/starter-app',
       className: 'doc-sidebar-item-bold',
@@ -124,7 +124,7 @@ const sidebars: SidebarsConfig = {
       type: 'doc',
       id: 'home/mcp-server',
       className: 'doc-sidebar-item-bold',
-    }
+    },
   ],
   components: [
     {
@@ -454,6 +454,10 @@ const sidebars: SidebarsConfig = {
           id: 'components/modal/index',
           label: 'Modal',
           items: [
+            {
+              id: 'components/modal/guide',
+              label: 'Usage',
+            },
             {
               id: 'components/modal/code',
               label: 'Code',
@@ -896,6 +900,24 @@ const sidebars: SidebarsConfig = {
               id: 'components/empty-state/code',
               label: 'Code',
             },
+            {
+              id: 'components/empty-state/uxwriting',
+              label: 'Writing',
+            },
+          ],
+        }),
+        createTabItem({
+          id: 'components/loading-modal/index',
+          label: 'Loading modal',
+          items: [
+            {
+              id: 'components/loading-modal/guide',
+              label: 'Usage',
+            },
+            {
+              id: 'components/loading-modal/code',
+              label: 'Code',
+            },
           ],
         }),
         createTabItem({
@@ -904,6 +926,20 @@ const sidebars: SidebarsConfig = {
           items: [
             {
               id: 'components/messagebar/code',
+              label: 'Code',
+            },
+          ],
+        }),
+        createTabItem({
+          id: 'components/message-modal/index',
+          label: 'Message modal',
+          items: [
+            {
+              id: 'components/message-modal/guide',
+              label: 'Usage',
+            },
+            {
+              id: 'components/message-modal/code',
               label: 'Code',
             },
           ],
@@ -944,6 +980,10 @@ const sidebars: SidebarsConfig = {
               id: 'components/toast/code',
               label: 'Code',
             },
+            {
+              id: 'components/toast/language',
+              label: 'Writing',
+            },
           ],
         }),
         createTabItem({
@@ -953,6 +993,10 @@ const sidebars: SidebarsConfig = {
             {
               id: 'components/tooltip/code',
               label: 'Code',
+            },
+            {
+              id: 'components/tooltip/uxwriting',
+              label: 'Writing',
             },
           ],
         }),
@@ -991,7 +1035,7 @@ const sidebars: SidebarsConfig = {
         }),
         createTabItem({
           id: 'components/html-grid/index',
-          label: 'HTML grid',
+          label: 'HTML table',
           items: [
             {
               id: 'components/html-grid/code',
@@ -1039,18 +1083,18 @@ const sidebars: SidebarsConfig = {
       label: 'Charts',
       items: [
         {
-          id: 'components/charts-overview/index',
+          id: 'components/charts-overview/overview',
           type: 'doc',
           customProps: {
             hideOnAlphabetical: true,
           },
         },
-        'components/line-chart/index',
-        'components/bar-chart/index',
-        'components/gauge-chart/index',
-        'components/pie-chart/index',
-        'components/3d/index',
-        'components/special-chart/index',
+        'components/line-chart/overview',
+        'components/bar-chart/overview',
+        'components/gauge-chart/overview',
+        'components/pie-chart/overview',
+        'components/3d/overview',
+        'components/special-chart/overview',
       ],
       collapsed: true,
     },
@@ -1177,7 +1221,10 @@ const sidebars: SidebarsConfig = {
       type: 'category',
       className: 'doc-sidebar-item-bold',
       label: 'Theme',
-      items: ['styles/theming/usage-developers', 'styles/theming/usage-designers'],
+      items: [
+        'styles/theming/usage-developers',
+        'styles/theming/usage-designers',
+      ],
       collapsed: true,
     },
   ],
