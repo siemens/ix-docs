@@ -52,7 +52,6 @@ log.txt
 *.sublime-workspace
 
 .idea/
-.vscode/
 .sass-cache/
 .versions/
 node_modules/
@@ -67,7 +66,6 @@ playwright/.cache/
 
 .stencil/
 .idea/
-.vscode/
 .sass-cache/
 .versions/
 node_modules/
@@ -100,13 +98,6 @@ node_modules
 *.launch
 .settings/
 *.sublime-workspace
-
-# IDE - VSCode
-.vscode/*
-!.vscode/settings.json
-!.vscode/tasks.json
-!.vscode/launch.json
-!.vscode/extensions.json
 
 # misc
 .turbo
