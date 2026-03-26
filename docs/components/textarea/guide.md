@@ -1,5 +1,6 @@
 ---
 doc-type: 'tab-item'
+description: 'Usage guide for the ix-textarea'
 formReady: true
 ---
 # Textarea - Usage

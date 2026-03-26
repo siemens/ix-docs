@@ -4,15 +4,23 @@ on:
   workflow_dispatch:
     inputs:
       confirm_deployment:
-        description: 'Please confirm deployment'
+        description: 'Confirm deployment to production (this will trigger the workflow and deploy to GitHub Pages)'
         required: true
         type: boolean
+      create_release:
+        description: 'Confirm creation of a GitHub release (this will trigger the workflow and create a release)'
+        required: true
+        type: boolean
+      version:
+        description: 'Version prefix for release (for example: v4.3.0)'
+        required: true
+        type: string
 
 concurrency: deploy-gh-pages-${{ github.ref }}
 
 jobs:
   deploy-gh-pages:
-    if: ${{ inputs.confirm_deployment == true && github.repository == 'siemens/ix-docs' }}
+    if: ${{ github.repository == 'siemens/ix-docs' }}
     permissions:
       contents: write
     runs-on: ubuntu-latest
@@ -33,7 +41,43 @@ jobs:
           BRAND_URL: ${{ vars.BRAND_URL }}
 
       - name: Deploy GitHub Pages 🚀
+        if: ${{ inputs.confirm_deployment == true }}
         uses: JamesIves/github-pages-deploy-action@6c2d9db40f9296374acc17b90404b6e8864128c8
         with:
           folder: ./build
           clean-exclude: version-*
+
+      - name: Create release version
+        if: ${{ inputs.create_release == true }}
+        id: release_meta
+        run: |
+          timestamp=$(date +%d%m%Y%H%M)
+          release_version="${{ github.event.inputs.version }}-${timestamp}"
+          echo "release_version=${release_version}" >> "$GITHUB_OUTPUT"
+
+      - name: Archive build markdown files
+        if: ${{ inputs.create_release == true }}
+        run: |
+          mkdir -p artifacts
+          find build/docs -type f -name '*.md' | sort > artifacts/markdown-files.txt
+
+          if [ ! -s artifacts/markdown-files.txt ]; then
+            echo "No markdown files found in build output" >&2
+            exit 1
+          fi
+
+          tar -czf "artifacts/llmstxt.tar.gz" -T artifacts/markdown-files.txt
+
+      - name: Create GitHub release with markdown bundle
+        if: ${{ inputs.create_release == true }}
+        uses: softprops/action-gh-release@a06a81a03ee405af7f2048a818ed3f03bbf83c7b # v2.5.0
+        with:
+          tag_name: deployment-${{ steps.release_meta.outputs.release_version }}
+          name: ${{ steps.release_meta.outputs.release_version }}
+          body: |
+            Automated release created from `deploy-gh-pages.yml`.
+            Deployment version: `${{ github.event.inputs.version }}`
+          files: artifacts/llmstxt.tar.gz
+          draft: true
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
