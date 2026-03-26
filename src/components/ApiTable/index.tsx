@@ -10,8 +10,8 @@ import BrowserOnly from '@docusaurus/BrowserOnly';
 import { useFramework } from '@site/src/hooks/use-framework';
 import clsx from 'clsx';
 import FrameworkSelection from '../UI/FrameworkSelection';
-import styles from './ApiTable.module.css';
 import { toKebabCase } from './toKebabCase';
+import styles from './ApiTable.module.css';
 
 export type ApiTableProps = {
   readonly children?: React.ReactNode;
