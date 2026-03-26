@@ -11,23 +11,13 @@ import { useFramework } from '@site/src/hooks/use-framework';
 import clsx from 'clsx';
 import FrameworkSelection from '../UI/FrameworkSelection';
 import styles from './ApiTable.module.css';
+import { toKebabCase } from './toKebabCase';
 
 export type ApiTableProps = {
   readonly children?: React.ReactNode;
   readonly name: string;
   readonly type?: 'event' | 'property' | 'slot';
   readonly singleFramework?: boolean;
-};
-
-const toKebabCase = (str: string) => {
-  return str
-    .split('')
-    .map((letter, idx) => {
-      return letter.toUpperCase() === letter
-        ? `${idx !== 0 ? '-' : ''}${letter.toLowerCase()}`
-        : letter;
-    })
-    .join('');
 };
 
 function ApiTable({ children, id }) {
