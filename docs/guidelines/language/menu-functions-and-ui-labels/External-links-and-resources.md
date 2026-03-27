@@ -166,7 +166,7 @@ Split external links from body text with separate paragraphs for faster scanning
 
 <div className="dos-and-donts" markdown>
 <div className="dos" markdown>
-- Description: Our new automation system improves efficiency by 40% and reduces downtime through predictive maintenance algorithms.<br/>Link text: Efficiency report <IxIcon name={iconOpenExternal} size="16" aria-label="external" role="img"></IxIcon>
+- Description: Our new automation system improves efficiency by 40% and reduces downtime through predictive maintenance algorithms.<br/><br/>Link text: Efficiency report <IxIcon name={iconOpenExternal} size="16" aria-label="external" role="img"></IxIcon>
 </div>
 <div className="donts" markdown>
 - For more technical details, visit Automation Whitepaper <IxIcon name={iconOpenExternal} size="16" aria-label="external" role="img"></IxIcon>.
