@@ -13,6 +13,7 @@ import { IxIcon } from "@siemens/ix-react";
 import { iconApplicationScreen } from "@siemens/ix-icons/icons";
 import { iconVideoFile } from "@siemens/ix-icons/icons";
 import { iconPdfDocument } from "@siemens/ix-icons/icons";
+import { iconOpenExternal } from "@siemens/ix-icons/icons";
 
 #
 
@@ -205,9 +206,9 @@ Ensure email addresses and phone numbers are clickable.
 
 ## Related
 
-- [Link buttons (component)](/docs/components/link-button/guide)
+- [Link button (component)](/docs/components/link-button/guide)
 - [Icon library](/docs/icons/icon-library.mdx)
-- [Numbers and percentages](/docs/guidelines/language/formatting/numbers)<br/><br/>
+- [Numbers and percentages](/docs/guidelines/language/formatting/numbers)
 - Web Content Accessibility Guidelines (WCAG)
     - [WCAG 2.4.4 (Link Purpose In Context)](https://www.w3.org/TR/WCAG21/#link-purpose-in-context) <IxIcon name={iconOpenExternal} size="16" aria-label="external" role="img"></IxIcon><br/><br/>
     - [WCAG 1.1.1 (Non-text Content)](https://www.w3.org/TR/WCAG21/#non-text-content) <IxIcon name={iconOpenExternal} size="16" aria-label="external" role="img"></IxIcon><br/><br/>
