@@ -29,7 +29,7 @@ Use brief, meaningful link text to explain the function of the target web page o
 </div>
 <div className="donts" markdown>
 - Learn about the latest device firmware updates
-- <span>https://www.company.com/s7-1500-firmware</span>
+- {'https://www.company.com/s7-1500-firmware'}
 - Remote access
 </div>
 </div>
@@ -43,7 +43,7 @@ Pair link text with universal icons, e.g. the open-external or application-scree
 </div>
 </div>
 
-Use descriptive link text instead of long, full URLs and remove the prefix [https://www.](#).
+Use descriptive link text instead of long, full URLs and remove the prefix {'https://www.'}.
 
 <div className="dos-and-donts" markdown>
 <div className="dos" markdown>
@@ -51,8 +51,8 @@ Use descriptive link text instead of long, full URLs and remove the prefix [http
 - acronymfinder.com <IxIcon name={iconOpenExternal} size="16" aria-label="external" role="img"></IxIcon>
 </div>
 <div className="donts" markdown>
-- https://www.company.com/s9-1600-firmware<br/>
-- https://support.company.com/us/en/view/107826255
+- {'https://www.company.com/s9-1600-firmware'}<br/>
+- {'https://support.company.com/us/en/view/107826255'}
 </div>
 </div>
 
