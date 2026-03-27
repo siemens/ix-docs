@@ -23,13 +23,13 @@ Use brief, meaningful link text to explain the function of the target web page o
 
 <div className="dos-and-donts" markdown>
 <div className="dos" markdown>
-- SIMATIC S7-1500 firmware updates <IxIcon name={iconOpenExternal} size="16" aria-label="external" role="img"></IxIcon>
-- Roles and permissions in the documentation <IxIcon name={iconOpenExternal} size="16" aria-label="external" role="img"></IxIcon>
-- Demonstration projects <IxIcon name={iconOpenExternal} size="16" aria-label="external" role="img"></IxIcon>
+- SIMATIC S7-1500 firmware updates
+- Roles and permissions in the documentation
+- Demonstration projects
 </div>
 <div className="donts" markdown>
 - Learn about the latest device firmware updates
-- https://www.company.com/s7-1500-firmware
+- htps://www.company.com/s7-1500-firmware
 - Remote access
 </div>
 </div>
@@ -51,21 +51,20 @@ Use descriptive link text instead of long, full URLs and remove the prefix [http
 - acronymfinder.com <IxIcon name={iconOpenExternal} size="16" aria-label="external" role="img"></IxIcon>
 </div>
 <div className="donts" markdown>
-- https://www.company.com/s9-1600-firmware<br/>
-https://support.company.com/us/en/view/107826255
+- htps://www.company.com/s9-1600-firmware<br/>
+- htps://support.company.com/us/en/view/107826255
 </div>
 </div>
 
-Avoid generic link text, e.g. "click here" without context or information regarding what opens.
-
+Avoid generic link text, e.g. "c
 <div className="dos-and-donts" markdown>
 <div className="dos" markdown>
-- The details regarding the collection and use of Analytics Data are described in Software Analytics Notice contained in the Application Function Manual.<br/>
-Open Application Function Manual
+- Description: The details regarding the collection and use of Analytics Data are described in Software Analytics Notice contained in the Application Function Manual.<br/>
+Link text: Open Application Function Manual
 </div>
 <div className="donts" markdown>
-- Click here
-- Read more
+- Link text: Click here
+- Link text: Read more
 </div>
 </div>
 
@@ -73,10 +72,10 @@ Use unique link text for each link destination so assistive technology users can
 
 <div className="dos-and-donts" markdown>
 <div className="dos" markdown>
-- Open Assembly Manual<br/>Open Demonstration Project App<br/>Explore Manual
+- Link text: Open Assembly Manual<br/>Link text: Open Demonstration Project App<br/>Link text: Explore Manual
 </div>
 <div className="donts" markdown>
-- Click here.<br/>Click here.<br/>Click here.
+- Link text: Click here.<br/>Link text: Click here.<br/>Link text: Click here.
 </div>
 </div>
 
@@ -123,7 +122,7 @@ Describe link behavior and type in ALT-texts instead of repeating icon and visib
 <div className="dos" markdown>
 - Link text: Visit our homepage <IxIcon name={iconOpenExternal} size="16" aria-label="external" role="img"></IxIcon><br/>ALT-text: external
 - Resource text: Function Manual <IxIcon name={iconPdfDocument} size="16" aria-label="PDF" role="img"></IxIcon><br/>ALT-text: external PDF
-- Resource text: Industrial Copilots with Agentic AI <IxIcon name={iconVideoFile} size="16" aria-label="video" role="img"></IxIcon><br/>ALT-text: external video in new tab
+- Resource text:<br/> Industrial Copilots with Agentic AI <IxIcon name={iconVideoFile} size="16" aria-label="video" role="img"></IxIcon><br/>ALT-text: external video in new tab
 </div>
 <div className="donts" markdown>
 - Link text: Visit our homepage <IxIcon name={iconOpenExternal} size="16" aria-label="external" role="img"></IxIcon><br/>ALT-text: Visit our homepage.
@@ -156,7 +155,7 @@ Separate external links from body text with lists to avoid disrupting user readi
 
 <div className="dos-and-donts" markdown>
 <div className="dos" markdown>
-- Our platform integrates with various tools to enhance productivity.<br/><br/>
+- Our platform integrates with various tools to enhance productivity.<br/>
 External resources:<br/> Documentation portal <IxIcon name={iconOpenExternal} size="16" aria-label="external" role="img"></IxIcon><br/>
 GitHub repository <IxIcon name={iconOpenExternal} size="16" aria-label="external" role="img"></IxIcon><br/>
 Support community <IxIcon name={iconOpenExternal} size="16" aria-label="external" role="img"></IxIcon>
@@ -167,20 +166,20 @@ Split external links from body text with separate paragraphs for faster scanning
 
 <div className="dos-and-donts" markdown>
 <div className="dos" markdown>
-- Our new automation system improves efficiency by 40% and reduces downtime through predictive maintenance algorithms.<br/>Efficiency report <IxIcon name={iconOpenExternal} size="16" aria-label="external" role="img"></IxIcon>
+- Description: Our new automation system improves efficiency by 40% and reduces downtime through predictive maintenance algorithms.<br/>Link text: Efficiency report <IxIcon name={iconOpenExternal} size="16" aria-label="external" role="img"></IxIcon>
 </div>
 <div className="donts" markdown>
-- For more technical details, visit Automation Whitepaper <IxIcon name={iconOpenExternal} size="16" aria-label="external" role="img"></IxIcon>.
+- Link text: For more technical details, visit Automation Whitepaper <IxIcon name={iconOpenExternal} size="16" aria-label="external" role="img"></IxIcon>.
 </div>
 </div>
 
 ## Emails and telephone numbers
 
-Avoid adding the "mailto" text and for email addresses as this is no longer added into the UI.
+Avoid adding the "mailto" text and for email addresses as this is no longer visible the UI.
 
 <div className="dos-and-donts" markdown>
 <div className="donts" markdown>
-- [mailto: name@examples.com](#)
+- mailto: name@examples.com
 </div>
 </div>
 
@@ -188,7 +187,7 @@ Ensure email addresses and phone numbers are clickable.
 
 <div className="dos-and-donts" markdown>
 <div className="dos" markdown>
-- You can reach us at the following telephone number [+1 555-0100](#)
+- You can reach us at the following telephone number +1 555-0100
 </div>
 <div className="donts" markdown>
 - 555 0100
@@ -210,6 +209,6 @@ Ensure email addresses and phone numbers are clickable.
 - [Icon library](/docs/icons/icon-library.mdx)
 - [Numbers and percentages](/docs/guidelines/language/formatting/numbers)
 - Web Content Accessibility Guidelines (WCAG)
-    - [WCAG 2.4.4 (Link Purpose In Context)](https://www.w3.org/TR/WCAG21/#link-purpose-in-context) <IxIcon name={iconOpenExternal} size="16" aria-label="external" role="img"></IxIcon><br/><br/>
-    - [WCAG 1.1.1 (Non-text Content)](https://www.w3.org/TR/WCAG21/#non-text-content) <IxIcon name={iconOpenExternal} size="16" aria-label="external" role="img"></IxIcon><br/><br/>
+    - [WCAG 2.4.4 (Link Purpose In Context)](https://www.w3.org/TR/WCAG21/#link-purpose-in-context) <IxIcon name={iconOpenExternal} size="16" aria-label="external" role="img"></IxIcon>
+    - [WCAG 1.1.1 (Non-text Content)](https://www.w3.org/TR/WCAG21/#non-text-content) <IxIcon name={iconOpenExternal} size="16" aria-label="external" role="img"></IxIcon>
     - [WCAG 3.1.2 (Language of Parts)](https://www.w3.org/TR/WCAG21/#language-of-parts) <IxIcon name={iconOpenExternal} size="16" aria-label="external" role="img"></IxIcon>
