@@ -46,11 +46,11 @@ This section provides clear definitions for the most frequently used mouse-relat
 
 ### Basic actions
 
-* click
-* double-click
-* left-click
-* right-click
-* middle-click (scroll wheel)
+- click
+- double-click
+- left-click
+- right-click
+- middle-click (scroll wheel)
 
 <div className="dos-and-donts" markdown>
 <div className="dos" markdown>
@@ -63,10 +63,10 @@ This section provides clear definitions for the most frequently used mouse-relat
 
 ### Movement-based actions
 
-* drag
-* drag and drop
-* hover
-* scroll
+- drag
+- drag and drop
+- hover
+- scroll
 
 <div className="dos-and-donts" markdown>
 <div className="dos" markdown>
@@ -93,19 +93,19 @@ As touchscreen interfaces rely on direct finger interaction, this section covers
 
 ### Simple movement gestures
 
-* drag
-* flick (fast and short swipe)
-* scroll
-* slide
-* spread
-* swipe
+- drag
+- flick (fast and short swipe)
+- scroll
+- slide
+- spread
+- swipe
 
 ### Multi-finger gestures
 
-* pinch
-* spread (reverse pinch)
-* rotate
-* two-finger scroll
+- pinch
+- spread (reverse pinch)
+- rotate
+- two-finger scroll
 
 ## Keyboard terminology
 
@@ -217,13 +217,13 @@ Many actions come in natural pairs or opposites. Using the right pairs help user
 
 ## Dos and Don’ts
 
-* Do maintain the same terms for the same actions across all screens
-* Do use specific and standardized component names
-* Do consider the user environment, e.g. mobile, desktop, touchscreen
-* Don’t use unclear or vague terms, e.g. field, instead of text field
+- Do maintain the same terms for the same actions across all screens
+- Do use specific and standardized component names
+- Do consider the user environment, e.g. mobile, desktop, touchscreen
+- Don’t use unclear or vague terms, e.g. field, instead of text field
 
 ## Related
 
-* [Button (component)](../../../components/button/)
-* [Search and filter](#)
-* [Logging in and out](./logging-in-and-out.md)
+- [Button (component)](../../../components/button/)
+- [Search and filter](#)
+- [Logging in and out](./logging-in-and-out.md)

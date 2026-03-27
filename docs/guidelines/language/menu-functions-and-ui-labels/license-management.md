@@ -387,15 +387,15 @@ Use “basic” product when talking about a simplified or entry-level version o
 
 ## Dos and Don’ts
 
-* Do create key license terms initially and record any changes for consistency
-* Do use the same license actions consistently across applications and portfolios
-* Don’t create new license types or states, instead use standard terms
+- Do create key license terms initially and record any changes for consistency
+- Do use the same license actions consistently across applications and portfolios
+- Don’t create new license types or states, instead use standard terms
 
 ## Related
 
-* [Names and titles](../formatting/names-titles.mdx)
-* [Dates](../formatting/date.mdx)
-* [Error messages](../messaging/error-messages.mdx)
-* [Time and time zones](../formatting/timezones.mdx)
-* [UI terminology](#)
-* [User management](#)
+- [Names and titles](../formatting/names-titles.mdx)
+- [Dates](../formatting/date.mdx)
+- [Error messages](../messaging/error-messages.mdx)
+- [Time and time zones](../formatting/timezones.mdx)
+- [UI terminology](#)
+- [User management](#)
