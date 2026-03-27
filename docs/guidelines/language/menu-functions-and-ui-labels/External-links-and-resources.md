@@ -29,7 +29,7 @@ Use brief, meaningful link text to explain the function of the target web page o
 </div>
 <div className="donts" markdown>
 - Learn about the latest device firmware updates
-- htps://www.company.com/s7-1500-firmware
+- <span>https://www.company.com/s7-1500-firmware</span>
 - Remote access
 </div>
 </div>
@@ -51,8 +51,8 @@ Use descriptive link text instead of long, full URLs and remove the prefix [http
 - acronymfinder.com <IxIcon name={iconOpenExternal} size="16" aria-label="external" role="img"></IxIcon>
 </div>
 <div className="donts" markdown>
-- htps://www.company.com/s9-1600-firmware<br/>
-- htps://support.company.com/us/en/view/107826255
+- https://www.company.com/s9-1600-firmware<br/>
+- https://support.company.com/us/en/view/107826255
 </div>
 </div>
 
