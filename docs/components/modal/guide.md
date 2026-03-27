@@ -46,7 +46,7 @@ Use custom models when a task requires immediate attention and the user returns 
     - The modal height increases with content until reaching screen height, then a scrollbar appears.
     - We recommend implementing a sticky footer when content overflows.
     - Avoid horizontal scrollbars by using a larger modal size and defining adaptive behaviors for different viewports.
-- **Placement:** Horizontally centered, vertically centered or top-aligned.
+- **Placement:** Vertically centered or top-aligned, horizontally centered.
 - **Responsiveness:**
     - Height: Depends on its content except for `full-screen`.
     - Content: Needs to be built responsively to adapt with the container's width.
