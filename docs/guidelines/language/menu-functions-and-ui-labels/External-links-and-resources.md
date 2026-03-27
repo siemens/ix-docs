@@ -56,15 +56,15 @@ Use descriptive link text instead of long, full URLs and remove the prefix {'htt
 </div>
 </div>
 
-Avoid generic link text, e.g. "c
+Avoid generic link text, e.g. "click here" without context or information regarding what opens.
 <div className="dos-and-donts" markdown>
 <div className="dos" markdown>
-- Description: The details regarding the collection and use of Analytics Data are described in Software Analytics Notice contained in the Application Function Manual.<br/>
+- Description: The details regarding the collection and use of Analytics Data are described in Software Analytics Notice contained in the Application Function Manual.<br/><br/>
 Link text: Open Application Function Manual
 </div>
 <div className="donts" markdown>
-- Link text: Click here
-- Link text: Read more
+- Click here
+- Read more
 </div>
 </div>
 
@@ -72,10 +72,10 @@ Use unique link text for each link destination so assistive technology users can
 
 <div className="dos-and-donts" markdown>
 <div className="dos" markdown>
-- Link text: Open Assembly Manual<br/>Link text: Open Demonstration Project App<br/>Link text: Explore Manual
+- Open Assembly Manual<br/>Open Demonstration Project App<br/>Explore Manual
 </div>
 <div className="donts" markdown>
-- Link text: Click here.<br/>Link text: Click here.<br/>Link text: Click here.
+- Click here<br/>Click here<br/>Click here
 </div>
 </div>
 
@@ -169,7 +169,7 @@ Split external links from body text with separate paragraphs for faster scanning
 - Description: Our new automation system improves efficiency by 40% and reduces downtime through predictive maintenance algorithms.<br/>Link text: Efficiency report <IxIcon name={iconOpenExternal} size="16" aria-label="external" role="img"></IxIcon>
 </div>
 <div className="donts" markdown>
-- Link text: For more technical details, visit Automation Whitepaper <IxIcon name={iconOpenExternal} size="16" aria-label="external" role="img"></IxIcon>.
+- For more technical details, visit Automation Whitepaper <IxIcon name={iconOpenExternal} size="16" aria-label="external" role="img"></IxIcon>.
 </div>
 </div>
 
@@ -179,7 +179,7 @@ Avoid adding the "mailto" text and for email addresses as this is no longer visi
 
 <div className="dos-and-donts" markdown>
 <div className="donts" markdown>
-- mailto: name@examples.com
+- {'mailto:name@examples.com'}
 </div>
 </div>
 
