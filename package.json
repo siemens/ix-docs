@@ -15,6 +15,7 @@
     "serve": "docusaurus serve",
     "write-translations": "docusaurus write-translations",
     "write-heading-ids": "docusaurus write-heading-ids",
+    "test": "tsx --test \"src/**/*.test.ts\"",
     "typecheck": "tsc",
     "update-figma": "tsx ./scripts/download-figma-images.ts update"
   },
