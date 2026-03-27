@@ -52,7 +52,7 @@ Use descriptive link text instead of long, full URLs and remove the prefix {'htt
 </div>
 <div className="donts" markdown>
 - {'https://www.company.com/s9-1600-firmware'}<br/>
-- {'https://support.company.com/us/en/view/107826255'}
+- {'https://support.com/us/en/view/107826255'}
 </div>
 </div>
 
