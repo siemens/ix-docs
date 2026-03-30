@@ -164,6 +164,10 @@ const config: Config = {
             from: '/docs/home/theming',
             to: '/docs/styles/theming/usage-developers',
           },
+          {
+            from: '/docs/guidelines/language/main-menu-functions',
+            to: '/docs/guidelines/language/menu-functions-and-ui-labels/logging-in-and-out',
+          },
         ],
       },
     ],
