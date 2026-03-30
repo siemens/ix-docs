@@ -23,9 +23,9 @@ Use brief, meaningful link text to explain the function of the target web page o
 
 <div className="dos-and-donts" markdown>
 <div className="dos" markdown>
-- SIMATIC S7-1500 firmware updates <IxIcon name={iconOpenExternal} size="16" aria-label="external" role="img">
-- Roles and permissions in the documentation <IxIcon name={iconOpenExternal} size="16" aria-label="external" role="img">
-- Demonstration projects <IxIcon name={iconApplicationScreen} size="16" aria-label="external application" role="img">
+- SIMATIC S7-1500 firmware updates <IxIcon name={iconOpenExternal} size="16" aria-label="external" role="img"></IxIcon>
+- Roles and permissions in the documentation <IxIcon name={iconOpenExternal} size="16" aria-label="external" role="img"></IxIcon>
+- Demonstration projects <IxIcon name={iconApplicationScreen} size="16" aria-label="external application" role="img"></IxIcon>
 </div>
 <div className="donts" markdown>
 - Learn about the latest device firmware updates
