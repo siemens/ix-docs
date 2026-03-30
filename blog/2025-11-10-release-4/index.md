@@ -14,7 +14,7 @@ The next chapter of the Industrial Experience Design System is here. This versio
 # How to start?
 
 - Install `@siemens/ix` (`@siemens/ix-angular`, `@siemens/ix-react`, `@siemens/ix-vue`) via the `latest` tag
-- Review detailed changelog [here](/docs/home/releases/changelog)
+- Review detailed changelog [here](https://github.com/siemens/ix/releases/tag/%40siemens%2Fix%404.0.0)
 - Make sure you're using the latest published version of our Figma library
 
 # Button update
