@@ -164,6 +164,10 @@ const config: Config = {
             from: '/docs/home/theming',
             to: '/docs/styles/theming/usage-developers',
           },
+          {
+            from: '/docs/guidelines/language/main-menu-functions',
+            to: '/docs/guidelines/language/menu-functions-and-ui-labels/logging-in-and-out',
+          },
         ],
       },
     ],
@@ -256,12 +260,13 @@ const config: Config = {
           position: 'left',
           label: 'Styles',
         },
-        {
-          type: 'custom-news-pill',
-          position: 'left',
-          label: 'Boost productivity with AI',
-          value: '/docs/home/mcp-server',
-        },
+        // Keep it as placeholder
+        // {
+        //   type: 'custom-news-pill',
+        //   position: 'left',
+        //   label: 'Boost productivity with AI',
+        //   value: '/docs/home/mcp-server',
+        // },
         {
           type: 'custom-version-selection',
           position: 'right',

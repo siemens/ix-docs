@@ -95,7 +95,11 @@ const sidebars: SidebarsConfig = {
       items: [
         'home/releases/roadmap',
         'home/releases/release-version',
-        'home/releases/changelog',
+        {
+          type: 'link',
+          href: 'https://github.com/siemens/ix/releases',
+          label: 'Changelog',
+        },
       ],
       collapsed: true,
     },
@@ -1028,6 +1032,10 @@ const sidebars: SidebarsConfig = {
           label: 'Data grid',
           items: [
             {
+              id: 'components/grid/guide',
+              label: 'Usage',
+            },
+            {
               id: 'components/grid/code',
               label: 'Code',
             },
@@ -1037,6 +1045,10 @@ const sidebars: SidebarsConfig = {
           id: 'components/html-grid/index',
           label: 'HTML table',
           items: [
+            {
+              id: 'components/html-grid/guide',
+              label: 'Usage',
+            },
             {
               id: 'components/html-grid/code',
               label: 'Code',
