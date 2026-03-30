@@ -30,10 +30,10 @@ Learn the guidelines for using proper nouns correctly in your text. This subchap
 
 Discover how we address formatting themes such as writing addresses, dates, measurements and units, names and titles, and money and currency. This section helps you address common formatting wording issues to enhance overall user efficiency. [Read more]( ./formatting/addresses.mdx)
 
+## Menu functions and UI labels
 
-## Main menu functions
+Explore best practices for writing common menu functions, e.g. logging in and welcoming and onboarding users. This section also includes how to label common UI labels, e.g. buttons, so users can easily navigate workflows. [Read more](./menu-functions-and-ui-labels/logging-in-and-out.md)
 
-Explore best practices for writing main menu functions to ensure intuitive navigation. This section provides tips on how to label and organize menu items so users can easily find what they need. [Read more](./main-menu-functions)
 
 ## Messages
 
@@ -47,3 +47,7 @@ Get tips for naming common app functions clearly and effectively. This subchapte
 ## Dialogs and buttons
 
 Discover guidelines for writing dialogs and button labels to ensure clear and actionable instructions. This section helps you create effective prompts and calls to action that enhance user interaction. [Read more](./dialogs-and-buttons)
+
+## Support and resources 
+
+Learn about the UX writer role, how writers work in teams and with stakeholders, and explore the UX writing library and AI resources to build your UX writing skills. [Read more](./support-and-resources/UX-writing-principles.md)

@@ -1,5 +1,5 @@
 ---
-sidebar_position: 10
+sidebar_position: 9
 sidebar_label: Dialogs and buttons
 title: Dialogs and buttons
 doc-type: 'banner'
