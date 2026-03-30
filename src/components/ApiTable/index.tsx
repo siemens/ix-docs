@@ -10,6 +10,7 @@ import BrowserOnly from '@docusaurus/BrowserOnly';
 import { useFramework } from '@site/src/hooks/use-framework';
 import clsx from 'clsx';
 import FrameworkSelection from '../UI/FrameworkSelection';
+import { toKebabCase } from './toKebabCase';
 import styles from './ApiTable.module.css';
 
 export type ApiTableProps = {
@@ -17,17 +18,6 @@ export type ApiTableProps = {
   readonly name: string;
   readonly type?: 'event' | 'property' | 'slot';
   readonly singleFramework?: boolean;
-};
-
-const toKebabCase = (str: string) => {
-  return str
-    .split('')
-    .map((letter, idx) => {
-      return letter.toUpperCase() === letter
-        ? `${idx !== 0 ? '-' : ''}${letter.toLowerCase()}`
-        : letter;
-    })
-    .join('');
 };
 
 function ApiTable({ children, id }) {
