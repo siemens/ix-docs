@@ -23,9 +23,9 @@ Use brief, meaningful link text to explain the function of the target web page o
 
 <div className="dos-and-donts" markdown>
 <div className="dos" markdown>
-- SIMATIC S7-1500 firmware updates
-- Roles and permissions in the documentation
-- Demonstration projects
+- SIMATIC S7-1500 firmware updates <IxIcon name={iconOpenExternal} size="16" aria-label="external" role="img">
+- Roles and permissions in the documentation <IxIcon name={iconOpenExternal} size="16" aria-label="external" role="img">
+- Demonstration projects <IxIcon name={iconApplicationScreen} size="16" aria-label="external application" role="img">
 </div>
 <div className="donts" markdown>
 - Learn about the latest device firmware updates
@@ -175,7 +175,7 @@ Split external links from body text with separate paragraphs for faster scanning
 
 ## Emails and telephone numbers
 
-Avoid adding the "mailto" text and for email addresses as this is no longer visible the UI.
+Avoid adding the "mailto" text and for email addresses as this is no longer visible in the UI.
 
 <div className="dos-and-donts" markdown>
 <div className="donts" markdown>
@@ -187,7 +187,7 @@ Ensure email addresses and phone numbers are clickable.
 
 <div className="dos-and-donts" markdown>
 <div className="dos" markdown>
-- You can reach us at the following telephone number +1 555-0100
+- You can reach us at the following telephone number +1 555-0100.
 </div>
 <div className="donts" markdown>
 - 555 0100
