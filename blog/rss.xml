@@ -118,7 +118,7 @@
 <h1>How to start?</h1>
 <ul>
 <li>Install <code>@siemens/ix</code> (<code>@siemens/ix-angular</code>, <code>@siemens/ix-react</code>, <code>@siemens/ix-vue</code>) via the <code>latest</code> tag</li>
-<li>Review detailed changelog <a href="https://ix.siemens.io/docs/home/releases/changelog">here</a></li>
+<li>Review detailed changelog <a href="https://github.com/siemens/ix/releases/tag/%40siemens%2Fix%404.0.0" target="_blank" rel="noopener noreferrer">here</a></li>
 <li>Make sure you're using the latest published version of our Figma library</li>
 </ul>
 <h1>Button update</h1>

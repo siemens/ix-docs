@@ -10,7 +10,7 @@ The select component supports single or multiple selections and the editable var
 
 1. Label
 2. Required indicator
-3. Placeholder
+3. Value
 4. Clear button
 5. Open dropdown button
 6. Container

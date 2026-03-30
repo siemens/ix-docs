@@ -299,6 +299,6 @@ const layout = [
 
 ### Properties
 
-| Name | Description | Attribute | Type | Default |
-| --- | --- | --- | --- | --- |
-| layout | Defines the layout of the form. | layout | { minWidth: string; columns: number; }[] | [ { minWidth: '0', columns: 1 }, { minWidth: '48em', columns: 2 }, ] |
+| Name | Description | Type | Default |
+| --- | --- | --- | --- |
+| layout | Defines the layout of the form. | { minWidth: string; columns: number; }[] | [ { minWidth: '0', columns: 1 }, { minWidth: '48em', columns: 2 }, ] |

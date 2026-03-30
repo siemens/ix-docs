@@ -27,9 +27,11 @@ export default () => {
         <IxTabItem onClick={() => changeTab(1)}>Tab 2</IxTabItem>
         <IxTabItem onClick={() => changeTab(2)}>Tab 3</IxTabItem>
       </IxTabs>
-      {selectedTab === 0 ? <div>Content 1</div> : null}
-      {selectedTab === 1 ? <div>Content 2</div> : null}
-      {selectedTab === 2 ? <div>Content 3</div> : null}
+      <section role="tabpanel" aria-label="Example content">
+        {selectedTab === 0 ? <>Content Tab 1</> : null}
+        {selectedTab === 1 ? <>Content Tab 2</> : null}
+        {selectedTab === 2 ? <>Content Tab 3</> : null}
+      </section>
     </div>
   );
 };
@@ -47,8 +49,13 @@ export default () => {
   display: none;
 }
 
-.tabs > div[data-tab-content].show {
+.tabs > div[data-tab-content].show,
+.tabs [data-tab-content].show {
   display: block;
+}
+
+.tabs [data-tab-content] {
+  display: none;
 }
 ```
 
@@ -68,15 +75,16 @@ import { Component } from '@angular/core';
         <ix-tab-item (click)="changeTab(1)">Tab 2</ix-tab-item>
         <ix-tab-item (click)="changeTab(2)">Tab 3</ix-tab-item>
       </ix-tabs>
-      <div *ngIf="selectedTab === 0">Content Tab 1</div>
-      <div *ngIf="selectedTab === 1">Content Tab 2</div>
-      <div *ngIf="selectedTab === 2">Content Tab 3</div>
+      <section role="tabpanel" aria-label="Example content">
+        @if (selectedTab === 0) { Content Tab 1 } @else if (selectedTab === 1) {
+        Content Tab 2 } @else if (selectedTab === 2) { Content Tab 3 }
+      </section>
     </div>
   `,
   styleUrls: ['./tabs.css'],
 })
 export default class Tabs {
-  selectedTab = 1;
+  selectedTab = 0;
 
   changeTab(tabIndex: number) {
     this.selectedTab = tabIndex;
@@ -96,8 +104,13 @@ export default class Tabs {
   display: none;
 }
 
-.tabs > div[data-tab-content].show {
+.tabs > div[data-tab-content].show,
+.tabs [data-tab-content].show {
   display: block;
+}
+
+.tabs [data-tab-content] {
+  display: none;
 }
 ```
 
@@ -106,13 +119,11 @@ export default class Tabs {
 #### tabs.ts
 ```ts
 import { Component } from '@angular/core';
-import { NgIf } from '@angular/common';
-
 import { IxTabs, IxTabItem } from '@siemens/ix-angular/standalone';
 
 @Component({
   selector: 'app-example',
-  imports: [IxTabs, IxTabItem, NgIf],
+  imports: [IxTabs, IxTabItem],
   template: `
     <div class="tabs">
       <ix-tabs [selected]="selectedTab">
@@ -120,15 +131,16 @@ import { IxTabs, IxTabItem } from '@siemens/ix-angular/standalone';
         <ix-tab-item (click)="changeTab(1)">Tab 2</ix-tab-item>
         <ix-tab-item (click)="changeTab(2)">Tab 3</ix-tab-item>
       </ix-tabs>
-      <div *ngIf="selectedTab === 0">Content Tab 1</div>
-      <div *ngIf="selectedTab === 1">Content Tab 2</div>
-      <div *ngIf="selectedTab === 2">Content Tab 3</div>
+      <section role="tabpanel" aria-label="Example content">
+        @if (selectedTab === 0) { Content Tab 1 } @else if (selectedTab === 1) {
+        Content Tab 2 } @else if (selectedTab === 2) { Content Tab 3 }
+      </section>
     </div>
   `,
   styleUrls: ['./tabs.css'],
 })
 export default class Tabs {
-  selectedTab = 1;
+  selectedTab = 0;
 
   changeTab(tabIndex: number) {
     this.selectedTab = tabIndex;
@@ -148,8 +160,13 @@ export default class Tabs {
   display: none;
 }
 
-.tabs > div[data-tab-content].show {
+.tabs > div[data-tab-content].show,
+.tabs [data-tab-content].show {
   display: block;
+}
+
+.tabs [data-tab-content] {
+  display: none;
 }
 ```
 
@@ -174,9 +191,27 @@ const changeTab = (tabId: number) => (selectedTab.value = tabId);
       <IxTabItem @click="changeTab(1)">Tab 2</IxTabItem>
       <IxTabItem @click="changeTab(2)">Tab 3</IxTabItem>
     </IxTabs>
-    <div v-show="selectedTab === 0">Content 1</div>
-    <div v-show="selectedTab === 1">Content 2</div>
-    <div v-show="selectedTab === 2">Content 3</div>
+    <section
+      role="tabpanel"
+      aria-label="Example content"
+      v-show="selectedTab === 0"
+    >
+      Content Tab 1
+    </section>
+    <section
+      role="tabpanel"
+      aria-label="Example content"
+      v-show="selectedTab === 1"
+    >
+      Content Tab 2
+    </section>
+    <section
+      role="tabpanel"
+      aria-label="Example content"
+      v-show="selectedTab === 2"
+    >
+      Content Tab 3
+    </section>
   </div>
 </template>
 ```
@@ -193,8 +228,13 @@ const changeTab = (tabId: number) => (selectedTab.value = tabId);
   display: none;
 }
 
-.tabs > div[data-tab-content].show {
+.tabs > div[data-tab-content].show,
+.tabs [data-tab-content].show {
   display: block;
+}
+
+.tabs [data-tab-content] {
+  display: none;
 }
 ```
 
@@ -218,22 +258,22 @@ export default () => {
   return (
     <IxTabs rounded>
       <IxTabItem>
-        <IxIcon name={iconSuccess}></IxIcon>
+        <IxIcon name={iconSuccess} aria-hidden="true"></IxIcon>
       </IxTabItem>
       <IxTabItem counter={200}>
-        <IxIcon name={iconTree}></IxIcon>
+        <IxIcon name={iconTree} aria-hidden="true"></IxIcon>
       </IxTabItem>
       <IxTabItem>
-        <IxIcon name={iconMaintenance}></IxIcon>
+        <IxIcon name={iconMaintenance} aria-hidden="true"></IxIcon>
       </IxTabItem>
       <IxTabItem disabled counter={24}>
-        <IxIcon name={iconSoundLoud}></IxIcon>
+        <IxIcon name={iconSoundLoud} aria-hidden="true"></IxIcon>
       </IxTabItem>
       <IxTabItem>
-        <IxIcon name={iconHierarchy}></IxIcon>
+        <IxIcon name={iconHierarchy} aria-hidden="true"></IxIcon>
       </IxTabItem>
       <IxTabItem disabled>
-        <IxIcon name={iconCalendarSettings}></IxIcon>
+        <IxIcon name={iconCalendarSettings} aria-hidden="true"></IxIcon>
       </IxTabItem>
     </IxTabs>
   );
@@ -357,8 +397,8 @@ import { IxIcon, IxTabItem, IxTabs } from '@siemens/ix-vue';
 
 | Name | Description | Attribute | Type | Default |
 | --- | --- | --- | --- | --- |
-| ariaLabelChevronLeftIconButton | ARIA label for the chevron left icon button | aria-label-chevron-left-icon-button | string \| undefined |  |
-| ariaLabelChevronRightIconButton | ARIA label for the chevron right icon button | aria-label-chevron-right-icon-button | string \| undefined |  |
+| ariaLabelChevronLeftIconButton | ARIA label for the chevron left icon button | aria-label-chevron-left-icon-button | string | 'Scroll tabs left' |
+| ariaLabelChevronRightIconButton | ARIA label for the chevron right icon button | aria-label-chevron-right-icon-button | string | 'Scroll tabs right' |
 | layout | Set layout width style | layout | "auto" \| "stretched" | 'auto' |
 | placement | Set placement style | placement | "bottom" \| "top" | 'bottom' |
 | rounded | Set rounded tabs | rounded | boolean | false |
@@ -369,7 +409,7 @@ import { IxIcon, IxTabItem, IxTabs } from '@siemens/ix-vue';
 
 | Name | Description | Event | Detail |
 | --- | --- | --- | --- |
-| selectedChange | \`selected\` property changed | selectedChange | number |
+| selectedChange | Tab selection event. Event detail is the zero-based tab index. Fires when the user selects a tab, or when the tab list changes and the selected index is adjusted. Not emitted when \`selected\` is set from outside. | selectedChange | number |
 
 ## API for ix-tab-item
 

@@ -683,9 +683,9 @@ onMounted(() => {
 
 | Name | Description | Attribute | Type | Default |
 | --- | --- | --- | --- | --- |
-| context | Selection and collapsed state management | context | { [x: string]: TreeItemContext; } | {} |
-| model | Tree model | model | { [x: string]: TreeItem ; } | {} |
-| renderItem | Render function of tree items | render-item | ( (index: number, data: T, dataList: T[], context: TreeContext, update: (callback: UpdateCallback) => void) => HTMLElement) \| undefined |  |
+| context | Selection and collapsed state management |  | { [x: string]: TreeItemContext; } | {} |
+| model | Tree model |  | any | {} |
+| renderItem | Render function of tree items |  | ( (index: number, data: T, dataList: T[], context: TreeContext, update: (callback: UpdateCallback) => void) => HTMLElement) \| undefined |  |
 | root | Initial root element will not be rendered | root | string | 'root' |
 | toggleOnItemClick | Enable to toggle items by click on the item | toggle-on-item-click | boolean \| undefined |  |
 
@@ -705,7 +705,7 @@ onMounted(() => {
 | Name | Description | Attribute | Type | Default |
 | --- | --- | --- | --- | --- |
 | ariaLabelChevronIcon | ARIA label for the chevron icon | aria-label-chevron-icon | string \| undefined |  |
-| context | Context | context | TreeItemContext \| undefined |  |
+| context | Context |  | TreeItemContext \| undefined |  |
 | hasChildren | Has tree item children | has-children | boolean | false |
 | text | Text | text | string \| undefined |  |
 

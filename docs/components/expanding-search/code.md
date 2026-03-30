@@ -69,9 +69,9 @@ import { IxExpandingSearch } from '@siemens/ix-vue';
 
 | Name | Description | Attribute | Type | Default |
 | --- | --- | --- | --- | --- |
-| ariaLabelClearIconButton | ARIA label for the clear icon button Will be set as aria-label on the nested HTML button element | aria-label-clear-icon-button | string \| undefined |  |
+| ariaLabelClearIconButton | ARIA label for the clear icon button Will be set as aria-label on the nested HTML button element | aria-label-clear-icon-button | string \| undefined | 'Clear search' |
 | ariaLabelSearchIconButton | ARIA label for the search icon button Will be set as aria-label on the nested HTML button element | aria-label-search-icon-button | string \| undefined |  |
-| ariaLabelSearchInput | ARIA label for the search input Will be set as aria-label on the nested HTML input element | aria-label-search-input | string \| undefined |  |
+| ariaLabelSearchInput | ARIA label for the search input Will be set as aria-label on the nested HTML input element | aria-label-search-input | string \| undefined | 'Search input' |
 | fullWidth | If true the search field will fill all available horizontal space of it's parent container when expanded. | full-width | boolean | false |
 | icon | Search icon | icon | string \| undefined |  |
 | placeholder | Placeholder text | placeholder | string | 'Enter text here' |

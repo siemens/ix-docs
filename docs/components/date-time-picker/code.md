@@ -91,28 +91,28 @@ export default async () => {
 
 | Name | Description | Attribute | Type | Default |
 | --- | --- | --- | --- | --- |
-| ariaLabelNextMonthButton | ARIA label for the next month icon button Will be set as aria-label on the nested HTML button element | aria-label-next-month-button | string \| undefined |  |
-| ariaLabelPreviousMonthButton | ARIA label for the previous month icon button Will be set as aria-label on the nested HTML button element | aria-label-previous-month-button | string \| undefined |  |
+| ariaLabelNextMonthButton | ARIA label for the next month icon button. Will be set as aria-label on the nested HTML button element. | aria-label-next-month-button | string \| undefined | 'Next month' |
+| ariaLabelPreviousMonthButton | ARIA label for the previous month icon button. Will be set as aria-label on the nested HTML button element. | aria-label-previous-month-button | string \| undefined | 'Previous month' |
 | dateFormat | Date format string. See [https://moment.github.io/luxon/#/formatting?id=table-of-tokens](https://moment.github.io/luxon/#/formatting?id=table-of-tokens) for all available tokens. | date-format | string | 'yyyy/LL/dd' |
-| from | The selected starting date. If the picker is not in range mode this is the selected date. Format has to match the \`format\` property. | from | string \| undefined |  |
-| i18nDone | Text of date select button | i18n-done | string | 'Done' |
-| i18nTime | Top label of time picker | i18n-time | string | 'Time' |
-| locale | Format of time string See [https://moment.github.io/luxon/#/formatting?id=table-of-tokens](https://moment.github.io/luxon/#/formatting?id=table-of-tokens) for all available tokens. | locale | string \| undefined |  |
-| maxDate | The latest date that can be selected by the date picker. If not set there will be no restriction. | max-date | string \| undefined |  |
-| minDate | The earliest date that can be selected by the date picker. If not set there will be no restriction. | min-date | string \| undefined |  |
-| showTimeReference | Show time reference input Time reference is default aligned with | show-time-reference | boolean | false |
-| showWeekNumbers | Shows week numbers displayed on the left side of the date picker | show-week-numbers | boolean | false |
-| singleSelection | If true disables date range selection (from/to). | single-selection | boolean | false |
-| time | Select time with format string | time | string \| undefined |  |
+| from | The selected starting date. If the picker is not in range mode, this is the selected date. Format has to match the \`dateFormat\` property. | from | string \| undefined |  |
+| i18nDone | Text of the date select button. | i18n-done | string | 'Done' |
+| i18nTime | Top label of the time picker. | i18n-time | string | 'Time' |
+| locale | Locale identifier (e.g. 'en' or 'de'). See [https://moment.github.io/luxon/#/formatting?id=table-of-tokens](https://moment.github.io/luxon/#/formatting?id=table-of-tokens) for all available tokens. | locale | string \| undefined |  |
+| maxDate | The latest date that can be selected. If not set there will be no restriction. | max-date | string \| undefined |  |
+| minDate | The earliest date that can be selected. If not set there will be no restriction. | min-date | string \| undefined |  |
+| showTimeReference | Show AM/PM time reference control. | show-time-reference | boolean | false |
+| showWeekNumbers | Shows week numbers displayed on the left side of the date picker. | show-week-numbers | boolean | false |
+| singleSelection | If true, disables date range selection (from/to). | single-selection | boolean | false |
+| time | Selected time value for the embedded time picker. Format has to match the \`timeFormat\` property. | time | string \| undefined |  |
 | timeFormat | Time format string. See [https://moment.github.io/luxon/#/formatting?id=table-of-tokens](https://moment.github.io/luxon/#/formatting?id=table-of-tokens) for all available tokens. | time-format | string | 'HH:mm:ss' |
-| timeReference | Set time reference | time-reference | "AM" \| "PM" \| undefined |  |
-| to | The selected end date. If the the picker is not in range mode this property has no impact. Format has to match the \`format\` property. | to | string \| undefined |  |
-| weekStartIndex | The index of which day to start the week on, based on the Locale#weekdays array. E.g. if the locale is en-us, weekStartIndex = 1 results in starting the week on monday. | week-start-index | number | 0 |
+| timeReference | Time reference (AM or PM). | time-reference | "AM" \| "PM" \| undefined |  |
+| to | The selected end date. If the picker is not in range mode, this property has no impact. Format has to match the \`dateFormat\` property. | to | string \| undefined |  |
+| weekStartIndex | The index of which day to start the week on, based on the Locale#weekdays array. E.g. if the locale is en-us, weekStartIndex = 1 results in starting the week on Monday. | week-start-index | number | 0 |
 
 ### Events
 
 | Name | Description | Event | Detail |
 | --- | --- | --- | --- |
-| dateChange | Date change | dateChange | string \| { from?: string \| undefined; to?: string \| undefined; } |
-| dateSelect | Datetime selection event is fired after confirm button is pressed | dateSelect | { from?: string \| undefined; to?: string \| undefined; time: string; } |
-| timeChange | Time change | timeChange | string |
+| dateChange | Date change event. Emitted when the date changes in the embedded date picker. | dateChange | "time" \| string \| { from?: string \| undefined; to?: string \| undefined; time: string; } |
+| dateSelect | Datetime selection event. Emitted when the user confirms the selection. | dateSelect | { from?: string \| undefined; to?: string \| undefined; time: string; } |
+| timeChange | Time change event. Emitted when the time changes in the embedded time picker. | timeChange | string |

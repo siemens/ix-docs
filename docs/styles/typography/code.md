@@ -17,7 +17,7 @@ We use utility CSS classes to style text. Theme changes will apply to texts auto
 | Name | Description | Attribute | Type | Default |
 | --- | --- | --- | --- | --- |
 | bold | Display text bold | bold | boolean | false |
-| format | Text format | format | TypographyFormat \| undefined |  |
+| format | Text format | format | "body" \| "body-lg" \| "body-sm" \| "body-xs" \| "code" \| "code-lg" \| "code-sm" \| "display" \| "display-lg" \| "display-sm" \| "display-xl" \| "display-xs" \| "display-xxl" \| "h1" \| "h2" \| "h3" \| "h4" \| "h5" \| "h6" \| "label" \| "label-lg" \| "label-sm" \| "label-xs" \| undefined |  |
 | textColor | Text color based on theme variables | text-color | "alarm" \| "alarm-contrast" \| "contrast" \| "critical-contrast" \| "info-contrast" \| "inv-contrast" \| "inv-soft" \| "inv-std" \| "inv-weak" \| "neutral-contrast" \| "primary-contrast" \| "soft" \| "std" \| "success-contrast" \| "warning-contrast" \| "weak" \| undefined |  |
 | textDecoration | Text decoration | text-decoration | "line-through" \| "none" \| "underline" | 'none' |
 

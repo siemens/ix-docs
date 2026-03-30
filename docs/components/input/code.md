@@ -10,7 +10,13 @@
 
 #### input.tsx
 ```tsx
-import { IxInput, IxButton, IxDateInput, IxTimeInput, IxNumberInput } from '@siemens/ix-react';
+import {
+  IxInput,
+  IxButton,
+  IxDateInput,
+  IxTimeInput,
+  IxNumberInput,
+} from '@siemens/ix-react';
 
 export default () => {
   const handleSubmit = (e: React.FormEvent, formType: string) => {
@@ -1082,6 +1088,7 @@ import { IxInput, IxIcon, IxTypography } from '@siemens/ix-vue';
 | Name | Description | Event | Detail |
 | --- | --- | --- | --- |
 | ixBlur | Event emitted when the text field loses focus. | ixBlur | void |
+| ixChange | Event emitted when the text field loses focus and the value has changed. | ixChange | string |
 | validityStateChange | Event emitted when the validity state of the text field changes. | validityStateChange | ValidityState |
 | valueChange | Event emitted when the value of the text field changes. | valueChange | string |
 

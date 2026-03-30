@@ -283,7 +283,7 @@ export default () => {
         Home
       </IxMenuItem>
       <IxMenuItem icon={iconGlobe} slot="bottom">
-        Bottom Tab
+        Bottom tab
       </IxMenuItem>
     </IxMenu>
   );
@@ -341,7 +341,7 @@ import { IxMenu, IxMenuItem } from '@siemens/ix-vue';
 <template>
   <IxMenu>
     <IxMenuItem home-tab :icon="iconHome">Home</IxMenuItem>
-    <IxMenuItem :icon="iconGlobe" slot="bottom">Bottom Tab</IxMenuItem>
+    <IxMenuItem :icon="iconGlobe" slot="bottom">Bottom tab</IxMenuItem>
   </IxMenu>
 </template>
 ```

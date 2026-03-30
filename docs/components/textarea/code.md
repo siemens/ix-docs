@@ -636,10 +636,10 @@ export default {
 | required | Determines if the textarea field is required. | required | boolean | false |
 | resizeBehavior | Determines the resize behavior of the textarea field. Resizing can be enabled in one direction, both directions or completely disabled. | resize-behavior | "both" \| "horizontal" \| "none" \| "vertical" | 'both' |
 | showTextAsTooltip | Determines if the text should be displayed as a tooltip. | show-text-as-tooltip | boolean \| undefined |  |
-| textareaCols | The width of the textarea specified by number of characters. | textarea-cols | number \| undefined |  |
-| textareaHeight | The height of the textarea field (e.g. "52px"). | textarea-height | string \| undefined |  |
-| textareaRows | The height of the textarea specified by number of rows. | textarea-rows | number \| undefined |  |
-| textareaWidth | The width of the textarea field (e.g. "200px"). | textarea-width | string \| undefined |  |
+| textareaCols | The width of the textarea specified by number of characters. Will be overridden by \`textareaWidth\` prop if both are set. | textarea-cols | number \| undefined |  |
+| textareaHeight | The height of the textarea field (e.g. "52px"). Will take precedence over \`textareaRows\` prop if both are set. | textarea-height | string \| undefined |  |
+| textareaRows | The height of the textarea specified by number of rows. Will be overridden by \`textareaHeight\` prop if both are set. | textarea-rows | number \| undefined |  |
+| textareaWidth | The width of the textarea field (e.g. "200px"). Will take precedence over \`textareaCols\` prop if both are set. | textarea-width | string \| undefined |  |
 | validText | The valid text for the textarea field. | valid-text | string \| undefined |  |
 | value | The value of the textarea field. | value | string | '' |
 | warningText | The warning text for the textarea field. | warning-text | string \| undefined |  |
@@ -649,5 +649,6 @@ export default {
 | Name | Description | Event | Detail |
 | --- | --- | --- | --- |
 | ixBlur | Event emitted when the textarea field loses focus. | ixBlur | void |
+| ixChange | Event emitted when the textarea field loses focus and the value has changed. | ixChange | string |
 | validityStateChange | Event emitted when the validity state of the textarea field changes. | validityStateChange | ValidityState |
 | valueChange | Event emitted when the value of the textarea field changes. | valueChange | string |

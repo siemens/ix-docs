@@ -265,7 +265,7 @@ const nextItems = ref<string[]>(['Next Item 1']);
 | --- | --- | --- | --- | --- |
 | ariaLabelPreviousButton | Accessibility label for the dropdown button (ellipsis icon) used to access the dropdown list with conditionally hidden previous items | aria-label-previous-button | string | 'previous' |
 | enableTopLayer | Enable Popover API rendering for dropdown. | enable-top-layer | boolean | false |
-| nextItems | Items will be accessible through a dropdown | next-items | string[] | [] |
+| nextItems | Items will be accessible through a dropdown |  | string[] | [] |
 | subtle | Ghost breadcrumbs will not show solid backgrounds on individual crumbs unless there is a mouse event (e.g. hover) | subtle | boolean | false |
 | visibleItemCount | Excess items will get hidden inside of dropdown | visible-item-count | number | 9 |
 

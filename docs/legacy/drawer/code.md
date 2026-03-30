@@ -200,7 +200,7 @@ const show = ref(false);
 
 | Name | Description | Attribute | Type | Default |
 | --- | --- | --- | --- | --- |
-| ariaLabelCloseButton | ARIA label for the close icon button Will be set as aria-label on the nested HTML button element | aria-label-close-button | string \| undefined |  |
+| ariaLabelCloseButton | ARIA label for the close icon button Will be set as aria-label on the nested HTML button element | aria-label-close-button | string \| undefined | 'Close drawer' |
 | closeOnClickOutside | Fired in case of an outside click during drawer showed state | close-on-click-outside | boolean | true |
 | fullHeight | Render the drawer with maximum height | full-height | boolean | false |
 | maxWidth | Max width interpreted as REM | max-width | number | 28 |

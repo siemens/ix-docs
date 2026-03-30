@@ -133,15 +133,16 @@ import { IxPagination } from '@siemens/ix-vue';
 | Name | Description | Attribute | Type | Default |
 | --- | --- | --- | --- | --- |
 | advanced | Advanced mode | advanced | boolean | false |
-| ariaLabelChevronLeftIconButton | ARIA label for the chevron left icon button Will be set as aria-label on the nested HTML button element | aria-label-chevron-left-icon-button | string \| undefined |  |
-| ariaLabelChevronRightIconButton | ARIA label for the chevron right icon button Will be set as aria-label on the nested HTML button element | aria-label-chevron-right-icon-button | string \| undefined |  |
+| ariaLabelChevronLeftIconButton | ARIA label for the chevron left icon button Will be set as aria-label on the nested HTML button element | aria-label-chevron-left-icon-button | string \| undefined | 'Previous page' |
+| ariaLabelChevronRightIconButton | ARIA label for the chevron right icon button Will be set as aria-label on the nested HTML button element | aria-label-chevron-right-icon-button | string \| undefined | 'Next page' |
 | ariaLabelPageSelection | ARIA label for the page selection input Will be set as aria-label on the nested HTML input element | aria-label-page-selection | string | 'Page selection input' |
 | count | Total number of pages | count | number | 0 |
 | hideItemCount | Hide item count in advanced mode | hide-item-count | boolean | false |
 | i18nItems | i18n label for 'Items' | i18n-items | string | 'Items' |
 | i18nOf | i18n label for 'of' | i18n-of | string | 'of' |
 | i18nPage | i18n label for 'Page' | i18n-page | string | 'Page' |
-| itemCount | Number of items shown at once. Can only be changed in advaced mode. | item-count | number | 15 |
+| itemCount | Number of items shown at once. Can only be changed in advanced mode. | item-count | number | 15 |
+| itemCountOptions | Custom item count options for advanced mode. Provide an array of positive numbers to display in the items per page dropdown. |  | number[] | [10, 15, 20, 40, 100] |
 | selectedPage | Zero based index of currently selected page | selected-page | number | 0 |
 
 ### Events

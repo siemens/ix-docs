@@ -562,7 +562,7 @@ import { IxSlider } from '@siemens/ix-vue';
 | infoText | Info text for the field component | info-text | string \| undefined |  |
 | invalidText | Error text for the field component | invalid-text | string \| undefined |  |
 | label | Label for the field component | label | string \| undefined |  |
-| marker | Define tick marker on the slider. Marker has to be within slider min/max | marker | number[] \| undefined |  |
+| marker | Define tick marker on the slider. Marker has to be within slider min/max |  | number[] \| undefined |  |
 | max | Maximum slider value | max | number | 100 |
 | min | Minimum slider value | min | number | 0 |
 | showTextAsTooltip | Show helper, info, warning, error and valid text as tooltip | show-text-as-tooltip | boolean | false |

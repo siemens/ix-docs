@@ -136,10 +136,10 @@ import { IxButton } from '@siemens/ix-react';
 export default () => {
   return (
     <>
-      <IxButton variant="subtle-primary">
+      <IxButton variant="secondary">
         Button
       </IxButton>
-      <IxButton variant="subtle-primary" disabled>
+      <IxButton variant="secondary" disabled>
         Button
       </IxButton>
     </>
@@ -167,8 +167,8 @@ import { Component } from '@angular/core';
 @Component({
   standalone: false,
   selector: 'app-example',
-  template: ` <ix-button variant="subtle-primary"> Button </ix-button>
-    <ix-button variant="subtle-primary" disabled> Button </ix-button>`,
+  template: ` <ix-button variant="secondary"> Button </ix-button>
+    <ix-button variant="secondary" disabled> Button </ix-button>`,
   styleUrls: ['./button-secondary.css'],
 })
 export default class Buttons {}
@@ -195,8 +195,8 @@ import { IxButton } from '@siemens/ix-angular/standalone';
 @Component({
   selector: 'app-example',
   imports: [IxButton],
-  template: ` <ix-button variant="subtle-primary"> Button </ix-button>
-    <ix-button variant="subtle-primary" disabled> Button </ix-button>`,
+  template: ` <ix-button variant="secondary"> Button </ix-button>
+    <ix-button variant="secondary" disabled> Button </ix-button>`,
   styleUrls: ['./button-secondary.css'],
 })
 export default class Buttons {}
@@ -224,8 +224,8 @@ import { IxButton } from '@siemens/ix-vue';
 <style scoped src="./button-secondary.css"></style>
 
 <template>
-  <IxButton variant="subtle-primary"> Button </IxButton>
-  <IxButton variant="subtle-primary" disabled> Button </IxButton>
+  <IxButton variant="secondary"> Button </IxButton>
+  <IxButton variant="secondary" disabled> Button </IxButton>
 </template>
 ```
 
@@ -244,9 +244,9 @@ ix-button {
 
 ### React Examples
 
-#### button-ghost.tsx
+#### button-tertiary.tsx
 ```tsx
-import './button-ghost.scoped.css';
+import './button-tertiary.scoped.css';
 
 import { IxButton } from '@siemens/ix-react';
 
@@ -264,7 +264,7 @@ export default () => {
 };
 ```
 
-#### button-ghost.scoped.css
+#### button-tertiary.scoped.css
 ```css
 body {
   display: flex;
@@ -277,7 +277,7 @@ ix-button {
 
 ### Angular Examples
 
-#### button-ghost.ts
+#### button-tertiary.ts
 ```ts
 import { Component } from '@angular/core';
 
@@ -288,12 +288,12 @@ import { Component } from '@angular/core';
     <ix-button variant="tertiary"> Button </ix-button>
     <ix-button variant="tertiary" disabled> Button </ix-button>
   `,
-  styleUrls: ['./button-ghost.css'],
+  styleUrls: ['./button-tertiary.css'],
 })
 export default class Buttons {}
 ```
 
-#### button-ghost.css
+#### button-tertiary.css
 ```css
 body {
   display: flex;
@@ -306,7 +306,7 @@ ix-button {
 
 ### Angular Standalone Examples
 
-#### button-ghost.ts
+#### button-tertiary.ts
 ```ts
 import { Component } from '@angular/core';
 import { IxButton } from '@siemens/ix-angular/standalone';
@@ -318,12 +318,12 @@ import { IxButton } from '@siemens/ix-angular/standalone';
     <ix-button variant="tertiary"> Button </ix-button>
     <ix-button variant="tertiary" disabled> Button </ix-button>
   `,
-  styleUrls: ['./button-ghost.css'],
+  styleUrls: ['./button-tertiary.css'],
 })
 export default class Buttons {}
 ```
 
-#### button-ghost.css
+#### button-tertiary.css
 ```css
 body {
   display: flex;
@@ -336,13 +336,13 @@ ix-button {
 
 ### Vue Examples
 
-#### button-ghost.vue
+#### button-tertiary.vue
 ```vue
 <script setup lang="ts">
 import { IxButton } from '@siemens/ix-vue';
 </script>
 
-<style scoped src="./button-ghost.css"></style>
+<style scoped src="./button-tertiary.css"></style>
 
 <template>
   <IxButton variant="tertiary"> Button </IxButton>
@@ -350,7 +350,7 @@ import { IxButton } from '@siemens/ix-vue';
 </template>
 ```
 
-#### button-ghost.css
+#### button-tertiary.css
 ```css
 body {
   display: flex;
@@ -365,9 +365,9 @@ ix-button {
 
 ### React Examples
 
-#### button-grey.tsx
+#### button-subtle-primary.tsx
 ```tsx
-import './button-grey.scoped.css';
+import './button-subtle-primary.scoped.css';
 
 import { IxButton } from '@siemens/ix-react';
 
@@ -383,7 +383,7 @@ export default () => {
 };
 ```
 
-#### button-grey.scoped.css
+#### button-subtle-primary.scoped.css
 ```css
 body {
   display: flex;
@@ -396,7 +396,7 @@ ix-button {
 
 ### Angular Examples
 
-#### button-grey.ts
+#### button-subtle-primary.ts
 ```ts
 import { Component } from '@angular/core';
 
@@ -407,12 +407,12 @@ import { Component } from '@angular/core';
     <ix-button variant="subtle-primary"> Button </ix-button>
     <ix-button disabled variant="subtle-primary"> Button </ix-button>
   `,
-  styleUrls: ['./button-grey.css'],
+  styleUrls: ['./button-subtle-primary.css'],
 })
 export default class Buttons {}
 ```
 
-#### button-grey.css
+#### button-subtle-primary.css
 ```css
 body {
   display: flex;
@@ -425,7 +425,7 @@ ix-button {
 
 ### Angular Standalone Examples
 
-#### button-grey.ts
+#### button-subtle-primary.ts
 ```ts
 import { Component } from '@angular/core';
 import { IxButton } from '@siemens/ix-angular/standalone';
@@ -437,12 +437,12 @@ import { IxButton } from '@siemens/ix-angular/standalone';
     <ix-button variant="subtle-primary"> Button </ix-button>
     <ix-button disabled variant="subtle-primary"> Button </ix-button>
   `,
-  styleUrls: ['./button-grey.css'],
+  styleUrls: ['./button-subtle-primary.css'],
 })
 export default class Buttons {}
 ```
 
-#### button-grey.css
+#### button-subtle-primary.css
 ```css
 body {
   display: flex;
@@ -455,13 +455,13 @@ ix-button {
 
 ### Vue Examples
 
-#### button-grey.vue
+#### button-subtle-primary.vue
 ```vue
 <script setup lang="ts">
 import { IxButton } from '@siemens/ix-vue';
 </script>
 
-<style scoped src="./button-grey.css"></style>
+<style scoped src="./button-subtle-primary.css"></style>
 
 <template>
   <IxButton variant="subtle-primary"> Button </IxButton>
@@ -469,7 +469,7 @@ import { IxButton } from '@siemens/ix-vue';
 </template>
 ```
 
-#### button-grey.css
+#### button-subtle-primary.css
 ```css
 body {
   display: flex;
@@ -484,9 +484,9 @@ ix-button {
 
 ### React Examples
 
-#### button-grey-secondary.tsx
+#### button-subtle-secondary.tsx
 ```tsx
-import './button-grey-secondary.scoped.css';
+import './button-subtle-secondary.scoped.css';
 
 import { IxButton } from '@siemens/ix-react';
 
@@ -504,7 +504,7 @@ export default () => {
 };
 ```
 
-#### button-grey-secondary.scoped.css
+#### button-subtle-secondary.scoped.css
 ```css
 body {
   display: flex;
@@ -517,7 +517,7 @@ ix-button {
 
 ### Angular Examples
 
-#### button-grey-secondary.ts
+#### button-subtle-secondary.ts
 ```ts
 import { Component } from '@angular/core';
 
@@ -528,12 +528,12 @@ import { Component } from '@angular/core';
     <ix-button variant="subtle-secondary"> Button </ix-button>
     <ix-button disabled variant="subtle-secondary"> Button </ix-button>
   `,
-  styleUrls: ['./button-grey-secondary.css'],
+  styleUrls: ['./button-subtle-secondary.css'],
 })
 export default class Buttons {}
 ```
 
-#### button-grey-secondary.css
+#### button-subtle-secondary.css
 ```css
 body {
   display: flex;
@@ -546,7 +546,7 @@ ix-button {
 
 ### Angular Standalone Examples
 
-#### button-grey-secondary.ts
+#### button-subtle-secondary.ts
 ```ts
 import { Component } from '@angular/core';
 import { IxButton } from '@siemens/ix-angular/standalone';
@@ -558,12 +558,12 @@ import { IxButton } from '@siemens/ix-angular/standalone';
     <ix-button variant="subtle-secondary"> Button </ix-button>
     <ix-button disabled variant="subtle-secondary"> Button </ix-button>
   `,
-  styleUrls: ['./button-grey-secondary.css'],
+  styleUrls: ['./button-subtle-secondary.css'],
 })
 export default class Buttons {}
 ```
 
-#### button-grey-secondary.css
+#### button-subtle-secondary.css
 ```css
 body {
   display: flex;
@@ -576,13 +576,13 @@ ix-button {
 
 ### Vue Examples
 
-#### button-grey-secondary.vue
+#### button-subtle-secondary.vue
 ```vue
 <script setup lang="ts">
 import { IxButton } from '@siemens/ix-vue';
 </script>
 
-<style scoped src="./button-grey-secondary.css"></style>
+<style scoped src="./button-subtle-secondary.css"></style>
 
 <template>
   <IxButton variant="subtle-secondary"> Button </IxButton>
@@ -590,7 +590,7 @@ import { IxButton } from '@siemens/ix-vue';
 </template>
 ```
 
-#### button-grey-secondary.css
+#### button-subtle-secondary.css
 ```css
 body {
   display: flex;
@@ -605,9 +605,9 @@ ix-button {
 
 ### React Examples
 
-#### button-grey-ghost.tsx
+#### button-subtle-tertiary.tsx
 ```tsx
-import './button-grey-ghost.scoped.css';
+import './button-subtle-tertiary.scoped.css';
 
 import { IxButton } from '@siemens/ix-react';
 
@@ -625,7 +625,7 @@ export default () => {
 };
 ```
 
-#### button-grey-ghost.scoped.css
+#### button-subtle-tertiary.scoped.css
 ```css
 body {
   display: flex;
@@ -638,19 +638,19 @@ ix-button {
 
 ### Angular Examples
 
-#### button-grey-ghost.ts
+#### button-subtle-tertiary.ts
 ```ts
 import { Component } from '@angular/core';
 
 @Component({
   standalone: false,
   selector: 'app-example',
-  template: buttonGreyGhost(),
-  styleUrls: ['./button-grey-ghost.css'],
+  template: buttonSubtleTertiary(),
+  styleUrls: ['./button-subtle-tertiary.css'],
 })
 export default class Buttons {}
 
-function buttonGreyGhost(): string | undefined {
+function buttonSubtleTertiary(): string | undefined {
   return `
       <ix-button variant="subtle-tertiary">
         Button
@@ -662,7 +662,7 @@ function buttonGreyGhost(): string | undefined {
 }
 ```
 
-#### button-grey-ghost.css
+#### button-subtle-tertiary.css
 ```css
 body {
   display: flex;
@@ -675,7 +675,7 @@ ix-button {
 
 ### Angular Standalone Examples
 
-#### button-grey-ghost.ts
+#### button-subtle-tertiary.ts
 ```ts
 import { Component } from '@angular/core';
 import { IxButton } from '@siemens/ix-angular/standalone';
@@ -683,12 +683,12 @@ import { IxButton } from '@siemens/ix-angular/standalone';
 @Component({
   selector: 'app-example',
   imports: [IxButton],
-  template: buttonGreyGhost(),
-  styleUrls: ['./button-grey-ghost.css'],
+  template: buttonSubtleTertiary(),
+  styleUrls: ['./button-subtle-tertiary.css'],
 })
 export default class Buttons {}
 
-function buttonGreyGhost(): string | undefined {
+function buttonSubtleTertiary(): string | undefined {
   return `
       <ix-button variant="subtle-tertiary">
         Button
@@ -700,7 +700,7 @@ function buttonGreyGhost(): string | undefined {
 }
 ```
 
-#### button-grey-ghost.css
+#### button-subtle-tertiary.css
 ```css
 body {
   display: flex;
@@ -713,13 +713,13 @@ ix-button {
 
 ### Vue Examples
 
-#### button-grey-ghost.vue
+#### button-subtle-tertiary.vue
 ```vue
 <script setup lang="ts">
 import { IxButton } from '@siemens/ix-vue';
 </script>
 
-<style scoped src="./button-grey-ghost.css"></style>
+<style scoped src="./button-subtle-tertiary.css"></style>
 
 <template>
   <IxButton variant="subtle-tertiary"> Button </IxButton>
@@ -727,7 +727,7 @@ import { IxButton } from '@siemens/ix-vue';
 </template>
 ```
 
-#### button-grey-ghost.css
+#### button-subtle-tertiary.css
 ```css
 body {
   display: flex;
@@ -744,9 +744,9 @@ Example is supported since version 2.3.0
 
 ### React Examples
 
-#### button-danger.tsx
+#### button-danger-primary.tsx
 ```tsx
-import './button-danger.scoped.css';
+import './button-danger-primary.scoped.css';
 
 import { IxButton } from '@siemens/ix-react';
 
@@ -762,7 +762,7 @@ export default () => {
 };
 ```
 
-#### button-danger.scoped.css
+#### button-danger-primary.scoped.css
 ```css
 body {
   display: flex;
@@ -775,26 +775,26 @@ ix-button {
 
 ### Angular Examples
 
-#### button-danger.ts
+#### button-danger-primary.ts
 ```ts
 import { Component } from '@angular/core';
 
 @Component({
   standalone: false,
   selector: 'app-example',
-  templateUrl: './button-danger.html',
-  styleUrls: ['./button-danger.css'],
+  templateUrl: './button-danger-primary.html',
+  styleUrls: ['./button-danger-primary.css'],
 })
 export default class Buttons {}
 ```
 
-#### button-danger.html
+#### button-danger-primary.html
 ```html
 <ix-button variant="danger-primary"> Button </ix-button>
 <ix-button disabled variant="danger-primary"> Button </ix-button>
 ```
 
-#### button-danger.css
+#### button-danger-primary.css
 ```css
 body {
   display: flex;
@@ -807,7 +807,7 @@ ix-button {
 
 ### Angular Standalone Examples
 
-#### button-danger.ts
+#### button-danger-primary.ts
 ```ts
 import { Component } from '@angular/core';
 import { IxButton } from '@siemens/ix-angular/standalone';
@@ -815,19 +815,19 @@ import { IxButton } from '@siemens/ix-angular/standalone';
 @Component({
   selector: 'app-example',
   imports: [IxButton],
-  templateUrl: './button-danger.html',
-  styleUrls: ['./button-danger.css'],
+  templateUrl: './button-danger-primary.html',
+  styleUrls: ['./button-danger-primary.css'],
 })
 export default class Buttons {}
 ```
 
-#### button-danger.html
+#### button-danger-primary.html
 ```html
 <ix-button variant="danger-primary"> Button </ix-button>
 <ix-button disabled variant="danger-primary"> Button </ix-button>
 ```
 
-#### button-danger.css
+#### button-danger-primary.css
 ```css
 body {
   display: flex;
@@ -840,13 +840,13 @@ ix-button {
 
 ### Vue Examples
 
-#### button-danger.vue
+#### button-danger-primary.vue
 ```vue
 <script setup lang="ts">
 import { IxButton } from '@siemens/ix-vue';
 </script>
 
-<style scoped src="./button-danger.css"></style>
+<style scoped src="./button-danger-primary.css"></style>
 
 <template>
   <IxButton variant="danger-primary"> Button </IxButton>
@@ -854,7 +854,7 @@ import { IxButton } from '@siemens/ix-vue';
 </template>
 ```
 
-#### button-danger.css
+#### button-danger-primary.css
 ```css
 body {
   display: flex;
@@ -871,9 +871,9 @@ Example is supported since version 2.3.0
 
 ### React Examples
 
-#### button-danger-outline.tsx
+#### button-danger-secondary.tsx
 ```tsx
-import './button-danger-outline.scoped.css';
+import './button-danger-secondary.scoped.css';
 
 import { IxButton } from '@siemens/ix-react';
 
@@ -891,7 +891,7 @@ export default () => {
 };
 ```
 
-#### button-danger-outline.scoped.css
+#### button-danger-secondary.scoped.css
 ```css
 body {
   display: flex;
@@ -904,26 +904,26 @@ ix-button {
 
 ### Angular Examples
 
-#### button-danger-outline.ts
+#### button-danger-secondary.ts
 ```ts
 import { Component } from '@angular/core';
 
 @Component({
   standalone: false,
   selector: 'app-example',
-  templateUrl: './button-danger-outline.html',
-  styleUrls: ['./button-danger-outline.css'],
+  templateUrl: './button-danger-secondary.html',
+  styleUrls: ['./button-danger-secondary.css'],
 })
 export default class Buttons {}
 ```
 
-#### button-danger-outline.html
+#### button-danger-secondary.html
 ```html
 <ix-button variant="danger-secondary"> Button </ix-button>
 <ix-button disabled variant="danger-secondary"> Button </ix-button>
 ```
 
-#### button-danger-outline.css
+#### button-danger-secondary.css
 ```css
 body {
   display: flex;
@@ -936,7 +936,7 @@ ix-button {
 
 ### Angular Standalone Examples
 
-#### button-danger-outline.ts
+#### button-danger-secondary.ts
 ```ts
 import { Component } from '@angular/core';
 import { IxButton } from '@siemens/ix-angular/standalone';
@@ -944,19 +944,19 @@ import { IxButton } from '@siemens/ix-angular/standalone';
 @Component({
   selector: 'app-example',
   imports: [IxButton],
-  templateUrl: './button-danger-outline.html',
-  styleUrls: ['./button-danger-outline.css'],
+  templateUrl: './button-danger-secondary.html',
+  styleUrls: ['./button-danger-secondary.css'],
 })
 export default class Buttons {}
 ```
 
-#### button-danger-outline.html
+#### button-danger-secondary.html
 ```html
 <ix-button variant="danger-secondary"> Button </ix-button>
 <ix-button disabled variant="danger-secondary"> Button </ix-button>
 ```
 
-#### button-danger-outline.css
+#### button-danger-secondary.css
 ```css
 body {
   display: flex;
@@ -969,13 +969,13 @@ ix-button {
 
 ### Vue Examples
 
-#### button-danger-outline.vue
+#### button-danger-secondary.vue
 ```vue
 <script setup lang="ts">
 import { IxButton } from '@siemens/ix-vue';
 </script>
 
-<style scoped src="./button-danger-outline.css"></style>
+<style scoped src="./button-danger-secondary.css"></style>
 
 <template>
   <IxButton variant="danger-secondary"> Button </IxButton>
@@ -983,7 +983,7 @@ import { IxButton } from '@siemens/ix-vue';
 </template>
 ```
 
-#### button-danger-outline.css
+#### button-danger-secondary.css
 ```css
 body {
   display: flex;
@@ -1000,19 +1000,19 @@ Example is supported since version 2.3.0
 
 ### React Examples
 
-#### button-danger-ghost.tsx
+#### button-danger-tertiary.tsx
 ```tsx
-import './button-danger-ghost.scoped.css';
+import './button-danger-tertiary.scoped.css';
 
 import { IxButton } from '@siemens/ix-react';
 
 export default () => {
   return (
     <>
-      <IxButton variant="subtle-tertiary">
+      <IxButton variant="danger-tertiary">
         Button
       </IxButton>
-      <IxButton disabled variant="subtle-tertiary">
+      <IxButton disabled variant="danger-tertiary">
         Button
       </IxButton>
     </>
@@ -1020,7 +1020,7 @@ export default () => {
 };
 ```
 
-#### button-danger-ghost.scoped.css
+#### button-danger-tertiary.scoped.css
 ```css
 body {
   display: flex;
@@ -1033,25 +1033,25 @@ ix-button {
 
 ### Angular Examples
 
-#### button-danger-ghost.ts
+#### button-danger-tertiary.ts
 ```ts
 import { Component } from '@angular/core';
 
 @Component({
   standalone: false,
   selector: 'app-example',
-  templateUrl: './button-danger-ghost.html',
+  templateUrl: './button-danger-tertiary.html',
 })
 export default class Buttons {}
 ```
 
-#### button-danger-ghost.html
+#### button-danger-tertiary.html
 ```html
-<ix-button variant="subtle-tertiary"> Button </ix-button>
-<ix-button disabled variant="subtle-tertiary"> Button </ix-button>
+<ix-button variant="danger-tertiary"> Button </ix-button>
+<ix-button disabled variant="danger-tertiary"> Button </ix-button>
 ```
 
-#### button-danger-ghost.css
+#### button-danger-tertiary.css
 ```css
 body {
   display: flex;
@@ -1064,7 +1064,7 @@ ix-button {
 
 ### Angular Standalone Examples
 
-#### button-danger-ghost.ts
+#### button-danger-tertiary.ts
 ```ts
 import { Component } from '@angular/core';
 import { IxButton } from '@siemens/ix-angular/standalone';
@@ -1072,18 +1072,18 @@ import { IxButton } from '@siemens/ix-angular/standalone';
 @Component({
   selector: 'app-example',
   imports: [IxButton],
-  templateUrl: './button-danger-ghost.html',
+  templateUrl: './button-danger-tertiary.html',
 })
 export default class Buttons {}
 ```
 
-#### button-danger-ghost.html
+#### button-danger-tertiary.html
 ```html
-<ix-button variant="subtle-tertiary"> Button </ix-button>
-<ix-button disabled variant="subtle-tertiary"> Button </ix-button>
+<ix-button variant="danger-tertiary"> Button </ix-button>
+<ix-button disabled variant="danger-tertiary"> Button </ix-button>
 ```
 
-#### button-danger-ghost.css
+#### button-danger-tertiary.css
 ```css
 body {
   display: flex;
@@ -1096,13 +1096,13 @@ ix-button {
 
 ### Vue Examples
 
-#### button-danger-ghost.vue
+#### button-danger-tertiary.vue
 ```vue
 <script setup lang="ts">
 import { IxButton } from '@siemens/ix-vue';
 </script>
 
-<style scoped src="./button-danger-ghost.css"></style>
+<style scoped src="./button-danger-tertiary.css"></style>
 
 <template>
   <IxButton variant="danger-tertiary"> Button </IxButton>
@@ -1110,7 +1110,7 @@ import { IxButton } from '@siemens/ix-vue';
 </template>
 ```
 
-#### button-danger-ghost.css
+#### button-danger-tertiary.css
 ```css
 body {
   display: flex;

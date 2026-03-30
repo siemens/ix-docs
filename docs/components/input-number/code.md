@@ -676,6 +676,7 @@ import { IxIcon, IxNumberInput, IxTypography } from '@siemens/ix-vue';
 | Name | Description | Event | Detail |
 | --- | --- | --- | --- |
 | ixBlur | Event emitted when the input field loses focus | ixBlur | void |
+| ixChange | Event emitted when the input field loses focus and the value has changed | ixChange | number |
 | validityStateChange | Event emitted when the validity state of the input field changes | validityStateChange | ValidityState |
 | valueChange | Event emitted when the value of the input field changes | valueChange | number |
 

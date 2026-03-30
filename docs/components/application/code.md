@@ -1121,8 +1121,8 @@ const activeContent = ref('home');
 
 | Name | Description | Attribute | Type | Default |
 | --- | --- | --- | --- | --- |
-| appSwitchConfig | Define application switch configuration | app-switch-config | undefined \| { currentAppId: string; apps: { id: string; name: string; description: string; url: string; target: AppSwitchConfigurationTarget; iconSrc: string; }[]; i18nAppSwitch?: string \| undefined; i18nLoadingApps?: string \| undefined; } |  |
-| breakpoints | Supported layouts | breakpoints | ("sm" \| "md" \| "lg")[] | ['sm', 'md', 'lg'] |
+| appSwitchConfig | Define application switch configuration |  | undefined \| { currentAppId: string; apps: { id: string; name: string; description: string; url: string; target: AppSwitchConfigurationTarget; iconSrc: string; }[]; i18nAppSwitch?: string \| undefined; i18nLoadingApps?: string \| undefined; } |  |
+| breakpoints | Supported layouts |  | ("sm" \| "md" \| "lg")[] | ['sm', 'md', 'lg'] |
 | forceBreakpoint | Change the responsive layout of the menu structure | force-breakpoint | "lg" \| "md" \| "sm" \| undefined |  |
 | theme | Application theme | theme | "classic" \| "classic-dark" \| "classic-light" \| string & Record \| undefined |  |
 | themeSystemAppearance | Use the system appearance dark or light | theme-system-appearance | boolean | false |

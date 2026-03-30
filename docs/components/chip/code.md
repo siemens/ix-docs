@@ -296,7 +296,7 @@ import { IxChip } from '@siemens/ix-vue';
 
 | Name | Description | Attribute | Type | Default |
 | --- | --- | --- | --- | --- |
-| ariaLabelCloseButton | ARIA label for the close button Will be set as aria-label on the nested HTML button element | aria-label-close-button | string \| undefined |  |
+| ariaLabelCloseButton | ARIA label for the close button Will be set as aria-label on the nested HTML button element | aria-label-close-button | string \| undefined | 'Close chip' |
 | background | Custom background color. Only has an effect on chips with \`variant='custom'\` | background | string \| undefined |  |
 | centerContent | Center the content of the chip. Set to false to disable centering. | center-content | boolean | false |
 | chipColor | Custom font and icon color. Only has an effect on chips with \`variant='custom'\` | chip-color | string \| undefined |  |

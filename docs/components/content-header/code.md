@@ -252,9 +252,9 @@ export default () => {
       <IxPill slot="header" icon={iconInfo} className="margin-top">
         Label
       </IxPill>
-      <IxButton ghost>Button1</IxButton>
-      <IxButton ghost>Button2</IxButton>
-      <IxButton ghost>Button3</IxButton>
+      <IxButton variant='tertiary'>Button1</IxButton>
+      <IxButton variant='tertiary'>Button2</IxButton>
+      <IxButton variant='tertiary'>Button3</IxButton>
     </IxContentHeader>
   );
 };
@@ -290,9 +290,9 @@ export default class ContentHeaderWithSlot {}
   header-subtitle="Subtitle"
 >
   <ix-pill slot="header" icon="info" class="margin-top">Label</ix-pill>
-  <ix-button ghost>Button1</ix-button>
-  <ix-button ghost>Button2</ix-button>
-  <ix-button ghost>Button3</ix-button>
+  <ix-button variant="tertiary">Button1</ix-button>
+  <ix-button variant="tertiary">Button2</ix-button>
+  <ix-button variant="tertiary">Button3</ix-button>
 </ix-content-header>
 ```
 
@@ -331,9 +331,9 @@ export default class ContentHeaderWithSlot {}
   header-subtitle="Subtitle"
 >
   <ix-pill slot="header" icon="info" class="margin-top">Label</ix-pill>
-  <ix-button ghost>Button1</ix-button>
-  <ix-button ghost>Button2</ix-button>
-  <ix-button ghost>Button3</ix-button>
+  <ix-button variant="tertiary">Button1</ix-button>
+  <ix-button variant="tertiary">Button2</ix-button>
+  <ix-button variant="tertiary">Button3</ix-button>
 </ix-content-header>
 ```
 
@@ -358,9 +358,9 @@ import { iconInfo } from '@siemens/ix-icons/icons';
 <template>
   <IxContentHeader has-back-button header-title="Content title" header-subtitle="Subtitle">
     <IxPill slot="header" :icon="iconInfo" class="margin-top">Label</IxPill>
-    <IxButton ghost>Button1</IxButton>
-    <IxButton ghost>Button2</IxButton>
-    <IxButton ghost>Button3</IxButton>
+    <IxButton variant="tertiary">Button1</IxButton>
+    <IxButton variant="tertiary">Button2</IxButton>
+    <IxButton variant="tertiary">Button3</IxButton>
   </IxContentHeader>
 </template>
 ```

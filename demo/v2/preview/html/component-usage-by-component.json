@@ -1,4 +1,7 @@
 {
+  "ix-action-card": [
+    "/src/preview-examples/action-card.html"
+  ],
   "ix-application": [
     "/src/preview-examples/about-and-legal.html",
     "/src/preview-examples/application-advanced.html",
@@ -41,10 +44,8 @@
     "/src/preview-examples/about-and-legal.html",
     "/src/preview-examples/popover-news.html"
   ],
-  "ix-action-card": [
-    "/src/preview-examples/action-card.html"
-  ],
   "ix-icon": [
+    "/home/runner/work/ix/ix/node_modules/.pnpm/@siemens+ix-icons@3.4.0/node_modules/@siemens/ix-icons/dist/esm/index.js",
     "/src/preview-examples/add-icons.html",
     "/src/preview-examples/card.html",
     "/src/preview-examples/date-input-with-slots.html",
@@ -121,16 +122,6 @@
     "/src/preview-examples/split-button-icons.html",
     "/src/preview-examples/split-button.html"
   ],
-  "ix-icon-button": [
-    "/src/preview-examples/application-header.html",
-    "/src/preview-examples/blind-header-actions.html",
-    "/src/preview-examples/button-loading.html",
-    "/src/preview-examples/button-with-icon.html",
-    "/src/preview-examples/content-header-no-back.html",
-    "/src/preview-examples/custom-field.html",
-    "/src/preview-examples/dropdown-quick-actions.html",
-    "/src/preview-examples/tile.html"
-  ],
   "ix-radio-group": [
     "/src/preview-examples/application-breakpoints.html",
     "/src/preview-examples/radio-group.html",
@@ -142,6 +133,16 @@
     "/src/preview-examples/radio-group.html",
     "/src/preview-examples/radio-validation.html",
     "/src/preview-examples/radio.html"
+  ],
+  "ix-icon-button": [
+    "/src/preview-examples/application-header.html",
+    "/src/preview-examples/blind-header-actions.html",
+    "/src/preview-examples/button-loading.html",
+    "/src/preview-examples/button-with-icon.html",
+    "/src/preview-examples/content-header-no-back.html",
+    "/src/preview-examples/custom-field.html",
+    "/src/preview-examples/dropdown-quick-actions.html",
+    "/src/preview-examples/tile.html"
   ],
   "ix-date-picker": [
     "/src/preview-examples/aria-label-properties.html",
@@ -173,16 +174,16 @@
     "/src/preview-examples/breadcrumb.html"
   ],
   "ix-button": [
-    "/src/preview-examples/button-danger-ghost.html",
-    "/src/preview-examples/button-danger-outline.html",
-    "/src/preview-examples/button-danger.html",
-    "/src/preview-examples/button-ghost.html",
-    "/src/preview-examples/button-grey-ghost.html",
-    "/src/preview-examples/button-grey-secondary.html",
-    "/src/preview-examples/button-grey.html",
+    "/src/preview-examples/button-danger-primary.html",
+    "/src/preview-examples/button-danger-secondary.html",
+    "/src/preview-examples/button-danger-tertiary.html",
     "/src/preview-examples/button-group.html",
     "/src/preview-examples/button-loading.html",
     "/src/preview-examples/button-secondary.html",
+    "/src/preview-examples/button-subtle-primary.html",
+    "/src/preview-examples/button-subtle-secondary.html",
+    "/src/preview-examples/button-subtle-tertiary.html",
+    "/src/preview-examples/button-tertiary.html",
     "/src/preview-examples/button-text-icon.html",
     "/src/preview-examples/button-with-link.html",
     "/src/preview-examples/buttons.html",
@@ -477,6 +478,9 @@
     "/src/preview-examples/pane-layout.html",
     "/src/preview-examples/pane.html"
   ],
+  "ix-menu-about-news": [
+    "/src/preview-examples/popover-news.html"
+  ],
   "ix-progress-indicator": [
     "/src/preview-examples/progress-indicator-circular-sizes.html",
     "/src/preview-examples/progress-indicator-circular-status.html",
@@ -485,9 +489,6 @@
     "/src/preview-examples/progress-indicator-linear-status.html",
     "/src/preview-examples/progress-indicator.html"
   ],
-  "ix-menu-about-news": [
-    "/src/preview-examples/popover-news.html"
-  ],
   "ix-menu-settings-item": [
     "/src/preview-examples/settings.html"
   ],
@@ -495,6 +496,7 @@
     "/src/preview-examples/slider-error.html",
     "/src/preview-examples/slider-marker.html",
     "/src/preview-examples/slider-trace.html",
+    "/src/preview-examples/slider-validation.html",
     "/src/preview-examples/slider.html"
   ],
   "ix-spinner": [
@@ -506,10 +508,12 @@
     "/src/preview-examples/split-button.html"
   ],
   "ix-tabs": [
+    "/src/preview-examples/tabs-overflow.html",
     "/src/preview-examples/tabs-rounded.html",
     "/src/preview-examples/tabs.html"
   ],
   "ix-tab-item": [
+    "/src/preview-examples/tabs-overflow.html",
     "/src/preview-examples/tabs-rounded.html",
     "/src/preview-examples/tabs.html"
   ],
@@ -567,12 +571,6 @@
   "ix-upload": [
     "/src/preview-examples/upload.html"
   ],
-  "ix-menu-avatar": [
-    "/src/preview-examples/vertical-tabs-with-avatar.html"
-  ],
-  "ix-menu-avatar-item": [
-    "/src/preview-examples/vertical-tabs-with-avatar.html"
-  ],
   "ix-workflow-steps": [
     "/src/preview-examples/workflow-vertical.html",
     "/src/preview-examples/workflow.html"
@@ -580,5 +578,11 @@
   "ix-workflow-step": [
     "/src/preview-examples/workflow-vertical.html",
     "/src/preview-examples/workflow.html"
+  ],
+  "ix-menu-avatar": [
+    "/src/preview-examples/vertical-tabs-with-avatar.html"
+  ],
+  "ix-menu-avatar-item": [
+    "/src/preview-examples/vertical-tabs-with-avatar.html"
   ]
 }

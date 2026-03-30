@@ -557,8 +557,8 @@ import { IxSelect, IxSelectItem } from '@siemens/ix-vue';
 | Name | Description | Attribute | Type | Default |
 | --- | --- | --- | --- | --- |
 | allowClear | Show clear button | allow-clear | boolean | false |
-| ariaLabelChevronDownIconButton | ARIA label for the chevron down icon button Will be set as aria-label on the nested HTML button element | aria-label-chevron-down-icon-button | string \| undefined | 'Open select dropdown' |
-| ariaLabelClearIconButton | ARIA label for the clear icon button Will be set as aria-label on the nested HTML button element | aria-label-clear-icon-button | string \| undefined |  |
+| ariaLabelChevronDownIconButton | ARIA label for the chevron down icon button Will be set as aria-label on the nested HTML button element | aria-label-chevron-down-icon-button | string \| undefined |  |
+| ariaLabelClearIconButton | ARIA label for the clear icon button Will be set as aria-label on the nested HTML button element | aria-label-clear-icon-button | string \| undefined | 'Clear selection' |
 | collapseMultipleSelection | Show "all" chip when all items are selected in multiple mode | collapse-multiple-selection | boolean | false |
 | disabled | If true the select will be in disabled state | disabled | boolean | false |
 | dropdownMaxWidth | The maximum width of the dropdown element with value and unit (e.g. "200px" or "12.5rem"). By default the maximum width of the dropdown element is set to 100%. | dropdown-max-width | string \| undefined |  |

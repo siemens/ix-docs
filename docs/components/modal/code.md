@@ -641,7 +641,7 @@ import { IxApplicationContext } from '@siemens/ix-vue';
 
 | Name | Description | Attribute | Type | Default |
 | --- | --- | --- | --- | --- |
-| ariaLabelCloseIconButton | ARIA label for the close icon button Will be set as aria-label on the nested HTML button element | aria-label-close-icon-button | string \| undefined |  |
+| ariaLabelCloseIconButton | ARIA label for the close icon button Will be set as aria-label on the nested HTML button element | aria-label-close-icon-button | string \| undefined | 'Close modal' |
 | ariaLabelIcon | ARIA label for the icon | aria-label-icon | string \| undefined |  |
 | hideClose | Hide the close button | hide-close | boolean | false |
 | icon | Icon of the Header | icon | string \| undefined |  |

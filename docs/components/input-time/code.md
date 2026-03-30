@@ -520,42 +520,43 @@ import { IxTimeInput, IxIcon, IxTypography } from '@siemens/ix-vue';
 
 | Name | Description | Attribute | Type | Default |
 | --- | --- | --- | --- | --- |
-| disabled | Disabled attribute | disabled | boolean | false |
+| disabled | Disabled attribute. | disabled | boolean | false |
 | enableTopLayer | Enable Popover API rendering for dropdown. | enable-top-layer | boolean | false |
-| format | Format of time string See [https://moment.github.io/luxon/#/formatting?id=table-of-tokens](https://moment.github.io/luxon/#/formatting?id=table-of-tokens) for all available tokens. | format | string | 'TT' |
-| helperText | Helper text below the input field | helper-text | string \| undefined |  |
+| format | Format of time string. See [https://moment.github.io/luxon/#/formatting?id=table-of-tokens](https://moment.github.io/luxon/#/formatting?id=table-of-tokens) for all available tokens. | format | string | 'TT' |
+| helperText | Helper text below the input field. | helper-text | string \| undefined |  |
 | hideHeader | Hides the header of the picker. | hide-header | boolean | false |
-| hourInterval | Interval for hour selection | hour-interval | number | 1 |
-| i18nErrorTimeUnparsable | I18n string for the error message when the time is not parsable | i18n-error-time-unparsable | string | 'Time is not valid' |
-| i18nHourColumnHeader | Text for time-picker hour column header | i18n-hour-column-header | string | 'hr' |
-| i18nMillisecondColumnHeader | Text for time-picker millisecond column header | i18n-millisecond-column-header | string | 'ms' |
-| i18nMinuteColumnHeader | Text for time-picker minute column header | i18n-minute-column-header | string | 'min' |
-| i18nSecondColumnHeader | Text for time-picker second column header | i18n-second-column-header | string | 'sec' |
-| i18nSelectTime | Text of time-picker time select button | i18n-select-time | string | 'Confirm' |
-| i18nTime | Text for time-picker top label | i18n-time | string | 'Time' |
-| infoText | Info text below the input field | info-text | string \| undefined |  |
-| invalidText | Error text below the input field | invalid-text | string \| undefined |  |
-| label | Label of the input field | label | string \| undefined |  |
-| millisecondInterval | Interval for millisecond selection | millisecond-interval | number | 100 |
-| minuteInterval | Interval for minute selection | minute-interval | number | 1 |
-| name | Name of the input element | name | string \| undefined |  |
-| placeholder | Placeholder of the input element | placeholder | string \| undefined |  |
-| readonly | Readonly attribute | readonly | boolean | false |
-| required | Required attribute | required | boolean \| undefined |  |
-| secondInterval | Interval for second selection | second-interval | number | 1 |
-| showTextAsTooltip | Show text as tooltip | show-text-as-tooltip | boolean \| undefined |  |
+| hourInterval | Interval for hour selection. | hour-interval | number | 1 |
+| i18nErrorTimeUnparsable | I18n string for the error message when the time is not parsable. | i18n-error-time-unparsable | string | 'Time is not valid' |
+| i18nHourColumnHeader | Text for the time picker hour column header. | i18n-hour-column-header | string | 'hr' |
+| i18nMillisecondColumnHeader | Text for the time picker millisecond column header. | i18n-millisecond-column-header | string | 'ms' |
+| i18nMinuteColumnHeader | Text for the time picker minute column header. | i18n-minute-column-header | string | 'min' |
+| i18nSecondColumnHeader | Text for the time picker second column header. | i18n-second-column-header | string | 'sec' |
+| i18nSelectTime | Text of the time picker confirm button. | i18n-select-time | string | 'Confirm' |
+| i18nTime | Text for the time picker top label. | i18n-time | string | 'Time' |
+| infoText | Info text below the input field. | info-text | string \| undefined |  |
+| invalidText | Error text below the input field. | invalid-text | string \| undefined |  |
+| label | Label of the input field. | label | string \| undefined |  |
+| millisecondInterval | Interval for millisecond selection. | millisecond-interval | number | 100 |
+| minuteInterval | Interval for minute selection. | minute-interval | number | 1 |
+| name | Name of the input element. | name | string \| undefined |  |
+| placeholder | Placeholder of the input element. | placeholder | string \| undefined |  |
+| readonly | Readonly attribute. | readonly | boolean | false |
+| required | Required attribute. | required | boolean \| undefined |  |
+| secondInterval | Interval for second selection. | second-interval | number | 1 |
+| showTextAsTooltip | Show text as tooltip. | show-text-as-tooltip | boolean \| undefined |  |
 | suppressSubmitOnEnter | If false, pressing Enter will submit the form (if inside a form). Set to true to suppress submit on Enter. | suppress-submit-on-enter | boolean | false |
 | textAlignment | Text alignment within the time input. 'start' aligns the text to the start of the input, 'end' aligns the text to the end of the input. | text-alignment | "end" \| "start" | 'start' |
-| validText | Valid text below the input field | valid-text | string \| undefined |  |
-| value | Value of the input element | value | string | '' |
-| warningText | Warning text below the input field | warning-text | string \| undefined |  |
+| validText | Valid text below the input field. | valid-text | string \| undefined |  |
+| value | Value of the input element. | value | string | '' |
+| warningText | Warning text below the input field. | warning-text | string \| undefined |  |
 
 ### Events
 
 | Name | Description | Event | Detail |
 | --- | --- | --- | --- |
-| validityStateChange | Validation state change event. | validityStateChange | { patternMismatch: boolean; invalidReason?: string \| undefined; } |
-| valueChange | Input change event. | valueChange | string |
+| ixChange | Change event. Emitted when the time input loses focus and the value has changed. | ixChange | string |
+| validityStateChange | Validation state change event. Emitted when the validation state changes. | validityStateChange | { patternMismatch: boolean; valueMissing: boolean; invalidReason?: string \| undefined; } |
+| valueChange | Value change event. Emitted when the input value changes. | valueChange | string |
 
 ### Slot
 

@@ -38,8 +38,9 @@ We recommend always following the active release. When a version moves from the 
 
 ## Supported versions
 
-| Version |   Status    | Released     | Maintenance support since | End of life since |
-| ------- | :---------: | ------------ | ---------------- | ----------------- |
-| V4.0.0  |   Latest    | November 2025 | -                | -                 |
-| V3.0.0  | Maintenance  | May 2025 | November 2025     | -                 |
-| V2.0.0  | End of Life | September 2023 | May 2025     | November 2025      |
+| Version |   Status    | Released       | Maintenance support since | End of life since |
+| ------- | :---------: | -------------- | ------------------------- | ----------------- |
+| V5.0.0  |    Next     | ~ May 2026     | -                         | -                 |
+| V4.0.0  |   Latest    | November 2025  | ~ May 2026                | ~ November 2026   |
+| V3.0.0  | Maintenance | May 2025       | November 2025             | May 2026          |
+| V2.0.0  | End of Life | September 2023 | May 2025                  | November 2025     |

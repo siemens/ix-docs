@@ -20,7 +20,7 @@ import { IxButton, showModalLoading } from '@siemens/ix-react';
 export default () => {
   const startLoading = () => {
     let count = 0;
-    const progress: ModalLoadingContext = showModalLoading('Loading 0/2');
+    const progress: ModalLoadingContext = showModalLoading({ message: 'Loading 0/2' });
     const interval = setInterval(() => {
       count++;
       progress.update(`Loading ${count}/2`);
@@ -54,7 +54,7 @@ export default class Loading {
   startLoading = () => {
     let count = 0;
     const progress: ModalLoadingContext =
-      this.loadingService.showModalLoading('Loading 0/2');
+      this.loadingService.showModalLoading({ message: 'Loading 0/2' });
     const interval = setInterval(() => {
       count++;
       progress.update(`Loading ${count}/2`);
@@ -87,7 +87,7 @@ export default class Loading {
   startLoading = () => {
     let count = 0;
     const progress: ModalLoadingContext =
-      this.loadingService.showModalLoading('Loading 0/2');
+      this.loadingService.showModalLoading({ message: 'Loading 0/2' });
     const interval = setInterval(() => {
       count++;
       progress.update(`Loading ${count}/2`);
@@ -107,11 +107,11 @@ export default class Loading {
 ```vue
 <script setup lang="ts">
 import { IxButton, showModalLoading } from '@siemens/ix-vue';
-import { ModalLoadingContext } from '@siemens/ix';
+import type { ModalLoadingContext } from '@siemens/ix';
 
 const startLoading = () => {
   let count = 0;
-  const progress: ModalLoadingContext = showModalLoading('Loading 0/2');
+  const progress: ModalLoadingContext = showModalLoading({ message: 'Loading 0/2' });
   const interval = setInterval(() => {
     count++;
     progress.update(`Loading ${count}/2`);
@@ -136,7 +136,7 @@ const startLoading = () => {
 #### showModalLoading
 
 ```ts
-showModalLoading(message: string): unknown;
+showModalLoading(message: string): ModalLoadingContext;
 ```
 
 Displays a loading modal with a message

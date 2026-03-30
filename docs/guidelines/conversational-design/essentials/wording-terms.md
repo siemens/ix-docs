@@ -10,6 +10,10 @@ import { iconThumbUp, iconThumbDown } from "@siemens/ix-icons/icons";
 
 Use this comprehensive list of common words and phrases typically seen in industrial chatbot interfaces to ensure your chatbot UI is consistent, clear and aligns with our ONE Design Language approach. The words and phrases below attempt to find a balance between representing our voice (open, engaging and authentic) while also not humanizing the bot. This means that the bot responds as a competent expert or colleague without responding as a human with real emotions.
 
+:::info
+The legal disclaimers for industrial copilots require specific content to comply with Siemens AG regulations. The official content and guidelines are exclusively available for Siemens AG employees and can be accessed [here](https://code.siemens.com/siemens-ix/ix-brand-theme/-/blob/main/apps/documentation/src/pages/legal-disclaimers-copilots.md).
+:::
+
 Note: Some elements offer more than one option for you to select depending on your use case.
 
 ## Welcome message 
