@@ -30,7 +30,7 @@ The category filter has been significantly reworked to support full operand-base
 | `filterState` (`FilterState`)                             | `filterState` (`FilterAndSearchValue[]`)                            |
 | `categories` (object hash `{ [id]: { label, options } }`) | `categories` (`FilterCategory[]` array of `{ key, label, values }`) |
 | `staticOperator` (`LogicalFilterOperator`)                | `staticOperand` (string key from the `operands` array)              |
-| `ariaLabelOperatorButton`                                 | _(removed — no replacement)_                                        |
+| `ariaLabelOperatorButton`                                 | _(removed)_                                                         |
 
 ### Removed types
 
@@ -43,7 +43,7 @@ The category filter has been significantly reworked to support full operand-base
 
 #### `filterState`
 
-Old `FilterState` had two separate arrays — `tokens` (free-text) and `categories` (structured). The new model uses a single discriminated union array:
+Old `FilterState` had two separate arrays, `tokens` (free-text) and `categories` (structured). The new model uses a single discriminated union array:
 
 ```ts
 // ❌ Old
