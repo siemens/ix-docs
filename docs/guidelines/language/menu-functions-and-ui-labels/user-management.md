@@ -179,21 +179,21 @@ Many user management words often appear together in familiar, expected combinati
 
 | Verb | Common paired nouns | Definition | UI text examples |
 | --- | --- | --- | --- |
-| activate | accounts</br>permissions | Temporarily enable access without deleting information. | Button: Activate account |
-| add | users</br>permissions | Include users or permissions in a system. | Confirmation dialog: Add permissions for immediate access. |
-| approve | users</br>requests</br>access | Grant users access to the system following review. | Notification: 5 user requests approved |
-| assign | users</br>tasks</br>roles | Connect users to roles, groups or resources to enable specific permissions. | Toast message: Role assigned |
-| authenticate | users</br>identity</br>credentials | Users prove identity to gain secure access to an application. | Login screen: Authenticate with your ID |
-| authorize | users</br>roles</br>access</br>actions</br>requests | Determine what authenticated users are allowed to access or do. | Error message: Not authorized. Check your credentials and try again. |
-| block | users</br>profiles</br>accounts</br>domains</br>devices</br>addresses | Restrict interaction, communication or access. | Administrator action: Block IP address due to suspicious activity |
-| create | accounts</br>roles</br>groups</br>projects</br>workspaces</br>profiles</br>permissions | Establish something new in the system. | Form heading: Create user account<br/><br/>Form heading: Create new workspace |
-| duplicate | roles</br>permissions</br>configurations</br>projects | Create another instance (a copy) that matches the original. | Button: Duplicate configuration |
-| edit | profiles</br>permissions</br>roles</br>settings</br>details</br>properties | Modify existing details and properties. | Form heading: Edit user profile |
-| manage | accounts</br>users</br>permissions</br>settings | Supervise and control accounts, roles and permissions within systems. | Navigation label: Manage users<br/><br/>Navigation label: User management |
-| remove | users</br>permissions</br>roles</br>members</br>access | Detach or revoke users’ access or association while keeping their account active. | Warning message: Removing this role will disable any associated permissions. |
-| revoke | permissions</br>access</br>authorization</br>licenses | Withdraw something formally that was previously granted often in access control contexts. | Button: Revoke all permissions |
-| verify | users</br>identity</br>accounts</br>data | Confirm identity, authenticity and accuracy of something. Often performed by administrators. | User action: Click the link to verify your account. |
-| view | profiles</br>details</br>history | Displaying and accessing details without the ability to modify (uncommon permission similar to read-only). | Permission: Can view user profiles |
+| activate | accounts<br/>permissions | Temporarily enable access without deleting information. | Button: Activate account |
+| add | users<br/>permissions | Include users or permissions in a system. | Confirmation dialog: Add permissions for immediate access. |
+| approve | users<br/>requests<br/>access | Grant users access to the system following review. | Notification: 5 user requests approved |
+| assign | users<br/>tasks<br/>roles | Connect users to roles, groups or resources to enable specific permissions. | Toast message: Role assigned |
+| authenticate | users<br/>identity<br/>credentials | Users prove identity to gain secure access to an application. | Login screen: Authenticate with your ID |
+| authorize | users<br/>roles<br/>access<br/>actions<br/>requests | Determine what authenticated users are allowed to access or do. | Error message: Not authorized. Check your credentials and try again. |
+| block | users<br/>profiles<br/>accounts<br/>domains<br/>devices<br/>addresses | Restrict interaction, communication or access. | Administrator action: Block IP address due to suspicious activity |
+| create | accounts<br/>roles<br/>groups<br/>projects<br/>workspaces<br/>profiles<br/>permissions | Establish something new in the system. | Form heading: Create user account<br/><br/>Form heading: Create new workspace |
+| duplicate | roles<br/>permissions<br/>configurations<br/>projects | Create another instance (a copy) that matches the original. | Button: Duplicate configuration |
+| edit | profiles<br/>permissions<br/>roles<br/>settings<br/>details<br/>properties | Modify existing details and properties. | Form heading: Edit user profile |
+| manage | accounts<br/>users<br/>permissions<br/>settings | Supervise and control accounts, roles and permissions within systems. | Navigation label: Manage users<br/><br/>Navigation label: User management |
+| remove | users<br/>permissions<br/>roles<br/>members<br/>access | Detach or revoke users’ access or association while keeping their account active. | Warning message: Removing this role will disable any associated permissions. |
+| revoke | permissions<br/>access<br/>authorization<br/>licenses | Withdraw something formally that was previously granted often in access control contexts. | Button: Revoke all permissions |
+| verify | users<br/>identity<br/>accounts<br/>data | Confirm identity, authenticity and accuracy of something. Often performed by administrators. | User action: Click the link to verify your account. |
+| view | profiles<br/>details<br/>history | Displaying and accessing details without the ability to modify (uncommon permission similar to read-only). | Permission: Can view user profiles |
 
 ## Common wording mistakes
 
