@@ -95,7 +95,11 @@ const sidebars: SidebarsConfig = {
       items: [
         'home/releases/roadmap',
         'home/releases/release-version',
-        'home/releases/changelog',
+        {
+          type: 'link',
+          href: 'https://github.com/siemens/ix/releases',
+          label: 'Changelog',
+        },
       ],
       collapsed: true,
     },
@@ -1034,8 +1038,7 @@ const sidebars: SidebarsConfig = {
             {
               id: 'components/grid/code',
               label: 'Code',
-            }
-
+            },
           ],
         }),
         createTabItem({
@@ -1049,7 +1052,7 @@ const sidebars: SidebarsConfig = {
             {
               id: 'components/html-grid/code',
               label: 'Code',
-            }
+            },
           ],
         }),
         createTabItem({

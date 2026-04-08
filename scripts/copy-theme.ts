@@ -12,7 +12,6 @@ import axios from 'axios';
 import os from 'os';
 import zlib from 'zlib';
 import * as tar from 'tar';
-import { fetchChangelog } from './fetch-changelog';
 import { config as dotenv } from '@dotenvx/dotenvx';
 
 dotenv({
@@ -134,25 +133,7 @@ function copyTheme() {
   }
 }
 
-async function generateChangelog() {
-  console.log('Generating changelog...');
-
-  const changeLogExist = fs.existsSync(__changelog);
-
-  if (!process.env.GITHUB_TOKEN) {
-    if (changeLogExist) {
-      return;
-    }
-    console.error('No GITHUB_TOKEN provided, creating empty changelog');
-    return;
-  }
-
-  const changelog = await fetchChangelog();
-  await fs.writeFile(__changelog, changelog);
-}
-
 export default async function main() {
   await downloadTheme();
-  await generateChangelog();
   copyTheme();
 }
