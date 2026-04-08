@@ -301,4 +301,4 @@ Avoid using “revoke” with people and users as direct objects.
 ## Related
 
 - [UI terminology](#)
-- [License management](#)
+- [License management](./license-management.md)
