@@ -5,22 +5,22 @@ title: User management
 doc-type: 'banner'
 component-tabs: ['']
 no_single_tab: true
-description: 'User management involves guiding people through tasks like creating accounts, assigning roles, and managing software access. Clear, consistent language is essential as these actions often carry security, compliance and cost implications.'
+description: 'User management involves guiding people through tasks like creating accounts, assigning roles and managing software access. Clear, consistent language is essential as these actions often carry security, compliance and cost implications.'
 ---
 
 #
 
 ## General terms
 
-Use the term “role” to refer to a collection of “permissions” and avoid mixing terms across products. 
+Use consistent terms across products.
 
-As the terms “right” and “privilege” are becoming less common due to localization and translation challenges, we recommend avoiding these terms both in the UI and documentation.
+Use the term “role” to refer to a collection of “permissions”. 
+
+Use permissions instead of “right” and “privilege” as these are becoming less common due to localization and translation challenges. Avoid “right”, “rights” and “privilege” in both the UI and user documentation.
 
 | Term | Definition |
 | --- | --- |
 | Role | A collection of access rights and permissions. |
-| Right | The type of operations permitted for a given user of a certain system resource (uncommon). |
-| Privilege | The type of operations permitted for a given user (uncommon). |
 | Permissions | Authorization to perform operations associated with a specific shared resource that must be granted by a system administrator to individual user accounts or administrative groups. |
 | Credentials | Information that includes identification and proof of identification and is used to gain access to local and network resources. |
 
@@ -177,23 +177,23 @@ Although often used interchangeably, the terms “account”, “user” and “
 
 Many user management words often appear together in familiar, expected combinations (collocates). Use these common pairings to sound professional, while avoiding uncommon and “weird” combinations. 
 
-| Common pairings | Definition | UI text examples |
-| --- | --- | --- |
-| activate accounts / permissions | Temporarily enable access without deleting information. | Button: Activate account |
-| add users / permissions | Include users or permissions in a system. | Confirmation dialog: Add permissions for immediate access. |
-| approve users / requests / access | Grant users access to the system following review. | Notification: 5 user requests approved |
-| assign users / tasks / roles | Connect users to roles, groups or resources to enable specific permissions. | Toast message: Role assigned |
-| authenticate users / identity / credentials | Users prove identity to gain secure access to an application. | Login screen: Authenticate with your ID |
-| authorize users / roles / access / actions / requests | Determine what authenticated users are allowed to access or do. | Error message: Not authorized. Check your credentials and try again. |
-| block users / profiles / accounts / domains / devices / addresses | Restrict interaction, communication or access. | Administrator action: Block IP address due to suspicious activity |
-| create accounts / roles / groups / projects / workspaces / profiles / permissions | Establish something new in the system. | Form heading: Create user account<br/><br/>Form heading: Create new workspace |
-| duplicate roles / permissions / configurations / projects | Create a copy that matches the original. | Button: Duplicate configuration |
-| edit profiles / permissions / roles / settings / details / properties | Modify existing details and properties. | Form heading: Edit user profile |
-| manage accounts / users / permissions / settings | Supervise and control accounts, roles and permissions within systems. | Navigation label: Manage users<br/><br/>Navigation label: User management |
-| remove users / permissions / roles / members / access | Detach or revoke access or association while keeping the account active. | Warning message: Removing this role will disable any associated permissions. |
-| revoke permissions / access / authorization / licenses | Formally withdraw something that was previously granted, often in access control contexts. | Button: Revoke all permissions for this role |
-| verify users / identity / accounts / data | Confirm identity, authenticity and accuracy, often performed by administrators. | User action: Click the link to verify your account. |
-| view profiles / details / history | Display and access details without the ability to modify (uncommon permission similar to read-only). | Permission: Can view user profiles |
+| Verb | Common paired nouns | Definition | UI text examples |
+| --- | --- | --- | --- |
+| activate | accounts</br>permissions | Temporarily enable access without deleting information. | Button: Activate account |
+| add | users</br>permissions | Include users or permissions in a system. | Confirmation dialog: Add permissions for immediate access. |
+| approve | users</br>requests</br>access | Grant users access to the system following review. | Notification: 5 user requests approved |
+| assign | users</br>tasks</br>roles | Connect users to roles, groups or resources to enable specific permissions. | Toast message: Role assigned |
+| authenticate | users</br>identity</br>credentials | Users prove identity to gain secure access to an application. | Login screen: Authenticate with your ID |
+| authorize | users</br>roles</br>access</br>actions</br>requests | Determine what authenticated users are allowed to access or do. | Error message: Not authorized. Check your credentials and try again. |
+| block | users</br>profiles</br>accounts</br>domains</br>devices</br>addresses | Restrict interaction, communication or access. | Administrator action: Block IP address due to suspicious activity |
+| create | accounts</br>roles</br>groups</br>projects</br>workspaces</br>profiles</br>permissions | Establish something new in the system. | Form heading: Create user account<br/><br/>Form heading: Create new workspace |
+| duplicate | roles</br>permissions</br>configurations</br>projects | Create another instance (a copy) that matches the original. | Button: Duplicate configuration |
+| edit | profiles</br>permissions</br>roles</br>settings</br>details</br>properties | Modify existing details and properties. | Form heading: Edit user profile |
+| manage | accounts</br>users</br>permissions</br>settings | Supervise and control accounts, roles and permissions within systems. | Navigation label: Manage users<br/><br/>Navigation label: User management |
+| remove | users</br>permissions</br>roles</br>members</br>access | Detach or revoke users’ access or association while keeping their account active. | Warning message: Removing this role will disable any associated permissions. |
+| revoke | permissions</br>access</br>authorization</br>licenses | Withdraw something formally that was previously granted often in access control contexts. | Button: Revoke all permissions |
+| verify | users</br>identity</br>accounts</br>data | Confirm identity, authenticity and accuracy of something. Often performed by administrators. | User action: Click the link to verify your account. |
+| view | profiles</br>details</br>history | Displaying and accessing details without the ability to modify (uncommon permission similar to read-only). | Permission: Can view user profiles |
 
 ## Common wording mistakes
 
@@ -261,7 +261,7 @@ Avoid using “write” for editing or modifying UI elements.
 </div>
 </div>
 
-Avoid using “delete” when ending an association; use “delete” only for permanent erasure.
+Avoid using “delete” for simple removals; use “delete” only for permanent erasure. 
 
 <div className="dos-and-donts" markdown>
 <div className="dos" markdown>
@@ -295,10 +295,10 @@ Avoid using “revoke” with people and users as direct objects.
 - Do ensure role behaviors are transparent and easy to understand
 - Do use clear, descriptive role names that reflect user responsibilities
 - Do group related permissions logically within roles
-- Don’t create excessive numbers of roles because this causes confusion
+- Don’t create excessive amounts of roles because this causes confusion
 - Don’t create overlapping roles with unclear differences
 
 ## Related
 
-- [UI terminology](#)
-- [License management](#)
+- [UI terminology](./UI-terminology.md)
+- [License management](./license-management.md)

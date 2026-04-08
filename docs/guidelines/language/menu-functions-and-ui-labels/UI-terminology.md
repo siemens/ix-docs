@@ -12,7 +12,7 @@ description: 'Using well-defined terms help users understand actions, navigate s
 
 ## General rules
 
-Always consider the difference between user actions within a desktop environment, based on mouse or keyboard usage, and mobile devices based on touch gestures.
+Always consider the difference between user actions within a desktop environment (based on mouse or keyboard usage) and mobile devices based on touch gestures.
 
 <div className="dos-and-donts" markdown>
 <div className="dos" markdown>
@@ -163,7 +163,6 @@ Avoid mixing terms within the same products and portfolios.
 - To enable automatic updates, select the checkbox to activate Auto update.
 - Click this image
 - The link opens in a new window.
-- The link opens in a new tab.
 </div>
 <div className="donts" markdown>
 - To enable automatic updates, select the box to activate Auto update.
@@ -187,16 +186,14 @@ Basic interactions form the foundation of how users engage with your application
 | download vs. export | Download: Transfer data from one location to another.<br/><br/>Export: Transfer and process data from one location to another. | Download the inspection report.<br/><br/>Export production data to Excel. |
 | apply vs. save vs. update | Apply: Confirm changes to settings or filters.<br/><br/>Save: Store changes or data.<br/><br/>Update: Upgrade to newer or corrected information. | Apply the new filter settings.<br/><br/>Save the equipment configuration.<br/><br/>Update the sensor framework. |
 | refresh vs. reload vs. reset | Refresh: Retrieve and apply new or updated data.<br/><br/>Reload: Reinitialize whole pages or views. No new data.<br/><br/>Reset: Restore something to its original or default state. | Refresh the dashboard to see current readings.<br/><br/>Reload the monitoring interface.<br/><br/>Reset the machine to factory settings. |
-| renew vs. update | Renew: Extend the validity or duration of something.<br/><br/>Update: Make it current by changing something. | Renew your safety certifications.<br/>Renew your subscription.<br/><br/>Update the firmware to the latest build. |
+| renew vs. update | Renew: Extend the validity or duration of something.<br/><br/>Update: Make it current by changing something. | Renew your safety certifications.<br/><br/>Update the firmware to the latest build. |
 | open vs. go to | Open: Display a file, list item or feature.<br/><br/>Go to: Not recommended. Use "open" instead. | Open user management settings. |
 | reject vs. deny | Reject: Decline or not accept something (decision-based, one-time decision).<br/><br/>Deny: Refuse or block something (policy-based decision). Not recommended. Use “reject” instead. | Reject or accept maintenance request. |
 | delete vs. remove | Delete: Permanently erase an item, including its data.<br/><br/>Remove: Take something out of a list or collection without deleting its data. | Delete all obsolete work orders.<br/><br/>Remove the sensor from the active monitoring list. |
 
-## Common opposite and paired terminology
+## Common opposites
 
 Many actions come in natural pairs or opposites. Using the right pairs help users understand what each action does.
-
-### Common opposites
 
 |  |  |
 |--------|----------|
@@ -220,10 +217,10 @@ Many actions come in natural pairs or opposites. Using the right pairs help user
 - Do maintain the same terms for the same actions across all screens
 - Do use specific and standardized component names
 - Do consider the user environment, e.g. mobile, desktop, touchscreen
-- Don’t use unclear or vague terms, e.g. field, instead of text field
+- Don’t use generic, invented or vague terms where terminology already exists
 
 ## Related
 
 - [Button (component)](../../../components/button/)
-- [Search and filter](#)
+- [Search and filter](./Search-and-filter.md)
 - [Logging in and out](./logging-in-and-out.md)

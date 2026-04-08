@@ -129,14 +129,14 @@ Describe link behavior and type in ALT-texts instead of repeating icon and visib
 </div>
 </div>
 
-### Icon legend
+## Icon legend
 
 | Icon | ALT-text |
 |------|----------|
 | <IxIcon name={iconOpenExternal} size="16" aria-label="external" role="img"></IxIcon> | Option 1: external<br/>Option 2: open external link in new tab |
 | <IxIcon name={iconApplicationScreen} size="16" aria-label="external application" role="img"></IxIcon> | Option 1: external application<br/>Option 2: open external application |
 | <IxIcon name={iconPdfDocument} size="16" aria-label="PDF" role="img"></IxIcon> | Option 1: PDF<br/>Option 2: external PDF |
-| <IxIcon name={iconVideoFile} size="16" aria-label="video" role="img"></IxIcon> | video |
+| <IxIcon name={iconVideoFile} size="16" aria-label="video" role="img"></IxIcon> | Video |
 
 ## Language
 
@@ -187,7 +187,7 @@ Ensure email addresses and phone numbers are clickable.
 
 <div className="dos-and-donts" markdown>
 <div className="dos" markdown>
-- You can reach us at the following telephone number +1 555-0100.
+- You can reach us at the following telephone number [+1 555-0100](#).
 </div>
 <div className="donts" markdown>
 - 555 0100
@@ -196,7 +196,7 @@ Ensure email addresses and phone numbers are clickable.
 
 ## Dos and Don'ts
 
--  Do add link text for transparency
+- Do add link text for transparency
 - Do pair link and resource icons with clear texts
 - Do use icons to visualize what will open, e.g. external link, PDF, etc.
 - Do use ALT-text to explain icons

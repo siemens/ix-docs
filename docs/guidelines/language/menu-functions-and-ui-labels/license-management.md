@@ -34,14 +34,12 @@ Use the same terms throughout workflows, applications and portfolios to avoid co
 </div>
 </div>
 
-Use links and key points when referencing terms of use or compliance documents.
+Use links when referencing terms of use or compliance documents.
 
 <div className="dos-and-donts" markdown>
 <div className="dos" markdown>
-- By using this software, you agree to our Terms of Use.<br/>Key points: Install maximum 5 devices; commercial use requires a separate license. [View full terms](#)
-</div>
-<div className="donts" markdown>
-- By using this software, you agree to our Terms of Service.
+- By using this software, you agree to our Terms of Use.<br/>
+Link text: View full terms
 </div>
 </div>
 
@@ -80,15 +78,24 @@ Avoid using apostrophes to describe singular (‘s) or plural (s’) license pos
 </div>
 </div>
 
-Use active voice for user actions and passive voice when the actor is unknown or unimportant.
+Use active voice for user actions.
 
 <div className="dos-and-donts" markdown>
 <div className="dos" markdown>
 - Activate your license now.
-- Your license was activated successfully.
 </div>
 <div className="donts" markdown>
 - Your license should be activated by you.
+</div>
+</div>
+
+Use passive voice when the actor is unknown or unimportant.
+
+<div className="dos-and-donts" markdown>
+<div className="dos" markdown>
+- Your license was activated successfully.
+</div>
+<div className="donts" markdown>
 - The license activates.
 </div>
 </div>
@@ -168,8 +175,8 @@ Note licenses can be both proper nouns and common nouns (per Product License vs.
 | Reserve | Hold a license for future use or specific purpose. | Button: Reserve license for deployment |
 | Revoke | Permanently withdraw or cancel a license. | Admin action: Revoke license |
 | Suspend | Temporarily disable a license. | Button: Suspend license |
-| Transfer | Move a license from one user or system to another. | User management: Transfer license to... |
-| Unassign | Remove a license assignment from a user or system. | User management: Unassign license from… |
+| Transfer | Move a license from one user or system to another. | User management: Transfer license to [user name] |
+| Unassign | Remove a license assignment from a user or system. | User management: Unassign license from [user name] |
 | Update | Modify license details or apply new license terms. | Settings: Update license information |
 | Upgrade | Switch to a higher-tier license with more features. | Notification: Upgrade to Professional License |
 | Validate | Verify that a license is genuine and properly configured. | System settings: Validate license |
