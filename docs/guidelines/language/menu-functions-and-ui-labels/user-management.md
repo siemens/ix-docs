@@ -16,7 +16,7 @@ Use consistent terms across products.
 
 Use the term “role” to refer to a collection of “permissions”. 
 
-Use permissions instead of “right” and “privilege” as these are becoming less common due to localization and translation challenges. Avoid “right”, “rights” and “privilege” in both the UI and user documentation.
+Use “permissions” instead of “right” and “privilege” as these are becoming less common due to localization and translation challenges. Avoid “right”, “rights” and “privilege” in both the UI and user documentation.
 
 | Term | Definition |
 | --- | --- |
@@ -170,8 +170,8 @@ Although often used interchangeably, the terms “account”, “user” and “
 | Word | Definition | Usage and context |
 | --- | --- | --- |
 | account | A digital key that gives users access to a system or service. | Includes login credentials (username / email and password), permissions and sometimes billing or subscription details.<br/><br/>Use when talking about access, permissions and authentication. |
-| user | The person or system working within software using an account. | Represents the person or system / maschine behind the account.<br/><br/>Use when talking about actions and roles in the system. |
-| profile | Personalized or system-specific settings and information. | Includes details like name, photo, job title, preferences, language, time zone and other customizable settings.<br/><br/>Use when talking about personal information and preferences. |
+| user | The person (or system) working within software using an account. | Represents the person or system / maschine behind the account.<br/><br/>Use when talking about actions and roles in the system. |
+| profile | Personalized or system-specific settings and information. | Includes details like name, photo, job title, preferences, language, time zone, and other customizable settings.<br/><br/>Use when talking about personal information and preferences. |
 
 ## Common wording pairs
 

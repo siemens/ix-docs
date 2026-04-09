@@ -223,10 +223,9 @@ Use “quantity” to refer to how many and “number” to refer to identifiers
 
 <div className="dos-and-donts" markdown>
 <div className="dos" markdown>
-- license key number
 - product number
 - serial number
-- Enter your license key number
+- Enter your license key
 </div>
 <div className="donts" markdown>
 - Enter your license key quantity
@@ -239,10 +238,10 @@ Use “ID” for identification and tracking and “key” for activation or acc
 
 <div className="dos-and-donts" markdown>
 <div className="dos" markdown>
-- Enter your license key number.
+- Enter your license key.
 </div>
 <div className="donts" markdown>
-- Enter your license key ID.
+- Enter your license ID.
 </div>
 </div>
 
@@ -318,12 +317,12 @@ Use “add-on” to refer to additional features or modules attached to an exist
 </div>
 </div>
 
-Use “upgrade” for when users are moving to a newer or better version of the same product.
+Use “upgrade” for when users are moving to a better version of the same product.
 
 <div className="dos-and-donts" markdown>
 <div className="dos" markdown>
 - Upgrade to the Professional edition for more features.
-- Upgrade your license from version 2.0 to version 3.0.
+- Upgrade your license from Version 2.0 to Version 3.0.
 </div>
 <div className="donts" markdown>
 - Add the next edition as an add-on.
@@ -372,7 +371,7 @@ Use “manage” instead of “edit” to administer licenses.
 
 <div className="dos-and-donts" markdown>
 <div className="dos" markdown>
-- Manage your licenses under “License management”.
+- Manage your licenses under License management.
 </div>
 </div>
 
@@ -394,7 +393,7 @@ Use “basic” product when talking about a simplified or entry-level version o
 
 ## Dos and Don’ts
 
-- Do create key license terms initially and record any changes for consistency
+- Do document license terms and record any changes for consistency
 - Do use the same license actions consistently across applications and portfolios
 - Don’t create new license types or states, instead use standard terms
 

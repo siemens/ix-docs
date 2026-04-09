@@ -39,6 +39,41 @@ Use clear, specific placeholder text that indicates what users can search for in
 </div>
 </div>
 
+## Advanced search and filter
+
+Use “Advanced search” to provide access to additional search options.
+
+<div className="dos-and-donts" markdown>
+<div className="dos" markdown>
+- Advanced search 
+</div>
+<div className="donts" markdown>
+- Additional 
+- Detailed search
+</div>
+</div>
+
+Use “Filter by” followed by the specific attribute to make filtering options immediately clear.
+
+<div className="dos-and-donts" markdown>
+<div className="dos" markdown>
+- Filter by machine type
+- Filter by date range
+</div>
+<div className="donts" markdown>
+- Filters
+</div>
+</div>
+
+Use prominent, one-click filter options for the most common filtering needs when possible.
+
+<div className="dos-and-donts" markdown>
+<div className="dos" markdown>
+- Quick filters: Active | Needs maintenance | Critical
+- Show: All | Active only | Inactive only
+</div>
+</div>
+
 Use “Apply filters” as the primary action label.
 
 <div className="dos-and-donts" markdown>
@@ -66,20 +101,6 @@ Use “Clear" or “Clear filters” to remove all active filters at once.
 </div>
 </div>
 
-## Advanced search
-
-Use “Advanced search” to provide access to additional search options.
-
-<div className="dos-and-donts" markdown>
-<div className="dos" markdown>
-- Advanced search 
-</div>
-<div className="donts" markdown>
-- Additional 
-- Detailed search
-</div>
-</div>
-
 Indicate whether filters will persist across sessions.
 
 <div className="dos-and-donts" markdown>
@@ -90,27 +111,6 @@ Indicate whether filters will persist across sessions.
 </div>
 <div className="donts" markdown>
 - Filters may persist. 
-</div>
-</div>
-
-Use “Filter by” followed by the specific attribute to make filtering options immediately clear.
-
-<div className="dos-and-donts" markdown>
-<div className="dos" markdown>
-- Filter by machine type
-- Filter by date range
-</div>
-<div className="donts" markdown>
-- Filters
-</div>
-</div>
-
-Use prominent, one-click filter options for the most common filtering needs when possible.
-
-<div className="dos-and-donts" markdown>
-<div className="dos" markdown>
-- Quick filters: Active | Needs maintenance | Critical
-- Show: All | Active only | Inactive only
 </div>
 </div>
 
@@ -133,16 +133,6 @@ Use clear wording when there are no results found.
 </div>
 </div>
 
-Use clear indicators to show what exactly is being searched when technically possible.
-
-<div className="dos-and-donts" markdown>
-<div className="dos" markdown>
-- Searching in all equipment
-- Search scope in building A only
-- Searching in 230 active machines 
-</div>
-</div>
-
 Use specific numbers and clear language to show how many results were found.
 
 <div className="dos-and-donts" markdown>
@@ -155,7 +145,7 @@ Use specific numbers and clear language to show how many results were found.
 </div>
 </div>
 
-Use clear pagination including both total page count and current position.
+Include both total page count and current position when using pagination.
 
 <div className="dos-and-donts" markdown>
 <div className="dos" markdown>
@@ -213,7 +203,7 @@ Use “Sort by” followed by the sorting criterion to make ordering options cle
 <div className="dos-and-donts" markdown>
 <div className="dos" markdown>
 - Sort by: Date (newest to oldest)
-- Sort by: Equipment name (alphabetically)
+- Sort by: Equipment name (a-z)
 - Sort by: Priority (high to low)
 </div>
 <div className="donts" markdown>
