@@ -64,7 +64,7 @@ When presented with an error message, follow this process:
     *	Reference to documentation/contact when appropriate
 
 ### Examples
-Input: “Runtime Exception 0xE3: Invalid torque calibration“ <br/>
+Input: “Runtime Exception 0xE3: Invalid torque calibration” <br/>
 <br/> 
 Output:
 * Title: Invalid tool calibration detected
