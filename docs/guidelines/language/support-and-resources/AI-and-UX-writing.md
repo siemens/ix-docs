@@ -55,7 +55,7 @@ When presented with an error message, follow this process:
     *	Error codes (unless user-facing standard)
     *	Passive voice
     *	Title casing, ALL CAP messages
-    *	Blaming language (“you failed to...“)
+    *	Blaming language (“you failed to...”)
     *	“Please“ do not use please for user actions or in any text
 
 5. Include
