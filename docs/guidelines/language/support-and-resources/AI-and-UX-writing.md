@@ -56,7 +56,7 @@ When presented with an error message, follow this process:
     *	Passive voice
     *	Title casing, ALL CAP messages
     *	Blaming language (“you failed to...”)
-    *	“Please“ do not use please for user actions or in any text
+    *	“Please” do not use please for user actions or in any text
 
 5. Include
     *	Specific component names
