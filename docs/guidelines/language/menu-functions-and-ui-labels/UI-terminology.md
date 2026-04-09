@@ -222,5 +222,5 @@ Many actions come in natural pairs or opposites. Using the right pairs help user
 ## Related
 
 - [Button (component)](../../../components/button/)
-- [Search and filter](#)
+- [Search and filter](./Search-and-filter.md)
 - [Logging in and out](./logging-in-and-out.md)

@@ -404,5 +404,5 @@ Use “basic” product when talking about a simplified or entry-level version o
 - [Dates](../formatting/date.mdx)
 - [Error messages](../messaging/error-messages.mdx)
 - [Time and time zones](../formatting/timezones.mdx)
-- [UI terminology](#)
-- [User management](#)
+- [UI terminology](./UI-terminology.md)
+- [User management](./user-management.md)
