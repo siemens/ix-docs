@@ -49,7 +49,7 @@ When presented with an error message, follow this process:
 3. Style requirements
    * Tone: Supportive coach (neutral situation, positive outlook)
    * Language: Grade 8 reading level
-   * Grammar: No negative contractions including “don’t“
+   * Grammar: No negative contractions including “don’t”
 
 4. Avoid
     *	Error codes (unless user-facing standard)
