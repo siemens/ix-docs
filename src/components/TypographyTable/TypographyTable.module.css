@@ -127,3 +127,12 @@
   background-color: transparent !important;
   padding-left: 0px;
 }
+
+
+.typographyFontFamilyValue {
+  text-transform: capitalize;
+}
+
+.typographyFontSizeValue {
+  text-transform: lowercase;
+}

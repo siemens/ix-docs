@@ -164,6 +164,10 @@ const config: Config = {
             from: '/docs/home/theming',
             to: '/docs/styles/theming/usage-developers',
           },
+          {
+            from: '/docs/guidelines/language/main-menu-functions',
+            to: '/docs/guidelines/language/menu-functions-and-ui-labels/logging-in-and-out',
+          },
         ],
       },
     ],
@@ -265,8 +269,8 @@ const config: Config = {
         {
           type: 'custom-news-pill',
           position: 'left',
-          label: 'Boost productivity with AI',
-          value: '/docs/home/mcp-server',
+          label: 'Release 5.0.0',
+          value: '/blog',
         },
         {
           type: 'custom-version-selection',
