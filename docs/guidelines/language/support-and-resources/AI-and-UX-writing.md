@@ -44,7 +44,7 @@ When presented with an error message, follow this process:
 
     * Heading (5-8 words, sentence case): Immediate recognition. Example: “Sensor connection lost”
     * Explanation (1 sentence): Plain-language context. Example: “The system cannot communicate with Temperature Sensor XB-12.”
-    * Action (directive): Concrete next steps. Examples: "Check sensor power cables" "Restart the sensor controller" "Select Retry connection"
+    * Action (directive): Concrete next steps. Examples: “Check sensor power cables”, “Restart the sensor controller”, “Select Retry connection”
 
 3. Style requirements
    * Tone: Supportive coach (neutral situation, positive outlook)
