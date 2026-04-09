@@ -34,5 +34,5 @@ The overlay can be closed in three ways:
 When the navigation menu is collapsed, the overlay stays open.
 
 :::info
-The About and Legal components require specific content to comply with Siemens AG regulations. The official content and guidelines are exclusively available for Siemens AG employees and can be accessed [here](https://code.siemens.com/siemens-ix/ix-brand-theme/-/blob/af74de1ec3c7d9b1fdd6e06e9c0c6eadefaf695b/apps/documentation/src/pages/about-legal-information.md).
+The About and legal components require specific content to comply with Siemens AG regulations. The official content and guidelines are exclusively available for Siemens AG employees and can be accessed [here](https://code.siemens.com/siemens-ix/ix-brand-theme/-/blob/main/apps/documentation/src/pages/about-legal-information.md?ref_type=heads).
 :::
