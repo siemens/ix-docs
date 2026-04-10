@@ -2,8 +2,6 @@
 sidebar_label: Developing with themes
 title: Developing with themes
 doc-type: 'banner'
-component-tabs: ['']
-no_single_tab: true
 description: 'Siemens Industrial Experience supports theming for all of its components. Everyone can use the two embedded themes that already ship with Siemens Industrial Experience: Classic light (theme-classic-light) and Classic dark (theme-classic-dark). You can also create your own themes to customize the design system for your own brand. Siemens AG applications should utilize the exclusive Siemens AG Corporate Brand Theme.'
 ---
 
@@ -21,8 +19,7 @@ Siemens AG employees can access the Corporate Brand Theme at [**https://code.sie
 
 ## How to set a theme
 
-To choose a theme set the `data-ix-theme` attribute of the `<html>` or `<body>` tag to the theme of choice (e.g. `classic`).
-The default is `classic` in `dark` mode. To enable light mode, set the `data-ix-color-schema` attribute to `light` instead.
+To choose a theme set the `data-ix-theme` attribute of the `<html>` tag to the theme of choice (e.g. `classic`) and the corresponding `data-ix-color-schema` attribute to the value `light`, `dark` or `system` to set the color scheme. `system` will automatically apply the color scheme of users’ operating systems.
 
 ```html
 <html data-ix-theme="classic" data-ix-color-schema="dark">
@@ -32,49 +29,7 @@ The default is `classic` in `dark` mode. To enable light mode, set the `data-ix-
 </html>
 ```
 
-The CSS class based theme configuration is still supported, but will be removed in version 5.0.0:
-
-The default theme is `theme-classic-dark`. To set a different theme, change the `class` attribute of the `<body>` tag to contain e.g. `theme-classic-light` instead of `theme-classic-dark`.
-
-```html
-<html>
-  <!-- Framework related imports -->
-  <!--  -->
-  <body class="theme-classic-light"></body>
-</html>
-```
-
-Avoid mixing the class-based approach with `data-` attributes, as this will cause redundant CSS custom properties to be loaded.
-
-## Using the legacy classic theme selector
-
-The original classic theme was deprecated in favor of an updated version that is more easily maintainable for us.
-The legacy theme is still available but no longer part of the main CSS file. In order to still apply it to your app, you have to load it manually.
-This can be done in various ways.
-
-The simplest way is to use the bundler/loader and just import the legacy styles inside your global stylesheet.
-
-e.g. styles.css:
-
-```
-@import '@siemens/ix/dist-css/theme/legacy-classic-dark.css';
-@import '@siemens/ix/dist-css/theme/legacy-classic-light.css';
-```
-
-If this step is done, you can set the theme name class on the body tag:
-
-```html
-<html>
-  <!-- Framework related imports -->
-  <!--  -->
-  <body class="theme-legacy-classic-dark"></body>
-</html>
-```
-
-- **deprecated** Legacy Classic light (theme-legacy-classic-light)
-- **deprecated** Legacy Classic dark (theme-legacy-classic-dark)
-
-## Applying only one theme to reduce build size
+## Applying only core functionalities without preloading themes
 
 Importing `siemens-ix-core.css` will only load core related functionalities, without preloading any theme or bootstrap.
 
@@ -92,14 +47,6 @@ import '@siemens/ix/dist/siemens-ix/siemens-ix-core.css';
 // Load theme
 import '@siemens/ix/dist/siemens-ix/theme/classic-light.css';
 import '@siemens/ix/dist/siemens-ix/theme/classic-dark.css';
-```
-
-**_Set theme_**
-
-```html
-<body class="theme-classic-dark">
-  ...
-</body>
 ```
 
 ## Working with themes during runtime
