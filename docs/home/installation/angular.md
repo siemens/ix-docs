@@ -54,7 +54,7 @@ Import the design system styling in your global stylesheet (e.g.: `src/styles.sc
 @import '@siemens/ix/dist/siemens-ix/siemens-ix.css';
 ```
 
-Set the `data-ix-theme` attribute of the `<html>` tag to the theme of choice (e.g. `classic`) and the corresponding `data-ix-color-schema` attribute to the value `light`,`dark` or `system` to set the color scheme. `system` will automatically apply the color scheme of the user's operating system.
+Set the `data-ix-theme` attribute of the `<html>` tag to the theme of choice (e.g. `classic`) and the corresponding `data-ix-color-schema` attribute to the value `light`, `dark` or `system` to set the color scheme. `system` will automatically apply the color scheme of users’ operating systems.
 
 ```html
 <html data-ix-theme="classic" data-ix-color-schema="dark">
