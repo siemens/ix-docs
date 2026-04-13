@@ -30,7 +30,7 @@
 }
 
 @media screen and (max-width: 1415px) {
-  .NewsPill {
+  a {
     display: none;
   }
 }
