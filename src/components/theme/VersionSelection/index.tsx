@@ -7,11 +7,7 @@
  * LICENSE file in the root directory of this source tree.
  */
 import { IxDropdown, IxDropdownItem, IxIcon } from '@siemens/ix-react';
-import {
-  iconChevronDown,
-  iconOpenExternal,
-  iconVersionHistory,
-} from '@siemens/ix-icons/icons';
+import { iconChevronDown } from '@siemens/ix-icons/icons';
 import BrowserOnly from '@docusaurus/BrowserOnly';
 import { useMemo } from 'react';
 import clsx from 'clsx';
@@ -37,6 +33,7 @@ export default function VersionSelection({ value }: { value: VersionFile }) {
     () => value.versions.find((v) => v.id === value.currentVersion),
     [value]
   );
+
   return (
     <BrowserOnly>
       {() => (
@@ -44,6 +41,8 @@ export default function VersionSelection({ value }: { value: VersionFile }) {
           <span
             id="custom-version-selection"
             className={clsx('navbar__item nav-link', styles.versionSelection)}
+            role="button"
+            tabIndex={0}
           >
             {currentVersion.label}
             <IxIcon name={iconChevronDown} />
