@@ -664,6 +664,20 @@ const sidebars: SidebarsConfig = {
           ],
         }),
         createTabItem({
+          id: 'components/range-field/index',
+          label: 'Range field',
+          items: [
+            {
+              id: 'components/range-field/guide',
+              label: 'Usage',
+            },
+            {
+              id: 'components/range-field/code',
+              label: 'Code',
+            },
+          ],
+        }),
+        createTabItem({
           id: 'components/radio/index',
           label: 'Radio',
           items: [
