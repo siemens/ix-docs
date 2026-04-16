@@ -127,7 +127,7 @@ The US Government’s overview of how to write clear content that follows plain 
 The UK Government’s standards and guidance for designing and building accessible and inclusive products and services in the Department for Education.
 
 **Website:** [accessibility.education.gov.uk](https://accessibility.education.gov.uk) <IxIcon name={iconOpenExternal} size="16" aria-label="external" role="img"></IxIcon><br/>
-**Website:** [accessibility.education.gov.uk/training/accessibility-inclusion/page-12](https://accessibility.education.gov.uk/training/accessibility-inclusion/page-12) <IxIcon name={iconOpenExternal} size="16" aria-label="external" role="img"></IxIcon>
+**Website:** [accessibility.education.gov.uk/training/](https://accessibility.education.gov.uk/training/accessibility-inclusion/page-12) <IxIcon name={iconOpenExternal} size="16" aria-label="external" role="img"></IxIcon>
 
 ### Sheri Byrne-Haber: Content and accessibility expert
 
@@ -148,7 +148,7 @@ Alexa Heinrich is a social media strategist and a leading voice in digital acces
 
 This guideline highlights the advantages of conversational design, particularly in industrial settings. It covers the complexities of industrial processes, the importance of data security, domain knowledge and the need for robust and reliable systems.
 
-**Website:** [ix.siemens.io/docs/guidelines/conversational-design/getting-started](https://ix.siemens.io/docs/guidelines/conversational-design/getting-started)
+**Website:** [Conversational design guidelines](../../conversational-design/)
 
 ### Voiceflow Learning Hub
 
