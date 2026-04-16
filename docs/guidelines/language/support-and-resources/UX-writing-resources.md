@@ -148,7 +148,7 @@ Alexa Heinrich is a social media strategist and a leading voice in digital acces
 
 This guideline highlights the advantages of conversational design, particularly in industrial settings. It covers the complexities of industrial processes, the importance of data security, domain knowledge and the need for robust and reliable systems.
 
-**Website:** [Conversational design guidelines](../../conversational-design/)
+**Website:** [Conversational design guidelines](../../conversational-design/getting-started.md)
 
 ### Voiceflow Learning Hub
 
