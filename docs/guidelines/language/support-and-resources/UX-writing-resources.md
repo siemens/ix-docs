@@ -26,7 +26,7 @@ She is a pioneer in UX content design, having written the first ever major publi
 
 **Book:** Strategic Writing for UX – Drive Engagement, Conversion, and Retention with Every Word<br/>
 **Website:** [torreypodmajersky.com](https://torreypodmajersky.com) <IxIcon name={iconOpenExternal} size="16" aria-label="external" role="img"></IxIcon><br/>
-**LinkedIn:** [linkedin.com/torreybird](https://linkedin.com/torreybird) <IxIcon name={iconOpenExternal} size="16" aria-label="external" role="img"></IxIcon>
+**LinkedIn:** [linkedin.com/torreybird](https://www.linkedin.com/in/torreybird/) <IxIcon name={iconOpenExternal} size="16" aria-label="external" role="img"></IxIcon>
 
 ### Sarah Richards
 
