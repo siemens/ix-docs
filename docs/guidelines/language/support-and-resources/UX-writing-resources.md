@@ -30,7 +30,7 @@ She is a pioneer in UX content design, having written the first ever major publi
 
 ### Sarah Richards
 
-She established a foundational methodology for creating evidence-based content during her work for the UK Government Digital Service, where she led the transformation of government websites into user centered GOV.UK platform. As the founder of “Content Design London”, she elevates the field by training teams worldwide.
+She established a foundational methodology for creating evidence-based content during her work for the UK Government Digital Service, where she led the transformation of government websites into user-centered GOV.UK platform. As the founder of “Content Design London”, she elevates the field by training teams worldwide.
 
 **Book:** Content Design – research, plan and deliver the content your audience wants and needs
 **Website:** [contentdesign.london/](https://contentdesign.london/) <IxIcon name={iconOpenExternal} size="16" aria-label="external" role="img"></IxIcon>
