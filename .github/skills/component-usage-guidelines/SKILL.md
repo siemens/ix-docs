@@ -1,16 +1,60 @@
 ---
 name: component-usage-guidelines
-description: 'Create or update Industrial Experience component usage guides. Use when writing guide.md or usage tabs for docs components, including when to use a component, key options, behavior in context, states, dos and don''ts, related links, a final docs build check, and suggestion-oriented wording that works for Siemens and non-Siemens audiences.'
-argument-hint: Which component needs usage guidance?
+description: 'Create or update component usage guides in the Industrial Experience design system. Use when writing guide.md or usage tabs for docs components, including when to use a component, key options, behavior in context, states, dos and don''ts, related links, a final docs build check, and suggestion-oriented wording that works for Siemens and non-Siemens audiences.'
+argument-hint: Which component needs usage guidance? Include the component name and the iX Figma component link if available.
 ---
 
-# Component Usage Guidelines
+# Component usage guidelines
 
 Use this skill when you need to create or revise usage documentation for a component in this repo.
 
 The goal is to produce a guide that matches the existing Industrial Experience documentation style: practical, decision-oriented, and focused on helping readers choose and apply the right component.
 
 The guidance must stay useful for readers outside Siemens as well. Always give clear recommendations, and treat Siemens-specific product habits as examples or context rather than as assumptions about the reader's environment.
+
+## Required Inputs
+
+At the start of each guide task, ask the user for:
+
+- The component name, e.g. `date-picker`
+- The link to the Figma component in the iX Figma library
+
+Use the Figma component link to:
+
+- place accurate component instances in illustrations instead of generic placeholders
+- inspect the layer structure and identify anatomy parts
+
+If either input is missing, stop and prompt the user before proceeding.
+
+## Figma MCP Prerequisite
+
+Before doing any Figma-based illustration or anatomy work, confirm that Figma MCP is available.
+
+- If the workspace uses a project-level `mcp.json`, check that it contains a Figma server entry such as:
+
+```json
+{
+	"servers": {
+		"figma": {
+			"url": "https://mcp.figma.com/mcp",
+			"type": "http"
+		}
+	}
+}
+```
+
+- Verify tool access with a lightweight Figma MCP call before proceeding with illustration work.
+- Prefer a lightweight read operation such as reading metadata for the provided Figma component link or another minimal node inspection.
+- If Figma MCP is unavailable, stop and tell the user:
+
+	"The Figma MCP server is not reachable. Please check that:
+
+	- `mcp.json` contains the Figma server entry above if your workspace uses project-level MCP configuration
+	- MCP access is enabled in your Figma account settings under Account → Security → MCP Access
+
+	Once enabled, restart the MCP session and try again."
+
+Do not proceed with any Figma illustration steps until the connection is confirmed.
 
 ## When To Use
 
@@ -40,22 +84,81 @@ Produce usage guidance that:
 - follows the repo styleguide for section order, formatting, grammar, voice and tone
 - uses uploaded Figma specifications when available to ground the guidance in actual design intent
 
+## Industrial B2B UX Context
+
+Keep the Industrial Experience product context in mind when writing usage guides.
+
+- Users are often operators, engineers, or technicians working under time pressure or in safety-critical environments.
+- Interfaces are often dense with data, so components need to support efficient scanning rather than decorative layouts.
+- Dark and light themes both matter. Avoid guidance that only works well in one theme.
+- Accessibility in industrial environments can include high contrast displays, glare, gloved input, and similar operational constraints alongside standard accessibility guidance.
+- Consistency and predictability matter more than novelty because users rely on pattern recognition.
+
 ## Procedure
 
-1. Inspect the target component folder under `docs/components/<component>/`.
-2. If the target component folder does not exist, create it and add the base documentation files following nearby component patterns, including `index.mdx`, `guide.md`, and `code.mdx`.
-3. Read the existing `index.mdx`, `guide.md`, `code.mdx`, `.gemini/styleguide.md`, and any related files to understand what already exists and which house rules apply.
-4. Make sure the short opening definition in `guide.md` is not a restatement of the `index.mdx` description. Use the opening to add usage context, decision support, or primary scenarios instead of repeating the summary line.
-5. If Figma specifications, screenshots or related design material are provided in the chat interaction, analyze them and use them as evidence for anatomy, variants, states and behavior guidance.
-6. Add an anatomy illustration near the top of the guide. If no component-specific anatomy image is available yet, use this dummy Figma illustration: `![Anatomy component](https://www.figma.com/design/wEptRgAezDU1z80Cn3eZ0o/iX-Documentation-illustrations?node-id=7794-3088&t=VdWD2lSX0POwEDXH-4)`.
-7. Always follow the anatomy illustration with a numbered list of annotations that names the key visible parts, for example `1. Start field`, `2. Range separator`, `3. End field`.
-8. Read 2 to 3 similar component guides from the same category to mirror the established structure and level of detail.
-9. Check `docs/components/overview.md` to confirm the component category and nearby alternatives users may confuse it with.
-10. Draft or revise the guide around decision-making, not implementation details.
-11. Phrase recommendations so they work for both Siemens and non-Siemens readers. If Siemens-specific context is useful, present it as an example, common pattern, or internal default rather than as a universal rule.
-12. Add or verify cross-links to related components, writing guidelines, and accessibility guidance when those links help users choose or use the component correctly.
-13. Validate headings, relative links, and anchor targets.
-14. Run a docs build as the final verification step and fix any broken links or anchors introduced by the change.
+1. Ask for the component name and the iX Figma component link if they are not already provided. Do not proceed until both inputs are available.
+2. Confirm that Figma MCP is available before doing any Figma-based illustration work. If the connection cannot be confirmed, stop and ask the user to fix the MCP setup first.
+3. Inspect the target component folder under `docs/components/<component>/`.
+4. If the target component folder does not exist, create it and add the base documentation files following nearby component patterns, including `index.mdx`, `guide.md`, and `code.mdx`.
+5. Read the existing `index.mdx`, `guide.md`, `code.mdx`, `.gemini/styleguide.md`, and any related files to understand what already exists and which house rules apply.
+6. Make sure the short opening definition in `guide.md` is not a restatement of the `index.mdx` description. Use the opening to add usage context, decision support, or primary scenarios instead of repeating the summary line.
+7. Analyze the Figma component link and any related design material provided in the chat interaction. Use them as evidence for anatomy, variants, states and behavior guidance.
+8. Add an anatomy illustration near the top of the guide. If no component-specific anatomy image is available yet, use this dummy Figma illustration: `![Anatomy component](https://www.figma.com/design/wEptRgAezDU1z80Cn3eZ0o/iX-Documentation-illustrations?node-id=7794-3088&t=VdWD2lSX0POwEDXH-4)`.
+9. Always follow the anatomy illustration with a numbered list of annotations that names the key visible parts, for example `1. Start field`, `2. Range separator`, `3. End field`.
+10. Read 2 to 3 similar component guides from the same category to mirror the established structure and level of detail.
+11. Check `docs/components/overview.md` to confirm the component category and nearby alternatives users may confuse it with.
+12. Draft or revise the guide around decision-making, not implementation details.
+13. Phrase recommendations so they work for both Siemens and non-Siemens readers. If Siemens-specific context is useful, present it as an example, common pattern, or internal default rather than as a universal rule.
+14. If design-system comparison would strengthen the recommendation and the tools are available, use the design-systems MCP (southleft/design-systems-mcp) to check relevant patterns from established external design systems such as Carbon, Material, or Atlassian.
+15. If alignment with Siemens Element would help and the tools are available, use the Element MCP server (element-mcp) for comparison with the sister design system.
+16. Add or verify cross-links to related components, writing guidelines, and accessibility guidance when those links help users choose or use the component correctly.
+17. Validate headings, relative links, and anchor targets.
+18. Run a docs build as the final verification step and fix any broken links or anchors introduced by the change.
+
+## Figma Illustration Workflow
+
+When the task includes creating or updating illustrations, use the dedicated Figma illustrations file:
+
+- `https://www.figma.com/file/wEptRgAezDU1z80Cn3eZ0o`
+
+Treat each page in that file as the illustration space for one documentation page. Locate the page matching `{componentName}` or create it if it does not exist. Treat each illustration as a separate frame on that page.
+
+All illustration frames must use:
+
+- width `1000px`
+- background `color-1` token from the iX library
+- padding `56px` on all sides
+- component instances sourced from the Figma component link provided by the user
+
+### Illustration 1 - Anatomy
+
+- Frame title: `{componentName}-anatomy`
+- Place an instance of the component in the frame.
+- Add annotation arrows for each anatomy part identified during layer inspection.
+- Match the annotation labels to the numbered list in the Anatomy section of the guide.
+
+### Illustration 2 - States
+
+- Frame title: `{componentName}-states`
+- Show one instance per relevant state, e.g. default, hover, active, disabled, loading, and focused.
+- Include only the states that are relevant to the component.
+- Place a text label above each state instance.
+
+### Additional illustrations
+
+- Create additional illustrations for Dos and Don’ts only when the point is not clear enough from text alone.
+- Use the same frame specification for any additional illustration.
+
+### After creating each frame
+
+- Retrieve the shareable frame link through Figma MCP.
+- Embed the frame in the draft markdown using `![{Descriptive alt text}](link-to-figma-frame)`.
+- Place the anatomy illustration in the Anatomy section and the states illustration in the States section.
+
+### Fetch illustration assets
+
+- Run `pnpm update-figma 'docs/components/{componentName}/guide.md'` to download PNG versions of the illustrations referenced from the guide.
+- Report success to the user once the command completes.
 
 ## Recommended Structure
 
@@ -109,47 +212,32 @@ If you create or revise `code.mdx` together with `guide.md`, follow this structu
 
 ## Writing Rules
 
-- Prefer short, direct sentences.
-- Remember that no one comes to Industrial Experience documentation to read more than necessary. Keep asking why each sentence needs to exist.
-- Less is more. Remove redundancy, internal reminders and content that only helps the writer rather than the reader.
-- Use "you" and "we" when that makes guidance clearer and more direct.
-- Prefer visuals when they explain faster than text. If an image, anatomy graphic or example communicates the point better, do not add extra explanation around it.
-- When anatomy is shown, prefer short numbered labels over long descriptive paragraphs.
+- Follow `.gemini/styleguide.md` for formatting, grammar, voice and tone. It is the single source of truth. If this skill conflicts with the styleguide, the styleguide wins.
+- Keep the tone helpful, expert and approachable. Write as a collaborator guiding other writers, not as a neutral catalog or strict reviewer.
+- Keep usage guides decision-oriented. Write recommendations and tradeoffs, not API inventories.
+- Use suggestion-led phrasing such as "We recommend...", "We usually...", "As a general rule...", "Typically at Siemens...", or "In our applications..." instead of direct commands.
+- Keep Siemens-specific guidance clearly framed as an example or common internal pattern, and pair it with a recommendation that also works for readers outside Siemens.
 - Do not repeat the `index.mdx` description sentence in the guide opening. Rephrase it and add decision-oriented context.
-- Be a little less formal than more corporate style guides. Use "you" and "we" when helpful, and avoid long, heavy sentences.
-- Use sentence case throughout. Start with a capital letter, then capitalize only proper nouns.
-- Use typographic punctuation from the styleguide: apostrophe `’`, ellipsis `…`, opening double quote `“`, and closing double quote `”`.
-- Avoid the Oxford comma where possible. If a sentence only works with the comma, simplify the sentence instead.
-- Use present simple tense whenever possible, for example "buttons show..." or "users select...".
-- Do not use `will` or `won't`. These guides are intended to stay true over time, so describe current behavior and guidance in present simple tense.
-- Prefer contractions such as "don’t", "isn’t", "haven’t", and "aren’t".
-- Prefer plurals over singular references to people and components. Write about users, buttons, icons and breadcrumbs instead of repeatedly saying "the user" or naming a single component instance.
-- Use active voice instead of passive voice.
-- Use product-facing language, not internal implementation language.
-- Write bullets as decisions or recommendations, not as API inventories.
-- In `Behavior in context`, prefer bullets for interaction, overflow, placement, and responsiveness over broader generic behavior summaries.
+- Prefer visuals and short annotations over extra explanation when an image already communicates the point.
 - Keep framework-specific code examples out of the usage guide when that content belongs in `code.mdx`.
-- Reuse existing terminology from nearby component docs.
-- Prefer relative links that match the surrounding docs structure.
-- Use guidance language such as "We recommend...", "We usually...", "As a general rule...", "Typically at Siemens...", or "In our applications..." instead of neutral catalog text.
-- Do not assume the reader works at Siemens. Explain Siemens-specific wording or patterns as one example among others.
-- Do not use the abbreviation `ix` or `iX` in Industrial Experience design system content. If it appears in usage-guide wording, remove it and align with content writers if broader cleanup is needed.
-- Refer to components in lowercase unless the name is an official proper noun. Write "button", "map navigation" and "breadcrumb", not "Button", "Map navigation" or "Breadcrumb". The recognized proper noun exception is "About and legal information".
-- Prefer "e.g." over "for example", "such as", or "like".
-- Prefer "changelog" over "change log".
-- Prefer "among other things" over "inter alia".
-- When naming code options in prose, keep the human-readable label aligned with the code spelling from the code section. For example, if code uses `i18nPlainText`, write "Plain text" in the description.
-- Remove trailing whitespace from lines.
+- Reuse existing terminology from nearby component docs, and prefer relative links that match the surrounding docs structure.
 
 ## What To Avoid
 
 - Do not add text just because it feels safer to explain more
+- Do not add an `## Anatomy` headline. Start the anatomy section directly with body text, the illustration, and the numbered list.
 - Do not copy the `index.mdx` description into the opening paragraph of `guide.md`
 - Do not repeat information across the opening, options, behavior and dos and don’ts sections
 - Do not add content that is mainly a note to the writer instead of guidance for readers
+- Do not write placeholder text for empty sections. Omit the section instead.
 - Do not explain obvious behavior that readers can already understand from the component name, image or code example
+- Do not describe illustrations only in prose when Figma MCP is available for creating them.
+- Do not source component instances from generic shapes. Use the user-provided Figma component link.
+- Do not start Figma-based illustration work before checking Figma MCP availability.
+- Do not link the Related section to specific files such as `code.mdx`. Link to the component folder instead.
 - Do not add future-tense phrasing such as `will` or `won't`
 - Do not use the abbreviations `ix` or `iX` in usage-guide content
+- Do not use punctuation that conflicts with `.gemini/styleguide.md`. Use `’`, `…`, `“`, and `”`.
 
 ## Dos and Don’ts Rules
 
