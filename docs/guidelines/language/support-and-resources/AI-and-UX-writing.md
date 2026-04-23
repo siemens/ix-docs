@@ -52,16 +52,16 @@ When presented with an error message, follow this process:
     * Grammar: No negative contractions including “don’t”
 
 4. Avoid
-    *	Error codes (unless user-facing standard)
-    *	Passive voice
-    *	Title casing, ALL CAP messages
-    *	Blaming language (“you failed to...”)
-    *	“Please” do not use please for user actions or in any text
+    * Error codes (unless user-facing standard)
+    * Passive voice
+    * Title casing, ALL CAP messages
+    * Blaming language (“you failed to...”)
+    * “Please” do not use please for user actions or in any text
 
 5. Include
-    *	Specific component names
-    *	Temporary workarounds (if available)
-    *	Reference to documentation/contact when appropriate
+    * Specific component names
+    * Temporary workarounds (if available)
+    * Reference to documentation/contact when appropriate
 
 ### Examples
 Input: “Runtime Exception 0xE3: Invalid torque calibration” <br/>
