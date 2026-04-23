@@ -334,5 +334,5 @@ Tell users when conditions create impossible or contradictory queries.
 - [Progress updates](../messaging/progress-updates.mdx)
 - [Empty-state messages](../messaging/empty-state-messages.mdx)
 - [Spinner (component)](../../../components/spinner/index.mdx)
-- [Category filter](../../../components/category-filter/guide.md)
-- [Expandable search](../../../components/expanding-search/code.mdx)
+- [Category filter (component)](../../../components/category-filter/guide.md)
+- [Expandable search (component)](../../../components/expanding-search/code.mdx)
