@@ -18,10 +18,10 @@ The following sections represent an example set of prompts to create a UX writin
 
 ## What you can do with these prompts
 
-1.	Simply copy and paste these prompts into your chosen AI software to support your error message microcopy (note that these prompts will result in microcopy suggestions that align with [these](../messaging/messages-overview) guidelines).
-2.	Adapt the prompts to align with your brand’s voice and tone guidelines. 
-3.	Use these prompts as an example to create more chatbots, e.g. ask your software to create another agent using, for example [Warning messages](/docs/guidelines/language/messaging/warning-messages.mdx) as the input using this template as an example to copy.
-4.	Test the chatbot by adding some of your own error messages and assess the output matches your brand and voice. Remember to continue to add prompts and always check for accuracy.
+1. Simply copy and paste these prompts into your chosen AI software to support your error message microcopy (note that these prompts will result in microcopy suggestions that align with [these](/docs/guidelines/language/messaging/error-messages.mdx) guidelines).
+2. Adapt the prompts to align with your brand’s voice and tone guidelines. 
+3. Use these prompts as an example to create more chatbots, e.g. ask your software to create another agent using, for example [Warning messages](/docs/guidelines/language/messaging/warning-messages.mdx) as the input using this template as an example to copy.
+4. Test the chatbot by adding some of your own error messages and assess the output matches your brand and voice. Remember to continue to add prompts and always check for accuracy.
 
 **Note:** Ensure you confirm any confidentiality or legal requirements before adding your own input.
 
@@ -49,7 +49,7 @@ When presented with an error message, follow this process:
 3. Style requirements
    * Tone: Supportive coach (neutral situation, positive outlook)
    * Language: Grade 8 reading level
-   * Grammar: No negative contractions including “don’t”
+    * Grammar: No negative contractions including “don’t”
 
 4. Avoid
     *	Error codes (unless user-facing standard)
@@ -74,7 +74,7 @@ Output:
     2. Recalibrate using calibration kit #TX45
     3. Confirm green status light before resuming
 
-Input: “Network timeout error“<br/>
+Input: “Network timeout error”<br/>
 <br/>
 Output:
 * Title: Connection to server timed out
@@ -88,16 +88,16 @@ Output:
 
 Use these simple techniques to use your chatbot as a writing partner. Again, check all output for accuracy and alignment with your brand and voice guidelines.
 
-1.	Microcopy brainstorming for elements and components <br/>
+1. Microcopy brainstorming for elements and components <br/>
 “Suggest 3 microcopy options for this [password field].”
 
-2.	Tone and voice alignment with your brand <br/>
+2. Tone and voice alignment with your brand <br/>
 “Rewrite this [error message] to sound more open, authentic and engaging.”
 
-3.	Alternatives and variations <br/>
+3. Alternatives and variations <br/>
 “Give me suitable alternatives to this UI text for an industrial application.”
 
-4.	Localization and simplification <br/>
+4. Localization and simplification <br/>
 “Rewrite this text with easier language that’s globally understandable.”
 
 ## Related
