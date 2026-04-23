@@ -62,7 +62,7 @@ Do not proceed with any Figma illustration steps until the connection is confirm
 - Creating a new component documentation folder when the target component does not exist yet
 - Refreshing an existing component guide to match current documentation patterns
 - Adding missing usage guidance, states, variants, or dos and don’ts
-- Clarifying when to use one component instead of a related alternative
+- Clarifying when to use one component instead of a more appropriate/better alternative
 - Analyzing Figma specifications provided in the chat interaction and translating them into usage guidance
 
 Do not use this skill for general overview pages unless the task is specifically to write or revise a component usage page.
@@ -71,13 +71,13 @@ Do not use this skill for general overview pages unless the task is specifically
 
 Produce usage guidance that:
 
-- explains what the component is for in plain language
+- explains what the component is for in plain language aimed at a grad 8 reading level
 - uses a short opening definition in `guide.md` that complements, rather than repeats, the `index.mdx` description
 - helps readers decide when to use it and when not to
 - includes an anatomy illustration and a numbered annotation list for the most important parts
 - documents the most relevant options and behaviors in context
 - treats `Behavior in context` primarily as guidance for interaction, overflow, text truncation, placement, and responsiveness
-- links to related components and writing or accessibility guidance where relevant
+- links to related components and UX writing or accessibility guidance where relevant
 - stays separate from API-heavy or framework-specific implementation details
 - gives explicit suggestions and recommendations instead of only describing the component
 - remains readable for non-Siemens audiences even when Siemens-specific examples are included
@@ -205,7 +205,7 @@ If you create or revise `code.mdx` together with `guide.md`, follow this structu
 - If the component has predefined action patterns, explain what authors can and cannot customize.
 - If copy, labels, or messaging are critical, link to the appropriate language guidelines instead of duplicating them.
 - If accessibility guidance materially changes usage, link to the relevant accessibility docs.
-- If a section would be speculative because the behavior is not documented or visible in existing sources, omit it and keep the guide factual.
+- If a section is speculative because the behavior is not documented or visible in existing sources, omit it and keep the guide factual.
 - Always include suggestions. Readers should leave with clear advice, not just a description of possible configurations.
 - When Siemens-specific practice is relevant, label it clearly as an example such as "Typically at Siemens...", "In our applications...", or "For our software...".
 - When possible, pair Siemens-specific examples with a broader recommendation that also makes sense for teams outside Siemens.
