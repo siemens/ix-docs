@@ -300,5 +300,5 @@ Avoid using “revoke” with people and users as direct objects.
 
 ## Related
 
-- [UI terminology](./UI-terminology.md)
+- [UI terminology](./ui-terminology.md)
 - [License management](./license-management.md)
