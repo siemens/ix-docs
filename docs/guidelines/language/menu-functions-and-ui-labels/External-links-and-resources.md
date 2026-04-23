@@ -43,7 +43,7 @@ Pair link text with universal icons, e.g. the open-external or application-scree
 </div>
 </div>
 
-Use descriptive link text instead of long, full URLs and remove the prefix {'https://www.'}.
+Use descriptive link text instead of long, full URLs and remove the prefix {'https://www'}.
 
 <div className="dos-and-donts" markdown>
 <div className="dos" markdown>
@@ -207,7 +207,6 @@ Ensure email addresses and phone numbers are clickable.
 
 - [Link button (component)](/docs/components/link-button/guide)
 - [Icon library](/docs/icons/icon-library.mdx)
-- [Numbers and percentages](/docs/guidelines/language/formatting/numbers)
 - Web Content Accessibility Guidelines (WCAG)
     - [WCAG 2.4.4 (Link Purpose In Context)](https://www.w3.org/TR/WCAG21/#link-purpose-in-context) <IxIcon name={iconOpenExternal} size="16" aria-label="external" role="img"></IxIcon>
     - [WCAG 1.1.1 (Non-text Content)](https://www.w3.org/TR/WCAG21/#non-text-content) <IxIcon name={iconOpenExternal} size="16" aria-label="external" role="img"></IxIcon>

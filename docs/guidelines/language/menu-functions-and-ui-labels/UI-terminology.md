@@ -195,7 +195,7 @@ Basic interactions form the foundation of how users engage with your application
 
 Many actions come in natural pairs or opposites. Using the right pairs help users understand what each action does.
 
-|  |  |
+| Action | Common opposites |
 |--------|----------|
 | add | remove |
 | activate | deactivate |
