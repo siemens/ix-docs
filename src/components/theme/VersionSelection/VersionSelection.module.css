@@ -9,10 +9,12 @@
 
 .versionSelection {
   cursor: pointer;
+  padding: 0;
+  height: 2.5rem;
 }
 
-.versionSelection ix-icon {
-  margin-inline-start: 0.25rem;
-  margin-block-start: 0.125rem;
-  vertical-align: top;
+.versionSelection span {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
 }
