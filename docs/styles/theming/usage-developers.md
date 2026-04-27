@@ -19,7 +19,7 @@ Siemens AG employees can access the Corporate Brand Theme at [**https://code.sie
 
 ## How to set a theme
 
-To choose a theme set the `data-ix-theme` attribute of the `<html>` tag to the theme of choice (e.g. `classic`) and the corresponding `data-ix-color-schema` attribute to the value `light`, `dark` or `system` to set the color scheme. `system` will automatically apply the color scheme of users’ operating systems.
+To choose a theme set the `data-ix-theme` attribute of the `<html>` tag to the theme of choice (e.g. `classic`) and the corresponding `data-ix-color-schema` attribute to the value `light`, `dark` or `system` to set the color scheme. `system` will automatically apply the color scheme of the users’ operating system.
 
 ```html
 <html data-ix-theme="classic" data-ix-color-schema="dark">
