@@ -11,8 +11,6 @@ description: 'React is a widely-used library for building user interfaces, parti
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
-#
-
 ## Library installation
 
 Install `@siemens/ix`, `@siemens/ix-react` and `@siemens/ix-icons` using a package manager:
@@ -35,8 +33,18 @@ Install `@siemens/ix`, `@siemens/ix-react` and `@siemens/ix-icons` using a packa
   </TabItem>
 </Tabs>
 
-## Import styles
+## Apply theme
 
 ```css
 @import '@siemens/ix/dist/siemens-ix/siemens-ix.css';
+```
+
+Set the `data-ix-theme` attribute of the `<html>` tag to the theme of choice (e.g. `classic`) and the corresponding `data-ix-color-schema` attribute to the value `light`, `dark` or `system` to set the color scheme. `system` will automatically apply the color scheme of the users’ operating system.
+
+```html
+<html data-ix-theme="classic" data-ix-color-schema="dark">
+  <!-- Framework related imports -->
+  <!--  -->
+  <body></body>
+</html>
 ```
