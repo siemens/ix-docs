@@ -38,7 +38,7 @@ This activity is driven by the Siemens Design Language, with the goal of sharing
 
 ![accessibility](../2026-05-11-release-5/2605_blog_accessibility.png)
 
-Accessibility was a core driver for Version 5. In this release, we focused on keyboard navigation and interaction clarity, especially in complex components such as:
+Accessibility was a core driver for Version 5. In this release, we focused on keyboard navigation and interaction clarity, especially in complex components, e.g.:
 
 - dropdowns
 - menus
@@ -76,7 +76,7 @@ This area also benefited from architectural cleanup, making future extensions mu
 Tabs have been reworked to better handle responsive scenarios.
 
 - tab overflow is handled more intelligently
-- a "More menu" keeps all tabs accessible, regardless of viewport size
+- a “More menu” keeps all tabs accessible, regardless of viewport size
 - visual styling is aligned with updated layout conventions
 - a continuous border helps separate the content below the tabs
 - updated visuals make the selected tab more distinctive
@@ -100,7 +100,7 @@ Additional improvements include:
 - an example showing slot usage for responsive card behavior
 
 
-# ...and lots more
+# …and lots more
 
 Beyond the bigger themes, Version 5 also includes:
 
