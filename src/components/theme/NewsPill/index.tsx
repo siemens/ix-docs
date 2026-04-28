@@ -13,7 +13,7 @@ import Link from '@docusaurus/Link';
 
 export default function NewsPill({ label, value }) {
   return (
-    <Link to={value} className={styles.NoTextDecoration}>
+    <Link to={value} className={styles.NoTextDecoration} aria-label={label}>
       <div className={styles.NewsPill}>
         <IxTypography format="body-sm" bold>
           {label}
