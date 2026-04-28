@@ -16,21 +16,21 @@ We strongly recommend upgrading version by version and not skipping major versio
 
 We optimized our [Breaking changes guide](https://github.com/siemens/ix/blob/main/BREAKING_CHANGES/v5.md) with a clear structure that is easy to parse both for humans and for agents.
 
-It starts with a high-level title and then splits the migration into isolated change domains, e.g. button accessibility, theming, ix-application, ix-toast-container, and ix-modals. Within each domain, the guide follows a repeatable pattern:
+It starts with a high-level title and then splits the migration into isolated change domains, e.g. button accessibility, theming, [ix-application](/docs/components/application), [ix-toast](/docs/components/toast), and [ix-modals](/docs/components/modal). Within each domain, the guide follows a repeatable pattern:
 
-- a short explanation of what changed and why
-- exact API or attribute names that were removed, added, or renamed
-- concrete before/after code examples
-- migration rules phrased as explicit rewrite steps
-- in some sections, a mapping table from V4 behavior to the V5 replacement
-- a final validation checklist to confirm the migration is complete
+- A short explanation of what changed and why
+- Exact API or attribute names that were removed, added, or renamed
+- Concrete before/after code examples
+- Migration rules phrased as explicit rewrite steps
+- In some sections, a mapping table from V4 behavior to the V5 replacement
+- A final validation checklist to confirm the migration is complete
 
 We recommend migrating V4 to V5 section by section, following the [Breaking changes guide](https://github.com/siemens/ix/blob/main/BREAKING_CHANGES/v5.md) as the source of truth. For each change domain: 
 
-1. search the codebase for the deprecated APIs listed in that section
-2. apply the documented V5 replacement using the before/after examples and migration rules
-3. validate each domain immediately before moving to the next one
-4. use the final validation checklist as a whole-repository review once all domains are complete
+1. Search the codebase for the deprecated APIs listed in that section.
+2. Apply the documented V5 replacement using the before/after examples and migration rules.
+3. Validate each domain immediately before moving to the next one.
+4. Use the final validation checklist as a whole-repository review once all domains are complete.
 
 This domain-by-domain approach is preferred over an all-at-once rewrite because it keeps changes reviewable, reduces migration risk, and makes automated transformations easier to verify.
 
@@ -74,22 +74,22 @@ Version 5 also introduces a broader set of updates in the iX Figma library. Thes
 
 ### Structural and behavior changes
 
-- Native Figma slots and slot-based layouts are introduced in key components such as Card and Tabs, allowing more flexible and responsive compositions.
-- Internal building blocks such as Tab Item and other internal atoms are moved to internal-only components to simplify the public library surface.
-- Interaction behavior for scrolling, overflow, and selection has been updated in areas such as Tabs, Date Dropdown, and Chip close behavior.
+- Native Figma slots and slot-based layouts are introduced in key components such as [card](/docs/components/card) and [tabs](/docs/components/tabs), allowing more flexible and responsive compositions.
+- Internal building blocks such as [tab item](/docs/components/tabs) and other internal atoms are moved to internal-only components to simplify the public library surface.
+- Interaction behavior for scrolling, overflow, and selection has been updated in areas such as [tabs](/docs/components/tabs), [date dropdown](/docs/components/date-dropdown), and [chip](/docs/components/chip) close behavior.
 
 ### Accessibility and usability improvements
 
 - Critical status colors such as error and info are refined to better meet WCAG contrast requirements.
 - Focus, hover, and active state handling is improved across form controls and other interactive elements.
-- Date-related inputs such as Date, Date Time, and Date Dropdown now provide clearer picker interactions and better separation of concerns.
+- Date-related inputs such as [date](/docs/components/input-date), [date time](/docs/components/input-date-time), and [date dropdown](/docs/components/date-dropdown) now provide clearer picker interactions and better separation of concerns.
 
 ### Breaking changes and migration notes
 
-- Card, Action Card, and Push Card are deprecated in favor of new card components that support slot-based layouts.
-- Card List examples now use the new Card component.
-- Modal, Message Modal, and Loading Modal properties are aligned more closely with code, which can require updates to existing Figma instances.
-- Input (Number) steppers are now hidden by default.
+- [Card](/docs/components/card), action card, and push card are deprecated in favor of new card components that support slot-based layouts.
+- [Card list](/docs/components/card-list) examples now use the new card component.
+- [Modal](/docs/components/modal), [message modal](/docs/components/message-modal), and [loading modal](/docs/components/loading-modal) properties are aligned more closely with code, which can require updates to existing Figma instances.
+- [Number input](/docs/components/input-number) steppers are now hidden by default.
 
 The following components were fully removed from the library after prior deprecation:
 
