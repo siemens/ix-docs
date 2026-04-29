@@ -12,7 +12,11 @@ description: Welcome to the migration guide for upgrading from Siemens Industria
 We strongly recommend upgrading version by version and not skipping major versions. If your project is still on an older major release, complete each intermediate migration first before moving to Version 5.
 :::
 
-## Migrate with your agent
+## Code migration
+
+This section gives an overview of the main code-level breaking changes in Version 5. For the complete list of changes, see the [Changelog](https://github.com/siemens/ix/releases) and the [Release V5.0.0 blog post](/blog/2026/05/11/release-5) for more context on the rationale behind the update.
+
+### Migrate with your agent
 
 We optimized our [Breaking changes guide](https://github.com/siemens/ix/blob/main/BREAKING_CHANGES/v5.md) with a clear structure that is easy to parse both for humans and for agents.
 
@@ -33,10 +37,6 @@ We recommend migrating V4 to V5 section by section, following the [Breaking chan
 4. Use the final validation checklist as a whole-repository review once all domains are complete.
 
 This domain-by-domain approach is preferred over an all-at-once rewrite because it keeps changes reviewable, reduces migration risk, and makes automated transformations easier to verify.
-
-## What changed in code
-
-This section gives an overview of the main code-level breaking changes in Version 5. For the complete list of changes, see the [Changelog](https://github.com/siemens/ix/releases) and the [Release V5.0.0 blog post](/blog/2026/05/11/release-5) for more context on the rationale behind the update.
 
 ### Deprecated and removed components
 
@@ -86,7 +86,7 @@ Version 5 also introduces a broader set of updates in the iX Figma library. Thes
 
 ### Breaking changes and migration notes
 
-- [Card](/docs/components/card), action card, and push card are deprecated in favor of new card components that support slot-based layouts.
+- [Card](/docs/components/card), action card and push card are deprecated in favor of new card components that support slot-based layouts.
 - [Card list](/docs/components/card-list) examples now use the new card component.
 - [Modal](/docs/components/modal), [message modal](/docs/components/message-modal), and [loading modal](/docs/components/loading-modal) properties are aligned more closely with code, which can require updates to existing Figma instances.
 - [Number input](/docs/components/input-number) steppers are now hidden by default.

@@ -7,7 +7,7 @@ tags: [release]
 
 ![banner](../2026-05-11-release-5/2605_blog_5-0.png)
 
-Version 5 marks a step forward for the Industrial Experience Design System. This major release focuses on improving accessibility, removing outdated components and strengthening the connection between design tokens, Figma, and code.
+Version 5 marks a step forward for the Industrial Experience Design System. This major release focuses on improving accessibility, removing outdated components and strengthening the connection between design tokens, Figma and code.
 
 <!-- truncate -->
 
@@ -51,7 +51,7 @@ The update focused especially on interaction clarity in areas such as:
 - [Dropdowns](/docs/components/dropdown)
 - Menus
 - [Tabs](/docs/components/tabs)
-- Composite form elements
+- Composite form elements, e.g. [range field](/docs/components/range-field)
 
 
 # Date and time inputs are more capable
@@ -64,13 +64,7 @@ Version 5 adds new date and time input capabilities and improves consistency acr
 - A dedicated [range field](/docs/components/range-field) concept
 - Improved interaction consistency across [date pickers](/docs/components/date-picker)
 
-Benefits include:
-
-- More predictable date and time entry in data-heavy workflows
-- More consistent behavior across locales and picker interactions
-- Easier integration with [forms](/docs/components/forms-field) and validation logic
-
-It also simplifies future extensions by reducing architectural complexity in the underlying implementation.
+We've standardized date and time component interactions across all locales, making data entry more predictable for complex workflows. All components now feature robust integration with [forms](/docs/components/forms-field) and validation. Architecturally, we've streamlined the implementation to support future enhancements.
 
 # Tabs now handle overflow with a More menu
 
@@ -78,8 +72,7 @@ It also simplifies future extensions by reducing architectural complexity in the
 
 [Tabs](/docs/components/tabs) now handle overflow more reliably in responsive layouts.
 
-- Tab overflow is handled more intelligently.
-- A “More menu” keeps all tabs accessible, regardless of viewport size.
+- Tab overflow is handled more intelligently. A “More menu” keeps all tabs accessible, regardless of viewport size.
 - Visual styling is aligned with updated layout conventions.
 - A continuous border helps separate the content below the tabs.
 - Updated visuals make the selected tab more distinctive.
@@ -95,10 +88,7 @@ That change required a breaking update in the Figma library:
 - Older versions of card components are now deprecated.
 - Reworked card components are now provided under the same existing names.
 
-Additional improvements include:
-
-- A new property for switching between outline and filled variants.
-- An example showing slot usage for responsive card behavior.
+Additionally, we introduced a new property for switching between outline and filled variants. We have added an example directly in the library showing slot usage for responsive card behavior.
 
 # More improvements in Version 5
 
