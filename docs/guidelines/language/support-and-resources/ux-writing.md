@@ -16,8 +16,11 @@ import { iconOpenExternal } from "@siemens/ix-icons/icons";
 
 ## Overview
 
-UX writers strengthen usability, reduce friction and ensure every interaction across a product feels supportive and human centered. They do this by shaping in product language that supports a clear, seamless and intuitive user experience, in line with [ISO 9241-110:2020](https://www.iso.org/standard/75258.html)<IxIcon name={iconOpenExternal} size="16" aria-label="external" role="img"> </IxIcon> Interaction principles. 
-UX writers create user interface microcopy such as buttons, labels, tooltips, warnings, onboarding and chatbot messages to guide users through workflows in line with [ISO 9241-112:2025](https://www.iso.org/standard/75258.html) <IxIcon name={iconOpenExternal} size="16" aria-label="external" role="img"></IxIcon> Principles for the presentation of information.
+UX writers strengthen usability, reduce friction and ensure every interaction across a product feels supportive and human centered. They do this by shaping in-product language that supports a clear, seamless and intuitive user experience, in line with [ISO 9241-110:2020](https://www.iso.org/standard/75258.html) <IxIcon name={iconOpenExternal} size="16" aria-label="external" role="img"> </IxIcon> Interaction principles.
+
+UX writers create user interface microcopy such as buttons, labels, tooltips, warnings, onboarding and chatbot messages to guide users through workflows in line with [ISO 9241-112:2025](https://www.iso.org/standard/75258.html) <IxIcon name={iconOpenExternal} size="16" aria-label="external" role="img"></IxIcon>.
+
+Principles for the presentation of information.
 UX writers are responsible for ensuring the voice and tone of every interaction is aligned with established brand guidelines, and all microcopy maintains a consistent voice that reflects the brand’s personality across all the whole product.
 
 UX writers are part of the design team and coordinate with multiple stakeholders.
@@ -112,5 +115,5 @@ Continuous collaboration improves quality and speed, prevents terminology gaps, 
 
 ## Related
 
-* [UX writing principles](#)
+* [UX writing principles](./UX-writing-principles.md)
 * [UX writing support and resources](#)
