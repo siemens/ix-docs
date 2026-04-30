@@ -14,7 +14,8 @@ import { useDocType } from '@site/src/utils/hooks/useDocType';
 import DocItemContent from '@theme-original/DocItem/Content';
 import DocItemFooter from '@theme-original/DocItem/Footer';
 import Layout from '@theme-original/DocItem/Layout';
-import DocItemPaginator from '@theme-original/DocItem/Paginator';
+// TODO(IX-4240) Not working with tabs, need to investigate
+// import DocItemPaginator from '@theme-original/DocItem/Paginator';
 import ContentVisibility from '@theme/ContentVisibility';
 import type LayoutType from '@theme/DocItem/Layout';
 import DocItemTOCDesktop from '@theme/DocItem/TOC/Desktop';
@@ -100,7 +101,9 @@ export function BannerDocItemLayout({ children }: Props): JSX.Element {
             </div>
           </article>
           <DocItemFooter />
-          <DocItemPaginator />
+          {/*
+          //TODO(IX-4240) Not working with tabs, need to investigate
+          <DocItemPaginator /> */}
         </div>
         <div className={clsx('col', styles.toc)}>{docTOC.desktop}</div>
       </div>
@@ -161,7 +164,9 @@ export function DocItemTabItemLayout({ children }: Props): JSX.Element {
             </div>
           </article>
           <DocItemFooter />
-          <DocItemPaginator />
+          {/*
+          // TODO(IX-4240) Not working with tabs, need to investigate
+          <DocItemPaginator /> */}
         </div>
         <div className={clsx('col', styles.toc)}>{docTOC.desktop}</div>
       </div>
