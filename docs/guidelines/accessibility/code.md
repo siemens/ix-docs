@@ -38,8 +38,8 @@ Static ARIA attributes can be set directly in HTML:
 <button aria-label="Save document"><i class="icon element-save"></i></button>
 ```
 
-For iX components, use the dedicated `ariaLabel` attribute for elements contained inside the component.
-**Example**: Setting the `aria-label` for the icon-buttons contained in ix-date-picker.
+For iX components, use the dedicated `ariaLabel` attribute for elements contained inside components.
+**Example**: Setting the `aria-label` for the icon buttons contained in ix-date-picker component.
 
 <Playground
 name="aria-label-properties"
@@ -136,7 +136,7 @@ Disconnect your mouse and try to operate your service using only the keyboard.
 
 ### Text alternatives and labels
 
-Any non-text content (images, buttons, links, inputs) must be labelled to be ([WCAG 2.1](https://www.w3.org/WAI/WCAG22/quickref/?showtechniques=141%2C131#keyboard-accessible)) compliant. The general rule to follow is:
+Label any non-text content, e.g. images, buttons, links or inputs, to comply with [WCAG guideline 2.1](https://www.w3.org/WAI/WCAG22/quickref/?showtechniques=141%2C131#keyboard-accessible). The general rule to follow is:
 
 1. Use `aria-labelledby`
 2. Otherwise use `aria-label`
