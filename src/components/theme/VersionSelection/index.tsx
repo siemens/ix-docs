@@ -68,12 +68,12 @@ export default function VersionSelection({ value }: { value: VersionFile }) {
             id="custom-version-selection"
             className={clsx('navbar__item nav-link', styles.versionSelection)}
             variant="tertiary"
-            aria-label={`${currentVersion.dropdownLabel ?? currentVersion.label}, select version`}
+            aria-label={`${currentVersion?.dropdownLabel ?? currentVersion?.label}, select version`}
             aria-haspopup="listbox"
           >
             <span>
               <IxTypography textColor="std" format="label-lg">
-                {currentVersion.label}
+                {currentVersion?.label}
               </IxTypography>
               <IxIcon color="color-std-text" name={iconChevronDown} />
             </span>
@@ -82,16 +82,15 @@ export default function VersionSelection({ value }: { value: VersionFile }) {
             {value.versions.map((version) => (
               <IxDropdownItem
                 key={version.id}
-                tabIndex={-1}
                 aria-label={
-                  currentVersion.id === version.id
+                  currentVersion?.id === version.id
                     ? `${version.dropdownLabel ?? version.label}, current version`
                     : `${version.dropdownLabel ?? version.label}, link`
                 }
               >
-                {currentVersion.id === version.id ? (
+                {currentVersion?.id === version.id ? (
                   <span>
-                    {currentVersion.dropdownLabel ?? currentVersion.label}
+                    {currentVersion?.dropdownLabel ?? currentVersion?.label}
                   </span>
                 ) : (
                   <a href={version.href} className="all-unset" tabIndex={-1}>
@@ -100,7 +99,7 @@ export default function VersionSelection({ value }: { value: VersionFile }) {
                 )}
               </IxDropdownItem>
             ))}
-            <IxDropdownItem tabIndex={-1} aria-label="Show versioning, link">
+            <IxDropdownItem aria-label="Show versioning, link">
               <Link href="/docs/home/releases/release-version" tabIndex={-1}>
                 Show versioning
               </Link>
