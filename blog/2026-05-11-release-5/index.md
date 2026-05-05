@@ -11,34 +11,33 @@ Version 5 marks a step forward for the Industrial Experience Design System. This
 
 <!-- truncate -->
 
-If you are planning an upgrade to Version 5, start here:
+To upgrade to Version 5, start here:
 
 - Review the [migration guide](/docs/home/migration/5_0_0) for breaking changes and required updates.
-- Expect the biggest impact in accessibility behavior, date and time inputs and token structure.
+- Expect the biggest changes to accessibility behavior, date and time inputs and status colors.
 - Update both code and Figma assets if your team relies on shared component libraries.
 
 # Why upgrade to Version 5?
 
-With Version 5, we took the opportunity of a major release to address topics that require breaking changes, areas where incremental updates were no longer enough.
+With Version 5, we took the opportunity to address topics that require breaking changes in areas where incremental updates were no longer enough.
 
 Our goals were clear:
 
 - Reduce legacy APIs and outdated approaches.
 - Align components with modern web and accessibility standards.
-- Strengthen the connection between design tokens, Figma, and code.
+- Strengthen the connection between design tokens, Figma and code.
 
-# Color tokens now follow a shared reference model
+# Brand theme colors now follow a shared reference model
 
 ![color-tokens](../2026-05-11-release-5/2605_blog_tokens.png)
 
-The token structure is now aligned with the Siemens Design Language and built on strict reference tokens.
+The color token basis is now aligned with the Siemens Design Language and built on strict reference token.
 
 Teams now have a more consistent foundation across design systems and codebases.
 
 - Color tokens are now strictly reference-based.
-- Background, text, and accent tokens follow a clear hierarchy.
-- Token naming is aligned to support shared reference tokens across Siemens design systems.
-- Interaction colors allow distinctive interaction states for keyboard interactions.
+- Contrast is increased for status colors and between interaction states.
+- Recognition of interaction state changes is increased for keyboard interactions.
 
 # Accessibility improvements for keyboard navigation
 
