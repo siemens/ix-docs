@@ -15,8 +15,7 @@ const DevicePreview = (props: {
   image?: string;
   style?: any;
 }) => {
-  // TODO: Show theme dynamic const theme = useTheme();
-  const theme = 'theme-brand-dark';
+  const theme = 'brand';
   const url = useBaseUrl('/demo/v2/preview/mobile/');
 
   return (
