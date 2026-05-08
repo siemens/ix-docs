@@ -1,0 +1,52 @@
+<!--
+SPDX-FileCopyrightText: 2024 Siemens AG
+
+SPDX-License-Identifier: MIT
+
+This source code is licensed under the MIT license found in the
+LICENSE file in the root directory of this source tree.
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ECharts empty state example</title>
+    <!-- External resources -->
+    <script src="https://cdn.jsdelivr.net/npm/echarts@5.4.1/dist/echarts.min.js"></script>
+    <!-- External resources -->
+
+    <script type="module" crossorigin src="../assets/echarts-empty-state-DlaSUo_Q.js"></script>
+    <link rel="modulepreload" crossorigin href="../assets/global-7ZbTfMw3.js">
+    <link rel="modulepreload" crossorigin href="../assets/init-6zSVdjuR.js">
+    <link rel="modulepreload" crossorigin href="../assets/ix-icon.entry-Co7qlYpz.js">
+    <link rel="modulepreload" crossorigin href="../assets/index-BWsIQ1EH.js">
+    <link rel="modulepreload" crossorigin href="../assets/index-VcTKdkWt.js">
+    <link rel="modulepreload" crossorigin href="../assets/logical-filter-operator-BH3f5fa3-983MLV_l.js">
+    <link rel="modulepreload" crossorigin href="../assets/upload-file-state-BGzrnl_l-DLdhtkd7.js">
+    <link rel="modulepreload" crossorigin href="../assets/index-BBzEV-f4-ChQfUIyc.js">
+    <link rel="modulepreload" crossorigin href="../assets/typed-event-BdCnOrqW-CWsLM0S_.js">
+    <link rel="modulepreload" crossorigin href="../assets/modal-BJAcx3Qd-CMIZ8YSL.js">
+    <link rel="modulepreload" crossorigin href="../assets/animation-BLaucX4x-BWLd_Wig.js">
+    <link rel="modulepreload" crossorigin href="../assets/theme-switcher-CpQ8JvHL-B4B-3Xrp.js">
+    <link rel="modulepreload" crossorigin href="../assets/index-B_6Kcb-H.js">
+    <link rel="stylesheet" crossorigin href="../assets/global-D7pkbQ45.css">
+    <link rel="stylesheet" crossorigin href="../assets/echarts-bar-horizontal-stacked-DsFwfgk9.css">
+  </head>
+  <body>
+    <div class="echarts">
+      <div id="empty-state-container" class="empty-state-container">
+        <ix-empty-state
+          class="empty-state"
+          header="No elements available"
+          sub-header="Failed to retrieve data"
+          icon="info"
+          action="Try again"
+        ></ix-empty-state>
+      </div>
+      <div class="echarts" id="main"></div>
+    </div>
+
+  </body>
+</html>

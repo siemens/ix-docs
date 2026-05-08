@@ -1,0 +1,8 @@
+/**
+ * anime.js - ESM
+ * @version v4.1.2
+ * @author Julian Garnier
+ * @license MIT
+ * @copyright (c) 2025 Julian Garnier
+ * @see https://animejs.com
+ */
