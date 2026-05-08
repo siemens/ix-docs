@@ -47,6 +47,10 @@ function replaceLibraryImports(
     /"@siemens\/ix-echarts":\s*"<VERSION>"/g,
     '"@siemens/ix-echarts": "^3.0.0"'
   );
+  packageJson = packageJson.replace(
+    /"@siemens\/ix-aggrid":\s*"<VERSION>"/g,
+    '"@siemens/ix-aggrid": "^4.0.0"'
+  );
   packageJson = packageJson.replace(/\"<VERSION>\"/g, `"${version}"`);
   project["package.json"] = packageJson;
 }
