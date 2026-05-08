@@ -4,41 +4,61 @@ title: Starter app
 doc-type: 'banner'
 component-tabs: ['']
 no_single_tab: true
-description: 'Get hands-on experience of the Siemens Industrial Experience design system with our interactive starter app. This shows and explains how to use our components effectively and allows you to experience the integration and functionality Siemens Industrial Experience offers.'
+description: 'Explore the Siemens Industrial Experience design system with our interactive starter apps. Build faster with ready-to-use components and documentation.'
 ---
 
-import image from './images/starter-app.png';
+import image1 from './images/home.png';
+import image2 from './images/forms.png';
+import image3 from './images/charts.png';
+import image4 from './images/grids.png';
 
 #
+
+## Explore
+
+- You can view the [starter app](https://siemens.github.io/ix-starter/react-starter/)
+- We recommend exploring the code in your desired [framework](#frameworks) and get started quickly
+- You can start building immediately in your IDE with all packages pre-installed
+- Using the ready-made examples can simplify your workflow
+
+
+## Preview
+
+The starter app includes an application shell and three example pages featuring: form elements, charts and data grids.
 
 <div style={{
   display: 'flex',
   flexDirection: 'column',
   marginBlockEnd: '2rem',
 }}>
-<section>
-      Explore the code and get started quickly by visiting our [GitHub repository](https://github.com/siemens/ix-starter/).
-      Or view the starter app [here](https://siemens.github.io/ix-starter/react-starter/).
-
-  </section>
-  <img src={image}
-    style={{
-      height: 'auto',
-      objectFit: 'contain',
-      alignSelf: 'flex-start'
-    }}
-  />
+  <div style={{
+    display: 'grid',
+    gridTemplateColumns: 'repeat(2, minmax(0, 1fr))',
+    gap: '1rem',
+    marginTop: '1rem',
+  }}>
+    {[image1, image2, image3, image4].map((image, index) => (
+      <img
+        key={index}
+        src={image}
+        style={{
+          width: '100%',
+          height: 'auto',
+          objectFit: 'contain',
+          display: 'block',
+        }}
+      />
+    ))}
+  </div>
 
 </div>
 
-## Key features
+## Frameworks
 
-- Intuitive design: Simplify your workflow with user-friendly components.
-- Versatile components: Adapt to different project requirements.
-- Seamless integration: Easy to implement and customize.
+The starter app is available for our supported frameworks.
 
-## Benefits
-
-- Comprehensive documentation: Access detailed guides and examples.
-- Consistent UI: Ensure consistency across your applications.
-- Time-saving: Reduce development time with pre-built components.
+| Framework | Repository | Deployment |
+| --- | --- | --- |
+| React | [GitHub repository (React)](https://github.com/siemens/ix-starter/) | [React app](https://siemens.github.io/ix-starter/react-starter/) |
+| Angular | [GitHub repository (Angular)](https://github.com/siemens/ix-starter/) | [Angular app](https://siemens.github.io/ix-starter/angular-starter/) |
+| Vue | [GitHub repository (Vue)](https://github.com/siemens/ix-starter/) | [Vue app](https://siemens.github.io/ix-starter/vue-starter/) |
