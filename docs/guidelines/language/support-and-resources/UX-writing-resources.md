@@ -22,23 +22,24 @@ Official Siemens UX writing and brand resources are exclusively available for Si
 
 ### Torrey Podmajersky
 
-She is a pioneer in UX content design, having written the first ever major publisher book on UX writing in 2019. Her experience at companies like Google or Microsoft has influenced how product teams use strategic content to solve business and customer problems, demonstrating the real impact of UX writing at scale.
+She is a pioneer in UX content design, having written the first ever major published book on UX writing in 2019. Her experience at companies like Google or Microsoft has influenced how product teams use strategic content to solve business and customer problems, demonstrating the real impact of UX writing at scale.
 
-**Book:** Strategic Writing for UX – Drive Engagement, Conversion, and Retention with Every Word<br/>
+**Books:** Strategic Writing for UX: Drive Engagement, Conversion, and Retention with Every Word<br/>
+UX Skills for Business Strategy by Torrey Podmajersky, Maya Elise Joseph-Goteiner, Kim Mats Mats<br/>
 **Website:** [torreypodmajersky.com](https://torreypodmajersky.com) <IxIcon name={iconOpenExternal} size="16" aria-label="external" role="img"></IxIcon><br/>
 **LinkedIn:** [linkedin.com/torreybird](https://www.linkedin.com/in/torreybird/) <IxIcon name={iconOpenExternal} size="16" aria-label="external" role="img"></IxIcon>
 
 ### Sarah Richards
 
-She established a foundational methodology for creating evidence-based content during her work for the UK Government Digital Service, where she led the transformation of government websites into user-centered GOV.UK platform. As the founder of “Content Design London”, she elevates the field by training teams worldwide.
+She established a foundational methodology for creating evidence-based content during her work for the UK Government Digital Service, where she led the transformation of government websites into the user-centered GOV.UK platform. As the founder of “Content Design London”, she elevates the field by training teams worldwide.
 
-**Book:** Content Design – research, plan and deliver the content your audience wants and needs<br/>
+**Book:** Content Design: Research, plan and deliver the content your audience wants and needs<br/>
 **Website:** [contentdesign.london/](https://contentdesign.london/) <IxIcon name={iconOpenExternal} size="16" aria-label="external" role="img"></IxIcon><br/>
 **LinkedIn:** [linkedin.com/company/content-design-london/](https://linkedin.com/company/content-design-london/) <IxIcon name={iconOpenExternal} size="16" aria-label="external" role="img"></IxIcon>
 
 ### Kinneret Yifrah
 
-She founded Nemala, Israel’s first microcopy studio, and has played an important role in shaping the national UX writing landscape by writing microcopy for major corporations and government institutions including designing the Israeli government’s voice for digital services.
+She founded Nemala, Israel’s first microcopy studio, and has played an important role in shaping the international UX writing landscape by writing microcopy for major corporations and government institutions including designing the Israeli government’s voice for digital services.
 
 **Book:** Microcopy: The Complete Guide<br/>
 **Website:** [microcopybook.com/](https://microcopybook.com/) <IxIcon name={iconOpenExternal} size="16" aria-label="external" role="img"></IxIcon><br/>
@@ -69,8 +70,8 @@ Kate Kiefer Lee and Nicole Fenton are widely recognized as foundational voices i
 
 ### Content Design London
 
-Content Design London (CDL) is a content‑focused agency founded by Sarah Richards. It specializes in training, consulting and helping organizations create useful, usable, human‑centred content. 
-Their podcast and blog include practical, research, content patterns and accessibility insights.
+Content Design London (CDL) is a content‑focused agency founded by Sarah Richards. It specializes in training, consulting and helping organizations create useful, usable, human‑centered content. 
+Their podcast and blog include research, content patterns and accessibility insights.
 
 **Podcast:** [contentdesign.london/podcast](https://contentdesign.london/podcast) <IxIcon name={iconOpenExternal} size="16" aria-label="external" role="img"></IxIcon><br/>
 **Blog:** [contentdesign.london/blog](https://contentdesign.london/blog) <IxIcon name={iconOpenExternal} size="16" aria-label="external" role="img"></IxIcon><br/>
@@ -78,7 +79,7 @@ Their podcast and blog include practical, research, content patterns and accessi
 
 ### Content Rookie
 
-Content Rookie is a podcast about content design, UX writing, and content strategy and aimed at people who want to learn and grow in content-focused careers. 
+Content Rookie is a podcast about content design, UX writing, and content strategy, and is aimed at people who want to learn and grow in content-focused careers. 
 
 **Podcast:** [contentrookiepod.com/](https://contentrookiepod.com/) <IxIcon name={iconOpenExternal} size="16" aria-label="external" role="img"></IxIcon>
 
@@ -88,7 +89,7 @@ Writers of Silicon Valley have deep conversations with content designers and UX 
 
 **Podcast:** [writersofsiliconvalley.com/](https://writersofsiliconvalley.com/) <IxIcon name={iconOpenExternal} size="16" aria-label="external" role="img"></IxIcon>
 
-## Resources for accessibility, inclusive writing and neurodiversity
+## Accessibility, inclusive writing and neurodiversity
 
 ### W3C Web Accessibility Initiative (WAI)
 
@@ -105,7 +106,7 @@ These Inclusive Design Principles are about designing the needs of people with p
 
 ### Microsoft Inclusive Design Toolkit
 
-Inclusive design is about creating products, services and experiences that work for everyone, not just the average or the assumed users. This toolkit is designed to help you understand the full spectrum of human diversity and integrate those insights into every stage of your design process.
+This toolkit is designed to help you understand the full spectrum of human diversity and integrate those insights into every stage of your design process.
 
 **Website:** [inclusive.microsoft.design](https://inclusive.microsoft.design) <IxIcon name={iconOpenExternal} size="16" aria-label="external" role="img"></IxIcon>
 
@@ -131,7 +132,7 @@ The UK Government’s standards and guidance for designing and building accessib
 
 ### Sheri Byrne-Haber: Content and accessibility expert
 
-Sheri Byrne Haber is an inclusion expert and one of the most widely respected leaders in digital accessibility, known for her decades long impact on making technology more inclusive for people with disabilities.
+Sheri Byrne Haber is an inclusion expert and one of the most widely respected leaders in digital accessibility, known for her impact on making technology more inclusive for people with disabilities.
 
 **Website:** [sheribyrnehaber.com/](https://sheribyrnehaber.com/) <IxIcon name={iconOpenExternal} size="16" aria-label="external" role="img"></IxIcon><br/>
 **LinkedIn:** [linkedin.com/in/sheribyrnehaber/](https://linkedin.com/in/sheribyrnehaber/) <IxIcon name={iconOpenExternal} size="16" aria-label="external" role="img"></IxIcon>
@@ -146,7 +147,7 @@ Alexa Heinrich is a social media strategist and a leading voice in digital acces
 
 ### Siemens Industrial Design: Conversational design guidelines
 
-This guideline highlights the advantages of conversational design, particularly in industrial settings. It covers the complexities of industrial processes, the importance of data security, domain knowledge and the need for robust and reliable systems.
+These guidelines highlight the advantages of conversational design, particularly in industrial settings. They cover the complexities of industrial processes, the importance of data security, domain knowledge and the need for robust and reliable systems.
 
 **Website:** [Conversational design guidelines](../../conversational-design/getting-started.md)
 
@@ -158,16 +159,16 @@ The Voiceflow Learning Hub is a comprehensive educational space designed to help
 
 ### Cathy Pearl
 
-Cathy Pearl is one of the most influential figures in conversational design, with more than two decades of experience shaping how humans interact with voice driven technology. She has helped define the foundations of modern voice UX.
+Cathy Pearl is an influential figures in conversational design, with more than two decades of experience shaping how humans interact with voice driven technology. She has helped define the foundation of modern voice UX.
 
 **Book:** Designing Voice User Interfaces<br/>
 **Website:** [cathypearl.com/](https://cathypearl.com/) <IxIcon name={iconOpenExternal} size="16" aria-label="external" role="img"></IxIcon>
 
-## Internationalization, translation & localization
+## Internationalization, translation and localization
 
 ### W3C Internationalization (i18n)
 
-In a global digital landscape, products are no longer designed for a single language or culture. This is where W3C Internationalization (i18n) becomes essential for UX writing. The W3C i18n guidelines provide a shared, standards based foundation for creating content that works for users everywhere.
+In a global digital landscape, products are no longer designed for a single language or culture. The W3C i18n guidelines provide a shared, standards based foundation for creating content that works for users everywhere.
 
 **Website:** [w3.org/International/](https://w3.org/International/) <IxIcon name={iconOpenExternal} size="16" aria-label="external" role="img"></IxIcon>
 
