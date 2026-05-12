@@ -1,7 +1,7 @@
 ---
 sidebar_position: 3
-sidebar_label: UX writing
-title: UX writing
+sidebar_label: UX writer role
+title: UX writer role
 doc-type: 'banner'
 component-tabs: ['']
 no_single_tab: true
@@ -18,9 +18,8 @@ import { iconOpenExternal } from "@siemens/ix-icons/icons";
 
 UX writers strengthen usability, reduce friction and ensure every interaction across a product feels supportive and human centered. They do this by shaping in-product language that supports a clear, seamless and intuitive user experience, in line with [ISO 9241-110:2020](https://www.iso.org/standard/75258.html) <IxIcon name={iconOpenExternal} size="16" aria-label="external" role="img"> </IxIcon> Interaction principles.
 
-UX writers create user interface microcopy such as buttons, labels, tooltips, warnings, onboarding and chatbot messages to guide users through workflows in line with [ISO 9241-112:2025](https://www.iso.org/standard/75258.html) <IxIcon name={iconOpenExternal} size="16" aria-label="external" role="img"></IxIcon>.
+UX writers create user interface microcopy such as buttons, labels, tooltips, warnings, onboarding and chatbot messages to guide users through workflows in line with [ISO 9241-112:2025](https://www.iso.org/standard/87518.html) <IxIcon name={iconOpenExternal} size="16" aria-label="external" role="img"></IxIcon>. Principles for the presentation of information.
 
-Principles for the presentation of information.
 UX writers are responsible for ensuring the voice and tone of every interaction is aligned with established brand guidelines, and all microcopy maintains a consistent voice that reflects the brand’s personality across all the whole product.
 
 UX writers are part of the design team and coordinate with multiple stakeholders.
@@ -55,7 +54,7 @@ Manage narrative content, thought leadership and storytelling that doesn't direc
 
 ### Accessibility teams
 
-Update team on new accessibility standards and norms and test UX writing guidelines for accessibility.
+Update team on new accessibility standards and norms, and test UX writing guidelines for accessibility.
 
 ### Development teams
 
@@ -68,7 +67,7 @@ Design systems provide components, shared patterns and guidelines for consistent
 ### What’s included
 
 * Voice and tone framework
-* Component guidelines (menus, dialogs, buttons, warnings, notifications)
+* Component guidelines (e.g. menus, dialogs, buttons, warnings, notifications)
 * Standardized terminology and approved terms
 * Writing guidelines and templates for components 
 * Common writing issues reference, such as false friends, common spelling issues, etc. 
@@ -77,7 +76,7 @@ Design systems provide components, shared patterns and guidelines for consistent
 
 ### Ownership
 
-Senior UX writers and senior UX writing teams contribute to the design system, approve terminology changes and support the writing of component guidelines. These teams own the UX writing guidelines and associated terminology databases.
+Senior UX writers and senior UX writing teams contribute to the design system, approve terminology changes and support the writing of component guidelines. These teams own the UX writing guidelines and the associated terminology databases.
 
 ### Review process
 
@@ -105,15 +104,15 @@ New UX writers should complete an onboarding program covering the UX writing gui
 
 Integrate UX writing throughout all agile project phases to allow product language to evolve with the design.
 
-* Sprint planning: Identify content needs and terminology early in ideation
-* Daily standups: Stay aligned on interaction changes that affect microcopy
-* Refinement: Collaborate with designers and product owners on wording decisions
-* Development: Ensure accurate implementation and consistency
-* Retrospectives: Refine the writing process based on team feedback
+* Sprint planning: Identify content needs and terminology early in ideation.
+* Daily standups: Stay aligned on interaction changes that affect microcopy.
+* Refinement: Collaborate with designers and product owners on wording decisions.
+* Development: Ensure accurate implementation and consistency.
+* Retrospectives: Refine the writing process based on team feedback.
 
 Continuous collaboration improves quality and speed, prevents terminology gaps, reduces rework and improves clarity throughout the product.
 
 ## Related
 
 * [UX writing principles](./UX-writing-principles.md)
-* [UX writing support and resources](#)
+* UX writing support and resources (coming soon)
