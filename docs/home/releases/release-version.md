@@ -40,13 +40,13 @@ All major releases receive support for approximately 12 months. We distinguish b
 
 Our support policy applies to all components of the design system including the code base, Figma design kits and our documentation.
 
-We recommend always following the active release. When a version moves from the active stage to the LTS stage, projects should start migrating to the new active major version.
+We recommend always following the active release. When a version moves from the active stage to the Maintenance stage, projects should start migrating to the new active major version.
 
 ## Supported versions
 
-| Version |   Status    | Released       | Maintenance support since | End of life since |
+| Version |   Status    | Latest       | Maintenance support | End of life |
 | ------- | :---------: | -------------- | ------------------------- | ----------------- |
-| V5.0.0  |    Next     | ~ May 2026     | -                         | -                 |
-| V4.0.0  |   Latest    | November 2025  | ~ May 2026                | ~ November 2026   |
-| V3.0.0  | Maintenance | May 2025       | November 2025             | May 2026          |
-| V2.0.0  | End of Life | September 2023 | May 2025                  | November 2025     |
+| V5.0.0  |        Latest       | 2026-05 - 2026-11 | 2026-11 - 2027-05 | 2027-05 |
+| V4.0.0  |     Maintenance     | 2025-11 - 2026-05 | 2026-05 - 2026-11 | 2026-11 |
+| V3.0.0  |     End of Life     | 2025-05 - 2025-11 | 2025-11 - 2026-05 | 2026-05 |
+| V2.0.0  |     End of Life     | 2023-09 - 2025-05 | 2025-05 - 2025-11 | 2025-11 |
