@@ -44,7 +44,7 @@ It starts with a high-level title and then splits the migration into isolated ch
 
 4. Review all changes after the agent is done.
 
-For large projects, run the agent section by section rather than all at once. Follow the [Breaking changes guide](https://github.com/siemens/ix/blob/main/BREAKING_CHANGES/v5.md) domain by domain:
+For large projects, we recommend running the agent section by section rather than all at once. You can follow the [Breaking changes guide](https://github.com/siemens/ix/blob/main/BREAKING_CHANGES/v5.md) domain by domain:
 
 1. Search the codebase for the deprecated APIs listed in that section.
 2. Apply the documented V5 replacement using the before/after examples and migration rules.
