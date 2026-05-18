@@ -29,7 +29,7 @@ It starts with a high-level title and then splits the migration into isolated ch
 - In some sections, a mapping table from V4 behavior to the V5 replacement
 - A final validation checklist to confirm the migration is complete
 
-#### Guide
+#### Small to mid-sized projects
 
 1. Install the new iX npm packages in your project.
 2. Start an agent session (GitHub Copilot, Claude Code, etc.) in the root folder of your project.
@@ -44,14 +44,35 @@ It starts with a high-level title and then splits the migration into isolated ch
 
 4. Review all changes after the agent finishes.
 
-For large projects, we recommend running the agent section by section rather than all at once. You can follow the [Breaking changes guide](https://github.com/siemens/ix/blob/main/BREAKING_CHANGES/v5.md) domain by domain:
+#### Large projects
+
+For large projects, we recommend running the agent one section at a time rather than the entire guide at once. For each section in the [Breaking changes guide](https://github.com/siemens/ix/blob/main/BREAKING_CHANGES/v5.md):
+
+1. Install the new iX npm packages in your project.
+2. Start an agent session (GitHub Copilot, Claude Code, etc.) in the root folder of your project.
+3. Scope the prompt to the section you want to migrate and run the agent. For example (replace `<section>` with the relevant section, and `<framework>` with the framework your project uses):
+
+   ```text
+   This app has been updated to iX 5.0.
+   I need you to go through the entire codebase and fix all parts the breaking changes affect.
+   This app uses the <framework> version of iX, so do use the <framework> components and properties whenever possible.
+
+   Breaking changes:
+   <section>
+   ```
+
+4. Review the changes.
+5. Start a new agent session to reset the context for better results before moving to the next section.
+6. Use the final validation checklist as a whole-repository review once all domains are complete.
+
+This keeps each batch of changes small and reviewable.
+
+#### Manual
 
 1. Search the codebase for the deprecated APIs listed in that section.
 2. Apply the documented V5 replacement using the before/after examples and migration rules.
 3. Validate each domain immediately before moving to the next one.
 4. Use the final validation checklist as a whole-repository review once all domains are complete.
-
-This domain-by-domain approach keeps changes reviewable, reduces migration risk and makes automated transformations easier to verify.
 
 ### Deprecated and removed components
 
