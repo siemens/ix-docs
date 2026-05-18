@@ -46,7 +46,7 @@ It starts with a high-level title and then splits the migration into isolated ch
 
 #### Large projects
 
-For large projects, we recommend running the agent one section at a time rather than the entire guide at once. For each section in the [Breaking changes guide](https://github.com/siemens/ix/blob/main/BREAKING_CHANGES/v5.md):
+For large projects, we recommend running the agent one section at a time rather than the entire [Breaking changes guide](https://github.com/siemens/ix/blob/main/BREAKING_CHANGES/v5.md) at once.:
 
 1. Install the new iX npm packages in your project.
 2. Start an agent session (GitHub Copilot, Claude Code, etc.) in the root folder of your project.
