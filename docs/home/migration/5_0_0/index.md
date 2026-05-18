@@ -51,7 +51,7 @@ For large projects, we recommend running the agent section by section rather tha
 3. Validate each domain immediately before moving to the next one.
 4. Use the final validation checklist as a whole-repository review once all domains are complete.
 
-This domain-by-domain approach keeps changes reviewable, reduces migration risk, and makes automated transformations easier to verify.
+This domain-by-domain approach keeps changes reviewable, reduces migration risk and makes automated transformations easier to verify.
 
 ### Deprecated and removed components
 
