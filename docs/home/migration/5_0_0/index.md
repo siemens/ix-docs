@@ -29,14 +29,50 @@ It starts with a high-level title and then splits the migration into isolated ch
 - In some sections, a mapping table from V4 behavior to the V5 replacement
 - A final validation checklist to confirm the migration is complete
 
-We recommend migrating V4 to V5 section by section, following the [Breaking changes guide](https://github.com/siemens/ix/blob/main/BREAKING_CHANGES/v5.md) as the source of truth. For each change domain: 
+#### Small to mid-sized projects
+
+1. Install the new iX npm packages in your project.
+2. Start an agent session (GitHub Copilot, Claude Code, etc.) in the root folder of your project.
+3. Attach the [Breaking changes guide](https://github.com/siemens/ix/blob/main/BREAKING_CHANGES/v5.md) to the session and use the following prompt, replacing `<framework>` with the framework your project uses (Angular, React, Vue, etc.):
+
+   ```text
+   This app has been updated to iX 5.0.
+   I need you to go through the entire codebase and fix all parts the breaking changes in the attached file affect.
+   This app uses the <framework> version of iX, so do use the <framework> components and properties whenever possible.
+   After you finish migrating, use the checklist at the end of the file to confirm the fixes.
+   ```
+
+4. Review all changes after the agent finishes.
+
+#### Large projects
+
+For large projects, we recommend running the agent one section at a time rather than the entire [Breaking changes guide](https://github.com/siemens/ix/blob/main/BREAKING_CHANGES/v5.md) at once.:
+
+1. Install the new iX npm packages in your project.
+2. Start an agent session (GitHub Copilot, Claude Code, etc.) in the root folder of your project.
+3. Scope the prompt to the section you want to migrate and run the agent. For example (replace `<section>` with the relevant section, and `<framework>` with the framework your project uses):
+
+   ```text
+   This app has been updated to iX 5.0.
+   I need you to go through the entire codebase and fix all parts the breaking changes affect.
+   This app uses the <framework> version of iX, so do use the <framework> components and properties whenever possible.
+
+   Breaking changes:
+   <section>
+   ```
+
+4. Review the changes.
+5. Start a new agent session to reset the context for better results before moving to the next section.
+6. Use the final validation checklist as a whole-repository review once all domains are complete.
+
+This keeps each batch of changes small and reviewable.
+
+#### Manual
 
 1. Search the codebase for the deprecated APIs listed in that section.
 2. Apply the documented V5 replacement using the before/after examples and migration rules.
 3. Validate each domain immediately before moving to the next one.
 4. Use the final validation checklist as a whole-repository review once all domains are complete.
-
-This domain-by-domain approach is preferred over an all-at-once rewrite because it keeps changes reviewable, reduces migration risk, and makes automated transformations easier to verify.
 
 ### Deprecated and removed components
 
@@ -64,7 +100,7 @@ Theming is the largest migration topic in Version 5.
 
 ## What changed in the Figma library
 
-Version 5 also introduces a broader set of updates in the iX Figma library. These changes improve visual consistency, introduce more flexible composition patterns, and align several properties and behaviors more closely with code. Review all design-related changes in detail in the Figma library’s release notes and ensure you update to the latest published version. 
+Version 5 also introduces a broader set of updates in the iX Figma library. These changes improve visual consistency, introduce more flexible composition patterns, and align several properties and behaviors more closely with code. Review all design-related changes in detail in the Figma library’s release notes and ensure you update to the latest published version.
 
 ### Design and visual updates
 
