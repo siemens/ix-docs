@@ -66,11 +66,11 @@ As design systems, such as Industrial Experience, provide components, shared pat
 
 ### What’s included
 
-* Voice and tone framework
-* Component guidelines (e.g. menus, dialogs, buttons, warnings, notifications)
-* Standardized terminology and approved terms
-* Writing guidelines and templates for components 
-* Common writing issues reference, such as false friends, common spelling issues, etc. 
+- Voice and tone framework
+- Component guidelines (e.g. menus, dialogs, buttons, warnings, notifications)
+- Standardized terminology and approved terms
+- Writing guidelines and templates for components 
+- Common writing issues reference, such as false friends, common spelling issues, etc. 
 
 ## UX writing responsibilities
 
@@ -104,15 +104,15 @@ New UX writers should complete an onboarding program covering the UX writing gui
 
 Integrate UX writing throughout all agile project phases to allow product language to evolve with the design.
 
-* Sprint planning: Identify content needs and terminology early in ideation.
-* Daily standups: Stay aligned on interaction changes that affect microcopy.
-* Refinement: Collaborate with designers and product owners on wording decisions.
-* Development: Ensure accurate implementation and consistency.
-* Retrospectives: Refine the writing process based on team feedback.
+- Sprint planning: Identify content needs and terminology early in ideation.
+- Daily standups: Stay aligned on interaction changes that affect microcopy.
+- Refinement: Collaborate with designers and product owners on wording decisions.
+- Development: Ensure accurate implementation and consistency.
+- Retrospectives: Refine the writing process based on team feedback.
 
 Continuous collaboration improves quality and speed, prevents terminology gaps, reduces rework and improves clarity throughout the product.
 
 ## Related
 
-* [UX writing principles](./UX-writing-principles.md)
-* UX writing support and resources (coming soon)
+- [UX writing principles](./UX-writing-principles.md)
+- UX writing support and resources (coming soon)
