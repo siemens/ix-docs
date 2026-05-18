@@ -37,7 +37,7 @@ It starts with a high-level title and then splits the migration into isolated ch
 
    ```text
    This app has been updated to iX 5.0.
-   I need you to go through the entire codebase and fix all parts that are affected by the breaking changes listed in the attached file.
+   I need you to go through the entire codebase and fix all parts the breaking changes in the attached file affect.
    This app uses the <framework> version of iX, so do use the <framework> components and properties whenever possible.
    After you are done migrating, use the checklist at the end of the file to confirm the fixes.
    ```
