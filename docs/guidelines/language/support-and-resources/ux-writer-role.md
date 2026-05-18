@@ -62,7 +62,7 @@ Support writers to understand the technical processes behind the software to “
 
 ## Design systems
 
-Design systems provide components, shared patterns and guidelines for consistent product language. They are used when writing microcopy, validate terminology before implementation and apply established patterns for consistency. UX writing patterns, templates and examples of best practice are shared here for teams to adopt and integrate into their product.
+As design systems, such as Industrial Experience, provide components, shared patterns and guidelines for consistent product language, UX writers use design systems to write microcopy and validate terminology before implementation. In addition, design systems can be used by UX writers to apply established patterns for consistency. UX writing patterns, templates and examples of best practice are shared here for teams to adopt and integrate into their product.
 
 ### What’s included
 
