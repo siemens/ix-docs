@@ -76,7 +76,7 @@ As design systems, such as Industrial Experience, provide components, shared pat
 
 ### Ownership
 
-Senior UX writers and senior UX writing teams contribute to the design system, approve terminology changes and support the writing of component guidelines. These teams own the UX writing guidelines and the associated terminology databases.
+Senior UX writers and senior UX writing teams contribute to the design system with UX writing rules and templates and approve terminology changes. These teams own the UX writing guidelines and the associated terminology databases.
 
 ### Review process
 
