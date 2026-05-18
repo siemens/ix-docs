@@ -38,7 +38,7 @@ We recommend migrating V4 to V5 section by section, following the [Breaking chan
 
 This domain-by-domain approach is preferred over an all-at-once rewrite because it keeps changes reviewable, reduces migration risk, and makes automated transformations easier to verify.
 
-### Deprecated and removed components and APIs
+### Deprecated and removed components and API resources
 
 Version 5 removes several legacy APIs and attributes that were kept for backwards compatibility in earlier releases.
 
