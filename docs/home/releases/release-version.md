@@ -40,7 +40,7 @@ All major releases receive support for approximately 12 months. We distinguish b
 
 Our support policy applies to all components of the design system including the code base, Figma design kits and our documentation.
 
-We recommend always following the active release. When a version moves from the active stage to the Maintenance stage, projects should start migrating to the new active major version.
+We recommend always following the active release. When a version moves from the active stage to the maintenance stage, projects should start migrating to the new active major version.
 
 ## Supported versions
 
