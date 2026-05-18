@@ -42,7 +42,7 @@ It starts with a high-level title and then splits the migration into isolated ch
    After you finish migrating, use the checklist at the end of the file to confirm the fixes.
    ```
 
-4. Review all changes after the agent is done.
+4. Review all changes after the agent finishes.
 
 For large projects, we recommend running the agent section by section rather than all at once. You can follow the [Breaking changes guide](https://github.com/siemens/ix/blob/main/BREAKING_CHANGES/v5.md) domain by domain:
 
