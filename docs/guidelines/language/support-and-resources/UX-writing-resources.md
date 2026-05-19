@@ -186,6 +186,6 @@ The Government Digital Service (GDS) style guide is the official writing and con
 
 ## Writing with graphics, visuals and information architecture
 
-Information Is Beautiful is an independent data-visualization collective founded by data journalist and designer David McCandless. Their mission is to make sense of the world through infographics, data-visualizations and interactive graphics, turning complex information into clear, engaging visual stories.
+Information Is Beautiful is an independent data-visualization collective founded by data journalist and designer David McCandless. Their mission is to make sense of the world through infographics, data-visualizations and interactive graphics, turning complex information into clear, engaging visual stories. For UX writers, it gives clear examples of how you can turn large chunks of text and data into clear, concise labels and headings. 
 
 **Website:** [https://informationisbeautiful.net/](https://informationisbeautiful.net/) <IxIcon name={iconOpenExternal} size="16" aria-label="external" role="img"></IxIcon>
