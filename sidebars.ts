@@ -1146,23 +1146,6 @@ const sidebars: SidebarsConfig = {
       ],
       collapsed: true,
     },
-    {
-      type: 'category',
-      className: 'doc-sidebar-item-bold',
-      label: 'Deprecated',
-      items: [
-        createTabItem({
-          id: 'legacy/drawer/index',
-          label: 'Drawer',
-          items: [
-            {
-              id: 'legacy/drawer/code',
-              label: 'Code',
-            },
-          ],
-        }),
-      ],
-    },
   ],
 
   guidelines: [
