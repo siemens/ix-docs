@@ -15,7 +15,7 @@ import { iconOpenExternal } from "@siemens/ix-icons/icons";
 #
 
 :::info
-Official Siemens UX writing and brand resources are exclusively available for Siemens AG employees and partners, and can be accessed here [LINK](#).
+Official Siemens UX writing and brand resources are exclusively available for Siemens AG employees and partners, and can be accessed [here](https://code.siemens.com/siemens-ix/ix-brand-theme/-/merge_requests/55).
 :::
 
 ## Books and websites of UX writers
