@@ -260,13 +260,12 @@ const config: Config = {
           position: 'left',
           label: 'Styles',
         },
-        // Keep it as placeholder
-        // {
-        //   type: 'custom-news-pill',
-        //   position: 'left',
-        //   label: 'Boost productivity with AI',
-        //   value: '/docs/home/mcp-server',
-        // },
+        {
+          type: 'custom-news-pill',
+          position: 'left',
+          label: 'Release 5.0.0',
+          value: '/blog',
+        },
         {
           type: 'custom-version-selection',
           position: 'right',

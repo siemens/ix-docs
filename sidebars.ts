@@ -66,6 +66,7 @@ const sidebars: SidebarsConfig = {
       className: 'doc-sidebar-item-bold',
       label: 'Migration and upgrade',
       items: [
+        'home/migration/5_0_0/index',
         'home/migration/4_0_0/index',
         'home/migration/3_0_0/index',
         'home/migration/2_0_0/index',
@@ -620,13 +621,31 @@ const sidebars: SidebarsConfig = {
           ],
         }),
         createTabItem({
+          id: 'components/input-date-time/index',
+          label: 'Date time input',
+          items: [
+            {
+              id: 'components/input-date-time/guide',
+              label: 'Usage',
+            },
+            {
+              id: 'components/input-date-time/code',
+              label: 'Code',
+            },
+          ],
+        }),
+        createTabItem({
           id: 'components/date-picker/index',
           label: 'Date picker',
           items: [
             {
+              id: 'components/date-picker/guide',
+              label: 'Usage',
+            },
+            {
               id: 'components/date-picker/code',
               label: 'Code',
-            },
+            }
           ],
         }),
         createTabItem({
@@ -634,9 +653,13 @@ const sidebars: SidebarsConfig = {
           label: 'Date time picker',
           items: [
             {
+              id: 'components/date-time-picker/guide',
+              label: 'Usage',
+            },
+                        {
               id: 'components/date-time-picker/code',
               label: 'Code',
-            },
+            }
           ],
         }),
         createTabItem({
@@ -659,6 +682,20 @@ const sidebars: SidebarsConfig = {
             },
             {
               id: 'components/input-number/code',
+              label: 'Code',
+            },
+          ],
+        }),
+        createTabItem({
+          id: 'components/range-field/index',
+          label: 'Range field',
+          items: [
+            {
+              id: 'components/range-field/guide',
+              label: 'Usage',
+            },
+            {
+              id: 'components/range-field/code',
               label: 'Code',
             },
           ],
