@@ -6,13 +6,13 @@
  * This source code is licensed under the MIT license found in the
  * LICENSE file in the root directory of this source tree.
  */
+import { config as dotenv } from '@dotenvx/dotenvx';
 import { Octokit } from '@octokit/rest';
 import AdmZip from 'adm-zip';
 import fs from 'fs-extra';
 import os from 'os';
 import path from 'path';
 import copyTheme from './copy-theme';
-import { config as dotenv } from '@dotenvx/dotenvx';
 
 const __dirname = path.resolve();
 
@@ -220,4 +220,5 @@ async function downloadLatestArtifact(branch: string) {
   // Clean up
   await fs.remove(tempZipPath);
 }
+
 main();
