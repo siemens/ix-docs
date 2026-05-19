@@ -9,6 +9,10 @@ no_single_tab: true
 description: "We’ve created a set of useful resources for you to further research the topic of conversational design."
 ---
 
+import React from "react";
+import { IxIcon } from "@siemens/ix-react";
+import { iconOpenExternal } from "@siemens/ix-icons/icons";
+
 #
 
 ## Siemens internal resources
