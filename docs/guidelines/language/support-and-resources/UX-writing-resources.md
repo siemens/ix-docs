@@ -1,5 +1,5 @@
 ---
-sidebar_position: 3
+sidebar_position: 4
 sidebar_label: UX writing resources
 title: UX writing resources
 doc-type: "banner"
@@ -70,7 +70,7 @@ Kate Kiefer Lee and Nicole Fenton are widely recognized as foundational voices i
 
 ### Content Design London
 
-Content Design London (CDL) is a content‑focused agency founded by Sarah Richards. It specializes in training, consulting and helping organizations create useful, usable, human‑centered content. 
+Content Design London (CDL) is a content‑focused agency founded by Sarah Richards. It specializes in training, consulting and helping organizations create useful, usable, human‑centered content.
 Their podcast and blog include research, content patterns and accessibility insights.
 
 **Podcast:** [contentdesign.london/podcast](https://contentdesign.london/podcast) <IxIcon name={iconOpenExternal} size="16" aria-label="external" role="img"></IxIcon><br/>
@@ -79,13 +79,13 @@ Their podcast and blog include research, content patterns and accessibility insi
 
 ### Content Rookie
 
-Content Rookie is a podcast about content design, UX writing, and content strategy, and is aimed at people who want to learn and grow in content-focused careers. 
+Content Rookie is a podcast about content design, UX writing, and content strategy, and is aimed at people who want to learn and grow in content-focused careers.
 
 **Podcast:** [contentrookiepod.com/](https://contentrookiepod.com/) <IxIcon name={iconOpenExternal} size="16" aria-label="external" role="img"></IxIcon>
 
 ### Writers of Silicon Valley
 
-Writers of Silicon Valley have deep conversations with content designers and UX writers working in tech with the host Yuval Keshtcher (UX Writer). 
+Writers of Silicon Valley have deep conversations with content designers and UX writers working in tech with the host Yuval Keshtcher (UX Writer).
 
 **Podcast:** [writersofsiliconvalley.com/](https://writersofsiliconvalley.com/) <IxIcon name={iconOpenExternal} size="16" aria-label="external" role="img"></IxIcon>
 
@@ -93,7 +93,7 @@ Writers of Silicon Valley have deep conversations with content designers and UX 
 
 ### W3C Web Accessibility Initiative (WAI)
 
-The W3C Web Accessibility Initiative (WAI) from the World Wide Web Consortium (W3C) develops standards and support materials to help software teams understand and implement accessibility. 
+The W3C Web Accessibility Initiative (WAI) from the World Wide Web Consortium (W3C) develops standards and support materials to help software teams understand and implement accessibility.
 
 **Website:** [w3.org/WAI/](https://w3.org/WAI/) <IxIcon name={iconOpenExternal} size="16" aria-label="external" role="img"></IxIcon><br/>
 **Website for cognitive accessibility:** [w3.org/WAI/cognitive/](https://w3.org/WAI/cognitive/) <IxIcon name={iconOpenExternal} size="16" aria-label="external" role="img"></IxIcon>
@@ -186,6 +186,6 @@ The Government Digital Service (GDS) style guide is the official writing and con
 
 ## Writing with graphics, visuals and information architecture
 
-Information Is Beautiful is an independent data-visualization collective founded by data journalist and designer David McCandless. Their mission is to make sense of the world through infographics, data-visualizations and interactive graphics, turning complex information into clear, engaging visual stories. For UX writers, it gives clear examples of how you can turn large chunks of text and data into clear, concise labels and headings. 
+Information Is Beautiful is an independent data-visualization collective founded by data journalist and designer David McCandless. Their mission is to make sense of the world through infographics, data-visualizations and interactive graphics, turning complex information into clear, engaging visual stories. For UX writers, it gives clear examples of how you can turn large chunks of text and data into clear, concise labels and headings.
 
 **Website:** [https://informationisbeautiful.net/](https://informationisbeautiful.net/) <IxIcon name={iconOpenExternal} size="16" aria-label="external" role="img"></IxIcon>
