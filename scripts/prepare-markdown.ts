@@ -220,5 +220,4 @@ async function downloadLatestArtifact(branch: string) {
   // Clean up
   await fs.remove(tempZipPath);
 }
-
 main();
