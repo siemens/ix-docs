@@ -5,7 +5,7 @@ description: 'Accessibility ensures that digital products are usable by everyone
 
 ## Our commitment as a design system
 
-We are committed that our deliverables qualify for building solutions that are accessible for everyone. We strive to meet **WCAG AA standards** by providing perceivable, operable, and understandable components.
+We are committed that our deliverables qualify for building solutions that are accessible for everyone. We strive to meet **WCAG AA standards** by providing perceivable, operable and understandable components.
 
 ## Ensuring accessibility in products
 
@@ -132,9 +132,9 @@ Ensure that users have sufficient time to read and interact with the content in 
 - Avoid autoplay content
 - Avoid time limits or allow adjustment
 
-**Example**: A dismissible [message bar](../../components/messagebar/index.mdx) stays visible until the user closes it. This avoids time pressure and gives users enough time to read and act on important information.
+**Example**: Dismissible [message bars](../../components/messagebar/index.mdx) stay visible until users close them. This avoids time pressure and gives users enough time to read and act on important information.
 
-![Dismissible message bar](https://www.figma.com/design/wEptRgAezDU1z80Cn3eZ0o/iX-Documentation-illustrations?node-id=5402-18173&t=JzJxfVEhA9XmeCtN-4)
+![Dismissible message bars](https://www.figma.com/design/wEptRgAezDU1z80Cn3eZ0o/iX-Documentation-illustrations?node-id=5402-18173&t=JzJxfVEhA9XmeCtN-4)
 
 ### Implement navigable aids
 
