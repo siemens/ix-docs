@@ -79,7 +79,7 @@ Their podcast and blog include research, content patterns and accessibility insi
 
 ### Content Rookie
 
-Content Rookie is a podcast about content design, UX writing, and content strategy, and is aimed at people who want to learn and grow in content-focused careers.
+Content Rookie is a podcast about content design, UX writing and content strategy, and is aimed at people who want to learn and grow in content-focused careers.
 
 **Podcast:** [contentrookiepod.com/](https://contentrookiepod.com/) <IxIcon name={iconOpenExternal} size="16" aria-label="external" role="img"></IxIcon>
 
