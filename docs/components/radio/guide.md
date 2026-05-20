@@ -19,7 +19,7 @@ Radio buttons are presented in groups to signify that only one selection is allo
 ## Options
 
 - **Radio button**:
-  - **Label**:** See [form field](../forms-field).
+  - **Label:** See [form field](../forms-field).
 - **Radio button group**:
   - **Label:** Use group labels if radio button labels are not self-explanatory and in context of forms. See [form field](../forms-field).
   - **Helper text**: See [form field](../forms-field).
