@@ -60,8 +60,7 @@ onlyFramework={'html'}
 
 ### Keyboard only and no keyboard trap
 
-All functionality of the content is operable through a keyboard interface without requiring specific timings for individual keystrokes,
-except where the underlying function requires input that depends on the path of the user's movement and not just the endpoints.
+All functionality must be usable with a keyboard and must not depend on timed key presses. The only exception is functionality that relies on the path of a movement, not just its start and end points.
 
 For components that use a simple, linear structure, stick to the default tab-based navigation. Make sure every clickable surface is both reachable and clickable by keyboard. You can also set the [tabindex](https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Global_attributes/tabindex) attribute to manipulate the default tab-navigation.
 

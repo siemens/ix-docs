@@ -264,7 +264,7 @@ const config: Config = {
           type: 'custom-news-pill',
           position: 'left',
           label: 'Release 5.0.0',
-          value: '/blog',
+          value: '/blog/2026/05/21/release-5',
         },
         {
           type: 'custom-version-selection',
