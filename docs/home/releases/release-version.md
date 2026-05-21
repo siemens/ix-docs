@@ -34,9 +34,9 @@ All major releases receive support for approximately 12 months. We distinguish b
 
 | Support stage | Support window | Details                                        |
 | ------------- | :------------: | ---------------------------------------------- |
-| ✅ Latest        |    6 months    | Receives regular minor releases                |
-| ⚠️ Maintenance   |    6 months    | Receives patch releases to fix critical issues |
-| ❌ End of life   |       -        | Receives no support and no further releases    |
+| Latest        |    6 months    | Receives regular minor releases                |
+| Maintenance   |    6 months    | Receives patch releases to fix critical issues |
+| End of life   |       -        | Receives no support and no further releases    |
 
 Our support policy applies to all components of the design system including the code base, Figma design kits and our documentation.
 
@@ -44,10 +44,10 @@ We recommend always following the active release. When a version moves from the 
 
 ## Supported versions
 
-| Version | Latest       | Maintenance support | End of life |
-| ------- | -------------- | ------------------------- | ----------------- |
-| V6.0.0  | *2026-11* |  |  |
-| ✅ V5.0.0  | **2026-05 - 2026-11** | 2026-11 - 2027-05 | 2027-05 |
-| ⚠️ V4.0.0  | 2025-11 - 2026-05 | **2026-05 - 2026-11** | 2026-11 |
-| ❌ V3.0.0  | 2025-05 - 2025-11 | 2025-11 - 2026-05 | **2026-05** |
-| ❌ V2.0.0  | 2023-09 - 2025-05 | 2025-05 - 2025-11 | **2025-11** |
+| Version | Status         | Release       | Active support ends       | Maintenance support ends |
+| ------- | -------------- | -------------- | ------------------------- | ----------------- |
+| V6.0.0  | Next | *November 2026* |  |  |
+| V5.0.0  | Latest | May 2026 | November 2026 | May 2027 | 
+| V4.0.0  | Maintenance | November 2025 | May 2026 | November 2026 |
+| V3.0.0  | End of life | May 2025 | November 2025 | May 2026 |
+| V2.0.0  | End of life | September 2023 | May 2025 | November 2025 |

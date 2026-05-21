@@ -60,7 +60,7 @@ onlyFramework={'html'}
 
 ### Keyboard only and no keyboard trap
 
-We recommend that all functions are usable with a keyboard and don’t depend on timed key presses. The only exception is functionality that relies on the path of a movement, not just its start and end points.
+We recommend that all functions are usable with a keyboard and don’t depend on timed key presses, e.g. pressing enter within 3 seconds to confirm. The only exception is functionality that relies on the path of a movement, not just its start and end points, e.g. freehand drawing or signing a signature.
 
 For components that use a simple, linear structure, stick to the default tab-based navigation. Make sure every clickable surface is both reachable and clickable by keyboard. You can also set the [tabindex](https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Global_attributes/tabindex) attribute to manipulate the default tab-navigation.
 
