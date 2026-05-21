@@ -13,22 +13,36 @@
 import './echarts-pie.scoped.css';
 
 import { useEffect, useState } from 'react';
-import { getComputedCSSProperty, registerTheme } from '@siemens/ix-echarts';
 import { themeSwitcher } from '@siemens/ix';
+import {
+  getComputedCSSProperty,
+  registerTheme,
+  resolveEChartThemeName,
+} from '@siemens/ix-echarts';
 import ReactEcharts from 'echarts-for-react';
 
 import { EChartsOption } from 'echarts';
 
+function useEChartTheme() {
+  const [theme, setTheme] = useState(resolveEChartThemeName);
+
+  useEffect(() => {
+    const disposer = themeSwitcher.themeChanged.on(() => {
+      setTheme(resolveEChartThemeName());
+    });
+
+    return () => {
+      disposer.dispose();
+    };
+  }, []);
+
+  return theme;
+}
+
 export default function EchartsPie() {
   registerTheme(echarts);
 
-  const [theme, setTheme] = useState(themeSwitcher.getCurrentTheme());
-
-  useEffect(() => {
-    themeSwitcher.themeChanged.on((theme: string) => {
-      setTheme(theme);
-    });
-  }, []);
+  const theme = useEChartTheme();
 
   const data = [
     { value: 29.4, name: 'China' },
@@ -95,8 +109,12 @@ export default function EchartsPie() {
 
 #### echarts-pie.ts
 ```ts
-import { Component, OnInit } from '@angular/core';
-import { getComputedCSSProperty, registerTheme } from '@siemens/ix-echarts';
+import { Component, OnDestroy, OnInit } from '@angular/core';
+import {
+  getComputedCSSProperty,
+  registerTheme,
+  resolveEChartThemeName,
+} from '@siemens/ix-echarts';
 import { themeSwitcher } from '@siemens/ix';
 
 import { EChartsOption } from 'echarts';
@@ -107,8 +125,9 @@ import { EChartsOption } from 'echarts';
   templateUrl: './echarts-pie.html',
   styleUrls: ['./echarts-pie.css'],
 })
-export default class EchartsPie implements OnInit {
-  theme = themeSwitcher.getCurrentTheme();
+export default class EchartsPie implements OnDestroy, OnInit {
+  theme = resolveEChartThemeName();
+  private themeChangeDisposer?: { dispose: () => void };
 
   data = [
     { value: 29.4, name: 'China' },
@@ -120,42 +139,51 @@ export default class EchartsPie implements OnInit {
     { value: 31.5, name: 'Other' },
   ];
 
-  options: EChartsOption = {
-    tooltip: {
-      trigger: 'item',
-    },
-    legend: {
-      icon: 'rect',
-      bottom: '0',
-      left: '0',
-    },
-    series: [
-      {
-        name: 'CO2 emissions from<',
-        type: 'pie',
-        radius: '80%',
-        data: this.data,
-        label: {
-          show: true,
-          color: getComputedCSSProperty('color-neutral'),
-        },
-        emphasis: {
-          itemStyle: {
-            shadowBlur: 10,
-            shadowOffsetX: 0,
-            shadowColor: 'rgba(0, 0, 0, 0.5)',
+  options: EChartsOption = this.getOptions();
+
+  private getOptions(): EChartsOption {
+    return {
+      tooltip: {
+        trigger: 'item',
+      },
+      legend: {
+        icon: 'rect',
+        bottom: '0',
+        left: '0',
+      },
+      series: [
+        {
+          name: 'CO2 emissions from<',
+          type: 'pie',
+          radius: '80%',
+          data: this.data,
+          label: {
+            show: true,
+            color: getComputedCSSProperty('color-neutral'),
+          },
+          emphasis: {
+            itemStyle: {
+              shadowBlur: 10,
+              shadowOffsetX: 0,
+              shadowColor: 'rgba(0, 0, 0, 0.5)',
+            },
           },
         },
-      },
-    ],
-  };
+      ],
+    };
+  }
 
   ngOnInit() {
     registerTheme(echarts);
 
-    themeSwitcher.themeChanged.on((theme: string) => {
-      this.theme = theme;
+    this.themeChangeDisposer = themeSwitcher.themeChanged.on(() => {
+      this.theme = resolveEChartThemeName();
+      this.options = this.getOptions();
     });
+  }
+
+  ngOnDestroy() {
+    this.themeChangeDisposer?.dispose();
   }
 }
 ```
@@ -184,10 +212,14 @@ export default class EchartsPie implements OnInit {
 
 #### echarts-pie.ts
 ```ts
-import { Component, OnInit } from '@angular/core';
+import { Component, OnDestroy, OnInit } from '@angular/core';
 import { NgxEchartsDirective, provideEchartsCore } from 'ngx-echarts';
 
-import { getComputedCSSProperty, registerTheme } from '@siemens/ix-echarts';
+import {
+  getComputedCSSProperty,
+  registerTheme,
+  resolveEChartThemeName,
+} from '@siemens/ix-echarts';
 import { themeSwitcher } from '@siemens/ix';
 
 import { EChartsOption } from 'echarts';
@@ -199,8 +231,9 @@ import { EChartsOption } from 'echarts';
   templateUrl: './echarts-pie.html',
   styleUrls: ['./echarts-pie.css'],
 })
-export default class EchartsPie implements OnInit {
-  theme = themeSwitcher.getCurrentTheme();
+export default class EchartsPie implements OnDestroy, OnInit {
+  theme = resolveEChartThemeName();
+  private themeChangeDisposer?: { dispose: () => void };
 
   data = [
     { value: 29.4, name: 'China' },
@@ -212,42 +245,51 @@ export default class EchartsPie implements OnInit {
     { value: 31.5, name: 'Other' },
   ];
 
-  options: EChartsOption = {
-    tooltip: {
-      trigger: 'item',
-    },
-    legend: {
-      icon: 'rect',
-      bottom: '0',
-      left: '0',
-    },
-    series: [
-      {
-        name: 'CO2 emissions from<',
-        type: 'pie',
-        radius: '80%',
-        data: this.data,
-        label: {
-          show: true,
-          color: getComputedCSSProperty('color-neutral'),
-        },
-        emphasis: {
-          itemStyle: {
-            shadowBlur: 10,
-            shadowOffsetX: 0,
-            shadowColor: 'rgba(0, 0, 0, 0.5)',
+  options: EChartsOption = this.getOptions();
+
+  private getOptions(): EChartsOption {
+    return {
+      tooltip: {
+        trigger: 'item',
+      },
+      legend: {
+        icon: 'rect',
+        bottom: '0',
+        left: '0',
+      },
+      series: [
+        {
+          name: 'CO2 emissions from<',
+          type: 'pie',
+          radius: '80%',
+          data: this.data,
+          label: {
+            show: true,
+            color: getComputedCSSProperty('color-neutral'),
+          },
+          emphasis: {
+            itemStyle: {
+              shadowBlur: 10,
+              shadowOffsetX: 0,
+              shadowColor: 'rgba(0, 0, 0, 0.5)',
+            },
           },
         },
-      },
-    ],
-  };
+      ],
+    };
+  }
 
   ngOnInit() {
     registerTheme(echarts);
 
-    themeSwitcher.themeChanged.on((theme: string) => {
-      this.theme = theme;
+    this.themeChangeDisposer = themeSwitcher.themeChanged.on(() => {
+      this.theme = resolveEChartThemeName();
+      this.options = this.getOptions();
     });
+  }
+
+  ngOnDestroy() {
+    this.themeChangeDisposer?.dispose();
   }
 }
 ```
@@ -272,8 +314,12 @@ export default class EchartsPie implements OnInit {
 #### echarts-pie.vue
 ```vue
 <script setup lang="ts">
-import { ref } from 'vue';
-import { getComputedCSSProperty, registerTheme } from '@siemens/ix-echarts';
+import { onBeforeUnmount, ref } from 'vue';
+import {
+  getComputedCSSProperty,
+  registerTheme,
+  resolveEChartThemeName,
+} from '@siemens/ix-echarts';
 import { themeSwitcher } from '@siemens/ix';
 import VueECharts from 'vue-echarts';
 
@@ -290,11 +336,7 @@ echarts.use([
 
 registerTheme(echarts);
 
-const theme = ref(themeSwitcher.getCurrentTheme());
-
-themeSwitcher.themeChanged.on((newTheme: string) => {
-  theme.value = newTheme;
-});
+const theme = ref(resolveEChartThemeName());
 
 const data = [
   { value: 29.4, name: 'China' },
@@ -306,35 +348,48 @@ const data = [
   { value: 31.5, name: 'Other' },
 ];
 
-const options: EChartsOption = {
-  tooltip: {
-    trigger: 'item',
-  },
-  legend: {
-    icon: 'rect',
-    bottom: '0',
-    left: '0',
-  },
-  series: [
-    {
-      name: 'CO2 emissions from<',
-      type: 'pie',
-      radius: '80%',
-      data: data,
-      label: {
-        show: true,
-        color: getComputedCSSProperty('color-neutral'),
-      },
-      emphasis: {
-        itemStyle: {
-          shadowBlur: 10,
-          shadowOffsetX: 0,
-          shadowColor: 'rgba(0, 0, 0, 0.5)',
+function getOptions(): EChartsOption {
+  return {
+    tooltip: {
+      trigger: 'item',
+    },
+    legend: {
+      icon: 'rect',
+      bottom: '0',
+      left: '0',
+    },
+    series: [
+      {
+        name: 'CO2 emissions from<',
+        type: 'pie',
+        radius: '80%',
+        data: data,
+        label: {
+          show: true,
+          color: getComputedCSSProperty('color-neutral'),
+        },
+        emphasis: {
+          itemStyle: {
+            shadowBlur: 10,
+            shadowOffsetX: 0,
+            shadowColor: 'rgba(0, 0, 0, 0.5)',
+          },
         },
       },
-    },
-  ],
-} as EChartsOption;
+    ],
+  };
+}
+
+const options = ref<EChartsOption>(getOptions());
+
+const disposer = themeSwitcher.themeChanged.on(() => {
+  theme.value = resolveEChartThemeName();
+  options.value = getOptions();
+});
+
+onBeforeUnmount(() => {
+  disposer.dispose();
+});
 </script>
 
 <style scoped src="./echarts-pie.css"></style>
@@ -365,22 +420,36 @@ Donut charts are a variation of pie charts that have a hole in the center. Donut
 import './echarts-circle.scoped.css';
 
 import { useEffect, useState } from 'react';
-import { getComputedCSSProperty, registerTheme } from '@siemens/ix-echarts';
 import { themeSwitcher } from '@siemens/ix';
+import {
+  getComputedCSSProperty,
+  registerTheme,
+  resolveEChartThemeName,
+} from '@siemens/ix-echarts';
 import ReactEcharts from 'echarts-for-react';
 
 import { EChartsOption } from 'echarts';
 
+function useEChartTheme() {
+  const [theme, setTheme] = useState(resolveEChartThemeName);
+
+  useEffect(() => {
+    const disposer = themeSwitcher.themeChanged.on(() => {
+      setTheme(resolveEChartThemeName());
+    });
+
+    return () => {
+      disposer.dispose();
+    };
+  }, []);
+
+  return theme;
+}
+
 export default function EchartsCircle() {
   registerTheme(echarts);
 
-  const [theme, setTheme] = useState(themeSwitcher.getCurrentTheme());
-
-  useEffect(() => {
-    themeSwitcher.themeChanged.on((theme: string) => {
-      setTheme(theme);
-    });
-  }, []);
+  const theme = useEChartTheme();
 
   const data = [
     { value: 72.17, name: 'Windows' },
@@ -448,8 +517,12 @@ export default function EchartsCircle() {
 
 #### echarts-circle.ts
 ```ts
-import { Component, OnInit } from '@angular/core';
-import { getComputedCSSProperty, registerTheme } from '@siemens/ix-echarts';
+import { Component, OnDestroy, OnInit } from '@angular/core';
+import {
+  getComputedCSSProperty,
+  registerTheme,
+  resolveEChartThemeName,
+} from '@siemens/ix-echarts';
 import { themeSwitcher } from '@siemens/ix';
 
 import { EChartsOption } from 'echarts';
@@ -460,8 +533,9 @@ import { EChartsOption } from 'echarts';
   templateUrl: './echarts-circle.html',
   styleUrls: ['./echarts-circle.css'],
 })
-export default class EchartsCircle implements OnInit {
-  theme = themeSwitcher.getCurrentTheme();
+export default class EchartsCircle implements OnDestroy, OnInit {
+  theme = resolveEChartThemeName();
+  private themeChangeDisposer?: { dispose: () => void };
 
   data = [
     { value: 72.17, name: 'Windows' },
@@ -471,45 +545,54 @@ export default class EchartsCircle implements OnInit {
     { value: 6.11, name: 'Other' },
   ];
 
-  options: EChartsOption = {
-    tooltip: {
-      trigger: 'item',
-    },
-    legend: {
-      icon: 'rect',
-      bottom: '0',
-      left: '0',
-    },
-    series: [
-      {
-        name: 'OS Share',
-        type: 'pie',
-        radius: ['60%', '90%'],
-        label: {
-          show: true,
-          color: getComputedCSSProperty('color-neutral'),
-        },
-        emphasis: {
+  options: EChartsOption = this.getOptions();
+
+  private getOptions(): EChartsOption {
+    return {
+      tooltip: {
+        trigger: 'item',
+      },
+      legend: {
+        icon: 'rect',
+        bottom: '0',
+        left: '0',
+      },
+      series: [
+        {
+          name: 'OS Share',
+          type: 'pie',
+          radius: ['60%', '90%'],
           label: {
             show: true,
-            fontSize: 25,
-            fontWeight: 'bold',
+            color: getComputedCSSProperty('color-neutral'),
           },
+          emphasis: {
+            label: {
+              show: true,
+              fontSize: 25,
+              fontWeight: 'bold',
+            },
+          },
+          labelLine: {
+            show: true,
+          },
+          data: this.data,
         },
-        labelLine: {
-          show: true,
-        },
-        data: this.data,
-      },
-    ],
-  };
+      ],
+    };
+  }
 
   ngOnInit() {
     registerTheme(echarts);
 
-    themeSwitcher.themeChanged.on((theme: string) => {
-      this.theme = theme;
+    this.themeChangeDisposer = themeSwitcher.themeChanged.on(() => {
+      this.theme = resolveEChartThemeName();
+      this.options = this.getOptions();
     });
+  }
+
+  ngOnDestroy() {
+    this.themeChangeDisposer?.dispose();
   }
 }
 ```
@@ -538,10 +621,14 @@ export default class EchartsCircle implements OnInit {
 
 #### echarts-circle.ts
 ```ts
-import { Component, OnInit } from '@angular/core';
+import { Component, OnDestroy, OnInit } from '@angular/core';
 import { NgxEchartsDirective, provideEchartsCore } from 'ngx-echarts';
 
-import { getComputedCSSProperty, registerTheme } from '@siemens/ix-echarts';
+import {
+  getComputedCSSProperty,
+  registerTheme,
+  resolveEChartThemeName,
+} from '@siemens/ix-echarts';
 import { themeSwitcher } from '@siemens/ix';
 
 import { EChartsOption } from 'echarts';
@@ -553,8 +640,9 @@ import { EChartsOption } from 'echarts';
   templateUrl: './echarts-circle.html',
   styleUrls: ['./echarts-circle.css'],
 })
-export default class EchartsCircle implements OnInit {
-  theme = themeSwitcher.getCurrentTheme();
+export default class EchartsCircle implements OnDestroy, OnInit {
+  theme = resolveEChartThemeName();
+  private themeChangeDisposer?: { dispose: () => void };
 
   data = [
     { value: 72.17, name: 'Windows' },
@@ -564,7 +652,112 @@ export default class EchartsCircle implements OnInit {
     { value: 6.11, name: 'Other' },
   ];
 
-  options: EChartsOption = {
+  options: EChartsOption = this.getOptions();
+
+  private getOptions(): EChartsOption {
+    return {
+      tooltip: {
+        trigger: 'item',
+      },
+      legend: {
+        icon: 'rect',
+        bottom: '0',
+        left: '0',
+      },
+      series: [
+        {
+          name: 'OS Share',
+          type: 'pie',
+          radius: ['60%', '90%'],
+          label: {
+            show: true,
+            color: getComputedCSSProperty('color-neutral'),
+          },
+          emphasis: {
+            label: {
+              show: true,
+              fontSize: 25,
+              fontWeight: 'bold',
+            },
+          },
+          labelLine: {
+            show: true,
+          },
+          data: this.data,
+        },
+      ],
+    };
+  }
+
+  ngOnInit() {
+    registerTheme(echarts);
+
+    this.themeChangeDisposer = themeSwitcher.themeChanged.on(() => {
+      this.theme = resolveEChartThemeName();
+      this.options = this.getOptions();
+    });
+  }
+
+  ngOnDestroy() {
+    this.themeChangeDisposer?.dispose();
+  }
+}
+```
+
+#### echarts-circle.html
+```html
+<div echarts [options]="options" [theme]="theme" class="echarts"></div>
+```
+
+#### echarts-circle.css
+```css
+.echarts {
+  position: relative;
+  width: 100%;
+  height: 40rem;
+  padding-top: 1rem;
+}
+```
+
+### Vue Examples
+
+#### echarts-circle.vue
+```vue
+<script setup lang="ts">
+import { onBeforeUnmount, ref } from 'vue';
+import {
+  getComputedCSSProperty,
+  registerTheme,
+  resolveEChartThemeName,
+} from '@siemens/ix-echarts';
+import { themeSwitcher } from '@siemens/ix';
+import VueECharts from 'vue-echarts';
+
+import { EChartsOption } from 'echarts';
+
+echarts.use([
+  components.TooltipComponent,
+  components.LegendComponent,
+  components.GridComponent,
+  components.MarkLineComponent,
+  charts.PieChart,
+  renderer.CanvasRenderer,
+]);
+
+registerTheme(echarts);
+
+const theme = ref(resolveEChartThemeName());
+
+const data = [
+  { value: 72.17, name: 'Windows' },
+  { value: 15.42, name: 'macOS' },
+  { value: 4.03, name: 'Linux' },
+  { value: 2.27, name: 'Chrome OS' },
+  { value: 6.11, name: 'Other' },
+];
+
+function getOptions(): EChartsOption {
+  return {
     tooltip: {
       trigger: 'item',
     },
@@ -592,105 +785,22 @@ export default class EchartsCircle implements OnInit {
         labelLine: {
           show: true,
         },
-        data: this.data,
+        data: data,
       },
     ],
   };
-
-  ngOnInit() {
-    registerTheme(echarts);
-
-    themeSwitcher.themeChanged.on((theme: string) => {
-      this.theme = theme;
-    });
-  }
 }
-```
 
-#### echarts-circle.html
-```html
-<div echarts [options]="options" [theme]="theme" class="echarts"></div>
-```
+const options = ref<EChartsOption>(getOptions());
 
-#### echarts-circle.css
-```css
-.echarts {
-  position: relative;
-  width: 100%;
-  height: 40rem;
-  padding-top: 1rem;
-}
-```
-
-### Vue Examples
-
-#### echarts-circle.vue
-```vue
-<script setup lang="ts">
-import { ref } from 'vue';
-import { getComputedCSSProperty, registerTheme } from '@siemens/ix-echarts';
-import { themeSwitcher } from '@siemens/ix';
-import VueECharts from 'vue-echarts';
-
-import { EChartsOption } from 'echarts';
-
-echarts.use([
-  components.TooltipComponent,
-  components.LegendComponent,
-  components.GridComponent,
-  components.MarkLineComponent,
-  charts.PieChart,
-  renderer.CanvasRenderer,
-]);
-
-registerTheme(echarts);
-
-const theme = ref(themeSwitcher.getCurrentTheme());
-
-themeSwitcher.themeChanged.on((newTheme: string) => {
-  theme.value = newTheme;
+const disposer = themeSwitcher.themeChanged.on(() => {
+  theme.value = resolveEChartThemeName();
+  options.value = getOptions();
 });
 
-const data = [
-  { value: 72.17, name: 'Windows' },
-  { value: 15.42, name: 'macOS' },
-  { value: 4.03, name: 'Linux' },
-  { value: 2.27, name: 'Chrome OS' },
-  { value: 6.11, name: 'Other' },
-];
-
-const options: EChartsOption = {
-  tooltip: {
-    trigger: 'item',
-  },
-  legend: {
-    icon: 'rect',
-    bottom: '0',
-    left: '0',
-  },
-  series: [
-    {
-      name: 'OS Share',
-      type: 'pie',
-      radius: ['60%', '90%'],
-      label: {
-        show: true,
-        color: getComputedCSSProperty('color-neutral'),
-      },
-      emphasis: {
-        label: {
-          show: true,
-          fontSize: 25,
-          fontWeight: 'bold',
-        },
-      },
-      labelLine: {
-        show: true,
-      },
-      data: data,
-    },
-  ],
-} as EChartsOption;
+onBeforeUnmount(() => {
+  disposer.dispose();
+});
 </script>
 
 <style scoped src="./echarts-circle.css"></style>

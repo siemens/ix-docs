@@ -201,10 +201,10 @@ import { IxKpi } from '@siemens/ix-vue';
 
 | Name | Description | Attribute | Type | Default |
 | --- | --- | --- | --- | --- |
-| ariaLabelAlarmIcon | ARIA label for the alarm icon | aria-label-alarm-icon | string \| undefined |  |
-| ariaLabelWarningIcon | ARIA label for the warning icon | aria-label-warning-icon | string \| undefined |  |
-| label |  | label | string \| undefined |  |
-| orientation |  | orientation | "horizontal" \| "vertical" | 'horizontal' |
-| state |  | state | "alarm" \| "neutral" \| "warning" | 'neutral' |
-| unit |  | unit | string \| undefined |  |
-| value |  | value | number \| string \| undefined |  |
+| ariaLabelAlarmIcon | { "ARIA label for the alarm icon" } | aria-label-alarm-icon | string \| undefined |  |
+| ariaLabelWarningIcon | { "ARIA label for the warning icon" } | aria-label-warning-icon | string \| undefined |  |
+| label | { "" } | label | string \| undefined |  |
+| orientation | { "" } | orientation | "horizontal" \| "vertical" | 'horizontal' |
+| state | { "" } | state | "alarm" \| "neutral" \| "warning" | 'neutral' |
+| unit | { "" } | unit | string \| undefined |  |
+| value | { "" } | value | number \| string \| undefined |  |

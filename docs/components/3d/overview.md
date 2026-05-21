@@ -19,22 +19,36 @@ The `echarts-gl` package extends ECharts to support 3D visualizations. With this
 import './echarts-special-3d.scoped.css';
 
 import { useEffect, useState } from 'react';
-import { getComputedCSSProperty, registerTheme } from '@siemens/ix-echarts';
 import { themeSwitcher } from '@siemens/ix';
+import {
+  getComputedCSSProperty,
+  registerTheme,
+  resolveEChartThemeName,
+} from '@siemens/ix-echarts';
 import ReactEcharts from 'echarts-for-react';
 
 import { EChartsOption } from 'echarts';
 
+function useEChartTheme() {
+  const [theme, setTheme] = useState(resolveEChartThemeName);
+
+  useEffect(() => {
+    const disposer = themeSwitcher.themeChanged.on(() => {
+      setTheme(resolveEChartThemeName());
+    });
+
+    return () => {
+      disposer.dispose();
+    };
+  }, []);
+
+  return theme;
+}
+
 export default function EchartsSpecial3d() {
   registerTheme(echarts);
 
-  const [theme, setTheme] = useState(themeSwitcher.getCurrentTheme());
-
-  useEffect(() => {
-    themeSwitcher.themeChanged.on((theme: string) => {
-      setTheme(theme);
-    });
-  }, []);
+  const theme = useEChartTheme();
 
   function gridConfig() {
     return {
@@ -117,8 +131,12 @@ export default function EchartsSpecial3d() {
 
 #### echarts-special-3d.ts
 ```ts
-import { Component, OnInit } from '@angular/core';
-import { getComputedCSSProperty, registerTheme } from '@siemens/ix-echarts';
+import { Component, OnDestroy, OnInit } from '@angular/core';
+import {
+  getComputedCSSProperty,
+  registerTheme,
+  resolveEChartThemeName,
+} from '@siemens/ix-echarts';
 import { themeSwitcher } from '@siemens/ix';
 import { EChartsOption } from 'echarts';
 
@@ -128,8 +146,9 @@ import { EChartsOption } from 'echarts';
   templateUrl: './echarts-special-3d.html',
   styleUrls: ['./echarts-special-3d.css'],
 })
-export default class EchartsSpecial3d implements OnInit {
-  theme = themeSwitcher.getCurrentTheme();
+export default class EchartsSpecial3d implements OnDestroy, OnInit {
+  theme = resolveEChartThemeName();
+  private themeChangeDisposer?: { dispose: () => void };
 
   gridConfig() {
     return {
@@ -150,49 +169,58 @@ export default class EchartsSpecial3d implements OnInit {
     };
   }
 
-  options: EChartsOption = {
-    tooltip: {},
-    visualMap: {
-      show: false,
-      dimension: 2,
-      min: -1,
-      max: 1,
-    },
-    xAxis3D: this.gridConfig(),
-    yAxis3D: this.gridConfig(),
-    zAxis3D: this.gridConfig(),
-    grid3D: {
-      viewControl: {
-        projection: 'orthographic',
+  options: EChartsOption = this.getOptions();
+
+  private getOptions(): EChartsOption {
+    return {
+      tooltip: {},
+      visualMap: {
+        show: false,
+        dimension: 2,
+        min: -1,
+        max: 1,
       },
-    },
-    series: [
-      {
-        type: 'surface',
-        equation: {
-          x: {
-            step: 0.05,
-          },
-          y: {
-            step: 0.05,
-          },
-          z: (x: number, y: number): string | number => {
-            if (Math.abs(x) < 0.1 && Math.abs(y) < 0.1) {
-              return '-';
-            }
-            return Math.sin(x * Math.PI) * Math.sin(y * Math.PI);
-          },
+      xAxis3D: this.gridConfig(),
+      yAxis3D: this.gridConfig(),
+      zAxis3D: this.gridConfig(),
+      grid3D: {
+        viewControl: {
+          projection: 'orthographic',
         },
-      } as any,
-    ],
-  };
+      },
+      series: [
+        {
+          type: 'surface',
+          equation: {
+            x: {
+              step: 0.05,
+            },
+            y: {
+              step: 0.05,
+            },
+            z: (x: number, y: number): string | number => {
+              if (Math.abs(x) < 0.1 && Math.abs(y) < 0.1) {
+                return '-';
+              }
+              return Math.sin(x * Math.PI) * Math.sin(y * Math.PI);
+            },
+          },
+        } as any,
+      ],
+    };
+  }
 
   ngOnInit() {
     registerTheme(echarts);
 
-    themeSwitcher.themeChanged.on((theme: string) => {
-      this.theme = theme;
+    this.themeChangeDisposer = themeSwitcher.themeChanged.on(() => {
+      this.theme = resolveEChartThemeName();
+      this.options = this.getOptions();
     });
+  }
+
+  ngOnDestroy() {
+    this.themeChangeDisposer?.dispose();
   }
 }
 ```
@@ -221,10 +249,14 @@ export default class EchartsSpecial3d implements OnInit {
 
 #### echarts-special-3d.ts
 ```ts
-import { Component, OnInit } from '@angular/core';
+import { Component, OnDestroy, OnInit } from '@angular/core';
 import { NgxEchartsDirective, provideEchartsCore } from 'ngx-echarts';
 
-import { getComputedCSSProperty, registerTheme } from '@siemens/ix-echarts';
+import {
+  getComputedCSSProperty,
+  registerTheme,
+  resolveEChartThemeName,
+} from '@siemens/ix-echarts';
 import { themeSwitcher } from '@siemens/ix';
 import { EChartsOption } from 'echarts';
 
@@ -235,8 +267,9 @@ import { EChartsOption } from 'echarts';
   templateUrl: './echarts-special-3d.html',
   styleUrls: ['./echarts-special-3d.css'],
 })
-export default class EchartsSpecial3d implements OnInit {
-  theme = themeSwitcher.getCurrentTheme();
+export default class EchartsSpecial3d implements OnDestroy, OnInit {
+  theme = resolveEChartThemeName();
+  private themeChangeDisposer?: { dispose: () => void };
 
   gridConfig() {
     return {
@@ -257,7 +290,127 @@ export default class EchartsSpecial3d implements OnInit {
     };
   }
 
-  options: EChartsOption = {
+  options: EChartsOption = this.getOptions();
+
+  private getOptions(): EChartsOption {
+    return {
+      tooltip: {},
+      visualMap: {
+        show: false,
+        dimension: 2,
+        min: -1,
+        max: 1,
+      },
+      xAxis3D: this.gridConfig(),
+      yAxis3D: this.gridConfig(),
+      zAxis3D: this.gridConfig(),
+      grid3D: {
+        viewControl: {
+          projection: 'orthographic',
+        },
+      },
+      series: [
+        {
+          type: 'surface',
+          equation: {
+            x: {
+              step: 0.05,
+            },
+            y: {
+              step: 0.05,
+            },
+            z: (x: number, y: number): string | number => {
+              if (Math.abs(x) < 0.1 && Math.abs(y) < 0.1) {
+                return '-';
+              }
+              return Math.sin(x * Math.PI) * Math.sin(y * Math.PI);
+            },
+          },
+        } as any,
+      ],
+    };
+  }
+
+  ngOnInit() {
+    registerTheme(echarts);
+
+    this.themeChangeDisposer = themeSwitcher.themeChanged.on(() => {
+      this.theme = resolveEChartThemeName();
+      this.options = this.getOptions();
+    });
+  }
+
+  ngOnDestroy() {
+    this.themeChangeDisposer?.dispose();
+  }
+}
+```
+
+#### echarts-special-3d.html
+```html
+<div echarts [options]="options" [theme]="theme" class="echarts"></div>
+```
+
+#### echarts-special-3d.css
+```css
+.echarts {
+  position: relative;
+  width: 100%;
+  height: 40rem;
+  padding-top: 1rem;
+}
+```
+
+### Vue Examples
+
+#### echarts-special-3d.vue
+```vue
+<script setup lang="ts">
+import { onBeforeUnmount, ref } from 'vue';
+import {
+  getComputedCSSProperty,
+  registerTheme,
+  resolveEChartThemeName,
+} from '@siemens/ix-echarts';
+import { themeSwitcher } from '@siemens/ix';
+import VueECharts from 'vue-echarts';
+
+import { EChartsOption } from 'echarts';
+
+echarts.use([
+  components.TooltipComponent,
+  components.LegendComponent,
+  components.GridComponent,
+  components.MarkLineComponent,
+  charts.BarChart,
+  renderer.CanvasRenderer,
+]);
+
+registerTheme(echarts);
+
+const theme = ref(resolveEChartThemeName());
+
+function gridConfig() {
+  return {
+    type: 'value',
+    axisLine: {
+      lineStyle: {
+        color: getComputedCSSProperty('chart-axes'),
+      },
+    },
+    splitLine: {
+      lineStyle: {
+        color: getComputedCSSProperty('chart-grid-lines'),
+      },
+    },
+    axisLabel: {
+      color: getComputedCSSProperty('color-std-text'),
+    },
+  };
+}
+
+function getOptions(): EChartsOption {
+  return {
     tooltip: {},
     visualMap: {
       show: false,
@@ -265,9 +418,9 @@ export default class EchartsSpecial3d implements OnInit {
       min: -1,
       max: 1,
     },
-    xAxis3D: this.gridConfig(),
-    yAxis3D: this.gridConfig(),
-    zAxis3D: this.gridConfig(),
+    xAxis3D: gridConfig(),
+    yAxis3D: gridConfig(),
+    zAxis3D: gridConfig(),
     grid3D: {
       viewControl: {
         projection: 'orthographic',
@@ -293,116 +446,18 @@ export default class EchartsSpecial3d implements OnInit {
       } as any,
     ],
   };
-
-  ngOnInit() {
-    registerTheme(echarts);
-
-    themeSwitcher.themeChanged.on((theme: string) => {
-      this.theme = theme;
-    });
-  }
 }
-```
 
-#### echarts-special-3d.html
-```html
-<div echarts [options]="options" [theme]="theme" class="echarts"></div>
-```
+const options = ref<EChartsOption>(getOptions());
 
-#### echarts-special-3d.css
-```css
-.echarts {
-  position: relative;
-  width: 100%;
-  height: 40rem;
-  padding-top: 1rem;
-}
-```
-
-### Vue Examples
-
-#### echarts-special-3d.vue
-```vue
-<script setup lang="ts">
-import { ref } from 'vue';
-import { getComputedCSSProperty, registerTheme } from '@siemens/ix-echarts';
-import { themeSwitcher } from '@siemens/ix';
-import VueECharts from 'vue-echarts';
-
-import { EChartsOption } from 'echarts';
-
-echarts.use([
-  components.TooltipComponent,
-  components.LegendComponent,
-  components.GridComponent,
-  components.MarkLineComponent,
-  charts.BarChart,
-  renderer.CanvasRenderer,
-]);
-
-registerTheme(echarts);
-
-const theme = ref(themeSwitcher.getCurrentTheme());
-
-themeSwitcher.themeChanged.on((newTheme: string) => {
-  theme.value = newTheme;
+const disposer = themeSwitcher.themeChanged.on(() => {
+  theme.value = resolveEChartThemeName();
+  options.value = getOptions();
 });
 
-function gridConfig() {
-  return {
-    type: 'value',
-    axisLine: {
-      lineStyle: {
-        color: getComputedCSSProperty('chart-axes'),
-      },
-    },
-    splitLine: {
-      lineStyle: {
-        color: getComputedCSSProperty('chart-grid-lines'),
-      },
-    },
-    axisLabel: {
-      color: getComputedCSSProperty('color-std-text'),
-    },
-  };
-}
-
-const options = {
-  tooltip: {},
-  visualMap: {
-    show: false,
-    dimension: 2,
-    min: -1,
-    max: 1,
-  },
-  xAxis3D: gridConfig(),
-  yAxis3D: gridConfig(),
-  zAxis3D: gridConfig(),
-  grid3D: {
-    viewControl: {
-      projection: 'orthographic',
-    },
-  },
-  series: [
-    {
-      type: 'surface',
-      equation: {
-        x: {
-          step: 0.05,
-        },
-        y: {
-          step: 0.05,
-        },
-        z: (x: number, y: number): string | number => {
-          if (Math.abs(x) < 0.1 && Math.abs(y) < 0.1) {
-            return '-';
-          }
-          return Math.sin(x * Math.PI) * Math.sin(y * Math.PI);
-        },
-      },
-    } as any,
-  ],
-} as EChartsOption;
+onBeforeUnmount(() => {
+  disposer.dispose();
+});
 </script>
 
 <style scoped src="./echarts-special-3d.css"></style>

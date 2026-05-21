@@ -388,11 +388,11 @@ import { IxCustomField } from '@siemens/ix-vue';
 
 | Name | Description | Attribute | Type | Default |
 | --- | --- | --- | --- | --- |
-| helperText | Show text below the field component which show additional information | helper-text | string \| undefined |  |
-| infoText | Info text for the field component | info-text | string \| undefined |  |
-| invalidText | Error text for the field component | invalid-text | string \| undefined |  |
-| label | Label for the field component | label | string \| undefined |  |
-| required | A value is required or must be checked for the form to be submittable | required | boolean | false |
-| showTextAsTooltip | Show helper, info, warning, error and valid text as tooltip | show-text-as-tooltip | boolean \| undefined |  |
-| validText | Valid text for the field component | valid-text | string \| undefined |  |
-| warningText | Warning text for the field component | warning-text | string \| undefined |  |
+| helperText | { "Show text below the field component which show additional information" } | helper-text | string \| undefined |  |
+| infoText | { "Info text for the field component" } | info-text | string \| undefined |  |
+| invalidText | { "Error text for the field component" } | invalid-text | string \| undefined |  |
+| label | { "Label for the field component" } | label | string \| undefined |  |
+| required | { "A value is required or must be checked for the form to be submittable" } | required | boolean | false |
+| showTextAsTooltip | { "Show helper, info, warning, error and valid text as tooltip" } | show-text-as-tooltip | boolean \| undefined |  |
+| validText | { "Valid text for the field component" } | valid-text | string \| undefined |  |
+| warningText | { "Warning text for the field component" } | warning-text | string \| undefined |  |

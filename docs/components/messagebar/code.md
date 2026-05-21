@@ -355,12 +355,12 @@ const handleShowMessage = () => {
 
 | Name | Description | Attribute | Type | Default |
 | --- | --- | --- | --- | --- |
-| persistent | If true, close button is disabled and alert cannot be dismissed by the user | persistent | boolean | false |
-| type | Specifies the type of the alert. | type | "alarm" \| "critical" \| "info" \| "neutral" \| "primary" \| "success" \| "warning" | 'info' |
+| persistent | { "If true, close button is disabled and alert cannot be dismissed by the user" } | persistent | boolean | false |
+| type | { "Specifies the type of the alert." } | type | "alarm" \| "critical" \| "info" \| "neutral" \| "primary" \| "success" \| "warning" | 'info' |
 
 ### Events
 
 | Name | Description | Event | Detail |
 | --- | --- | --- | --- |
-| closeAnimationCompleted | An event emitted when the close animation is completed | closeAnimationCompleted | any |
-| closedChange | An event emitted when the close button is clicked | closedChange | any |
+| closeAnimationCompleted | { "An event emitted when the close animation is completed" } | closeAnimationCompleted | any |
+| closedChange | { "An event emitted when the close button is clicked" } | closedChange | any |

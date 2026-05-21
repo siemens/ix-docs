@@ -429,31 +429,31 @@ const layout = ref<'full-horizontal' | 'full-vertical'>('full-horizontal');
 
 | Name | Description | Attribute | Type | Default |
 | --- | --- | --- | --- | --- |
-| ariaLabelCollapseCloseButton | ARIA label close or collapse button | aria-label-collapse-close-button | string \| undefined |  |
-| ariaLabelIcon | ARIA label for the icon | aria-label-icon | string \| undefined |  |
-| borderless | Toggle the border of the pane. Defaults to the borderless attribute of the pane layout. If used standalone it defaults to false. | borderless | boolean | false |
-| closeOnClickOutside | If true, the pane will close when clicking outside of it | close-on-click-outside | boolean | false |
-| composition | Defines the position of the pane inside it's container. Inside a pane layout this property will automatically be set to the name of slot the pane is assigned to. | composition | "bottom" \| "left" \| "right" \| "top" | 'top' |
-| expanded | State of the pane | expanded | boolean | false |
-| heading | Title of the side panel | heading | string \| undefined |  |
-| hideOnCollapse | Define if the pane should have a collapsed state | hide-on-collapse | boolean | false |
-| icon | Name of the icon | icon | string \| undefined |  |
-| size | The maximum size of the sidebar, when it is expanded | size | "240px" \| "320px" \| "33%" \| "360px" \| "480px" \| "50%" \| "600px" | '240px' |
-| variant | Variant of the side pane. Defaults to the variant attribute of the pane layout. If used standalone it defaults to inline. | variant | "floating" \| "inline" | 'inline' |
+| ariaLabelCollapseCloseButton | { "ARIA label close or collapse button" } | aria-label-collapse-close-button | string \| undefined |  |
+| ariaLabelIcon | { "ARIA label for the icon" } | aria-label-icon | string \| undefined |  |
+| borderless | { "Toggle the border of the pane.\n\nDefaults to the borderless attribute of the pane layout. If used standalone it defaults to false." } | borderless | boolean | false |
+| closeOnClickOutside | { "If true, the pane will close when clicking outside of it" } | close-on-click-outside | boolean | false |
+| composition | { "Defines the position of the pane inside it's container.\n\nInside a pane layout this property will automatically be set to the name of slot the pane is assigned to." } | composition | "bottom" \| "left" \| "right" \| "top" | 'top' |
+| expanded | { "State of the pane" } | expanded | boolean | false |
+| heading | { "Title of the side panel" } | heading | string \| undefined |  |
+| hideOnCollapse | { "Define if the pane should have a collapsed state" } | hide-on-collapse | boolean | false |
+| icon | { "Name of the icon" } | icon | string \| undefined |  |
+| size | { "The maximum size of the sidebar, when it is expanded" } | size | "240px" \| "320px" \| "33%" \| "360px" \| "480px" \| "50%" \| "600px" | '240px' |
+| variant | { "Variant of the side pane.\n\nDefaults to the variant attribute of the pane layout. If used standalone it defaults to inline." } | variant | "floating" \| "inline" | 'inline' |
 
 ### Events
 
 | Name | Description | Event | Detail |
 | --- | --- | --- | --- |
-| borderlessChanged | This event is triggered when the variant of the pane is changed | borderlessChanged | { slot: string; borderless: boolean; } |
-| expandedChanged | This event is triggered when the pane either expands or contracts | expandedChanged | { slot: string; expanded: boolean; } |
-| variantChanged | This event is triggered when the variant of the pane is changed | variantChanged | { slot: string; variant: "floating" \| "inline"; } |
+| borderlessChanged | { "This event is triggered when the variant of the pane is changed" } | borderlessChanged | { slot: string; borderless: boolean; } |
+| expandedChanged | { "This event is triggered when the pane either expands or contracts" } | expandedChanged | { slot: string; expanded: boolean; } |
+| variantChanged | { "This event is triggered when the variant of the pane is changed" } | variantChanged | { slot: string; variant: "floating" \| "inline"; } |
 
 ### Slot
 
 | Name | Description |
 | --- | --- |
-| header | { `Additional slot for the header content` } |
+| header | { "Additional slot for the header content" } |
 
 ## API for ix-pane-layout
 
@@ -461,6 +461,6 @@ const layout = ref<'full-horizontal' | 'full-vertical'>('full-horizontal');
 
 | Name | Description | Attribute | Type | Default |
 | --- | --- | --- | --- | --- |
-| borderless | Set the default border state for all panes in the layout | borderless | boolean | false |
-| layout | Choose the layout of the panes. When set to 'full-vertical' the vertical panes (left, right) will get the full height. When set to 'full-horizontal' the horizontal panes (top, bottom) will get the full width. | layout | "full-horizontal" \| "full-vertical" | 'full-vertical' |
-| variant | Set the default variant for all panes in the layout | variant | "floating" \| "inline" | 'inline' |
+| borderless | { "Set the default border state for all panes in the layout" } | borderless | boolean | false |
+| layout | { "Choose the layout of the panes.\n\nWhen set to 'full-vertical' the vertical panes (left, right) will get the full height.\n\nWhen set to 'full-horizontal' the horizontal panes (top, bottom) will get the full width." } | layout | "full-horizontal" \| "full-vertical" | 'full-vertical' |
+| variant | { "Set the default variant for all panes in the layout" } | variant | "floating" \| "inline" | 'inline' |

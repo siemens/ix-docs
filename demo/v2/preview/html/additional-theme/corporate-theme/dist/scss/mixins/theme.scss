@@ -1,0 +1,42 @@
+/*
+ * COPYRIGHT (c) Siemens AG 2018-2026 ALL RIGHTS RESERVED.
+ */
+@use './../brand/dark/variables' as as_dark_variables;
+@use './../brand/light/variables' as as_light_variables;
+
+@mixin define-brand-system {
+  @media (prefers-color-scheme: dark) {
+    --theme-color-schema: dark;
+    @include as_dark_variables.setVars();
+  }
+
+  @media (prefers-color-scheme: light) {
+    --theme-color-schema: light;
+    @include as_light_variables.setVars();
+  }
+}
+
+@mixin define-brand-theme {
+  :root,
+  :host {
+    color-scheme: light dark;
+  }
+
+  [data-ix-theme='brand'] {
+    --theme-name: brand;
+
+    &[data-ix-color-schema='dark'] {
+      --theme-color-schema: dark;
+      @include as_dark_variables.setVars();
+    }
+
+    &[data-ix-color-schema='light'] {
+      --theme-color-schema: light;
+      @include as_light_variables.setVars();
+    }
+
+    &[data-ix-color-schema='system'] {
+      @include define-brand-system();
+    }
+  }
+}

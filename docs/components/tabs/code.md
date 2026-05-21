@@ -16,21 +16,22 @@ import { IxTabItem, IxTabs } from '@siemens/ix-react';
 import { useState } from 'react';
 
 export default () => {
-  const [selectedTab, setSelectedTab] = useState(0);
-
-  const changeTab = (tabId: number) => setSelectedTab(tabId);
+  const [activeTabKey, setActiveTabKey] = useState('tab-1');
 
   return (
     <div className="tabs">
-      <IxTabs selected={selectedTab}>
-        <IxTabItem onClick={() => changeTab(0)}>Tab 1</IxTabItem>
-        <IxTabItem onClick={() => changeTab(1)}>Tab 2</IxTabItem>
-        <IxTabItem onClick={() => changeTab(2)}>Tab 3</IxTabItem>
+      <IxTabs
+        activeTabKey={activeTabKey}
+        onTabChange={({ detail }) => setActiveTabKey(detail ?? 'tab-1')}
+      >
+        <IxTabItem tabKey="tab-1">Tab 1</IxTabItem>
+        <IxTabItem tabKey="tab-2">Tab 2</IxTabItem>
+        <IxTabItem tabKey="tab-3">Tab 3</IxTabItem>
       </IxTabs>
       <section role="tabpanel" aria-label="Example content">
-        {selectedTab === 0 ? <>Content Tab 1</> : null}
-        {selectedTab === 1 ? <>Content Tab 2</> : null}
-        {selectedTab === 2 ? <>Content Tab 3</> : null}
+        {activeTabKey === 'tab-1' ? <>Content Tab 1</> : null}
+        {activeTabKey === 'tab-2' ? <>Content Tab 2</> : null}
+        {activeTabKey === 'tab-3' ? <>Content Tab 3</> : null}
       </section>
     </div>
   );
@@ -70,25 +71,25 @@ import { Component } from '@angular/core';
   selector: 'app-example',
   template: `
     <div class="tabs">
-      <ix-tabs [selected]="selectedTab">
-        <ix-tab-item (click)="changeTab(0)">Tab 1</ix-tab-item>
-        <ix-tab-item (click)="changeTab(1)">Tab 2</ix-tab-item>
-        <ix-tab-item (click)="changeTab(2)">Tab 3</ix-tab-item>
+      <ix-tabs
+        [activeTabKey]="activeTabKey"
+        (tabChange)="activeTabKey = $event.detail ?? 'tab-1'"
+      >
+        <ix-tab-item tabKey="tab-1">Tab 1</ix-tab-item>
+        <ix-tab-item tabKey="tab-2">Tab 2</ix-tab-item>
+        <ix-tab-item tabKey="tab-3">Tab 3</ix-tab-item>
       </ix-tabs>
       <section role="tabpanel" aria-label="Example content">
-        @if (selectedTab === 0) { Content Tab 1 } @else if (selectedTab === 1) {
-        Content Tab 2 } @else if (selectedTab === 2) { Content Tab 3 }
+        @if (activeTabKey === 'tab-1') { Content Tab 1 } @else if (activeTabKey
+        === 'tab-2') { Content Tab 2 } @else if (activeTabKey === 'tab-3') {
+        Content Tab 3 }
       </section>
     </div>
   `,
   styleUrls: ['./tabs.css'],
 })
 export default class Tabs {
-  selectedTab = 0;
-
-  changeTab(tabIndex: number) {
-    this.selectedTab = tabIndex;
-  }
+  activeTabKey = 'tab-1';
 }
 ```
 
@@ -126,25 +127,25 @@ import { IxTabs, IxTabItem } from '@siemens/ix-angular/standalone';
   imports: [IxTabs, IxTabItem],
   template: `
     <div class="tabs">
-      <ix-tabs [selected]="selectedTab">
-        <ix-tab-item (click)="changeTab(0)">Tab 1</ix-tab-item>
-        <ix-tab-item (click)="changeTab(1)">Tab 2</ix-tab-item>
-        <ix-tab-item (click)="changeTab(2)">Tab 3</ix-tab-item>
+      <ix-tabs
+        [activeTabKey]="activeTabKey"
+        (tabChange)="activeTabKey = $event.detail ?? 'tab-1'"
+      >
+        <ix-tab-item tabKey="tab-1">Tab 1</ix-tab-item>
+        <ix-tab-item tabKey="tab-2">Tab 2</ix-tab-item>
+        <ix-tab-item tabKey="tab-3">Tab 3</ix-tab-item>
       </ix-tabs>
       <section role="tabpanel" aria-label="Example content">
-        @if (selectedTab === 0) { Content Tab 1 } @else if (selectedTab === 1) {
-        Content Tab 2 } @else if (selectedTab === 2) { Content Tab 3 }
+        @if (activeTabKey === 'tab-1') { Content Tab 1 } @else if (activeTabKey
+        === 'tab-2') { Content Tab 2 } @else if (activeTabKey === 'tab-3') {
+        Content Tab 3 }
       </section>
     </div>
   `,
   styleUrls: ['./tabs.css'],
 })
 export default class Tabs {
-  selectedTab = 0;
-
-  changeTab(tabIndex: number) {
-    this.selectedTab = tabIndex;
-  }
+  activeTabKey = 'tab-1';
 }
 ```
 
@@ -178,37 +179,40 @@ export default class Tabs {
 import { IxTabItem, IxTabs } from '@siemens/ix-vue';
 import { ref } from 'vue';
 
-const selectedTab = ref(0);
-const changeTab = (tabId: number) => (selectedTab.value = tabId);
+const activeTabKey = ref('tab-1');
+
+const setActiveTabKey = (event: CustomEvent<string | undefined>) => {
+  activeTabKey.value = event.detail ?? 'tab-1';
+};
 </script>
 
 <style scoped src="./tabs.css"></style>
 
 <template>
   <div class="tabs">
-    <IxTabs :selected="selectedTab">
-      <IxTabItem @click="changeTab(0)">Tab 1</IxTabItem>
-      <IxTabItem @click="changeTab(1)">Tab 2</IxTabItem>
-      <IxTabItem @click="changeTab(2)">Tab 3</IxTabItem>
+    <IxTabs :activeTabKey="activeTabKey" @tabChange="setActiveTabKey">
+      <IxTabItem tabKey="tab-1">Tab 1</IxTabItem>
+      <IxTabItem tabKey="tab-2">Tab 2</IxTabItem>
+      <IxTabItem tabKey="tab-3">Tab 3</IxTabItem>
     </IxTabs>
     <section
       role="tabpanel"
       aria-label="Example content"
-      v-show="selectedTab === 0"
+      v-show="activeTabKey === 'tab-1'"
     >
       Content Tab 1
     </section>
     <section
       role="tabpanel"
       aria-label="Example content"
-      v-show="selectedTab === 1"
+      v-show="activeTabKey === 'tab-2'"
     >
       Content Tab 2
     </section>
     <section
       role="tabpanel"
       aria-label="Example content"
-      v-show="selectedTab === 2"
+      v-show="activeTabKey === 'tab-3'"
     >
       Content Tab 3
     </section>
@@ -257,23 +261,26 @@ import {
 export default () => {
   return (
     <IxTabs rounded>
-      <IxTabItem>
-        <IxIcon name={iconSuccess} aria-hidden="true"></IxIcon>
+      <IxTabItem tabKey="success" label="Success">
+        <IxIcon name={iconSuccess} aria-label="Success"></IxIcon>
       </IxTabItem>
-      <IxTabItem counter={200}>
-        <IxIcon name={iconTree} aria-hidden="true"></IxIcon>
+      <IxTabItem tabKey="tree" label="Tree" counter={200}>
+        <IxIcon name={iconTree} aria-label="Tree"></IxIcon>
       </IxTabItem>
-      <IxTabItem>
-        <IxIcon name={iconMaintenance} aria-hidden="true"></IxIcon>
+      <IxTabItem tabKey="maintenance" label="Maintenance">
+        <IxIcon name={iconMaintenance} aria-label="Maintenance"></IxIcon>
       </IxTabItem>
-      <IxTabItem disabled counter={24}>
-        <IxIcon name={iconSoundLoud} aria-hidden="true"></IxIcon>
+      <IxTabItem tabKey="sound" label="Sound" disabled counter={24}>
+        <IxIcon name={iconSoundLoud} aria-label="Sound"></IxIcon>
       </IxTabItem>
-      <IxTabItem>
-        <IxIcon name={iconHierarchy} aria-hidden="true"></IxIcon>
+      <IxTabItem tabKey="hierarchy" label="Hierarchy">
+        <IxIcon name={iconHierarchy} aria-label="Hierarchy"></IxIcon>
       </IxTabItem>
-      <IxTabItem disabled>
-        <IxIcon name={iconCalendarSettings} aria-hidden="true"></IxIcon>
+      <IxTabItem tabKey="calendar-settings" label="Calendar settings" disabled>
+        <IxIcon
+          name={iconCalendarSettings}
+          aria-label="Calendar settings"
+        ></IxIcon>
       </IxTabItem>
     </IxTabs>
   );
@@ -291,23 +298,30 @@ import { Component } from '@angular/core';
   selector: 'app-example',
   template: `
     <ix-tabs rounded>
-      <ix-tab-item>
-        <ix-icon name="success"></ix-icon>
+      <ix-tab-item tabKey="success" label="Success">
+        <ix-icon name="success" aria-label="Success"></ix-icon>
       </ix-tab-item>
-      <ix-tab-item counter="200">
-        <ix-icon name="tree"></ix-icon>
+      <ix-tab-item tabKey="tree" label="Tree" counter="200">
+        <ix-icon name="tree" aria-label="Tree"></ix-icon>
       </ix-tab-item>
-      <ix-tab-item>
-        <ix-icon name="maintenance"></ix-icon>
+      <ix-tab-item tabKey="maintenance" label="Maintenance">
+        <ix-icon name="maintenance" aria-label="Maintenance"></ix-icon>
       </ix-tab-item>
-      <ix-tab-item disabled counter="24">
-        <ix-icon name="sound-loud"></ix-icon>
+      <ix-tab-item tabKey="sound" label="Sound" disabled counter="24">
+        <ix-icon name="sound-loud" aria-label="Sound"></ix-icon>
       </ix-tab-item>
-      <ix-tab-item>
-        <ix-icon name="hierarchy"></ix-icon>
+      <ix-tab-item tabKey="hierarchy" label="Hierarchy">
+        <ix-icon name="hierarchy" aria-label="Hierarchy"></ix-icon>
       </ix-tab-item>
-      <ix-tab-item disabled>
-        <ix-icon name="calendar-settings"></ix-icon>
+      <ix-tab-item
+        tabKey="calendar-settings"
+        label="Calendar settings"
+        disabled
+      >
+        <ix-icon
+          name="calendar-settings"
+          aria-label="Calendar settings"
+        ></ix-icon>
       </ix-tab-item>
     </ix-tabs>
   `,
@@ -320,30 +334,37 @@ export default class TabsRounded {}
 #### tabs-rounded.ts
 ```ts
 import { Component } from '@angular/core';
-import { IxTabs, IxTabItem, IxIcon } from '@siemens/ix-angular/standalone';
+import { IxIcon, IxTabItem, IxTabs } from '@siemens/ix-angular/standalone';
 
 @Component({
   selector: 'app-example',
   imports: [IxTabs, IxTabItem, IxIcon],
   template: `
     <ix-tabs rounded>
-      <ix-tab-item>
-        <ix-icon name="success"></ix-icon>
+      <ix-tab-item tabKey="success" label="Success">
+        <ix-icon name="success" aria-label="Success"></ix-icon>
       </ix-tab-item>
-      <ix-tab-item counter="200">
-        <ix-icon name="tree"></ix-icon>
+      <ix-tab-item tabKey="tree" label="Tree" counter="200">
+        <ix-icon name="tree" aria-label="Tree"></ix-icon>
       </ix-tab-item>
-      <ix-tab-item>
-        <ix-icon name="maintenance"></ix-icon>
+      <ix-tab-item tabKey="maintenance" label="Maintenance">
+        <ix-icon name="maintenance" aria-label="Maintenance"></ix-icon>
       </ix-tab-item>
-      <ix-tab-item disabled counter="24">
-        <ix-icon name="sound-loud"></ix-icon>
+      <ix-tab-item tabKey="sound" label="Sound" disabled counter="24">
+        <ix-icon name="sound-loud" aria-label="Sound"></ix-icon>
       </ix-tab-item>
-      <ix-tab-item>
-        <ix-icon name="hierarchy"></ix-icon>
+      <ix-tab-item tabKey="hierarchy" label="Hierarchy">
+        <ix-icon name="hierarchy" aria-label="Hierarchy"></ix-icon>
       </ix-tab-item>
-      <ix-tab-item disabled>
-        <ix-icon name="calendar-settings"></ix-icon>
+      <ix-tab-item
+        tabKey="calendar-settings"
+        label="Calendar settings"
+        disabled
+      >
+        <ix-icon
+          name="calendar-settings"
+          aria-label="Calendar settings"
+        ></ix-icon>
       </ix-tab-item>
     </ix-tabs>
   `,
@@ -369,23 +390,26 @@ import { IxIcon, IxTabItem, IxTabs } from '@siemens/ix-vue';
 
 <template>
   <IxTabs rounded>
-    <IxTabItem>
-      <IxIcon :name="iconSuccess"></IxIcon>
+    <IxTabItem tabKey="success" label="Success">
+      <IxIcon :name="iconSuccess" aria-label="Success"></IxIcon>
     </IxTabItem>
-    <IxTabItem :counter="200">
-      <IxIcon :name="iconTree"></IxIcon>
+    <IxTabItem tabKey="tree" label="Tree" :counter="200">
+      <IxIcon :name="iconTree" aria-label="Tree"></IxIcon>
     </IxTabItem>
-    <IxTabItem>
-      <IxIcon :name="iconMaintenance"></IxIcon>
+    <IxTabItem tabKey="maintenance" label="Maintenance">
+      <IxIcon :name="iconMaintenance" aria-label="Maintenance"></IxIcon>
     </IxTabItem>
-    <IxTabItem disabled :counter="24">
-      <IxIcon :name="iconSoundLoud"></IxIcon>
+    <IxTabItem tabKey="sound" label="Sound" disabled :counter="24">
+      <IxIcon :name="iconSoundLoud" aria-label="Sound"></IxIcon>
     </IxTabItem>
-    <IxTabItem>
-      <IxIcon :name="iconHierarchy"></IxIcon>
+    <IxTabItem tabKey="hierarchy" label="Hierarchy">
+      <IxIcon :name="iconHierarchy" aria-label="Hierarchy"></IxIcon>
     </IxTabItem>
-    <IxTabItem disabled>
-      <IxIcon :name="iconCalendarSettings"></IxIcon>
+    <IxTabItem tabKey="calendar-settings" label="Calendar settings" disabled>
+      <IxIcon
+        :name="iconCalendarSettings"
+        aria-label="Calendar settings"
+      ></IxIcon>
     </IxTabItem>
   </IxTabs>
 </template>
@@ -397,19 +421,20 @@ import { IxIcon, IxTabItem, IxTabs } from '@siemens/ix-vue';
 
 | Name | Description | Attribute | Type | Default |
 | --- | --- | --- | --- | --- |
-| ariaLabelChevronLeftIconButton | ARIA label for the chevron left icon button | aria-label-chevron-left-icon-button | string | 'Scroll tabs left' |
-| ariaLabelChevronRightIconButton | ARIA label for the chevron right icon button | aria-label-chevron-right-icon-button | string | 'Scroll tabs right' |
-| layout | Set layout width style | layout | "auto" \| "stretched" | 'auto' |
-| placement | Set placement style | placement | "bottom" \| "top" | 'bottom' |
-| rounded | Set rounded tabs | rounded | boolean | false |
-| selected | Set default selected tab by index | selected | number | 0 |
-| small | Set tab items to small size | small | boolean | false |
+| activeTabKey | { "Active tab key." } | active-tab-key | string \| undefined |  |
+| ariaLabelMoreTabs | { "Aria label for the overflow menu button." } | aria-label-more-tabs | string | 'Show all tabs' |
+| keyboardNavigation | { "Keyboard interaction behavior:\n\nautomatic: A tabs widget where tabs are automatically activated and their panel is displayed when they receive focus.\n\nmanual: A tabs widget where users activate a tab and display its panel by pressing Space or Enter." } | keyboard-navigation | "automatic" \| "manual" | 'automatic' |
+| layout | { "Set layout width style" } | layout | "auto" \| "stretched" | 'auto' |
+| placement | { "Set placement style" } | placement | "bottom" \| "top" | 'bottom' |
+| rounded | { "Set rounded tabs" } | rounded | boolean | false |
+| small | { "Set tab items to small size" } | small | boolean | false |
 
 ### Events
 
 | Name | Description | Event | Detail |
 | --- | --- | --- | --- |
-| selectedChange | Tab selection event. Event detail is the zero-based tab index. Fires when the user selects a tab, or when the tab list changes and the selected index is adjusted. Not emitted when \`selected\` is set from outside. | selectedChange | number |
+| tabChange | { "Tab selection event. Event detail contains the new active tab key." } | tabChange | string \| undefined |
+| tabClose | { "Tab close event. Event detail contains the closed tab key." } | tabClose | string \| undefined |
 
 ## API for ix-tab-item
 
@@ -417,17 +442,18 @@ import { IxIcon, IxTabItem, IxTabs } from '@siemens/ix-vue';
 
 | Name | Description | Attribute | Type | Default |
 | --- | --- | --- | --- | --- |
-| counter | Set counter value | counter | number \| undefined |  |
-| disabled | Set disabled tab | disabled | boolean | false |
-| icon | Set icon only tab | icon | boolean | false |
-| layout | Set layout width style | layout | "auto" \| "stretched" | 'auto' |
-| placement | Set selected placement | placement | "bottom" \| "top" | 'bottom' |
-| rounded | Set rounded tab | rounded | boolean | false |
-| selected | Set selected tab | selected | boolean | false |
-| small | Set small size tab | small | boolean | false |
+| ariaLabelCloseButton | { "Aria label for the close button, important for accessibility" } | aria-label-close-button | string | 'Close tab' |
+| closable | { "If the tab can be closed" } | closable | boolean | false |
+| counter | { "Set counter value" } | counter | number \| undefined |  |
+| disabled | { "Set disabled tab" } | disabled | boolean | false |
+| icon | { "Set icon of the tab" } | icon | string \| undefined |  |
+| label | { "Tab label" } | label | string \| undefined |  |
+| selected | { "Set selected tab" } | selected | boolean | false |
+| tabKey | { "Key of the tab, used for identifying the tab in events" } | tab-key | string |  |
 
 ### Events
 
 | Name | Description | Event | Detail |
 | --- | --- | --- | --- |
-| tabClick | Emitted when the tab is clicked. | tabClick | { nativeEvent: MouseEvent; } |
+| tabClick | { "Emitted when the tab is clicked." } | tabClick | { tabKey?: string \| undefined; nativeEvent: Event; } |
+| tabClose | { "Emitted when the tab's close button is clicked." } | tabClose | { tabKey?: string \| undefined; nativeEvent: Event; } |

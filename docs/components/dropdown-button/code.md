@@ -404,11 +404,19 @@ import { IxDropdownButton } from '@siemens/ix-vue';
 
 | Name | Description | Attribute | Type | Default |
 | --- | --- | --- | --- | --- |
-| ariaLabelDropdownButton | ARIA label for the dropdown button Will be set as aria-label on the nested HTML button element | aria-label-dropdown-button | string \| undefined |  |
-| closeBehavior | Controls if the dropdown will be closed in response to a click event depending on the position of the event relative to the dropdown. | close-behavior | "both" \| "inside" \| "outside" \| boolean | 'both' |
-| disabled | Disable button | disabled | boolean | false |
-| enableTopLayer | Enable Popover API rendering for dropdown. | enable-top-layer | boolean | false |
-| icon | Button icon | icon | string \| undefined |  |
-| label | Set label | label | string \| undefined |  |
-| placement | Placement of the dropdown | placement | "bottom-end" \| "bottom-start" \| "left-end" \| "left-start" \| "right-end" \| "right-start" \| "top-end" \| "top-start" \| undefined |  |
-| variant | Button variant | variant | "danger-primary" \| "danger-secondary" \| "danger-tertiary" \| "primary" \| "secondary" \| "subtle-primary" \| "subtle-secondary" \| "subtle-tertiary" \| "tertiary" | 'primary' |
+| ariaLabelDropdownButton | { "ARIA label for the dropdown button\n\nWill be set as aria-label on the nested HTML button element" } | aria-label-dropdown-button | string \| undefined |  |
+| closeBehavior | { "Controls if the dropdown will be closed in response to a click event depending on the position of the event relative to the dropdown." } | close-behavior | "both" \| "inside" \| "outside" \| boolean | 'both' |
+| disabled | { "Disable button" } | disabled | boolean | false |
+| enableTopLayer | { "Enable Popover API rendering for dropdown." } | enable-top-layer | boolean | false |
+| focusCheckedItem | { "If true, the dropdown will try to focus checked items first when opened via keyboard, otherwise it will always focus the first focusable item." } | focus-checked-item | boolean | false |
+| icon | { "Button icon" } | icon | string \| undefined |  |
+| label | { "Set label" } | label | null \| string \| undefined |  |
+| placement | { "Placement of the dropdown" } | placement | "bottom-end" \| "bottom-start" \| "left-end" \| "left-start" \| "right-end" \| "right-start" \| "top-end" \| "top-start" \| undefined |  |
+| variant | { "Button variant" } | variant | "danger-primary" \| "danger-secondary" \| "danger-tertiary" \| "primary" \| "secondary" \| "subtle-primary" \| "subtle-secondary" \| "subtle-tertiary" \| "tertiary" | 'primary' |
+
+### Events
+
+| Name | Description | Event | Detail |
+| --- | --- | --- | --- |
+| showChange | { "Fire event before visibility of dropdown has changed, preventing event will cancel showing dropdown" } | showChange | boolean |
+| showChanged | { "Fire event after visibility of dropdown has changed" } | showChanged | boolean |

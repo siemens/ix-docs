@@ -351,10 +351,9 @@ import { iconCheckboxes } from '@siemens/ix-icons/icons';
 
 | Name | Description | Attribute | Type |
 | --- | --- | --- | --- |
-| a11yLabel | Accessibility label for the image Will be set as aria-label on the nested HTML img element | a11y-label | string \| undefined |
-| ariaLabelTooltip | aria-label for the tooltip | aria-label-tooltip | string \| undefined |
-| extra | Optional description text that will be displayed underneath the username. Note: Only working if avatar is part of the ix-application-header | extra | string \| undefined |
-| image | Display an avatar image | image | string \| undefined |
-| initials | Display the initials of the user. Will be overwritten by image | initials | string \| undefined |
-| tooltipText | Text to display in a tooltip when hovering over the avatar | tooltip-text | string \| undefined |
-| username | If set an info card displaying the username will be placed inside the dropdown. Note: Only working if avatar is part of the ix-application-header | username | string \| undefined |
+| ariaLabelTooltip | { "aria-label for the tooltip" } | aria-label-tooltip | string \| undefined |
+| extra | { "Optional description text that will be displayed underneath the username.\n\nNote: Only working if avatar is part of the ix-application-header" } | extra | string \| undefined |
+| image | { "Display an avatar image" } | image | string \| undefined |
+| initials | { "Display the initials of the user. Will be overwritten by image" } | initials | string \| undefined |
+| tooltipText | { "Text to display in a tooltip when hovering over the avatar" } | tooltip-text | string \| undefined |
+| username | { "If set an info card displaying the username will be placed inside the dropdown.\n\nNote: Only working if avatar is part of the ix-application-header" } | username | string \| undefined |

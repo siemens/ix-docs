@@ -1500,13 +1500,13 @@ import { IxProgressIndicator } from '@siemens/ix-vue';
 
 | Name | Description | Attribute | Type | Default |
 | --- | --- | --- | --- | --- |
-| helperText | The helper text for the progress indicator. | helper-text | string \| undefined |  |
-| label | The label for the progress indicator. | label | string \| undefined |  |
-| max | The maximum value of the progress indicator. | max | number | 100 |
-| min | The minimum value of the progress indicator. | min | number | 0 |
-| showTextAsTooltip | Show the helper text as a tooltip | show-text-as-tooltip | boolean | false |
-| size | The size of the progress indicator. | size | "lg" \| "md" \| "sm" \| "xl" \| "xs" | 'md' |
-| status | The state of the progress indicator. This is used to indicate the current state of the progress indicator. | status | "default" \| "error" \| "info" \| "paused" \| "success" \| "warning" | 'default' |
-| textAlignment | The text alignment for the helper text. Can be 'left', 'center', or 'right'. | text-alignment | "center" \| "left" \| "right" | 'left' |
-| type | The type of progress indicator to use. | type | "circular" \| "linear" | 'linear' |
-| value | The value of the progress indicator. | value | number | 0 |
+| helperText | { "The helper text for the progress indicator." } | helper-text | string \| undefined |  |
+| label | { "The label for the progress indicator." } | label | string \| undefined |  |
+| max | { "The maximum value of the progress indicator." } | max | number | 100 |
+| min | { "The minimum value of the progress indicator." } | min | number | 0 |
+| showTextAsTooltip | { "Show the helper text as a tooltip" } | show-text-as-tooltip | boolean | false |
+| size | { "The size of the progress indicator." } | size | "lg" \| "md" \| "sm" \| "xl" \| "xs" | 'md' |
+| status | { "The state of the progress indicator.\n\nThis is used to indicate the current state of the progress indicator." } | status | "default" \| "error" \| "info" \| "paused" \| "success" \| "warning" | 'default' |
+| textAlignment | { "The text alignment for the helper text.\n\nCan be 'left', 'center', or 'right'." } | text-alignment | "center" \| "left" \| "right" | 'left' |
+| type | { "The type of progress indicator to use." } | type | "circular" \| "linear" | 'linear' |
+| value | { "The value of the progress indicator." } | value | number | 0 |

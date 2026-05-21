@@ -136,6 +136,6 @@ import { IxLinkButton } from '@siemens/ix-vue';
 
 | Name | Description | Attribute | Type | Default |
 | --- | --- | --- | --- | --- |
-| disabled | Disable the link button | disabled | boolean | false |
-| target | Specifies where to open the link https://www.w3schools.com/html/html_links.asp | target | "_blank" \| "_parent" \| "_self" \| "_top" | '_self' |
-| url | Url for the link button | url | string \| undefined |  |
+| disabled | { "Disable the link button" } | disabled | boolean | false |
+| target | { "Specifies where to open the link\n\nhttps://www.w3schools.com/html/html_links.asp" } | target | "_blank" \| "_parent" \| "_self" \| "_top" | '_self' |
+| url | { "Url for the link button" } | url | string \| undefined |  |

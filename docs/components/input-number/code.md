@@ -648,41 +648,41 @@ import { IxIcon, IxNumberInput, IxTypography } from '@siemens/ix-vue';
 
 | Name | Description | Attribute | Type | Default |
 | --- | --- | --- | --- | --- |
-| allowEmptyValueChange | If true, the valueChange event will return null instead of 0 for an empty input state. This property will be removed in 5.0.0 and this behaviour will be default. | allow-empty-value-change | boolean | false |
-| allowedCharactersPattern | The allowed characters pattern for the input field | allowed-characters-pattern | string \| undefined |  |
-| disabled | Disables the input field | disabled | boolean | false |
-| helperText | The helper text for the input field | helper-text | string \| undefined |  |
-| infoText | The info text for the input field | info-text | string \| undefined |  |
-| invalidText | The error text for the input field | invalid-text | string \| undefined |  |
-| label | The label for the input field | label | string \| undefined |  |
-| max | The maximum value for the input field | max | number \| string \| undefined |  |
-| min | The minimum value for the input field | min | number \| string \| undefined |  |
-| name | name of the input element | name | string \| undefined |  |
-| pattern | The pattern for the input field | pattern | string \| undefined |  |
-| placeholder | placeholder of the input element | placeholder | string \| undefined |  |
-| readonly | Indicates if the field is read-only | readonly | boolean | false |
-| required | Indicates if the field is required. When required, empty values (undefined) are not accepted. | required | boolean | false |
-| showStepperButtons | Indicates if the stepper buttons should be shown | show-stepper-buttons | boolean \| undefined |  |
-| showTextAsTooltip | Indicates if the text should be shown as a tooltip | show-text-as-tooltip | boolean \| undefined |  |
-| step | Step value to increment or decrement the input value. Default step value is 1. | step | number \| string \| undefined | 1 |
-| suppressSubmitOnEnter | If false, pressing Enter will submit the form (if inside a form). Set to true to suppress submit on Enter. | suppress-submit-on-enter | boolean | false |
-| textAlignment | Text alignment within the number input. 'start' aligns the text to the start of the input, 'end' aligns the text to the end of the input. | text-alignment | "end" \| "start" | 'end' |
-| validText | The valid text for the input field | valid-text | string \| undefined |  |
-| value | The value of the input field. Supports numeric values, scientific notation (1E6, 1E-6), or undefined for empty. | value | number \| undefined | 0 |
-| warningText | The warning text for the input field | warning-text | string \| undefined |  |
+| allowEmptyValueChange | { "If true, the valueChange event will return null instead of 0 for an empty input state.\n\nThis property will be removed in 5.0.0 and this behaviour will be default." } | allow-empty-value-change | boolean | false |
+| allowedCharactersPattern | { "The allowed characters pattern for the input field" } | allowed-characters-pattern | string \| undefined |  |
+| disabled | { "Disables the input field" } | disabled | boolean | false |
+| helperText | { "The helper text for the input field" } | helper-text | string \| undefined |  |
+| infoText | { "The info text for the input field" } | info-text | string \| undefined |  |
+| invalidText | { "The error text for the input field" } | invalid-text | string \| undefined |  |
+| label | { "The label for the input field" } | label | string \| undefined |  |
+| max | { "The maximum value for the input field" } | max | number \| string \| undefined |  |
+| min | { "The minimum value for the input field" } | min | number \| string \| undefined |  |
+| name | { "name of the input element" } | name | string \| undefined |  |
+| pattern | { "The pattern for the input field" } | pattern | string \| undefined |  |
+| placeholder | { "placeholder of the input element" } | placeholder | string \| undefined |  |
+| readonly | { "Indicates if the field is read-only" } | readonly | boolean | false |
+| required | { "Indicates if the field is required. When required, empty values (undefined) are not accepted." } | required | boolean | false |
+| showStepperButtons | { "Indicates if the stepper buttons should be shown" } | show-stepper-buttons | boolean \| undefined |  |
+| showTextAsTooltip | { "Indicates if the text should be shown as a tooltip" } | show-text-as-tooltip | boolean \| undefined |  |
+| step | { "Step value to increment or decrement the input value. Default step value is 1." } | step | number \| string \| undefined | 1 |
+| suppressSubmitOnEnter | { "If false, pressing Enter will submit the form (if inside a form).\n\nSet to true to suppress submit on Enter." } | suppress-submit-on-enter | boolean | false |
+| textAlignment | { "Text alignment within the number input. 'start' aligns the text to the start of the input, 'end' aligns the text to the end of the input." } | text-alignment | "end" \| "start" | 'end' |
+| validText | { "The valid text for the input field" } | valid-text | string \| undefined |  |
+| value | { "The value of the input field. Supports numeric values, scientific notation (1E6, 1E-6), or undefined for empty." } | value | number \| undefined | 0 |
+| warningText | { "The warning text for the input field" } | warning-text | string \| undefined |  |
 
 ### Events
 
 | Name | Description | Event | Detail |
 | --- | --- | --- | --- |
-| ixBlur | Event emitted when the input field loses focus | ixBlur | void |
-| ixChange | Event emitted when the input field loses focus and the value has changed | ixChange | number |
-| validityStateChange | Event emitted when the validity state of the input field changes | validityStateChange | ValidityState |
-| valueChange | Event emitted when the value of the input field changes | valueChange | number |
+| ixBlur | { "Event emitted when the input field loses focus" } | ixBlur | void |
+| ixChange | { "Event emitted when the input field loses focus and the value has changed" } | ixChange | number |
+| validityStateChange | { "Event emitted when the validity state of the input field changes" } | validityStateChange | ValidityState |
+| valueChange | { "Event emitted when the value of the input field changes" } | valueChange | number |
 
 ### Slot
 
 | Name | Description |
 | --- | --- |
-| end | { `Element will be displayed at the end of the input` } |
-| start | { `Element will be displayed at the start of the input` } |
+| end | { "Element will be displayed at the end of the input" } |
+| start | { "Element will be displayed at the start of the input" } |

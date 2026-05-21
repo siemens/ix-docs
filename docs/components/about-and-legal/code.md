@@ -1,6 +1,6 @@
 # About and legal - Code
 
-> Code examples and API documentation for the ix-menu-about, ix-menu-about-item
+> Code examples and API documentation for the ix-menu-about
 
 # About and legal - Code
 
@@ -15,12 +15,14 @@ import {
   IxApplicationHeader,
   IxMenu,
   IxMenuAbout,
-  IxMenuAboutItem,
+  IxTabItem,
+  IxTabs,
 } from '@siemens/ix-react';
-import { useLayoutEffect, useRef } from 'react';
+import { useLayoutEffect, useRef, useState } from 'react';
 
 export default () => {
   const ref = useRef<HTMLIxMenuElement>(null);
+  const [activeTabKey, setActiveTabKey] = useState('tab-1');
 
   useLayoutEffect(() => {
     const element = ref.current;
@@ -35,9 +37,24 @@ export default () => {
         <div className="placeholder-logo" slot="logo"></div>
       </IxApplicationHeader>
       <IxMenu ref={ref}>
-        <IxMenuAbout>
-          <IxMenuAboutItem label="Tab 1">Content 1</IxMenuAboutItem>
-          <IxMenuAboutItem label="Tab 2">Content 2</IxMenuAboutItem>
+        <IxMenuAbout suppressLegacyTabs>
+          <IxTabs
+            activeTabKey={activeTabKey}
+            onTabChange={({ detail }) => setActiveTabKey(detail ?? 'tab-1')}
+          >
+            <IxTabItem tabKey="tab-1">Tab 1</IxTabItem>
+            <IxTabItem tabKey="tab-2">Tab 2</IxTabItem>
+          </IxTabs>
+          {activeTabKey === 'tab-1' ? (
+            <section role="tabpanel" aria-label="About and legal content">
+              Content 1
+            </section>
+          ) : null}
+          {activeTabKey === 'tab-2' ? (
+            <section role="tabpanel" aria-label="About and legal content">
+              Content 2
+            </section>
+          ) : null}
         </IxMenuAbout>
       </IxMenu>
     </IxApplication>
@@ -60,6 +77,8 @@ export default class AboutAndLegal implements AfterViewInit {
   @ViewChild('menu', { read: ElementRef })
   menuRef!: ElementRef<HTMLIxMenuElement>;
 
+  activeTabKey = 'tab-1';
+
   ngAfterViewInit() {
     const { nativeElement } = this.menuRef;
     nativeElement.toggleAbout(true);
@@ -74,9 +93,23 @@ export default class AboutAndLegal implements AfterViewInit {
     <div class="placeholder-logo" slot="logo"></div>
   </ix-application-header>
   <ix-menu #menu>
-    <ix-menu-about>
-      <ix-menu-about-item label="Tab 1">Content 1</ix-menu-about-item>
-      <ix-menu-about-item label="Tab 2">Content 2</ix-menu-about-item>
+    <ix-menu-about suppressLegacyTabs>
+      <ix-tabs
+        [activeTabKey]="activeTabKey"
+        (tabChange)="activeTabKey = $event.detail ?? 'tab-1'"
+      >
+        <ix-tab-item tabKey="tab-1">Tab 1</ix-tab-item>
+        <ix-tab-item tabKey="tab-2">Tab 2</ix-tab-item>
+      </ix-tabs>
+      @if (activeTabKey === 'tab-1') {
+      <section role="tabpanel" aria-label="About and legal content">
+        Content 1
+      </section>
+      } @else {
+      <section role="tabpanel" aria-label="About and legal content">
+        Content 2
+      </section>
+      }
     </ix-menu-about>
   </ix-menu>
 </ix-application>
@@ -92,7 +125,8 @@ import {
   IxApplicationHeader,
   IxMenu,
   IxMenuAbout,
-  IxMenuAboutItem,
+  IxTabItem,
+  IxTabs,
 } from '@siemens/ix-angular/standalone';
 
 @Component({
@@ -102,13 +136,16 @@ import {
     IxApplicationHeader,
     IxMenu,
     IxMenuAbout,
-    IxMenuAboutItem,
+    IxTabs,
+    IxTabItem,
   ],
   templateUrl: './about-and-legal.html',
 })
 export default class AboutAndLegal implements AfterViewInit {
   @ViewChild('menu', { read: ElementRef })
   menuRef!: ElementRef<HTMLIxMenuElement>;
+
+  activeTabKey = 'tab-1';
 
   ngAfterViewInit() {
     const { nativeElement } = this.menuRef;
@@ -124,9 +161,23 @@ export default class AboutAndLegal implements AfterViewInit {
     <div class="placeholder-logo" slot="logo"></div>
   </ix-application-header>
   <ix-menu #menu>
-    <ix-menu-about>
-      <ix-menu-about-item label="Tab 1">Content 1</ix-menu-about-item>
-      <ix-menu-about-item label="Tab 2">Content 2</ix-menu-about-item>
+    <ix-menu-about suppressLegacyTabs>
+      <ix-tabs
+        [activeTabKey]="activeTabKey"
+        (tabChange)="activeTabKey = $event.detail ?? 'tab-1'"
+      >
+        <ix-tab-item tabKey="tab-1">Tab 1</ix-tab-item>
+        <ix-tab-item tabKey="tab-2">Tab 2</ix-tab-item>
+      </ix-tabs>
+      @if (activeTabKey === 'tab-1') {
+      <section role="tabpanel" aria-label="About and legal content">
+        Content 1
+      </section>
+      } @else {
+      <section role="tabpanel" aria-label="About and legal content">
+        Content 2
+      </section>
+      }
     </ix-menu-about>
   </ix-menu>
 </ix-application>
@@ -142,13 +193,20 @@ import {
   IxApplicationHeader,
   IxMenu,
   IxMenuAbout,
-  IxMenuAboutItem,
+  IxTabItem,
+  IxTabs,
 } from '@siemens/ix-vue';
-import { useTemplateRef, onMounted } from 'vue';
+import { onMounted, ref, useTemplateRef } from 'vue';
 
-const input = useTemplateRef<HTMLIxMenuElement>('menu');
+const input = useTemplateRef<InstanceType<typeof IxMenu>>('menu');
+const activeTabKey = ref('tab-1');
+
+const setActiveTabKey = (event: CustomEvent<string | undefined>) => {
+  activeTabKey.value = event.detail ?? 'tab-1';
+};
+
 onMounted(() => {
-  input.value?.toggleAbout(true);
+  input.value?.$el?.toggleAbout(true);
 });
 </script>
 
@@ -158,9 +216,25 @@ onMounted(() => {
       <div className="placeholder-logo" slot="logo"></div>
     </IxApplicationHeader>
     <IxMenu ref="menu">
-      <IxMenuAbout>
-        <IxMenuAboutItem label="Tab 1">Content 1</IxMenuAboutItem>
-        <IxMenuAboutItem label="Tab 2">Content 2</IxMenuAboutItem>
+      <IxMenuAbout suppressLegacyTabs>
+        <IxTabs :activeTabKey="activeTabKey" @tabChange="setActiveTabKey">
+          <IxTabItem tabKey="tab-1">Tab 1</IxTabItem>
+          <IxTabItem tabKey="tab-2">Tab 2</IxTabItem>
+        </IxTabs>
+        <section
+          v-if="activeTabKey === 'tab-1'"
+          role="tabpanel"
+          aria-label="About and legal content"
+        >
+          Content 1
+        </section>
+        <section
+          v-if="activeTabKey === 'tab-2'"
+          role="tabpanel"
+          aria-label="About and legal content"
+        >
+          Content 2
+        </section>
       </IxMenuAbout>
     </IxMenu>
   </IxApplication>
@@ -177,27 +251,14 @@ Supported language codes are `'global/en' | 'global/es' | 'de/de' | 'cn/zh'`
 
 | Name | Description | Attribute | Type | Default |
 | --- | --- | --- | --- | --- |
-| activeTabLabel | Active tab | active-tab-label | string \| undefined |  |
-| ariaLabelCloseButton | Aria label for close button | aria-label-close-button | string | 'Close About' |
-| label | Content of the header | label | string | 'About & legal information' |
+| activeTabKey | { "Active tab used for legacy ix-menu-about-item integrations" } | active-tab-key | string \| undefined |  |
+| ariaLabelCloseButton | { "Aria label for close button" } | aria-label-close-button | string | 'Close About' |
+| label | { "Content of the header" } | label | string | 'About & legal information' |
+| suppressLegacyTabs | { "Whether to suppress legacy tabs (ix-menu-about-item) and use slotted tabs\n\n(ix-tab-item) instead" } | suppress-legacy-tabs | boolean | false |
 
 ### Events
 
 | Name | Description | Event | Detail |
 | --- | --- | --- | --- |
-| close | About and Legal closed | close | CustomCloseEvent |
-| tabChange | Active tab changed | tabChange | string |
-
-## API for ix-menu-about-item
-
-### Properties
-
-| Name | Description | Attribute | Type |
-| --- | --- | --- | --- |
-| label | About Item label | label | string \| undefined |
-
-### Events
-
-| Name | Description | Event | Detail |
-| --- | --- | --- | --- |
-| labelChange | Label changed | labelChange | CustomLabelChangeEvent |
+| close | { "About and Legal closed" } | close | CustomCloseEvent |
+| tabChange | { "Active tab changed" } | tabChange | string |

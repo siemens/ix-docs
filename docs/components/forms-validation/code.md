@@ -1,6 +1,6 @@
 # Forms validation - Code
 
-> Code examples and API documentation for the ix-validation-tooltip
+> Code examples and API documentation for form validation
 
 import Admonition from '@theme/Admonition';
 

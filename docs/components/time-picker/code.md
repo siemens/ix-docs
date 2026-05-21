@@ -13,7 +13,7 @@
 import { IxTimePicker } from '@siemens/ix-react';
 
 export default () => {
-  return <IxTimePicker />;
+  return <IxTimePicker minTime="13:00:00" maxTime="17:30:00" time="12:45:00" />;
 };
 ```
 
@@ -231,25 +231,27 @@ import { IxTimePicker } from '@siemens/ix-vue';
 
 | Name | Description | Attribute | Type | Default |
 | --- | --- | --- | --- | --- |
-| corners | Corner style. | corners | "left" \| "right" \| "rounded" \| "straight" | 'rounded' |
-| embedded | Embedded style (for use in other components). | embedded | boolean | false |
-| format | Format of time string. See [https://moment.github.io/luxon/#/formatting?id=table-of-tokens](https://moment.github.io/luxon/#/formatting?id=table-of-tokens) for all available tokens. Note: Formats that combine date and time (like f or F) are not supported. Timestamp tokens x and X are not supported either. | format | string | 'TT' |
-| hideHeader | Hides the header of the picker. | hide-header | boolean | false |
-| hourInterval | Interval for hour selection. | hour-interval | number | HOUR_INTERVAL_DEFAULT |
-| i18nConfirmTime | Text of the time confirm button. | i18n-confirm-time | string | CONFIRM_BUTTON_DEFAULT |
-| i18nHeader | Text for the top header. | i18n-header | string | HEADER_DEFAULT |
-| i18nHourColumnHeader | Text for the hour column header. | i18n-column-header | string | 'hr' |
-| i18nMillisecondColumnHeader | Text for the millisecond column header. | i18n-millisecond-column-header | string | 'ms' |
-| i18nMinuteColumnHeader | Text for the minute column header. | i18n-minute-column-header | string | 'min' |
-| i18nSecondColumnHeader | Text for the second column header. | i18n-second-column-header | string | 'sec' |
-| millisecondInterval | Interval for millisecond selection. | millisecond-interval | number | MILLISECOND_INTERVAL_DEFAULT |
-| minuteInterval | Interval for minute selection. | minute-interval | number | MINUTE_INTERVAL_DEFAULT |
-| secondInterval | Interval for second selection. | second-interval | number | SECOND_INTERVAL_DEFAULT |
-| time | Selected time value. Format has to match the \`format\` property. | time | string \| undefined |  |
+| corners | { "Corner style." } | corners | "left" \| "right" \| "rounded" \| "straight" | 'rounded' |
+| embedded | { "Embedded style (for use in other components)." } | embedded | boolean | false |
+| format | { "Format of time string.\n\nSee [https://moment.github.io/luxon/#/formatting?id=table-of-tokens](https://moment.github.io/luxon/#/formatting?id=table-of-tokens) for all available tokens.\n\nNote: Formats that combine date and time (like f or F) are not supported. Timestamp tokens x and X are not supported either." } | format | string | 'TT' |
+| hideHeader | { "Hides the header of the picker." } | hide-header | boolean | false |
+| hourInterval | { "Interval for hour selection." } | hour-interval | number | HOUR_INTERVAL_DEFAULT |
+| i18nConfirmTime | { "Text of the time confirm button." } | i18n-confirm-time | string | CONFIRM_BUTTON_DEFAULT |
+| i18nHeader | { "Text for the top header." } | i18n-header | string | HEADER_DEFAULT |
+| i18nHourColumnHeader | { "Text for the hour column header." } | i18n-hour-column-header | string | 'hr' |
+| i18nMillisecondColumnHeader | { "Text for the millisecond column header." } | i18n-millisecond-column-header | string | 'ms' |
+| i18nMinuteColumnHeader | { "Text for the minute column header." } | i18n-minute-column-header | string | 'min' |
+| i18nSecondColumnHeader | { "Text for the second column header." } | i18n-second-column-header | string | 'sec' |
+| maxTime | { "Latest selectable time (`format` tokens). Invalid non-empty values are ignored." } | max-time | string \| undefined |  |
+| millisecondInterval | { "Interval for millisecond selection." } | millisecond-interval | number | MILLISECOND_INTERVAL_DEFAULT |
+| minTime | { "Earliest selectable time (`format` tokens). Invalid non-empty values are ignored." } | min-time | string \| undefined |  |
+| minuteInterval | { "Interval for minute selection." } | minute-interval | number | MINUTE_INTERVAL_DEFAULT |
+| secondInterval | { "Interval for second selection." } | second-interval | number | SECOND_INTERVAL_DEFAULT |
+| time | { "Selected time value.\n\nFormat has to match the `format` property." } | time | string \| undefined |  |
 
 ### Events
 
 | Name | Description | Event | Detail |
 | --- | --- | --- | --- |
-| timeChange | Time change event. Emitted when the selected time changes while interacting with the picker. | timeChange | string |
-| timeSelect | Time event. Emitted when the user confirms the selected time. | timeSelect | string |
+| timeChange | { "Time change event. Emitted when the selected time changes while interacting with the picker." } | timeChange | string |
+| timeSelect | { "Time event. Emitted when the user confirms the selected time." } | timeSelect | string |

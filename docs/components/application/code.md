@@ -871,8 +871,8 @@ export default function ApplicationAdvancedExample() {
             Network
           </IxMenuItem>
         </IxMenuCategory>
-        <IxMenuSettings></IxMenuSettings>
-        <IxMenuAbout></IxMenuAbout>
+        <IxMenuSettings suppressLegacyTabs></IxMenuSettings>
+        <IxMenuAbout suppressLegacyTabs></IxMenuAbout>
       </IxMenu>
       <IxContent>
         <IxContentHeader
@@ -881,7 +881,7 @@ export default function ApplicationAdvancedExample() {
       </IxContent>
     </IxApplication>
   );
-};
+}
 ```
 
 ### Angular Examples
@@ -940,12 +940,14 @@ export default class ApplicationAdvancedExample {
         >Network</ix-menu-item
       >
     </ix-menu-category>
-    <ix-menu-settings></ix-menu-settings>
-    <ix-menu-about></ix-menu-about>
+    <ix-menu-settings suppressLegacyTabs></ix-menu-settings>
+    <ix-menu-about suppressLegacyTabs></ix-menu-about>
   </ix-menu>
 
   <ix-content>
-    <ix-content-header headerTitle="Example {{ activeContent }} content"></ix-content-header>
+    <ix-content-header
+      headerTitle="Example {{ activeContent }} content"
+    ></ix-content-header>
   </ix-content>
 </ix-application>
 ```
@@ -1029,12 +1031,14 @@ export default class ApplicationAdvancedExample {
         >Network</ix-menu-item
       >
     </ix-menu-category>
-    <ix-menu-settings></ix-menu-settings>
-    <ix-menu-about></ix-menu-about>
+    <ix-menu-settings suppressLegacyTabs></ix-menu-settings>
+    <ix-menu-about suppressLegacyTabs></ix-menu-about>
   </ix-menu>
 
   <ix-content>
-    <ix-content-header headerTitle="Example {{ activeContent }} content"></ix-content-header>
+    <ix-content-header
+      headerTitle="Example {{ activeContent }} content"
+    ></ix-content-header>
   </ix-content>
 </ix-application>
 ```
@@ -1121,8 +1125,8 @@ const activeContent = ref('home');
 
 | Name | Description | Attribute | Type | Default |
 | --- | --- | --- | --- | --- |
-| appSwitchConfig | Define application switch configuration |  | undefined \| { currentAppId: string; apps: { id: string; name: string; description: string; url: string; target: AppSwitchConfigurationTarget; iconSrc: string; }[]; i18nAppSwitch?: string \| undefined; i18nLoadingApps?: string \| undefined; } |  |
-| breakpoints | Supported layouts |  | ("sm" \| "md" \| "lg")[] | ['sm', 'md', 'lg'] |
-| forceBreakpoint | Change the responsive layout of the menu structure | force-breakpoint | "lg" \| "md" \| "sm" \| undefined |  |
-| theme | Application theme | theme | "classic" \| "classic-dark" \| "classic-light" \| string & Record \| undefined |  |
-| themeSystemAppearance | Use the system appearance dark or light | theme-system-appearance | boolean | false |
+| appSwitchConfig | { "Define application switch configuration" } |  | undefined \| { currentAppId: string; apps: { id: string; name: string; description: string; url: string; target: AppSwitchConfigurationTarget; iconSrc: string; }[]; i18nAppSwitch?: string \| undefined; i18nLoadingApps?: string \| undefined; } |  |
+| breakpoints | { "Supported layouts" } |  | ("sm" \| "md" \| "lg")[] | ['sm', 'md', 'lg'] |
+| colorSchema | { "Color schema of the theme" } | color-schema | "dark" \| "light" \| "system" \| undefined | 'system' |
+| forceBreakpoint | { "Change the responsive layout of the menu structure" } | force-breakpoint | "lg" \| "md" \| "sm" \| undefined |  |
+| theme | { "Application theme" } | theme | string \| undefined |  |

@@ -419,14 +419,14 @@ import { IxFlipTile, IxFlipTileContent, IxIcon } from '@siemens/ix-vue';
 
 | Name | Description | Attribute | Type | Default |
 | --- | --- | --- | --- | --- |
-| ariaLabelEyeIconButton | ARIA label for the eye icon button Will be set as aria-label on the nested HTML button element | aria-label-eye-icon-button | string \| undefined |  |
-| height | Height interpreted as REM | height | "auto" \| number | 15.125 |
-| index | Index of the currently visible content | index | number | 0 |
-| variant | Variation of the Flip | variant | "alarm" \| "filled" \| "info" \| "outline" \| "primary" \| "warning" | 'filled' |
-| width | Width interpreted as REM | width | "auto" \| number | 16 |
+| ariaLabelEyeIconButton | { "ARIA label for the eye icon button\n\nWill be set as aria-label on the nested HTML button element" } | aria-label-eye-icon-button | string \| undefined |  |
+| height | { "Height interpreted as REM" } | height | "auto" \| number | 15.125 |
+| index | { "Index of the currently visible content" } | index | number | 0 |
+| variant | { "Variation of the Flip" } | variant | "alarm" \| "filled" \| "info" \| "outline" \| "primary" \| "warning" | 'filled' |
+| width | { "Width interpreted as REM" } | width | "auto" \| number | 16 |
 
 ### Events
 
 | Name | Description | Event | Detail |
 | --- | --- | --- | --- |
-| toggle | Event emitted when the index changes | toggle | number |
+| toggle | { "Event emitted when the index changes" } | toggle | number |

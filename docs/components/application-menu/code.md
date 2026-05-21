@@ -352,16 +352,17 @@ import { IxMenu, IxMenuItem } from '@siemens/ix-vue';
 
 | Name | Description | Attribute | Type | Default |
 | --- | --- | --- | --- | --- |
-| activeTabLabel | Active tab | active-tab-label | string \| undefined |  |
-| ariaLabelCloseButton | Aria label for close button | aria-label-close-button | string | 'Close Settings' |
-| label | Label of first tab | label | string | 'Settings' |
+| activeTabKey | { "Active tab used for legacy ix-menu-settings-item integrations" } | active-tab-key | string \| undefined |  |
+| ariaLabelCloseButton | { "Aria label for close button" } | aria-label-close-button | string | 'Close Settings' |
+| label | { "Label of first tab" } | label | string | 'Settings' |
+| suppressLegacyTabs | { "Whether to suppress legacy tabs (ix-menu-settings-item) and use slotted\n\ntabs (ix-tab-item) instead" } | suppress-legacy-tabs | boolean | false |
 
 ### Events
 
 | Name | Description | Event | Detail |
 | --- | --- | --- | --- |
-| close | Popover closed | close | CustomCloseEvent |
-| tabChange | Active tab changed | tabChange | string |
+| close | { "Popover closed" } | close | CustomCloseEvent |
+| tabChange | { "Active tab changed" } | tabChange | string |
 
 ## API for ix-menu
 
@@ -369,30 +370,29 @@ import { IxMenu, IxMenuItem } from '@siemens/ix-vue';
 
 | Name | Description | Attribute | Type | Default |
 | --- | --- | --- | --- | --- |
-| applicationDescription | Should only be set if you use ix-menu standalone | application-description | string | '' |
-| applicationName | Should only be set if you use ix-menu standalone | application-name | string \| undefined |  |
-| enableToggleTheme | Show toggle between light and dark variant. Only if the provided theme have implemented both! | enable-toggle-theme | boolean | false |
-| expand | Toggle the expand state of the menu | expand | boolean | false |
-| i18nCollapse | i18n label for 'Collapse' button | i18n-collapse | string | 'Collapse' |
-| i18nExpand | i18n label for 'Expand' button | i18n-expand | string | ' Expand' |
-| i18nExpandSidebar | Accessibility i18n label for the burger menu of the sidebar | i18n-expand-sidebar | string | 'Expand sidebar' |
-| i18nLegal | i18n label for 'About & legal information' button | i18n-legal | string | 'About & legal information' |
-| i18nSettings | i18n label for 'Settings' button | i18n-settings | string | 'Settings' |
-| i18nToggleTheme | i18n label for 'Toggle theme' button | i18n-toggle-theme | string | 'Toggle theme' |
-| pinned | Menu stays pinned to the left | pinned | boolean | false |
-| showAbout | Is about tab visible | show-about | boolean | false |
-| showSettings | Is settings tab visible | show-settings | boolean | false |
-| startExpanded | If set the menu will be expanded initially. This will only take effect at the breakpoint 'lg'. | start-expanded | boolean | false |
+| applicationDescription | { "Should only be set if you use ix-menu standalone" } | application-description | string | '' |
+| applicationName | { "Should only be set if you use ix-menu standalone" } | application-name | string \| undefined |  |
+| enableToggleTheme | { "Show toggle between light and dark variant. Only if the provided theme have implemented both!" } | enable-toggle-theme | boolean | false |
+| expand | { "Toggle the expand state of the menu" } | expand | boolean | false |
+| i18nCollapse | { "i18n label for 'Collapse' button" } | i18n-collapse | string | 'Collapse' |
+| i18nExpand | { "i18n label for 'Expand' button" } | i18n-expand | string | 'Expand' |
+| i18nLegal | { "i18n label for 'About & legal information' button" } | i18n-legal | string | 'About & legal information' |
+| i18nSettings | { "i18n label for 'Settings' button" } | i18n-settings | string | 'Settings' |
+| i18nToggleTheme | { "i18n label for 'Toggle theme' button" } | i18n-toggle-theme | string | 'Toggle theme' |
+| pinned | { "Menu stays pinned to the left" } | pinned | boolean | false |
+| showAbout | { "Is about tab visible" } | show-about | boolean | false |
+| showSettings | { "Is settings tab visible" } | show-settings | boolean | false |
+| startExpanded | { "If set the menu will be expanded initially. This will only take effect at the breakpoint 'lg'." } | start-expanded | boolean | false |
 
 ### Events
 
 | Name | Description | Event | Detail |
 | --- | --- | --- | --- |
-| expandChange | Menu expanded | expandChange | boolean |
-| mapExpandChange | Map Sidebar expanded | mapExpandChange | boolean |
-| openAbout | Event emitted when the about button is clicked | openAbout | void |
-| openAppSwitch | Event emitted when the app switch button is clicked | openAppSwitch | void |
-| openSettings | Event emitted when the settings button is clicked | openSettings | void |
+| expandChange | { "Menu expanded" } | expandChange | boolean |
+| mapExpandChange | { "Map Sidebar expanded" } | mapExpandChange | boolean |
+| openAbout | { "Event emitted when the about button is clicked" } | openAbout | void |
+| openAppSwitch | { "Event emitted when the app switch button is clicked" } | openAppSwitch | void |
+| openSettings | { "Event emitted when the settings button is clicked" } | openSettings | void |
 
 ## API for ix-menu-item
 
@@ -400,23 +400,23 @@ import { IxMenu, IxMenuItem } from '@siemens/ix-vue';
 
 | Name | Description | Attribute | Type | Default |
 | --- | --- | --- | --- | --- |
-| active | State to display active | active | boolean | false |
-| bottom | Caution: this is no longer working. Please use slot="bottom" instead. Place tab on bottom | bottom | boolean | false |
-| disabled | Disable tab and remove event handlers | disabled | boolean | false |
-| home | Move the Tab to a top position. | home | boolean | false |
-| href | URL for the button link. When provided, the button will render as an anchor tag. | href | string \| undefined |  |
-| icon | Name of the icon you want to display. Icon names can be resolved from the documentation [https://ix.siemens.io/docs/icon-library/icons](https://ix.siemens.io/docs/icon-library/icons) | icon | string \| undefined |  |
-| label | Label of the menu item. Will also be used as tooltip text | label | string \| undefined |  |
-| notifications | Show notification count on tab | notifications | number \| undefined |  |
-| rel | Specifies the relationship between the current document and the linked document when href is provided. | rel | string \| undefined |  |
-| target | Specifies where to open the linked document when href is provided. | target | "_blank" \| "_parent" \| "_self" \| "_top" \| undefined | '_self' |
-| tooltipText | Will be shown as tooltip text, if not provided menu text content will be used. | tooltip-text | string \| undefined |  |
+| active | { "State to display active" } | active | boolean | false |
+| bottom | { "Caution: this is no longer working. Please use slot=\"bottom\" instead.\n\nPlace tab on bottom" } | bottom | boolean | false |
+| disabled | { "Disable tab and remove event handlers" } | disabled | boolean | false |
+| home | { "Move the Tab to a top position." } | home | boolean | false |
+| href | { "URL for the button link. When provided, the button will render as an anchor tag." } | href | string \| undefined |  |
+| icon | { "Name of the icon you want to display. Icon names can be resolved from the documentation [https://ix.siemens.io/docs/icon-library/icons](https://ix.siemens.io/docs/icon-library/icons)" } | icon | string \| undefined |  |
+| label | { "Label of the menu item. Will also be used as tooltip text" } | label | string \| undefined |  |
+| notifications | { "Show notification count on tab" } | notifications | number \| undefined |  |
+| rel | { "Specifies the relationship between the current document and the linked document when href is provided." } | rel | string \| undefined |  |
+| target | { "Specifies where to open the linked document when href is provided." } | target | "_blank" \| "_parent" \| "_self" \| "_top" \| undefined | '_self' |
+| tooltipText | { "Will be shown as tooltip text, if not provided menu text content will be used." } | tooltip-text | string \| undefined |  |
 
 ### Slot
 
 | Name | Description |
 | --- | --- |
-| menu-item-label Custom label | { `` } |
+| menu-item-label Custom label | { "" } |
 
 ## API for ix-menu-category
 
@@ -424,7 +424,7 @@ import { IxMenu, IxMenuItem } from '@siemens/ix-vue';
 
 | Name | Description | Attribute | Type |
 | --- | --- | --- | --- |
-| icon | Icon of the category | icon | string \| undefined |
-| label | Display name of the category | label | string \| undefined |
-| notifications | Show notification count on the category | notifications | number \| undefined |
-| tooltipText | Will be shown as tooltip text, if not provided menu text content will be used. | tooltip-text | string \| undefined |
+| icon | { "Icon of the category" } | icon | string \| undefined |
+| label | { "Display name of the category" } | label | string \| undefined |
+| notifications | { "Show notification count on the category" } | notifications | number \| undefined |
+| tooltipText | { "Will be shown as tooltip text, if not provided menu text content will be used." } | tooltip-text | string \| undefined |

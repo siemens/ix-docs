@@ -129,4 +129,4 @@ import { IxContent, IxContentHeader } from '@siemens/ix-vue';
 
 | Name | Description |
 | --- | --- |
-| header | { `Display content at the top of the content page` } |
+| header | { "Display content at the top of the content page" } |

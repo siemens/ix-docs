@@ -13,7 +13,7 @@
 import { IxToggle } from '@siemens/ix-react';
 
 export default () => {
-  return <IxToggle />;
+  return <IxToggle aria-label="Toggle" />;
 };
 ```
 
@@ -26,7 +26,7 @@ import { Component } from '@angular/core';
 @Component({
   standalone: false,
   selector: 'app-example',
-  template: ` <ix-toggle></ix-toggle> `,
+  template: ` <ix-toggle aria-label="Toggle"></ix-toggle> `,
 })
 export default class Toggle {}
 ```
@@ -44,7 +44,7 @@ import {
 @Component({
   selector: 'app-example',
   imports: [IxToggle, IxBooleanValueAccessorDirective],
-  template: ` <ix-toggle></ix-toggle> `,
+  template: ` <ix-toggle aria-label="Toggle"></ix-toggle> `,
 })
 export default class Toggle {}
 ```
@@ -58,7 +58,7 @@ import { IxToggle } from '@siemens/ix-vue';
 </script>
 
 <template>
-  <IxToggle />
+  <IxToggle aria-label="Toggle" />
 </template>
 ```
 
@@ -71,7 +71,7 @@ import { IxToggle } from '@siemens/ix-vue';
 import { IxToggle } from '@siemens/ix-react';
 
 export default () => {
-  return <IxToggle text-off="Offline" text-on="Online"></IxToggle>;
+  return <IxToggle text-off="Offline" text-on="Online" aria-label="Connection status"></IxToggle>;
 };
 ```
 
@@ -84,7 +84,7 @@ import { Component } from '@angular/core';
 @Component({
   standalone: false,
   selector: 'app-example',
-  template: ` <ix-toggle text-off="Offline" text-on="Online"></ix-toggle> `,
+  template: ` <ix-toggle text-off="Offline" text-on="Online" aria-label="Connection status"></ix-toggle> `,
 })
 export default class ToggleCustomLabel {}
 ```
@@ -102,7 +102,7 @@ import {
 @Component({
   selector: 'app-example',
   imports: [IxToggle, IxBooleanValueAccessorDirective],
-  template: ` <ix-toggle text-off="Offline" text-on="Online"></ix-toggle> `,
+  template: ` <ix-toggle text-off="Offline" text-on="Online" aria-label="Connection status"></ix-toggle> `,
 })
 export default class ToggleCustomLabel {}
 ```
@@ -116,7 +116,7 @@ import { IxToggle } from '@siemens/ix-vue';
 </script>
 
 <template>
-  <IxToggle text-off="Offline" text-on="Online"></IxToggle>
+  <IxToggle text-off="Offline" text-on="Online" aria-label="Connection status"></IxToggle>
 </template>
 ```
 
@@ -129,7 +129,7 @@ import { IxToggle } from '@siemens/ix-vue';
 import { IxToggle } from '@siemens/ix-react';
 
 export default () => {
-  return <IxToggle disabled />;
+  return <IxToggle disabled aria-label="Toggle" />;
 };
 ```
 
@@ -142,7 +142,7 @@ import { Component } from '@angular/core';
 @Component({
   standalone: false,
   selector: 'app-example',
-  template: ` <ix-toggle disabled></ix-toggle> `,
+  template: ` <ix-toggle disabled aria-label="Toggle"></ix-toggle> `,
 })
 export default class ToggleCustomDisabled {}
 ```
@@ -160,7 +160,7 @@ import {
 @Component({
   selector: 'app-example',
   imports: [IxToggle, IxBooleanValueAccessorDirective],
-  template: ` <ix-toggle disabled></ix-toggle> `,
+  template: ` <ix-toggle disabled aria-label="Toggle"></ix-toggle> `,
 })
 export default class ToggleCustomDisabled {}
 ```
@@ -174,7 +174,7 @@ import { IxToggle } from '@siemens/ix-vue';
 </script>
 
 <template>
-  <IxToggle disabled />
+  <IxToggle disabled aria-label="Toggle" />
 </template>
 ```
 
@@ -187,7 +187,7 @@ import { IxToggle } from '@siemens/ix-vue';
 import { IxToggle } from '@siemens/ix-react';
 
 export default () => {
-  return <IxToggle checked />;
+  return <IxToggle checked aria-label="Toggle" />;
 };
 ```
 
@@ -200,7 +200,7 @@ import { Component } from '@angular/core';
 @Component({
   standalone: false,
   selector: 'app-example',
-  template: ` <ix-toggle checked></ix-toggle> `,
+  template: ` <ix-toggle checked aria-label="Toggle"></ix-toggle> `,
 })
 export default class ToggleChecked {}
 ```
@@ -218,7 +218,7 @@ import {
 @Component({
   selector: 'app-example',
   imports: [IxToggle, IxBooleanValueAccessorDirective],
-  template: ` <ix-toggle checked></ix-toggle> `,
+  template: ` <ix-toggle checked aria-label="Toggle"></ix-toggle> `,
 })
 export default class ToggleChecked {}
 ```
@@ -232,7 +232,7 @@ import { IxToggle } from '@siemens/ix-vue';
 </script>
 
 <template>
-  <IxToggle checked />
+  <IxToggle checked aria-label="Toggle" />
 </template>
 ```
 
@@ -245,7 +245,7 @@ import { IxToggle } from '@siemens/ix-vue';
 import { IxToggle } from '@siemens/ix-react';
 
 export default () => {
-  return <IxToggle indeterminate />;
+  return <IxToggle indeterminate aria-label="Toggle" />;
 };
 ```
 
@@ -258,7 +258,7 @@ import { Component } from '@angular/core';
 @Component({
   standalone: false,
   selector: 'app-example',
-  template: ` <ix-toggle indeterminate></ix-toggle> `,
+  template: ` <ix-toggle indeterminate aria-label="Toggle"></ix-toggle> `,
 })
 export default class ToggleIndeterminate {}
 ```
@@ -276,7 +276,7 @@ import {
 @Component({
   selector: 'app-example',
   imports: [IxToggle, IxBooleanValueAccessorDirective],
-  template: ` <ix-toggle indeterminate></ix-toggle> `,
+  template: ` <ix-toggle indeterminate aria-label="Toggle"></ix-toggle> `,
 })
 export default class ToggleIndeterminate {}
 ```
@@ -290,7 +290,7 @@ import { IxToggle } from '@siemens/ix-vue';
 </script>
 
 <template>
-  <IxToggle indeterminate />
+  <IxToggle indeterminate aria-label="Toggle" />
 </template>
 ```
 
@@ -300,20 +300,20 @@ import { IxToggle } from '@siemens/ix-vue';
 
 | Name | Description | Attribute | Type | Default |
 | --- | --- | --- | --- | --- |
-| checked | Whether the slide-toggle element is checked or not. | checked | boolean | false |
-| disabled | Whether the slide-toggle element is disabled or not. | disabled | boolean | false |
-| hideText | Hide \`on\` and \`off\` text | hide-text | boolean | false |
-| indeterminate | If true the control is in indeterminate state | indeterminate | boolean | false |
-| name | Name of the checkbox component | name | string \| undefined |  |
-| required | Required state of the checkbox component. If true, checkbox needs to be checked to be valid | required | boolean | false |
-| textIndeterminate | Text for indeterminate state | text-indeterminate | string | 'Mixed' |
-| textOff | Text for off state | text-off | string | 'Off' |
-| textOn | Text for on state | text-on | string | 'On' |
-| value | Value of the checkbox component | value | string | 'on' |
+| checked | { "Whether the slide-toggle element is checked or not." } | checked | boolean | false |
+| disabled | { "Whether the slide-toggle element is disabled or not." } | disabled | boolean | false |
+| hideText | { "Hide `on` and `off` text" } | hide-text | boolean | false |
+| indeterminate | { "If true the control is in indeterminate state" } | indeterminate | boolean | false |
+| name | { "Name of the checkbox component" } | name | string \| undefined |  |
+| required | { "Required state of the checkbox component.\n\nIf true, checkbox needs to be checked to be valid" } | required | boolean | false |
+| textIndeterminate | { "Text for indeterminate state" } | text-indeterminate | string | 'Mixed' |
+| textOff | { "Text for off state" } | text-off | string | 'Off' |
+| textOn | { "Text for on state" } | text-on | string | 'On' |
+| value | { "Value of the checkbox component" } | value | string | 'on' |
 
 ### Events
 
 | Name | Description | Event | Detail |
 | --- | --- | --- | --- |
-| checkedChange | An event will be dispatched each time the slide-toggle changes its value. | checkedChange | boolean |
-| ixBlur | An event will be dispatched each time the toggle is blurred. | ixBlur | void |
+| checkedChange | { "An event will be dispatched each time the slide-toggle changes its value." } | checkedChange | boolean |
+| ixBlur | { "An event will be dispatched each time the toggle is blurred." } | ixBlur | void |

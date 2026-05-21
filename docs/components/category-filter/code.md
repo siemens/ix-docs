@@ -265,29 +265,29 @@ const suggestions = ref(['Item 1', 'Item 2']);
 
 | Name | Description | Attribute | Type | Default |
 | --- | --- | --- | --- | --- |
-| ariaLabelFilterInput | ARIA label for the filter input Will be set as aria-label on the nested HTML input element | aria-label-filter-input | string \| undefined |  |
-| ariaLabelOperatorButton | ARIA label for the operator button Will be set as aria-label on the nested HTML button element | aria-label-operator-button | string \| undefined |  |
-| ariaLabelResetButton | ARIA label for the reset button Will be set as aria-label on the nested HTML button element | aria-label-reset-button | string \| undefined |  |
-| categories | Configuration object hash used to populate the dropdown menu for type-ahead and quick selection functionality. Each ID maps to an object with a label and an array of options to select from. |  | undefined \| { [id: string]: { label: string; options: string[]; }; } |  |
-| disabled | If true the filter will be in disabled state | disabled | boolean | false |
-| enableTopLayer | Enable Popover API rendering for dropdown. | enable-top-layer | boolean | false |
-| filterState | A set of search criteria to populate the component with. |  | FilterState \| undefined |  |
-| hideIcon | Allows to hide the icon inside the text input. Defaults to false | hide-icon | boolean | false |
-| i18nPlainText | i18n label for 'Filter by text' | i18n-plain-text | string | 'Filter by text' |
-| icon | The icon next to the actual text input Defaults to 'search' | icon | string \| undefined |  |
-| labelCategories | i18n | label-categories | string | 'Categories' |
-| nonSelectableCategories | In certain use cases some categories may not be available for selection anymore. To allow proper display of set filters with these categories this ID to label mapping can be populated. Configuration object hash used to supply labels to the filter chips in the input field. Each ID maps to a string representing the label to display. |  | undefined \| { [id: string]: string; } | {} |
-| placeholder | Placeholder text to be displayed in an empty input field. | placeholder | string \| undefined |  |
-| readonly | If true the filter will be in readonly mode | readonly | boolean | false |
-| staticOperator | If set categories will always be filtered via the respective logical operator. Toggling of the operator will not be available to the user. | static-operator | LogicalFilterOperator.EQUAL \| LogicalFilterOperator.NOT_EQUAL \| undefined |  |
-| suggestions | A list of strings that will be supplied as type-ahead suggestions not tied to any categories. |  | string[] \| undefined |  |
-| uniqueCategories | If set to true, prevents that a single category can be set more than once. An already set category will not appear in the category dropdown if set to true. | unique-categories | boolean | false |
+| ariaLabelFilterInput | { "ARIA label for the filter input\n\nWill be set as aria-label on the nested HTML input element" } | aria-label-filter-input | string \| undefined |  |
+| ariaLabelOperatorButton | { "ARIA label for the operator button\n\nWill be set as aria-label on the nested HTML button element" } | aria-label-operator-button | string \| undefined |  |
+| ariaLabelResetButton | { "ARIA label for the reset button\n\nWill be set as aria-label on the nested HTML button element" } | aria-label-reset-button | string \| undefined |  |
+| categories | { "Configuration object hash used to populate the dropdown menu for type-ahead and quick selection functionality.\n\nEach ID maps to an object with a label and an array of options to select from." } |  | undefined \| { [id: string]: { label: string; options: string[]; }; } |  |
+| disabled | { "If true the filter will be in disabled state" } | disabled | boolean | false |
+| enableTopLayer | { "Enable Popover API rendering for dropdown." } | enable-top-layer | boolean | false |
+| filterState | { "A set of search criteria to populate the component with." } |  | FilterState \| undefined |  |
+| hideIcon | { "Allows to hide the icon inside the text input.\n\nDefaults to false" } | hide-icon | boolean | false |
+| i18nPlainText | { "i18n label for 'Filter by text'" } | i18n-plain-text | string | 'Filter by text' |
+| icon | { "The icon next to the actual text input\n\nDefaults to 'search'" } | icon | string \| undefined |  |
+| labelCategories | { "i18n" } | label-categories | string | 'Categories' |
+| nonSelectableCategories | { "In certain use cases some categories may not be available for selection anymore.\n\nTo allow proper display of set filters with these categories this ID to label mapping can be populated.\n\nConfiguration object hash used to supply labels to the filter chips in the input field.\n\nEach ID maps to a string representing the label to display." } |  | undefined \| { [id: string]: string; } | {} |
+| placeholder | { "Placeholder text to be displayed in an empty input field." } | placeholder | string \| undefined |  |
+| readonly | { "If true the filter will be in readonly mode" } | readonly | boolean | false |
+| staticOperator | { "If set categories will always be filtered via the respective logical operator.\n\nToggling of the operator will not be available to the user." } | static-operator | LogicalFilterOperator.EQUAL \| LogicalFilterOperator.NOT_EQUAL \| undefined |  |
+| suggestions | { "A list of strings that will be supplied as type-ahead suggestions not tied to any categories." } |  | string[] \| undefined |  |
+| uniqueCategories | { "If set to true, prevents that a single category can be set more than once.\n\nAn already set category will not appear in the category dropdown if set to true." } | unique-categories | boolean | false |
 
 ### Events
 
 | Name | Description | Event | Detail |
 | --- | --- | --- | --- |
-| categoryChanged | Event dispatched whenever a category gets selected in the dropdown | categoryChanged | string |
-| filterChanged | Event dispatched whenever the filter state changes. | filterChanged | FilterState |
-| filterCleared | Event dispatched whenever the filter gets cleared. | filterCleared | void |
-| inputChanged | Event dispatched whenever the text input changes. | inputChanged | InputState |
+| categoryChanged | { "Event dispatched whenever a category gets selected in the dropdown" } | categoryChanged | string |
+| filterChanged | { "Event dispatched whenever the filter state changes." } | filterChanged | FilterState |
+| filterCleared | { "Event dispatched whenever the filter gets cleared." } | filterCleared | void |
+| inputChanged | { "Event dispatched whenever the text input changes." } | inputChanged | InputState |

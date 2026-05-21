@@ -13,7 +13,7 @@
 import { IxDateInput } from '@siemens/ix-react';
 
 export default () => {
-  return <IxDateInput value="1970/01/01"></IxDateInput>;
+  return <IxDateInput value="2026/02/08"></IxDateInput>;
 };
 ```
 
@@ -33,7 +33,7 @@ export default class DateInput {}
 
 #### date-input.html
 ```html
-<ix-date-input value='1970/01/01'></ix-date-input>
+<ix-date-input value="2026/02/08"></ix-date-input>
 ```
 
 ### Angular Standalone Examples
@@ -56,7 +56,7 @@ export default class DateInput {}
 
 #### date-input.html
 ```html
-<ix-date-input value="1970/01/01"></ix-date-input>
+<ix-date-input value="2026/02/08"></ix-date-input>
 ```
 
 ### Vue Examples
@@ -68,7 +68,7 @@ import { IxDateInput } from '@siemens/ix-vue';
 </script>
 
 <template>
-  <IxDateInput value="1970/01/01"></IxDateInput>
+  <IxDateInput value="2026/02/08"></IxDateInput>
 </template>
 ```
 
@@ -81,7 +81,7 @@ import { IxDateInput } from '@siemens/ix-vue';
 import { IxDateInput } from '@siemens/ix-react';
 
 export default () => {
-  return <IxDateInput value="1970/01/01" disabled></IxDateInput>;
+  return <IxDateInput value="2026/02/08" disabled></IxDateInput>;
 };
 ```
 
@@ -101,7 +101,7 @@ export default class DateInputDisabled {}
 
 #### date-input-disabled.html
 ```html
-<ix-date-input value='1970/01/01' disabled></ix-date-input>
+<ix-date-input value='2026/02/08' disabled></ix-date-input>
 ```
 
 ### Angular Standalone Examples
@@ -124,7 +124,7 @@ export default class DateInputDisabled {}
 
 #### date-input-disabled.html
 ```html
-<ix-date-input value="1970/01/01" disabled></ix-date-input>
+<ix-date-input value="2026/02/08" disabled></ix-date-input>
 ```
 
 ### Vue Examples
@@ -136,7 +136,7 @@ import { IxDateInput } from '@siemens/ix-vue';
 </script>
 
 <template>
-  <IxDateInput value="1970/01/01" disabled></IxDateInput>
+  <IxDateInput value="2026/02/08" disabled></IxDateInput>
 </template>
 ```
 
@@ -154,7 +154,7 @@ export default () => {
       label="Begin"
       name="begin"
       helper-text="Some helper text"
-      value="1970/01/01"
+      value="2026/02/08"
     ></IxDateInput>
   );
 };
@@ -180,7 +180,7 @@ export default class DateInputLabel {}
   label='Begin'
   name='begin'
   helper-text='Some helper text'
-  value='1970/01/01'
+  value='2026/02/08'
 ></ix-date-input>
 ```
 
@@ -208,7 +208,7 @@ export default class DateInputLabel {}
   label="Begin"
   name="begin"
   helper-text="Some helper text"
-  value="1970/01/01"
+  value="2026/02/08"
 ></ix-date-input>
 ```
 
@@ -225,7 +225,7 @@ import { IxDateInput } from '@siemens/ix-vue';
     label="Begin"
     name="begin"
     helper-text="Some helper text"
-    value="1970/01/01"
+    value="2026/02/08"
   ></IxDateInput>
 </template>
 ```
@@ -239,7 +239,7 @@ import { IxDateInput } from '@siemens/ix-vue';
 import { IxDateInput } from '@siemens/ix-react';
 
 export default () => {
-  return <IxDateInput value="1970/01/01" readonly></IxDateInput>;
+  return <IxDateInput value="2026/02/08" readonly></IxDateInput>;
 };
 ```
 
@@ -259,7 +259,7 @@ export default class DateInputReadonly {}
 
 #### date-input-readonly.html
 ```html
-<ix-date-input value='1970/01/01' readonly></ix-date-input>
+<ix-date-input value='2026/02/08' readonly></ix-date-input>
 ```
 
 ### Angular Standalone Examples
@@ -282,7 +282,7 @@ export default class DateInputReadonly {}
 
 #### date-input-readonly.html
 ```html
-<ix-date-input value="1970/01/01" readonly></ix-date-input>
+<ix-date-input value="2026/02/08" readonly></ix-date-input>
 ```
 
 ### Vue Examples
@@ -294,7 +294,7 @@ import { IxDateInput } from '@siemens/ix-vue';
 </script>
 
 <template>
-  <IxDateInput value="1970/01/01" readonly></IxDateInput>
+  <IxDateInput value="2026/02/08" readonly></IxDateInput>
 </template>
 ```
 
@@ -311,7 +311,7 @@ export default () => {
     <>
       <div>
         <IxDateInput
-          value="1970/01/01"
+          value="2026/02/08"
           infoText="Info text"
           className="ix-info"
         ></IxDateInput>
@@ -319,7 +319,7 @@ export default () => {
 
       <div>
         <IxDateInput
-          value="1970/01/01"
+          value="2026/02/08"
           warningText="Warning text"
           className="ix-warning"
         ></IxDateInput>
@@ -327,7 +327,7 @@ export default () => {
 
       <div>
         <IxDateInput
-          value="1970/01/01"
+          value="2026/02/08"
           validText="Valid text"
           className="ix-valid"
         ></IxDateInput>
@@ -335,7 +335,7 @@ export default () => {
 
       <div>
         <IxDateInput
-          value="1970/01/01"
+          value="2026/02/08"
           invalidText="Invalid text"
           className="ix-invalid"
         ></IxDateInput>
@@ -363,7 +363,7 @@ export default class DateInputValidation {}
 ```html
 <div>
   <ix-date-input
-    value='1970/01/01'
+    value='2026/02/08'
     info-text='Info text'
     class='ix-info'
   ></ix-date-input>
@@ -371,7 +371,7 @@ export default class DateInputValidation {}
 
 <div>
   <ix-date-input
-    value='1970/01/01'
+    value='2026/02/08'
     warning-text='Warning text'
     class='ix-warning'
   ></ix-date-input>
@@ -379,7 +379,7 @@ export default class DateInputValidation {}
 
 <div>
   <ix-date-input
-    value='1970/01/01'
+    value='2026/02/08'
     valid-text='Valid text'
     class='ix-valid'
   ></ix-date-input>
@@ -387,7 +387,7 @@ export default class DateInputValidation {}
 
 <div>
   <ix-date-input
-    value='1970/01/01'
+    value='2026/02/08'
     invalid-text='Invalid text'
     class='ix-invalid'
   ></ix-date-input>
@@ -416,7 +416,7 @@ export default class DateInputValidation {}
 ```html
 <div>
   <ix-date-input
-    value="1970/01/01"
+    value="2026/02/08"
     info-text="Info text"
     class="ix-info"
   ></ix-date-input>
@@ -424,7 +424,7 @@ export default class DateInputValidation {}
 
 <div>
   <ix-date-input
-    value="1970/01/01"
+    value="2026/02/08"
     warning-text="Warning text"
     class="ix-warning"
   ></ix-date-input>
@@ -432,7 +432,7 @@ export default class DateInputValidation {}
 
 <div>
   <ix-date-input
-    value="1970/01/01"
+    value="2026/02/08"
     valid-text="Valid text"
     class="ix-valid"
   ></ix-date-input>
@@ -440,7 +440,7 @@ export default class DateInputValidation {}
 
 <div>
   <ix-date-input
-    value="1970/01/01"
+    value="2026/02/08"
     invalid-text="Invalid text"
     class="ix-invalid"
   ></ix-date-input>
@@ -458,7 +458,7 @@ import { IxDateInput } from '@siemens/ix-vue';
 <template>
   <div>
     <IxDateInput
-      value="1970/01/01"
+      value="2026/02/08"
       info-text="Info text"
       class="ix-info"
     ></IxDateInput>
@@ -466,7 +466,7 @@ import { IxDateInput } from '@siemens/ix-vue';
 
   <div>
     <IxDateInput
-      value="1970/01/01"
+      value="2026/02/08"
       warning-text="Warning text"
       class="ix-warning"
     ></IxDateInput>
@@ -474,7 +474,7 @@ import { IxDateInput } from '@siemens/ix-vue';
 
   <div>
     <IxDateInput
-      value="1970/01/01"
+      value="2026/02/08"
       valid-text="Valid text"
       class="ix-valid"
     ></IxDateInput>
@@ -482,7 +482,7 @@ import { IxDateInput } from '@siemens/ix-vue';
 
   <div>
     <IxDateInput
-      value="1970/01/01"
+      value="2026/02/08"
       invalid-text="Invalid text"
       class="ix-invalid"
     ></IxDateInput>
@@ -501,7 +501,7 @@ import { iconBulb } from '@siemens/ix-icons/icons';
 
 export default () => {
   return (
-    <IxDateInput value="1970/01/01">
+    <IxDateInput value="2026/02/08">
       <IxIcon name={iconBulb} slot="start" size="16"></IxIcon>
       <IxTypography slot="end">Slot</IxTypography>
     </IxDateInput>
@@ -525,7 +525,7 @@ export default class DateInputWithSlots {}
 
 #### date-input-with-slots.html
 ```html
-<ix-date-input value="1970/01/01">
+<ix-date-input value="2026/02/08">
   <ix-icon name="bulb" slot="start" size="16"></ix-icon>
   <ix-typography slot="end">Slot</ix-typography>
 </ix-date-input>
@@ -553,7 +553,7 @@ export default class DateInputWithSlots {}
 
 #### date-input-with-slots.html
 ```html
-<ix-date-input value="1970/01/01">
+<ix-date-input value="2026/02/08">
   <ix-icon name="bulb" slot="start" size="16"></ix-icon>
   <ix-typography slot="end">Slot</ix-typography>
 </ix-date-input>
@@ -569,7 +569,7 @@ import { IxDateInput, IxIcon, IxTypography } from '@siemens/ix-vue';
 </script>
 
 <template>
-  <IxDateInput value="1970/01/01">
+  <IxDateInput value="2026/02/08">
     <IxIcon :name="iconBulb" slot="start" size="16"></IxIcon>
     <IxTypography slot="end">Slot</IxTypography>
   </IxDateInput>
@@ -587,9 +587,9 @@ import { IxDateInput } from '@siemens/ix-react';
 export default () => {
   return (
     <IxDateInput
-      minDate="2025/07/06"
-      maxDate="2025/07/14"
-      value="2025/07/07"
+      minDate="2026/02/01"
+      maxDate="2026/02/28"
+      value="2026/02/08"
     ></IxDateInput>
   );
 };
@@ -612,9 +612,9 @@ export default class DateInputMinMaxDate {}
 #### date-input-min-max-date.html
 ```html
 <ix-date-input
-  minDate="2025/07/06"
-  maxDate="2025/07/14"
-  value="2025/07/07"
+  minDate="2026/02/01"
+  maxDate="2026/02/28"
+  value="2026/02/08"
 ></ix-date-input>
 ```
 
@@ -639,9 +639,9 @@ export default class DateInputMinMaxDate {}
 #### date-input-min-max-date.html
 ```html
 <ix-date-input
-  minDate="2025/07/06"
-  maxDate="2025/07/14"
-  value="2025/07/07"
+  minDate="2026/02/01"
+  maxDate="2026/02/28"
+  value="2026/02/08"
 ></ix-date-input>
 ```
 
@@ -654,7 +654,7 @@ import { IxDateInput } from '@siemens/ix-vue';
 </script>
 
 <template>
-  <IxDateInput minDate="2025/07/06" maxDate="2025/07/14" value="2025/07/07" />
+  <IxDateInput minDate="2026/02/01" maxDate="2026/02/28" value="2026/02/08" />
 </template>
 ```
 
@@ -664,44 +664,44 @@ import { IxDateInput } from '@siemens/ix-vue';
 
 | Name | Description | Attribute | Type | Default |
 | --- | --- | --- | --- | --- |
-| ariaLabelCalendarButton | ARIA label for the calendar icon button. Will be set as aria-label on the nested HTML button element. | aria-label-calendar-button | string \| undefined | 'Open calendar' |
-| ariaLabelNextMonthButton | ARIA label for the next month icon button. Will be set as aria-label on the nested HTML button element. | aria-label-next-month-button | string \| undefined | 'Next month' |
-| ariaLabelPreviousMonthButton | ARIA label for the previous month icon button. Will be set as aria-label on the nested HTML button element. | aria-label-previous-month-button | string \| undefined | 'Previous month' |
-| disabled | Disabled attribute. | disabled | boolean | false |
-| enableTopLayer | Enable Popover API rendering for dropdown. | enable-top-layer | boolean | false |
-| format | Date format string. See [https://moment.github.io/luxon/#/formatting?id=table-of-tokens](https://moment.github.io/luxon/#/formatting?id=table-of-tokens) for all available tokens. | format | string | 'yyyy/LL/dd' |
-| helperText | Helper text below the input field. | helper-text | string \| undefined |  |
-| i18nErrorDateUnparsable | I18n string for the error message when the date is not parsable. | i18n-error-date-unparsable | string | 'Date is not valid' |
-| infoText | Info text below the input field. | info-text | string \| undefined |  |
-| invalidText | Error text below the input field. | invalid-text | string \| undefined |  |
-| label | Label of the input field. | label | string \| undefined |  |
-| locale | Locale identifier (e.g. 'en' or 'de'). The locale is used to translate the labels for weekdays and months. It also determines the default order of weekdays based on the locale's conventions. When the locale changes, the weekday labels are rotated according to the \`weekStartIndex\`. It does not affect the values returned by methods and events. | locale | string \| undefined |  |
-| maxDate | The latest date that can be selected by the date input/picker. If not set there will be no restriction. | max-date | string | '' |
-| minDate | The earliest date that can be selected by the date input/picker. If not set there will be no restriction. | min-date | string | '' |
-| name | Name of the input element. | name | string \| undefined |  |
-| placeholder | Placeholder of the input element. | placeholder | string \| undefined |  |
-| readonly | Readonly attribute. | readonly | boolean | false |
-| required | Required attribute. | required | boolean \| undefined |  |
-| showTextAsTooltip | Show text as tooltip. | show-text-as-tooltip | boolean \| undefined |  |
-| showWeekNumbers | Shows week numbers displayed on the left side of the date picker. | show-week-numbers | boolean | false |
-| suppressSubmitOnEnter | If false, pressing Enter will submit the form (if inside a form). Set to true to suppress submit on Enter. | suppress-submit-on-enter | boolean | false |
-| textAlignment | Text alignment within the date input. 'start' aligns the text to the start of the input, 'end' aligns the text to the end of the input. | text-alignment | "end" \| "start" | 'start' |
-| validText | Valid text below the input field. | valid-text | string \| undefined |  |
-| value | Value of the input element. | value | string \| undefined | '' |
-| warningText | Warning text below the input field. | warning-text | string \| undefined |  |
-| weekStartIndex | The index of which day to start the week on, based on the Locale#weekdays array. E.g. if the locale is en-us, weekStartIndex = 1 results in starting the week on Monday. | week-start-index | number | 0 |
+| ariaLabelCalendarButton | { "ARIA label for the calendar icon button.\n\nWill be set as aria-label on the nested HTML button element." } | aria-label-calendar-button | string \| undefined | 'Open calendar' |
+| ariaLabelNextMonthButton | { "ARIA label for the next month icon button.\n\nWill be set as aria-label on the nested HTML button element." } | aria-label-next-month-button | string \| undefined | 'Next month' |
+| ariaLabelPreviousMonthButton | { "ARIA label for the previous month icon button.\n\nWill be set as aria-label on the nested HTML button element." } | aria-label-previous-month-button | string \| undefined | 'Previous month' |
+| disabled | { "Disabled attribute." } | disabled | boolean | false |
+| enableTopLayer | { "Enable Popover API rendering for dropdown." } | enable-top-layer | boolean | false |
+| format | { "Date format string.\n\nSee [https://moment.github.io/luxon/#/formatting?id=table-of-tokens](https://moment.github.io/luxon/#/formatting?id=table-of-tokens) for all available tokens." } | format | string | 'yyyy/LL/dd' |
+| helperText | { "Helper text below the input field." } | helper-text | string \| undefined |  |
+| i18nErrorDateUnparsable | { "I18n string for the error message when the date is not parsable." } | i18n-error-date-unparsable | string | 'Date is not valid' |
+| infoText | { "Info text below the input field." } | info-text | string \| undefined |  |
+| invalidText | { "Error text below the input field." } | invalid-text | string \| undefined |  |
+| label | { "Label of the input field." } | label | string \| undefined |  |
+| locale | { "Locale identifier (e.g. 'en' or 'de').\n\nThe locale is used to translate the labels for weekdays and months.\n\nIt also determines the default order of weekdays based on the locale's conventions.\n\nWhen the locale changes, the weekday labels are rotated according to the `weekStartIndex`.\n\nIt does not affect the values returned by methods and events." } | locale | string \| undefined |  |
+| maxDate | { "The latest date that can be selected by the date input/picker.\n\nIf not set there will be no restriction." } | max-date | string | '' |
+| minDate | { "The earliest date that can be selected by the date input/picker.\n\nIf not set there will be no restriction." } | min-date | string | '' |
+| name | { "Name of the input element." } | name | string \| undefined |  |
+| placeholder | { "Placeholder of the input element." } | placeholder | string \| undefined |  |
+| readonly | { "Readonly attribute." } | readonly | boolean | false |
+| required | { "Required attribute." } | required | boolean \| undefined |  |
+| showTextAsTooltip | { "Show text as tooltip." } | show-text-as-tooltip | boolean \| undefined |  |
+| showWeekNumbers | { "Shows week numbers displayed on the left side of the date picker." } | show-week-numbers | boolean | false |
+| suppressSubmitOnEnter | { "If false, pressing Enter will submit the form (if inside a form).\n\nSet to true to suppress submit on Enter." } | suppress-submit-on-enter | boolean | false |
+| textAlignment | { "Text alignment within the date input. 'start' aligns the text to the start of the input, 'end' aligns the text to the end of the input." } | text-alignment | "end" \| "start" | 'start' |
+| validText | { "Valid text below the input field." } | valid-text | string \| undefined |  |
+| value | { "Value of the input element." } | value | string \| undefined | '' |
+| warningText | { "Warning text below the input field." } | warning-text | string \| undefined |  |
+| weekStartIndex | { "The index of which day to start the week on, based on the Locale#weekdays array.\n\nE.g. if the locale is en-us, weekStartIndex = 1 results in starting the week on Monday." } | week-start-index | number | 0 |
 
 ### Events
 
 | Name | Description | Event | Detail |
 | --- | --- | --- | --- |
-| ixChange | Change event. Emitted when the date input loses focus and the value has changed. | ixChange | string \| undefined |
-| validityStateChange | Validation state change event. Emitted when the validation state changes. | validityStateChange | { patternMismatch: boolean; valueMissing: boolean; invalidReason?: string \| undefined; } |
-| valueChange | Value change event. Emitted when the input value changes. | valueChange | string \| undefined |
+| ixChange | { "Change event. Emitted when the date input loses focus and the value has changed." } | ixChange | string \| undefined |
+| validityStateChange | { "Validation state change event. Emitted when the validation state changes." } | validityStateChange | { patternMismatch: boolean; valueMissing: boolean; invalidReason?: string \| undefined; } |
+| valueChange | { "Value change event. Emitted when the input value changes." } | valueChange | string \| undefined |
 
 ### Slot
 
 | Name | Description |
 | --- | --- |
-| end | { `Element will be displayed at the end of the input` } |
-| start | { `Element will be displayed at the start of the input` } |
+| end | { "Element will be displayed at the end of the input" } |
+| start | { "Element will be displayed at the start of the input" } |

@@ -549,10 +549,10 @@ import { IxEventList, IxEventListItem } from '@siemens/ix-vue';
 
 | Name | Description | Attribute | Type | Default |
 | --- | --- | --- | --- | --- |
-| animated | Animate state change transitions. Defaults to 'false'. | animated | boolean | false |
-| chevron | Display a chevron icon in list items. Defaults to 'false' | chevron | boolean | false |
-| compact | Make event-list items more compact | compact | boolean | false |
-| itemHeight | Determines the height of list items. This can either be one of two predefined sizes ('S' or 'L') or an absolute pixel value. In case a number is supplied it will get converted to rem internally. Defaults to 'S'. | item-height | "L" \| "S" \| number | 'S' |
+| animated | { "Animate state change transitions. Defaults to 'false'." } | animated | boolean | false |
+| chevron | { "Display a chevron icon in list items. Defaults to 'false'" } | chevron | boolean | false |
+| compact | { "Make event-list items more compact" } | compact | boolean | false |
+| itemHeight | { "Determines the height of list items.\n\nThis can either be one of two predefined sizes ('S' or 'L') or an absolute pixel value.\n\nIn case a number is supplied it will get converted to rem internally.\n\nDefaults to 'S'." } | item-height | "L" \| "S" \| number | 'S' |
 
 ## API for ix-event-list-item
 
@@ -560,14 +560,14 @@ import { IxEventList, IxEventListItem } from '@siemens/ix-vue';
 
 | Name | Description | Attribute | Type | Default |
 | --- | --- | --- | --- | --- |
-| chevron | Show chevron on right side of the event list item | chevron | boolean | false |
-| disabled | Disable event list item | disabled | boolean | false |
-| itemColor | Color of the status indicator. You can find a list of all available colors in our documentation. Example values are \`--theme-color-alarm\` or \`color-alarm\` [https://ix.siemens.io/docs/styles/colors](https://ix.siemens.io/docs/styles/colors) | item-color | string \| undefined |  |
-| selected | Show event list item as selected | selected | boolean | false |
-| variant | Variant of the event list item | variant | "filled" \| "outline" | 'outline' |
+| chevron | { "Show chevron on right side of the event list item" } | chevron | boolean | false |
+| disabled | { "Disable event list item" } | disabled | boolean | false |
+| itemColor | { "Color of the status indicator.\n\nYou can find a list of all available colors in our documentation.\n\nExample values are `--theme-color-alarm` or `color-alarm`\n\n[https://ix.siemens.io/docs/styles/colors](https://ix.siemens.io/docs/styles/colors)" } | item-color | string \| undefined |  |
+| selected | { "Show event list item as selected" } | selected | boolean | false |
+| variant | { "Variant of the event list item" } | variant | "filled" \| "outline" | 'outline' |
 
 ### Events
 
 | Name | Description | Event | Detail |
 | --- | --- | --- | --- |
-| itemClick | Event list item click | itemClick | any |
+| itemClick | { "Event list item click" } | itemClick | any |

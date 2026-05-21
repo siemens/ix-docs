@@ -421,19 +421,25 @@ import { IxSlider } from '@siemens/ix-react';
 export default () => {
   return (
     <>
-      <IxSlider trace trace-reference={50} marker={[0, 25, 50, 75, 100]} error>
+      <IxSlider
+        className="ix-invalid"
+        trace
+        trace-reference={50}
+        marker={[0, 25, 50, 75, 100]}
+      >
         <span slot="label-start">0</span>
         <span slot="label-end">100</span>
       </IxSlider>
 
       <IxSlider
+        className="ix-invalid"
         min={0}
         max={50}
         step={10}
         trace
         trace-reference={10}
         marker={[0, 10, 20, 30, 40, 50]}
-        error={'Error message'}
+        invalidText="Error message"
       >
         <span slot="label-start">0</span>
         <span slot="label-end">50</span>
@@ -459,12 +465,18 @@ export default class SliderError {}
 
 #### slider-error.html
 ```html
-<ix-slider trace trace-reference="50" [marker]="[0, 25, 50, 75, 100]" error>
+<ix-slider
+  class="ix-invalid"
+  trace
+  trace-reference="50"
+  [marker]="[0, 25, 50, 75, 100]"
+>
   <span slot="label-start">0</span>
   <span slot="label-end">100</span>
 </ix-slider>
 
 <ix-slider
+  class="ix-invalid"
   min="0"
   max="50"
   step="10"
@@ -472,7 +484,7 @@ export default class SliderError {}
   trace
   trace-reference="50"
   [marker]="[0, 10, 20, 30, 40, 50]"
-  error="Error message"
+  invalid-text="Error message"
 >
   <span slot="label-start">0</span>
   <span slot="label-end">50</span>
@@ -496,12 +508,18 @@ export default class SliderError {}
 
 #### slider-error.html
 ```html
-<ix-slider trace trace-reference="50" [marker]="[0, 25, 50, 75, 100]" error>
+<ix-slider
+  class="ix-invalid"
+  trace
+  trace-reference="50"
+  [marker]="[0, 25, 50, 75, 100]"
+>
   <span slot="label-start">0</span>
   <span slot="label-end">100</span>
 </ix-slider>
 
 <ix-slider
+  class="ix-invalid"
   min="0"
   max="50"
   step="10"
@@ -509,7 +527,7 @@ export default class SliderError {}
   trace
   trace-reference="50"
   [marker]="[0, 10, 20, 30, 40, 50]"
-  error="Error message"
+  invalid-text="Error message"
 >
   <span slot="label-start">0</span>
   <span slot="label-end">50</span>
@@ -526,27 +544,297 @@ import { IxSlider } from '@siemens/ix-vue';
 
 <template>
   <IxSlider
+    class="ix-invalid"
     trace
     :trace-reference="50"
     :marker="[0, 25, 50, 75, 100]"
-    :error="true"
   >
     <span slot="label-start">0</span>
     <span slot="label-end">100</span>
   </IxSlider>
 
   <IxSlider
+    class="ix-invalid"
     :min="0"
     :max="50"
     :step="10"
     trace
     :trace-reference="10"
     :marker="[0, 10, 20, 30, 40, 50]"
-    error="Error message"
+    invalid-text="Error message"
   >
     <span slot="label-start">0</span>
     <span slot="label-end">50</span>
   </IxSlider>
+</template>
+```
+
+## Validation
+
+### React Examples
+
+#### slider-validation.tsx
+```tsx
+import { IxSlider } from '@siemens/ix-react';
+
+export default () => {
+  return (
+    <>
+      <div>
+        <IxSlider
+          label="Info"
+          value={10}
+          trace
+          info-text="Info text"
+          className="ix-info"
+        >
+          <span slot="label-start">0</span>
+          <span slot="label-end">100</span>
+        </IxSlider>
+      </div>
+
+      <div>
+        <IxSlider
+          label="Warning"
+          value={90}
+          trace
+          warningText="Warning text"
+          className="ix-warning"
+        >
+          <span slot="label-start">0</span>
+          <span slot="label-end">100</span>
+        </IxSlider>
+      </div>
+
+      <div>
+        <IxSlider
+          label="Valid"
+          value={10}
+          trace
+          validText="Valid text"
+          className="ix-valid"
+        >
+          <span slot="label-start">0</span>
+          <span slot="label-end">100</span>
+        </IxSlider>
+      </div>
+
+      <div>
+        <IxSlider
+          label="Invalid"
+          value={100}
+          trace
+          invalidText="Invalid text"
+          className="ix-invalid"
+        >
+          <span slot="label-start">0</span>
+          <span slot="label-end">100</span>
+        </IxSlider>
+      </div>
+    </>
+  );
+};
+```
+
+### Angular Examples
+
+#### slider-validation.ts
+```ts
+import { Component } from '@angular/core';
+
+@Component({
+  standalone: false,
+  selector: 'app-example',
+  templateUrl: './slider-validation.html',
+})
+export default class SliderValidation {}
+```
+
+#### slider-validation.html
+```html
+<div>
+  <ix-slider
+    label="Info"
+    value="10"
+    trace
+    info-text="Info text"
+    class="ix-info"
+  >
+    <span slot="label-start">0</span>
+    <span slot="label-end">100</span>
+  </ix-slider>
+</div>
+
+<div>
+  <ix-slider
+    label="Warning"
+    value="90"
+    trace
+    warningText="Warning text"
+    class="ix-warning"
+  >
+    <span slot="label-start">0</span>
+    <span slot="label-end">100</span>
+  </ix-slider>
+</div>
+
+<div>
+  <ix-slider
+    label="Valid"
+    value="10"
+    trace
+    validText="Valid text"
+    class="ix-valid"
+  >
+    <span slot="label-start">0</span>
+    <span slot="label-end">100</span>
+  </ix-slider>
+</div>
+
+<div>
+  <ix-slider
+    label="Invalid"
+    value="100"
+    trace
+    invalidText="Invalid text"
+    class="ix-invalid"
+  >
+    <span slot="label-start">0</span>
+    <span slot="label-end">100</span>
+  </ix-slider>
+</div>
+```
+
+### Angular Standalone Examples
+
+#### slider-validation.ts
+```ts
+import { Component } from '@angular/core';
+import { IxSlider } from '@siemens/ix-angular/standalone';
+
+@Component({
+  selector: 'app-example',
+  imports: [IxSlider],
+  templateUrl: './slider-validation.html',
+})
+export default class SliderValidation {}
+```
+
+#### slider-validation.html
+```html
+<div>
+  <ix-slider
+    label="Info"
+    value="10"
+    trace
+    info-text="Info text"
+    class="ix-info"
+  >
+    <span slot="label-start">0</span>
+    <span slot="label-end">100</span>
+  </ix-slider>
+</div>
+
+<div>
+  <ix-slider
+    label="Warning"
+    value="90"
+    trace
+    warningText="Warning text"
+    class="ix-warning"
+  >
+    <span slot="label-start">0</span>
+    <span slot="label-end">100</span>
+  </ix-slider>
+</div>
+
+<div>
+  <ix-slider
+    label="Valid"
+    value="10"
+    trace
+    validText="Valid text"
+    class="ix-valid"
+  >
+    <span slot="label-start">0</span>
+    <span slot="label-end">100</span>
+  </ix-slider>
+</div>
+
+<div>
+  <ix-slider
+    label="Invalid"
+    value="100"
+    trace
+    invalidText="Invalid text"
+    class="ix-invalid"
+  >
+    <span slot="label-start">0</span>
+    <span slot="label-end">100</span>
+  </ix-slider>
+</div>
+```
+
+### Vue Examples
+
+#### slider-validation.vue
+```vue
+<script setup lang="ts">
+import { IxSlider } from '@siemens/ix-vue';
+</script>
+
+<template>
+  <div>
+    <IxSlider
+      label="Info"
+      :value="10"
+      trace
+      info-text="Info text"
+      class="ix-info"
+    >
+      <span slot="label-start">0</span>
+      <span slot="label-end">100</span>
+    </IxSlider>
+  </div>
+
+  <div>
+    <IxSlider
+      label="Warning"
+      :value="90"
+      trace
+      warning-text="Warning text"
+      class="ix-warning"
+    >
+      <span slot="label-start">0</span>
+      <span slot="label-end">100</span>
+    </IxSlider>
+  </div>
+
+  <div>
+    <IxSlider
+      label="Valid"
+      :value="10"
+      trace
+      valid-text="Valid text"
+      class="ix-valid"
+    >
+      <span slot="label-start">0</span>
+      <span slot="label-end">100</span>
+    </IxSlider>
+  </div>
+
+  <div>
+    <IxSlider
+      label="Invalid"
+      :value="100"
+      trace
+      invalid-text="Invalid text"
+      class="ix-invalid"
+    >
+      <span slot="label-start">0</span>
+      <span slot="label-end">100</span>
+    </IxSlider>
+  </div>
 </template>
 ```
 
@@ -556,32 +844,31 @@ import { IxSlider } from '@siemens/ix-vue';
 
 | Name | Description | Attribute | Type | Default |
 | --- | --- | --- | --- | --- |
-| disabled | Show control as disabled | disabled | boolean | false |
-| error | Show error state and message | error | boolean \| string \| undefined |  |
-| helperText | Show text below the field component | helper-text | string \| undefined |  |
-| infoText | Info text for the field component | info-text | string \| undefined |  |
-| invalidText | Error text for the field component | invalid-text | string \| undefined |  |
-| label | Label for the field component | label | string \| undefined |  |
-| marker | Define tick marker on the slider. Marker has to be within slider min/max |  | number[] \| undefined |  |
-| max | Maximum slider value | max | number | 100 |
-| min | Minimum slider value | min | number | 0 |
-| showTextAsTooltip | Show helper, info, warning, error and valid text as tooltip | show-text-as-tooltip | boolean | false |
-| step | Legal number intervals [https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/range#step](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/range#step) | step | number | 1 |
-| trace | Show a trace line | trace | boolean | false |
-| traceReference | Define the start point of the trace line | trace-reference | number | 0 |
-| validText | Valid text for the field component | valid-text | string \| undefined |  |
-| value | Current value of the slider | value | number | 0 |
-| warningText | Warning text for the field component | warning-text | string \| undefined |  |
+| disabled | { "Show control as disabled" } | disabled | boolean | false |
+| helperText | { "Show text below the field component" } | helper-text | string \| undefined |  |
+| infoText | { "Info text for the field component" } | info-text | string \| undefined |  |
+| invalidText | { "Error text for the field component" } | invalid-text | string \| undefined |  |
+| label | { "Label for the field component" } | label | string \| undefined |  |
+| marker | { "Define tick marker on the slider. Marker has to be within slider min/max" } |  | number[] \| undefined |  |
+| max | { "Maximum slider value" } | max | number | 100 |
+| min | { "Minimum slider value" } | min | number | 0 |
+| showTextAsTooltip | { "Show helper, info, warning, error and valid text as tooltip" } | show-text-as-tooltip | boolean | false |
+| step | { "Legal number intervals\n\n[https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/range#step](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/range#step)" } | step | number | 1 |
+| trace | { "Show a trace line" } | trace | boolean | false |
+| traceReference | { "Define the start point of the trace line" } | trace-reference | number | 0 |
+| validText | { "Valid text for the field component" } | valid-text | string \| undefined |  |
+| value | { "Current value of the slider" } | value | number | 0 |
+| warningText | { "Warning text for the field component" } | warning-text | string \| undefined |  |
 
 ### Events
 
 | Name | Description | Event | Detail |
 | --- | --- | --- | --- |
-| valueChange | Will emit the value when it changes | valueChange | number |
+| valueChange | { "Will emit the value when it changes" } | valueChange | number |
 
 ### Slot
 
 | Name | Description |
 | --- | --- |
-| label-end | { `Element will be displayed at the end of the slider` } |
-| label-start | { `Element will be displayed at the start of the slider` } |
+| label-end | { "Element will be displayed at the end of the slider" } |
+| label-start | { "Element will be displayed at the start of the slider" } |

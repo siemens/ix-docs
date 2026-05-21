@@ -71,22 +71,31 @@ Example: last year and current year.
 import './echarts.scoped.css';
 
 import { useEffect, useState } from 'react';
-import { registerTheme } from '@siemens/ix-echarts';
 import { themeSwitcher } from '@siemens/ix';
+import { registerTheme, resolveEChartThemeName } from '@siemens/ix-echarts';
 import ReactEcharts from 'echarts-for-react';
 
 import { EChartsOption } from 'echarts';
 
-export default function Echarts() {
-  registerTheme(echarts);
-
-  const [theme, setTheme] = useState(themeSwitcher.getCurrentTheme());
+function useEChartTheme() {
+  const [theme, setTheme] = useState(resolveEChartThemeName);
 
   useEffect(() => {
-    themeSwitcher.themeChanged.on((theme: string) => {
-      setTheme(theme);
+    const disposer = themeSwitcher.themeChanged.on(() => {
+      setTheme(resolveEChartThemeName());
     });
+
+    return () => {
+      disposer.dispose();
+    };
   }, []);
+
+  return theme;
+}
+
+export default function Echarts() {
+  registerTheme(echarts);
+  const theme = useEChartTheme();
 
   const options: EChartsOption = {
     tooltip: {
@@ -232,8 +241,8 @@ export default function Echarts() {
 
 #### echarts.ts
 ```ts
-import { Component, OnInit } from '@angular/core';
-import { registerTheme } from '@siemens/ix-echarts';
+import { Component, OnDestroy, OnInit } from '@angular/core';
+import { registerTheme, resolveEChartThemeName } from '@siemens/ix-echarts';
 import { themeSwitcher } from '@siemens/ix';
 
 import { EChartsOption } from 'echarts';
@@ -244,8 +253,9 @@ import { EChartsOption } from 'echarts';
   templateUrl: './echarts.html',
   styleUrls: ['./echarts.css'],
 })
-export default class Echarts implements OnInit {
-  theme = themeSwitcher.getCurrentTheme();
+export default class Echarts implements OnDestroy, OnInit {
+  theme = resolveEChartThemeName();
+  private themeChangeDisposer?: { dispose: () => void };
 
   options: EChartsOption = {
     tooltip: {
@@ -369,9 +379,13 @@ export default class Echarts implements OnInit {
   ngOnInit() {
     registerTheme(echarts);
 
-    themeSwitcher.themeChanged.on((theme: string) => {
-      this.theme = theme;
+    this.themeChangeDisposer = themeSwitcher.themeChanged.on(() => {
+      this.theme = resolveEChartThemeName();
     });
+  }
+
+  ngOnDestroy() {
+    this.themeChangeDisposer?.dispose();
   }
 }
 ```
@@ -400,10 +414,10 @@ export default class Echarts implements OnInit {
 
 #### echarts.ts
 ```ts
-import { Component, OnInit } from '@angular/core';
+import { Component, OnDestroy, OnInit } from '@angular/core';
 import { NgxEchartsDirective, provideEchartsCore } from 'ngx-echarts';
 
-import { registerTheme } from '@siemens/ix-echarts';
+import { registerTheme, resolveEChartThemeName } from '@siemens/ix-echarts';
 import { themeSwitcher } from '@siemens/ix';
 
 import { EChartsOption } from 'echarts';
@@ -415,8 +429,9 @@ import { EChartsOption } from 'echarts';
   templateUrl: './echarts.html',
   styleUrls: ['./echarts.css'],
 })
-export default class Echarts implements OnInit {
-  theme = themeSwitcher.getCurrentTheme();
+export default class Echarts implements OnDestroy, OnInit {
+  theme = resolveEChartThemeName();
+  private themeChangeDisposer?: { dispose: () => void };
 
   options: EChartsOption = {
     tooltip: {
@@ -540,9 +555,13 @@ export default class Echarts implements OnInit {
   ngOnInit() {
     registerTheme(echarts);
 
-    themeSwitcher.themeChanged.on((theme: string) => {
-      this.theme = theme;
+    this.themeChangeDisposer = themeSwitcher.themeChanged.on(() => {
+      this.theme = resolveEChartThemeName();
     });
+  }
+
+  ngOnDestroy() {
+    this.themeChangeDisposer?.dispose();
   }
 }
 ```
@@ -567,8 +586,8 @@ export default class Echarts implements OnInit {
 #### echarts.vue
 ```vue
 <script setup lang="ts">
-import { ref } from 'vue';
-import { registerTheme } from '@siemens/ix-echarts';
+import { onBeforeUnmount, ref } from 'vue';
+import { registerTheme, resolveEChartThemeName } from '@siemens/ix-echarts';
 import { themeSwitcher } from '@siemens/ix';
 import VueECharts from 'vue-echarts';
 
@@ -585,10 +604,14 @@ echarts.use([
 
 registerTheme(echarts);
 
-const theme = ref(themeSwitcher.getCurrentTheme());
+const theme = ref(resolveEChartThemeName());
 
-themeSwitcher.themeChanged.on((newTheme: string) => {
-  theme.value = newTheme;
+const disposer = themeSwitcher.themeChanged.on(() => {
+  theme.value = resolveEChartThemeName();
+});
+
+onBeforeUnmount(() => {
+  disposer.dispose();
 });
 
 const options: EChartsOption = {
@@ -745,24 +768,34 @@ An empty state occurs when a user first opens an application, no data is availab
 import './echarts-empty-state.scoped.css';
 
 import { useEffect, useState } from 'react';
-import { registerTheme } from '@siemens/ix-echarts';
 import { themeSwitcher } from '@siemens/ix';
+import { registerTheme, resolveEChartThemeName } from '@siemens/ix-echarts';
 import ReactEcharts from 'echarts-for-react';
 
 import { EChartsOption } from 'echarts';
 import { IxEmptyState } from '@siemens/ix-react';
 import { iconInfo } from '@siemens/ix-icons/icons';
 
+function useEChartTheme() {
+  const [theme, setTheme] = useState(resolveEChartThemeName);
+
+  useEffect(() => {
+    const disposer = themeSwitcher.themeChanged.on(() => {
+      setTheme(resolveEChartThemeName());
+    });
+
+    return () => {
+      disposer.dispose();
+    };
+  }, []);
+
+  return theme;
+}
+
 export default function Echarts() {
   registerTheme(echarts);
 
-  const [theme, setTheme] = useState(themeSwitcher.getCurrentTheme());
-
-  useEffect(() => {
-    themeSwitcher.themeChanged.on((theme: string) => {
-      setTheme(theme);
-    });
-  }, []);
+  const theme = useEChartTheme();
 
   const data = {
     weekdays: ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun'],
@@ -818,8 +851,8 @@ export default function Echarts() {
 
 #### echarts-empty-state.ts
 ```ts
-import { Component, OnInit } from '@angular/core';
-import { registerTheme } from '@siemens/ix-echarts';
+import { Component, OnDestroy, OnInit } from '@angular/core';
+import { registerTheme, resolveEChartThemeName } from '@siemens/ix-echarts';
 import { themeSwitcher } from '@siemens/ix';
 
 import { EChartsOption } from 'echarts';
@@ -830,8 +863,9 @@ import { EChartsOption } from 'echarts';
   templateUrl: './echarts-empty-state.html',
   styleUrls: ['./echarts-empty-state.css'],
 })
-export default class EchartsLineSimple implements OnInit {
-  theme = themeSwitcher.getCurrentTheme();
+export default class EchartsLineSimple implements OnDestroy, OnInit {
+  theme = resolveEChartThemeName();
+  private themeChangeDisposer?: { dispose: () => void };
   data = {
     weekdays: ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun'],
     value: [],
@@ -856,9 +890,13 @@ export default class EchartsLineSimple implements OnInit {
   ngOnInit() {
     registerTheme(echarts);
 
-    themeSwitcher.themeChanged.on((theme: string) => {
-      this.theme = theme;
+    this.themeChangeDisposer = themeSwitcher.themeChanged.on(() => {
+      this.theme = resolveEChartThemeName();
     });
+  }
+
+  ngOnDestroy() {
+    this.themeChangeDisposer?.dispose();
   }
 }
 ```
@@ -903,14 +941,14 @@ export default class EchartsLineSimple implements OnInit {
 
 #### echarts-empty-state.ts
 ```ts
-import { Component, OnInit } from '@angular/core';
+import { Component, OnDestroy, OnInit } from '@angular/core';
 import { NgxEchartsDirective, provideEchartsCore } from 'ngx-echarts';
 
 import { NgIf } from '@angular/common';
 
 import { IxEmptyState } from '@siemens/ix-angular/standalone';
 
-import { registerTheme } from '@siemens/ix-echarts';
+import { registerTheme, resolveEChartThemeName } from '@siemens/ix-echarts';
 import { themeSwitcher } from '@siemens/ix';
 
 import { EChartsOption } from 'echarts';
@@ -922,8 +960,9 @@ import { EChartsOption } from 'echarts';
   templateUrl: './echarts-empty-state.html',
   styleUrls: ['./echarts-empty-state.css'],
 })
-export default class EchartsLineSimple implements OnInit {
-  theme = themeSwitcher.getCurrentTheme();
+export default class EchartsLineSimple implements OnDestroy, OnInit {
+  theme = resolveEChartThemeName();
+  private themeChangeDisposer?: { dispose: () => void };
   data = {
     weekdays: ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun'],
     value: [],
@@ -948,9 +987,13 @@ export default class EchartsLineSimple implements OnInit {
   ngOnInit() {
     registerTheme(echarts);
 
-    themeSwitcher.themeChanged.on((theme: string) => {
-      this.theme = theme;
+    this.themeChangeDisposer = themeSwitcher.themeChanged.on(() => {
+      this.theme = resolveEChartThemeName();
     });
+  }
+
+  ngOnDestroy() {
+    this.themeChangeDisposer?.dispose();
   }
 }
 ```
@@ -996,8 +1039,8 @@ export default class EchartsLineSimple implements OnInit {
 #### echarts-empty-state.vue
 ```vue
 <script setup lang="ts">
-import { ref } from 'vue';
-import { registerTheme } from '@siemens/ix-echarts';
+import { onBeforeUnmount, ref } from 'vue';
+import { registerTheme, resolveEChartThemeName } from '@siemens/ix-echarts';
 import { themeSwitcher } from '@siemens/ix';
 import VueECharts from 'vue-echarts';
 
@@ -1016,10 +1059,14 @@ echarts.use([
 
 registerTheme(echarts);
 
-const theme = ref(themeSwitcher.getCurrentTheme());
+const theme = ref(resolveEChartThemeName());
 
-themeSwitcher.themeChanged.on((newTheme: string) => {
-  theme.value = newTheme;
+const disposer = themeSwitcher.themeChanged.on(() => {
+  theme.value = resolveEChartThemeName();
+});
+
+onBeforeUnmount(() => {
+  disposer.dispose();
 });
 
 const data = {

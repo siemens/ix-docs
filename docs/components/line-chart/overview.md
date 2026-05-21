@@ -15,22 +15,32 @@ Basic line charts use a series of data points connected by straight lines to sho
 import './echarts-line-simple.scoped.css';
 
 import { useEffect, useState } from 'react';
-import { registerTheme } from '@siemens/ix-echarts';
 import { themeSwitcher } from '@siemens/ix';
+import { registerTheme, resolveEChartThemeName } from '@siemens/ix-echarts';
 import ReactEcharts from 'echarts-for-react';
 
 import { EChartsOption } from 'echarts';
 
+function useEChartTheme() {
+  const [theme, setTheme] = useState(resolveEChartThemeName);
+
+  useEffect(() => {
+    const disposer = themeSwitcher.themeChanged.on(() => {
+      setTheme(resolveEChartThemeName());
+    });
+
+    return () => {
+      disposer.dispose();
+    };
+  }, []);
+
+  return theme;
+}
+
 export default function EchartsLineSimple() {
   registerTheme(echarts);
 
-  const [theme, setTheme] = useState(themeSwitcher.getCurrentTheme());
-
-  useEffect(() => {
-    themeSwitcher.themeChanged.on((theme: string) => {
-      setTheme(theme);
-    });
-  }, []);
+  const theme = useEChartTheme();
 
   const data = {
     weekdays: ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun'],
@@ -78,8 +88,8 @@ export default function EchartsLineSimple() {
 
 #### echarts-line-simple.ts
 ```ts
-import { Component, OnInit } from '@angular/core';
-import { registerTheme } from '@siemens/ix-echarts';
+import { Component, OnDestroy, OnInit } from '@angular/core';
+import { registerTheme, resolveEChartThemeName } from '@siemens/ix-echarts';
 import { themeSwitcher } from '@siemens/ix';
 
 import { EChartsOption } from 'echarts';
@@ -90,8 +100,9 @@ import { EChartsOption } from 'echarts';
   templateUrl: './echarts-line-simple.html',
   styleUrls: ['./echarts-line-simple.css'],
 })
-export default class EchartsLineSimple implements OnInit {
-  theme = themeSwitcher.getCurrentTheme();
+export default class EchartsLineSimple implements OnDestroy, OnInit {
+  theme = resolveEChartThemeName();
+  private themeChangeDisposer?: { dispose: () => void };
 
   data = {
     weekdays: ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun'],
@@ -119,9 +130,13 @@ export default class EchartsLineSimple implements OnInit {
   ngOnInit() {
     registerTheme(echarts);
 
-    themeSwitcher.themeChanged.on((theme: string) => {
-      this.theme = theme;
+    this.themeChangeDisposer = themeSwitcher.themeChanged.on(() => {
+      this.theme = resolveEChartThemeName();
     });
+  }
+
+  ngOnDestroy() {
+    this.themeChangeDisposer?.dispose();
   }
 }
 ```
@@ -150,10 +165,10 @@ export default class EchartsLineSimple implements OnInit {
 
 #### echarts-line-simple.ts
 ```ts
-import { Component, OnInit } from '@angular/core';
+import { Component, OnDestroy, OnInit } from '@angular/core';
 import { NgxEchartsDirective, provideEchartsCore } from 'ngx-echarts';
 
-import { registerTheme } from '@siemens/ix-echarts';
+import { registerTheme, resolveEChartThemeName } from '@siemens/ix-echarts';
 import { themeSwitcher } from '@siemens/ix';
 
 import { EChartsOption } from 'echarts';
@@ -165,8 +180,9 @@ import { EChartsOption } from 'echarts';
   templateUrl: './echarts-line-simple.html',
   styleUrls: ['./echarts-line-simple.css'],
 })
-export default class EchartsLineSimple implements OnInit {
-  theme = themeSwitcher.getCurrentTheme();
+export default class EchartsLineSimple implements OnDestroy, OnInit {
+  theme = resolveEChartThemeName();
+  private themeChangeDisposer?: { dispose: () => void };
 
   data = {
     weekdays: ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun'],
@@ -194,9 +210,13 @@ export default class EchartsLineSimple implements OnInit {
   ngOnInit() {
     registerTheme(echarts);
 
-    themeSwitcher.themeChanged.on((theme: string) => {
-      this.theme = theme;
+    this.themeChangeDisposer = themeSwitcher.themeChanged.on(() => {
+      this.theme = resolveEChartThemeName();
     });
+  }
+
+  ngOnDestroy() {
+    this.themeChangeDisposer?.dispose();
   }
 }
 ```
@@ -221,8 +241,8 @@ export default class EchartsLineSimple implements OnInit {
 #### echarts-line-simple.vue
 ```vue
 <script setup lang="ts">
-import { ref } from 'vue';
-import { registerTheme } from '@siemens/ix-echarts';
+import { onBeforeUnmount, ref } from 'vue';
+import { registerTheme, resolveEChartThemeName } from '@siemens/ix-echarts';
 import { themeSwitcher } from '@siemens/ix';
 import VueECharts from 'vue-echarts';
 
@@ -239,10 +259,14 @@ echarts.use([
 
 registerTheme(echarts);
 
-const theme = ref(themeSwitcher.getCurrentTheme());
+const theme = ref(resolveEChartThemeName());
 
-themeSwitcher.themeChanged.on((newTheme: string) => {
-  theme.value = newTheme;
+const disposer = themeSwitcher.themeChanged.on(() => {
+  theme.value = resolveEChartThemeName();
+});
+
+onBeforeUnmount(() => {
+  disposer.dispose();
 });
 
 const data = {
@@ -297,23 +321,37 @@ Multi-y-axis line charts are used to compare multiple data series that have diff
 import './echarts-line-multiple-y-axis.scoped.css';
 
 import { useEffect, useState } from 'react';
-import { getComputedCSSProperty, registerTheme } from '@siemens/ix-echarts';
 import { themeSwitcher } from '@siemens/ix';
+import {
+  getComputedCSSProperty,
+  registerTheme,
+  resolveEChartThemeName,
+} from '@siemens/ix-echarts';
 import ReactEcharts from 'echarts-for-react';
 
 import { EChartsOption, SeriesOption } from 'echarts';
 import { YAXisOption } from 'echarts/types/dist/shared';
 
+function useEChartTheme() {
+  const [theme, setTheme] = useState(resolveEChartThemeName);
+
+  useEffect(() => {
+    const disposer = themeSwitcher.themeChanged.on(() => {
+      setTheme(resolveEChartThemeName());
+    });
+
+    return () => {
+      disposer.dispose();
+    };
+  }, []);
+
+  return theme;
+}
+
 export default function EchartsLineMultipleYAxis() {
   registerTheme(echarts);
 
-  const [theme, setTheme] = useState(themeSwitcher.getCurrentTheme());
-
-  useEffect(() => {
-    themeSwitcher.themeChanged.on((theme: string) => {
-      setTheme(theme);
-    });
-  }, []);
+  const theme = useEChartTheme();
 
   const months = [
     'Jan',
@@ -445,8 +483,12 @@ export default function EchartsLineMultipleYAxis() {
 
 #### echarts-line-multiple-y-axis.ts
 ```ts
-import { Component, OnInit } from '@angular/core';
-import { getComputedCSSProperty, registerTheme } from '@siemens/ix-echarts';
+import { Component, OnDestroy, OnInit } from '@angular/core';
+import {
+  getComputedCSSProperty,
+  registerTheme,
+  resolveEChartThemeName,
+} from '@siemens/ix-echarts';
 import { themeSwitcher } from '@siemens/ix';
 
 import { EChartsOption, SeriesOption } from 'echarts';
@@ -458,8 +500,9 @@ import { YAXisOption } from 'echarts/types/dist/shared';
   templateUrl: './echarts-line-multiple-y-axis.html',
   styleUrls: ['./echarts-line-multiple-y-axis.css'],
 })
-export default class EchartsLineMultipleYAxis implements OnInit {
-  theme = themeSwitcher.getCurrentTheme();
+export default class EchartsLineMultipleYAxis implements OnDestroy, OnInit {
+  theme = resolveEChartThemeName();
+  private themeChangeDisposer?: { dispose: () => void };
 
   dates = Array.from({ length: 2025 - 2013 }, (_, i) => (2013 + i).toString());
 
@@ -483,10 +526,6 @@ export default class EchartsLineMultipleYAxis implements OnInit {
     precipitation: this.months.map(() => (Math.random() * 200).toFixed(2)),
     temperature: this.months.map(() => (Math.random() * 30).toFixed(2)),
   };
-
-  themeChartList = Array.from({ length: 17 }, (_, i) =>
-    getComputedCSSProperty(`chart-${i + 1}`)
-  );
 
   createYAxis(
     name: string,
@@ -537,75 +576,68 @@ export default class EchartsLineMultipleYAxis implements OnInit {
     };
   }
 
-  options: EChartsOption = {
-    tooltip: {
-      trigger: 'axis',
-      axisPointer: { type: 'cross' },
-    },
-    grid: {
-      right: '20%',
-    },
-    legend: {
-      show: true,
-      bottom: '0',
-      left: '0',
-    },
-    xAxis: [
-      {
-        type: 'category',
-        axisTick: { alignWithLabel: true },
-        data: this.months,
+  options: EChartsOption = this.getOptions();
+
+  private getOptions(): EChartsOption {
+    const themeChartList = Array.from({ length: 17 }, (_, i) =>
+      getComputedCSSProperty(`chart-${i + 1}`)
+    );
+
+    return {
+      tooltip: {
+        trigger: 'axis',
+        axisPointer: { type: 'cross' },
       },
-    ],
-    yAxis: [
-      this.createYAxis(
-        'Evaporation',
-        'right',
-        this.themeChartList[0],
-        '{value} ml'
-      ),
-      this.createYAxis(
-        'Precipitation',
-        'right',
-        this.themeChartList[7],
-        '{value} ml',
-        80
-      ),
-      this.createYAxis(
-        'Temperature',
-        'left',
-        this.themeChartList[12],
-        '{value} °C'
-      ),
-    ],
-    series: [
-      this.createSeries(
-        'Evaporation',
-        0,
-        this.data.evaporation,
-        this.themeChartList[0]
-      ),
-      this.createSeries(
-        'Precipitation',
-        1,
-        this.data.precipitation,
-        this.themeChartList[7]
-      ),
-      this.createSeries(
-        'Temperature',
-        2,
-        this.data.temperature,
-        this.themeChartList[12]
-      ),
-    ],
-  };
+      grid: {
+        right: '20%',
+      },
+      legend: {
+        show: true,
+        bottom: '0',
+        left: '0',
+      },
+      xAxis: [
+        {
+          type: 'category',
+          axisTick: { alignWithLabel: true },
+          data: this.months,
+        },
+      ],
+      yAxis: [
+        this.createYAxis('Evaporation', 'right', themeChartList[0], '{value} ml'),
+        this.createYAxis(
+          'Precipitation',
+          'right',
+          themeChartList[7],
+          '{value} ml',
+          80
+        ),
+        this.createYAxis('Temperature', 'left', themeChartList[12], '{value} °C'),
+      ],
+      series: [
+        this.createSeries('Evaporation', 0, this.data.evaporation, themeChartList[0]),
+        this.createSeries(
+          'Precipitation',
+          1,
+          this.data.precipitation,
+          themeChartList[7]
+        ),
+        this.createSeries('Temperature', 2, this.data.temperature, themeChartList[12]),
+      ],
+    };
+  }
 
   ngOnInit() {
     registerTheme(echarts);
 
-    themeSwitcher.themeChanged.on((theme: string) => {
-      this.theme = theme;
+    this.themeChangeDisposer = themeSwitcher.themeChanged.on(() => {
+      this.theme = resolveEChartThemeName();
+      this.options = this.getOptions();
     });
+  }
+
+  ngOnDestroy() {
+    this.themeChangeDisposer?.dispose();
   }
 }
 ```
@@ -634,10 +666,14 @@ export default class EchartsLineMultipleYAxis implements OnInit {
 
 #### echarts-line-multiple-y-axis.ts
 ```ts
-import { Component, OnInit } from '@angular/core';
+import { Component, OnDestroy, OnInit } from '@angular/core';
 import { NgxEchartsDirective, provideEchartsCore } from 'ngx-echarts';
 
-import { getComputedCSSProperty, registerTheme } from '@siemens/ix-echarts';
+import {
+  getComputedCSSProperty,
+  registerTheme,
+  resolveEChartThemeName,
+} from '@siemens/ix-echarts';
 import { themeSwitcher } from '@siemens/ix';
 
 import { EChartsOption, SeriesOption } from 'echarts';
@@ -650,8 +686,9 @@ import { YAXisOption } from 'echarts/types/dist/shared';
   templateUrl: './echarts-line-multiple-y-axis.html',
   styleUrls: ['./echarts-line-multiple-y-axis.css'],
 })
-export default class EchartsLineMultipleYAxis implements OnInit {
-  theme = themeSwitcher.getCurrentTheme();
+export default class EchartsLineMultipleYAxis implements OnDestroy, OnInit {
+  theme = resolveEChartThemeName();
+  private themeChangeDisposer?: { dispose: () => void };
 
   dates = Array.from({ length: 2025 - 2013 }, (_, i) => (2013 + i).toString());
 
@@ -675,10 +712,6 @@ export default class EchartsLineMultipleYAxis implements OnInit {
     precipitation: this.months.map(() => (Math.random() * 200).toFixed(2)),
     temperature: this.months.map(() => (Math.random() * 30).toFixed(2)),
   };
-
-  themeChartList = Array.from({ length: 17 }, (_, i) =>
-    getComputedCSSProperty(`chart-${i + 1}`)
-  );
 
   createYAxis(
     name: string,
@@ -729,75 +762,68 @@ export default class EchartsLineMultipleYAxis implements OnInit {
     };
   }
 
-  options: EChartsOption = {
-    tooltip: {
-      trigger: 'axis',
-      axisPointer: { type: 'cross' },
-    },
-    grid: {
-      right: '20%',
-    },
-    legend: {
-      show: true,
-      bottom: '0',
-      left: '0',
-    },
-    xAxis: [
-      {
-        type: 'category',
-        axisTick: { alignWithLabel: true },
-        data: this.months,
+  options: EChartsOption = this.getOptions();
+
+  private getOptions(): EChartsOption {
+    const themeChartList = Array.from({ length: 17 }, (_, i) =>
+      getComputedCSSProperty(`chart-${i + 1}`)
+    );
+
+    return {
+      tooltip: {
+        trigger: 'axis',
+        axisPointer: { type: 'cross' },
       },
-    ],
-    yAxis: [
-      this.createYAxis(
-        'Evaporation',
-        'right',
-        this.themeChartList[0],
-        '{value} ml'
-      ),
-      this.createYAxis(
-        'Precipitation',
-        'right',
-        this.themeChartList[7],
-        '{value} ml',
-        80
-      ),
-      this.createYAxis(
-        'Temperature',
-        'left',
-        this.themeChartList[12],
-        '{value} °C'
-      ),
-    ],
-    series: [
-      this.createSeries(
-        'Evaporation',
-        0,
-        this.data.evaporation,
-        this.themeChartList[0]
-      ),
-      this.createSeries(
-        'Precipitation',
-        1,
-        this.data.precipitation,
-        this.themeChartList[7]
-      ),
-      this.createSeries(
-        'Temperature',
-        2,
-        this.data.temperature,
-        this.themeChartList[12]
-      ),
-    ],
-  };
+      grid: {
+        right: '20%',
+      },
+      legend: {
+        show: true,
+        bottom: '0',
+        left: '0',
+      },
+      xAxis: [
+        {
+          type: 'category',
+          axisTick: { alignWithLabel: true },
+          data: this.months,
+        },
+      ],
+      yAxis: [
+        this.createYAxis('Evaporation', 'right', themeChartList[0], '{value} ml'),
+        this.createYAxis(
+          'Precipitation',
+          'right',
+          themeChartList[7],
+          '{value} ml',
+          80
+        ),
+        this.createYAxis('Temperature', 'left', themeChartList[12], '{value} °C'),
+      ],
+      series: [
+        this.createSeries('Evaporation', 0, this.data.evaporation, themeChartList[0]),
+        this.createSeries(
+          'Precipitation',
+          1,
+          this.data.precipitation,
+          themeChartList[7]
+        ),
+        this.createSeries('Temperature', 2, this.data.temperature, themeChartList[12]),
+      ],
+    };
+  }
 
   ngOnInit() {
     registerTheme(echarts);
 
-    themeSwitcher.themeChanged.on((theme: string) => {
-      this.theme = theme;
+    this.themeChangeDisposer = themeSwitcher.themeChanged.on(() => {
+      this.theme = resolveEChartThemeName();
+      this.options = this.getOptions();
     });
+  }
+
+  ngOnDestroy() {
+    this.themeChangeDisposer?.dispose();
   }
 }
 ```
@@ -822,8 +848,12 @@ export default class EchartsLineMultipleYAxis implements OnInit {
 #### echarts-line-multiple-y-axis.vue
 ```vue
 <script setup lang="ts">
-import { ref } from 'vue';
-import { getComputedCSSProperty, registerTheme } from '@siemens/ix-echarts';
+import { onBeforeUnmount, ref } from 'vue';
+import {
+  getComputedCSSProperty,
+  registerTheme,
+  resolveEChartThemeName,
+} from '@siemens/ix-echarts';
 import { themeSwitcher } from '@siemens/ix';
 import VueECharts from 'vue-echarts';
 
@@ -841,7 +871,7 @@ echarts.use([
 
 registerTheme(echarts);
 
-const theme = ref(themeSwitcher.getCurrentTheme());
+const theme = ref(resolveEChartThemeName());
 
 const dates = Array.from({ length: 2025 - 2013 }, (_, i) =>
   (2013 + i).toString()
@@ -867,10 +897,6 @@ const data = {
   precipitation: months.map(() => (Math.random() * 200).toFixed(2)),
   temperature: months.map(() => (Math.random() * 30).toFixed(2)),
 };
-
-const themeChartList = Array.from({ length: 17 }, (_, i) =>
-  getComputedCSSProperty(`chart-${i + 1}`)
-);
 
 function createYAxis(
   name: string,
@@ -921,37 +947,54 @@ function createSeries(
   } as SeriesOption;
 }
 
-const options: EChartsOption = {
-  tooltip: {
-    trigger: 'axis',
-    axisPointer: { type: 'cross' },
-  },
-  grid: {
-    right: '20%',
-  },
-  legend: {
-    show: true,
-    bottom: '0',
-    left: '0',
-  },
-  xAxis: [
-    {
-      type: 'category',
-      axisTick: { alignWithLabel: true },
-      data: months,
+function getOptions(): EChartsOption {
+  const themeChartList = Array.from({ length: 17 }, (_, i) =>
+    getComputedCSSProperty(`chart-${i + 1}`)
+  );
+
+  return {
+    tooltip: {
+      trigger: 'axis',
+      axisPointer: { type: 'cross' },
     },
-  ],
-  yAxis: [
-    createYAxis('Evaporation', 'right', themeChartList[0], '{value} ml'),
-    createYAxis('Precipitation', 'right', themeChartList[7], '{value} ml', 80),
-    createYAxis('Temperature', 'left', themeChartList[12], '{value} °C'),
-  ],
-  series: [
-    createSeries('Evaporation', 0, data.evaporation, themeChartList[0]),
-    createSeries('Precipitation', 1, data.precipitation, themeChartList[7]),
-    createSeries('Temperature', 2, data.temperature, themeChartList[12]),
-  ],
-} as EChartsOption;
+    grid: {
+      right: '20%',
+    },
+    legend: {
+      show: true,
+      bottom: '0',
+      left: '0',
+    },
+    xAxis: [
+      {
+        type: 'category',
+        axisTick: { alignWithLabel: true },
+        data: months,
+      },
+    ],
+    yAxis: [
+      createYAxis('Evaporation', 'right', themeChartList[0], '{value} ml'),
+      createYAxis('Precipitation', 'right', themeChartList[7], '{value} ml', 80),
+      createYAxis('Temperature', 'left', themeChartList[12], '{value} °C'),
+    ],
+    series: [
+      createSeries('Evaporation', 0, data.evaporation, themeChartList[0]),
+      createSeries('Precipitation', 1, data.precipitation, themeChartList[7]),
+      createSeries('Temperature', 2, data.temperature, themeChartList[12]),
+    ],
+  };
+}
+
+const options = ref<EChartsOption>(getOptions());
+
+const disposer = themeSwitcher.themeChanged.on(() => {
+  theme.value = resolveEChartThemeName();
+  options.value = getOptions();
+});
+
+onBeforeUnmount(() => {
+  disposer.dispose();
+});
 </script>
 
 <style scoped src="./echarts-line-multiple-y-axis.css"></style>
@@ -982,22 +1025,36 @@ Advanced line charts are an enhanced version of basic line charts, designed to p
 import './echarts-line-advanced.scoped.css';
 
 import { useEffect, useState } from 'react';
-import { getComputedCSSProperty, registerTheme } from '@siemens/ix-echarts';
 import { themeSwitcher } from '@siemens/ix';
+import {
+  getComputedCSSProperty,
+  registerTheme,
+  resolveEChartThemeName,
+} from '@siemens/ix-echarts';
 import ReactEcharts from 'echarts-for-react';
 
 import { EChartsOption } from 'echarts';
 
+function useEChartTheme() {
+  const [theme, setTheme] = useState(resolveEChartThemeName);
+
+  useEffect(() => {
+    const disposer = themeSwitcher.themeChanged.on(() => {
+      setTheme(resolveEChartThemeName());
+    });
+
+    return () => {
+      disposer.dispose();
+    };
+  }, []);
+
+  return theme;
+}
+
 export default function EchartsLineAdvanced() {
   registerTheme(echarts);
 
-  const [theme, setTheme] = useState(themeSwitcher.getCurrentTheme());
-
-  useEffect(() => {
-    themeSwitcher.themeChanged.on((theme: string) => {
-      setTheme(theme);
-    });
-  }, []);
+  const theme = useEChartTheme();
 
   const dates = Array.from({ length: 2025 - 2013 }, (_, i) =>
     (2013 + i).toString()
@@ -1073,8 +1130,12 @@ export default function EchartsLineAdvanced() {
 
 #### echarts-line-advanced.ts
 ```ts
-import { Component, OnInit } from '@angular/core';
-import { registerTheme, getComputedCSSProperty } from '@siemens/ix-echarts';
+import { Component, OnDestroy, OnInit } from '@angular/core';
+import {
+  registerTheme,
+  getComputedCSSProperty,
+  resolveEChartThemeName,
+} from '@siemens/ix-echarts';
 import { themeSwitcher } from '@siemens/ix';
 
 import { EChartsOption } from 'echarts';
@@ -1085,8 +1146,9 @@ import { EChartsOption } from 'echarts';
   templateUrl: './echarts-line-advanced.html',
   styleUrls: ['./echarts-line-advanced.css'],
 })
-export default class EchartsLineAdvanced implements OnInit {
-  theme = themeSwitcher.getCurrentTheme();
+export default class EchartsLineAdvanced implements OnDestroy, OnInit {
+  theme = resolveEChartThemeName();
+  private themeChangeDisposer?: { dispose: () => void };
 
   dates = Array.from({ length: 2025 - 2013 }, (_, i) => (2013 + i).toString());
 
@@ -1095,52 +1157,61 @@ export default class EchartsLineAdvanced implements OnInit {
     156.48, 168.52,
   ];
 
-  options: EChartsOption = {
-    tooltip: { trigger: 'axis' },
-    xAxis: { type: 'category', data: this.dates },
-    yAxis: {
-      type: 'value',
-      splitLine: { lineStyle: { type: 'dashed' } },
-    },
-    series: [
-      {
-        type: 'line',
-        data: this.stockData,
-        smooth: true,
-        lineStyle: { width: 4, shadowBlur: 10 },
-        areaStyle: {
-          color: new echarts.graphic.LinearGradient(0, 0, 0, 1, [
-            {
-              offset: 0,
-              color: getComputedCSSProperty('color-primary'),
+  options: EChartsOption = this.getOptions();
+
+  private getOptions(): EChartsOption {
+    return {
+      tooltip: { trigger: 'axis' },
+      xAxis: { type: 'category', data: this.dates },
+      yAxis: {
+        type: 'value',
+        splitLine: { lineStyle: { type: 'dashed' } },
+      },
+      series: [
+        {
+          type: 'line',
+          data: this.stockData,
+          smooth: true,
+          lineStyle: { width: 4, shadowBlur: 10 },
+          areaStyle: {
+            color: new echarts.graphic.LinearGradient(0, 0, 0, 1, [
+              {
+                offset: 0,
+                color: getComputedCSSProperty('color-primary'),
+              },
+              { offset: 1, color: 'transparent' },
+            ]),
+          },
+          markPoint: {
+            data: [
+              { type: 'max', name: 'Max', symbol: 'circle', symbolSize: 60 },
+              { type: 'min', name: 'Min', symbol: 'circle', symbolSize: 60 },
+            ],
+            label: {
+              fontWeight: 'bold',
+              color: getComputedCSSProperty('color-inv-contrast-text'),
             },
-            { offset: 1, color: 'transparent' },
-          ]),
-        },
-        markPoint: {
-          data: [
-            { type: 'max', name: 'Max', symbol: 'circle', symbolSize: 60 },
-            { type: 'min', name: 'Min', symbol: 'circle', symbolSize: 60 },
-          ],
-          label: {
-            fontWeight: 'bold',
-            color: getComputedCSSProperty('color-inv-contrast-text'),
+          },
+          markLine: {
+            data: [{ type: 'average', name: 'Avg' }],
+            lineStyle: { type: 'dashed' },
           },
         },
-        markLine: {
-          data: [{ type: 'average', name: 'Avg' }],
-          lineStyle: { type: 'dashed' },
-        },
-      },
-    ],
-  };
+      ],
+    };
+  }
 
   ngOnInit() {
     registerTheme(echarts);
 
-    themeSwitcher.themeChanged.on((theme: string) => {
-      this.theme = theme;
+    this.themeChangeDisposer = themeSwitcher.themeChanged.on(() => {
+      this.theme = resolveEChartThemeName();
+      this.options = this.getOptions();
     });
+  }
+
+  ngOnDestroy() {
+    this.themeChangeDisposer?.dispose();
   }
 }
 ```
@@ -1169,10 +1240,14 @@ export default class EchartsLineAdvanced implements OnInit {
 
 #### echarts-line-advanced.ts
 ```ts
-import { Component, OnInit } from '@angular/core';
+import { Component, OnDestroy, OnInit } from '@angular/core';
 import { NgxEchartsDirective, provideEchartsCore } from 'ngx-echarts';
 
-import { registerTheme, getComputedCSSProperty } from '@siemens/ix-echarts';
+import {
+  registerTheme,
+  getComputedCSSProperty,
+  resolveEChartThemeName,
+} from '@siemens/ix-echarts';
 import { themeSwitcher } from '@siemens/ix';
 
 import { EChartsOption } from 'echarts';
@@ -1184,8 +1259,9 @@ import { EChartsOption } from 'echarts';
   templateUrl: './echarts-line-advanced.html',
   styleUrls: ['./echarts-line-advanced.css'],
 })
-export default class EchartsLineAdvanced implements OnInit {
-  theme = themeSwitcher.getCurrentTheme();
+export default class EchartsLineAdvanced implements OnDestroy, OnInit {
+  theme = resolveEChartThemeName();
+  private themeChangeDisposer?: { dispose: () => void };
 
   dates = Array.from({ length: 2025 - 2013 }, (_, i) => (2013 + i).toString());
 
@@ -1194,9 +1270,123 @@ export default class EchartsLineAdvanced implements OnInit {
     156.48, 168.52,
   ];
 
-  options: EChartsOption = {
+  options: EChartsOption = this.getOptions();
+
+  private getOptions(): EChartsOption {
+    return {
+      tooltip: { trigger: 'axis' },
+      xAxis: { type: 'category', data: this.dates },
+      yAxis: {
+        type: 'value',
+        splitLine: { lineStyle: { type: 'dashed' } },
+      },
+      series: [
+        {
+          type: 'line',
+          data: this.stockData,
+          smooth: true,
+          lineStyle: { width: 4, shadowBlur: 10 },
+          areaStyle: {
+            color: new echarts.graphic.LinearGradient(0, 0, 0, 1, [
+              {
+                offset: 0,
+                color: getComputedCSSProperty('color-primary'),
+              },
+              { offset: 1, color: 'transparent' },
+            ]),
+          },
+          markPoint: {
+            data: [
+              { type: 'max', name: 'Max', symbol: 'circle', symbolSize: 60 },
+              { type: 'min', name: 'Min', symbol: 'circle', symbolSize: 60 },
+            ],
+            label: {
+              fontWeight: 'bold',
+              color: getComputedCSSProperty('color-inv-contrast-text'),
+            },
+          },
+          markLine: {
+            data: [{ type: 'average', name: 'Avg' }],
+            lineStyle: { type: 'dashed' },
+          },
+        },
+      ],
+    };
+  }
+
+  ngOnInit() {
+    registerTheme(echarts);
+
+    this.themeChangeDisposer = themeSwitcher.themeChanged.on(() => {
+      this.theme = resolveEChartThemeName();
+      this.options = this.getOptions();
+    });
+  }
+
+  ngOnDestroy() {
+    this.themeChangeDisposer?.dispose();
+  }
+}
+```
+
+#### echarts-line-advanced.html
+```html
+<div echarts [options]="options" [theme]="theme" class="echarts"></div>
+```
+
+#### echarts-line-advanced.css
+```css
+.echarts {
+  position: relative;
+  width: 100%;
+  height: 40rem;
+  padding-top: 1rem;
+}
+```
+
+### Vue Examples
+
+#### echarts-line-advanced.vue
+```vue
+<script setup lang="ts">
+import { onBeforeUnmount, ref } from 'vue';
+import {
+  getComputedCSSProperty,
+  registerTheme,
+  resolveEChartThemeName,
+} from '@siemens/ix-echarts';
+import { themeSwitcher } from '@siemens/ix';
+import VueECharts from 'vue-echarts';
+
+import { EChartsOption } from 'echarts';
+
+echarts.use([
+  components.TooltipComponent,
+  components.LegendComponent,
+  components.GridComponent,
+  components.MarkLineComponent,
+  components.MarkPointComponent,
+  charts.LineChart,
+  renderer.CanvasRenderer,
+]);
+
+registerTheme(echarts);
+
+const theme = ref(resolveEChartThemeName());
+
+const dates = Array.from({ length: 2025 - 2013 }, (_, i) =>
+  (2013 + i).toString()
+);
+
+const stockData = [
+  77.67, 82.81, 84.09, 91.75, 118.15, 107.48, 99.36, 93.07, 137.18, 104.38,
+  156.48, 168.52,
+];
+
+function getOptions(): EChartsOption {
+  return {
     tooltip: { trigger: 'axis' },
-    xAxis: { type: 'category', data: this.dates },
+    xAxis: { type: 'category', data: dates },
     yAxis: {
       type: 'value',
       splitLine: { lineStyle: { type: 'dashed' } },
@@ -1204,7 +1394,7 @@ export default class EchartsLineAdvanced implements OnInit {
     series: [
       {
         type: 'line',
-        data: this.stockData,
+        data: stockData,
         smooth: true,
         lineStyle: { width: 4, shadowBlur: 10 },
         areaStyle: {
@@ -1233,110 +1423,18 @@ export default class EchartsLineAdvanced implements OnInit {
       },
     ],
   };
-
-  ngOnInit() {
-    registerTheme(echarts);
-
-    themeSwitcher.themeChanged.on((theme: string) => {
-      this.theme = theme;
-    });
-  }
 }
-```
 
-#### echarts-line-advanced.html
-```html
-<div echarts [options]="options" [theme]="theme" class="echarts"></div>
-```
+const options = ref<EChartsOption>(getOptions());
 
-#### echarts-line-advanced.css
-```css
-.echarts {
-  position: relative;
-  width: 100%;
-  height: 40rem;
-  padding-top: 1rem;
-}
-```
-
-### Vue Examples
-
-#### echarts-line-advanced.vue
-```vue
-<script setup lang="ts">
-import { ref } from 'vue';
-import { getComputedCSSProperty, registerTheme } from '@siemens/ix-echarts';
-import { themeSwitcher } from '@siemens/ix';
-import VueECharts from 'vue-echarts';
-
-import { EChartsOption } from 'echarts';
-
-echarts.use([
-  components.TooltipComponent,
-  components.LegendComponent,
-  components.GridComponent,
-  components.MarkLineComponent,
-  components.MarkPointComponent,
-  charts.LineChart,
-  renderer.CanvasRenderer,
-]);
-
-registerTheme(echarts);
-
-const theme = ref(themeSwitcher.getCurrentTheme());
-
-themeSwitcher.themeChanged.on((newTheme: string) => {
-  theme.value = newTheme;
+const disposer = themeSwitcher.themeChanged.on(() => {
+  theme.value = resolveEChartThemeName();
+  options.value = getOptions();
 });
 
-const dates = Array.from({ length: 2025 - 2013 }, (_, i) =>
-  (2013 + i).toString()
-);
-
-const stockData = [
-  77.67, 82.81, 84.09, 91.75, 118.15, 107.48, 99.36, 93.07, 137.18, 104.38,
-  156.48, 168.52,
-];
-
-const options: EChartsOption = {
-  tooltip: { trigger: 'axis' },
-  xAxis: { type: 'category', data: dates },
-  yAxis: {
-    type: 'value',
-    splitLine: { lineStyle: { type: 'dashed' } },
-  },
-  series: [
-    {
-      type: 'line',
-      data: stockData,
-      smooth: true,
-      lineStyle: { width: 4, shadowBlur: 10 },
-      areaStyle: {
-        color: new echarts.graphic.LinearGradient(0, 0, 0, 1, [
-          {
-            offset: 0,
-            color: getComputedCSSProperty('color-primary'),
-          },
-          { offset: 1, color: 'transparent' },
-        ]),
-      },
-      markPoint: {
-        data: [
-          { type: 'max', name: 'Max', symbol: 'circle', symbolSize: 60 },
-          { type: 'min', name: 'Min', symbol: 'circle', symbolSize: 60 },
-        ],
-        label: {
-          fontWeight: 'bold',
-          color: getComputedCSSProperty('color-inv-contrast-text'),
-        },
-      },
-      markLine: {
-        data: [{ type: 'average', name: 'Avg' }],
-        lineStyle: { type: 'dashed' },
-      },
-    },
-  ],
-} as EChartsOption;
+onBeforeUnmount(() => {
+  disposer.dispose();
+});
 </script>
 
 <style scoped src="./echarts-line-advanced.css"></style>

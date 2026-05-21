@@ -2404,19 +2404,18 @@ ix-icon-toggle-button {
 
 | Name | Description | Attribute | Type | Default |
 | --- | --- | --- | --- | --- |
-| ariaLabelButton | ARIA label that will be set on the native HTML button element | aria-label-button | string \| undefined |  |
-| disabled | Disable the button | disabled | boolean | false |
-| icon | Icon name | icon | string \| undefined |  |
-| iconRight | Icon name for the right side of the button | icon-right | string \| undefined |  |
-| loading | Loading button | loading | boolean | false |
-| pressed | Show button as pressed | pressed | boolean | false |
-| variant | Button variant. | variant | "primary" \| "secondary" \| "subtle-primary" \| "subtle-secondary" \| "subtle-tertiary" \| "tertiary" | 'subtle-primary' |
+| disabled | { "Disable the button" } | disabled | boolean | false |
+| icon | { "Icon name" } | icon | string \| undefined |  |
+| iconRight | { "Icon name for the right side of the button" } | icon-right | string \| undefined |  |
+| loading | { "Loading button" } | loading | boolean | false |
+| pressed | { "Show button as pressed" } | pressed | boolean | false |
+| variant | { "Button variant." } | variant | "primary" \| "secondary" \| "subtle-primary" \| "subtle-secondary" \| "subtle-tertiary" \| "tertiary" | 'subtle-primary' |
 
 ### Events
 
 | Name | Description | Event | Detail |
 | --- | --- | --- | --- |
-| pressedChange | Pressed change event | pressedChange | boolean |
+| pressedChange | { "Pressed change event" } | pressedChange | boolean |
 
 ## API for ix-icon-toggle-button
 
@@ -2424,19 +2423,18 @@ ix-icon-toggle-button {
 
 | Name | Description | Attribute | Type | Default |
 | --- | --- | --- | --- | --- |
-| ariaLabelIconButton | ARIA label for the icon button Will be set for the native HTML button element | aria-label-icon-button | string \| undefined |  |
-| disabled | Disable the button | disabled | boolean | false |
-| ghost | Button with no background or outline | ghost | boolean | false |
-| icon | Icon name | icon | string \| undefined |  |
-| loading | Loading button | loading | boolean | false |
-| outline | Outline button | outline | boolean | false |
-| oval | Button in oval shape | oval | boolean | false |
-| pressed | Show button as pressed | pressed | boolean | false |
-| size | Size of icon in button | size | "12" \| "16" \| "24" | '24' |
-| variant | Button variant. | variant | "danger-primary" \| "danger-secondary" \| "danger-tertiary" \| "primary" \| "secondary" \| "subtle-primary" \| "subtle-secondary" \| "subtle-tertiary" \| "tertiary" | 'subtle-primary' |
+| disabled | { "Disable the button" } | disabled | boolean | false |
+| ghost | { "Button with no background or outline" } | ghost | boolean | false |
+| icon | { "Icon name" } | icon | string \| undefined |  |
+| loading | { "Loading button" } | loading | boolean | false |
+| outline | { "Outline button" } | outline | boolean | false |
+| oval | { "Button in oval shape" } | oval | boolean | false |
+| pressed | { "Show button as pressed" } | pressed | boolean | false |
+| size | { "Size of icon in button" } | size | "12" \| "16" \| "24" | '24' |
+| variant | { "Button variant." } | variant | "danger-primary" \| "danger-secondary" \| "danger-tertiary" \| "primary" \| "secondary" \| "subtle-primary" \| "subtle-secondary" \| "subtle-tertiary" \| "tertiary" | 'subtle-primary' |
 
 ### Events
 
 | Name | Description | Event | Detail |
 | --- | --- | --- | --- |
-| pressedChange | Pressed change event | pressedChange | boolean |
+| pressedChange | { "Pressed change event" } | pressedChange | boolean |

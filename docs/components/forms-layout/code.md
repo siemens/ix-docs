@@ -1,6 +1,6 @@
 # Forms layout - Code
 
-> Code examples and API documentation for the ix-validation-tooltip
+> Code examples and API documentation for form layout patterns
 
 # Forms layout - Code
 

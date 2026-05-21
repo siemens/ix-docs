@@ -1062,39 +1062,39 @@ import { IxInput, IxIcon, IxTypography } from '@siemens/ix-vue';
 
 | Name | Description | Attribute | Type | Default |
 | --- | --- | --- | --- | --- |
-| allowedCharactersPattern | The allowed characters pattern for the text field. | allowed-characters-pattern | string \| undefined |  |
-| disabled | Specifies whether the text field is disabled. | disabled | boolean | false |
-| helperText | The helper text for the text field. | helper-text | string \| undefined |  |
-| infoText | The info text for the text field. | info-text | string \| undefined |  |
-| invalidText | The error text for the text field. | invalid-text | string \| undefined |  |
-| label | The label for the text field. | label | string \| undefined |  |
-| maxLength | The maximum length of the text field. | max-length | number \| undefined |  |
-| minLength | The minimum length of the text field. | min-length | number \| undefined |  |
-| name | The name of the text field. | name | string \| undefined |  |
-| pattern | The pattern for the text field. | pattern | string \| undefined |  |
-| placeholder | The placeholder text for the text field. | placeholder | string \| undefined |  |
-| readonly | Specifies whether the text field is readonly. | readonly | boolean | false |
-| required | Specifies whether the text field is required. | required | boolean | false |
-| showTextAsTooltip | Specifies whether to show the text as a tooltip. | show-text-as-tooltip | boolean \| undefined |  |
-| suppressSubmitOnEnter | If false, pressing Enter will submit the form (if inside a form). Set to true to suppress submit on Enter. | suppress-submit-on-enter | boolean | false |
-| textAlignment | Text alignment within the input. 'start' aligns the text to the start of the input, 'end' aligns the text to the end of the input. | text-alignment | "end" \| "start" | 'start' |
-| type | The type of the text field. Possible values are 'text', 'email', or 'password'. | type | "email" \| "password" \| "tel" \| "text" \| "url" | 'text' |
-| validText | The valid text for the text field. | valid-text | string \| undefined |  |
-| value | The value of the text field. | value | string | '' |
-| warningText | The warning text for the text field. | warning-text | string \| undefined |  |
+| allowedCharactersPattern | { "The allowed characters pattern for the text field." } | allowed-characters-pattern | string \| undefined |  |
+| disabled | { "Specifies whether the text field is disabled." } | disabled | boolean | false |
+| helperText | { "The helper text for the text field." } | helper-text | string \| undefined |  |
+| infoText | { "The info text for the text field." } | info-text | string \| undefined |  |
+| invalidText | { "The error text for the text field." } | invalid-text | string \| undefined |  |
+| label | { "The label for the text field." } | label | string \| undefined |  |
+| maxLength | { "The maximum length of the text field." } | max-length | number \| undefined |  |
+| minLength | { "The minimum length of the text field." } | min-length | number \| undefined |  |
+| name | { "The name of the text field." } | name | string \| undefined |  |
+| pattern | { "The pattern for the text field." } | pattern | string \| undefined |  |
+| placeholder | { "The placeholder text for the text field." } | placeholder | string \| undefined |  |
+| readonly | { "Specifies whether the text field is readonly." } | readonly | boolean | false |
+| required | { "Specifies whether the text field is required." } | required | boolean | false |
+| showTextAsTooltip | { "Specifies whether to show the text as a tooltip." } | show-text-as-tooltip | boolean \| undefined |  |
+| suppressSubmitOnEnter | { "If false, pressing Enter will submit the form (if inside a form).\n\nSet to true to suppress submit on Enter." } | suppress-submit-on-enter | boolean | false |
+| textAlignment | { "Text alignment within the input. 'start' aligns the text to the start of the input, 'end' aligns the text to the end of the input." } | text-alignment | "end" \| "start" | 'start' |
+| type | { "The type of the text field. Possible values are 'text', 'email', or 'password'." } | type | "email" \| "password" \| "tel" \| "text" \| "url" | 'text' |
+| validText | { "The valid text for the text field." } | valid-text | string \| undefined |  |
+| value | { "The value of the text field." } | value | string | '' |
+| warningText | { "The warning text for the text field." } | warning-text | string \| undefined |  |
 
 ### Events
 
 | Name | Description | Event | Detail |
 | --- | --- | --- | --- |
-| ixBlur | Event emitted when the text field loses focus. | ixBlur | void |
-| ixChange | Event emitted when the text field loses focus and the value has changed. | ixChange | string |
-| validityStateChange | Event emitted when the validity state of the text field changes. | validityStateChange | ValidityState |
-| valueChange | Event emitted when the value of the text field changes. | valueChange | string |
+| ixBlur | { "Event emitted when the text field loses focus." } | ixBlur | void |
+| ixChange | { "Event emitted when the text field loses focus and the value has changed." } | ixChange | string |
+| validityStateChange | { "Event emitted when the validity state of the text field changes." } | validityStateChange | ValidityState |
+| valueChange | { "Event emitted when the value of the text field changes." } | valueChange | string |
 
 ### Slot
 
 | Name | Description |
 | --- | --- |
-| end | { `Element will be displayed at the end of the input` } |
-| start | { `Element will be displayed at the start of the input` } |
+| end | { "Element will be displayed at the end of the input" } |
+| start | { "Element will be displayed at the start of the input" } |

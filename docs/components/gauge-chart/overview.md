@@ -15,22 +15,36 @@ Metrics gauge charts, also known as dial or speedometer charts, are an effective
 import './echarts-gauge.scoped.css';
 
 import { useEffect, useState } from 'react';
-import { getComputedCSSProperty, registerTheme } from '@siemens/ix-echarts';
 import { themeSwitcher } from '@siemens/ix';
+import {
+  getComputedCSSProperty,
+  registerTheme,
+  resolveEChartThemeName,
+} from '@siemens/ix-echarts';
 import ReactEcharts from 'echarts-for-react';
 
 import { EChartsOption } from 'echarts';
 
+function useEChartTheme() {
+  const [theme, setTheme] = useState(resolveEChartThemeName);
+
+  useEffect(() => {
+    const disposer = themeSwitcher.themeChanged.on(() => {
+      setTheme(resolveEChartThemeName());
+    });
+
+    return () => {
+      disposer.dispose();
+    };
+  }, []);
+
+  return theme;
+}
+
 export default function EchartsGauge() {
   registerTheme(echarts);
 
-  const [theme, setTheme] = useState(themeSwitcher.getCurrentTheme());
-
-  useEffect(() => {
-    themeSwitcher.themeChanged.on((theme: string) => {
-      setTheme(theme);
-    });
-  }, []);
+  const theme = useEChartTheme();
 
   const value = 45.3;
 
@@ -161,8 +175,12 @@ export default function EchartsGauge() {
 
 #### echarts-gauge.ts
 ```ts
-import { Component, OnInit } from '@angular/core';
-import { getComputedCSSProperty, registerTheme } from '@siemens/ix-echarts';
+import { Component, OnDestroy, OnInit } from '@angular/core';
+import {
+  getComputedCSSProperty,
+  registerTheme,
+  resolveEChartThemeName,
+} from '@siemens/ix-echarts';
 import { themeSwitcher } from '@siemens/ix';
 
 import { EChartsOption } from 'echarts';
@@ -173,8 +191,9 @@ import { EChartsOption } from 'echarts';
   templateUrl: './echarts-gauge.html',
   styleUrls: ['./echarts-gauge.css'],
 })
-export default class EchartsGauge implements OnInit {
-  theme = themeSwitcher.getCurrentTheme();
+export default class EchartsGauge implements OnDestroy, OnInit {
+  theme = resolveEChartThemeName();
+  private themeChangeDisposer?: { dispose: () => void };
 
   value = 45.3;
 
@@ -186,106 +205,115 @@ export default class EchartsGauge implements OnInit {
     }
   }
 
-  options: EChartsOption = {
-    series: [
-      {
-        id: '1',
-        type: 'gauge',
-        axisLine: {
-          show: true,
-          lineStyle: {
-            width: 18,
-            color: [[1, getComputedCSSProperty('color-neutral-40')]],
-          },
-        },
-        axisTick: {
-          show: false,
-        },
-        radius: '75%',
-        center: ['50%', '60%'],
-        startAngle: 180,
-        endAngle: 0,
-        splitNumber: 1,
-        splitLine: {
-          show: true,
-        },
-        axisLabel: {
-          show: true,
-          distance: 30,
-          fontSize: 16,
-          color: getComputedCSSProperty('color-std-text'),
-        },
-        progress: {
-          show: true,
-          overlap: false,
-          width: 35,
-          itemStyle: {
-            borderMiterLimit: 16,
-            color: this.getGaugeColor(this.value),
-          },
-        },
-        pointer: {
-          show: false,
-        },
-        data: [
-          {
-            value: this.value,
-            title: {
-              show: false,
-            },
-            detail: {
-              show: true,
-              offsetCenter: [0, -70],
-              overflow: 'break',
-              fontSize: '1.5rem',
-              width: 250,
-              lineHeight: 35,
-              color: getComputedCSSProperty('color-soft-text'),
-              formatter: '{value}Mbps \nNetwork Speed',
-            },
-            pointer: {
-              show: false,
+  options: EChartsOption = this.getOptions();
+
+  private getOptions(): EChartsOption {
+    return {
+      series: [
+        {
+          id: '1',
+          type: 'gauge',
+          axisLine: {
+            show: true,
+            lineStyle: {
+              width: 18,
+              color: [[1, getComputedCSSProperty('color-neutral-40')]],
             },
           },
-        ],
-      },
-      {
-        id: '2',
-        type: 'gauge',
-        splitLine: {
-          show: false,
-        },
-        axisTick: {
-          show: false,
-        },
-        axisLabel: {
-          show: false,
-        },
-        axisLine: {
-          show: true,
-          lineStyle: {
-            width: 5,
-            color: [
-              [0.25, getComputedCSSProperty('color-alarm')],
-              [0.6, getComputedCSSProperty('color-warning')],
-              [1, getComputedCSSProperty('color-success')],
-            ],
+          axisTick: {
+            show: false,
           },
+          radius: '75%',
+          center: ['50%', '60%'],
+          startAngle: 180,
+          endAngle: 0,
+          splitNumber: 1,
+          splitLine: {
+            show: true,
+          },
+          axisLabel: {
+            show: true,
+            distance: 30,
+            fontSize: 16,
+            color: getComputedCSSProperty('color-std-text'),
+          },
+          progress: {
+            show: true,
+            overlap: false,
+            width: 35,
+            itemStyle: {
+              borderMiterLimit: 16,
+              color: this.getGaugeColor(this.value),
+            },
+          },
+          pointer: {
+            show: false,
+          },
+          data: [
+            {
+              value: this.value,
+              title: {
+                show: false,
+              },
+              detail: {
+                show: true,
+                offsetCenter: [0, -70],
+                overflow: 'break',
+                fontSize: '1.5rem',
+                width: 250,
+                lineHeight: 35,
+                color: getComputedCSSProperty('color-soft-text'),
+                formatter: '{value}Mbps \nNetwork Speed',
+              },
+              pointer: {
+                show: false,
+              },
+            },
+          ],
         },
-        radius: '80%',
-        center: ['50%', '60%'],
-        startAngle: 180,
-        endAngle: 0,
-      },
-    ],
-  };
+        {
+          id: '2',
+          type: 'gauge',
+          splitLine: {
+            show: false,
+          },
+          axisTick: {
+            show: false,
+          },
+          axisLabel: {
+            show: false,
+          },
+          axisLine: {
+            show: true,
+            lineStyle: {
+              width: 5,
+              color: [
+                [0.25, getComputedCSSProperty('color-alarm')],
+                [0.6, getComputedCSSProperty('color-warning')],
+                [1, getComputedCSSProperty('color-success')],
+              ],
+            },
+          },
+          radius: '80%',
+          center: ['50%', '60%'],
+          startAngle: 180,
+          endAngle: 0,
+        },
+      ],
+    };
+  }
 
   ngOnInit() {
     registerTheme(echarts);
 
-    themeSwitcher.themeChanged.on((theme: string) => {
-      this.theme = theme;
+    this.themeChangeDisposer = themeSwitcher.themeChanged.on(() => {
+      this.theme = resolveEChartThemeName();
+      this.options = this.getOptions();
     });
+  }
+
+  ngOnDestroy() {
+    this.themeChangeDisposer?.dispose();
   }
 }
 ```
@@ -314,10 +342,14 @@ export default class EchartsGauge implements OnInit {
 
 #### echarts-gauge.ts
 ```ts
-import { Component, OnInit } from '@angular/core';
+import { Component, OnDestroy, OnInit } from '@angular/core';
 import { NgxEchartsDirective, provideEchartsCore } from 'ngx-echarts';
 
-import { getComputedCSSProperty, registerTheme } from '@siemens/ix-echarts';
+import {
+  getComputedCSSProperty,
+  registerTheme,
+  resolveEChartThemeName,
+} from '@siemens/ix-echarts';
 import { themeSwitcher } from '@siemens/ix';
 
 import { EChartsOption } from 'echarts';
@@ -329,8 +361,9 @@ import { EChartsOption } from 'echarts';
   templateUrl: './echarts-gauge.html',
   styleUrls: ['./echarts-gauge.css'],
 })
-export default class EchartsGauge implements OnInit {
-  theme = themeSwitcher.getCurrentTheme();
+export default class EchartsGauge implements OnDestroy, OnInit {
+  theme = resolveEChartThemeName();
+  private themeChangeDisposer?: { dispose: () => void };
 
   value = 45.3;
 
@@ -342,7 +375,175 @@ export default class EchartsGauge implements OnInit {
     }
   }
 
-  options: EChartsOption = {
+  options: EChartsOption = this.getOptions();
+
+  private getOptions(): EChartsOption {
+    return {
+      series: [
+        {
+          id: '1',
+          type: 'gauge',
+          axisLine: {
+            show: true,
+            lineStyle: {
+              width: 18,
+              color: [[1, getComputedCSSProperty('color-neutral-40')]],
+            },
+          },
+          axisTick: {
+            show: false,
+          },
+          radius: '75%',
+          center: ['50%', '60%'],
+          startAngle: 180,
+          endAngle: 0,
+          splitNumber: 1,
+          splitLine: {
+            show: true,
+          },
+          axisLabel: {
+            show: true,
+            distance: 30,
+            fontSize: 16,
+            color: getComputedCSSProperty('color-std-text'),
+          },
+          progress: {
+            show: true,
+            overlap: false,
+            width: 35,
+            itemStyle: {
+              borderMiterLimit: 16,
+              color: this.getGaugeColor(this.value),
+            },
+          },
+          pointer: {
+            show: false,
+          },
+          data: [
+            {
+              value: this.value,
+              title: {
+                show: false,
+              },
+              detail: {
+                show: true,
+                offsetCenter: [0, -70],
+                overflow: 'break',
+                fontSize: '1.5rem',
+                width: 250,
+                lineHeight: 35,
+                color: getComputedCSSProperty('color-soft-text'),
+                formatter: '{value}Mbps \nNetwork Speed',
+              },
+              pointer: {
+                show: false,
+              },
+            },
+          ],
+        },
+        {
+          id: '2',
+          type: 'gauge',
+          splitLine: {
+            show: false,
+          },
+          axisTick: {
+            show: false,
+          },
+          axisLabel: {
+            show: false,
+          },
+          axisLine: {
+            show: true,
+            lineStyle: {
+              width: 5,
+              color: [
+                [0.25, getComputedCSSProperty('color-alarm')],
+                [0.6, getComputedCSSProperty('color-warning')],
+                [1, getComputedCSSProperty('color-success')],
+              ],
+            },
+          },
+          radius: '80%',
+          center: ['50%', '60%'],
+          startAngle: 180,
+          endAngle: 0,
+        },
+      ],
+    };
+  }
+
+  ngOnInit() {
+    registerTheme(echarts);
+
+    this.themeChangeDisposer = themeSwitcher.themeChanged.on(() => {
+      this.theme = resolveEChartThemeName();
+      this.options = this.getOptions();
+    });
+  }
+
+  ngOnDestroy() {
+    this.themeChangeDisposer?.dispose();
+  }
+}
+```
+
+#### echarts-gauge.html
+```html
+<div echarts [options]="options" [theme]="theme" class="echarts"></div>
+```
+
+#### echarts-gauge.css
+```css
+.echarts {
+  position: relative;
+  width: 100%;
+  height: 40rem;
+  padding-top: 1rem;
+}
+```
+
+### Vue Examples
+
+#### echarts-gauge.vue
+```vue
+<script setup lang="ts">
+import { onBeforeUnmount, ref } from 'vue';
+import {
+  getComputedCSSProperty,
+  registerTheme,
+  resolveEChartThemeName,
+} from '@siemens/ix-echarts';
+import { themeSwitcher } from '@siemens/ix';
+import VueECharts from 'vue-echarts';
+
+import { EChartsOption } from 'echarts';
+
+echarts.use([
+  components.TooltipComponent,
+  components.LegendComponent,
+  components.GridComponent,
+  components.MarkLineComponent,
+  charts.GaugeChart,
+  renderer.CanvasRenderer,
+]);
+
+registerTheme(echarts);
+
+const theme = ref(resolveEChartThemeName());
+
+const value = 45.3;
+
+function getGaugeColor(value: number) {
+  if (value > 60) return getComputedCSSProperty('color-success');
+  else if (value > 25) return getComputedCSSProperty('color-warning');
+  else {
+    return getComputedCSSProperty('color-alarm');
+  }
+}
+
+function getOptions(): EChartsOption {
+  return {
     series: [
       {
         id: '1',
@@ -377,7 +578,7 @@ export default class EchartsGauge implements OnInit {
           width: 35,
           itemStyle: {
             borderMiterLimit: 16,
-            color: this.getGaugeColor(this.value),
+            color: getGaugeColor(value),
           },
         },
         pointer: {
@@ -385,7 +586,7 @@ export default class EchartsGauge implements OnInit {
         },
         data: [
           {
-            value: this.value,
+            value: value,
             title: {
               show: false,
             },
@@ -435,164 +636,18 @@ export default class EchartsGauge implements OnInit {
       },
     ],
   };
-
-  ngOnInit() {
-    registerTheme(echarts);
-
-    themeSwitcher.themeChanged.on((theme: string) => {
-      this.theme = theme;
-    });
-  }
 }
-```
 
-#### echarts-gauge.html
-```html
-<div echarts [options]="options" [theme]="theme" class="echarts"></div>
-```
+const options = ref<EChartsOption>(getOptions());
 
-#### echarts-gauge.css
-```css
-.echarts {
-  position: relative;
-  width: 100%;
-  height: 40rem;
-  padding-top: 1rem;
-}
-```
-
-### Vue Examples
-
-#### echarts-gauge.vue
-```vue
-<script setup lang="ts">
-import { ref } from 'vue';
-import { getComputedCSSProperty, registerTheme } from '@siemens/ix-echarts';
-import { themeSwitcher } from '@siemens/ix';
-import VueECharts from 'vue-echarts';
-
-import { EChartsOption } from 'echarts';
-
-echarts.use([
-  components.TooltipComponent,
-  components.LegendComponent,
-  components.GridComponent,
-  components.MarkLineComponent,
-  charts.GaugeChart,
-  renderer.CanvasRenderer,
-]);
-
-registerTheme(echarts);
-
-const theme = ref(themeSwitcher.getCurrentTheme());
-
-themeSwitcher.themeChanged.on((newTheme: string) => {
-  theme.value = newTheme;
+const disposer = themeSwitcher.themeChanged.on(() => {
+  theme.value = resolveEChartThemeName();
+  options.value = getOptions();
 });
 
-const value = 45.3;
-
-function getGaugeColor(value: number) {
-  if (value > 60) return getComputedCSSProperty('color-success');
-  else if (value > 25) return getComputedCSSProperty('color-warning');
-  else {
-    return getComputedCSSProperty('color-alarm');
-  }
-}
-
-const options: EChartsOption = {
-  series: [
-    {
-      id: '1',
-      type: 'gauge',
-      axisLine: {
-        show: true,
-        lineStyle: {
-          width: 18,
-          color: [[1, getComputedCSSProperty('color-neutral-40')]],
-        },
-      },
-      axisTick: {
-        show: false,
-      },
-      radius: '75%',
-      center: ['50%', '60%'],
-      startAngle: 180,
-      endAngle: 0,
-      splitNumber: 1,
-      splitLine: {
-        show: true,
-      },
-      axisLabel: {
-        show: true,
-        distance: 30,
-        fontSize: 16,
-        color: getComputedCSSProperty('color-std-text'),
-      },
-      progress: {
-        show: true,
-        overlap: false,
-        width: 35,
-        itemStyle: {
-          borderMiterLimit: 16,
-          color: getGaugeColor(value),
-        },
-      },
-      pointer: {
-        show: false,
-      },
-      data: [
-        {
-          value: value,
-          title: {
-            show: false,
-          },
-          detail: {
-            show: true,
-            offsetCenter: [0, -70],
-            overflow: 'break',
-            fontSize: '1.5rem',
-            width: 250,
-            lineHeight: 35,
-            color: getComputedCSSProperty('color-soft-text'),
-            formatter: '{value}Mbps \nNetwork Speed',
-          },
-          pointer: {
-            show: false,
-          },
-        },
-      ],
-    },
-    {
-      id: '2',
-      type: 'gauge',
-      splitLine: {
-        show: false,
-      },
-      axisTick: {
-        show: false,
-      },
-      axisLabel: {
-        show: false,
-      },
-      axisLine: {
-        show: true,
-        lineStyle: {
-          width: 5,
-          color: [
-            [0.25, getComputedCSSProperty('color-alarm')],
-            [0.6, getComputedCSSProperty('color-warning')],
-            [1, getComputedCSSProperty('color-success')],
-          ],
-        },
-      },
-      radius: '80%',
-      center: ['50%', '60%'],
-      startAngle: 180,
-      endAngle: 0,
-    },
-  ],
-} as EChartsOption;
+onBeforeUnmount(() => {
+  disposer.dispose();
+});
 </script>
 
 <style scoped src="./echarts-gauge.css"></style>
@@ -623,22 +678,36 @@ Circle gauge charts, also known as radial progress charts or circular progress b
 import './echarts-progress-circle.scoped.css';
 
 import { useEffect, useState } from 'react';
-import { getComputedCSSProperty, registerTheme } from '@siemens/ix-echarts';
 import { themeSwitcher } from '@siemens/ix';
+import {
+  getComputedCSSProperty,
+  registerTheme,
+  resolveEChartThemeName,
+} from '@siemens/ix-echarts';
 import ReactEcharts from 'echarts-for-react';
 
 import { EChartsOption } from 'echarts';
 
+function useEChartTheme() {
+  const [theme, setTheme] = useState(resolveEChartThemeName);
+
+  useEffect(() => {
+    const disposer = themeSwitcher.themeChanged.on(() => {
+      setTheme(resolveEChartThemeName());
+    });
+
+    return () => {
+      disposer.dispose();
+    };
+  }, []);
+
+  return theme;
+}
+
 export default function EchartsGauge() {
   registerTheme(echarts);
 
-  const [theme, setTheme] = useState(themeSwitcher.getCurrentTheme());
-
-  useEffect(() => {
-    themeSwitcher.themeChanged.on((theme: string) => {
-      setTheme(theme);
-    });
-  }, []);
+  const theme = useEChartTheme();
 
   const value = 60;
 
@@ -733,8 +802,12 @@ export default function EchartsGauge() {
 
 #### echarts-progress-circle.ts
 ```ts
-import { Component, OnInit } from '@angular/core';
-import { getComputedCSSProperty, registerTheme } from '@siemens/ix-echarts';
+import { Component, OnDestroy, OnInit } from '@angular/core';
+import {
+  getComputedCSSProperty,
+  registerTheme,
+  resolveEChartThemeName,
+} from '@siemens/ix-echarts';
 import { themeSwitcher } from '@siemens/ix';
 
 import { EChartsOption } from 'echarts';
@@ -745,83 +818,93 @@ import { EChartsOption } from 'echarts';
   templateUrl: './echarts-progress-circle.html',
   styleUrls: ['./echarts-progress-circle.css'],
 })
-export default class EchartsProgressCircle implements OnInit {
-  theme = themeSwitcher.getCurrentTheme();
+export default class EchartsProgressCircle implements OnDestroy, OnInit {
+  theme = resolveEChartThemeName();
+  private themeChangeDisposer?: { dispose: () => void };
 
   value = 60;
 
-  options: EChartsOption = {
-    series: [
-      {
-        id: '1',
-        type: 'gauge',
-        axisLine: {
-          show: true,
-          lineStyle: {
-            width: 15,
-            color: [[1, getComputedCSSProperty('color-neutral-40')]],
+  options: EChartsOption = this.getOptions();
+
+  private getOptions(): EChartsOption {
+    return {
+      series: [
+        {
+          id: '1',
+          type: 'gauge',
+          axisLine: {
+            show: true,
+            lineStyle: {
+              width: 15,
+              color: [[1, getComputedCSSProperty('color-neutral-40')]],
+            },
           },
-        },
-        axisTick: {
-          show: false,
-        },
-        radius: '100%',
-        startAngle: 90,
-        endAngle: -270,
-        splitLine: {
-          show: false,
-        },
-        axisLabel: {
-          show: false,
-        },
-        progress: {
-          show: true,
-          overlap: false,
-          width: 35,
-          itemStyle: {
-            borderMiterLimit: 16,
-            color: getComputedCSSProperty('color-success'),
+          axisTick: {
+            show: false,
           },
-        },
-        pointer: {
-          show: false,
-        },
-        data: [
-          {
-            value: this.value,
-            detail: {
-              offsetCenter: [0, 0],
-              fontSize: '2rem',
-              fontWeight: 'normal',
-              color: getComputedCSSProperty('color-soft-text'),
-              rich: {
-                valueStyle: {
-                  fontSize: '2rem',
-                  color: getComputedCSSProperty('color-soft-text'),
-                  fontWeight: 'bold',
+          radius: '100%',
+          startAngle: 90,
+          endAngle: -270,
+          splitLine: {
+            show: false,
+          },
+          axisLabel: {
+            show: false,
+          },
+          progress: {
+            show: true,
+            overlap: false,
+            width: 35,
+            itemStyle: {
+              borderMiterLimit: 16,
+              color: getComputedCSSProperty('color-success'),
+            },
+          },
+          pointer: {
+            show: false,
+          },
+          data: [
+            {
+              value: this.value,
+              detail: {
+                offsetCenter: [0, 0],
+                fontSize: '2rem',
+                fontWeight: 'normal',
+                color: getComputedCSSProperty('color-soft-text'),
+                rich: {
+                  valueStyle: {
+                    fontSize: '2rem',
+                    color: getComputedCSSProperty('color-soft-text'),
+                    fontWeight: 'bold',
+                  },
+                  textStyle: {
+                    fontSize: '1.5rem',
+                    color: getComputedCSSProperty('color-soft-text'),
+                  },
                 },
-                textStyle: {
-                  fontSize: '1.5rem',
-                  color: getComputedCSSProperty('color-soft-text'),
-                },
+                formatter: `{valueStyle|{value}}/100\n{textStyle|completed}`,
               },
-              formatter: `{valueStyle|{value}}/100\n{textStyle|completed}`,
+              pointer: {
+                show: false,
+              },
             },
-            pointer: {
-              show: false,
-            },
-          },
-        ],
-      },
-    ],
-  };
+          ],
+        },
+      ],
+    };
+  }
 
   ngOnInit() {
     registerTheme(echarts);
 
-    themeSwitcher.themeChanged.on((theme: string) => {
-      this.theme = theme;
+    this.themeChangeDisposer = themeSwitcher.themeChanged.on(() => {
+      this.theme = resolveEChartThemeName();
+      this.options = this.getOptions();
     });
+  }
+
+  ngOnDestroy() {
+    this.themeChangeDisposer?.dispose();
   }
 }
 ```
@@ -850,10 +933,14 @@ export default class EchartsProgressCircle implements OnInit {
 
 #### echarts-progress-circle.ts
 ```ts
-import { Component, OnInit } from '@angular/core';
+import { Component, OnDestroy, OnInit } from '@angular/core';
 import { NgxEchartsDirective, provideEchartsCore } from 'ngx-echarts';
 
-import { getComputedCSSProperty, registerTheme } from '@siemens/ix-echarts';
+import {
+  getComputedCSSProperty,
+  registerTheme,
+  resolveEChartThemeName,
+} from '@siemens/ix-echarts';
 import { themeSwitcher } from '@siemens/ix';
 
 import { EChartsOption } from 'echarts';
@@ -865,12 +952,145 @@ import { EChartsOption } from 'echarts';
   templateUrl: './echarts-progress-circle.html',
   styleUrls: ['./echarts-progress-circle.css'],
 })
-export default class EchartsProgressCircle implements OnInit {
-  theme = themeSwitcher.getCurrentTheme();
+export default class EchartsProgressCircle implements OnDestroy, OnInit {
+  theme = resolveEChartThemeName();
+  private themeChangeDisposer?: { dispose: () => void };
 
   value = 60;
 
-  options: EChartsOption = {
+  options: EChartsOption = this.getOptions();
+
+  private getOptions(): EChartsOption {
+    return {
+      series: [
+        {
+          id: '1',
+          type: 'gauge',
+          axisLine: {
+            show: true,
+            lineStyle: {
+              width: 15,
+              color: [[1, getComputedCSSProperty('color-neutral-40')]],
+            },
+          },
+          axisTick: {
+            show: false,
+          },
+          radius: '100%',
+          startAngle: 90,
+          endAngle: -270,
+          splitLine: {
+            show: false,
+          },
+          axisLabel: {
+            show: false,
+          },
+          progress: {
+            show: true,
+            overlap: false,
+            width: 35,
+            itemStyle: {
+              borderMiterLimit: 16,
+              color: getComputedCSSProperty('color-success'),
+            },
+          },
+          pointer: {
+            show: false,
+          },
+          data: [
+            {
+              value: this.value,
+              detail: {
+                offsetCenter: [0, 0],
+                fontSize: '2rem',
+                fontWeight: 'normal',
+                color: getComputedCSSProperty('color-soft-text'),
+                rich: {
+                  valueStyle: {
+                    fontSize: '2rem',
+                    color: getComputedCSSProperty('color-soft-text'),
+                    fontWeight: 'bold',
+                  },
+                  textStyle: {
+                    fontSize: '1.5rem',
+                    color: getComputedCSSProperty('color-soft-text'),
+                  },
+                },
+                formatter: `{valueStyle|{value}}/100\n{textStyle|completed}`,
+              },
+              pointer: {
+                show: false,
+              },
+            },
+          ],
+        },
+      ],
+    };
+  }
+
+  ngOnInit() {
+    registerTheme(echarts);
+
+    this.themeChangeDisposer = themeSwitcher.themeChanged.on(() => {
+      this.theme = resolveEChartThemeName();
+      this.options = this.getOptions();
+    });
+  }
+
+  ngOnDestroy() {
+    this.themeChangeDisposer?.dispose();
+  }
+}
+```
+
+#### echarts-progress-circle.html
+```html
+<div echarts [options]="options" [theme]="theme" class="echarts-gauge"></div>
+```
+
+#### echarts-progress-circle.css
+```css
+.echarts-gauge {
+  position: relative;
+  width: 100%;
+  height: 20rem;
+  padding-top: 3rem;
+}
+```
+
+### Vue Examples
+
+#### echarts-progress-circle.vue
+```vue
+<script setup lang="ts">
+import { onBeforeUnmount, ref } from 'vue';
+import {
+  getComputedCSSProperty,
+  registerTheme,
+  resolveEChartThemeName,
+} from '@siemens/ix-echarts';
+import { themeSwitcher } from '@siemens/ix';
+import VueECharts from 'vue-echarts';
+
+import { EChartsOption } from 'echarts';
+
+echarts.use([
+  components.TooltipComponent,
+  components.LegendComponent,
+  components.GridComponent,
+  components.MarkLineComponent,
+  charts.GaugeChart,
+  renderer.CanvasRenderer,
+]);
+
+registerTheme(echarts);
+
+const theme = ref(resolveEChartThemeName());
+
+const value = 60;
+
+function getOptions(): EChartsOption {
+  return {
     series: [
       {
         id: '1',
@@ -908,7 +1128,7 @@ export default class EchartsProgressCircle implements OnInit {
         },
         data: [
           {
-            value: this.value,
+            value: value,
             detail: {
               offsetCenter: [0, 0],
               fontSize: '2rem',
@@ -935,128 +1155,18 @@ export default class EchartsProgressCircle implements OnInit {
       },
     ],
   };
-
-  ngOnInit() {
-    registerTheme(echarts);
-
-    themeSwitcher.themeChanged.on((theme: string) => {
-      this.theme = theme;
-    });
-  }
 }
-```
 
-#### echarts-progress-circle.html
-```html
-<div echarts [options]="options" [theme]="theme" class="echarts-gauge"></div>
-```
+const options = ref<EChartsOption>(getOptions());
 
-#### echarts-progress-circle.css
-```css
-.echarts-gauge {
-  position: relative;
-  width: 100%;
-  height: 20rem;
-  padding-top: 3rem;
-}
-```
-
-### Vue Examples
-
-#### echarts-progress-circle.vue
-```vue
-<script setup lang="ts">
-import { ref } from 'vue';
-import { getComputedCSSProperty, registerTheme } from '@siemens/ix-echarts';
-import { themeSwitcher } from '@siemens/ix';
-import VueECharts from 'vue-echarts';
-
-import { EChartsOption } from 'echarts';
-
-echarts.use([
-  components.TooltipComponent,
-  components.LegendComponent,
-  components.GridComponent,
-  components.MarkLineComponent,
-  charts.GaugeChart,
-  renderer.CanvasRenderer,
-]);
-
-registerTheme(echarts);
-
-const theme = ref(themeSwitcher.getCurrentTheme());
-
-themeSwitcher.themeChanged.on((newTheme: string) => {
-  theme.value = newTheme;
+const disposer = themeSwitcher.themeChanged.on(() => {
+  theme.value = resolveEChartThemeName();
+  options.value = getOptions();
 });
 
-const value = 60;
-
-const options: EChartsOption = {
-  series: [
-    {
-      id: '1',
-      type: 'gauge',
-      axisLine: {
-        show: true,
-        lineStyle: {
-          width: 15,
-          color: [[1, getComputedCSSProperty('color-neutral-40')]],
-        },
-      },
-      axisTick: {
-        show: false,
-      },
-      radius: '100%',
-      startAngle: 90,
-      endAngle: -270,
-      splitLine: {
-        show: false,
-      },
-      axisLabel: {
-        show: false,
-      },
-      progress: {
-        show: true,
-        overlap: false,
-        width: 35,
-        itemStyle: {
-          borderMiterLimit: 16,
-          color: getComputedCSSProperty('color-success'),
-        },
-      },
-      pointer: {
-        show: false,
-      },
-      data: [
-        {
-          value: value,
-          detail: {
-            offsetCenter: [0, 0],
-            fontSize: '2rem',
-            fontWeight: 'normal',
-            color: getComputedCSSProperty('color-soft-text'),
-            rich: {
-              valueStyle: {
-                fontSize: '2rem',
-                color: getComputedCSSProperty('color-soft-text'),
-                fontWeight: 'bold',
-              },
-              textStyle: {
-                fontSize: '1.5rem',
-                color: getComputedCSSProperty('color-soft-text'),
-              },
-            },
-            formatter: `{valueStyle|{value}}/100\n{textStyle|completed}`,
-          },
-          pointer: {
-            show: false,
-          },
-        },
-      ],
-    },
-  ],
-} as EChartsOption;
+onBeforeUnmount(() => {
+  disposer.dispose();
+});
 </script>
 
 <style scoped src="./echarts-progress-circle.css"></style>
@@ -1092,22 +1202,36 @@ Arc gauge charts, also known as semi-circular progress bars, are a dynamic way t
 import './echarts-progress-arc.scoped.css';
 
 import { useEffect, useState } from 'react';
-import { getComputedCSSProperty, registerTheme } from '@siemens/ix-echarts';
 import { themeSwitcher } from '@siemens/ix';
+import {
+  getComputedCSSProperty,
+  registerTheme,
+  resolveEChartThemeName,
+} from '@siemens/ix-echarts';
 import ReactEcharts from 'echarts-for-react';
 
 import { EChartsOption } from 'echarts';
 
+function useEChartTheme() {
+  const [theme, setTheme] = useState(resolveEChartThemeName);
+
+  useEffect(() => {
+    const disposer = themeSwitcher.themeChanged.on(() => {
+      setTheme(resolveEChartThemeName());
+    });
+
+    return () => {
+      disposer.dispose();
+    };
+  }, []);
+
+  return theme;
+}
+
 export default function EchartsProgressArc() {
   registerTheme(echarts);
 
-  const [theme, setTheme] = useState(themeSwitcher.getCurrentTheme());
-
-  useEffect(() => {
-    themeSwitcher.themeChanged.on((theme: string) => {
-      setTheme(theme);
-    });
-  }, []);
+  const theme = useEChartTheme();
 
   const value = 60;
 
@@ -1194,8 +1318,12 @@ export default function EchartsProgressArc() {
 
 #### echarts-progress-arc.ts
 ```ts
-import { Component, OnInit } from '@angular/core';
-import { getComputedCSSProperty, registerTheme } from '@siemens/ix-echarts';
+import { Component, OnDestroy, OnInit } from '@angular/core';
+import {
+  getComputedCSSProperty,
+  registerTheme,
+  resolveEChartThemeName,
+} from '@siemens/ix-echarts';
 import { themeSwitcher } from '@siemens/ix';
 
 import { EChartsOption } from 'echarts';
@@ -1206,75 +1334,85 @@ import { EChartsOption } from 'echarts';
   templateUrl: './echarts-progress-arc.html',
   styleUrls: ['./echarts-progress-arc.css'],
 })
-export default class EchartsProgressArc implements OnInit {
-  theme = themeSwitcher.getCurrentTheme();
+export default class EchartsProgressArc implements OnDestroy, OnInit {
+  theme = resolveEChartThemeName();
+  private themeChangeDisposer?: { dispose: () => void };
 
   value = 60;
 
-  options: EChartsOption = {
-    series: [
-      {
-        id: '1',
-        type: 'gauge',
-        axisLine: {
-          show: true,
-          lineStyle: {
-            width: 15,
-            color: [[1, getComputedCSSProperty('color-neutral-40')]],
-          },
-        },
-        axisTick: {
-          show: false,
-        },
-        radius: '100%',
-        startAngle: 200,
-        endAngle: -20,
-        splitLine: {
-          show: false,
-        },
-        axisLabel: {
-          show: false,
-        },
-        progress: {
-          show: true,
-          overlap: false,
-          width: 35,
-          itemStyle: {
-            borderMiterLimit: 16,
-            color: getComputedCSSProperty('color-success'),
-          },
-        },
-        pointer: {
-          show: false,
-        },
-        data: [
-          {
-            value: this.value,
-            detail: {
-              offsetCenter: [0, 0],
-              overflow: 'break',
-              fontSize: '2rem',
-              fontWeight: 'normal',
-              color: getComputedCSSProperty('color-soft-text'),
-              width: 250,
-              lineHeight: 35,
-              formatter: '{value} / 100 \n completed',
-            },
-            pointer: {
-              show: false,
+  options: EChartsOption = this.getOptions();
+
+  private getOptions(): EChartsOption {
+    return {
+      series: [
+        {
+          id: '1',
+          type: 'gauge',
+          axisLine: {
+            show: true,
+            lineStyle: {
+              width: 15,
+              color: [[1, getComputedCSSProperty('color-neutral-40')]],
             },
           },
-        ],
-      },
-    ],
-  };
+          axisTick: {
+            show: false,
+          },
+          radius: '100%',
+          startAngle: 200,
+          endAngle: -20,
+          splitLine: {
+            show: false,
+          },
+          axisLabel: {
+            show: false,
+          },
+          progress: {
+            show: true,
+            overlap: false,
+            width: 35,
+            itemStyle: {
+              borderMiterLimit: 16,
+              color: getComputedCSSProperty('color-success'),
+            },
+          },
+          pointer: {
+            show: false,
+          },
+          data: [
+            {
+              value: this.value,
+              detail: {
+                offsetCenter: [0, 0],
+                overflow: 'break',
+                fontSize: '2rem',
+                fontWeight: 'normal',
+                color: getComputedCSSProperty('color-soft-text'),
+                width: 250,
+                lineHeight: 35,
+                formatter: '{value} / 100 \n completed',
+              },
+              pointer: {
+                show: false,
+              },
+            },
+          ],
+        },
+      ],
+    };
+  }
 
   ngOnInit() {
     registerTheme(echarts);
 
-    themeSwitcher.themeChanged.on((theme: string) => {
-      this.theme = theme;
+    this.themeChangeDisposer = themeSwitcher.themeChanged.on(() => {
+      this.theme = resolveEChartThemeName();
+      this.options = this.getOptions();
     });
+  }
+
+  ngOnDestroy() {
+    this.themeChangeDisposer?.dispose();
   }
 }
 ```
@@ -1303,10 +1441,14 @@ export default class EchartsProgressArc implements OnInit {
 
 #### echarts-progress-arc.ts
 ```ts
-import { Component, OnInit } from '@angular/core';
+import { Component, OnDestroy, OnInit } from '@angular/core';
 import { NgxEchartsDirective, provideEchartsCore } from 'ngx-echarts';
 
-import { getComputedCSSProperty, registerTheme } from '@siemens/ix-echarts';
+import {
+  getComputedCSSProperty,
+  registerTheme,
+  resolveEChartThemeName,
+} from '@siemens/ix-echarts';
 import { themeSwitcher } from '@siemens/ix';
 
 import { EChartsOption } from 'echarts';
@@ -1318,12 +1460,137 @@ import { EChartsOption } from 'echarts';
   templateUrl: './echarts-progress-arc.html',
   styleUrls: ['./echarts-progress-arc.css'],
 })
-export default class EchartsProgressArc implements OnInit {
-  theme = themeSwitcher.getCurrentTheme();
+export default class EchartsProgressArc implements OnDestroy, OnInit {
+  theme = resolveEChartThemeName();
+  private themeChangeDisposer?: { dispose: () => void };
 
   value = 60;
 
-  options: EChartsOption = {
+  options: EChartsOption = this.getOptions();
+
+  private getOptions(): EChartsOption {
+    return {
+      series: [
+        {
+          id: '1',
+          type: 'gauge',
+          axisLine: {
+            show: true,
+            lineStyle: {
+              width: 15,
+              color: [[1, getComputedCSSProperty('color-neutral-40')]],
+            },
+          },
+          axisTick: {
+            show: false,
+          },
+          radius: '100%',
+          startAngle: 200,
+          endAngle: -20,
+          splitLine: {
+            show: false,
+          },
+          axisLabel: {
+            show: false,
+          },
+          progress: {
+            show: true,
+            overlap: false,
+            width: 35,
+            itemStyle: {
+              borderMiterLimit: 16,
+              color: getComputedCSSProperty('color-success'),
+            },
+          },
+          pointer: {
+            show: false,
+          },
+          data: [
+            {
+              value: this.value,
+              detail: {
+                offsetCenter: [0, 0],
+                overflow: 'break',
+                fontSize: '2rem',
+                fontWeight: 'normal',
+                color: getComputedCSSProperty('color-soft-text'),
+                width: 250,
+                lineHeight: 35,
+                formatter: '{value} / 100 \n completed',
+              },
+              pointer: {
+                show: false,
+              },
+            },
+          ],
+        },
+      ],
+    };
+  }
+
+  ngOnInit() {
+    registerTheme(echarts);
+
+    this.themeChangeDisposer = themeSwitcher.themeChanged.on(() => {
+      this.theme = resolveEChartThemeName();
+      this.options = this.getOptions();
+    });
+  }
+
+  ngOnDestroy() {
+    this.themeChangeDisposer?.dispose();
+  }
+}
+```
+
+#### echarts-progress-arc.html
+```html
+<div echarts [options]="options" [theme]="theme" class="echarts-gauge"></div>
+```
+
+#### echarts-progress-arc.css
+```css
+.echarts-gauge {
+  position: relative;
+  width: 100%;
+  height: 20rem;
+  padding-top: 3rem;
+}
+```
+
+### Vue Examples
+
+#### echarts-progress-arc.vue
+```vue
+<script setup lang="ts">
+import { onBeforeUnmount, ref } from 'vue';
+import {
+  getComputedCSSProperty,
+  registerTheme,
+  resolveEChartThemeName,
+} from '@siemens/ix-echarts';
+import { themeSwitcher } from '@siemens/ix';
+import VueECharts from 'vue-echarts';
+
+import { EChartsOption } from 'echarts';
+
+echarts.use([
+  components.TooltipComponent,
+  components.LegendComponent,
+  components.GridComponent,
+  components.MarkLineComponent,
+  charts.GaugeChart,
+  renderer.CanvasRenderer,
+]);
+
+registerTheme(echarts);
+
+const theme = ref(resolveEChartThemeName());
+
+const value = 60;
+
+function getOptions(): EChartsOption {
+  return {
     series: [
       {
         id: '1',
@@ -1361,7 +1628,7 @@ export default class EchartsProgressArc implements OnInit {
         },
         data: [
           {
-            value: this.value,
+            value: value,
             detail: {
               offsetCenter: [0, 0],
               overflow: 'break',
@@ -1380,120 +1647,18 @@ export default class EchartsProgressArc implements OnInit {
       },
     ],
   };
-
-  ngOnInit() {
-    registerTheme(echarts);
-
-    themeSwitcher.themeChanged.on((theme: string) => {
-      this.theme = theme;
-    });
-  }
 }
-```
 
-#### echarts-progress-arc.html
-```html
-<div echarts [options]="options" [theme]="theme" class="echarts-gauge"></div>
-```
+const options = ref<EChartsOption>(getOptions());
 
-#### echarts-progress-arc.css
-```css
-.echarts-gauge {
-  position: relative;
-  width: 100%;
-  height: 20rem;
-  padding-top: 3rem;
-}
-```
-
-### Vue Examples
-
-#### echarts-progress-arc.vue
-```vue
-<script setup lang="ts">
-import { ref } from 'vue';
-import { getComputedCSSProperty, registerTheme } from '@siemens/ix-echarts';
-import { themeSwitcher } from '@siemens/ix';
-import VueECharts from 'vue-echarts';
-
-import { EChartsOption } from 'echarts';
-
-echarts.use([
-  components.TooltipComponent,
-  components.LegendComponent,
-  components.GridComponent,
-  components.MarkLineComponent,
-  charts.GaugeChart,
-  renderer.CanvasRenderer,
-]);
-
-registerTheme(echarts);
-
-const theme = ref(themeSwitcher.getCurrentTheme());
-
-themeSwitcher.themeChanged.on((newTheme: string) => {
-  theme.value = newTheme;
+const disposer = themeSwitcher.themeChanged.on(() => {
+  theme.value = resolveEChartThemeName();
+  options.value = getOptions();
 });
 
-const value = 60;
-
-const options = {
-  series: [
-    {
-      id: '1',
-      type: 'gauge',
-      axisLine: {
-        show: true,
-        lineStyle: {
-          width: 15,
-          color: [[1, getComputedCSSProperty('color-neutral-40')]],
-        },
-      },
-      axisTick: {
-        show: false,
-      },
-      radius: '100%',
-      startAngle: 200,
-      endAngle: -20,
-      splitLine: {
-        show: false,
-      },
-      axisLabel: {
-        show: false,
-      },
-      progress: {
-        show: true,
-        overlap: false,
-        width: 35,
-        itemStyle: {
-          borderMiterLimit: 16,
-          color: getComputedCSSProperty('color-success'),
-        },
-      },
-      pointer: {
-        show: false,
-      },
-      data: [
-        {
-          value: value,
-          detail: {
-            offsetCenter: [0, 0],
-            overflow: 'break',
-            fontSize: '2rem',
-            fontWeight: 'normal',
-            color: getComputedCSSProperty('color-soft-text'),
-            width: 250,
-            lineHeight: 35,
-            formatter: '{value} / 100 \n completed',
-          },
-          pointer: {
-            show: false,
-          },
-        },
-      ],
-    } as EChartsOption,
-  ],
-};
+onBeforeUnmount(() => {
+  disposer.dispose();
+});
 </script>
 
 <style scoped src="./echarts-progress-arc.css"></style>

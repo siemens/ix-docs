@@ -1,13 +1,21 @@
 {
-  "/src/preview-examples/action-card.html": [
-    "ix-action-card"
+  "/src/preview-examples/about-and-legal-legacy.html": [
+    "ix-application",
+    "ix-application-header",
+    "ix-menu",
+    "ix-menu-about",
+    "ix-menu-about-item"
   ],
   "/src/preview-examples/about-and-legal.html": [
     "ix-application",
     "ix-application-header",
     "ix-menu",
     "ix-menu-about",
-    "ix-menu-about-item"
+    "ix-tab-item",
+    "ix-tabs"
+  ],
+  "/src/preview-examples/action-card.html": [
+    "ix-action-card"
   ],
   "/src/preview-examples/add-icons.html": [
     "ix-icon"
@@ -84,12 +92,12 @@
   "/src/preview-examples/blind-variants.html": [
     "ix-blind"
   ],
-  "/src/preview-examples/blind.html": [
-    "ix-blind"
-  ],
   "/src/preview-examples/breadcrumb-next-items.html": [
     "ix-breadcrumb",
     "ix-breadcrumb-item"
+  ],
+  "/src/preview-examples/blind.html": [
+    "ix-blind"
   ],
   "/src/preview-examples/breadcrumb-truncate.html": [
     "ix-breadcrumb",
@@ -186,7 +194,7 @@
     "ix-icon-button",
     "ix-input"
   ],
-  "/src/preview-examples/date-dropdown-user-range.html": [
+  "/src/preview-examples/date-dropdown-presets.html": [
     "ix-date-dropdown"
   ],
   "/src/preview-examples/date-dropdown.html": [
@@ -201,10 +209,13 @@
   "/src/preview-examples/date-input-min-max-date.html": [
     "ix-date-input"
   ],
+  "/src/preview-examples/date-input-validation.html": [
+    "ix-date-input"
+  ],
   "/src/preview-examples/date-input-readonly.html": [
     "ix-date-input"
   ],
-  "/src/preview-examples/date-input-validation.html": [
+  "/src/preview-examples/date-input.html": [
     "ix-date-input"
   ],
   "/src/preview-examples/date-input-with-slots.html": [
@@ -212,8 +223,9 @@
     "ix-icon",
     "ix-typography"
   ],
-  "/src/preview-examples/date-input.html": [
-    "ix-date-input"
+  "/src/preview-examples/date-range.html": [
+    "ix-date-input",
+    "ix-range-field"
   ],
   "/src/preview-examples/datepicker-locale.html": [
     "ix-date-picker",
@@ -226,19 +238,38 @@
   "/src/preview-examples/datepicker.html": [
     "ix-date-picker"
   ],
+  "/src/preview-examples/datetime-input-disabled.html": [
+    "ix-datetime-input"
+  ],
+  "/src/preview-examples/datetime-input-label.html": [
+    "ix-datetime-input"
+  ],
+  "/src/preview-examples/datetime-input-min-max-date.html": [
+    "ix-datetime-input"
+  ],
+  "/src/preview-examples/datetime-input-readonly.html": [
+    "ix-datetime-input"
+  ],
+  "/src/preview-examples/datetime-input-validation.html": [
+    "ix-datetime-input"
+  ],
+  "/src/preview-examples/datetime-input-with-slots.html": [
+    "ix-datetime-input",
+    "ix-icon",
+    "ix-typography"
+  ],
+  "/src/preview-examples/datetime-input.html": [
+    "ix-datetime-input"
+  ],
+  "/src/preview-examples/datetime-range.html": [
+    "ix-datetime-input",
+    "ix-range-field"
+  ],
   "/src/preview-examples/datetimepicker.html": [
     "ix-datetime-picker"
   ],
   "/src/preview-examples/divider.html": [
     "ix-divider"
-  ],
-  "/src/preview-examples/drawer-full-height.html": [
-    "ix-button",
-    "ix-drawer"
-  ],
-  "/src/preview-examples/drawer.html": [
-    "ix-button",
-    "ix-drawer"
   ],
   "/src/preview-examples/dropdown-button-icon.html": [
     "ix-dropdown-button",
@@ -392,10 +423,10 @@
   "/src/preview-examples/icon-toggle-button-subtle-primary.html": [
     "ix-icon-toggle-button"
   ],
-  "/src/preview-examples/icon-toggle-button-subtle-secondary.html": [
+  "/src/preview-examples/icon-toggle-button-subtle-tertiary.html": [
     "ix-icon-toggle-button"
   ],
-  "/src/preview-examples/icon-toggle-button-subtle-tertiary.html": [
+  "/src/preview-examples/icon-toggle-button-subtle-secondary.html": [
     "ix-icon-toggle-button"
   ],
   "/src/preview-examples/icon-toggle-button-tertiary.html": [
@@ -455,12 +486,12 @@
   "/src/preview-examples/key-value.html": [
     "ix-key-value"
   ],
+  "/src/preview-examples/kpi.html": [
+    "ix-kpi"
+  ],
   "/src/preview-examples/layout-auto-custom.html": [
     "ix-layout-auto",
     "ix-typography"
-  ],
-  "/src/preview-examples/kpi.html": [
-    "ix-kpi"
   ],
   "/src/preview-examples/layout-auto.html": [
     "ix-layout-auto",
@@ -472,14 +503,14 @@
   "/src/preview-examples/link-button.html": [
     "ix-link-button"
   ],
-  "/src/preview-examples/loading.html": [
-    "ix-button"
-  ],
   "/src/preview-examples/menu-category.html": [
     "ix-application",
     "ix-menu",
     "ix-menu-category",
     "ix-menu-item"
+  ],
+  "/src/preview-examples/loading.html": [
+    "ix-button"
   ],
   "/src/preview-examples/menu-with-bottom-tabs.html": [
     "ix-menu",
@@ -507,6 +538,13 @@
     "ix-modal-content",
     "ix-modal-footer",
     "ix-modal-header"
+  ],
+  "/src/preview-examples/modal-non-blocking.html": [
+    "ix-button",
+    "ix-modal-content",
+    "ix-modal-footer",
+    "ix-modal-header",
+    "ix-typography"
   ],
   "/src/preview-examples/modal-sizes.html": [
     "ix-button"
@@ -537,11 +575,11 @@
     "ix-number-input",
     "ix-typography"
   ],
-  "/src/preview-examples/number-input.html": [
-    "ix-number-input"
-  ],
   "/src/preview-examples/pagination-advanced.html": [
     "ix-pagination"
+  ],
+  "/src/preview-examples/number-input.html": [
+    "ix-number-input"
   ],
   "/src/preview-examples/pagination.html": [
     "ix-pagination"
@@ -607,6 +645,12 @@
   "/src/preview-examples/radio.html": [
     "ix-radio"
   ],
+  "/src/preview-examples/range-field.html": [
+    "ix-date-input",
+    "ix-datetime-input",
+    "ix-range-field",
+    "ix-time-input"
+  ],
   "/src/preview-examples/select-editable.html": [
     "ix-select",
     "ix-select-item"
@@ -623,17 +667,25 @@
     "ix-select",
     "ix-select-item"
   ],
-  "/src/preview-examples/settings.html": [
+  "/src/preview-examples/settings-legacy.html": [
     "ix-application",
     "ix-application-header",
     "ix-menu",
     "ix-menu-settings",
     "ix-menu-settings-item"
   ],
-  "/src/preview-examples/slider-error.html": [
-    "ix-slider"
+  "/src/preview-examples/settings.html": [
+    "ix-application",
+    "ix-application-header",
+    "ix-menu",
+    "ix-menu-settings",
+    "ix-tab-item",
+    "ix-tabs"
   ],
   "/src/preview-examples/slider-marker.html": [
+    "ix-slider"
+  ],
+  "/src/preview-examples/slider-error.html": [
     "ix-slider"
   ],
   "/src/preview-examples/slider-trace.html": [
@@ -712,18 +764,25 @@
   "/src/preview-examples/time-input-validation.html": [
     "ix-time-input"
   ],
+  "/src/preview-examples/time-input.html": [
+    "ix-time-input"
+  ],
   "/src/preview-examples/time-input-with-slots.html": [
     "ix-icon",
     "ix-time-input",
     "ix-typography"
   ],
-  "/src/preview-examples/time-input.html": [
+  "/src/preview-examples/time-range.html": [
+    "ix-range-field",
     "ix-time-input"
   ],
   "/src/preview-examples/timepicker-format-adjusted.html": [
     "ix-time-picker"
   ],
   "/src/preview-examples/timepicker-intervals.html": [
+    "ix-time-picker"
+  ],
+  "/src/preview-examples/timepicker-min-max-time.html": [
     "ix-time-picker"
   ],
   "/src/preview-examples/timepicker.html": [
@@ -744,23 +803,14 @@
   "/src/preview-examples/toggle-button-primary.html": [
     "ix-toggle-button"
   ],
-  "/src/preview-examples/toggle-button-secondary.html": [
-    "ix-toggle-button"
-  ],
   "/src/preview-examples/toggle-button-subtle-primary.html": [
     "ix-toggle-button"
   ],
-  "/src/preview-examples/toggle-button-subtle-secondary.html": [
+  "/src/preview-examples/toggle-button-secondary.html": [
     "ix-toggle-button"
   ],
   "/src/preview-examples/toggle-button-subtle-tertiary.html": [
     "ix-toggle-button"
-  ],
-  "/src/preview-examples/toggle-button-tertiary.html": [
-    "ix-toggle-button"
-  ],
-  "/src/preview-examples/toggle-checked.html": [
-    "ix-toggle"
   ],
   "/src/preview-examples/toggle-custom-label.html": [
     "ix-toggle"
@@ -769,9 +819,6 @@
     "ix-toggle"
   ],
   "/src/preview-examples/toggle-indeterminate.html": [
-    "ix-toggle"
-  ],
-  "/src/preview-examples/toggle.html": [
     "ix-toggle"
   ],
   "/src/preview-examples/tooltip-with-icon.html": [
@@ -783,6 +830,9 @@
     "ix-button",
     "ix-tooltip"
   ],
+  "/src/preview-examples/toggle.html": [
+    "ix-toggle"
+  ],
   "/src/preview-examples/tree-custom.html": [
     "ix-button",
     "ix-tree"
@@ -793,6 +843,21 @@
   "/src/preview-examples/upload.html": [
     "ix-upload"
   ],
+  "/src/preview-examples/validation-select.html": [
+    "ix-button",
+    "ix-select",
+    "ix-select-item"
+  ],
+  "/src/preview-examples/vertical-tabs-with-avatar.html": [
+    "ix-menu",
+    "ix-menu-avatar",
+    "ix-menu-avatar-item",
+    "ix-menu-item"
+  ],
+  "/src/preview-examples/vertical-tabs.html": [
+    "ix-menu",
+    "ix-menu-item"
+  ],
   "/src/preview-examples/workflow-vertical.html": [
     "ix-workflow-step",
     "ix-workflow-steps"
@@ -801,22 +866,19 @@
     "ix-workflow-step",
     "ix-workflow-steps"
   ],
-  "/src/preview-examples/vertical-tabs.html": [
-    "ix-menu",
-    "ix-menu-item"
+  "/src/preview-examples/toggle-checked.html": [
+    "ix-toggle"
   ],
-  "/src/preview-examples/vertical-tabs-with-avatar.html": [
-    "ix-menu",
-    "ix-menu-avatar",
-    "ix-menu-avatar-item",
-    "ix-menu-item"
+  "/src/preview-examples/toggle-button-tertiary.html": [
+    "ix-toggle-button"
   ],
-  "/src/preview-examples/validation-select.html": [
-    "ix-button",
-    "ix-select",
-    "ix-select-item"
+  "/src/preview-examples/toggle-button-subtle-secondary.html": [
+    "ix-toggle-button"
   ],
   "/home/runner/work/ix/ix/node_modules/.pnpm/@siemens+ix-icons@3.4.0/node_modules/@siemens/ix-icons/dist/esm/index.js": [
     "ix-icon"
+  ],
+  "/home/runner/work/ix/ix/packages/core/dist/esm/ix-select.entry.js": [
+    "ix-icon-button"
   ]
 }

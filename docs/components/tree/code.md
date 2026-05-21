@@ -62,7 +62,7 @@ export default () => {
         height: '40rem',
       }}
     >
-      <IxTree root="root" model={model}></IxTree>
+      <IxTree root="root" model={model} aria-label="Sample tree"></IxTree>
     </div>
   );
 };
@@ -79,7 +79,7 @@ import { TreeModel } from '@siemens/ix';
   standalone: false,
   selector: 'app-example',
   template: ` <div class="example">
-    <ix-tree root="root" [model]="model"></ix-tree>
+    <ix-tree root="root" [model]="model" aria-label="Sample tree"></ix-tree>
   </div>`,
   styles: [
     `
@@ -145,7 +145,7 @@ import { TreeModel } from '@siemens/ix';
   selector: 'app-example',
   imports: [IxTree],
   template: ` <div class="example">
-    <ix-tree root="root" [model]="model"></ix-tree>
+    <ix-tree root="root" [model]="model" aria-label="Sample tree"></ix-tree>
   </div>`,
   styles: [
     `
@@ -253,7 +253,7 @@ onMounted(() => {
 
 <template>
   <div style="display: block; position: relative; width: 100%; height: 40rem">
-    <IxTree root="root" :model="model"></IxTree>
+    <IxTree root="root" :model="model" aria-label="Sample tree"></IxTree>
   </div>
 </template>
 ```
@@ -344,6 +344,7 @@ export default () => {
         root="root"
         model={model}
         context={context}
+        aria-label="Sample tree"
         onContextChange={({ detail }) => {
           setContext(detail);
         }}
@@ -403,6 +404,7 @@ type TreeData = {
       [model]="model"
       [context]="context"
       [renderItem]="treeItem"
+      aria-label="Sample tree"
     ></ix-tree>
     <ng-template #treeItem let-item>
       <div style="display: flex; align-items: center">
@@ -507,6 +509,7 @@ type TreeData = {
       [model]="model"
       [context]="context"
       [renderItem]="treeItem"
+      aria-label="Sample tree"
     ></ix-tree>
     <ng-template #treeItem let-item>
       <div style="display: flex; align-items: center">
@@ -670,6 +673,7 @@ onMounted(() => {
       root="root"
       :model="model"
       :context="context"
+      aria-label="Sample tree"
       @contextChange="({ detail }) => (context = detail)"
     >
     </IxTree>
@@ -683,20 +687,20 @@ onMounted(() => {
 
 | Name | Description | Attribute | Type | Default |
 | --- | --- | --- | --- | --- |
-| context | Selection and collapsed state management |  | { [x: string]: TreeItemContext; } | {} |
-| model | Tree model |  | any | {} |
-| renderItem | Render function of tree items |  | ( (index: number, data: T, dataList: T[], context: TreeContext, update: (callback: UpdateCallback) => void) => HTMLElement) \| undefined |  |
-| root | Initial root element will not be rendered | root | string | 'root' |
-| toggleOnItemClick | Enable to toggle items by click on the item | toggle-on-item-click | boolean \| undefined |  |
+| context | { "Selection and collapsed state management" } |  | { [x: string]: TreeItemContext; } | {} |
+| model | { "Tree model" } |  | any | {} |
+| renderItem | { "Render function of tree items" } |  | ( (index: number, data: T, dataList: T[], context: TreeContext, update: (callback: UpdateCallback) => void) => HTMLElement) \| undefined |  |
+| root | { "Initial root element will not be rendered" } | root | string | 'root' |
+| toggleOnItemClick | { "Enable to toggle items by click on the item" } | toggle-on-item-click | boolean \| undefined |  |
 
 ### Events
 
 | Name | Description | Event | Detail |
 | --- | --- | --- | --- |
-| contextChange | Context changed | contextChange | { [x: string]: TreeItemContext; } |
-| nodeClicked | Node clicked event | nodeClicked | string |
-| nodeRemoved | Emits removed nodes | nodeRemoved | any |
-| nodeToggled | Node toggled event | nodeToggled | { id: string; isExpanded: boolean; } |
+| contextChange | { "Context changed" } | contextChange | { [x: string]: TreeItemContext; } |
+| nodeClicked | { "Node clicked event" } | nodeClicked | string |
+| nodeRemoved | { "Emits removed nodes" } | nodeRemoved | any |
+| nodeToggled | { "Node toggled event" } | nodeToggled | { id: string; isExpanded: boolean; } |
 
 ## API for ix-tree-item
 
@@ -704,14 +708,15 @@ onMounted(() => {
 
 | Name | Description | Attribute | Type | Default |
 | --- | --- | --- | --- | --- |
-| ariaLabelChevronIcon | ARIA label for the chevron icon | aria-label-chevron-icon | string \| undefined |  |
-| context | Context |  | TreeItemContext \| undefined |  |
-| hasChildren | Has tree item children | has-children | boolean | false |
-| text | Text | text | string \| undefined |  |
+| ariaLabelChevronIcon | { "ARIA label for the chevron icon" } | aria-label-chevron-icon | string \| undefined |  |
+| context | { "Context" } |  | TreeItemContext \| undefined |  |
+| disabled | { "Disable tree item" } | disabled | boolean | false |
+| hasChildren | { "Has tree item children" } | has-children | boolean | false |
+| text | { "Text" } | text | string \| undefined |  |
 
 ### Events
 
 | Name | Description | Event | Detail |
 | --- | --- | --- | --- |
-| itemClick | Click on item not on the expand/collapse icon | itemClick | void |
-| toggle | Expand/Collapsed toggled | toggle | void |
+| itemClick | { "Click on item not on the expand/collapse icon" } | itemClick | void |
+| toggle | { "Expand/Collapsed toggled" } | toggle | void |

@@ -18,9 +18,11 @@ import { ModalLoadingContext } from '@siemens/ix';
 import { IxButton, showModalLoading } from '@siemens/ix-react';
 
 export default () => {
-  const startLoading = () => {
+  const startLoading = async () => {
     let count = 0;
-    const progress: ModalLoadingContext = showModalLoading({ message: 'Loading 0/2' });
+    const progress: ModalLoadingContext = await showModalLoading({
+      message: 'Loading 0/2',
+    });
     const interval = setInterval(() => {
       count++;
       progress.update(`Loading ${count}/2`);
@@ -51,10 +53,10 @@ import { LoadingService } from '@siemens/ix-angular';
 export default class Loading {
   constructor(private readonly loadingService: LoadingService) {}
 
-  startLoading = () => {
+  startLoading = async () => {
     let count = 0;
     const progress: ModalLoadingContext =
-      this.loadingService.showModalLoading({ message: 'Loading 0/2' });
+      await this.loadingService.showModalLoading({ message: 'Loading 0/2' });
     const interval = setInterval(() => {
       count++;
       progress.update(`Loading ${count}/2`);
@@ -84,10 +86,10 @@ import { IxButton, LoadingService } from '@siemens/ix-angular/standalone';
 export default class Loading {
   constructor(private readonly loadingService: LoadingService) {}
 
-  startLoading = () => {
+  startLoading = async () => {
     let count = 0;
     const progress: ModalLoadingContext =
-      this.loadingService.showModalLoading({ message: 'Loading 0/2' });
+      await this.loadingService.showModalLoading({ message: 'Loading 0/2' });
     const interval = setInterval(() => {
       count++;
       progress.update(`Loading ${count}/2`);
@@ -109,9 +111,11 @@ export default class Loading {
 import { IxButton, showModalLoading } from '@siemens/ix-vue';
 import type { ModalLoadingContext } from '@siemens/ix';
 
-const startLoading = () => {
+const startLoading = async () => {
   let count = 0;
-  const progress: ModalLoadingContext = showModalLoading({ message: 'Loading 0/2' });
+  const progress: ModalLoadingContext = await showModalLoading({
+    message: 'Loading 0/2',
+  });
   const interval = setInterval(() => {
     count++;
     progress.update(`Loading ${count}/2`);
@@ -133,13 +137,19 @@ const startLoading = () => {
 
 ### Functions
 
+#### createShowModalLoading
+
+```ts
+createShowModalLoading(dependencies: ShowModalLoadingDependencies): DependencyFunction&lt;unknown, ShowModalLoadingDependencies&gt;;
+```
+
+Create a loading modal helper with custom element dependencies.
+
 #### showModalLoading
 
 ```ts
-showModalLoading(message: string): ModalLoadingContext;
+showModalLoading(options: ModalLoadingOptions): Promise&lt;ModalLoadingContext&gt;;
 ```
-
-Displays a loading modal with a message
 
 ## API for LoadingService (Angular)
 
@@ -148,7 +158,7 @@ Displays a loading modal with a message
 #### showModalLoading
 
 ```ts
-showModalLoading(message: string): ModalLoadingContext;
+showModalLoading(options: ModalLoadingOptions): Promise&lt;ModalLoadingContext&gt;;
 ```
 
 Displays a loading modal with a message

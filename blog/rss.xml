@@ -4,10 +4,89 @@
         <title>Siemens Industrial Experience Blog</title>
         <link>https://ix.siemens.io/blog</link>
         <description>Siemens Industrial Experience Blog</description>
-        <lastBuildDate>Mon, 23 Feb 2026 00:00:00 GMT</lastBuildDate>
+        <lastBuildDate>Thu, 21 May 2026 00:00:00 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <generator>https://github.com/jpmonette/feed</generator>
         <language>en</language>
+        <item>
+            <title><![CDATA[Release V5.0.0]]></title>
+            <link>https://ix.siemens.io/blog/2026/05/21/release-5</link>
+            <guid>https://ix.siemens.io/blog/2026/05/21/release-5</guid>
+            <pubDate>Thu, 21 May 2026 00:00:00 GMT</pubDate>
+            <description><![CDATA[banner]]></description>
+            <content:encoded><![CDATA[<p><img decoding="async" loading="lazy" alt="banner" src="https://ix.siemens.io/assets/images/2605_blog_5-0-768258213ec38878f3bef372f3f969af.png" width="896" height="360" class="img_QgcI"></p>
+<p>Version 5 marks a step forward for the Industrial Experience Design System. This major release focuses on improving accessibility, removing outdated components and strengthening the connection between design tokens, Figma and code.</p>
+<p>To upgrade to Version 5, start here:</p>
+<ul>
+<li>Review the <a href="https://ix.siemens.io/docs/home/migration/5_0_0">migration guide</a> for breaking changes and required updates.</li>
+<li>Expect the biggest changes to accessibility behavior, date and time inputs and status colors.</li>
+<li>Update both code and Figma assets if your team relies on shared component libraries.</li>
+</ul>
+<h1>Why upgrade to Version 5?</h1>
+<p>With Version 5, we took the opportunity to address topics that require breaking changes in areas where incremental updates were no longer enough.</p>
+<p>Our goals were clear:</p>
+<ul>
+<li>Reduce legacy APIs and outdated approaches.</li>
+<li>Align components with modern web and accessibility standards.</li>
+<li>Strengthen the connection between design tokens, Figma and code.</li>
+</ul>
+<h1>Brand theme colors now follow a shared reference model</h1>
+<p><img decoding="async" loading="lazy" alt="color-tokens" src="https://ix.siemens.io/assets/images/2605_blog_tokens-f9925783bef43e0cfc8210ec3921b366.png" width="896" height="360" class="img_QgcI"></p>
+<p>The color token basis is now aligned with the Siemens Design Language and built on strict reference token.</p>
+<p>Teams now have a more consistent foundation across design systems and codebases.</p>
+<ul>
+<li>Color tokens are now strictly reference-based.</li>
+<li>Contrast is increased for status colors and between interaction states.</li>
+<li>Recognition of interaction state changes is increased for keyboard interactions.</li>
+</ul>
+<h1>Accessibility improvements for keyboard navigation</h1>
+<p><img decoding="async" loading="lazy" alt="accessibility" src="https://ix.siemens.io/assets/images/2605_blog_accessibility-94fe513bc1debfff2863f7293721f910.png" width="896" height="360" class="img_QgcI"></p>
+<p>Keyboard navigation and focus handling have been improved across several complex components.</p>
+<p>The update focused especially on interaction clarity in areas such as:</p>
+<ul>
+<li><a href="https://ix.siemens.io/docs/components/dropdown">Dropdowns</a></li>
+<li>Menus</li>
+<li><a href="https://ix.siemens.io/docs/components/tabs">Tabs</a></li>
+<li>Composite form elements, e.g. <a href="https://ix.siemens.io/docs/components/range-field">range field</a></li>
+</ul>
+<h1>Date and time inputs are more capable</h1>
+<p><img decoding="async" loading="lazy" alt="date-and-time" src="https://ix.siemens.io/assets/images/2605_blog_datetime-8fd79b522504509b70d5c9dfbdcd8ffb.png" width="896" height="360" class="img_QgcI"></p>
+<p>Version 5 adds new date and time input capabilities and improves consistency across existing flows, including:</p>
+<ul>
+<li>A new <a href="https://ix.siemens.io/docs/components/input-date-time">date-time input</a></li>
+<li>A dedicated <a href="https://ix.siemens.io/docs/components/range-field">range field</a> concept</li>
+<li>Improved interaction consistency across <a href="https://ix.siemens.io/docs/components/date-picker">date pickers</a></li>
+</ul>
+<p>We've standardized date and time component interactions across all locales, making data entry more predictable for complex workflows. All components now feature robust integration with <a href="https://ix.siemens.io/docs/components/forms-field">forms</a> and validation. Architecturally, we've streamlined the implementation to support future enhancements.</p>
+<h1>Tabs now handle overflow with a More menu</h1>
+<p><img decoding="async" loading="lazy" alt="tabs-overflow" src="https://ix.siemens.io/assets/images/2605_blog_tab-overflow-cd882033a0037a89651dda906953a1f6.png" width="896" height="360" class="img_QgcI"></p>
+<p><a href="https://ix.siemens.io/docs/components/tabs">Tabs</a> now handle overflow more reliably in responsive layouts.</p>
+<ul>
+<li>Tab overflow is handled more intelligently. A “More menu” keeps all tabs accessible, regardless of viewport size.</li>
+<li>Visual styling is aligned with updated layout conventions.</li>
+<li>A continuous border helps separate the content below the tabs.</li>
+<li>Updated visuals make the selected tab more distinctive.</li>
+</ul>
+<h1>Card components now use Figma native slots</h1>
+<p><img decoding="async" loading="lazy" alt="Cards" src="https://ix.siemens.io/assets/images/2605_blog_Cards-9488ae3484d295ffeaa1e3d6123ecac7.png" width="896" height="360" class="img_QgcI"></p>
+<p>The <a href="https://ix.siemens.io/docs/components/card">card</a> updates in Version 5 are focused on the Figma library and are not related to code changes. Native Figma slots make card composition more flexible and support more responsive behavior directly in the library.</p>
+<p>That change required a breaking update in the Figma library:</p>
+<ul>
+<li>Older versions of card components are now deprecated.</li>
+<li>Reworked card components are now provided under the same existing names.</li>
+</ul>
+<p>Additionally, we introduced a new property for switching between outline and filled variants. We have added an example directly in the library showing slot usage for responsive card behavior.</p>
+<h1>More improvements in Version 5</h1>
+<p>Beyond the bigger themes, Version 5 also includes:</p>
+<ul>
+<li>Non-blocking <a href="https://ix.siemens.io/docs/components/modal">modal</a> behavior improvements</li>
+<li>Architectural refactoring under the hood</li>
+<li>Bug fixes and performance improvements</li>
+<li>Updated component specifications in Figma</li>
+</ul>
+<p>Together, these updates improve stability, consistency and future development speed even when they are less visible at first glance.</p>]]></content:encoded>
+            <category>Release</category>
+        </item>
         <item>
             <title><![CDATA[Beyond the toast: Mastering messaging and feedback]]></title>
             <link>https://ix.siemens.io/blog/messaging</link>

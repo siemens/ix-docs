@@ -648,20 +648,20 @@ import { IxRadio, IxRadioGroup } from '@siemens/ix-vue';
 
 | Name | Description | Attribute | Type | Default |
 | --- | --- | --- | --- | --- |
-| checked | Checked state of the radio component | checked | boolean | false |
-| disabled | Disabled state of the radio component | disabled | boolean | false |
-| label | Label for the radio component | label | string \| undefined |  |
-| name | Name of the radio component | name | string \| undefined |  |
-| required | Requires the radio component and its group to be checked for the form to be submittable | required | boolean | false |
-| value | Value of the radio component | value | string \| undefined |  |
+| checked | { "Checked state of the radio component" } | checked | boolean | false |
+| disabled | { "Disabled state of the radio component" } | disabled | boolean | false |
+| label | { "Label for the radio component" } | label | string \| undefined |  |
+| name | { "Name of the radio component" } | name | string \| undefined |  |
+| required | { "Requires the radio component and its group to be checked for the form to be submittable" } | required | boolean | false |
+| value | { "Value of the radio component" } | value | string \| undefined |  |
 
 ### Events
 
 | Name | Description | Event | Detail |
 | --- | --- | --- | --- |
-| checkedChange | Event emitted when the checked state of the radio changes | checkedChange | boolean |
-| ixBlur | Event emitted when the radio is blurred | ixBlur | void |
-| valueChange | Event emitted when the value of the radio changes | valueChange | string |
+| checkedChange | { "Event emitted when the checked state of the radio changes" } | checkedChange | boolean |
+| ixBlur | { "Event emitted when the radio is blurred" } | ixBlur | void |
+| valueChange | { "Event emitted when the value of the radio changes" } | valueChange | string |
 
 ## API for ix-radio-group
 
@@ -669,18 +669,18 @@ import { IxRadio, IxRadioGroup } from '@siemens/ix-vue';
 
 | Name | Description | Attribute | Type | Default |
 | --- | --- | --- | --- | --- |
-| direction | Alignment of the radio buttons in the group | direction | "column" \| "row" | 'column' |
-| helperText | Show text below the field component | helper-text | string \| undefined |  |
-| infoText | Info text for the field component | info-text | string \| undefined |  |
-| invalidText | Error text for the field component | invalid-text | string \| undefined |  |
-| label | Label for the field component | label | string \| undefined |  |
-| showTextAsTooltip | Show helper, info, warning, error and valid text as tooltip | show-text-as-tooltip | boolean \| undefined |  |
-| validText | Valid text for the field component | valid-text | string \| undefined |  |
-| value | Value of the radiobutton group component | value | string \| undefined |  |
-| warningText | Warning text for the field component | warning-text | string \| undefined |  |
+| direction | { "Alignment of the radio buttons in the group" } | direction | "column" \| "row" | 'column' |
+| helperText | { "Show text below the field component" } | helper-text | string \| undefined |  |
+| infoText | { "Info text for the field component" } | info-text | string \| undefined |  |
+| invalidText | { "Error text for the field component" } | invalid-text | string \| undefined |  |
+| label | { "Label for the field component" } | label | string \| undefined |  |
+| showTextAsTooltip | { "Show helper, info, warning, error and valid text as tooltip" } | show-text-as-tooltip | boolean \| undefined |  |
+| validText | { "Valid text for the field component" } | valid-text | string \| undefined |  |
+| value | { "Value of the radiobutton group component" } | value | string \| undefined |  |
+| warningText | { "Warning text for the field component" } | warning-text | string \| undefined |  |
 
 ### Events
 
 | Name | Description | Event | Detail |
 | --- | --- | --- | --- |
-| valueChange | Event emitted when the value of the radiobutton group changes | valueChange | string |
+| valueChange | { "Event emitted when the value of the radiobutton group changes" } | valueChange | string |

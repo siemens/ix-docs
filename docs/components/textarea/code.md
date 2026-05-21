@@ -623,32 +623,32 @@ export default {
 
 | Name | Description | Attribute | Type | Default |
 | --- | --- | --- | --- | --- |
-| disabled | Determines if the textarea field is disabled. | disabled | boolean | false |
-| helperText | The helper text for the textarea field. | helper-text | string \| undefined |  |
-| infoText | The info text for the textarea field. | info-text | string \| undefined |  |
-| invalidText | The error text for the textarea field. | invalid-text | string \| undefined |  |
-| label | The label for the textarea field. | label | string \| undefined |  |
-| maxLength | The maximum length of the textarea field. | max-length | number \| undefined |  |
-| minLength | The minimum length of the textarea field. | min-length | number \| undefined |  |
-| name | The name of the textarea field. | name | string \| undefined |  |
-| placeholder | The placeholder text for the textarea field. | placeholder | string \| undefined |  |
-| readonly | Determines if the textarea field is readonly. | readonly | boolean | false |
-| required | Determines if the textarea field is required. | required | boolean | false |
-| resizeBehavior | Determines the resize behavior of the textarea field. Resizing can be enabled in one direction, both directions or completely disabled. | resize-behavior | "both" \| "horizontal" \| "none" \| "vertical" | 'both' |
-| showTextAsTooltip | Determines if the text should be displayed as a tooltip. | show-text-as-tooltip | boolean \| undefined |  |
-| textareaCols | The width of the textarea specified by number of characters. Will be overridden by \`textareaWidth\` prop if both are set. | textarea-cols | number \| undefined |  |
-| textareaHeight | The height of the textarea field (e.g. "52px"). Will take precedence over \`textareaRows\` prop if both are set. | textarea-height | string \| undefined |  |
-| textareaRows | The height of the textarea specified by number of rows. Will be overridden by \`textareaHeight\` prop if both are set. | textarea-rows | number \| undefined |  |
-| textareaWidth | The width of the textarea field (e.g. "200px"). Will take precedence over \`textareaCols\` prop if both are set. | textarea-width | string \| undefined |  |
-| validText | The valid text for the textarea field. | valid-text | string \| undefined |  |
-| value | The value of the textarea field. | value | string | '' |
-| warningText | The warning text for the textarea field. | warning-text | string \| undefined |  |
+| disabled | { "Determines if the textarea field is disabled." } | disabled | boolean | false |
+| helperText | { "The helper text for the textarea field." } | helper-text | string \| undefined |  |
+| infoText | { "The info text for the textarea field." } | info-text | string \| undefined |  |
+| invalidText | { "The error text for the textarea field." } | invalid-text | string \| undefined |  |
+| label | { "The label for the textarea field." } | label | string \| undefined |  |
+| maxLength | { "The maximum length of the textarea field." } | max-length | number \| undefined |  |
+| minLength | { "The minimum length of the textarea field." } | min-length | number \| undefined |  |
+| name | { "The name of the textarea field." } | name | string \| undefined |  |
+| placeholder | { "The placeholder text for the textarea field." } | placeholder | string \| undefined |  |
+| readonly | { "Determines if the textarea field is readonly." } | readonly | boolean | false |
+| required | { "Determines if the textarea field is required." } | required | boolean | false |
+| resizeBehavior | { "Determines the resize behavior of the textarea field.\n\nResizing can be enabled in one direction, both directions or completely disabled." } | resize-behavior | "both" \| "horizontal" \| "none" \| "vertical" | 'both' |
+| showTextAsTooltip | { "Determines if the text should be displayed as a tooltip." } | show-text-as-tooltip | boolean \| undefined |  |
+| textareaCols | { "The width of the textarea specified by number of characters.\n\nWill be overridden by `textareaWidth` prop if both are set." } | textarea-cols | number \| undefined |  |
+| textareaHeight | { "The height of the textarea field (e.g. \"52px\").\n\nWill take precedence over `textareaRows` prop if both are set." } | textarea-height | string \| undefined |  |
+| textareaRows | { "The height of the textarea specified by number of rows.\n\nWill be overridden by `textareaHeight` prop if both are set." } | textarea-rows | number \| undefined |  |
+| textareaWidth | { "The width of the textarea field (e.g. \"200px\").\n\nWill take precedence over `textareaCols` prop if both are set." } | textarea-width | string \| undefined |  |
+| validText | { "The valid text for the textarea field." } | valid-text | string \| undefined |  |
+| value | { "The value of the textarea field." } | value | string | '' |
+| warningText | { "The warning text for the textarea field." } | warning-text | string \| undefined |  |
 
 ### Events
 
 | Name | Description | Event | Detail |
 | --- | --- | --- | --- |
-| ixBlur | Event emitted when the textarea field loses focus. | ixBlur | void |
-| ixChange | Event emitted when the textarea field loses focus and the value has changed. | ixChange | string |
-| validityStateChange | Event emitted when the validity state of the textarea field changes. | validityStateChange | ValidityState |
-| valueChange | Event emitted when the value of the textarea field changes. | valueChange | string |
+| ixBlur | { "Event emitted when the textarea field loses focus." } | ixBlur | void |
+| ixChange | { "Event emitted when the textarea field loses focus and the value has changed." } | ixChange | string |
+| validityStateChange | { "Event emitted when the validity state of the textarea field changes." } | validityStateChange | ValidityState |
+| valueChange | { "Event emitted when the value of the textarea field changes." } | valueChange | string |

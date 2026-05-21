@@ -26,10 +26,12 @@ export default () => {
         <div className="placeholder-logo" slot="logo"></div>
       </IxApplicationHeader>
       <IxMenu>
-        <IxMenuAbout>
-          <IxMenuAboutItem label="Example"> </IxMenuAboutItem>
+        <IxMenuAbout activeTabKey="tab-1">
+          <IxMenuAboutItem tabKey="tab-1" label="Example">
+            {' '}
+          </IxMenuAboutItem>
         </IxMenuAbout>
-        <IxMenuAboutNews label="Test" show about-item-label="Example">
+        <IxMenuAboutNews label="Test" show activeAboutTabKey="tab-1">
           Test
         </IxMenuAboutNews>
       </IxMenu>
@@ -59,10 +61,10 @@ export default class PopoverNews {}
     <div class="placeholder-logo" slot="logo"></div>
   </ix-application-header>
   <ix-menu>
-    <ix-menu-about>
-      <ix-menu-about-item label="Example"> </ix-menu-about-item>
+    <ix-menu-about activeTabKey="tab-1">
+      <ix-menu-about-item tabKey="tab-1" label="Example"> </ix-menu-about-item>
     </ix-menu-about>
-    <ix-menu-about-news label="Test" show about-item-label="Example">
+    <ix-menu-about-news label="Test" show activeAboutTabKey="tab-1">
       Test
     </ix-menu-about-news>
   </ix-menu>
@@ -105,10 +107,10 @@ export default class PopoverNews {}
     <div class="placeholder-logo" slot="logo"></div>
   </ix-application-header>
   <ix-menu>
-    <ix-menu-about>
-      <ix-menu-about-item label="Example"> </ix-menu-about-item>
+    <ix-menu-about activeTabKey="tab-1">
+      <ix-menu-about-item tabKey="tab-1" label="Example"> </ix-menu-about-item>
     </ix-menu-about>
-    <ix-menu-about-news label="Test" show about-item-label="Example">
+    <ix-menu-about-news label="Test" show activeAboutTabKey="tab-1">
       Test
     </ix-menu-about-news>
   </ix-menu>
@@ -136,10 +138,10 @@ import {
       <div className="placeholder-logo" slot="logo"></div>
     </IxApplicationHeader>
     <IxMenu>
-      <IxMenuAbout>
-        <IxMenuAboutItem label="Example"> </IxMenuAboutItem>
+      <IxMenuAbout enableLegacyTabs activeTabKey="tab-1">
+        <IxMenuAboutItem tabKey="tab-1" label="Example"> </IxMenuAboutItem>
       </IxMenuAbout>
-      <IxMenuAboutNews label="Test" show about-item-label="Example">
+      <IxMenuAboutNews label="Test" show activeAboutTabKey="tab-1">
         Test
       </IxMenuAboutNews>
     </IxMenu>
@@ -153,14 +155,15 @@ import {
 
 | Name | Description | Attribute | Type | Default |
 | --- | --- | --- | --- | --- |
-| aboutItemLabel | Subtitle of the about news | about-item-label | string \| undefined |  |
-| i18nShowMore | i18n label for 'Show more' button | i18n-show-more | string | 'Show more' |
-| label | Title of the about news | label | string \| undefined |  |
-| show | Show about news | show | boolean | false |
+| aboutItemLabel | { "Subtitle of the about news" } | about-item-label | string \| undefined |  |
+| activeAboutTabKey | { "Defines which tab should be active, used when the about news is used in combination with ix-menu-about" } | active-about-tab-key | string \| undefined |  |
+| i18nShowMore | { "i18n label for 'Show more' button" } | i18n-show-more | string | 'Show more' |
+| label | { "Title of the about news" } | label | string \| undefined |  |
+| show | { "Show about news" } | show | boolean | false |
 
 ### Events
 
 | Name | Description | Event | Detail |
 | --- | --- | --- | --- |
-| closePopover | Popover closed | closePopover | void |
-| showMore | Show More button is pressed | showMore | MouseEvent |
+| closePopover | { "Popover closed" } | closePopover | void |
+| showMore | { "Show More button is pressed" } | showMore | MouseEvent |

@@ -30,17 +30,18 @@ All major releases receive support for approximately 12 months. We distinguish b
 | ------------- | :------------: | ---------------------------------------------- |
 | Latest        |    6 months    | Receives regular minor releases                |
 | Maintenance   |    6 months    | Receives patch releases to fix critical issues |
-| End of Life   |       -        | Receives no support and no further releases    |
+| End of life   |       -        | Receives no support and no further releases    |
 
 Our support policy applies to all components of the design system including the code base, Figma design kits and our documentation.
 
-We recommend always following the active release. When a version moves from the active stage to the LTS stage, projects should start migrating to the new active major version.
+We recommend always following the active release. When a version moves from the active stage to the maintenance stage, projects should start migrating to the new active major version.
 
 ## Supported versions
 
-| Version |   Status    | Released       | Maintenance support since | End of life since |
-| ------- | :---------: | -------------- | ------------------------- | ----------------- |
-| V5.0.0  |    Next     | ~ May 2026     | -                         | -                 |
-| V4.0.0  |   Latest    | November 2025  | ~ May 2026                | ~ November 2026   |
-| V3.0.0  | Maintenance | May 2025       | November 2025             | May 2026          |
-| V2.0.0  | End of Life | September 2023 | May 2025                  | November 2025     |
+| Version | Status         | Release       | Active support ends       | Maintenance support ends |
+| ------- | -------------- | -------------- | ------------------------- | ----------------- |
+| V6.0.0  | Next | *November 2026* |  |  |
+| V5.0.0  | Latest | May 2026 | November 2026 | May 2027 | 
+| V4.0.0  | Maintenance | November 2025 | May 2026 | November 2026 |
+| V3.0.0  | End of life | May 2025 | November 2025 | May 2026 |
+| V2.0.0  | End of life | September 2023 | May 2025 | November 2025 |

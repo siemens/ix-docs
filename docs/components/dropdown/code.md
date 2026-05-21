@@ -499,21 +499,26 @@ import { IxButton, IxDropdown, IxDropdownItem } from '@siemens/ix-vue';
 
 | Name | Description | Attribute | Type | Default |
 | --- | --- | --- | --- | --- |
-| anchor | Define an anchor element | anchor | HTMLElement \| Promise \| string \| undefined |  |
-| closeBehavior | Controls if the dropdown will be closed in response to a click event depending on the position of the event relative to the dropdown. If the dropdown is a child of another one, it will be closed with the parent, regardless of its own close behavior. | close-behavior | "both" \| "inside" \| "outside" \| boolean | 'both' |
-| enableTopLayer | Enable Popover API rendering for top-layer positioning. | enable-top-layer | boolean | false |
-| header | An optional header shown at the top of the dropdown | header | string \| undefined |  |
-| placement | Placement of the dropdown | placement | "bottom-end" \| "bottom-start" \| "left-end" \| "left-start" \| "right-end" \| "right-start" \| "top-end" \| "top-start" | 'bottom-start' |
-| positioningStrategy | Position strategy | positioning-strategy | "absolute" \| "fixed" | 'fixed' |
-| show | Show dropdown | show | boolean | false |
-| suppressAutomaticPlacement | Suppress the automatic placement of the dropdown. | suppress-automatic-placement | boolean | false |
-| trigger | Define an element that triggers the dropdown. A trigger can either be a string that will be interpreted as id attribute or a DOM element. | trigger | HTMLElement \| Promise \| string \| undefined |  |
+| anchor | { "Define an anchor element" } | anchor | HTMLElement \| Promise \| string \| undefined |  |
+| closeBehavior | { "Controls if the dropdown will be closed in response to a click event depending on the position of the event relative to the dropdown.\n\nIf the dropdown is a child of another one, it will be closed with the parent, regardless of its own close behavior." } | close-behavior | "both" \| "inside" \| "outside" \| boolean | 'both' |
+| disableFocusHandling | { "Suppress automatic focus when the dropdown is shown" } | disable-focus-handling | boolean | false |
+| disableFocusTrap | { "Close dropdown when tabbing away, and do not trap focus inside dropdown" } | disable-focus-trap | boolean | false |
+| enableTopLayer | { "Enable Popover API rendering for top-layer positioning." } | enable-top-layer | boolean | false |
+| focusCheckedItem | { "If true, the dropdown will try to focus checked items first when opened via keyboard, otherwise it will always focus the first focusable item." } | focus-checked-item | boolean | false |
+| header | { "An optional header shown at the top of the dropdown" } | header | string \| undefined |  |
+| placement | { "Placement of the dropdown" } | placement | "bottom-end" \| "bottom-start" \| "left-end" \| "left-start" \| "right-end" \| "right-start" \| "top-end" \| "top-start" | 'bottom-start' |
+| positioningStrategy | { "Position strategy" } | positioning-strategy | "absolute" \| "fixed" | 'fixed' |
+| show | { "Show dropdown" } | show | boolean | false |
+| suppressAutomaticPlacement | { "Suppress the automatic placement of the dropdown." } | suppress-automatic-placement | boolean | false |
+| suppressTriggerVisibilityCheck | { "By default the dropdown gets closed if the trigger is not visible anymore (e.g. due to scrolling). Setting this property prevents that behavior." } | suppress-trigger-visibility-check | boolean | false |
+| trigger | { "Define an element that triggers the dropdown.\n\nA trigger can either be a string that will be interpreted as id attribute or a DOM element." } | trigger | HTMLElement \| Promise \| string \| undefined |  |
 
 ### Events
 
 | Name | Description | Event | Detail |
 | --- | --- | --- | --- |
-| showChanged | Fire event after visibility of dropdown has changed | showChanged | boolean |
+| showChange | { "Fire event before visibility of dropdown has changed, preventing event will cancel showing dropdown" } | showChange | boolean |
+| showChanged | { "Fire event after visibility of dropdown has changed" } | showChanged | boolean |
 
 ## API for ix-dropdown-item
 
@@ -521,10 +526,11 @@ import { IxButton, IxDropdown, IxDropdownItem } from '@siemens/ix-vue';
 
 | Name | Description | Attribute | Type | Default |
 | --- | --- | --- | --- | --- |
-| ariaLabelButton | ARIA label for the item's button Will be set as aria-label for the nested HTML button element | aria-label-button | string \| undefined |  |
-| ariaLabelIcon | ARIA label for the icon | aria-label-icon | string \| undefined |  |
-| checked | Whether the item is checked or not. If true a checkmark will mark the item as checked. | checked | boolean | false |
-| disabled | Disable item and remove event listeners | disabled | boolean | false |
-| hover | Display hover state | hover | boolean | false |
-| icon | Icon of dropdown item | icon | string \| undefined |  |
-| label | Label of dropdown item | label | string \| undefined |  |
+| ariaLabelButton | { "ARIA label for the item's button\n\nWill be set as aria-label for the nested HTML button element" } | aria-label-button | string \| undefined |  |
+| ariaLabelIcon | { "ARIA label for the icon" } | aria-label-icon | string \| undefined |  |
+| checked | { "Whether the item is checked or not. If true a checkmark will mark the item as checked." } | checked | boolean | false |
+| disabled | { "Disable item and remove event listeners" } | disabled | boolean | false |
+| hover | { "Display hover state" } | hover | boolean | false |
+| icon | { "Icon of dropdown item" } | icon | string \| undefined |  |
+| itemRole | { "Role of the host surface.\n\nUse `option` when the item represents a listbox option (e.g. inside select); use `menuitem` in menus." } | item-role | "menuitem" \| "option" | 'menuitem' |
+| label | { "Label of dropdown item" } | label | string \| undefined |  |

@@ -546,4 +546,4 @@ import { IxKeyValue, IxKeyValueList } from '@siemens/ix-vue';
 
 | Name | Description | Attribute | Type | Default |
 | --- | --- | --- | --- | --- |
-| striped | Optional striped key value list style | striped | boolean | false |
+| striped | { "Optional striped key value list style" } | striped | boolean | false |

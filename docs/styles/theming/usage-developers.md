@@ -16,8 +16,7 @@ Siemens AG employees can access the Corporate Brand Theme at [**https://code.sie
 
 ## How to set a theme
 
-To choose a theme set the `data-ix-theme` attribute of the `<html>` or `<body>` tag to the theme of choice (e.g. `classic`).
-The default is `classic` in `dark` mode. To enable light mode, set the `data-ix-color-schema` attribute to `light` instead.
+To choose a theme set the `data-ix-theme` attribute of the `<html>` tag to the theme of choice (e.g. `classic`) and the corresponding `data-ix-color-schema` attribute to the value `light`, `dark` or `system` to set the color scheme. `system` will automatically apply the color scheme of the users’ operating system.
 
 ```html
 <html data-ix-theme="classic" data-ix-color-schema="dark">
@@ -27,49 +26,7 @@ The default is `classic` in `dark` mode. To enable light mode, set the `data-ix-
 </html>
 ```
 
-The CSS class based theme configuration is still supported, but will be removed in version 5.0.0:
-
-The default theme is `theme-classic-dark`. To set a different theme, change the `class` attribute of the `<body>` tag to contain e.g. `theme-classic-light` instead of `theme-classic-dark`.
-
-```html
-<html>
-  <!-- Framework related imports -->
-  <!--  -->
-  <body class="theme-classic-light"></body>
-</html>
-```
-
-Avoid mixing the class-based approach with `data-` attributes, as this will cause redundant CSS custom properties to be loaded.
-
-## Using the legacy classic theme selector
-
-The original classic theme was deprecated in favor of an updated version that is more easily maintainable for us.
-The legacy theme is still available but no longer part of the main CSS file. In order to still apply it to your app, you have to load it manually.
-This can be done in various ways.
-
-The simplest way is to use the bundler/loader and just import the legacy styles inside your global stylesheet.
-
-e.g. styles.css:
-
-```
-@import '@siemens/ix/dist-css/theme/legacy-classic-dark.css';
-@import '@siemens/ix/dist-css/theme/legacy-classic-light.css';
-```
-
-If this step is done, you can set the theme name class on the body tag:
-
-```html
-<html>
-  <!-- Framework related imports -->
-  <!--  -->
-  <body class="theme-legacy-classic-dark"></body>
-</html>
-```
-
-- **deprecated** Legacy Classic light (theme-legacy-classic-light)
-- **deprecated** Legacy Classic dark (theme-legacy-classic-dark)
-
-## Applying only one theme to reduce build size
+## Applying only core functionalities without preloading themes
 
 Importing `siemens-ix-core.css` will only load core related functionalities, without preloading any theme or bootstrap.
 
@@ -87,14 +44,6 @@ import '@siemens/ix/dist/siemens-ix/siemens-ix-core.css';
 // Load theme
 import '@siemens/ix/dist/siemens-ix/theme/classic-light.css';
 import '@siemens/ix/dist/siemens-ix/theme/classic-dark.css';
-```
-
-**_Set theme_**
-
-```html
-<body class="theme-classic-dark">
-  ...
-</body>
 ```
 
 ## Working with themes during runtime
@@ -123,8 +72,7 @@ export default () => {
   const [useSystemTheme, setUseSystemTheme] = useState(false);
 
   useEffect(() => {
-    themeSwitcher.setTheme('classic');
-    themeSwitcher.setVariant(selectedVariant);
+    themeSwitcher.setTheme('classic', selectedVariant);
   }, []);
 
   const onValueChange = (event: CustomEvent<string | string[]>) => {
@@ -134,7 +82,7 @@ export default () => {
 
     const newVariant = event.detail as ThemeVariant;
 
-    themeSwitcher.setVariant(newVariant);
+    themeSwitcher.setColorSchema(newVariant);
     setSelectedVariant(newVariant);
   };
 
@@ -156,9 +104,9 @@ export default () => {
     setUseSystemTheme(checked);
 
     if (checked) {
-      themeSwitcher.setVariant();
+      themeSwitcher.setColorSchema('system');
     } else {
-      themeSwitcher.setVariant(selectedVariant);
+      themeSwitcher.setColorSchema(selectedVariant);
     }
   };
 
@@ -233,8 +181,7 @@ export default class ThemeSwitcher implements OnInit {
   useSystemTheme = false;
 
   ngOnInit() {
-    themeSwitcher.setTheme('classic');
-    themeSwitcher.setVariant(this.selectedVariant);
+    themeSwitcher.setTheme('classic', this.selectedVariant);
   }
 
   onValueChange(event: Event) {
@@ -245,7 +192,7 @@ export default class ThemeSwitcher implements OnInit {
     const customEvent = event as CustomEvent<string>;
     const newVariant = customEvent.detail as ThemeVariant;
 
-    themeSwitcher.setVariant(newVariant);
+    themeSwitcher.setColorSchema(newVariant);
 
     this.selectedVariant = newVariant;
   }
@@ -265,9 +212,9 @@ export default class ThemeSwitcher implements OnInit {
     this.useSystemTheme = checked;
 
     if (checked) {
-      themeSwitcher.setVariant();
+      themeSwitcher.setColorSchema('system');
     } else {
-      themeSwitcher.setVariant(this.selectedVariant);
+      themeSwitcher.setColorSchema(this.selectedVariant);
     }
   }
 }
@@ -368,8 +315,7 @@ export default class ThemeSwitcher implements OnInit {
   useSystemTheme = false;
 
   ngOnInit() {
-    themeSwitcher.setTheme('classic');
-    themeSwitcher.setVariant(this.selectedVariant);
+    themeSwitcher.setTheme('classic', this.selectedVariant);
   }
 
   onValueChange(event: Event) {
@@ -380,7 +326,7 @@ export default class ThemeSwitcher implements OnInit {
     const customEvent = event as CustomEvent<string>;
     const newVariant = customEvent.detail as ThemeVariant;
 
-    themeSwitcher.setVariant(newVariant);
+    themeSwitcher.setColorSchema(newVariant);
 
     this.selectedVariant = newVariant;
   }
@@ -400,9 +346,9 @@ export default class ThemeSwitcher implements OnInit {
     this.useSystemTheme = checked;
 
     if (checked) {
-      themeSwitcher.setVariant();
+      themeSwitcher.setColorSchema('system');
     } else {
-      themeSwitcher.setVariant(this.selectedVariant);
+      themeSwitcher.setColorSchema(this.selectedVariant);
     }
   }
 }
@@ -483,8 +429,7 @@ const selectedVariant = ref<ThemeVariant>('dark');
 const useSystemTheme = ref(false);
 
 onMounted(() => {
-  themeSwitcher.setTheme('classic');
-  themeSwitcher.setVariant(selectedVariant.value);
+  themeSwitcher.setTheme('classic', selectedVariant.value);
 });
 
 const valueChange = (event: CustomEvent<string | string[]>) => {
@@ -494,7 +439,7 @@ const valueChange = (event: CustomEvent<string | string[]>) => {
 
   const newVariant = event.detail as ThemeVariant;
 
-  themeSwitcher.setVariant(newVariant);
+  themeSwitcher.setColorSchema(newVariant);
 
   selectedVariant.value = newVariant;
 };
@@ -514,9 +459,9 @@ const systemChange = (event: CustomEvent<boolean>) => {
   useSystemTheme.value = checked;
 
   if (checked) {
-    themeSwitcher.setVariant();
+    themeSwitcher.setColorSchema('system');
   } else {
-    themeSwitcher.setVariant(selectedVariant.value);
+    themeSwitcher.setColorSchema(selectedVariant.value);
   }
 };
 </script>

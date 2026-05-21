@@ -314,14 +314,14 @@ import { IxKeyValue } from '@siemens/ix-vue';
 
 | Name | Description | Attribute | Type | Default |
 | --- | --- | --- | --- | --- |
-| ariaLabelIcon | ARIA label for the icon | aria-label-icon | string \| undefined |  |
-| icon | Optional key value icon | icon | string \| undefined |  |
-| label | Key value label | label | string |  |
-| labelPosition | Optional key value label position - 'top' or 'left' | label-position | "left" \| "top" | 'top' |
-| value | Optional key value text value | value | string \| undefined |  |
+| ariaLabelIcon | { "ARIA label for the icon" } | aria-label-icon | string \| undefined |  |
+| icon | { "Optional key value icon" } | icon | string \| undefined |  |
+| label | { "Key value label" } | label | string |  |
+| labelPosition | { "Optional key value label position - 'top' or 'left'" } | label-position | "left" \| "top" | 'top' |
+| value | { "Optional key value text value" } | value | string \| undefined |  |
 
 ### Slot
 
 | Name | Description |
 | --- | --- |
-| custom-value | { `Optional custom value at key value instead of text value` } |
+| custom-value | { "Optional custom value at key value instead of text value" } |

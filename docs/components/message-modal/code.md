@@ -142,53 +142,21 @@ TypedEvent<{
 
 ### Functions
 
+#### createShowMessage
+
+```ts
+createShowMessage(dependencies: ShowMessageDependencies): ShowMessage;
+```
+
+Create a message modal helper with custom element dependencies.
+
 #### showMessage
 
 ```ts
-showMessage(config: MessageConfig&lt;T&gt;): Promise&lt;TypedEvent&lt;unknown&gt;&gt;;
+showMessage(config: MessageConfig&lt;T&gt;): ShowMessageResult&lt;T&gt;;
 ```
 
 Displays a message modal with configurable actions and returns an event emitter for action responses
-
-#### showMessage.error
-
-```ts
-showMessage.error(title: string, message: string, textOkay: string, textCancel: string, payloadOkay: any, payloadCancel: any): Promise&lt;TypedEvent&lt;unknown&gt;&gt;;
-```
-
-Displays an error message modal with an error icon
-
-#### showMessage.info
-
-```ts
-showMessage.info(title: string, message: string, textOkay: string, textCancel: string, payloadOkay: any, payloadCancel: any): Promise&lt;TypedEvent&lt;unknown&gt;&gt;;
-```
-
-Displays an info message modal with an info icon
-
-#### showMessage.question
-
-```ts
-showMessage.question(title: string, message: string, textOkay: string, textCancel: string, payloadOkay: any, payloadCancel: any): Promise&lt;TypedEvent&lt;unknown&gt;&gt;;
-```
-
-Displays a question message modal with a question icon
-
-#### showMessage.success
-
-```ts
-showMessage.success(title: string, message: string, textOkay: string, textCancel: string, payloadOkay: any, payloadCancel: any): Promise&lt;TypedEvent&lt;unknown&gt;&gt;;
-```
-
-Displays a success message modal with a success icon
-
-#### showMessage.warning
-
-```ts
-showMessage.warning(title: string, message: string, textOkay: string, textCancel: string, payloadOkay: any, payloadCancel: any): Promise&lt;TypedEvent&lt;unknown&gt;&gt;;
-```
-
-Displays a warning message modal with a warning icon
 
 ## API for MessageService (Angular)
 
@@ -197,7 +165,7 @@ Displays a warning message modal with a warning icon
 #### error
 
 ```ts
-error(title: string, message: string, textOkay: string, textCancel: string, payloadOkay: any, payloadCancel: any): Promise&lt;TypedEvent&lt;unknown&gt;&gt;;
+error(title: string, message: string, textOkay: string, textCancel: string, payloadOkay: any, payloadCancel: any): ShowMessageResult&lt;unknown&gt;;
 ```
 
 Displays an error message modal with an error icon
@@ -205,7 +173,7 @@ Displays an error message modal with an error icon
 #### info
 
 ```ts
-info(title: string, message: string, textOkay: string, textCancel: string, payloadOkay: any, payloadCancel: any): Promise&lt;TypedEvent&lt;unknown&gt;&gt;;
+info(title: string, message: string, textOkay: string, textCancel: string, payloadOkay: any, payloadCancel: any): ShowMessageResult&lt;unknown&gt;;
 ```
 
 Displays an info message modal with an info icon
@@ -213,7 +181,7 @@ Displays an info message modal with an info icon
 #### question
 
 ```ts
-question(title: string, message: string, textOkay: string, textCancel: string, payloadOkay: any, payloadCancel: any): Promise&lt;TypedEvent&lt;unknown&gt;&gt;;
+question(title: string, message: string, textOkay: string, textCancel: string, payloadOkay: any, payloadCancel: any): ShowMessageResult&lt;unknown&gt;;
 ```
 
 Displays a question message modal with a question icon
@@ -227,7 +195,7 @@ showMessage(config: MessageConfig&lt;T&gt;): Promise&lt;TypedEvent&lt;unknown&gt
 #### success
 
 ```ts
-success(title: string, message: string, textOkay: string, textCancel: string, payloadOkay: any, payloadCancel: any): Promise&lt;TypedEvent&lt;unknown&gt;&gt;;
+success(title: string, message: string, textOkay: string, textCancel: string, payloadOkay: any, payloadCancel: any): ShowMessageResult&lt;unknown&gt;;
 ```
 
 Displays a success message modal with a success icon
@@ -235,7 +203,7 @@ Displays a success message modal with a success icon
 #### warning
 
 ```ts
-warning(title: string, message: string, textOkay: string, textCancel: string, payloadOkay: any, payloadCancel: any): Promise&lt;TypedEvent&lt;unknown&gt;&gt;;
+warning(title: string, message: string, textOkay: string, textCancel: string, payloadOkay: any, payloadCancel: any): ShowMessageResult&lt;unknown&gt;;
 ```
 
 Displays a warning message modal with a warning icon

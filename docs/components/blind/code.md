@@ -589,14 +589,14 @@ ix-blind {
 
 | Name | Description | Attribute | Type | Default |
 | --- | --- | --- | --- | --- |
-| collapsed | Collapsed state | collapsed | boolean | false |
-| icon | Optional icon to be displayed next to the header label | icon | string \| undefined |  |
-| label | Label of blind | label | string \| undefined |  |
-| sublabel | Secondary label inside blind header | sublabel | string \| undefined |  |
-| variant | Blind variant | variant | "alarm" \| "critical" \| "filled" \| "info" \| "neutral" \| "outline" \| "primary" \| "success" \| "warning" | 'filled' |
+| collapsed | { "Collapsed state" } | collapsed | boolean | false |
+| icon | { "Optional icon to be displayed next to the header label" } | icon | string \| undefined |  |
+| label | { "Label of blind" } | label | string \| undefined |  |
+| sublabel | { "Secondary label inside blind header" } | sublabel | string \| undefined |  |
+| variant | { "Blind variant" } | variant | "alarm" \| "critical" \| "filled" \| "info" \| "neutral" \| "outline" \| "primary" \| "success" \| "warning" | 'filled' |
 
 ### Events
 
 | Name | Description | Event | Detail |
 | --- | --- | --- | --- |
-| collapsedChange | Collapsed state changed | collapsedChange | boolean |
+| collapsedChange | { "Collapsed state changed" } | collapsedChange | boolean |

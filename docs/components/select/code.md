@@ -556,42 +556,43 @@ import { IxSelect, IxSelectItem } from '@siemens/ix-vue';
 
 | Name | Description | Attribute | Type | Default |
 | --- | --- | --- | --- | --- |
-| allowClear | Show clear button | allow-clear | boolean | false |
-| ariaLabelChevronDownIconButton | ARIA label for the chevron down icon button Will be set as aria-label on the nested HTML button element | aria-label-chevron-down-icon-button | string \| undefined |  |
-| ariaLabelClearIconButton | ARIA label for the clear icon button Will be set as aria-label on the nested HTML button element | aria-label-clear-icon-button | string \| undefined | 'Clear selection' |
-| collapseMultipleSelection | Show "all" chip when all items are selected in multiple mode | collapse-multiple-selection | boolean | false |
-| disabled | If true the select will be in disabled state | disabled | boolean | false |
-| dropdownMaxWidth | The maximum width of the dropdown element with value and unit (e.g. "200px" or "12.5rem"). By default the maximum width of the dropdown element is set to 100%. | dropdown-max-width | string \| undefined |  |
-| dropdownWidth | The width of the dropdown element with value and unit (e.g. "200px" or "12.5rem"). | dropdown-width | string \| undefined |  |
-| editable | Select is extendable | editable | boolean | false |
-| enableTopLayer | Enable Popover API rendering for dropdown. | enable-top-layer | boolean | false |
-| helperText | Helper text for the select component | helper-text | string \| undefined |  |
-| hideListHeader | Hide list header | hide-list-header | boolean | false |
-| i18nAllSelected | Chip label for all selected items in multiple mode. | i18n-all-selected | string | 'All' |
-| i18nNoMatches | Information inside of dropdown if no items where found with current filter text | i18n-no-matches | string | 'No matches' |
-| i18nPlaceholder | Input field placeholder | i18n-placeholder | string | 'Select an option' |
-| i18nPlaceholderEditable | Input field placeholder for editable select | i18n-placeholder-editable | string | 'Type of select option' |
-| i18nSelectListHeader | Select list header | i18n-select-list-header | string | 'Select an option' |
-| infoText | Info text for the select component | info-text | string \| undefined |  |
-| invalidText | Error text for the select component | invalid-text | string \| undefined |  |
-| label | Label for the select component | label | string \| undefined |  |
-| mode | Selection mode | mode | "multiple" \| "single" | 'single' |
-| name | A string that represents the element's name attribute, containing a name that identifies the element when submitting the form. | name | string \| undefined |  |
-| readonly | If true the select will be in readonly mode | readonly | boolean | false |
-| required | A Boolean attribute indicating that an option with a non-empty string value must be selected | required | boolean | false |
-| showTextAsTooltip | Show helper, error, info, warning text as tooltip | show-text-as-tooltip | boolean \| undefined |  |
-| validText | Valid text for the select component | valid-text | string \| undefined |  |
-| value | Current selected value. This corresponds to the value property of ix-select-items | value | string \| string[] | '' |
-| warningText | Warning text for the select component | warning-text | string \| undefined |  |
+| allowClear | { "Show clear button" } | allow-clear | boolean | false |
+| ariaLabelAddItem | { "ARIA label for the add item" } | aria-label-add-item | string | 'Add item' |
+| ariaLabelClearIconButton | { "ARIA label for the clear icon button\n\nWill be set as aria-label on the nested HTML button element" } | aria-label-clear-icon-button | string \| undefined | 'Clear selection' |
+| collapseMultipleSelection | { "Show \"all\" chip when all items are selected in multiple mode" } | collapse-multiple-selection | boolean | false |
+| disabled | { "If true the select will be in disabled state" } | disabled | boolean | false |
+| dropdownMaxWidth | { "The maximum width of the dropdown element with value and unit (e.g. \"200px\" or \"12.5rem\").\n\nBy default the maximum width of the dropdown element is set to 100%." } | dropdown-max-width | string \| undefined |  |
+| dropdownWidth | { "The width of the dropdown element with value and unit (e.g. \"200px\" or \"12.5rem\")." } | dropdown-width | string \| undefined |  |
+| editable | { "Select is extendable" } | editable | boolean | false |
+| enableTopLayer | { "Enable Popover API rendering for dropdown." } | enable-top-layer | boolean | false |
+| helperText | { "Helper text for the select component" } | helper-text | string \| undefined |  |
+| hideListHeader | { "Hide list header" } | hide-list-header | boolean | false |
+| i18nAllSelected | { "Chip label for all selected items in multiple mode." } | i18n-all-selected | string | 'All' |
+| i18nNoMatches | { "Information inside of dropdown if no items where found with current filter text" } | i18n-no-matches | string | 'No matches' |
+| i18nPlaceholder | { "Input field placeholder" } | i18n-placeholder | string | 'Select an option' |
+| i18nPlaceholderEditable | { "Input field placeholder for editable select" } | i18n-placeholder-editable | string | 'Type of select option' |
+| i18nRemoveSelectedItem | { "Prefix for the accessible name of the close control on a selected chip in multiple mode.\n\nThe chip label or value is appended (e.g. \"Remove Item 1\")." } | i18n-remove-selected-item | string | 'Remove' |
+| i18nSelectListHeader | { "Select list header" } | i18n-select-list-header | string | 'Select an option' |
+| infoText | { "Info text for the select component" } | info-text | string \| undefined |  |
+| invalidText | { "Error text for the select component" } | invalid-text | string \| undefined |  |
+| label | { "Label for the select component" } | label | string \| undefined |  |
+| mode | { "Selection mode" } | mode | "multiple" \| "single" | 'single' |
+| name | { "A string that represents the element's name attribute,\n\ncontaining a name that identifies the element when submitting the form." } | name | string \| undefined |  |
+| readonly | { "If true the select will be in readonly mode" } | readonly | boolean | false |
+| required | { "A Boolean attribute indicating that an option with a non-empty string value must be selected" } | required | boolean | false |
+| showTextAsTooltip | { "Show helper, error, info, warning text as tooltip" } | show-text-as-tooltip | boolean \| undefined |  |
+| validText | { "Valid text for the select component" } | valid-text | string \| undefined |  |
+| value | { "Current selected value.\n\nThis corresponds to the value property of ix-select-items" } | value | string \| string[] | '' |
+| warningText | { "Warning text for the select component" } | warning-text | string \| undefined |  |
 
 ### Events
 
 | Name | Description | Event | Detail |
 | --- | --- | --- | --- |
-| addItem | Item added to selection | addItem | string |
-| inputChange | Event dispatched whenever the text input changes. | inputChange | string |
-| ixBlur | Blur input | ixBlur | void |
-| valueChange | Value changed | valueChange | string \| string[] |
+| addItem | { "Item added to selection" } | addItem | string |
+| inputChange | { "Event dispatched whenever the text input changes." } | inputChange | string |
+| ixBlur | { "Blur input" } | ixBlur | void |
+| valueChange | { "Value changed" } | valueChange | string \| string[] |
 
 ## API for ix-select-item
 
@@ -599,12 +600,12 @@ import { IxSelect, IxSelectItem } from '@siemens/ix-vue';
 
 | Name | Description | Attribute | Type | Default |
 | --- | --- | --- | --- | --- |
-| label | Displayed name of the item | label | string \| undefined |  |
-| selected | Flag indicating whether the item is selected | selected | boolean | false |
-| value | The value of the item. Important: The select component uses string values to handle selection and will call toString() on this value. Therefor a string should be passed to value to prevent unexpected behavior. | value | string |  |
+| label | { "Displayed name of the item" } | label | string \| undefined |  |
+| selected | { "Flag indicating whether the item is selected" } | selected | boolean | false |
+| value | { "The value of the item.\n\nImportant: The select component uses string values to handle selection and will call toString() on this value.\n\nTherefor a string should be passed to value to prevent unexpected behavior." } | value | string |  |
 
 ### Events
 
 | Name | Description | Event | Detail |
 | --- | --- | --- | --- |
-| itemClick | Item clicked | itemClick | string |
+| itemClick | { "Item clicked" } | itemClick | string |

@@ -283,21 +283,20 @@ import { IxSplitButton, IxDropdownItem } from '@siemens/ix-vue';
 
 | Name | Description | Attribute | Type | Default |
 | --- | --- | --- | --- | --- |
-| ariaLabelButton | ARIA label for the button (use if no label and icon button) | aria-label-button | string \| undefined |  |
-| ariaLabelSplitIconButton | ARIA label for the split icon button | aria-label-split-icon-button | string \| undefined |  |
-| closeBehavior | Controls if the dropdown will be closed in response to a click event depending on the position of the event relative to the dropdown. | close-behavior | "both" \| "inside" \| "outside" \| boolean | 'both' |
-| disableButton | Disables only the main button while keeping the dropdown trigger enabled | disable-button | boolean | false |
-| disableDropdownButton | Disables only the dropdown trigger while keeping the main button enabled | disable-dropdown-button | boolean | false |
-| disabled | Disabled | disabled | boolean | false |
-| enableTopLayer | Enable Popover API rendering for dropdown. | enable-top-layer | boolean | false |
-| icon | Button icon | icon | string \| undefined |  |
-| label | Button label | label | string \| undefined |  |
-| placement | Placement of the dropdown | placement | "bottom-end" \| "bottom-start" \| "left-end" \| "left-start" \| "right-end" \| "right-start" \| "top-end" \| "top-start" | 'bottom-start' |
-| splitIcon | Icon of the button on the right | split-icon | string \| undefined |  |
-| variant | Color variant of button | variant | "danger-primary" \| "danger-secondary" \| "danger-tertiary" \| "primary" \| "secondary" \| "subtle-primary" \| "subtle-secondary" \| "subtle-tertiary" \| "tertiary" | 'primary' |
+| ariaLabelButton | { "ARIA label for the button (use if no label and icon button)" } | aria-label-button | string \| undefined |  |
+| ariaLabelSplitIconButton | { "ARIA label for the split icon button" } | aria-label-split-icon-button | string \| undefined |  |
+| closeBehavior | { "Controls if the dropdown will be closed in response to a click event depending on the position of the event relative to the dropdown." } | close-behavior | "both" \| "inside" \| "outside" \| boolean | 'both' |
+| disableButton | { "Disables only the main button while keeping the dropdown trigger enabled" } | disable-button | boolean | false |
+| disableDropdownButton | { "Disables only the dropdown trigger while keeping the main button enabled" } | disable-dropdown-button | boolean | false |
+| disabled | { "Disabled" } | disabled | boolean | false |
+| enableTopLayer | { "Enable Popover API rendering for dropdown." } | enable-top-layer | boolean | false |
+| icon | { "Button icon" } | icon | string \| undefined |  |
+| label | { "Button label" } | label | string \| undefined |  |
+| splitIcon | { "Icon of the button on the right" } | split-icon | string \| undefined |  |
+| variant | { "Color variant of button" } | variant | "danger-primary" \| "danger-secondary" \| "danger-tertiary" \| "primary" \| "secondary" \| "subtle-primary" \| "subtle-secondary" \| "subtle-tertiary" \| "tertiary" | 'primary' |
 
 ### Events
 
 | Name | Description | Event | Detail |
 | --- | --- | --- | --- |
-| buttonClick | Button clicked | buttonClick | MouseEvent |
+| buttonClick | { "Button clicked" } | buttonClick | MouseEvent |

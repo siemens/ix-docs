@@ -434,15 +434,15 @@ setToastPosition('top-right');
 
 | Name | Description | Attribute | Type |
 | --- | --- | --- | --- |
-| action | Action element that is displayed below the toast message/title | action | HTMLElement |
-| autoClose | Controls whether the toast closes automatically after a delay | autoClose | boolean |
-| autoCloseDelay | Sets the delay for autoClose in milliseconds | autoCloseDelay | number |
-| hideIcon | Allows to hide the icon in the toast | hideIcon | boolean |
-| icon | Icon that is displayed with the toast | icon | string |
-| iconColor | Color of the icon | iconColor | string |
-| message | Message of the toast | message | string \| HTMLElement |
-| title | Title of the toast | title | string |
-| type | Type of the toast | type | ToastType |
+| action | { "Action element that is displayed below the toast message/title" } | action | HTMLElement |
+| autoClose | { "Controls whether the toast closes automatically after a delay" } | autoClose | boolean |
+| autoCloseDelay | { "Sets the delay for autoClose in milliseconds" } | autoCloseDelay | number |
+| hideIcon | { "Allows to hide the icon in the toast" } | hideIcon | boolean |
+| icon | { "Icon that is displayed with the toast" } | icon | string |
+| iconColor | { "Color of the icon" } | iconColor | string |
+| message | { "Message of the toast" } | message | string \| HTMLElement |
+| title | { "Title of the toast" } | title | string |
+| type | { "Type of the toast" } | type | ToastType |
 
 ## API for toast utils (JavaScript, React, Vue)
 

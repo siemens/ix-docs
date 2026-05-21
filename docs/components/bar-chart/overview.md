@@ -15,22 +15,32 @@ Common bar charts normally compare the values of different categories where the 
 import './echarts-bar-simple.scoped.css';
 
 import { useEffect, useState } from 'react';
-import { registerTheme } from '@siemens/ix-echarts';
 import { themeSwitcher } from '@siemens/ix';
+import { registerTheme, resolveEChartThemeName } from '@siemens/ix-echarts';
 import ReactEcharts from 'echarts-for-react';
 
 import { EChartsOption } from 'echarts';
 
+function useEChartTheme() {
+  const [theme, setTheme] = useState(resolveEChartThemeName);
+
+  useEffect(() => {
+    const disposer = themeSwitcher.themeChanged.on(() => {
+      setTheme(resolveEChartThemeName());
+    });
+
+    return () => {
+      disposer.dispose();
+    };
+  }, []);
+
+  return theme;
+}
+
 export default function EchartsBarSimple() {
   registerTheme(echarts);
 
-  const [theme, setTheme] = useState(themeSwitcher.getCurrentTheme());
-
-  useEffect(() => {
-    themeSwitcher.themeChanged.on((theme: string) => {
-      setTheme(theme);
-    });
-  }, []);
+  const theme = useEChartTheme();
 
   const data = {
     products: [
@@ -90,8 +100,8 @@ export default function EchartsBarSimple() {
 
 #### echarts-bar-simple.ts
 ```ts
-import { Component, OnInit } from '@angular/core';
-import { registerTheme } from '@siemens/ix-echarts';
+import { Component, OnDestroy, OnInit } from '@angular/core';
+import { registerTheme, resolveEChartThemeName } from '@siemens/ix-echarts';
 import { themeSwitcher } from '@siemens/ix';
 
 import { EChartsOption } from 'echarts';
@@ -102,8 +112,9 @@ import { EChartsOption } from 'echarts';
   templateUrl: './echarts-bar-simple.html',
   styleUrls: ['./echarts-bar-simple.css'],
 })
-export default class EchartsBarSimple implements OnInit {
-  theme = themeSwitcher.getCurrentTheme();
+export default class EchartsBarSimple implements OnDestroy, OnInit {
+  theme = resolveEChartThemeName();
+  private themeChangeDisposer?: { dispose: () => void };
   data = {
     products: [
       'Product A',
@@ -140,9 +151,13 @@ export default class EchartsBarSimple implements OnInit {
   ngOnInit() {
     registerTheme(echarts);
 
-    themeSwitcher.themeChanged.on((theme: string) => {
-      this.theme = theme;
+    this.themeChangeDisposer = themeSwitcher.themeChanged.on(() => {
+      this.theme = resolveEChartThemeName();
     });
+  }
+
+  ngOnDestroy() {
+    this.themeChangeDisposer?.dispose();
   }
 }
 ```
@@ -171,10 +186,10 @@ export default class EchartsBarSimple implements OnInit {
 
 #### echarts-bar-simple.ts
 ```ts
-import { Component, OnInit } from '@angular/core';
+import { Component, OnDestroy, OnInit } from '@angular/core';
 import { NgxEchartsDirective, provideEchartsCore } from 'ngx-echarts';
 
-import { registerTheme } from '@siemens/ix-echarts';
+import { registerTheme, resolveEChartThemeName } from '@siemens/ix-echarts';
 import { themeSwitcher } from '@siemens/ix';
 
 import { EChartsOption } from 'echarts';
@@ -186,8 +201,9 @@ import { EChartsOption } from 'echarts';
   templateUrl: './echarts-bar-simple.html',
   styleUrls: ['./echarts-bar-simple.css'],
 })
-export default class EchartsBarSimple implements OnInit {
-  theme = themeSwitcher.getCurrentTheme();
+export default class EchartsBarSimple implements OnDestroy, OnInit {
+  theme = resolveEChartThemeName();
+  private themeChangeDisposer?: { dispose: () => void };
   data = {
     products: [
       'Product A',
@@ -224,9 +240,13 @@ export default class EchartsBarSimple implements OnInit {
   ngOnInit() {
     registerTheme(echarts);
 
-    themeSwitcher.themeChanged.on((theme: string) => {
-      this.theme = theme;
+    this.themeChangeDisposer = themeSwitcher.themeChanged.on(() => {
+      this.theme = resolveEChartThemeName();
     });
+  }
+
+  ngOnDestroy() {
+    this.themeChangeDisposer?.dispose();
   }
 }
 ```
@@ -251,8 +271,8 @@ export default class EchartsBarSimple implements OnInit {
 #### echarts-bar-simple.vue
 ```vue
 <script setup lang="ts">
-import { ref } from 'vue';
-import { registerTheme } from '@siemens/ix-echarts';
+import { onBeforeUnmount, ref } from 'vue';
+import { registerTheme, resolveEChartThemeName } from '@siemens/ix-echarts';
 import { themeSwitcher } from '@siemens/ix';
 import VueECharts from 'vue-echarts';
 
@@ -269,10 +289,14 @@ echarts.use([
 
 registerTheme(echarts);
 
-const theme = ref(themeSwitcher.getCurrentTheme());
+const theme = ref(resolveEChartThemeName());
 
-themeSwitcher.themeChanged.on((newTheme: string) => {
-  theme.value = newTheme;
+const disposer = themeSwitcher.themeChanged.on(() => {
+  theme.value = resolveEChartThemeName();
+});
+
+onBeforeUnmount(() => {
+  disposer.dispose();
 });
 
 const data = {
@@ -337,22 +361,32 @@ Stacked bar charts are typically used to visualize the relationship between the 
 import './echarts-bar-horizontal-stacked.scoped.css';
 
 import { useEffect, useState } from 'react';
-import { registerTheme } from '@siemens/ix-echarts';
 import { themeSwitcher } from '@siemens/ix';
+import { registerTheme, resolveEChartThemeName } from '@siemens/ix-echarts';
 import ReactEcharts from 'echarts-for-react';
 
 import { BarSeriesOption, EChartsOption } from 'echarts';
 
+function useEChartTheme() {
+  const [theme, setTheme] = useState(resolveEChartThemeName);
+
+  useEffect(() => {
+    const disposer = themeSwitcher.themeChanged.on(() => {
+      setTheme(resolveEChartThemeName());
+    });
+
+    return () => {
+      disposer.dispose();
+    };
+  }, []);
+
+  return theme;
+}
+
 export default function EchartsBarHorizontalStacked() {
   registerTheme(echarts);
 
-  const [theme, setTheme] = useState(themeSwitcher.getCurrentTheme());
-
-  useEffect(() => {
-    themeSwitcher.themeChanged.on((theme: string) => {
-      setTheme(theme);
-    });
-  }, []);
+  const theme = useEChartTheme();
 
   const data = {
     years: ['2023', '2022', '2021', '2020', '2019'],
@@ -413,8 +447,8 @@ export default function EchartsBarHorizontalStacked() {
 
 #### echarts-bar-horizontal-stacked.ts
 ```ts
-import { Component, OnInit } from '@angular/core';
-import { registerTheme } from '@siemens/ix-echarts';
+import { Component, OnDestroy, OnInit } from '@angular/core';
+import { registerTheme, resolveEChartThemeName } from '@siemens/ix-echarts';
 import { themeSwitcher } from '@siemens/ix';
 
 import { BarSeriesOption, EChartsOption } from 'echarts';
@@ -425,8 +459,9 @@ import { BarSeriesOption, EChartsOption } from 'echarts';
   templateUrl: './echarts-bar-horizontal-stacked.html',
   styleUrls: ['./echarts-bar-horizontal-stacked.css'],
 })
-export default class EchartsBarHorizontalStacked implements OnInit {
-  theme = themeSwitcher.getCurrentTheme();
+export default class EchartsBarHorizontalStacked implements OnDestroy, OnInit {
+  theme = resolveEChartThemeName();
+  private themeChangeDisposer?: { dispose: () => void };
 
   data = {
     years: ['2023', '2022', '2021', '2020', '2019'],
@@ -472,9 +507,13 @@ export default class EchartsBarHorizontalStacked implements OnInit {
   ngOnInit() {
     registerTheme(echarts);
 
-    themeSwitcher.themeChanged.on((theme: string) => {
-      this.theme = theme;
+    this.themeChangeDisposer = themeSwitcher.themeChanged.on(() => {
+      this.theme = resolveEChartThemeName();
     });
+  }
+
+  ngOnDestroy() {
+    this.themeChangeDisposer?.dispose();
   }
 }
 ```
@@ -503,10 +542,10 @@ export default class EchartsBarHorizontalStacked implements OnInit {
 
 #### echarts-bar-horizontal-stacked.ts
 ```ts
-import { Component, OnInit } from '@angular/core';
+import { Component, OnDestroy, OnInit } from '@angular/core';
 import { NgxEchartsDirective, provideEchartsCore } from 'ngx-echarts';
 
-import { registerTheme } from '@siemens/ix-echarts';
+import { registerTheme, resolveEChartThemeName } from '@siemens/ix-echarts';
 import { themeSwitcher } from '@siemens/ix';
 
 import { BarSeriesOption, EChartsOption } from 'echarts';
@@ -518,8 +557,9 @@ import { BarSeriesOption, EChartsOption } from 'echarts';
   templateUrl: './echarts-bar-horizontal-stacked.html',
   styleUrls: ['./echarts-bar-horizontal-stacked.css'],
 })
-export default class EchartsBarHorizontalStacked implements OnInit {
-  theme = themeSwitcher.getCurrentTheme();
+export default class EchartsBarHorizontalStacked implements OnDestroy, OnInit {
+  theme = resolveEChartThemeName();
+  private themeChangeDisposer?: { dispose: () => void };
 
   data = {
     years: ['2023', '2022', '2021', '2020', '2019'],
@@ -565,9 +605,13 @@ export default class EchartsBarHorizontalStacked implements OnInit {
   ngOnInit() {
     registerTheme(echarts);
 
-    themeSwitcher.themeChanged.on((theme: string) => {
-      this.theme = theme;
+    this.themeChangeDisposer = themeSwitcher.themeChanged.on(() => {
+      this.theme = resolveEChartThemeName();
     });
+  }
+
+  ngOnDestroy() {
+    this.themeChangeDisposer?.dispose();
   }
 }
 ```
@@ -592,8 +636,8 @@ export default class EchartsBarHorizontalStacked implements OnInit {
 #### echarts-bar-horizontal-stacked.vue
 ```vue
 <script setup lang="ts">
-import { ref } from 'vue';
-import { registerTheme } from '@siemens/ix-echarts';
+import { onBeforeUnmount, ref } from 'vue';
+import { registerTheme, resolveEChartThemeName } from '@siemens/ix-echarts';
 import { themeSwitcher } from '@siemens/ix';
 import VueECharts from 'vue-echarts';
 
@@ -610,10 +654,14 @@ echarts.use([
 
 registerTheme(echarts);
 
-const theme = ref(themeSwitcher.getCurrentTheme());
+const theme = ref(resolveEChartThemeName());
 
-themeSwitcher.themeChanged.on((newTheme: string) => {
-  theme.value = newTheme;
+const disposer = themeSwitcher.themeChanged.on(() => {
+  theme.value = resolveEChartThemeName();
+});
+
+onBeforeUnmount(() => {
+  disposer.dispose();
 });
 
 const data = {

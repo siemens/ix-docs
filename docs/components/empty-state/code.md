@@ -288,15 +288,15 @@ import { IxEmptyState } from '@siemens/ix-vue';
 
 | Name | Description | Attribute | Type | Default |
 | --- | --- | --- | --- | --- |
-| action | Optional empty state action | action | string \| undefined |  |
-| ariaLabelEmptyStateIcon | ARIA label for the empty state icon | aria-label-empty-state-icon | string \| undefined |  |
-| header | Empty state header | header | string |  |
-| icon | Optional empty state icon | icon | string \| undefined |  |
-| layout | Optional empty state layout - one of 'large', 'compact' or 'compactBreak' | layout | "compact" \| "compactBreak" \| "large" | 'large' |
-| subHeader | Optional empty state sub header | sub-header | string \| undefined |  |
+| action | { "Optional empty state action" } | action | string \| undefined |  |
+| ariaLabelEmptyStateIcon | { "ARIA label for the empty state icon" } | aria-label-empty-state-icon | string \| undefined |  |
+| header | { "Empty state header" } | header | string |  |
+| icon | { "Optional empty state icon" } | icon | string \| undefined |  |
+| layout | { "Optional empty state layout - one of 'large', 'compact' or 'compactBreak'" } | layout | "compact" \| "compactBreak" \| "large" | 'large' |
+| subHeader | { "Optional empty state sub header" } | sub-header | string \| undefined |  |
 
 ### Events
 
 | Name | Description | Event | Detail |
 | --- | --- | --- | --- |
-| actionClick | Empty state action click event | actionClick | void |
+| actionClick | { "Empty state action click event" } | actionClick | void |

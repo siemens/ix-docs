@@ -18,9 +18,7 @@ export default () => {
   return (
     <>
       <IxButton>Button</IxButton>
-      <IxButton disabled>
-        Button
-      </IxButton>
+      <IxButton disabled>Button</IxButton>
     </>
   );
 };
@@ -1288,10 +1286,12 @@ import { IxButton } from '@siemens/ix-angular/standalone';
   selector: 'app-example',
   imports: [IxButton],
   template: `
-    <ix-button icon="star"> Button </ix-button>
-    <ix-button variant="subtle-primary" icon="star"> Button </ix-button>
-    <ix-button variant="subtle-primary" icon="star"> Button </ix-button>
-    <ix-button variant="tertiary" icon="star"> Button </ix-button>
+    <ix-button icon="star">Button</ix-button>
+    <ix-button icon="star" icon-right="bulb">Button</ix-button>
+    <ix-button icon-right="bulb">Button</ix-button>
+    <ix-button variant="subtle-primary" icon="star">Button</ix-button>
+    <ix-button variant="subtle-primary" icon="star">Button</ix-button>
+    <ix-button variant="tertiary" icon="star">Button</ix-button>
   `,
   styleUrls: ['./button-text-icon.css'],
 })
@@ -1357,9 +1357,11 @@ export default () => {
   const [toggle, setToggle] = useState(false);
   const [toggle2, setToggle2] = useState(false);
   const [toggle3, setToggle3] = useState(false);
+  const [toggle4, setToggle4] = useState(false);
   return (
     <>
       <IxButton
+        variant="subtle-primary"
         onClick={() => {
           setToggle(true);
           setTimeout(() => {
@@ -1367,12 +1369,12 @@ export default () => {
           }, 2500);
         }}
         loading={toggle}
-        outline
       >
         Button
       </IxButton>
 
       <IxButton
+        variant="subtle-primary"
         onClick={() => {
           setToggle2(true);
           setTimeout(() => {
@@ -1380,13 +1382,13 @@ export default () => {
           }, 2500);
         }}
         loading={toggle2}
-        outline
         icon={iconStar}
       >
         Button
       </IxButton>
 
       <IxButton
+        variant="subtle-primary"
         onClick={() => {
           setToggle3(true);
           setTimeout(() => {
@@ -1394,25 +1396,31 @@ export default () => {
           }, 2500);
         }}
         loading={toggle3}
-        outline
         icon={iconStar}
+        aria-label="Star"
       ></IxButton>
 
       <IxIconButton
+        variant="subtle-primary"
         onClick={() => {
-          setToggle(true);
+          setToggle4(true);
           setTimeout(() => {
-            setToggle(false);
+            setToggle4(false);
           }, 2500);
         }}
-        loading={toggle}
-        outline
+        loading={toggle4}
         icon={iconStar}
+        aria-label="Toggle loading"
       ></IxIconButton>
       <IxButton variant="subtle-primary" loading>
         Button
       </IxButton>
-      <IxIconButton variant="subtle-primary" loading></IxIconButton>
+      <IxIconButton
+        variant="subtle-primary"
+        loading
+        icon={iconStar}
+        aria-label="Loading action"
+      ></IxIconButton>
     </>
   );
 };
@@ -1439,13 +1447,14 @@ import { Component } from '@angular/core';
 @Component({
   standalone: false,
   selector: 'app-example',
-  template: './button-loading.html',
+  templateUrl: './button-loading.html',
   styleUrls: ['./button-loading.css'],
 })
 export default class ButtonLoading {
   loading = false;
   loading2 = false;
   loading3 = false;
+  loading4 = false;
 
   toggle() {
     this.loading = true;
@@ -1467,6 +1476,13 @@ export default class ButtonLoading {
       this.loading3 = false;
     }, 2500);
   }
+
+  toggle4() {
+    this.loading4 = true;
+    setTimeout(() => {
+      this.loading4 = false;
+    }, 2500);
+  }
 }
 ```
 
@@ -1480,12 +1496,30 @@ export default class ButtonLoading {
   Button
 </ix-button>
 
-<ix-icon-button variant="subtle-primary" (click)="toggle3()" [loading]="loading3" icon="star">
-</ix-icon-button>
+<ix-button
+  variant="subtle-primary"
+  (click)="toggle3()"
+  [loading]="loading3"
+  icon="star"
+  aria-label="Star"
+></ix-button>
+
+<ix-icon-button
+  variant="subtle-primary"
+  (click)="toggle4()"
+  [loading]="loading4"
+  icon="star"
+  aria-label="Toggle loading"
+></ix-icon-button>
 
 <ix-button variant="subtle-primary" loading> Button </ix-button>
 
-<ix-icon-button variant="subtle-primary" loading icon="star"></ix-icon-button>
+<ix-icon-button
+  variant="subtle-primary"
+  loading
+  icon="star"
+  aria-label="Loading action"
+></ix-icon-button>
 ```
 
 #### button-loading.css
@@ -1505,16 +1539,19 @@ ix-icon-button {
 #### button-loading.ts
 ```ts
 import { Component } from '@angular/core';
+import { IxButton, IxIconButton } from '@siemens/ix-angular/standalone';
 
 @Component({
   selector: 'app-example',
-  template: './button-loading.html',
+  imports: [IxButton, IxIconButton],
+  templateUrl: './button-loading.html',
   styleUrls: ['./button-loading.css'],
 })
 export default class ButtonLoading {
   loading = false;
   loading2 = false;
   loading3 = false;
+  loading4 = false;
 
   toggle() {
     this.loading = true;
@@ -1536,23 +1573,50 @@ export default class ButtonLoading {
       this.loading3 = false;
     }, 2500);
   }
+
+  toggle4() {
+    this.loading4 = true;
+    setTimeout(() => {
+      this.loading4 = false;
+    }, 2500);
+  }
 }
 ```
 
 #### button-loading.html
 ```html
-<ix-button variant="subtle-primary" (click)="toggle()" [loading]="loading"> Button </ix-button>
+<ix-button variant="subtle-primary" (click)="toggle()" [loading]="loading">
+  Button
+</ix-button>
 
 <ix-button variant="subtle-primary" (click)="toggle2()" [loading]="loading2" icon="star">
   Button
 </ix-button>
 
-<ix-icon-button variant="subtle-primary" (click)="toggle3()" [loading]="loading3" icon="star">
-</ix-icon-button>
+<ix-button
+  variant="subtle-primary"
+  (click)="toggle3()"
+  [loading]="loading3"
+  icon="star"
+  aria-label="Star"
+></ix-button>
+
+<ix-icon-button
+  variant="subtle-primary"
+  (click)="toggle4()"
+  [loading]="loading4"
+  icon="star"
+  aria-label="Toggle loading"
+></ix-icon-button>
 
 <ix-button variant="subtle-primary" loading> Button </ix-button>
 
-<ix-icon-button variant="subtle-primary" loading icon="star"></ix-icon-button>
+<ix-icon-button
+  variant="subtle-primary"
+  loading
+  icon="star"
+  aria-label="Loading action"
+></ix-icon-button>
 ```
 
 #### button-loading.css
@@ -1579,16 +1643,19 @@ import { ref } from 'vue';
 let toggle1 = ref(false);
 let toggle2 = ref(false);
 let toggle3 = ref(false);
+let toggle4 = ref(false);
 
 function load(value: string) {
   if (value === '1') toggle1.value = true;
   if (value === '2') toggle2.value = true;
   if (value === '3') toggle3.value = true;
+  if (value === '4') toggle4.value = true;
 
   setTimeout(() => {
     if (value === '1') toggle1.value = false;
     if (value === '2') toggle2.value = false;
     if (value === '3') toggle3.value = false;
+    if (value === '4') toggle4.value = false;
   }, 2500);
 }
 </script>
@@ -1597,13 +1664,38 @@ function load(value: string) {
 
 <template>
   <div>
-    <IxButton variant="subtle-primary" :loading="toggle1" @click="load('1')"> Button </IxButton>
-    <IxButton variant="subtle-primary" :loading="toggle2" @click="load('2')" :icon="iconStar">
+    <IxButton variant="subtle-primary" :loading="toggle1" @click="load('1')">
       Button
     </IxButton>
-    <IxIconButton variant="subtle-primary" :loading="toggle3" @click="load('3')" :icon="iconStar"></IxIconButton>
+    <IxButton
+      variant="subtle-primary"
+      :loading="toggle2"
+      @click="load('2')"
+      :icon="iconStar"
+    >
+      Button
+    </IxButton>
+    <IxButton
+      variant="subtle-primary"
+      :loading="toggle3"
+      @click="load('3')"
+      :icon="iconStar"
+      aria-label="Star"
+    ></IxButton>
+    <IxIconButton
+      variant="subtle-primary"
+      :loading="toggle4"
+      @click="load('4')"
+      :icon="iconStar"
+      aria-label="Toggle loading"
+    ></IxIconButton>
     <IxButton variant="subtle-primary" loading> Button </IxButton>
-    <IxIconButton variant="subtle-primary" loading></IxIconButton>
+    <IxIconButton
+      variant="subtle-primary"
+      loading
+      :icon="iconStar"
+      aria-label="Loading action"
+    ></IxIconButton>
   </div>
 </template>
 ```
@@ -1626,14 +1718,13 @@ ix-icon-button {
 
 | Name | Description | Attribute | Type | Default |
 | --- | --- | --- | --- | --- |
-| ariaLabelButton | ARIA label for the button Will be set as aria-label on the nested HTML button element | aria-label-button | string \| undefined |  |
-| disabled | Disable the button | disabled | boolean | false |
-| form | Provide a form element ID to automatically submit the from if the button is pressed. Only works in combination with type="submit". | form | string \| undefined |  |
-| href | URL for the button link. When provided, the button will render as an anchor tag. | href | string \| undefined |  |
-| icon | Icon name | icon | string \| undefined |  |
-| iconRight | Icon name for the right side of the button | icon-right | string \| undefined |  |
-| loading | Loading button | loading | boolean | false |
-| rel | Specifies the relationship between the current document and the linked document when href is provided. | rel | string \| undefined |  |
-| target | Specifies where to open the linked document when href is provided. | target | "_blank" \| "_parent" \| "_self" \| "_top" \| undefined | '_self' |
-| type | Type of the button | type | "button" \| "submit" | 'button' |
-| variant | Button variant | variant | "danger-primary" \| "danger-secondary" \| "danger-tertiary" \| "primary" \| "secondary" \| "subtle-primary" \| "subtle-secondary" \| "subtle-tertiary" \| "tertiary" | 'primary' |
+| disabled | { "Disable the button" } | disabled | boolean | false |
+| form | { "Provide a form element ID to automatically submit the from if the button is pressed. Only works in combination with type=\"submit\"." } | form | string \| undefined |  |
+| href | { "URL for the button link. When provided, the button will render as an anchor tag." } | href | string \| undefined |  |
+| icon | { "Icon name" } | icon | string \| undefined |  |
+| iconRight | { "Icon name for the right side of the button" } | icon-right | string \| undefined |  |
+| loading | { "Loading button" } | loading | boolean | false |
+| rel | { "Specifies the relationship between the current document and the linked document when href is provided." } | rel | string \| undefined |  |
+| target | { "Specifies where to open the linked document when href is provided." } | target | "_blank" \| "_parent" \| "_self" \| "_top" \| undefined | '_self' |
+| type | { "Type of the button" } | type | "button" \| "submit" | 'button' |
+| variant | { "Button variant" } | variant | "danger-primary" \| "danger-secondary" \| "danger-tertiary" \| "primary" \| "secondary" \| "subtle-primary" \| "subtle-secondary" \| "subtle-tertiary" \| "tertiary" | 'primary' |

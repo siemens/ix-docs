@@ -120,5 +120,5 @@ import { IxSpinner } from '@siemens/ix-vue';
 
 | Name | Description | Attribute | Type | Default |
 | --- | --- | --- | --- | --- |
-| size | Size of spinner | size | "large" \| "medium" \| "small" \| "x-small" \| "xx-small" | 'medium' |
-| variant | Variant of spinner | variant | "primary" \| "secondary" | 'secondary' |
+| size | { "Size of spinner" } | size | "large" \| "medium" \| "small" \| "x-small" \| "xx-small" | 'medium' |
+| variant | { "Variant of spinner" } | variant | "primary" \| "secondary" | 'secondary' |

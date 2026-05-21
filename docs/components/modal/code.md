@@ -440,7 +440,9 @@ function CustomModal() {
         <IxButton variant="subtle-primary" onClick={() => dismiss()}>
           Cancel
         </IxButton>
-        <IxButton onClick={() => close()}>OK</IxButton>
+        <IxButton autoFocus onClick={() => close()}>
+          OK
+        </IxButton>
       </IxModalFooter>
     </Modal>
   );
@@ -551,7 +553,7 @@ import { IxApplicationContext } from '@siemens/ix-vue';
 #### modal.html
 ```html
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-ix-theme="classic" data-ix-color-schema="system">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -641,17 +643,17 @@ import { IxApplicationContext } from '@siemens/ix-vue';
 
 | Name | Description | Attribute | Type | Default |
 | --- | --- | --- | --- | --- |
-| ariaLabelCloseIconButton | ARIA label for the close icon button Will be set as aria-label on the nested HTML button element | aria-label-close-icon-button | string \| undefined | 'Close modal' |
-| ariaLabelIcon | ARIA label for the icon | aria-label-icon | string \| undefined |  |
-| hideClose | Hide the close button | hide-close | boolean | false |
-| icon | Icon of the Header | icon | string \| undefined |  |
-| iconColor | Icon color | icon-color | string \| undefined |  |
+| ariaLabelCloseIconButton | { "ARIA label for the close icon button\n\nWill be set as aria-label on the nested HTML button element" } | aria-label-close-icon-button | string \| undefined | 'Close modal' |
+| ariaLabelIcon | { "ARIA label for the icon" } | aria-label-icon | string \| undefined |  |
+| hideClose | { "Hide the close button" } | hide-close | boolean | false |
+| icon | { "Icon of the header" } | icon | string \| undefined |  |
+| iconColor | { "Icon color" } | icon-color | string \| undefined |  |
 
 ### Events
 
 | Name | Description | Event | Detail |
 | --- | --- | --- | --- |
-| closeClick | Emits when close icon is clicked and closes the modal Can be prevented, in which case only the event is triggered, and the modal remains open | closeClick | MouseEvent |
+| closeClick | { "Emits when the close icon is clicked and closes the modal\n\nCan be prevented, in which case only the event is triggered, and the modal remains open" } | closeClick | MouseEvent |
 
 ## API for ix-modal-config
 
@@ -659,18 +661,16 @@ import { IxApplicationContext } from '@siemens/ix-vue';
 
 | Name | Description | Attribute | Type |
 | --- | --- | --- | --- |
-| animation | Enable modal animation | animation | boolean |
-| ariaDescribedby | ID of element describing the modal | ariaDescribedby | string |
-| ariaLabelledby | ID of element labeling the modal | ariaLabelledby | string |
-| backdrop | Show backdrop behind modal | backdrop | boolean |
-| beforeDismiss | Called before modal is dismissed | beforeDismiss | unknown |
-| centered | Center modal vertically | centered | boolean |
-| closeOnBackdropClick | Dismiss modal on backdrop click | closeOnBackdropClick | boolean |
-| container | Element to attach modal to | container | string \| HTMLElement |
-| content | Modal content | content | string \| CONTENT |
-| keyboard | Allow closing with Escape key | keyboard | boolean |
-| size | Modal size | size | IxModalSize |
-| title | Modal title | title | string |
+| animation | { "Enable modal animation" } | animation | boolean |
+| ariaDescribedby | { "ID of element describing the modal" } | ariaDescribedby | string |
+| ariaLabelledby | { "ID of element labeling the modal" } | ariaLabelledby | string |
+| backdrop | { "Show backdrop behind modal" } | backdrop | boolean |
+| beforeDismiss | { "Called before modal is dismissed" } | beforeDismiss | unknown |
+| centered | { "Center modal vertically" } | centered | boolean |
+| closeOnBackdropClick | { "Dismiss modal on backdrop click (ignored when **isNonBlocking** is ``true``)" } | closeOnBackdropClick | boolean |
+| content | { "Modal content" } | content | string \| CONTENT |
+| isNonBlocking | { "Non-modal dialog: page stays interactive, no lightbox or focus trap; ``aria-modal`` is ``false``.\n\nSet before calling ``showModal()``; changing while open is unsupported." } | isNonBlocking | boolean |
+| size | { "Modal size" } | size | IxModalSize |
 
 ## API for ix-modal-instance
 
@@ -678,9 +678,9 @@ import { IxApplicationContext } from '@siemens/ix-vue';
 
 | Name | Description | Attribute | Type |
 | --- | --- | --- | --- |
-| htmlElement | The Modal HTML Element | htmlElement | HTMLIxModalElement |
-| onClose | Event that fires when closing the modal | onClose | TypedEvent |
-| onDismiss | Event that fires when dismissing the modal | onDismiss | TypedEvent |
+| htmlElement | { "The Modal HTML Element" } | htmlElement | HTMLIxModalElement |
+| onClose | { "Event that fires when closing the modal" } | onClose | TypedEvent |
+| onDismiss | { "Event that fires when dismissing the modal" } | onDismiss | TypedEvent |
 
 ## API for modal utils (JavaScript, React, Vue)
 

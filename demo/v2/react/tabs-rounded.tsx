@@ -20,23 +20,26 @@ import {
 export default () => {
   return (
     <IxTabs rounded>
-      <IxTabItem>
-        <IxIcon name={iconSuccess} aria-hidden="true"></IxIcon>
+      <IxTabItem tabKey="success" label="Success">
+        <IxIcon name={iconSuccess} aria-label="Success"></IxIcon>
       </IxTabItem>
-      <IxTabItem counter={200}>
-        <IxIcon name={iconTree} aria-hidden="true"></IxIcon>
+      <IxTabItem tabKey="tree" label="Tree" counter={200}>
+        <IxIcon name={iconTree} aria-label="Tree"></IxIcon>
       </IxTabItem>
-      <IxTabItem>
-        <IxIcon name={iconMaintenance} aria-hidden="true"></IxIcon>
+      <IxTabItem tabKey="maintenance" label="Maintenance">
+        <IxIcon name={iconMaintenance} aria-label="Maintenance"></IxIcon>
       </IxTabItem>
-      <IxTabItem disabled counter={24}>
-        <IxIcon name={iconSoundLoud} aria-hidden="true"></IxIcon>
+      <IxTabItem tabKey="sound" label="Sound" disabled counter={24}>
+        <IxIcon name={iconSoundLoud} aria-label="Sound"></IxIcon>
       </IxTabItem>
-      <IxTabItem>
-        <IxIcon name={iconHierarchy} aria-hidden="true"></IxIcon>
+      <IxTabItem tabKey="hierarchy" label="Hierarchy">
+        <IxIcon name={iconHierarchy} aria-label="Hierarchy"></IxIcon>
       </IxTabItem>
-      <IxTabItem disabled>
-        <IxIcon name={iconCalendarSettings} aria-hidden="true"></IxIcon>
+      <IxTabItem tabKey="calendar-settings" label="Calendar settings" disabled>
+        <IxIcon
+          name={iconCalendarSettings}
+          aria-label="Calendar settings"
+        ></IxIcon>
       </IxTabItem>
     </IxTabs>
   );

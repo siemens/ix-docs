@@ -219,12 +219,11 @@ ix-icon-button {
 
 | Name | Description | Attribute | Type | Default |
 | --- | --- | --- | --- | --- |
-| a11yLabel | Accessibility label for the icon button Will be set as aria-label on the nested HTML button element | a11y-label | string \| undefined |  |
-| disabled | Disabled | disabled | boolean | false |
-| icon | Icon name | icon | string \| undefined |  |
-| iconColor | Color of icon in button | icon-color | string \| undefined |  |
-| loading | Loading button | loading | boolean | false |
-| oval | Button in oval shape | oval | boolean | false |
-| size | Size of icon in button | size | "12" \| "16" \| "24" | '24' |
-| type | Type of the button | type | "button" \| "submit" | 'button' |
-| variant | Variant of button | variant | "danger-primary" \| "danger-secondary" \| "danger-tertiary" \| "primary" \| "secondary" \| "subtle-primary" \| "subtle-secondary" \| "subtle-tertiary" \| "tertiary" | 'subtle-primary' |
+| disabled | { "Disabled" } | disabled | boolean | false |
+| icon | { "Icon name" } | icon | string \| undefined |  |
+| iconColor | { "Color of icon in button" } | icon-color | string \| undefined |  |
+| loading | { "Loading button" } | loading | boolean | false |
+| oval | { "Button in oval shape" } | oval | boolean | false |
+| size | { "Size of icon in button" } | size | "12" \| "16" \| "24" | '24' |
+| type | { "Type of the button" } | type | "button" \| "submit" | 'button' |
+| variant | { "Variant of button" } | variant | "danger-primary" \| "danger-secondary" \| "danger-tertiary" \| "primary" \| "secondary" \| "subtle-primary" \| "subtle-secondary" \| "subtle-tertiary" \| "tertiary" | 'subtle-primary' |

@@ -378,20 +378,20 @@ import { iconInfo } from '@siemens/ix-icons/icons';
 
 | Name | Description | Attribute | Type | Default |
 | --- | --- | --- | --- | --- |
-| hasBackButton | Display a back button | has-back-button | boolean | false |
-| headerSubtitle | Subtitle of Header | header-subtitle | string \| undefined | undefined |
-| headerTitle | Title of Header | header-title | string \| undefined |  |
-| variant | Variant of content header | variant | "primary" \| "secondary" | 'primary' |
+| hasBackButton | { "Display a back button" } | has-back-button | boolean | false |
+| headerSubtitle | { "Subtitle of Header" } | header-subtitle | string \| undefined | undefined |
+| headerTitle | { "Title of Header" } | header-title | string \| undefined |  |
+| variant | { "Variant of content header" } | variant | "primary" \| "secondary" | 'primary' |
 
 ### Events
 
 | Name | Description | Event | Detail |
 | --- | --- | --- | --- |
-| backButtonClick | Triggered when back button is clicked | backButtonClick | void |
+| backButtonClick | { "Triggered when back button is clicked" } | backButtonClick | void |
 
 ### Slot
 
 | Name | Description |
 | --- | --- |
-|  | { `Default slot for action buttons or other content` } |
-| header | { `Content to be placed in the header area next to the title` } |
+|  | { "Default slot for action buttons or other content" } |
+| header | { "Content to be placed in the header area next to the title" } |

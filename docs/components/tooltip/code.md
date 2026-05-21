@@ -160,14 +160,14 @@ See examples [above](#basic).
 
 | Name | Description | Attribute | Type | Default |
 | --- | --- | --- | --- | --- |
-| for | CSS selector for hover trigger element e.g. \`for="[data-my-custom-select]"\` | for | ElementReference[] \| HTMLElement \| Promise \| string \| undefined |  |
-| interactive | Define if the user can access the tooltip via mouse. | interactive | boolean | false |
-| placement | Initial placement of the tooltip. If the selected placement doesn't have enough space, the tooltip will be repositioned to another location. | placement | "bottom" \| "left" \| "right" \| "top" | 'top' |
-| titleContent | Title of the tooltip | title-content | string \| undefined |  |
+| for | { "CSS selector for hover trigger element e.g. `for=\"[data-my-custom-select]\"`" } | for | ElementReference[] \| HTMLElement \| Promise \| string \| undefined |  |
+| interactive | { "Define if the user can access the tooltip via mouse." } | interactive | boolean | false |
+| placement | { "Initial placement of the tooltip.\n\nIf the selected placement doesn't have enough space, the tooltip will be repositioned to another location." } | placement | "bottom" \| "left" \| "right" \| "top" | 'top' |
+| titleContent | { "Title of the tooltip" } | title-content | string \| undefined |  |
 
 ### Slot
 
 | Name | Description |
 | --- | --- |
-| title-content | { `Content of tooltip title` } |
-| title-icon | { `Icon displayed next to the tooltip title. The icon will be displayed as 16x16px.` } |
+| title-content | { "Content of tooltip title" } |
+| title-icon | { "Icon displayed next to the tooltip title. The icon will be displayed as 16x16px." } |

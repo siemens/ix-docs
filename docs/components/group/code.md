@@ -378,21 +378,21 @@ import {
 
 | Name | Description | Attribute | Type | Default |
 | --- | --- | --- | --- | --- |
-| expandOnHeaderClick | Expand the group if the header is clicked | expand-on-header-click | boolean | false |
-| expanded | Whether the group is expanded or collapsed. Defaults to false. | expanded | boolean | false |
-| header | Group header | header | string \| undefined |  |
-| index | The index of the selected group entry. If undefined no group item is selected. | index | number \| undefined |  |
-| selected | Whether the group is selected. | selected | boolean | false |
-| subHeader | Group header subtitle | sub-header | string \| undefined |  |
-| suppressHeaderSelection | Prevent header from being selectable | suppress-header-selection | boolean | false |
+| expandOnHeaderClick | { "Expand the group if the header is clicked" } | expand-on-header-click | boolean | false |
+| expanded | { "Whether the group is expanded or collapsed. Defaults to false." } | expanded | boolean | false |
+| header | { "Group header" } | header | string \| undefined |  |
+| index | { "The index of the selected group entry.\n\nIf undefined no group item is selected." } | index | number \| undefined |  |
+| selected | { "Whether the group is selected." } | selected | boolean | false |
+| subHeader | { "Group header subtitle" } | sub-header | string \| undefined |  |
+| suppressHeaderSelection | { "Prevent header from being selectable" } | suppress-header-selection | boolean | false |
 
 ### Events
 
 | Name | Description | Event | Detail |
 | --- | --- | --- | --- |
-| expandedChanged | Group expanded | expandedChanged | boolean |
-| selectGroup | Emits when whole group gets selected. | selectGroup | boolean |
-| selectItem | Emits when group item gets selected. | selectItem | number |
+| expandedChanged | { "Group expanded" } | expandedChanged | boolean |
+| selectGroup | { "Emits when whole group gets selected." } | selectGroup | boolean |
+| selectItem | { "Emits when group item gets selected." } | selectItem | number |
 
 ## API for ix-group-item
 
@@ -400,17 +400,17 @@ import {
 
 | Name | Description | Attribute | Type | Default |
 | --- | --- | --- | --- | --- |
-| ariaLabelIcon | ARIA label for the icon | aria-label-icon | string \| undefined |  |
-| disabled | Disable the group item. The elements tabindex attribute will get set accordingly. If false tabindex will be 0, -1 otherwise. | disabled | boolean | false |
-| icon | Group item icon | icon | string \| undefined |  |
-| index | Index | index | number \| undefined |  |
-| secondaryText | Group item secondary text | secondary-text | string \| undefined |  |
-| selected | Show selected state | selected | boolean | false |
-| suppressSelection | Supress the selection of the group | suppress-selection | boolean | false |
-| text | Group item text | text | string \| undefined |  |
+| ariaLabelIcon | { "ARIA label for the icon" } | aria-label-icon | string \| undefined |  |
+| disabled | { "Disable the group item.\n\nThe elements tabindex attribute will get set accordingly.\n\nIf false tabindex will be 0, -1 otherwise." } | disabled | boolean | false |
+| icon | { "Group item icon" } | icon | string \| undefined |  |
+| index | { "Index" } | index | number \| undefined |  |
+| secondaryText | { "Group item secondary text" } | secondary-text | string \| undefined |  |
+| selected | { "Show selected state" } | selected | boolean | false |
+| suppressSelection | { "Supress the selection of the group" } | suppress-selection | boolean | false |
+| text | { "Group item text" } | text | string \| undefined |  |
 
 ### Events
 
 | Name | Description | Event | Detail |
 | --- | --- | --- | --- |
-| selectedChanged | Selection changed | selectedChanged | HTMLIxGroupItemElement |
+| selectedChanged | { "Selection changed" } | selectedChanged | HTMLIxGroupItemElement |

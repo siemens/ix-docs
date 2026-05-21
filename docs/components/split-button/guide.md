@@ -19,7 +19,6 @@ All the variants, options and states of the [button](../button/index.mdx) and th
 ## Options
 
 - **Label:** Set a label for the button component (left side). We typically use short labels that contain a verb.
-- **Placement:** Define where the flyout appears which is triggered when the dropdown button is active. You can choose between different directions (top, bottom, left, right) and two options for alignment with the button (start, end). When there is not enough space for the chosen setting, the placement is corrected automatically.
 - **Split icon:** We typically use a chevron icon on the dropdown button, but a custom icon can be set. A common alternative to the chevron is the "more-menu" icon.
 
 The options **loading** and **type** are not available for split buttons.

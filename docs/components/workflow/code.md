@@ -228,11 +228,11 @@ import { IxWorkflowStep, IxWorkflowSteps } from '@siemens/ix-vue';
 
 | Name | Description | Attribute | Type | Default |
 | --- | --- | --- | --- | --- |
-| clickable | Activate navigation click | clickable | boolean | false |
-| disabled | Set disabled | disabled | boolean | false |
-| selected | Set selected | selected | boolean | false |
-| status | Set status | status | "done" \| "error" \| "open" \| "success" \| "warning" | 'open' |
-| vertical | Select orientation | vertical | boolean | false |
+| clickable | { "Activate navigation click" } | clickable | boolean | false |
+| disabled | { "Set disabled" } | disabled | boolean | false |
+| selected | { "Set selected" } | selected | boolean | false |
+| status | { "Set status" } | status | "done" \| "error" \| "open" \| "success" \| "warning" | 'open' |
+| vertical | { "Select orientation" } | vertical | boolean | false |
 
 ## API for ix-workflow-steps
 
@@ -240,12 +240,12 @@ import { IxWorkflowStep, IxWorkflowSteps } from '@siemens/ix-vue';
 
 | Name | Description | Attribute | Type | Default |
 | --- | --- | --- | --- | --- |
-| clickable | Activate navigation click | clickable | boolean | false |
-| selectedIndex | Activate navigation click | selected-index | number | 0 |
-| vertical | Select orientation | vertical | boolean | false |
+| clickable | { "Activate navigation click" } | clickable | boolean | false |
+| selectedIndex | { "Activate navigation click" } | selected-index | number | 0 |
+| vertical | { "Select orientation" } | vertical | boolean | false |
 
 ### Events
 
 | Name | Description | Event | Detail |
 | --- | --- | --- | --- |
-| stepSelected | On step selected event | stepSelected | number |
+| stepSelected | { "On step selected event" } | stepSelected | number |

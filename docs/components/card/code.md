@@ -548,14 +548,14 @@ import { IxPushCard } from '@siemens/ix-vue';
 
 | Name | Description | Attribute | Type | Default |
 | --- | --- | --- | --- | --- |
-| ariaLabelCard | ARIA label for the card | aria-label-card | string \| undefined |  |
-| ariaLabelIcon | ARIA label for the icon | aria-label-icon | string \| undefined |  |
-| heading | Card heading | heading | string \| undefined |  |
-| icon | Card icon | icon | string \| undefined | undefined |
-| passive | If true, disables hover and active styles and changes cursor to default | passive | boolean | false |
-| selected | Card selection | selected | boolean | false |
-| subheading | Card subheading | subheading | string \| undefined |  |
-| variant | Card variant | variant | "alarm" \| "critical" \| "filled" \| "info" \| "neutral" \| "outline" \| "primary" \| "success" \| "warning" | 'outline' |
+| ariaLabelCard | { "ARIA label for the card" } | aria-label-card | string \| undefined |  |
+| ariaLabelIcon | { "ARIA label for the icon" } | aria-label-icon | string \| undefined |  |
+| heading | { "Card heading" } | heading | string \| undefined |  |
+| icon | { "Card icon" } | icon | string \| undefined | undefined |
+| passive | { "If true, disables hover and active styles and changes cursor to default" } | passive | boolean | false |
+| selected | { "Card selection" } | selected | boolean | false |
+| subheading | { "Card subheading" } | subheading | string \| undefined |  |
+| variant | { "Card variant" } | variant | "alarm" \| "critical" \| "filled" \| "info" \| "neutral" \| "outline" \| "primary" \| "success" \| "warning" | 'outline' |
 
 ## API for ix-push-card
 
@@ -563,14 +563,14 @@ import { IxPushCard } from '@siemens/ix-vue';
 
 | Name | Description | Attribute | Type | Default |
 | --- | --- | --- | --- | --- |
-| ariaLabelIcon | ARIA label for the icon | aria-label-icon | string \| undefined |  |
-| expanded | Expand the card | expanded | boolean | false |
-| heading | Card heading | heading | string \| undefined |  |
-| icon | Card icon | icon | string \| undefined |  |
-| notification | Card KPI value | notification | string \| undefined |  |
-| passive | If true, disables hover and active styles and changes cursor to default | passive | boolean | false |
-| subheading | Card subheading | subheading | string \| undefined |  |
-| variant | Card variant | variant | "alarm" \| "critical" \| "filled" \| "info" \| "neutral" \| "outline" \| "primary" \| "success" \| "warning" | 'outline' |
+| ariaLabelIcon | { "ARIA label for the icon" } | aria-label-icon | string \| undefined |  |
+| expanded | { "Expand the card" } | expanded | boolean | false |
+| heading | { "Card heading" } | heading | string \| undefined |  |
+| icon | { "Card icon" } | icon | string \| undefined |  |
+| notification | { "Card KPI value" } | notification | string \| undefined |  |
+| passive | { "If true, disables hover and active styles and changes cursor to default" } | passive | boolean | false |
+| subheading | { "Card subheading" } | subheading | string \| undefined |  |
+| variant | { "Card variant" } | variant | "alarm" \| "critical" \| "filled" \| "info" \| "neutral" \| "outline" \| "primary" \| "success" \| "warning" | 'outline' |
 
 ## API for ix-card
 
@@ -578,6 +578,6 @@ import { IxPushCard } from '@siemens/ix-vue';
 
 | Name | Description | Attribute | Type | Default |
 | --- | --- | --- | --- | --- |
-| passive | If true, disables hover and active styles and changes cursor to default | passive | boolean | false |
-| selected | Show card in selected state | selected | boolean | false |
-| variant | Card variant | variant | "alarm" \| "critical" \| "filled" \| "info" \| "neutral" \| "outline" \| "primary" \| "success" \| "warning" | 'outline' |
+| passive | { "If true, disables hover and active styles and changes cursor to default" } | passive | boolean | false |
+| selected | { "Show card in selected state" } | selected | boolean | false |
+| variant | { "Card variant" } | variant | "alarm" \| "critical" \| "filled" \| "info" \| "neutral" \| "outline" \| "primary" \| "success" \| "warning" | 'outline' |

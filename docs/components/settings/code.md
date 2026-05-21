@@ -1,6 +1,6 @@
 # Settings - Code
 
-> Code examples and API documentation for the ix-menu-settings, ix-menu-settings-item
+> Code examples and API documentation for the ix-menu-settings
 
 # Settings - Code
 
@@ -15,12 +15,14 @@ import {
   IxApplicationHeader,
   IxMenu,
   IxMenuSettings,
-  IxMenuSettingsItem,
+  IxTabItem,
+  IxTabs,
 } from '@siemens/ix-react';
-import { useLayoutEffect, useRef } from 'react';
+import { useLayoutEffect, useRef, useState } from 'react';
 
 export default () => {
   const ref = useRef<HTMLIxMenuElement>(null);
+  const [activeTabKey, setActiveTabKey] = useState('tab-1');
 
   useLayoutEffect(() => {
     if (ref.current) {
@@ -34,9 +36,24 @@ export default () => {
         <div className="placeholder-logo" slot="logo"></div>
       </IxApplicationHeader>
       <IxMenu ref={ref}>
-        <IxMenuSettings>
-          <IxMenuSettingsItem label="Example Setting 1"></IxMenuSettingsItem>
-          <IxMenuSettingsItem label="Example Setting 2"></IxMenuSettingsItem>
+        <IxMenuSettings suppressLegacyTabs>
+          <IxTabs
+            activeTabKey={activeTabKey}
+            onTabChange={({ detail }) => setActiveTabKey(detail ?? 'tab-1')}
+          >
+            <IxTabItem tabKey="tab-1">Example Setting 1</IxTabItem>
+            <IxTabItem tabKey="tab-2">Example Setting 2</IxTabItem>
+          </IxTabs>
+          {activeTabKey === 'tab-1' ? (
+            <section role="tabpanel" aria-label="Settings content">
+              Example Setting 1 content
+            </section>
+          ) : null}
+          {activeTabKey === 'tab-2' ? (
+            <section role="tabpanel" aria-label="Settings content">
+              Example Setting 2 content
+            </section>
+          ) : null}
         </IxMenuSettings>
       </IxMenu>
     </IxApplication>
@@ -59,6 +76,8 @@ export default class Settings implements AfterViewInit {
   @ViewChild('menu', { read: ElementRef })
   menuRef!: ElementRef<HTMLIxMenuElement>;
 
+  activeTabKey = 'tab-1';
+
   ngAfterViewInit() {
     const { nativeElement } = this.menuRef;
     nativeElement.toggleSettings(true);
@@ -73,9 +92,23 @@ export default class Settings implements AfterViewInit {
     <div class="placeholder-logo" slot="logo"></div>
   </ix-application-header>
   <ix-menu #menu>
-    <ix-menu-settings>
-      <ix-menu-settings-item label="Example Setting 1"></ix-menu-settings-item>
-      <ix-menu-settings-item label="Example Setting 2"></ix-menu-settings-item>
+    <ix-menu-settings suppressLegacyTabs>
+      <ix-tabs
+        [activeTabKey]="activeTabKey"
+        (tabChange)="activeTabKey = $event.detail ?? 'tab-1'"
+      >
+        <ix-tab-item tabKey="tab-1">Example Setting 1</ix-tab-item>
+        <ix-tab-item tabKey="tab-2">Example Setting 2</ix-tab-item>
+      </ix-tabs>
+      @if (activeTabKey === 'tab-1') {
+      <section role="tabpanel" aria-label="Settings content">
+        Example Setting 1 content
+      </section>
+      } @else {
+      <section role="tabpanel" aria-label="Settings content">
+        Example Setting 2 content
+      </section>
+      }
     </ix-menu-settings>
   </ix-menu>
 </ix-application>
@@ -91,7 +124,8 @@ import {
   IxApplicationHeader,
   IxMenu,
   IxMenuSettings,
-  IxMenuSettingsItem,
+  IxTabItem,
+  IxTabs,
 } from '@siemens/ix-angular/standalone';
 
 @Component({
@@ -101,13 +135,16 @@ import {
     IxApplicationHeader,
     IxMenu,
     IxMenuSettings,
-    IxMenuSettingsItem,
+    IxTabs,
+    IxTabItem,
   ],
   templateUrl: './settings.html',
 })
 export default class Settings implements AfterViewInit {
   @ViewChild('menu', { read: ElementRef })
   menuRef!: ElementRef<HTMLIxMenuElement>;
+
+  activeTabKey = 'tab-1';
 
   ngAfterViewInit() {
     const { nativeElement } = this.menuRef;
@@ -123,9 +160,23 @@ export default class Settings implements AfterViewInit {
     <div class="placeholder-logo" slot="logo"></div>
   </ix-application-header>
   <ix-menu #menu>
-    <ix-menu-settings>
-      <ix-menu-settings-item label="Example Setting 1"></ix-menu-settings-item>
-      <ix-menu-settings-item label="Example Setting 2"></ix-menu-settings-item>
+    <ix-menu-settings suppressLegacyTabs>
+      <ix-tabs
+        [activeTabKey]="activeTabKey"
+        (tabChange)="activeTabKey = $event.detail ?? 'tab-1'"
+      >
+        <ix-tab-item tabKey="tab-1">Example Setting 1</ix-tab-item>
+        <ix-tab-item tabKey="tab-2">Example Setting 2</ix-tab-item>
+      </ix-tabs>
+      @if (activeTabKey === 'tab-1') {
+      <section role="tabpanel" aria-label="Settings content">
+        Example Setting 1 content
+      </section>
+      } @else {
+      <section role="tabpanel" aria-label="Settings content">
+        Example Setting 2 content
+      </section>
+      }
     </ix-menu-settings>
   </ix-menu>
 </ix-application>
@@ -142,11 +193,17 @@ import {
   IxApplicationHeader,
   IxMenu,
   IxMenuSettings,
-  IxMenuSettingsItem,
+  IxTabItem,
+  IxTabs,
 } from '@siemens/ix-vue';
 import { nextTick, onMounted, ref } from 'vue';
 
 const menu = ref<HTMLRefElement<HTMLIxMenuElement>>();
+const activeTabKey = ref('tab-1');
+
+const setActiveTabKey = (event: CustomEvent<string | undefined>) => {
+  activeTabKey.value = event.detail ?? 'tab-1';
+};
 
 onMounted(async () => {
   await nextTick();
@@ -161,8 +218,24 @@ onMounted(async () => {
     </IxApplicationHeader>
     <IxMenu ref="menu">
       <IxMenuSettings>
-        <IxMenuSettingsItem label="Example Setting 1"></IxMenuSettingsItem>
-        <IxMenuSettingsItem label="Example Setting 2"></IxMenuSettingsItem>
+        <IxTabs :activeTabKey="activeTabKey" @tabChange="setActiveTabKey">
+          <IxTabItem tabKey="tab-1">Example Setting 1</IxTabItem>
+          <IxTabItem tabKey="tab-2">Example Setting 2</IxTabItem>
+        </IxTabs>
+        <section
+          v-if="activeTabKey === 'tab-1'"
+          role="tabpanel"
+          aria-label="Settings content"
+        >
+          Example Setting 1 content
+        </section>
+        <section
+          v-if="activeTabKey === 'tab-2'"
+          role="tabpanel"
+          aria-label="Settings content"
+        >
+          Example Setting 2 content
+        </section>
       </IxMenuSettings>
     </IxMenu>
   </IxApplication>
@@ -175,27 +248,14 @@ onMounted(async () => {
 
 | Name | Description | Attribute | Type | Default |
 | --- | --- | --- | --- | --- |
-| activeTabLabel | Active tab | active-tab-label | string \| undefined |  |
-| ariaLabelCloseButton | Aria label for close button | aria-label-close-button | string | 'Close Settings' |
-| label | Label of first tab | label | string | 'Settings' |
+| activeTabKey | { "Active tab used for legacy ix-menu-settings-item integrations" } | active-tab-key | string \| undefined |  |
+| ariaLabelCloseButton | { "Aria label for close button" } | aria-label-close-button | string | 'Close Settings' |
+| label | { "Label of first tab" } | label | string | 'Settings' |
+| suppressLegacyTabs | { "Whether to suppress legacy tabs (ix-menu-settings-item) and use slotted\n\ntabs (ix-tab-item) instead" } | suppress-legacy-tabs | boolean | false |
 
 ### Events
 
 | Name | Description | Event | Detail |
 | --- | --- | --- | --- |
-| close | Popover closed | close | CustomCloseEvent |
-| tabChange | Active tab changed | tabChange | string |
-
-## API for ix-menu-settings-item
-
-### Properties
-
-| Name | Description | Attribute | Type |
-| --- | --- | --- | --- |
-| label | Settings Item label | label | string \| undefined |
-
-### Events
-
-| Name | Description | Event | Detail |
-| --- | --- | --- | --- |
-| labelChange | Label changed | labelChange | CustomLabelChangeEvent |
+| close | { "Popover closed" } | close | CustomCloseEvent |
+| tabChange | { "Active tab changed" } | tabChange | string |

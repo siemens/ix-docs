@@ -846,21 +846,21 @@ import { IxCheckbox, IxCheckboxGroup } from '@siemens/ix-vue';
 
 | Name | Description | Attribute | Type | Default |
 | --- | --- | --- | --- | --- |
-| checked | Checked state of the checkbox component | checked | boolean | false |
-| disabled | Disabled state of the checkbox component | disabled | boolean | false |
-| indeterminate | Indeterminate state of the checkbox component | indeterminate | boolean | false |
-| label | Label for the checkbox component | label | string \| undefined |  |
-| name | Name of the checkbox component | name | string \| undefined |  |
-| required | Required state of the checkbox component. If true, checkbox needs to be checked to be valid | required | boolean | false |
-| value | Value of the checkbox component | value | string | 'on' |
+| checked | { "Checked state of the checkbox component" } | checked | boolean | false |
+| disabled | { "Disabled state of the checkbox component" } | disabled | boolean | false |
+| indeterminate | { "Indeterminate state of the checkbox component" } | indeterminate | boolean | false |
+| label | { "Label for the checkbox component" } | label | string \| undefined |  |
+| name | { "Name of the checkbox component" } | name | string \| undefined |  |
+| required | { "Required state of the checkbox component.\n\nIf true, checkbox needs to be checked to be valid" } | required | boolean | false |
+| value | { "Value of the checkbox component" } | value | string | 'on' |
 
 ### Events
 
 | Name | Description | Event | Detail |
 | --- | --- | --- | --- |
-| checkedChange | Event emitted when the checked state of the checkbox changes | checkedChange | boolean |
-| ixBlur | Event emitted when the checkbox is blurred | ixBlur | void |
-| valueChange | Event emitted when the value of the checkbox changes | valueChange | string |
+| checkedChange | { "Event emitted when the checked state of the checkbox changes" } | checkedChange | boolean |
+| ixBlur | { "Event emitted when the checkbox is blurred" } | ixBlur | void |
+| valueChange | { "Event emitted when the value of the checkbox changes" } | valueChange | string |
 
 ## API for ix-checkbox-group
 
@@ -868,11 +868,11 @@ import { IxCheckbox, IxCheckboxGroup } from '@siemens/ix-vue';
 
 | Name | Description | Attribute | Type | Default |
 | --- | --- | --- | --- | --- |
-| direction | Alignment of the checkboxes in the group | direction | "column" \| "row" | 'column' |
-| helperText | Optional helper text displayed below the checkbox group | helper-text | string \| undefined |  |
-| infoText | Info text for the checkbox group | info-text | string \| undefined |  |
-| invalidText | Error text for the checkbox group | invalid-text | string \| undefined |  |
-| label | Label for the checkbox group | label | string \| undefined |  |
-| showTextAsTooltip | Show helper, info, warning, error and valid text as tooltip | show-text-as-tooltip | boolean | false |
-| validText | Valid text for the checkbox group | valid-text | string \| undefined |  |
-| warningText | Warning text for the checkbox group | warning-text | string \| undefined |  |
+| direction | { "Alignment of the checkboxes in the group" } | direction | "column" \| "row" | 'column' |
+| helperText | { "Optional helper text displayed below the checkbox group" } | helper-text | string \| undefined |  |
+| infoText | { "Info text for the checkbox group" } | info-text | string \| undefined |  |
+| invalidText | { "Error text for the checkbox group" } | invalid-text | string \| undefined |  |
+| label | { "Label for the checkbox group" } | label | string \| undefined |  |
+| showTextAsTooltip | { "Show helper, info, warning, error and valid text as tooltip" } | show-text-as-tooltip | boolean | false |
+| validText | { "Valid text for the checkbox group" } | valid-text | string \| undefined |  |
+| warningText | { "Warning text for the checkbox group" } | warning-text | string \| undefined |  |

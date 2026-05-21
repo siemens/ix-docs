@@ -321,20 +321,21 @@ import { IxCardList, IxPushCard } from '@siemens/ix-vue';
 
 | Name | Description | Attribute | Type | Default |
 | --- | --- | --- | --- | --- |
-| ariaLabelExpandButton | ARIA label for the card's expand button. Will be set as aria-label on the nested HTML button element | aria-label-expand-button | string \| undefined |  |
-| collapse | Collapse the list | collapse | boolean | false |
-| hideShowAll | Hide the show all button | hide-show-all | boolean | false |
-| i18nMoreCards | i18n More cards available | i18n-more-cards | string | 'There are more cards available' |
-| i18nShowAll | i18n Show all button | i18n-show-all | string | 'Show all' |
-| label | Name the card list | label | string \| undefined |  |
-| listStyle | List style | list-style | "scroll" \| "stack" | 'stack' |
-| showAllCount | Overwrite the default show all count. | show-all-count | number \| undefined |  |
-| suppressOverflowHandling | Suppress the overflow handling of child elements | suppress-overflow-handling | boolean | false |
+| ariaLabelExpandButton | { "ARIA label for the card's expand button.\n\nWill be set as aria-label on the nested HTML button element" } | aria-label-expand-button | string \| undefined |  |
+| collapse | { "Collapse the list" } | collapse | boolean | false |
+| hideShowAll | { "Hide the show all button" } | hide-show-all | boolean | false |
+| i18nMoreCards | { "i18n More cards available" } | i18n-more-cards | string | 'There are more cards available' |
+| i18nShowAll | { "i18n Show all button" } | i18n-show-all | string | 'Show all' |
+| i18nShowLess | { "i18n show less button" } | i18n-show-less | string | 'Show less' |
+| label | { "Name the card list" } | label | string \| undefined |  |
+| listStyle | { "List style" } | list-style | "scroll" \| "stack" | 'stack' |
+| showAllCount | { "Overwrite the default show all count." } | show-all-count | number \| undefined |  |
+| suppressOverflowHandling | { "Suppress the overflow handling of child elements" } | suppress-overflow-handling | boolean | false |
 
 ### Events
 
 | Name | Description | Event | Detail |
 | --- | --- | --- | --- |
-| collapseChanged | Fire event when the collapse state is changed by the user | collapseChanged | boolean |
-| showAllClick | Fire event when the collapse state is changed by the user | showAllClick | { nativeEvent: MouseEvent; } |
-| showMoreCardClick | Fire event when the show more card is clicked. | showMoreCardClick | { nativeEvent: MouseEvent; } |
+| collapseChanged | { "Fire event when the collapse state is changed by the user" } | collapseChanged | boolean |
+| showAllClick | { "Fire event when the collapse state is changed by the user" } | showAllClick | { nativeEvent: MouseEvent; } |
+| showMoreCardClick | { "Fire event when the show more card is clicked." } | showMoreCardClick | { nativeEvent: MouseEvent; } |
