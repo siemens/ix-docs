@@ -39,7 +39,7 @@ description: 'Compatibility matrix for Siemens Industrial Experience Version 5.'
 
 ## Tested in CI
 
-These are the specific library versions used in the monorepo's test applications, validated through automated CI pipelines.
+We validate these library versions in the monorepo’s test applications using automated CI pipelines.
 
 | Framework / Library | Tested version |
 | --- | --- |
