@@ -14,7 +14,7 @@ We strongly recommend upgrading version by version and not skipping major versio
 
 ## Code migration
 
-This section gives an overview of the main code-level breaking changes in Version 5. For the complete list of changes, see the [Changelog](https://github.com/siemens/ix/releases) and the [Release V5.0.0 blog post](/blog/2026/05/11/release-5) for more context on the rationale behind the update.
+This section gives an overview of the main code-level breaking changes in Version 5. For the complete list of changes, see the [Changelog](https://github.com/siemens/ix/releases) and the [Release V5.0.0 blog post](/blog/2026/05/21/release-5) for more context on the rationale behind the update.
 
 ### Migrate with your agent
 
@@ -146,6 +146,6 @@ The following components were fully removed from the library after prior depreca
 
 Please check out the following resources and don’t hesitate to [contact us](./../support/contact-us) if you have further questions or migration problems.
 
-- [Release V5.0.0 blog post](/blog/2026/05/11/release-5)
+- [Release V5.0.0 blog post](/blog/2026/05/21/release-5)
 - [Breaking Changes guide](https://github.com/siemens/ix/blob/main/BREAKING_CHANGES/v5.md)
 - [Changelog](https://github.com/siemens/ix/releases)

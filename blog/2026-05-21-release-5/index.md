@@ -5,7 +5,7 @@ tags: [release]
 
 # Release V5.0.0
 
-![banner](../2026-05-11-release-5/2605_blog_5-0.png)
+![banner](../2026-05-21-release-5/2605_blog_5-0.png)
 
 Version 5 marks a step forward for the Industrial Experience Design System. This major release focuses on improving accessibility, removing outdated components and strengthening the connection between design tokens, Figma and code.
 
@@ -29,7 +29,7 @@ Our goals were clear:
 
 # Brand theme colors now follow a shared reference model
 
-![color-tokens](../2026-05-11-release-5/2605_blog_tokens.png)
+![color-tokens](../2026-05-21-release-5/2605_blog_tokens.png)
 
 The color token basis is now aligned with the Siemens Design Language and built on strict reference token.
 
@@ -41,7 +41,7 @@ Teams now have a more consistent foundation across design systems and codebases.
 
 # Accessibility improvements for keyboard navigation
 
-![accessibility](../2026-05-11-release-5/2605_blog_accessibility.png)
+![accessibility](../2026-05-21-release-5/2605_blog_accessibility.png)
 
 Keyboard navigation and focus handling have been improved across several complex components.
 
@@ -55,7 +55,7 @@ The update focused especially on interaction clarity in areas such as:
 
 # Date and time inputs are more capable
 
-![date-and-time](../2026-05-11-release-5/2605_blog_datetime.png)
+![date-and-time](../2026-05-21-release-5/2605_blog_datetime.png)
 
 Version 5 adds new date and time input capabilities and improves consistency across existing flows, including:
 
@@ -67,7 +67,7 @@ We've standardized date and time component interactions across all locales, maki
 
 # Tabs now handle overflow with a More menu
 
-![tabs-overflow](../2026-05-11-release-5/2605_blog_tab-overflow.png)
+![tabs-overflow](../2026-05-21-release-5/2605_blog_tab-overflow.png)
 
 [Tabs](/docs/components/tabs) now handle overflow more reliably in responsive layouts.
 
@@ -78,7 +78,7 @@ We've standardized date and time component interactions across all locales, maki
 
 # Card components now use Figma native slots
 
-![Cards](../2026-05-11-release-5/2605_blog_Cards.png)
+![Cards](../2026-05-21-release-5/2605_blog_Cards.png)
 
 The [card](/docs/components/card) updates in Version 5 are focused on the Figma library and are not related to code changes. Native Figma slots make card composition more flexible and support more responsive behavior directly in the library.
 
