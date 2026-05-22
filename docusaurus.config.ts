@@ -264,7 +264,7 @@ const config: Config = {
           type: 'custom-news-pill',
           position: 'left',
           label: 'Release 5.0.0',
-          value: '/blog',
+          value: '/blog/2026/05/21/release-5',
         },
         {
           type: 'custom-version-selection',
@@ -358,7 +358,12 @@ const config: Config = {
           title: 'More',
           items: [
             {
-              html: '<a href="https://www.netlify.com"> <img src="https://www.netlify.com/v3/img/components/netlify-color-accent.svg" alt="Deploys by Netlify" /> </a>',
+              html: `<a href="https://www.netlify.com">
+  <img
+    src="https://www.netlify.com/assets/badges/netlify-badge-color-accent.svg"
+    alt="Deploys by Netlify"
+  />
+</a>`,
             },
           ],
         },

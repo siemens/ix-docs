@@ -92,7 +92,8 @@ p {
   --ifm-menu-color: var(--theme-color-std-text);
   --ifm-background-color: var(--theme-color-1);
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.1);
-  --ifm-link-color: var(--theme-color-dynamic);
+  --ifm-link-color: var(--theme-color-primary);
+  --ifm-blockquote-padding-horizontal: 0.5rem;
 }
 
 [data-ix-theme='classic'][data-ix-color-schema='dark'] {

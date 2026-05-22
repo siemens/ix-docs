@@ -13,7 +13,7 @@ description: 'We’re constantly improving our design system for you by extendin
 ![Roadmap](https://www.figma.com/design/wEptRgAezDU1z80Cn3eZ0o/iX-Documentation-illustrations?node-id=6992-210&t=UmcDJUatVbcLymkF-4)
 
 ### ✅ Completed
-**🔹 Release 5.0**: Applying reference color tokens aligned with the Siemens design language, refactoring keyboard navigation in dropdowns, new [date-time input](/docs/components/input-date-time) & [range field](/docs/components/range-field) component, [tabs](/docs/components/tabs) with overflow menu and style adaptions. [Read more](/blog/2026/05/11/release-5)
+**🔹 Release 5.0**: Applying reference color tokens aligned with the Siemens design language, refactoring keyboard navigation in dropdowns, new [date-time input](/docs/components/input-date-time) & [range field](/docs/components/range-field) component, [tabs](/docs/components/tabs) with overflow menu and style adaptions. [Read more](/blog/2026/05/21/release-5)
 
 ### 🚧 Work in progress
 
