@@ -41,7 +41,7 @@ const customCss = [
   './node_modules/@siemens/ix/dist/siemens-ix/theme/classic-dark.css',
   './node_modules/@siemens/ix/dist/siemens-ix/theme/classic-light.css',
   './src/scss/custom.scss',
-  './node_modules/@siemens/ix/scss/_common-variables.scss',
+  './node_modules/@siemens/ix/scss/misc/_common-variables.scss',
 ];
 
 let withBrandTheme = false;
@@ -106,7 +106,7 @@ const config: Config = {
 
   customFields: {
     withBrandTheme,
-    playgroundVersion: '^4',
+    playgroundVersion: '^5',
   },
 
   presets: [
