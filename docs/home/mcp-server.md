@@ -73,8 +73,8 @@ After successful installation you need to initialize the MCP server and provide 
 4. **Restart your AI tools** (VS Code, Cline, Zed, etc.)
    - Ensure the server is running and trust the MCP server, e.g., click the "Server" icon in the
      GitHub Copilot Chat panel in VS Code.
-   - **For GitHub Copilot in VS Code**: Make sure you are in Agent Mode, not Chat Mode. Use models
-     like **Claude Sonnet 4.5**.
+   - **For GitHub Copilot in VS Code**: Make sure you are in Agent Mode, not Chat Mode. Use models,
+     e.g. **Claude Sonnet 4.5**.
 
 5. **Start prompting**:
    - "How do I use the search component from @siemens/ix?"
@@ -161,7 +161,7 @@ New MCP package versions on the same `ix` version are incremented like `5.0.0-v.
 Simply install the package again with the updated version.
 
 
-For example if you want to upgrade from iX V4 to V5:
+E.g., if you want to upgrade from iX V4 to V5:
 
 ```bash
 
@@ -267,7 +267,7 @@ npx @siemens/ix-mcp log
 
 If you're using WSL, you need to configure the LLM token using environment variables instead of the
 system keychain. Before running any commands, add the following to a `.env` file in the project root
-(if you're using a project installation):
+(if you’re using a project installation):
 
 ```
 SDL_MCP_TOKEN_ENV=true
@@ -276,7 +276,7 @@ OPENAI_API_KEY=<your-key-here>
 
 Make sure the `.env` file is in your `.gitignore` and cannot be committed.
 
-Alternatively, or if you're using a global installation, add these to your shell profile
+Alternatively, or if you’re using a global installation, add these to your shell profile
 (`~/.zprofile` or `~/.bash_profile`):
 
 ```bash
