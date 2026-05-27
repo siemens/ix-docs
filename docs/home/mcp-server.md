@@ -63,12 +63,12 @@ After successful installation you need to initialize the MCP server and provide 
   - __Token setup__: Enter your LLM token from [https://my.siemens.com/](https://my.siemens.com/) (requires 'llm' scope)
   - __Tool configuration__:
     1. Choose which tools to configure (VS Code, Cline, Zed, etc.).
-    2. Logging of MCP queries and responses can be enabled
+    2. Enable logging of MCP queries and responses (optional)
   - __Agent instructions__:
     1. Setup can add predefined instruction files to your project that guide agents how to develop with iX
-    2. Symlinks/aliases can be used to help keep instruction files updated.
+    2. Use symlinks/aliases to help keep instruction files updated (optional)
        > This may not work for every package manager or platform (e.g. Windows)
-  - Commit the local configuration to share it (make sure it is not ignored by `.gitignore`).
+  - Commit the local configuration to share it (make sure it isn't ignored by `.gitignore`).
 
 4. **Restart your AI tools** (VS Code, Cline, Zed, etc.)
    - Ensure the server is running and trust the MCP server, e.g., click the "Server" icon in the
@@ -135,7 +135,7 @@ We distribute an MCP server package `@siemens/ix-mcp` for every `@siemens/ix` ve
 `@siemens/ix-mcp` must match your version of `@siemens/ix`. The version number of the MCP package
 `@siemens/ix-mcp` is a combination of the `@siemens/ix` version and the version of the MCP code.
 
-For example, `@siemens/ix-mcp@5.0.0-v.1.4.8` comes with the data of `@siemens/ix@5.0.0` and
+For instance `@siemens/ix-mcp@5.0.0-v.1.4.8` comes with the data of `@siemens/ix@5.0.0` and
 `v.1.4.8` is the version of the MCP script.
 
 To facilitate version selection, we use
@@ -199,8 +199,8 @@ local log files in `~/.ix-mcp`.
 
 ### Viewing and sharing logs
 
-To view logs, use the `npx @siemens/ix-mcp log` command, select a relevant session, and look at either the
-output or the files copied to your current working directory.
+To view logs, use the `npx @siemens/ix-mcp log` command.
+Select a relevant session and look at the output or the files copied to your current working directory.
 
 To help us improve the MCP agent, please send feedback on your MCP and agent results by creating an issue at
 [https://code.siemens.com/ux/sdl-mcp/issues](https://code.siemens.com/ux/sdl-mcp/issues). Share your
