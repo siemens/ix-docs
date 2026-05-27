@@ -16,41 +16,41 @@ description: "Discover the importance of proper grammar and vocabulary in UX wri
 
 - Only use simple verb forms in the past or future when necessary
 
-<div className="dos-and-donts" markdown="true">
-<div className="dos" markdown="true">
-
-- click, browse, upload
-- file loads, file loaded
-
+<div className="dos-and-donts">
+<div className="dos">
+  <ul aria-label="Recommended practices">
+    <li>click, browse, upload</li>
+    <li>file loads, file loaded</li>
+  </ul>
 </div>
-<div className="donts" markdown="true">
-
-- clicking, being clicked, was clicking
-- file is going to be loaded, file has been loaded
-
+<div className="donts">
+  <ul aria-label="Practices to avoid">
+    <li>clicking, being clicked, was clicking</li>
+    <li>file is going to be loaded, file has been loaded</li>
+  </ul>
 </div>
 </div>
 
 ## Active voice
 
-<div className="dos-and-donts" markdown="true">
-<div className="dos" markdown="true">
-
-- Configuration file opens.
-- Admin provides read-only access.
-- Measure performance.
-- Click submit.
-- Calculate the data.
-
+<div className="dos-and-donts">
+<div className="dos">
+  <ul aria-label="Recommended practices">
+    <li>Configuration file opens.</li>
+    <li>Admin provides read-only access.</li>
+    <li>Measure performance.</li>
+    <li>Click submit.</li>
+    <li>Calculate the data.</li>
+  </ul>
 </div>
-<div className="donts" markdown="true">
-
-- The configuration file is opened.
-- Read-only access is provided by Admin.
-- Performance is measured.
-- Submit is clicked by user.
-- The data is calculated by application.
-
+<div className="donts">
+  <ul aria-label="Practices to avoid">
+    <li>The configuration file is opened.</li>
+    <li>Read-only access is provided by Admin.</li>
+    <li>Performance is measured.</li>
+    <li>Submit is clicked by user.</li>
+    <li>The data is calculated by application.</li>
+  </ul>
 </div>
 </div>
 
@@ -62,18 +62,18 @@ description: "Discover the importance of proper grammar and vocabulary in UX wri
 
 - Basic terminology: checkbox, drop-down, field, icon, menu, link, radio button, window
 
-<div className="dos-and-donts" markdown="true">
-<div className="dos" markdown="true">
-
-- click
-- hover
-
+<div className="dos-and-donts">
+<div className="dos">
+  <ul aria-label="Recommended practices">
+    <li>click</li>
+    <li>hover</li>
+  </ul>
 </div>
-<div className="donts" markdown="true">
-
-- press
-- mouse over
-
+<div className="donts">
+  <ul aria-label="Practices to avoid">
+    <li>press</li>
+    <li>mouse over</li>
+  </ul>
 </div>
 </div>
 
@@ -85,22 +85,22 @@ description: "Discover the importance of proper grammar and vocabulary in UX wri
 
 - Avoid cultural references
 
-<div className="dos-and-donts" markdown="true">
-<div className="dos" markdown="true">
-
-- remove
-- calculate
-- continue
-- mobile device
-
+<div className="dos-and-donts">
+<div className="dos">
+  <ul aria-label="Recommended practices">
+    <li>remove</li>
+    <li>calculate</li>
+    <li>continue</li>
+    <li>mobile device</li>
+  </ul>
 </div>
-<div className="donts" markdown="true">
-
-- get rid of
-- add up
-- carry on
-- Apple, Android, iOS, smartphone
-
+<div className="donts">
+  <ul aria-label="Practices to avoid">
+    <li>get rid of</li>
+    <li>add up</li>
+    <li>carry on</li>
+    <li>Apple, Android, iOS, smartphone</li>
+  </ul>
 </div>
 </div>
 
@@ -124,22 +124,22 @@ description: "Discover the importance of proper grammar and vocabulary in UX wri
 
 - Never make up your own acronyms: https://www.acronymfinder.com/
 
-<div className="dos-and-donts" markdown="true">
-<div className="dos" markdown="true">
-
-- light emitting diodes (LEDs)
-- APS
-- EU
-- I/O component, I/O list, I/O module
-
+<div className="dos-and-donts">
+<div className="dos">
+  <ul aria-label="Recommended practices">
+    <li>light emitting diodes (LEDs)</li>
+    <li>APS</li>
+    <li>EU</li>
+    <li>I/O component, I/O list, I/O module</li>
+  </ul>
 </div>
-<div className="donts" markdown="true">
-
-- Light Emitting Diodes (LEDS)
-- A.P.S.
-- E.U.
-- IO component, i/o list, I-O module
-
+<div className="donts">
+  <ul aria-label="Practices to avoid">
+    <li>Light Emitting Diodes (LEDS)</li>
+    <li>A.P.S.</li>
+    <li>E.U.</li>
+    <li>IO component, i/o list, I-O module</li>
+  </ul>
 </div>
 </div>
 
@@ -151,19 +151,19 @@ description: "Discover the importance of proper grammar and vocabulary in UX wri
 
 - Recent is more time focused and is similar to latest. It means that it happened a short time ago.
 
-<div className="dos-and-donts" markdown="true">
-<div className="dos" markdown="true">
-
-- Latest update
-- Latest summary
-- Recent events
-
+<div className="dos-and-donts">
+<div className="dos">
+  <ul aria-label="Recommended practices">
+    <li>Latest update</li>
+    <li>Latest summary</li>
+    <li>Recent events</li>
+  </ul>
 </div>
-<div className="donts" markdown="true">
-
-- Last update
-- Last summary
-- Last events
-
+<div className="donts">
+  <ul aria-label="Practices to avoid">
+    <li>Last update</li>
+    <li>Last summary</li>
+    <li>Last events</li>
+  </ul>
 </div>
 </div>

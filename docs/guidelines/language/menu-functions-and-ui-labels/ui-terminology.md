@@ -14,29 +14,35 @@ description: 'Using well-defined terms help users understand actions, navigate s
 
 Always consider the difference between user actions within a desktop environment (based on mouse or keyboard usage) and mobile devices based on touch gestures.
 
-<div className="dos-and-donts" markdown>
-<div className="dos" markdown>
-- click (desktop)
-- tap (mobile device)
-- select (when not sure if desktop or mobile)
+<div className="dos-and-donts">
+<div className="dos">
+  <ul aria-label="Recommended practices">
+    <li>click (desktop)</li>
+    <li>tap (mobile device)</li>
+    <li>select (when not sure if desktop or mobile)</li>
+  </ul>
 </div>
 </div>
 
 Use clear and precise terms that leave no room for misunderstandings.
 
-<div className="dos-and-donts" markdown>
-<div className="dos" markdown>
-- delete (if you want to erase data, e.g. a file)
-- remove (if you want to take data away, e.g. permissions)
+<div className="dos-and-donts">
+<div className="dos">
+  <ul aria-label="Recommended practices">
+    <li>delete (if you want to erase data, e.g. a file)</li>
+    <li>remove (if you want to take data away, e.g. permissions)</li>
+  </ul>
 </div>
 </div>
 
 Use “select” for multi-platform applications where the input method varies (tap, click, etc.).
 
-<div className="dos-and-donts" markdown>
-<div className="dos" markdown>
-- Select the checkbox to enable notifications.
-- Select and hold the Shift key to select multiple items.
+<div className="dos-and-donts">
+<div className="dos">
+  <ul aria-label="Recommended practices">
+    <li>Select the checkbox to enable notifications.</li>
+    <li>Select and hold the Shift key to select multiple items.</li>
+  </ul>
 </div>
 </div>
 
@@ -52,12 +58,16 @@ This section provides clear definitions for the most frequently used mouse-relat
 - right-click
 - middle-click (scroll wheel)
 
-<div className="dos-and-donts" markdown>
-<div className="dos" markdown>
-- click
+<div className="dos-and-donts">
+<div className="dos">
+  <ul aria-label="Recommended practices">
+    <li>click</li>
+  </ul>
 </div>
-<div className="donts" markdown>
-- press
+<div className="donts">
+  <ul aria-label="Practices to avoid">
+    <li>press</li>
+  </ul>
 </div>
 </div>
 
@@ -68,12 +78,16 @@ This section provides clear definitions for the most frequently used mouse-relat
 - hover
 - scroll
 
-<div className="dos-and-donts" markdown>
-<div className="dos" markdown>
-- hover
+<div className="dos-and-donts">
+<div className="dos">
+  <ul aria-label="Recommended practices">
+    <li>hover</li>
+  </ul>
 </div>
-<div className="donts" markdown>
-- mouse over
+<div className="donts">
+  <ul aria-label="Practices to avoid">
+    <li>mouse over</li>
+  </ul>
 </div>
 </div>
 
@@ -111,32 +125,40 @@ As touchscreen interfaces rely on direct finger interaction, this section covers
 
 Use "press" when referring to the physical action of pressing a key.
 
-<div className="dos-and-donts" markdown>
-<div className="dos" markdown>
-- Press Enter to confirm
-- Press Spacebar to play or pause
+<div className="dos-and-donts">
+<div className="dos">
+  <ul aria-label="Recommended practices">
+    <li>Press Enter to confirm</li>
+    <li>Press Spacebar to play or pause</li>
+  </ul>
 </div>
-<div className="donts" markdown>
-- Hit Enter
-- Strike Enter
-- Depress Enter
+<div className="donts">
+  <ul aria-label="Practices to avoid">
+    <li>Hit Enter</li>
+    <li>Strike Enter</li>
+    <li>Depress Enter</li>
+  </ul>
 </div>
 </div>
 
 Capitalize special keys and directions.
 
-<div className="dos-and-donts" markdown>
-<div className="dos" markdown>
-- Enter / Tab / Shift / Ctrl / Alt
-- Up Arrow / Down Arrow / Left Arrow / Right Arrow
+<div className="dos-and-donts">
+<div className="dos">
+  <ul aria-label="Recommended practices">
+    <li>Enter / Tab / Shift / Ctrl / Alt</li>
+    <li>Up Arrow / Down Arrow / Left Arrow / Right Arrow</li>
+  </ul>
 </div>
 </div>
 
 Use "type" when asking users to enter text.
 
-<div className="dos-and-donts" markdown>
-<div className="dos" markdown>
-- Type admin in the username field.
+<div className="dos-and-donts">
+<div className="dos">
+  <ul aria-label="Recommended practices">
+    <li>Type admin in the username field.</li>
+  </ul>
 </div>
 </div>
 
@@ -144,30 +166,38 @@ Use "type" when asking users to enter text.
 
 Use standardized and consistent terminology to describe UI components and input elements.
 
-<div className="dos-and-donts" markdown>
-<div className="dos" markdown>
-- checkbox
+<div className="dos-and-donts">
+<div className="dos">
+  <ul aria-label="Recommended practices">
+    <li>checkbox</li>
+  </ul>
 </div>
-<div className="donts" markdown>
-- box
-- option box
-- selection box
-- tick box
+<div className="donts">
+  <ul aria-label="Practices to avoid">
+    <li>box</li>
+    <li>option box</li>
+    <li>selection box</li>
+    <li>tick box</li>
+  </ul>
 </div>
 </div>
 
 Avoid mixing terms within the same products and portfolios.
 
-<div className="dos-and-donts" markdown>
-<div className="dos" markdown>
-- To enable automatic updates, select the checkbox to activate Auto update.
-- Click this image
-- The link opens in a new window.
+<div className="dos-and-donts">
+<div className="dos">
+  <ul aria-label="Recommended practices">
+    <li>To enable automatic updates, select the checkbox to activate Auto update.</li>
+    <li>Click this image</li>
+    <li>The link opens in a new window.</li>
+  </ul>
 </div>
-<div className="donts" markdown>
-- To enable automatic updates, select the box to activate Auto update.
-- Click this picture
-- The link opens in a new browser.
+<div className="donts">
+  <ul aria-label="Practices to avoid">
+    <li>To enable automatic updates, select the box to activate Auto update.</li>
+    <li>Click this picture</li>
+    <li>The link opens in a new browser.</li>
+  </ul>
 </div>
 </div>
 
