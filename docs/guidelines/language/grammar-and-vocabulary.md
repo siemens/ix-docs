@@ -151,15 +151,15 @@ description: "Discover the importance of proper grammar and vocabulary in UX wri
 
 - Recent is more time focused and is similar to latest. It means that it happened a short time ago.
 
-<div className="dos-and-donts">
-<div className="dos">
+<div class="dos-and-donts">
+<div class="dos">
   <ul aria-label="Recommended practices">
     <li>Latest update</li>
     <li>Latest summary</li>
     <li>Recent events</li>
   </ul>
 </div>
-<div className="donts">
+<div class="donts">
   <ul aria-label="Practices to avoid">
     <li>Last update</li>
     <li>Last summary</li>

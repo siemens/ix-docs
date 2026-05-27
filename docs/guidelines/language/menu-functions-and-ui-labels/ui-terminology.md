@@ -244,10 +244,20 @@ Many actions come in natural pairs or opposites. Using the right pairs help user
 
 ## Dos and Don’ts
 
-- Do maintain the same terms for the same actions across all screens
-- Do use specific and standardized component names
-- Do consider the user environment, e.g. mobile, desktop, touchscreen
-- Don’t use generic, invented or vague terms where terminology already exists
+<div class="dos-and-donts">
+  <div class="dos">
+    <ul aria-label="Recommended practices">
+      <li>Do maintain the same terms for the same actions across all screens</li>
+      <li>Do use specific and standardized component names</li>
+      <li>Do consider the user environment, e.g. mobile, desktop, touchscreen</li>
+    </ul>
+  </div>
+  <div class="donts">
+    <ul aria-label="Practices to avoid">
+      <li>Don’t use generic, invented or vague terms where terminology already exists</li>
+    </ul>
+  </div>
+</div>
 
 ## Related
 

@@ -364,11 +364,21 @@ Avoid using “revoke” with people and users as direct objects.
 
 ## Dos and Don’ts
 
-- Do ensure role behaviors are transparent and easy to understand
-- Do use clear, descriptive role names that reflect user responsibilities
-- Do group related permissions logically within roles
-- Don’t create excessive amounts of roles because this causes confusion
-- Don’t create overlapping roles with unclear differences
+<div class="dos-and-donts">
+  <div class="dos">
+    <ul aria-label="Recommended practices">
+      <li>Do ensure role behaviors are transparent and easy to understand</li>
+      <li>Do use clear, descriptive role names that reflect user responsibilities</li>
+      <li>Do group related permissions logically within roles</li>
+    </ul>
+  </div>
+  <div class="donts">
+    <ul aria-label="Practices to avoid">
+      <li>Don’t create excessive amounts of roles because this causes confusion</li>
+      <li>Don’t create overlapping roles with unclear differences</li>
+    </ul>
+  </div>
+</div>
 
 ## Related
 

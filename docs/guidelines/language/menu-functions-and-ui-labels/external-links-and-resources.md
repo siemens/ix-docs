@@ -240,12 +240,16 @@ Ensure email addresses and phone numbers are clickable.
 
 ## Dos and Don’ts
 
-- Do add link text for transparency
-- Do pair link and resource icons with clear texts
-- Do use icons to visualize what will open, e.g. external link, PDF, etc.
-- Do use ALT-text to explain icons
-- Don't include https://, http: or www in URL text
-- Don't add links in headings or sub-headings
+<div class="dos-and-donts">
+  <div class="dos">
+    <ul aria-label="Recommended practices">
+      <li>Do add link text for transparency</li>
+      <li>Do pair link and resource icons with clear texts</li>
+      <li>Do use icons to visualize what will open, e.g. external link, PDF, etc.</li>
+      <li>Do use ALT-text to explain icons</li>
+    </ul>
+  </div>
+</div>
 
 ## Related
 

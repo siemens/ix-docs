@@ -485,9 +485,19 @@ Use “basic” product when talking about a simplified or entry-level version o
 
 ## Dos and Don’ts
 
-- Do document license terms and record any changes for consistency
-- Do use the same license actions consistently across applications and portfolios
-- Don’t create new license types or states, instead use standard terms
+<div class="dos-and-donts">
+  <div class="dos">
+    <ul aria-label="Recommended practices">
+      <li>Do document license terms and record any changes for consistency</li>
+      <li>Do use the same license actions consistently across applications and portfolios</li>
+    </ul>
+  </div>
+  <div class="donts">
+    <ul aria-label="Practices to avoid">
+      <li>Don’t create new license types or states, instead use standard terms</li>
+    </ul>
+  </div>
+</div>
 
 ## Related
 

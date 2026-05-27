@@ -412,10 +412,20 @@ Tell users when conditions create impossible or contradictory queries.
 
 ## Dos and Don’ts
 
-- Do provide simple examples or templates for common conditional searches to help users get started
-- Do offer actionable next steps and helpful suggestions when searches fail or return no results
-- Don’t provide unhelpful “Try again” recommendations that provide no guidance on what to do next
-- Don’t use generic or vague labels like “Go”, “Find” or “Error” 
+<div class="dos-and-donts">
+  <div class="dos">
+    <ul aria-label="Recommended practices">
+      <li>Do provide simple examples or templates for common conditional searches to help users get started</li>
+      <li>Do offer actionable next steps and helpful suggestions when searches fail or return no results</li>
+    </ul>
+  </div>
+  <div class="donts">
+    <ul aria-label="Practices to avoid">
+      <li>Don’t provide unhelpful “Try again” recommendations that provide no guidance on what to do next</li>
+      <li>Don’t use generic or vague labels like “Go”, “Find” or “Error”</li>
+    </ul>
+  </div>
+</div>
 
 ## Related
 

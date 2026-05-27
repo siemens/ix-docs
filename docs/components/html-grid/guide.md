@@ -30,10 +30,20 @@ The HTML table is not a dedicated web component, but rather styling applied to t
 
 ## Dos and Don’ts
 
-- Do display only essential information
-- Do design tables to adapt responsively to different screen sizes, e.g. by hiding less critical columns on smaller screens, enabling horizontal scrolling or wrapping content within cells
-- Don’t use tables for unstructured or hierarchical data, use [event lists](../event-list) or [trees](../tree) instead
-- Don’t rely solely on color for status; also use icons or labels for additional transparency
+<div class="dos-and-donts">
+  <div class="dos">
+    <ul aria-label="Recommended practices">
+      <li>Do display only essential information</li>
+      <li>Do design tables to adapt responsively to different screen sizes, e.g. by hiding less critical columns on smaller screens, enabling horizontal scrolling or wrapping content within cells</li>
+    </ul>
+  </div>
+  <div class="donts">
+    <ul aria-label="Practices to avoid">
+      <li>Don’t use tables for unstructured or hierarchical data, use [event lists](../event-list) or [trees](../tree) instead</li>
+      <li>Don’t rely solely on color for status; also use icons or labels for additional transparency</li>
+    </ul>
+  </div>
+</div>
 
 ## Related
 

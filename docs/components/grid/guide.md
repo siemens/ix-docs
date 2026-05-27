@@ -49,11 +49,21 @@ Data grid columns, rows and cells have multiple states: Default, hover, active a
 
 ## Dos and Don’ts
 
-- Do only display primary information by default and use [column tool panels](https://www.ag-grid.com/javascript-data-grid/tool-panel-columns/) for secondary information
-- Do keep selection and row-click behavior independent to avoid confusion
-- Do design responsive layouts that adapt to different screen sizes
-- Don’t embed heavily interactive components within grid cells
-- Don’t rely solely on color for status, use icons, labels or badges instead
+<div class="dos-and-donts">
+  <div class="dos">
+    <ul aria-label="Recommended practices">
+      <li>Do only display primary information by default and use [column tool panels](https://www.ag-grid.com/javascript-data-grid/tool-panel-columns/) for secondary information</li>
+      <li>Do keep selection and row-click behavior independent to avoid confusion</li>
+      <li>Do design responsive layouts that adapt to different screen sizes</li>
+    </ul>
+  </div>
+  <div class="donts">
+    <ul aria-label="Practices to avoid">
+      <li>Don’t embed heavily interactive components within grid cells</li>
+      <li>Don’t rely solely on color for status, use icons, labels or badges instead</li>
+    </ul>
+  </div>
+</div>
 
 ## Related
 

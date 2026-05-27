@@ -176,10 +176,20 @@ Allow users to go back to change actions and avoid “OK” which is often under
 
 ## Dos and Don’ts
 
-- Do first classify what kind of message is required
-- Do make a record or changelog of your messages for consistency and changes
-- Don’t over communicate with irrelevant or unrelated information
-- Don’t repeat the exact same wording in both the heading and description
+<div class="dos-and-donts">
+  <div class="dos">
+    <ul aria-label="Recommended practices">
+      <li>Do first classify what kind of message is required</li>
+      <li>Do make a record or changelog of your messages for consistency and changes</li>
+    </ul>
+  </div>
+  <div class="donts">
+    <ul aria-label="Practices to avoid">
+      <li>Don’t over communicate with irrelevant or unrelated information</li>
+      <li>Don’t repeat the exact same wording in both the heading and description</li>
+    </ul>
+  </div>
+</div>
 
 ## Related
 
