@@ -91,13 +91,21 @@ Use a heading with a short description for longer tooltips.
 <div className="dos-and-donts">
   <div className="dos">
     <ul aria-label="Recommended practices">
-      <li>Heading: Cycle time input
-      <br />
-      Description: Set the duration of each production cycle in seconds.
-      <br /></li>
-      <li>Heading: Log history
-      <br />
-      Description: View historical logs of machine activity and operator actions.</li>
+      <li>
+        <div>
+          Heading: Cycle time input
+          <br />
+          Description: Set the duration of each production cycle in seconds.
+          <br />
+        </div>
+      </li>
+      <li>
+        <div>
+          Heading: Log history
+          <br />
+          Description: View historical logs of machine activity and operator actions.
+        </div>
+      </li>
     </ul>
   </div>
 </div>
@@ -107,14 +115,19 @@ Avoid repeating text already visible and readable on the screen.
 <div className="dos-and-donts">
   <div className="dos">
     <ul aria-label="Recommended practices">
-      <li>Edit (as icon<IxIcon name={iconEditDocument} size="16"></IxIcon>) <br />
-      Tooltip: Edit</li>
+      <li>
+        <span>Edit (as icon <IxIcon name={iconEditDocument} size="16"></IxIcon>)</span>
+        <br />
+        Tooltip: Edit
+      </li>
     </ul>
   </div>
   <div className="donts">
     <ul aria-label="Practices to avoid">
-      <li>Edit (as text) <br />
-      Tooltip: Edit</li>
+      <li>
+        Edit (as text) <br />
+        Tooltip: Edit
+      </li>
     </ul>
   </div>
 </div>
