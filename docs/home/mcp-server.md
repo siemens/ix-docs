@@ -16,7 +16,7 @@ with design system and component library APIs.'
 - Create a free token at [https://my.siemens.com](https://my.siemens.com) with `llm` scope to get access to the
   `embeddings` API at [https://api.siemens.com/llm](https://api.siemens.com/llm).
   (Currently, Siemens access is required to request a token, but we are working on a configurable alternative for all users.)
-- IDE/agent/LLM setup of your choice, e.g. VS Code, GitHub Copilot, Claude Sonnet 4.5
+- IDE/agent/LLM setup of your choice, e.g. VS Code, GitHub Copilot, Claude Sonnet 4.5, OpenCode
 - Choose the npm package matching your web dev framework. Read the [version selection section](#version-selection) below for more details.
   > This guide shows only instructions for @siemens/ix-mcp. Adapt the commands to fit your technology stack.
 
