@@ -92,23 +92,23 @@
   "/src/preview-examples/blind-variants.html": [
     "ix-blind"
   ],
+  "/src/preview-examples/blind.html": [
+    "ix-blind"
+  ],
   "/src/preview-examples/breadcrumb-next-items.html": [
     "ix-breadcrumb",
     "ix-breadcrumb-item"
-  ],
-  "/src/preview-examples/blind.html": [
-    "ix-blind"
   ],
   "/src/preview-examples/breadcrumb-truncate.html": [
     "ix-breadcrumb",
     "ix-breadcrumb-item"
   ],
+  "/src/preview-examples/button-danger-primary.html": [
+    "ix-button"
+  ],
   "/src/preview-examples/breadcrumb.html": [
     "ix-breadcrumb",
     "ix-breadcrumb-item"
-  ],
-  "/src/preview-examples/button-danger-primary.html": [
-    "ix-button"
   ],
   "/src/preview-examples/button-danger-secondary.html": [
     "ix-button"
@@ -173,14 +173,14 @@
     "ix-content-header",
     "ix-icon-button"
   ],
+  "/src/preview-examples/content-header.html": [
+    "ix-button",
+    "ix-content-header"
+  ],
   "/src/preview-examples/content-header-with-slot.html": [
     "ix-button",
     "ix-content-header",
     "ix-pill"
-  ],
-  "/src/preview-examples/content-header.html": [
-    "ix-button",
-    "ix-content-header"
   ],
   "/src/preview-examples/content.html": [
     "ix-content",
@@ -209,19 +209,19 @@
   "/src/preview-examples/date-input-min-max-date.html": [
     "ix-date-input"
   ],
-  "/src/preview-examples/date-input-validation.html": [
-    "ix-date-input"
-  ],
   "/src/preview-examples/date-input-readonly.html": [
     "ix-date-input"
   ],
-  "/src/preview-examples/date-input.html": [
+  "/src/preview-examples/date-input-validation.html": [
     "ix-date-input"
   ],
   "/src/preview-examples/date-input-with-slots.html": [
     "ix-date-input",
     "ix-icon",
     "ix-typography"
+  ],
+  "/src/preview-examples/date-input.html": [
+    "ix-date-input"
   ],
   "/src/preview-examples/date-range.html": [
     "ix-date-input",
@@ -423,10 +423,10 @@
   "/src/preview-examples/icon-toggle-button-subtle-primary.html": [
     "ix-icon-toggle-button"
   ],
-  "/src/preview-examples/icon-toggle-button-subtle-tertiary.html": [
+  "/src/preview-examples/icon-toggle-button-subtle-secondary.html": [
     "ix-icon-toggle-button"
   ],
-  "/src/preview-examples/icon-toggle-button-subtle-secondary.html": [
+  "/src/preview-examples/icon-toggle-button-subtle-tertiary.html": [
     "ix-icon-toggle-button"
   ],
   "/src/preview-examples/icon-toggle-button-tertiary.html": [
@@ -503,14 +503,14 @@
   "/src/preview-examples/link-button.html": [
     "ix-link-button"
   ],
+  "/src/preview-examples/loading.html": [
+    "ix-button"
+  ],
   "/src/preview-examples/menu-category.html": [
     "ix-application",
     "ix-menu",
     "ix-menu-category",
     "ix-menu-item"
-  ],
-  "/src/preview-examples/loading.html": [
-    "ix-button"
   ],
   "/src/preview-examples/menu-with-bottom-tabs.html": [
     "ix-menu",
@@ -575,11 +575,11 @@
     "ix-number-input",
     "ix-typography"
   ],
-  "/src/preview-examples/pagination-advanced.html": [
-    "ix-pagination"
-  ],
   "/src/preview-examples/number-input.html": [
     "ix-number-input"
+  ],
+  "/src/preview-examples/pagination-advanced.html": [
+    "ix-pagination"
   ],
   "/src/preview-examples/pagination.html": [
     "ix-pagination"
@@ -682,10 +682,10 @@
     "ix-tab-item",
     "ix-tabs"
   ],
-  "/src/preview-examples/slider-marker.html": [
+  "/src/preview-examples/slider-error.html": [
     "ix-slider"
   ],
-  "/src/preview-examples/slider-error.html": [
+  "/src/preview-examples/slider-marker.html": [
     "ix-slider"
   ],
   "/src/preview-examples/slider-trace.html": [
@@ -764,13 +764,13 @@
   "/src/preview-examples/time-input-validation.html": [
     "ix-time-input"
   ],
-  "/src/preview-examples/time-input.html": [
-    "ix-time-input"
-  ],
   "/src/preview-examples/time-input-with-slots.html": [
     "ix-icon",
     "ix-time-input",
     "ix-typography"
+  ],
+  "/src/preview-examples/time-input.html": [
+    "ix-time-input"
   ],
   "/src/preview-examples/time-range.html": [
     "ix-range-field",
@@ -803,13 +803,16 @@
   "/src/preview-examples/toggle-button-primary.html": [
     "ix-toggle-button"
   ],
-  "/src/preview-examples/toggle-button-subtle-primary.html": [
-    "ix-toggle-button"
-  ],
   "/src/preview-examples/toggle-button-secondary.html": [
     "ix-toggle-button"
   ],
-  "/src/preview-examples/toggle-button-subtle-tertiary.html": [
+  "/src/preview-examples/toggle-button-subtle-primary.html": [
+    "ix-toggle-button"
+  ],
+  "/src/preview-examples/toggle-button-subtle-secondary.html": [
+    "ix-toggle-button"
+  ],
+  "/src/preview-examples/toggle-button-tertiary.html": [
     "ix-toggle-button"
   ],
   "/src/preview-examples/toggle-custom-label.html": [
@@ -821,6 +824,9 @@
   "/src/preview-examples/toggle-indeterminate.html": [
     "ix-toggle"
   ],
+  "/src/preview-examples/toggle.html": [
+    "ix-toggle"
+  ],
   "/src/preview-examples/tooltip-with-icon.html": [
     "ix-button",
     "ix-icon",
@@ -829,9 +835,6 @@
   "/src/preview-examples/tooltip.html": [
     "ix-button",
     "ix-tooltip"
-  ],
-  "/src/preview-examples/toggle.html": [
-    "ix-toggle"
   ],
   "/src/preview-examples/tree-custom.html": [
     "ix-button",
@@ -843,16 +846,16 @@
   "/src/preview-examples/upload.html": [
     "ix-upload"
   ],
-  "/src/preview-examples/validation-select.html": [
-    "ix-button",
-    "ix-select",
-    "ix-select-item"
-  ],
   "/src/preview-examples/vertical-tabs-with-avatar.html": [
     "ix-menu",
     "ix-menu-avatar",
     "ix-menu-avatar-item",
     "ix-menu-item"
+  ],
+  "/src/preview-examples/validation-select.html": [
+    "ix-button",
+    "ix-select",
+    "ix-select-item"
   ],
   "/src/preview-examples/vertical-tabs.html": [
     "ix-menu",
@@ -866,14 +869,11 @@
     "ix-workflow-step",
     "ix-workflow-steps"
   ],
+  "/src/preview-examples/toggle-button-subtle-tertiary.html": [
+    "ix-toggle-button"
+  ],
   "/src/preview-examples/toggle-checked.html": [
     "ix-toggle"
-  ],
-  "/src/preview-examples/toggle-button-tertiary.html": [
-    "ix-toggle-button"
-  ],
-  "/src/preview-examples/toggle-button-subtle-secondary.html": [
-    "ix-toggle-button"
   ],
   "/home/runner/work/ix/ix/node_modules/.pnpm/@siemens+ix-icons@3.4.0/node_modules/@siemens/ix-icons/dist/esm/index.js": [
     "ix-icon"
