@@ -1010,6 +1010,20 @@ const sidebars: SidebarsConfig = {
           ],
         }),
         createTabItem({
+          id: 'components/popover/index',
+          label: 'Popover',
+          items: [
+            {
+              id: 'components/popover/guide',
+              label: 'Usage',
+            },
+            {
+              id: 'components/popover/code',
+              label: 'Code',
+            },
+          ],
+        }),
+        createTabItem({
           id: 'components/toast/index',
           label: 'Toast',
           items: [
