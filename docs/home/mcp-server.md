@@ -62,7 +62,7 @@ After successful installation you need to initialize the MCP server and provide 
 3. **Follow the prompts**:
   - **Token setup**: Enter your LLM token from [https://my.siemens.com/](https://my.siemens.com/) (requires 'llm' scope)
   - **Tool configuration**:
-    1. Choose which tools to configure (VS Code, Claude Code, Zed, etc.).
+    1. Choose which tools to configure (VS Code, OpenCode, Claude Code, Zed, etc.).
     2. Enable logging of MCP queries and responses (optional)
   - **Agent instructions**:
     1. Setup can add predefined instruction files to your project that guide agents how to develop with iX
@@ -70,7 +70,7 @@ After successful installation you need to initialize the MCP server and provide 
       > This may not work for every package manager or platform (e.g. Windows)
   - Commit the local configuration to share it (make sure it isn't ignored by `.gitignore`).
 
-4. **Restart your AI tools** (VS Code, Claude Code, Zed, etc.)
+4. **Restart your AI tools** (VS Code, OpenCode, Claude Code, Zed, etc.)
    - Ensure the server is running and trust the MCP server, e.g., click the "Server" icon in the
      GitHub Copilot Chat panel in VS Code.
    - **For GitHub Copilot in VS Code**: Make sure you are in Agent Mode, not Chat Mode. Use models,
@@ -91,6 +91,8 @@ During `init` or `setup`, select which configuration(s) to create:
 
 - **Local VS Code / GitHub Copilot (repository)** creates a VS Code MCP configuration file at
   `.vscode/mcp.json` in the current repository
+- **OpenCode (repository)** creates `opencode.json` in the current repository for OpenCode AI
+- **OpenCode global settings** updates global OpenCode configuration (`~/.config/opencode/opencode.json`)
 - **Claude Code global settings** updates global Claude Code MCP configuration
 - **VS Code / GitHub Copilot global config** writes user-level MCP config
 - **Zed global settings** configures Zed editor / agent MCP
@@ -306,6 +308,46 @@ If you prefer to set up configuration manually, here are the required files and 
   }
 }
 ```
+
+### OpenCode (local or global)
+
+For repository-level configuration, create `opencode.json` in your project root:
+
+```json
+{
+  "$schema": "https://opencode.ai/config.json",
+  "mcp": {
+    "ix-mcp": {
+      "type": "local",
+      "command": ["npx", "-y", "@siemens/ix-mcp"],
+      "enabled": true
+    }
+  },
+  "instructions": ["ix.instructions.md"]
+}
+```
+
+For global configuration, edit `~/.config/opencode/opencode.json`:
+
+```json
+{
+  "$schema": "https://opencode.ai/config.json",
+  "mcp": {
+    "ix-mcp": {
+      "type": "local",
+      "command": ["npx", "-y", "@siemens/ix-mcp"],
+      "enabled": true
+    }
+  }
+}
+```
+
+Learn more about OpenCode configuration at
+[https://opencode.ai/docs/config](https://opencode.ai/docs/config).
+
+Learn how to install it
+[here](https://code.siemens.com/ai/opencode/#getting-started) or use the script at
+[https://open.code.siemens.io](https://open.code.siemens.io).
 
 ### Claude Code (global Claude Code MCP settings)
 
