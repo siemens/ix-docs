@@ -344,7 +344,7 @@ broader model support, and is often considered more stable. As a proprietary clo
 Claude Code may not offer the same transparency and data handling guarantees as a fully open
 alternative. See the OpenCode docs for setup.
 
-- <https://code.siemens.com/ai/opencode/#getting-started>
+- [https://code.siemens.com/ai/opencode/#getting-started](https://code.siemens.com/ai/opencode/#getting-started)
 
 ### Zed (global Zed settings)
 
