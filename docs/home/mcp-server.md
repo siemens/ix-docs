@@ -60,17 +60,17 @@ After successful installation you need to initialize the MCP server and provide 
    > Important: Run this command in the root of every project where you want to use the MCP server.
 
 3. **Follow the prompts**:
-  - __Token setup__: Enter your LLM token from [https://my.siemens.com/](https://my.siemens.com/) (requires 'llm' scope)
-  - __Tool configuration__:
-    1. Choose which tools to configure (VS Code, Cline, Zed, etc.).
+  - **Token setup**: Enter your LLM token from [https://my.siemens.com/](https://my.siemens.com/) (requires 'llm' scope)
+  - **Tool configuration**:
+    1. Choose which tools to configure (VS Code, Claude Code, Zed, etc.).
     2. Enable logging of MCP queries and responses (optional)
-  - __Agent instructions__:
+  - **Agent instructions**:
     1. Setup can add predefined instruction files to your project that guide agents how to develop with iX
     2. Use symlinks/aliases to help keep instruction files updated (optional)
-       > This may not work for every package manager or platform (e.g. Windows)
+      > This may not work for every package manager or platform (e.g. Windows)
   - Commit the local configuration to share it (make sure it isn't ignored by `.gitignore`).
 
-4. **Restart your AI tools** (VS Code, Cline, Zed, etc.)
+4. **Restart your AI tools** (VS Code, Claude Code, Zed, etc.)
    - Ensure the server is running and trust the MCP server, e.g., click the "Server" icon in the
      GitHub Copilot Chat panel in VS Code.
    - **For GitHub Copilot in VS Code**: Make sure you are in Agent Mode, not Chat Mode. Use models,
@@ -91,7 +91,7 @@ During `init` or `setup`, select which configuration(s) to create:
 
 - **Local VS Code / GitHub Copilot (repository)** creates a VS Code MCP configuration file at
   `.vscode/mcp.json` in the current repository
-- **Cline global settings** updates global Cline MCP configuration
+- **Claude Code global settings** updates global Claude Code MCP configuration
 - **VS Code / GitHub Copilot global config** writes user-level MCP config
 - **Zed global settings** configures Zed editor / agent MCP
 
@@ -159,7 +159,6 @@ New MCP package versions on the same `ix` version are incremented like `5.0.0-v.
 ## Upgrading
 
 Simply install the package again with the updated version.
-
 
 E.g., if you want to upgrade from iX V4 to V5:
 
@@ -308,18 +307,44 @@ If you prefer to set up configuration manually, here are the required files and 
 }
 ```
 
-### Cline (global Cline MCP settings)
+### Claude Code (global Claude Code MCP settings)
 
 ```json
 {
   "mcpServers": {
     "@siemens/ix-mcp": {
+      "type": "stdio",
       "command": "npx",
-      "args": ["@siemens/ix-mcp"]
+      "args": ["-y", "@siemens/ix-mcp"],
+      "env": {}
     }
   }
 }
 ```
+
+On Windows, prefer the full path to `npx`, for example:
+
+```json
+{
+  "mcpServers": {
+    "@siemens/ix-mcp": {
+      "type": "stdio",
+      "command": "<path-to-npx, run which/where npx to find>",
+      "args": ["-y", "@siemens/ix-mcp"],
+      "env": {}
+    }
+  }
+}
+```
+
+Consider OpenCode as an open alternative
+
+OpenCode is the established open-source alternative to Claude Code. It offers the same feature set,
+broader model support, and is often considered more stable. As a proprietary closed-source tool,
+Claude Code may not offer the same transparency and data handling guarantees as a fully open
+alternative. See the OpenCode docs for setup.
+
+- [https://code.siemens.com/ai/opencode/#getting-started](https://code.siemens.com/ai/opencode/#getting-started)
 
 ### Zed (global Zed settings)
 
@@ -328,7 +353,7 @@ If you prefer to set up configuration manually, here are the required files and 
   "context_servers": {
     "@siemens/ix-mcp": {
       "source": "custom",
-      "command": "<path-to-npx, run which/where npx to find>",
+      "command": "npx",
       "args": ["@siemens/ix-mcp"],
       "env": {}
     }
