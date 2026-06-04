@@ -45,7 +45,6 @@
     "@types/mustache": "^4.1.1",
     "@types/node": "^22.15.19",
     "@types/react": "^18.3.10",
-    "@types/rimraf": "^4.0.5",
     "@types/tar": "^6.1.13",
     "adm-zip": "^0.5.16",
     "autoprefixer": "10.4.21",
