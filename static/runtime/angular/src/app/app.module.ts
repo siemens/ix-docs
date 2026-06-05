@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { ReactiveFormsModule } from '@angular/forms';
 import { IxModule } from '@siemens/ix-angular';
 import { NgxEchartsModule } from 'ngx-echarts';
 import { AgGridModule } from 'ag-grid-angular';
@@ -10,6 +11,7 @@ import ExampleComponent from './example.component';
   declarations: [AppComponent, ExampleComponent],
   imports: [
     BrowserModule,
+    ReactiveFormsModule,
     IxModule.forRoot(),
     AgGridModule,
     NgxEchartsModule.forRoot({
