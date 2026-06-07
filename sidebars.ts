@@ -1000,16 +1000,6 @@ const sidebars: SidebarsConfig = {
           ],
         }),
         createTabItem({
-          id: 'components/spinner/index',
-          label: 'Spinner',
-          items: [
-            {
-              id: 'components/spinner/code',
-              label: 'Code',
-            },
-          ],
-        }),
-        createTabItem({
           id: 'components/popover/index',
           label: 'Popover',
           items: [
@@ -1019,6 +1009,16 @@ const sidebars: SidebarsConfig = {
             },
             {
               id: 'components/popover/code',
+              label: 'Code',
+            },
+          ],
+        }),
+        createTabItem({
+          id: 'components/spinner/index',
+          label: 'Spinner',
+          items: [
+            {
+              id: 'components/spinner/code',
               label: 'Code',
             },
           ],

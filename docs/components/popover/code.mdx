@@ -18,7 +18,7 @@ The playground below shows one composed popover using the available properties a
 
 <PopoverPlayground height="32rem" />
 
-## Structure
+### Structure
 
 ```html
 <ix-button id="triggerId">Open</ix-button>
@@ -44,20 +44,20 @@ Call `hidePopover()` on the parent `ix-popover` to dismiss the popover from cust
 document.getElementById('popover')?.hidePopover();
 ```
 
-## Methods
+### Methods
 
 | Method | Description |
 | --- | --- |
 | `showPopover()` | Open the popover programmatically. |
 | `hidePopover()` | Close the popover programmatically. |
 
-## Events
+### Events
 
 | Event | Description |
 | --- | --- |
 | `showChange` | Fires before visibility changes. Cancel the event to prevent open/close. |
 | `showChanged` | Fires after visibility has changed. |
-| `closeClick` (`ix-popover-header`) | Fires when the header close button is clicked. Cancel to prevent closing. |
+| `closeClick` (`ix-popover-header`) | Fires when users click the header close button. Cancel to prevent closing. |
 
 ## API for ix-popover
 
