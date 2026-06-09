@@ -203,6 +203,20 @@ const sidebars: SidebarsConfig = {
             },
           ],
         }),
+        createTabItem({
+          id: 'components/ai-chat-attachment/index',
+          label: 'AI Chat attachment',
+          items: [
+            {
+              id: 'components/ai-chat-attachment/guide',
+              label: 'Usage',
+            },
+            {
+              id: 'components/ai-chat-attachment/code',
+              label: 'Code',
+            },
+          ],
+        }),
       ],
       collapsed: true,
     },
