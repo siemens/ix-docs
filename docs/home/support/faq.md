@@ -159,29 +159,29 @@ The Siemens Industrial Experience design system is intended for building industr
 This usually happens when ECharts is initialized before the chart container has a valid size. Based on the official Apache ECharts FAQ, verify the following first:
 
 - `echarts.js` is loaded correctly
-- the `echarts` variable exists
-- the DOM container has a width and height when `echarts.init(...)` is called
+- The `echarts` variable exists
+- The DOM container has a width and height when `echarts.init(...)` is called
 
-If any of these conditions is not met, the chart may render blank or incorrectly.
+If any of these conditions isn't met, the chart may render blank or incorrectly.
 </Accordion>
 
-<Accordion title="Why does chart loading issue happen in application frames, tabs, modals, or hidden containers?" id="echarts-hidden-container">
-If the chart container is hidden (for example in collapsed panes, tabs, modals, or parts of an application frame), ECharts cannot read proper layout dimensions during initialization. This can affect React, Angular, and plain HTML integrations equally.
+<Accordion title="Why does chart loading issue happen in application frames, tabs, modals or hidden containers?" id="echarts-hidden-container">
+If the chart container is hidden (e.g. in collapsed panes, tabs, modals or parts of an application frame), ECharts cannot read proper layout dimensions during initialization. This can affect React, Angular and plain HTML integrations equally.
 
 Use one of these approaches:
 
-- initialize the chart only after the container becomes visible
-- set explicit container dimensions (`style.width` and `style.height`) before init
-- call `chart.resize()` after the container is shown
+- Initialize the chart only after the container becomes visible
+- Set explicit container dimensions (`style.width` and `style.height`) before init
+- Call `chart.resize()` after the container is shown
 </Accordion>
 
-<Accordion title="Are there framework-specific recommendations for React, Angular, and HTML?" id="echarts-framework-guidance" showBorderBottom>
-Yes. The same sizing principle applies everywhere, including wrappers such as `echarts-for-react`.
+<Accordion title="Are there framework-specific recommendations for React, Angular and HTML?" id="echarts-framework-guidance" showBorderBottom>
+Yes. The same sizing principle applies everywhere, including wrappers e.g. `echarts-for-react`.
 
-- **React (including `echarts-for-react`)**: ensure parent/container dimensions are stable before mounting; trigger `resize()` after layout changes
-- **Angular**: initialize in a lifecycle stage where container size is available, and call `resize()` when visibility or layout changes
-- **Plain HTML/JavaScript**: confirm script load order and container dimensions before `echarts.init(...)`
-- **SSR**: set width and height explicitly via `opts.width` and `opts.height`
+- **React (including `echarts-for-react`)**: Ensure parent/container dimensions are stable before mounting; trigger `resize()` after layout changes
+- **Angular**: Initialize in a lifecycle stage where container size is available, and call `resize()` when visibility or layout changes
+- **Plain HTML/JavaScript**: Confirm script load order and container dimensions before `echarts.init(...)`
+- **SSR**: Set width and height explicitly via `opts.width` and `opts.height`
 
 For details, see the official docs: [Apache ECharts FAQ](https://echarts.apache.org/en/faq.html) and [Apache ECharts API](https://echarts.apache.org/en/api.html#echarts).
 </Accordion>
