@@ -150,3 +150,38 @@ The Siemens Industrial Experience design team provides a transparent versioning 
 <Accordion title="Can I use the design system to build my documentation?" id="docu-theme" showBorderBottom>
 The Siemens Industrial Experience design system is intended for building industrial applications. If you are a Siemens AG employee looking to create a documentation website, use the [official MkDocs theme](https://code.siemens.com/code-ops/docs-theme) for documentation purposes. This ensures consistency and alignment with Siemens documentation standards.
 </Accordion>
+
+<div className="h2-faq">
+## Chart rendering and troubleshooting
+</div>
+
+<Accordion title="Why is my ECharts chart not displayed on first render?" id="echarts-first-render">
+This usually happens when ECharts is initialized before the chart container has a valid size. Based on the official Apache ECharts FAQ, verify the following first:
+
+- `echarts.js` is loaded correctly
+- the `echarts` variable exists
+- the DOM container has a width and height when `echarts.init(...)` is called
+
+If any of these conditions is not met, the chart may render blank or incorrectly.
+</Accordion>
+
+<Accordion title="Why does chart loading issue happen in application frames, tabs, modals, or hidden containers?" id="echarts-hidden-container">
+If the chart container is hidden (for example in collapsed panes, tabs, modals, or parts of an application frame), ECharts cannot read proper layout dimensions during initialization. This can affect React, Angular, and plain HTML integrations equally.
+
+Use one of these approaches:
+
+- initialize the chart only after the container becomes visible
+- set explicit container dimensions (`style.width` and `style.height`) before init
+- call `chart.resize()` after the container is shown
+</Accordion>
+
+<Accordion title="Are there framework-specific recommendations for React, Angular, and HTML?" id="echarts-framework-guidance" showBorderBottom>
+Yes. The same sizing principle applies everywhere, including wrappers such as `echarts-for-react`.
+
+- **React (including `echarts-for-react`)**: ensure parent/container dimensions are stable before mounting; trigger `resize()` after layout changes
+- **Angular**: initialize in a lifecycle stage where container size is available, and call `resize()` when visibility or layout changes
+- **Plain HTML/JavaScript**: confirm script load order and container dimensions before `echarts.init(...)`
+- **SSR**: set width and height explicitly via `opts.width` and `opts.height`
+
+For details, see the official docs: [Apache ECharts FAQ](https://echarts.apache.org/en/faq.html) and [Apache ECharts API](https://echarts.apache.org/en/api.html#echarts).
+</Accordion>
