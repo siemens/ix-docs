@@ -1,30 +1,40 @@
 ---
 sidebar_title: Starter app
-title: Starter app
+title: Starter apps
 doc-type: 'banner'
 component-tabs: ['']
 no_single_tab: true
-description: 'Explore the Siemens Industrial Experience design system with our interactive starter apps. Build faster with ready-to-use components and documentation.'
+description: 'Scaffold a Siemens Industrial Experience starter app for React, Vue, or Angular. Build faster with ready-to-use pages, components, and integrations.'
 ---
 
 import image1 from './images/home.png';
 import image2 from './images/forms.png';
 import image3 from './images/charts.png';
 import image4 from './images/grids.png';
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
 
 #
 
 ## Explore
 
-- You can view the [starter app](https://siemens.github.io/ix-starter/react-starter/)
-- We recommend exploring the code in your desired [framework](#frameworks) and get started quickly
-- You can start building immediately in your IDE with all packages pre-installed
-- Using the ready-made examples can simplify your workflow
+The iX starter apps help you create a new project with ready-to-use layouts, example pages, and Siemens iX packages for your preferred framework.
 
+- Scaffold a starter app with [`degit`](https://github.com/Rich-Harris/degit) without cloning the full repository history
+- Explore the hosted preview for your desired [framework](#frameworks)
+- Start building in your IDE with the framework-specific setup already in place
 
 ## Preview
 
-The starter app includes an application shell and three example pages featuring: form elements, charts and data grids.
+You can view the [React starter app](https://siemens.github.io/ix-starter/react-starter/) to explore the starter experience.
+
+The starter apps include an application shell and example pages featuring:
+
+- Get started
+- Forms
+- Charts with ECharts and the iX theme
+- Grids with AG Grid and the iX theme
+- Theme toggle for light and dark mode
 
 <div style={{
   display: 'flex',
@@ -55,10 +65,80 @@ The starter app includes an application shell and three example pages featuring:
 
 ## Frameworks
 
-The starter app is available for our supported frameworks.
+Choose a framework and scaffold the starter app into a new project folder.
 
-| Framework | Repository | Deployment |
-| --- | --- | --- |
-| React | [GitHub repository (React)](https://github.com/siemens/ix-starter/) | [React app](https://siemens.github.io/ix-starter/react-starter/) |
-| Angular | [GitHub repository (Angular)](https://github.com/siemens/ix-starter/) | [Angular app](https://siemens.github.io/ix-starter/angular-starter/) |
-| Vue | [GitHub repository (Vue)](https://github.com/siemens/ix-starter/) | [Vue app](https://siemens.github.io/ix-starter/vue-starter/) |
+### Angular
+
+Source: `apps/angular-starter`  
+
+<Tabs groupId="degit-runner">
+  <TabItem value="npx" label="npx" default>
+    ```bash
+    npx degit siemens/ix-starter/apps/angular-starter my-ix-angular-app
+    ```
+  </TabItem>
+  <TabItem value="pnpx" label="pnpx">
+    ```bash
+    pnpx degit siemens/ix-starter/apps/angular-starter my-ix-angular-app
+    ```
+  </TabItem>
+</Tabs>
+
+### React
+
+Source: `apps/react-starter`  
+
+<Tabs groupId="degit-runner">
+  <TabItem value="npx" label="npx" default>
+    ```bash
+    npx degit siemens/ix-starter/apps/react-starter my-ix-react-app
+    ```
+  </TabItem>
+  <TabItem value="pnpx" label="pnpx">
+    ```bash
+    pnpx degit siemens/ix-starter/apps/react-starter my-ix-react-app
+    ```
+  </TabItem>
+</Tabs>
+
+### Vue
+
+Source: `apps/vue-starter`  
+
+<Tabs groupId="degit-runner">
+  <TabItem value="npx" label="npx" default>
+    ```bash
+    npx degit siemens/ix-starter/apps/vue-starter my-ix-vue-app
+    ```
+  </TabItem>
+  <TabItem value="pnpx" label="pnpx">
+    ```bash
+    pnpx degit siemens/ix-starter/apps/vue-starter my-ix-vue-app
+    ```
+  </TabItem>
+</Tabs>
+
+The current starter version is available from `main`. To scaffold an older version, append the repository tag to the starter source, for example:
+
+<Tabs groupId="degit-runner">
+  <TabItem value="npx" label="npx" default>
+    ```bash
+    npx degit siemens/ix-starter/apps/react-starter#v5.0.0 my-ix-react-app
+    ```
+  </TabItem>
+  <TabItem value="pnpx" label="pnpx">
+    ```bash
+    pnpx degit siemens/ix-starter/apps/react-starter#v5.0.0 my-ix-react-app
+    ```
+  </TabItem>
+</Tabs>
+
+After scaffolding a starter app, install dependencies and start the development server from the generated project folder.
+
+```bash
+cd my-ix-react-app
+pnpm install
+pnpm dev
+```
+
+Use the generated folder name from your selected command, for example `my-ix-vue-app` or `my-ix-angular-app`.
