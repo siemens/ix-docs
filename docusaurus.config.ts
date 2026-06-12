@@ -25,16 +25,32 @@ function getAnnouncementBarConfig() {
   }
 }
 
-function getFontHeadTag(fontStyle: string) {
+const fontBaseUrl = 'https://cdn.c2comms.cloud/fonts/global/2.0';
+const siemensSansFontFaces = [
+  { file: 'Roman', weight: 400, style: 'normal' },
+  { file: 'Italic', weight: 400, style: 'italic' },
+  { file: 'Bold', weight: 700, style: 'normal' },
+  { file: 'BoldItalic', weight: 700, style: 'italic' },
+];
+
+function getSiemensSansFontFaceHeadTag() {
   return {
-    tagName: 'link',
+    tagName: 'style',
     attributes: {
-      rel: 'preload',
-      href: `https://cdn.c2comms.cloud/fonts/global/2.0/SiemensSans_Global_${fontStyle}.ttf`,
-      as: 'font',
-      type: 'font/ttf',
-      crossorigin: 'anonymous',
+      type: 'text/css',
     },
+    innerHTML: siemensSansFontFaces
+      .map(
+        ({ file, weight, style }) => `
+@font-face {
+  font-family: 'Siemens Sans';
+  src: url('${fontBaseUrl}/SiemensSans_Global_${file}.ttf') format('truetype');
+  font-weight: ${weight};
+  font-style: ${style};
+  font-display: swap;
+}`
+      )
+      .join('\n'),
   };
 }
 const customCss = [
@@ -196,12 +212,7 @@ const config: Config = {
     llmstxtPostbuildPlugin,
   ],
 
-  headTags: [
-    getFontHeadTag('Bold'),
-    getFontHeadTag('BoldItalic'),
-    getFontHeadTag('Italic'),
-    getFontHeadTag('Roman'),
-  ],
+  headTags: [getSiemensSansFontFaceHeadTag()],
   themeConfig: {
     ...getAnnouncementBarConfig(),
     metadata: [
