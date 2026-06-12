@@ -4819,6 +4819,7 @@ The select component supports single or multiple selections and the editable var
 - **Items:**
   - **Label:** Set a short and concise label for dropdown items.
   - **Selected:** Mark selected items in the dropdown with a check mark.
+  - **Disabled:** Mark individual items as disabled when they cannot be selected in the current context. Disabled items are visually muted, skipped during keyboard navigation and cannot be picked via mouse or keyboard.
 
 ## Behavior in context
 
