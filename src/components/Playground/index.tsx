@@ -81,6 +81,29 @@ export type PlaygroundProps = Readonly<{
   onlyFramework?: FrameworkTypes;
 }>;
 
+function normalizeEmbeddedPreviewDocument(iframe: HTMLIFrameElement): void {
+  const doc = iframe.contentDocument;
+  const win = iframe.contentWindow;
+  if (!doc || !win) {
+    return;
+  }
+
+  const apply = () => {
+    doc.documentElement.style.removeProperty('overflow');
+    doc.documentElement.style.height = 'auto';
+    if (doc.body) {
+      doc.body.style.removeProperty('overflow');
+      doc.body.style.height = 'auto';
+      doc.body.style.minHeight = '0';
+    }
+  };
+
+  apply();
+
+  const initPromise = (win as Window & { ixInitPromise?: Promise<unknown> }).ixInitPromise;
+  initPromise?.then(apply).catch(() => undefined);
+}
+
 function Playground(props: PlaygroundProps) {
   const defaultTheme = useDefaultTheme();
   const { playgroundThemeVariant } = usePlaygroundThemeVariant();
@@ -162,6 +185,7 @@ function Playground(props: PlaygroundProps) {
                 title={`Preview for ${props.name}`}
                 src={iframeSrc}
                 className={styles.iframe}
+                onLoad={(event) => normalizeEmbeddedPreviewDocument(event.currentTarget)}
               ></iframe>
             ) : (
               <SourceCode />
