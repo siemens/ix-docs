@@ -89,8 +89,10 @@ function normalizeEmbeddedPreviewDocument(iframe: HTMLIFrameElement): void {
   }
 
   const apply = () => {
-    doc.documentElement.style.removeProperty('overflow');
-    doc.documentElement.style.height = 'auto';
+    if (doc.documentElement) {
+      doc.documentElement.style.removeProperty('overflow');
+      doc.documentElement.style.height = 'auto';
+    }
     if (doc.body) {
       doc.body.style.removeProperty('overflow');
       doc.body.style.height = 'auto';
