@@ -47,10 +47,11 @@ The starter apps include an application shell and example pages featuring:
     gap: '1rem',
     marginTop: '1rem',
   }}>
-    {[image1, image2, image3, image4].map((image, index) => (
+    {[{image: image1, alt: 'Home'}, {image: image2, alt: 'Forms'}, {image: image3, alt: 'Charts'}, {image: image4, alt: 'Grids'}].map((data, index) => (
       <img
         key={index}
-        src={image}
+        src={data.image}
+        alt={data.alt}
         style={{
           width: '100%',
           height: 'auto',
@@ -69,7 +70,7 @@ Choose a framework and scaffold the starter app into a new project folder.
 
 ### Angular
 
-Source: `apps/angular-starter`  
+Source: `apps/angular-starter`
 
 <Tabs groupId="degit-runner">
   <TabItem value="npx" label="npx" default>
@@ -86,7 +87,7 @@ Source: `apps/angular-starter`
 
 ### React
 
-Source: `apps/react-starter`  
+Source: `apps/react-starter`
 
 <Tabs groupId="degit-runner">
   <TabItem value="npx" label="npx" default>
@@ -103,7 +104,7 @@ Source: `apps/react-starter`
 
 ### Vue
 
-Source: `apps/vue-starter`  
+Source: `apps/vue-starter`
 
 <Tabs groupId="degit-runner">
   <TabItem value="npx" label="npx" default>
