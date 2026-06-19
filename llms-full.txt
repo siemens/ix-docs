@@ -12738,30 +12738,122 @@ Learn how to create consistent and clear commands that can be easily understood 
 
 ---
 
-## Starter app
+## Starter apps
 
-import image from './images/starter-app.png';
+import image1 from './images/home.png';
+import image2 from './images/forms.png';
+import image3 from './images/charts.png';
+import image4 from './images/grids.png';
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
 
 #
 
-<section>
-      Explore the code and get started quickly by visiting our [GitHub repository](https://github.com/siemens/ix-starter/).
-      Or view the starter app [here](https://siemens.github.io/ix-starter/react-starter/).
+## Explore
 
-  </section>
+The iX starter apps help you create a new project with ready-to-use layouts, example pages, and Siemens iX packages for your preferred framework.
+
+- Scaffold a starter app with [`degit`](https://github.com/Rich-Harris/degit) without cloning the full repository history
+- Explore the hosted preview for your desired [framework](#frameworks)
+- Start building in your IDE with the framework-specific setup already in place
+
+## Preview
+
+You can view the [React starter app](https://siemens.github.io/ix-starter/react-starter/) to explore the starter experience.
+
+The starter apps include an application shell and example pages featuring:
+
+- Get started
+- Forms
+- Charts with ECharts and the iX theme
+- Grids with AG Grid and the iX theme
+- Theme toggle for light and dark mode
+
+  
+    {[{image: image1, alt: 'Home'}, {image: image2, alt: 'Forms'}, {image: image3, alt: 'Charts'}, {image: image4, alt: 'Grids'}].map((data, index) => (
+      
+    ))}
   
 
-## Key features
+## Frameworks
 
-- Intuitive design: Simplify your workflow with user-friendly components.
-- Versatile components: Adapt to different project requirements.
-- Seamless integration: Easy to implement and customize.
+Choose a framework and scaffold the starter app into a new project folder.
 
-## Benefits
+### Angular
 
-- Comprehensive documentation: Access detailed guides and examples.
-- Consistent UI: Ensure consistency across your applications.
-- Time-saving: Reduce development time with pre-built components.
+Source: `apps/angular-starter`
+
+<Tabs groupId="degit-runner">
+  <TabItem value="npx" label="npx" default>
+    ```bash
+    npx degit siemens/ix-starter/apps/angular-starter my-ix-angular-app
+    ```
+  </TabItem>
+  <TabItem value="pnpx" label="pnpx">
+    ```bash
+    pnpx degit siemens/ix-starter/apps/angular-starter my-ix-angular-app
+    ```
+  </TabItem>
+</Tabs>
+
+### React
+
+Source: `apps/react-starter`
+
+<Tabs groupId="degit-runner">
+  <TabItem value="npx" label="npx" default>
+    ```bash
+    npx degit siemens/ix-starter/apps/react-starter my-ix-react-app
+    ```
+  </TabItem>
+  <TabItem value="pnpx" label="pnpx">
+    ```bash
+    pnpx degit siemens/ix-starter/apps/react-starter my-ix-react-app
+    ```
+  </TabItem>
+</Tabs>
+
+### Vue
+
+Source: `apps/vue-starter`
+
+<Tabs groupId="degit-runner">
+  <TabItem value="npx" label="npx" default>
+    ```bash
+    npx degit siemens/ix-starter/apps/vue-starter my-ix-vue-app
+    ```
+  </TabItem>
+  <TabItem value="pnpx" label="pnpx">
+    ```bash
+    pnpx degit siemens/ix-starter/apps/vue-starter my-ix-vue-app
+    ```
+  </TabItem>
+</Tabs>
+
+The current starter version is available from `main`. To scaffold an older version, append the repository tag to the starter source, for example:
+
+<Tabs groupId="degit-runner">
+  <TabItem value="npx" label="npx" default>
+    ```bash
+    npx degit siemens/ix-starter/apps/react-starter#v5.0.0 my-ix-react-app
+    ```
+  </TabItem>
+  <TabItem value="pnpx" label="pnpx">
+    ```bash
+    pnpx degit siemens/ix-starter/apps/react-starter#v5.0.0 my-ix-react-app
+    ```
+  </TabItem>
+</Tabs>
+
+After scaffolding a starter app, install dependencies and start the development server from the generated project folder.
+
+```bash
+cd my-ix-react-app
+pnpm install
+pnpm dev
+```
+
+Use the generated folder name from your selected command, for example `my-ix-vue-app` or `my-ix-angular-app`.
 
 ---
 
