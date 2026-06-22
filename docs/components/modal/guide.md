@@ -6,7 +6,7 @@ doc-type: 'tab-item'
 
 Custom modals present rich, contextual content, e.g. forms, complex workflows or nested interactions that require the user's focus.
 
-Use custom models when a task requires immediate attention and the user returns to the same place after closing the modal.
+Use custom modals when a task requires immediate attention and the user returns to the same place after closing the modal.
 
 ![Modal overview](https://www.figma.com/design/wEptRgAezDU1z80Cn3eZ0o/iX-Documentation-illustrations?node-id=7350-2529&t=WHbXyipgpGwQbVsV-4)
 

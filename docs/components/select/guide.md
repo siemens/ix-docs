@@ -70,7 +70,7 @@ The select field has five states: default, hover, focused, disabled and read-onl
   </div>
   <div class="donts">
     <ul aria-label="Practices to avoid">
-      <li>Don’t use selects for binary choices, like yes and no, use [radio buttons](../toggle) instead</li>
+      <li>Don’t use selects for binary choices, like yes and no, use [radio buttons](../radio) instead</li>
       <li>Don’t use selects for navigational or search patterns, use [category filters](../expanding-search) instead</li>
       <li>Don’t combine several data attributes in an item label, use [HTML tables](../html-grid) or [AG Grids](../grid) with a search functionality instead</li>
     </ul>
@@ -87,5 +87,4 @@ The select field has five states: default, hover, focused, disabled and read-onl
 - [Input](../input)
 - [Radio button](../radio)
 - [Checkbox](../checkbox)
-- [Toggle](../toggle)
 - [Date input](../input-date)
