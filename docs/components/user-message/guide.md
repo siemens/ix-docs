@@ -15,7 +15,7 @@ User messages display a single prompt submitted by users in a conversational thr
 
 ## Options
 
-- **Attachments:** If users submit files together with a prompt, show those [attachments](../chat-user-message) directly with the message so the request stays understandable later in the thread.
+- **Attachments:** If users submit files together with a prompt, show those [attachments](../chat-attachment) directly with the message so the request stays understandable later in the thread.
 - **Message:** Show the original user input as the main message content without alterations.
 - **Actions:** Add only the few actions users need for their own prompt, e.g. copy, edit or open a compact overflow menu. We recommend using subtle tertiary [icon buttons](../icon-button) so actions stay secondary to the message.
 
