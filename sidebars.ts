@@ -484,6 +484,20 @@ const sidebars: SidebarsConfig = {
           ],
         }),
         createTabItem({
+          id: 'components/popover/index',
+          label: 'Popover',
+          items: [
+            {
+              id: 'components/popover/guide',
+              label: 'Usage',
+            },
+            {
+              id: 'components/popover/code',
+              label: 'Code',
+            },
+          ],
+        }),
+        createTabItem({
           id: 'components/tile/index',
           label: 'Tile',
           items: [
@@ -995,20 +1009,6 @@ const sidebars: SidebarsConfig = {
             },
             {
               id: 'components/pill/code',
-              label: 'Code',
-            },
-          ],
-        }),
-        createTabItem({
-          id: 'components/popover/index',
-          label: 'Popover',
-          items: [
-            {
-              id: 'components/popover/guide',
-              label: 'Usage',
-            },
-            {
-              id: 'components/popover/code',
               label: 'Code',
             },
           ],

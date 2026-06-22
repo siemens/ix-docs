@@ -101,6 +101,7 @@ import { CategoryButton } from '@site/src/components/CategoryButton';
 | [Layout grid](./layout-grid/index.mdx) | Layout grids are used to structure the layout of a page or screen responsively.                                              |
 | [Modal](./modal/index.mdx)             | Modals present information prominently and are useful for gathering essential user input without navigating to another page. |
 | [Panes](./panes/index.mdx)             | Panes are interactive components that allow users to access content that isn&#39;t constantly visible on the screen.         |
+| [Popovers](./popover/index.mdx)             | Popovers display contextual information next to a trigger element.       |
 | [Tile](./tile/index.mdx)               | Tiles are containers that display content in a card-like format.                                                             |
 
 ## Forms
