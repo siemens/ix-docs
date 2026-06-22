@@ -56,7 +56,7 @@ Chat inputs have six states: default, hover, focused and processing.
 
 ## Related
 
-- [AI chatbot overview](../ai-chatbot-overview)
+- [Chat](../chat)
 - [AI message](../ai-message)
 - [User message](../user-message)
 - [Textarea](../textarea)

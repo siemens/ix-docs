@@ -145,85 +145,6 @@ const sidebars: SidebarsConfig = {
       type: 'category',
       className: 'doc-sidebar-item-bold',
 
-      label: 'AI chatbot',
-      items: [
-        createTabItem({
-          id: 'components/ai-chatbot-overview/index',
-          label: 'Overview',
-          items: [
-            {
-              id: 'components/ai-chatbot-overview/guide',
-              label: 'Usage',
-            },
-            {
-              id: 'components/ai-chatbot-overview/code',
-              label: 'Code',
-            },
-          ],
-        }),
-        createTabItem({
-          id: 'components/chat-input/index',
-          label: 'Chat input',
-          items: [
-            {
-              id: 'components/chat-input/guide',
-              label: 'Usage',
-            },
-            {
-              id: 'components/chat-input/code',
-              label: 'Code',
-            },
-          ],
-        }),
-        createTabItem({
-          id: 'components/user-message/index',
-          label: 'User message',
-          items: [
-            {
-              id: 'components/user-message/guide',
-              label: 'Usage',
-            },
-            {
-              id: 'components/user-message/code',
-              label: 'Code',
-            },
-          ],
-        }),
-        createTabItem({
-          id: 'components/ai-message/index',
-          label: 'AI message',
-          items: [
-            {
-              id: 'components/ai-message/guide',
-              label: 'Usage',
-            },
-            {
-              id: 'components/ai-message/code',
-              label: 'Code',
-            },
-          ],
-        }),
-        createTabItem({
-          id: 'components/ai-chat-attachment/index',
-          label: 'AI Chat attachment',
-          items: [
-            {
-              id: 'components/ai-chat-attachment/guide',
-              label: 'Usage',
-            },
-            {
-              id: 'components/ai-chat-attachment/code',
-              label: 'Code',
-            },
-          ],
-        }),
-      ],
-      collapsed: true,
-    },
-    {
-      type: 'category',
-      className: 'doc-sidebar-item-bold',
-
       label: 'Application frame',
       items: [
         createTabItem({
@@ -1197,6 +1118,85 @@ const sidebars: SidebarsConfig = {
           items: [
             {
               id: 'components/kpi/code',
+              label: 'Code',
+            },
+          ],
+        }),
+      ],
+      collapsed: true,
+    },
+    {
+      type: 'category',
+      className: 'doc-sidebar-item-bold',
+
+      label: 'Chat',
+      items: [
+        createTabItem({
+          id: 'components/chat/index',
+          label: 'Overview',
+          items: [
+            {
+              id: 'components/chat/guide',
+              label: 'Usage',
+            },
+            {
+              id: 'components/chat/code',
+              label: 'Code',
+            },
+          ],
+        }),
+        createTabItem({
+          id: 'components/chat-input/index',
+          label: 'Chat input',
+          items: [
+            {
+              id: 'components/chat-input/guide',
+              label: 'Usage',
+            },
+            {
+              id: 'components/chat-input/code',
+              label: 'Code',
+            },
+          ],
+        }),
+        createTabItem({
+          id: 'components/user-message/index',
+          label: 'User message',
+          items: [
+            {
+              id: 'components/user-message/guide',
+              label: 'Usage',
+            },
+            {
+              id: 'components/user-message/code',
+              label: 'Code',
+            },
+          ],
+        }),
+        createTabItem({
+          id: 'components/ai-message/index',
+          label: 'AI message',
+          items: [
+            {
+              id: 'components/ai-message/guide',
+              label: 'Usage',
+            },
+            {
+              id: 'components/ai-message/code',
+              label: 'Code',
+            },
+          ],
+        }),
+        createTabItem({
+          id: 'components/chat-user-message/index',
+          label: 'Chat user message',
+          items: [
+            {
+              id: 'components/chat-user-message/guide',
+              label: 'Usage',
+            },
+            {
+              id: 'components/chat-user-message/code',
               label: 'Code',
             },
           ],
