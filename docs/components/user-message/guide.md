@@ -23,8 +23,8 @@ User messages display a single prompt submitted by users in a conversational thr
 
 - **Interaction:** User messages keep the submitted prompt visible as the main record of what users asked.
 - **Actions:** Message actions are only shown when users hover over the message with a mouse, tap the message on touch devices or reach the message with the `Tab` key.
-- **Placement:** We usually keep attachments above or alongside the message content inside the same container so users can review the full prompt context at a glance.
-- **Responsiveness:** User messages take 45 to 80 % of the chat container width.
+- **Placement:** User messages are always placed on the right side of the [chat](../chat/) to visually distinguish them from [AI messages](../ai-message) on the left side.
+- **Responsiveness:** User messages take from 45 to 80 % of the chat's container width, depending on the viewport width.
 
 ## Dos and Don’ts
 

@@ -1133,7 +1133,7 @@ const sidebars: SidebarsConfig = {
       items: [
         createTabItem({
           id: 'components/chat/index',
-          label: 'Overview',
+          label: 'Chat',
           items: [
             {
               id: 'components/chat/guide',
@@ -1189,7 +1189,7 @@ const sidebars: SidebarsConfig = {
         }),
         createTabItem({
           id: 'components/chat-attachment/index',
-          label: 'Chat user message',
+          label: 'Chat attachment',
           items: [
             {
               id: 'components/chat-attachment/guide',

@@ -29,3 +29,5 @@ Chats are the outer containers that bring together the three building blocks of 
 - [Chat input](../chat-input)
 - [User message](../user-message)
 - [AI message](../ai-message)
+- [Conversational design guidelines](../../guidelines/conversational-design/getting-started)
+- [SDL AI UX Guidelines](https://www.figma.com/design/KbgPxj7qLgngXkJfnDM4Ty/SDL-AI-UX-Guidelines?t=Kv2aR7JVmhNYuR1S-0) (can be accessed exclusively by Siemens AG employees)

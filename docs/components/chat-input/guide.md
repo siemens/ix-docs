@@ -5,7 +5,7 @@ description: 'Usage guide for chat input'
 
 # Chat input - Usage
 
-Chat inputs help users compose and send short conversational messages in chat and assistant experiences. We recommend using them for quick, iterative exchanges, not for long-form forms or multi-step data entry.
+Chat inputs help users compose and send short conversational messages in chat experiences. We recommend using them for quick, iterative exchanges, not for multi-step data entries.
 
 ![Anatomy component](https://www.figma.com/design/wEptRgAezDU1z80Cn3eZ0o/iX-Documentation-illustrations?node-id=7940-7427&t=mrtbkWj76QJhvNLI-11)
 
@@ -21,7 +21,7 @@ Chat inputs help users compose and send short conversational messages in chat an
 
 - **Placeholder:** Use clear, contextual prompts, e.g. “Enter a command, question or topic…”
 - **Follow-up slot:** Optionally include a slot for follow-up questions. We typically use tertiary outline [buttons](../button) or [icon buttons](../icon-button) for that purpose.
-- **Attachment slot:** Optionally include a slot for [attachments](#).
+- **Attachment slot:** Optionally include a slot for [attachments](../chat-attachment/).
 - **Start slot:** Add secondary actions. We recommend using tertiary outline [icon buttons](../icon-button) and trying to stick to one action. If you have more than one action, use [dropdown buttons](../dropdown-button/).
 - **End slot:** Use this slot to add alternative input methods, e.g. voice input.
 - **Disclaimer:** In AI contexts, include a short visible disclaimer near the input.
