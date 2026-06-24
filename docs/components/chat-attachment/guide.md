@@ -15,7 +15,7 @@ Chat attachments display files that users add to a chat prompt. We recommend usi
 
 ## Options
 
-- **File icon:** Show a recognizable file-type icon so users can identify attachments quickly, e.g. [pdf-document](../../icons/icon-library#pdf-document).
+- **File icon:** Show a recognizable file-type icon so users can identify attachments quickly, e.g. pdf-document.
 - **File name:** Show the file name including the file extension.
 - **Remove button:** Show remove buttons in a [chat input](../chat-input/), and hide it once an attachment is part of a submitted [message](../user-message/).
 - **Preview supported:** Use only for supported files to show e.g. thumbnails.
