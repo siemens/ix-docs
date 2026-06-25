@@ -63,8 +63,6 @@ Popovers have two states: Closed and opened. When a popover is opened, it appear
 - Don’t use popovers for essential information that must be read before proceeding, use [modals](../modal) instead
 - Don’t use popovers for selecting from a list of actions, use [dropdowns](../dropdown) instead
 - Don’t keep multiple popovers open at the same time, close the current one before opening another
-- Don’t open a [dropdown](../dropdown) inside a popover when users need many choices, use a modal or dedicated page instead
-- Don’t use popovers for long explanations or multi-step tasks, use a [modal](../modal) or dedicated page instead
 
 ## Related
 
