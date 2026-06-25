@@ -1,4 +1,5 @@
 ---
+sidebar_position: 1
 sidebar_label: Voice and tone
 title: Voice and tone
 doc-type: banner
@@ -16,18 +17,18 @@ We use American English for our UI text and recommend choosing one language vari
 <div className="dos-and-donts" markdown="true">
 <div className="dos" markdown="true">
 
-- DO: Optimize sensor
-- DO: Data is invalid
-- DO: Confirmation dialog
-- DO: License management
+- Optimize sensor
+- Data is invalid
+- Confirmation dialog
+- License management
 
 </div>
 <div className="donts" markdown="true">
 
-- DON’T: Optimise sensor
-- DON’T: Data are invalid
-- DON’T: Confirmation dialogue
-- DON’T: Licence management
+- Optimise sensor
+- Data are invalid
+- Confirmation dialogue
+- Licence management
 
 </div>
 </div>
@@ -38,12 +39,12 @@ Use sentences only when necessary and write in short, scannable segments instead
 <div className="dos-and-donts" markdown="true">
 <div className="dos" markdown="true">
 
-- DO: Select “Submit” to save changes.
+- Select “Submit” to save changes.
 
 </div>
 <div className="donts" markdown="true">
 
-- DON’T: Please select the ‘Submit’ button to save your changes so you do not lose data.
+- Please select the ‘Submit’ button to save your changes so you do not lose data.
 
 </div>
 </div>
@@ -54,12 +55,12 @@ Use specific and clear wording that can be understood by everyone, not only indu
 <div className="dos-and-donts" markdown="true">
 <div className="dos" markdown="true">
 
-- DO: Failed to upload. Try again.
+- Failed to upload. Try again.
 
 </div>
 <div className="donts" markdown="true">
 
-- DON’T: System error #232/01
+- System error #232/01
 
 </div>
 </div>
@@ -70,14 +71,14 @@ Use positive language whenever possible and focus on what users can achieve with
 <div className="dos-and-donts" markdown="true">
 <div className="dos" markdown="true">
 
-- DO: Values are displayed when you select events.
-- DO: Select an event to view values.
+- Values are displayed when you select events.
+- Select an event to view values.
 
 </div>
 <div className="donts" markdown="true">
 
-- DON’T: Values aren’t displayed when none are selected.
-- DON’T: Values do not appear until an event is selected.
+- Values aren’t displayed when none are selected.
+- Values do not appear until an event is selected.
 
 </div>
 </div>
@@ -88,16 +89,16 @@ Avoid gender-specific language and terms in industrial applications.
 <div className="dos-and-donts" markdown="true">
 <div className="dos" markdown="true">
 
-- DO: their / them / their
-- DO: The operator must verify their credentials before accessing the control panel.
-- DO: Contact the supervisor if you need their approval.
+- their / them / their
+- The operator must verify their credentials before accessing the control panel.
+- Contact the supervisor if you need their approval.
 
 </div>
 <div className="donts" markdown="true">
 
-- DON’T: his / hers / him
-- DON’T: The operator must verify his credentials before accessing the control panel.
-- DON’T: Contact the supervisor if you need her approval.
+- his / hers / him
+- The operator must verify his credentials before accessing the control panel.
+- Contact the supervisor if you need her approval.
 
 </div>
 </div>
@@ -108,14 +109,14 @@ Only use “please” and “sorry” for extremely inconvenient or unforeseen e
 <div className="dos-and-donts" markdown="true">
 <div className="dos" markdown="true">
 
-- DO: Enter password
-- DO: Your dashboard closed unexpectedly. Log in to continue working.
+- Enter password
+- Your dashboard closed unexpectedly. Log in to continue working.
 
 </div>
 <div className="donts" markdown="true">
 
-- DON’T: Please enter password
-- DON’T: We are very sorry your dashboard closed unexpectedly. Please log in again.
+- Please enter password
+- We are very sorry your dashboard closed unexpectedly. Please log in again.
 
 </div>
 </div>
@@ -126,16 +127,16 @@ Use positive shortened word forms such as “we’ve” and “you’ll” (cont
 <div className="dos-and-donts" markdown="true">
 <div className="dos" markdown="true">
 
-- DO: From Version 3.2, you’ll be able to configure thresholds directly at your device.
-- DO: you’ll
-- DO: We’ve updated our features to give you more control over your events and alarms.
-- DO: we’ve
+- From Version 3.2, you’ll be able to configure thresholds directly at your device.
+- you’ll
+- We’ve updated our features to give you more control over your events and alarms.
+- we’ve
 
 </div>
 <div className="donts" markdown="true">
 
-- DON’T: you will
-- DON’T: we have
+- you will
+- we have
 
 </div>
 </div>
@@ -145,14 +146,14 @@ Avoid using negative shortened word forms such as “can’t” and “won’t�
 <div className="dos-and-donts" markdown="true">
 <div className="dos" markdown="true">
 
-- DO: cannot
-- DO: will not
+- cannot
+- will not
 
 </div>
 <div className="donts" markdown="true">
 
-- DON’T: can’t
-- DON’T: can’t, won’t
+- can’t
+- can’t, won’t
 
 </div>
 </div>
