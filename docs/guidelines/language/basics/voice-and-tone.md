@@ -127,7 +127,7 @@ Use positive shortened word forms such as “we’ve” and “you’ll” (cont
 <div className="dos-and-donts" markdown="true">
 <div className="dos" markdown="true">
 
-- From Version 3.2, you’ll be able to configure thresholds directly at your device.
+- From version 3.2, you’ll be able to configure thresholds directly at your device.
 - you’ll
 - We’ve updated our features to give you more control over your events and alarms.
 - we’ve
