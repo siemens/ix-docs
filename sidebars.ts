@@ -495,6 +495,10 @@ const sidebars: SidebarsConfig = {
               id: 'components/popover/code',
               label: 'Code',
             },
+            {
+              id: 'components/popover/uxwriting',
+              label: 'Writing',
+            },
           ],
         }),
         createTabItem({
