@@ -117,5 +117,5 @@ Your [App name] team
 
 ## Related
 
-[Error messages](../messaging/error-messages.mdx)
-[Dates](../formatting/date.mdx)
+- [Error messages](../messaging/error-messages.mdx)
+- [Dates](../formatting/date.mdx)
