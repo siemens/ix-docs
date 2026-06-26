@@ -42,10 +42,20 @@ Our content header variants makes it easier to achieve a well-balanced visual hi
 
 ## Dos and Don’ts
 
-- Do use to provide quick access to common tasks for the whole content area
-- Do place only items in the header slot that don’t take up too much space, such as a status or a counter
-- Don’t use a secondary content header as a page title
-- Don’t use more than one primary headline in one page
+<div class="dos-and-donts">
+  <div class="dos">
+    <ul aria-label="Recommended practices">
+      <li>Do use to provide quick access to common tasks for the whole content area</li>
+      <li>Do place only items in the header slot that don’t take up too much space, such as a status or a counter</li>
+    </ul>
+  </div>
+  <div class="donts">
+    <ul aria-label="Practices to avoid">
+      <li>Don’t use a secondary content header as a page title</li>
+      <li>Don’t use more than one primary headline in one page</li>
+    </ul>
+  </div>
+</div>
 
 ## Related
 

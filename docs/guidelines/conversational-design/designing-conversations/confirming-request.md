@@ -23,7 +23,17 @@ In this interaction we see a simple request for confirmation before completing t
 
 ## Dos and Don’ts
 
--	Do make all confirmations clear and transparent before processing tasks  
--	Do mitigate risks associated with making changes to systems or processes  
--	Do add warnings and consequences for significant or hazardous changes  
--	Don’t ask for confirmation more than once 
+<div class="dos-and-donts">
+  <div class="dos">
+    <ul aria-label="Recommended practices">
+      <li>Do make all confirmations clear and transparent before processing tasks</li>
+      <li>Do mitigate risks associated with making changes to systems or processes</li>
+      <li>Do add warnings and consequences for significant or hazardous changes</li>
+    </ul>
+  </div>
+  <div class="donts">
+    <ul aria-label="Practices to avoid">
+      <li>Don’t ask for confirmation more than once</li>
+    </ul>
+  </div>
+</div>
