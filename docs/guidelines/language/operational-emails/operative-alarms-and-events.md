@@ -189,9 +189,9 @@ Your [App name] team
 
 ## Related
 
-[Dates](../formatting/date.mdx)
-[Time and time zones](../formatting/timezones.mdx)
-[Time related messages](../messaging/time-related-messages.mdx)
-[Error messages](../messaging/error-messages.mdx)
-[Warnings](../messaging/warning-messages.mdx)
-[Non-critical information messages](../messaging/non-critical-information-messages.mdx)
+- [Dates](../formatting/date.mdx)
+- [Time and time zones](../formatting/timezones.mdx)
+- [Time related messages](../messaging/time-related-messages.mdx)
+- [Error messages](../messaging/error-messages.mdx)
+- [Warnings](../messaging/warning-messages.mdx)
+- [Non-critical information messages](../messaging/non-critical-information-messages.mdx)

@@ -1,0 +1,217 @@
+---
+sidebar_position: 4
+sidebar_label: Workflow and task management emails
+title: Workflow and task management emails
+doc-type: 'banner'
+description: 'Easily scannable and well-structured emails for workflow notifications help teams collaborate better and make faster decisions.'
+---
+
+#
+
+Note: Use these rules alongside the Overview guidelines and we have used [App name] as the standard placeholder for you to adapt individually to your product. All placeholders are shown with square brackets [placeholder].
+
+## Subject lines
+
+State clear purpose or topic of the email with a descriptive title for context.
+
+<div className="dos-and-donts" markdown="true">
+<div className="dos" markdown="true">
+
+- [App name] | Task #234 created | Spare part maintenance
+- [App name] | Task #659 assigned to you | Log file management
+- [App name] | Task #012 completed | Turbine overhaul
+- [App name] | Maintenance scheduled for Nov 11, 2026, 10:00
+
+</div>
+</div>
+
+State any time urgency, criticality or workflow impact within the subject line.
+
+<div className="dos-and-donts" markdown="true">
+<div className="dos" markdown="true">
+
+- [App name] | Immediate action required | Firmware update
+- [App name] | Task #134 | Review due Nov 11, 2026, 14:30
+- [App name] | Task #879 | Approval requested
+- [App name] | Task #987 | Overdue
+
+</div>
+</div>
+
+## Body text
+
+Use clear and unambiguous headings to tell users what needs to be managed.
+
+<div className="dos-and-donts" markdown="true">
+<div className="dos" markdown="true">
+
+- Task assigned
+- Approval required
+- Task overdue
+- Review required
+
+</div>
+<div className="donts" markdown="true">
+
+- Task for you
+- Task
+
+</div>
+</div>
+
+Include bullet points to enhance readability and highlight key information.
+
+<div className="dos-and-donts" markdown="true">
+<div className="dos" markdown="true">
+
+- New task assigned
+  &nbsp;&nbsp;&bull; Task ID: 462<br/>
+  &nbsp;&nbsp;&bull; Task description: Spare part replacement for sensor 672_A<br/>
+  &nbsp;&nbsp;&bull; Assigned by: Operator<br/>
+  &nbsp;&nbsp;&bull; Assigned: February 10, 2026<br/>
+  &nbsp;&nbsp;&bull; Due: February 15, 2026
+
+</div>
+</div>
+
+Avoid vague statements about impact or required actions.
+
+<div className="dos-and-donts" markdown="true">
+<div className="dos" markdown="true">
+
+- This update will require a restart and cause 5 minutes of downtime for "[Asset name]".
+
+Software update
+&nbsp;&nbsp;&bull; Software: Update to Version 4.3.6<br/>
+&nbsp;&nbsp;&bull; Date: November 10, 2025<br/>
+&nbsp;&nbsp;&bull; Time: 01:00–01:05 (UTC+2)<br/>
+&nbsp;&nbsp;&bull; Impact: Brief downtime (approx. 5 minutes)
+
+</div>
+<div className="donts" markdown="true">
+
+- This update might require a restart.
+
+</div>
+</div>
+
+## Task management and progress
+
+Include specific and quantifiable progress updates whenever possible.
+
+<div className="dos-and-donts" markdown="true">
+<div className="dos" markdown="true">
+
+- Software patch deployment for SCADA system is 75% complete.
+- Maintenance for "[Production Line 3]" is currently underway, estimated completion in 2 hours (10:00 UTC+2).
+
+</div>
+</div>
+
+Include expected completion times or clear next steps.
+
+<div className="dos-and-donts" markdown="true">
+<div className="dos" markdown="true">
+
+- Expected completion by November 10, 2025, 22:00 (UTC+2). You will receive a notification once the system is fully operational.
+
+</div>
+</div>
+
+## Status updates
+
+Use clear indicators (operational, degraded, offline, standby) and state the impact immediately.
+
+<div className="dos-and-donts" markdown="true">
+<div className="dos" markdown="true">
+
+- Status update | Remote monitoring system | Degraded performance
+- Status update | Conveyor belt system | Offline
+- Status update | Backup generator | Standby
+- Status update | Remote monitoring system | Degraded performance
+
+</div>
+</div>
+
+Avoid sending repetitive updates or leaving long gaps without communication during critical incidents. Only mention the previous status when it adds useful content.
+
+<div className="dos-and-donts" markdown="true">
+<div className="dos" markdown="true">
+
+- Ticket #274 status changed from "active" to "closed".
+- We will provide an update every 2 hours until resolution, or sooner if the status changes significantly. Our next update is scheduled for 14:00 (UTC+2).
+
+</div>
+</div>
+
+## Best practice example for task assignment
+
+**Subject**
+
+[App name] | Task #234 assigned to you
+
+**Body**
+
+Dear [App name] user,
+
+Task assigned
+
+- Task ID: 462
+- Task description: Spare part replacement for sensor 672_A
+- Assigned by: Operator
+- Assigned: February 10, 2026
+- Due date: February 15, 2026
+
+What you need to do
+
+Open Task list for further task details.
+
+Button: Open task list
+
+If you have any questions or need assistance, contact our team at [email address].
+
+This email is automated: Do not reply.
+
+Kind regards,<br/>
+Your [App name] team
+
+[Company disclaimer]<br/>
+[Company legal footer]
+
+## Best practice example for overdue task reminder
+
+**Subject**
+
+[App name] | Immediate action needed | Overdue task #1234 "Firmware update"
+
+**Body**
+
+Dear [App name] user,
+
+Overdue task
+
+- Task: Firmware update V5.6.01
+- Due: November 22, 2025
+
+What you need to do
+
+- Log in and perform update in Task manager
+
+Button: Open Task manager
+
+If you have any questions or need assistance, contact our team at [email address].
+
+This email is automated: Do not reply.
+
+Kind regards,<br/>
+Your [App name] team
+
+[Company disclaimer]<br/>
+[Company legal footer]
+
+## Related
+
+[Time-related messages](../messaging/time-related-messages.mdx)
+[Progress updates](../messaging/progress-updates.mdx)
+[Dates](../formatting/date.mdx)
+[Time and time zones](../formatting/timezones.mdx)
