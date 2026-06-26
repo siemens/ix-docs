@@ -6,6 +6,8 @@ doc-type: 'banner'
 description: 'In industrial applications, customer emails connect users to essential information, project updates and critical alerts. Well-written and clear customer emails keep operations running smoothly and users well-informed.'
 ---
 
+#
+
 Note: We have used [App name] as the standard placeholder for you to adapt individually to your product. All placeholders are shown with square brackets [placeholder].
 
 Keep emails short, add relevant information and avoid complex and lengthy sentences.
@@ -23,7 +25,7 @@ Keep emails short, add relevant information and avoid complex and lengthy senten
 </div>
 </div>
 
-## Use past tense for completed events
+Use past tense for completed events.
 
 <div className="dos-and-donts" markdown="true">
 <div className="dos" markdown="true">
@@ -38,7 +40,7 @@ Keep emails short, add relevant information and avoid complex and lengthy senten
 </div>
 </div>
 
-## Use future tense for upcoming actions or scheduled events
+Use future tense for upcoming actions or scheduled events.
 
 <div className="dos-and-donts" markdown="true">
 <div className="dos" markdown="true">
@@ -52,8 +54,6 @@ Keep emails short, add relevant information and avoid complex and lengthy senten
 
 </div>
 </div>
-
-## Use the present perfect passive tense for system-generated confirmations or assignments
 
 Use the present perfect passive tense (have been/done) for system-generated confirmations or assignments.
 
@@ -70,7 +70,7 @@ Use the present perfect passive tense (have been/done) for system-generated conf
 </div>
 </div>
 
-## Use the past active tense when someone manually assigns a task or role
+Use the past active tense when someone manually assigns a task or role.
 
 <div className="dos-and-donts" markdown="true">
 <div className="dos" markdown="true">
@@ -84,8 +84,6 @@ Use the present perfect passive tense (have been/done) for system-generated conf
 
 </div>
 </div>
-
-## Use sentence case
 
 Use sentence case in your applications (capitalize only the first word of a sentence or heading, and any proper nouns).
 
@@ -101,8 +99,6 @@ Use sentence case in your applications (capitalize only the first word of a sent
 
 </div>
 </div>
-
-## Use typographic double quotation marks
 
 Use typographic double quotation marks for opening quotes “ (Unicode U+201C) and for closing quotes ” (Unicode U+201D) instead of single marks for consistency.
 
@@ -173,12 +169,12 @@ Keep the subject line as short as possible. Additional information should be pro
 <div className="dos-and-donts" markdown="true">
 <div className="dos" markdown="true">
 
-- [App name] | Immediate Action Required | Update
+- [App name] | Immediate action required | Update
 
 </div>
 <div className="donts" markdown="true">
 
-- [App name] | Immediate Action Required | Update from old Version 2.4 to new Version 2.5 due to security issues
+- [App name] | Immediate action required | Update from old Version 2.4 to new Version 2.5 due to security issues
 
 </div>
 </div>
@@ -244,7 +240,7 @@ Include a professional and polite closing with a descriptive signature.
 </div>
 </div>
 
-## Time-related information
+### Time-related information
 
 Include specific times, dates, and time zones whenever relevant.
 
@@ -272,7 +268,7 @@ Include duration and instructions when applicable.
 </div>
 </div>
 
-## Actions and links
+### Actions and links
 
 Include a clear message when users don’t have to do anything.
 
@@ -337,12 +333,12 @@ Use a full, live link when buttons are not possible in the email (see External l
 </div>
 <div className="donts" markdown="true">
 
-- https://example.com/[App name]
+- {'https://example.com/'}[App name]
 
 </div>
 </div>
 
-## Responding options
+### Responding options
 
 Include options for readers to respond to or get support when possible.
 
@@ -365,25 +361,25 @@ Clearly state when an email is automated and cannot be replied to.
 </div>
 </div>
 
-## Disclaimer and footer
+### Disclaimer and footer
 
 Include a legal disclaimer. Check the correct legal text with your legal team.
 
 Include the company’s legal footer and any other required legal information.
 
-## Formatting
+### Formatting
 
 Highlight important information but avoid excessive and mixed text formatting.
 
 <div className="dos-and-donts" markdown="true">
 <div className="dos" markdown="true">
 
-- Review the attached Maintenance Report for details
+- Review the attached maintenance report for details.
 
 </div>
 <div className="donts" markdown="true">
 
-- Review the attached Maintenance Report for details.
+- Review the attached **Maintenance Report** for details.
 
 </div>
 </div>
@@ -403,7 +399,7 @@ Do not use emojis.
 </div>
 </div>
 
-## General best practice example
+### General best practice example
 
 **Subject**
 
@@ -430,7 +426,7 @@ Your [App name] team
 
 ## Related
 
-- Grammar LINK
-- Punctuation LINK
-- Time and time zones LINK
-- Time-related messages LINK
+- [Grammar](#)
+- [Punctuation](#)
+- [Time and time zones](../formatting/timezones.mdx)
+- [Time-related messages](../messaging/time-related-messages.mdx)
