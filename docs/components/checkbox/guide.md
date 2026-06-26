@@ -17,12 +17,13 @@ Checkboxes are commonly used when there are multiple options that can be selecte
 
 ## Options
 
-- **Checkbox label:** See [form field](../forms-field).
-- **Indeterminate checkbox:** Indicates that only some items in a checkbox group are selected. We offer the indeterminate state, but the implementation when this state is active is the responsibility of each individual.
-- **Checkbox group**: Group checkboxes to indicate that they are related. We typically use checkbox groups when multiple options need to be presented for selection, allowing users to choose any combination of the available choices. They are particularly useful in user interface design for forms, settings and preferences where multiple selections are possible.
-- **Group label:** Add a label to the group of checkboxes to provide context to your users. We typically use short and descriptive labels to summarize the options in the group.
-- **Group helper text**: See [form field](../forms-field).
-- **Group feedback text**: See [form field](../forms-field).
+- **Checkbox**:
+  - **Label:** See [form field](../forms-field).
+  - **Indeterminate:** Indicates that only some items in a checkbox group are selected.
+- **Checkbox group**:
+  - **Label:** Add a label to the group of checkboxes to provide context to your users. We typically use short and descriptive labels to summarize the options in the group.
+  - **Helper text**: See [form field](../forms-field).
+  - **Show text as tooltip**: See [form field](../forms-field).
 
 ## Behavior in context
 
