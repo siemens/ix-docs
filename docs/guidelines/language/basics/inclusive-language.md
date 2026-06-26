@@ -63,7 +63,7 @@ Note: The list contains words that may be considered offensive, sensitive or ina
 
 | Non-inclusive terms | Explanation | Alternative terms |
 | --- | --- | --- |
-| black | This term is particularly sensitive in discussions about race and language and the goal is to remove all racial connotations from technical terms.<br/>Never use when black means unknown, mysterious or bad.<br/>Use for color references and visual properties only. | - dark<br/>- dark mode |
+| black | This term is particularly sensitive in discussions about race and language and the goal is to remove all racial connotations from technical terms.<br/><br/>Never use when black means unknown, mysterious or bad.<br/>Use for color references and visual properties only. | - dark<br/>- dark mode |
 | black box testing | Reinforces the association with mystery and concealment. | - behavioral testing<br/>- opaque-box testing<br/>- closed-box testing<br/>- functional testing |
 | black hat (hacker) | Reinforces the association with illegality. | - criminal hacker<br/>- unethical hacker<br/>- malicious actor<br/>- unauthorized hacker |
 | Blacklist | Reinforces the association with exclusion and privilege. | - deny list<br/>- reject list<br/>- untrusted list<br/>- blocked list<br/>- exclude (include)<br/>- block (allow) |
@@ -71,7 +71,7 @@ Note: The list contains words that may be considered offensive, sensitive or ina
 | native (feature) | Refers to something designed specifically for a particular platform. Still extensively used but as it has cultural associations, alternatives are being introduced. | - built-in<br/>- default<br/>- first-party<br/>- platform-specific<br/>- integrated |
 | red team | Used as a derogatory term for Native Americans, reinforcing harmful racial stereotypes. | - attack team<br/>- adversary team<br/>- offensive security team |
 | tribe | May carry cultural and historical associations. Using it for team structures can be seen as insensitive in some contexts. | - team<br/>- group<br/>- unit |
-| white | Reinforces racial color coding. Avoid all metaphorical terms when white means known, accepted, good or true.<br/>Use for color references and visual properties only. | - light mode<br/>- light |
+| white | Reinforces racial color coding. Avoid all metaphorical terms when white means known, accepted, good or true.<br/><br/>Use for color references and visual properties only. | - light mode<br/>- light |
 | white box | Reinforces racial color coding and associates white with transparent. | - open box<br/>- clear box |
 | white hat (hacker) | Reinforces racial color coding and associates white with good. | - ethical hacker |
 | whitelist | Reinforces the association with exclusion and privilege. Outdated, no longer used in industrial contexts. | - allow list<br/>- trust list<br/>- trusted list<br/>- approved list<br/>- include (exclude)<br/>- allow (block) |
@@ -87,4 +87,3 @@ Official Siemens brand resources regarding this theme are exclusively available 
 - [Offensive language](#)
 - [Accessibility](#)
 - [UX writing resources and support](#)
-
