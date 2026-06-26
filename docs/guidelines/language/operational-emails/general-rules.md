@@ -418,10 +418,10 @@ Restart your system after the maintenance window to apply all updates.
 
 If you have any questions or need assistance, contact our team at [email address].
 
-Kind regards,
+Kind regards,<br/>
 Your [App name] team
 
-[Company disclaimer]
+[Company disclaimer]<br/>
 [Company legal footer]
 
 ## Related

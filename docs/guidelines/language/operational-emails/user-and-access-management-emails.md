@@ -11,6 +11,8 @@ description: 'Clear, timely communication related to account creation, role assi
 
 Note: Use these rules alongside the Overview guidelines and we have used [App name] as the standard placeholder for you to adapt individually to your product. All placeholders are shown with square brackets [placeholder].
 
+## Subject lines
+
 State the clear purpose or topic of the email.
 
 <div className="dos-and-donts" markdown="true">
@@ -34,7 +36,7 @@ Start with a clear sentence describing the topic of the email.
 - Thank you for choosing [App name].
 - Your account has been successfully created.
 - You requested a one-time PIN to verify your identity.
-- A new device has been registered to this account: [user@example.com]
+- A new device has been registered to this account: [{'user@example.com'}]
 
 </div>
 </div>
@@ -45,9 +47,9 @@ Provide users with additional information or a summary.
 <div className="dos" markdown="true">
 
 - What you need to do
-	- Open [App name]
-	- Start configuring your dashboard
-	- Explore key features: Real-time energy monitoring, load optimization and predictive analytics
+	&nbsp;&nbsp;&bull; Open [App name]
+	&nbsp;&nbsp;&bull; Start configuring your dashboard
+	&nbsp;&nbsp;&bull; Explore key features: Real-time energy monitoring, load optimization and predictive analytics
 
 Button: [Open]
 
@@ -97,8 +99,8 @@ Mention both previous and new states when access or role settings are changed.
 <div className="dos-and-donts" markdown="true">
 <div className="dos" markdown="true">
 
-- There have been changes to your role for [App name]:
-	New role: Administrator
+- There have been changes to your role for [App name]:<br/>
+	New role: Administrator<br/>
 	Previous role: Operator
 
 </div>
@@ -131,9 +133,10 @@ To set your password securely visit our [App name portal]. For your safety, we n
 
 If you have any questions or need assistance, contact our team at [email address].
 
-Kind regards,
+Kind regards,<br/>
 Your [App name] team
-[Company disclaimer]
+
+[Company disclaimer]<br/>
 [Company legal footer]
 
 ## Best practice example for role changes
@@ -154,9 +157,10 @@ To see your current role, log in and go to your profile.
 
 Button: Open [App name]
 
-Kind regards,
+Kind regards,<br/>
 Your [App name] team
-[Company disclaimer]
+
+[Company disclaimer]<br/>
 [Company legal footer]
 
 ## Best practice example for new devices
@@ -169,7 +173,7 @@ Your [App name] team
 
 Dear [App name] user,
 
-A new device has been registered to your account: [user@example.com]
+A new device has been registered to your account: [{'user@example.com'}]
 Device name: Laptop123
 Device ID: ABCDEFGHI
 Operating system: Windows
@@ -180,12 +184,13 @@ Review your registered devices here: [Link]
 If you haven't registered this device on your account, reach out to your local Cybersecurity Contact here and ask them to open an investigation.
 Thank you for your cooperation.
 
-Kind regards,
+Kind regards,<br/>
 Your [App name] team
-[Company disclaimer]
+
+[Company disclaimer]<br/>
 [Company legal footer]
 
 Related
-[Dates](../formatting/date.mdx)
-[Time and time zones](../formatting/timezones.mdx)
-[Time-related messages](../messaging/time-related-messages.mdx)
+- [Dates](../formatting/date.mdx)
+- [Time and time zones](../formatting/timezones.mdx)
+- [Time-related messages](../messaging/time-related-messages.mdx)
