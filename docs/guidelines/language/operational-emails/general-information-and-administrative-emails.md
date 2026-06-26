@@ -194,4 +194,4 @@ Your [App name] team
 
 ## Related
 
-- [Non-critical information messages](./messaging/non-critical-information-messages.mdx)
+- [Non-critical information messages](../messaging/non-critical-information-messages.mdx)
