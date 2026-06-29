@@ -34,7 +34,7 @@ Include the new version number and release date.
 <div className="dos-and-donts" markdown="true">
 <div className="dos" markdown="true">
 
-- Version V2.1.0 will be available starting November 10.
+- Version 2.1.0 will be available starting November 10.
 
 </div>
 </div>

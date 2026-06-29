@@ -82,7 +82,7 @@ Avoid vague statements about impact or required actions.
 - This update will require a restart and cause 5 minutes of downtime for "[Asset name]".
 
 - Software update<br/>
-&nbsp;&nbsp;&bull; Software: Update to Version 4.3.6<br/>
+&nbsp;&nbsp;&bull; Software: Update to version 4.3.6<br/>
 &nbsp;&nbsp;&bull; Date: November 10, 2025<br/>
 &nbsp;&nbsp;&bull; Time: 01:00–01:05 (UTC+2)<br/>
 &nbsp;&nbsp;&bull; Impact: Brief downtime (approx. 5 minutes)
@@ -128,7 +128,6 @@ Use clear indicators (operational, degraded, offline, standby) and state the imp
 - Status update | Remote monitoring system | Degraded performance
 - Status update | Conveyor belt system | Offline
 - Status update | Backup generator | Standby
-- Status update | Remote monitoring system | Degraded performance
 
 </div>
 </div>
