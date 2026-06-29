@@ -81,7 +81,7 @@ Avoid vague statements about impact or required actions.
 
 - This update will require a restart and cause 5 minutes of downtime for "[Asset name]".
 
-- Software update
+- Software update<br/>
 &nbsp;&nbsp;&bull; Software: Update to Version 4.3.6<br/>
 &nbsp;&nbsp;&bull; Date: November 10, 2025<br/>
 &nbsp;&nbsp;&bull; Time: 01:00–01:05 (UTC+2)<br/>
