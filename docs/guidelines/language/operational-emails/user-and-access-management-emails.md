@@ -46,7 +46,7 @@ Provide users with additional information or a summary.
 <div className="dos-and-donts" markdown="true">
 <div className="dos" markdown="true">
 
-- What you need to do
+- What you need to do<br/>
 	&nbsp;&nbsp;&bull; Open [App name]<br/>
 	&nbsp;&nbsp;&bull; Start configuring your dashboard<br/>
 	&nbsp;&nbsp;&bull; Explore key features: Real-time energy monitoring, load optimization and predictive analytics
@@ -149,8 +149,8 @@ Your [App name] team
 
 Dear [App name] user,
 
-There have been changes to your role for [App name]:
-New role: Administrator
+There have been changes to your role for [App name]:<br/>
+New role: Administrator<br/>
 Previous role: Operator
 
 To see your current role, log in and go to your profile.
@@ -173,15 +173,15 @@ Your [App name] team
 
 Dear [App name] user,
 
-A new device has been registered to your account: [{'user@example.com'}]
-Device name: Laptop123
-Device ID: ABCDEFGHI
-Operating system: Windows
+A new device has been registered to your account: [{'user@example.com'}]<br/>
+Device name: Laptop123<br/>
+Device ID: ABCDEFGHI<br/>
+Operating system: Windows<br/>
 Date: November 11, 2026 at 14:32
 
 Review your registered devices here: [Link]
 
-If you haven't registered this device on your account, reach out to your local Cybersecurity Contact here and ask them to open an investigation.
+If you haven't registered this device on your account, reach out to your local Cybersecurity Contact here and ask them to open an investigation.<br/>
 Thank you for your cooperation.
 
 Kind regards,<br/>
@@ -190,7 +190,7 @@ Your [App name] team
 [Company disclaimer]<br/>
 [Company legal footer]
 
-Related
+## Related
 - [Dates](../formatting/date.mdx)
 - [Time and time zones](../formatting/timezones.mdx)
 - [Time-related messages](../messaging/time-related-messages.mdx)

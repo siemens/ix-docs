@@ -64,12 +64,12 @@ Include bullet points to enhance readability and highlight key information.
 <div className="dos-and-donts" markdown="true">
 <div className="dos" markdown="true">
 
-- New task assigned
-  &nbsp;&nbsp;&bull; Task ID: 462<br/>
-  &nbsp;&nbsp;&bull; Task description: Spare part replacement for sensor 672_A<br/>
-  &nbsp;&nbsp;&bull; Assigned by: Operator<br/>
-  &nbsp;&nbsp;&bull; Assigned: February 10, 2026<br/>
-  &nbsp;&nbsp;&bull; Due: February 15, 2026
+- New task assigned<br/>
+ &nbsp;&nbsp;&bull; Task ID: 462<br/>
+ &nbsp;&nbsp;&bull; Task description: Spare part replacement for sensor 672_A<br/>
+ &nbsp;&nbsp;&bull; Assigned by: Operator<br/>
+ &nbsp;&nbsp;&bull; Assigned: February 10, 2026<br/>
+ &nbsp;&nbsp;&bull; Due: February 15, 2026
 
 </div>
 </div>
@@ -81,7 +81,7 @@ Avoid vague statements about impact or required actions.
 
 - This update will require a restart and cause 5 minutes of downtime for "[Asset name]".
 
-Software update
+- Software update
 &nbsp;&nbsp;&bull; Software: Update to Version 4.3.6<br/>
 &nbsp;&nbsp;&bull; Date: November 10, 2025<br/>
 &nbsp;&nbsp;&bull; Time: 01:00–01:05 (UTC+2)<br/>
@@ -211,7 +211,7 @@ Your [App name] team
 
 ## Related
 
-[Time-related messages](../messaging/time-related-messages.mdx)
-[Progress updates](../messaging/progress-updates.mdx)
-[Dates](../formatting/date.mdx)
-[Time and time zones](../formatting/timezones.mdx)
+- [Time-related messages](../messaging/time-related-messages.mdx)
+- [Progress updates](../messaging/progress-updates.mdx)
+- [Dates](../formatting/date.mdx)
+- [Time and time zones](../formatting/timezones.mdx)

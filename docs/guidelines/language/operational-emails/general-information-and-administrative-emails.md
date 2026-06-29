@@ -3,7 +3,7 @@ sidebar_position: 7
 sidebar_label: General information and administrative emails
 title: General information and administrative emails
 doc-type: 'banner'
-description: 'In everyday operations, clear communication is key to maintaining transparency and trust. General notifications covering administrative details, confirmations, and other essential updates help keep stakeholders informed and processes organized.'
+description: 'In everyday operations, clear communication is key to maintaining transparency and trust. General notifications - covering administrative details, confirmations, and other essential updates outside specific operational categories - help keep stakeholders informed and processes organized. Well-structured messaging ensures clarity, reduces confusion, and supports smooth business interactions.'
 ---
 
 #
