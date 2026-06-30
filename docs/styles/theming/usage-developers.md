@@ -31,7 +31,7 @@ To choose a theme set the `data-ix-theme` attribute of the `<html>` tag to the t
 
 ## Applying only core functionalities without preloading themes
 
-Importing `siemens-ix-core.css` will only load core related functionalities, without preloading any theme or bootstrap.
+Importing `siemens-ix-core.css` will load core related functionalities without preloading any theme or bootstrap. This includes the iX foundation styles and the legacy global utility styles.
 
 You can load a specific theme by importing the corresponding CSS file.
 
@@ -48,6 +48,47 @@ import '@siemens/ix/dist/siemens-ix/siemens-ix-core.css';
 import '@siemens/ix/dist/siemens-ix/theme/classic-light.css';
 import '@siemens/ix/dist/siemens-ix/theme/classic-dark.css';
 ```
+
+## Applying only foundation styles without global utilities
+
+If your application should not load iX global utility styles, import the foundation styles instead of `siemens-ix-core.css`.
+
+:::info
+Starting with iX v6, the setup without legacy global utility styles is planned to become the default. If your application depends on legacy global styles, import the legacy utilities explicitly.
+:::
+
+The foundation stylesheet contains the CSS variables and foundation tokens required by iX components. It does not apply global utility classes, native element styling, normalize styles, or body styles.
+
+```tsx
+// Load the iX foundation styles required by components
+import '@siemens/ix/dist/siemens-ix/siemens-ix-foundation.css';
+
+// Load theme
+import '@siemens/ix/dist/siemens-ix/theme/classic-light.css';
+import '@siemens/ix/dist/siemens-ix/theme/classic-dark.css';
+```
+
+If your application still uses legacy global utility styles, import them explicitly:
+
+```tsx
+import '@siemens/ix/dist/siemens-ix/siemens-ix-legacy-utilities.css';
+```
+
+Legacy global utilities include styles such as `.ix-form-control`, `.typography-*`, `.ix-table` for native HTML tables, global link styles, normalize styles, and body styles.
+
+The same legacy utility layer is also available as SCSS:
+
+```scss
+@use '@siemens/ix/scss/legacy-utilities';
+```
+
+If you only need selected legacy styles, you can also import individual SCSS utility modules instead of the full legacy utility stylesheet. For example, to include only the global iX link styling:
+
+```scss
+@use '@siemens/ix/scss/components/links';
+```
+
+This applies the global `a[href]` iX link styles. Other legacy SCSS modules are available under `@siemens/ix/scss/components/*` and `@siemens/ix/scss/legacy/components/*`. Use partial legacy imports only for styles your application intentionally wants to apply outside iX components.
 
 ## Working with themes during runtime
 
