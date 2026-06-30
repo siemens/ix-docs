@@ -720,7 +720,7 @@ const sidebars: SidebarsConfig = {
         }),
         createTabItem({
           id: 'components/radio/index',
-          label: 'Radio',
+          label: 'Radio button',
           items: [
             {
               id: 'components/radio/guide',
