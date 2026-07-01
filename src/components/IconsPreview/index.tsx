@@ -77,9 +77,10 @@ const IconTiles: React.FC<{
   iconList: string[];
   searchApi: IconSearchApi | null;
   displayableSet: Set<string>;
+  onResetSearch: () => void;
 }> = (props) => {
   const [framework, setFramework] = useState<FrameworkTypes>('angular');
-  const { searchApi, displayableSet } = props;
+  const { searchApi, displayableSet, onResetSearch } = props;
   const IconDetails = React.forwardRef<
     HTMLDivElement,
     { iconName: string; columnCount: number }
@@ -175,7 +176,10 @@ const IconTiles: React.FC<{
                     size="24"
                     title={name}
                     aria-label={name}
-                    onClick={() => handleIconClick(name)}
+                    onClick={() => {
+                      onResetSearch();
+                      handleIconClick(name);
+                    }}
                   ></IxIconButton>
                 ))}
               </div>
@@ -190,14 +194,10 @@ const IconTiles: React.FC<{
   });
 
   const iconDetailsRef = useRef<HTMLDivElement>(null);
+  const pendingScrollRef = useRef<string | null>(null);
   const handleIconClick = useCallback((icon: string) => {
+    pendingScrollRef.current = icon;
     setSelectedIcon((prev) => (prev === icon ? null : icon));
-    setTimeout(() => {
-      iconDetailsRef.current?.scrollIntoView({
-        behavior: 'smooth',
-        block: 'nearest',
-      });
-    }, 0);
   }, []);
 
   window.addEventListener('keydown', (e) => {
@@ -225,6 +225,27 @@ const IconTiles: React.FC<{
     }
   }, []);
 
+  useEffect(() => {
+    const target = pendingScrollRef.current;
+    if (!target) {
+      return;
+    }
+    if (selectedIcon !== target) {
+      pendingScrollRef.current = null;
+      return;
+    }
+    if (!props.iconList.includes(target)) {
+      return;
+    }
+    pendingScrollRef.current = null;
+    requestAnimationFrame(() => {
+      document.getElementById(`icon-tile-${target}`)?.scrollIntoView({
+        behavior: 'smooth',
+        block: 'center',
+      });
+    });
+  }, [selectedIcon, props.iconList, props.columnCount]);
+
   return (
     <div className={clsx(styles.Icons)}>
       {iconRows.map((row, rowIndex) => (
@@ -239,6 +260,7 @@ const IconTiles: React.FC<{
                     row.includes(selectedIcon) &&
                     styles.Icon__ContainerDetails
                 )}
+                id={`icon-tile-${icon}`}
                 key={icon}
               >
                 <div
@@ -282,12 +304,18 @@ const Icons: React.FC = () => {
   const [showRegularIcons, setShowRegularIcons] = useState<boolean>(true);
   const [showFilledIcons, setShowFilledIcons] = useState<boolean>(true);
   const [icons] = useState<string[]>(ICON_LIST.icons);
-  const [iconList, setIconList] = useState<string[]>(ICON_LIST.icons);
   const [columnCount, setColumnCount] = useState<number>(2);
   const [searchApi, setSearchApi] = useState<IconSearchApi | null>(null);
   const filterInputRef = useRef<HTMLIxInputElement>(null);
 
   const displayableSet = useMemo(() => new Set(icons), [icons]);
+
+  const resetSearch = useCallback(() => {
+    setIconFilter('');
+    if (filterInputRef.current) {
+      filterInputRef.current.value = '';
+    }
+  }, []);
 
   useEffect(() => {
     let active = true;
@@ -325,10 +353,6 @@ const Icons: React.FC = () => {
 
     return applyVariantFilter(matches);
   }, [icons, iconFilter, searchApi, displayableSet, applyVariantFilter]);
-
-  useEffect(() => {
-    setIconList(filteredIcons);
-  }, [filteredIcons]);
 
   useEffect(() => {
     const handleResize = debounce(() => {
@@ -376,10 +400,7 @@ const Icons: React.FC = () => {
                   slot="end"
                   size="16"
                   onClick={() => {
-                    setIconFilter('');
-                    if (filterInputRef.current) {
-                      filterInputRef.current.value = '';
-                    }
+                    resetSearch();
                   }}
                 ></IxIconButton>
               )}
@@ -402,12 +423,13 @@ const Icons: React.FC = () => {
 
           <IconTiles
             columnCount={columnCount}
-            iconList={iconList}
+            iconList={filteredIcons}
             searchApi={searchApi}
             displayableSet={displayableSet}
+            onResetSearch={resetSearch}
           />
 
-          {iconList.length === 0 && (
+          {filteredIcons.length === 0 && (
             <div className={styles.Search__NoResults}>
               <IxIcon
                 className={styles.Search__NoResultsIcon}
