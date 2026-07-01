@@ -15,6 +15,7 @@ import React, {
   useState,
   useMemo,
   useCallback,
+  useTransition,
 } from 'react';
 import styles from './Icons.module.css';
 import {
@@ -100,6 +101,7 @@ type IconDetailsProps = {
   displayableSet: Set<string>;
   onRelatedIconClick: (name: string) => void;
   onClose: () => void;
+  shouldFocusRef: React.MutableRefObject<boolean>;
 };
 
 const IconDetails: React.FC<IconDetailsProps> = ({
@@ -111,6 +113,7 @@ const IconDetails: React.FC<IconDetailsProps> = ({
   displayableSet,
   onRelatedIconClick,
   onClose,
+  shouldFocusRef,
 }) => {
   const tooltipRef = useRef<HTMLIxTooltipElement>(null);
   const codeBlockContainerRef = useRef<HTMLDivElement>(null);
@@ -121,8 +124,11 @@ const IconDetails: React.FC<IconDetailsProps> = ({
   );
 
   useEffect(() => {
-    containerRef.current?.focus({ preventScroll: true });
-  }, []);
+    if (shouldFocusRef.current) {
+      shouldFocusRef.current = false;
+      containerRef.current?.focus({ preventScroll: true });
+    }
+  }, [shouldFocusRef]);
 
   async function copyToClipboard(text: string) {
     await navigator.clipboard.writeText(text);
@@ -280,14 +286,19 @@ const IconTiles: React.FC<{
   const [selectedIcon, setSelectedIcon] = useState<string | null>();
   const selectedIconRef = useRef<string | null>(null);
   const pendingScrollRef = useRef<string | null>(null);
+  const shouldFocusPreviewRef = useRef<boolean>(false);
 
   useEffect(() => {
     selectedIconRef.current = selectedIcon ?? null;
   }, [selectedIcon]);
 
   const handleIconClick = useCallback((icon: string) => {
-    pendingScrollRef.current = icon;
-    setSelectedIcon((prev) => (prev === icon ? null : icon));
+    const isOpening = selectedIconRef.current !== icon;
+    if (isOpening) {
+      pendingScrollRef.current = icon;
+      shouldFocusPreviewRef.current = true;
+    }
+    setSelectedIcon(isOpening ? icon : null);
   }, []);
 
   const closePreview = useCallback(() => {
@@ -392,6 +403,7 @@ const IconTiles: React.FC<{
                     displayableSet={displayableSet}
                     onRelatedIconClick={handleRelatedIconClick}
                     onClose={closePreview}
+                    shouldFocusRef={shouldFocusPreviewRef}
                   />
                 )}
               </div>
@@ -411,6 +423,7 @@ const Icons: React.FC = () => {
   const [columnCount, setColumnCount] = useState<number>(2);
   const [searchApi, setSearchApi] = useState<IconSearchApi | null>(null);
   const filterInputRef = useRef<HTMLIxInputElement>(null);
+  const [, startFilterTransition] = useTransition();
 
   const displayableSet = useMemo(() => new Set(icons), [icons]);
 
@@ -484,11 +497,12 @@ const Icons: React.FC = () => {
               ref={filterInputRef}
               placeholder="Search icon"
               aria-label="Search icon"
-              onInput={(e) =>
-                setIconFilter(
-                  (e.target as HTMLInputElement).value.toLocaleLowerCase()
-                )
-              }
+              onInput={(e) => {
+                const value = (
+                  e.target as HTMLInputElement
+                ).value.toLocaleLowerCase();
+                startFilterTransition(() => setIconFilter(value));
+              }}
             >
               <IxIcon
                 name={iconSearch}
