@@ -112,7 +112,11 @@
 }
 
 .Icon__ContainerDetails {
-  height: 190px;
+  height: 16.75rem;
+}
+
+.Icon__PreviewIcon {
+  margin-top: 0.7rem;
 }
 
 .Icon__Details {
@@ -120,7 +124,7 @@
   left: 0;
 
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   gap: 0.625rem;
 
   background-color: var(--theme-color-2);
@@ -128,7 +132,6 @@
   border-radius: 4px;
 
   width: 100%;
-  height: 5rem;
   min-height: 5rem;
 
   margin: 0.5rem;
@@ -168,10 +171,48 @@ ix-typography:focus-visible,
 
 .Icon__FlexContent {
   display: flex;
-  align-items: center;
+  flex-direction: column;
+  align-items: stretch;
+  justify-content: center;
   min-width: 0;
   flex-grow: 1;
   gap: 0.5rem;
+}
+
+.Icon__PrimaryRow {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  width: 100%;
+}
+
+.Icon__Tags {
+  min-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.Icon__Tags ix-typography {
+  color: var(--theme-color-soft-text);
+}
+
+.Icon__RelatedIcons {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.Icon__RelatedIcons ix-typography {
+  color: var(--theme-color-soft-text);
+  white-space: nowrap;
+}
+
+.Icon__RelatedList {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+  flex-wrap: wrap;
 }
 
 .Icon__Code[class*='codeBlockContainer'],

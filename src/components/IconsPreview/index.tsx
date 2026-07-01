@@ -33,6 +33,7 @@ import { fromKebabCaseToCamelCase } from '@site/src/lib/utils/string-format';
 import { debounce } from '@site/src/lib/utils/debounce';
 import BrowserOnly from '@docusaurus/BrowserOnly';
 import { getIcon } from '@site/src/utils/icons';
+import { getIconSearch, IconSearchApi } from './iconSearch';
 
 function getIconCode(iconName: string, framework: FrameworkTypes) {
   const importedName = 'icon' + fromKebabCaseToCamelCase(iconName);
@@ -71,16 +72,24 @@ function getColumnCount(width: number) {
   }
 }
 
-const IconTiles: React.FC<{ columnCount: number; iconList: string[] }> = (
-  props
-) => {
+const IconTiles: React.FC<{
+  columnCount: number;
+  iconList: string[];
+  searchApi: IconSearchApi | null;
+  displayableSet: Set<string>;
+}> = (props) => {
   const [framework, setFramework] = useState<FrameworkTypes>('angular');
+  const { searchApi, displayableSet } = props;
   const IconDetails = React.forwardRef<
     HTMLDivElement,
     { iconName: string; columnCount: number }
   >(function (props, ref) {
     const tooltipRef = useRef<HTMLIxTooltipElement>(null);
     const codeBlockContainerRef = useRef<HTMLDivElement>(null);
+    const meta = searchApi?.getMeta(props.iconName);
+    const relatedIcons = (meta?.relatedIcons ?? []).filter((name) =>
+      displayableSet.has(name)
+    );
 
     async function copyToClipboard(text: string) {
       await navigator.clipboard.writeText(text);
@@ -104,43 +113,73 @@ const IconTiles: React.FC<{ columnCount: number; iconList: string[] }> = (
         style={{ width: getWidth() }}
         className={styles.Icon__Details}
       >
-        <IxIcon name={getIcon(props.iconName)} size="32" />
+        <IxIcon className={styles.Icon__PreviewIcon} name={getIcon(props.iconName)} size="32" />
         <div className={styles.Icon__FlexContent}>
-          <div className={styles.Icon__NameContainer}>
-            <IxTypography format="h3">{props.iconName}</IxTypography>
-            <a href={`#${props.iconName}`} className="hash-link"></a>
+          <div className={styles.Icon__PrimaryRow}>
+            <div className={styles.Icon__NameContainer}>
+              <IxTypography format="h3">{props.iconName}</IxTypography>
+              <a href={`#${props.iconName}`} className="hash-link"></a>
+            </div>
+
+            <div
+              ref={codeBlockContainerRef}
+              className={clsx(
+                styles.Icon__CodeContainer,
+                'code-block-no-copy',
+                'code-block-no-wrap'
+              )}
+              onClick={() => {
+                copyToClipboard(getIconCode(props.iconName, framework));
+              }}
+              onKeyDown={(e) => {
+                if (e.key === 'Enter') {
+                  copyToClipboard(getIconCode(props.iconName, framework));
+                }
+              }}
+            >
+              <CodeBlock className={styles.Icon__Code} language="html">
+                {getIconCode(props.iconName, framework)}
+              </CodeBlock>
+              <IxTooltip ref={tooltipRef}>
+                <div className={styles.TooltipSuccess}>
+                  <IxIcon
+                    name={iconSuccess}
+                    color="color-success"
+                    size="16"
+                  ></IxIcon>
+                  Copied
+                </div>
+              </IxTooltip>
+            </div>
           </div>
 
-          <div
-            ref={codeBlockContainerRef}
-            className={clsx(
-              styles.Icon__CodeContainer,
-              'code-block-no-copy',
-              'code-block-no-wrap'
-            )}
-            onClick={() => {
-              copyToClipboard(getIconCode(props.iconName, framework));
-            }}
-            onKeyDown={(e) => {
-              if (e.key === 'Enter') {
-                copyToClipboard(getIconCode(props.iconName, framework));
-              }
-            }}
-          >
-            <CodeBlock className={styles.Icon__Code} language="html">
-              {getIconCode(props.iconName, framework)}
-            </CodeBlock>
-            <IxTooltip ref={tooltipRef}>
-              <div className={styles.TooltipSuccess}>
-                <IxIcon
-                  name={iconSuccess}
-                  color="color-success"
-                  size="16"
-                ></IxIcon>
-                Copied
+          {meta?.tags?.length ? (
+            <div className={styles.Icon__Tags}>
+              <IxTypography format="body">
+                Tags: {meta.tags.join(', ')}
+              </IxTypography>
+            </div>
+          ) : null}
+
+          {relatedIcons.length ? (
+            <div className={styles.Icon__RelatedIcons}>
+              <IxTypography format="body">Related icons:</IxTypography>
+              <div className={styles.Icon__RelatedList}>
+                {relatedIcons.map((name) => (
+                  <IxIconButton
+                    key={name}
+                    variant="tertiary"
+                    oval
+                    icon={getIcon(name)}
+                    size="24"
+                    title={name}
+                    aria-label={name}
+                    onClick={() => handleIconClick(name)}
+                  ></IxIconButton>
+                ))}
               </div>
-            </IxTooltip>
-          </div>
+            </div>
+          ) : null}
         </div>
         <div className={styles.FrameworkSelectionContainer}>
           <FrameworkSelection onFrameworkChange={(fw) => setFramework(fw)} />
@@ -243,20 +282,47 @@ const Icons: React.FC = () => {
   const [icons] = useState<string[]>(ICON_LIST.icons);
   const [iconList, setIconList] = useState<string[]>(ICON_LIST.icons);
   const [columnCount, setColumnCount] = useState<number>(2);
+  const [searchApi, setSearchApi] = useState<IconSearchApi | null>(null);
   const filterInputRef = useRef<HTMLIxInputElement>(null);
 
-  const filteredIcons = useMemo(() => {
-    return icons.filter((icon) => {
-      const isFilled = icon.endsWith('-filled');
-      const matchesFilter =
-        !iconFilter || icon.toLowerCase().includes(iconFilter);
+  const displayableSet = useMemo(() => new Set(icons), [icons]);
 
-      return (
-        ((showRegularIcons && !isFilled) || (showFilledIcons && isFilled)) &&
-        matchesFilter
-      );
+  useEffect(() => {
+    let active = true;
+    getIconSearch().then((api) => {
+      if (active) {
+        setSearchApi(api);
+      }
     });
-  }, [icons, iconFilter, showRegularIcons, showFilledIcons]);
+    return () => {
+      active = false;
+    };
+  }, []);
+
+  const applyVariantFilter = useCallback(
+    (names: string[]) =>
+      names.filter((icon) => {
+        const isFilled = icon.endsWith('-filled');
+        return (
+          (showRegularIcons && !isFilled) || (showFilledIcons && isFilled)
+        );
+      }),
+    [showRegularIcons, showFilledIcons]
+  );
+
+  const filteredIcons = useMemo(() => {
+    const query = iconFilter?.trim();
+
+    if (!query) {
+      return applyVariantFilter(icons);
+    }
+
+    const matches = searchApi
+      ? searchApi.search(query, displayableSet)
+      : icons.filter((icon) => icon.toLowerCase().includes(query));
+
+    return applyVariantFilter(matches);
+  }, [icons, iconFilter, searchApi, displayableSet, applyVariantFilter]);
 
   useEffect(() => {
     setIconList(filteredIcons);
@@ -330,7 +396,12 @@ const Icons: React.FC = () => {
             ></IxCheckbox>
           </div>
 
-          <IconTiles columnCount={columnCount} iconList={iconList} />
+          <IconTiles
+            columnCount={columnCount}
+            iconList={iconList}
+            searchApi={searchApi}
+            displayableSet={displayableSet}
+          />
 
           {iconList.length === 0 && (
             <div className={styles.Search__NoResults}>
