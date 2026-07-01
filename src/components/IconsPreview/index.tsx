@@ -87,7 +87,6 @@ function getFocusableElements(container: HTMLElement): HTMLElement[] {
   ).filter(
     (el) =>
       !el.hasAttribute('disabled') &&
-      el.tabIndex !== -1 &&
       el.getClientRects().length > 0
   );
 }

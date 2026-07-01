@@ -31,10 +31,6 @@
 }
 
 .Icon__Tile {
-  border: none;
-  margin: 0;
-  padding: 0;
-  width: auto;
   overflow: visible;
 
   background: transparent;
@@ -268,6 +264,13 @@ ix-typography:focus-visible,
   align-items: center;
   gap: 0.25rem;
 }
+
+@media (max-width: 780px) {
+  .Icon__RelatedIcons {
+    display: none;
+  }
+}
+
 
 @media (max-width: 1280px) {
   .FrameworkSelectionContainer {

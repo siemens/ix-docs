@@ -70,7 +70,12 @@ function buildSearchApi(records: IconMetadata[]): IconSearchApi {
 
 export function getIconSearch(): Promise<IconSearchApi> {
   if (!searchApiPromise) {
-    searchApiPromise = loadMetadata().then(buildSearchApi);
+    searchApiPromise = loadMetadata()
+      .then(buildSearchApi)
+      .catch((error) => {
+        searchApiPromise = null;
+        throw error;
+      });
   }
   return searchApiPromise;
 }
