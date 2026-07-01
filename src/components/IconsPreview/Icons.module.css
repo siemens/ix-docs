@@ -115,9 +115,15 @@
   height: 16.75rem;
 }
 
-.FrameworkSelectionContainer,
-.Icon__PreviewIcon {
+.FrameworkSelectionContainer {
   margin-top: 0.7rem;
+}
+
+.Icon__PreviewIcon {
+    width: 5rem;
+    scale: 1.5;
+    justify-self: center;
+    align-self: center;
 }
 
 .Icon__Details {

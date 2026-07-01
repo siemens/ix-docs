@@ -170,8 +170,7 @@ const IconTiles: React.FC<{
                 {relatedIcons.map((name) => (
                   <IxIconButton
                     key={name}
-                    variant="tertiary"
-                    oval
+                    variant="subtle-tertiary"
                     icon={getIcon(name)}
                     size="24"
                     title={name}
