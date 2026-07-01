@@ -72,6 +72,203 @@ function getColumnCount(width: number) {
   }
 }
 
+const FOCUSABLE_SELECTOR = [
+  'a[href]',
+  'button:not([disabled])',
+  'input:not([disabled])',
+  'select:not([disabled])',
+  'textarea:not([disabled])',
+  '[tabindex]:not([tabindex="-1"])',
+].join(',');
+
+function getFocusableElements(container: HTMLElement): HTMLElement[] {
+  return Array.from(
+    container.querySelectorAll<HTMLElement>(FOCUSABLE_SELECTOR)
+  ).filter(
+    (el) =>
+      !el.hasAttribute('disabled') &&
+      el.tabIndex !== -1 &&
+      el.getClientRects().length > 0
+  );
+}
+
+type IconDetailsProps = {
+  iconName: string;
+  columnCount: number;
+  framework: FrameworkTypes;
+  onFrameworkChange: (framework: FrameworkTypes) => void;
+  searchApi: IconSearchApi | null;
+  displayableSet: Set<string>;
+  onRelatedIconClick: (name: string) => void;
+  onClose: () => void;
+};
+
+const IconDetails: React.FC<IconDetailsProps> = ({
+  iconName,
+  columnCount,
+  framework,
+  onFrameworkChange,
+  searchApi,
+  displayableSet,
+  onRelatedIconClick,
+  onClose,
+}) => {
+  const tooltipRef = useRef<HTMLIxTooltipElement>(null);
+  const codeBlockContainerRef = useRef<HTMLDivElement>(null);
+  const containerRef = useRef<HTMLDivElement>(null);
+  const meta = searchApi?.getMeta(iconName);
+  const relatedIcons = (meta?.relatedIcons ?? []).filter((name) =>
+    displayableSet.has(name)
+  );
+
+  useEffect(() => {
+    containerRef.current?.focus({ preventScroll: true });
+  }, []);
+
+  async function copyToClipboard(text: string) {
+    await navigator.clipboard.writeText(text);
+    if (codeBlockContainerRef.current) {
+      tooltipRef.current?.showTooltip(codeBlockContainerRef.current);
+    }
+    setTimeout(() => {
+      tooltipRef.current?.hideTooltip();
+    }, 750);
+  }
+
+  function getWidth() {
+    const tileWidth = 128;
+    const tileMargin = 16;
+    return tileWidth * columnCount + tileMargin * (columnCount - 1);
+  }
+
+  function handleKeyDown(event: React.KeyboardEvent<HTMLDivElement>) {
+    if (event.key === 'Escape') {
+      event.preventDefault();
+      event.stopPropagation();
+      onClose();
+      return;
+    }
+
+    if (event.key !== 'Tab') {
+      return;
+    }
+
+    const container = containerRef.current;
+    if (!container) {
+      return;
+    }
+
+    const focusables = getFocusableElements(container);
+    if (focusables.length === 0) {
+      event.preventDefault();
+      container.focus({ preventScroll: true });
+      return;
+    }
+
+    const first = focusables[0];
+    const last = focusables[focusables.length - 1];
+    const active = document.activeElement as HTMLElement | null;
+
+    if (event.shiftKey) {
+      if (active === first || active === container || !container.contains(active)) {
+        event.preventDefault();
+        last.focus();
+      }
+    } else if (active === last || !container.contains(active)) {
+      event.preventDefault();
+      first.focus();
+    }
+  }
+
+  return (
+    <div
+      ref={containerRef}
+      role="dialog"
+      aria-modal="true"
+      aria-label={`${iconName} icon details`}
+      tabIndex={-1}
+      onKeyDown={handleKeyDown}
+      style={{ width: getWidth() }}
+      className={styles.Icon__Details}
+    >
+      <IxIcon
+        className={styles.Icon__PreviewIcon}
+        name={getIcon(iconName)}
+        size="32"
+      />
+      <div className={styles.Icon__FlexContent}>
+        <div className={styles.Icon__PrimaryRow}>
+          <div className={styles.Icon__NameContainer}>
+            <IxTypography format="h3">{iconName}</IxTypography>
+            <a href={`#${iconName}`} className="hash-link"></a>
+          </div>
+
+          <div
+            ref={codeBlockContainerRef}
+            className={clsx(
+              styles.Icon__CodeContainer,
+              'code-block-no-copy',
+              'code-block-no-wrap'
+            )}
+            onClick={() => {
+              copyToClipboard(getIconCode(iconName, framework));
+            }}
+            onKeyDown={(e) => {
+              if (e.key === 'Enter') {
+                copyToClipboard(getIconCode(iconName, framework));
+              }
+            }}
+          >
+            <CodeBlock className={styles.Icon__Code} language="html">
+              {getIconCode(iconName, framework)}
+            </CodeBlock>
+            <IxTooltip ref={tooltipRef}>
+              <div className={styles.TooltipSuccess}>
+                <IxIcon
+                  name={iconSuccess}
+                  color="color-success"
+                  size="16"
+                ></IxIcon>
+                Copied
+              </div>
+            </IxTooltip>
+          </div>
+        </div>
+
+        {meta?.tags?.length ? (
+          <div className={styles.Icon__Tags}>
+            <IxTypography format="body">
+              Tags: {meta.tags.join(', ')}
+            </IxTypography>
+          </div>
+        ) : null}
+
+        {relatedIcons.length ? (
+          <div className={styles.Icon__RelatedIcons}>
+            <IxTypography format="body">Related icons:</IxTypography>
+            <div className={styles.Icon__RelatedList}>
+              {relatedIcons.map((name) => (
+                <IxIconButton
+                  key={name}
+                  variant="subtle-tertiary"
+                  icon={getIcon(name)}
+                  size="24"
+                  title={name}
+                  aria-label={name}
+                  onClick={() => onRelatedIconClick(name)}
+                ></IxIconButton>
+              ))}
+            </div>
+          </div>
+        ) : null}
+      </div>
+      <div className={styles.FrameworkSelectionContainer}>
+        <FrameworkSelection onFrameworkChange={onFrameworkChange} />
+      </div>
+    </div>
+  );
+};
+
 const IconTiles: React.FC<{
   columnCount: number;
   iconList: string[];
@@ -81,135 +278,38 @@ const IconTiles: React.FC<{
 }> = (props) => {
   const [framework, setFramework] = useState<FrameworkTypes>('angular');
   const { searchApi, displayableSet, onResetSearch } = props;
-  const IconDetails = React.forwardRef<
-    HTMLDivElement,
-    { iconName: string; columnCount: number }
-  >(function (props, ref) {
-    const tooltipRef = useRef<HTMLIxTooltipElement>(null);
-    const codeBlockContainerRef = useRef<HTMLDivElement>(null);
-    const meta = searchApi?.getMeta(props.iconName);
-    const relatedIcons = (meta?.relatedIcons ?? []).filter((name) =>
-      displayableSet.has(name)
-    );
-
-    async function copyToClipboard(text: string) {
-      await navigator.clipboard.writeText(text);
-      if (codeBlockContainerRef.current) {
-        tooltipRef.current?.showTooltip(codeBlockContainerRef.current);
-      }
-      setTimeout(() => {
-        tooltipRef.current?.hideTooltip();
-      }, 750);
-    }
-
-    function getWidth() {
-      const tileWidth = 128;
-      const tileMargin = 16;
-      return (
-        tileWidth * props.columnCount + tileMargin * (props.columnCount - 1)
-      );
-    }
-
-    return (
-      <div
-        ref={ref}
-        style={{ width: getWidth() }}
-        className={styles.Icon__Details}
-      >
-        <IxIcon className={styles.Icon__PreviewIcon} name={getIcon(props.iconName)} size="32" />
-        <div className={styles.Icon__FlexContent}>
-          <div className={styles.Icon__PrimaryRow}>
-            <div className={styles.Icon__NameContainer}>
-              <IxTypography format="h3">{props.iconName}</IxTypography>
-              <a href={`#${props.iconName}`} className="hash-link"></a>
-            </div>
-
-            <div
-              ref={codeBlockContainerRef}
-              className={clsx(
-                styles.Icon__CodeContainer,
-                'code-block-no-copy',
-                'code-block-no-wrap'
-              )}
-              onClick={() => {
-                copyToClipboard(getIconCode(props.iconName, framework));
-              }}
-              onKeyDown={(e) => {
-                if (e.key === 'Enter') {
-                  copyToClipboard(getIconCode(props.iconName, framework));
-                }
-              }}
-            >
-              <CodeBlock className={styles.Icon__Code} language="html">
-                {getIconCode(props.iconName, framework)}
-              </CodeBlock>
-              <IxTooltip ref={tooltipRef}>
-                <div className={styles.TooltipSuccess}>
-                  <IxIcon
-                    name={iconSuccess}
-                    color="color-success"
-                    size="16"
-                  ></IxIcon>
-                  Copied
-                </div>
-              </IxTooltip>
-            </div>
-          </div>
-
-          {meta?.tags?.length ? (
-            <div className={styles.Icon__Tags}>
-              <IxTypography format="body">
-                Tags: {meta.tags.join(', ')}
-              </IxTypography>
-            </div>
-          ) : null}
-
-          {relatedIcons.length ? (
-            <div className={styles.Icon__RelatedIcons}>
-              <IxTypography format="body">Related icons:</IxTypography>
-              <div className={styles.Icon__RelatedList}>
-                {relatedIcons.map((name) => (
-                  <IxIconButton
-                    key={name}
-                    variant="subtle-tertiary"
-                    icon={getIcon(name)}
-                    size="24"
-                    title={name}
-                    aria-label={name}
-                    onClick={() => {
-                      onResetSearch();
-                      handleIconClick(name);
-                    }}
-                  ></IxIconButton>
-                ))}
-              </div>
-            </div>
-          ) : null}
-        </div>
-        <div className={styles.FrameworkSelectionContainer}>
-          <FrameworkSelection onFrameworkChange={(fw) => setFramework(fw)} />
-        </div>
-      </div>
-    );
-  });
-
-  const iconDetailsRef = useRef<HTMLDivElement>(null);
+  const [selectedIcon, setSelectedIcon] = useState<string | null>();
+  const selectedIconRef = useRef<string | null>(null);
   const pendingScrollRef = useRef<string | null>(null);
+
+  useEffect(() => {
+    selectedIconRef.current = selectedIcon ?? null;
+  }, [selectedIcon]);
+
   const handleIconClick = useCallback((icon: string) => {
     pendingScrollRef.current = icon;
     setSelectedIcon((prev) => (prev === icon ? null : icon));
   }, []);
 
-  window.addEventListener('keydown', (e) => {
-    if (
-      e.key === 'Escape' &&
-      iconDetailsRef.current?.contains(document.activeElement)
-    ) {
-      setSelectedIcon(null);
+  const closePreview = useCallback(() => {
+    const current = selectedIconRef.current;
+    setSelectedIcon(null);
+    if (current) {
+      const button = document
+        .getElementById(`icon-tile-${current}`)
+        ?.querySelector('button');
+      (button as HTMLButtonElement | null)?.focus();
     }
-  });
+  }, []);
 
-  const [selectedIcon, setSelectedIcon] = useState<string | null>();
+  const handleRelatedIconClick = useCallback(
+    (name: string) => {
+      onResetSearch();
+      handleIconClick(name);
+    },
+    [onResetSearch, handleIconClick]
+  );
+
   const iconRows = useMemo(() => {
     const rows = [];
     for (let i = 0; i < props.iconList.length; i += props.columnCount) {
@@ -285,9 +385,14 @@ const IconTiles: React.FC<{
                 </button>
                 {selectedIcon === icon && props.columnCount > 2 && (
                   <IconDetails
-                    ref={iconDetailsRef}
                     iconName={selectedIcon}
                     columnCount={props.columnCount}
+                    framework={framework}
+                    onFrameworkChange={setFramework}
+                    searchApi={searchApi}
+                    displayableSet={displayableSet}
+                    onRelatedIconClick={handleRelatedIconClick}
+                    onClose={closePreview}
                   />
                 )}
               </div>
@@ -379,6 +484,7 @@ const Icons: React.FC = () => {
             <IxInput
               ref={filterInputRef}
               placeholder="Search icon"
+              aria-label="Search icon"
               onInput={(e) =>
                 setIconFilter(
                   (e.target as HTMLInputElement).value.toLocaleLowerCase()

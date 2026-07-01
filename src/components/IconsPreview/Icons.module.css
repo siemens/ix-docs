@@ -137,10 +137,10 @@
 }
 
 .Icon__PreviewIcon {
-    width: 5rem;
-    scale: 1.5;
-    justify-self: center;
-    align-self: center;
+  width: 5rem;
+  scale: 1.5;
+  justify-self: center;
+  align-self: center;
 }
 
 .Icon__Details {
@@ -160,6 +160,11 @@
 
   margin: 0.5rem;
   padding: calc(1rem - 1px);
+}
+
+.Icon__Details:focus-visible {
+  outline: 1px solid var(--theme-color-focus-bdr);
+  outline-offset: 2px;
 }
 
 .Icon__Details .Icon__NameContainer {
