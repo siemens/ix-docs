@@ -494,6 +494,7 @@ const Icons: React.FC = () => {
         <div className={styles.IconsPreview}>
           <div className={clsx(styles.Search)}>
             <IxInput
+              className={styles.Search__Input}
               ref={filterInputRef}
               placeholder="Search icon"
               aria-label="Search icon"

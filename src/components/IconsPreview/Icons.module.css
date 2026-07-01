@@ -104,6 +104,12 @@
   margin-block-start: 1.5rem;
 }
 
+.Search__Input {
+  min-width: 13.25rem;
+  max-width: 13.25rem;
+  width: 13.25rem;
+}
+
 .Search__NoResultsIcon {
   width: 3.5rem;
   height: 3.5rem;
