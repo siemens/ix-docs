@@ -93,7 +93,9 @@ const IconTiles: React.FC<{
 
     async function copyToClipboard(text: string) {
       await navigator.clipboard.writeText(text);
-      tooltipRef.current?.showTooltip(codeBlockContainerRef.current);
+      if (codeBlockContainerRef.current) {
+        tooltipRef.current?.showTooltip(codeBlockContainerRef.current);
+      }
       setTimeout(() => {
         tooltipRef.current?.hideTooltip();
       }, 750);
@@ -234,6 +236,7 @@ const IconTiles: React.FC<{
                 className={clsx(
                   styles.Icon__Container,
                   props.columnCount > 2 &&
+                    !!selectedIcon &&
                     row.includes(selectedIcon) &&
                     styles.Icon__ContainerDetails
                 )}
@@ -375,7 +378,9 @@ const Icons: React.FC = () => {
                   size="16"
                   onClick={() => {
                     setIconFilter('');
-                    filterInputRef.current.value = '';
+                    if (filterInputRef.current) {
+                      filterInputRef.current.value = '';
+                    }
                   }}
                 ></IxIconButton>
               )}
