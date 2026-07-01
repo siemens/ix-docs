@@ -31,6 +31,18 @@
 }
 
 .Icon__Tile {
+  border: none;
+  margin: 0;
+  padding: 0;
+  width: auto;
+  overflow: visible;
+
+  background: transparent;
+
+  color: inherit;
+  font: inherit;
+  line-height: normal;
+
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -46,6 +58,11 @@
   padding: calc(1rem - 1px);
 
   cursor: pointer;
+}
+
+.Icon__Tile:focus-visible {
+  outline: 1px solid var(--theme-color-focus-bdr);
+  outline-offset: 2px;
 }
 
 .Icon__Tile.Selected {

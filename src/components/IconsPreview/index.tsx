@@ -263,7 +263,7 @@ const IconTiles: React.FC<{
                 id={`icon-tile-${icon}`}
                 key={icon}
               >
-                <div
+                <button
                   className={clsx(styles.Icon__Tile, {
                     [styles.Selected]: selectedIcon === icon,
                   })}
@@ -278,11 +278,11 @@ const IconTiles: React.FC<{
                     name: getIcon(icon),
                   })}
                   <div className={styles.Icon__Name}>
-                    <IxTypography tabIndex={0} format="body">
+                    <IxTypography format="body">
                       {icon}
                     </IxTypography>
                   </div>
-                </div>
+                </button>
                 {selectedIcon === icon && props.columnCount > 2 && (
                   <IconDetails
                     ref={iconDetailsRef}
