@@ -107,7 +107,7 @@ This file contains links to documentation sections following the llmstxt.org sta
 - [Progress-Indicator - Code](https://ix.siemens.io//docs/components/progress-indicator/code.md): Code examples and API documentation for the ix-progress-indicator
 - [Progress indicator - Usage](https://ix.siemens.io//docs/components/progress-indicator/guide.md): Usage guide for the ix-progress-indicator
 - [Radio - Code](https://ix.siemens.io//docs/components/radio/code.md): Code examples and API documentation for the ix-radio, ix-radio-group
-- [Radio - Usage](https://ix.siemens.io//docs/components/radio/guide.md): Usage guide for the ix-radio, ix-radio-group
+- [Radio button - Usage](https://ix.siemens.io//docs/components/radio/guide.md): Usage guide for the ix-radio, ix-radio-group
 - [Range field - Code](https://ix.siemens.io//docs/components/range-field/code.md): Code examples and API documentation for the ix-range-field
 - [Range field - Usage](https://ix.siemens.io//docs/components/range-field/guide.md): Usage guide for the ix-range-field
 - [Select - Code](https://ix.siemens.io//docs/components/select/code.md): Code examples and API documentation for the ix-select, ix-select-item

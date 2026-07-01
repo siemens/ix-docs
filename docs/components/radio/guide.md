@@ -1,8 +1,8 @@
-# Radio - Usage
+# Radio button - Usage
 
 > Usage guide for the ix-radio, ix-radio-group
 
-# Radio - Usage
+# Radio button - Usage
 
 Radio buttons are presented in groups to signify that only one selection is allowed at a time. Selecting a radio button automatically deselects any previously chosen radio button within the same group. We typically use radio buttons to offer users a set of exclusive choices.
 
@@ -17,9 +17,14 @@ Radio buttons are presented in groups to signify that only one selection is allo
 
 ## Options
 
-- **Label:** See [form field](../forms-field).
-- **Helper text**: See [form field](../forms-field).
-- **Feedback text**: See [form field](../forms-field).
+- **Radio button**:
+  - **Label:** See [form field](../forms-field).
+- **Radio button group**:
+  - **Label:** Use group labels if radio button labels are not self-explanatory and in context of forms. See [form field](../forms-field).
+  - **Helper text**: See [form field](../forms-field).
+  - **Show text as tooltip**: See [form field](../forms-field).
+  - **Required**: When enabled, users are required to select an option in a group. See [form field](../forms-field).
+  - **Direction**: Choose to align radio buttons vertically or horizontally. We typically use a horizontal layout for short labels with two to three options, and a vertical layout for more options to enhance readability.
 
 ## Behavior in context
 

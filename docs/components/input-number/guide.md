@@ -21,7 +21,6 @@ The number input component is commonly used in forms, calculators and other area
 - **Value**: See [form field](../forms-field).
 - **Required**: See [form field](../forms-field).
 - **Helper text**: See [form field](../forms-field).
-- **Feedback text**: See [form field](../forms-field).
 - **Show text as tooltip**: See [form field](../forms-field).
 - **Placeholder**: See [form field](../forms-field).
 - **Text alignment:** See [form field](../forms-field) (by default at end).
