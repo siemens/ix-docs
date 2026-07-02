@@ -25,10 +25,10 @@ AI messages display a single assistant response inside a conversational thread. 
 ## Dos and Don’ts
 
 - Do structure longer responses into short paragraphs or lists so users can scan them quickly
-- Do show clear [loading indicators](../spinner/) while the assistant is processing
+- Do show clear [loading indicators](../spinner/) while the assistant is generating responses (see [wording guidelines](../../guidelines/conversational-design/essentials/wording-terms.mdx#response-progress-indicator))
 - Do show sources or evidence when the response refers to external or retrieved information
-- Don't overuse actions by focusing only on the few actions users commonly need after reading, e.g. copy, feedback, regenerate
-- Don’t present speculative or low-confidence output as if it were verified fact
+- Do use the same actions for each AI message for consistency, but not more than 4 to avoid overloading users, e.g. copy, feedback, regenerate
+- Do add thumbs up or down actions only if you are aligned with data protection guidelines
 
 ## Related
 

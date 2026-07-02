@@ -5,7 +5,7 @@ description: 'Usage guide for chat attachment'
 
 # Chat attachment - Usage
 
-Chat attachments display files that users have uploaded to a chat prompt. It is typically displayed when users are writing in the chat input [chat inputs](../chat-input) and in all sent user messages.
+Chat attachments display files that users have uploaded to a chat prompt. It is typically displayed when users are writing in the chat input [chat inputs](../chat-input) and in all sent [user messages](../user-message/).
 
 ![Chat attachment anatomy](https://www.figma.com/design/wEptRgAezDU1z80Cn3eZ0o/iX-Documentation-illustrations?node-id=7970-230&t=HrpSIFfB7yjzt741-4)
 
@@ -36,8 +36,8 @@ Chat attachments follow the [chip](../chip) interaction model, including hover, 
 
 - Do keep attachments visible in user messages so attachments stay traceable within context
 - Don’t hide the remove action while users are still composing a prompt in the [chat input](../chat-input/)
-- Don’t detach attachments from their related [user message](../user-message/) after sending 
-- 
+- Don’t detach attachments from their related [user message](../user-message/) after sending
+-
 
 ## Related
 
