@@ -20,7 +20,7 @@ AI messages display a single assistant response inside a conversational thread. 
 
 ## Behavior in context
 
-- **Responsiveness:** AI messages use from 45 to 80 % of the chat's container width, depending on the viewport width.
+- **Responsiveness:** AI messages use from 45 to 80% of the chat's container width, depending on the viewport width.
 
 ## Dos and Don’ts
 

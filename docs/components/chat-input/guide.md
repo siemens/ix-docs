@@ -48,11 +48,10 @@ Chat inputs have six states: default, hover, focused and processing.
 - Do keep labels and helper text explicit instead of relying on placeholder text only
 - Do keep action labels verb-based and specific so users understand the outcome
 - Do show attachment or action context before send so users can review what they submit
-- Do keep AI disclaimers concise and tied to AI generation contexts
 - Don’t allow sending empty input
 - Don’t rely on color alone to communicate validation errors
 - Don’t hide essential guidance only in tooltips
-- Don’t use AI disclaimer content in non-AI messaging contexts
+- Don’t place AI disclaimers away from user input and messages
 
 ## Related
 
