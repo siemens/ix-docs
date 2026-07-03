@@ -83,7 +83,6 @@ Use passive voice when the action is more important for the user, or when you wa
 - You entered invalid payment information.
 
 </div>
-</div>
 
 ## Use imperative (command) mood
 
