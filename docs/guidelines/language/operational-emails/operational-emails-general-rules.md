@@ -35,7 +35,7 @@ Use past tense for completed events.
 </div>
 <div className="donts" markdown="true">
 
-- Payment is processing Tuesday, November 2025.
+- Payment is processing Tuesday, November 11, 2025.
 
 </div>
 </div>
@@ -45,17 +45,17 @@ Use future tense for upcoming actions or scheduled events.
 <div className="dos-and-donts" markdown="true">
 <div className="dos" markdown="true">
 
-- We will deploy firmware version 5.3 on November 22.
+- We will deploy firmware Version 5.3 on November 22.
 
 </div>
 <div className="donts" markdown="true">
 
-- We deploy firmware version 5.3 on November 22.
+- We deploy firmware Version 5.3 on November 22.
 
 </div>
 </div>
 
-Use the present perfect passive tense (have been/done) for system-generated confirmations or assignments.
+Use the present perfect passive tense (have been / done) for system-generated confirmations or assignments.
 
 <div className="dos-and-donts" markdown="true">
 <div className="dos" markdown="true">
@@ -85,7 +85,7 @@ Use the past active tense when someone manually assigns a task or role.
 </div>
 </div>
 
-Use sentence case in your applications (capitalize only the first word of a sentence or heading, and any proper nouns).
+Use sentence case in your emails (capitalize only the first word of a sentence or heading and any proper nouns).
 
 <div className="dos-and-donts" markdown="true">
 <div className="dos" markdown="true">
@@ -117,7 +117,7 @@ Use typographic double quotation marks for opening quotes “ (Unicode U+201C) a
 
 ## Subject lines
 
-Start the subject line with the application name. Use pipe separators to clearly structure the subject line and separate the product name, action, and topic.
+Start the subject line with the application name. Use pipe separators to clearly structure the subject line and separate the product name, action and topic.
 
 <div className="dos-and-donts" markdown="true">
 <div className="dos" markdown="true">
@@ -202,10 +202,10 @@ Repeat key words from the subject line in the body text.
 <div className="dos-and-donts" markdown="true">
 <div className="dos" markdown="true">
 
-- Subject line: [App name] | Version 2.0 available
+- Subject line: [App name] | Version 2.0 available<br/>
   Body text: We’ve released Version 2.0 of [App name].
 
-- Subject line: [App name] | One-time PIN for verification
+- Subject line: [App name] | One-time PIN for verification<br/>
   Body text: You requested a one-time PIN to verify your identity.
 
 </div>
@@ -228,13 +228,13 @@ Include a professional and polite closing with a descriptive signature.
 <div className="dos-and-donts" markdown="true">
 <div className="dos" markdown="true">
 
-- Kind regards,
+- Kind regards,<br/>
   Your [App name] team
 
 </div>
 <div className="donts" markdown="true">
 
-- Best wishes,
+- Best wishes,<br/>
   Your friendly [App name] team
 
 </div>
@@ -242,7 +242,7 @@ Include a professional and polite closing with a descriptive signature.
 
 ### Time-related information
 
-Include specific times, dates, and time zones whenever relevant.
+Include specific times, dates and time zones whenever relevant.
 
 <div className="dos-and-donts" markdown="true">
 <div className="dos" markdown="true">
@@ -275,18 +275,18 @@ Include a clear message when users don’t have to do anything.
 <div className="dos-and-donts" markdown="true">
 <div className="dos" markdown="true">
 
-- What you need to do
+- What you need to do<br/>
   You don’t need to do anything. We’ll inform you when the data migration is complete.
 
 </div>
 </div>
 
-Provide a clear call to action when user actions are needed.
+Provide a clear call-to-action when user actions are needed.
 
 <div className="dos-and-donts" markdown="true">
 <div className="dos" markdown="true">
 
-- What you need to do
+- What you need to do<br/>
   Restart your system after the update to ensure all changes take effect.
 
 </div>
@@ -312,7 +312,7 @@ If possible, provide call-to-actions in buttons instead of links.
 </div>
 </div>
 
-Use inline text links for additional information and buttons for required user actions.
+Use inline text links for additional information.
 
 <div className="dos-and-donts" markdown="true">
 <div className="dos" markdown="true">
@@ -322,7 +322,7 @@ Use inline text links for additional information and buttons for required user a
 </div>
 </div>
 
-Use a full, live link when buttons are not possible in the email (see External links and resources).
+Use a full, live link when buttons are not possible in the email (see [External links and resources](../menu-functions-and-ui-labels/external-links-and-resources.md)).
 
 <div className="dos-and-donts" markdown="true">
 <div className="dos" markdown="true">
@@ -340,7 +340,7 @@ Use a full, live link when buttons are not possible in the email (see External l
 
 ### Responding options
 
-Include options for readers to respond to or get support when possible.
+Include options for users to respond to or get support when possible.
 
 <div className="dos-and-donts" markdown="true">
 <div className="dos" markdown="true">
@@ -363,9 +363,8 @@ Clearly state when an email is automated and cannot be replied to.
 
 ### Disclaimer and footer
 
-Include a legal disclaimer. Check the correct legal text with your legal team.
-
-Include the company’s legal footer and any other required legal information.
+Include a legal disclaimer, the company’s legal footer and any other required legal information.<br/>
+Check the correct legal text with your legal team.
 
 ### Formatting
 
@@ -402,20 +401,16 @@ Do not use emojis.
 ### General best practice example
 
 **Subject**
-
 [App name] | Scheduled maintenance November 10, 2026
 
 **Body**
+Dear [App name] user,<br/>
 
-Dear [App name] user,
-
-What’s happening
-On Monday, November 10, between 02:00–04:00, we will perform system
-maintenance that will cause temporary service interruptions.
-
-What you need to do
-Restart your system after the maintenance window to apply all updates.
-
+What’s happeningy<br/>
+On Monday, November 10, between 02:00–04:00, we will perform system<br/>
+maintenance that will cause temporary service interruptions.<br/>
+What you need to do<br/>
+Restart your system after the maintenance window to apply all updates.<br/>
 If you have any questions or need assistance, contact our team at [email address].
 
 Kind regards,<br/>
