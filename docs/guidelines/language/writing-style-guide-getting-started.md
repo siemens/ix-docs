@@ -12,7 +12,7 @@ description: 'The writing style guide provides support for content designers, wr
 
 ## Basics
 
-Dive into the fundamental principles of UX writing, where you'll learn how to create text that enhances user experience by being clear, concise, and user-friendly. This section lays the groundwork for all your UX writing endeavors. [Read more](./basics)
+Dive into the fundamental principles of UX writing, where you'll learn how to create text that enhances user experience by being clear, concise, and user-friendly. This section lays the groundwork for all your UX writing endeavors. [Read more](#)
 
 ## Grammar and vocabulary
 
