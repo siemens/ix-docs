@@ -141,18 +141,14 @@ Avoid hiding or making it difficult to find options for managing communication p
 
 ## Best practice example for New Terms of Use
 
-**Subject**
-
+**Subject**<br/>
 [App name] | New Terms of Use
 
 **Body**
 
-Dear [App name] user,
-
-There is an update to the Terms of Use for your [App name] account.
-
-What you need to do
-
+Dear [App name] user,<br/>
+There is an update to the Terms of Use for your [App name] account.<br/>
+What you need to do<br/>
 To continue using [App name], read and agree to the new Terms of Use by January 31, 2026.
 
 Button: Open Terms of Use
@@ -167,23 +163,19 @@ Your [App name] team
 
 ## Best practice example for customer survey invitation
 
-**Subject**
-
+**Subject**<br/>
 [App name] | Tell us about your app experience
 
 **Body**
 
-Dear [App name] user,
-
-We’ve put together a short survey to gather your thoughts on various aspects of [App name], such as usability, performance and features.
-
-You can participate in the anonymous survey by March 2, 2025.
+Dear [App name] user,<br/>
+We’ve put together a short survey to gather your thoughts on various aspects of [App name], such as usability, performance and features.<br/>
+You can participate in the anonymous survey by March 2, 2025.<br/>
 This short survey will take approximately 5–7 minutes to complete.
 
 Button: Participate in the survey
 
-Thank you for helping us improve [App name].
-
+Thank you for helping us improve [App name].<br/>
 If you have any questions or need assistance, contact our team at [email address].
 
 Kind regards,<br/>
