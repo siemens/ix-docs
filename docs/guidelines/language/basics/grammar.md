@@ -22,6 +22,8 @@ Verbs can take many forms (upload, uploading, uploaded, has been uploaded, is be
 - File uploaded.
 
 </div>
+</div>
+
 <div className="donts" markdown="true">
 
 - While the software is being updated, continue working in offline mode.
@@ -45,6 +47,8 @@ We want our users to immediately understand who is doing what in our application
 - Select Start to begin calibration.
 
 </div>
+</div>
+
 <div className="donts" markdown="true">
 
 - The configuration file is opened.
@@ -73,6 +77,8 @@ Use passive voice when the action is more important for the user, or when you wa
 - The payment could not be processed.
 
 </div>
+</div>
+
 <div className="donts" markdown="true">
 
 - You were logged out because you were inactive.
@@ -82,6 +88,7 @@ Use passive voice when the action is more important for the user, or when you wa
 - You forgot to fill in this field.
 - You entered invalid payment information.
 
+</div>
 </div>
 
 ## Use imperative (command) mood
@@ -96,6 +103,8 @@ Use the imperative mood (command form) for buttons and action-oriented UI elemen
 - Enter shipping address
 
 </div>
+</div>
+
 <div className="donts" markdown="true">
 
 - To save changes, select Save
@@ -119,7 +128,7 @@ There are times when we need to specify something happened in the past or explai
 - Backup will run tonight at 23:00.
 
 </div>
-
+</div>
 
 ### Scheduled actions
 
@@ -132,6 +141,7 @@ There are times when we need to specify something happened in the past or explai
 - Your report will be ready by 17:00 today.
 
 </div>
+</div>
 
 ### Warnings
 
@@ -143,6 +153,7 @@ There are times when we need to specify something happened in the past or explai
 - You will lose access after logout.
 
 </div>
+</div>
 
 ### Notifications
 
@@ -153,6 +164,7 @@ There are times when we need to specify something happened in the past or explai
 - Account created on March 15.
 - Download completed at 09:30.
 
+</div>
 </div>
 
 ### Toast and confirmation messages
@@ -166,6 +178,7 @@ There are times when we need to specify something happened in the past or explai
 - Profile updated
 - Team member assigned
 
+</div>
 </div>
 
 ## Articles (a / an / the)
@@ -183,6 +196,8 @@ Use articles in instructional texts, messages and explanations.
 - Choose a network from the list.
 
 </div>
+</div>
+
 <div className="donts" markdown="true">
 
 - System detected error in configuration.
@@ -202,6 +217,8 @@ Omit articles in short UI labels, such as buttons, titles and field names, where
 - Open Settings menu.
 
 </div>
+</div>
+
 <div className="donts" markdown="true">
 
 - Click the Start button to begin.
@@ -224,6 +241,8 @@ Use grammatically correct singular and plural forms to match the quantity being 
 - Hazards: 1
 
 </div>
+</div>
+
 <div className="donts" markdown="true">
 
 - 1 files selected
@@ -245,6 +264,8 @@ Use "No" for empty states instead of “0”.
 - No results available
 
 </div>
+</div>
+
 <div className="donts" markdown="true">
 
 - 0 items found
@@ -269,6 +290,8 @@ Use "if" for uncertain conditions or user choices, and "when" for inevitable or 
 - If you delete this file, it cannot be recovered.
 
 </div>
+</div>
+
 <div className="donts" markdown="true">
 
 - When you close this window, unsaved changes will be lost.
