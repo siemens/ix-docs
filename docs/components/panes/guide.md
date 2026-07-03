@@ -52,11 +52,21 @@ Panes have two states: collapsed and expanded. The appearance of the states vari
 
 ## Dos and Don’ts
 
-- Do use panes to organize your content and guide your users' attention
-- Do use panes to display different views within a single screen
-- Do use panes to expand/collapse content or hide/reveal content
-- Don’t use panes for a small amount of content
-- Don’t use panes for content that should stay visible
+<div class="dos-and-donts">
+  <div class="dos">
+    <ul aria-label="Recommended practices">
+      <li>Do use panes to organize your content and guide your users' attention</li>
+      <li>Do use panes to display different views within a single screen</li>
+      <li>Do use panes to expand/collapse content or hide/reveal content</li>
+    </ul>
+  </div>
+  <div class="donts">
+    <ul aria-label="Practices to avoid">
+      <li>Don’t use panes for a small amount of content</li>
+      <li>Don’t use panes for content that should stay visible</li>
+    </ul>
+  </div>
+</div>
 
 ## Related
 

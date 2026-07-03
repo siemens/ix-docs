@@ -22,7 +22,17 @@ Here the chatbot is immediately apologetic and tells the user they cannot comple
 Here, although it’s clear what the user wants, they can’t give the chatbot the information it needs to fulfill the request. In this situation, the chatbot immediately says they cannot carry out the task, explains why, and then tells the user where to find a solution. We recommend this three-step approach for chatbot responses and for error messages in general.   
 ## Dos and Don’ts
 
-- Do assume your chatbot makes mistakes  
-- Do try to ‘break’ your chatbot in testing   
-- Do train your chatbot to tell users immediately if they cannot complete a task     
-- Don’t forget to add a disclaimer stating that information could be incorrect
+<div class="dos-and-donts">
+  <div class="dos">
+    <ul aria-label="Recommended practices">
+      <li>Do assume your chatbot makes mistakes</li>
+      <li>Do try to ‘break’ your chatbot in testing</li>
+      <li>Do train your chatbot to tell users immediately if they cannot complete a task</li>
+    </ul>
+  </div>
+  <div class="donts">
+    <ul aria-label="Practices to avoid">
+      <li>Don’t forget to add a disclaimer stating that information could be incorrect</li>
+    </ul>
+  </div>
+</div>
