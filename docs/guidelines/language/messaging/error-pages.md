@@ -27,45 +27,61 @@ We follow these templates when creating our main error pages. Although some of t
 
 Use the official code and definition so users can search for code terms and information themselves.
 
-<div className="dos-and-donts" markdown>
-<div className="dos" markdown>
-- 401 Unauthorized
+<div className="dos-and-donts">
+<div className="dos">
+  <ul aria-label="Recommended practices">
+    <li>401 Unauthorized</li>
+  </ul>
 </div>
-<div className="donts" markdown>
-- 401 Unlawful
+<div className="donts">
+  <ul aria-label="Practices to avoid">
+    <li>401 Unlawful</li>
+  </ul>
 </div>
 </div>
 
 Use language suitable for all target users, including non-native English speakers.
 
-<div className="dos-and-donts" markdown>
-<div className="dos" markdown>
-- This page is not available right now. Try again later.
+<div className="dos-and-donts">
+<div className="dos">
+  <ul aria-label="Recommended practices">
+    <li>This page is not available right now. Try again later.</li>
+  </ul>
 </div>
-<div className="donts" markdown>
-- An unforeseen server-side condition prevented the fruitful processing of your request. This indicates an issue within our infrastructure, not a client-side input error.
+<div className="donts">
+  <ul aria-label="Practices to avoid">
+    <li>An unforeseen server-side condition prevented the fruitful processing of your request. This indicates an issue within our infrastructure, not a client-side input error.</li>
+  </ul>
 </div>
 </div>
 
 Avoid jokes, memes, emojis or casual wording in error pages for industrial applications.
 
-<div className="dos-and-donts" markdown>
-<div className="dos" markdown>
-- 401 Unauthorized
+<div className="dos-and-donts">
+<div className="dos">
+  <ul aria-label="Recommended practices">
+    <li>401 Unauthorized</li>
+  </ul>
 </div>
-<div className="donts" markdown>
-- Hold on! VIP access only! 🎩✨
+<div className="donts">
+  <ul aria-label="Practices to avoid">
+    <li>Hold on! VIP access only! 🎩✨</li>
+  </ul>
 </div>
 </div>
 
 Use sentence casing within the description with minimal punctuation and formatting.
 
-<div className="dos-and-donts" markdown>
-<div className="dos" markdown>
-- There is an error on this page. Try again later.
+<div className="dos-and-donts">
+<div className="dos">
+  <ul aria-label="Recommended practices">
+    <li>There is an error on this page. Try again later.</li>
+  </ul>
 </div>
-<div className="donts" markdown>
-- There <ins>is</ins> an ERROR on this **page**! Try again later.
+<div className="donts">
+  <ul aria-label="Practices to avoid">
+    <li>There <ins>is</ins> an ERROR on this **page**! Try again later.</li>
+  </ul>
 </div>
 </div>
 

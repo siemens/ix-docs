@@ -42,12 +42,22 @@ Toasts are UI elements where an event causes a small text field to appear on scr
 
 ## Dos and Don’ts
 
-- Do use toasts to provide contextual tips and shortcuts for users
-- Do use toasts to instantly inform a user about the outcome of an action
-- Do include shortcuts to undo an action immediately after it’s taken
-- Do stick with a consistent position for toasts within the same app and avoid interchanging their positions
-- Don’t use toasts for high-priority or critical alerts that prevent the user from continuing their work (use a [modal](../messagebar) instead)
-- Don’t edit or reuse icons or icon colors from the four predefined toast types when creating custom toasts
+<div class="dos-and-donts">
+  <div class="dos">
+    <ul aria-label="Recommended practices">
+      <li>Do use toasts to provide contextual tips and shortcuts for users</li>
+      <li>Do use toasts to instantly inform a user about the outcome of an action</li>
+      <li>Do include shortcuts to undo an action immediately after it’s taken</li>
+      <li>Do stick with a consistent position for toasts within the same app and avoid interchanging their positions</li>
+    </ul>
+  </div>
+  <div class="donts">
+    <ul aria-label="Practices to avoid">
+      <li>Don’t use toasts for high-priority or critical alerts that prevent the user from continuing their work (use a [modal](../messagebar) instead)</li>
+      <li>Don’t edit or reuse icons or icon colors from the four predefined toast types when creating custom toasts</li>
+    </ul>
+  </div>
+</div>
 
 ## Related
 
