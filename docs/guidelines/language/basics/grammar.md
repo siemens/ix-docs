@@ -25,7 +25,7 @@ Verbs can take many forms (upload, uploading, uploaded, has been uploaded, is be
 <div className="donts" markdown="true">
 
 - While the software is being updated, continue working in offline mode.
-- was loading / has been loaded / will be being loaded
+- was loading / has been loaded
 - File has been uploaded.
 
 </div>
@@ -56,11 +56,11 @@ We want our users to immediately understand who is doing what in our application
 </div>
 </div>
 
-## Understand when to use passive voice
+## Use passive voice thoughtfully
 
-While active voice is preferred within UI text, there are specific situations where passive voice is more appropriate and beneficial.
+While active voice is preferred within UI text, there are specific situations where passive voice is more appropriate.
 
-Use passive voice when the action is more important for the user, or when you want to make system errors or actions less personal. Typically, passive voice is used for system errors or unknown or unexpected events, and is formed using “to be” + past participle (was created, is processed). It is also strategically used to avoid a blaming tone towards users, such as: “The report could not be saved” instead of “You failed to save the report.”
+Use passive voice when the action is more important for the user, or when you want to make system errors or actions less personal. Typically, passive voice is used for system errors or unknown or unexpected events, and is formed using “to be” + past participle (was created, is processed). It is also strategically used to avoid a blaming tone towards users, such as: “The report could not be saved.” instead of “You failed to save the report.”
 
 <div className="dos-and-donts" markdown="true">
 <div className="dos" markdown="true">
@@ -99,7 +99,7 @@ Use the imperative mood (command form) for buttons and action-oriented UI elemen
 </div>
 <div className="donts" markdown="true">
 
-- To save changes, select “Save”
+- To save changes, select Save
 - Click here to delete items
 - You should enter your shipping address
 
@@ -112,30 +112,54 @@ There are times when we need to specify something happened in the past or explai
 
 ### Reminders
 
+<div className="dos-and-donts" markdown="true">
+<div className="dos" markdown="true">
+
 - Your trial will expire in 3 days.
 - Maintenance will begin at 14:00 tomorrow.
 - Backup will run tonight at 23:00.
 
+</div>
+
+
 ### Scheduled actions
+
+<div className="dos-and-donts" markdown="true">
+<div className="dos" markdown="true">
 
 - Reports will be sent on April 1.
 - Your license will renew next month.
 - Data will sync in 5 minutes.
 - Your report will be ready by 17:00 today.
 
+</div>
+
 ### Warnings
+
+<div className="dos-and-donts" markdown="true">
+<div className="dos" markdown="true">
 
 - Unsaved changes will be lost.
 - This action will delete all data.
 - You will lose access after logout.
 
+</div>
+
 ### Notifications
+
+<div className="dos-and-donts" markdown="true">
+<div className="dos" markdown="true">
 
 - Your password changed 2 hours ago.
 - Account created on March 15.
 - Download completed at 09:30.
 
+</div>
+
 ### Toast and confirmation messages
+
+<div className="dos-and-donts" markdown="true">
+<div className="dos" markdown="true">
 
 - Settings saved
 - 12 files exported
@@ -143,11 +167,13 @@ There are times when we need to specify something happened in the past or explai
 - Profile updated
 - Team member assigned
 
-## Articles (a/an/the)
+</div>
 
-Articles help users understand whether you're referring to something specific (the) or general (a/an). They guide users to the correct element or action when it may be unclear.
+## Articles (a / an / the)
 
-Use articles in instructional text, messages, explanations.
+Articles help users understand whether you're referring to something specific (the) or general (a / an). They guide users to the correct element or action when it may be unclear.
+
+Use articles in instructional texts, messages and explanations.
 
 <div className="dos-and-donts" markdown="true">
 <div className="dos" markdown="true">
@@ -229,7 +255,7 @@ Use "No" for empty states instead of “0”.
 </div>
 </div>
 
-## Conditional statements (if/when)
+## Conditional statements (if / when)
 
 Use "if" for uncertain conditions or user choices, and "when" for inevitable or expected events. This distinction helps users understand whether something might happen or will definitely happen when explaining system behavior and consequences.
 

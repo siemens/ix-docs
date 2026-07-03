@@ -12,7 +12,7 @@ description: For our UI text, we use natural, conversational language to talk to
 # 
 
 ## Use one language variant
-We use American English for our UI text and recommend choosing one language variation per product to maintain consistency with spelling and grammar.
+We use American English for our UI text and recommend choosing one language variat per product to maintain consistency with spelling and grammar.
 
 <div className="dos-and-donts" markdown="true">
 <div className="dos" markdown="true">
@@ -39,12 +39,12 @@ Use sentences only when necessary and write in short, scannable segments instead
 <div className="dos-and-donts" markdown="true">
 <div className="dos" markdown="true">
 
-- Select “Submit” to save changes.
+- Select Submit to save changes.
 
 </div>
 <div className="donts" markdown="true">
 
-- Please select the ‘Submit’ button to save your changes so you do not lose data.
+- Please select the Submit button to save your changes so you do not lose data.
 
 </div>
 </div>
@@ -127,12 +127,11 @@ Use positive shortened word forms such as “we’ve” and “you’ll” (cont
 <div className="dos-and-donts" markdown="true">
 <div className="dos" markdown="true">
 
-- From version 3.2, you’ll be able to configure thresholds directly at your device.
 - you’ll
-- We’ve updated our features to give you more control over your events and alarms.
 - we’ve
 
 </div>
+
 <div className="donts" markdown="true">
 
 - you will
@@ -141,7 +140,7 @@ Use positive shortened word forms such as “we’ve” and “you’ll” (cont
 </div>
 </div>
 
-Avoid using negative shortened word forms such as “can’t” and “won’t” (contractions) as they can sound too casual and direct.
+Avoid using negative shortened word forms such as “can’t” and “won’t” as they can sound too casual and direct.
 
 <div className="dos-and-donts" markdown="true">
 <div className="dos" markdown="true">

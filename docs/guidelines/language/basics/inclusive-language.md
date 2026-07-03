@@ -13,15 +13,15 @@ description: Use language that respects all users by avoiding stereotypes, biase
 
 ## General rules
 
-Use clear, neutral and inclusive language, avoiding stereotypes or terms with social history tied to ethnicity, nationality or cultural identity. [Voice and tone](#)
+Use clear, neutral and inclusive language, avoiding stereotypes or terms with social history tied to ethnicity, nationality or cultural identity. See: [Voice and tone](#)
 
-Use terms that describe processes, technology or jobs, not people or users. [User management](../menu-functions-and-ui-labels/user-management.md)
+Use terms that describe processes, technology or jobs, not people or users. See: [User management](../menu-functions-and-ui-labels/user-management.md)
 
-Avoid idioms, metaphors or slang that may not translate well across cultures or abilities. [Vocabulary basics](#)
+Avoid idioms, metaphors or slang that may not translate well across cultures or abilities. See: [Vocabulary basics](#)
 
 ## Non-inclusive language list
 
-Below is a list of common UI terms and action labels to avoid and includes recommended alternatives for your product’s UI.
+Below is a list of common UI terms and action labels to avoid and includes recommended alternatives for your product’s UI text.
 
 ### Disclaimer and content warning
 
@@ -32,7 +32,7 @@ Note: The list contains words that may be considered offensive, sensitive or ina
 ## Gender
 
 | Non-inclusive terms | Explanation | Alternative terms |
-| --- | --- | --- |
+| ---- | ----- | ---- |
 | daughter board | Reinforces traditional gender hierarchies in technical contexts. | - auxiliary / ancillary board<br/>- secondary board |
 | male / female connector | Reinforces traditional gender hierarchies in technical contexts. Modern inclusive-language frameworks avoid gendered terms. | - plug / external<br/>- socket / internal<br/>- jack |
 | male / female thread | Reinforces traditional gender hierarchies in technical contexts. Modern inclusive-language frameworks avoid gendered terms. | - external / internal thread |
@@ -42,7 +42,7 @@ Note: The list contains words that may be considered offensive, sensitive or ina
 ## Ability
 
 | Non-inclusive terms | Explanation | Alternative terms |
-| --- | --- | --- |
+| ---- | ----- | ---- |
 | blind / double blind | Offensive to people who are blind or have other visual impairments. | - anonymous<br/>- dual anonymous |
 | blind review | Equates blindness with ignorance. | - anonymous review |
 | disable(d) | Sometimes used in technical contexts to signal something is not working. Insensitive to people with disabilities. | - turn off<br/>- uncheck<br/>- unavailable<br/>- clear |
@@ -56,17 +56,17 @@ Note: The list contains words that may be considered offensive, sensitive or ina
 ## Age
 
 | Non-inclusive term | Explanation | Alternative terms |
-| --- | --- | --- |
+| ---- | ----- | ---- |
 | grandfathered in | Refers to an exception that allows for old rules to be used. Linked to racist voter-suppression laws and exclusion. | - legacy status<br/>- exemption / exempt |
 
 ## Ethnicity
 
 | Non-inclusive terms | Explanation | Alternative terms |
-| --- | --- | --- |
+| ---- | ----- | ---- |
 | black | This term is particularly sensitive in discussions about race and language and the goal is to remove all racial connotations from technical terms.<br/><br/>Never use when black means unknown, mysterious or bad.<br/>Use for color references and visual properties only. | - dark<br/>- dark mode |
 | black box testing | Reinforces the association with mystery and concealment. | - behavioral testing<br/>- opaque-box testing<br/>- closed-box testing<br/>- functional testing |
 | black hat (hacker) | Reinforces the association with illegality. | - criminal hacker<br/>- unethical hacker<br/>- malicious actor<br/>- unauthorized hacker |
-| Blacklist | Reinforces the association with exclusion and privilege. | - deny list<br/>- reject list<br/>- untrusted list<br/>- blocked list<br/>- exclude (include)<br/>- block (allow) |
+| blacklist | Reinforces the association with exclusion and privilege. | - deny list<br/>- reject list<br/>- untrusted list<br/>- blocked list<br/>- exclude (include)<br/>- block (allow) |
 | gray hat (hacker) | Reinforces racial color coding and oversimplifies the legality and ethics of the role. | - ethical hacker<br/>- hacktivist<br/>- security researcher |
 | native (feature) | Refers to something designed specifically for a particular platform. Still extensively used but as it has cultural associations, alternatives are being introduced. | - built-in<br/>- default<br/>- first-party<br/>- platform-specific<br/>- integrated |
 | red team | Used as a derogatory term for Native Americans, reinforcing harmful racial stereotypes. | - attack team<br/>- adversary team<br/>- offensive security team |
