@@ -22,7 +22,6 @@ Verbs can take many forms (upload, uploading, uploaded, has been uploaded, is be
 - File uploaded.
 
 </div>
-</div>
 
 <div className="donts" markdown="true">
 
@@ -46,7 +45,6 @@ We want our users to immediately understand who is doing what in our application
 - Enter your credentials to continue.
 - Select Start to begin calibration.
 
-</div>
 </div>
 
 <div className="donts" markdown="true">
@@ -77,7 +75,6 @@ Use passive voice when the action is more important for the user, or when you wa
 - The payment could not be processed.
 
 </div>
-</div>
 
 <div className="donts" markdown="true">
 
@@ -102,7 +99,6 @@ Use the imperative mood (command form) for buttons and action-oriented UI elemen
 - Delete items
 - Enter shipping address
 
-</div>
 </div>
 
 <div className="donts" markdown="true">
@@ -196,7 +192,6 @@ Use articles in instructional texts, messages and explanations.
 - Choose a network from the list.
 
 </div>
-</div>
 
 <div className="donts" markdown="true">
 
@@ -216,7 +211,6 @@ Omit articles in short UI labels, such as buttons, titles and field names, where
 - Click Start to begin.
 - Open Settings menu.
 
-</div>
 </div>
 
 <div className="donts" markdown="true">
@@ -241,7 +235,6 @@ Use grammatically correct singular and plural forms to match the quantity being 
 - Hazards: 1
 
 </div>
-</div>
 
 <div className="donts" markdown="true">
 
@@ -263,7 +256,6 @@ Use "No" for empty states instead of “0”.
 - No devices connected
 - No results available
 
-</div>
 </div>
 
 <div className="donts" markdown="true">
@@ -289,7 +281,6 @@ Use "if" for uncertain conditions or user choices, and "when" for inevitable or 
 - When calibration finishes, the device will be ready.
 - If you delete this file, it cannot be recovered.
 
-</div>
 </div>
 
 <div className="donts" markdown="true">
