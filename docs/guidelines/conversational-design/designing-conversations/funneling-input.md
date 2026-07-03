@@ -33,6 +33,16 @@ Presenting options or choices for the user to select from also helps to funnel q
 
 ## Dos and Don’ts
 
--	Do train your chatbot to guide users to their point  
--	Do test your chatbot with vague queries   
--	Don’t assume users know what to ask for 
+<div class="dos-and-donts">
+  <div class="dos">
+    <ul aria-label="Recommended practices">
+      <li>Do train your chatbot to guide users to their point</li>
+      <li>Do test your chatbot with vague queries</li>
+    </ul>
+  </div>
+  <div class="donts">
+    <ul aria-label="Practices to avoid">
+      <li>Don’t assume users know what to ask for</li>
+    </ul>
+  </div>
+</div>
