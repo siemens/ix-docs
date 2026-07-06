@@ -162,7 +162,7 @@ A new device has been registered to your account: [{'user@example.com'}]<br/>
 Device name: Laptop123<br/>
 Device ID: ABCDEFGHI<br/>
 Operating system: Windows<br/>
-Date: November 11, 2026 at 14:32
+Date: November 11, 2026 at 14:32<br/>
 
 Review your registered devices here: [Link]
 

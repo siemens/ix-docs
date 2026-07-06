@@ -19,7 +19,7 @@ Include system or product lifecycle events, such as upcoming updates, directly i
 
 - [App name] | Version 2.0 available
 - [App name] | End-of-life announcement for "legacy control panel model X-200"
-- [App name] | Test version 2.1 available for staging environment
+- [App name] | Test Version 2.1 available for staging environment
 - [App name] | Scheduled maintenance September 24, 2026, 01:00–13:00
 
 </div>
@@ -55,7 +55,7 @@ Include installation or update instructions with clear links, buttons or next st
 <div className="dos" markdown="true">
 
 - Download the update via the [App name] portal and restart your system.<br/>
-  Button: Open [App name]
+  Button: Open
 
 </div>
 </div>
@@ -112,7 +112,7 @@ Include the test environment details.
 <div className="dos-and-donts" markdown="true">
 <div className="dos" markdown="true">
 
-- The staging release is now available at [web address]
+- The staging release is now available at [web address].
 
 </div>
 </div>
@@ -146,34 +146,27 @@ Use instructions for preparation or follow-up.
 <div className="dos" markdown="true">
 
 - Ensure backups are completed before the maintenance window.<br/>
-  Button: Open [App name] drive manager
+  Button: Open Drive manager
 
 </div>
 </div>
 
 ## Best practice example for new version
 
-**Subject**
-
+**Subject**<br/>
 [App name] | Version 2.1.0 available
 
-**Body**
-
-Dear [App name] user,
-
-We’re excited to announce the release of Version 2.1.0.
-
-What’s new
-
-- Enhanced firewall rules for improved security
-- Better logging for system diagnostics
-
-What you need to do
-
-- Download the update via the [App name] portal
+**Body**<br/>
+Dear [App name] user,<br/>
+We’re excited to announce the release of Version 2.1.0.<br/>
+What’s new<br/>
+- Enhanced firewall rules for improved security<br/>
+- Better logging for system diagnostics<br/>
+What you need to do<br/>
+- Download the update via the [App name] portal<br/>
 - Restart your system to apply changes
 
-Button: Open [App name]
+Button: Open
 
 If you have any questions or need assistance, contact our team at [email address].
 
@@ -185,6 +178,6 @@ Your [App name] team
 
 ## Related
 
-- [Version](../formatting/software-versions.mdx)
+- [Software versions](../formatting/software-versions.mdx)
 - [Onboarding](../menu-functions-and-ui-labels/onboarding.md)
 - [What’s new announcements](../menu-functions-and-ui-labels/whats-new-announcements.md)

@@ -3,7 +3,7 @@ sidebar_position: 7
 sidebar_label: General information and administrative emails
 title: General information and administrative emails
 doc-type: 'banner'
-description: 'In everyday operations, clear communication is key to maintaining transparency and trust. General notifications - covering administrative details, confirmations, and other essential updates outside specific operational categories - help keep stakeholders informed and processes organized. Well-structured messaging ensures clarity, reduces confusion, and supports smooth business interactions.'
+description: 'In everyday operations, clear communication is key to maintaining transparency and trust. General notifications - covering administrative details, confirmations, and other essential updates outside specific operational categories - help keep stakeholders informed and processes organized. Well-structured messaging ensures clarity, reduces confusion and supports smooth business interactions.'
 ---
 
 #
@@ -144,8 +144,7 @@ Avoid hiding or making it difficult to find options for managing communication p
 **Subject**<br/>
 [App name] | New Terms of Use
 
-**Body**
-
+**Body**<br/>
 Dear [App name] user,<br/>
 There is an update to the Terms of Use for your [App name] account.<br/>
 What you need to do<br/>
@@ -166,8 +165,7 @@ Your [App name] team
 **Subject**<br/>
 [App name] | Tell us about your app experience
 
-**Body**
-
+**Body**<br/>
 Dear [App name] user,<br/>
 We’ve put together a short survey to gather your thoughts on various aspects of [App name], such as usability, performance and features.<br/>
 You can participate in the anonymous survey by March 2, 2025.<br/>

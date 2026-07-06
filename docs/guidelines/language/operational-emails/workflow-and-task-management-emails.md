@@ -79,10 +79,10 @@ Avoid vague statements about impact or required actions.
 <div className="dos-and-donts" markdown="true">
 <div className="dos" markdown="true">
 
-- This update will require a restart and cause 5 minutes of downtime for "[Asset name]".
+- This update will require a restart and cause 5 minutes of downtime for [Asset name].
 
 - Software update<br/>
-&nbsp;&nbsp;&bull; Software: Update to version 4.3.6<br/>
+&nbsp;&nbsp;&bull; Software: Update to Version 4.3.6<br/>
 &nbsp;&nbsp;&bull; Date: November 10, 2025<br/>
 &nbsp;&nbsp;&bull; Time: 01:00–01:05 (UTC+2)<br/>
 &nbsp;&nbsp;&bull; Impact: Brief downtime (approx. 5 minutes)
@@ -103,7 +103,7 @@ Include specific and quantifiable progress updates whenever possible.
 <div className="dos" markdown="true">
 
 - Software patch deployment for SCADA system is 75% complete.
-- Maintenance for "[Production Line 3]" is currently underway, estimated completion in 2 hours (10:00 UTC+2).
+- Maintenance for [production line] is currently underway, estimated completion in 2 hours (10:00 UTC+2).
 
 </div>
 </div>
@@ -145,27 +145,21 @@ Avoid sending repetitive updates or leaving long gaps without communication duri
 
 ## Best practice example for task assignment
 
-**Subject**
-
+**Subject**<br/>
 [App name] | Task #234 assigned to you
 
-**Body**
-
-Dear [App name] user,
-
-Task assigned
-
-- Task ID: 462
-- Task description: Spare part replacement for sensor 672_A
-- Assigned by: Operator
-- Assigned: February 10, 2026
+**Body**<br/>
+Dear [App name] user,<br/>
+Task assigned<br/>
+- Task ID: 462<br/>
+- Task description: Spare part replacement for sensor 672_A<br/>
+- Assigned by: Operator<br/>
+- Assigned: February 10, 2026<br/>
 - Due date: February 15, 2026
-
-What you need to do
-
+What you need to do<br/>
 Open Task list for further task details.
 
-Button: Open task list
+Button: Open Task list
 
 If you have any questions or need assistance, contact our team at [email address].
 
@@ -179,22 +173,16 @@ Your [App name] team
 
 ## Best practice example for overdue task reminder
 
-**Subject**
-
+**Subject**<br/>
 [App name] | Immediate action needed | Overdue task #1234 "Firmware update"
 
-**Body**
-
-Dear [App name] user,
-
-Overdue task
-
-- Task: Firmware update V5.6.01
-- Due: November 22, 2025
-
-What you need to do
-
-- Log in and perform update in Task manager
+**Body**<br/>
+Dear [App name] user,<br/>
+Overdue task<br/>
+- Task: Firmware update V5.6.01<br/>
+- Due: November 22, 2025<br/>
+What you need to do<br/>
+- Log in and perform update in Task manager<br/>
 
 Button: Open Task manager
 

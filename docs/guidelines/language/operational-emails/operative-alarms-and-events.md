@@ -47,7 +47,7 @@ Be as specific as possible and tell users exactly what happened (what, when, how
 <div className="dos-and-donts" markdown="true">
 <div className="dos" markdown="true">
 
-- Critical alarm immediate attention required: Power supply failure detected in Plant A.
+- Critical alarm immediate attention required: Power supply failure detected in Plant A.<br/>
   &nbsp;&nbsp;&bull; Power supply failure detected in Plant A.<br/>
   &nbsp;&nbsp;&bull; Event details: Overload detected on Transformer T-102 at 14:35 (UTC+2)<br/>
   &nbsp;&nbsp;&bull; Location: Nuremberg facility 32/A.
@@ -113,32 +113,24 @@ Explain if and how users can resolve issues or act with links, buttons, and sugg
 
 ## Best practice example for alarm email
 
-**Subject**
-
+**Subject**<br/>
 [App name] | Immediate action required | Batch threshold exceeded
 
-**Body**
-
-Dear [App name] user,
-
-Batch BTH-20260304-A127 threshold exceeded:
-
-- Parameter: Temperature
-- Current value: 87.3°C
-- Threshold limit: 85.0°C
-- Deviation: +2.3°C (+2.7%)
-- Duration: 00:03:47
-
-Batch details:
-
-- Batch ID: BTH-20260304-A127
-- Product line: Beverage Mixing Line 3
-- Product: Orange Juice Concentrate
-- Location: Plant A, Nuremberg facility
-- Time: 2026-03-04 08:55:21
-
-What you need to do
-
+**Body**<br/>
+Dear [App name] user,<br/>
+Batch BTH-20260304-A127 threshold exceeded:<br/>
+- Parameter: Temperature<br/>
+- Current value: 87.3°C<br/>
+- Threshold limit: 85.0°C<br/>
+- Deviation: +2.3°C (+2.7%)<br/>
+- Duration: 00:03:47<br/>
+Batch details:<br/>
+- Batch ID: BTH-20260304-A127<br/>
+- Product line: Beverage Mixing Line 3<br/>
+- Product: Orange Juice Concentrate<br/>
+- Location: Plant A, Nuremberg facility<br/>
+- Time: 2026-03-04 08:55:21<br/>
+What you need to do<br/>
 - Open Batch list to stop processing or adjust thresholds.
 
 Button: Open Batch list
@@ -153,31 +145,23 @@ Kind regards,<br/>
 
 ## Best practice example for cyberattack notification
 
-**Subject**
-
+**Subject**<br/>
 [App name] | Immediate action required | Critical risk of cyber attacks
 
-**Body**
-
-Dear [App name] user,
-
-A new cyberattack has been detected in your monitored environment. Immediate attention is required.
-
-Event details
-
-- Attack type: Unauthorized access attempt
-- Location: Erlangen facility
-- Time: 2026-03-04 08:55:21
-
-What you need to do
-
-- Switch to backup security protocols immediately.
-- Confirm system status in the Security portal.
-- Review recent logs for suspicious activity.
-
+**Body**<br/>
+Dear [App name] user,<br/>
+A new cyberattack has been detected in your monitored environment. Immediate attention is required.<br/>
+Event details<br/>
+- Attack type: Unauthorized access attempt<br/>
+- Location: Erlangen facility<br/>
+- Time: 2026-03-04 08:55:21<br/>
+What you need to do<br/>
+- Switch to backup security protocols immediately.<br/>
+- Confirm system status in the Security portal.<br/>
+- Review recent logs for suspicious activity.<br/>
 We will continue monitoring the system and provide updates as needed.
 
-Button: Open [App name]
+Button: Open
 
 If you have any questions or need assistance, contact our team at [email address].
 
@@ -193,5 +177,5 @@ Your [App name] team
 - [Time and time zones](../formatting/timezones.mdx)
 - [Time related messages](../messaging/time-related-messages.mdx)
 - [Error messages](../messaging/error-messages.mdx)
-- [Warnings](../messaging/warning-messages.mdx)
+- [Warning messages](../messaging/warning-messages.mdx)
 - [Non-critical information messages](../messaging/non-critical-information-messages.mdx)
