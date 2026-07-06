@@ -53,20 +53,20 @@ For more information about writing effective helper texts or labels, see our [UX
 
 ## Dos and Don’ts
 
-<div className="dos-and-donts" markdown="true">
-<div className="dos" markdown="true">
-
-- Do use progress indicators consistently for similar processes
-- Do use progress indicators for determinate processes where progress can be measured (otherwise use [spinners](../spinner/index.mdx))
-- Do use linear progress indicators in horizontal layouts and circular indicators in compact spaces or centered layouts
-- Do keep your slot content short, especially for the centered alignment (use helper texts and labels for lengthier content)
-
+<div className="dos-and-donts">
+<div className="dos">
+  <ul aria-label="Recommended practices">
+    <li>Do use progress indicators consistently for similar processes</li>
+    <li>Do use progress indicators for determinate processes where progress can be measured (otherwise use [spinners](../spinner/index.mdx))</li>
+    <li>Do use linear progress indicators in horizontal layouts and circular indicators in compact spaces or centered layouts</li>
+    <li>Do keep your slot content short, especially for the centered alignment (use helper texts and labels for lengthier content)</li>
+  </ul>
 </div>
-<div className="donts" markdown="true">
-
-- Don't use progress indicators for operations shorter than one second
-- Don't only indicate progress completion with the indicator without clear task messages, e.g. success toasts or displaying the loaded content
-
+<div className="donts">
+  <ul aria-label="Practices to avoid">
+    <li>Don't use progress indicators for operations shorter than one second</li>
+    <li>Don't only indicate progress completion with the indicator without clear task messages, e.g. success toasts or displaying the loaded content</li>
+  </ul>
 </div>
 </div>
 

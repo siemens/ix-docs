@@ -52,12 +52,22 @@ Chips take a default, hover, focused or active state with a varying background c
 
 ## Dos and Don’ts
 
-- Do use chips to tag and categorize so users can easily organize and filter content
-- Do ensure proper color contrast between chip background and text/icon with the custom variant to support readability
-- Do consider chip spacing for easy tapping or selecting with mobiles and desktops
-- Don’t overuse chips as this leads to cluttered and overwhelming interfaces
-- Don’t use different styles for chips with the same or similar use
-- Don’t use chips without any interaction (we recommend pills instead)
+<div class="dos-and-donts">
+  <div class="dos">
+    <ul aria-label="Recommended practices">
+      <li>Do use chips to tag and categorize so users can easily organize and filter content</li>
+      <li>Do ensure proper color contrast between chip background and text/icon with the custom variant to support readability</li>
+      <li>Do consider chip spacing for easy tapping or selecting with mobiles and desktops</li>
+    </ul>
+  </div>
+  <div class="donts">
+    <ul aria-label="Practices to avoid">
+      <li>Don’t overuse chips as this leads to cluttered and overwhelming interfaces</li>
+      <li>Don’t use different styles for chips with the same or similar use</li>
+      <li>Don’t use chips without any interaction (we recommend pills instead)</li>
+    </ul>
+  </div>
+</div>
 
 ## Related
 

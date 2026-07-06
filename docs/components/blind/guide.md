@@ -49,11 +49,21 @@ For all blind variants, a default, hover, active and focused state is available.
 
 ## Dos and Don’ts
 
-- Do stay within the recommended number of blinds - between 3 and 7
-- Don’t use multi-line text in the header. The header section has a fixed height for single-line text entries
-- Don’t change the position of the chevron icon and the blind's label in the header
-- Don’t use a blind if there is only a single category to be displayed
-- Don’t use blinds to display hierarchically structured files or objects - rather use a tree for such cases
+<div class="dos-and-donts">
+  <div class="dos">
+    <ul aria-label="Recommended practices">
+      <li>Do stay within the recommended number of blinds - between 3 and 7</li>
+    </ul>
+  </div>
+  <div class="donts">
+    <ul aria-label="Practices to avoid">
+      <li>Don’t use multi-line text in the header. The header section has a fixed height for single-line text entries</li>
+      <li>Don’t change the position of the chevron icon and the blind's label in the header</li>
+      <li>Don’t use a blind if there is only a single category to be displayed</li>
+      <li>Don’t use blinds to display hierarchically structured files or objects - rather use a tree for such cases</li>
+    </ul>
+  </div>
+</div>
 
 ## Related
 
