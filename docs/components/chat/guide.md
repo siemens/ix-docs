@@ -1,6 +1,6 @@
 ---
 doc-type: 'tab-item'
-description: 'Usage guide for chat'
+description: 'Usage guide for chat.'
 ---
 
 # Chat - Usage

@@ -1,6 +1,6 @@
 ---
 doc-type: 'tab-item'
-description: 'Usage guide for AI message'
+description: 'Usage guide for AI message.'
 ---
 
 # AI message - Usage

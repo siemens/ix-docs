@@ -1,6 +1,6 @@
 ---
 doc-type: 'tab-item'
-description: 'Usage guide for user message'
+description: 'Usage guide for user message.'
 ---
 
 # User message - Usage
@@ -15,7 +15,7 @@ User messages display a single prompt submitted by users in a conversational thr
 
 ## Options
 
-- **Attachments:** When users attach files with their prompts, show those [attachments](../chat-attachment) with the message to maintain context even after multiple turns in the conversation. 
+- **Attachments:** When users attach files with their prompts, show those [attachments](../chat-attachment) with the message to maintain context even after multiple turns in the conversation.
 - **Message:** Show the original user input as the main message content without alterations.
 - **Actions:** Add only the few actions users need for their own prompt, e.g. copy, edit or open a compact overflow menu. We recommend using subtle tertiary [icon buttons](../icon-button) so actions stay secondary to the message.
 
