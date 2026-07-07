@@ -16,8 +16,14 @@ Chats are the outer containers that bring together the three building blocks of 
 ## Behavior in context
 
 - **Placement:** We recommend placing the chat either in the main content or in panes depending on the user goals:
-  - [Main content](../content): Use when the chat is the main focus of the experience, e.g. standalone or workspace copilots
-  - [Panes](../panes): Use when the chat is a secondary feature, e.g. for contextual help
+    - [Main content](../content): Use when the chat is the main focus of the experience, e.g. standalone or workspace copilots
+    - [Panes](../panes): Use when the chat is a secondary feature, e.g. for contextual help
+
+## Dos and Don’ts
+
+- Do use chats for conversational experiences that require users to read, review and act on messages in a thread
+- Do enable auto-scroll when users are already at the latest message, not when they are reading older messages
+- Don't add limits to how many messages are visible, instead always display full chat sessions
 
 ## Related
 
@@ -25,10 +31,5 @@ Chats are the outer containers that bring together the three building blocks of 
 - [User message](../user-message)
 - [AI message](../ai-message)
 - [Conversational design guidelines](../../guidelines/conversational-design/getting-started)
-- [SDL AI UX Guidelines](https://www.figma.com/design/KbgPxj7qLgngXkJfnDM4Ty/SDL-AI-UX-Guidelines?t=Kv2aR7JVmhNYuR1S-0) (can be accessed exclusively by Siemens AG employees)
+- [SDL AI UX Guidelines](https://www.figma.com/design/KbgPxj7qLgngXkJfnDM4Ty/SDL-AI-UX-Guidelines?t=Kv2aR7JVmhNYuR1S-0) (Siemens AG internal resource)
 
-## Dos and Don’ts
-
-- Do use chats for conversational experiences that require users to read, review and act on messages in a thread
-- Do enable auto-scroll when users are already at the latest message, not when they are reading older messages
-- Don't add limits to how many messages are visible, instead always display full chat sessions

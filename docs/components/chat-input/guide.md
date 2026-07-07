@@ -5,11 +5,11 @@ description: 'Usage guide for chat input.'
 
 # Chat input - Usage
 
-Chat inputs help users compose and send short conversational messages in chat experiences. We recommend using them for quick, iterative exchanges, not for multi-step data entries.
+In chat inputs users write and send messages . We recommend using them for quick, iterative exchanges, not for multi-step data entries.
 
 ![Anatomy component](https://www.figma.com/design/wEptRgAezDU1z80Cn3eZ0o/iX-Documentation-illustrations?node-id=7940-7427&t=mrtbkWj76QJhvNLI-11)
 
-1. Follow-up questions
+1. Follow-up prompts
 2. Attachments
 3. Textarea
 4. Start slot for secondary actions
@@ -19,7 +19,7 @@ Chat inputs help users compose and send short conversational messages in chat ex
 
 ## Options
 
-- **Placeholder:** Use clear, contextual prompts, e.g. “Enter a command, question or topic…”.
+- **Placeholder:** Use clear, contextual prompts, e.g. “Enter a command, question or topic…” (see [writing guidelines](../../guidelines/conversational-design/essentials/wording-terms)).
 - **Follow-up slot:** Optionally include a slot for follow-up questions. We typically use tertiary outline [buttons](../button) or [icon buttons](../icon-button) for that purpose.
 - **Attachment slot:** Optionally include a slot for [attachments](../chat-attachment/).
 - **Start slot:** Add secondary actions. We recommend using tertiary outline [icon buttons](../icon-button) and trying to stick to one action. If you have more than one action, use [dropdown buttons](../dropdown-button/).
@@ -31,9 +31,9 @@ Chat inputs help users compose and send short conversational messages in chat ex
 
 - **Interaction:** Keep the input compact at start and let it grow to multiline while users type
 - **Overflow:**
-  - On the follow-up slot: If the follow-up actions exceed max width, they break into multiple lines
-  - On the input: If the input reaches max height, the input shows a vertical scroll
-  - On the attachments: If the attachments reach max width, they show a horizontal scroll
+    - On the follow-up slot: If the follow-up actions exceed max width, they break into multiple lines
+    - On the input: If the input reaches max height, the input shows a vertical scroll
+    - On the attachments: If the attachments reach max width, they show a horizontal scroll
 
 ![Overflow behavior](https://www.figma.com/design/wEptRgAezDU1z80Cn3eZ0o/iX-Documentation-illustrations?node-id=7940-7020&t=mrtbkWj76QJhvNLI-11)
 
@@ -56,3 +56,4 @@ Chat inputs have six states: default, hover, focused and processing.
 - [AI message](../ai-message)
 - [User message](../user-message)
 - [Textarea](../textarea)
+- [Conversational design guidelines](../../guidelines/conversational-design/getting-started)
