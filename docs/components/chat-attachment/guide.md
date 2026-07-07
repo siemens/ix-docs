@@ -1,6 +1,6 @@
 ---
 doc-type: 'tab-item'
-description: 'Usage guide for chat attachment'
+description: 'Usage guide for chat attachment.'
 ---
 
 # Chat attachment - Usage
@@ -15,16 +15,16 @@ Chat attachments display files that users have uploaded to a chat prompt. It is 
 
 ## Options
 
+- **File icon:** Show a recognizable file-type icon so users can identify attachments quickly, e.g. [pdf-document](../../icons/icon-library).
 - **File name:** Show the file name including the file extension.
 - **Remove button:** Show remove buttons in a [chat input](../chat-input/), and hide it once an attachment is part of a submitted [message](../user-message/).
 - **Preview supported:** Use only for supported files to show e.g. thumbnails.
-- **Tooltip:** By default, the tooltip shows the file name in case of truncation. Override it to show additional information, e.g. for previews or file size.
 
 ## Behavior in context
 
 - **Chat input context:** If attachments exceed the chat input's width, they overflow into a scrollable horizontal list.
 - **User message context:** If attachments exceed the user message container's width, a more button is visible.
-- **Text overflow:** If an attachment exceeds `20rem`, the file name is truncated at the end while preserving the file extension. A tooltip shows the full file name on hover.
+- **Text overflow:** If an attachment exceeds `20rem`, the file name is truncated at the end while preserving the file extension.
 
 ## States
 
