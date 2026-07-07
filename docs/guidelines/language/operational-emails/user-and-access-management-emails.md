@@ -49,7 +49,8 @@ Provide users with additional information or a summary.
 - What you need to do<br/>
 	&nbsp;&nbsp;&bull; Open [App name]<br/>
 	&nbsp;&nbsp;&bull; Start configuring your dashboard<br/>
-	&nbsp;&nbsp;&bull; Explore key features: Real-time energy monitoring, load optimization and predictive analytics
+	&nbsp;&nbsp;&bull; Explore key features: Real-time energy monitoring, load optimization<br/>
+	and predictive analytics
 
 Button: Open
 
@@ -59,10 +60,10 @@ Button: Open
 <div className="dos-and-donts" markdown="true">
 <div className="dos" markdown="true">
 - The information below relates to your newly registered device:<br/>
-	&nbsp;&nbsp;&bull; Device name: Laptop123
-	&nbsp;&nbsp;&bull; Device ID: ABCDEFGHI
-	&nbsp;&nbsp;&bull; Operating system: Windows
-	&nbsp;&nbsp;&bull; Date: November 11, 2026, 14:32
+	&nbsp;&nbsp;&bull; Device name: Laptop123<br/>
+	&nbsp;&nbsp;&bull; Device ID: ABCDEFGHI<br/>
+	&nbsp;&nbsp;&bull; Operating system: Windows<br/>
+	&nbsp;&nbsp;&bull; Date: November 11, 2026, 14:32<br/>
 
 </div>
 </div>
@@ -106,10 +107,10 @@ Mention both previous and new states when access or role settings are changed.
 
 ## Best practice example for onboarding
 
-**Subject**
+**Subject**<br/>
 [App name] | Welcome to [App name]
 
-**Body**
+**Body**<br/>
 Dear [App name] user,<br/>
 Welcome to [App name]. Your account has been successfully created and is ready to use.<br/>
 Your access credentials<br/>
@@ -133,10 +134,10 @@ Your [App name] team
 
 ## Best practice example for role changes
 
-**Subject**
+**Subject**<br/>
 [App name] | Notification of role change
 
-**Body**
+**Body**<br/>
 Dear [App name] user,<br/>
 There have been changes to your role for [App name]:<br/>
 New role: Administrator<br/>
@@ -153,10 +154,10 @@ Your [App name] team
 
 ## Best practice example for new devices
 
-**Subject**
+**Subject**<br/>
 [App name] | Registered new device
 
-**Body**
+**Body**<br/>
 Dear [App name] user,<br/>
 A new device has been registered to your account: [{'user@example.com'}]<br/>
 Device name: Laptop123<br/>
