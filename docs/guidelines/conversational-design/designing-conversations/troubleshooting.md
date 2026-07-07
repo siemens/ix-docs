@@ -22,7 +22,18 @@ Here the chatbot says exactly what the problem is, but this response lacks empat
 Here the chatbot says exactly what the problem is, gives a possible reason for the lack of connection and then provides a solution to move the user forward.
 
 ## Dos and Don’ts
-- Do provide calls to action when troubleshooting
-- Do offer step by step solutions using technical documentation
-- Don’t allow your chatbot to offer competitor solutions to their problems
-- Don’t allow your chatbot to hallucinate (make up) solutions without concrete resources
+
+<div class="dos-and-donts">
+  <div class="dos">
+    <ul aria-label="Recommended practices">
+      <li>Do provide calls to action when troubleshooting</li>
+      <li>Do offer step by step solutions using technical documentation</li>
+    </ul>
+  </div>
+  <div class="donts">
+    <ul aria-label="Practices to avoid">
+      <li>Don't allow your chatbot to offer competitor solutions to their problems</li>
+      <li>Don't allow your chatbot to hallucinate (make up) solutions without concrete resources</li>
+    </ul>
+  </div>
+</div>

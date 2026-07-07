@@ -21,9 +21,19 @@ All the variants, options and states of the [button](../button) component apply 
 
 ## Dos and Don’ts
 
-- Do use icons that have a clear meaning for the user, otherwise use text buttons
-- Don’t use icon buttons in large numbers, instead use a toolbar
-- Don’t stretch icon buttons to span a container’s width
+<div class="dos-and-donts">
+  <div class="dos">
+    <ul aria-label="Recommended practices">
+      <li>Do use icons that have a clear meaning for the user, otherwise use text buttons</li>
+    </ul>
+  </div>
+  <div class="donts">
+    <ul aria-label="Practices to avoid">
+      <li>Don’t use icon buttons in large numbers, instead use a toolbar</li>
+      <li>Don’t stretch icon buttons to span a container’s width</li>
+    </ul>
+  </div>
+</div>
 
 ## Related
 
