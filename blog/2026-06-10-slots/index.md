@@ -27,11 +27,11 @@ Typical slot usage in iX:
 - Layout components with positional areas (top, right, bottom, left)
 - Figma components with native slot-based composition
 
-# Use slots in development
+## Use slots in development
 
-## Example patterns
+### Example patterns
 
-### 1. Add start and end content to an input
+#### 1. Add start and end content to an input
 
 ```html
 <ix-input label="Search">
@@ -42,7 +42,7 @@ Typical slot usage in iX:
 
 Use this for compact, contextual information. Keep slot content short and scannable.
 
-### 2. Compose pane layouts by position
+#### 2. Compose pane layouts by position
 
 ```html
 <ix-pane-layout>
@@ -53,7 +53,7 @@ Use this for compact, contextual information. Keep slot content short and scanna
 
 Use positional slots to express page structure directly and keep layout intent readable.
 
-## Dos and Don’ts
+### Dos and Don’ts
 
 <div className="dos-and-donts" markdown="true">
 <div className="dos" markdown="true">
@@ -72,7 +72,7 @@ Use positional slots to express page structure directly and keep layout intent r
 </div>
 </div>
 
-# Use slots in Figma
+## Use slots in Figma
 
 Version 5 introduced native slot-based composition for key components such as card and tabs in the iX Figma library. It is now possible to add content directly into slots in Figma, instead of detaching your instances, or creating custom content components.
 
@@ -84,14 +84,14 @@ If preferred instances are configured for a slot, the Add instances popup sugges
 
 For handoff quality, keep slot content concise, validate responsive behavior (especially truncation and overflow), and annotate special interaction intent when needed.
 
-# Collaboration tips for design and development
+## Collaboration tips for design and development
 
 - Use the same naming language for slot content in design specs and code reviews
 - Document which content is required, optional or mutually exclusive
 - Align early on responsive behavior for slot-heavy components
 - Prefer one clear composition pattern over many one-off exceptions
 
-## When not to use slots
+### When not to use slots
 
 Do not use slots to solve every customization request.
 
@@ -103,7 +103,7 @@ Instead, consider:
 
 Slots are most effective when they enhance clarity, not when they increase complexity.
 
-## Key takeaway
+### Key takeaway
 
 Slots are a shared design and development pattern:
 
