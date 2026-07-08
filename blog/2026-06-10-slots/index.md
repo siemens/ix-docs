@@ -5,7 +5,7 @@ tags: [ux, development]
 
 # How to use slots in iX
 
-![banner](../2026-05-11-release-5/2605_blog_5-0.png)
+![banner](../2026-06-10-slots/2607_blog_slots_header.svg)
 
 Slots are one of the most useful composition patterns in iX. They let you place custom content in predefined areas of a component without rebuilding the component itself.
 
@@ -18,7 +18,8 @@ Think of it like this:
 - The slot defines where additional content can be placed.
 - You provide the content that belongs to that position.
 
-This keeps components reusable while still allowing flexible layouts.
+This keeps components reusable while still allowing flexible layouts:
+- 
 
 Typical slot usage in iX:
 
@@ -75,6 +76,8 @@ Use positional slots to express page structure directly and keep layout intent r
 ## Use slots in Figma
 
 Version 5 introduced native slot-based composition for key components such as card and tabs in the iX Figma library. It is now possible to add content directly into slots in Figma, instead of detaching your instances, or creating custom content components.
+
+![Replace slots in Figma](2607_blog_slots_figma.svg)
 
 When you select an instance, Figma shows a pink border around the slot area which helps identifying where content can be inserted.
 
