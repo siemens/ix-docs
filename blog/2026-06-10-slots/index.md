@@ -3,6 +3,10 @@ authors: [kathrinschalber]
 tags: [ux, development]
 ---
 
+import React from "react";
+import { IxIcon } from "@siemens/ix-react";
+import { iconAddCircleFilled } from "@siemens/ix-icons/icons";
+
 # How to use slots in iX
 
 ![banner](../2026-06-10-slots/2607_blog_slots_header.svg)
@@ -19,7 +23,8 @@ Think of it like this:
 - You provide the content that belongs to that position.
 
 This keeps components reusable while still allowing flexible layouts:
-- 
+- [Get started in development](#use-slots-in-development)
+- [Get started in Figma](#use-slots-in-figma)
 
 Typical slot usage in iX:
 
@@ -81,7 +86,7 @@ Version 5 introduced native slot-based composition for key components such as ca
 
 When you select an instance, Figma shows a pink border around the slot area which helps identifying where content can be inserted.
 
-You can add any content to a slot, e.g. by clicking on the <ix-icon name="add" size="16" aria-label="Add"></ix-icon> ("Add instance") or creating new layers directly in the slot.
+You can add any content to a slot, e.g. by clicking on the <IxIcon name={iconAddCircleFilled}></IxIcon> ("Add instance") or creating new layers directly in the slot.
 
 If preferred instances are configured for a slot, the Add instances popup suggests specific components recommended by iX. For example, dropdown items are suggested for dropdowns by default.
 
