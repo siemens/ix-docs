@@ -59,7 +59,7 @@ Use positional slots to express page structure directly and keep layout intent r
 <div className="dos-and-donts" markdown="true">
 <div className="dos" markdown="true">
 
-- Do use only documented slot names of the component
+- Do use only documented slot names of components
 - Do keep slot content lightweight and purpose-specific
 - Do consider smaller breakpoints, interaction via keyboard and touch, and screen reader behavior
 
@@ -81,7 +81,7 @@ Version 5 introduced native slot-based composition for key components such as ca
 
 When you select an instance, Figma shows a pink border around the slot area which helps identifying where content can be inserted.
 
-You can add any content to a slot, e.g. by clicking on the <ixicon name="add" size="16" aria-label="Add"></ixicon> icon ("Add instance") or creating new layers directly in the slot.
+You can add any content to a slot, e.g. by clicking on the <ix-icon name="add" size="16" aria-label="Add"></ix-icon> ("Add instance") or creating new layers directly in the slot.
 
 If preferred instances are configured for a slot, the Add instances popup suggests specific components recommended by iX. For example, dropdown items are suggested for dropdowns by default.
 
