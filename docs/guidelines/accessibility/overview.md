@@ -5,7 +5,7 @@ description: 'Accessibility ensures that digital products are usable by everyone
 
 ## Our commitment as a design system
 
-We are committed that our deliverables qualify for building solutions that are accessible for everyone. We strive to meet **WCAG AA standards** by providing perceivable, operable, and understandable components that follow our accessibility checklist.
+We are committed that our deliverables qualify for building solutions that are accessible for everyone. We strive to meet **WCAG AA standards** by providing perceivable, operable and understandable components.
 
 ## Ensuring accessibility in products
 
@@ -38,13 +38,10 @@ https://www.w3.org/WAI/fundamentals/accessibility-intro/
 Provide text alternatives for non-text content. It allows content to be adapted into formats that support assistive technology e.g. screen readers ([WCAG reference 1.1](https://www.w3.org/WAI/WCAG22/quickref/?showtechniques=141%2C131#text-alternatives)).
 
 - Provide text alternatives for any non-text content, such as icons without text labels
+- Annotate your designs to provide text alternatives when developing
 - Provide text content for videos
 - Provide captions for figures and tables
 - Avoid images containing text
-
-**Example**: Annotate your designs to provide text alternatives when developing.
-
-![Annotations](https://www.figma.com/design/wEptRgAezDU1z80Cn3eZ0o/iX-Documentation-illustrations?node-id=5402-18109&t=LutEhcCmwu00FxNT-4)
 
 **Example**: Use ARIA tags to ensure that your content is accessible and understandable to all users, including those using assistive technologies.
 
@@ -135,9 +132,9 @@ Ensure that users have sufficient time to read and interact with the content in 
 - Avoid autoplay content
 - Avoid time limits or allow adjustment
 
-**Example**: [Toast messages](../../components/toast/index.mdx) with auto closure visualize the time left until the toast disappears. This auto closure can be paused when hovering over the message.
+**Example**: Dismissible [message bars](../../components/messagebar/index.mdx) stay visible until users close them. This avoids time pressure and gives users enough time to read and act on important information.
 
-![Toast messages with auto closure](https://www.figma.com/design/wEptRgAezDU1z80Cn3eZ0o/iX-Documentation-illustrations?node-id=5402-18173&t=JzJxfVEhA9XmeCtN-4)
+![Dismissible message bars](https://www.figma.com/design/wEptRgAezDU1z80Cn3eZ0o/iX-Documentation-illustrations?node-id=5402-18173&t=JzJxfVEhA9XmeCtN-4)
 
 ### Implement navigable aids
 

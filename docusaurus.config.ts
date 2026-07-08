@@ -25,23 +25,39 @@ function getAnnouncementBarConfig() {
   }
 }
 
-function getFontHeadTag(fontStyle: string) {
+const fontBaseUrl = 'https://cdn.c2comms.cloud/fonts/global/2.0';
+const siemensSansFontFaces = [
+  { file: 'Roman', weight: 400, style: 'normal' },
+  { file: 'Italic', weight: 400, style: 'italic' },
+  { file: 'Bold', weight: 700, style: 'normal' },
+  { file: 'BoldItalic', weight: 700, style: 'italic' },
+];
+
+function getSiemensSansFontFaceHeadTag() {
   return {
-    tagName: 'link',
+    tagName: 'style',
     attributes: {
-      rel: 'preload',
-      href: `https://cdn.c2comms.cloud/fonts/global/2.0/SiemensSans_Global_${fontStyle}.ttf`,
-      as: 'font',
-      type: 'font/ttf',
-      crossorigin: 'anonymous',
+      type: 'text/css',
     },
+    innerHTML: siemensSansFontFaces
+      .map(
+        ({ file, weight, style }) => `
+@font-face {
+  font-family: 'Siemens Sans';
+  src: url('${fontBaseUrl}/SiemensSans_Global_${file}.ttf') format('truetype');
+  font-weight: ${weight};
+  font-style: ${style};
+  font-display: swap;
+}`
+      )
+      .join('\n'),
   };
 }
 const customCss = [
   './node_modules/@siemens/ix/dist/siemens-ix/theme/classic-dark.css',
   './node_modules/@siemens/ix/dist/siemens-ix/theme/classic-light.css',
   './src/scss/custom.scss',
-  './node_modules/@siemens/ix/scss/_common-variables.scss',
+  './node_modules/@siemens/ix/scss/misc/_common-variables.scss',
 ];
 
 let withBrandTheme = false;
@@ -106,7 +122,7 @@ const config: Config = {
 
   customFields: {
     withBrandTheme,
-    playgroundVersion: '^4',
+    playgroundVersion: '^5',
   },
 
   presets: [
@@ -196,12 +212,7 @@ const config: Config = {
     llmstxtPostbuildPlugin,
   ],
 
-  headTags: [
-    getFontHeadTag('Bold'),
-    getFontHeadTag('BoldItalic'),
-    getFontHeadTag('Italic'),
-    getFontHeadTag('Roman'),
-  ],
+  headTags: [getSiemensSansFontFaceHeadTag()],
   themeConfig: {
     ...getAnnouncementBarConfig(),
     metadata: [
@@ -264,7 +275,7 @@ const config: Config = {
           type: 'custom-news-pill',
           position: 'left',
           label: 'Release 5.0.0',
-          value: '/blog',
+          value: '/blog/2026/05/21/release-5',
         },
         {
           type: 'custom-version-selection',

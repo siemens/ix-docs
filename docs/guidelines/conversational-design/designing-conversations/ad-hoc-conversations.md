@@ -30,8 +30,18 @@ Finally, in the face of truly unprofessional and offensive input, the following 
 **Copilot:** As an AI language model, I don’t have personal opinions or feelings, but I am designed to follow ethical guidelines. I **do not** engage in discussions or create content that promotes racism, sexism, or any form of discrimination. If you encounter any inappropriate responses, please let me know, and I'll do my best to address them.
 ## Dos and Don’ts
 
-- Do consider training your chatbot to filter for a list of offensive terms
--	Do consider localization and cultural nuances, such as “master” and “slave”
--	Do train your chatbot to move users back on track
--	Don’t forget to test and train for offensive user input
--	Don’t forget to allow for some harmless non-work interactions
+<div class="dos-and-donts">
+  <div class="dos">
+    <ul aria-label="Recommended practices">
+      <li>Do consider training your chatbot to filter for a list of offensive terms</li>
+      <li>Do consider localization and cultural nuances, such as “master” and “slave”</li>
+      <li>Do train your chatbot to move users back on track</li>
+    </ul>
+  </div>
+  <div class="donts">
+    <ul aria-label="Practices to avoid">
+      <li>Don’t forget to test and train for offensive user input</li>
+      <li>Don’t forget to allow for some harmless non-work interactions</li>
+    </ul>
+  </div>
+</div>

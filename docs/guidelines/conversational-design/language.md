@@ -110,7 +110,17 @@ Here the response is more concise, professional and shows the chatbot is aware o
 
 ## Dos and Don’ts
 
-- Do use your brand’s voice rules to shape your chatbot voice
-- Do work with developers to support data set collection
-- Don’t assume your users write correctly or accurately
-- Don’t forget to implement new NLP models as they advance
+<div class="dos-and-donts">
+  <div class="dos">
+    <ul aria-label="Recommended practices">
+      <li>Do use your brand’s voice rules to shape your chatbot voice</li>
+      <li>Do work with developers to support data set collection</li>
+    </ul>
+  </div>
+  <div class="donts">
+    <ul aria-label="Practices to avoid">
+      <li>Don’t assume your users write correctly or accurately</li>
+      <li>Don’t forget to implement new NLP models as they advance</li>
+    </ul>
+  </div>
+</div>

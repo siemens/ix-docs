@@ -23,6 +23,7 @@ Panes help users focus on tasks as related controls are visually grouped and the
 - **Composition**: Panes can be positioned on the left, top, right or bottom. We often use left panes for structuring components like trees or lists, and right panes for contextual information. Top and bottom panes are less common in our applications, but can help communicate a clear "top to bottom" hierarchy.
 - **Size**: Sizes can be picked either as a fixed size (in pixels) or as a relative size (in percentage) depending on the intended layout. However, picking sizes only applies to medium and large screens as small screen panes are always displayed in full screen (see responsiveness below for more information). We usually choose a pane width and height that avoids the need for scrolling in our applications.
 - **Borderless**: Panes can have borders to visually split them from other content areas. We typically use borderless panes when placed within layouts that already have other visual means to split areas.
+- **No padding**: By default, panes apply inline and bottom padding around their content. Enabling the no padding option removes this padding so the content can span the full pane area. This is useful for content that brings its own spacing or should sit flush against the pane edges, such as banner images, horizontal dividers, etc.
 - **Hide on collapse**: Define whether a pane is visible in its collapsed state. If it is visible, it has a bar appearance when collapsed that contains both the title and the expand button. We usually use inline panes with a collapsible option and floating panes without since they are triggered from a dedicated control like a button or a list item.
 - **Variant**: When used within a layout, floating panes are placed above (z-axis) the main content but below the navigation menu and header. When expanded, they cover a part of the main content. Inline panes are placed on one level with the main content. When expanded, they move the main content and reduce its available space.
 - **Layout**: Depending on which pane needs more focus, the top/bottom or left/right panes can use more space.
@@ -52,11 +53,21 @@ Panes have two states: collapsed and expanded. The appearance of the states vari
 
 ## Dos and Don’ts
 
-- Do use panes to organize your content and guide your users' attention
-- Do use panes to display different views within a single screen
-- Do use panes to expand/collapse content or hide/reveal content
-- Don’t use panes for a small amount of content
-- Don’t use panes for content that should stay visible
+<div class="dos-and-donts">
+  <div class="dos">
+    <ul aria-label="Recommended practices">
+      <li>Do use panes to organize your content and guide your users' attention</li>
+      <li>Do use panes to display different views within a single screen</li>
+      <li>Do use panes to expand/collapse content or hide/reveal content</li>
+    </ul>
+  </div>
+  <div class="donts">
+    <ul aria-label="Practices to avoid">
+      <li>Don’t use panes for a small amount of content</li>
+      <li>Don’t use panes for content that should stay visible</li>
+    </ul>
+  </div>
+</div>
 
 ## Related
 
