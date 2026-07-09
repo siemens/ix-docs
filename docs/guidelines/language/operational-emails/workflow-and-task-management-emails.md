@@ -12,7 +12,7 @@ Note: Use these rules alongside the [General rules](#) and we have used [App nam
 
 ## Subject lines
 
-State clear purpose or topic of the email with a descriptive title for context.
+State the clear purpose or topic of the email with a descriptive title for context.
 
 <div className="dos-and-donts" markdown="true">
 <div className="dos" markdown="true">
@@ -132,7 +132,7 @@ Use clear indicators (operational, degraded, offline, standby) and state the imp
 </div>
 </div>
 
-Avoid sending repetitive updates or leaving long gaps without communication during critical incidents. Only mention the previous status when it adds useful content.
+Avoid sending repetitive updates or leaving long gaps without communication during critical incidents. Only mention the previous status when it adds useful information.
 
 <div className="dos-and-donts" markdown="true">
 <div className="dos" markdown="true">
@@ -150,12 +150,14 @@ Avoid sending repetitive updates or leaving long gaps without communication duri
 
 **Body**<br/>
 Dear [App name] user,<br/>
-Task assigned<br/>
+
+Task assigned:<br/>
 - Task ID: 462<br/>
 - Task description: Spare part replacement for sensor 672_A<br/>
 - Assigned by: Operator<br/>
 - Assigned: February 10, 2026<br/>
-- Due date: February 15, 2026
+- Due date: February 15, 2026<br/>
+
 What you need to do<br/>
 Open Task list for further task details.
 
@@ -178,9 +180,11 @@ Your [App name] team
 
 **Body**<br/>
 Dear [App name] user,<br/>
-Overdue task<br/>
+
+Overdue task:<br/>
 - Task: Firmware update V5.6.01<br/>
 - Due: November 22, 2025<br/>
+
 What you need to do<br/>
 - Log in and perform update in Task manager<br/>
 

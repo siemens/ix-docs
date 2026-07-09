@@ -3,7 +3,7 @@ sidebar_position: 7
 sidebar_label: General information and administrative emails
 title: General information and administrative emails
 doc-type: 'banner'
-description: 'In everyday operations, clear communication is key to maintaining transparency and trust. General notifications - covering administrative details, confirmations, and other essential updates outside specific operational categories - help keep stakeholders informed and processes organized. Well-structured messaging ensures clarity, reduces confusion and supports smooth business interactions.'
+description: 'In everyday operations, general emails covering administrative details, confirmations, and other essential updates - outside specific operational categories - help keep stakeholders informed and processes organized.'
 ---
 
 #
@@ -34,7 +34,7 @@ Be specific when asking for confirmation or agreement.
 <div className="dos-and-donts" markdown="true">
 <div className="dos" markdown="true">
 
-- You have to confirm the new Terms of Use until January 31, 2026.
+- You have until January 31, 2026 to confirm the new Terms of Use .
 
 </div>
 <div className="donts" markdown="true">
@@ -81,12 +81,12 @@ Include a method for the customer to review, modify or cancel the agreement or a
 
 ### Feedback and surveys
 
-Use a clear and polite invitation that explains the purpose of the survey.
+Use clear and polite invitations that explain the purpose of the survey.
 
 <div className="dos-and-donts" markdown="true">
 <div className="dos" markdown="true">
 
-- We value your opinion and would appreciate your feedback on your recent interaction with our technical support team.
+- We value your opinion and would appreciate feedback on your recent interaction with our technical support team.
 
 </div>
 </div>
@@ -116,7 +116,7 @@ Include direct and secure links or buttons to make participation easier.
 </div>
 </div>
 
-### Communication information
+### Communication and contact
 
 Include specific reference numbers or identifiers to help users track issues.
 
@@ -133,13 +133,13 @@ Avoid hiding or making it difficult to find options for managing communication p
 <div className="dos-and-donts" markdown="true">
 <div className="dos" markdown="true">
 
-- You can manage your email preferences here: [link to preference center].
+- Manage your email preferences here: [link to preference center].
 - Unsubscribe from emails here.
 
 </div>
 </div>
 
-## Best practice example for New Terms of Use
+## Best practice example for new Terms of Use
 
 **Subject**<br/>
 [App name] | New Terms of Use
@@ -147,6 +147,7 @@ Avoid hiding or making it difficult to find options for managing communication p
 **Body**<br/>
 Dear [App name] user,<br/>
 There is an update to the Terms of Use for your [App name] account.<br/>
+
 What you need to do<br/>
 To continue using [App name], read and agree to the new Terms of Use by January 31, 2026.
 
@@ -168,12 +169,15 @@ Your [App name] team
 **Body**<br/>
 Dear [App name] user,<br/>
 We’ve put together a short survey to gather your thoughts on various aspects of [App name], such as usability, performance and features.<br/>
-You can participate in the anonymous survey by March 2, 2025.<br/>
+
+You can participate in the anonymous survey until March 2, 2025.<br/>
+
 This short survey will take approximately 5–7 minutes to complete.
 
-Button: Participate in the survey
+Button: Participate
 
 Thank you for helping us improve [App name].<br/>
+
 If you have any questions or need assistance, contact our team at [email address].
 
 Kind regards,<br/>

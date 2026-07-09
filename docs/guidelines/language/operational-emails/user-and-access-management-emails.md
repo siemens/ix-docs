@@ -112,9 +112,11 @@ Mention both previous and new states when access or role settings are changed.
 **Body**<br/>
 Dear [App name] user,<br/>
 Welcome to [App name]. Your account has been successfully created and is ready to use.<br/>
+
 Your access credentials<br/>
 - Role assigned: Energy Analyst<br/>
 - Tenant ID: [App name] NBG_001<br/>
+
 What you need to do<br/>
 - Open [App name]<br/>
 - Start configuring your dashboard<br/>
@@ -123,6 +125,7 @@ What you need to do<br/>
 Button: Open
 
 To set your password securely visit our [App name portal]. For your safety, we never include passwords directly in emails.<br/>
+
 If you have any questions or need assistance, contact our team at [email address].
 
 Kind regards,<br/>
@@ -138,9 +141,11 @@ Your [App name] team
 
 **Body**<br/>
 Dear [App name] user,<br/>
+
 There have been changes to your role for [App name]:<br/>
 New role: Administrator<br/>
 Previous role: Operator<br/>
+
 To see your current role, log in and go to your profile.
 
 Button: Open
@@ -158,6 +163,7 @@ Your [App name] team
 
 **Body**<br/>
 Dear [App name] user,<br/>
+
 A new device has been registered to your account: [{'user@example.com'}]<br/>
 Device name: Laptop123<br/>
 Device ID: ABCDEFGHI<br/>
@@ -167,6 +173,7 @@ Date: November 11, 2026 at 14:32<br/>
 Review your registered devices here: [Link]
 
 If you haven't registered this device on your account, reach out to your local cybersecurity contact and ask them to open an investigation.<br/>
+
 Thank you for your cooperation.
 
 Kind regards,<br/>

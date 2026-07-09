@@ -307,7 +307,7 @@ If possible, provide call-to-actions in buttons instead of links.
 <div className="dos-and-donts" markdown="true">
 <div className="dos" markdown="true">
 
-- Open dashboard (button)
+- Button: Open dashboard
 
 </div>
 </div>
@@ -363,8 +363,8 @@ Clearly state when an email is automated and cannot be replied to.
 
 ### Disclaimer and footer
 
-Include a legal disclaimer, the company’s legal footer and any other required legal information.<br/>
-Check the correct legal text with your legal team.
+Check the correct legal text with your legal team and include a legal disclaimer, the company’s legal footer, and any other required legal information.<br/>
+
 
 ### Formatting
 
@@ -420,7 +420,5 @@ Your [App name] team
 
 ## Related
 
-- [Grammar](#)
-- [Punctuation](#)
 - [Time and time zones](../formatting/timezones.mdx)
 - [Time-related messages](../messaging/time-related-messages.mdx)

@@ -3,7 +3,7 @@ sidebar_position: 6
 sidebar_label: System and product lifecycle emails
 title: System and product lifecycle emails
 doc-type: 'banner'
-description: 'In complex systems and product ecosystems, actionable and structured lifecycle notifications are critical for maintaining stability and performance.'
+description: 'In complex systems and product ecosystems, actionable and structured lifecycle emails are critical for maintaining stability and performance.'
 ---
 
 #
@@ -34,7 +34,7 @@ Include the new version number and release date.
 <div className="dos-and-donts" markdown="true">
 <div className="dos" markdown="true">
 
-- Version 2.1.0 will be available starting November 10.
+- Version 2.1.0 will be available November 10.
 
 </div>
 </div>
@@ -67,7 +67,7 @@ Include upgrade paths, migration guides and support options for product transiti
 <div className="dos-and-donts" markdown="true">
 <div className="dos" markdown="true">
 
-- Our dedicated support team is available to assist with your migration to the "smart factory OS". Contact us at [email address] or visit our [Migration portal].
+- Our dedicated support team is available to assist you with your migration to the "smart factory OS". Contact us at [email address] or visit our [Migration portal].
 
 </div>
 </div>
@@ -162,6 +162,7 @@ We’re excited to announce the release of Version 2.1.0.<br/>
 What’s new<br/>
 - Enhanced firewall rules for improved security<br/>
 - Better logging for system diagnostics<br/>
+
 What you need to do<br/>
 - Download the update via the [App name] portal<br/>
 - Restart your system to apply changes

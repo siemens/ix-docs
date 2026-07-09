@@ -40,7 +40,7 @@ Use language that reflects the urgency of the email and mentions if actions are 
 </div>
 </div>
 
-## Body texts
+## Body text
 
 Be as specific as possible and tell users exactly what happened (what, when, how).
 
@@ -60,7 +60,11 @@ Explain consequences and solutions about the event whenever possible.
 <div className="dos-and-donts" markdown="true">
 <div className="dos" markdown="true">
 
-- Event: Overload detected on Transformer T-102 at 14:35 at Nuremberg facility.
+What you should do<br/>
+- Immediate: Reduce the load on T-102 by redistributing power to backup transformers.
+- Short-term: Inspect the transformer for signs of damage or wear.
+- Monitor: Check the load distribution system to identify why the overload occurred.
+- Follow-up: Schedule a maintenance review to prevent future overloads.
 
 </div>
 </div>
@@ -111,7 +115,7 @@ Explain if and how users can resolve issues or act with links, buttons, and sugg
 </div>
 </div>
 
-## Best practice example for alarm email
+## Best practice example for alarms
 
 **Subject**<br/>
 [App name] | Immediate action required | Batch threshold exceeded
@@ -124,12 +128,14 @@ Batch BTH-20260304-A127 threshold exceeded:<br/>
 - Threshold limit: 85.0°C<br/>
 - Deviation: +2.3°C (+2.7%)<br/>
 - Duration: 00:03:47<br/>
+
 Batch details:<br/>
 - Batch ID: BTH-20260304-A127<br/>
 - Product line: Beverage Mixing Line 3<br/>
 - Product: Orange Juice Concentrate<br/>
 - Location: Plant A, Nuremberg facility<br/>
 - Time: 2026-03-04 08:55:21<br/>
+
 What you need to do<br/>
 - Open Batch list to stop processing or adjust thresholds.
 
@@ -143,18 +149,21 @@ Kind regards,<br/>
 [Company disclaimer]<br/>
 [Company legal footer]
 
-## Best practice example for cyberattack notification
+## Best practice example for cyberattacks
 
 **Subject**<br/>
 [App name] | Immediate action required | Critical risk of cyber attacks
 
 **Body**<br/>
 Dear [App name] user,<br/>
+
 A new cyberattack has been detected in your monitored environment. Immediate attention is required.<br/>
+
 Event details<br/>
 - Attack type: Unauthorized access attempt<br/>
 - Location: Erlangen facility<br/>
 - Time: 2026-03-04 08:55:21<br/>
+
 What you need to do<br/>
 - Switch to backup security protocols immediately.<br/>
 - Confirm system status in the Security portal.<br/>
