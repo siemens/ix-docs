@@ -22,7 +22,7 @@ User messages display a single prompt submitted by users in a conversational thr
 ## Behavior in context
 
 - **Interaction:** User messages keep the sent prompts visible as a chat history of user input.
-- **Actions:** Message actions are only shown when users hover over the message with a mouse, tap the message on touch devices or reach the message with the `Tab` key.
+- **Actions:** Message actions are only shown when users hover over the message with a mouse, tap the message on touch devices or reach the message with the `Tab` key (for Siemens AG see the [AI UX terminology guide](https://www.figma.com/design/lqjt9c5IzzwQ4eJ4nqG7Kv/AI-Terminology?node-id=1-9&t=8g9VIGSar5B6wwtC-1) on labelling actions).
 - **Placement:** User messages are always placed on the right side of the [chat](../chat/) to visually distinguish them from [AI messages](../ai-message) on the left side.
 - **Responsiveness:** User messages take from 45 to 80% of the chat's container width, depending on the viewport width.
 

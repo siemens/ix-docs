@@ -21,8 +21,7 @@ Chats are the outer containers that bring together the three building blocks of 
 
 ## Dos and Don’ts
 
-- Do use chats for conversational experiences that require users to read, review and act on messages in a thread
-- Do enable auto-scroll when users are already at the latest message, not when they are reading older messages
+- Do enable auto-scroll when users are reading the current response, not when they are reading previous responses
 - Don't add limits to how many messages are visible, instead always display full chat sessions
 
 ## Related
