@@ -297,7 +297,7 @@ Add minimal links, actions, or buttons in each email (we recommend one per email
 <div className="dos-and-donts" markdown="true">
 <div className="dos" markdown="true">
 
-- [Open App name] event list N
+- [Open App name] event list
 
 </div>
 </div>
