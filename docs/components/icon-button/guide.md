@@ -21,9 +21,17 @@ All the variants, options and states of the [button](../button) component apply 
 
 ## Dos and Don’ts
 
-- Do use icons that have a clear meaning for the user, otherwise use text buttons
-- Don’t use icon buttons in large numbers, instead use a toolbar
-- Don’t stretch icon buttons to span a container’s width
+  
+    
+      Do use icons that have a clear meaning for the user, otherwise use text buttons
+    
+  
+  
+    
+      Don’t use icon buttons in large numbers, instead use a toolbar
+      Don’t stretch icon buttons to span a container’s width
+    
+  
 
 ## Related
 

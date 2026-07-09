@@ -121,6 +121,9 @@ export default () => {
             },
           },
         ],
+        autoSizeStrategy: {
+          type: 'fitGridWidth',
+        },
         rowData: [
           {
             type: 'Equipment',
@@ -136,6 +139,41 @@ export default () => {
             type: 'Pressure sensor',
             status: 'Unknown',
             hwVersion: 'N/A',
+          },
+          {
+            type: 'Flow meter',
+            status: 'Normal',
+            hwVersion: '3.1',
+          },
+          {
+            type: 'Temperature sensor',
+            status: 'Warning',
+            hwVersion: '2.2',
+          },
+          {
+            type: 'Valve',
+            status: 'Normal',
+            hwVersion: '1.5',
+          },
+          {
+            type: 'Actuator',
+            status: 'Maintenance',
+            hwVersion: '2.0',
+          },
+          {
+            type: 'Controller',
+            status: 'Normal',
+            hwVersion: '4.0',
+          },
+          {
+            type: 'Safety relay',
+            status: 'Unknown',
+            hwVersion: 'N/A',
+          },
+          {
+            type: 'Power supply',
+            status: 'Normal',
+            hwVersion: '1.8',
           },
         ],
         suppressCellFocus: true,
@@ -222,6 +260,9 @@ export default class AGGrid implements OnInit {
           },
         },
       ],
+      autoSizeStrategy: {
+        type: 'fitGridWidth',
+      },
       rowData: [
         {
           type: 'Equipment',
@@ -237,6 +278,41 @@ export default class AGGrid implements OnInit {
           type: 'Pressure sensor',
           status: 'Unknown',
           hwVersion: 'N/A',
+        },
+        {
+          type: 'Flow meter',
+          status: 'Normal',
+          hwVersion: '3.1',
+        },
+        {
+          type: 'Temperature sensor',
+          status: 'Warning',
+          hwVersion: '2.2',
+        },
+        {
+          type: 'Valve',
+          status: 'Normal',
+          hwVersion: '1.5',
+        },
+        {
+          type: 'Actuator',
+          status: 'Maintenance',
+          hwVersion: '2.0',
+        },
+        {
+          type: 'Controller',
+          status: 'Normal',
+          hwVersion: '4.0',
+        },
+        {
+          type: 'Safety relay',
+          status: 'Unknown',
+          hwVersion: 'N/A',
+        },
+        {
+          type: 'Power supply',
+          status: 'Normal',
+          hwVersion: '1.8',
         },
       ],
       suppressCellFocus: true,
@@ -320,6 +396,9 @@ export default class AGGrid implements OnInit {
           },
         },
       ],
+      autoSizeStrategy: {
+        type: 'fitGridWidth',
+      },
       rowData: [
         {
           type: 'Equipment',
@@ -335,6 +414,41 @@ export default class AGGrid implements OnInit {
           type: 'Pressure sensor',
           status: 'Unknown',
           hwVersion: 'N/A',
+        },
+        {
+          type: 'Flow meter',
+          status: 'Normal',
+          hwVersion: '3.1',
+        },
+        {
+          type: 'Temperature sensor',
+          status: 'Warning',
+          hwVersion: '2.2',
+        },
+        {
+          type: 'Valve',
+          status: 'Normal',
+          hwVersion: '1.5',
+        },
+        {
+          type: 'Actuator',
+          status: 'Maintenance',
+          hwVersion: '2.0',
+        },
+        {
+          type: 'Controller',
+          status: 'Normal',
+          hwVersion: '4.0',
+        },
+        {
+          type: 'Safety relay',
+          status: 'Unknown',
+          hwVersion: 'N/A',
+        },
+        {
+          type: 'Power supply',
+          status: 'Normal',
+          hwVersion: '1.8',
         },
       ],
       suppressCellFocus: true,
@@ -412,6 +526,9 @@ onMounted(() => {
         },
       },
     ],
+    autoSizeStrategy: {
+      type: 'fitGridWidth',
+    },
     rowData: [
       {
         type: 'Equipment',
@@ -427,6 +544,41 @@ onMounted(() => {
         type: 'Pressure sensor',
         status: 'Unknown',
         hwVersion: 'N/A',
+      },
+      {
+        type: 'Flow meter',
+        status: 'Normal',
+        hwVersion: '3.1',
+      },
+      {
+        type: 'Temperature sensor',
+        status: 'Warning',
+        hwVersion: '2.2',
+      },
+      {
+        type: 'Valve',
+        status: 'Normal',
+        hwVersion: '1.5',
+      },
+      {
+        type: 'Actuator',
+        status: 'Maintenance',
+        hwVersion: '2.0',
+      },
+      {
+        type: 'Controller',
+        status: 'Normal',
+        hwVersion: '4.0',
+      },
+      {
+        type: 'Safety relay',
+        status: 'Unknown',
+        hwVersion: 'N/A',
+      },
+      {
+        type: 'Power supply',
+        status: 'Normal',
+        hwVersion: '1.8',
       },
     ],
     suppressCellFocus: true,

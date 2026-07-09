@@ -157,7 +157,7 @@ import {
 
 export default () => {
   return (
-    <IxApplication>
+    <IxApplication forceBreakpoint="md">
       <IxMenu>
         <IxMenuItem home icon={iconHome}>
           Home
@@ -189,7 +189,7 @@ export default class MenuCategory {}
 
 #### menu-category.html
 ```html
-<ix-application>
+<ix-application force-breakpoint="md">
   <ix-menu>
     <ix-menu-item home icon="home">Home</ix-menu-item>
     <ix-menu-item icon="globe">Normal Tab</ix-menu-item>
@@ -223,7 +223,7 @@ export default class MenuCategory {}
 
 #### menu-category.html
 ```html
-<ix-application>
+<ix-application force-breakpoint="md">
   <ix-menu>
     <ix-menu-item home icon="home">Home</ix-menu-item>
     <ix-menu-item icon="globe">Normal Tab</ix-menu-item>
@@ -250,7 +250,7 @@ import {
 </script>
 
 <template>
-  <IxApplication>
+  <IxApplication force-breakpoint="md">
     <IxMenu>
       <IxMenuItem home :icon="iconHome"> Home </IxMenuItem>
       <IxMenuItem :icon="iconGlobe">Normal Tab</IxMenuItem>
@@ -374,9 +374,11 @@ import { IxMenu, IxMenuItem } from '@siemens/ix-vue';
 | applicationName | { "Should only be set if you use ix-menu standalone" } | application-name | string \| undefined |  |
 | enableToggleTheme | { "Show toggle between light and dark variant. Only if the provided theme have implemented both!" } | enable-toggle-theme | boolean | false |
 | expand | { "Toggle the expand state of the menu" } | expand | boolean | false |
+| i18nAriaLabelMenu | { "i18n aria-label for menu. Gets read out by screen readers when first focusing the menu" } | i18n-aria-label-menu | string | 'Application Navigation' |
 | i18nCollapse | { "i18n label for 'Collapse' button" } | i18n-collapse | string | 'Collapse' |
 | i18nExpand | { "i18n label for 'Expand' button" } | i18n-expand | string | 'Expand' |
 | i18nLegal | { "i18n label for 'About & legal information' button" } | i18n-legal | string | 'About & legal information' |
+| i18nNavigationHint | { "i18n description for menu keyboard navigation hint, read by screen readers when focusing the menu" } | i18n-navigation-hint | string | 'Use Up and Down arrow keys to navigate between menu items' |
 | i18nSettings | { "i18n label for 'Settings' button" } | i18n-settings | string | 'Settings' |
 | i18nToggleTheme | { "i18n label for 'Toggle theme' button" } | i18n-toggle-theme | string | 'Toggle theme' |
 | pinned | { "Menu stays pinned to the left" } | pinned | boolean | false |

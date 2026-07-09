@@ -47,13 +47,21 @@ Data grid columns, rows and cells have multiple states: Default, hover, active a
 
 ![Data grid states](https://www.figma.com/design/wEptRgAezDU1z80Cn3eZ0o/iX-Documentation-illustrations?node-id=7743-1852&t=pnIkODidZu9oNqXj-4)
 
-## Dos and Don'ts
+## Dos and Don’ts
 
-- Do only display primary information by default and use [column tool panels](https://www.ag-grid.com/javascript-data-grid/tool-panel-columns/) for secondary information
-- Do keep selection and row-click behavior independent to avoid confusion
-- Do design responsive layouts that adapt to different screen sizes
-- Don’t embed heavily interactive components within grid cells
-- Don’t rely solely on color for status, use icons, labels or badges instead
+  
+    
+      Do only display primary information by default and use [column tool panels](https://www.ag-grid.com/javascript-data-grid/tool-panel-columns/) for secondary information
+      Do keep selection and row-click behavior independent to avoid confusion
+      Do design responsive layouts that adapt to different screen sizes
+    
+  
+  
+    
+      Don’t embed heavily interactive components within grid cells
+      Don’t rely solely on color for status, use icons, labels or badges instead
+    
+  
 
 ## Related
 

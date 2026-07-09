@@ -27,8 +27,14 @@ Use your dialogs to highlight the complex interactions required for your industr
 4.	You have your own brand voice and tone guidelines
 ## Dos and Don’ts
 
-- Do create example conversations based on user personas
-- Do focus on industrial-relevant communicative functions
-- Do offer users an exit or calls to action to support further actions
-- Don’t forget to read aloud your dialogs; if it sounds robotic, it is robotic
-- Don’t create lengthy monologues, instead keep responses concise and simple
+  
+    
+      Do create example conversations based on user personas
+      Do focus on industrial-relevant communicative functions
+      Do offer users an exit or calls to action to support further actions
+    
+  
+  
+    
+      Don’t forget to read aloud your dialogs; if it sounds robotic, it is robotic
+      Don’t create lengthy monologues, instead keep responses concise and simple

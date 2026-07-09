@@ -24,7 +24,13 @@ This chatbot is less formal, more conversational and would be found within more 
 
 ## Dos and Don’ts
 
-- Do keep your greeting short and simple  
--	Do check every word matches your brand  
--	Don’t add a list of bullet points explaining what the chatbot can do   
--	Don’t use slang or idiomatic language in your greeting
+  
+    
+      Do keep your greeting short and simple
+      Do check every word matches your brand
+    
+  
+  
+    
+      Don’t add a list of bullet points explaining what the chatbot can do
+      Don’t use slang or idiomatic language in your greeting

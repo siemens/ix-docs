@@ -40,15 +40,19 @@ Individual calendar dates within a date picker have five states: Default, hover,
 
 ## Dos and Don’ts
 
-- Do use date pickers to ensure accurate date selection
-- Do provide clear labels when the date picker is used in a form context
-- Do ensure the date picker is accessible via keyboard navigation
-- Do use range selection for date periods like booking dates or report timeframes
-- Do set min and max dates to prevent invalid date selections
+  
+    Do use date pickers to ensure accurate date selection
+    Do provide clear labels when the date picker is used in a form context
+    Do ensure the date picker is accessible via keyboard navigation
+    Do use range selection for date periods like booking dates or report timeframes
+    Do set min and max dates to prevent invalid date selections
+  
 
-- Don’t use date pickers for dates that are far in the past or future, use [date inputs](../input) instead
-- Don’t clutter the date picker interface with unnecessary options
-- Don’t forget to handle empty or invalid date states in your validation logic
+  
+    Don’t use date pickers for dates that are far in the past or future, use [date inputs](../input) instead
+    Don’t clutter the date picker interface with unnecessary options
+    Don’t forget to handle empty or invalid date states in your validation logic
+  
 
 ## Related
 

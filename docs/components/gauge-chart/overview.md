@@ -1685,9 +1685,15 @@ onBeforeUnmount(() => {
 
 ## Dos and Don’ts
 
-- Do keep it simple and easy to read, with a clear needle and well-defined ranges
-- Do use color coding, e.g. green for good, red for danger, etc. to indicate different ranges
-- Do label ranges and the needle value clearly to avoid confusion
-- Don’t overcrowd the gauge with too many ranges or labels
-- Don’t use gauge charts for visualizing complex data or large datasets
-- Don’t use similar colors for adjacent ranges to avoid confusion
+  
+    
+      Do keep it simple and easy to read, with a clear needle and well-defined ranges
+      Do use color coding, e.g. green for good, red for danger, etc. to indicate different ranges
+      Do label ranges and the needle value clearly to avoid confusion
+    
+  
+  
+    
+      Don’t overcrowd the gauge with too many ranges or labels
+      Don’t use gauge charts for visualizing complex data or large datasets
+      Don’t use similar colors for adjacent ranges to avoid confusion

@@ -22,85 +22,129 @@ Use “permissions” instead of “right” and “privilege” as these are be
 
 Write user roles in short, clear and descriptive terms and give users access to role descriptions.
 
-- Line operator
+  
+    Line operator
+  
 
-- Basic user
+  
+    Basic user
+  
 
 Use role names consistently within workflows and across the whole product.
 
-- Device administrator / Device administrator / Device administrator
+  
+    Device administrator / Device administrator / Device administrator
+  
 
-- Device Admin / Asset Admins / Administrator / Device Manager / Officer for devices
+  
+    Device Admin / Asset Admins / Administrator / Device Manager / Officer for devices
+  
 
 Focus on personas instead of generic and unclear titles when creating roles for your product.
 
-- Line operator
-- Plant operator
-- Service engineer
+  
+    Line operator
+    Plant operator
+    Service engineer
+  
 
-- Technician
-- Team lead
-- Expert user
+  
+    Technician
+    Team lead
+    Expert user
+  
 
 Avoid mixing location with function when creating roles for your product.
 
-- User
+  
+    User
+  
 
-- External user
-- Local user
-- International user
+  
+    External user
+    Local user
+    International user
+  
 
 Avoid creating vague user roles without a clear persona or scope that can be misunderstood.
 
-- Production report creator
-- Quality report reviewer
-- Batch approver (review and release)
+  
+    Production report creator
+    Quality report reviewer
+    Batch approver (review and release)
+  
 
-- Read-only user
-- Write-only user
+  
+    Read-only user
+    Write-only user
+  
 
 Use “read only” as a specific role permission, not a unique role name.
 
-- External consultant (read-only)
+  
+    External consultant (read-only)
+  
 
-- Read-only user
+  
+    Read-only user
+  
 
 Avoid easily misunderstood permissions such as “view”, be specific about what users can do.
 
-- record / log / configure / override
-- adjust / review / modify / correct
-- monitor / review / inspect
-- track / display / observe
+  
+    record / log / configure / override
+    adjust / review / modify / correct
+    monitor / review / inspect
+    track / display / observe
+  
 
-- write
-- edit
-- read-only
-- view
+  
+    write
+    edit
+    read-only
+    view
+  
 
 Use sentence case for all user roles.
 
-- Service engineer
+  
+    Service engineer
+  
 
-- Service Engineer
+  
+    Service Engineer
+  
 
 Avoid jargon or internal terms, instead use language everyone understands.
 
-- Plant manager
+  
+    Plant manager
+  
 
-- Top tier
+  
+    Top tier
+  
 
 Keep role names short, preferably not more than three words.
 
-- Safety incident investigator
-- Shift handover reporter
+  
+    Safety incident investigator
+    Shift handover reporter
+  
 
-- Gateway and portal maintenance manager for Plant 3 and 5 (read-only permissions)
+  
+    Gateway and portal maintenance manager for Plant 3 and 5 (read-only permissions)
+  
 
 Avoid using functions or features as roles or permissions, instead focus on persona and tasks.
 
-- Shift supervisor – Production floor
+  
+    Shift supervisor – Production floor
+  
 
-- Dashboard user
+  
+    Dashboard user
+  
 
 ## Identity and access
 
@@ -138,69 +182,105 @@ Many user management words often appear together in familiar, expected combinati
 
 Avoid using “deny” and “disapprove” with “user” as opposites to “approve”.
 
-- Reject access request
+  
+    Reject access request
+  
 
-- Admin denied user
-- Disapprove user
+  
+    Admin denied user
+    Disapprove user
+  
 
 Avoid using “deauthenticate” as the opposite of authenticate.
 
-- Log out
-- End session
+  
+    Log out
+    End session
+  
 
-- Deauthenticate
-- Click to deauthenticate
+  
+    Deauthenticate
+    Click to deauthenticate
+  
 
 Avoid using “grant” with “permissions” in casual UI contexts as this has become outdated.
 
-- Assign permissions to user
-- Give user access to reports
+  
+    Assign permissions to user
+    Give user access to reports
+  
 
-- Grant permissions to user
+  
+    Grant permissions to user
+  
 
 Avoid using “read” for viewing UI elements like profiles, permissions and roles.
 
-- View user profile
-- View role details
+  
+    View user profile
+    View role details
+  
 
-- Read user profile
-- Read permissions
+  
+    Read user profile
+    Read permissions
+  
 
 Avoid using “write” for editing or modifying UI elements.
 
-- Edit permissions
-- Modify settings
+  
+    Edit permissions
+    Modify settings
+  
 
-- Write permissions
-- Write role details
-- Write to database
+  
+    Write permissions
+    Write role details
+    Write to database
+  
 
 Avoid using “delete” for simple removals; use “delete” only for permanent erasure. 
 
-- Unassign
-- Remove user from team
-- Remove role from user
-- Delete user account (permanent)
-- Delete file (permanent)
+  
+    Unassign
+    Remove user from team
+    Remove role from user
+    Delete user account (permanent)
+    Delete file (permanent)
+  
 
-- Delete user from team
-- Delete role from user
+  
+    Delete user from team
+    Delete role from user
+  
 
 Avoid using “revoke” with people and users as direct objects.
 
-- Revoke all permissions
-- Revoke API key
+  
+    Revoke all permissions
+    Revoke API key
+  
 
-- Revoke user
-- Revoke the employee
+  
+    Revoke user
+    Revoke the employee
+  
 
 ## Dos and Don’ts
 
-- Do ensure role behaviors are transparent and easy to understand
-- Do use clear, descriptive role names that reflect user responsibilities
-- Do group related permissions logically within roles
-- Don’t create excessive amounts of roles because this causes confusion
-- Don’t create overlapping roles with unclear differences
+  
+    
+      Do ensure role behaviors are transparent and easy to understand
+      Do use clear, descriptive role names that reflect user responsibilities
+      Do group related permissions logically within roles
+    
+  
+  
+    
+      Don’t create excessive amounts of roles because this causes confusion
+      Don’t create overlapping roles with unclear differences
+    
+  
 
 ## Related
 

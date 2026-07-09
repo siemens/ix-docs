@@ -26,6 +26,12 @@ Presenting options or choices for the user to select from also helps to funnel q
 
 ## Dos and Don’ts
 
--	Do train your chatbot to guide users to their point  
--	Do test your chatbot with vague queries   
--	Don’t assume users know what to ask for
+  
+    
+      Do train your chatbot to guide users to their point
+      Do test your chatbot with vague queries
+    
+  
+  
+    
+      Don’t assume users know what to ask for

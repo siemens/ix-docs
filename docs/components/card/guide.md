@@ -83,10 +83,18 @@ Cards have four states: Default, hover, active and focused.
 
 ## Dos and Don’ts
 
-- Do group cards in [card lists](../card-list) or [grids](../grid)
-- Do keep multiple cards equal in size
-- Don’t nest cards inside each other
-- Don’t use cards to collect user input
+  
+    
+      Do group cards in [card lists](../card-list) or [grids](../grid)
+      Do keep multiple cards equal in size
+    
+  
+  
+    
+      Don’t nest cards inside each other
+      Don’t use cards to collect user input
+    
+  
 
 ## Related
 

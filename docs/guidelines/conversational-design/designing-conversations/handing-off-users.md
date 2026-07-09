@@ -12,6 +12,12 @@ Here the chatbot is polite, professional and after a couple of clarifying questi
 
 ## Dos and Don’ts
 
-- Do ensure support features are current and live   
-- Do be transparent when your chatbot is handing users over    
--	Don’t try more than 3 times to ask for clarification; know when to hand off
+  
+    
+      Do ensure support features are current and live
+      Do be transparent when your chatbot is handing users over
+    
+  
+  
+    
+      Don’t try more than 3 times to ask for clarification; know when to hand off

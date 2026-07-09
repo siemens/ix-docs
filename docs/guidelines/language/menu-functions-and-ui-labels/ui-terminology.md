@@ -8,19 +8,25 @@
 
 Always consider the difference between user actions within a desktop environment (based on mouse or keyboard usage) and mobile devices based on touch gestures.
 
-- click (desktop)
-- tap (mobile device)
-- select (when not sure if desktop or mobile)
+  
+    click (desktop)
+    tap (mobile device)
+    select (when not sure if desktop or mobile)
+  
 
 Use clear and precise terms that leave no room for misunderstandings.
 
-- delete (if you want to erase data, e.g. a file)
-- remove (if you want to take data away, e.g. permissions)
+  
+    delete (if you want to erase data, e.g. a file)
+    remove (if you want to take data away, e.g. permissions)
+  
 
 Use “select” for multi-platform applications where the input method varies (tap, click, etc.).
 
-- Select the checkbox to enable notifications.
-- Select and hold the Shift key to select multiple items.
+  
+    Select the checkbox to enable notifications.
+    Select and hold the Shift key to select multiple items.
+  
 
 ## Mouse terminology
 
@@ -34,9 +40,13 @@ This section provides clear definitions for the most frequently used mouse-relat
 - right-click
 - middle-click (scroll wheel)
 
-- click
+  
+    click
+  
 
-- press
+  
+    press
+  
 
 ### Movement-based actions
 
@@ -45,9 +55,13 @@ This section provides clear definitions for the most frequently used mouse-relat
 - hover
 - scroll
 
-- hover
+  
+    hover
+  
 
-- mouse over
+  
+    mouse over
+  
 
 ## Touchscreen terminology
 
@@ -83,42 +97,58 @@ As touchscreen interfaces rely on direct finger interaction, this section covers
 
 Use "press" when referring to the physical action of pressing a key.
 
-- Press Enter to confirm
-- Press Spacebar to play or pause
+  
+    Press Enter to confirm
+    Press Spacebar to play or pause
+  
 
-- Hit Enter
-- Strike Enter
-- Depress Enter
+  
+    Hit Enter
+    Strike Enter
+    Depress Enter
+  
 
 Capitalize special keys and directions.
 
-- Enter / Tab / Shift / Ctrl / Alt
-- Up Arrow / Down Arrow / Left Arrow / Right Arrow
+  
+    Enter / Tab / Shift / Ctrl / Alt
+    Up Arrow / Down Arrow / Left Arrow / Right Arrow
+  
 
 Use "type" when asking users to enter text.
 
-- Type admin in the username field.
+  
+    Type admin in the username field.
+  
 
 ## UI element terminology
 
 Use standardized and consistent terminology to describe UI components and input elements.
 
-- checkbox
+  
+    checkbox
+  
 
-- box
-- option box
-- selection box
-- tick box
+  
+    box
+    option box
+    selection box
+    tick box
+  
 
 Avoid mixing terms within the same products and portfolios.
 
-- To enable automatic updates, select the checkbox to activate Auto update.
-- Click this image
-- The link opens in a new window.
+  
+    To enable automatic updates, select the checkbox to activate Auto update.
+    Click this image
+    The link opens in a new window.
+  
 
-- To enable automatic updates, select the box to activate Auto update.
-- Click this picture
-- The link opens in a new browser.
+  
+    To enable automatic updates, select the box to activate Auto update.
+    Click this picture
+    The link opens in a new browser.
+  
 
 ## UI interaction terminology
 
@@ -163,10 +193,18 @@ Many actions come in natural pairs or opposites. Using the right pairs help user
 
 ## Dos and Don’ts
 
-- Do maintain the same terms for the same actions across all screens
-- Do use specific and standardized component names
-- Do consider the user environment, e.g. mobile, desktop, touchscreen
-- Don’t use generic, invented or vague terms where terminology already exists
+  
+    
+      Do maintain the same terms for the same actions across all screens
+      Do use specific and standardized component names
+      Do consider the user environment, e.g. mobile, desktop, touchscreen
+    
+  
+  
+    
+      Don’t use generic, invented or vague terms where terminology already exists
+    
+  
 
 ## Related
 

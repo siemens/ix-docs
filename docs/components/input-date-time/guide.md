@@ -52,14 +52,18 @@ Date time input has five states: Default, hover, disabled, read-only and focused
 
 ![Date time input states](https://www.figma.com/design/wEptRgAezDU1z80Cn3eZ0o/iX-Documentation-illustrations?node-id=7441-86123&t=BStIEA03mmCLaHAL-4)
 
-## Dos and Don'ts
+## Dos and Don’ts
 
-- Do use consistent date and time formats throughout the application to avoid confusion
-- Do provide clear instructions on the expected format, such as "Enter the date time in yyyy/mm/dd HH:mm format"
-- Do consider localization to adapt date and time formats to local conventions
-- Do use separate inputs for start and end date times when defining time ranges
+  
+    Do use consistent date and time formats throughout the application to avoid confusion
+    Do provide clear instructions on the expected format, such as "Enter the date time in yyyy/mm/dd HH:mm format"
+    Do consider localization to adapt date and time formats to local conventions
+    Do use separate inputs for start and end date times when defining time ranges
+  
 
-- Don't use date time inputs when only a date or only a time is needed (use [date input](../input-date) or [time input](../input-time) instead)
+  
+    Don't use date time inputs when only a date or only a time is needed (use [date input](../input-date) or [time input](../input-time) instead)
+  
 
 ## Related
 

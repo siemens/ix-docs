@@ -48,9 +48,16 @@ Follow these steps and answer the questions with your teams to create your indus
    - How do we assess the chatbot's performance? Consider response time, accuracy, successful/abandoned interactions.
 
 ## Dos and Don’ts
-- Do work with all stakeholders to ensure transparency
-- Do customize chatbot responses for project-specific terminology and processes
-- Do consider how your chatbot hands off to humans for complex issues
-- Do read and review interactions (with user consent)
-- Don’t assume all chatbot interactions are successful
-- Don’t forget to retrain, test and update your chatbot
+
+  
+    
+      Do work with all stakeholders to ensure transparency
+      Do customize chatbot responses for project-specific terminology and processes
+      Do consider how your chatbot hands off to humans for complex issues
+      Do read and review interactions (with user consent)
+    
+  
+  
+    
+      Don't assume all chatbot interactions are successful
+      Don't forget to retrain, test and update your chatbot

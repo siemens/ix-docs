@@ -36,9 +36,15 @@ Checkboxes are commonly used when there are multiple options that can be selecte
 
 ## Dos and Don’ts
 
-- Do use checkboxes when you have multiple options that can be selected
-- Do group related checkboxes together to indicate their relationship
-- Do use checkboxes in forms to allow users to select multiple options
-- Don’t use a checkbox for binary choices (yes/no, true/false) - use a toggle switch instead
-- Don’t use checkboxes for mutually exclusive options - use [radio buttons](../radio) instead
-- Don’t use checkboxes for actions that have immediate consequences - use [buttons](../button) or links instead
+  
+    
+      Do use checkboxes when you have multiple options that can be selected
+      Do group related checkboxes together to indicate their relationship
+      Do use checkboxes in forms to allow users to select multiple options
+    
+  
+  
+    
+      Don’t use a checkbox for binary choices (yes/no, true/false) - use a toggle switch instead
+      Don’t use checkboxes for mutually exclusive options - use [radio buttons](../radio) instead
+      Don’t use checkboxes for actions that have immediate consequences - use [buttons](../button) or links instead

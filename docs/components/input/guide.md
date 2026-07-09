@@ -42,11 +42,11 @@ The input field has five states: default, focused, hover, disabled and read-only
 
 ## Dos and Don’ts
 
-- Do use helper text to guide users through the input process
-- Do use feedback text to inform users about the status of their input
-- Do ensure that the width of the input field is appropriate for the expected content
-- Don’t overcrowd the input field with too many elements
-- Don’t use placeholders as a substitute for labels
+  
+    
+      Do ensure that the width of the input field is appropriate for the expected content
+    
+  
 
 ## Related
 

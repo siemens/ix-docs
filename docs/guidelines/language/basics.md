@@ -30,17 +30,21 @@
 
 - Avoid using negative contractions as they can appear too informal
 
-- their, them, theirs, salesperson
-- Welcome to this application
-- X appears when detail view has selected events
-- cannot, will not
-- you’ll, we’ve
+  
+    their, them, theirs, salesperson
+    Welcome to this application
+    X appears when detail view has selected events
+    cannot, will not
+    you’ll, we’ve
+  
 
-- his, hers, him, salesman
-- Hey there!
-- X doesn’t appear if detail view has no selected events
-- can’t, won’t
-- you will, we have
+  
+    his, hers, him, salesman
+    Hey there!
+    X doesn’t appear if detail view has no selected events
+    can’t, won’t
+    you will, we have
+  
 
 ## Length
 
@@ -64,40 +68,47 @@
 
 - Capitalize named app functions and UI elements: Go to Settings, Allocate users in User management, Press OK
 
-- Go to Settings
-- Press OK
-- Log in
-- For more information, see Siemens Industry Online Support.
+  
+    Go to Settings
+    Press OK
+    Log in
+    For more information, see Siemens Industry Online Support.
+  
 
-- Go To Settings
-- Press OK
-- LOG IN
-- For more information, see Siemens industry online support.
+  
+    Go To Settings
+    Press OK
+    LOG IN
+    For more information, see Siemens industry online support.
+  
 
 ## Common UX wording mistakes
 
-- time zone
-- log file
-- log in (as an action)
-- login (as a noun)
-- equipment
-- feedback
-- training
-- current
-- avoid "shall"
-- Siemens has
-- 34 million / 35 billion
-- 34 million
+  
+    time zone
+    log file
+    log in (as an action)
+    login (as a noun)
+    equipment
+    feedback
+    training
+    current
+    avoid "shall"
+    Siemens has
+    34 million / 35 billion
+    34 million
+  
 
-- timezone
-- logfile
-- login
-- log in
-- equipments
-- feedbacks
-- trainings
-- actual
-- user shall manage users
-- Siemens have
-- 34’ / 35“
-- 34 millions
+  
+    timezone
+    logfile
+    login
+    log in
+    equipments
+    feedbacks
+    trainings
+    actual
+    user shall manage users
+    Siemens have
+    34’ / 35“
+    34 millions

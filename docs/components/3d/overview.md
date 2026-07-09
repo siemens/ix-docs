@@ -487,6 +487,12 @@ import 'echarts-gl';
 
 ## Dos and Don’ts
 
-- Do use with data that's best seen and interpreted in multiple dimensions
-- Don’t use 3D charts for simple data that can be effectively represented with 2D charts
-- Don’t overuse 3D charts as they can make the data harder to interpret
+  
+    
+      Do use with data that's best seen and interpreted in multiple dimensions
+    
+  
+  
+    
+      Don’t use 3D charts for simple data that can be effectively represented with 2D charts
+      Don’t overuse 3D charts as they can make the data harder to interpret

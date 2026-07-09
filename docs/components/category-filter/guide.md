@@ -45,14 +45,22 @@ Category filter has six states: Default, hover, active, disabled, read-only and 
 
 ## Dos and Don’ts
 
-- Do use if you have a large amount of content or products organized into different categories
-- Do use when catering to a diverse user base with different interests or needs
-- Do use if your content or products are organized into distinct categories or topics
-- Do use to make it easier for users to refine their search queries and receive more targeted results
-- Don’t use if your content is minimal or not organized into distinct categories
-- Don’t use if it’s not the primary method of navigation
-- Don’t use if it slows down the user experience
-- Don’t use if your users are not familiar with the category names
+  
+    
+      Do use if you have a large amount of content or products organized into different categories
+      Do use when catering to a diverse user base with different interests or needs
+      Do use if your content or products are organized into distinct categories or topics
+      Do use to make it easier for users to refine their search queries and receive more targeted results
+    
+  
+  
+    
+      Don’t use if your content is minimal or not organized into distinct categories
+      Don’t use if it’s not the primary method of navigation
+      Don’t use if it slows down the user experience
+      Don’t use if your users are not familiar with the category names
+    
+  
 
 ## Related
 

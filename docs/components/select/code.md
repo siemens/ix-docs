@@ -568,6 +568,7 @@ import { IxSelect, IxSelectItem } from '@siemens/ix-vue';
 | helperText | { "Helper text for the select component" } | helper-text | string \| undefined |  |
 | hideListHeader | { "Hide list header" } | hide-list-header | boolean | false |
 | i18nAllSelected | { "Chip label for all selected items in multiple mode." } | i18n-all-selected | string | 'All' |
+| i18nMoreItems | { "Accessible label template for the overflow indicator chip shown in multiple\n\nmode when not all selected chips fit on a single row. The `{count}`\n\nplaceholder is replaced with the number of hidden items (e.g. \"3 more\")." } | i18n-more-items | string | '{count} more' |
 | i18nNoMatches | { "Information inside of dropdown if no items where found with current filter text" } | i18n-no-matches | string | 'No matches' |
 | i18nPlaceholder | { "Input field placeholder" } | i18n-placeholder | string | 'Select an option' |
 | i18nPlaceholderEditable | { "Input field placeholder for editable select" } | i18n-placeholder-editable | string | 'Type of select option' |
@@ -600,6 +601,7 @@ import { IxSelect, IxSelectItem } from '@siemens/ix-vue';
 
 | Name | Description | Attribute | Type | Default |
 | --- | --- | --- | --- | --- |
+| disabled | { "Disable the item. A disabled item cannot be selected via mouse or keyboard\n\nand is excluded from the focusable items of the parent ix-select." } | disabled | boolean | false |
 | label | { "Displayed name of the item" } | label | string \| undefined |  |
 | selected | { "Flag indicating whether the item is selected" } | selected | boolean | false |
 | value | { "The value of the item.\n\nImportant: The select component uses string values to handle selection and will call toString() on this value.\n\nTherefor a string should be passed to value to prevent unexpected behavior." } | value | string |  |

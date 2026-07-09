@@ -45,11 +45,19 @@ Pills are read-only.
 
 ## Dos and Don’ts
 
-- Do use pills to communicate tags and categories
-- Do use pills to indicate the status or characteristics of an item
-- Don’t overuse pills as this leads to cluttered and overwhelming interfaces
-- Don’t use different styles for pills with the same or similar use
-- Don’t use pills if users can interact with the component (e.g. click, close) use chips instead
+  
+    
+      Do use pills to communicate tags and categories
+      Do use pills to indicate the status or characteristics of an item
+    
+  
+  
+    
+      Don’t overuse pills as this leads to cluttered and overwhelming interfaces
+      Don’t use different styles for pills with the same or similar use
+      Don’t use pills if users can interact with the component (e.g. click, close) use chips instead
+    
+  
 
 ## Related
 

@@ -438,7 +438,6 @@ export default function EchartsLineMultipleYAxis() {
     legend: {
       show: true,
       bottom: '0',
-      left: '0',
     },
     xAxis: [
       {
@@ -594,7 +593,6 @@ export default class EchartsLineMultipleYAxis implements OnDestroy, OnInit {
       legend: {
         show: true,
         bottom: '0',
-        left: '0',
       },
       xAxis: [
         {
@@ -780,7 +778,6 @@ export default class EchartsLineMultipleYAxis implements OnDestroy, OnInit {
       legend: {
         show: true,
         bottom: '0',
-        left: '0',
       },
       xAxis: [
         {
@@ -963,7 +960,6 @@ function getOptions(): EChartsOption {
     legend: {
       show: true,
       bottom: '0',
-      left: '0',
     },
     xAxis: [
       {
@@ -1456,10 +1452,16 @@ onBeforeUnmount(() => {
 
 ## Dos and Don’ts
 
-- Do start the Y-axis at zero and label axes clearly
-- Do use contrasting colors for multiple lines to better distinguish different data series
-- Do use consistent intervals on axes
-- Do highlight important data points
-- Do use visual cues to show gaps in data
-- Don’t overcrowd the chart with colors
-- Don’t clutter the chart with too many lines, we recommend no more than 7 lines
+  
+    
+      Do start the Y-axis at zero and label axes clearly
+      Do use contrasting colors for multiple lines to better distinguish different data series
+      Do use consistent intervals on axes
+      Do highlight important data points
+      Do use visual cues to show gaps in data
+    
+  
+  
+    
+      Don’t overcrowd the chart with colors
+      Don’t clutter the chart with too many lines, we recommend no more than 7 lines

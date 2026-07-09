@@ -34,8 +34,16 @@ Dropdown buttons have five states: Default, hover, active, disabled and focused.
 
 ## Dos and Don’ts
 
-- Do use dropdown buttons when selecting an option triggers an action
-- Don’t use dropdown buttons when there is a frequent or most-important action (use a standard button or a split button instead)
+  
+    
+      Do use dropdown buttons when selecting an option triggers an action
+    
+  
+  
+    
+      Don’t use dropdown buttons when there is a frequent or most-important action (use a standard button or a split button instead)
+    
+  
 
 ## Related
 

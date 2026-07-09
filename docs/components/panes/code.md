@@ -438,6 +438,7 @@ const layout = ref<'full-horizontal' | 'full-vertical'>('full-horizontal');
 | heading | { "Title of the side panel" } | heading | string \| undefined |  |
 | hideOnCollapse | { "Define if the pane should have a collapsed state" } | hide-on-collapse | boolean | false |
 | icon | { "Name of the icon" } | icon | string \| undefined |  |
+| noPadding | { "Remove the padding of the content area.\n\nIf set to `true` the left, right and bottom padding of the content area is removed." } | no-padding | boolean | false |
 | size | { "The maximum size of the sidebar, when it is expanded" } | size | "240px" \| "320px" \| "33%" \| "360px" \| "480px" \| "50%" \| "600px" | '240px' |
 | variant | { "Variant of the side pane.\n\nDefaults to the variant attribute of the pane layout. If used standalone it defaults to inline." } | variant | "floating" \| "inline" | 'inline' |
 

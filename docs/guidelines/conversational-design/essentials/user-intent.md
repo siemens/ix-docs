@@ -38,8 +38,14 @@ Here we see that although the intent for maintenance is very explicit, the chatb
 
 ## Dos and Don’ts
 
-- Do carry out extensive research on user needs and goals
-- Do work with your teams to establish and predict user intent with example dialogs
-- Do test your chatbot with explicit and implicit requests to assess evaluation of user intent
-- Don’t assume your users will be explicit about what they need
-- Don’t assume users are skilled at prompting your chatbot
+  
+    
+      Do carry out extensive research on user needs and goals
+      Do work with your teams to establish and predict user intent with example dialogs
+      Do test your chatbot with explicit and implicit requests to assess evaluation of user intent
+    
+  
+  
+    
+      Don’t assume your users will be explicit about what they need
+      Don’t assume users are skilled at prompting your chatbot

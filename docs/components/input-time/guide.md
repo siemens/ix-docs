@@ -32,6 +32,7 @@ Time inputs are typically used in forms, filters and scheduling tools to ensure 
   - **Header**: Hide the header when there is a label on the input, or if the context is conveyed in another way.
   - **Corners**
   - **Standalone appearance**
+
 ## Behavior in context
 
 - **Interaction**:
@@ -54,12 +55,12 @@ Time input has five states: Default, hover, disabled, read-only and focused.
 
 ## Dos and Don’ts
 
-- Do use consistent time formats throughout the application to avoid confusion
-- Do add helper text to clarify the time format being used
-- Do ensure the time picker is accessible via keyboard
-- Do consider localization to adapt time formats to local conventions
+  Do use consistent time formats throughout the application to avoid confusion
+  Do add helper text to clarify the time format being used
+  Do ensure the time picker is accessible via keyboard
+  Do consider localization to adapt time formats to local conventions
 
-- Don’t use the same input for start and end times, instead separate them
+  Don’t use the same input for start and end times, instead separate them
 
 ## Related
 

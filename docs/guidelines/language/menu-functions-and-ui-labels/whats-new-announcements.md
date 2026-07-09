@@ -16,54 +16,80 @@ We follow this three-step approach when creating our updates. They explain what�
 
 Use the wording “What’s new…” for the heading without a question mark (?) or period.
 
-- What’s new in October
-- What’s new in Version 3.2
-- What’s new this month
+  
+    What’s new in October
+    What’s new in Version 3.2
+    What’s new this month
+  
 
-- What’s new this month?
+  
+    What’s new this month?
+  
 
 Use a contraction in the heading, i.e. “What’s” not “What is”.
 
-- What’s new in October
+  
+    What’s new in October
+  
 
-- What is new in October
+  
+    What is new in October
+  
 
 Use paragraphs or bullet points to present or highlight one point at a time instead of italics or bold.
 
-- What’s new in the dashboard
-&nbsp;&nbsp;&bull; Edit with new filter options.
-&nbsp;&nbsp;&bull; Set up zones to itemize your assets.
+  
+    What’s new in the dashboard
+    &nbsp;&nbsp;&bull; Edit with new filter options.
+    &nbsp;&nbsp;&bull; Set up zones to itemize your assets.
+  
 
-- What’s new in the dashboard. Now includes customizable widgets, allowing you to tailor your view to your specific needs, new ways to edit your dashboards by moving or adjusting filters to help you with your day, and zones for dashboards such as by plant or groups to itemize your assets more easily.
+  
+    What’s new in the dashboard. Now includes customizable widgets, allowing you to tailor your view to your specific needs, new ways to edit your dashboards by moving or adjusting filters to help you with your day, and zones for dashboards such as by plant or groups to itemize your assets more easily.
+  
 
 Use a personal and engaging tone without being too informal (avoid emojis or slang).
 
-- With this new version we bring you new features and improvements to enhance your experience.
+  
+    With this new version we bring you new features and improvements to enhance your experience.
+  
 
-- Yo fam, we’ve been grinding to drop some lit upgrades to level up your vibe! 🚀✨
+  
+    Yo fam, we’ve been grinding to drop some lit upgrades to level up your vibe! 🚀✨
+  
 
 Provide a clear way for users to dismiss announcements without confusion.
 
-- Close
-- Skip
-- Skip and don’t show again
+  
+    Close
+    Skip
+    Skip and don’t show again
+  
 
-- Confirm
-- Proceed
-- Continue
+  
+    Confirm
+    Proceed
+    Continue
+  
 
 Provide a clear way for users to postpone announcements.
 
-- Not now
-- Remind me at next login
+  
+    Not now
+    Remind me at next login
+  
 
-- Maybe later
+  
+    Maybe later
+  
 
 Avoid technical, negative or wordy dismiss actions.
 
-- Terminate dialog
-- No, I don’t want to improve my workflow
-- I confirm I understand this announcement and wish to close this notification
+  
+    Terminate dialog
+    No, I don’t want to improve my workflow
+    I confirm I understand this announcement and wish to close this notification
+  
 
 ## Dos and Don’ts
 

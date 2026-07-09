@@ -103,7 +103,13 @@ Here the response is more concise, professional and shows the chatbot is aware o
 
 ## Dos and Don’ts
 
-- Do use your brand’s voice rules to shape your chatbot voice
-- Do work with developers to support data set collection
-- Don’t assume your users write correctly or accurately
-- Don’t forget to implement new NLP models as they advance
+  
+    
+      Do use your brand’s voice rules to shape your chatbot voice
+      Do work with developers to support data set collection
+    
+  
+  
+    
+      Don’t assume your users write correctly or accurately
+      Don’t forget to implement new NLP models as they advance

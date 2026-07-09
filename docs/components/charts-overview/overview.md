@@ -107,7 +107,6 @@ export default function Echarts() {
     legend: {
       icon: 'rect',
       bottom: 0,
-      left: 0,
     },
     grid: {
       left: '3%',
@@ -267,7 +266,6 @@ export default class Echarts implements OnDestroy, OnInit {
     legend: {
       icon: 'rect',
       bottom: 0,
-      left: 0,
     },
     grid: {
       left: '3%',
@@ -443,7 +441,6 @@ export default class Echarts implements OnDestroy, OnInit {
     legend: {
       icon: 'rect',
       bottom: 0,
-      left: 0,
     },
     grid: {
       left: '3%',
@@ -624,7 +621,6 @@ const options: EChartsOption = {
   legend: {
     icon: 'rect',
     bottom: 0,
-    left: 0,
   },
   grid: {
     left: '3%',

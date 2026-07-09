@@ -94,7 +94,7 @@ This file contains links to documentation sections following the llmstxt.org sta
 - [Message modal - usage](https://ix.siemens.io//docs/components/message-modal/guide.md): import { IxButton } from '@siemens/ix-react';
 - [Message bar - Code](https://ix.siemens.io//docs/components/messagebar/code.md): Code examples and API documentation for the ix-message-bar
 - [Modal - Code](https://ix.siemens.io//docs/components/modal/code.md): Code examples and API documentation for the ix-modal-header
-- [Custom modal - Usage](https://ix.siemens.io//docs/components/modal/guide.md): Custom modal - Usage
+- [Custom modal - Usage](https://ix.siemens.io//docs/components/modal/guide.md): Custom modals present rich, contextual content, e.g. forms, complex workflows or nested interactions that require the user's focus.
 - [Components overview](https://ix.siemens.io//docs/components/overview.md): Our design system clusters components into intuitive categories, making it easy to find the right tools for your app design. Explore each section t...
 - [Pagination - Code](https://ix.siemens.io//docs/components/pagination/code.md): Code examples and API documentation for the ix-pagination
 - [Panes - Code](https://ix.siemens.io//docs/components/panes/code.md): Code examples and API documentation for the ix-pane, ix-pane-layout

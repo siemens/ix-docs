@@ -74,10 +74,10 @@
   "/src/preview-examples/aria-label-properties.html": [
     "ix-date-picker"
   ],
-  "/src/preview-examples/avatar-initials.html": [
+  "/src/preview-examples/avatar-image.html": [
     "ix-avatar"
   ],
-  "/src/preview-examples/avatar-image.html": [
+  "/src/preview-examples/avatar-initials.html": [
     "ix-avatar"
   ],
   "/src/preview-examples/avatar.html": [
@@ -220,12 +220,12 @@
     "ix-icon",
     "ix-typography"
   ],
+  "/src/preview-examples/date-input.html": [
+    "ix-date-input"
+  ],
   "/src/preview-examples/date-range.html": [
     "ix-date-input",
     "ix-range-field"
-  ],
-  "/src/preview-examples/date-input.html": [
-    "ix-date-input"
   ],
   "/src/preview-examples/datepicker-locale.html": [
     "ix-date-picker",
@@ -331,12 +331,12 @@
   "/src/preview-examples/event-list-filled.html": [
     "ix-event-list"
   ],
+  "/src/preview-examples/event-list-selected.html": [
+    "ix-event-list"
+  ],
   "/src/preview-examples/event-list.html": [
     "ix-event-list",
     "ix-event-list-item"
-  ],
-  "/src/preview-examples/event-list-selected.html": [
-    "ix-event-list"
   ],
   "/src/preview-examples/expanding-search.html": [
     "ix-expanding-search"
@@ -610,6 +610,15 @@
     "ix-menu-about-item",
     "ix-menu-about-news"
   ],
+  "/src/preview-examples/popover.html": [
+    "ix-button",
+    "ix-pill",
+    "ix-popover",
+    "ix-popover-content",
+    "ix-popover-footer",
+    "ix-popover-header",
+    "ix-popover-image"
+  ],
   "/src/preview-examples/progress-indicator-circular-sizes.html": [
     "ix-progress-indicator"
   ],
@@ -806,11 +815,11 @@
   "/src/preview-examples/toggle-button-secondary.html": [
     "ix-toggle-button"
   ],
-  "/src/preview-examples/toggle-button-subtle-primary.html": [
-    "ix-toggle-button"
-  ],
   "/src/preview-examples/toggle-button-subtle-secondary.html": [
     "ix-toggle-button"
+  ],
+  "/src/preview-examples/toggle-checked.html": [
+    "ix-toggle"
   ],
   "/src/preview-examples/toggle-custom-label.html": [
     "ix-toggle"
@@ -866,14 +875,14 @@
     "ix-workflow-step",
     "ix-workflow-steps"
   ],
-  "/src/preview-examples/toggle-button-tertiary.html": [
-    "ix-toggle-button"
-  ],
   "/src/preview-examples/toggle-button-subtle-tertiary.html": [
     "ix-toggle-button"
   ],
-  "/src/preview-examples/toggle-checked.html": [
-    "ix-toggle"
+  "/src/preview-examples/toggle-button-tertiary.html": [
+    "ix-toggle-button"
+  ],
+  "/src/preview-examples/toggle-button-subtle-primary.html": [
+    "ix-toggle-button"
   ],
   "/home/runner/work/ix/ix/node_modules/.pnpm/@siemens+ix-icons@3.4.0/node_modules/@siemens/ix-icons/dist/esm/index.js": [
     "ix-icon"

@@ -39,11 +39,15 @@ An individual time item of a time picker has five states: Default, hover, active
 
 ## Dos and Don’ts
 
-- Do use the time picker to ensure accurate time selection (we recommend to use [time inputs](../input-time) for that reason)
-- Do provide clear instructions and labels for users
-- Do ensure the time picker is accessible via keyboard
+  
+    Do use the time picker to ensure accurate time selection (we recommend to use [time inputs](../input-time) for that reason)
+    Do provide clear instructions and labels for users
+    Do ensure the time picker is accessible via keyboard
+  
 
-- Don’t clutter the time picker with unnecessary options
+  
+    Don’t clutter the time picker with unnecessary options
+  
 
 ## Related
 

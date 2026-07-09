@@ -18,77 +18,117 @@ We follow this three-step approach when creating our warning messages. This ensu
 
 Use warning messages only when an action or awareness is genuinely needed.
 
-- Temperature readings from Zone 3 approaching 30°. Check cooling system and ensure all windows and doors are closed.
+  
+    Temperature readings from Zone 3 approaching 30°. Check cooling system and ensure all windows and doors are closed.
+  
 
 Use clear, understandable titles and avoid generic warning messages.
 
-- Temperature approaching 30°
+  
+    Temperature approaching 30°
+  
 
-- Temperature warning
+  
+    Temperature warning
+  
 
 Provide specific and clear consequences and solutions.
 
-- Heading: Leave without saving
-Description: You’re about to leave this page. Unsaved changes will be lost. Go back to save changes or exit without saving.
-Button: Leave without saving
-Button: Go back
+  
+    Heading: Leave without saving
+    Description: You’re about to leave this page. Unsaved changes will be lost. Go back to save changes or exit without saving.
+    Button: Leave without saving
+    Button: Go back
+  
 
-- Do you want to leave the page?
-Button: Continue
-Button: OK
-Button: Cancel
+  
+    Do you want to leave the page?
+    Button: Continue
+    Button: OK
+    Button: Cancel
+  
 
 Avoid using words like "may", "might" or "possibly will" when explaining problems.
 
-- Your changes will be lost if not saved.
+  
+    Your changes will be lost if not saved.
+  
 
-- Your changes might be lost if not saved.
+  
+    Your changes might be lost if not saved.
+  
 
 Include links to help pages or troubleshooting steps to avoid the consequences when possible.
 
-- Heading: Login attempt from unknown device
-Description: Review access settings or security guidelines to prevent unauthorized access.
-Button: Open guidelines
-Button: Open access settings
+  
+    Heading: Login attempt from unknown device
+    Description: Review access settings or security guidelines to prevent unauthorized access.
+    Button: Open guidelines
+    Button: Open access settings
+  
 
-- Heading: Unauthorized access attempt on Control Panel A
-Description: Review access logs and verify user credentials.
-Button: Open access logs
+  
+    Heading: Unauthorized access attempt on Control Panel A
+    Description: Review access logs and verify user credentials.
+    Button: Open access logs
+  
 
 Avoid repeating your message in both the heading and description.
 
-- Heading: Pressure in Tank B approaching limit
-Description: Initiate release protocol to avoid exceeding threshold.
+  
+    Heading: Pressure in Tank B approaching limit
+    Description: Initiate release protocol to avoid exceeding threshold.
+  
 
-- Heading: Pressure in Tank B approaching limit
-Description: Pressure in Tank B approaching limit so initiate release protocol.
+  
+    Heading: Pressure in Tank B approaching limit
+    Description: Pressure in Tank B approaching limit so initiate release protocol.
+  
 
 Avoid asking "Are you sure?" as this is vague, has no context, consequences and causes hesitation.
 
-- This action will delete all sensor data from the last 24 hours. Do you want to proceed and delete?
+  
+    This action will delete all sensor data from the last 24 hours. Do you want to proceed and delete?
+  
 
-- Are you sure you want to delete?
+  
+    Are you sure you want to delete?
+  
 
 Use clear, urgent wording for irreversible actions.
 
-- Heading: Reset device
-Description: A reset restores the device to its factory settings, deleting all applications and user data. This action cannot be undone.
-Button: Reset
-Button: Cancel
+  
+    Heading: Reset device
+    Description: A reset restores the device to its factory settings, deleting all applications and user data. This action cannot be undone.
+    Button: Reset
+    Button: Cancel
+  
 
-- Press reset to proceed.
+  
+    Press reset to proceed.
+  
 
 Avoid using all uppercase text as it can be difficult to read and may seem like we’re shouting.
 
-- WARNING!! FAILURE! IMMEDIATE ACTION REQUIRED!!
+  
+    WARNING!! FAILURE! IMMEDIATE ACTION REQUIRED!!
+  
 
 ## Dos and Don’ts
 
-* Do be consistent by re-using the verbs of the message and buttons
-* Do make sure users understand the warning’s context
-* Do give users actions to avoid any negative consequences
-* Don’t use "please" with the call to action or options
-* Don’t use patronizing questions such as "Are you sure…?"
+  
+    
+      Do be consistent by re-using the verbs of the message and buttons
+      Do make sure users understand the warning’s context
+      Do give users actions to avoid any negative consequences
+    
+  
+  
+    
+      Don’t use "please" with the call to action or options
+      Don’t use patronizing questions such as "Are you sure…?"
+    
+  
 
 ## Related
 

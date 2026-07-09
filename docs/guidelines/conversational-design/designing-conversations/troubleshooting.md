@@ -15,7 +15,14 @@ Here the chatbot says exactly what the problem is, but this response lacks empat
 Here the chatbot says exactly what the problem is, gives a possible reason for the lack of connection and then provides a solution to move the user forward.
 
 ## Dos and Don’ts
-- Do provide calls to action when troubleshooting
-- Do offer step by step solutions using technical documentation
-- Don’t allow your chatbot to offer competitor solutions to their problems
-- Don’t allow your chatbot to hallucinate (make up) solutions without concrete resources
+
+  
+    
+      Do provide calls to action when troubleshooting
+      Do offer step by step solutions using technical documentation
+    
+  
+  
+    
+      Don't allow your chatbot to offer competitor solutions to their problems
+      Don't allow your chatbot to hallucinate (make up) solutions without concrete resources

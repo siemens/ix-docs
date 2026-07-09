@@ -56,12 +56,20 @@ Dropdown items have five states: Default, hover, active, disabled and focused. W
 
 ## Dos and Don’ts
 
-- Do structure dropdown items coherently with submenus, quick actions and separators
-- Do use dropdowns to showcase related actions
-- Do disable items that cannot be used at that moment
-- Don’t use global navigation options in a dropdown
-- Don’t use too many dropdown items - we recommend a maximum of seven
-- Don’t insert the [date picker](../date-dropdown) instead)
+  
+    
+      Do structure dropdown items coherently with submenus, quick actions and separators
+      Do use dropdowns to showcase related actions
+      Do disable items that cannot be used at that moment
+    
+  
+  
+    
+      Don’t use global navigation options in a dropdown
+      Don’t use too many dropdown items - we recommend a maximum of seven
+      Don’t insert the [date picker](../date-dropdown) instead)
+    
+  
 
 ## Related
 

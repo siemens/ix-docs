@@ -17,45 +17,65 @@ We follow this three-step approach when creating our empty-state messages. They 
 Use the template when the error stops users moving forward.
 
   
-    - Heading: No zones added
-    Description: Add zones to your profile to see them listed here.
-    Button: Add zones
+    
+      Heading: No zones added
+      Description: Add zones to your profile to see them listed here.
+      Button: Add zones
+    
   
 
   
-    - Heading: No zones created
-    Description: Add region from your dashboard.
-    Button: Make sectors
+    
+      Heading: No zones created
+      Description: Add region from your dashboard.
+      Button: Make sectors
+    
   
 
 Use clear action verbs to show users how to fill the empty state.
 
   
-
-    - Heading: No users added 
+    
+      Heading: No users added 
       Description: Add users in User management.
       Button: Open User management
-
+    
   
 
 Use neutral framing of the empty state and avoid making it seem like a user failure.
 
-- No users added
+  
+    No users added
+  
 
-- You haven’t added any of your users
+  
+    You haven’t added any of your users
+  
 
 Avoid “yet” or other expectation-related terms in headings.
 
-- Heading: No users added
+  
+    Heading: No users added
+  
 
-- Heading: No users added yet
+  
+    Heading: No users added yet
+  
 
 ## Dos and Don’ts
 
-- Do make all messages consistent in terms of grammar and punctuation
-- Do make sure users understand the space is not an error or a bug
-- Do provide an option to fill the empty space with a button or link
-- Don’t overcommunicate about the function of the empty state
+  
+    
+      Do make all messages consistent in terms of grammar and punctuation
+      Do make sure users understand the space is not an error or a bug
+      Do provide an option to fill the empty space with a button or link
+    
+  
+  
+    
+      Don’t overcommunicate about the function of the empty state
+    
+  
 
 ## Related
 

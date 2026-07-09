@@ -20,7 +20,13 @@ Here, although there may be some lag time between the query and the response, th
 
 ## Dos and Don’ts
 
-- Do use discourse markers to acknowledge users (see grammar section)  
--	Do use interim acknowledgments if the query response takes time to load  
--	Do read out dialogs to test if any acknowledgments are naturally missing  
--	Don’t forget to balance efficiency with authenticity
+  
+    
+      Do use discourse markers to acknowledge users (see grammar section)
+      Do use interim acknowledgments if the query response takes time to load
+      Do read out dialogs to test if any acknowledgments are naturally missing
+    
+  
+  
+    
+      Don’t forget to balance efficiency with authenticity

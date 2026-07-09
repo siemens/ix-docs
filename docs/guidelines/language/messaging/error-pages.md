@@ -21,27 +21,43 @@ We follow these templates when creating our main error pages. Although some of t
 
 Use the official code and definition so users can search for code terms and information themselves.
 
-- 401 Unauthorized
+  
+    401 Unauthorized
+  
 
-- 401 Unlawful
+  
+    401 Unlawful
+  
 
 Use language suitable for all target users, including non-native English speakers.
 
-- This page is not available right now. Try again later.
+  
+    This page is not available right now. Try again later.
+  
 
-- An unforeseen server-side condition prevented the fruitful processing of your request. This indicates an issue within our infrastructure, not a client-side input error.
+  
+    An unforeseen server-side condition prevented the fruitful processing of your request. This indicates an issue within our infrastructure, not a client-side input error.
+  
 
 Avoid jokes, memes, emojis or casual wording in error pages for industrial applications.
 
-- 401 Unauthorized
+  
+    401 Unauthorized
+  
 
-- Hold on! VIP access only! 🎩✨
+  
+    Hold on! VIP access only! 🎩✨
+  
 
 Use sentence casing within the description with minimal punctuation and formatting.
 
-- There is an error on this page. Try again later.
+  
+    There is an error on this page. Try again later.
+  
 
-- There <ins>is</ins> an ERROR on this **page**! Try again later.
+  
+    There <ins>is</ins> an ERROR on this **page**! Try again later.
+  
 
 ## Dos and Don’ts
 

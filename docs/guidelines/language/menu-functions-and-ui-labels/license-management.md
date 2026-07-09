@@ -8,60 +8,92 @@
 
 Use clear and consistent language your users are familiar with.
 
-- Your subscription expires in 30 days. Renew now to keep access to all features.
+  
+    Your subscription expires in 30 days. Renew now to keep access to all features.
+  
 
-- Your entitlement terminates in 30 days. Execute renewal procedures to maintain feature provisioning.
+  
+    Your entitlement terminates in 30 days. Execute renewal procedures to maintain feature provisioning.
+  
 
 Use the same terms throughout workflows, applications and portfolios to avoid confusion.
 
-- Activate your license / License activated / View activated licenses
+  
+    Activate your license / License activated / View activated licenses
+  
 
-- Activate your license / License enabled / View dynamic licenses
+  
+    Activate your license / License enabled / View dynamic licenses
+  
 
 Use links when referencing terms of use or compliance documents.
 
-- By using this software, you agree to our Terms of Use.
-Link text: View full terms
+  
+    By using this software, you agree to our Terms of Use.
+    Link text: View full terms
+  
 
 ## Grammar and spelling rules
 
 Use American English spelling “license” (with s) for both nouns and verbs in all global interfaces.
 
-- Your license expires in 30 days.
+  
+    Your license expires in 30 days.
+  
 
-- Your licence expires in 30 days.
+  
+    Your licence expires in 30 days.
+  
 
 Use “a license” when referring to single licenses in general, and “the license” when referring to specific licenses.
 
-- You need a license to access this feature.
-- The license you purchased includes 5 users.
+  
+    You need a license to access this feature.
+    The license you purchased includes 5 users.
+  
 
 Avoid using apostrophes to describe singular (‘s) or plural (s’) license possession.
 
-- The license expires on May 1, 2026.
-- The status of all licenses can be viewed here.
+  
+    The license expires on May 1, 2026.
+    The status of all licenses can be viewed here.
+  
 
-- The license’s expiration date is May 1, 2026.
-- All licenses’ status can be viewed here.
+  
+    The license’s expiration date is May 1, 2026.
+    All licenses’ status can be viewed here.
+  
 
 Use active voice for user actions.
 
-- Activate your license now.
+  
+    Activate your license now.
+  
 
-- Your license should be activated by you.
+  
+    Your license should be activated by you.
+  
 
 Use passive voice when the actor is unknown or unimportant.
 
-- Your license was activated successfully.
+  
+    Your license was activated successfully.
+  
 
-- The license activates.
+  
+    The license activates.
+  
 
 Use hyphens to connect descriptive words before nouns.
 
-- A multi-user license
-- The license is multi-user
+  
+    A multi-user license
+    The license is multi-user
+  
 
-- A multi user license
+  
+    A multi user license
+  
 
 ## License types
 
@@ -137,126 +169,194 @@ Note licenses can be both proper nouns and common nouns (per Product License vs.
 
 Use clear and specific dates, limits and consequences.
 
-- Your license expires on November 30, 2025.
+  
+    Your license expires on November 30, 2025.
+  
 
-- Your license will expire soon.
+  
+    Your license will expire soon.
+  
 
 Use prominent and clear expiration warnings.
 
-- First notice: Your license expires on November 30, 2025.
-- Second notice: Your license expires in 7 days.
-- Final notice: Your license expires tomorrow.
+  
+    First notice: Your license expires on November 30, 2025.
+    Second notice: Your license expires in 7 days.
+    Final notice: Your license expires tomorrow.
+  
 
 Send timely, progressive reminders, especially for expiration and grace periods.
 
-- Heading: Your license has expired.Description: Your license expired on January 1, 2026. To continue using our application renew your subscription.Buttons: Renew now / Contact sales
-- Grace period notice: 7 days
+  
+    Heading: Your license has expired.Description: Your license expired on January 1, 2026. To continue using our application renew your subscription.Buttons: Renew now / Contact sales
+    Grace period notice: 7 days
+  
 
-- License expired.
+  
+    License expired.
+  
 
 ## License quantities and numbers
 
 Use “quantity” to refer to how many and “number” to refer to identifiers and codes.
 
-- product number
-- serial number
-- Enter your license key
+  
+    product number
+    serial number
+    Enter your license key
+  
 
-- Enter your license key quantity
+  
+    Enter your license key quantity
+  
 
 ## License identification and keys
 
 Use “ID” for identification and tracking and “key” for activation or access.
 
-- Enter your license key.
+  
+    Enter your license key.
+  
 
-- Enter your license ID.
+  
+    Enter your license ID.
+  
 
 Use “subscription ID” when referring to the unique identifier number or code for an entire subscription (often a long number or UUID).
 
-- Your subscription ID is 1234567890.
+  
+    Your subscription ID is 1234567890.
+  
 
-- Your subscription key is 1234567890.
+  
+    Your subscription key is 1234567890.
+  
 
 Use “subscription key” when referring to a code or password required to activate or access a subscription.
 
-- Copy this subscription key to activate your subscription.
+  
+    Copy this subscription key to activate your subscription.
+  
 
-- Copy this subscription ID to activate your subscription.
+  
+    Copy this subscription ID to activate your subscription.
+  
 
 Use “license ID” or “ID” for the unique identifier of a specific license within the subscription.
 
-- Each license has its own license ID for tracking and management.
+  
+    Each license has its own license ID for tracking and management.
+  
 
-- Each license has its own license key for tracking and management.
+  
+    Each license has its own license key for tracking and management.
+  
 
 Use “license key” when talking about the code or string that unlocks or activates a specific license.
 
-- Enter your license key to activate the product.
+  
+    Enter your license key to activate the product.
+  
 
-- Enter your license ID to activate the product.
+  
+    Enter your license ID to activate the product.
+  
 
 ## License error messages
 
 When licenses cannot be found, explain possible causes and provide clear actions to resolve the issue.
 
-- Heading: License not foundDescription: Failed to find a valid license for this product. This may happen if you’re registered under a different account, or if your license has not been activated yet.Button: Sign in with different account
+  
+    Heading: License not foundDescription: Failed to find a valid license for this product. This may happen if you’re registered under a different account, or if your license has not been activated yet.Button: Sign in with different account
+  
 
 When licenses are not available, explain how users can resolve the issue.
 
-- Heading: No licenses availableDescription: All 10 licenses are currently in use. Ask your administrator to assign a license to you or wait until one becomes available.Buttons: Request license / View license usage
+  
+    Heading: No licenses availableDescription: All 10 licenses are currently in use. Ask your administrator to assign a license to you or wait until one becomes available.Buttons: Request license / View license usage
+  
 
 ## Common wording issues
 
 Use “add-on” to refer to additional features or modules attached to an existing product.
 
-- Add the Health package add-on for obsolescence notifications.
+  
+    Add the Health package add-on for obsolescence notifications.
+  
 
 Use “upgrade” for when users are moving to a better version of the same product.
 
-- Upgrade to the Professional edition for more features.
-- Upgrade your license from Version 2.0 to Version 3.0.
+  
+    Upgrade to the Professional edition for more features.
+    Upgrade your license from Version 2.0 to Version 3.0.
+  
 
-- Add the next edition as an add-on.
+  
+    Add the next edition as an add-on.
+  
 
 Use “requirement” to refer to what a user needs to run the software.
 
-- License requirements: Active subscription and internet connection.
-- This feature requires an active maintenance agreement.
+  
+    License requirements: Active subscription and internet connection.
+    This feature requires an active maintenance agreement.
+  
 
 Use “entitlement” to refer to what the user is authorized to do.
 
-- Your entitlement includes 5 user licenses.
-- This feature is not included in your current entitlement.
+  
+    Your entitlement includes 5 user licenses.
+    This feature is not included in your current entitlement.
+  
 
-- Your requirement includes 5 user licenses.
+  
+    Your requirement includes 5 user licenses.
+  
 
 Use the standard term “activate” and “assign” instead of the non-standard “start”.
 
-- Activate license now.
-- Assign licenses to your team in your dashboard.
+  
+    Activate license now.
+    Assign licenses to your team in your dashboard.
+  
 
 Use “renew” instead of “update” for continuing subscriptions.
 
-- Renew your license in one easy step.
+  
+    Renew your license in one easy step.
+  
 
 Use “manage” instead of “edit” to administer licenses.
 
-- Manage your licenses under License management.
+  
+    Manage your licenses under License management.
+  
 
 Use “base” product to talk about a foundation product that other features build on.
 
-- The base product includes core functionality.
+  
+    The base product includes core functionality.
+  
 
 Use “basic” product when talking about a simplified or entry-level version of your product.
 
-- Select either our Basic, Premium or Advanced licenses.
+  
+    Select either our Basic, Premium or Advanced licenses.
+  
 
 ## Dos and Don’ts
 
-- Do document license terms and record any changes for consistency
-- Do use the same license actions consistently across applications and portfolios
-- Don’t create new license types or states, instead use standard terms
+  
+    
+      Do document license terms and record any changes for consistency
+      Do use the same license actions consistently across applications and portfolios
+    
+  
+  
+    
+      Don’t create new license types or states, instead use standard terms
+    
+  
 
 ## Related
 

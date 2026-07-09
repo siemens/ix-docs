@@ -52,13 +52,17 @@ For more information about writing effective helper texts or labels, see our [UX
 
 ## Dos and Don’ts
 
-- Do use progress indicators consistently for similar processes
-- Do use progress indicators for determinate processes where progress can be measured (otherwise use [spinners](../spinner/index.mdx))
-- Do use linear progress indicators in horizontal layouts and circular indicators in compact spaces or centered layouts
-- Do keep your slot content short, especially for the centered alignment (use helper texts and labels for lengthier content)
+  
+    Do use progress indicators consistently for similar processes
+    Do use progress indicators for determinate processes where progress can be measured (otherwise use [spinners](../spinner/index.mdx))
+    Do use linear progress indicators in horizontal layouts and circular indicators in compact spaces or centered layouts
+    Do keep your slot content short, especially for the centered alignment (use helper texts and labels for lengthier content)
+  
 
-- Don't use progress indicators for operations shorter than one second
-- Don't only indicate progress completion with the indicator without clear task messages, e.g. success toasts or displaying the loaded content
+  
+    Don't use progress indicators for operations shorter than one second
+    Don't only indicate progress completion with the indicator without clear task messages, e.g. success toasts or displaying the loaded content
+  
 
 ## Related
 

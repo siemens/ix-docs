@@ -8,41 +8,61 @@
 
 Place the currency symbol before the amount in English and use the same formatting style throughout.
 
-- £320
+  
+    £320
+  
 
-- 320£
-- £320/£320.00/Three hundred and twenty pounds/320 pounds (mixed styles)
+  
+    320£
+    £320/£320.00/Three hundred and twenty pounds/320 pounds (mixed styles)
+  
 
 Use decimal points for cents or smaller units within English user interfaces.
 
-- €999.50
-- $400,456.50
+  
+    €999.50
+    $400,456.50
+  
 
-- €999,50
-- $400.456,50
+  
+    €999,50
+    $400.456,50
+  
 
 Never add a space between the currency symbol and the amount.
 
-- $100
+  
+    $100
+  
 
-- $ 100
+  
+    $ 100
+  
 
 Use the ISO currency code before the number without a space.
 
-- USD400
+  
+    USD400
+  
 
-- 300USD
+  
+    300USD
+  
 
 Use numbers and currency symbols within the UI when talking about marketing and pricing.
 
-- Thank you. Your payment of $50 has been processed.
-- Invest in our new soft sensors for $6,000 to boost your production efficiency.
-- Spare parts cost estimation for 2025 is $125,999.
-- The subscription costs $10 per month.
+  
+    Thank you. Your payment of $50 has been processed.
+    Invest in our new soft sensors for $6,000 to boost your production efficiency.
+    Spare parts cost estimation for 2025 is $125,999.
+    The subscription costs $10 per month.
+  
 
 Write out the full word in formal and legal documents.
 
-- The total amount shall not exceed four thousand dollars.
+  
+    The total amount shall not exceed four thousand dollars.
+  
 
 ## Using currency symbols (¥) or codes (JPY)
 

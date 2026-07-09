@@ -23,105 +23,125 @@ Although always short, toast messages vary in length and complexity:
 Use simple past tense verbs to state what happened.
 
   
-    - Assets uploaded
+    
+      Assets uploaded
+    
   
   
-    - Assets have been uploaded
+    
+      Assets have been uploaded
+    
   
 
 Use "not" or "failed to" with the verb to signal failure.
 
   
-
-    - File not imported
-    - Failed to import file
-
+    
+      File not imported
+      Failed to import file
+    
   
   
-    - File type not recognized
+    
+      File type not recognized
+    
   
 
 Use present progressive verbs for background or ongoing actions.
 
   
-    - Update application → Updating application… → Application updated
+    
+      Update application → Updating application… → Application updated
+    
   
 
 Use the same verbs and nouns from the dialog and button that initiated the toast message.
 
   
-
-    - Upload file → File uploaded
-    - Connect → Gateway connected
-
+    
+      Upload file → File uploaded
+      Connect → Gateway connected
+    
   
   
-
-    - Upload file → File added
-    - Connect → Gateway established
-
+    
+      Upload file → File added
+      Connect → Gateway established
+    
   
 
 Avoid punctuation as this takes up extra space and adds to visual clutter.
 
   
-    - Scan finished
+    
+      Scan finished
+    
   
   
-
-    - Scan finished.
-    - Scan not finished!
-
+    
+      Scan finished.
+      Scan not finished!
+    
   
 
 Avoid adding additional words or verbs such as "you", "your", "is" or "was".
 
   
-
-    - Maintenance scheduled
-    - Asset onboarded
-
+    
+      Maintenance scheduled
+      Asset onboarded
+    
   
   
-
-    - Your maintenance was scheduled
-    - Onboarding for asset was successfully completed
-
+    
+      Your maintenance was scheduled
+      Onboarding for asset was successfully completed
+    
   
 
 Avoid generic toast messages, such as "successful", "unsuccessful", "error" and "failure".
 
   
-
-    - Connected
-    - Failed to connect
-
+    
+      Connected
+      Failed to connect
+    
   
   
-
-    - Successful
-    - Failed
-
+    
+      Successful
+      Failed
+    
   
 
 Avoid using "successful" and "successfully" as this adds to the reading load and effort.
 
   
-    - Connected
+    
+      Connected
+    
   
   
-
-    - Connection successfully established
-    - Connection established successfully
-
+    
+      Connection successfully established
+      Connection established successfully
+    
   
 
-## Dos and Don'ts
+## Dos and Don’ts
 
-- Do add extra time when there is an action option
-- Do use consistent wording to help users scan toast messages easier
-- Don’t use full sentences or complex verb forms
-- Don’t add an action unless absolutely necessary
+  
+    
+      Do add extra time when there is an action option
+      Do use consistent wording to help users scan toast messages easier
+    
+  
+  
+    
+      Don’t use full sentences or complex verb forms
+      Don’t add an action unless absolutely necessary
+    
+  
 
 ## Related
 

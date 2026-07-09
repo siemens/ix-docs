@@ -29,11 +29,15 @@ Loading modals have two states: Closed and opened.
 
 ## Dos and Don’ts
 
-- Do only use if any user interaction needs to be blocked, otherwise use [spinners](../spinner) instead
-- Do use if user interaction needs to be blocked and the progress is unknown, otherwise use [progress indicators](../progress-indicator) placed in [custom modals](../modal) instead
+  
+    Do only use if any user interaction needs to be blocked, otherwise use [spinners](../spinner) instead
+    Do use if user interaction needs to be blocked and the progress is unknown, otherwise use [progress indicators](../progress-indicator) placed in [custom modals](../modal) instead
+  
 
-- Don’t block users for long tasks without an alternative
-- Don’t show vague messages that leave users unsure what is happening
+  
+    Don’t block users for long tasks without an alternative
+    Don’t show vague messages that leave users unsure what is happening
+  
 
 ## Related
 

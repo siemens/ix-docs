@@ -41,15 +41,19 @@ Individual calendar dates within a date time picker have five states: Default, h
 
 ## Dos and Don’ts
 
-- Do use date time pickers when both date and time information are required
-- Do ensure the date time picker is accessible via keyboard navigation
-- Do use range selection for time periods like booking appointments or scheduling events
-- Do set appropriate min and max dates to prevent invalid selections
+  
+    Do use date time pickers when both date and time information are required
+    Do ensure the date time picker is accessible via keyboard navigation
+    Do use range selection for time periods like booking appointments or scheduling events
+    Do set appropriate min and max dates to prevent invalid selections
+  
 
-- Don’t use date time pickers when only a date or only a time is needed (use [date pickers](../date-picker) or [time pickers](../time-picker) instead)
-- Don’t forget to validate both date and time inputs in your form logic
-- Don’t use date time pickers for dates that are far in the past or future without setting appropriate min and max constraints
-- Don’t clutter the interface with unnecessary time precision when approximate times are sufficient
+  
+    Don’t use date time pickers when only a date or only a time is needed (use [date pickers](../date-picker) or [time pickers](../time-picker) instead)
+    Don’t forget to validate both date and time inputs in your form logic
+    Don’t use date time pickers for dates that are far in the past or future without setting appropriate min and max constraints
+    Don’t clutter the interface with unnecessary time precision when approximate times are sufficient
+  
 
 ## Related
 

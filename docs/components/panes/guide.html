@@ -46,8 +46,8 @@
   font-weight: 700;
   font-style: italic;
   font-display: swap;
-}</style><link rel="stylesheet" href="/assets/css/styles.f68130a3.css">
-<script src="/assets/js/runtime~main.9397700a.js" defer="defer"></script>
+}</style><link rel="stylesheet" href="/assets/css/styles.31080462.css">
+<script src="/assets/js/runtime~main.e9c4c854.js" defer="defer"></script>
 <script src="/assets/js/main.29975561.js" defer="defer"></script>
 </head>
 <body class="navigation-with-keyboard" data-theme="light">
@@ -68,6 +68,7 @@
 <li><strong>Composition</strong>: Panes can be positioned on the left, top, right or bottom. We often use left panes for structuring components like trees or lists, and right panes for contextual information. Top and bottom panes are less common in our applications, but can help communicate a clear &quot;top to bottom&quot; hierarchy.</li>
 <li><strong>Size</strong>: Sizes can be picked either as a fixed size (in pixels) or as a relative size (in percentage) depending on the intended layout. However, picking sizes only applies to medium and large screens as small screen panes are always displayed in full screen (see responsiveness below for more information). We usually choose a pane width and height that avoids the need for scrolling in our applications.</li>
 <li><strong>Borderless</strong>: Panes can have borders to visually split them from other content areas. We typically use borderless panes when placed within layouts that already have other visual means to split areas.</li>
+<li><strong>No padding</strong>: By default, panes apply inline and bottom padding around their content. Enabling the no padding option removes this padding so the content can span the full pane area. This is useful for content that brings its own spacing or should sit flush against the pane edges, such as banner images, horizontal dividers, etc.</li>
 <li><strong>Hide on collapse</strong>: Define whether a pane is visible in its collapsed state. If it is visible, it has a bar appearance when collapsed that contains both the title and the expand button. We usually use inline panes with a collapsible option and floating panes without since they are triggered from a dedicated control like a button or a list item.</li>
 <li><strong>Variant</strong>: When used within a layout, floating panes are placed above (z-axis) the main content but below the navigation menu and header. When expanded, they cover a part of the main content. Inline panes are placed on one level with the main content. When expanded, they move the main content and reduce its available space.</li>
 <li><strong>Layout</strong>: Depending on which pane needs more focus, the top/bottom or left/right panes can use more space.</li>
@@ -94,13 +95,7 @@
 <h2 class="anchor anchorWithStickyNavbar_loeA" id="states">States<a href="#states" class="hash-link" aria-label="Direct link to States" title="Direct link to States">​</a></h2>
 <p>Panes have two states: collapsed and expanded. The appearance of the states varies between variants and screen sizes.</p>
 <h2 class="anchor anchorWithStickyNavbar_loeA" id="dos-and-donts">Dos and Don’ts<a href="#dos-and-donts" class="hash-link" aria-label="Direct link to Dos and Don’ts" title="Direct link to Dos and Don’ts">​</a></h2>
-<ul>
-<li>Do use panes to organize your content and guide your users&#x27; attention</li>
-<li>Do use panes to display different views within a single screen</li>
-<li>Do use panes to expand/collapse content or hide/reveal content</li>
-<li>Don’t use panes for a small amount of content</li>
-<li>Don’t use panes for content that should stay visible</li>
-</ul>
+<div class="dos-and-donts"><div class="dos"><ul aria-label="Recommended practices"><li>Do use panes to organize your content and guide your users&#x27; attention</li><li>Do use panes to display different views within a single screen</li><li>Do use panes to expand/collapse content or hide/reveal content</li></ul></div><div class="donts"><ul aria-label="Practices to avoid"><li>Don’t use panes for a small amount of content</li><li>Don’t use panes for content that should stay visible</li></ul></div></div>
 <h2 class="anchor anchorWithStickyNavbar_loeA" id="related">Related<a href="#related" class="hash-link" aria-label="Direct link to Related" title="Direct link to Related">​</a></h2>
 <ul>
 <li><a href="/docs/components/application-header">Header</a></li>

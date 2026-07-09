@@ -40,13 +40,21 @@ Range fields rely on the states of the paired inputs. Use the same guidance as [
 
 ## Dos and Don’ts
 
-- Do use range fields when start and end values describe one bounded interval
-- Do label both inputs clearly so users can scan the order quickly
-- Do omit labels on both inputs consistently when the surrounding context already makes the range clear
-- Do validate that the end value is not smaller or earlier than the start value
-- Don’t use range fields for single values or unrelated inputs
-- Don’t use different input types, formats or levels of precision within one range
-- Don’t mix date, time and date-time inputs in one range
+  
+    
+      Do use range fields when start and end values describe one bounded interval
+      Do label both inputs clearly so users can scan the order quickly
+      Do omit labels on both inputs consistently when the surrounding context already makes the range clear
+      Do validate that the end value is not smaller or earlier than the start value
+    
+  
+  
+    
+      Don’t use range fields for single values or unrelated inputs
+      Don’t use different input types, formats or levels of precision within one range
+      Don’t mix date, time and date-time inputs in one range
+    
+  
 
 ## Related
 

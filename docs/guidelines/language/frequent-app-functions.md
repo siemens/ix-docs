@@ -12,9 +12,11 @@
 
 - Cockpit
 
-- Console
-- Dash
-- Control panel
+  
+    Console
+    Dash
+    Control panel
+  
 
 ## Analytics
 
@@ -22,8 +24,10 @@
 
 - Anomaly detection
 
-- Assessment
-- Examination
+  
+    Assessment
+    Examination
+  
 
 ## Monitoring and scheduling
 
@@ -35,7 +39,9 @@
 
 - Remove from watchlist
 
-- Watch list
+  
+    Watch list
+  
 
 ## Detail view
 
@@ -45,8 +51,10 @@
 
 - Details
 
-- Facts
-- Specifics
+  
+    Facts
+    Specifics
+  
 
 ### Asset properties
 
@@ -90,7 +98,9 @@
 
 - Drag files here or select files
 
-- Drag and drop here or browse
+  
+    Drag and drop here or browse
+  
 
 ## Comments
 
@@ -102,7 +112,9 @@
 
 - Write your comments here
 
-- Write a comment
+  
+    Write a comment
+  
 
 ## Grid and list actions
 
@@ -126,9 +138,11 @@
 
 - Notify me when X occurs
 
-- Error
-- Issue
-- Problem
+  
+    Error
+    Issue
+    Problem
+  
 
 ## Event types
 
@@ -156,10 +170,12 @@
 
 - Detected
 
-- Unacklowedged
-- Unack.
-- Unackn.
-- Unacknl.
+  
+    Unacklowedged
+    Unack.
+    Unackn.
+    Unacknl.
+  
 
 ## Event actions
 

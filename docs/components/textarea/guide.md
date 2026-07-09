@@ -53,10 +53,18 @@ Textareas have five states: Default, hover, focused, read-only and disabled.
 
 ## Dos and Don’ts
 
-- Do ensure the textarea size matches the expected input, e.g. 5 to 10 rows for detailed feedback
-- Do use the placeholder to give users an example of the expected input
-- Do set minimum and maximum character limits to ensure appropriate input length
-- Don’t use the textarea for short, single-line input like name or email address, use an [input field](../input) instead
+  
+    
+      Do ensure the textarea size matches the expected input, e.g. 5 to 10 rows for detailed feedback
+      Do use the placeholder to give users an example of the expected input
+      Do set minimum and maximum character limits to ensure appropriate input length
+    
+  
+  
+    
+      Don’t use the textarea for short, single-line input like name or email address, use an [input field](../input) instead
+    
+  
 
 ## Related
 

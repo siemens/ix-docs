@@ -16,7 +16,13 @@ In this interaction we see a simple request for confirmation before completing t
 
 ## Dos and Don’ts
 
--	Do make all confirmations clear and transparent before processing tasks  
--	Do mitigate risks associated with making changes to systems or processes  
--	Do add warnings and consequences for significant or hazardous changes  
--	Don’t ask for confirmation more than once
+  
+    
+      Do make all confirmations clear and transparent before processing tasks
+      Do mitigate risks associated with making changes to systems or processes
+      Do add warnings and consequences for significant or hazardous changes
+    
+  
+  
+    
+      Don’t ask for confirmation more than once

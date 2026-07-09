@@ -37,11 +37,19 @@ Radio buttons are presented in groups to signify that only one selection is allo
 
 ## Dos and Don’ts
 
-- Do use radio buttons when the user needs to select only one option from a set of options
-- Do group related radio buttons together to indicate that only one option can be selected at a time
-- Do provide a default (already selected) option when the user first sees the radio button group
-- Don’t use radio buttons if the user needs to select multiple options from a set of options - use a checkbox instead
-- Don’t use only one radio button in a group, groups should have at least two options
+  
+    
+      Do use radio buttons when the user needs to select only one option from a set of options
+      Do group related radio buttons together to indicate that only one option can be selected at a time
+      Do provide a default (already selected) option when the user first sees the radio button group
+    
+  
+  
+    
+      Don’t use radio buttons if the user needs to select multiple options from a set of options - use a checkbox instead
+      Don’t use only one radio button in a group, groups should have at least two options
+    
+  
 
 ## Related
 

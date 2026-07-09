@@ -18,13 +18,17 @@
 
 - Only use ‘OK’ as an option if you cannot find an appropriate verb
 
-- Title: Add user  / Buttons: Cancel, Add
-- Title: Delete file  / Buttons: Cancel, Delete
-- Title: Edit details  / Buttons: Cancel, Save
+  
+    Title: Add user  / Buttons: Cancel, Add
+    Title: Delete file  / Buttons: Cancel, Delete
+    Title: Edit details  / Buttons: Cancel, Save
+  
 
-- Title: Add user  / Buttons: Cancel, OK
-- Title: Are you sure  / Buttons: Cancel, Delete
-- Title: Edit details  / Buttons: Cancel, Edit
+  
+    Title: Add user  / Buttons: Cancel, OK
+    Title: Are you sure  / Buttons: Cancel, Delete
+    Title: Edit details  / Buttons: Cancel, Edit
+  
 
 ## Primary and secondary actions
 
@@ -32,6 +36,9 @@
 
 - Primary actions can either be positive (Send, Save) or negative (Delete)
 
-- Cancel, Save
+  
+    Cancel, Save
+  
 
-- Save, Cancel
+  
+    Save, Cancel

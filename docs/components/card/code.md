@@ -557,6 +557,12 @@ import { IxPushCard } from '@siemens/ix-vue';
 | subheading | { "Card subheading" } | subheading | string \| undefined |  |
 | variant | { "Card variant" } | variant | "alarm" \| "critical" \| "filled" \| "info" \| "neutral" \| "outline" \| "primary" \| "success" \| "warning" | 'outline' |
 
+### Slot
+
+| Description |
+| --- |
+| { "Place additional non-interactive content inside the card. Avoid interactive elements (links, buttons, inputs) as the card itself is rendered as a single button." } |
+
 ## API for ix-push-card
 
 ### Properties

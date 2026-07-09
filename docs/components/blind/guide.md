@@ -48,11 +48,19 @@ For all blind variants, a default, hover, active and focused state is available.
 
 ## Dos and Don’ts
 
-- Do stay within the recommended number of blinds - between 3 and 7
-- Don’t use multi-line text in the header. The header section has a fixed height for single-line text entries
-- Don’t change the position of the chevron icon and the blind's label in the header
-- Don’t use a blind if there is only a single category to be displayed
-- Don’t use blinds to display hierarchically structured files or objects - rather use a tree for such cases
+  
+    
+      Do stay within the recommended number of blinds - between 3 and 7
+    
+  
+  
+    
+      Don’t use multi-line text in the header. The header section has a fixed height for single-line text entries
+      Don’t change the position of the chevron icon and the blind's label in the header
+      Don’t use a blind if there is only a single category to be displayed
+      Don’t use blinds to display hierarchically structured files or objects - rather use a tree for such cases
+    
+  
 
 ## Related
 

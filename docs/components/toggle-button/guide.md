@@ -27,9 +27,17 @@ Toggle buttons have five states: Default, hover, active, disabled, loading and f
 
 ## Dos and Don’ts
 
-- Do use toggle buttons when users can switch a setting on or off independently
-- Do use toggle buttons when two opposing options don’t follow the on/off metaphor
-- Don’t use toggle buttons in button groups where only one option can be selected (use normal [buttons](../button/index.mdx) or [icon buttons](../icon-button/index.mdx) instead)
+  
+    
+      Do use toggle buttons when users can switch a setting on or off independently
+      Do use toggle buttons when two opposing options don’t follow the on/off metaphor
+    
+  
+  
+    
+      Don’t use toggle buttons in button groups where only one option can be selected (use normal [buttons](../button/index.mdx) or [icon buttons](../icon-button/index.mdx) instead)
+    
+  
 
 ## Related
 

@@ -409,6 +409,9 @@ export default function EchartsBarHorizontalStacked() {
   }));
 
   const options: EChartsOption = {
+    grid: {
+      bottom: 100,
+    },
     xAxis: {
       type: 'value',
       name: 'Revenue (in Millions of USD)',
@@ -423,8 +426,8 @@ export default function EchartsBarHorizontalStacked() {
     },
     legend: {
       show: true,
-      left: '0',
-      bottom: '0',
+      bottom: 0,
+      padding: 16,
     },
     series: series,
   };
@@ -484,6 +487,9 @@ export default class EchartsBarHorizontalStacked implements OnDestroy, OnInit {
   }));
 
   options: EChartsOption = {
+    grid: {
+      bottom: 100,
+    },
     xAxis: {
       type: 'value',
       name: 'Revenue (in Millions of USD)',
@@ -499,7 +505,7 @@ export default class EchartsBarHorizontalStacked implements OnDestroy, OnInit {
     legend: {
       show: true,
       bottom: '0',
-      left: '0',
+      padding: 16,
     },
     series: this.series,
   };
@@ -582,6 +588,9 @@ export default class EchartsBarHorizontalStacked implements OnDestroy, OnInit {
   }));
 
   options: EChartsOption = {
+    grid: {
+      bottom: 100,
+    },
     xAxis: {
       type: 'value',
       name: 'Revenue (in Millions of USD)',
@@ -597,7 +606,7 @@ export default class EchartsBarHorizontalStacked implements OnDestroy, OnInit {
     legend: {
       show: true,
       bottom: '0',
-      left: '0',
+      padding: 16,
     },
     series: this.series,
   };
@@ -688,6 +697,9 @@ const series = seriesData.map(
 );
 
 const options: EChartsOption = {
+  grid: {
+    bottom: 100,
+  },
   xAxis: {
     type: 'value',
     name: 'Revenue (in Millions of USD)',
@@ -703,7 +715,7 @@ const options: EChartsOption = {
   legend: {
     show: true,
     bottom: '0',
-    left: '0',
+    padding: 16,
   },
   series: series,
 } as EChartsOption;
@@ -728,10 +740,16 @@ const options: EChartsOption = {
 
 ## Dos and Don’ts
 
-- Do start the Y-axis at zero and label axes clearly
-- Do use short and clear category names
-- Do include context and additional information when necessary
-- Do arrange categories and bars in a logical order
-- Don’t use too many bars in one chart
-- Don’t overcrowd charts with colors and categories, especially the stacked variant
-- Don’t use stacked bars if the total value is not important
+  
+    
+      Do start the Y-axis at zero and label axes clearly
+      Do use short and clear category names
+      Do include context and additional information when necessary
+      Do arrange categories and bars in a logical order
+    
+  
+  
+    
+      Don’t use too many bars in one chart
+      Don’t overcrowd charts with colors and categories, especially the stacked variant
+      Don’t use stacked bars if the total value is not important

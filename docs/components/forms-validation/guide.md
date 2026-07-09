@@ -67,9 +67,17 @@ Example: When the user completes the shipping address section of an e-commerce c
 
 ## Dos and Don’ts
 
-- Do use short and helpful copy for validation
-- Do include all relevant information in the validation message, including context
-- Don’t show valid feedback on components, only in the input help component
+  
+    
+      Do use short and helpful copy for validation
+      Do include all relevant information in the validation message, including context
+    
+  
+  
+    
+      Don’t show valid feedback on components, only in the input help component
+    
+  
 
 ## Related
 

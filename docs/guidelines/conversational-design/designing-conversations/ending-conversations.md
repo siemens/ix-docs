@@ -20,6 +20,12 @@ Here the chatbot offers an apology for not being able to support the user, expla
 
 ## Dos and Don’ts
 
-- Do consider adding a time-out feature   
-- Do consider adding thumbs up and thumbs down icons to get feedback   
-- Don’t loop back and have the chatbot reintroduce themselves
+  
+    
+      Do consider adding a time-out feature
+      Do consider adding thumbs up and thumbs down icons to get feedback
+    
+  
+  
+    
+      Don’t loop back and have the chatbot reintroduce themselves

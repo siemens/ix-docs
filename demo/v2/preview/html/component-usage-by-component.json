@@ -231,6 +231,7 @@
     "/src/preview-examples/modal.html",
     "/src/preview-examples/pane-layout.html",
     "/src/preview-examples/pane.html",
+    "/src/preview-examples/popover.html",
     "/src/preview-examples/theme-switcher.html",
     "/src/preview-examples/tile.html",
     "/src/preview-examples/toast-custom.html",
@@ -278,7 +279,8 @@
   "ix-pill": [
     "/src/preview-examples/content-header-with-slot.html",
     "/src/preview-examples/pill-variants.html",
-    "/src/preview-examples/pill.html"
+    "/src/preview-examples/pill.html",
+    "/src/preview-examples/popover.html"
   ],
   "ix-custom-field": [
     "/src/preview-examples/custom-field-validation.html",
@@ -523,6 +525,21 @@
   ],
   "ix-menu-about-news": [
     "/src/preview-examples/popover-news.html"
+  ],
+  "ix-popover": [
+    "/src/preview-examples/popover.html"
+  ],
+  "ix-popover-header": [
+    "/src/preview-examples/popover.html"
+  ],
+  "ix-popover-image": [
+    "/src/preview-examples/popover.html"
+  ],
+  "ix-popover-content": [
+    "/src/preview-examples/popover.html"
+  ],
+  "ix-popover-footer": [
+    "/src/preview-examples/popover.html"
   ],
   "ix-progress-indicator": [
     "/src/preview-examples/progress-indicator-circular-sizes.html",
