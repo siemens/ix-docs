@@ -41,8 +41,8 @@ Typical slot usage in iX:
 
 ```html
 <ix-input label="Search">
-	<ix-icon slot="start" name="search" size="16" aria-label="Search"></ix-icon>
-	<ix-typography slot="end">Ctrl + K</ix-typography>
+  <ix-icon slot="start" name="search" size="16" aria-label="Search"></ix-icon>
+  <ix-typography slot="end">Ctrl + K</ix-typography>
 </ix-input>
 ```
 
@@ -52,8 +52,8 @@ Use this for compact, contextual information. Keep slot content short and scanna
 
 ```html
 <ix-pane-layout>
-	<ix-pane heading="Details" slot="right" size="33%"></ix-pane>
-	<ix-pane heading="Filters" slot="left" size="25%"></ix-pane>
+  <ix-pane heading="Details" slot="right" size="33%"></ix-pane>
+  <ix-pane heading="Filters" slot="left" size="25%"></ix-pane>
 </ix-pane-layout>
 ```
 
@@ -86,7 +86,7 @@ Version 5 introduced native slot-based composition for key components such as ca
 
 When you select an instance, Figma shows a pink border around the slot area which helps identifying where content can be inserted.
 
-You can add any content to a slot, e.g. by clicking on the <IxIcon name={iconAddCircleFilled}></IxIcon> ("Add instance") or creating new layers directly in the slot.
+You can add any content to a slot, e.g. by clicking on the <IxIcon name={iconAddCircleFilled} size=16></IxIcon> ("Add instance") or creating new layers directly in the slot.
 
 If preferred instances are configured for a slot, the Add instances popup suggests specific components recommended by iX. For example, dropdown items are suggested for dropdowns by default.
 
