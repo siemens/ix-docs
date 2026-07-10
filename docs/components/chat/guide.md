@@ -16,8 +16,9 @@ Chats are the outer containers that bring together the three building blocks of 
 ## Behavior in context
 
 - **Placement:** We recommend placing the chat either in the main content or in panes depending on the user goals:
-    - [Main content](../content): Use when the chat is the main focus of the experience, e.g. standalone or workspace copilots
-    - [Panes](../panes): Use when the chat is a secondary feature, e.g. for contextual help
+  - [Main content](../content): Use when the chat is the main focus of the experience, e.g. standalone or workspace copilots
+  - [Panes](../panes): Use when the chat is a secondary feature, e.g. for contextual help
+- **Responsiveness:** Chats will resize to a max-width of `45rem`.
 
 ## Dos and Don’ts
 

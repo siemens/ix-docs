@@ -31,15 +31,15 @@ In chat inputs users write and send messages . We recommend using them for quick
 
 - **Interaction:** Keep the input compact at start and let it grow to multiline while users type
 - **Overflow:**
-    - On the follow-up slot: If the follow-up actions exceed max width, they break into multiple lines
-    - On the input: If the input reaches max height, the input shows a vertical scroll
-    - On the attachments: If the attachments reach max width, they show a horizontal scroll
+  - On the follow-up actions: If the actions exceed max width, they break into multiple lines
+  - On the input: If the input reaches max height, the input shows a vertical scroll
+  - On the attachments: If the attachments reach max width, they show a horizontal scroll
 
 ![Overflow behavior](https://www.figma.com/design/wEptRgAezDU1z80Cn3eZ0o/iX-Documentation-illustrations?node-id=7940-7020&t=mrtbkWj76QJhvNLI-11)
 
 ## States
 
-Chat inputs have six states: default, hover, focused and processing.
+Chat inputs have four states: default, hover, focused and processing.
 
 ![States](https://www.figma.com/design/wEptRgAezDU1z80Cn3eZ0o/iX-Documentation-illustrations?node-id=7940-2809&t=mrtbkWj76QJhvNLI-4)
 
