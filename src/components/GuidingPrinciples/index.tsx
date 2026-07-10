@@ -12,6 +12,11 @@ import './GuidingPrinciples.scss';
 import { IxTypography } from '@siemens/ix-react';
 import { IxIcon } from "@siemens/ix-react";
 import { iconDiamond, iconElement, iconBook, iconPalette } from "@siemens/ix-icons/icons";
+import ReactLogo from '../../../static/img/react.svg';
+import AngularLogo from '../../../static/img/angular.svg';
+import WebComponentsLogo from '../../../static/img/webcomponents.svg';
+import VueLogo from '../../../static/img/vue.svg';
+import BlazorLogo from '../../../static/img/blazor.svg';
 
 function GuidingPrincipleCard(
   props: React.PropsWithChildren<{ name: string; link?: string; description: string }>
@@ -132,7 +137,7 @@ function DevelopmentFrameworks(){
       link="/docs/home/installation/react"
       description="Get started with React and build dynamic user interfaces."
       >
-      <img src="/img/react.svg" alt="React"/>
+      <ReactLogo />
       </GuidingPrincipleCard>
 
       <GuidingPrincipleCard
@@ -140,7 +145,7 @@ function DevelopmentFrameworks(){
       link="/docs/home/installation/angular"
       description="Learn how to set up Angular for robust web applications."
       >
-      <img src="/img/angular.svg" alt="Angular" />
+      <AngularLogo />
       </GuidingPrincipleCard>
 
       <GuidingPrincipleCard
@@ -148,7 +153,7 @@ function DevelopmentFrameworks(){
       link="/docs/home/installation/javascript"
       description="Discover how to start developing with a set of web platform APIs."
       >
-      <img src="/img/webcomponents.svg" alt="Web Components"/>
+      <WebComponentsLogo />
       </GuidingPrincipleCard>
 
       <GuidingPrincipleCard
@@ -156,7 +161,7 @@ function DevelopmentFrameworks(){
       link="/docs/home/installation/vue"
       description="Start building with Vue for a progressive framework experience."
       >
-      <img src="/img/vue.svg" alt="Vue"/>
+      <VueLogo />
       </GuidingPrincipleCard>
 
       <GuidingPrincipleCard
@@ -164,7 +169,7 @@ function DevelopmentFrameworks(){
       link="/docs/home/installation/blazor"
       description="Utilize Blazor for building interactive web UIs with C#."
       >
-      <img src="/img/blazor.svg" alt="Blazor"/>
+      <BlazorLogo />
       </GuidingPrincipleCard>
     </div>
   );
