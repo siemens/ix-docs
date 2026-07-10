@@ -117,7 +117,7 @@ function GuidingLinks() {
       >
         <IxIcon name={iconDiamond} size="32"></IxIcon>
       </GuidingPrincipleCard>
-{/* Replace SVG with ixIcon once available */}
+
       <GuidingPrincipleCard
         name="Styles"
         link="../styles/colors"
