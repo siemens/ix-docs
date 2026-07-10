@@ -102,6 +102,9 @@ This file contains links to documentation sections following the llmstxt.org sta
 - [Pie chart](https://ix.siemens.io//docs/components/pie-chart/overview.md): Pie charts display data using a circular graph. The length of each slice is proportional to the value it represents. Pie charts are commonly used t...
 - [Pill - Code](https://ix.siemens.io//docs/components/pill/code.md): Code examples and API documentation for the ix-pill
 - [Pill - Usage](https://ix.siemens.io//docs/components/pill/guide.md): Usage guide for the ix-pill
+- [Popover - Code](https://ix.siemens.io//docs/components/popover/code.md): Code examples and API documentation for the ix-popover
+- [Popover - Usage](https://ix.siemens.io//docs/components/popover/guide.md): Usage guide for the ix-popover
+- [Popover - Language](https://ix.siemens.io//docs/components/popover/uxwriting.md): Language guide for the ix-popover
 - [Popover news - Code](https://ix.siemens.io//docs/components/popover-news/code.md): Code examples and API documentation for the ix-menu-about-news
 - [Popover news - Usage](https://ix.siemens.io//docs/components/popover-news/guide.md): Usage guide for the ix-menu-about-news
 - [Progress-Indicator - Code](https://ix.siemens.io//docs/components/progress-indicator/code.md): Code examples and API documentation for the ix-progress-indicator

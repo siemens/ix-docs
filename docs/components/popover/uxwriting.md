@@ -1,0 +1,128 @@
+# Popover - Language
+
+> Language guide for the ix-popover
+# Popover - Language
+
+In this writing chapter, we use the term infotips instead of popovers to stay consistent with the messaging guidelines.
+
+#
+
+## General rules
+
+Use sentence case and end with a period (similar to tooltips).
+
+<div className="dos-and-donts">
+ <div className="dos">
+   <ul aria-label="Recommended practices">
+     <li>View the current status of the production line.</li>
+   </ul>
+ </div>
+ <div className="donts">
+   <ul aria-label="Practices to avoid">
+     <li>VIEW CURRENT STATUS OF PRODUCTION LINE</li>
+   </ul>
+ </div>
+</div>
+
+Use infotips to support users with guidance and contextual information.
+
+<div className="dos-and-donts">
+<div className="dos">
+  <ul aria-label="Recommended practices">
+    <li>Maximum allowable hydraulic pressure (bar).</li>
+    <li>Current motor load in percentage.</li>
+    <li>Enables automatic system recalibration.</li>
+    <li>Unique identifier for the production batch.</li>
+  </ul>
+</div>
+</div>
+
+Use infotips to help users understand complex terminology.
+
+<div className="dos-and-donts">
+<div className="dos">
+  <ul aria-label="Recommended practices">
+    <li>SCADA System<br/>
+    Supervisory Control and Data Acquisition: A system that monitors and controls industrial processes locally or at remote locations. <br/></li>
+    <li>PLC cycle time<br/>
+    This indicates the time (in milliseconds) it takes for the Programmable Logic Controller to execute one full scan of its program logic.</li>
+  </ul>
+</div>
+</div>
+Use infotips to help users understand complex features and workflows.
+
+<div className="dos-and-donts">
+<div className="dos">
+  <ul aria-label="Recommended practices">
+    <li>Set thresholds<br/>
+    Set project thresholds here. Adjust the value to trigger alerts when the temperature exceeds a specified limit (e.g. 80°C).<br/></li>
+    <li>PID controller tuning<br/>
+    Adjust these parameters (Proportional, Integral, Derivative) to optimize the system's response to errors and achieve stable control.</li>
+    <li>Schedule maintenance<br/>
+    This workflow guides you through planning and assigning preventive maintenance tasks. First, select the asset, then define the task type, and finally set the recurrence schedule.</li>
+  </ul>
+</div>
+</div>
+<br/>
+
+Use paragraphs to split complex information and use bullet points or lists for clarity.
+
+<div className="dos-and-donts">
+ <div className="dos">
+   <ul aria-label="Recommended practices">
+     <li>Power meter monitoring<br/>
+     Area: Production floor<br/>
+     Present consumption: 120 kW<br/>
+     Peak: 150 kW<br/>
+     Button: Open meter list</li>
+   </ul>
+ </div>
+</div>
+
+Use imperative verbs (commands) for instructions and guidance.
+
+<div className="dos-and-donts">
+<div className="dos">
+  <ul aria-label="Recommended practices">
+    <li>Assign a unique identifier to each physical asset for tracking, maintenance scheduling, and inventory management.<br/></li>
+    <li>Define and manage sequences of operations and ingredient quantities for automated production processes.</li>
+  </ul>
+</div>
+</div>
+
+Avoid personal pronouns (you, we, our, etc.).
+
+<div className="dos-and-donts">
+ <div className="dos">
+   <ul aria-label="Recommended practices">
+     <li>Select a device from the network to begin configuration.</li>
+   </ul>
+ </div>
+
+ <div className="donts">
+   <ul aria-label="Practices to avoid">
+     <li>Select one of your devices to begin configuring your factory assets.</li>
+   </ul>
+ </div>
+</div>
+
+## Dos and Don’ts
+
+<div class="dos-and-donts">
+  <div class="dos">
+    <ul aria-label="Recommended practices">
+      <li>Do keep infotips short and instructional</li>
+    </ul>
+  </div>
+  <div class="donts">
+    <ul aria-label="Practices to avoid">
+      <li>Don’t include critical or legal information</li>
+      <li>Don’t copy your user manual into your infotips</li>
+    </ul>
+  </div>
+</div>
+
+## Related
+
+* [Popover](../../../components/popover/guide.md)
+* [Tooltips](./tooltips.mdx)
