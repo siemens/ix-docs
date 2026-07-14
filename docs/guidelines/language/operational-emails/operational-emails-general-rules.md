@@ -8,7 +8,12 @@ description: 'In industrial applications, customer emails connect users to essen
 
 #
 
-Note: We have used [App name] as the standard placeholder for you to adapt individually to your product. All placeholders are shown with square brackets [placeholder].
+
+:::note
+
+All placeholders are shown with square brackets, e.g. [placeholder]. We have used [App name] as the standard placeholder for you to adapt individually to your product. 
+:::
+
 
 Keep emails short, add relevant information and avoid complex and lengthy sentences.
 
