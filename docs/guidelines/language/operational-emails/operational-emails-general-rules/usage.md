@@ -1,13 +1,9 @@
 ---
-sidebar_position: 1
-sidebar_label: Overview
-title: Overview
-doc-type: 'banner'
-description: 'In industrial applications, customer emails connect users to essential information, project updates and critical alerts. Well-written and clear customer emails keep operations running smoothly and users well-informed.'
+doc-type: 'tab-item'
+description: 'Usage guide for operational emails'
 ---
 
-#
-
+# Operational Emails - Usage
 
 :::note
 
@@ -67,12 +63,12 @@ Use the present perfect passive tense (have been / done) for system-generated co
 <div className="dos-and-donts" markdown="true">
 <div className="dos" markdown="true">
 
-- You have been assigned the role of “Energy Analyst”.
+- You have been assigned the role of "Energy Analyst".
 
 </div>
 <div className="donts" markdown="true">
 
-- The system assigned you the role of “Energy Analyst”.
+- The system assigned you the role of "Energy Analyst".
 
 </div>
 </div>
@@ -97,27 +93,27 @@ Use sentence case in your emails (capitalize only the first word of a sentence o
 <div className="dos-and-donts" markdown="true">
 <div className="dos" markdown="true">
 
-- What’s happening
+- What's happening
 
 </div>
 <div className="donts" markdown="true">
 
-- What’s Happening
+- What's Happening
 
 </div>
 </div>
 
-Use typographic double quotation marks for opening quotes “ (Unicode U+201C) and for closing quotes ” (Unicode U+201D) instead of single marks for consistency.
+Use typographic double quotation marks for opening quotes " (Unicode U+201C) and for closing quotes " (Unicode U+201D) instead of single marks for consistency.
 
 <div className="dos-and-donts" markdown="true">
 <div className="dos" markdown="true">
 
-- You have been assigned the role of “Energy Analyst”.
+- You have been assigned the role of "Energy Analyst".
 
 </div>
 <div className="donts" markdown="true">
 
-- You have been assigned the role of ‘Energy Analyst’.
+- You have been assigned the role of 'Energy Analyst'.
 
 </div>
 </div>
@@ -188,7 +184,7 @@ Keep the subject line as short as possible. Additional information should be pro
 
 ## Body text
 
-Start with a polite salutation using “Dear” followed by a comma (American English). Do not use gendered titles or gendered forms of address. Use the recipient’s name if available. If no name is available, use a neutral greeting. For German translations, Siemens AG employees and partners can follow the [German Brand Guide](https://brandville.siemens.com/en/design-elements/language/inklusive-und-gendergerechte-sprache) for inclusive language.
+Start with a polite salutation using "Dear" followed by a comma (American English). Do not use gendered titles or gendered forms of address. Use the recipient's name if available. If no name is available, use a neutral greeting. For German translations, Siemens AG employees and partners can follow the [German Brand Guide](https://brandville.siemens.com/en/design-elements/language/inklusive-und-gendergerechte-sprache) for inclusive language.
 
 <div className="dos-and-donts" markdown="true">
 <div className="dos" markdown="true">
@@ -210,7 +206,7 @@ Repeat key words from the subject line in the body text.
 <div className="dos" markdown="true">
 
 - Subject line: [App name] | Version 2.0 available<br/>
-  Body text: We’ve released Version 2.0 of [App name].
+  Body text: We've released Version 2.0 of [App name].
 
 - Subject line: [App name] | One-time PIN for verification<br/>
   Body text: You requested a one-time PIN to verify your identity.
@@ -224,7 +220,7 @@ Use clear headings for users to easily scan body text for important information 
 <div className="dos" markdown="true">
 
 - Heading: What happened
-- Heading: What’s happening
+- Heading: What's happening
 - Heading: What you need to do
 
 </div>
@@ -277,13 +273,13 @@ Include duration and instructions when applicable.
 
 ### Actions and links
 
-Include a clear message when users don’t have to do anything.
+Include a clear message when users don't have to do anything.
 
 <div className="dos-and-donts" markdown="true">
 <div className="dos" markdown="true">
 
 - What you need to do<br/>
-  You don’t need to do anything. We’ll inform you when the data migration is complete.
+  You don't need to do anything. We'll inform you when the data migration is complete.
 
 </div>
 </div>
@@ -370,7 +366,7 @@ Clearly state when an email is automated and cannot be replied to.
 
 ### Disclaimer and footer
 
-Check the correct legal text with your legal team and include a legal disclaimer, the company’s legal footer, and any other required legal information.<br/>
+Check the correct legal text with your legal team and include a legal disclaimer, the company's legal footer, and any other required legal information.<br/>
 
 
 ### Formatting
@@ -404,30 +400,3 @@ Do not use emojis.
 
 </div>
 </div>
-
-## General best practice example
-
-**Subject**<br/>
-[App name] | Scheduled maintenance November 10, 2026
-
-**Body**<br/>
-Dear [App name] user,<br/>
-
-What’s happening<br/>
-On Monday, November 10, between 02:00–04:00, we will perform system<br/>
-maintenance that will cause temporary service interruptions.<br/>
-
-What you need to do<br/>
-Restart your system after the maintenance window to apply all updates.<br/>
-If you have any questions or need assistance, contact our team at [email address].
-
-Kind regards,<br/>
-Your [App name] team
-
-[Company disclaimer]<br/>
-[Company legal footer]
-
-## Related
-
-- [Time and time zones](../formatting/timezones.mdx)
-- [Time-related messages](../messaging/time-related-messages.mdx)
