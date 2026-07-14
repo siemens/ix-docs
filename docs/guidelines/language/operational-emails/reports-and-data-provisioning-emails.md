@@ -50,7 +50,7 @@ Include a brief summary or key highlights from the report, especially if it's a 
 <div className="dos-and-donts" markdown="true">
 <div className="dos" markdown="true">
 
-- This month's "Performance overview" highlights a 5% improvement in uptime for production line 2 due to recent sensor recalibrations.
+- This month's "Performance overview" highlights a 5% improvement in uptime for production line 2 due to recent sensor recalibration.
 
 </div>
 </div>
