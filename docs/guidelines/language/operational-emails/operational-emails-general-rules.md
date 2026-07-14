@@ -405,7 +405,7 @@ Do not use emojis.
 </div>
 </div>
 
-### General best practice example
+## General best practice example
 
 **Subject**<br/>
 [App name] | Scheduled maintenance November 10, 2026
