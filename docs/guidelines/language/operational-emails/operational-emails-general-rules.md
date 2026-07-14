@@ -15,6 +15,8 @@ All placeholders are shown with square brackets, e.g. [placeholder]. We have use
 :::
 
 
+## General rules
+
 Keep emails short, add relevant information and avoid complex and lengthy sentences.
 
 <div className="dos-and-donts" markdown="true">
