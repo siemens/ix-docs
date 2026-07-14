@@ -14,146 +14,146 @@ description: For our UI text, we use natural, conversational language to talk to
 ## Use one language variant
 We use American English for our UI text and recommend choosing one language variat per product to maintain consistency with spelling and grammar.
 
-<div className="dos-and-donts" markdown="true">
-<div className="dos" markdown="true">
-
-- Optimize sensor
-- Data is invalid
-- Confirmation dialog
-- License management
-
+<div className="dos-and-donts">
+<div className="dos">
+  <ul aria-label="Recommended practices">
+    <li>Optimize sensor</li>
+    <li>Data is invalid</li>
+    <li>Confirmation dialog</li>
+    <li>License management</li>
+  </ul>
 </div>
-<div className="donts" markdown="true">
-
-- Optimise sensor
-- Data are invalid
-- Confirmation dialogue
-- Licence management
-
+<div className="donts">
+  <ul aria-label="Practices to avoid">
+    <li>Optimise sensor</li>
+    <li>Data are invalid</li>
+    <li>Confirmation dialogue</li>
+    <li>Licence management</li>
+  </ul>
 </div>
 </div>
 
 ## Use fewer words
 Use sentences only when necessary and write in short, scannable segments instead of paragraphs.
 
-<div className="dos-and-donts" markdown="true">
-<div className="dos" markdown="true">
-
-- Select Submit to save changes.
-
+<div className="dos-and-donts">
+<div className="dos">
+  <ul aria-label="Recommended practices">
+    <li>Select Submit to save changes.</li>
+  </ul>
 </div>
-<div className="donts" markdown="true">
-
-- Please select the Submit button to save your changes so you do not lose data.
-
+<div className="donts">
+  <ul aria-label="Practices to avoid">
+    <li>Please select the Submit button to save your changes so you do not lose data.</li>
+  </ul>
 </div>
 </div>
 
 ## Use simple language
 Use specific and clear wording that can be understood by everyone, not only industry experts.
 
-<div className="dos-and-donts" markdown="true">
-<div className="dos" markdown="true">
-
-- Failed to upload. Try again.
-
+<div className="dos-and-donts">
+<div className="dos">
+  <ul aria-label="Recommended practices">
+    <li>Failed to upload. Try again.</li>
+  </ul>
 </div>
-<div className="donts" markdown="true">
-
-- System error #232/01
-
+<div className="donts">
+  <ul aria-label="Practices to avoid">
+    <li>System error #232/01</li>
+  </ul>
 </div>
 </div>
 
 ## Use positive framing
 Use positive language whenever possible and focus on what users can achieve with the product.
 
-<div className="dos-and-donts" markdown="true">
-<div className="dos" markdown="true">
-
-- Values are displayed when you select events.
-- Select an event to view values.
-
+<div className="dos-and-donts">
+<div className="dos">
+  <ul aria-label="Recommended practices">
+    <li>Values are displayed when you select events.</li>
+    <li>Select an event to view values.</li>
+  </ul>
 </div>
-<div className="donts" markdown="true">
-
-- Values aren’t displayed when none are selected.
-- Values do not appear until an event is selected.
-
+<div className="donts">
+  <ul aria-label="Practices to avoid">
+    <li>Values aren’t displayed when none are selected.</li>
+    <li>Values do not appear until an event is selected.</li>
+  </ul>
 </div>
 </div>
 
 ## Use gender-neutral terms
 Avoid gender-specific language and terms in industrial applications.
 
-<div className="dos-and-donts" markdown="true">
-<div className="dos" markdown="true">
-
-- their / them / their
-- The operator must verify their credentials before accessing the control panel.
-- Contact the supervisor if you need their approval.
-
+<div className="dos-and-donts">
+<div className="dos">
+  <ul aria-label="Recommended practices">
+    <li>their / them / their</li>
+    <li>The operator must verify their credentials before accessing the control panel.</li>
+    <li>Contact the supervisor if you need their approval.</li>
+  </ul>
 </div>
-<div className="donts" markdown="true">
-
-- his / hers / him
-- The operator must verify his credentials before accessing the control panel.
-- Contact the supervisor if you need her approval.
-
+<div className="donts">
+  <ul aria-label="Practices to avoid">
+    <li>his / hers / him</li>
+    <li>The operator must verify his credentials before accessing the control panel.</li>
+    <li>Contact the supervisor if you need her approval.</li>
+  </ul>
 </div>
 </div>
 
 ## Use polite language
 Only use “please” and “sorry” for extremely inconvenient or unforeseen events for your users. Using these terms should be an exception and used rarely within the UI.
 
-<div className="dos-and-donts" markdown="true">
-<div className="dos" markdown="true">
-
-- Enter password
-- Your dashboard closed unexpectedly. Log in to continue working.
-
+<div className="dos-and-donts">
+<div className="dos">
+  <ul aria-label="Recommended practices">
+    <li>Enter password</li>
+    <li>Your dashboard closed unexpectedly. Log in to continue working.</li>
+  </ul>
 </div>
-<div className="donts" markdown="true">
-
-- Please enter password
-- We are very sorry your dashboard closed unexpectedly. Please log in again.
-
+<div className="donts">
+  <ul aria-label="Practices to avoid">
+    <li>Please enter password</li>
+    <li>We are very sorry your dashboard closed unexpectedly. Please log in again.</li>
+  </ul>
 </div>
 </div>
 
 ## Use shortened word forms thoughtfully
 Use positive shortened word forms such as “we’ve” and “you’ll” (contractions) to sound authentic.
 
-<div className="dos-and-donts" markdown="true">
-<div className="dos" markdown="true">
-
-- you’ll
-- we’ve
-
+<div className="dos-and-donts">
+<div className="dos">
+  <ul aria-label="Recommended practices">
+    <li>you’ll</li>
+    <li>we’ve</li>
+  </ul>
 </div>
 
-<div className="donts" markdown="true">
-
-- you will
-- we have
-
+<div className="donts">
+  <ul aria-label="Practices to avoid">
+    <li>you will</li>
+    <li>we have</li>
+  </ul>
 </div>
 </div>
 
 Avoid using negative shortened word forms such as “can’t” and “won’t” as they can sound too casual and direct.
 
-<div className="dos-and-donts" markdown="true">
-<div className="dos" markdown="true">
-
-- cannot
-- will not
-
+<div className="dos-and-donts">
+<div className="dos">
+  <ul aria-label="Recommended practices">
+    <li>cannot</li>
+    <li>will not</li>
+  </ul>
 </div>
-<div className="donts" markdown="true">
-
-- can’t
-- can’t, won’t
-
+<div className="donts">
+  <ul aria-label="Practices to avoid">
+    <li>can’t</li>
+    <li>can’t, won’t</li>
+  </ul>
 </div>
 </div>
 
