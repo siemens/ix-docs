@@ -51,7 +51,7 @@ Provide users with additional information or a summary.
 	&nbsp;&nbsp;&bull; Start configuring your dashboard<br/>
 	&nbsp;&nbsp;&bull; Explore key features: Real-time energy monitoring, load optimization and predictive analytics
 
-Button: Open
+	&nbsp;&nbsp;Button: Open<br/>
 
 </div>
 </div>
