@@ -154,7 +154,7 @@ Avoid sending repetitive updates or leaving long gaps without communication duri
 **Body**<br/>
 Dear [App name] user,<br/>
 
-Task assigned:<br/>
+Task assigned<br/>
 - Task ID: 462<br/>
 - Task description: Spare part replacement for sensor 672_A<br/>
 - Assigned by: Operator<br/>
@@ -184,7 +184,7 @@ Your [App name] team
 **Body**<br/>
 Dear [App name] user,<br/>
 
-Overdue task:<br/>
+Overdue task<br/>
 - Task: Firmware update V5.6.01<br/>
 - Due: November 22, 2025<br/>
 

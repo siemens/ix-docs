@@ -70,7 +70,7 @@ Include upgrade paths, migration guides and support options for product transiti
 <div className="dos-and-donts" markdown="true">
 <div className="dos" markdown="true">
 
-- Our dedicated support team is available to assist you with your migration to the "smart factory OS". Contact us at [email address] or visit our [Migration portal].
+- Our dedicated support team is available to assist you with your migration to the "Smart factory OS". Contact us at [email address] or visit our [Migration portal].
 
 </div>
 </div>
@@ -162,6 +162,7 @@ Use instructions for preparation or follow-up.
 **Body**<br/>
 Dear [App name] user,<br/>
 We’re excited to announce the release of Version 2.1.0.<br/>
+
 What’s new<br/>
 - Enhanced firewall rules for improved security<br/>
 - Better logging for system diagnostics<br/>

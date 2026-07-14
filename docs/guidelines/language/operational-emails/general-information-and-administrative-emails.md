@@ -89,7 +89,7 @@ Use clear and polite invitations that explain the purpose of the survey.
 <div className="dos-and-donts" markdown="true">
 <div className="dos" markdown="true">
 
-- We value your opinion and would appreciate feedback on your recent interaction with our technical support team.
+- We value your opinion and would appreciate feedback on your recent interaction with our support team.
 
 </div>
 </div>
@@ -131,7 +131,7 @@ Include specific reference numbers or identifiers to help users track issues.
 </div>
 </div>
 
-Avoid hiding or making it difficult to find options for managing communication preferences or unsubscribing.
+Avoid hiding (or making it difficult) to find options for managing communication preferences or unsubscribing.
 
 <div className="dos-and-donts" markdown="true">
 <div className="dos" markdown="true">

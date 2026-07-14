@@ -59,7 +59,7 @@ Provide users with additional information or a summary.
 
 <div className="dos-and-donts" markdown="true">
 <div className="dos" markdown="true">
-- The information below relates to your newly registered device:<br/>
+- The information below relates to your newly registered device<br/>
 	&nbsp;&nbsp;&bull; Device name: Laptop123<br/>
 	&nbsp;&nbsp;&bull; Device ID: ABCDEFGHI<br/>
 	&nbsp;&nbsp;&bull; Operating system: Windows<br/>
@@ -98,7 +98,7 @@ Mention both previous and new states when access or role settings are changed.
 <div className="dos-and-donts" markdown="true">
 <div className="dos" markdown="true">
 
-- There have been changes to your role for [App name]:<br/>
+- There have been changes to your role for [App name]<br/>
 	New role: Administrator<br/>
 	Previous role: Operator
 
@@ -143,7 +143,7 @@ Your [App name] team
 **Body**<br/>
 Dear [App name] user,<br/>
 
-There have been changes to your role for [App name]:<br/>
+There have been changes to your role for [App name]<br/>
 New role: Administrator<br/>
 Previous role: Operator<br/>
 
@@ -165,7 +165,7 @@ Your [App name] team
 **Body**<br/>
 Dear [App name] user,<br/>
 
-A new device has been registered to your account: [{'user@example.com'}]<br/>
+A new device has been registered to your account [{'user@example.com'}]<br/>
 Device name: Laptop123<br/>
 Device ID: ABCDEFGHI<br/>
 Operating system: Windows<br/>

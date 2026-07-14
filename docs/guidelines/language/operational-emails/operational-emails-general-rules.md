@@ -1,7 +1,7 @@
 ---
 sidebar_position: 1
 sidebar_label: General rules
-title: General rules
+title: Overview
 doc-type: 'banner'
 description: 'In industrial applications, customer emails connect users to essential information, project updates and critical alerts. Well-written and clear customer emails keep operations running smoothly and users well-informed.'
 ---
@@ -124,7 +124,7 @@ Use typographic double quotation marks for opening quotes “ (Unicode U+201C) a
 
 ## Subject lines
 
-Start the subject line with the application name. Use pipe separators to clearly structure the subject line and separate the product name, action and topic.
+Start the subject line with the application name. Use pipe separators to clearly structure the subject line, and separate the product name, action and topic.
 
 <div className="dos-and-donts" markdown="true">
 <div className="dos" markdown="true">
@@ -218,7 +218,7 @@ Repeat key words from the subject line in the body text.
 </div>
 </div>
 
-Use clear headings for users to easily scan body text for important information.
+Use clear headings for users to easily scan body text for important information (omit the question mark).
 
 <div className="dos-and-donts" markdown="true">
 <div className="dos" markdown="true">
@@ -380,7 +380,7 @@ Highlight important information but avoid excessive and mixed text formatting.
 <div className="dos-and-donts" markdown="true">
 <div className="dos" markdown="true">
 
-- Review the attached maintenance report for details.
+- Review the attached maintenance report for <u>details</u>.
 
 </div>
 <div className="donts" markdown="true">
@@ -412,9 +412,11 @@ Do not use emojis.
 
 **Body**<br/>
 Dear [App name] user,<br/>
+
 What’s happening<br/>
 On Monday, November 10, between 02:00–04:00, we will perform system<br/>
 maintenance that will cause temporary service interruptions.<br/>
+
 What you need to do<br/>
 Restart your system after the maintenance window to apply all updates.<br/>
 If you have any questions or need assistance, contact our team at [email address].

@@ -52,7 +52,7 @@ Be as specific as possible and tell users exactly what happened (what, when, how
 
 - Critical alarm immediate attention required: Power supply failure detected in Plant A.<br/>
   &nbsp;&nbsp;&bull; Power supply failure detected in Plant A.<br/>
-  &nbsp;&nbsp;&bull; Event details: Overload detected on Transformer T-102 at 14:35 (UTC+2)<br/>
+  &nbsp;&nbsp;&bull; Event details: Overload detected on Transformer T-102 at 14:35 (UTC+2).<br/>
   &nbsp;&nbsp;&bull; Location: Nuremberg facility 32/A.
 
 </div>
@@ -125,14 +125,14 @@ Explain if and how users can resolve issues or act with links, buttons, and sugg
 
 **Body**<br/>
 Dear [App name] user,<br/>
-Batch BTH-20260304-A127 threshold exceeded:<br/>
+Batch BTH-20260304-A127 threshold exceeded<br/>
 - Parameter: Temperature<br/>
 - Current value: 87.3°C<br/>
 - Threshold limit: 85.0°C<br/>
 - Deviation: +2.3°C (+2.7%)<br/>
 - Duration: 00:03:47<br/>
 
-Batch details:<br/>
+Batch details<br/>
 - Batch ID: BTH-20260304-A127<br/>
 - Product line: Beverage Mixing Line 3<br/>
 - Product: Orange Juice Concentrate<br/>
