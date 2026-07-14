@@ -7,9 +7,10 @@ description: 'Clear, timely communication related to account creation, role assi
 '
 ---
 
-#
+:::note
 
-Note: Use these rules alongside the [General rules](#) and we have used [App name] as the standard placeholder for you to adapt individually to your product. All placeholders are shown with square brackets [placeholder].
+Use these rules alongside the [General rules](./operational-emails-general-rules.md). All placeholders are shown with square brackets, e.g. [placeholder]. We have used [App name] as the standard placeholder for you to adapt individually to your product. 
+:::
 
 ## Subject lines
 

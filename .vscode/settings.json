@@ -3,5 +3,6 @@
         "chatbots",
         "infotips",
         "WCAG"
-    ]
+    ],
+    "chat.byokUtilityModelDefault": "copilot"
 }
