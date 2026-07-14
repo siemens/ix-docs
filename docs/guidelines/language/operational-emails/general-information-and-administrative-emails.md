@@ -10,7 +10,7 @@ description: 'In everyday operations, general emails covering administrative det
 
 :::note
 
-Use these rules alongside the [General rules](./operational-emails-general-rules.md). All placeholders are shown with square brackets, e.g. [placeholder]. We have used [App name] as the standard placeholder for you to adapt individually to your product. 
+Use these rules alongside the [General rules](./operational-emails-general-rules/index.mdx). All placeholders are shown with square brackets, e.g. [placeholder]. We have used [App name] as the standard placeholder for you to adapt individually to your product. 
 :::
 
 ## Subject lines
