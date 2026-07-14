@@ -1,16 +1,16 @@
 /**
  * Word to Markdown Converter
- * 
+ *
  * Converts Microsoft Word (.docx) documents to Markdown format with image extraction.
- * 
+ *
  * Usage:
  *   npx tsx ./scripts/word-to-markdown.ts <input.docx> [--output <dir>]
- * 
+ *
  * Example:
  *   npx tsx ./scripts/word-to-markdown.ts document.docx --output docs/converted
- * 
+ *
  * Requirements:
- *   npm install mammoth turndown sharp
+ *   npm install mammoth turndown sharp adm-zip
  */
 
 import * as fs from 'fs-extra';
@@ -29,7 +29,7 @@ async function importDependencies() {
   } catch (error) {
     console.error('❌ Missing required dependencies.');
     console.error(
-      '\nPlease install them with:\n  npm install mammoth turndown sharp'
+      '\nPlease install them with:\n  npm install mammoth turndown sharp adm-zip'
     );
     process.exit(1);
   }
@@ -143,7 +143,7 @@ async function convertWordToMarkdown(options: ConversionOptions) {
     // Add rules for better markdown formatting
     turndownService.addRule('strikethrough', {
       filter: ['s', 'strike', 'del'],
-      replacement: (content) => `~~${content}~~`,
+      replacement: (content: string) => `~~${content}~~`,
     });
 
     const markdown = turndownService.turndown(html);
@@ -203,39 +203,214 @@ function cleanupMarkdown(markdown: string): string {
   return cleaned;
 }
 
+function formatDosAndDontsList(list: string, type: 'dos' | 'donts') {
+  const ariaLabel =
+    type === 'dos' ? 'Recommended practices' : 'Practices to avoid';
+  const items = list
+    .split('\n')
+    .map((line) => line.trim())
+    .filter((line) => line.startsWith('- '))
+    .map((line) => `    <li>${line.slice(2)}</li>`)
+    .join('\n');
+
+  return `<div className="${type}">
+  <ul aria-label="${ariaLabel}">
+${items}
+  </ul>
+</div>`;
+}
+
+function escapeHtml(text: string): string {
+  return text
+    .replace(/&/g, '&amp;')
+    .replace(/</g, '&lt;')
+    .replace(/>/g, '&gt;');
+}
+
+function formatDosAndDontsItems(items: string[], type: 'dos' | 'donts') {
+  const ariaLabel =
+    type === 'dos' ? 'Recommended practices' : 'Practices to avoid';
+  const listItems = items
+    .map((item) => {
+      const content = escapeHtml(item)
+        .split('\n')
+        .map((line) => line.trim())
+        .filter(Boolean)
+        .join('<br />');
+
+      return `    <li>${content}</li>`;
+    })
+    .join('\n');
+
+  return `<div className="${type}">
+  <ul aria-label="${ariaLabel}">
+${listItems}
+  </ul>
+</div>`;
+}
+
+function isStructuredExampleContinuation(line: string): boolean {
+  const trimmed = line.trim();
+
+  return (
+    trimmed.startsWith('- ') ||
+    trimmed.startsWith('• ') ||
+    /^\d+\.\s+/.test(trimmed) ||
+    /^[A-Z][A-Z0-9 /&()'-]*:/.test(trimmed)
+  );
+}
+
+function formatDosAndDontsExamplePairs(markdown: string): string {
+  const lines = markdown.split('\n');
+  const result: string[] = [];
+  const exampleStartPattern = /^(#{1,6}\s+)?(DO|DON['’]T):\s*(.*)$/;
+
+  let index = 0;
+
+  while (index < lines.length) {
+    const startMatch = lines[index].match(exampleStartPattern);
+
+    if (!startMatch) {
+      result.push(lines[index]);
+      index += 1;
+      continue;
+    }
+
+    const dos: string[] = [];
+    const donts: string[] = [];
+    const startIndex = index;
+
+    while (index < lines.length) {
+      const currentMatch = lines[index].match(exampleStartPattern);
+      if (!currentMatch) {
+        break;
+      }
+
+      const type = currentMatch[2] === 'DO' ? 'dos' : 'donts';
+      const blockLines = [currentMatch[3].trim()].filter(Boolean);
+      index += 1;
+
+      while (index < lines.length) {
+        const nextLine = lines[index];
+
+        if (nextLine.match(exampleStartPattern)) {
+          break;
+        }
+
+        if (nextLine.match(/^#{1,6}\s+/)) {
+          break;
+        }
+
+        if (nextLine.trim() === '') {
+          let lookaheadIndex = index + 1;
+
+          while (
+            lookaheadIndex < lines.length &&
+            lines[lookaheadIndex].trim() === ''
+          ) {
+            lookaheadIndex += 1;
+          }
+
+          const nextNonEmptyLine = lines[lookaheadIndex];
+
+          if (
+            nextNonEmptyLine === undefined ||
+            nextNonEmptyLine.match(exampleStartPattern) ||
+            nextNonEmptyLine.match(/^#{1,6}\s+/)
+          ) {
+            break;
+          }
+
+          if (!isStructuredExampleContinuation(nextNonEmptyLine)) {
+            break;
+          }
+
+          index += 1;
+          continue;
+        }
+
+        if (!isStructuredExampleContinuation(nextLine)) {
+          break;
+        }
+
+        blockLines.push(nextLine);
+        index += 1;
+      }
+
+      const content = blockLines.join('\n').trim();
+      if (content) {
+        if (type === 'dos') {
+          dos.push(content);
+        } else {
+          donts.push(content);
+        }
+      }
+
+      while (index < lines.length && lines[index].trim() === '') {
+        const nextLine = lines[index + 1];
+
+        if (nextLine?.match(exampleStartPattern)) {
+          index += 1;
+          break;
+        }
+
+        if (nextLine?.match(/^#{1,6}\s+/)) {
+          break;
+        }
+
+        if (!nextLine || !isStructuredExampleContinuation(nextLine)) {
+          break;
+        }
+
+        index += 1;
+      }
+    }
+
+    if (dos.length > 0 || donts.length > 0) {
+      const sections = [];
+
+      if (dos.length > 0) {
+        sections.push(formatDosAndDontsItems(dos, 'dos'));
+      }
+
+      if (donts.length > 0) {
+        sections.push(formatDosAndDontsItems(donts, 'donts'));
+      }
+
+      result.push(`<div className="dos-and-donts">
+${sections.join('\n')}
+</div>`);
+      continue;
+    }
+
+    result.push(...lines.slice(startIndex, index));
+  }
+
+  return result.join('\n');
+}
+
 function formatDosAndDonts(markdown: string): string {
   // Pattern 1: Look for "Dos" or "Do's" / "Don'ts" or "Don't" headings followed by lists
-  const dosPattern = /^(#{1,6})\s+(?:Dos?|Do's?)\s*\n((?:(?:^-.*\n?)+(?:\n)?)+)(?=(#{1,6})\s+(?:Don'?ts?|Don't))/gm;
-  
+  const dosPattern = /^(#{1,6})\s+(?:Dos?|Do['’]s?)\s*\n((?:(?:^-.*\n?)+(?:\n)?)+)(?=(#{1,6})\s+(?:Don['’]?ts?|Don['’]t))/gm;
+
   // Check if we have dos/don'ts pairs
   let formatted = markdown;
   const matches = Array.from(markdown.matchAll(dosPattern));
-  
+
   if (matches.length > 0) {
     // Process each dos section paired with don'ts
     formatted = markdown.replace(
-      /^(#{1,6})\s+(?:Dos?|Do's?)\s*\n((?:(?:^-.*(?:\n|$))+(?:\n)?)+)(?=(#{1,6})\s+(?:Don'?ts?|Don't))\3\s+(?:Don'?ts?|Don't)\s*\n((?:(?:^-.*(?:\n|$))+(?:\n)?)+)/gm,
+      /^(#{1,6})\s+(?:Dos?|Do['’]s?)\s*\n((?:(?:^-.*(?:\n|$))+(?:\n)?)+)(?=(#{1,6})\s+(?:Don['’]?ts?|Don['’]t))\3\s+(?:Don['’]?ts?|Don['’]t)\s*\n((?:(?:^-.*(?:\n|$))+(?:\n)?)+)/gm,
       (match, heading1, dosList, heading2, dontsList) => {
-        // Preserve the heading levels and create dos/don'ts structure
-        const level = heading1;
-        
-        return `<div className="dos-and-donts" markdown="true">
-<div className="dos" markdown="true">
-
-${dosList.trim()}
-
-</div>
-<div className="donts" markdown="true">
-
-${dontsList.trim()}
-
-</div>
+        return `<div className="dos-and-donts">
+${formatDosAndDontsList(dosList.trim(), 'dos')}
+${formatDosAndDontsList(dontsList.trim(), 'donts')}
 </div>`;
       }
     );
   }
 
-  return formatted;
+  return formatDosAndDontsExamplePairs(formatted);
 }
 
 function convertCurlyQuotes(markdown: string): string {
@@ -329,7 +504,7 @@ Options:
   -h, --help          Show this help message
 
 Prerequisites:
-  npm install mammoth turndown sharp
+  npm install mammoth turndown sharp adm-zip
 
 What it does:
   1. Converts .docx to HTML using Mammoth
