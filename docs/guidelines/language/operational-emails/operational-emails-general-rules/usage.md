@@ -325,7 +325,7 @@ Use inline text links for additional information.
 </div>
 </div>
 
-Use a full, live link when buttons are not possible in the email (see [External links and resources](../menu-functions-and-ui-labels/external-links-and-resources.md)).
+Use a full, live link when buttons are not possible in the email (see [External links and resources](../../menu-functions-and-ui-labels/external-links-and-resources.md)).
 
 <div className="dos-and-donts" markdown="true">
 <div className="dos" markdown="true">

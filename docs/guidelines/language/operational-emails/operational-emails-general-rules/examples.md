@@ -3,7 +3,7 @@ doc-type: 'tab-item'
 description: 'Examples of operational emails'
 ---
 
-# Operational Emails - Examples
+# Operational email examples
 
 ## General best practice example
 
@@ -29,5 +29,5 @@ Your [App name] team
 
 ## Related
 
-- [Time and time zones](../formatting/timezones.mdx)
-- [Time-related messages](../messaging/time-related-messages.mdx)
+- [Time and time zones](../../formatting/timezones.mdx)
+- [Time-related messages](../../messaging/time-related-messages.mdx)
