@@ -163,13 +163,23 @@ There are two persona templates: a basic set of prompts and an exhaustive set of
 
 ## Dos and Don’ts
 
-- Do test and retest your chatbot to ensure its responses are in line with your brand
-- Do predefine responses with persona prompts to avoid generic responses
-- Do create different personas if the bot needs to work with multiple, varied users
-- Do base system personas on user research to ensure there is a good level of customer understanding
-- Don’t pretend your chatbot is human – it should be clear to your users that they’re talking to a chatbot
-- Don’t encourage your chatbot to engage in unnecessary small talk with your users
-- Don’t use more than a page of persona prompts – only take what’s vital and relevant from our templates
+<div class="dos-and-donts">
+  <div class="dos">
+    <ul aria-label="Recommended practices">
+      <li>Do test and retest your chatbot to ensure its responses are in line with your brand</li>
+      <li>Do predefine responses with persona prompts to avoid generic responses</li>
+      <li>Do create different personas if the bot needs to work with multiple, varied users</li>
+      <li>Do base system personas on user research to ensure there is a good level of customer understanding</li>
+    </ul>
+  </div>
+  <div class="donts">
+    <ul aria-label="Practices to avoid">
+      <li>Don’t pretend your chatbot is human – it should be clear to your users that they’re talking to a chatbot</li>
+      <li>Don’t encourage your chatbot to engage in unnecessary small talk with your users</li>
+      <li>Don’t use more than a page of persona prompts – only take what’s vital and relevant from our templates</li>
+    </ul>
+  </div>
+</div>
 
 
 

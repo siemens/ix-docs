@@ -27,7 +27,17 @@ Here the chatbot offers an apology for not being able to support the user, expla
 
 ## Dos and Don’ts
 
-- Do consider adding a time-out feature   
-- Do consider adding thumbs up and thumbs down icons to get feedback   
-- Don’t loop back and have the chatbot reintroduce themselves
+<div class="dos-and-donts">
+  <div class="dos">
+    <ul aria-label="Recommended practices">
+      <li>Do consider adding a time-out feature</li>
+      <li>Do consider adding thumbs up and thumbs down icons to get feedback</li>
+    </ul>
+  </div>
+  <div class="donts">
+    <ul aria-label="Practices to avoid">
+      <li>Don’t loop back and have the chatbot reintroduce themselves</li>
+    </ul>
+  </div>
+</div>
  
