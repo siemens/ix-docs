@@ -26,9 +26,13 @@ Unlike a modal, popover news does not prevent users from navigating and interact
 
 ## Dos and Don’ts
 
-- Do use popover news for "nice to know" information
-- Don‘t use popover news for essential information a user must read, instead use a [modal](../messagebar)
-- Don‘t use popover news for system feedback or messages, instead use a [modal](../toast)
+<div class="dos-and-donts">
+  <div class="dos">
+    <ul aria-label="Recommended practices">
+      <li>Do use popover news for "nice to know" information</li>
+    </ul>
+  </div>
+</div>
 
 ## Related
 
