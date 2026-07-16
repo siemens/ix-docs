@@ -43,9 +43,19 @@ The scroll card list style displays the content items from left to right next to
 
 ## Dos and Don’ts
 
-- Do keep cards and items within card lists the same size
-- Don’t place different types of components within card lists
-- Don’t nest card lists within each other
+<div class="dos-and-donts">
+  <div class="dos">
+    <ul aria-label="Recommended practices">
+      <li>Do keep cards and items within card lists the same size</li>
+    </ul>
+  </div>
+  <div class="donts">
+    <ul aria-label="Practices to avoid">
+      <li>Don’t place different types of components within card lists</li>
+      <li>Don’t nest card lists within each other</li>
+    </ul>
+  </div>
+</div>
 
 ## Related
 

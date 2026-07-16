@@ -67,9 +67,19 @@ Example: When the user completes the shipping address section of an e-commerce c
 
 ## Dos and Don’ts
 
-- Do use short and helpful copy for validation
-- Do include all relevant information in the validation message, including context
-- Don’t show valid feedback on components, only in the input help component
+<div class="dos-and-donts">
+  <div class="dos">
+    <ul aria-label="Recommended practices">
+      <li>Do use short and helpful copy for validation</li>
+      <li>Do include all relevant information in the validation message, including context</li>
+    </ul>
+  </div>
+  <div class="donts">
+    <ul aria-label="Practices to avoid">
+      <li>Don’t show valid feedback on components, only in the input help component</li>
+    </ul>
+  </div>
+</div>
 
 ## Related
 

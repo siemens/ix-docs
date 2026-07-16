@@ -484,6 +484,24 @@ const sidebars: SidebarsConfig = {
           ],
         }),
         createTabItem({
+          id: 'components/popover/index',
+          label: 'Popover',
+          items: [
+            {
+              id: 'components/popover/guide',
+              label: 'Usage',
+            },
+            {
+              id: 'components/popover/code',
+              label: 'Code',
+            },
+            {
+              id: 'components/popover/uxwriting',
+              label: 'Writing',
+            },
+          ],
+        }),
+        createTabItem({
           id: 'components/tile/index',
           label: 'Tile',
           items: [
@@ -702,7 +720,7 @@ const sidebars: SidebarsConfig = {
         }),
         createTabItem({
           id: 'components/radio/index',
-          label: 'Radio',
+          label: 'Radio button',
           items: [
             {
               id: 'components/radio/guide',
