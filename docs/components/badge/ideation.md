@@ -26,9 +26,9 @@ Can be used **standalone or with an anchor element**. When attached to interacti
 
 Supported types:
 
-- **label**: use for showing an entitity's status (replaces pill)
+- **label**: use for showing an entity's status (replaces pill)
 - **counter** (default): use for notifications that need attention
-- **status-icon**: use for notifications that need attention OR showing an entitity's status
+- **status-icon**: use for notifications that need attention OR showing an entity's status
 - **dot**: use for notifications that need attention
 
 ## Variants
