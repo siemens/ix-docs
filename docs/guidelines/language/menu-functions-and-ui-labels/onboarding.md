@@ -23,128 +23,128 @@ We follow this three-step approach when writing our onboarding messages.
 Welcome users in the onboarding component only once with a friendly yet professional tone.
 
 <div className="dos-and-donts">
-<div className="dos">
-  <ul aria-label="Recommended practices">
-    <li>Welcome to [application name]</li>
-    <li>Welcome [user name] to [application name]</li>
-  </ul>
-</div>
-<div className="donts">
-  <ul aria-label="Practices to avoid">
-    <li>Welcome again to [application name]</li>
-  </ul>
-</div>
+  <div className="dos">
+    <ul aria-label="Recommended practices">
+      <li>Welcome to [application name]</li>
+      <li>Welcome [user name] to [application name]</li>
+    </ul>
+  </div>
+  <div className="donts">
+    <ul aria-label="Practices to avoid">
+      <li>Welcome again to [application name]</li>
+    </ul>
+  </div>
 </div>
 
 Use a friendly, professional tone that’s engaging and informative but not casual or informal.
 
 <div className="dos-and-donts">
-<div className="dos">
-  <ul aria-label="Recommended practices">
-    <li>Get started</li>
-    <li>Getting started</li>
-  </ul>
-</div>
-<div className="donts">
-  <ul aria-label="Practices to avoid">
-    <li>Hey there! Let’s dive in and get you rolling! 🚀</li>
-  </ul>
-</div>
+  <div className="dos">
+    <ul aria-label="Recommended practices">
+      <li>Get started</li>
+      <li>Getting started</li>
+    </ul>
+  </div>
+  <div className="donts">
+    <ul aria-label="Practices to avoid">
+      <li>Hey there! Let’s dive in and get you rolling! 🚀</li>
+    </ul>
+  </div>
 </div>
 
 Avoid using marketing or selling wording, instead address users as a partner and expert.
 
 <div className="dos-and-donts">
-<div className="donts">
-  <ul aria-label="Practices to avoid">
-    <li>Connecting your mobile device is a piece of cake with our Asset Manager.</li>
-  </ul>
-</div>
+  <div className="donts">
+    <ul aria-label="Practices to avoid">
+      <li>Connecting your mobile device is a piece of cake with our Asset Manager.</li>
+    </ul>
+  </div>
 </div>
 
 Break onboarding into small, manageable steps with bullet points, pagination or short paragraphs.
 
 <div className="dos-and-donts">
-<div className="dos">
-  <ul aria-label="Recommended practices">
-    <li>Set up your notifications:<br/>
+  <div className="dos">
+    <ul aria-label="Recommended practices">
+      <li>Set up your notifications:<br/>
     &nbsp;&nbsp;&bull; Select the notifications you want<br/>
     &nbsp;&nbsp;&bull; Set quiet hours to avoid interruptions</li>
-  </ul>
-</div>
-<div className="donts">
-  <ul aria-label="Practices to avoid">
-    <li>Getting started with smart notifications. You can now choose what types of alerts you want, set quiet hours, and customize how you receive notifications so you’re not overwhelmed.</li>
-  </ul>
-</div>
+    </ul>
+  </div>
+  <div className="donts">
+    <ul aria-label="Practices to avoid">
+      <li>Getting started with smart notifications. You can now choose what types of alerts you want, set quiet hours, and customize how you receive notifications so you’re not overwhelmed.</li>
+    </ul>
+  </div>
 </div>
 
 Use verbs for call-to-actions, providing concrete actions or onboarding steps.
 
 <div className="dos-and-donts">
-<div className="dos">
-  <ul aria-label="Recommended practices">
-    <li>Get started</li>
-    <li>Start now</li>
-    <li>Start tour</li>
-    <li>Learn more</li>
-    <li>Register</li>
-    <li>Create account</li>
-    <li>Explore the app</li>
-    <li>Onboard devices</li>
-    <li>Learn how to onboard assets</li>
-  </ul>
-</div>
+  <div className="dos">
+    <ul aria-label="Recommended practices">
+      <li>Get started</li>
+      <li>Start now</li>
+      <li>Start tour</li>
+      <li>Learn more</li>
+      <li>Register</li>
+      <li>Create account</li>
+      <li>Explore the app</li>
+      <li>Onboard devices</li>
+      <li>Learn how to onboard assets</li>
+    </ul>
+  </div>
 </div>
 
 Avoid generic call-to-actions when possible to enhance transparency and build confidence.
 
 <div className="dos-and-donts">
-<div className="donts">
-  <ul aria-label="Practices to avoid">
-    <li>OK</li>
-    <li>Click here</li>
-  </ul>
-</div>
+  <div className="donts">
+    <ul aria-label="Practices to avoid">
+      <li>OK</li>
+      <li>Click here</li>
+    </ul>
+  </div>
 </div>
 
 Use clear (but not catastrophic) wording to highlight important points for users to remember.
 
 <div className="dos-and-donts">
-<div className="dos">
-  <ul aria-label="Recommended practices">
-    <li>Important: Always log out using your profile. Do not simply close the app.</li>
-    <li>Make sure you “Save all” before leaving workflows to save your data.</li>
-    <li>We recommend creating a backup of your dashboard to avoid risk of data loss.</li>
-    <li>Note: You can always find this tour in the “About” tab.</li>
-  </ul>
-</div>
-<div className="donts">
-  <ul aria-label="Practices to avoid">
-    <li>Failure to save your changes will result in permanent loss of your data.</li>
-  </ul>
-</div>
+  <div className="dos">
+    <ul aria-label="Recommended practices">
+      <li>Important: Always log out using your profile. Do not simply close the app.</li>
+      <li>Make sure you “Save all” before leaving workflows to save your data.</li>
+      <li>We recommend creating a backup of your dashboard to avoid risk of data loss.</li>
+      <li>Note: You can always find this tour in the “About” tab.</li>
+    </ul>
+  </div>
+  <div className="donts">
+    <ul aria-label="Practices to avoid">
+      <li>Failure to save your changes will result in permanent loss of your data.</li>
+    </ul>
+  </div>
 </div>
 
 Provide a clear way for users to dismiss or postpone onboarding without confusion.
 
 <div className="dos-and-donts">
-<div className="dos">
-  <ul aria-label="Recommended practices">
-    <li>Close</li>
-    <li>Skip</li>
-    <li>Skip and don’t show again</li>
-    <li>Remind me at next login</li>
-  </ul>
-</div>
-<div className="donts">
-  <ul aria-label="Practices to avoid">
-    <li>Confirm</li>
-    <li>Proceed</li>
-    <li>Continue</li>
-    <li>Maybe later</li>
-  </ul>
-</div>
+  <div className="dos">
+    <ul aria-label="Recommended practices">
+      <li>Close</li>
+      <li>Skip</li>
+      <li>Skip and don’t show again</li>
+      <li>Remind me at next login</li>
+    </ul>
+  </div>
+  <div className="donts">
+    <ul aria-label="Practices to avoid">
+      <li>Confirm</li>
+      <li>Proceed</li>
+      <li>Continue</li>
+      <li>Maybe later</li>
+    </ul>
+  </div>
 </div>
 
 ## Dos and Don’ts

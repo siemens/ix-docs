@@ -14,53 +14,53 @@ import { CategoryButton } from '@site/src/components/CategoryButton';
 #
 
 <IxLayoutGrid style={{marginBottom: '3rem'}} no-margin>
-<IxRow style={{gap: '0.5rem', justifyContent: 'center'}}>
-<CategoryButton
+  <IxRow style={{gap: '0.5rem', justifyContent: 'center'}}>
+    <CategoryButton
     title="Application frame"
     link="#application-frame">
 ![](https://www.figma.com/design/wEptRgAezDU1z80Cn3eZ0o/iX-Documentation-illustrations?node-id=5186-249&t=gkh6VNlJun96I6Ac-4)
-</CategoryButton>
-<CategoryButton
+    </CategoryButton>
+    <CategoryButton
     title="Navigation and hierarchy"
     link="#navigation-and-hierarchy">
 ![](https://www.figma.com/design/wEptRgAezDU1z80Cn3eZ0o/iX-Documentation-illustrations?node-id=5186-259&t=gkh6VNlJun96I6Ac-4)
-</CategoryButton>
-<CategoryButton
+    </CategoryButton>
+    <CategoryButton
     title="Containers and layouts"
     link="#containers-and-layouts">
 ![](https://www.figma.com/design/wEptRgAezDU1z80Cn3eZ0o/iX-Documentation-illustrations?node-id=5186-269&t=gkh6VNlJun96I6Ac-4)
-</CategoryButton>
-<CategoryButton
+    </CategoryButton>
+    <CategoryButton
     title="Forms"
     link="#forms">
 ![](https://www.figma.com/design/wEptRgAezDU1z80Cn3eZ0o/iX-Documentation-illustrations?node-id=5186-283&t=gkh6VNlJun96I6Ac-4)
-</CategoryButton>
-<CategoryButton
+    </CategoryButton>
+    <CategoryButton
     title="Input fields and selections"
     link="#input-fields-and-selections">
 ![](https://www.figma.com/design/wEptRgAezDU1z80Cn3eZ0o/iX-Documentation-illustrations?node-id=5186-298&t=gkh6VNlJun96I6Ac-11)
-</CategoryButton>
-<CategoryButton
+    </CategoryButton>
+    <CategoryButton
     title="Buttons and actions"
     link="#buttons-and-actions">
 ![](https://www.figma.com/design/wEptRgAezDU1z80Cn3eZ0o/iX-Documentation-illustrations?node-id=5186-305&t=gkh6VNlJun96I6Ac-11)
-</CategoryButton>
-<CategoryButton
+    </CategoryButton>
+    <CategoryButton
     title="System feedback and status"
     link="#system-feedback-and-status">
 ![](https://www.figma.com/design/wEptRgAezDU1z80Cn3eZ0o/iX-Documentation-illustrations?node-id=5186-332&t=gkh6VNlJun96I6Ac-11)
-</CategoryButton>
-<CategoryButton
+    </CategoryButton>
+    <CategoryButton
     title="Data display"
     link="#data-display">
 ![](https://www.figma.com/design/wEptRgAezDU1z80Cn3eZ0o/iX-Documentation-illustrations?node-id=5186-370&t=gkh6VNlJun96I6Ac-11)
-</CategoryButton>
-<CategoryButton
+    </CategoryButton>
+    <CategoryButton
     title="Charts"
     link="#charts">
 ![](https://www.figma.com/design/wEptRgAezDU1z80Cn3eZ0o/iX-Documentation-illustrations?node-id=5186-387&t=gkh6VNlJun96I6Ac-11)
-</CategoryButton>
-</IxRow>
+    </CategoryButton>
+  </IxRow>
 </IxLayoutGrid>
 
 ## Application frame

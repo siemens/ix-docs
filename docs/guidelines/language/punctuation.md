@@ -46,7 +46,7 @@ Always consider whether necessary
 `'` Single quotation mark for possession: Customer’s role (single), customers’ roles (plural)
 </div>
 <div className="mb-2">
-<code style={{ whiteSpace: 'pre' }}> </code> No quotation mark or brackets for plurals: PDFs
+  <code style={{ whiteSpace: 'pre' }}> </code> No quotation mark or brackets for plurals: PDFs
 </div>
 
 <div className="mb-2">
@@ -86,36 +86,36 @@ Always consider whether necessary
 - Numbers: Use No. as an abbreviation for number, no spacing between abbreviated No. and number: No.8
 
 <div className="dos-and-donts">
-<div className="dos">
-  <ul aria-label="Recommended practices">
-    <li>11am</li>
-    <li>Monday, January 12, 2021</li>
-    <li>€999.50</li>
-    <li>€2.5 million</li>
-    <li>$400,456.50</li>
-    <li>£320</li>
-    <li>30 mm</li>
-    <li>10 oz</li>
-    <li>10-40%</li>
-    <li>No.7</li>
-    <li>Number 7</li>
-  </ul>
-</div>
-<div className="donts">
-  <ul aria-label="Practices to avoid">
-    <li>11 a.m.</li>
-    <li>Monday, 12 January 2021</li>
-    <li>€999,50</li>
-    <li>€2,5 million</li>
-    <li>$400.456,50</li>
-    <li>320£</li>
-    <li>30 mms</li>
-    <li>10 oz.</li>
-    <li>10–40%</li>
-    <li>#7</li>
-    <li>Num 7</li>
-  </ul>
-</div>
+  <div className="dos">
+    <ul aria-label="Recommended practices">
+      <li>11am</li>
+      <li>Monday, January 12, 2021</li>
+      <li>€999.50</li>
+      <li>€2.5 million</li>
+      <li>$400,456.50</li>
+      <li>£320</li>
+      <li>30 mm</li>
+      <li>10 oz</li>
+      <li>10-40%</li>
+      <li>No.7</li>
+      <li>Number 7</li>
+    </ul>
+  </div>
+  <div className="donts">
+    <ul aria-label="Practices to avoid">
+      <li>11 a.m.</li>
+      <li>Monday, 12 January 2021</li>
+      <li>€999,50</li>
+      <li>€2,5 million</li>
+      <li>$400.456,50</li>
+      <li>320£</li>
+      <li>30 mms</li>
+      <li>10 oz.</li>
+      <li>10–40%</li>
+      <li>#7</li>
+      <li>Num 7</li>
+    </ul>
+  </div>
 </div>
 
 ## Spacing
@@ -131,22 +131,22 @@ Always consider whether necessary
 - Add a space before unit of measurement
 
 <div className="dos-and-donts">
-<div className="dos">
-  <ul aria-label="Recommended practices">
-    <li>50%</li>
-    <li>11am</li>
-    <li>Tuesday: no data</li>
-    <li>Browse…</li>
-  </ul>
-</div>
-<div className="donts">
-  <ul aria-label="Practices to avoid">
-    <li>50 %</li>
-    <li>11 am</li>
-    <li>Tuesday: no data</li>
-    <li>Browse …</li>
-  </ul>
-</div>
+  <div className="dos">
+    <ul aria-label="Recommended practices">
+      <li>50%</li>
+      <li>11am</li>
+      <li>Tuesday: no data</li>
+      <li>Browse…</li>
+    </ul>
+  </div>
+  <div className="donts">
+    <ul aria-label="Practices to avoid">
+      <li>50 %</li>
+      <li>11 am</li>
+      <li>Tuesday: no data</li>
+      <li>Browse …</li>
+    </ul>
+  </div>
 </div>
 
 ## Lists
@@ -163,19 +163,19 @@ Always consider whether necessary
 
 <div className="dos-and-donts">
 
-<div className="dos">
-  <ul aria-label="Recommended practices">
-    <li>Write comments</li>
-    <li>Respond to comments</li>
-    <li>Approve work orders</li>
-  </ul>
-</div>
+  <div className="dos">
+    <ul aria-label="Recommended practices">
+      <li>Write comments</li>
+      <li>Respond to comments</li>
+      <li>Approve work orders</li>
+    </ul>
+  </div>
 
-<div className="donts">
-  <ul aria-label="Practices to avoid">
-    <li>Write comments</li>
-    <li>Respond to comments</li>
-    <li>Approve work orders by adding your fingerprint to your user management section in your smartphone.</li>
-  </ul>
-</div>
+  <div className="donts">
+    <ul aria-label="Practices to avoid">
+      <li>Write comments</li>
+      <li>Respond to comments</li>
+      <li>Approve work orders by adding your fingerprint to your user management section in your smartphone.</li>
+    </ul>
+  </div>
 </div>

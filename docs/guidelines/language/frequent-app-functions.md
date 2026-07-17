@@ -19,13 +19,13 @@ description: 'Get tips for naming common app functions clearly and effectively. 
 - Cockpit
 
 <div className="dos-and-donts">
-<div className="donts">
-  <ul aria-label="Practices to avoid">
-    <li>Console</li>
-    <li>Dash</li>
-    <li>Control panel</li>
-  </ul>
-</div>
+  <div className="donts">
+    <ul aria-label="Practices to avoid">
+      <li>Console</li>
+      <li>Dash</li>
+      <li>Control panel</li>
+    </ul>
+  </div>
 </div>
 
 ## Analytics
@@ -35,12 +35,12 @@ description: 'Get tips for naming common app functions clearly and effectively. 
 - Anomaly detection
 
 <div className="dos-and-donts">
-<div className="donts">
-  <ul aria-label="Practices to avoid">
-    <li>Assessment</li>
-    <li>Examination</li>
-  </ul>
-</div>
+  <div className="donts">
+    <ul aria-label="Practices to avoid">
+      <li>Assessment</li>
+      <li>Examination</li>
+    </ul>
+  </div>
 </div>
 
 ## Monitoring and scheduling
@@ -54,11 +54,11 @@ description: 'Get tips for naming common app functions clearly and effectively. 
 - Remove from watchlist
 
 <div className="dos-and-donts">
-<div className="donts">
-  <ul aria-label="Practices to avoid">
-    <li>Watch list</li>
-  </ul>
-</div>
+  <div className="donts">
+    <ul aria-label="Practices to avoid">
+      <li>Watch list</li>
+    </ul>
+  </div>
 </div>
 
 ## Detail view
@@ -70,12 +70,12 @@ description: 'Get tips for naming common app functions clearly and effectively. 
 - Details
 
 <div className="dos-and-donts">
-<div className="donts">
-  <ul aria-label="Practices to avoid">
-    <li>Facts</li>
-    <li>Specifics</li>
-  </ul>
-</div>
+  <div className="donts">
+    <ul aria-label="Practices to avoid">
+      <li>Facts</li>
+      <li>Specifics</li>
+    </ul>
+  </div>
 </div>
 
 ### Asset properties
@@ -121,11 +121,11 @@ description: 'Get tips for naming common app functions clearly and effectively. 
 - Drag files here or select files
 
 <div className="dos-and-donts">
-<div className="donts">
-  <ul aria-label="Practices to avoid">
-    <li>Drag and drop here or browse</li>
-  </ul>
-</div>
+  <div className="donts">
+    <ul aria-label="Practices to avoid">
+      <li>Drag and drop here or browse</li>
+    </ul>
+  </div>
 </div>
 
 ## Comments
@@ -139,11 +139,11 @@ description: 'Get tips for naming common app functions clearly and effectively. 
 - Write your comments here
 
 <div className="dos-and-donts">
-<div className="donts">
-  <ul aria-label="Practices to avoid">
-    <li>Write a comment</li>
-  </ul>
-</div>
+  <div className="donts">
+    <ul aria-label="Practices to avoid">
+      <li>Write a comment</li>
+    </ul>
+  </div>
 </div>
 
 ## Grid and list actions
@@ -169,13 +169,13 @@ description: 'Get tips for naming common app functions clearly and effectively. 
 - Notify me when X occurs
 
 <div className="dos-and-donts">
-<div className="donts">
-  <ul aria-label="Practices to avoid">
-    <li>Error</li>
-    <li>Issue</li>
-    <li>Problem</li>
-  </ul>
-</div>
+  <div className="donts">
+    <ul aria-label="Practices to avoid">
+      <li>Error</li>
+      <li>Issue</li>
+      <li>Problem</li>
+    </ul>
+  </div>
 </div>
 
 ## Event types
@@ -205,14 +205,14 @@ description: 'Get tips for naming common app functions clearly and effectively. 
 - Detected
 
 <div className="dos-and-donts">
-<div className="donts">
-  <ul aria-label="Practices to avoid">
-    <li>Unacklowedged</li>
-    <li>Unack.</li>
-    <li>Unackn.</li>
-    <li>Unacknl.</li>
-  </ul>
-</div>
+  <div className="donts">
+    <ul aria-label="Practices to avoid">
+      <li>Unacklowedged</li>
+      <li>Unack.</li>
+      <li>Unackn.</li>
+      <li>Unacknl.</li>
+    </ul>
+  </div>
 </div>
 
 ## Event actions

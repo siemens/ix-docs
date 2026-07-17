@@ -31,18 +31,18 @@ Loading modals have two states: Closed and opened.
 ## Dos and Don’ts
 
 <div className="dos-and-donts">
-<div className="dos">
-  <ul aria-label="Recommended practices">
-    <li>Do only use if any user interaction needs to be blocked, otherwise use [spinners](../spinner) instead</li>
-    <li>Do use if user interaction needs to be blocked and the progress is unknown, otherwise use [progress indicators](../progress-indicator) placed in [custom modals](../modal) instead</li>
-  </ul>
-</div>
-<div className="donts">
-  <ul aria-label="Practices to avoid">
-    <li>Don’t block users for long tasks without an alternative</li>
-    <li>Don’t show vague messages that leave users unsure what is happening</li>
-  </ul>
-</div>
+  <div className="dos">
+    <ul aria-label="Recommended practices">
+      <li>Do only use if any user interaction needs to be blocked, otherwise use [spinners](../spinner) instead</li>
+      <li>Do use if user interaction needs to be blocked and the progress is unknown, otherwise use [progress indicators](../progress-indicator) placed in [custom modals](../modal) instead</li>
+    </ul>
+  </div>
+  <div className="donts">
+    <ul aria-label="Practices to avoid">
+      <li>Don’t block users for long tasks without an alternative</li>
+      <li>Don’t show vague messages that leave users unsure what is happening</li>
+    </ul>
+  </div>
 </div>
 
 ## Related
