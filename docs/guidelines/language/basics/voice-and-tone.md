@@ -152,7 +152,7 @@ Avoid using negative shortened word forms such as “can’t” and “won’t�
 <div className="donts">
   <ul aria-label="Practices to avoid">
     <li>can’t</li>
-    <li>can’t, won’t</li>
+    <li>won’t</li>
   </ul>
 </div>
 </div>
