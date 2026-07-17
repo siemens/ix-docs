@@ -256,7 +256,7 @@ Em dashes are often used in longer texts to make part of the text stand out, suc
 
 ## Exclamation mark !
 
-Use only for high-level alarms. We do not use them for messages, notifications or for any other communication with our users. And, as the exclamation mark is often within warning icons, it does not need to be added to text to signify the strength of our messaging.
+Use only for high-level alarms. We don’t use them for messages, notifications or for any other communication with our users. And, as the exclamation mark is often within warning icons, it doesn’t need to be added to text to signify the strength of our messaging.
 
 <div class="dos-and-donts">
   <div class="dos">
