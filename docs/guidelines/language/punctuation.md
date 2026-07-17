@@ -500,7 +500,7 @@ Use the tilde primarily in technical contexts to indicate approximation and home
 
 Use the correct symbol for the correct context. ™ is used for unregistered trademarks, ® is used for registered trademarks. Always follow Siemens brand guidelines when applying trademark symbols to product and service names.
 
-Only use the trademark symbol on the first mention of the name on a page or screen. Do not repeat it every time the name appears.
+Only use the trademark symbol on the first mention of the name on a page or screen. Don’t repeat it every time the name appears.
 
 Never place a space between the name and the symbol. Do not alter the size or position of the symbol, it should always appear as a superscript.
 
