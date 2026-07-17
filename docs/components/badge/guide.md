@@ -1,26 +1,33 @@
 ---
 doc-type: 'tab-item'
-description: 'Usage guide for the ix-badge'
+description: 'Usage guide for the badge component'
 ---
 # Badge - Usage
 
-Badges are non-interactive visual aids for status, counters and notification cues. They usually carry dynamic information. We recommend badges when users need a compact signal next to another element or as a standalone status cue. Interaction always belongs to the anchor, not the badge.
+Badges are non-interactive visual aids for status, counters and notification cues. We recommend badges when users need a compact signal next to another element or a lightweight standalone status cue. Interaction always belongs to the anchor, not to the badge.
 
-1. Anchor
-2. Indicator (label, counter, dot or status icon)
+![Badge anatomy](https://www.figma.com/design/wEptRgAezDU1z80Cn3eZ0o/iX-Documentation-illustrations?node-id=8141-4052&t=v625YpvIn3UzoFuJ-4)
 
-Badges work **standalone** or **attached** to an anchor. Use the related [pill](../pill) for static category labels without an overlay relationship, and the [chip](../chip) when users need to interact with the item.
+1. Badge of type `label` as standalone
+2. Badge of type `counter`
+3. Badge of type `dot`
+4. Badge of type `status icon`
+5. Anchor element
+
+Badges work **standalone** or **attached** to an anchor. As a general rule, we use badges for dynamic status or notification information and [chips](../chip) when users need to interact with the item.
 
 ## Variants
 
-Badge types define the anatomy of the indicator:
+Badge types define how the indicator appears:
 
 - **Counter:** Default type. Use for notifications that need attention, with integers up to two digits (`99+` for larger values). Short words are an exception, e.g. `new`.
-- **Label:** Use for an entity’s status, e.g. Online or Offline in a list. Labels can include an icon that matches the semantic meaning of the color.
+- **Label:** Use for status, e.g. Online or Offline in a list. Labels can include an icon that matches the semantic meaning of the color.
 - **Dot:** Use for a compact notification that needs attention without a count.
-- **Status icon:** Use for notifications that need attention or to show an entity’s status with a semantic glyph.
+- **Status icon:** Use for notifications that need attention or to show a status with a semantic glyph.
 
 Semantic color variants communicate meaning, not decoration:
+
+![Badge variants](https://www.figma.com/design/wEptRgAezDU1z80Cn3eZ0o/iX-Documentation-illustrations?node-id=8141-4066&t=v625YpvIn3UzoFuJ-4)
 
 - **Primary:** Highlight new features, discoveries or exploratory information.
 - **Alarm:** Show negative values, removals or high-urgency counts.
@@ -33,9 +40,13 @@ Semantic color variants communicate meaning, not decoration:
 
 We recommend matching icons on label badges to the meaning of the chosen color. Prefer outlined styles when you need lower visual emphasis on busy surfaces.
 
+:::info
+Badges with type `label` replace the deprecated [pill](../pill). Use a standalone label badge for existing pill use cases, e.g. compact statuses or categories. Attach it to an anchor only when the label supplements that specific element.
+:::
+
 ## Options
 
-- **Placement:** Use inline (standalone) to show an entity’s status in a list. With an anchor, we typically use top after for notifications that need attention and bottom after for status on individual elements, e.g. user presence.
+- **Placement:** Use inline (standalone) to show an entity’s status in a list. With an anchor, we typically use `top after` for notifications that need attention and `bottom after` for status on individual elements, e.g. user presence.
 - **Label:** Grows with content unless you set a max width via `--ix-badge-max-width`.
 - **Outline:** Use for lower visual emphasis. On status icons, outline selects the outline glyph.
 - **Border:** Add a high-contrast border on filled badges when the surface behind them is busy. Ignore border when outline is on.
@@ -45,14 +56,21 @@ We recommend matching icons on label badges to the meaning of the chosen color. 
 
 ## Behavior in context
 
-- **Attached vs standalone:** In attached mode the slotted anchor keeps its role and the badge stays a visual cue. In standalone mode authors provide accessible naming on the host when there is no visible text.
-- **Resizing:** Labels hug their content unless a max width is applied.
-- **Overflow:** With a max width, label text truncates. We recommend avoiding multiline badge text.
-- **Interaction:** Badges themselves are not interactive. Label text can be selected.
+- **Interaction:** Badges are read-only visual cues. Badges don’t trigger actions, and label text can still be selected.
+- **Overflow:** With a max width, label text truncates. We recommend short labels.
+- **Alignment:** Keep badges aligned to the edge of the anchor so the anchor remains recognizable.
+- **Responsiveness:** In compact layouts, we usually prefer dot or status icon badges over long labels.
+- **Placement:** Keep the indicator inside the parent bounds and attach it only to the element it describes. Avoid covering critical anchor content, e.g. the icon that identifies a notification button.
+- **Notification context:** Attach badges to the control that opens or represents the related information, e.g. a notification or calendar icon. Use counters when the number helps users decide what to do, dots when only the presence of new information matters and status icons when users need to recognize a state or severity.
+- **Updates:** Keep badges synchronized with the underlying notification state. Update or remove the indicator when users read notifications or when the status changes, and don’t leave stale counts or statuses attached to an anchor.
+- **Accessibility**
+   - **Accessible naming:** When badges are attached, include their meaning in the anchor’s accessible name, e.g. “Notifications, 3 unread”. Standalone dot and status icon badges need an accessible name because they don’t contain readable text.
+   - **Dynamic updates:** We recommend a polite live region when users need to hear an important badge update without moving focus. Reserve assertive announcements for critical conditions that require immediate attention, and don’t announce routine count changes.
+   - **Reading order:** Treat an attached badge and its anchor as one accessible unit. Avoid exposing the same information separately when this causes duplicate announcements.
 
 ## States
 
-Badges are read-only. They don’t have hover, active or disabled interaction states of their own. When pulse animation is enabled, it draws attention until the product turns it off.
+Badges are read-only. They don’t have hover, active or disabled interaction states of their own. When pulse animation is enabled, it draws attention until the application disables it.
 
 ## Dos and Don’ts
 
@@ -61,7 +79,8 @@ Badges are read-only. They don’t have hover, active or disabled interaction st
     <ul aria-label="Recommended practices">
       <li>Do use badges for status, counters or notification cues that stay secondary to the anchor</li>
       <li>Do keep counter labels to integers with at most two digits, using 99+ when needed</li>
-      <li>Do provide an accessible name on standalone dot or status-icon badges</li>
+      <li>Do include the badge meaning in the accessible name of its anchor</li>
+      <li>Do announce meaningful dynamic updates without announcing every routine count change</li>
       <li>Do keep the badge inside the parent and leave enough of the anchor visible</li>
     </ul>
   </div>
@@ -79,4 +98,6 @@ Badges are read-only. They don’t have hover, active or disabled interaction st
 
 - [Pill](../pill)
 - [Chip](../chip)
-- [Tooltip](../tooltip)
+- [Popover](../popover)
+- [UX writing basics](../../guidelines/language/basics)
+- [Accessibility](../../guidelines/accessibility)
