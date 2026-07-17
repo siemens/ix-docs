@@ -233,7 +233,7 @@ They look similar, but there are two dashes and we use them differently from hyp
 
 Use the smaller en dash to connect times, numbers and date ranges. Use the longer em dash to replace commas, brackets or colons.
 
-Do not use spaces when using en dashes for number ranges. In all other cases, add spaces before and after en dashes and em dashes for digital readability.
+Don’t use spaces when using en dashes for number ranges. In all other cases, add spaces before and after en dashes and em dashes for digital readability.
 
 Em dashes are often used in longer texts to make part of the text stand out, such as telling users about special or new application features. To avoid em dash overuse, we typically use commas instead within UI text to connect phrases.
 
