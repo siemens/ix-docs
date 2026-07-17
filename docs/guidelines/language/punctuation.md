@@ -327,8 +327,8 @@ Use for variables, placeholders and programming.
 <div class="dos-and-donts">
   <div class="dos">
     <ul aria-label="Recommended practices">
-      <li>Service alert: <code>{{deviceId}}</code> - <code>{{errorCode}}</code></li>
-      <li>Template: <code>{{customerName}}</code></li>
+      <li>Service alert: `{deviceId}` - `{errorCode}`</li>
+      <li>Template: `{customerName}`</li>
     </ul>
   </div>
   <div class="donts">
