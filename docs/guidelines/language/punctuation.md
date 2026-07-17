@@ -161,7 +161,7 @@ The Oxford comma is placed before the final “and” or “or” in a list of t
 
 Use ellipsis with transitional text to inform users that something is happening and ongoing. There are never spaces between the text and the ellipsis.
 
-They are also sometimes used to show that a new dialog box will open within the UI such as “Print…” or “Save as…” but as this comes with consistency challenges it is slowly being removed from UX writing guidelines.
+They are also sometimes used to show that a new dialog box will open within the UI, e.g. “Print…” or “Save as…”, but as this comes with consistency challenges it is slowly being removed from UX writing guidelines.
 
 <div class="dos-and-donts">
   <div class="dos">
