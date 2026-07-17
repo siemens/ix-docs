@@ -376,7 +376,7 @@ Use to show file paths and navigation more clearly in applications. Add spaces b
 
 ## Periods and full stops .
 
-Use consistently. We use full stops at the end of all full sentences, for tooltips that include descriptions, and file extensions (.csv .txt .zip). We do not use full stops for toast messages (brief pop-ups), headings, titles or icon/button text labels.
+Use consistently. We use full stops at the end of all full sentences, for tooltips that include descriptions, and file extensions (.csv .txt .zip). We don’t use full stops for toast messages (brief pop-ups), headings, titles or icon/button text labels.
 
 When creating lists or using bullet points, use full stops for full sentences. If even one item in your list requires a full stop, add full stops to all items to keep punctuation consistent.
 
