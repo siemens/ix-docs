@@ -87,7 +87,7 @@ Note: If your design system adds asterisks automatically via attributes, omit th
 
 Use bullet points to break down complex information into scannable, digestible chunks. They help users quickly identify key points and reduce cognitive load. Use consistent bullet styles within a single list or section.
 
-For unordered lists, use round bullets (•). For ordered lists, use numbers followed by a period (1.). Maintain parallel structure; if one item is a complete sentence, make all items complete sentences.
+For unordered lists, use round bullets (•). For ordered lists, use numbers followed by a period (1.). Maintain parallel structure. If one item is a complete sentence, make all items complete sentences.
 
 Add one space after the bullet point or number before the text begins.
 
