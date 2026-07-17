@@ -226,7 +226,6 @@ Use the proper minus sign (−) rather than a hyphen (-) when expressing negativ
     </ul>
   </div>
 </div>
-```suggestion
 
 ## En and em dashes – —
 
