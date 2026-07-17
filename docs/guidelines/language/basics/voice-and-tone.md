@@ -89,7 +89,7 @@ Avoid gender-specific language and terms in industrial applications.
 <div className="dos-and-donts">
 <div className="dos">
   <ul aria-label="Recommended practices">
-    <li>their / them / their</li>
+    <li>they / them / their</li>
     <li>The operator must verify their credentials before accessing the control panel.</li>
     <li>Contact the supervisor if you need their approval.</li>
   </ul>
