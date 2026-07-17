@@ -345,7 +345,7 @@ Rarely used within UI text. Sometimes used for units but more common within acad
 <div class="dos-and-donts">
   <div class="dos">
     <ul aria-label="Recommended practices">
-      <li>Save assets, such as valves [Ventil] within your plant zones.</li>
+      <li>Save assets, e.g. valves [Ventil] within your plant zones.</li>
       <li>“A real game-changer for the [food and beverage] industry.”</li>
       <li>Room temperature [°C]</li>
     </ul>
