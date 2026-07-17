@@ -502,7 +502,7 @@ Use the correct symbol for the correct context. ™ is used for unregistered tra
 
 Only use the trademark symbol on the first mention of the name on a page or screen. Don’t repeat it every time the name appears.
 
-Never place a space between the name and the symbol. Do not alter the size or position of the symbol, it should always appear as a superscript.
+Never place a space between the name and the symbol. Don’t alter the size or position of the symbol, it should always appear as a superscript.
 
 <div class="dos-and-donts">
   <div class="dos">
