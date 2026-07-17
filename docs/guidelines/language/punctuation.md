@@ -209,12 +209,12 @@ Omit hyphens for widely understood terms that have evolved beyond needing them.
 
 ## Minus sign −
 
-Use the proper minus sign (−) rather than a hyphen (-) when expressing negative values or subtraction. In UI contexts, e.g. labels, values or data displays, the minus sign should be used to ensure mathematical clarity. Always include a space between the minus sign and the number in running text, but no space in numeric or data display contexts.
+Use the proper minus sign (−) rather than a hyphen (-) when expressing negative values or subtraction. In UI contexts such as labels, values, or data displays, the minus sign should be used to ensure mathematical clarity. The minus sign should be placed directly before the number with no intervening space except for mathematical operations for readability. 
 
 <div class="dos-and-donts">
   <div class="dos">
     <ul aria-label="Recommended practices">
-      <li>The temperature dropped to −12°C</li>
+      <li>The temperature dropped to − 12°C</li>
       <li>Balance: −$50.00</li>
       <li>10 − 3 = 7</li>
     </ul>
@@ -226,6 +226,7 @@ Use the proper minus sign (−) rather than a hyphen (-) when expressing negativ
     </ul>
   </div>
 </div>
+```suggestion
 
 ## En and em dashes – —
 
