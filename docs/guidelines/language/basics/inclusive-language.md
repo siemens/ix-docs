@@ -13,11 +13,11 @@ description: Use language that respects all users by avoiding stereotypes, biase
 
 ## General rules
 
-Use clear, neutral and inclusive language, avoiding stereotypes or terms with social history tied to ethnicity, nationality or cultural identity. See: [Voice and tone](#)
+Use clear, neutral and inclusive language, avoiding stereotypes or terms with social history tied to ethnicity, nationality or cultural identity. See: [Voice and tone](./voice-and-tone.md)
 
 Use terms that describe processes, technology or jobs, not people or users. See: [User management](../menu-functions-and-ui-labels/user-management.md)
 
-Avoid idioms, metaphors or slang that may not translate well across cultures or abilities. See: [Vocabulary basics](#)
+Avoid idioms, metaphors or slang that may not translate well across cultures or abilities.
 
 ## Non-inclusive language list
 
@@ -84,6 +84,5 @@ Official Siemens brand resources regarding this theme are exclusively available 
 
 ## Related
 
-- [Offensive language](#)
-- [Accessibility](#)
-- [UX writing resources and support](#)
+- [Offensive language](./offensive-language.md)
+- [UX writing resources and support](../support-and-resources/UX-writing-resources.md)
