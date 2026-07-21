@@ -18,47 +18,52 @@ import { CategoryButton } from '@site/src/components/CategoryButton';
 <CategoryButton
     title="Application frame"
     link="#application-frame">
-![](https://www.figma.com/design/wEptRgAezDU1z80Cn3eZ0o/iX-Documentation-illustrations?node-id=5186-249&t=gkh6VNlJun96I6Ac-4)
+![Application frame](https://www.figma.com/design/wEptRgAezDU1z80Cn3eZ0o/iX-Documentation-illustrations?node-id=5186-249&t=gkh6VNlJun96I6Ac-4)
 </CategoryButton>
 <CategoryButton
     title="Navigation and hierarchy"
     link="#navigation-and-hierarchy">
-![](https://www.figma.com/design/wEptRgAezDU1z80Cn3eZ0o/iX-Documentation-illustrations?node-id=5186-259&t=gkh6VNlJun96I6Ac-4)
+![Navigation and hierarchy](https://www.figma.com/design/wEptRgAezDU1z80Cn3eZ0o/iX-Documentation-illustrations?node-id=5186-259&t=gkh6VNlJun96I6Ac-4)
 </CategoryButton>
 <CategoryButton
     title="Containers and layouts"
     link="#containers-and-layouts">
-![](https://www.figma.com/design/wEptRgAezDU1z80Cn3eZ0o/iX-Documentation-illustrations?node-id=5186-269&t=gkh6VNlJun96I6Ac-4)
+![Containers and layouts](https://www.figma.com/design/wEptRgAezDU1z80Cn3eZ0o/iX-Documentation-illustrations?node-id=5186-269&t=gkh6VNlJun96I6Ac-4)
 </CategoryButton>
 <CategoryButton
     title="Forms"
     link="#forms">
-![](https://www.figma.com/design/wEptRgAezDU1z80Cn3eZ0o/iX-Documentation-illustrations?node-id=5186-283&t=gkh6VNlJun96I6Ac-4)
+![Forms](https://www.figma.com/design/wEptRgAezDU1z80Cn3eZ0o/iX-Documentation-illustrations?node-id=5186-283&t=gkh6VNlJun96I6Ac-4)
 </CategoryButton>
 <CategoryButton
     title="Input fields and selections"
     link="#input-fields-and-selections">
-![](https://www.figma.com/design/wEptRgAezDU1z80Cn3eZ0o/iX-Documentation-illustrations?node-id=5186-298&t=gkh6VNlJun96I6Ac-11)
+![Input fields and selections](https://www.figma.com/design/wEptRgAezDU1z80Cn3eZ0o/iX-Documentation-illustrations?node-id=5186-298&t=gkh6VNlJun96I6Ac-11)
 </CategoryButton>
 <CategoryButton
     title="Buttons and actions"
     link="#buttons-and-actions">
-![](https://www.figma.com/design/wEptRgAezDU1z80Cn3eZ0o/iX-Documentation-illustrations?node-id=5186-305&t=gkh6VNlJun96I6Ac-11)
+![Buttons and actions](https://www.figma.com/design/wEptRgAezDU1z80Cn3eZ0o/iX-Documentation-illustrations?node-id=5186-305&t=gkh6VNlJun96I6Ac-11)
 </CategoryButton>
 <CategoryButton
     title="System feedback and status"
     link="#system-feedback-and-status">
-![](https://www.figma.com/design/wEptRgAezDU1z80Cn3eZ0o/iX-Documentation-illustrations?node-id=5186-332&t=gkh6VNlJun96I6Ac-11)
+![System feedback and status](https://www.figma.com/design/wEptRgAezDU1z80Cn3eZ0o/iX-Documentation-illustrations?node-id=5186-332&t=gkh6VNlJun96I6Ac-11)
 </CategoryButton>
 <CategoryButton
     title="Data display"
     link="#data-display">
-![](https://www.figma.com/design/wEptRgAezDU1z80Cn3eZ0o/iX-Documentation-illustrations?node-id=5186-370&t=gkh6VNlJun96I6Ac-11)
+![Data display](https://www.figma.com/design/wEptRgAezDU1z80Cn3eZ0o/iX-Documentation-illustrations?node-id=5186-370&t=gkh6VNlJun96I6Ac-11)
+</CategoryButton>
+<CategoryButton
+    title="Chat"
+    link="#chat">
+![Chat](https://www.figma.com/design/wEptRgAezDU1z80Cn3eZ0o/iX-Documentation-illustrations?node-id=7974-3280&t=HrpSIFfB7yjzt741-4)
 </CategoryButton>
 <CategoryButton
     title="Charts"
     link="#charts">
-![](https://www.figma.com/design/wEptRgAezDU1z80Cn3eZ0o/iX-Documentation-illustrations?node-id=5186-387&t=gkh6VNlJun96I6Ac-11)
+![Charts](https://www.figma.com/design/wEptRgAezDU1z80Cn3eZ0o/iX-Documentation-illustrations?node-id=5186-387&t=gkh6VNlJun96I6Ac-11)
 </CategoryButton>
 </IxRow>
 </IxLayoutGrid>
@@ -170,6 +175,16 @@ import { CategoryButton } from '@site/src/components/CategoryButton';
 | [Key value](./key-value/index.mdx)           | Key value pairs display a label (key) and a value in a structured, easy way.                                                                                                            |
 | [Key value list](./key-value-list/index.mdx) | Key value lists organize and list a series of key value pairs.                                                                                                                          |
 | [KPI](./kpi/index.mdx)                       | KPIs display measured values together with a status indicator to help users interpret data.                                                                                             |
+
+## Chat
+
+| Component                                            | Description                                                                                                                 |
+| :--------------------------------------------------- | :-------------------------------------------------------------------------------------------------------------------------- |
+| [Chat](./chat/index.mdx)                             | Chat component for building conversational chatbot experiences.                                                             |
+| [Chat input](./chat-input/index.mdx)                 | Chat inputs are used to compose and submit messages, attachments and follow-up actions in a conversational AI thread.                      |
+| [User message](./user-message/index.mdx)             | User messages display messages authored by the user in a chat thread.                           |
+| [AI message](./ai-message/index.mdx)                 | AI messages display responses generated by the AI in a conversational chats.                                           |
+| [Chat attachment](./chat-attachment/index.mdx)       | Chat attachments are files attached on chat inputs and user messages.                                                                                        |
 
 ## Charts
 
