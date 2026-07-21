@@ -131,10 +131,20 @@ Avoid technical, negative or wordy dismiss actions.
 
 ## Dos and Don’ts
 
-* Do allow users to close, postpone or choose to not see the content again
-* Don’t add so much content that users need to scroll, instead use pages or split news
-* Don’t embed critical text in images as it’s hard to translate and read
-* Don’t add time-critical actions only in announcements as they are too easy to close
+<div className="dos-and-donts">
+<div className="dos">
+  <ul aria-label="Recommended practices">
+    <li>Do allow users to close, postpone or choose to not see the content again</li>
+  </ul>
+</div>
+<div className="donts">
+  <ul aria-label="Practices to avoid">
+    <li>Don’t add so much content that users need to scroll, instead use pages or split news</li>
+    <li>Don’t embed critical text in images as it’s hard to translate and read</li>
+    <li>Don’t add time-critical actions only in announcements as they are too easy to close</li>
+  </ul>
+</div>
+</div>
 
 
 ## Related

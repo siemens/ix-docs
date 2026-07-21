@@ -339,10 +339,20 @@ Use specific authentication terms and use them consistently within workflows to 
 
 ## Dos and Don’ts
 
-* Do explain compliance requirements when applicable, e.g. “Required by company security policy”
-* Do use consistent terminology to reduce user friction and frustration
-* Do show password policies before users start writing within the UI
-* Don’t use questions such as “Forgot your password?”
+<div className="dos-and-donts">
+<div className="dos">
+  <ul aria-label="Recommended practices">
+    <li>Do explain compliance requirements when applicable, e.g. “Required by company security policy”</li>
+    <li>Do use consistent terminology to reduce user friction and frustration</li>
+    <li>Do show password policies before users start writing within the UI</li>
+  </ul>
+</div>
+<div className="donts">
+  <ul aria-label="Practices to avoid">
+    <li>Don’t use questions such as “Forgot your password?”</li>
+  </ul>
+</div>
+</div>
 
 ## Related
 
