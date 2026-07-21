@@ -8,7 +8,7 @@ description: 'Writing guidance for localization.'
 
 UX writers are the text experts in the product development team and therefore should understand localization. This page gives recommendations on how UX writers can support localization teams and translators to minimize internationalization challenges.
 
-### Consider translation
+## Consider translation
 
 Create translation-friendly texts while thinking like a translator and asking the question: “Is the text understandable without the visual context?”.
 In the example below, UX writers should ask themselves whether a tool instance is being deleted or whether something is being named.
@@ -33,7 +33,7 @@ User interface texts are stand-alone, short, and to the point, but they provide 
 - [Precise](#use-domain-terminology)
 - [Unambiguous](#avoid-misunderstandings)
 
-### Use domain terminology
+## Use domain terminology
 
 Use terms from standardization bodies (e.g. [ISO](https://iso.org), [EN](https://cen.eu), [UL](https://ul.com), [IEC](https://iec.ch)) or experts from universities and global specialized companies, but avoid terms from quasi-industrial standards.
 
@@ -59,7 +59,7 @@ Common language serves multiple purposes:
 - Openness to third parties, breaking up of silos
 - Foundation for artificial intelligence
 
-#### Consider that terms are used in different ways
+## Consider that terms are used in different ways
 
 Many terms have various meanings related to a specific context or domain.
 Use the terminology database of domain to maintain a common language.
@@ -102,7 +102,7 @@ One meaning always dominates regardless of context. That is the meaning that can
 
 In addition, the alternative term substantially increases the probability of correct interpretation by artificial intelligence (as part of translation, machine learning, or any other use).
 
-### Avoid misunderstandings
+## Avoid misunderstandings
 
 Avoid possible causes of misunderstandings by
 
@@ -110,7 +110,7 @@ Avoid possible causes of misunderstandings by
 - only using the [predominant meaning](#consider-that-terms-are-used-in-different-ways) of the term
 - annotating texts with a description (if supported by translation framework and file format)
 
-### Avoid directional terms on UI
+## Avoid directional terms on UI
 
 Directional terms might be incorrect if the user interface is mirrored for [RTL languages](./overview.md#ltr-rtl).
 Use direction agnostic texts instead.
@@ -131,7 +131,7 @@ Use direction agnostic texts instead.
 </div>
 
 
-### Manage space for translations
+## Manage space for translations
 
 Follow these steps to ensure that translations have enough space in the user interface:
 
@@ -144,7 +144,7 @@ Follow these steps to ensure that translations have enough space in the user int
 
 Fixing UI issues caused by long translations late in the development cycle is expensive and time-consuming.
 
-#### Be aware of length increase
+## Be aware of length increase
 
 Always design with translation in mind, assuming text will grow.
 
@@ -164,7 +164,7 @@ Some generally accepted rules of thumb:
 - Longer texts (21-50 characters) typically increase by 50-100%.
  Very long texts (50+ characters) typically increase by 30-50% but are sometimes shorter than the original.
 
-#### Limit space if required
+## Limit space if required
 
 Identify UI elements which truly offer limited space, even if a flexible design is the preferred choice.
 The following UI elements may require text length restrictions, measured in either character count or pixel width:
@@ -175,7 +175,7 @@ The following UI elements may require text length restrictions, measured in eith
 - Table headers
 - Input field labels
 
-### Consider pluralization rules
+## Consider pluralization rules
 
 Each language has its own grammatical rules that specify how texts containing numbers must be presented.
 It is important to consider these different rules early in the UX writing and implementation process to ensure that the product can be localized correctly.
@@ -196,7 +196,7 @@ It is important to consider these different rules early in the UX writing and im
 		- 22-24 pliki
 		- 25-31 plików
 
-#### Use localization to handle pluralization
+## Use localization to handle pluralization
 
 Pluralization cannot be handled by product code or writing style. Use localization (e.g. ICU or framework plural rules) instead.
 
@@ -215,7 +215,7 @@ Pluralization cannot be handled by product code or writing style. Use localizati
 </div>
 </div>
 
-#### Consider different linguistic rules
+## Consider different linguistic rules
 
 Depending on the language there might be up to 6 forms. The following language specific variability exists:
 
@@ -236,7 +236,7 @@ Depending on the language there might be up to 6 forms. The following language s
 
 The [plural rules specification from the Unicode Common Locale Data Repository (CLDR)](https://cldr.unicode.org/index/cldr-spec/plural-rules) contains a detailed linguistic analysis.
 
-### Provide user-friendly language selection
+## Provide user-friendly language selection
 
 Provide each language name in the target language for the language switcher.
 
@@ -263,7 +263,7 @@ Provide each language name in the target language for the language switcher.
 </div>
 </div>
 
-### Avoid text concatenations
+## Avoid text concatenations
 
 Building sentences from fragments prevents correct grammar in many languages.
 Keep sentences as one unit with placeholders.
@@ -285,7 +285,7 @@ Keep sentences as one unit with placeholders.
 
 Note: The verb (EN:"select" / DE:"auswählen") is at the beginning of the sentence in English but at the end in German.
 
-### Define named placeholders
+## Define named placeholders
 
 Keep sentences understandable even with placeholders.
 
@@ -302,7 +302,7 @@ Keep sentences understandable even with placeholders.
 </div>
 </div>
 
-### Avoid hard-coding formats
+## Avoid hard-coding formats
 
 Use locale-aware formatting, and avoid creating UI text that depends on one single format. This helps users to understand times, values, etc. and strengthens their confidence in using the system.
 
@@ -321,12 +321,12 @@ Use locale-aware formatting, and avoid creating UI text that depends on one sing
 </div>
 </div>
 
-### Provide UX writing specifications
+## Provide UX writing specifications
 
 Providing project-specific UX writing specifications helps developers [group texts by use cases](#group-texts) and determine when a text can be [reused](#reuse-texts) or whether [a specific context needs to be taken into account](#consider-different-contexts).
 [Non-concatenated texts](#avoid-text-concatenations) with [readable placeholder names](#define-named-placeholders), combined with translation [translation libraries](#use-translation-libraries), enable efficient, high-quality localization.
 
-#### Group texts
+## Group texts
 
 Translators translate texts individually.
 In order to understand the context and maintain consistency, it is necessary to have related texts close together.
@@ -369,7 +369,7 @@ Related texts can be brought together by grouping texts based on use cases (e.g.
 </div>
 </div>
 
-#### Reuse texts
+## Reuse texts
 
 Before writing a new text, check whether one with the exact same meaning already exists.
 
@@ -396,7 +396,7 @@ Reusing the same instance of text has the following advantages:
 
 However, be careful when changing approved, reused texts to ensure that their meaning is preserved.
 
-#### Consider different contexts
+## Consider different contexts
 
 An English text may require different translations in different contexts.
 In such cases, a separate text must be created.
@@ -420,7 +420,7 @@ If in doubt, create a separate text for each use, even if the English text appea
 </div>
 
 
-#### Use translation libraries
+## Use translation libraries
 
 Packages based on the [Unicode CLDR](https://cldr.unicode.org/) like `@angular/common` and built-in runtime objects like `Intl` provide complete and high quality translations for:
 
