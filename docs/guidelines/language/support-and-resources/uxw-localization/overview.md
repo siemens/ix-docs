@@ -74,9 +74,8 @@ jurisdiction.
 - Request local lawyers to provide tailored legal artifacts for relevant markets and regions.
 - Manage market-specific legal and safety requirements, compliance logic, and legal services in your application.
 
-:::
-info
-The About and Legal components require specific content to comply with Siemens AG regulations. The official content and guidelines are exclusively available for Siemens employees and can be accessed [here](https://code.siemens.com/siemens-ix/ix-brand-theme/-/blob/main/apps/documentation/src/pages/about-legal-information.md?ref_type=heads).
+:::info
+The About and Legal components require specific content to comply with Siemens AG regulations. The official content and guidelines are exclusively available for Siemens employees and can be accessed [here](https://code.siemens.com/siemens-ix/ix-brand-theme/-/blob/main/apps/documentation/src/pages/about-legal-information.md?ref_type=heads).
 :::
 
 ## Customer support
