@@ -112,7 +112,7 @@ Avoid possible causes of misunderstandings by
 
 ### Avoid directional terms on UI
 
-Directional terms might be incorrect if the user interface is mirrored for [RTL languages](#ltr-rtl).
+Directional terms might be incorrect if the user interface is mirrored for [RTL languages](./overview.md#ltr-rtl).
 Use direction agnostic texts instead.
 
 <div className="dos-and-donts">
@@ -139,7 +139,7 @@ Follow these steps to ensure that translations have enough space in the user int
 1. Write English texts, keeping conciseness in mind from the start.
 1. Determine reasonable limits and provide it to the translation management.
 1. Request translations
-1. Test every screen with translated texts in languages known for their long translations (German, Finish, Greek and some Slavic languages).
+1. Test every screen with translated texts in languages known for their long translations (German, Finnish, Greek and some Slavic languages).
 1. Revisit the UI design or the original texts if a translator cannot convey the meaning within the limit.
 
 Fixing UI issues caused by long translations late in the development cycle is expensive and time-consuming.
@@ -304,12 +304,12 @@ Keep sentences understandable even with placeholders.
 
 ### Avoid hard-coding formats
 
-Use locale-aware formatting (see [Code tab](#code)), and avoid creating UI text that depends on one single format. This helps users to understand times, values, etc. and strengthens their confidence in using the system.
+Use locale-aware formatting, and avoid creating UI text that depends on one single format. This helps users to understand times, values, etc. and strengthens their confidence in using the system.
 
 <div className="dos-and-donts">
 <div className="dos">
 	<ul aria-label="Recommended practices">
-		<li>Use the localization framework (see [Code tab](#code))</li>
+		<li>Use the localization framework</li>
 		<li>Use [placeholders](#define-named-placeholders) in text: "Saved on {date}"</li>
 	</ul>
 </div>
