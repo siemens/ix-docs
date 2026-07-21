@@ -8,7 +8,6 @@ no_single_tab: true
 description: 'Capitalization means using uppercase letters (A, B, C) instead of lowercase letters (a, b, c). This section provides clear rules for capitalizing names, brands, technical terms, and UI elements.'
 ---
 
-#
 
 ## General rules
 

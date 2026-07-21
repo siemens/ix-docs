@@ -46,6 +46,15 @@ Apostrophes look like a single quotation mark, show ownership and create contrac
       <li>customers’ roles (multiple customers)</li>
       <li>The folder’s contents are displayed in the dashboard.</li>
       <li>Today’s date is displayed in the banner.</li>
+    </ul>
+  </div>
+
+With our minimal punctuation approach, we limit apostrophes by using nouns as adjectives.
+
+<div class="dos-and-donts">
+  <div class="dos">
+    <ul aria-label="Recommended practices">
+      <li>Today’s date is displayed in the banner.</li>
       <li>Select file location.</li>
       <li>Edit user profile information.</li>
       <li>View employee details.</li>
@@ -61,8 +70,6 @@ Apostrophes look like a single quotation mark, show ownership and create contrac
     </ul>
   </div>
 </div>
-
-With our minimal punctuation approach, we limit apostrophes by using nouns as adjectives.
 
 ## Asterisk *
 
@@ -83,7 +90,7 @@ Note: If your design system adds asterisks automatically via attributes, omit th
   </div>
 </div>
 
-## Bullet points 
+## Bullet points />
 
 Use bullet points to break down complex information into scannable, digestible chunks. They help users quickly identify key points and reduce cognitive load. Use consistent bullet styles within a single list or section.
 
@@ -94,18 +101,9 @@ Add one space after the bullet point or number before the text begins.
 <div class="dos-and-donts">
   <div class="dos">
     <ul aria-label="Recommended practices">
-      <li>Key features:</li>
-      <li>Real-time monitoring</li>
-      <li>Automated alerts</li>
-      <li>Custom dashboards</li>
-      <li>Setup steps:</li>
-      <li>Connect device</li>
-      <li>Configure settings</li>
-      <li>Start monitoring</li>
-      <li>Benefits include:</li>
-      <li>Increased efficiency across all operations.</li>
-      <li>Reduced downtime through predictive maintenance.</li>
-      <li>Enhanced visibility into system performance.</li>
+      <li>Key features:<br />Real-time monitoring<br />Automated alerts<br />Custom dashboards</li>
+      <li>Setup steps:<br />Connect device<br />Configure settings<br />Start monitoring</li>
+      <li>Benefits include:<br />Increased efficiency across all operations.<br />Reduced downtime through predictive maintenance.<br />Enhanced visibility into system performance.</li>
     </ul>
   </div>
   <div class="donts">
@@ -320,7 +318,7 @@ Use sparingly to give users additional information or clarify messaging. Conside
   </div>
 </div>
 
-### Curly { }
+### Curly \{ \}
 
 Use for variables, placeholders and programming.
 
