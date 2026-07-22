@@ -138,7 +138,8 @@ export function DocItemTabItemLayout({ children }: Props): JSX.Element {
 
   const sidebar = useCurrentSidebarCategory();
 
-  const parentId = metadata.id.split('/').splice(0, 2).join('/') + '/index';
+  // Resolve the parent tabs document relative to the current tab-item depth.
+  const parentId = `${metadata.id.split('/').slice(0, -1).join('/')}/index`;
   const parentDoc = useDocById(parentId);
 
   return (

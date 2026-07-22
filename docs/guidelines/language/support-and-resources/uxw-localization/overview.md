@@ -4,7 +4,9 @@ sidebar_label: 'Localization'
 description: 'Overview'
 ---
 
-# Overview
+# 
+
+## Overview
 
 Localization adapts a product to a specific language, region, and culture. It includes
 translation, formats, visual conventions, legal requirements, and user expectations.

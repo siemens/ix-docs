@@ -203,14 +203,14 @@ Pluralization cannot be handled by product code or writing style. Use localizati
 <div className="dos-and-donts">
 <div className="dos">
 	<ul aria-label="Recommended practices">
-		<li>"Delete {count} rows?"</li>
-		<li>"Delete {rowName}?"</li>
+		<li>"Delete &#123;count&#125; rows?"</li>
+		<li>"Delete &#123;rowName&#125;?"</li>
 	</ul>
 </div>
 <div className="donts">
 	<ul aria-label="Practices to avoid">
-		<li>"Delete {count} row(s)?"</li>
-		<li>`if (count == 1) {`"1 row"` } else {`"{count} rows"`}`</li>
+		<li>"Delete &#123;count&#125; row(s)?"</li>
+		<li>`if (count == 1) { "1 row" } else { "{count} rows" }`</li>
 	</ul>
 </div>
 </div>
@@ -271,14 +271,14 @@ Keep sentences as one unit with placeholders.
 <div className="dos-and-donts">
 <div className="dos">
 	<ul aria-label="Recommended practices">
-		<li>EN: "Select site {site} of {company}?"</li>
-		<li>DE: "Standort {site} von {company} auswählen?"</li>
+		<li>EN: "Select site &#123;site&#125; of &#123;company&#125;?"</li>
+		<li>DE: "Standort &#123;site&#125; von &#123;company&#125; auswählen?"</li>
 	</ul>
 </div>
 <div className="donts">
 	<ul aria-label="Practices to avoid">
-		<li>EN: "Select site " `+` `{site}` `+` " of " `+` `{company}` `+` "?"</li>
-		<li>DE: "Standort auswählen " `+` `{site}` `+` " von " `+` `{company}` `+` "?"</li>
+		<li>EN: "Select site " `+` `&#123;site&#125;` `+` " of " `+` `&#123;company&#125;` `+` "?"</li>
+		<li>DE: "Standort auswählen " `+` `&#123;site&#125;` `+` " von " `+` `&#123;company&#125;` `+` "?"</li>
 	</ul>
 </div>
 </div>
@@ -292,12 +292,12 @@ Keep sentences understandable even with placeholders.
 <div className="dos-and-donts">
 <div className="dos">
 	<ul aria-label="Recommended practices">
-		<li>"Reactivating site {name} within activation period: {startDate} – {endDate}"</li>
+		<li>"Reactivating site &#123;name&#125; within activation period: &#123;startDate&#125; – &#123;endDate&#125;"</li>
 	</ul>
 </div>
 <div className="donts">
 	<ul aria-label="Practices to avoid">
-		<li>"Reactivating site {1} within activation period: {2} – {3}"</li>
+		<li>"Reactivating site &#123;1&#125; within activation period: &#123;2&#125; – &#123;3&#125;"</li>
 	</ul>
 </div>
 </div>
@@ -310,7 +310,7 @@ Use locale-aware formatting, and avoid creating UI text that depends on one sing
 <div className="dos">
 	<ul aria-label="Recommended practices">
 		<li>Use the localization framework</li>
-		<li>Use [placeholders](#define-named-placeholders) in text: "Saved on {date}"</li>
+		<li>Use [placeholders](#define-named-placeholders) in text: "Saved on &#123;date&#125;"</li>
 	</ul>
 </div>
 <div className="donts">
@@ -347,7 +347,7 @@ Related texts can be brought together by grouping texts based on use cases (e.g.
 		<li>`LEGAL.ABOUT:` About</li>
 		<li>`LEGAL.IMPRINT:` Corporate Information</li>
 		<li>`LEGAL.PRIVACY_POLICY:` Privacy Notice</li>
-		<li>`LEGAL.VERSION:` Version {{version}}</li>
+		<li>`LEGAL.VERSION:` Version &#123;&#123;version&#125;&#125;</li>
 	</ul>
 </div>
 <div className="donts">
@@ -364,7 +364,7 @@ Related texts can be brought together by grouping texts based on use cases (e.g.
 		<li>`PRIVACY_POLICY:` Privacy Notice</li>
 		<li>`SETTINGS:` Settings</li>
 		<li>`THEME:` Theme</li>
-		<li>`VERSION:` Version {{version}}</li>
+		<li>`VERSION:` Version &#123;&#123;version&#125;&#125;</li>
 	</ul>
 </div>
 </div>

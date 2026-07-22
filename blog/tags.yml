@@ -2,3 +2,7 @@ release:
   description: 'Blog posts about new Industrial Experience design system releases'
 merging:
   description: 'Merging activities from other design systems at Siemens'
+ux:
+  description: 'User experience patterns, recommendations, and writing guidance'
+development:
+  description: 'Developer-focused implementation tips, APIs, and code practices'
