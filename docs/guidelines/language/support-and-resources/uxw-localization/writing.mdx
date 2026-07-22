@@ -27,11 +27,11 @@ It is also unclear whether “complete” is an adjective or a verb.
 </div>
 </div>
 
-User interface texts are stand-alone, short, and to the point, but they provide little to no context on their own. Thus, translators and AI can only produce a reliable translation if the terms are
+User interface texts are stand-alone, short, and to the point, but they provide little to no context on their own. Thus, translators and AI can only produce a reliable translation if the terms are:
 
-- [Predominant](#consider-that-terms-are-used-in-different-ways)
-- [Precise](#use-domain-terminology)
-- [Unambiguous](#avoid-misunderstandings)
+- Predominant
+- Precise
+- Unambiguous
 
 ## Use domain terminology
 
@@ -62,24 +62,20 @@ Common language serves multiple purposes:
 ## Consider that terms are used in different ways
 
 Many terms have various meanings related to a specific context or domain.
-Use the terminology database of domain to maintain a common language.
+Use the terminology domain database to maintain a common language.
 UX writers should request terms from the terminology maintainers of the domain if the term is not yet defined (via terminology databases if available).
 Then UX writers should review the UI texts together with domain experts, and ensure that translations are done by translators with domain knowledge.
 
-!!! info "Meaning of the term title"
+### Example: The term "title" and its meanings
 
-		A subset of meanings of "title":
+- Predominant meaning: An appellation of dignity, honor, distinction, or preeminence attached to a person or family by virtue of rank, office, precedent, privilege, attainment or lands
+- Descriptive name: [Appellation](https://www.merriam-webster.com/dictionary/appellation)
+- A person holding a title especially of nobility
+- A similar distinguishing name of a musical composition or a work of art
+- All the elements constituting legal ownership
+- A descriptive or general heading (as of a chapter in a book)
 
-		- Predominant meaning: An appellation of dignity, honor, distinction, or preeminence attached to a person or family by virtue of rank, office, precedent, privilege, attainment or lands
-		- Descriptive name: [Appellation](https://www.merriam-webster.com/dictionary/appellation)
-		- A person holding a title especially of nobility
-		- A similar distinguishing name of a musical composition or a work of art
-		- All the elements constituting legal ownership
-		- A descriptive or general heading (as of a chapter in a book)
-
-		See [Merriam Webster](https://www.merriam-webster.com/dictionary/title) for details
-
-One meaning always dominates regardless of context. That is the meaning that can be used without creating confusion. However, if this dominating meaning does not fit the context, an alternative term (unambiguous synonym) must be used to eliminate misunderstandings.
+One meaning always dominates regardless of context. That is the meaning that can be used without creating confusion. However, if this dominant meaning does not fit the context, an alternative term (unambiguous synonym) must be used to eliminate misunderstandings.
 
 <div className="dos-and-donts">
 <div className="dos">
@@ -104,10 +100,10 @@ In addition, the alternative term substantially increases the probability of cor
 
 ## Avoid misunderstandings
 
-Avoid possible causes of misunderstandings by
+Avoid possible causes of misunderstandings by:
 
-- [grouping the texts](#group-texts) by use cases
-- only using the [predominant meaning](#consider-that-terms-are-used-in-different-ways) of the term
+- grouping the texts by use cases
+- only using the predominant meaning of the term
 - annotating texts with a description (if supported by translation framework and file format)
 
 ## Avoid directional terms on UI
@@ -138,7 +134,7 @@ Follow these steps to ensure that translations have enough space in the user int
 1. Design UI by prioritizing flexible layouts, identify areas with limited text space, and always allocate more space than you think you'll need.
 1. Write English texts, keeping conciseness in mind from the start.
 1. Determine reasonable limits and provide it to the translation management.
-1. Request translations
+1. Request translations.
 1. Test every screen with translated texts in languages known for their long translations (German, Finnish, Greek and some Slavic languages).
 1. Revisit the UI design or the original texts if a translator cannot convey the meaning within the limit.
 
@@ -146,18 +142,20 @@ Fixing UI issues caused by long translations late in the development cycle is ex
 
 ## Be aware of length increase
 
-Always design with translation in mind, assuming text will grow.
+Always design with translation in mind, assuming text will grow:
 
-- Layout breakage
-	Fixed-width elements may not accommodate longer text, which can result in overflows, line breaks in awkward places, or text disappearing completely.
-- Truncation
-	If text is truncated, important instructions or information may be invisible, which can lead to frustration and misuse.
-- UI inconsistency
-	Different languages require different amounts of space, which makes it difficult to maintain a consistent look and feel.
+1. Layout breakage <br>
+Fixed-width elements may not accommodate longer text, which can result in overflows, line breaks in awkward places, or text disappearing completely.
+
+2. Truncation<br>
+If text is truncated, important instructions or information may be invisible, which can lead to frustration and misuse.
+
+3. UI inconsistency<br>
+Different languages require different amounts of space, which makes it difficult to maintain a consistent look and feel.
 
 Keeping these differences in length for translations in mind supports the whole design team to create localization-friendly designs.
-The exact length of a translation cannot be predicted.
-Some generally accepted rules of thumb:
+
+Although the exact length of a translation cannot be predicted, there are some generally accepted rules of thumb:
 
 - Short texts (1-10 characters) typically increase by 200-300% (e.g. EN: "On" → DE: "Eingeschaltet").
 - Medium texts (11-20 characters) typically increase by 100-200% (e.g. EN: "Withdraw request" → DE: "Anfrage zurückziehen").
@@ -180,21 +178,19 @@ The following UI elements may require text length restrictions, measured in eith
 Each language has its own grammatical rules that specify how texts containing numbers must be presented.
 It is important to consider these different rules early in the UX writing and implementation process to ensure that the product can be localized correctly.
 
-!!! info "Pluralization examples"
+### Pluralization examples
 
-		Pluralization of the English term «apple»:
+Pluralization of the English term "apple":<br>
+- 0: I own no apple.
+- 1: I own one apple.
+- n: I own four apples.
 
-		- 0: «I own no apple.»
-		- 1: «I own one apple.»
-		- n: «I own four apples.»
-
-		Pluralization of the Polish term «Plik» (English: «file»):
-
-		- 1 plik
-		- 2, 3, 4 pliki
-		- 5-21 plików
-		- 22-24 pliki
-		- 25-31 plików
+Pluralization of the Polish term "Plik"  (English:file):<br>
+- 1 plik
+- 2, 3, 4 pliki
+- 5-21 plików
+- 22-24 pliki
+- 25-31 plików
 
 ## Use localization to handle pluralization
 
@@ -310,7 +306,7 @@ Use locale-aware formatting, and avoid creating UI text that depends on one sing
 <div className="dos">
 	<ul aria-label="Recommended practices">
 		<li>Use the localization framework</li>
-		<li>Use [placeholders](#define-named-placeholders) in text: "Saved on &#123;date&#125;"</li>
+		<li>Use placeholders in text: "Saved on &#123;date&#125;"</li>
 	</ul>
 </div>
 <div className="donts">
@@ -323,8 +319,8 @@ Use locale-aware formatting, and avoid creating UI text that depends on one sing
 
 ## Provide UX writing specifications
 
-Providing project-specific UX writing specifications helps developers [group texts by use cases](#group-texts) and determine when a text can be [reused](#reuse-texts) or whether [a specific context needs to be taken into account](#consider-different-contexts).
-[Non-concatenated texts](#avoid-text-concatenations) with [readable placeholder names](#define-named-placeholders), combined with translation [translation libraries](#use-translation-libraries), enable efficient, high-quality localization.
+Providing project-specific UX writing specifications helps developers group texts by use cases and determine when a text can be reused or whether a specific context needs to be taken into account.
+Non-concatenated texts with readable placeholder names, combined with translation libraries, enable efficient, high-quality localization.
 
 ## Group texts
 
@@ -430,5 +426,5 @@ Packages based on the [Unicode CLDR](https://cldr.unicode.org/) like `@angular/c
 - months, weekdays and time zones
 
 :::info
-For Siemens employees and partners, Element design system provides pretranslated texts for components and can be accessed [here](https://simpl.code.siemens.io/simpl/development/language-packs).
+For Siemens employees and partners, the Element design system provides pretranslated texts for components and can be accessed [here](https://simpl.code.siemens.io/simpl/development/language-packs).
 :::
