@@ -1244,11 +1244,24 @@ const sidebars: SidebarsConfig = {
           type: 'category',
           label: 'Support and resources',
           items: [
-            'guidelines/language/support-and-resources/AI-and-UX-writing',
-            'guidelines/language/support-and-resources/UX-writing-principles',
-            'guidelines/language/support-and-resources/UX-writing-resources',
             'guidelines/language/support-and-resources/ux-writer-role',
-            'guidelines/language/support-and-resources/uxw-localization/index',
+            'guidelines/language/support-and-resources/UX-writing-principles',
+            'guidelines/language/support-and-resources/AI-and-UX-writing',
+            createTabItem({
+              id: 'guidelines/language/support-and-resources/uxw-localization/index',
+              label: 'Localization',
+              items: [
+                {
+                  id: 'guidelines/language/support-and-resources/uxw-localization/overview',
+                  label: 'Overview',
+                },
+                {
+                  id: 'guidelines/language/support-and-resources/uxw-localization/writing',
+                  label: 'Writing',
+                },
+              ],
+            }),
+            'guidelines/language/support-and-resources/UX-writing-resources',
           ],
           collapsed: true,
         },
