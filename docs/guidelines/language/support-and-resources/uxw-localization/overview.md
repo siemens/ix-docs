@@ -49,7 +49,7 @@ Localized interfaces must work with different text lengths and different reading
 design options such as flexible growing areas, line wrapping, or fixed layouts with scrollbars,
 and plan enough space for longer translations.
 
-## LTR & RTL {#ltr-rtl}
+## LTR and RTL {#ltr-rtl}
 
 LTR (Left-to-Right) refers to languages and scripts that are written and read from left to right.
 
@@ -66,7 +66,7 @@ RTL can require mirrored navigation, icon direction, alignment, and interaction 
 
 Payment expectations differ by country, including preferred methods, flows, and trust signals.
 
-## Legal and Safety
+## Legal and safety
 
 Legal notices, safety texts, consent flows, and compliance content may vary by market and
 jurisdiction.
