@@ -1,6 +1,6 @@
 ---
 sidebar_position: 4
-sidebar_label: Proper nouns
+sidebar_label: Capitalization and proper nouns
 title: Capitalization and proper nouns
 doc-type: 'banner'
 component-tabs: ['']

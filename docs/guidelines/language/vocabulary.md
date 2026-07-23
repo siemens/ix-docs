@@ -514,7 +514,7 @@ Here are common false friends in industrial UX writing.
 | --- | --- | --- | --- | --- |
 | actual (real) | German "aktuell" | current, present | "actual value" read as "current value" not "real value" | "tatsaechlich" (actual)<br />"aktuell" (current) |
 | actualize (make real) | German "aktualisieren" | update, refresh | "actualize notifications" read as "update notifications" not "make notifications real" | "aktualisieren" (update)<br />"verwirklichen" (actualize) |
-| billion (10^9^) | German "Billion" | trillion (10^12^) | data values off by 1000x in reports | "Milliarde" (billion)<br />"Billion" (trillion) |
+| billion (10<sup>9</sup>) | German "Billion" | trillion (10<sup>12</sup>) | data values off by 1000x in reports | "Milliarde" (billion)<br />"Billion" (trillion) |
 | control (regulate) | Spanish "controlar" | to check, verify | "control system" might mean "check system" | "Gestionar/administrar un proceso" (control the process)<br />"Panel de configuracion/supervision" (control panel) |
 | date (day/time) | German "Datei" | computer file | "enter date" could mean "enter file" | "Datum" (date)<br />"Datei" (file) |
 | eventually (in time) | German "eventuell" | possibly, perhaps | "process eventually completes" is ambiguous | "schliesslich" (eventually)<br />"eventuell" (possibly) |
