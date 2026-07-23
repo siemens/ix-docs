@@ -1,0 +1,565 @@
+---
+sidebar_position: 3
+sidebar_label: Vocabulary
+title: Vocabulary
+doc-type: 'banner'
+component-tabs: ['']
+no_single_tab: true
+description: 'Explore common vocabulary themes and challenges in UX writing. This section guides you on using the correct and most effective words to create easily understandable content.'
+---
+
+## Word length
+
+- Use short words instead of long words (8 letters or more) when possible.
+
+<div className="dos-and-donts">
+<div className="dos">
+	<ul aria-label="Recommended practices">
+		<li>Start pump</li>
+		<li>Set flow rate</li>
+	</ul>
+</div>
+<div className="donts">
+	<ul aria-label="Practices to avoid">
+		<li>Initialize hydraulic mechanism</li>
+		<li>Configure movement parameters</li>
+	</ul>
+</div>
+</div>
+
+- Keep sentences under 25 words (the average is 15 words) and break up longer sentences.
+
+<div className="dos-and-donts">
+<div className="dos">
+	<ul aria-label="Recommended practices">
+		<li>Pressure exceeds safe limits. Reduce flow rate immediately.</li>
+	</ul>
+</div>
+<div className="donts">
+	<ul aria-label="Practices to avoid">
+		<li>The pressure monitoring system has detected levels that are significantly above the established safety thresholds and requires immediate corrective action.</li>
+	</ul>
+</div>
+</div>
+
+- Keep headings, sub-headings, and email subjects under 65 characters (including spaces).
+
+<div className="dos-and-donts">
+<div className="dos">
+	<ul aria-label="Recommended practices">
+		<li>Motor overheating alert</li>
+		<li>Pump maintenance required</li>
+		<li>Production line status</li>
+	</ul>
+</div>
+<div className="donts">
+	<ul aria-label="Practices to avoid">
+		<li>Critical system malfunction detected - immediate maintenance required for production line</li>
+	</ul>
+</div>
+</div>
+
+## Modal verbs
+
+Modal verbs are helping words such as "can", "must" or "will". They are placed before other verbs to show possibility, permission, obligation or ability. We use some modal verbs in UI text when talking about what users can and cannot do in products.
+
+- Use "can" and "cannot" to talk about permissions and capabilities instead of "could" that indicates uncertainty.
+
+<div className="dos-and-donts">
+<div className="dos">
+	<ul aria-label="Recommended practices">
+		<li>You can export the data as CSV.</li>
+		<li>Failed to export. The system cannot export the data as CSV.</li>
+	</ul>
+</div>
+<div className="donts">
+	<ul aria-label="Practices to avoid">
+		<li>You could export the data as CSV.</li>
+	</ul>
+</div>
+</div>
+
+- Use "will" to talk about definite future actions and consequences instead of "would" that indicates hesitation and doubt.
+
+<div className="dos-and-donts">
+<div className="dos">
+	<ul aria-label="Recommended practices">
+		<li>The system will send a confirmation email once updated.</li>
+	</ul>
+</div>
+<div className="donts">
+	<ul aria-label="Practices to avoid">
+		<li>The system would send a confirmation email once updated.</li>
+	</ul>
+</div>
+</div>
+
+- Do not use "should" when giving instructions as it indicates a recommendation, not a concrete action.
+
+<div className="dos-and-donts">
+<div className="dos">
+	<ul aria-label="Recommended practices">
+		<li>Log in</li>
+	</ul>
+</div>
+<div className="donts">
+	<ul aria-label="Practices to avoid">
+		<li>You should log in</li>
+	</ul>
+</div>
+</div>
+
+- Specifically avoid using the modal verbs "may" or "might" as they are unclear. Instead, state consequences clearly.
+
+<div className="dos-and-donts">
+<div className="dos">
+	<ul aria-label="Recommended practices">
+		<li>Removing this device influences any asset dependencies.</li>
+	</ul>
+</div>
+<div className="donts">
+	<ul aria-label="Practices to avoid">
+		<li>Removing this device may influence asset dependencies.</li>
+	</ul>
+</div>
+</div>
+
+- Avoid using "must" as this can seem aggressive and forceful. Only use it for emergencies.
+
+<div className="dos-and-donts">
+<div className="dos">
+	<ul aria-label="Recommended practices">
+		<li>Enter your password.</li>
+		<li>All software must be updated by April 23, 2027, to avoid losing data.</li>
+	</ul>
+</div>
+<div className="donts">
+	<ul aria-label="Practices to avoid">
+		<li>You must enter your password.</li>
+	</ul>
+</div>
+</div>
+
+- Avoid "shall" as it sounds overly formal and legal, and readers often confuse it with "will" or "should".
+
+<div className="dos-and-donts">
+<div className="dos">
+	<ul aria-label="Recommended practices">
+		<li>The system will delete these temporary files after 30 days.</li>
+	</ul>
+</div>
+<div className="donts">
+	<ul aria-label="Practices to avoid">
+		<li>The system shall delete these temporary files after 30 days.</li>
+	</ul>
+</div>
+</div>
+
+## Idioms, buzzwords and jargon
+
+- Avoid idiomatic expressions because their meaning cannot be understood literally from the words themselves, especially by non-native speakers.
+
+<div className="dos-and-donts">
+<div className="dos">
+	<ul aria-label="Recommended practices">
+		<li>Resolve the issue by checking device connectivity.</li>
+	</ul>
+</div>
+<div className="donts">
+	<ul aria-label="Practices to avoid">
+		<li>Nip this issue in the bud by checking device connectivity.</li>
+	</ul>
+</div>
+</div>
+
+- Avoid buzzwords as they sound corporate rather than clear.
+
+<div className="dos-and-donts">
+<div className="dos">
+	<ul aria-label="Recommended practices">
+		<li>Use this feature to personalize your notifications.</li>
+	</ul>
+</div>
+<div className="donts">
+	<ul aria-label="Practices to avoid">
+		<li>Leverage this capability to personalize your notifications.</li>
+	</ul>
+</div>
+</div>
+
+- Avoid jargon unless your specific audience understands the technical term better than a plain alternative.
+
+<div className="dos-and-donts">
+<div className="dos">
+	<ul aria-label="Recommended practices">
+		<li>Save your changes automatically</li>
+		<li>PLC configuration</li>
+		<li>motor speed</li>
+	</ul>
+</div>
+<div className="donts">
+	<ul aria-label="Practices to avoid">
+		<li>Enable auto-persistence of data</li>
+		<li>programmable logic controller setup</li>
+		<li>angular velocity coefficient</li>
+	</ul>
+</div>
+</div>
+
+- Avoid cultural references or brand names unless functionally necessary.
+
+<div className="dos-and-donts">
+<div className="dos">
+	<ul aria-label="Recommended practices">
+		<li>mobile device</li>
+		<li>search online</li>
+		<li>WLAN</li>
+	</ul>
+</div>
+<div className="donts">
+	<ul aria-label="Practices to avoid">
+		<li>iPhone</li>
+		<li>Google</li>
+		<li>WiFi</li>
+	</ul>
+</div>
+</div>
+
+## Phrasal verbs (multi-word verbs)
+
+- Avoid multi-word phrasal verbs when one word works.
+
+<div className="dos-and-donts">
+<div className="dos">
+	<ul aria-label="Recommended practices">
+		<li>calculate</li>
+		<li>continue</li>
+		<li>delete</li>
+		<li>review alarm history</li>
+	</ul>
+</div>
+<div className="donts">
+	<ul aria-label="Practices to avoid">
+		<li>add up</li>
+		<li>carry on</li>
+		<li>get rid of</li>
+		<li>look over alarm history</li>
+	</ul>
+</div>
+</div>
+
+- Use common industrial-application phrasal verbs when they are more familiar than one-word alternatives.
+
+<div className="dos-and-donts">
+<div className="dos">
+	<ul aria-label="Recommended practices">
+		<li>log out</li>
+		<li>shut down</li>
+		<li>start up</li>
+	</ul>
+</div>
+<div className="donts">
+	<ul aria-label="Practices to avoid">
+		<li>terminate</li>
+		<li>deactivate</li>
+		<li>initiate</li>
+	</ul>
+</div>
+</div>
+
+## Abbreviations and acronyms
+
+Use abbreviations and acronyms carefully. They can improve clarity for domain users, but can confuse general users. Never invent your own acronyms. Use established terminology only. See [Capitalization and proper nouns](./capitalization-and-proper-nouns) for punctuation guidance.
+
+<div className="dos-and-donts">
+<div className="dos">
+	<ul aria-label="Recommended practices">
+		<li>Acknowledge</li>
+	</ul>
+</div>
+<div className="donts">
+	<ul aria-label="Practices to avoid">
+		<li>Ack</li>
+		<li>Akdg</li>
+	</ul>
+</div>
+</div>
+
+- Avoid Latin abbreviations when there is space in the UI for plain English alternatives. Although e.g. and i.e. are often treated as common, many non-native English speakers cannot distinguish between them.
+
+<div className="dos-and-donts">
+<div className="dos">
+	<ul aria-label="Recommended practices">
+		<li>for example</li>
+		<li>for instance</li>
+		<li>that is</li>
+		<li>specifically</li>
+		<li>and so on</li>
+	</ul>
+</div>
+<div className="donts">
+	<ul aria-label="Practices to avoid">
+		<li>e.g.</li>
+		<li>i.e.</li>
+		<li>etc.</li>
+	</ul>
+</div>
+</div>
+
+- Use established industry-standard acronyms when your user expects them. Spell out new or less familiar acronyms on first use, then use the acronym consistently afterward.
+
+<div className="dos-and-donts">
+<div className="dos">
+	<ul aria-label="Recommended practices">
+		<li>PLC configuration</li>
+		<li>USB connection</li>
+		<li>Access the Supervisory Control and Data Acquisition (SCADA) dashboard to view production metrics. Update SCADA alarm thresholds as needed.</li>
+	</ul>
+</div>
+<div className="donts">
+	<ul aria-label="Practices to avoid">
+		<li>Programmable Logic Controller (PLC) configuration</li>
+		<li>Universal Serial Bus</li>
+		<li>Access the SCADA dashboard to view production metrics. Update SCADA alarm thresholds as needed.</li>
+	</ul>
+</div>
+</div>
+
+- Abbreviations are acceptable in buttons, labels and tables when space is limited, no responsive design is available, and only when they are familiar to users and clarified in a visible part of the UI.
+
+<div className="dos-and-donts">
+<div className="dos">
+	<ul aria-label="Recommended practices">
+		<li>Max</li>
+		<li>Min</li>
+		<li>Temp</li>
+		<li>Info</li>
+	</ul>
+</div>
+</div>
+
+- Add lower case "s" without an apostrophe for plural forms.
+
+<div className="dos-and-donts">
+<div className="dos">
+	<ul aria-label="Recommended practices">
+		<li>PLCs</li>
+		<li>APIs</li>
+	</ul>
+</div>
+<div className="donts">
+	<ul aria-label="Practices to avoid">
+		<li>PLC's</li>
+		<li>API's</li>
+	</ul>
+</div>
+</div>
+
+## Nouns without plural form
+
+English has many nouns that do not take a plural form (they do not use "s" for plurals). These are common errors in menus, labels and instructions within industrial UIs.
+
+<div className="dos-and-donts">
+<div className="dos">
+	<ul aria-label="Recommended practices">
+		<li>feedback</li>
+		<li>additional feedback</li>
+		<li>information</li>
+		<li>more information</li>
+		<li>equipment</li>
+		<li>navigation</li>
+		<li>progress</li>
+		<li>data</li>
+		<li>software</li>
+	</ul>
+</div>
+<div className="donts">
+	<ul aria-label="Practices to avoid">
+		<li>feedbacks</li>
+		<li>informations</li>
+		<li>equipments</li>
+		<li>navigations</li>
+		<li>progresses</li>
+		<li>datas</li>
+		<li>softwares</li>
+	</ul>
+</div>
+</div>
+
+- Use the singular verb form for collective nouns. Organizations and groups are single entities.
+
+<div className="dos-and-donts">
+<div className="dos">
+	<ul aria-label="Recommended practices">
+		<li>Siemens provides industrial automation solutions.</li>
+		<li>The team is reviewing the configuration.</li>
+		<li>The company has released a new update.</li>
+	</ul>
+</div>
+<div className="donts">
+	<ul aria-label="Practices to avoid">
+		<li>Siemens provide industrial automation solutions.</li>
+		<li>The team are reviewing the configuration.</li>
+		<li>The company have released a new update.</li>
+	</ul>
+</div>
+</div>
+
+## Time-based vocabulary
+
+Choose time-related words carefully. They set user expectations about whether more updates, events or actions will occur.
+
+## Last vs. latest vs. recent
+
+Last implies nothing else will follow. It is final and no more are coming.
+
+<div className="dos-and-donts">
+<div className="dos">
+	<ul aria-label="Recommended practices">
+		<li>Latest update (ongoing)</li>
+	</ul>
+</div>
+<div className="donts">
+	<ul aria-label="Practices to avoid">
+		<li>Last update (final)</li>
+	</ul>
+</div>
+</div>
+
+Latest is the most recent and newest, which means there could be more to follow.
+
+<div className="dos-and-donts">
+<div className="dos">
+	<ul aria-label="Recommended practices">
+		<li>Latest summary (more could come)</li>
+	</ul>
+</div>
+<div className="donts">
+	<ul aria-label="Practices to avoid">
+		<li>Last summary (final)</li>
+	</ul>
+</div>
+</div>
+
+Recent means it happened a short time ago. Similar to latest but highlights events close to the present.
+
+<div className="dos-and-donts">
+<div className="dos">
+	<ul aria-label="Recommended practices">
+		<li>Recent events (happened recently)</li>
+	</ul>
+</div>
+<div className="donts">
+	<ul aria-label="Practices to avoid">
+		<li>Latest events (recent and more could come)</li>
+	</ul>
+</div>
+</div>
+
+## Pending vs. waiting vs. queued
+
+Pending means waiting for an action or decision that needs someone else to act.
+
+<div className="dos-and-donts">
+<div className="dos">
+	<ul aria-label="Recommended practices">
+		<li>Pending approval</li>
+	</ul>
+</div>
+<div className="donts">
+	<ul aria-label="Practices to avoid">
+		<li>Waiting for approval</li>
+	</ul>
+</div>
+</div>
+
+Waiting means the system is paused until a condition is met. Avoid "awaiting" as this is too formal.
+
+<div className="dos-and-donts">
+<div className="dos">
+	<ul aria-label="Recommended practices">
+		<li>Waiting for connection.</li>
+		<li>Waiting for sensor response.</li>
+	</ul>
+</div>
+<div className="donts">
+	<ul aria-label="Practices to avoid">
+		<li>Awaiting sensor response.</li>
+	</ul>
+</div>
+</div>
+
+Queued means something is in a line and will be processed in order.
+
+<div className="dos-and-donts">
+<div className="dos">
+	<ul aria-label="Recommended practices">
+		<li>Queued jobs</li>
+	</ul>
+</div>
+<div className="donts">
+	<ul aria-label="Practices to avoid">
+		<li>Waiting jobs</li>
+	</ul>
+</div>
+</div>
+
+## False friends
+
+False friends are words that seem correct because they look similar to words in other languages, but they mean something different in English. Avoid false friends by checking the English meaning, not the similar word in your language, and by avoiding word-for-word translations.
+
+Here are common false friends in industrial UX writing.
+
+| English word and meaning | Similar to other language | Meaning in other language | Typical error in UX writing | Correct translation |
+| --- | --- | --- | --- | --- |
+| actual (real) | German "aktuell" | current, present | "actual value" read as "current value" not "real value" | "tatsaechlich" (actual)<br />"aktuell" (current) |
+| actualize (make real) | German "aktualisieren" | update, refresh | "actualize notifications" read as "update notifications" not "make notifications real" | "aktualisieren" (update)<br />"verwirklichen" (actualize) |
+| billion (10^9^) | German "Billion" | trillion (10^12^) | data values off by 1000x in reports | "Milliarde" (billion)<br />"Billion" (trillion) |
+| control (regulate) | Spanish "controlar" | to check, verify | "control system" might mean "check system" | "Gestionar/administrar un proceso" (control the process)<br />"Panel de configuracion/supervision" (control panel) |
+| date (day/time) | German "Datei" | computer file | "enter date" could mean "enter file" | "Datum" (date)<br />"Datei" (file) |
+| eventually (in time) | German "eventuell" | possibly, perhaps | "process eventually completes" is ambiguous | "schliesslich" (eventually)<br />"eventuell" (possibly) |
+| exit (leave) | Spanish "exito" | success | "exit code" could mean "success code" | "salida" (exit)<br />"exito" (success) |
+| fabric (textile) | French "fabrique" | factory, plant | "fabric configuration" suggests factory config | "tissu" (fabric)<br />"fabrique" (factory) |
+| fast (quick) | German "fast" | almost, nearly | "fast mode" means "almost mode" | "schnell" (fast)<br />"fast" (almost) |
+| large (big) | French "large" | wide | "large capacity" might mean "wide capacity" | "grand" (large)<br />"large" (wide) |
+| library (collection) | French "librairie" | bookstore | "code library" misunderstood | "bibliotheque" (library)<br />"librairie" (bookstore) |
+| realize (understand) | Spanish "realizar" | to carry out, perform | "realize changes" means "perform changes" | "darse cuenta" (realize)<br />"realizar" (perform) |
+| sensible (rational) | French "sensible" | sensitive | "sensible data" means sensitive, not reasonable | "raisonnable" (sensible)<br />"sensible" (sensitive) |
+
+## Common wording issues
+
+The following words and pairs are often misused and misunderstood when writing text for industrial applications.
+
+<div className="dos-and-donts">
+<div className="dos">
+	<ul aria-label="Recommended practices">
+		<li>Error state (fixed condition)</li>
+		<li>Status: Running (ongoing process)</li>
+		<li>in the future</li>
+		<li>on Monday</li>
+		<li>time zone</li>
+		<li>log file (two words)</li>
+		<li>log in (as an action)</li>
+		<li>login (as a noun)</li>
+		<li>34 million</li>
+	</ul>
+</div>
+<div className="donts">
+	<ul aria-label="Practices to avoid">
+		<li>Error status</li>
+		<li>State: Running</li>
+		<li>in future</li>
+		<li>on the Monday</li>
+		<li>timezone</li>
+		<li>logfile</li>
+		<li>login (as an action)</li>
+		<li>log in (as a noun)</li>
+		<li>34 millions</li>
+	</ul>
+</div>
+</div>
+
+## Related
+
+- [UI terminology](./menu-functions-and-ui-labels/ui-terminology)
+- [Grammar and vocabulary](./grammar-and-vocabulary)

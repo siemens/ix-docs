@@ -48,6 +48,7 @@ Apostrophes look like a single quotation mark, show ownership and create contrac
       <li>Today’s date is displayed in the banner.</li>
     </ul>
   </div>
+</div>
 
 With our minimal punctuation approach, we limit apostrophes by using nouns as adjectives.
 
