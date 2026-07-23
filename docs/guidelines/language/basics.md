@@ -37,24 +37,24 @@ description: "Dive into the fundamental principles of UX writing, where you'll l
 - Avoid using negative contractions as they can appear too informal
 
 <div className="dos-and-donts">
-<div className="dos">
-  <ul aria-label="Recommended practices">
-    <li>their, them, theirs, salesperson</li>
-    <li>Welcome to this application</li>
-    <li>X appears when detail view has selected events</li>
-    <li>cannot, will not</li>
-    <li>you’ll, we’ve</li>
-  </ul>
-</div>
-<div className="donts">
-  <ul aria-label="Practices to avoid">
-    <li>his, hers, him, salesman</li>
-    <li>Hey there!</li>
-    <li>X doesn’t appear if detail view has no selected events</li>
-    <li>can’t, won’t</li>
-    <li>you will, we have</li>
-  </ul>
-</div>
+  <div className="dos">
+    <ul aria-label="Recommended practices">
+      <li>their, them, theirs, salesperson</li>
+      <li>Welcome to this application</li>
+      <li>X appears when detail view has selected events</li>
+      <li>cannot, will not</li>
+      <li>you’ll, we’ve</li>
+    </ul>
+  </div>
+  <div className="donts">
+    <ul aria-label="Practices to avoid">
+      <li>his, hers, him, salesman</li>
+      <li>Hey there!</li>
+      <li>X doesn’t appear if detail view has no selected events</li>
+      <li>can’t, won’t</li>
+      <li>you will, we have</li>
+    </ul>
+  </div>
 </div>
 
 ## Length
@@ -80,57 +80,57 @@ description: "Dive into the fundamental principles of UX writing, where you'll l
 - Capitalize named app functions and UI elements: Go to Settings, Allocate users in User management, Press OK
 
 <div className="dos-and-donts">
-<div className="dos">
-  <ul aria-label="Recommended practices">
-    <li>Go to Settings</li>
-    <li>Press OK</li>
-    <li>Log in</li>
-    <li>For more information, see Siemens Industry Online Support.</li>
-  </ul>
-</div>
-<div className="donts">
-  <ul aria-label="Practices to avoid">
-    <li>Go To Settings</li>
-    <li>Press OK</li>
-    <li>LOG IN</li>
-    <li>For more information, see Siemens industry online support.</li>
-  </ul>
-</div>
+  <div className="dos">
+    <ul aria-label="Recommended practices">
+      <li>Go to Settings</li>
+      <li>Press OK</li>
+      <li>Log in</li>
+      <li>For more information, see Siemens Industry Online Support.</li>
+    </ul>
+  </div>
+  <div className="donts">
+    <ul aria-label="Practices to avoid">
+      <li>Go To Settings</li>
+      <li>Press OK</li>
+      <li>LOG IN</li>
+      <li>For more information, see Siemens industry online support.</li>
+    </ul>
+  </div>
 </div>
 
 ## Common UX wording mistakes
 
 <div className="dos-and-donts">
-<div className="dos">
-  <ul aria-label="Recommended practices">
-    <li>time zone</li>
-    <li>log file</li>
-    <li>log in (as an action)</li>
-    <li>login (as a noun)</li>
-    <li>equipment</li>
-    <li>feedback</li>
-    <li>training</li>
-    <li>current</li>
-    <li>avoid "shall"</li>
-    <li>Siemens has</li>
-    <li>34 million / 35 billion</li>
-    <li>34 million</li>
-  </ul>
-</div>
-<div className="donts">
-  <ul aria-label="Practices to avoid">
-    <li>timezone</li>
-    <li>logfile</li>
-    <li>login</li>
-    <li>log in</li>
-    <li>equipments</li>
-    <li>feedbacks</li>
-    <li>trainings</li>
-    <li>actual</li>
-    <li>user shall manage users</li>
-    <li>Siemens have</li>
-    <li>34’ / 35“</li>
-    <li>34 millions</li>
-  </ul>
-</div>
+  <div className="dos">
+    <ul aria-label="Recommended practices">
+      <li>time zone</li>
+      <li>log file</li>
+      <li>log in (as an action)</li>
+      <li>login (as a noun)</li>
+      <li>equipment</li>
+      <li>feedback</li>
+      <li>training</li>
+      <li>current</li>
+      <li>avoid "shall"</li>
+      <li>Siemens has</li>
+      <li>34 million / 35 billion</li>
+      <li>34 million</li>
+    </ul>
+  </div>
+  <div className="donts">
+    <ul aria-label="Practices to avoid">
+      <li>timezone</li>
+      <li>logfile</li>
+      <li>login</li>
+      <li>log in</li>
+      <li>equipments</li>
+      <li>feedbacks</li>
+      <li>trainings</li>
+      <li>actual</li>
+      <li>user shall manage users</li>
+      <li>Siemens have</li>
+      <li>34’ / 35“</li>
+      <li>34 millions</li>
+    </ul>
+  </div>
 </div>

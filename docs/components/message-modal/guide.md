@@ -57,19 +57,19 @@ Message modals have two states: Closed and opened.
 ## Dos and Don’ts
 
 <div className="dos-and-donts">
-<div className="dos">
-  <ul aria-label="Recommended practices">
-    <li>Do use action labels that describe the result (avoid Yes or No)</li>
-    <li>Do communicate consequences clearly for destructive actions</li>
-    <li>Do keep messages short and scannable</li>
-  </ul>
-</div>
-<div className="donts">
-  <ul aria-label="Practices to avoid">
-    <li>Don’t use message modals for non-essential information, use [toasts](../toast) instead</li>
-    <li>Don’t hide confirm actions behind ambiguous labels</li>
-  </ul>
-</div>
+  <div className="dos">
+    <ul aria-label="Recommended practices">
+      <li>Do use action labels that describe the result (avoid Yes or No)</li>
+      <li>Do communicate consequences clearly for destructive actions</li>
+      <li>Do keep messages short and scannable</li>
+    </ul>
+  </div>
+  <div className="donts">
+    <ul aria-label="Practices to avoid">
+      <li>Don’t use message modals for non-essential information, use [toasts](../toast) instead</li>
+      <li>Don’t hide confirm actions behind ambiguous labels</li>
+    </ul>
+  </div>
 </div>
 
 ## Related

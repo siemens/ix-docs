@@ -15,42 +15,42 @@ description: 'Clear license and subscription management writing reduces user con
 Use clear and consistent language your users are familiar with.
 
 <div className="dos-and-donts">
-<div className="dos">
-  <ul aria-label="Recommended practices">
-    <li>Your subscription expires in 30 days. Renew now to keep access to all features.</li>
-  </ul>
-</div>
-<div className="donts">
-  <ul aria-label="Practices to avoid">
-    <li>Your entitlement terminates in 30 days. Execute renewal procedures to maintain feature provisioning.</li>
-  </ul>
-</div>
+  <div className="dos">
+    <ul aria-label="Recommended practices">
+      <li>Your subscription expires in 30 days. Renew now to keep access to all features.</li>
+    </ul>
+  </div>
+  <div className="donts">
+    <ul aria-label="Practices to avoid">
+      <li>Your entitlement terminates in 30 days. Execute renewal procedures to maintain feature provisioning.</li>
+    </ul>
+  </div>
 </div>
 
 Use the same terms throughout workflows, applications and portfolios to avoid confusion.
 
 <div className="dos-and-donts">
-<div className="dos">
-  <ul aria-label="Recommended practices">
-    <li>Activate your license / License activated / View activated licenses</li>
-  </ul>
-</div>
-<div className="donts">
-  <ul aria-label="Practices to avoid">
-    <li>Activate your license / License enabled / View dynamic licenses</li>
-  </ul>
-</div>
+  <div className="dos">
+    <ul aria-label="Recommended practices">
+      <li>Activate your license / License activated / View activated licenses</li>
+    </ul>
+  </div>
+  <div className="donts">
+    <ul aria-label="Practices to avoid">
+      <li>Activate your license / License enabled / View dynamic licenses</li>
+    </ul>
+  </div>
 </div>
 
 Use links when referencing terms of use or compliance documents.
 
 <div className="dos-and-donts">
-<div className="dos">
-  <ul aria-label="Recommended practices">
-    <li>By using this software, you agree to our Terms of Use.<br/>
+  <div className="dos">
+    <ul aria-label="Recommended practices">
+      <li>By using this software, you agree to our Terms of Use.<br/>
     Link text: View full terms</li>
-  </ul>
-</div>
+    </ul>
+  </div>
 </div>
 
 ## Grammar and spelling rules
@@ -58,90 +58,90 @@ Use links when referencing terms of use or compliance documents.
 Use American English spelling “license” (with s) for both nouns and verbs in all global interfaces.
 
 <div className="dos-and-donts">
-<div className="dos">
-  <ul aria-label="Recommended practices">
-    <li>Your license expires in 30 days.</li>
-  </ul>
-</div>
-<div className="donts">
-  <ul aria-label="Practices to avoid">
-    <li>Your licence expires in 30 days.</li>
-  </ul>
-</div>
+  <div className="dos">
+    <ul aria-label="Recommended practices">
+      <li>Your license expires in 30 days.</li>
+    </ul>
+  </div>
+  <div className="donts">
+    <ul aria-label="Practices to avoid">
+      <li>Your licence expires in 30 days.</li>
+    </ul>
+  </div>
 </div>
 
 Use “a license” when referring to single licenses in general, and “the license” when referring to specific licenses.
 
 <div className="dos-and-donts">
-<div className="dos">
-  <ul aria-label="Recommended practices">
-    <li>You need a license to access this feature.</li>
-    <li>The license you purchased includes 5 users.</li>
-  </ul>
-</div>
+  <div className="dos">
+    <ul aria-label="Recommended practices">
+      <li>You need a license to access this feature.</li>
+      <li>The license you purchased includes 5 users.</li>
+    </ul>
+  </div>
 </div>
 
 Avoid using apostrophes to describe singular (‘s) or plural (s’) license possession.
 
 <div className="dos-and-donts">
-<div className="dos">
-  <ul aria-label="Recommended practices">
-    <li>The license expires on May 1, 2026.</li>
-    <li>The status of all licenses can be viewed here.</li>
-  </ul>
-</div>
-<div className="donts">
-  <ul aria-label="Practices to avoid">
-    <li>The license’s expiration date is May 1, 2026.</li>
-    <li>All licenses’ status can be viewed here.</li>
-  </ul>
-</div>
+  <div className="dos">
+    <ul aria-label="Recommended practices">
+      <li>The license expires on May 1, 2026.</li>
+      <li>The status of all licenses can be viewed here.</li>
+    </ul>
+  </div>
+  <div className="donts">
+    <ul aria-label="Practices to avoid">
+      <li>The license’s expiration date is May 1, 2026.</li>
+      <li>All licenses’ status can be viewed here.</li>
+    </ul>
+  </div>
 </div>
 
 Use active voice for user actions.
 
 <div className="dos-and-donts">
-<div className="dos">
-  <ul aria-label="Recommended practices">
-    <li>Activate your license now.</li>
-  </ul>
-</div>
-<div className="donts">
-  <ul aria-label="Practices to avoid">
-    <li>Your license should be activated by you.</li>
-  </ul>
-</div>
+  <div className="dos">
+    <ul aria-label="Recommended practices">
+      <li>Activate your license now.</li>
+    </ul>
+  </div>
+  <div className="donts">
+    <ul aria-label="Practices to avoid">
+      <li>Your license should be activated by you.</li>
+    </ul>
+  </div>
 </div>
 
 Use passive voice when the actor is unknown or unimportant.
 
 <div className="dos-and-donts">
-<div className="dos">
-  <ul aria-label="Recommended practices">
-    <li>Your license was activated successfully.</li>
-  </ul>
-</div>
-<div className="donts">
-  <ul aria-label="Practices to avoid">
-    <li>The license activates.</li>
-  </ul>
-</div>
+  <div className="dos">
+    <ul aria-label="Recommended practices">
+      <li>Your license was activated successfully.</li>
+    </ul>
+  </div>
+  <div className="donts">
+    <ul aria-label="Practices to avoid">
+      <li>The license activates.</li>
+    </ul>
+  </div>
 </div>
 
 Use hyphens to connect descriptive words before nouns.
 
 <div className="dos-and-donts">
-<div className="dos">
-  <ul aria-label="Recommended practices">
-    <li>A multi-user license</li>
-    <li>The license is multi-user</li>
-  </ul>
-</div>
-<div className="donts">
-  <ul aria-label="Practices to avoid">
-    <li>A multi user license</li>
-  </ul>
-</div>
+  <div className="dos">
+    <ul aria-label="Recommended practices">
+      <li>A multi-user license</li>
+      <li>The license is multi-user</li>
+    </ul>
+  </div>
+  <div className="donts">
+    <ul aria-label="Practices to avoid">
+      <li>A multi user license</li>
+    </ul>
+  </div>
 </div>
 
 ## License types
@@ -219,44 +219,44 @@ Note licenses can be both proper nouns and common nouns (per Product License vs.
 Use clear and specific dates, limits and consequences.
 
 <div className="dos-and-donts">
-<div className="dos">
-  <ul aria-label="Recommended practices">
-    <li>Your license expires on November 30, 2025.</li>
-  </ul>
-</div>
-<div className="donts">
-  <ul aria-label="Practices to avoid">
-    <li>Your license will expire soon.</li>
-  </ul>
-</div>
+  <div className="dos">
+    <ul aria-label="Recommended practices">
+      <li>Your license expires on November 30, 2025.</li>
+    </ul>
+  </div>
+  <div className="donts">
+    <ul aria-label="Practices to avoid">
+      <li>Your license will expire soon.</li>
+    </ul>
+  </div>
 </div>
 
 Use prominent and clear expiration warnings.
 
 <div className="dos-and-donts">
-<div className="dos">
-  <ul aria-label="Recommended practices">
-    <li>First notice: Your license expires on November 30, 2025.</li>
-    <li>Second notice: Your license expires in 7 days.</li>
-    <li>Final notice: Your license expires tomorrow.</li>
-  </ul>
-</div>
+  <div className="dos">
+    <ul aria-label="Recommended practices">
+      <li>First notice: Your license expires on November 30, 2025.</li>
+      <li>Second notice: Your license expires in 7 days.</li>
+      <li>Final notice: Your license expires tomorrow.</li>
+    </ul>
+  </div>
 </div>
 
 Send timely, progressive reminders, especially for expiration and grace periods.
 
 <div className="dos-and-donts">
-<div className="dos">
-  <ul aria-label="Recommended practices">
-    <li>Heading: Your license has expired.<br/>Description: Your license expired on January 1, 2026. To continue using our application renew your subscription.<br/>Buttons: Renew now / Contact sales</li>
-    <li>Grace period notice: 7 days</li>
-  </ul>
-</div>
-<div className="donts">
-  <ul aria-label="Practices to avoid">
-    <li>License expired.</li>
-  </ul>
-</div>
+  <div className="dos">
+    <ul aria-label="Recommended practices">
+      <li>Heading: Your license has expired.<br/>Description: Your license expired on January 1, 2026. To continue using our application renew your subscription.<br/>Buttons: Renew now / Contact sales</li>
+      <li>Grace period notice: 7 days</li>
+    </ul>
+  </div>
+  <div className="donts">
+    <ul aria-label="Practices to avoid">
+      <li>License expired.</li>
+    </ul>
+  </div>
 </div>
 
 ## License quantities and numbers
@@ -264,18 +264,18 @@ Send timely, progressive reminders, especially for expiration and grace periods.
 Use “quantity” to refer to how many and “number” to refer to identifiers and codes.
 
 <div className="dos-and-donts">
-<div className="dos">
-  <ul aria-label="Recommended practices">
-    <li>product number</li>
-    <li>serial number</li>
-    <li>Enter your license key</li>
-  </ul>
-</div>
-<div className="donts">
-  <ul aria-label="Practices to avoid">
-    <li>Enter your license key quantity</li>
-  </ul>
-</div>
+  <div className="dos">
+    <ul aria-label="Recommended practices">
+      <li>product number</li>
+      <li>serial number</li>
+      <li>Enter your license key</li>
+    </ul>
+  </div>
+  <div className="donts">
+    <ul aria-label="Practices to avoid">
+      <li>Enter your license key quantity</li>
+    </ul>
+  </div>
 </div>
 
 ## License identification and keys
@@ -283,76 +283,76 @@ Use “quantity” to refer to how many and “number” to refer to identifiers
 Use “ID” for identification and tracking and “key” for activation or access.
 
 <div className="dos-and-donts">
-<div className="dos">
-  <ul aria-label="Recommended practices">
-    <li>Enter your license key.</li>
-  </ul>
-</div>
-<div className="donts">
-  <ul aria-label="Practices to avoid">
-    <li>Enter your license ID.</li>
-  </ul>
-</div>
+  <div className="dos">
+    <ul aria-label="Recommended practices">
+      <li>Enter your license key.</li>
+    </ul>
+  </div>
+  <div className="donts">
+    <ul aria-label="Practices to avoid">
+      <li>Enter your license ID.</li>
+    </ul>
+  </div>
 </div>
 
 Use “subscription ID” when referring to the unique identifier number or code for an entire subscription (often a long number or UUID).
 
 <div className="dos-and-donts">
-<div className="dos">
-  <ul aria-label="Recommended practices">
-    <li>Your subscription ID is 1234567890.</li>
-  </ul>
-</div>
-<div className="donts">
-  <ul aria-label="Practices to avoid">
-    <li>Your subscription key is 1234567890.</li>
-  </ul>
-</div>
+  <div className="dos">
+    <ul aria-label="Recommended practices">
+      <li>Your subscription ID is 1234567890.</li>
+    </ul>
+  </div>
+  <div className="donts">
+    <ul aria-label="Practices to avoid">
+      <li>Your subscription key is 1234567890.</li>
+    </ul>
+  </div>
 </div>
 
 Use “subscription key” when referring to a code or password required to activate or access a subscription.
 
 <div className="dos-and-donts">
-<div className="dos">
-  <ul aria-label="Recommended practices">
-    <li>Copy this subscription key to activate your subscription.</li>
-  </ul>
-</div>
-<div className="donts">
-  <ul aria-label="Practices to avoid">
-    <li>Copy this subscription ID to activate your subscription.</li>
-  </ul>
-</div>
+  <div className="dos">
+    <ul aria-label="Recommended practices">
+      <li>Copy this subscription key to activate your subscription.</li>
+    </ul>
+  </div>
+  <div className="donts">
+    <ul aria-label="Practices to avoid">
+      <li>Copy this subscription ID to activate your subscription.</li>
+    </ul>
+  </div>
 </div>
 
 Use “license ID” or “ID” for the unique identifier of a specific license within the subscription.
 
 <div className="dos-and-donts">
-<div className="dos">
-  <ul aria-label="Recommended practices">
-    <li>Each license has its own license ID for tracking and management.</li>
-  </ul>
-</div>
-<div className="donts">
-  <ul aria-label="Practices to avoid">
-    <li>Each license has its own license key for tracking and management.</li>
-  </ul>
-</div>
+  <div className="dos">
+    <ul aria-label="Recommended practices">
+      <li>Each license has its own license ID for tracking and management.</li>
+    </ul>
+  </div>
+  <div className="donts">
+    <ul aria-label="Practices to avoid">
+      <li>Each license has its own license key for tracking and management.</li>
+    </ul>
+  </div>
 </div>
 
 Use “license key” when talking about the code or string that unlocks or activates a specific license.
 
 <div className="dos-and-donts">
-<div className="dos">
-  <ul aria-label="Recommended practices">
-    <li>Enter your license key to activate the product.</li>
-  </ul>
-</div>
-<div className="donts">
-  <ul aria-label="Practices to avoid">
-    <li>Enter your license ID to activate the product.</li>
-  </ul>
-</div>
+  <div className="dos">
+    <ul aria-label="Recommended practices">
+      <li>Enter your license key to activate the product.</li>
+    </ul>
+  </div>
+  <div className="donts">
+    <ul aria-label="Practices to avoid">
+      <li>Enter your license ID to activate the product.</li>
+    </ul>
+  </div>
 </div>
 
 ## License error messages
@@ -360,21 +360,21 @@ Use “license key” when talking about the code or string that unlocks or acti
 When licenses cannot be found, explain possible causes and provide clear actions to resolve the issue.
 
 <div className="dos-and-donts">
-<div className="dos">
-  <ul aria-label="Recommended practices">
-    <li>Heading: License not found<br/>Description: Failed to find a valid license for this product. This may happen if you’re registered under a different account, or if your license has not been activated yet.<br/>Button: Sign in with different account</li>
-  </ul>
-</div>
+  <div className="dos">
+    <ul aria-label="Recommended practices">
+      <li>Heading: License not found<br/>Description: Failed to find a valid license for this product. This may happen if you’re registered under a different account, or if your license has not been activated yet.<br/>Button: Sign in with different account</li>
+    </ul>
+  </div>
 </div>
 
 When licenses are not available, explain how users can resolve the issue.
 
 <div className="dos-and-donts">
-<div className="dos">
-  <ul aria-label="Recommended practices">
-    <li>Heading: No licenses available<br/>Description: All 10 licenses are currently in use. Ask your administrator to assign a license to you or wait until one becomes available.<br/>Buttons: Request license / View license usage</li>
-  </ul>
-</div>
+  <div className="dos">
+    <ul aria-label="Recommended practices">
+      <li>Heading: No licenses available<br/>Description: All 10 licenses are currently in use. Ask your administrator to assign a license to you or wait until one becomes available.<br/>Buttons: Request license / View license usage</li>
+    </ul>
+  </div>
 </div>
 
 ## Common wording issues
@@ -382,105 +382,105 @@ When licenses are not available, explain how users can resolve the issue.
 Use “add-on” to refer to additional features or modules attached to an existing product.
 
 <div className="dos-and-donts">
-<div className="dos">
-  <ul aria-label="Recommended practices">
-    <li>Add the Health package add-on for obsolescence notifications.</li>
-  </ul>
-</div>
+  <div className="dos">
+    <ul aria-label="Recommended practices">
+      <li>Add the Health package add-on for obsolescence notifications.</li>
+    </ul>
+  </div>
 </div>
 
 Use “upgrade” for when users are moving to a better version of the same product.
 
 <div className="dos-and-donts">
-<div className="dos">
-  <ul aria-label="Recommended practices">
-    <li>Upgrade to the Professional edition for more features.</li>
-    <li>Upgrade your license from Version 2.0 to Version 3.0.</li>
-  </ul>
-</div>
-<div className="donts">
-  <ul aria-label="Practices to avoid">
-    <li>Add the next edition as an add-on.</li>
-  </ul>
-</div>
+  <div className="dos">
+    <ul aria-label="Recommended practices">
+      <li>Upgrade to the Professional edition for more features.</li>
+      <li>Upgrade your license from Version 2.0 to Version 3.0.</li>
+    </ul>
+  </div>
+  <div className="donts">
+    <ul aria-label="Practices to avoid">
+      <li>Add the next edition as an add-on.</li>
+    </ul>
+  </div>
 </div>
 
 Use “requirement” to refer to what a user needs to run the software.
 
 <div className="dos-and-donts">
-<div className="dos">
-  <ul aria-label="Recommended practices">
-    <li>License requirements: Active subscription and internet connection.</li>
-    <li>This feature requires an active maintenance agreement.</li>
-  </ul>
-</div>
+  <div className="dos">
+    <ul aria-label="Recommended practices">
+      <li>License requirements: Active subscription and internet connection.</li>
+      <li>This feature requires an active maintenance agreement.</li>
+    </ul>
+  </div>
 </div>
 
 Use “entitlement” to refer to what the user is authorized to do.
 
 <div className="dos-and-donts">
-<div className="dos">
-  <ul aria-label="Recommended practices">
-    <li>Your entitlement includes 5 user licenses.</li>
-    <li>This feature is not included in your current entitlement.</li>
-  </ul>
-</div>
-<div className="donts">
-  <ul aria-label="Practices to avoid">
-    <li>Your requirement includes 5 user licenses.</li>
-  </ul>
-</div>
+  <div className="dos">
+    <ul aria-label="Recommended practices">
+      <li>Your entitlement includes 5 user licenses.</li>
+      <li>This feature is not included in your current entitlement.</li>
+    </ul>
+  </div>
+  <div className="donts">
+    <ul aria-label="Practices to avoid">
+      <li>Your requirement includes 5 user licenses.</li>
+    </ul>
+  </div>
 </div>
 
 Use the standard term “activate” and “assign” instead of the non-standard “start”.
 
 <div className="dos-and-donts">
-<div className="dos">
-  <ul aria-label="Recommended practices">
-    <li>Activate license now.</li>
-    <li>Assign licenses to your team in your dashboard.</li>
-  </ul>
-</div>
+  <div className="dos">
+    <ul aria-label="Recommended practices">
+      <li>Activate license now.</li>
+      <li>Assign licenses to your team in your dashboard.</li>
+    </ul>
+  </div>
 </div>
 
 Use “renew” instead of “update” for continuing subscriptions.
 
 <div className="dos-and-donts">
-<div className="dos">
-  <ul aria-label="Recommended practices">
-    <li>Renew your license in one easy step.</li>
-  </ul>
-</div>
+  <div className="dos">
+    <ul aria-label="Recommended practices">
+      <li>Renew your license in one easy step.</li>
+    </ul>
+  </div>
 </div>
 
 Use “manage” instead of “edit” to administer licenses.
 
 <div className="dos-and-donts">
-<div className="dos">
-  <ul aria-label="Recommended practices">
-    <li>Manage your licenses under License management.</li>
-  </ul>
-</div>
+  <div className="dos">
+    <ul aria-label="Recommended practices">
+      <li>Manage your licenses under License management.</li>
+    </ul>
+  </div>
 </div>
 
 Use “base” product to talk about a foundation product that other features build on.
 
 <div className="dos-and-donts">
-<div className="dos">
-  <ul aria-label="Recommended practices">
-    <li>The base product includes core functionality.</li>
-  </ul>
-</div>
+  <div className="dos">
+    <ul aria-label="Recommended practices">
+      <li>The base product includes core functionality.</li>
+    </ul>
+  </div>
 </div>
 
 Use “basic” product when talking about a simplified or entry-level version of your product.
 
 <div className="dos-and-donts">
-<div className="dos">
-  <ul aria-label="Recommended practices">
-    <li>Select either our Basic, Premium or Advanced licenses.</li>
-  </ul>
-</div>
+  <div className="dos">
+    <ul aria-label="Recommended practices">
+      <li>Select either our Basic, Premium or Advanced licenses.</li>
+    </ul>
+  </div>
 </div>
 
 ## Dos and Don’ts
