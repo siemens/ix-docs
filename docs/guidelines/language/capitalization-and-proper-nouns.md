@@ -1,6 +1,6 @@
 ---
 sidebar_position: 4
-sidebar_label: Proper nouns
+sidebar_label: Capitalization and proper nouns
 title: Capitalization and proper nouns
 doc-type: 'banner'
 component-tabs: ['']
@@ -8,7 +8,6 @@ no_single_tab: true
 description: 'Capitalization means using uppercase letters (A, B, C) instead of lowercase letters (a, b, c). This section provides clear rules for capitalizing names, brands, technical terms, and UI elements.'
 ---
 
-#
 
 ## General rules
 
