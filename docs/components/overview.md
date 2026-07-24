@@ -159,6 +159,7 @@ import { CategoryButton } from '@site/src/components/CategoryButton';
 | :------------------------------------------------ | :------------------------------------------------------------------------------------------------------------------------------------------------- |
 | [Empty state](./empty-state/index.mdx)            | Empty states inform users that there is no content to display.                                                                                     |
 | [Message bar](./messagebar/index.mdx)             | Message bars display important information to users, e.g. feedback, warnings or errors.                                                            |
+| [Badge](./badge/index.mdx)                        | Badges display compact status, counter or notification cues on or next to UI elements.                                                             |
 | [Pill](./pill/index.mdx)                          | Pills display small pieces of information, e.g. counters or statuses.                                                                              |
 | [Popover](./popover/index.mdx)                    | Popovers display contextual information in a floating panel anchored to a trigger element.                                                         |
 | [Progress indicator](progress-indicator/guide.md) | Progress indicators inform users about the status of ongoing processes, e.g. loading data, submitting forms or processing non-blocking operations. |

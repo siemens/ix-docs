@@ -1004,6 +1004,20 @@ const sidebars: SidebarsConfig = {
           ],
         }),
         createTabItem({
+          id: 'components/badge/index',
+          label: 'Badge',
+          items: [
+            {
+              id: 'components/badge/guide',
+              label: 'Usage',
+            },
+            {
+              id: 'components/badge/code',
+              label: 'Code',
+            },
+          ],
+        }),
+        createTabItem({
           id: 'components/pill/index',
           label: 'Pill',
           items: [
