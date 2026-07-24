@@ -46,21 +46,25 @@ Badges with type `label` replace the deprecated [pill](../pill). Use a standalon
 
 ## Options
 
+![Badge options](https://www.figma.com/design/wEptRgAezDU1z80Cn3eZ0o/iX-Documentation-illustrations?node-id=8161-118&t=OTo6nDmRwFCU9cVf-4)
+
 - **Placement:** Use inline (standalone) to show an entity’s status in a list. With an anchor, we typically use `top after` for notifications that need attention and `bottom after` for status on individual elements, e.g. user presence.
 - **Label:** Grows with content unless you set a max width via `--ix-badge-max-width`.
-- **Outline:** Use for lower visual emphasis. On status icons, outline selects the outline glyph.
+- **Outline:** Intended for lower visual emphasis on standalone badges. On status icons, outline selects the outline glyph.
 - **Border:** Add a high-contrast border on filled badges when the surface behind them is busy. Ignore border when outline is on.
 - **Offset:** Keep the indicator close to the anchor without covering it fully and without leaving the parent bounding box. Defaults are type-specific in the component.
 - **Pulse animation:** Use `enable-animation` only for immediate, urgent attention. Animation respects `prefers-reduced-motion`.
 - **Custom colors:** With the custom variant, set background and badge color together so contrast stays readable.
+- **Tooltip text**: Provide a specific text to be displayed as the tooltip or set the attribute without a specific value to display the badge's text content. The tooltip works only for standalone badges.
 
 ## Behavior in context
 
-- **Interaction:** Badges are read-only visual cues. Badges don’t trigger actions, and label text can still be selected.
-- **Overflow:** With a max width, label text truncates. We recommend short labels.
-- **Alignment:** Keep badges aligned to the edge of the anchor so the anchor remains recognizable.
+![Badge behavior](https://www.figma.com/design/wEptRgAezDU1z80Cn3eZ0o/iX-Documentation-illustrations?node-id=8173-214&t=OTo6nDmRwFCU9cVf-4)
+
+- **Interaction:** Badges are read-only visual cues with no interaction but label text can be selected.
+- **Overflow:** With a max width, label text truncates. We recommend short labels. Badges of type `counter` do not provide an overflow due to limited character count.
+- **Container and overlapping:** An attached badge overlaps the anchor at its edge without extending the parent’s bounding box. This placement leaves the anchor recognizable and its critical content, e.g. the icon that identifies a notification button, visible.
 - **Responsiveness:** In compact layouts, we usually prefer dot or status icon badges over long labels.
-- **Placement:** Keep the indicator inside the parent bounds and attach it only to the element it describes. Avoid covering critical anchor content, e.g. the icon that identifies a notification button.
 - **Notification context:** Attach badges to the control that opens or represents the related information, e.g. a notification or calendar icon. Use counters when the number helps users decide what to do, dots when only the presence of new information matters and status icons when users need to recognize a state or severity.
 - **Updates:** Keep badges synchronized with the underlying notification state. Update or remove the indicator when users read notifications or when the status changes, and don’t leave stale counts or statuses attached to an anchor.
 - **Accessibility**
