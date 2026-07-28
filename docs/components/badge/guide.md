@@ -20,10 +20,10 @@ Badges work **standalone** or **attached** to an anchor. As a general rule, we u
 
 Badge types define how the indicator appears:
 
-- **Counter:** Default type. Use for notifications that need attention, with integers up to two digits (`99+` for larger values). Short words are an exception, e.g. `new`.
-- **Label:** Use for status, e.g. Online or Offline in a list. Labels can include an icon that matches the semantic meaning of the color.
+- **Counter:** Default type. Use for notifications that need attention, with integers up to two digits ("99+" for larger values). Short words are an exception, e.g. "new".
+- **Label:** Use for a readable status, e.g. "Online" or "Offline" in a list.
 - **Dot:** Use for a compact notification that needs attention without a count.
-- **Status icon:** Use for notifications that need attention or to show a status with a semantic glyph.
+- **Status icon:** Use for notifications that need attention or showing statuses that are recognizable by icon alone.
 
 Semantic color variants communicate meaning, not decoration:
 
@@ -41,7 +41,7 @@ Semantic color variants communicate meaning, not decoration:
 We recommend matching icons on label badges to the meaning of the chosen color. Prefer outlined styles when you need lower visual emphasis on busy surfaces.
 
 :::info
-Badges with type `label` replace the deprecated [pill](../pill). Use a standalone label badge for existing pill use cases, e.g. compact statuses or categories. Attach it to an anchor only when the label supplements that specific element.
+Use standalone label badges to replace deprecated [pills](../pill) usages, e.g. compact statuses or categories.
 :::
 
 ## Options
@@ -49,13 +49,13 @@ Badges with type `label` replace the deprecated [pill](../pill). Use a standalon
 ![Badge options](https://www.figma.com/design/wEptRgAezDU1z80Cn3eZ0o/iX-Documentation-illustrations?node-id=8161-118&t=OTo6nDmRwFCU9cVf-4)
 
 - **Placement:** Use inline (standalone) to show an entity’s status in a list. With an anchor, we typically use `top after` for notifications that need attention and `bottom after` for status on individual elements, e.g. user presence.
-- **Label:** Grows with content unless you set a max width via `--ix-badge-max-width`.
+- **Label:** We usually show the full status name and use max-width to control lengthy labels.
 - **Outline:** Intended for lower visual emphasis on standalone badges. On status icons, outline selects the outline glyph.
 - **Border:** Add a high-contrast border on filled badges when the surface behind them is busy. Ignore border when outline is on.
 - **Offset:** Keep the indicator close to the anchor without covering it fully and without leaving the parent bounding box. Defaults are type-specific in the component.
-- **Pulse animation:** Use `enable-animation` only for immediate, urgent attention. Animation respects `prefers-reduced-motion`.
+- **Pulse animation:** Use only for immediate, urgent attention. Note that it might not be visible with certain a11y browser configurations.
 - **Custom colors:** With the custom variant, set background and badge color together so contrast stays readable.
-- **Tooltip text**: Provide a specific text to be displayed as the tooltip or set the attribute without a specific value to display the badge's text content. The tooltip works only for standalone badges.
+- **Tooltip text**: For standalone badges, provide a specific text to be displayed as the tooltip or set the attribute without a specific value to display the badge's text content.
 
 ## Behavior in context
 
