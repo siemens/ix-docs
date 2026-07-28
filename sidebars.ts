@@ -952,6 +952,20 @@ const sidebars: SidebarsConfig = {
       label: 'System feedback and status',
       items: [
         createTabItem({
+          id: 'components/badge/index',
+          label: 'Badge',
+          items: [
+            {
+              id: 'components/badge/guide',
+              label: 'Usage',
+            },
+            {
+              id: 'components/badge/code',
+              label: 'Code',
+            },
+          ],
+        }),
+        createTabItem({
           id: 'components/empty-state/index',
           label: 'Empty state',
           items: [
@@ -999,20 +1013,6 @@ const sidebars: SidebarsConfig = {
             },
             {
               id: 'components/message-modal/code',
-              label: 'Code',
-            },
-          ],
-        }),
-        createTabItem({
-          id: 'components/badge/index',
-          label: 'Badge',
-          items: [
-            {
-              id: 'components/badge/guide',
-              label: 'Usage',
-            },
-            {
-              id: 'components/badge/code',
               label: 'Code',
             },
           ],
