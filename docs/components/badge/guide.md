@@ -55,7 +55,7 @@ Use standalone label badges to replace deprecated [pills](../pill) usages, e.g. 
 - **Outline:** Intended for lower visual emphasis on standalone badges. On status icons, outline selects the outline glyph.
 - **Border:** Add a high-contrast border on filled badges when the surface behind them is busy. Not applicable to outline badges.
 - **Offset:** Keep the indicator close to the anchor without covering it fully and without leaving the parent's visual bounding box, e.g. round elements like avatars need larger negative offsets.
-- **Pulse animation:** Use only for immediate, urgent attention. Note that it might not be visible with certain a11y browser configurations.
+- **Pulse animation:** Use only for immediate, urgent attention. It loops continuously until explicitly disabled. Note that certain a11y browser configurations might prevent it from being visible.
 - **Custom colors:** With the custom variant, set background and badge color together so contrast stays readable.
 - **Tooltip text**: For standalone badges, provide a specific text to be displayed as the tooltip or set the attribute without a specific value to display the badge's text content.
 
@@ -72,21 +72,19 @@ Use standalone label badges to replace deprecated [pills](../pill) usages, e.g. 
 
 ## States
 
-Badges are read-only. They don't have hover, active, or disabled states, but support text selection. If enabled, badges are pulsing until the application disables them.
+Badges are read-only. They don't have hover, active, or disabled states, but support text selection.
 
 ## Dos and Don’ts
 
 <div class="dos-and-donts">
   <div class="dos">
     <ul aria-label="Recommended practices">
-      <li>Do keep counter labels to integers with at most two digits, using 99+ when needed</li>
-      <li>Do attach badges to the control that opens or represents the related information</li>
+      <li>Do keep counter labels to integers with at most two digits, using 99+ when needed, or short words e.g. "new"</li>
       <li>Do prefer dot or status icon badges over long labels in compact layouts</li>
-      <li>Do keep badges synchronized with the underlying notification state</li>
+      <li>Do keep badges synchronized with the underlying notification state, e.g. update or remove them when users read notifications</li>
       <li>Do include the badge meaning in the accessible name of its anchor</li>
       <li>Do announce meaningful dynamic updates without announcing every routine count change</li>
       <li>Do keep the badge inside the parent and leave enough of the anchor visible</li>
-      <li>Keep badges synchronized with the underlying notification state. Update or remove the indicator when users read notifications or when the status changes, and don’t leave stale counts or statuses attached to an anchor.</li>
     </ul>
   </div>
   <div class="donts">
