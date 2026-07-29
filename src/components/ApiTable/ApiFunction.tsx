@@ -62,10 +62,10 @@ function ApiFunction({
                   'api-row border-solid border-0 border-b border-[var(--theme-color-soft-bdr)]'
                 )}
               >
-                <div className="px-8 py-4 font-bold w-auto min-w-[150px] border-solid border-0 border-r border-[var(--theme-color-soft-bdr)]">
+                <div className="px-8 py-4 font-bold w-auto border-solid border-0 border-r border-[var(--theme-color-soft-bdr)] break-words">
                   Description
                 </div>
-                <div className="w-auto p-4 items-center">{children}</div>
+                <div className="w-auto p-4 break-words">{children}</div>
               </div>
             )}
 
@@ -79,7 +79,7 @@ function ApiFunction({
                       'api-row border-solid border-0 border-b border-[var(--theme-color-soft-bdr)]'
                     )}
                   >
-                    <div className="px-8 py-4 font-bold w-auto min-w-[150px] border-solid border-0 border-r border-[var(--theme-color-soft-bdr)]">
+                    <div className="px-8 py-4 font-bold w-auto border-solid border-0 border-r border-[var(--theme-color-soft-bdr)]">
                       <div>{param.name}</div>
                       {param.optional && (
                         <div className="font-normal text-xs opacity-70">
@@ -113,7 +113,7 @@ function ApiFunction({
             )}
 
             <div className={clsx(styles.ApiTableText, 'api-row')}>
-              <div className="px-8 py-4 font-bold w-auto min-w-[150px] border-solid border-0 border-r border-[var(--theme-color-soft-bdr)]">
+              <div className="px-8 py-4 font-bold w-auto border-solid border-0 border-r border-[var(--theme-color-soft-bdr)]">
                 Returns
               </div>
               <div className="w-auto p-4 flex items-center">
