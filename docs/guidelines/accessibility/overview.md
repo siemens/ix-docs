@@ -143,7 +143,7 @@ Navigation aids help users find content and understand their location within you
 - Use headings properly (`<h1>` ... `<h6>`)
 - Provide descriptive page titles
 - Provide clear link text
-- Provide links to skip blocks
+- Provide links to skip repeated blocks. [Application](../../components/application/guide.md) includes a "Skip to main content" link by default.
 - Provide a search function
 - Reduce the use of text styles and decorations
 

@@ -18,6 +18,22 @@ The code snippet below shows an example of a combination of different components
 
 <ApplicationPlayground height="30rem" />
 
+## Skip link target
+
+`ix-application` includes a "Skip to main content" link with no configuration required. By default, it focuses the application's internal main region. The basic example above uses `skipLinkTargetId` to focus a specific content boundary instead:
+
+```html
+<ix-application skip-link-target-id="main-content">
+  <ix-application-header name="My Application"></ix-application-header>
+  <ix-menu>...</ix-menu>
+  <ix-content id="main-content">...</ix-content>
+</ix-application>
+```
+
+Pass the target as a bare ID, not as `#main-content` or another CSS selector. The target must be a unique, usable light-DOM descendant of the same `ix-application`. If it cannot be used, the component logs a warning and falls back to the internal main region.
+
+Use `i18nSkipToContent` to localize the link text. Set `disableSkipLink` only when an equivalent document-level bypass link is already available.
+
 ## Breakpoints
 
 <ApplicationBreakpointsPlayground height="30rem" />
