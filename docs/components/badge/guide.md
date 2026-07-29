@@ -20,7 +20,7 @@ Badges work **standalone** or **attached** to an anchor that represents the rela
 
 Badge types define how the indicator appears:
 
-- **Counter (default):** Use for notifications that need attention, with integers up to two digits ("99+" for larger values). Short words are an exception, e.g. "new".
+- **Counter (default):** Use for notifications that need attention, with integers up to two digits ( for larger values).
 - **Label:** Use for a readable status, e.g. "Online" or "Offline" in a list.
 - **Dot:** Use when only the presence of new information matters, e.g. for a compact notification that needs attention without a count.
 - **Status icon:** Use for showing statuses or notifications that are recognizable by icon alone.
@@ -55,7 +55,7 @@ Use standalone label badges to replace deprecated [pills](../pill) usages, e.g. 
 - **Outline:** Intended for lower visual emphasis on standalone badges. On status icons, outline selects the outline glyph.
 - **Border:** Add a high-contrast border on filled badges when the surface behind them is busy. Not applicable to outline badges.
 - **Offset:** Keep the indicator close to the anchor without covering it fully and without leaving the parent's visual bounding box, e.g. round elements like avatars need larger negative offsets.
-- **Pulse animation:** Use only for immediate, urgent attention. It loops continuously until explicitly disabled. Note that certain a11y browser configurations might prevent it from being visible.
+- **Pulse animation:** Use only for immediate, urgent attention. It loops until explicitly disabled. Note that `prefers-reduced-motion` settings might override this.
 - **Custom colors:** With the custom variant, set background and badge color together so contrast stays readable.
 - **Tooltip text**: For standalone badges, provide a specific text to be displayed as the tooltip or set the attribute without a specific value to display the badge's text content.
 
@@ -63,23 +63,22 @@ Use standalone label badges to replace deprecated [pills](../pill) usages, e.g. 
 
 ![Badge behavior](https://www.figma.com/design/wEptRgAezDU1z80Cn3eZ0o/iX-Documentation-illustrations?node-id=8173-214&t=OTo6nDmRwFCU9cVf-4)
 
-- **Overflow:** With a max width, label text truncates. Counter badges do not provide an overflow due to limited character count.
+- **Overflow:**
+  - Label badges: If a max-width is applied, label is truncated.
+  - Counter badges: If more than 2 digits are entered, label shows "99+".
 - **Container and overlapping:** An attached badge overlaps the anchor at its edge without extending the parent’s bounding box. This placement leaves the anchor recognizable and its critical content, e.g. the icon that identifies a notification button, visible.
-- **Accessibility**
-   - **Accessible naming:** When badges are attached, include their meaning in the anchor’s accessible name, e.g. “Notifications, 3 unread”. Standalone dot and status icon badges need an accessible name because they don’t contain readable text.
-   - **Dynamic updates:** We recommend a polite live region when users need to hear an important badge update without moving focus. Reserve assertive announcements for critical conditions that require immediate attention, and don’t announce routine count changes.
-   - **Reading order:** Treat an attached badge and its anchor as one accessible unit. Avoid exposing the same information separately when this causes duplicate announcements.
+- **Screen readers:** Labels of standalone badges are read by screen readers. Attached badges are read as part of their anchor’s accessible name.
 
 ## States
 
-Badges are read-only. They don't have hover, active, or disabled states, but support text selection.
+Badges are read-only. They don't have hover, active or disabled states, but standalone badges support text selection.
 
 ## Dos and Don’ts
 
 <div class="dos-and-donts">
   <div class="dos">
     <ul aria-label="Recommended practices">
-      <li>Do keep counter labels to integers with at most two digits, using 99+ when needed, or short words e.g. "new"</li>
+      <li>Do provide an accessible name for dot and status icon badges by using `aria-label` on the anchor when attached, or on the badge when standalone</li>
       <li>Do prefer dot or status icon badges over long labels in compact layouts</li>
       <li>Do keep badges synchronized with the underlying notification state, e.g. update or remove them when users read notifications</li>
       <li>Do include the badge meaning in the accessible name of its anchor</li>
@@ -89,7 +88,7 @@ Badges are read-only. They don't have hover, active, or disabled states, but sup
   </div>
   <div class="donts">
     <ul aria-label="Practices to avoid">
-      <li>Don’t make badges interactive, use chips when users need to click or dismiss</li>
+      <li>Don’t make badges interactive, use [chips](../chip) when users need to click or dismiss</li>
       <li>Don’t use color alone to convey meaning without supporting text or ARIA on the host or anchor</li>
       <li>Don’t rely on pulse animation for long-running or low-priority hints</li>
       <li>Don’t place essential primary content only in a badge</li>

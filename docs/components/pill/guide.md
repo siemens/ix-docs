@@ -4,7 +4,7 @@ description: 'Usage guide for the ix-pill'
 ---
 # Pill - Usage
 
-:::info
+:::warning
 Pills are deprecated and removed in V7.0.0. We recommend using [badges](../badge/index.mdx) with type `label` instead, which support the same compact status and category use cases.
 :::
 
