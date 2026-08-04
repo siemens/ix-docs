@@ -12,7 +12,7 @@ description: 'The writing style guide provides support for content designers, wr
 
 ## Basics
 
-Dive into the fundamental principles of UX writing, where you'll learn how to create text that enhances user experience by being clear, concise, and user-friendly. This section lays the groundwork for all your UX writing endeavors. [Read more](./basics)
+Dive into the fundamental principles of UX writing, where you'll learn how to create text that enhances user experience by being clear, concise, and user-friendly. This section lays the groundwork for all your UX writing endeavors. [Read more](./basics/voice-and-tone)
 
 ## Grammar and vocabulary
 
@@ -47,6 +47,10 @@ Get tips for naming common app functions clearly and effectively. This subchapte
 ## Dialogs and buttons
 
 Discover guidelines for writing dialogs and button labels to ensure clear and actionable instructions. This section helps you create effective prompts and calls to action that enhance user interaction. [Read more](./dialogs-and-buttons)
+
+## Operational emails 
+
+Explore our guidelines and best practice examples for the most common operational emails in industrial applications. Whether you're managing access requests, assigning workflows, or communicating operational alarms and events, clear and consistent emails are essential. This section covers the UX writing fundamentals to keep operations running smoothly and users well-informed. [Read more](./operational-emails/overview-operational-emails/usage.mdx)
 
 ## Support and resources 
 

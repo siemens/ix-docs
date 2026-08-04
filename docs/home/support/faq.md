@@ -43,6 +43,19 @@ Read more on the topic in our development and UX guides on mobile development wi
 Our design system uses English as default, but it can be used with any language. All texts are fully customizable and therefore integrate nicely with third-party i18n solutions, which means your software can easily be adapted for users of different cultures and languages.
 </Accordion>
 
+<Accordion title="Why is my ECharts chart not displayed or sized incorrectly?" id="echarts-rendering" showBorderBottom>
+This usually happens when ECharts is initialized before its container has a valid size, for example inside collapsed panes, tabs, modals or hidden parts of an application frame. This affects React, Angular and plain HTML integrations equally.
+
+To avoid it:
+
+- Make sure `echarts.js` is loaded and the DOM container has a width and height when `echarts.init(...)` is called
+- Initialize the chart only after the container becomes visible, or set explicit dimensions (`style.width` and `style.height`) before init
+- Call `chart.resize()` after the container is shown or the layout changes
+- The same applies to wrappers such as `echarts-for-react`; for SSR, set `opts.width` and `opts.height` explicitly
+
+For details, see the official docs: [Apache ECharts FAQ](https://echarts.apache.org/en/faq.html) and [Apache ECharts API](https://echarts.apache.org/en/api.html#echarts).
+</Accordion>
+
 <div className="h2-faq">
 ## Contribution and development
 </div>
