@@ -399,6 +399,6 @@ dash-case (URLs, file names, CSS classes):
 
 ## Related
 
-- [Voice and tone](basics.md#tone-and-voice)
+- [Voice and tone](basics/voice-and-tone.md)
 - [UI terminology](menu-functions-and-ui-labels/ui-terminology.md)
 - [Punctuation](punctuation.md)
