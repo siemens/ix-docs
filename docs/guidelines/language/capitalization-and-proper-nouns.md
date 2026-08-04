@@ -11,7 +11,7 @@ description: 'Capitalization means using uppercase letters (A, B, C) instead of 
 
 ## General rules
 
-Use sentence case in your applications (capitalize only the first word of a sentence or heading, and any proper nouns). As the dominant trend in digital interfaces, we use sentence case to support readability, accessibility, consistency and localization.
+Use sentence case in your applications (capitalize only the first word of a sentence or heading, and any proper nouns). As the dominant trend in digital interfaces, we use sentence case to support readability, accessibility and consistency.
 
 <div className="dos-and-donts">
 <div className="dos">
@@ -129,15 +129,15 @@ Capitalize official service and portal names you have created and named within y
 </div>
 <div className="donts">
   <ul aria-label="Practices to avoid">
-    <li>Access resources on developer hub.</li>
     <li>Log in to the customer portal.</li>
+    <li>Access resources on developer hub.</li>
   </ul>
 </div>
 </div>
 
 ## Headings
 
-Use sentence case for all headings (including table headings). Capitalize only the first word and proper nouns. See punctuation guidelines [LINK].
+Use sentence case for all headings (including table headings). Capitalize only the first word and proper nouns. See [Punctuation](#).
 
 <div className="dos-and-donts">
 <div className="dos">
@@ -179,7 +179,7 @@ Use sentence case for button labels and UI elements. Capitalize only the first w
 </div>
 </div>
 
-Slashes do not create new sentences. Treat them like "and" or "or". Capitalize only the first word and proper nouns. See punctuation guidelines [LINK].
+Slashes do not create new sentences. Treat them like "and" or "or". Capitalize only the first word and proper nouns. See [Punctuation](#).
 
 <div className="dos-and-donts">
 <div className="dos">
@@ -245,15 +245,15 @@ Use capitalization for the first word of app functions and menu items when navig
 <div className="dos-and-donts">
 <div className="dos">
   <ul aria-label="Recommended practices">
-    <li>Go to Settings</li>
-    <li>Allocate users in User management</li>
+    <li>Open Settings</li>
+    <li>Allocate users in User management.</li>
   </ul>
 </div>
 <div className="donts">
   <ul aria-label="Practices to avoid">
     <li>Open settings</li>
-    <li>Allocate users in user management</li>
-    <li>Allocate users in User Management</li>
+    <li>Allocate users in user management.</li>
+    <li>Allocate users in User Management.</li>
   </ul>
 </div>
 </div>
@@ -292,30 +292,30 @@ Don't use periods for geographic abbreviations. Capitalize all country codes.
 
 ## Lists and bullet points
 
-Capitalize the first word of each list item. Use sentence case throughout. For punctuation in lists, see period/full stop [LINK].
+Capitalize the first word of each list item. Use sentence case throughout. For punctuation in lists, see [Punctuation: Period/full stop](#).
 
 <div className="dos-and-donts">
 <div className="dos">
   <ul aria-label="Recommended practices">
-    <li>Configure the database connection.</li>
-    <li>Import user data from CSV.</li>
-    <li>Set up authentication.</li>
-    <li>Generate reports in PDF format.</li>
+    <li>Configure the database connection.<br/>
+     &nbsp;&nbsp;&bull; Import user data from CSV.<br/>
+     &nbsp;&nbsp;&bull; Set up authentication.<br/>
+     &nbsp;&nbsp;&bull; Generate reports in PDF format.</li>
   </ul>
 </div>
 <div className="donts">
   <ul aria-label="Practices to avoid">
-    <li>configure the database connection.</li>
-    <li>Import User Data From CSV.</li>
-    <li>set up authentication.</li>
-    <li>Generate reports in pdf format.</li>
+    <li>configure the database connection.<br/>
+    &nbsp;&nbsp;&bull; Import User Data From CSV.<br/>
+    &nbsp;&nbsp;&bull; set up authentication.<br/>
+    &nbsp;&nbsp;&bull; Generate reports in pdf format.</li>
   </ul>
 </div>
 </div>
 
 ## Hyphenated words
 
-Capitalize only the first word of a hyphenated compound unless the second part is a proper noun.
+Capitalize only the first word of a hyphenated compound (nouns connected with hyphens) unless the second part is a proper noun.
 
 <div className="dos-and-donts">
 <div className="dos">
@@ -364,12 +364,16 @@ camelCase (variables, functions, methods):
 <div className="dos-and-donts">
 <div className="dos">
   <ul aria-label="Recommended practices">
-    <li><code>firstName</code>, <code>getUserData()</code>, <code>isValid</code></li>
+    <li><code>firstName</code></li>
+    <li><code>getUserData()</code></li>
+    <li><code>isValid</code></li>
   </ul>
 </div>
 <div className="donts">
   <ul aria-label="Practices to avoid">
-    <li><code>FirstName</code>, <code>GetUserData()</code>, <code>IsValid</code></li>
+    <li><code>FirstName</code></li>
+    <li><code>GetUserData()</code></li>
+    <li><code>IsValid</code></li>
   </ul>
 </div>
 </div>
@@ -379,12 +383,16 @@ dash-case (URLs, file names, CSS classes):
 <div className="dos-and-donts">
 <div className="dos">
   <ul aria-label="Recommended practices">
-    <li><code>user-profile.html</code>, <code>main-content</code>, <code>/api/user-settings</code></li>
+    <li><code>user-profile.html</code></li>
+    <li><code>main-content</code></li>
+    <li><code>/api/user-settings</code></li>
   </ul>
 </div>
 <div className="donts">
   <ul aria-label="Practices to avoid">
-    <li><code>userProfile.html</code>, <code>mainContent</code>, <code>/api/userSettings</code></li>
+    <li><code>userProfile.html</code></li>
+    <li><code>mainContent</code></li>
+    <li><code>/api/userSettings</code></li>
   </ul>
 </div>
 </div>
