@@ -97,5 +97,5 @@ Avoid personal pronouns (you, we, our, etc.).
 
 ## Related
 
-* [Popover](../../../components/popover/guide.md)
+* [Popover](../../../components/popover-news/code.mdx)
 * [Tooltips](./tooltips.mdx)
