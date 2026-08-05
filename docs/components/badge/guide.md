@@ -20,14 +20,14 @@ Badges work **standalone** or **attached** to an anchor that represents the rela
 
 Badge types define how the indicator appears:
 
-- **Counter (default):** Use for notifications that need attention, with integers up to two digits ( for larger values).
+- **Counter (default):** Use for notifications that need attention, with integers up to two digits (for larger values).
 - **Label:** Use for a readable status, e.g. "Online" or "Offline" in a list.
 - **Dot:** Use when only the presence of new information matters, e.g. for a compact notification that needs attention without a count.
 - **Status icon:** Use for showing statuses or notifications that are recognizable by icon alone.
 
 ## Variants
 
-Semantic color variants communicate meaning, not decoration:
+Semantic color variants communicate clear meanings:
 
 ![Badge variants](https://www.figma.com/design/wEptRgAezDU1z80Cn3eZ0o/iX-Documentation-illustrations?node-id=8141-4066&t=v625YpvIn3UzoFuJ-4)
 
@@ -66,7 +66,7 @@ Use standalone label badges to replace deprecated [pills](../pill) usages, e.g. 
 - **Overflow:**
   - Label badges: If a max-width is applied, label is truncated.
   - Counter badges: If more than 2 digits are entered, label shows "99+".
-- **Container and overlapping:** An attached badge overlaps the anchor at its edge without extending the parent’s bounding box. This placement leaves the anchor recognizable and its critical content, e.g. the icon that identifies a notification button, visible.
+- **Container and overlapping:** An attached badge overlaps the anchor at its edge without extending the parent’s bounding box. This placement leaves the anchor recognizable and its critical content visible, e.g. the icon that identifies a notification button.
 - **Screen readers:** Labels of standalone badges are read by screen readers. Attached badges are read as part of their anchor’s accessible name.
 
 ## States
@@ -82,7 +82,7 @@ Badges are read-only. They don't have hover, active or disabled states, but stan
       <li>Do prefer dot or status icon badges over long labels in compact layouts</li>
       <li>Do keep badges synchronized with the underlying notification state, e.g. update or remove them when users read notifications</li>
       <li>Do include the badge meaning in the accessible name of its anchor</li>
-      <li>Do announce meaningful dynamic updates without announcing every routine count change</li>
+      <li>Do announce meaningful dynamic updates while considering cognitive load on the user</li>
       <li>Do keep the badge inside the parent and leave enough of the anchor visible</li>
     </ul>
   </div>
