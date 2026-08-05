@@ -145,6 +145,7 @@ export function DocItemTabItemLayout({ children }: Props): JSX.Element {
 
   // Resolve the parent tabs document relative to the current tab-item depth.
   const parentId = `${metadata.id.split('/').slice(0, -1).join('/')}/index`;
+  const parentId = metadata.id.split('/').slice(0, -1).join('/') + '/index';
   const parentDoc = useDocById(parentId);
   const isLocalizationTab = metadata.id.startsWith(
     'guidelines/language/support-and-resources/uxw-localization/'
