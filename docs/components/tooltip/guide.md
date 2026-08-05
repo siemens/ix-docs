@@ -21,7 +21,6 @@ Use tooltips to clarify the function of familiar icon-only controls or add brief
 - **Content:** Keep content brief and specific. Follow the [tooltip language guidance](uxwriting.mdx) for labels, sentence structure and punctuation.
 - **Interactive:** Enable this option when users need to move the pointer onto the tooltip, for example to select or copy its content.
 - **Spike direction:** Point the spike toward the trigger. Choose top, right, bottom or left based on the available space, or omit the spike when the relationship to the trigger is clear.
-- **Maximum width:** Tooltips have a maximum width of 292 px. Shorter tooltips fit their content instead of expanding to the maximum width.
 
 ## Behavior in context
 
@@ -30,7 +29,7 @@ Use tooltips to clarify the function of familiar icon-only controls or add brief
 - **Interaction:** Tooltips appear when users hover over or focus the trigger and disappear when the pointer or focus moves away. The component controls the delay for showing and hiding tooltips.
 - **Overflow:** Tooltips wrap content within their predefined maximum width of 292 px. Their height adapts to the content and has no predefined maximum.
 - **Placement:** The position depends on the trigger element, e.g. a button. By default, tooltips appear above the trigger. When there isn’t enough space for the selected placement, the position is corrected automatically.
-- **Responsiveness:** Touch devices don’t provide a persistent hover state. Tapping a trigger may open its tooltip and activate the trigger’s primary action at the same time.
+- **Responsiveness:** Touch devices don’t provide a persistent hover state. Tapping a trigger can open its tooltip and activate the trigger’s primary action at the same time.
 - **Accessibility:** The `aria-describedby` attribute connects tooltips to their triggers as supplementary descriptions. Accessible names remain separate. Disabled elements don’t receive keyboard focus, so their tooltips don’t appear through focus.
 
 ## States
