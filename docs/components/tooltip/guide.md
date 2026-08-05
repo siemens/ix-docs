@@ -20,7 +20,7 @@ Use tooltips to clarify the function of familiar icon-only controls or add brief
 - **Icon:** Add an icon only when it helps users identify the message type or subject faster.
 - **Content:** Keep content brief and specific. Follow the [tooltip language guidance](uxwriting.mdx) for labels, sentence structure and punctuation.
 - **Interactive:** Enable this option when users need to move the pointer onto the tooltip, for example to select or copy its content.
-- **Spike direction:** Point the spike toward the trigger. Choose top, right, bottom or left based on the available space, or omit the spike when the relationship to the trigger remains clear.
+- **Spike direction:** Point the spike toward the trigger. Choose top, right, bottom or left based on the available space, or omit the spike when the relationship to the trigger is clear.
 - **Maximum width:** Tooltips have a maximum width of 292 px. Shorter tooltips fit their content instead of expanding to the maximum width.
 
 ## Behavior in context
