@@ -57,7 +57,7 @@ Use standalone label badges to replace deprecated [pills](../pill) usages, e.g. 
 - **Offset:** Keep the indicator close to the anchor without covering it fully and without leaving the parent's visual bounding box, e.g. round elements like avatars need larger negative offsets.
 - **Pulse animation:** Use only for immediate, urgent attention. It loops until explicitly disabled. Note that `prefers-reduced-motion` settings might override this.
 - **Custom colors:** With the custom variant, set background and badge color together so contrast stays readable.
-- **Tooltip text**: For standalone badges, provide a specific text to be displayed as the tooltip or set the attribute without a specific value to display the badge's text content.
+- **Tooltip text**: For standalone badges, provide a specific text to be displayed as the [tooltip](../tooltip) or set the attribute without a specific value to display the badge's text content (see [writing guide](../../guidelines/language/messaging/tooltips)).
 
 ## Behavior in context
 
