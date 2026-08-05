@@ -58,11 +58,6 @@ type ColorContextType = Color & {
   children: (Color & { rawName: string })[];
 };
 
-type ThemeContextType = {
-  currentTheme: string;
-  isDarkColor: boolean;
-};
-
 const ColorContext = createContext<ColorContextType>({
   name: '',
   hex: '',

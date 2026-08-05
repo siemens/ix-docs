@@ -31,13 +31,12 @@ export default function Logo(props: Readonly<Props>): ReactNode {
       {...propsRest}
       {...(logo?.target && { target: logo.target })}
     >
-      <div className={'navbar__logo'}>
-        <SiemensLogo
-          id="logo"
-          width={logo.width}
-          height={logo.height}
-          aria-label={alt}
-        />
+      <div
+        className={'navbar__logo'}
+        aria-label={alt}
+        style={{ width: logo?.width, height: logo?.height }}
+      >
+        <SiemensLogo />
       </div>
       {navbarTitle != null && <b className={titleClassName}>{navbarTitle}</b>}
     </Link>

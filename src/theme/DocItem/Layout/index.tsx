@@ -115,10 +115,15 @@ export function DocItemTabsLayout(): JSX.Element {
   const history = useHistory();
   const { metadata } = useDoc();
 
-  const sidebar = useCurrentSidebarCategory() as { items: { href: string }[] };
+  let sidebar: { items?: { href: string }[] } | undefined;
+  try {
+    sidebar = useCurrentSidebarCategory() as { items?: { href: string }[] };
+  } catch {
+    sidebar = undefined;
+  }
 
   useEffect(() => {
-    if (sidebar.items.length > 0) {
+    if (sidebar?.items && sidebar.items.length > 0) {
       history.push(sidebar.items[0].href);
     }
   }, [sidebar]);
@@ -145,7 +150,6 @@ export function DocItemTabItemLayout({ children }: Props): JSX.Element {
 
   // Resolve the parent tabs document relative to the current tab-item depth.
   const parentId = `${metadata.id.split('/').slice(0, -1).join('/')}/index`;
-  const parentId = metadata.id.split('/').slice(0, -1).join('/') + '/index';
   const parentDoc = useDocById(parentId);
   const isLocalizationTab = metadata.id.startsWith(
     'guidelines/language/support-and-resources/uxw-localization/'
@@ -153,13 +157,13 @@ export function DocItemTabItemLayout({ children }: Props): JSX.Element {
 
   const localizationTabs: PropSidebarItemLink[] = [
     {
-      type: 'doc',
+      type: 'link',
       docId: 'guidelines/language/support-and-resources/uxw-localization/overview',
       href: '/docs/guidelines/language/support-and-resources/uxw-localization/overview',
       label: 'Localization',
     },
     {
-      type: 'doc',
+      type: 'link',
       docId: 'guidelines/language/support-and-resources/uxw-localization/writing',
       href: '/docs/guidelines/language/support-and-resources/uxw-localization/writing',
       label: 'Writing',
