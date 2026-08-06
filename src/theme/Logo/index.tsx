@@ -16,10 +16,12 @@ export default function Logo(props: Readonly<Props>): ReactNode {
 
   const { imageClassName, titleClassName, ...propsRest } = props;
   const logoLink = useBaseUrl(logo?.href || '/');
+  const hasNavbarTitle =
+    typeof navbarTitle === 'string' ? navbarTitle.trim().length > 0 : navbarTitle != null;
 
   // If visible title is shown, fallback alt text should be
   // an empty string to mark the logo as decorative.
-  const fallbackAlt = navbarTitle ? '' : title;
+  const fallbackAlt = hasNavbarTitle ? '' : title;
 
   // Use logo alt text if provided (including empty string),
   // and provide a sensible fallback otherwise.
@@ -28,12 +30,12 @@ export default function Logo(props: Readonly<Props>): ReactNode {
   return (
     <Link
       to={logoLink}
+      aria-label={hasNavbarTitle ? undefined : alt}
       {...propsRest}
       {...(logo?.target && { target: logo.target })}
     >
       <div
         className={'navbar__logo'}
-        aria-label={alt}
         style={{ width: logo?.width, height: logo?.height }}
       >
         <SiemensLogo />
