@@ -9,7 +9,7 @@ Application is a technical and infrastructural component without a direct visual
 
 The component itself is designed with modularity in mind. It can be seamlessly integrated with other components such as [application header](/docs/components/application-header/guide.md), [application menu](/docs/components/application-menu/guide.md), [content](/docs/components/content/guide.md) and more. This modular approach allows you to mix and match components based on your specific application requirements, providing flexibility and customization options.
 
-The application component primarily manages layout and application-wide behavior.
+It's important to note that the application component focuses solely on layouting and does not dictate visual design.
 
 ## Application example
 
@@ -18,23 +18,6 @@ The application component primarily manages layout and application-wide behavior
 1. [Application header](/docs/components/application-header/guide)
 2. [Application menu](/docs/components/application-menu/guide)
 3. [Content](/docs/components/content/guide)
-
-## Skip link
-
-Application provides a "Skip to main content" link by default. It is the first focusable element within the application shell, remains visually hidden until it receives keyboard focus and lets users bypass repeated content such as the header, search and navigation. Activating the link moves keyboard focus to the destination and scrolls it to the beginning without changing the URL fragment.
-
-Without additional configuration, the link targets the internal main region. Use `skipLinkTargetId` to target a more specific content boundary:
-
-- Provide a bare element ID, without `#` or other CSS selector syntax.
-- The ID must identify one visible, usable light-DOM descendant of the same `ix-application`.
-- Application makes a non-interactive destination programmatically focusable when necessary and preserves an existing `tabindex`.
-- An invalid target produces a console warning and falls back to the internal main region.
-
-The built-in link is the first focusable element owned by `ix-application`. Applications remain responsible for any focusable content rendered before the component in the document.
-
-Use `i18nSkipToContent` to localize the link text. An empty value falls back to "Skip to main content" so the link always has an accessible name.
-
-Only set `disableSkipLink` to `true` when the page provides an equivalent bypass mechanism outside `ix-application`. Disabling it without an alternative makes repeated application-shell content harder to bypass and can cause a WCAG 2.2 [Bypass Blocks](https://www.w3.org/WAI/WCAG22/Understanding/bypass-blocks.html) failure.
 
 ## Application switch
 
@@ -57,9 +40,6 @@ We typically avoid opening the same application in multiple browser tabs. Instea
 ## Options
 
 - **forceBreakpoint:** Forces a specific breakpoint "lg", "md" or "sm". This can be used to force a specific application behavior that ignores the current browser viewport width.
-- **skipLinkTargetId:** Sets the ID of a custom light-DOM destination for the built-in skip link.
-- **i18nSkipToContent:** Localizes the built-in skip link text.
-- **disableSkipLink:** Disables the built-in skip link when an equivalent bypass mechanism is available.
 
 ## Behavior
 
@@ -68,9 +48,3 @@ The application component automatically adapts, by default, to three breakpoints
 - "lg" for large screens (min-width 62em)
 - "md" for medium screens (min-width 48em)
 - "sm" for small screens (min-width 36em)
-
-## Related
-
-- [Accessibility](../../guidelines/accessibility)
-- [WCAG 2.2: Bypass Blocks](https://www.w3.org/WAI/WCAG22/Understanding/bypass-blocks.html)
-- [W3C Technique G1: Adding a link to main content](https://www.w3.org/WAI/WCAG22/Techniques/general/G1)
