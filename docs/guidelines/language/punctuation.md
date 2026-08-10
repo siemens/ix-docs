@@ -124,7 +124,7 @@ Use to introduce lists, options, descriptions, settings and preferences to visua
 <div class="dos-and-donts">
   <div class="dos">
     <ul aria-label="Recommended practices">
-      <li>Username <span style="color: blue;">Felix</span> (color to distinguish fields)</li>
+      <li>Username <span style={{color: 'blue'}}>Felix</span> (color to distinguish fields)</li>
       <li>Username: Felix (colon to visually separate label and field)</li>
     </ul>
   </div>
