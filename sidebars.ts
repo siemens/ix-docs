@@ -1064,6 +1064,10 @@ const sidebars: SidebarsConfig = {
           label: 'Tooltip',
           items: [
             {
+              id: 'components/tooltip/guide',
+              label: 'Usage',
+            },
+            {
               id: 'components/tooltip/code',
               label: 'Code',
             },
