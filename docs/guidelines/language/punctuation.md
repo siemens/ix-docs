@@ -103,7 +103,7 @@ Note: If your design system adds asterisks automatically via attributes, remove 
 
 Use bullet points to break down complex information into scannable, digestible chunks. They help users quickly identify key points and reduce cognitive load. Use consistent bullet styles within a single list or section.
 
-For unordered lists, use round bullets (•). For ordered lists, use numbers followed by a period (1.). Maintain parallel structure. If one item is a complete sentence, make all items complete sentences.
+For unordered lists, use round bullets (•). For ordered lists, use numbers followed by a period (1.). Maintain parallel structure; if one item is a complete sentence, make all items complete sentences.
 
 Add one space after the bullet point or number before the text begins.
 
@@ -124,7 +124,7 @@ Use to introduce lists, options, descriptions, settings and preferences to visua
 <div class="dos-and-donts">
   <div class="dos">
     <ul aria-label="Recommended practices">
-      <li>Username <span style={{color: 'blue'}}>Felix</span> (color to distinguish fields)</li>
+      <li>Username <span style={{color: 'yellow'}}>Felix</span> (color to distinguish fields)</li>
       <li>Username: Felix (colon to visually separate label and field)</li>
     </ul>
   </div>
@@ -180,7 +180,7 @@ Use ellipsis with transitional text to inform users that something is happening 
   </div>
 </div>
 
-They are also sometimes used to show that a new dialog box will open within the UI, e.g. “Print…” or “Save as…”, but as this comes with consistency challenges it is slowly being removed from UX writing guidelines.
+They are also sometimes used to show that a new dialog box will open within the UI, e.g. "Print…" or "Save as…", but as this comes with consistency challenges it is slowly being removed from UX writing guidelines.
 
 <div class="dos-and-donts">
   <div class="dos">
@@ -538,7 +538,7 @@ Use semi-colons to separate key application features to enhance and contrast the
       <li>The system is offline; check your connection.</li>
       <li>Our app offers real-time plant updates; personalized dashboards; and interactive maps.</li>
       <li>Our app offers real-time plant updates, personalized dashboards and interactive maps.</li>
-      <li>1. Calibrate sensors; 2. Set operating parameters; 3. Start the process.</li>
+      <li>1. Calibrate sensors;<br/>2. Set operating parameters;<br/>3. Start the process.</li>
     </ul>
   </div>
   <div class="donts">
@@ -622,7 +622,7 @@ Spaces after punctuation: Use only one space after periods (full stops), commas,
   </div>
   <div class="donts">
     <ul aria-label="Practices to avoid">
-      <li>Welcome to your new app experience.    Log in to see more.</li>
+      <li>Welcome to your new app experience. &nbsp;&nbsp;&nbsp;Log in to see more.</li>
     </ul>
   </div>
 </div>
