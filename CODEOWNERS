@@ -1,0 +1,6 @@
+* @siemens-ix-owners
+
+/src/ @siemens-ix-developers
+
+/docs/ @siemens-ix-content @siemens-ix-developers
+/blog/ @siemens-ix-content @siemens-ix-developers

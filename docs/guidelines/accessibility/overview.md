@@ -176,7 +176,7 @@ Make text content easy to read and understand. Implement straightforward languag
 - Use simple, clear language
 - Provide definitions for complex terms
 
-**Tip**: Our [writing guidelines](../../guidelines/language/basics.md) help make applications readable and understandable.
+**Tip**: Our [writing guidelines](../../guidelines/language/writing-style-guide-getting-started.md) help make applications readable and understandable.
 
 ![Wording example](https://www.figma.com/design/wEptRgAezDU1z80Cn3eZ0o/iX-Documentation-illustrations?node-id=5402-18180&t=JzJxfVEhA9XmeCtN-4)
 
