@@ -18,18 +18,34 @@ reviews:
         - Use suggestion-oriented phrasing: "we recommend", "we usually", "as a general rule", "typically at Siemens, we", "in our applications, we".
         - Use active voice and present simple tense.
         - Use "don't", "isn't", "haven't", "aren't" instead of their expanded forms.
-        - Use "e.g." instead of "for example", "such as", or "like".
+        - Use "e.g." instead of "for example", "such as", or "like". When there are multiple examples within paragraphs, "such as" is acceptable to avoid seeing "e.g." repeatedly. 
         - Use "changelog" (one word), "among other things" (not "inter alia").
         - Refer to components in the plural (e.g., buttons, breadcrumbs), except application frame components that only appear once.
         - Capitalize only proper nouns; component names are lowercase (e.g., "button", not "Button"). The only exception is "About and legal information".
         - Talk about "users" (plural), not "the user".
+        - Remove AI writing patterns: 
+
+1. Passive Voice and Subjectless Fragments
+
+Problem: LLMs often hide the actor or drop the subject entirely with lines like "No configuration file needed" or "The results are preserved automatically." Rewrite these when active voice makes the sentence clearer and more direct. 
+
+Before: No configuration file needed. The results are preserved automatically. After: You do not need a configuration file. The system preserves the results 
+
+2. Remove em dashes (and en dashes): Replace each one, in rough order of preference: a period (start a new sentence), a comma (a tight aside), a colon (introducing an explanation), parentheses (a true aside), or restructure the sentence. Also catch spaced em dashes (—) and double hyphens (--) used the same way. 
+
+3. Never use title case in headings
+Problem: AI chatbots capitalize all main words in headings.
+Before: Strategic Negotiations And Global Partnerships
+After: Strategic negotiations and global partnerships
+
+        
 
         Formatting:
         - Use sentence case for all headings and body text.
         - Avoid the Oxford comma before "and"/"or" unless the sentence would be ambiguous without it; if ambiguous, simplify the sentence instead.
         - Apostrophe: use ' (U+2019), not '.
         - Ellipses: use … (U+2026), not three full stops.
-        - Opening quotation mark: use " (U+201C). Closing quotation mark: use " (U+201D).
+        - Opening quotation mark: use " (U+201C). Closing quotation mark: use " (U+201D). Note that ChatGPT uses curly quotes (“...”) instead of straight quotes ("...") and these should be doublechecked. Before: He said “the project is on track” but others disagreed. After: He said "the project is on track" but others disagreed.
         - No trailing whitespace at the end of lines.
 
         General quality:
