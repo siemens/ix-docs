@@ -54,10 +54,8 @@ function getSiemensSansFontFaceHeadTag() {
   };
 }
 const customCss = [
-  './node_modules/@siemens/ix/dist/siemens-ix/theme/classic-dark.css',
-  './node_modules/@siemens/ix/dist/siemens-ix/theme/classic-light.css',
+  require.resolve('@siemens/ix/css/default.css'),
   './src/scss/custom.scss',
-  './node_modules/@siemens/ix/scss/misc/_common-variables.scss',
 ];
 
 let withBrandTheme = false;
@@ -68,11 +66,9 @@ try {
   console.log('Found optionalDependency @siemens-ix/corporate-theme.');
   customCss.push(path);
   customCss.push('./src/scss/prod.scss');
-  customCss.push('./src/scss/classic-theme.scss');
   withBrandTheme = true;
 } catch (e) {
   console.warn('optionalDependency @siemens-ix/corporate-theme not found!');
-  customCss.push('./src/scss/classic-theme.scss');
 }
 
 const brokenLinks = 'throw';

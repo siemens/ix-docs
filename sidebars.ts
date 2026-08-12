@@ -66,6 +66,7 @@ const sidebars: SidebarsConfig = {
       className: 'doc-sidebar-item-bold',
       label: 'Migration and upgrade',
       items: [
+        'home/migration/6_0_0/index',
         'home/migration/5_0_0/index',
         'home/migration/4_0_0/index',
         'home/migration/3_0_0/index',
@@ -1346,6 +1347,7 @@ const sidebars: SidebarsConfig = {
     'styles/shadows',
     'styles/elevation',
     'styles/animation',
+    'styles/global-styles',
     {
       type: 'category',
       className: 'doc-sidebar-item-bold',

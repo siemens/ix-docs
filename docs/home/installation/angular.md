@@ -51,8 +51,10 @@ Install `@siemens/ix`, `@siemens/ix-angular` and `@siemens/ix-icons` using a pac
 Import the design system styling in your global stylesheet (e.g.: `src/styles.scss`):
 
 ```css
-@import '@siemens/ix/dist/siemens-ix/siemens-ix.css';
+@import '@siemens/ix/css/default.css';
 ```
+
+The default stylesheet includes the foundation styles and the Classic theme required by the components. It does not style native HTML elements or add global utility classes. See [Global styles](/docs/styles/global-styles) for optional reset, base, scrollbar, utility and legacy styles.
 
 Set the `data-ix-theme` attribute of the `<html>` tag to the theme of choice (e.g. `classic`) and the corresponding `data-ix-color-schema` attribute to the value `light`, `dark` or `system` to set the color scheme. `system` will automatically apply the color scheme of the users’ operating system.
 

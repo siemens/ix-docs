@@ -1,3 +1,4 @@
+import '@siemens/ix/css/default.css';
 import './styles/global.css';
 
 import React from 'react';

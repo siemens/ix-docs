@@ -38,7 +38,7 @@ Install `@siemens/ix`, `@siemens/ix-vue` and `@siemens/ix-icons` using a package
 ## Usage
 
 ```ts
-import '@siemens/ix/dist/siemens-ix/siemens-ix.css';
+import '@siemens/ix/css/default.css';
 
 import { createApp } from 'vue';
 import { ixPlugin } from '@siemens/ix-vue';
@@ -50,6 +50,8 @@ app.use(ixPlugin);
 
 app.mount('#root');
 ```
+
+The default stylesheet includes the foundation styles and the Classic theme required by the components. It does not style native HTML elements or add global utility classes. See [Global styles](/docs/styles/global-styles) for optional reset, base, scrollbar, utility and legacy styles.
 
 Set the `data-ix-theme` attribute of the `<html>` tag to the theme of choice (e.g. `classic`) and the corresponding `data-ix-color-schema` attribute to the value `light`, `dark` or `system` to set the color scheme. `system` will automatically apply the color scheme of the users’ operating system.
 

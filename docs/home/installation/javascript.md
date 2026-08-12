@@ -62,7 +62,7 @@ In the following section we will describe how you can build an application with 
 `main.js`
 
 ```javascript
-import '@siemens/ix/dist/siemens-ix/siemens-ix.css';
+import '@siemens/ix/css/default.css';
 import { defineCustomElements } from '@siemens/ix/loader';
 import { defineCustomElements as defineIxIconCustomElement } from '@siemens/ix-icons/loader';
 
@@ -71,3 +71,5 @@ import { defineCustomElements as defineIxIconCustomElement } from '@siemens/ix-i
   defineCustomElements();
 })();
 ```
+
+The default stylesheet includes the foundation styles and the Classic theme required by the components. It does not style native HTML elements or add global utility classes. See [Global styles](/docs/styles/global-styles) for optional reset, base, scrollbar, utility and legacy styles.
