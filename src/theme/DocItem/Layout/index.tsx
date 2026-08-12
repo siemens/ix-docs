@@ -115,10 +115,15 @@ export function DocItemTabsLayout(): JSX.Element {
   const history = useHistory();
   const { metadata } = useDoc();
 
-  const sidebar = useCurrentSidebarCategory() as { items: { href: string }[] };
+  let sidebar: { items?: { href: string }[] } | undefined;
+  try {
+    sidebar = useCurrentSidebarCategory() as { items?: { href: string }[] };
+  } catch {
+    sidebar = undefined;
+  }
 
   useEffect(() => {
-    if (sidebar.items.length > 0) {
+    if (sidebar?.items && sidebar.items.length > 0) {
       history.push(sidebar.items[0].href);
     }
   }, [sidebar]);
@@ -136,10 +141,21 @@ export function DocItemTabItemLayout({ children }: Props): JSX.Element {
   const doc = useDoc();
   const { metadata } = doc;
 
-  const sidebar = useCurrentSidebarCategory();
+  let sidebar: { items?: PropSidebarItemLink[] } | undefined;
+  try {
+    sidebar = useCurrentSidebarCategory() as { items?: PropSidebarItemLink[] };
+  } catch {
+    sidebar = undefined;
+  }
 
-  const parentId = metadata.id.split('/').slice(0, -1).join('/') + '/index';
+  // Resolve the parent tabs document relative to the current tab-item depth.
+  const parentId = `${metadata.id.split('/').slice(0, -1).join('/')}/index`;
   const parentDoc = useDocById(parentId);
+
+  const tabs =
+    sidebar?.items && sidebar.items.length > 0
+      ? (sidebar.items as PropSidebarItemLink[])
+      : [];
 
   return (
     <>
@@ -148,7 +164,7 @@ export function DocItemTabItemLayout({ children }: Props): JSX.Element {
         title={parentDoc.title}
         description={parentDoc.description}
         frontMatter={metadata.frontMatter}
-        tabs={sidebar.items as PropSidebarItemLink[]}
+        tabs={tabs}
       />
       <div className={styles.Row}>
         <div className={styles.docItemContainer}>
