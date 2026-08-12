@@ -83,10 +83,20 @@ Cards have four states: Default, hover, active and focused.
 
 ## Dos and Don’ts
 
-- Do group cards in [card lists](../card-list) or [grids](../grid)
-- Do keep multiple cards equal in size
-- Don’t nest cards inside each other
-- Don’t use cards to collect user input
+<div class="dos-and-donts">
+  <div class="dos">
+    <ul aria-label="Recommended practices">
+      <li>Do group cards in [card lists](../card-list) or [grids](../grid)</li>
+      <li>Do keep multiple cards equal in size</li>
+    </ul>
+  </div>
+  <div class="donts">
+    <ul aria-label="Practices to avoid">
+      <li>Don’t nest cards inside each other</li>
+      <li>Don’t use cards to collect user input</li>
+    </ul>
+  </div>
+</div>
 
 ## Related
 

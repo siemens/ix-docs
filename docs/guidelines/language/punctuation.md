@@ -85,36 +85,36 @@ Always consider whether necessary
 
 - Numbers: Use No. as an abbreviation for number, no spacing between abbreviated No. and number: No.8
 
-<div className="dos-and-donts" markdown="true">
-<div className="dos" markdown="true">
-
-- 11am
-- Monday, January 12, 2021
-- €999.50
-- €2.5 million
-- $400,456.50
-- £320
-- 30 mm
-- 10 oz
-- 10-40%
-- No.7
-- Number 7
-
+<div className="dos-and-donts">
+<div className="dos">
+  <ul aria-label="Recommended practices">
+    <li>11am</li>
+    <li>Monday, January 12, 2021</li>
+    <li>€999.50</li>
+    <li>€2.5 million</li>
+    <li>$400,456.50</li>
+    <li>£320</li>
+    <li>30 mm</li>
+    <li>10 oz</li>
+    <li>10-40%</li>
+    <li>No.7</li>
+    <li>Number 7</li>
+  </ul>
 </div>
-<div className="donts" markdown="true">
-
-- 11 a.m.
-- Monday, 12 January 2021
-- €999,50
-- €2,5 million
-- $400.456,50
-- 320£
-- 30 mms
-- 10 oz.
-- 10–40%
-- #7
-- Num 7
-
+<div className="donts">
+  <ul aria-label="Practices to avoid">
+    <li>11 a.m.</li>
+    <li>Monday, 12 January 2021</li>
+    <li>€999,50</li>
+    <li>€2,5 million</li>
+    <li>$400.456,50</li>
+    <li>320£</li>
+    <li>30 mms</li>
+    <li>10 oz.</li>
+    <li>10–40%</li>
+    <li>#7</li>
+    <li>Num 7</li>
+  </ul>
 </div>
 </div>
 
@@ -130,22 +130,22 @@ Always consider whether necessary
 
 - Add a space before unit of measurement
 
-<div className="dos-and-donts" markdown="true">
-<div className="dos" markdown="true">
-
-- 50%
-- 11am
-- Tuesday: no data
-- Browse…
-
+<div className="dos-and-donts">
+<div className="dos">
+  <ul aria-label="Recommended practices">
+    <li>50%</li>
+    <li>11am</li>
+    <li>Tuesday: no data</li>
+    <li>Browse…</li>
+  </ul>
 </div>
-<div className="donts" markdown="true">
-
-- 50 %
-- 11 am
-- Tuesday: no data
-- Browse …
-
+<div className="donts">
+  <ul aria-label="Practices to avoid">
+    <li>50 %</li>
+    <li>11 am</li>
+    <li>Tuesday: no data</li>
+    <li>Browse …</li>
+  </ul>
 </div>
 </div>
 
@@ -161,25 +161,21 @@ Always consider whether necessary
 
 - Make lists parallel, i.e. all items / bullets have the same look, length, feel, punctuation, capitalization
 
-<div className="dos-and-donts" markdown="true">
+<div className="dos-and-donts">
 
-<div className="dos" markdown="true">
-
-  #### Activate comments within your smartphone to
-
-  - Write comments
-  - Respond to comments
-  - Approve work orders
-
+<div className="dos">
+  <ul aria-label="Recommended practices">
+    <li>Write comments</li>
+    <li>Respond to comments</li>
+    <li>Approve work orders</li>
+  </ul>
 </div>
 
-<div className="donts" markdown="true">
-
-  #### Activate comments within your smartphone to
-
-  - Write comments
-  - Respond to comments
-  - Approve work orders by adding your fingerprint to your user management section in your smartphone.
-
+<div className="donts">
+  <ul aria-label="Practices to avoid">
+    <li>Write comments</li>
+    <li>Respond to comments</li>
+    <li>Approve work orders by adding your fingerprint to your user management section in your smartphone.</li>
+  </ul>
 </div>
 </div>

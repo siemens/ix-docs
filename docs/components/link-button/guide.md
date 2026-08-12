@@ -41,6 +41,16 @@ Link buttons take five states: Default, hover, active, disabled and focused. On 
 
 ## Dos and Don’ts
 
-- Do use link buttons for navigation
-- Don’t use link buttons to indicate actions
-- Don’t place link buttons within a paragraph
+<div class="dos-and-donts">
+  <div class="dos">
+    <ul aria-label="Recommended practices">
+      <li>Do use link buttons for navigation</li>
+    </ul>
+  </div>
+  <div class="donts">
+    <ul aria-label="Practices to avoid">
+      <li>Don’t use link buttons to indicate actions</li>
+      <li>Don’t place link buttons within a paragraph</li>
+    </ul>
+  </div>
+</div>

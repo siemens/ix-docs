@@ -44,8 +44,18 @@ The navigation menu is an essential part of your application. It offers a way to
 The application menu has two states: collapsed and expanded. The appearance of the states varies between screen sizes.
 ## Dos and Don’ts
 
-- Do use icons in second-level navigation items when it helps users to better understand and recognize them
-- Do use a custom tooltip text if the label is so long that it gets truncated or needs additional context
-- Don’t mix menu items with and without icons within a second-level navigation category
-- Don’t place non-navigational items in the navigation section
-- Don’t place navigation items in the bottom section as items in the bottom section must not navigate away from the current context
+<div class="dos-and-donts">
+  <div class="dos">
+    <ul aria-label="Recommended practices">
+      <li>Do use icons in second-level navigation items when it helps users to better understand and recognize them</li>
+      <li>Do use a custom tooltip text if the label is so long that it gets truncated or needs additional context</li>
+    </ul>
+  </div>
+  <div class="donts">
+    <ul aria-label="Practices to avoid">
+      <li>Don’t mix menu items with and without icons within a second-level navigation category</li>
+      <li>Don’t place non-navigational items in the navigation section</li>
+      <li>Don’t place navigation items in the bottom section as items in the bottom section must not navigate away from the current context</li>
+    </ul>
+  </div>
+</div>

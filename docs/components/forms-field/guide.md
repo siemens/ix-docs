@@ -43,11 +43,21 @@ When a feedback tooltip is chosen over a message, the field shows a tooltip when
 
 ## Dos and Don’ts
 
-- Do use a label for every field
-- Do use a counter for fields with a character limit
-- Do use helper text to provide additional information or context about the field
-- Don’t use helper text as a replacement for clear labels
-- Don’t mix different variants of feedback text and tooltips
+<div class="dos-and-donts">
+  <div class="dos">
+    <ul aria-label="Recommended practices">
+      <li>Do use a label for every field</li>
+      <li>Do use a counter for fields with a character limit</li>
+      <li>Do use helper text to provide additional information or context about the field</li>
+    </ul>
+  </div>
+  <div class="donts">
+    <ul aria-label="Practices to avoid">
+      <li>Don’t use helper text as a replacement for clear labels</li>
+      <li>Don’t mix different variants of feedback text and tooltips</li>
+    </ul>
+  </div>
+</div>
 
 ## Related
 

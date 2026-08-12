@@ -33,9 +33,19 @@ Split buttons have five states: Default, hover, active, disabled and focused. St
 
 ## Dos and Don’ts
 
-- Do use split buttons when there is a frequent or most-important action
-- Don’t use split buttons for unrelated actions
-- Don’t duplicate the default option in the dropdown
+<div class="dos-and-donts">
+  <div class="dos">
+    <ul aria-label="Recommended practices">
+      <li>Do use split buttons when there is a frequent or most-important action</li>
+    </ul>
+  </div>
+  <div class="donts">
+    <ul aria-label="Practices to avoid">
+      <li>Don’t use split buttons for unrelated actions</li>
+      <li>Don’t duplicate the default option in the dropdown</li>
+    </ul>
+  </div>
+</div>
 
 ## Related
 

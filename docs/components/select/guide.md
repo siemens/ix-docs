@@ -60,12 +60,22 @@ The select field has five states: default, hover, focused, disabled and read-onl
 
 ## Dos and Don’ts
 
-- Do consider performance when loading an extensive list of items
-- Do use the select component when there is a finite list of items available to avoid manual input errors or duplicates
-- Do sort items logically, e.g. alphabetically or numerically
-- Don’t use selects for binary choices, like yes and no, use [radio buttons](../toggle) instead
-- Don’t use selects for navigational or search patterns, use [category filters](../expanding-search) instead
-- Don’t combine several data attributes in an item label, use [HTML tables](../html-grid) or [AG Grids](../grid) with a search functionality instead
+<div class="dos-and-donts">
+  <div class="dos">
+    <ul aria-label="Recommended practices">
+      <li>Do consider performance when loading an extensive list of items</li>
+      <li>Do use the select component when there is a finite list of items available to avoid manual input errors or duplicates</li>
+      <li>Do sort items logically, e.g. alphabetically or numerically</li>
+    </ul>
+  </div>
+  <div class="donts">
+    <ul aria-label="Practices to avoid">
+      <li>Don’t use selects for binary choices, like yes and no, use [radio buttons](../radio) instead</li>
+      <li>Don’t use selects for navigational or search patterns, use [category filters](../expanding-search) instead</li>
+      <li>Don’t combine several data attributes in an item label, use [HTML tables](../html-grid) or [AG Grids](../grid) with a search functionality instead</li>
+    </ul>
+  </div>
+</div>
 
 ![Don’t combine data attributes](https://www.figma.com/design/wEptRgAezDU1z80Cn3eZ0o/iX-Pattern-Illustrations?node-id=3978-800&t=MWpyPDZDK5B531n9-4)
 
@@ -77,5 +87,4 @@ The select field has five states: default, hover, focused, disabled and read-onl
 - [Input](../input)
 - [Radio button](../radio)
 - [Checkbox](../checkbox)
-- [Toggle](../toggle)
 - [Date input](../input-date)

@@ -31,7 +31,17 @@ This chatbot is less formal, more conversational and would be found within more 
 
 ## Dos and Don’ts
 
-- Do keep your greeting short and simple  
--	Do check every word matches your brand  
--	Don’t add a list of bullet points explaining what the chatbot can do   
--	Don’t use slang or idiomatic language in your greeting 
+<div class="dos-and-donts">
+  <div class="dos">
+    <ul aria-label="Recommended practices">
+      <li>Do keep your greeting short and simple</li>
+      <li>Do check every word matches your brand</li>
+    </ul>
+  </div>
+  <div class="donts">
+    <ul aria-label="Practices to avoid">
+      <li>Don’t add a list of bullet points explaining what the chatbot can do</li>
+      <li>Don’t use slang or idiomatic language in your greeting</li>
+    </ul>
+  </div>
+</div>

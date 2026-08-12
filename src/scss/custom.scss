@@ -185,8 +185,11 @@ ix-dropdown {
   * Custom styles for the Blog
   */
 
-.blog-wrapper .margin-bottom--xl {
+.blog-wrapper article.margin-bottom--xl {
   margin: 0rem 1rem 5rem !important;
+  background: var(--ifm-background-color);
+  padding: 24px 32px;
+  border-radius: var(--ifm-alert-border-radius);
 }
 
 .table-full-width {

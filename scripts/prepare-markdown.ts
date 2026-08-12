@@ -56,19 +56,19 @@ async function getDefaults(): Promise<BranchConfig> {
 
   if (
     !(
-      process.env.DOCS_BRANCH &&
-      process.env.DOCS_BRANCH_TYPE &&
-      process.env.DOCS_PR_NUMBER !== undefined
+      process.env.IX_REPO_BRANCH &&
+      process.env.IX_REPO_TYPE &&
+      process.env.IX_REPO_PR !== undefined
     )
   ) {
     throw new Error(
-      'DOCS_BRANCH, DOCS_BRANCH_TYPE and DOCS_PR_NUMBER environment variables are required in CI.',
+      'IX_REPO_BRANCH, IX_REPO_TYPE and IX_REPO_PR environment variables are required in CI.'
     );
   }
 
-  defaults.branch = process.env.DOCS_BRANCH;
-  defaults.branchType = process.env.DOCS_BRANCH_TYPE;
-  defaults.prNumber = process.env.DOCS_PR_NUMBER;
+  defaults.branch = process.env.IX_REPO_BRANCH;
+  defaults.branchType = process.env.IX_REPO_TYPE;
+  defaults.prNumber = process.env.IX_REPO_PR;
 
   return defaults;
 }
@@ -160,7 +160,7 @@ async function downloadLatestArtifact(branch: string) {
     .flatMap((run) => run.data.workflow_runs)
     .sort(
       (a, b) =>
-        new Date(b.created_at).getTime() - new Date(a.created_at).getTime(),
+        new Date(b.created_at).getTime() - new Date(a.created_at).getTime()
     );
 
   if (
@@ -173,7 +173,7 @@ async function downloadLatestArtifact(branch: string) {
     throw new Error(message);
   }
   const runId = runs.filter(
-    (run) => run.name === 'Build' || run.name === 'Pull Request',
+    (run) => run.name === 'Build' || run.name === 'Pull Request'
   )[0].id;
 
   // Get artifacts for the run
@@ -189,7 +189,7 @@ async function downloadLatestArtifact(branch: string) {
   }
 
   const artifact = artifactsData.artifacts.find((artifact) =>
-    artifact.name.startsWith('documentation-'),
+    artifact.name.startsWith('documentation-')
   );
 
   if (!artifact) {
@@ -198,7 +198,7 @@ async function downloadLatestArtifact(branch: string) {
 
   console.log(
     `Downloading artifact: ${artifact.name} (ID: ${artifact.id})`,
-    artifact,
+    artifact
   );
 
   // Download the artifact zip
