@@ -60,6 +60,11 @@ type BorderContextType = Border & {
   children: (Border & { rawName: string })[];
 };
 
+type ThemeContextType = {
+  currentTheme: string;
+  isDarkColor: boolean;
+};
+
 const BorderContext = createContext<BorderContextType>({
   name: '',
   width: '',

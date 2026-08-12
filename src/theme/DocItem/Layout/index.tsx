@@ -115,15 +115,10 @@ export function DocItemTabsLayout(): JSX.Element {
   const history = useHistory();
   const { metadata } = useDoc();
 
-  let sidebar: { items?: { href: string }[] } | undefined;
-  try {
-    sidebar = useCurrentSidebarCategory() as { items?: { href: string }[] };
-  } catch {
-    sidebar = undefined;
-  }
+  const sidebar = useCurrentSidebarCategory() as { items: { href: string }[] };
 
   useEffect(() => {
-    if (sidebar?.items && sidebar.items.length > 0) {
+    if (sidebar.items.length > 0) {
       history.push(sidebar.items[0].href);
     }
   }, [sidebar]);
@@ -141,41 +136,10 @@ export function DocItemTabItemLayout({ children }: Props): JSX.Element {
   const doc = useDoc();
   const { metadata } = doc;
 
-  let sidebar: { items?: PropSidebarItemLink[] } | undefined;
-  try {
-    sidebar = useCurrentSidebarCategory() as { items?: PropSidebarItemLink[] };
-  } catch {
-    sidebar = undefined;
-  }
+  const sidebar = useCurrentSidebarCategory();
 
-  // Resolve the parent tabs document relative to the current tab-item depth.
-  const parentId = `${metadata.id.split('/').slice(0, -1).join('/')}/index`;
+  const parentId = metadata.id.split('/').slice(0, -1).join('/') + '/index';
   const parentDoc = useDocById(parentId);
-  const isLocalizationTab = metadata.id.startsWith(
-    'guidelines/language/support-and-resources/uxw-localization/'
-  );
-
-  const localizationTabs: PropSidebarItemLink[] = [
-    {
-      type: 'link',
-      docId: 'guidelines/language/support-and-resources/uxw-localization/overview',
-      href: '/docs/guidelines/language/support-and-resources/uxw-localization/overview',
-      label: 'Localization',
-    },
-    {
-      type: 'link',
-      docId: 'guidelines/language/support-and-resources/uxw-localization/writing',
-      href: '/docs/guidelines/language/support-and-resources/uxw-localization/writing',
-      label: 'Writing',
-    },
-  ];
-
-  const tabs =
-    sidebar?.items && sidebar.items.length > 0
-      ? (sidebar.items as PropSidebarItemLink[])
-      : isLocalizationTab
-        ? localizationTabs
-        : [];
 
   return (
     <>
@@ -184,7 +148,7 @@ export function DocItemTabItemLayout({ children }: Props): JSX.Element {
         title={parentDoc.title}
         description={parentDoc.description}
         frontMatter={metadata.frontMatter}
-        tabs={tabs}
+        tabs={sidebar.items as PropSidebarItemLink[]}
       />
       <div className={styles.Row}>
         <div className={styles.docItemContainer}>
