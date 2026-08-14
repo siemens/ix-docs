@@ -43,9 +43,9 @@ reviews:
         Formatting:
         - Use sentence case for all headings and body text.
         - Avoid the Oxford comma before "and"/"or" unless the sentence would be ambiguous without it; if ambiguous, simplify the sentence instead.
-        - Apostrophe: use ’ (U+2019), not '.
+        - Apostrophe: Use ' (U+0027), not ’ (U+2019).
         - Ellipses: use … (U+2026), not three full stops.
-        - Opening quotation mark: use " (U+201C). Closing quotation mark: use " (U+201D). Note that ChatGPT uses curly quotes (“...”) instead of straight quotes ("...") and these should be doublechecked. (Before: He said “the project is on track” but others disagreed. After: He said "the project is on track" but others disagreed.)
+        - Use straight double quotes " (U+0022) for both opening and closing marks. Do not use curly "smart" quotes “ (U+201C) or ” (U+201D). Note: Many text editors and AI tools (like ChatGPT) automatically convert straight quotes to curly quotes. Always double-check that these have been reverted to straight versions in the final UI string. Before: He said “the project is on track” but others disagreed. After: He said "the project is on track" but others disagreed.
         - No trailing whitespace at the end of lines.
 
         General quality:
