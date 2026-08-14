@@ -1036,6 +1036,12 @@ import { IxCol, IxLayoutGrid, IxRow, IxTypography } from '@siemens/ix-vue';
 | gap | { "Grid gap" } | gap | "12" \| "16" \| "24" \| "8" | '24' |
 | noMargin | { "The grid will not have any horizontal padding" } | no-margin | boolean | false |
 
+### Slot
+
+| Name | Description |
+| --- | --- |
+| default | { "Content arranged in the grid." } |
+
 ## API for ix-col
 
 ### Properties
@@ -1046,3 +1052,9 @@ import { IxCol, IxLayoutGrid, IxRow, IxTypography } from '@siemens/ix-vue';
 | sizeLg | { "Size of the column for lg screens" } | size-lg | "1" \| "10" \| "11" \| "12" \| "2" \| "3" \| "4" \| "5" \| "6" \| "7" \| "8" \| "9" \| "auto" \| undefined |
 | sizeMd | { "Size of the column for md screens" } | size-md | "1" \| "10" \| "11" \| "12" \| "2" \| "3" \| "4" \| "5" \| "6" \| "7" \| "8" \| "9" \| "auto" \| undefined |
 | sizeSm | { "Size of the column for sm screens" } | size-sm | "1" \| "10" \| "11" \| "12" \| "2" \| "3" \| "4" \| "5" \| "6" \| "7" \| "8" \| "9" \| "auto" \| undefined |
+
+### Slot
+
+| Name | Description |
+| --- | --- |
+| default | { "Column content." } |

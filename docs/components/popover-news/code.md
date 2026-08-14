@@ -167,3 +167,9 @@ import {
 | --- | --- | --- | --- |
 | closePopover | { "Popover closed" } | closePopover | void |
 | showMore | { "Show More button is pressed" } | showMore | MouseEvent |
+
+### Slot
+
+| Name | Description |
+| --- | --- |
+| default | { "News content." } |

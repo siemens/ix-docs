@@ -78,6 +78,16 @@ import { IxUpload } from '@siemens/ix-vue';
 | uploadFailedText | { "Will be used by state = UploadFileState.UPLOAD_FAILED" } | upload-failed-text | string | 'Upload failed. Please try again.' |
 | uploadSuccessText | { "Will be used by state = UploadFileState.UPLOAD_SUCCESSED" } | upload-success-text | string | 'Upload successful' |
 
+### Methods
+
+#### setFilesToUpload
+
+```ts
+setFilesToUpload(obj: any): Promise&lt;void&gt;;
+```
+
+{ "Set files" }
+
 ### Events
 
 | Name | Description | Event | Detail |

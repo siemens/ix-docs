@@ -1728,3 +1728,9 @@ ix-icon-button {
 | target | { "Specifies where to open the linked document when href is provided." } | target | "_blank" \| "_parent" \| "_self" \| "_top" \| undefined | '_self' |
 | type | { "Type of the button" } | type | "button" \| "submit" | 'button' |
 | variant | { "Button variant" } | variant | "danger-primary" \| "danger-secondary" \| "danger-tertiary" \| "primary" \| "secondary" \| "subtle-primary" \| "subtle-secondary" \| "subtle-tertiary" \| "tertiary" | 'primary' |
+
+### Slot
+
+| Name | Description |
+| --- | --- |
+| default | { "Button label." } |

@@ -249,6 +249,16 @@ import { IxTimePicker } from '@siemens/ix-vue';
 | secondInterval | { "Interval for second selection." } | second-interval | number | 1 |
 | time | { "Selected time value.\n\nFormat has to match the `format` property." } | time | string \| undefined |  |
 
+### Methods
+
+#### getCurrentTime
+
+```ts
+getCurrentTime(): Promise&lt;string | undefined&gt;;
+```
+
+{ "Get the current time based on the wanted format" }
+
 ### Events
 
 | Name | Description | Event | Detail |

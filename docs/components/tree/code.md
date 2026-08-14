@@ -693,6 +693,24 @@ onMounted(() => {
 | root | { "Initial root element will not be rendered" } | root | string | 'root' |
 | toggleOnItemClick | { "Enable to toggle items by click on the item" } | toggle-on-item-click | boolean \| undefined |  |
 
+### Methods
+
+#### markItemsAsDirty
+
+```ts
+markItemsAsDirty(): Promise&lt;void&gt;;
+```
+
+{ "Mark items as dirty.\n\nThis will force the list to re-render the items with the given ids." }
+
+#### refreshTree
+
+```ts
+refreshTree(): Promise&lt;void&gt;;
+```
+
+{ "Refresh the list.\n\nThis will re-render the list with the current model and context." }
+
 ### Events
 
 | Name | Description | Event | Detail |
@@ -701,6 +719,12 @@ onMounted(() => {
 | nodeClicked | { "Node clicked event" } | nodeClicked | string |
 | nodeRemoved | { "Emits removed nodes" } | nodeRemoved | any |
 | nodeToggled | { "Node toggled event" } | nodeToggled | { id: string; isExpanded: boolean; } |
+
+### Slot
+
+| Name | Description |
+| --- | --- |
+| default | { "Tree items." } |
 
 ## API for ix-tree-item
 
@@ -720,3 +744,9 @@ onMounted(() => {
 | --- | --- | --- | --- |
 | itemClick | { "Click on item not on the expand/collapse icon" } | itemClick | void |
 | toggle | { "Expand/Collapsed toggled" } | toggle | void |
+
+### Slot
+
+| Name | Description |
+| --- | --- |
+| default | { "Tree item content and nested items." } |

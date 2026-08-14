@@ -203,6 +203,7 @@ Enhance the interactivity of your application-header by placing the avatar compo
 | Name | Description |
 | --- | --- |
 | default | { "Place items on the right side of the header. If the screen size is small, the items will be shown inside a dropdown." } |
+| ix-application-header-avatar | { "Place an avatar at the end of the header." } |
 | logo | { "Place a company logo inside the header. Alternatively the companyLogo property can be set." } |
 | overflow | { "Use this slot to display additional items that do not fit in the default or secondary slot." } |
 | secondary | { "Place additional items inside the header. They will appear after logo and name. If the screen size is small, the items will be shown inside a dropdown." } |

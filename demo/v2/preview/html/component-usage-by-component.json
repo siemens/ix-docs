@@ -66,7 +66,7 @@
     "/src/preview-examples/action-card.html"
   ],
   "ix-icon": [
-    "/home/runner/work/ix/ix/node_modules/.pnpm/@siemens+ix-icons@3.4.0/node_modules/@siemens/ix-icons/dist/esm/index.js",
+    "/home/runner/work/ix/ix/node_modules/.pnpm/@siemens+ix-icons@3.5.0/node_modules/@siemens/ix-icons/dist/esm/index.js",
     "/src/preview-examples/add-icons.html",
     "/src/preview-examples/card.html",
     "/src/preview-examples/date-input-with-slots.html",
@@ -160,9 +160,14 @@
   "ix-icon-button": [
     "/home/runner/work/ix/ix/packages/core/dist/esm/ix-select.entry.js",
     "/src/preview-examples/application-header.html",
+    "/src/preview-examples/badge.html",
     "/src/preview-examples/blind-header-actions.html",
     "/src/preview-examples/button-loading.html",
     "/src/preview-examples/button-with-icon.html",
+    "/src/preview-examples/chat-ai-message.html",
+    "/src/preview-examples/chat-input.html",
+    "/src/preview-examples/chat-user-message.html",
+    "/src/preview-examples/chat.html",
     "/src/preview-examples/content-header-no-back.html",
     "/src/preview-examples/custom-field.html",
     "/src/preview-examples/dropdown-quick-actions.html",
@@ -174,30 +179,15 @@
     "/src/preview-examples/datepicker-range.html",
     "/src/preview-examples/datepicker.html"
   ],
-  "ix-blind": [
-    "/src/preview-examples/blind-header-actions.html",
-    "/src/preview-examples/blind-variants.html",
-    "/src/preview-examples/blind.html"
-  ],
-  "ix-dropdown": [
-    "/src/preview-examples/blind-header-actions.html",
-    "/src/preview-examples/dropdown-icon.html",
-    "/src/preview-examples/dropdown-quick-actions.html",
-    "/src/preview-examples/dropdown-submenu.html",
-    "/src/preview-examples/dropdown.html",
-    "/src/preview-examples/group-context-menu.html"
-  ],
-  "ix-breadcrumb": [
-    "/src/preview-examples/breadcrumb-next-items.html",
-    "/src/preview-examples/breadcrumb-truncate.html",
-    "/src/preview-examples/breadcrumb.html"
-  ],
-  "ix-breadcrumb-item": [
-    "/src/preview-examples/breadcrumb-next-items.html",
-    "/src/preview-examples/breadcrumb-truncate.html",
-    "/src/preview-examples/breadcrumb.html"
+  "ix-badge": [
+    "/src/preview-examples/badge-counter.html",
+    "/src/preview-examples/badge-dot.html",
+    "/src/preview-examples/badge-label.html",
+    "/src/preview-examples/badge-status-icon.html",
+    "/src/preview-examples/badge.html"
   ],
   "ix-button": [
+    "/src/preview-examples/badge.html",
     "/src/preview-examples/button-danger-primary.html",
     "/src/preview-examples/button-danger-secondary.html",
     "/src/preview-examples/button-danger-tertiary.html",
@@ -242,6 +232,29 @@
     "/src/preview-examples/tree-custom.html",
     "/src/preview-examples/validation-select.html"
   ],
+  "ix-blind": [
+    "/src/preview-examples/blind-header-actions.html",
+    "/src/preview-examples/blind-variants.html",
+    "/src/preview-examples/blind.html"
+  ],
+  "ix-dropdown": [
+    "/src/preview-examples/blind-header-actions.html",
+    "/src/preview-examples/dropdown-icon.html",
+    "/src/preview-examples/dropdown-quick-actions.html",
+    "/src/preview-examples/dropdown-submenu.html",
+    "/src/preview-examples/dropdown.html",
+    "/src/preview-examples/group-context-menu.html"
+  ],
+  "ix-breadcrumb": [
+    "/src/preview-examples/breadcrumb-next-items.html",
+    "/src/preview-examples/breadcrumb-truncate.html",
+    "/src/preview-examples/breadcrumb.html"
+  ],
+  "ix-breadcrumb-item": [
+    "/src/preview-examples/breadcrumb-next-items.html",
+    "/src/preview-examples/breadcrumb-truncate.html",
+    "/src/preview-examples/breadcrumb.html"
+  ],
   "ix-card-list": [
     "/src/preview-examples/card-list.html"
   ],
@@ -273,8 +286,33 @@
     "/src/preview-examples/category-filter-suggestions.html",
     "/src/preview-examples/category-filter.html"
   ],
+  "ix-chat": [
+    "/src/preview-examples/chat-ai-message.html",
+    "/src/preview-examples/chat-input.html",
+    "/src/preview-examples/chat-user-message.html",
+    "/src/preview-examples/chat.html"
+  ],
+  "ix-chat-ai-message": [
+    "/src/preview-examples/chat-ai-message.html",
+    "/src/preview-examples/chat.html"
+  ],
   "ix-chip": [
+    "/src/preview-examples/chat-ai-message.html",
+    "/src/preview-examples/chat.html",
     "/src/preview-examples/chip.html"
+  ],
+  "ix-chat-input": [
+    "/src/preview-examples/chat-input.html",
+    "/src/preview-examples/chat.html"
+  ],
+  "ix-chat-attachment": [
+    "/src/preview-examples/chat-input.html",
+    "/src/preview-examples/chat-user-message.html",
+    "/src/preview-examples/chat.html"
+  ],
+  "ix-chat-user-message": [
+    "/src/preview-examples/chat-user-message.html",
+    "/src/preview-examples/chat.html"
   ],
   "ix-pill": [
     "/src/preview-examples/content-header-with-slot.html",

@@ -262,3 +262,9 @@ Supported language codes are `'global/en' | 'global/es' | 'de/de' | 'cn/zh'`
 | --- | --- | --- | --- |
 | close | { "About and Legal closed" } | close | CustomCloseEvent |
 | tabChange | { "Active tab changed" } | tabChange | string |
+
+### Slot
+
+| Name | Description |
+| --- | --- |
+| default | { "About overlay content." } |

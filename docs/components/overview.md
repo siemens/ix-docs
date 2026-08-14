@@ -95,6 +95,7 @@ import { CategoryButton } from '@site/src/components/CategoryButton';
 | [Layout grid](./layout-grid/index.mdx) | Layout grids are used to structure the layout of a page or screen responsively.                                              |
 | [Modal](./modal/index.mdx)             | Modals present information prominently and are useful for gathering essential user input without navigating to another page. |
 | [Panes](./panes/index.mdx)             | Panes are interactive components that allow users to access content that isn&#39;t constantly visible on the screen.         |
+| [Popovers](./popover/index.mdx)             | Popovers display contextual information next to a trigger element.       |
 | [Tile](./tile/index.mdx)               | Tiles are containers that display content in a card-like format.                                                             |
 
 ## Forms
@@ -148,6 +149,7 @@ import { CategoryButton } from '@site/src/components/CategoryButton';
 | [Empty state](./empty-state/index.mdx)            | Empty states inform users that there is no content to display.                                                                                     |
 | [Message bar](./messagebar/index.mdx)             | Message bars display important information to users, e.g. feedback, warnings or errors.                                                            |
 | [Pill](./pill/index.mdx)                          | Pills display small pieces of information, e.g. counters or statuses.                                                                              |
+| [Popover](./popover/index.mdx)                    | Popovers display contextual information in a floating panel anchored to a trigger element.                                                         |
 | [Progress indicator](progress-indicator/guide.md) | Progress indicators inform users about the status of ongoing processes, e.g. loading data, submitting forms or processing non-blocking operations. |
 | [Spinner](./spinner/index.mdx)                    | Spinners indicate that a process is running to provide feedback to the user.                                                                       |
 | [Toast](./toast/index.mdx)                        | Toasts are small pop-ups that provide simple feedback on a process.                                                                                |

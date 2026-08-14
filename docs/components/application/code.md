@@ -1130,3 +1130,13 @@ const activeContent = ref('home');
 | colorSchema | { "Color schema of the theme" } | color-schema | "dark" \| "light" \| "system" \| undefined | 'system' |
 | forceBreakpoint | { "Change the responsive layout of the menu structure" } | force-breakpoint | "lg" \| "md" \| "sm" \| undefined |  |
 | theme | { "Application theme" } | theme | string \| undefined |  |
+
+### Slot
+
+| Name | Description |
+| --- | --- |
+| application-header | { "Header displayed at the top of the application." } |
+| application-sidebar | { "Sidebar displayed next to the main content." } |
+| bottom | { "Footer displayed below the main content." } |
+| default | { "Main application content." } |
+| menu | { "Main application navigation." } |

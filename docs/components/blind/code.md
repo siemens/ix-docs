@@ -600,3 +600,11 @@ ix-blind {
 | Name | Description | Event | Detail |
 | --- | --- | --- | --- |
 | collapsedChange | { "Collapsed state changed" } | collapsedChange | boolean |
+
+### Slot
+
+| Name | Description |
+| --- | --- |
+| custom-header | { "Custom content inside blind header." } |
+| default | { "Expandable blind content." } |
+| header-actions | { "Actions displayed at the end of the header." } |

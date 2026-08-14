@@ -300,3 +300,9 @@ import { IxSplitButton, IxDropdownItem } from '@siemens/ix-vue';
 | Name | Description | Event | Detail |
 | --- | --- | --- | --- |
 | buttonClick | { "Button clicked" } | buttonClick | MouseEvent |
+
+### Slot
+
+| Name | Description |
+| --- | --- |
+| default | { "Dropdown items for the split button." } |

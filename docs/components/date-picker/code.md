@@ -306,6 +306,16 @@ export default {
 | to | { "The selected end date. If the date picker is not in range mode, this property has no impact.\n\nFormat has to match the `format` property." } | to | string \| undefined |  |
 | weekStartIndex | { "The index of which day to start the week on, based on the Locale#weekdays array.\n\nE.g. if the locale is en-us, weekStartIndex = 1 results in starting the week on Monday." } | week-start-index | number | 0 |
 
+### Methods
+
+#### getCurrentDate
+
+```ts
+getCurrentDate(): Promise&lt;DateChangeEvent&gt;;
+```
+
+{ "Get the currently selected date or range. The object returned contains `from` and `to` properties.\n\nThe property strings are formatted according to the `format` property and not affected by the `locale` property.\n\nThe locale applied is always `en-US`." }
+
 ### Events
 
 | Name | Description | Event | Detail |

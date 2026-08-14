@@ -396,3 +396,9 @@ import { IxCustomField } from '@siemens/ix-vue';
 | showTextAsTooltip | { "Show helper, info, warning, error and valid text as tooltip" } | show-text-as-tooltip | boolean \| undefined |  |
 | validText | { "Valid text for the field component" } | valid-text | string \| undefined |  |
 | warningText | { "Warning text for the field component" } | warning-text | string \| undefined |  |
+
+### Slot
+
+| Name | Description |
+| --- | --- |
+| default | { "The form control." } |

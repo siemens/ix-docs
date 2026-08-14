@@ -148,15 +148,15 @@ TypedEvent<{
 createShowMessage(dependencies: ShowMessageDependencies): ShowMessage;
 ```
 
-Create a message modal helper with custom element dependencies.
+{ "Create a message modal helper with custom element dependencies." }
 
-#### showMessage
+#### showMessage&lt;T&gt;
 
 ```ts
-showMessage(config: MessageConfig&lt;T&gt;): ShowMessageResult&lt;T&gt;;
+showMessage&lt;T&gt;(config: MessageConfig&lt;T&gt;): ShowMessageResult&lt;T&gt;;
 ```
 
-Displays a message modal with configurable actions and returns an event emitter for action responses
+{ "Displays a message modal with configurable actions and returns an event emitter for action responses" }
 
 ## API for MessageService (Angular)
 
@@ -168,7 +168,7 @@ Displays a message modal with configurable actions and returns an event emitter 
 error(title: string, message: string, textOkay: string, textCancel: string, payloadOkay: any, payloadCancel: any): ShowMessageResult&lt;unknown&gt;;
 ```
 
-Displays an error message modal with an error icon
+{ "Displays an error message modal with an error icon" }
 
 #### info
 
@@ -176,7 +176,7 @@ Displays an error message modal with an error icon
 info(title: string, message: string, textOkay: string, textCancel: string, payloadOkay: any, payloadCancel: any): ShowMessageResult&lt;unknown&gt;;
 ```
 
-Displays an info message modal with an info icon
+{ "Displays an info message modal with an info icon" }
 
 #### question
 
@@ -184,13 +184,15 @@ Displays an info message modal with an info icon
 question(title: string, message: string, textOkay: string, textCancel: string, payloadOkay: any, payloadCancel: any): ShowMessageResult&lt;unknown&gt;;
 ```
 
-Displays a question message modal with a question icon
+{ "Displays a question message modal with a question icon" }
 
-#### showMessage
+#### showMessage&lt;T&gt;
 
 ```ts
-showMessage(config: MessageConfig&lt;T&gt;): Promise&lt;TypedEvent&lt;unknown&gt;&gt;;
+showMessage&lt;T&gt;(config: MessageConfig&lt;T&gt;): Promise&lt;TypedEvent&lt;unknown&gt;&gt;;
 ```
+
+{ "" }
 
 #### success
 
@@ -198,7 +200,7 @@ showMessage(config: MessageConfig&lt;T&gt;): Promise&lt;TypedEvent&lt;unknown&gt
 success(title: string, message: string, textOkay: string, textCancel: string, payloadOkay: any, payloadCancel: any): ShowMessageResult&lt;unknown&gt;;
 ```
 
-Displays a success message modal with a success icon
+{ "Displays a success message modal with a success icon" }
 
 #### warning
 
@@ -206,4 +208,4 @@ Displays a success message modal with a success icon
 warning(title: string, message: string, textOkay: string, textCancel: string, payloadOkay: any, payloadCancel: any): ShowMessageResult&lt;unknown&gt;;
 ```
 
-Displays a warning message modal with a warning icon
+{ "Displays a warning message modal with a warning icon" }

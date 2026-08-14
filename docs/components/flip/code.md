@@ -430,3 +430,11 @@ import { IxFlipTile, IxFlipTileContent, IxIcon } from '@siemens/ix-vue';
 | Name | Description | Event | Detail |
 | --- | --- | --- | --- |
 | toggle | { "Event emitted when the index changes" } | toggle | number |
+
+### Slot
+
+| Name | Description |
+| --- | --- |
+| default | { "Flip tile pages." } |
+| footer | { "Content displayed in the tile footer." } |
+| header | { "Content displayed in the tile header." } |

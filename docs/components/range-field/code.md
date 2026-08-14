@@ -247,3 +247,9 @@ import { IxDatetimeInput, IxRangeField } from '@siemens/ix-vue';
 | --- | --- | --- | --- | --- |
 | hideArrow | { "Hides the arrow icon between the two input fields. This can be used when the input range is used in a context where the arrow icon is not desired, such as in a form field with a custom label." } | hide-arrow | boolean | false |
 | type | { "The type of the input range. If set to \"time-range\", the input range will be displayed as a time range." } | type | "date-range" \| "datetime-range" \| "time-range" \| undefined |  |
+
+### Slot
+
+| Name | Description |
+| --- | --- |
+| default | { "Range field controls." } |

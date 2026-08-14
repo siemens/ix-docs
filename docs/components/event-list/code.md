@@ -554,6 +554,12 @@ import { IxEventList, IxEventListItem } from '@siemens/ix-vue';
 | compact | { "Make event-list items more compact" } | compact | boolean | false |
 | itemHeight | { "Determines the height of list items.\n\nThis can either be one of two predefined sizes ('S' or 'L') or an absolute pixel value.\n\nIn case a number is supplied it will get converted to rem internally.\n\nDefaults to 'S'." } | item-height | "L" \| "S" \| number | 'S' |
 
+### Slot
+
+| Name | Description |
+| --- | --- |
+| default | { "Event list items." } |
+
 ## API for ix-event-list-item
 
 ### Properties
@@ -571,3 +577,9 @@ import { IxEventList, IxEventListItem } from '@siemens/ix-vue';
 | Name | Description | Event | Detail |
 | --- | --- | --- | --- |
 | itemClick | { "Event list item click" } | itemClick | any |
+
+### Slot
+
+| Name | Description |
+| --- | --- |
+| default | { "Event list item content." } |

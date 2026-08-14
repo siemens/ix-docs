@@ -655,6 +655,12 @@ import { IxApplicationContext } from '@siemens/ix-vue';
 | --- | --- | --- | --- |
 | closeClick | { "Emits when the close icon is clicked and closes the modal\n\nCan be prevented, in which case only the event is triggered, and the modal remains open" } | closeClick | MouseEvent |
 
+### Slot
+
+| Name | Description |
+| --- | --- |
+| default | { "Modal header content." } |
+
 ## API for ix-modal-config
 
 ### Properties
@@ -686,13 +692,13 @@ import { IxApplicationContext } from '@siemens/ix-vue';
 
 ### Functions
 
-#### closeModal
+#### closeModal&lt;TClose &#x3D; any&gt;
 
 ```ts
-closeModal(element: Element, closeResult: TClose): void;
+closeModal&lt;TClose &#x3D; any&gt;(element: Element, closeResult: TClose): void;
 ```
 
-Close closest ix-modal relative to a provided element
+{ "Close closest ix-modal relative to a provided element" }
 
 #### dismissModal
 
@@ -700,7 +706,7 @@ Close closest ix-modal relative to a provided element
 dismissModal(element: Element, dismissResult: any): void;
 ```
 
-Dismiss closest ix-modal relative to a provided element
+{ "Dismiss closest ix-modal relative to a provided element" }
 
 #### setA11yAttributes
 
@@ -708,32 +714,32 @@ Dismiss closest ix-modal relative to a provided element
 setA11yAttributes(element: HTMLElement, config: ModalConfig): void;
 ```
 
-Set accessibility attributes on modal element
+{ "Set accessibility attributes on modal element" }
 
-#### showModal
+#### showModal&lt;T&gt;
 
 ```ts
-showModal(config: ModalConfig&lt;T&gt;): Promise&lt;ModalInstance&lt;T&gt;&gt;;
+showModal&lt;T&gt;(config: ModalConfig&lt;T&gt;): Promise&lt;ModalInstance&lt;T&gt;&gt;;
 ```
 
-Show modal with given configuration
+{ "Show modal with given configuration" }
 
 ## API for ModalService (Angular)
 
 ### Functions
 
-#### close
+#### close&lt;TReason &#x3D; any&gt;
 
 ```ts
-close(instance: ModalInstance&lt;TReason&gt;, reason: TReason): void;
+close&lt;TReason &#x3D; any&gt;(instance: ModalInstance&lt;TReason&gt;, reason: TReason): void;
 ```
 
-Closes a modal based on a ModalInstance
+{ "Closes a modal based on a ModalInstance" }
 
-#### open
+#### open&lt;TData &#x3D; any, TReason &#x3D; any&gt;
 
 ```ts
-open(config: ModalConfig&lt;TData&gt;): Promise&lt;ModalInstance&lt;TReason&gt;&gt;;
+open&lt;TData &#x3D; any, TReason &#x3D; any&gt;(config: ModalConfig&lt;TData&gt;): Promise&lt;ModalInstance&lt;TReason&gt;&gt;;
 ```
 
-Opens a modal based on ModalConfig
+{ "Opens a modal based on ModalConfig" }

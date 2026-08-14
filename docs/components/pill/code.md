@@ -770,3 +770,9 @@ ix-pill {
 | pillColor | { "Custom font color for pill. Only working for `variant='custom'`" } | pill-color | string \| undefined |  |
 | tooltipText | { "Display a tooltip. By default, no tooltip will be displayed.\n\nAdd the attribute to display the text content of the component as a tooltip or use a string to display a custom text." } | tooltip-text | boolean \| string | false |
 | variant | { "Pill variant" } | variant | "alarm" \| "critical" \| "custom" \| "info" \| "neutral" \| "primary" \| "success" \| "warning" | 'primary' |
+
+### Slot
+
+| Name | Description |
+| --- | --- |
+| default | { "Pill label." } |

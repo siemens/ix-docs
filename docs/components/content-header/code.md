@@ -393,5 +393,5 @@ import { iconInfo } from '@siemens/ix-icons/icons';
 
 | Name | Description |
 | --- | --- |
-|  | { "Default slot for action buttons or other content" } |
+| default | { "Default slot for action buttons or other content" } |
 | header | { "Content to be placed in the header area next to the title" } |

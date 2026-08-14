@@ -1510,3 +1510,10 @@ import { IxProgressIndicator } from '@siemens/ix-vue';
 | textAlignment | { "The text alignment for the helper text.\n\nCan be 'left', 'center', or 'right'." } | text-alignment | "center" \| "left" \| "right" | 'left' |
 | type | { "The type of progress indicator to use." } | type | "circular" \| "linear" | 'linear' |
 | value | { "The value of the progress indicator." } | value | number | 0 |
+
+### Slot
+
+| Name | Description |
+| --- | --- |
+| default | { "Content displayed with the progress indicator." } |
+| helper-text | { "Custom helper text content." } |

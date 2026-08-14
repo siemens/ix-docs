@@ -644,6 +644,24 @@ export default {
 | value | { "The value of the textarea field." } | value | string | '' |
 | warningText | { "The warning text for the textarea field." } | warning-text | string \| undefined |  |
 
+### Methods
+
+#### focusInput
+
+```ts
+focusInput(): Promise&lt;void&gt;;
+```
+
+{ "Focuses the input field" }
+
+#### getNativeInputElement
+
+```ts
+getNativeInputElement(): Promise&lt;HTMLTextAreaElement&gt;;
+```
+
+{ "Get the native textarea element." }
+
 ### Events
 
 | Name | Description | Event | Detail |

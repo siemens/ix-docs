@@ -364,3 +364,9 @@ const handleShowMessage = () => {
 | --- | --- | --- | --- |
 | closeAnimationCompleted | { "An event emitted when the close animation is completed" } | closeAnimationCompleted | any |
 | closedChange | { "An event emitted when the close button is clicked" } | closedChange | any |
+
+### Slot
+
+| Name | Description |
+| --- | --- |
+| default | { "Message content." } |

@@ -93,10 +93,15 @@ Avoid technical, negative or wordy dismiss actions.
 
 ## Dos and Don’ts
 
-* Do allow users to close, postpone or choose to not see the content again
-* Don’t add so much content that users need to scroll, instead use pages or split news
-* Don’t embed critical text in images as it’s hard to translate and read
-* Don’t add time-critical actions only in announcements as they are too easy to close
+  
+    Do allow users to close, postpone or choose to not see the content again
+  
+
+  
+    Don’t add so much content that users need to scroll, instead use pages or split news
+    Don’t embed critical text in images as it’s hard to translate and read
+    Don’t add time-critical actions only in announcements as they are too easy to close
+  
 
 ## Related
 

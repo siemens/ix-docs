@@ -454,7 +454,7 @@ setToastPosition('top-right');
 getToastContainer(): HTMLIxToastContainerElement;
 ```
 
-Gets the toast container.
+{ "Gets the toast container." }
 
 #### setToastPosition
 
@@ -462,7 +462,7 @@ Gets the toast container.
 setToastPosition(position: ToastPosition): void;
 ```
 
-Sets the position of the toast container
+{ "Sets the position of the toast container" }
 
 #### toast
 
@@ -470,7 +470,7 @@ Sets the position of the toast container
 toast(config: ToastConfig): Promise&lt;ShowToastResult&gt;;
 ```
 
-Display a toast based on the provided configuration
+{ "Display a toast based on the provided configuration" }
 
 #### toast.error
 
@@ -478,7 +478,7 @@ Display a toast based on the provided configuration
 toast.error(config: ToastConfig): Promise&lt;ShowToastResult&gt;;
 ```
 
-Display an error toast based on the provided configuration
+{ "Display an error toast based on the provided configuration" }
 
 #### toast.info
 
@@ -486,7 +486,7 @@ Display an error toast based on the provided configuration
 toast.info(config: ToastConfig): Promise&lt;ShowToastResult&gt;;
 ```
 
-Display an info toast based on the provided configuration
+{ "Display an info toast based on the provided configuration" }
 
 #### toast.success
 
@@ -494,7 +494,7 @@ Display an info toast based on the provided configuration
 toast.success(config: ToastConfig): Promise&lt;ShowToastResult&gt;;
 ```
 
-Display a success toast based on the provided configuration
+{ "Display a success toast based on the provided configuration" }
 
 #### toast.warning
 
@@ -502,7 +502,7 @@ Display a success toast based on the provided configuration
 toast.warning(config: ToastConfig): Promise&lt;ShowToastResult&gt;;
 ```
 
-Display a warning toast based on the provided configuration
+{ "Display a warning toast based on the provided configuration" }
 
 ## API for ToastService (Angular)
 
@@ -514,7 +514,7 @@ Display a warning toast based on the provided configuration
 getPosition(): ToastPosition;
 ```
 
-Gets the current toast position
+{ "Gets the current toast position" }
 
 #### setPosition
 
@@ -522,7 +522,7 @@ Gets the current toast position
 setPosition(position: ToastPosition): void;
 ```
 
-Sets the current toast position
+{ "Sets the current toast position" }
 
 #### show
 
@@ -530,4 +530,4 @@ Sets the current toast position
 show(config: ToastConfig): Promise&lt;ShowToastResult&gt;;
 ```
 
-Shows the toast
+{ "Shows the toast" }

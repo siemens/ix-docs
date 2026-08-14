@@ -368,6 +368,16 @@ const dateRangeOptions = [
 | variant | { "Button variant" } | variant | "danger-primary" \| "danger-secondary" \| "danger-tertiary" \| "primary" \| "secondary" \| "subtle-primary" \| "subtle-secondary" \| "subtle-tertiary" \| "tertiary" | 'primary' |
 | weekStartIndex | { "The index of which day to start the week on, based on the Locale#weekdays array.\n\nE.g. if the locale is en-us, weekStartIndex = 1 results in starting the week on monday." } | week-start-index | number | 0 |
 
+### Methods
+
+#### getDateRange
+
+```ts
+getDateRange(): Promise&lt;DateRangeChangeEvent&gt;;
+```
+
+{ "Retrieves the currently selected date range from the component.\n\nThis method returns the selected date range as a `DateChangeEvent` object." }
+
 ### Events
 
 | Name | Description | Event | Detail |

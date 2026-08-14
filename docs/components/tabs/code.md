@@ -436,6 +436,12 @@ import { IxIcon, IxTabItem, IxTabs } from '@siemens/ix-vue';
 | tabChange | { "Tab selection event. Event detail contains the new active tab key." } | tabChange | string \| undefined |
 | tabClose | { "Tab close event. Event detail contains the closed tab key." } | tabClose | string \| undefined |
 
+### Slot
+
+| Name | Description |
+| --- | --- |
+| default | { "Tab items." } |
+
 ## API for ix-tab-item
 
 ### Properties
@@ -457,3 +463,9 @@ import { IxIcon, IxTabItem, IxTabs } from '@siemens/ix-vue';
 | --- | --- | --- | --- |
 | tabClick | { "Emitted when the tab is clicked." } | tabClick | { tabKey?: string \| undefined; nativeEvent: Event; } |
 | tabClose | { "Emitted when the tab's close button is clicked." } | tabClose | { tabKey?: string \| undefined; nativeEvent: Event; } |
+
+### Slot
+
+| Name | Description |
+| --- | --- |
+| default | { "Tab label." } |

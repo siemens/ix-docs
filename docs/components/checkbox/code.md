@@ -862,6 +862,12 @@ import { IxCheckbox, IxCheckboxGroup } from '@siemens/ix-vue';
 | ixBlur | { "Event emitted when the checkbox is blurred" } | ixBlur | void |
 | valueChange | { "Event emitted when the value of the checkbox changes" } | valueChange | string |
 
+### Slot
+
+| Name | Description |
+| --- | --- |
+| default | { "Checkbox label." } |
+
 ## API for ix-checkbox-group
 
 ### Properties
@@ -876,3 +882,9 @@ import { IxCheckbox, IxCheckboxGroup } from '@siemens/ix-vue';
 | showTextAsTooltip | { "Show helper, info, warning, error and valid text as tooltip" } | show-text-as-tooltip | boolean | false |
 | validText | { "Valid text for the checkbox group" } | valid-text | string \| undefined |  |
 | warningText | { "Warning text for the checkbox group" } | warning-text | string \| undefined |  |
+
+### Slot
+
+| Name | Description |
+| --- | --- |
+| default | { "Checkboxes displayed in the group." } |

@@ -394,6 +394,15 @@ import {
 | selectGroup | { "Emits when whole group gets selected." } | selectGroup | boolean |
 | selectItem | { "Emits when group item gets selected." } | selectItem | number |
 
+### Slot
+
+| Name | Description |
+| --- | --- |
+| default | { "Group items." } |
+| dropdown | { "Dropdown used for the group context menu." } |
+| footer | { "Content displayed below the group items." } |
+| header | { "Content displayed in the group header." } |
+
 ## API for ix-group-item
 
 ### Properties
@@ -414,3 +423,9 @@ import {
 | Name | Description | Event | Detail |
 | --- | --- | --- | --- |
 | selectedChanged | { "Selection changed" } | selectedChanged | HTMLIxGroupItemElement |
+
+### Slot
+
+| Name | Description |
+| --- | --- |
+| default | { "Group item content." } |

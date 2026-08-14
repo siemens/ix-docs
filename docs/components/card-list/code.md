@@ -338,4 +338,10 @@ import { IxCardList, IxPushCard } from '@siemens/ix-vue';
 | --- | --- | --- | --- |
 | collapseChanged | { "Fire event when the collapse state is changed by the user" } | collapseChanged | boolean |
 | showAllClick | { "Fire event when the collapse state is changed by the user" } | showAllClick | { nativeEvent: MouseEvent; } |
-| showMoreCardClick | { "Fire event when the show more card is clicked." } | showMoreCardClick | { nativeEvent: MouseEvent; } |
+| showMoreCardClick | { "Fire event when the show more card is clicked." } | showMoreCardClick | { nativeEvent: MouseEvent \| KeyboardEvent; } |
+
+### Slot
+
+| Name | Description |
+| --- | --- |
+| default | { "Cards displayed in the list." } |

@@ -364,6 +364,12 @@ import { IxMenu, IxMenuItem } from '@siemens/ix-vue';
 | close | { "Popover closed" } | close | CustomCloseEvent |
 | tabChange | { "Active tab changed" } | tabChange | string |
 
+### Slot
+
+| Name | Description |
+| --- | --- |
+| default | { "Settings overlay content." } |
+
 ## API for ix-menu
 
 ### Properties
@@ -386,6 +392,40 @@ import { IxMenu, IxMenuItem } from '@siemens/ix-vue';
 | showSettings | { "Is settings tab visible" } | show-settings | boolean | false |
 | startExpanded | { "If set the menu will be expanded initially. This will only take effect at the breakpoint 'lg'." } | start-expanded | boolean | false |
 
+### Methods
+
+#### toggleAbout
+
+```ts
+toggleAbout(show: boolean): Promise&lt;void&gt;;
+```
+
+{ "Toggle About tabs" }
+
+#### toggleMapExpand
+
+```ts
+toggleMapExpand(show: boolean | undefined): Promise&lt;void&gt;;
+```
+
+{ "Toggle map sidebar expand" }
+
+#### toggleMenu
+
+```ts
+toggleMenu(show: boolean | undefined): Promise&lt;void&gt;;
+```
+
+{ "Toggle menu" }
+
+#### toggleSettings
+
+```ts
+toggleSettings(show: boolean): Promise&lt;void&gt;;
+```
+
+{ "Toggle Settings tabs" }
+
 ### Events
 
 | Name | Description | Event | Detail |
@@ -395,6 +435,17 @@ import { IxMenu, IxMenuItem } from '@siemens/ix-vue';
 | openAbout | { "Event emitted when the about button is clicked" } | openAbout | void |
 | openAppSwitch | { "Event emitted when the app switch button is clicked" } | openAppSwitch | void |
 | openSettings | { "Event emitted when the settings button is clicked" } | openSettings | void |
+
+### Slot
+
+| Name | Description |
+| --- | --- |
+| bottom | { "Menu items displayed below the main navigation." } |
+| default | { "Main menu items and categories." } |
+| home | { "Home menu item." } |
+| ix-menu-about | { "About content displayed in the menu overlay." } |
+| ix-menu-avatar | { "Avatar displayed at the top of the menu." } |
+| ix-menu-settings | { "Settings content displayed in the menu overlay." } |
 
 ## API for ix-menu-item
 
@@ -418,7 +469,7 @@ import { IxMenu, IxMenuItem } from '@siemens/ix-vue';
 
 | Name | Description |
 | --- | --- |
-| menu-item-label Custom label | { "" } |
+| default | { "Custom menu item label." } |
 
 ## API for ix-menu-category
 
@@ -430,3 +481,9 @@ import { IxMenu, IxMenuItem } from '@siemens/ix-vue';
 | label | { "Display name of the category" } | label | string \| undefined |
 | notifications | { "Show notification count on the category" } | notifications | number \| undefined |
 | tooltipText | { "Will be shown as tooltip text, if not provided menu text content will be used." } | tooltip-text | string \| undefined |
+
+### Slot
+
+| Name | Description |
+| --- | --- |
+| default | { "Menu items in the category." } |

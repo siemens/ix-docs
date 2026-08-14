@@ -691,6 +691,24 @@ import { IxDateInput } from '@siemens/ix-vue';
 | warningText | { "Warning text below the input field." } | warning-text | string \| undefined |  |
 | weekStartIndex | { "The index of which day to start the week on, based on the Locale#weekdays array.\n\nE.g. if the locale is en-us, weekStartIndex = 1 results in starting the week on Monday." } | week-start-index | number | 0 |
 
+### Methods
+
+#### focusInput
+
+```ts
+focusInput(): Promise&lt;void&gt;;
+```
+
+{ "Focuses the input field" }
+
+#### getNativeInputElement
+
+```ts
+getNativeInputElement(): Promise&lt;HTMLInputElement&gt;;
+```
+
+{ "Get the native input element" }
+
 ### Events
 
 | Name | Description | Event | Detail |

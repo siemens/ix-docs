@@ -663,6 +663,12 @@ import { IxRadio, IxRadioGroup } from '@siemens/ix-vue';
 | ixBlur | { "Event emitted when the radio is blurred" } | ixBlur | void |
 | valueChange | { "Event emitted when the value of the radio changes" } | valueChange | string |
 
+### Slot
+
+| Name | Description |
+| --- | --- |
+| default | { "Radio button label." } |
+
 ## API for ix-radio-group
 
 ### Properties
@@ -684,3 +690,9 @@ import { IxRadio, IxRadioGroup } from '@siemens/ix-vue';
 | Name | Description | Event | Detail |
 | --- | --- | --- | --- |
 | valueChange | { "Event emitted when the value of the radiobutton group changes" } | valueChange | string |
+
+### Slot
+
+| Name | Description |
+| --- | --- |
+| default | { "Radio buttons displayed in the group." } |

@@ -143,13 +143,15 @@ const startLoading = async () => {
 createShowModalLoading(dependencies: ShowModalLoadingDependencies): DependencyFunction&lt;unknown, ShowModalLoadingDependencies&gt;;
 ```
 
-Create a loading modal helper with custom element dependencies.
+{ "Create a loading modal helper with custom element dependencies." }
 
 #### showModalLoading
 
 ```ts
 showModalLoading(options: ModalLoadingOptions): Promise&lt;ModalLoadingContext&gt;;
 ```
+
+{ "" }
 
 ## API for LoadingService (Angular)
 
@@ -161,4 +163,4 @@ showModalLoading(options: ModalLoadingOptions): Promise&lt;ModalLoadingContext&g
 showModalLoading(options: ModalLoadingOptions): Promise&lt;ModalLoadingContext&gt;;
 ```
 
-Displays a loading modal with a message
+{ "Displays a loading modal with a message" }

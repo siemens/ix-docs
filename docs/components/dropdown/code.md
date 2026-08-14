@@ -513,12 +513,28 @@ import { IxButton, IxDropdown, IxDropdownItem } from '@siemens/ix-vue';
 | suppressTriggerVisibilityCheck | { "By default the dropdown gets closed if the trigger is not visible anymore (e.g. due to scrolling). Setting this property prevents that behavior." } | suppress-trigger-visibility-check | boolean | false |
 | trigger | { "Define an element that triggers the dropdown.\n\nA trigger can either be a string that will be interpreted as id attribute or a DOM element." } | trigger | HTMLElement \| Promise \| string \| undefined |  |
 
+### Methods
+
+#### updatePosition
+
+```ts
+updatePosition(): Promise&lt;void&gt;;
+```
+
+{ "Update position of dropdown" }
+
 ### Events
 
 | Name | Description | Event | Detail |
 | --- | --- | --- | --- |
 | showChange | { "Fire event before visibility of dropdown has changed, preventing event will cancel showing dropdown" } | showChange | boolean |
 | showChanged | { "Fire event after visibility of dropdown has changed" } | showChanged | boolean |
+
+### Slot
+
+| Name | Description |
+| --- | --- |
+| default | { "Dropdown items." } |
 
 ## API for ix-dropdown-item
 
@@ -534,3 +550,9 @@ import { IxButton, IxDropdown, IxDropdownItem } from '@siemens/ix-vue';
 | icon | { "Icon of dropdown item" } | icon | string \| undefined |  |
 | itemRole | { "Role of the host surface.\n\nUse `option` when the item represents a listbox option (e.g. inside select); use `menuitem` in menus." } | item-role | "menuitem" \| "option" | 'menuitem' |
 | label | { "Label of dropdown item" } | label | string \| undefined |  |
+
+### Slot
+
+| Name | Description |
+| --- | --- |
+| default | { "Dropdown item content." } |

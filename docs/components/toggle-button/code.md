@@ -2417,6 +2417,12 @@ ix-icon-toggle-button {
 | --- | --- | --- | --- |
 | pressedChange | { "Pressed change event" } | pressedChange | boolean |
 
+### Slot
+
+| Name | Description |
+| --- | --- |
+| default | { "Toggle button label." } |
+
 ## API for ix-icon-toggle-button
 
 ### Properties

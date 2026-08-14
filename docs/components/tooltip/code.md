@@ -169,5 +169,6 @@ See examples [above](#basic).
 
 | Name | Description |
 | --- | --- |
+| default | { "Tooltip body content." } |
 | title-content | { "Content of tooltip title" } |
 | title-icon | { "Icon displayed next to the tooltip title. The icon will be displayed as 16x16px." } |

@@ -234,6 +234,13 @@ import { IxWorkflowStep, IxWorkflowSteps } from '@siemens/ix-vue';
 | status | { "Set status" } | status | "done" \| "error" \| "open" \| "success" \| "warning" | 'open' |
 | vertical | { "Select orientation" } | vertical | boolean | false |
 
+### Slot
+
+| Name | Description |
+| --- | --- |
+| custom-icon | { "Custom icon displayed for the workflow step." } |
+| default | { "Workflow step label and content." } |
+
 ## API for ix-workflow-steps
 
 ### Properties
@@ -249,3 +256,9 @@ import { IxWorkflowStep, IxWorkflowSteps } from '@siemens/ix-vue';
 | Name | Description | Event | Detail |
 | --- | --- | --- | --- |
 | stepSelected | { "On step selected event" } | stepSelected | number |
+
+### Slot
+
+| Name | Description |
+| --- | --- |
+| default | { "Workflow step items." } |

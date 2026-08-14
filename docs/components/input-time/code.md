@@ -553,6 +553,24 @@ import { IxTimeInput, IxIcon, IxTypography } from '@siemens/ix-vue';
 | value | { "Value of the input element." } | value | string | '' |
 | warningText | { "Warning text below the input field." } | warning-text | string \| undefined |  |
 
+### Methods
+
+#### focusInput
+
+```ts
+focusInput(): Promise&lt;void&gt;;
+```
+
+{ "Focuses the input field" }
+
+#### getNativeInputElement
+
+```ts
+getNativeInputElement(): Promise&lt;HTMLInputElement&gt;;
+```
+
+{ "Get the native input element" }
+
 ### Events
 
 | Name | Description | Event | Detail |

@@ -396,7 +396,7 @@ import { IxChip } from '@siemens/ix-vue';
 | chipColor | { "Custom font and icon color.\n\nOnly has an effect on chips with `variant='custom'`" } | chip-color | string \| undefined |  |
 | closable | { "Show close icon" } | closable | boolean | false |
 | icon | { "Show icon" } | icon | string \| undefined |  |
-| inactive | { "Determines if the chip is interactive. If true no user input (e.g. mouse states, keyboard navigation)\n\nwill be possible and also the close button will not be present." } | inactive | boolean | false |
+| inactive | { "Determines if the chip is interactive. If true no user input (e.g. mouse states, keyboard navigation)\n\nwill be possible on the main chip content." } | inactive | boolean | false |
 | outline | { "Show chip with outline style" } | outline | boolean | false |
 | tooltipText | { "Display a tooltip. By default, no tooltip will be displayed.\n\nAdd the attribute to display the text content of the component as a tooltip or use a string to display a custom text." } | tooltip-text | boolean \| string | false |
 | variant | { "Chip variant.\n\nDefaults to `primary`. When unset or set to an unknown value the chip falls back to `primary` styling." } | variant | "alarm" \| "critical" \| "custom" \| "info" \| "neutral" \| "primary" \| "success" \| "warning" | 'primary' |
@@ -406,3 +406,9 @@ import { IxChip } from '@siemens/ix-vue';
 | Name | Description | Event | Detail |
 | --- | --- | --- | --- |
 | closeChip | { "Fire event if close button is clicked" } | closeChip | any |
+
+### Slot
+
+| Name | Description |
+| --- | --- |
+| default | { "Chip label." } |

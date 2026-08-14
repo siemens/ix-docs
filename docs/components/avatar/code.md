@@ -357,3 +357,9 @@ import { iconCheckboxes } from '@siemens/ix-icons/icons';
 | initials | { "Display the initials of the user. Will be overwritten by image" } | initials | string \| undefined |
 | tooltipText | { "Text to display in a tooltip when hovering over the avatar" } | tooltip-text | string \| undefined |
 | username | { "If set an info card displaying the username will be placed inside the dropdown.\n\nNote: Only working if avatar is part of the ix-application-header" } | username | string \| undefined |
+
+### Slot
+
+| Name | Description |
+| --- | --- |
+| default | { "Custom content displayed inside the avatar dropdown when placed inside header." } |

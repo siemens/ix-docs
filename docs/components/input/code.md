@@ -1083,6 +1083,32 @@ import { IxInput, IxIcon, IxTypography } from '@siemens/ix-vue';
 | value | { "The value of the text field." } | value | string | '' |
 | warningText | { "The warning text for the text field." } | warning-text | string \| undefined |  |
 
+### Methods
+
+#### focusInput
+
+```ts
+focusInput(): Promise&lt;void&gt;;
+```
+
+{ "Focuses the input field" }
+
+#### getNativeInputElement
+
+```ts
+getNativeInputElement(): Promise&lt;HTMLInputElement&gt;;
+```
+
+{ "Returns the native input element used in the text field." }
+
+#### getValidityState
+
+```ts
+getValidityState(): Promise&lt;ValidityState&gt;;
+```
+
+{ "Returns the validity state of the input field." }
+
 ### Events
 
 | Name | Description | Event | Detail |

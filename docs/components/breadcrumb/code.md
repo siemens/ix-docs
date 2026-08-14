@@ -379,6 +379,12 @@ const nextItems = ref<{ breadcrumbKey: string; label: string }[]>([
 | itemClick | { "Crumb item clicked event" } | itemClick | { breadcrumbKey: string; label?: string \| undefined; } |
 | nextClick | { "Next item clicked event" } | nextClick | { event: UIEvent; item: BreadcrumbClick; } |
 
+### Slot
+
+| Name | Description |
+| --- | --- |
+| default | { "Breadcrumb items." } |
+
 ## API for ix-breadcrumb-item
 
 ### Properties
@@ -391,3 +397,9 @@ const nextItems = ref<{ breadcrumbKey: string; label: string }[]>([
 | label | { "Breadcrumb label" } | label | string \| undefined |  |
 | rel | { "Specifies the relationship between the current document and the linked document when href is provided." } | rel | string \| undefined |  |
 | target | { "Specifies where to open the linked document when href is provided." } | target | "_blank" \| "_parent" \| "_self" \| "_top" \| undefined | '_self' |
+
+### Slot
+
+| Name | Description |
+| --- | --- |
+| default | { "Breadcrumb item label." } |

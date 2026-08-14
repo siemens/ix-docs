@@ -21,6 +21,12 @@ We use utility CSS classes to style text. Theme changes will apply to texts auto
 | textColor | { "Text color based on theme variables" } | text-color | "alarm" \| "alarm-contrast" \| "contrast" \| "critical-contrast" \| "info-contrast" \| "inv-contrast" \| "inv-soft" \| "inv-std" \| "inv-weak" \| "neutral-contrast" \| "primary-contrast" \| "soft" \| "std" \| "success-contrast" \| "warning-contrast" \| "weak" \| undefined |  |
 | textDecoration | { "Text decoration" } | text-decoration | "line-through" \| "none" \| "underline" | 'none' |
 
+### Slot
+
+| Name | Description |
+| --- | --- |
+| default | { "Text content." } |
+
 ## Mixins
 
 We provide additional SCSS mixins which can be used to create valid custom typography

@@ -420,3 +420,10 @@ import { IxDropdownButton } from '@siemens/ix-vue';
 | --- | --- | --- | --- |
 | showChange | { "Fire event before visibility of dropdown has changed, preventing event will cancel showing dropdown" } | showChange | boolean |
 | showChanged | { "Fire event after visibility of dropdown has changed" } | showChanged | boolean |
+
+### Slot
+
+| Name | Description |
+| --- | --- |
+| button-label | { "Custom content displayed next to the button label." } |
+| default | { "Dropdown items." } |

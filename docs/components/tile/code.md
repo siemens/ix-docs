@@ -299,3 +299,12 @@ ix-tile {
 | Name | Description | Attribute | Type | Default |
 | --- | --- | --- | --- | --- |
 | size | { "Size of the tile - one of 'small', 'medium' or 'large'" } | size | "big" \| "medium" \| "small" | 'medium' |
+
+### Slot
+
+| Name | Description |
+| --- | --- |
+| default | { "Main tile content." } |
+| footer | { "Content displayed in the tile footer." } |
+| header | { "Content displayed in the tile header." } |
+| subheader | { "Content displayed below the tile header." } |

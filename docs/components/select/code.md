@@ -586,6 +586,24 @@ import { IxSelect, IxSelectItem } from '@siemens/ix-vue';
 | value | { "Current selected value.\n\nThis corresponds to the value property of ix-select-items" } | value | string \| string[] | '' |
 | warningText | { "Warning text for the select component" } | warning-text | string \| undefined |  |
 
+### Methods
+
+#### focusInput
+
+```ts
+focusInput(): Promise&lt;void&gt;;
+```
+
+{ "Focuses the input field" }
+
+#### getNativeInputElement
+
+```ts
+getNativeInputElement(): Promise&lt;HTMLInputElement&gt;;
+```
+
+{ "Returns the native input element used in the component." }
+
 ### Events
 
 | Name | Description | Event | Detail |
@@ -594,6 +612,12 @@ import { IxSelect, IxSelectItem } from '@siemens/ix-vue';
 | inputChange | { "Event dispatched whenever the text input changes." } | inputChange | string |
 | ixBlur | { "Blur input" } | ixBlur | void |
 | valueChange | { "Value changed" } | valueChange | string \| string[] |
+
+### Slot
+
+| Name | Description |
+| --- | --- |
+| default | { "Select items." } |
 
 ## API for ix-select-item
 

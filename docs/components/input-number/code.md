@@ -671,6 +671,24 @@ import { IxIcon, IxNumberInput, IxTypography } from '@siemens/ix-vue';
 | value | { "The value of the input field. Supports numeric values, scientific notation (1E6, 1E-6), or undefined for empty." } | value | number \| undefined | 0 |
 | warningText | { "The warning text for the input field" } | warning-text | string \| undefined |  |
 
+### Methods
+
+#### focusInput
+
+```ts
+focusInput(): Promise&lt;void&gt;;
+```
+
+{ "Focuses the input field" }
+
+#### getNativeInputElement
+
+```ts
+getNativeInputElement(): Promise&lt;HTMLInputElement&gt;;
+```
+
+{ "Returns the native input element used under the hood" }
+
 ### Events
 
 | Name | Description | Event | Detail |

@@ -454,6 +454,7 @@ const layout = ref<'full-horizontal' | 'full-vertical'>('full-horizontal');
 
 | Name | Description |
 | --- | --- |
+| default | { "Pane body content." } |
 | header | { "Additional slot for the header content" } |
 
 ## API for ix-pane-layout
@@ -465,3 +466,14 @@ const layout = ref<'full-horizontal' | 'full-vertical'>('full-horizontal');
 | borderless | { "Set the default border state for all panes in the layout" } | borderless | boolean | false |
 | layout | { "Choose the layout of the panes.\n\nWhen set to 'full-vertical' the vertical panes (left, right) will get the full height.\n\nWhen set to 'full-horizontal' the horizontal panes (top, bottom) will get the full width." } | layout | "full-horizontal" \| "full-vertical" | 'full-vertical' |
 | variant | { "Set the default variant for all panes in the layout" } | variant | "floating" \| "inline" | 'inline' |
+
+### Slot
+
+| Name | Description |
+| --- | --- |
+| bottom | { "Pane displayed below the content." } |
+| content | { "Main layout content." } |
+| default | { "Additional main layout content." } |
+| left | { "Pane displayed to the left of the content." } |
+| right | { "Pane displayed to the right of the content." } |
+| top | { "Pane displayed above the content." } |

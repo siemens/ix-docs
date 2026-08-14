@@ -259,3 +259,9 @@ onMounted(async () => {
 | --- | --- | --- | --- |
 | close | { "Popover closed" } | close | CustomCloseEvent |
 | tabChange | { "Active tab changed" } | tabChange | string |
+
+### Slot
+
+| Name | Description |
+| --- | --- |
+| default | { "Settings overlay content." } |

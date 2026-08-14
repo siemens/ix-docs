@@ -83,6 +83,23 @@
   "/src/preview-examples/avatar.html": [
     "ix-avatar"
   ],
+  "/src/preview-examples/badge-counter.html": [
+    "ix-badge"
+  ],
+  "/src/preview-examples/badge-dot.html": [
+    "ix-badge"
+  ],
+  "/src/preview-examples/badge-label.html": [
+    "ix-badge"
+  ],
+  "/src/preview-examples/badge-status-icon.html": [
+    "ix-badge"
+  ],
+  "/src/preview-examples/badge.html": [
+    "ix-badge",
+    "ix-button",
+    "ix-icon-button"
+  ],
   "/src/preview-examples/blind-header-actions.html": [
     "ix-blind",
     "ix-dropdown",
@@ -165,6 +182,33 @@
   ],
   "/src/preview-examples/category-filter.html": [
     "ix-category-filter"
+  ],
+  "/src/preview-examples/chat-ai-message.html": [
+    "ix-chat",
+    "ix-chat-ai-message",
+    "ix-chip",
+    "ix-icon-button"
+  ],
+  "/src/preview-examples/chat-input.html": [
+    "ix-chat",
+    "ix-chat-attachment",
+    "ix-chat-input",
+    "ix-icon-button"
+  ],
+  "/src/preview-examples/chat-user-message.html": [
+    "ix-chat",
+    "ix-chat-attachment",
+    "ix-chat-user-message",
+    "ix-icon-button"
+  ],
+  "/src/preview-examples/chat.html": [
+    "ix-chat",
+    "ix-chat-ai-message",
+    "ix-chat-attachment",
+    "ix-chat-input",
+    "ix-chat-user-message",
+    "ix-chip",
+    "ix-icon-button"
   ],
   "/src/preview-examples/chip.html": [
     "ix-chip"
@@ -785,15 +829,6 @@
     "ix-range-field",
     "ix-time-input"
   ],
-  "/src/preview-examples/timepicker-format-adjusted.html": [
-    "ix-time-picker"
-  ],
-  "/src/preview-examples/timepicker-intervals.html": [
-    "ix-time-picker"
-  ],
-  "/src/preview-examples/timepicker-min-max-time.html": [
-    "ix-time-picker"
-  ],
   "/src/preview-examples/timepicker.html": [
     "ix-time-picker"
   ],
@@ -815,7 +850,16 @@
   "/src/preview-examples/toggle-button-secondary.html": [
     "ix-toggle-button"
   ],
+  "/src/preview-examples/toggle-button-subtle-primary.html": [
+    "ix-toggle-button"
+  ],
   "/src/preview-examples/toggle-button-subtle-secondary.html": [
+    "ix-toggle-button"
+  ],
+  "/src/preview-examples/toggle-button-subtle-tertiary.html": [
+    "ix-toggle-button"
+  ],
+  "/src/preview-examples/toggle-button-tertiary.html": [
     "ix-toggle-button"
   ],
   "/src/preview-examples/toggle-checked.html": [
@@ -875,16 +919,16 @@
     "ix-workflow-step",
     "ix-workflow-steps"
   ],
-  "/src/preview-examples/toggle-button-subtle-tertiary.html": [
-    "ix-toggle-button"
+  "/src/preview-examples/timepicker-format-adjusted.html": [
+    "ix-time-picker"
   ],
-  "/src/preview-examples/toggle-button-tertiary.html": [
-    "ix-toggle-button"
+  "/src/preview-examples/timepicker-min-max-time.html": [
+    "ix-time-picker"
   ],
-  "/src/preview-examples/toggle-button-subtle-primary.html": [
-    "ix-toggle-button"
+  "/src/preview-examples/timepicker-intervals.html": [
+    "ix-time-picker"
   ],
-  "/home/runner/work/ix/ix/node_modules/.pnpm/@siemens+ix-icons@3.4.0/node_modules/@siemens/ix-icons/dist/esm/index.js": [
+  "/home/runner/work/ix/ix/node_modules/.pnpm/@siemens+ix-icons@3.5.0/node_modules/@siemens/ix-icons/dist/esm/index.js": [
     "ix-icon"
   ],
   "/home/runner/work/ix/ix/packages/core/dist/esm/ix-select.entry.js": [

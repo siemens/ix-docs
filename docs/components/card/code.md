@@ -559,9 +559,9 @@ import { IxPushCard } from '@siemens/ix-vue';
 
 ### Slot
 
-| Description |
-| --- |
-| { "Place additional non-interactive content inside the card. Avoid interactive elements (links, buttons, inputs) as the card itself is rendered as a single button." } |
+| Name | Description |
+| --- | --- |
+| default | { "Place additional non-interactive content inside the card. Avoid interactive elements (links, buttons, inputs) as the card itself is rendered as a single button." } |
 
 ## API for ix-push-card
 
@@ -578,6 +578,13 @@ import { IxPushCard } from '@siemens/ix-vue';
 | subheading | { "Card subheading" } | subheading | string \| undefined |  |
 | variant | { "Card variant" } | variant | "alarm" \| "critical" \| "filled" \| "info" \| "neutral" \| "outline" \| "primary" \| "success" \| "warning" | 'outline' |
 
+### Slot
+
+| Name | Description |
+| --- | --- |
+| default | { "Expandable card content." } |
+| title-action | { "Action displayed next to the card title." } |
+
 ## API for ix-card
 
 ### Properties
@@ -587,3 +594,10 @@ import { IxPushCard } from '@siemens/ix-vue';
 | passive | { "If true, disables hover and active styles and changes cursor to default" } | passive | boolean | false |
 | selected | { "Show card in selected state" } | selected | boolean | false |
 | variant | { "Card variant" } | variant | "alarm" \| "critical" \| "filled" \| "info" \| "neutral" \| "outline" \| "primary" \| "success" \| "warning" | 'outline' |
+
+### Slot
+
+| Name | Description |
+| --- | --- |
+| card-accordion | { "Accordion displayed in the card footer." } |
+| default | { "Main card content." } |
