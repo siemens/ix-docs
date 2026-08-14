@@ -10,7 +10,7 @@ description: 'Explore common vocabulary themes and challenges in UX writing. Thi
 
 ## Word length
 
-- Use short words instead of long words (8 letters or more) when possible.
+Use short words instead of long words (8 letters or more) when possible.
 
 <div className="dos-and-donts">
 <div className="dos">
@@ -27,7 +27,7 @@ description: 'Explore common vocabulary themes and challenges in UX writing. Thi
 </div>
 </div>
 
-- Keep sentences under 25 words (the average is 15 words) and break up longer sentences.
+Keep sentences under 25 words (the average is 15 words) and break up longer sentences.
 
 <div className="dos-and-donts">
 <div className="dos">
@@ -42,7 +42,7 @@ description: 'Explore common vocabulary themes and challenges in UX writing. Thi
 </div>
 </div>
 
-- Keep headings, sub-headings, and email subjects under 65 characters (including spaces).
+Keep headings, sub-headings, and email subjects under 65 characters (including spaces).
 
 <div className="dos-and-donts">
 <div className="dos">
@@ -63,7 +63,7 @@ description: 'Explore common vocabulary themes and challenges in UX writing. Thi
 
 Modal verbs are helping words such as "can", "must" or "will". They are placed before other verbs to show possibility, permission, obligation or ability. We use some modal verbs in UI text when talking about what users can and cannot do in products.
 
-- Use "can" and "cannot" to talk about permissions and capabilities instead of "could" that indicates uncertainty.
+Use "can" and "cannot" to talk about permissions and capabilities instead of "could" that indicates uncertainty.
 
 <div className="dos-and-donts">
 <div className="dos">
@@ -79,7 +79,7 @@ Modal verbs are helping words such as "can", "must" or "will". They are placed b
 </div>
 </div>
 
-- Use "will" to talk about definite future actions and consequences instead of "would" that indicates hesitation and doubt.
+Use "will" to talk about definite future actions and consequences instead of "would" that indicates hesitation and doubt.
 
 <div className="dos-and-donts">
 <div className="dos">
@@ -94,7 +94,7 @@ Modal verbs are helping words such as "can", "must" or "will". They are placed b
 </div>
 </div>
 
-- Do not use "should" when giving instructions as it indicates a recommendation, not a concrete action.
+Do not use "should" when giving instructions as it indicates a recommendation, not a concrete action.
 
 <div className="dos-and-donts">
 <div className="dos">
@@ -109,7 +109,7 @@ Modal verbs are helping words such as "can", "must" or "will". They are placed b
 </div>
 </div>
 
-- Specifically avoid using the modal verbs "may" or "might" as they are unclear. Instead, state consequences clearly.
+Specifically avoid using the modal verbs "may" or "might" as they are unclear. Instead, state consequences clearly.
 
 <div className="dos-and-donts">
 <div className="dos">
@@ -124,7 +124,7 @@ Modal verbs are helping words such as "can", "must" or "will". They are placed b
 </div>
 </div>
 
-- Avoid using "must" as this can seem aggressive and forceful. Only use it for emergencies.
+Avoid using "must" as this can seem aggressive and forceful. Only use it for emergencies.
 
 <div className="dos-and-donts">
 <div className="dos">
@@ -140,7 +140,7 @@ Modal verbs are helping words such as "can", "must" or "will". They are placed b
 </div>
 </div>
 
-- Avoid "shall" as it sounds overly formal and legal, and readers often confuse it with "will" or "should".
+Avoid "shall" as it sounds overly formal and legal, and readers often confuse it with "will" or "should".
 
 <div className="dos-and-donts">
 <div className="dos">
@@ -157,7 +157,7 @@ Modal verbs are helping words such as "can", "must" or "will". They are placed b
 
 ## Idioms, buzzwords and jargon
 
-- Avoid idiomatic expressions because their meaning cannot be understood literally from the words themselves, especially by non-native speakers.
+Avoid idiomatic expressions because their meaning cannot be understood literally from the words themselves, especially by non-native speakers.
 
 <div className="dos-and-donts">
 <div className="dos">
@@ -172,7 +172,7 @@ Modal verbs are helping words such as "can", "must" or "will". They are placed b
 </div>
 </div>
 
-- Avoid buzzwords as they sound corporate rather than clear.
+Avoid buzzwords as they sound corporate rather than clear.
 
 <div className="dos-and-donts">
 <div className="dos">
@@ -187,26 +187,26 @@ Modal verbs are helping words such as "can", "must" or "will". They are placed b
 </div>
 </div>
 
-- Avoid jargon unless your specific audience understands the technical term better than a plain alternative.
+Avoid jargon unless your specific audience understands the technical term better than a plain alternative.
 
 <div className="dos-and-donts">
 <div className="dos">
 	<ul aria-label="Recommended practices">
-		<li>Save your changes automatically</li>
+		<li>Save your changes automatically.</li>
 		<li>PLC configuration</li>
 		<li>motor speed</li>
 	</ul>
 </div>
 <div className="donts">
 	<ul aria-label="Practices to avoid">
-		<li>Enable auto-persistence of data</li>
+		<li>Enable auto-persistence of data.</li>
 		<li>programmable logic controller setup</li>
 		<li>angular velocity coefficient</li>
 	</ul>
 </div>
 </div>
 
-- Avoid cultural references or brand names unless functionally necessary.
+Avoid cultural references or brand names unless functionally necessary.
 
 <div className="dos-and-donts">
 <div className="dos">
@@ -227,7 +227,7 @@ Modal verbs are helping words such as "can", "must" or "will". They are placed b
 
 ## Phrasal verbs (multi-word verbs)
 
-- Avoid multi-word phrasal verbs when one word works.
+Avoid multi-word phrasal verbs when one word works.
 
 <div className="dos-and-donts">
 <div className="dos">
@@ -248,7 +248,7 @@ Modal verbs are helping words such as "can", "must" or "will". They are placed b
 </div>
 </div>
 
-- Use common industrial-application phrasal verbs when they are more familiar than one-word alternatives.
+Use common industrial-application phrasal verbs when they are more familiar than one-word alternatives.
 
 <div className="dos-and-donts">
 <div className="dos">
@@ -285,7 +285,7 @@ Use abbreviations and acronyms carefully. They can improve clarity for domain us
 </div>
 </div>
 
-- Avoid Latin abbreviations when there is space in the UI for plain English alternatives. Although e.g. and i.e. are often treated as common, many non-native English speakers cannot distinguish between them.
+Avoid Latin abbreviations when there is space in the UI for plain English alternatives. Although e.g. and i.e. seem to be universally understood, many non-native English speakers cannot distinguish between them.
 
 <div className="dos-and-donts">
 <div className="dos">
@@ -306,7 +306,7 @@ Use abbreviations and acronyms carefully. They can improve clarity for domain us
 </div>
 </div>
 
-- Use established industry-standard acronyms when your user expects them. Spell out new or less familiar acronyms on first use, then use the acronym consistently afterward.
+Use established industry-standard acronyms when your user expects them. Spell out new or less familiar acronyms on first use, then use the acronym consistently afterward.
 
 <div className="dos-and-donts">
 <div className="dos">
@@ -319,13 +319,13 @@ Use abbreviations and acronyms carefully. They can improve clarity for domain us
 <div className="donts">
 	<ul aria-label="Practices to avoid">
 		<li>Programmable Logic Controller (PLC) configuration</li>
-		<li>Universal Serial Bus</li>
+		<li>Universal Serial Bus connection</li>
 		<li>Access the SCADA dashboard to view production metrics. Update SCADA alarm thresholds as needed.</li>
 	</ul>
 </div>
 </div>
 
-- Abbreviations are acceptable in buttons, labels and tables when space is limited, no responsive design is available, and only when they are familiar to users and clarified in a visible part of the UI.
+Abbreviations are acceptable in buttons, labels and tables when space is limited and only when they are familiar to users. Clarify abbreviations in a visible part of the UI with legends, glossaries or infotips.
 
 <div className="dos-and-donts">
 <div className="dos">
@@ -338,7 +338,7 @@ Use abbreviations and acronyms carefully. They can improve clarity for domain us
 </div>
 </div>
 
-- Add lower case "s" without an apostrophe for plural forms.
+Add lower case "s" without an apostrophe for plural forms.
 
 <div className="dos-and-donts">
 <div className="dos">
@@ -386,7 +386,7 @@ English has many nouns that do not take a plural form (they do not use "s" for p
 </div>
 </div>
 
-- Use the singular verb form for collective nouns. Organizations and groups are single entities.
+Use the singular verb form for collective nouns. Organizations and groups are single entities.
 
 <div className="dos-and-donts">
 <div className="dos">
@@ -409,19 +409,19 @@ English has many nouns that do not take a plural form (they do not use "s" for p
 
 Choose time-related words carefully. They set user expectations about whether more updates, events or actions will occur.
 
-## Last vs. latest vs. recent
+### Last vs. latest vs. recent
 
 Last implies nothing else will follow. It is final and no more are coming.
 
 <div className="dos-and-donts">
 <div className="dos">
 	<ul aria-label="Recommended practices">
-		<li>Latest update (ongoing)</li>
+		<li>Last update (final)</li>
 	</ul>
 </div>
 <div className="donts">
 	<ul aria-label="Practices to avoid">
-		<li>Last update (final)</li>
+		<li>Last update (ongoing)</li>
 	</ul>
 </div>
 </div>
@@ -431,17 +431,17 @@ Latest is the most recent and newest, which means there could be more to follow.
 <div className="dos-and-donts">
 <div className="dos">
 	<ul aria-label="Recommended practices">
-		<li>Latest summary (more could come)</li>
+		<li>Latest summary (more coming)</li>
 	</ul>
 </div>
 <div className="donts">
 	<ul aria-label="Practices to avoid">
-		<li>Last summary (final)</li>
+		<li>Latest summary (final – no more coming)</li>
 	</ul>
 </div>
 </div>
 
-Recent means it happened a short time ago. Similar to latest but highlights events close to the present.
+Recent means it happened a short time ago. Similar to "latest" but highlights events closer to the present.
 
 <div className="dos-and-donts">
 <div className="dos">
@@ -451,12 +451,12 @@ Recent means it happened a short time ago. Similar to latest but highlights even
 </div>
 <div className="donts">
 	<ul aria-label="Practices to avoid">
-		<li>Latest events (recent and more could come)</li>
+		<li>Recent events (happened a long time ago)</li>
 	</ul>
 </div>
 </div>
 
-## Pending vs. waiting vs. queued
+### Pending vs. waiting vs. queued
 
 Pending means waiting for an action or decision that needs someone else to act.
 
@@ -464,11 +464,6 @@ Pending means waiting for an action or decision that needs someone else to act.
 <div className="dos">
 	<ul aria-label="Recommended practices">
 		<li>Pending approval</li>
-	</ul>
-</div>
-<div className="donts">
-	<ul aria-label="Practices to avoid">
-		<li>Waiting for approval</li>
 	</ul>
 </div>
 </div>
@@ -506,23 +501,23 @@ Queued means something is in a line and will be processed in order.
 
 ## False friends
 
-False friends are words that seem correct because they look similar to words in other languages, but they mean something different in English. Avoid false friends by checking the English meaning, not the similar word in your language, and by avoiding word-for-word translations.
+False friends are words that seem correct because they look similar to words in other languages, but they mean something different in English. Always check the English meaning and avoid word-for-word translations.
 
 Here are common false friends in industrial UX writing.
 
 | English word and meaning | Similar to other language | Meaning in other language | Typical error in UX writing | Correct translation |
 | --- | --- | --- | --- | --- |
-| actual (real) | German "aktuell" | current, present | "actual value" read as "current value" not "real value" | "tatsaechlich" (actual)<br />"aktuell" (current) |
+| actual (real) | German "aktuell" | current, present | "actual value" read as "current value" not "real value" | "tatsächlich" (actual)<br />"aktuell" (current) |
 | actualize (make real) | German "aktualisieren" | update, refresh | "actualize notifications" read as "update notifications" not "make notifications real" | "aktualisieren" (update)<br />"verwirklichen" (actualize) |
 | billion (10<sup>9</sup>) | German "Billion" | trillion (10<sup>12</sup>) | data values off by 1000x in reports | "Milliarde" (billion)<br />"Billion" (trillion) |
 | control (regulate) | Spanish "controlar" | to check, verify | "control system" might mean "check system" | "Gestionar/administrar un proceso" (control the process)<br />"Panel de configuracion/supervision" (control panel) |
 | date (day/time) | German "Datei" | computer file | "enter date" could mean "enter file" | "Datum" (date)<br />"Datei" (file) |
-| eventually (in time) | German "eventuell" | possibly, perhaps | "process eventually completes" is ambiguous | "schliesslich" (eventually)<br />"eventuell" (possibly) |
-| exit (leave) | Spanish "exito" | success | "exit code" could mean "success code" | "salida" (exit)<br />"exito" (success) |
+| eventually (in time) | German "eventuell" | possibly, perhaps | "process eventually completes" is ambiguous | "schließlich" (eventually)<br />"eventuell" (possibly) |
+| exit (leave) | Spanish "exito" | success | "exit code" could mean "success code" | "salida" (exit)<br />"éxito" (success) |
 | fabric (textile) | French "fabrique" | factory, plant | "fabric configuration" suggests factory config | "tissu" (fabric)<br />"fabrique" (factory) |
 | fast (quick) | German "fast" | almost, nearly | "fast mode" means "almost mode" | "schnell" (fast)<br />"fast" (almost) |
 | large (big) | French "large" | wide | "large capacity" might mean "wide capacity" | "grand" (large)<br />"large" (wide) |
-| library (collection) | French "librairie" | bookstore | "code library" misunderstood | "bibliotheque" (library)<br />"librairie" (bookstore) |
+| library (collection) | French "librairie" | bookstore | "code library" misunderstood | "bibliothèque" (library)<br />"librairie" (bookstore) |
 | realize (understand) | Spanish "realizar" | to carry out, perform | "realize changes" means "perform changes" | "darse cuenta" (realize)<br />"realizar" (perform) |
 | sensible (rational) | French "sensible" | sensitive | "sensible data" means sensitive, not reasonable | "raisonnable" (sensible)<br />"sensible" (sensitive) |
 
