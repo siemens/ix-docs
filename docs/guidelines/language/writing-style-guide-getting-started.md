@@ -16,15 +16,15 @@ Dive into the fundamental principles of UX writing, where you'll learn how to cr
 
 ## Grammar and vocabulary
 
-Discover the importance of proper grammar and vocabulary in UX writing. This subchapter will guide you on how to use language effectively to create professional and easily understandable content. [Read more](./grammar-and-vocabulary)
+Discover the importance of proper grammar and vocabulary in UX writing. These subchapters will guide you on how to use language effectively to create professional and easily understandable content. [Read more: Grammar](./basics/grammar.md)[Read more: Vocabulary](./basics/vocabulary.md)
 
 ## Punctuation
 
-Master the use of punctuation to improve the readability and comprehension of your text. This section covers the rules and best practices for using punctuation marks to ensure your writing is clear and precise. [Read more](./punctuation)
+Master the use of punctuation to improve the readability and comprehension of your text. This section covers the rules and best practices for using punctuation marks to ensure your writing is clear and precise. [Read more](./basics/punctuation.md)
 
-## Proper nouns
+## Capitalization and proper nouns
 
-Learn the guidelines for using proper nouns correctly in your text. This subchapter will help you understand when and how to capitalize names, brands, and other specific terms to maintain consistency and professionalism. [Read more](./proper-nouns)
+Learn the guidelines for using proper nouns correctly in your text. This subchapter will help you understand when and how to capitalize names, brands, and other specific terms to maintain consistency and professionalism. [Read more](./basics/capitalization-and-proper-nouns.md)
 
 ## Formatting 
 
@@ -41,7 +41,7 @@ Learn when and how to write all types of messages including warnings, errors, in
 
 ## Frequent app functions
 
-Get tips for naming common app functions clearly and effectively. This subchapter focuses on how to describe frequent actions and features in a way that users can quickly understand and use. [Read more](./frequent-app-functions)
+Get tips for naming common app functions clearly and effectively. This subchapter focuses on how to describe frequent actions and features in a way that users can quickly understand and use. [Read more](./menu-functions-and-ui-labels/ui-terminology.md)
 
 
 ## Dialogs and buttons

@@ -556,5 +556,5 @@ The following words and pairs are often misused and misunderstood when writing t
 
 ## Related
 
-- [UI terminology](./menu-functions-and-ui-labels/ui-terminology)
-- [Grammar and vocabulary](./grammar-and-vocabulary)
+- [UI terminology](../menu-functions-and-ui-labels/ui-terminology.md)
+- [Grammar](./grammar.md)

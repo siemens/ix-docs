@@ -644,5 +644,5 @@ Spaces before and after punctuation: No spaces inside parentheses or quotation m
 
 ## Related
 
-- [Messages overview](./messaging/messages-overview.md)
-- [Progress updates](./messaging/progress-updates.mdx)
+- [Messages overview](../messaging/messages-overview.md)
+- [Progress updates](../messaging/progress-updates.mdx)

@@ -137,7 +137,7 @@ Capitalize official service and portal names you have created and named within y
 
 ## Headings
 
-Use sentence case for all headings (including table headings). Capitalize only the first word and proper nouns. See [Punctuation](#).
+Use sentence case for all headings (including table headings). Capitalize only the first word and proper nouns. See [Punctuation](./punctuation.md).
 
 <div className="dos-and-donts">
 <div className="dos">
@@ -179,7 +179,7 @@ Use sentence case for button labels and UI elements. Capitalize only the first w
 </div>
 </div>
 
-Slashes do not create new sentences. Treat them like "and" or "or". Capitalize only the first word and proper nouns. See [Punctuation](#).
+Slashes do not create new sentences. Treat them like "and" or "or". Capitalize only the first word and proper nouns. See [Punctuation](./punctuation.md).
 
 <div className="dos-and-donts">
 <div className="dos">
@@ -292,7 +292,7 @@ Don't use periods for geographic abbreviations. Capitalize all country codes.
 
 ## Lists and bullet points
 
-Capitalize the first word of each list item. Use sentence case throughout. For punctuation in lists, see [Punctuation: Period/full stop](#).
+Capitalize the first word of each list item. Use sentence case throughout. For punctuation in lists, see [Punctuation: Period/full stop](./punctuation.md#periods--full-stops-).
 
 <div className="dos-and-donts">
 <div className="dos">
@@ -399,6 +399,6 @@ dash-case (URLs, file names, CSS classes):
 
 ## Related
 
-- [Voice and tone](basics/voice-and-tone.md)
-- [UI terminology](menu-functions-and-ui-labels/ui-terminology.md)
-- [Punctuation](punctuation.md)
+- [Voice and tone](./voice-and-tone.md)
+- [UI terminology](../menu-functions-and-ui-labels/ui-terminology.md)
+- [Punctuation](./punctuation.md)

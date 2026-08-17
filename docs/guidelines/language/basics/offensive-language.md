@@ -86,4 +86,5 @@ Engage with language experts specializing in content moderation to ensure compre
 ## Related
 
 - [Voice and tone](./voice-and-tone.md)
+- [Vocabulary](../basics/vocabulary.md)
 - [User management](../menu-functions-and-ui-labels/user-management.md)
