@@ -75,7 +75,7 @@ try {
   customCss.push('./src/scss/classic-theme.scss');
 }
 
-const brokenLinks = 'throw';
+const brokenLinks = process.env.CI ? 'throw' : 'warn';
 const baseUrl = process.env.BASE_URL || '/';
 
 console.log('Using BASE_URL', baseUrl);

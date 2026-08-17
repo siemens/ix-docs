@@ -16,7 +16,7 @@ Dive into the fundamental principles of UX writing, where you'll learn how to cr
 
 ## Grammar and vocabulary
 
-Discover the importance of proper grammar and vocabulary in UX writing. These subchapters will guide you on how to use language effectively to create professional and easily understandable content. [Read more: Grammar](./basics/grammar.md)[Read more: Vocabulary](./basics/vocabulary.md)
+Discover the importance of proper grammar and vocabulary in UX writing. These subchapters will guide you on how to use language effectively to create professional and easily understandable content. Read more: [Grammar](./basics/grammar.md) and [Vocabulary](./basics/vocabulary.md)
 
 ## Punctuation
 
@@ -41,7 +41,7 @@ Learn when and how to write all types of messages including warnings, errors, in
 
 ## Frequent app functions
 
-Get tips for naming common app functions clearly and effectively. This subchapter focuses on how to describe frequent actions and features in a way that users can quickly understand and use. [Read more](./menu-functions-and-ui-labels/ui-terminology.md)
+Get tips for naming common app functions clearly and effectively. This subchapter focuses on how to describe frequent actions and features in a way that users can quickly understand and use. [Read more](../language/frequent-app-functions.md)
 
 
 ## Dialogs and buttons
