@@ -54,7 +54,7 @@ Import the design system styling in your global stylesheet (e.g.: `src/styles.sc
 @import '@siemens/ix/css/default.css';
 ```
 
-The default stylesheet includes the foundation styles and the Classic theme required by the components. It does not style native HTML elements or add global utility classes. See [Global styles](/docs/styles/global-styles) for optional reset, base, scrollbar, utility and legacy styles.
+The default stylesheet includes the Classic theme, foundation and common utilities for button groups, links, table classes and typography. Foundation applies the SiemensSans Pro font stack to `[data-ix-theme]` and sets body typography, text color, background and document-wide scrollbar styles. The default stylesheet does not include a reset, body margin reset, the complete utility layer or legacy native form styles. See [Global styles](/docs/styles/global-styles) for the optional entry points.
 
 Set the `data-ix-theme` attribute of the `<html>` tag to the theme of choice (e.g. `classic`) and the corresponding `data-ix-color-schema` attribute to the value `light`, `dark` or `system` to set the color scheme. `system` will automatically apply the color scheme of the users’ operating system.
 

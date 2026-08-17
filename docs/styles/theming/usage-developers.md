@@ -31,13 +31,13 @@ To choose a theme set the `data-ix-theme` attribute of the `<html>` tag to the t
 
 ## Recommended setup
 
-The default stylesheet combines the component foundation with the Classic light and dark themes:
+The default stylesheet combines the component foundation and common utilities with the Classic light and dark themes:
 
 ```ts
 import '@siemens/ix/css/default.css';
 ```
 
-It does not include a reset, body styles, scrollbar styles, utility classes or legacy native form styles. Components remain self-contained without these optional global styles.
+Foundation applies the SiemensSans Pro font stack to `[data-ix-theme]` and sets body typography, text color, background and document-wide scrollbar styles. The default stylesheet also includes utilities for button groups, links, table classes and typography. It does not include a reset, body margin reset, the complete utility layer or legacy native form styles.
 
 ## Loading foundation and themes separately
 
@@ -50,12 +50,14 @@ import '@siemens/ix/css/theme/classic-light.css';
 import '@siemens/ix/css/theme/classic-dark.css';
 ```
 
-The Sass entry points provide the same composition:
+The Sass entry points provide the foundation and Classic themes separately:
 
 ```scss
 @use '@siemens/ix/scss/foundation';
 @use '@siemens/ix/scss/theme/classic';
 ```
+
+Add `@siemens/ix/scss/utilities` when this custom composition also needs the utility layer.
 
 Use the light or dark Sass theme entry point when you only need one color schema:
 

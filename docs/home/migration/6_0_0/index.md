@@ -10,7 +10,7 @@ description: Upgrade global CSS and Sass imports from Siemens Industrial Experie
 
 ## Global CSS and Sass
 
-Version 6 makes component styles self-contained and changes the default stylesheet to include only the Classic theme and component foundation. It no longer changes `body`, normalizes native elements, styles native links or form controls, provides utility classes or applies document-wide scrollbar styles.
+Version 6 makes component styles self-contained and changes the default stylesheet to include the Classic theme, component foundation and common utilities for button groups, links, table classes and typography. Foundation applies the SiemensSans Pro font stack to `[data-ix-theme]` and sets body typography, text color, background and document-wide scrollbar styles. The default stylesheet no longer normalizes native elements, resets the body margin or styles native form controls.
 
 Use the canonical default import for components:
 
@@ -18,9 +18,9 @@ Use the canonical default import for components:
 @import '@siemens/ix/css/default.css';
 ```
 
-The existing `@siemens/ix/dist/siemens-ix/siemens-ix.css` import path remains available, but now resolves to the same minimal theme and foundation bundle. It no longer provides the previous global styles.
+The existing `@siemens/ix/dist/siemens-ix/siemens-ix.css` import path remains available and resolves to the same default bundle. It includes the selected utilities and foundation defaults, but not the reset, body margin reset, complete utility layer or legacy native form styles.
 
-See [Global styles](/docs/styles/global-styles) to select reset, base, scrollbar and utility styles individually.
+See [Global styles](/docs/styles/global-styles) to select reset, base, scoped scrollbar, complete utility and legacy styles individually.
 
 ### Preserve previous global behavior
 
@@ -38,19 +38,21 @@ Applications that keep the existing distribution path can restore the same behav
 @import '@siemens/ix/css/legacy.css';
 ```
 
-The legacy stylesheet restores native form classes, utilities, reset and base styles. It also retains the previous automatic `body:not(.disable-scrollbar)` scrollbar behavior. It does not include a theme or component foundation.
+The legacy stylesheet restores native form classes, utilities, reset and base styles. It does not include a theme or component foundation.
 
 ### Opt into scrollbar styles
 
-The new scrollbar stylesheet only styles an explicitly marked subtree:
+Foundation styles document scrollbars automatically. Add `disable-scrollbar` to `body` to disable that behavior. The scoped scrollbar stylesheet can then enable themed scrollbars for a selected subtree:
 
 ```css
 @import '@siemens/ix/css/scrollbar.css';
 ```
 
 ```html
-<body data-ix-scrollbars>
-  <!-- Scrollable descendants use the themed scrollbar. -->
+<body class="disable-scrollbar">
+  <main data-ix-scrollbars>
+    <!-- Scrollable descendants use the themed scrollbar. -->
+  </main>
 </body>
 ```
 
