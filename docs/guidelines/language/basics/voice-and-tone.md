@@ -161,5 +161,5 @@ Avoid using negative shortened word forms such as “can’t” and “won’t�
 
 - [Grammar](./grammar.md)
 - [Punctuation](./punctuation.md)
-- [Capitalization](../proper-nouns.md)
+- [Capitalization](./capitalization-and-proper-nouns.md)
 - [Error pages](../messaging/error-pages.md)
