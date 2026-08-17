@@ -37,7 +37,9 @@ function ApiFunction({
   children,
 }: ApiFunctionProps) {
   const signature = `${name}(${parameters
-    .map((p) => `${p.name}${p.optional ? '?' : ''}: ${decodeHTMLEntities(p.type)}`)
+    .map(
+      (p) => `${p.name}${p.optional ? '?' : ''}: ${decodeHTMLEntities(p.type)}`
+    )
     .join(', ')})`;
 
   return (
@@ -45,7 +47,6 @@ function ApiFunction({
       {() => (
         <div className="api-table container ml-0 mb-8" id={`function-${name}`}>
           <div className="bg-[transparent] rounded-lg overflow-hidden border-solid border-[1px] border-[var(--theme-color-soft-bdr)]">
-            
             <AnchorHeader
               anchorName={`function-${name}`}
               anchorLabel={`Direct link to ${name}`}
@@ -55,33 +56,54 @@ function ApiFunction({
             </AnchorHeader>
 
             {children && (
-              <div className={clsx(styles.ApiTableText, 'api-row border-solid border-0 border-b border-[var(--theme-color-soft-bdr)]')}>
-                <div className="px-8 py-4 font-bold w-auto min-w-[150px] border-solid border-0 border-r border-[var(--theme-color-soft-bdr)]">
+              <div
+                className={clsx(
+                  styles.ApiTableText,
+                  'api-row border-solid border-0 border-b border-[var(--theme-color-soft-bdr)]'
+                )}
+              >
+                <div className="px-8 py-4 font-bold w-auto border-solid border-0 border-r border-[var(--theme-color-soft-bdr)] break-words">
                   Description
                 </div>
-                <div className="w-auto p-4 flex items-center">
-                  {children}
-                </div>
+                <div className="w-auto p-4 break-words">{children}</div>
               </div>
             )}
 
             {parameters.length > 0 && (
               <>
                 {parameters.map((param, idx) => (
-                  <div key={idx} className={clsx(styles.ApiTableText, 'api-row border-solid border-0 border-b border-[var(--theme-color-soft-bdr)]')}>
-                    <div className="px-8 py-4 font-bold w-auto min-w-[150px] border-solid border-0 border-r border-[var(--theme-color-soft-bdr)]">
+                  <div
+                    key={idx}
+                    className={clsx(
+                      styles.ApiTableText,
+                      'api-row border-solid border-0 border-b border-[var(--theme-color-soft-bdr)]'
+                    )}
+                  >
+                    <div className="px-8 py-4 font-bold w-auto border-solid border-0 border-r border-[var(--theme-color-soft-bdr)]">
                       <div>{param.name}</div>
-                      {param.optional && <div className="font-normal text-xs opacity-70">(optional)</div>}
+                      {param.optional && (
+                        <div className="font-normal text-xs opacity-70">
+                          (optional)
+                        </div>
+                      )}
                     </div>
                     <div className="w-auto p-4 flex flex-col justify-center">
                       <div>
-                        <span className="opacity-70 text-xs uppercase tracking-wider mr-2">Type:</span>
-                        <code className="p-1 text-sm">{decodeHTMLEntities(param.type)}</code>
+                        <span className="opacity-70 text-xs uppercase tracking-wider mr-2">
+                          Type:
+                        </span>
+                        <code className="p-1 text-sm">
+                          {decodeHTMLEntities(param.type)}
+                        </code>
                       </div>
                       {param.defaultValue && (
                         <div className="mt-1">
-                           <span className="opacity-70 text-xs uppercase tracking-wider mr-2">Default:</span>
-                           <code className="p-1 text-sm">{decodeHTMLEntities(param.defaultValue)}</code>
+                          <span className="opacity-70 text-xs uppercase tracking-wider mr-2">
+                            Default:
+                          </span>
+                          <code className="p-1 text-sm">
+                            {decodeHTMLEntities(param.defaultValue)}
+                          </code>
                         </div>
                       )}
                     </div>
@@ -91,14 +113,13 @@ function ApiFunction({
             )}
 
             <div className={clsx(styles.ApiTableText, 'api-row')}>
-              <div className="px-8 py-4 font-bold w-auto min-w-[150px] border-solid border-0 border-r border-[var(--theme-color-soft-bdr)]">
+              <div className="px-8 py-4 font-bold w-auto border-solid border-0 border-r border-[var(--theme-color-soft-bdr)]">
                 Returns
               </div>
               <div className="w-auto p-4 flex items-center">
                 <code className="p-1 text-sm">{returnType}</code>
               </div>
             </div>
-
           </div>
         </div>
       )}
