@@ -9,6 +9,8 @@ This file contains links to documentation sections following the llmstxt.org sta
 - [3D chart](https://ix.siemens.io//docs/components/3d/overview.md): 3D charts are a powerful way to visualize data in three dimensions. They provide a more immersive and interactive experience compared to traditiona...
 - [About and legal - Code](https://ix.siemens.io//docs/components/about-and-legal/code.md): Code examples and API documentation for the ix-menu-about
 - [About and legal - Usage](https://ix.siemens.io//docs/components/about-and-legal/guide.md): Usage guide for the ix-menu-about, ix-menu-about-item
+- [AI message - Code](https://ix.siemens.io//docs/components/ai-message/code.md): Code examples and API documentation for AI message.
+- [AI message - Usage](https://ix.siemens.io//docs/components/ai-message/guide.md): Usage guide for AI message.
 - [Application - Code](https://ix.siemens.io//docs/components/application/code.md): Code examples and API documentation for the ix-application
 - [Application - Usage](https://ix.siemens.io//docs/components/application/guide.md): Usage guide for the ix-application
 - [Application header - Code](https://ix.siemens.io//docs/components/application-header/code.md): Code examples and API documentation for the ix-application-header
@@ -17,6 +19,8 @@ This file contains links to documentation sections following the llmstxt.org sta
 - [Application menu - Usage](https://ix.siemens.io//docs/components/application-menu/guide.md): Usage guide for the ix-menu-settings, ix-menu, ix-menu-item, ix-menu-category, ix-menu-avatar, ix-menu-avatar-item
 - [Avatar - Code](https://ix.siemens.io//docs/components/avatar/code.md): Code examples and API documentation for the ix-avatar
 - [Avatar - Usage](https://ix.siemens.io//docs/components/avatar/guide.md): Usage guide for the ix-avatar
+- [Badge - Code](https://ix.siemens.io//docs/components/badge/code.md): Code examples and API documentation for the ix-badge
+- [Badge - Usage](https://ix.siemens.io//docs/components/badge/guide.md): Usage guide for the badge component
 - [Bar chart](https://ix.siemens.io//docs/components/bar-chart/overview.md): Bar charts display data using rectangular bars. The length of each bar is proportional to the value it represents. Bar charts are commonly used to ...
 - [Blind - Code](https://ix.siemens.io//docs/components/blind/code.md): Code examples and API documentation for the ix-blind
 - [Blind - Usage](https://ix.siemens.io//docs/components/blind/guide.md): Usage guide for the ix-blind
@@ -31,6 +35,12 @@ This file contains links to documentation sections following the llmstxt.org sta
 - [Category filter - Code](https://ix.siemens.io//docs/components/category-filter/code.md): Code examples and API documentation for the ix-category-filter
 - [Category filter - Usage](https://ix.siemens.io//docs/components/category-filter/guide.md): Usage guide for the ix-category-filter
 - [Overview](https://ix.siemens.io//docs/components/charts-overview/overview.md): Charts are essential tools for visualizing data, making complex information more accessible and easier to understand.
+- [Chat - Code](https://ix.siemens.io//docs/components/chat/code.md): Code examples and API documentation for chat.
+- [Chat - Usage](https://ix.siemens.io//docs/components/chat/guide.md): Usage guide for chat.
+- [Chat attachment - Code](https://ix.siemens.io//docs/components/chat-attachment/code.md): Code examples and API documentation for chat attachment.
+- [Chat attachment - Usage](https://ix.siemens.io//docs/components/chat-attachment/guide.md): Usage guide for chat attachment.
+- [Chat input - Code](https://ix.siemens.io//docs/components/chat-input/code.md): Code examples and API documentation for chat input.
+- [Chat input - Usage](https://ix.siemens.io//docs/components/chat-input/guide.md): Usage guide for chat input.
 - [Checkbox - Code](https://ix.siemens.io//docs/components/checkbox/code.md): Code examples and API documentation for the ix-checkbox, ix-checkbox-group
 - [Checkbox - Usage](https://ix.siemens.io//docs/components/checkbox/guide.md): Usage guide for the ix-checkbox, ix-checkbox-group
 - [Chip - Code](https://ix.siemens.io//docs/components/chip/code.md): Code examples and API documentation for the ix-chip
@@ -136,9 +146,12 @@ This file contains links to documentation sections following the llmstxt.org sta
 - [Toggle button - Code](https://ix.siemens.io//docs/components/toggle-button/code.md): Code examples and API documentation for the ix-icon-toggle-button, ix-toggle-button
 - [Toggle button - Usage](https://ix.siemens.io//docs/components/toggle-button/guide.md): Usage guide for the ix-icon-toggle-button, ix-toggle-button
 - [Tooltip - Code](https://ix.siemens.io//docs/components/tooltip/code.md): Code examples and API documentation for the ix-tooltip
+- [Tooltip - Usage](https://ix.siemens.io//docs/components/tooltip/guide.md): Usage guide for tooltips
 - [Tooltip - Language](https://ix.siemens.io//docs/components/tooltip/uxwriting.md): Language guide for the ix-tooltip
 - [Tree - Code](https://ix.siemens.io//docs/components/tree/code.md): Code examples and API documentation for the ix-tree, ix-tree-item
 - [Upload - Code](https://ix.siemens.io//docs/components/upload/code.md): Code examples and API documentation for the ix-upload
+- [User message - Code](https://ix.siemens.io//docs/components/user-message/code.md): Code examples and API documentation for user message.
+- [User message - Usage](https://ix.siemens.io//docs/components/user-message/guide.md): Usage guide for user message.
 - [Workflow - Code](https://ix.siemens.io//docs/components/workflow/code.md): Code examples and API documentation for the ix-workflow-step, ix-workflow-steps
 - [Code](https://ix.siemens.io//docs/guidelines/accessibility/code.md): Developer-focused accessibility guidance for ix design system, with practical code examples and implementation patterns to meet WCAG requirements a...
 - [Overview](https://ix.siemens.io//docs/guidelines/accessibility/overview.md): Accessibility ensures that digital products are usable by everyone, including people with disabilities. It is crucial for creating inclusive soluti...

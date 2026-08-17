@@ -4,6 +4,10 @@
 
 # Pill - Code
 
+:::info
+Pills are deprecated and removed in V7.0.0. We recommend using [badges](../badge/index.mdx) with type `label` instead, which support the same compact status and category use cases.
+:::
+
 ## Basic
 
 ### React Examples
