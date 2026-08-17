@@ -101,5 +101,5 @@ Badges are read-only. They don't have hover, active or disabled states, but stan
 - [Pill](../pill)
 - [Chip](../chip)
 - [Popover](../popover)
-- [UX writing basics](../../guidelines/language/basics)
+- [UX writing basics](../../guidelines/language/basics/voice-and-tone)
 - [Accessibility](../../guidelines/accessibility)
