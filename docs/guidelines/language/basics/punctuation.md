@@ -110,23 +110,6 @@ Add one space after the bullet point or number before the text begins.
 <div class="dos-and-donts">
   <div class="dos">
     <ul aria-label="Recommended practices">
-      <li>• Real-time monitoring</li>
-      <li>• Automated alerts</li>
-      <li>• Custom dashboards</li>
-    </ul>
-  </div>
-  <div class="donts">
-    <ul aria-label="Practices to avoid">
-      <li>Real-time monitoring</li>
-      <li>Automated alerts</li>
-      <li>Custom dashboards</li>
-    </ul>
-  </div>
-</div>
-
-<div class="dos-and-donts">
-  <div class="dos">
-    <ul aria-label="Recommended practices">
       <li>Key features:<br/>&nbsp;&nbsp;&bull; Real-time monitoring<br/>&nbsp;&nbsp;&bull; Automated alerts<br/>&nbsp;&nbsp;&bull; Custom dashboards</li>
       <li>Setup steps:<br/>1 Connect device<br/>2. Configure settings<br/>3. Start monitoring</li>
       <li>Benefits include:<br/>&nbsp;&nbsp;&bull; Increased efficiency across all operations.<br/>&nbsp;&nbsp;&bull; Reduced downtime through predictive maintenance.<br/>&nbsp;&nbsp;&bull; Enhanced visibility into system performance.</li>
