@@ -84,7 +84,7 @@ With our minimal punctuation approach, we limit apostrophes by using nouns as ad
 
 Use a single asterisk to indicate required fields. Place them immediately after the text without a space. A legend explaining what the asterisk means, typically at the top of forms, is no longer necessary as asterisks are widely understood to mean mandatory.
 
-Note: If your design system adds asterisks automatically via attributes, remove the manual symbol to prevent duplication.
+Note: Consider adding asterisks automatically via attributes within your component to remove the manual load and prevent duplication. See [Forms field (component)](../../../components/forms-field/guide.md).
 
 <div class="dos-and-donts">
   <div class="dos">
@@ -99,13 +99,30 @@ Note: If your design system adds asterisks automatically via attributes, remove 
   </div>
 </div>
 
-## Bullet points `&nbsp;&nbsp;&bull;`
+## Bullet points `•`
 
 Use bullet points to break down complex information into scannable, digestible chunks. They help users quickly identify key points and reduce cognitive load. Use consistent bullet styles within a single list or section.
 
 For unordered lists, use round bullets (•). For ordered lists, use numbers followed by a period (1.). Maintain parallel structure; if one item is a complete sentence, make all items complete sentences.
 
 Add one space after the bullet point or number before the text begins.
+
+<div class="dos-and-donts">
+  <div class="dos">
+    <ul aria-label="Recommended practices">
+      <li>• Real-time monitoring</li>
+      <li>• Automated alerts</li>
+      <li>• Custom dashboards</li>
+    </ul>
+  </div>
+  <div class="donts">
+    <ul aria-label="Practices to avoid">
+      <li>Real-time monitoring</li>
+      <li>Automated alerts</li>
+      <li>Custom dashboards</li>
+    </ul>
+  </div>
+</div>
 
 <div class="dos-and-donts">
   <div class="dos">
@@ -235,7 +252,7 @@ Remove hyphens for widely understood terms that have evolved beyond needing them
 
 ## Minus sign `−`
 
-Use the proper minus sign (−) rather than a hyphen (-) when expressing negative values or subtraction. In UI contexts such as labels, values or data displays, the minus sign should be used to ensure mathematical clarity. The minus sign should be placed directly before the number with no intervening space except for mathematical operations for readability. See also [Formatting of Numbers and percentages](../formatting/numbers.mdx) 
+Use the proper minus sign (−) rather than a hyphen (-) when expressing negative values or subtraction. In UI contexts such as labels, values or data displays, the minus sign should be used to ensure mathematical clarity. The minus sign should be placed directly before the number with no intervening space except for mathematical operations for readability. See [Formatting of Numbers and percentages](../formatting/numbers.mdx) 
 
 <div class="dos-and-donts">
   <div class="dos">
