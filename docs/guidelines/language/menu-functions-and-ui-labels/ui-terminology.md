@@ -15,35 +15,35 @@ description: 'Using well-defined terms help users understand actions, navigate s
 Always consider the difference between user actions within a desktop environment (based on mouse or keyboard usage) and mobile devices based on touch gestures.
 
 <div className="dos-and-donts">
-<div className="dos">
-  <ul aria-label="Recommended practices">
-    <li>click (desktop)</li>
-    <li>tap (mobile device)</li>
-    <li>select (when not sure if desktop or mobile)</li>
-  </ul>
-</div>
+  <div className="dos">
+    <ul aria-label="Recommended practices">
+      <li>click (desktop)</li>
+      <li>tap (mobile device)</li>
+      <li>select (when not sure if desktop or mobile)</li>
+    </ul>
+  </div>
 </div>
 
 Use clear and precise terms that leave no room for misunderstandings.
 
 <div className="dos-and-donts">
-<div className="dos">
-  <ul aria-label="Recommended practices">
-    <li>delete (if you want to erase data, e.g. a file)</li>
-    <li>remove (if you want to take data away, e.g. permissions)</li>
-  </ul>
-</div>
+  <div className="dos">
+    <ul aria-label="Recommended practices">
+      <li>delete (if you want to erase data, e.g. a file)</li>
+      <li>remove (if you want to take data away, e.g. permissions)</li>
+    </ul>
+  </div>
 </div>
 
 Use “select” for multi-platform applications where the input method varies (tap, click, etc.).
 
 <div className="dos-and-donts">
-<div className="dos">
-  <ul aria-label="Recommended practices">
-    <li>Select the checkbox to enable notifications.</li>
-    <li>Select and hold the Shift key to select multiple items.</li>
-  </ul>
-</div>
+  <div className="dos">
+    <ul aria-label="Recommended practices">
+      <li>Select the checkbox to enable notifications.</li>
+      <li>Select and hold the Shift key to select multiple items.</li>
+    </ul>
+  </div>
 </div>
 
 ## Mouse terminology
@@ -59,16 +59,16 @@ This section provides clear definitions for the most frequently used mouse-relat
 - middle-click (scroll wheel)
 
 <div className="dos-and-donts">
-<div className="dos">
-  <ul aria-label="Recommended practices">
-    <li>click</li>
-  </ul>
-</div>
-<div className="donts">
-  <ul aria-label="Practices to avoid">
-    <li>press</li>
-  </ul>
-</div>
+  <div className="dos">
+    <ul aria-label="Recommended practices">
+      <li>click</li>
+    </ul>
+  </div>
+  <div className="donts">
+    <ul aria-label="Practices to avoid">
+      <li>press</li>
+    </ul>
+  </div>
 </div>
 
 ### Movement-based actions
@@ -79,16 +79,16 @@ This section provides clear definitions for the most frequently used mouse-relat
 - scroll
 
 <div className="dos-and-donts">
-<div className="dos">
-  <ul aria-label="Recommended practices">
-    <li>hover</li>
-  </ul>
-</div>
-<div className="donts">
-  <ul aria-label="Practices to avoid">
-    <li>mouse over</li>
-  </ul>
-</div>
+  <div className="dos">
+    <ul aria-label="Recommended practices">
+      <li>hover</li>
+    </ul>
+  </div>
+  <div className="donts">
+    <ul aria-label="Practices to avoid">
+      <li>mouse over</li>
+    </ul>
+  </div>
 </div>
 
 ## Touchscreen terminology
@@ -126,40 +126,40 @@ As touchscreen interfaces rely on direct finger interaction, this section covers
 Use "press" when referring to the physical action of pressing a key.
 
 <div className="dos-and-donts">
-<div className="dos">
-  <ul aria-label="Recommended practices">
-    <li>Press Enter to confirm</li>
-    <li>Press Spacebar to play or pause</li>
-  </ul>
-</div>
-<div className="donts">
-  <ul aria-label="Practices to avoid">
-    <li>Hit Enter</li>
-    <li>Strike Enter</li>
-    <li>Depress Enter</li>
-  </ul>
-</div>
+  <div className="dos">
+    <ul aria-label="Recommended practices">
+      <li>Press Enter to confirm</li>
+      <li>Press Spacebar to play or pause</li>
+    </ul>
+  </div>
+  <div className="donts">
+    <ul aria-label="Practices to avoid">
+      <li>Hit Enter</li>
+      <li>Strike Enter</li>
+      <li>Depress Enter</li>
+    </ul>
+  </div>
 </div>
 
 Capitalize special keys and directions.
 
 <div className="dos-and-donts">
-<div className="dos">
-  <ul aria-label="Recommended practices">
-    <li>Enter / Tab / Shift / Ctrl / Alt</li>
-    <li>Up Arrow / Down Arrow / Left Arrow / Right Arrow</li>
-  </ul>
-</div>
+  <div className="dos">
+    <ul aria-label="Recommended practices">
+      <li>Enter / Tab / Shift / Ctrl / Alt</li>
+      <li>Up Arrow / Down Arrow / Left Arrow / Right Arrow</li>
+    </ul>
+  </div>
 </div>
 
 Use "type" when asking users to enter text.
 
 <div className="dos-and-donts">
-<div className="dos">
-  <ul aria-label="Recommended practices">
-    <li>Type admin in the username field.</li>
-  </ul>
-</div>
+  <div className="dos">
+    <ul aria-label="Recommended practices">
+      <li>Type admin in the username field.</li>
+    </ul>
+  </div>
 </div>
 
 ## UI element terminology
@@ -167,38 +167,38 @@ Use "type" when asking users to enter text.
 Use standardized and consistent terminology to describe UI components and input elements.
 
 <div className="dos-and-donts">
-<div className="dos">
-  <ul aria-label="Recommended practices">
-    <li>checkbox</li>
-  </ul>
-</div>
-<div className="donts">
-  <ul aria-label="Practices to avoid">
-    <li>box</li>
-    <li>option box</li>
-    <li>selection box</li>
-    <li>tick box</li>
-  </ul>
-</div>
+  <div className="dos">
+    <ul aria-label="Recommended practices">
+      <li>checkbox</li>
+    </ul>
+  </div>
+  <div className="donts">
+    <ul aria-label="Practices to avoid">
+      <li>box</li>
+      <li>option box</li>
+      <li>selection box</li>
+      <li>tick box</li>
+    </ul>
+  </div>
 </div>
 
 Avoid mixing terms within the same products and portfolios.
 
 <div className="dos-and-donts">
-<div className="dos">
-  <ul aria-label="Recommended practices">
-    <li>To enable automatic updates, select the checkbox to activate Auto update.</li>
-    <li>Click this image</li>
-    <li>The link opens in a new window.</li>
-  </ul>
-</div>
-<div className="donts">
-  <ul aria-label="Practices to avoid">
-    <li>To enable automatic updates, select the box to activate Auto update.</li>
-    <li>Click this picture</li>
-    <li>The link opens in a new browser.</li>
-  </ul>
-</div>
+  <div className="dos">
+    <ul aria-label="Recommended practices">
+      <li>To enable automatic updates, select the checkbox to activate Auto update.</li>
+      <li>Click this image</li>
+      <li>The link opens in a new window.</li>
+    </ul>
+  </div>
+  <div className="donts">
+    <ul aria-label="Practices to avoid">
+      <li>To enable automatic updates, select the box to activate Auto update.</li>
+      <li>Click this picture</li>
+      <li>The link opens in a new browser.</li>
+    </ul>
+  </div>
 </div>
 
 ## UI interaction terminology

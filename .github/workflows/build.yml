@@ -19,6 +19,9 @@ jobs:
 
       - uses: ./.github/workflows/actions/turbo
 
+      - name: Lint Markdown
+        run: pnpm lint:markdown
+
       - name: Build
         run: pnpm build
         env:

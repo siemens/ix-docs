@@ -59,23 +59,23 @@ Modals have two states: Closed and opened.
 ## Dos and Don’ts
 
 <div className="dos-and-donts">
-<div className="dos">
-  <ul aria-label="Recommended practices">
-    <li>Do provide at least one visible way to close the modal</li>
-    <li>Do provide a clear primary action that describes the result</li>
-    <li>Do ensure all controls are accessible by keyboard and screen‑reader</li>
-    <li>Do preserve scroll position and page state when closing</li>
-    <li>Do return users to the previous state when cancelling, not an unrelated page</li>
-  </ul>
-</div>
-<div className="donts">
-  <ul aria-label="Practices to avoid">
-    <li>Don’t use modals if a decision should be made (use [message modals](../message-modal) instead)</li>
-    <li>Don’t nest modals, e.g. to load more data, instead use [spinners](../spinner) within modal contents)</li>
-    <li>Don’t auto close modals for irreversible actions</li>
-    <li>Don’t overload the modal with unrelated content</li>
-  </ul>
-</div>
+  <div className="dos">
+    <ul aria-label="Recommended practices">
+      <li>Do provide at least one visible way to close the modal</li>
+      <li>Do provide a clear primary action that describes the result</li>
+      <li>Do ensure all controls are accessible by keyboard and screen‑reader</li>
+      <li>Do preserve scroll position and page state when closing</li>
+      <li>Do return users to the previous state when cancelling, not an unrelated page</li>
+    </ul>
+  </div>
+  <div className="donts">
+    <ul aria-label="Practices to avoid">
+      <li>Don’t use modals if a decision should be made (use [message modals](../message-modal) instead)</li>
+      <li>Don’t nest modals, e.g. to load more data, instead use [spinners](../spinner) within modal contents)</li>
+      <li>Don’t auto close modals for irreversible actions</li>
+      <li>Don’t overload the modal with unrelated content</li>
+    </ul>
+  </div>
 </div>
 
 ## Related

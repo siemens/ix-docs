@@ -25,20 +25,20 @@ description: 'Discover guidelines for writing dialogs and button labels to ensur
 - Only use ‘OK’ as an option if you cannot find an appropriate verb
 
 <div className="dos-and-donts">
-<div className="dos">
-  <ul aria-label="Recommended practices">
-    <li>Title: Add user  / Buttons: Cancel, Add</li>
-    <li>Title: Delete file  / Buttons: Cancel, Delete</li>
-    <li>Title: Edit details  / Buttons: Cancel, Save</li>
-  </ul>
-</div>
-<div className="donts">
-  <ul aria-label="Practices to avoid">
-    <li>Title: Add user  / Buttons: Cancel, OK</li>
-    <li>Title: Are you sure  / Buttons: Cancel, Delete</li>
-    <li>Title: Edit details  / Buttons: Cancel, Edit</li>
-  </ul>
-</div>
+  <div className="dos">
+    <ul aria-label="Recommended practices">
+      <li>Title: Add user  / Buttons: Cancel, Add</li>
+      <li>Title: Delete file  / Buttons: Cancel, Delete</li>
+      <li>Title: Edit details  / Buttons: Cancel, Save</li>
+    </ul>
+  </div>
+  <div className="donts">
+    <ul aria-label="Practices to avoid">
+      <li>Title: Add user  / Buttons: Cancel, OK</li>
+      <li>Title: Are you sure  / Buttons: Cancel, Delete</li>
+      <li>Title: Edit details  / Buttons: Cancel, Edit</li>
+    </ul>
+  </div>
 </div>
 
 ## Primary and secondary actions
@@ -48,14 +48,14 @@ description: 'Discover guidelines for writing dialogs and button labels to ensur
 - Primary actions can either be positive (Send, Save) or negative (Delete)
 
 <div className="dos-and-donts">
-<div className="dos">
-  <ul aria-label="Recommended practices">
-    <li>Cancel, Save</li>
-  </ul>
-</div>
-<div className="donts">
-  <ul aria-label="Practices to avoid">
-    <li>Save, Cancel</li>
-  </ul>
-</div>
+  <div className="dos">
+    <ul aria-label="Recommended practices">
+      <li>Cancel, Save</li>
+    </ul>
+  </div>
+  <div className="donts">
+    <ul aria-label="Practices to avoid">
+      <li>Save, Cancel</li>
+    </ul>
+  </div>
 </div>
