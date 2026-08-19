@@ -88,17 +88,17 @@ Use sentence casing within the description with minimal punctuation and formatti
 ## Dos and Don’ts
 
 <div className="dos-and-donts">
-<div className="dos">
-  <ul aria-label="Recommended practices">
-    <li>Do give users a way out so the error page is not a dead end with only “Try again.” or “Try again later.”</li>
-    <li>Do adapt your recommended actions depending on your use case and what is technically possible</li>
-  </ul>
-</div>
-<div className="donts">
-  <ul aria-label="Practices to avoid">
-    <li>Don’t say your team is working on a solution to the error unless this is true</li>
-  </ul>
-</div>
+  <div className="dos">
+    <ul aria-label="Recommended practices">
+      <li>Do give users a way out so the error page is not a dead end with only “Try again.” or “Try again later.”</li>
+      <li>Do adapt your recommended actions depending on your use case and what is technically possible</li>
+    </ul>
+  </div>
+  <div className="donts">
+    <ul aria-label="Practices to avoid">
+      <li>Don’t say your team is working on a solution to the error unless this is true</li>
+    </ul>
+  </div>
 </div>
 
 ## Related
