@@ -3,6 +3,6 @@ release:
 merging:
   description: 'Merging activities from other design systems at Siemens'
 ux:
-  description: 'Posts about user experience and UX writing topics'
+  description: 'Blog posts about user experience and UX writing topics'
 development:
-  description: 'Posts about implementation, tooling and development workflows'
+  description: 'Blog posts about implementation, tooling and development workflows'

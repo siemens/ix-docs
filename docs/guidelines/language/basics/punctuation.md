@@ -10,9 +10,9 @@ description: 'We recommend a minimal approach to punctuation as it can add cogni
 
 #
 
-## Ampersand &
+## Ampersand `&`
 
-Use only when part of an official or registered product, or company name. Although space-saving, many screen readers are unable to interpret ampersands correctly.
+Use only when part of an official or registered product or company name. Although space-saving, many screen readers are unable to interpret ampersands correctly.
 
 <div class="dos-and-donts">
   <div class="dos">
@@ -44,7 +44,7 @@ The common phrase “About & legal” always uses the ampersand. This is the onl
   </div>
 </div>
 
-## Apostrophe ’
+## Apostrophe `’`
 
 Apostrophes look like a single quotation mark, show ownership and create contractions (I’m, you’re, they’re).
 
@@ -80,7 +80,7 @@ With our minimal punctuation approach, we limit apostrophes by using nouns as ad
   </div>
 </div>
 
-## Asterisk *
+## Asterisk `*`
 
 Use a single asterisk to indicate required fields. Place them immediately after the text without a space. A legend explaining what the asterisk means, typically at the top of forms, is no longer necessary as asterisks are widely understood to mean mandatory.
 
@@ -99,7 +99,7 @@ Note: If your design system adds asterisks automatically via attributes, remove 
   </div>
 </div>
 
-## Bullet points &nbsp;&nbsp;&bull;
+## Bullet points `&nbsp;&nbsp;&bull;`
 
 Use bullet points to break down complex information into scannable, digestible chunks. They help users quickly identify key points and reduce cognitive load. Use consistent bullet styles within a single list or section.
 
@@ -117,7 +117,7 @@ Add one space after the bullet point or number before the text begins.
   </div>
 </div>
 
-## Colon :
+## Colon `:`
 
 Use to introduce lists, options, descriptions, settings and preferences to visually separate labels and input fields. Colons help to enhance readability when both the labels and input area are not visually distinguishable. When it’s clear within the interface what needs to be completed, remove the colon.
 
@@ -130,7 +130,7 @@ Use to introduce lists, options, descriptions, settings and preferences to visua
   </div>
 </div>
 
-## Comma ,
+## Comma `,`
 
 Use commas to separate data in lists for clarity.
 
@@ -147,12 +147,12 @@ Use commas to separate data in lists for clarity.
   </div>
 </div>
 
-The Oxford comma is placed before the final “and” or “or” in a list of three or more items. It is acceptable to use and can help avoid ambiguity, but omit it when space is limited in the UI. Remove the Oxford comma especially if it causes text to wrap or overflow in constrained UI elements such as labels, tooltips, or buttons.
+The Oxford comma is placed before the final “and” or “or” in a list of three or more items. It is acceptable to use and can help avoid ambiguity, but omit it when space is limited in the UI. Remove the Oxford comma especially if it causes text to wrap or overflow in constrained UI elements such as labels, tooltips or buttons.
 
 <div class="dos-and-donts">
   <div class="dos">
     <ul aria-label="Recommended practices">
-      <li>Save, print, or share this document.</li>
+      <li>Save, print or share this document.</li>
       <li>Settings include notifications, privacy, and security.</li>
       <li>Status: Connected to WLAN, Bluetooth, and USB.</li>
       <li>Before proceeding, save your work, close all applications, and disconnect external devices.</li>
@@ -161,7 +161,7 @@ The Oxford comma is placed before the final “and” or “or” in a list of t
   </div>
 </div>
 
-## Ellipsis …
+## Ellipsis `…`
 
 Use ellipsis with transitional text to inform users that something is happening and ongoing. There are never spaces between the text and the ellipsis.
 
@@ -195,7 +195,7 @@ They are also sometimes used to show that a new dialog box will open within the 
   </div>
 </div>
 
-## Hyphen ‐
+## Hyphen `‐`
 
 Hyphens join words together (drop-down menu) and connect prefixes to words (non-technical). Use hyphens to avoid confusion and enhance readability. Never use spaces before or after the hyphen.
 
@@ -233,9 +233,9 @@ Remove hyphens for widely understood terms that have evolved beyond needing them
   </div>
 </div>
 
-## Minus sign −
+## Minus sign `−`
 
-Use the proper minus sign (−) rather than a hyphen (-) when expressing negative values or subtraction. In UI contexts such as labels, values, or data displays, the minus sign should be used to ensure mathematical clarity. The minus sign should be placed directly before the number with no intervening space except for mathematical operations for readability. 
+Use the proper minus sign (−) rather than a hyphen (-) when expressing negative values or subtraction. In UI contexts such as labels, values or data displays, the minus sign should be used to ensure mathematical clarity. The minus sign should be placed directly before the number with no intervening space except for mathematical operations for readability. See also [Formatting of Numbers and percentages](../formatting/numbers.mdx) 
 
 <div class="dos-and-donts">
   <div class="dos">
@@ -254,7 +254,7 @@ Use the proper minus sign (−) rather than a hyphen (-) when expressing negativ
   </div>
 </div>
 
-## En and em dashes – —
+## En and em dashes `– —`
 
 They look similar, but there are two dashes and we use them differently from hyphens and the minus sign.
 
@@ -281,7 +281,7 @@ Em dashes are often used in longer texts to make part of the text stand out, suc
   </div>
 </div>
 
-## Exclamation mark !
+## Exclamation mark `!`
 
 Use only for high-level alarms. We don’t use them for messages, notifications or for any other communication with our users. And, as the exclamation mark is often within warning icons, it doesn’t need to be added to text to signify the strength of our messaging.
 
@@ -298,7 +298,7 @@ Use only for high-level alarms. We don’t use them for messages, notifications 
   </div>
 </div>
 
-## Forward slash /
+## Forward slash `/`
 
 Use forward slashes sparingly in UI text. They work well for established patterns and technical contexts, but can reduce clarity and accessibility. Forward slashes are appropriate for established UI patterns like on/off and country/region, mathematical fractions, file paths, and compact form labels where space is limited. Use lowercase in body text (on/off) and sentence case following standard capitalization rules (see Capitalization guide). Use lowercase after the slash unless it’s a proper noun.
 
@@ -329,7 +329,7 @@ Avoid spaces before or after the slash unless spaces enhance clarity in larger t
 
 There are several types of parentheses (also known as brackets). For all variations, there are no spaces between the parentheses and the text within them. However, there are spaces before and after all variations except when followed by another punctuation mark.
 
-### Round ( )
+### Round `( )`
 
 Use sparingly to give users additional information or clarify messaging. Consider alternative punctuation first, e.g. commas or dashes. Use when the information is supplementary but helpful.
 
@@ -347,7 +347,7 @@ Use sparingly to give users additional information or clarify messaging. Conside
   </div>
 </div>
 
-### Curly \{ \}
+### Curly `\{ \}`
 
 Use for variables, placeholders and programming.
 
@@ -360,7 +360,7 @@ Use for variables, placeholders and programming.
   </div>
 </div>
 
-### Square [ ]
+### Square `[ ]`
 
 Rarely used within UI text. Sometimes used for units but more common within academic authoring, quotes and translations to indicate errors, omissions or text in other languages.
 
@@ -374,7 +374,7 @@ Rarely used within UI text. Sometimes used for units but more common within acad
   </div>
 </div>
 
-### Angular < >
+### Angular `< >`
 
 Use to show file paths and navigation more clearly in applications. Add spaces before and after for enhanced readability except when followed by another punctuation mark.
 
@@ -391,7 +391,7 @@ Use to show file paths and navigation more clearly in applications. Add spaces b
   </div>
 </div>
 
-## Periods / full stops .
+## Periods / full stops `.`
 
 Use consistently. We use full stops at the end of all full sentences and file extensions (.csv .txt .zip).
 
@@ -450,7 +450,7 @@ We do not use full stops for toast messages (brief pop-ups), headings, titles or
   </div>
 </div>
 
-## Question mark ?
+## Question mark `?`
 
 Question marks are appropriate for genuine informational questions, in help text and search prompts. However, avoid them in headings, even when phrased as questions, to maintain a confident and declarative tone.
 
@@ -495,7 +495,7 @@ Never use multiple question marks for emphasis. Use one space after a question m
   </div>
 </div>
 
-## Quotation marks " "
+## Quotation marks `" "`
 
 Use consistent quotation marks throughout the UI. We typically use straight double quotation marks, not single or curly, for direct quotes and to highlight UI text when it improves readability. Use quotation marks to differentiate UI elements only when the same word appears multiple times in close proximity or when clarity requires it. Avoid overusing quotation marks around UI elements as most of the time, the context is clear without them.
 
@@ -528,7 +528,7 @@ Never use quotation marks for emphasis or to add informal tone. No space between
   </div>
 </div>
 
-## Semi-colon ;
+## Semi-colon `;`
 
 Use semi-colons to separate key application features to enhance and contrast them, and to present steps or sequential information. We prefer using commas or short sentences instead as semi-colons are easily misused and misunderstood. No space before a semicolon. One space after a semicolon when mid-sentence.
 
@@ -549,7 +549,7 @@ Use semi-colons to separate key application features to enhance and contrast the
   </div>
 </div>
 
-## Tilde ~
+## Tilde `~`
 
 Use the tilde primarily in technical contexts to indicate approximation and home directories in file paths. In UI text, we prefer "approximately" or "about" for better clarity and accessibility when there is space within the UI. Add spaces before and after the tilde when using it to mean "approximately" in text. Remove spaces when used in file paths or technical notation.
 
@@ -570,7 +570,7 @@ Use the tilde primarily in technical contexts to indicate approximation and home
   </div>
 </div>
 
-## Trademark symbols ™ ®
+## Trademark symbols `™` `®`
 
 Use the correct symbol for the correct context. ™ is used for unregistered trademarks, ® is used for registered trademarks. Always follow Siemens brand guidelines when applying trademark symbols to product and service names.
 
@@ -597,7 +597,7 @@ Note: If you are unsure whether a product name is a registered or unregistered t
 
 ## Punctuation and spacing
 
-Spaces before punctuation: As a general rule, there are no spaces between text and its following punctuation.
+**Spaces before punctuation:** As a general rule, there are no spaces between text and its following punctuation.
 
 <div class="dos-and-donts">
   <div class="dos">

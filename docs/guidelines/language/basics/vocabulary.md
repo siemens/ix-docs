@@ -194,14 +194,14 @@ Avoid jargon unless your specific audience understands the technical term better
 	<ul aria-label="Recommended practices">
 		<li>Save your changes automatically.</li>
 		<li>PLC configuration</li>
-		<li>motor speed</li>
+		<li>Motor speed</li>
 	</ul>
 </div>
 <div className="donts">
 	<ul aria-label="Practices to avoid">
 		<li>Enable auto-persistence of data.</li>
-		<li>programmable logic controller setup</li>
-		<li>angular velocity coefficient</li>
+		<li>Programmable logic controller setup</li>
+		<li>Angular velocity coefficient</li>
 	</ul>
 </div>
 </div>
@@ -211,8 +211,8 @@ Avoid cultural references or brand names unless functionally necessary.
 <div className="dos-and-donts">
 <div className="dos">
 	<ul aria-label="Recommended practices">
-		<li>mobile device</li>
-		<li>search online</li>
+		<li>Mobile device</li>
+		<li>Search online</li>
 		<li>WLAN</li>
 	</ul>
 </div>
@@ -232,18 +232,18 @@ Avoid multi-word phrasal verbs when one word works.
 <div className="dos-and-donts">
 <div className="dos">
 	<ul aria-label="Recommended practices">
-		<li>calculate</li>
-		<li>continue</li>
-		<li>delete</li>
-		<li>review alarm history</li>
+		<li>Calculate</li>
+		<li>Continue</li>
+		<li>Delete</li>
+		<li>Review alarm history</li>
 	</ul>
 </div>
 <div className="donts">
 	<ul aria-label="Practices to avoid">
-		<li>add up</li>
-		<li>carry on</li>
-		<li>get rid of</li>
-		<li>look over alarm history</li>
+		<li>Add up</li>
+		<li>Carry on</li>
+		<li>Get rid of</li>
+		<li>Look over alarm history</li>
 	</ul>
 </div>
 </div>
@@ -253,16 +253,16 @@ Use common industrial-application phrasal verbs when they are more familiar than
 <div className="dos-and-donts">
 <div className="dos">
 	<ul aria-label="Recommended practices">
-		<li>log out</li>
-		<li>shut down</li>
-		<li>start up</li>
+		<li>Log out</li>
+		<li>Shut down</li>
+		<li>Start up</li>
 	</ul>
 </div>
 <div className="donts">
 	<ul aria-label="Practices to avoid">
-		<li>terminate</li>
-		<li>deactivate</li>
-		<li>initiate</li>
+		<li>Terminate</li>
+		<li>Deactivate</li>
+		<li>Initiate</li>
 	</ul>
 </div>
 </div>
@@ -290,11 +290,11 @@ Avoid Latin abbreviations when there is space in the UI for plain English altern
 <div className="dos-and-donts">
 <div className="dos">
 	<ul aria-label="Recommended practices">
-		<li>for example</li>
-		<li>for instance</li>
-		<li>that is</li>
-		<li>specifically</li>
-		<li>and so on</li>
+		<li>For example</li>
+		<li>For instance</li>
+		<li>That is</li>
+		<li>Specifically</li>
+		<li>And so on</li>
 	</ul>
 </div>
 <div className="donts">
@@ -362,26 +362,26 @@ English has many nouns that do not take a plural form (they do not use "s" for p
 <div className="dos-and-donts">
 <div className="dos">
 	<ul aria-label="Recommended practices">
-		<li>feedback</li>
-		<li>additional feedback</li>
-		<li>information</li>
-		<li>more information</li>
-		<li>equipment</li>
-		<li>navigation</li>
-		<li>progress</li>
-		<li>data</li>
-		<li>software</li>
+		<li>Equipment</li>
+		<li>Navigation</li>
+		<li>Progress</li>
+		<li>Data</li>
+		<li>Doftware</li>
+		<li>Feedback</li>
+		<li>Information</li>
+		<li>Additional feedback</li>
+		<li>More information</li>
 	</ul>
 </div>
 <div className="donts">
 	<ul aria-label="Practices to avoid">
-		<li>feedbacks</li>
-		<li>informations</li>
-		<li>equipments</li>
-		<li>navigations</li>
-		<li>progresses</li>
-		<li>datas</li>
-		<li>softwares</li>
+		<li>Equipments</li>
+		<li>Navigations</li>
+		<li>Progresses</li>
+		<li>Datas</li>
+		<li>Doftwares</li>
+		<li>Feedbacks</li>
+		<li>Informations</li>
 	</ul>
 </div>
 </div>
@@ -530,12 +530,12 @@ The following words and pairs are often misused and misunderstood when writing t
 	<ul aria-label="Recommended practices">
 		<li>Error state (fixed condition)</li>
 		<li>Status: Running (ongoing process)</li>
-		<li>in the future</li>
-		<li>on Monday</li>
-		<li>time zone</li>
-		<li>log file (two words)</li>
-		<li>log in (as an action)</li>
-		<li>login (as a noun)</li>
+		<li>In the future</li>
+		<li>On Monday</li>
+		<li>Time zone</li>
+		<li>Log file (two words)</li>
+		<li>Log in (as an action)</li>
+		<li>Login (as a noun)</li>
 		<li>34 million</li>
 	</ul>
 </div>
@@ -543,12 +543,12 @@ The following words and pairs are often misused and misunderstood when writing t
 	<ul aria-label="Practices to avoid">
 		<li>Error status</li>
 		<li>State: Running</li>
-		<li>in future</li>
-		<li>on the Monday</li>
-		<li>timezone</li>
-		<li>logfile</li>
-		<li>login (as an action)</li>
-		<li>log in (as a noun)</li>
+		<li>In future</li>
+		<li>On the Monday</li>
+		<li>Timezone</li>
+		<li>Logfile</li>
+		<li>Login (as an action)</li>
+		<li>Log in (as a noun)</li>
 		<li>34 millions</li>
 	</ul>
 </div>

@@ -106,6 +106,13 @@ Always capitalize product names, systems, and third-party platforms exactly as t
     <li>Product names: Adobe Photoshop, Salesforce, Slack, Zoom</li>
     <li>Company names: Microsoft, Google, Apple, Amazon, Meta</li>
     <li>Trademarked terms: Windows, macOS, Linux, Android, iOS</li>
+  </ul>
+</div>
+</div>
+
+<div className="dos-and-donts">
+<div className="dos">
+  <ul aria-label="Recommended practices">
     <li>Configure Photoshop settings.</li>
     <li>Integrate with Salesforce.</li>
   </ul>
@@ -208,7 +215,7 @@ Capitalize all letters in acronyms and abbreviations. Do not use periods between
 <div className="dos-and-donts">
 <div className="dos">
   <ul aria-label="Recommended practices">
-    <li>UI / API / FAQ / PDF / CSV / HTML / USB</li>
+    <li>UI, API, FAQ, PDF, CSV, HTML, USB</li>
     <li>Check the FAQ for common questions.</li>
     <li>Export data as CSV or PDF.</li>
     <li>The API documentation is available online.</li>
