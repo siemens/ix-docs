@@ -41,7 +41,7 @@ Make the upload form-ready by using [custom fields](../custom-field/), e.g. to a
 
 ## States
 
-Uploads have seven documented states: Default, drag over, checking, success, fail and disabled. The checking states keep users informed while the file is being inspected, while success and fail communicate the result of that check. Multi-file implementations can also show queued or completed statuses on individual file rows.
+Uploads have six states: Default, drag over, checking, success, fail and disabled. The checking states keep users informed while the file is being inspected, while success and fail communicate the result of that check. Multi-file implementations can also show queued or completed statuses on individual file rows.
 
 ![Upload states](https://www.figma.com/design/wEptRgAezDU1z80Cn3eZ0o/iX-Documentation-illustrations?node-id=8251-245)
 
@@ -60,7 +60,7 @@ Uploads have seven documented states: Default, drag over, checking, success, fai
 <div className="donts">
   <ul aria-label="Practices to avoid">
     <li>Don’t hide file restrictions in a tooltip when they affect whether users can complete the task</li>
-    <li>Don’t use an upload when users only need to choose an existing item, use a <a href="../select/">select</a> instead</li>
+    <li>Don’t use uploads when users only need to choose existing items, use [selects](../select) instead</li>
     <li>Don’t rely on drag-and-drop as the only way to select files</li>
     <li>Don’t use a toast as the only explanation for a file-level validation error</li>
   </ul>
