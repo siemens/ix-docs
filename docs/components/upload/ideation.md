@@ -79,3 +79,10 @@ These are the questions we should settle as a team, because there is no single c
 ▶️ When should labels be truncated with ellipsis / when not?
 
 ---
+
+Recommendation for file items:
+- Text overflow: Truncate long filenames with ellipsis and show full name on hover (-> long file names are common and will otherwise break layout)
+- Interaction:
+  - Keyboard: Tab to focus, Enter or Space to remove the item
+
+File items should have row-level states for file-specific issues: queued, uploading, uploaded/success, error, removed

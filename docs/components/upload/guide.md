@@ -5,58 +5,73 @@ description: 'Usage guide for upload component.'
 
 # Upload - Usage
 
-![Anatomy]()
+Uploads help users add files to a form or workflow from their device. Use them when users need to provide one or more files as part of a task, and make the file rules and upload status visible near the control.
 
-- Label
-- Helper text
-- Input button
-- Drag-and-drop target area
-- File rows or stacked uploaded items (not part of the component)
+![Upload anatomy](https://www.figma.com/design/wEptRgAezDU1z80Cn3eZ0o/iX-Documentation-illustrations?node-id=8251-222)
+
+1. Drag-and-drop target area
+2. Input button
+3. Instruction text
 
 ## Variants
 
-- single file
-  - once a single file is successfully uploaded, the drop zone may disappear or convert to a single uploaded item state
-  - the user can reopen or replace the file via action button or replace link
-  - file limit is enforced before upload
-- Multi-file uploader
-  - multiple files in a single drop zone
-  - queueing or list ordering
-  - file count restriction with maxCount or file limit rules
-  - each file row can show size, status, and actions
+- **Single file:** Use when the task needs one file only, e.g. a profile image, configuration file or certificate. After a successful upload, replace the drop zone with the uploaded item or provide a clear replace action.
+- **Multiple files:** Use when users need to submit a set of files. Show the uploaded files in a list so users can review each file’s name, size, status and available actions.
 
 ## Options
 
-- Accept: allowed file types (mime types or extensions)
-- Directory upload: If the browser supports it, allow users to upload a folder of files.
-- Label: Separate text for disabled, loading, select file, failed, success
-- Multiline: If the label is long, it can wrap to multiple lines.
+- **Accepted file types:** Describe the allowed file types with familiar names and extensions, e.g. “PDF or PNG”. Use the accepted types to prevent unsupported files from being selected.
+- **Directory upload:** Allow folder selection when the task involves a complete set of files and the target browser supports it. Use multiple-file upload when users need to choose individual files.
+- **Label:** Use short, specific labels for the default, checking, success, failed and disabled states. Keep the action clear, e.g. “Select file” or “Select files”.
+- **Multiline:** Use multiline labels when the available width is limited or the instruction needs more context. Keep the label concise so the upload area remains easy to scan.
+
+:::tip
+
+Make the upload form-ready by using [custom fields](../custom-field/), e.g. to add a label and helper text and to integrate with [form validation](../forms-validation).
+
+:::
 
 ## Behavior in context
 
-- **Interaction:**
-  - Click-to-select
-  - Drag-and-drop
-
-Recommendation for file items:
-- Text overflow: Truncate long filenames with ellipsis and show full name on hover (-> long file names are common and will otherwise break layout)
-- Interaction:
-  - Keyboard: Tab to focus, Enter or Space to remove the item
+- **Interaction:** Users select files by clicking the input button or dragging files into the target area. Keep both methods available when drag-and-drop is useful, because it isn’t available or convenient in every environment.
+- **Overflow:** Let labels, helper text and validation messages wrap onto multiple lines. Keep file names readable and provide an action such as remove or replace instead of hiding important text with a tooltip.
+- **Placement:** Place uploads near the related form fields or task action. Use [form fields](../forms-field) when the upload needs a label, helper text or validation message.
+- **Responsiveness:** Let the upload area fill the available form width and use the multiline option when its label becomes difficult to scan at narrow widths. Keep the control height aligned with nearby fields when it appears in a form.
+- **Feedback:** Show checking progress and file-level errors next to the affected file or upload area. Use a [toast](../toast) only for system-level feedback that doesn’t need to stay connected to a specific file.
 
 ## States
 
-For upload area: Drag over, loading, success, error, queued (when multi-file ordering matters), disabled
+Uploads have seven documented states: Default, drag over, checking, success, fail and disabled. The checking states keep users informed while the file is being inspected, while success and fail communicate the result of that check. Multi-file implementations can also show queued or completed statuses on individual file rows.
 
-File items should have row-level states for file-specific issues: queued, uploading, uploaded/success, error, removed
+![Upload states](https://www.figma.com/design/wEptRgAezDU1z80Cn3eZ0o/iX-Documentation-illustrations?node-id=8251-245)
+
 
 ## Dos and Don’ts
 
-Do
-- Keep the field consistent with form controls (for consistency with other controls)
-- Be explicit about file constraints, position it near the control, and don't hide it in a tooltip:
-  - describe allowed file type
-  - describe max file size
-  - say whether multiple files are allowed
-  - say whether drag-and-drop is supported
-- Inline feedback is better than a toast for most validation errors unless it is system-level and the upload as a whole is blocked
-- Form height should match adjacent inputs
+<div className="dos-and-donts">
+<div className="dos">
+  <ul aria-label="Recommended practices">
+    <li>Do state the allowed file types, maximum size and whether users can select multiple files</li>
+    <li>Do keep upload feedback close to the upload area or the affected file</li>
+    <li>Do provide a replace or remove action after users select a file</li>
+    <li>Do keep the upload area aligned with adjacent form controls</li>
+  </ul>
+</div>
+<div className="donts">
+  <ul aria-label="Practices to avoid">
+    <li>Don’t hide file restrictions in a tooltip when they affect whether users can complete the task</li>
+    <li>Don’t use an upload when users only need to choose an existing item, use a <a href="../select/">select</a> instead</li>
+    <li>Don’t rely on drag-and-drop as the only way to select files</li>
+    <li>Don’t use a toast as the only explanation for a file-level validation error</li>
+  </ul>
+</div>
+</div>
+
+## Related
+
+- [Custom field](../custom-field)
+- [Form field](../forms-field)
+- [Validation](../forms-validation)
+- [Select](../select)
+- [UX writing](../../guidelines/language/writing-style-guide-getting-started.md)
+- [Accessibility](../../guidelines/accessibility)
