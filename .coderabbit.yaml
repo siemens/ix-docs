@@ -1,0 +1,70 @@
+language: "en-US"
+
+reviews:
+  profile: "assertive"
+  path_instructions:
+    - path: "**"
+      instructions: |
+        Review priorities:
+        - Prioritize accuracy, clarity and consistency with the IX documentation style guide.
+        - Prefer concise, actionable comments.
+
+    - path: "docs/**"
+      instructions: |
+        Apply the IX documentation style guide for all files under docs/.
+
+        Voice and tone:
+        - Address readers as "you"; use "we" when describing Siemens conventions.
+        - Use suggestion-oriented phrasing: "we recommend", "we usually", "as a general rule", "typically at Siemens, we", "in our applications, we".
+        - Avoid AI sounding filler phrases:
+          - "In order to achieve this goal" → "To achieve this"
+          - "Due to the fact that it was raining" → "Because it was raining"
+          - "At this point in time" → "Now"
+          - "In the event that you need help" → "If you need help"
+          - "The system has the ability to process" → "The system can process"
+          - "It is important to note that the data shows" → "The data shows"
+        - Use active voice and present simple tense.
+        - Use "don’t", "isn’t", "haven’t", "aren’t" instead of their expanded forms.
+        - Use "e.g." instead of "for example", "such as", or "like". When there are multiple examples within paragraphs, "such as" is acceptable to avoid seeing "e.g." repeatedly.
+        - Use "changelog" (one word), "among other things" (not "inter alia"), "blog post" (not "post", "blog").
+        - Refer to components in the plural (e.g., buttons, breadcrumbs), except application frame components that only appear once.
+        - Capitalize only proper nouns; component names are lowercase (e.g., "button", not "Button"). The only exception is "About and legal information".
+        - Talk about "users" (plural), not "the user".
+
+        Remove AI writing patterns:
+        1. Passive Voice and Subjectless Fragments (Problem: LLMs often hide the actor or drop the subject entirely with lines like "No configuration file needed" or "The results are preserved automatically." Rewrite these when active voice makes the sentence clearer and more direct.)
+          - Before: No configuration file needed. The results are preserved automatically.
+          - After: You do not need a configuration file. The system preserves the results.
+        2. Remove em dashes (and en dashes): Replace each one, in rough order of preference: a period (start a new sentence), a comma (a tight aside), a colon (introducing an explanation), parentheses (a true aside), or restructure the sentence. Also catch spaced em dashes (—) and double hyphens (--) used the same way.
+        3. Never use title case in headings
+          - Before: Strategic Negotiations And Global Partnerships
+          - After: Strategic negotiations and global partnerships
+
+        Formatting:
+        - Use sentence case for all headings and body text.
+        - Avoid the Oxford comma before "and"/"or" unless the sentence would be ambiguous without it; if ambiguous, simplify the sentence instead.
+        - Apostrophe: Use ' (U+0027), not ’ (U+2019).
+        - Ellipses: use … (U+2026), not three full stops.
+        - Use straight double quotes " (U+0022) for both opening and closing marks. Do not use curly "smart" quotes “ (U+201C) or ” (U+201D). Note: Many text editors and AI tools (like ChatGPT) automatically convert straight quotes to curly quotes. Always double-check that these have been reverted to straight versions in the final UI string. Before: He said “the project is on track” but others disagreed. After: He said "the project is on track" but others disagreed.
+        - No trailing whitespace at the end of lines.
+
+        General quality:
+        - Flag any content that contradicts the style guide rules above.
+        - Avoid redundancy; less is more.
+
+    - path: "docs/components/**"
+      instructions: |
+        Apply the IX documentation style guide for all files under docs/components/.
+
+        File structure (guide.md):
+        - Sections must appear in this order when present: front matter (title and description), short description with anatomy (no headline, with image and list), Variants, Options, Behavior in context, States, Dos and Don'ts, Related.
+        - Not all sections are required; omit sections that don't apply to the component.
+
+        Section-specific rules:
+        - Options: Bold the option name and colon (e.g., "**Label:**"). Use the spelling from the code section but avoid technical jargon.
+        - Behavior in context: Title must be "Behavior in context" (not "Behavior"). Common sub-topics: Interaction, Overflow, Alignment, Responsiveness, Placement.
+        - States: Introduce states as a sentence listing them, e.g., "{component} have six states: Default, hover, active, disabled, loading and focused." Follow with an image.
+        - Dos and Don'ts: Title is "Dos and Don'ts". Each entry is one sentence with no trailing punctuation. Dos start with "Do …"; Don'ts start with "Don't …". Always include at least one Do and one Don't (maximum five each). Start with Dos. Keep framing positive. Suggest alternative components in Don'ts where relevant and link to the Related section.
+
+        code.md structure:
+        - Sections: Basic, (further examples), API for {component} > Properties, Events (if any), Slots (if any).
