@@ -26,7 +26,7 @@ reviews:
         - Use active voice and present simple tense.
         - Use "don’t", "isn’t", "haven’t", "aren’t" instead of their expanded forms.
         - Use "e.g." instead of "for example", "such as", or "like". When there are multiple examples within paragraphs, "such as" is acceptable to avoid seeing "e.g." repeatedly.
-        - Use "changelog" (one word), "among other things" (not "inter alia").
+        - Use "changelog" (one word), "among other things" (not "inter alia"), "blog post" (not "post", "blog").
         - Refer to components in the plural (e.g., buttons, breadcrumbs), except application frame components that only appear once.
         - Capitalize only proper nouns; component names are lowercase (e.g., "button", not "Button"). The only exception is "About and legal information".
         - Talk about "users" (plural), not "the user".
