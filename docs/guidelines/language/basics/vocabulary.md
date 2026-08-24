@@ -366,7 +366,7 @@ English has many nouns that do not take a plural form (they do not use "s" for p
 		<li>Navigation</li>
 		<li>Progress</li>
 		<li>Data</li>
-		<li>Doftware</li>
+		<li>Software</li>
 		<li>Feedback</li>
 		<li>Information</li>
 		<li>Additional feedback</li>
@@ -379,7 +379,7 @@ English has many nouns that do not take a plural form (they do not use "s" for p
 		<li>Navigations</li>
 		<li>Progresses</li>
 		<li>Datas</li>
-		<li>Doftwares</li>
+		<li>Softwares</li>
 		<li>Feedbacks</li>
 		<li>Informations</li>
 	</ul>

@@ -29,7 +29,7 @@ Use only when part of an official or registered product or company name. Althoug
   </div>
 </div>
 
-The common phrase “About & legal” always uses the ampersand. This is the only exception in our guidelines for ampersand use.
+The common phrase "About & legal" always uses the ampersand. This is the only exception in our guidelines for ampersand use.
 
 <div class="dos-and-donts">
   <div class="dos">
@@ -46,15 +46,15 @@ The common phrase “About & legal” always uses the ampersand. This is the onl
 
 ## Apostrophe `’`
 
-Apostrophes look like a single quotation mark, show ownership and create contractions (I’m, you’re, they’re).
+Apostrophes look like a single quotation mark, show ownership and create contractions (I'm, you're, they're).
 
 <div class="dos-and-donts">
   <div class="dos">
     <ul aria-label="Recommended practices">
-      <li>customer’s role (single customer)</li>
-      <li>customers’ roles (multiple customers)</li>
+      <li>customer's role (single customer)</li>
+      <li>customers' roles (multiple customers)</li>
       <li>The folder’s contents are displayed in the dashboard.</li>
-      <li>Today’s date is displayed in the banner.</li>
+      <li>Today's date is displayed in the banner.</li>
     </ul>
   </div>
 </div>
@@ -72,10 +72,10 @@ With our minimal punctuation approach, we limit apostrophes by using nouns as ad
   </div>
   <div class="donts">
     <ul aria-label="Practices to avoid">
-      <li>Select the file’s location.</li>
-      <li>Edit user’s profile information.</li>
-      <li>View employee’s details.</li>
-      <li>Set the time’s format.</li>
+      <li>Select the file's location.</li>
+      <li>Edit user's profile information.</li>
+      <li>View employee's details.</li>
+      <li>Set the time's format.</li>
     </ul>
   </div>
 </div>
@@ -119,7 +119,7 @@ Add one space after the bullet point or number before the text begins.
 
 ## Colon `:`
 
-Use to introduce lists, options, descriptions, settings and preferences to visually separate labels and input fields. Colons help to enhance readability when both the labels and input area are not visually distinguishable. When it’s clear within the interface what needs to be completed, remove the colon.
+Use to introduce lists, options, descriptions, settings and preferences to visually separate labels and input fields. Colons help to enhance readability when both the labels and input area are not visually distinguishable. When it's clear within the interface what needs to be completed, remove the colon.
 
 <div class="dos-and-donts">
   <div class="dos">
@@ -147,7 +147,7 @@ Use commas to separate data in lists for clarity.
   </div>
 </div>
 
-The Oxford comma is placed before the final “and” or “or” in a list of three or more items. It is acceptable to use and can help avoid ambiguity, but omit it when space is limited in the UI. Remove the Oxford comma especially if it causes text to wrap or overflow in constrained UI elements such as labels, tooltips or buttons.
+The Oxford comma is placed before the final "and" or "or" in a list of three or more items. It is acceptable to use and can help avoid ambiguity, but omit it when space is limited in the UI. Remove the Oxford comma especially if it causes text to wrap or overflow in constrained UI elements such as labels, tooltips or buttons.
 
 <div class="dos-and-donts">
   <div class="dos">
@@ -235,7 +235,7 @@ Remove hyphens for widely understood terms that have evolved beyond needing them
 
 ## Minus sign `−`
 
-Use the proper minus sign (−) rather than a hyphen (-) when expressing negative values or subtraction. In UI contexts such as labels, values or data displays, the minus sign should be used to ensure mathematical clarity. The minus sign should be placed directly before the number with no intervening space except for mathematical operations for readability. See [Formatting of Numbers and percentages](../formatting/numbers.mdx) 
+Use the proper minus sign (−) rather than a hyphen (-) when expressing negative values or subtraction. In UI contexts such as labels, values or data displays, the minus sign should be used to ensure mathematical clarity. The minus sign should be placed directly before the number with no intervening space except for mathematical operations for readability. See [Formatting of Numbers and percentages](../formatting/numbers.mdx).
 
 <div class="dos-and-donts">
   <div class="dos">
@@ -260,7 +260,7 @@ They look similar, but there are two dashes and we use them differently from hyp
 
 Use the smaller en dash to connect times, numbers and date ranges. Use the longer em dash to replace commas, brackets or colons.
 
-Don’t use spaces when using en dashes for number ranges. In all other cases, add spaces before and after en dashes and em dashes for digital readability.
+Don't use spaces when using en dashes for number ranges. In all other cases, add spaces before and after en dashes and em dashes for digital readability.
 
 Em dashes are often used in longer texts to make part of the text stand out, such as telling users about special or new application features. To avoid em dash overuse, we typically use commas instead within UI text to connect phrases.
 
@@ -283,7 +283,7 @@ Em dashes are often used in longer texts to make part of the text stand out, suc
 
 ## Exclamation mark `!`
 
-Use only for high-level alarms. We don’t use them for messages, notifications or for any other communication with our users. And, as the exclamation mark is often within warning icons, it doesn’t need to be added to text to signify the strength of our messaging.
+Use only for high-level alarms. We don't use them for messages, notifications or for any other communication with our users. And, as the exclamation mark is often within warning icons, it doesn't need to be added to text to signify the strength of our messaging.
 
 <div class="dos-and-donts">
   <div class="dos">
@@ -325,7 +325,7 @@ Avoid spaces before or after the slash unless spaces enhance clarity in larger t
   </div>
 </div>
 
-## Parentheses and brackets 
+## Parentheses and brackets
 
 There are several types of parentheses (also known as brackets). For all variations, there are no spaces between the parentheses and the text within them. However, there are spaces before and after all variations except when followed by another punctuation mark.
 
@@ -368,7 +368,7 @@ Rarely used within UI text. Sometimes used for units but more common within acad
   <div class="dos">
     <ul aria-label="Recommended practices">
       <li>Save assets, e.g. valves [Ventil] within your plant zones.</li>
-      <li>“A real game-changer for the [food and beverage] industry.”</li>
+      <li>"A real game-changer for the [food and beverage] industry."</li>
       <li>Room temperature [°C]</li>
     </ul>
   </div>
@@ -405,7 +405,7 @@ Use consistently. We use full stops at the end of all full sentences and file ex
   <div class="donts">
     <ul aria-label="Practices to avoid">
       <li>Heading: No notifications.</li>
-      <li>Description: We’ll notify you when there are updates or activities related to your account.</li>
+      <li>Description: We'll notify you when there are updates or activities related to your account.</li>
     </ul>
   </div>
 </div>
@@ -459,7 +459,7 @@ Question marks are appropriate for genuine informational questions, in help text
     <ul aria-label="Recommended practices">
       <li>Need help? Contact support.</li>
       <li>What are you looking for?</li>
-      <li>What’s new with Version 3.4?</li>
+      <li>What's new with Version 3.4?</li>
     </ul>
   </div>
   <div class="donts">
