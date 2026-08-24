@@ -53,7 +53,7 @@ Apostrophes look like a single quotation mark, show ownership and create contrac
     <ul aria-label="Recommended practices">
       <li>customer's role (single customer)</li>
       <li>customers' roles (multiple customers)</li>
-      <li>The folder’s contents are displayed in the dashboard.</li>
+      <li>The folder's contents are displayed in the dashboard.</li>
       <li>Today's date is displayed in the banner.</li>
     </ul>
   </div>
@@ -82,7 +82,7 @@ With our minimal punctuation approach, we limit apostrophes by using nouns as ad
 
 ## Asterisk `*`
 
-Use a single asterisk to indicate required fields. Place them immediately after the text without a space. A legend explaining what the asterisk means, typically at the top of forms, is no longer necessary as asterisks are widely understood to mean mandatory.
+Use a single asterisk to indicate required fields. Place them immediately after the text without a space. A legend explaining what the asterisk means, typically at the top of forms, is recommended.
 
 Note: Consider adding asterisks automatically via attributes within your component to remove the manual load and prevent duplication. See [Forms field (component)](../../../components/forms-field/guide.md).
 

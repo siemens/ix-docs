@@ -269,7 +269,7 @@ Use common industrial-application phrasal verbs when they are more familiar than
 
 ## Abbreviations and acronyms
 
-Use abbreviations and acronyms carefully. They can improve clarity for domain users, but can confuse general users. Never invent your own acronyms. Use established terminology only. See [Capitalization and proper nouns](./capitalization-and-proper-nouns) for punctuation guidance.
+Use abbreviations and acronyms carefully. They can improve clarity for domain users, but can confuse general users. Never invent your own acronyms. Use established terminology only. See [Capitalization and proper nouns](./capitalization-and-proper-nouns) for guidance.
 
 <div className="dos-and-donts">
 <div className="dos">
