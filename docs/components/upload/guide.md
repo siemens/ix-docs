@@ -10,8 +10,8 @@ Uploads help users add files to a form or workflow from their device. Use them w
 ![Upload anatomy](https://www.figma.com/design/wEptRgAezDU1z80Cn3eZ0o/iX-Documentation-illustrations?node-id=8251-222)
 
 1. Drag-and-drop target area
-2. Input button
-3. Instruction text
+2. Instruction text
+3. Button
 
 ## Variants
 
@@ -33,7 +33,7 @@ Make the upload form-ready by using [custom fields](../custom-field/), e.g. to a
 
 ## Behavior in context
 
-- **Interaction:** Users select files by clicking the input button or dragging files into the target area. Keep both methods available when drag-and-drop is useful, because it isn’t available or convenient in every environment.
+- **Interaction:** Users select files by clicking the button or dragging files into the target area. Keep both methods available when drag-and-drop is useful, because it isn’t available or convenient in every environment.
 - **Overflow:** Let labels, helper text and validation messages wrap onto multiple lines. Keep file names readable and provide an action such as remove or replace instead of hiding important text with a tooltip.
 - **Placement:** Place uploads near the related form fields or task action. Use [form fields](../forms-field) when the upload needs a label, helper text or validation message.
 - **Responsiveness:** Let the upload area fill the available form width and use the multiline option when its label becomes difficult to scan at narrow widths. Keep the control height aligned with nearby fields when it appears in a form.
@@ -60,7 +60,6 @@ Uploads have six states: Default, drag over, checking, success, fail and disable
 <div className="donts">
   <ul aria-label="Practices to avoid">
     <li>Don’t hide file restrictions in a tooltip when they affect whether users can complete the task</li>
-    <li>Don’t use uploads when users only need to choose existing items, use [selects](../select) instead</li>
     <li>Don’t rely on drag-and-drop as the only way to select files</li>
     <li>Don’t use a toast as the only explanation for a file-level validation error</li>
   </ul>
