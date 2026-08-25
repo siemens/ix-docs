@@ -9,11 +9,8 @@ A toggle is a user interface element that enables users to switch between two st
 
 ![Anatomy toggle](https://www.figma.com/design/wEptRgAezDU1z80Cn3eZ0o/iX-Documentation-illustrations?node-id=7147-451930&t=DrLi4Tgyh22TBGiT-4)
 
-1. Label
-2. Required indicator
-3. Toggle
-4. Toggle label
-5. Helper or feedback text
+1. Toggle
+2. Toggle label
 
 ## Options
 
