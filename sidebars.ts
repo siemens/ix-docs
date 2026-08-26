@@ -615,6 +615,16 @@ const sidebars: SidebarsConfig = {
           ],
         }),
         createTabItem({
+          id: 'components/expanding-search/index',
+          label: 'Expanding search',
+          items: [
+            {
+              id: 'components/expanding-search/code',
+              label: 'Code',
+            },
+          ],
+        }),
+        createTabItem({
           id: 'components/input-number/index',
           label: 'Number input',
           items: [

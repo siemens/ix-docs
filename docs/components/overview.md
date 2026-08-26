@@ -41,9 +41,9 @@ import { CategoryButton } from '@site/src/components/CategoryButton';
 ![Input fields and selections](https://www.figma.com/design/wEptRgAezDU1z80Cn3eZ0o/iX-Documentation-illustrations?node-id=5186-298&t=gkh6VNlJun96I6Ac-11)
 </CategoryButton>
 <CategoryButton
-    title="Date and time selections"
+    title="Date and time selection"
     link="#date-and-time-selection">
-![Date and time selections](https://www.figma.com/design/wEptRgAezDU1z80Cn3eZ0o/iX-Documentation-illustrations?node-id=8261-16&t=26NpDmIuHhqoFRhU-4)
+![Date and time selection](https://www.figma.com/design/wEptRgAezDU1z80Cn3eZ0o/iX-Documentation-illustrations?node-id=8261-16&t=26NpDmIuHhqoFRhU-4)
 </CategoryButton>
 <CategoryButton
     title="Buttons and actions"
@@ -147,7 +147,7 @@ import { CategoryButton } from '@site/src/components/CategoryButton';
 | [Date dropdown](./date-dropdown/index.mdx)       | Date dropdowns allow users to select a specific date from a date picker or pre-defined date options.                                                                                             |
 | [Date input](./input-date/index.mdx)             | Date inputs allow users to enter and select dates in a standardized format, ensuring consistency and accuracy.                                                                                   |
 | [Time input](./input-time/index.mdx)             | Time inputs allow users to enter and select times in a standardized format, ensuring consistency and accuracy.                                                                                   |
-| [Date time input](./input-date-time/index.mdx)    | Date time input provides a versatile interface for selecting both date and time values, offering a seamless way to input date and time information either as a standalone element or within a dropdown.                                                                                   |
+| [Date time input](./input-date-time/index.mdx)    | Date time inputs provide a versatile interface for selecting both date and time values, offering a seamless way to input date and time information either as a standalone element or within a dropdown.                                                                                   |
 | [Date picker](./date-picker/index.mdx)           | Date pickers provide a versatile calendar that can be used as a standalone element or within a dropdown for date input, offering a seamless way to select dates.                                 |
 | [Time picker](./time-picker/index.mdx)           | Time pickers allow users to select specific times ensuring accurate time input.                                                                                                                  |
 | [Date time picker](./date-time-picker/index.mdx) | Date-time pickers offer an interface for selecting both dates and times, which can be used as a standalone element or within a dropdown, providing a seamless way to input date and time values. |
