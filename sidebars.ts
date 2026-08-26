@@ -615,72 +615,6 @@ const sidebars: SidebarsConfig = {
           ],
         }),
         createTabItem({
-          id: 'components/date-dropdown/index',
-          label: 'Date dropdown',
-          items: [
-            {
-              id: 'components/date-dropdown/code',
-              label: 'Code',
-            },
-          ],
-        }),
-        createTabItem({
-          id: 'components/input-date/index',
-          label: 'Date input',
-          items: [
-            {
-              id: 'components/input-date/guide',
-              label: 'Usage',
-            },
-            {
-              id: 'components/input-date/code',
-              label: 'Code',
-            },
-          ],
-        }),
-        createTabItem({
-          id: 'components/input-date-time/index',
-          label: 'Date time input',
-          items: [
-            {
-              id: 'components/input-date-time/guide',
-              label: 'Usage',
-            },
-            {
-              id: 'components/input-date-time/code',
-              label: 'Code',
-            },
-          ],
-        }),
-        createTabItem({
-          id: 'components/date-picker/index',
-          label: 'Date picker',
-          items: [
-            {
-              id: 'components/date-picker/guide',
-              label: 'Usage',
-            },
-            {
-              id: 'components/date-picker/code',
-              label: 'Code',
-            }
-          ],
-        }),
-        createTabItem({
-          id: 'components/date-time-picker/index',
-          label: 'Date time picker',
-          items: [
-            {
-              id: 'components/date-time-picker/guide',
-              label: 'Usage',
-            },
-                        {
-              id: 'components/date-time-picker/code',
-              label: 'Code',
-            }
-          ],
-        }),
-        createTabItem({
           id: 'components/expanding-search/index',
           label: 'Expanding search',
           items: [
@@ -700,20 +634,6 @@ const sidebars: SidebarsConfig = {
             },
             {
               id: 'components/input-number/code',
-              label: 'Code',
-            },
-          ],
-        }),
-        createTabItem({
-          id: 'components/range-field/index',
-          label: 'Range field',
-          items: [
-            {
-              id: 'components/range-field/guide',
-              label: 'Usage',
-            },
-            {
-              id: 'components/range-field/code',
               label: 'Code',
             },
           ],
@@ -785,34 +705,6 @@ const sidebars: SidebarsConfig = {
           ],
         }),
         createTabItem({
-          id: 'components/input-time/index',
-          label: 'Time input',
-          items: [
-            {
-              id: 'components/input-time/guide',
-              label: 'Usage',
-            },
-            {
-              id: 'components/input-time/code',
-              label: 'Code',
-            },
-          ],
-        }),
-        createTabItem({
-          id: 'components/time-picker/index',
-          label: 'Time picker',
-          items: [
-            {
-              id: 'components/time-picker/guide',
-              label: 'Usage',
-            },
-            {
-              id: 'components/time-picker/code',
-              label: 'Code',
-            },
-          ],
-        }),
-        createTabItem({
           id: 'components/toggle/index',
           label: 'Toggle',
           items: [
@@ -836,6 +728,123 @@ const sidebars: SidebarsConfig = {
             },
           ],
         }),
+      ],
+      collapsed: true,
+    },
+        {
+      type: 'category',
+      className: 'doc-sidebar-item-bold',
+
+      label: 'Date and time selection',
+      items: [
+        createTabItem({
+          id: 'components/date-dropdown/index',
+          label: 'Date dropdown',
+          items: [
+            {
+              id: 'components/date-dropdown/code',
+              label: 'Code',
+            },
+          ],
+        }),
+        createTabItem({
+          id: 'components/input-date/index',
+          label: 'Date input',
+          items: [
+            {
+              id: 'components/input-date/guide',
+              label: 'Usage',
+            },
+            {
+              id: 'components/input-date/code',
+              label: 'Code',
+            },
+          ],
+        }),
+        createTabItem({
+          id: 'components/input-time/index',
+          label: 'Time input',
+          items: [
+            {
+              id: 'components/input-time/guide',
+              label: 'Usage',
+            },
+            {
+              id: 'components/input-time/code',
+              label: 'Code',
+            },
+          ],
+        }),
+        createTabItem({
+          id: 'components/input-date-time/index',
+          label: 'Date time input',
+          items: [
+            {
+              id: 'components/input-date-time/guide',
+              label: 'Usage',
+            },
+            {
+              id: 'components/input-date-time/code',
+              label: 'Code',
+            },
+          ],
+        }),
+        createTabItem({
+          id: 'components/date-picker/index',
+          label: 'Date picker',
+          items: [
+            {
+              id: 'components/date-picker/guide',
+              label: 'Usage',
+            },
+            {
+              id: 'components/date-picker/code',
+              label: 'Code',
+            }
+          ],
+        }),
+        createTabItem({
+          id: 'components/time-picker/index',
+          label: 'Time picker',
+          items: [
+            {
+              id: 'components/time-picker/guide',
+              label: 'Usage',
+            },
+            {
+              id: 'components/time-picker/code',
+              label: 'Code',
+            },
+          ],
+        }),
+        createTabItem({
+          id: 'components/date-time-picker/index',
+          label: 'Date time picker',
+          items: [
+            {
+              id: 'components/date-time-picker/guide',
+              label: 'Usage',
+            },
+                        {
+              id: 'components/date-time-picker/code',
+              label: 'Code',
+            }
+          ],
+        }),
+        createTabItem({
+          id: 'components/range-field/index',
+          label: 'Range field',
+          items: [
+            {
+              id: 'components/range-field/guide',
+              label: 'Usage',
+            },
+            {
+              id: 'components/range-field/code',
+              label: 'Code',
+            },
+          ],
+        })
       ],
       collapsed: true,
     },
