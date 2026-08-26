@@ -595,3 +595,537 @@ onMounted(() => {
   </AgGridVue>
 </template>
 ```
+
+## Striped rows
+
+Enable alternating row styling with `getIxTheme(agGridCommunity, { stripedRows: true })`.
+
+### React Examples
+
+#### aggrid-striped.tsx
+```tsx
+import { useEffect, useState } from 'react';
+
+import { AgGridReact } from 'ag-grid-react';
+import { getIxTheme } from '@siemens/ix-aggrid';
+import {
+  ModuleRegistry,
+  AllCommunityModule,
+  GridOptions,
+} from 'ag-grid-community';
+
+ModuleRegistry.registerModules([AllCommunityModule]);
+
+export default () => {
+  const [gridOptions, setGridOptions] = useState<GridOptions | null>(null);
+
+  useEffect(() => {
+    const initializeGrid = () => {
+      const ixTheme = getIxTheme(agGrid, {
+        stripedRows: true,
+      });
+
+      setGridOptions({
+        theme: ixTheme,
+        rowDragManaged: true,
+        tooltipShowDelay: 500,
+        rowSelection: {
+          mode: 'multiRow',
+          checkboxes: true,
+          headerCheckbox: true,
+          selectAll: 'filtered',
+        },
+        columnDefs: [
+          {
+            field: 'type',
+            headerName: 'Type',
+            resizable: true,
+            rowDrag: true,
+            tooltipField: 'type',
+          },
+          {
+            field: 'status',
+            headerName: 'Status',
+            resizable: true,
+            sortable: true,
+            filter: true,
+            tooltipValueGetter: (params) => {
+              return `Status: ${params.value} - Type: ${params.data.type}`;
+            },
+          },
+          {
+            field: 'hwVersion',
+            headerName: 'HW version',
+            resizable: true,
+            tooltipValueGetter: (params) => {
+              if (params.value === 'N/A') {
+                return 'Hardware version not available';
+              }
+              return `Hardware Version ${params.value}`;
+            },
+          },
+        ],
+        autoSizeStrategy: {
+          type: 'fitGridWidth',
+        },
+        rowData: [
+          {
+            type: 'Equipment',
+            status: 'Normal',
+            hwVersion: '2.0',
+          },
+          {
+            type: 'Positioner',
+            status: 'Maintenance',
+            hwVersion: '1.0',
+          },
+          {
+            type: 'Pressure sensor',
+            status: 'Unknown',
+            hwVersion: 'N/A',
+          },
+          {
+            type: 'Flow meter',
+            status: 'Normal',
+            hwVersion: '3.1',
+          },
+          {
+            type: 'Temperature sensor',
+            status: 'Warning',
+            hwVersion: '2.2',
+          },
+          {
+            type: 'Valve',
+            status: 'Normal',
+            hwVersion: '1.5',
+          },
+          {
+            type: 'Actuator',
+            status: 'Maintenance',
+            hwVersion: '2.0',
+          },
+          {
+            type: 'Controller',
+            status: 'Normal',
+            hwVersion: '4.0',
+          },
+          {
+            type: 'Safety relay',
+            status: 'Unknown',
+            hwVersion: 'N/A',
+          },
+          {
+            type: 'Power supply',
+            status: 'Normal',
+            hwVersion: '1.8',
+          },
+        ],
+        suppressCellFocus: true,
+      });
+    };
+
+    initializeGrid();
+  }, []);
+
+  if (!gridOptions) {
+    return null;
+  }
+
+  return (
+    <div style={{ height: '12rem', width: '100%' }}>
+      <AgGridReact gridOptions={gridOptions}></AgGridReact>
+    </div>
+  );
+};
+```
+
+### Angular Examples
+
+#### aggrid-striped.ts
+```ts
+import { Component, OnInit } from '@angular/core';
+import { getIxTheme } from '@siemens/ix-aggrid';
+import {
+  GridOptions,
+  AllCommunityModule,
+  ModuleRegistry,
+} from 'ag-grid-community';
+
+ModuleRegistry.registerModules([AllCommunityModule]);
+
+@Component({
+  standalone: false,
+  selector: 'app-example',
+  templateUrl: './aggrid.html',
+})
+export default class AGGridStriped implements OnInit {
+  gridOptions: GridOptions | null = null;
+
+  ngOnInit() {
+    const ixTheme = getIxTheme(agGrid, {
+      stripedRows: true,
+    });
+
+    this.gridOptions = {
+      theme: ixTheme,
+      rowDragManaged: true,
+      tooltipShowDelay: 500,
+      rowSelection: {
+        mode: 'multiRow',
+        checkboxes: true,
+        headerCheckbox: true,
+        selectAll: 'filtered',
+      },
+      columnDefs: [
+        {
+          field: 'type',
+          headerName: 'Type',
+          resizable: true,
+          rowDrag: true,
+          tooltipField: 'type',
+        },
+        {
+          field: 'status',
+          headerName: 'Status',
+          resizable: true,
+          sortable: true,
+          filter: true,
+          tooltipValueGetter: (params) => {
+            return `Status: ${params.value} - Type: ${params.data.type}`;
+          },
+        },
+        {
+          field: 'hwVersion',
+          headerName: 'HW version',
+          resizable: true,
+          tooltipValueGetter: (params) => {
+            if (params.value === 'N/A') {
+              return 'Hardware version not available';
+            }
+            return `Hardware Version ${params.value}`;
+          },
+        },
+      ],
+      autoSizeStrategy: {
+        type: 'fitGridWidth',
+      },
+      rowData: [
+        {
+          type: 'Equipment',
+          status: 'Normal',
+          hwVersion: '2.0',
+        },
+        {
+          type: 'Positioner',
+          status: 'Maintenance',
+          hwVersion: '1.0',
+        },
+        {
+          type: 'Pressure sensor',
+          status: 'Unknown',
+          hwVersion: 'N/A',
+        },
+        {
+          type: 'Flow meter',
+          status: 'Normal',
+          hwVersion: '3.1',
+        },
+        {
+          type: 'Temperature sensor',
+          status: 'Warning',
+          hwVersion: '2.2',
+        },
+        {
+          type: 'Valve',
+          status: 'Normal',
+          hwVersion: '1.5',
+        },
+        {
+          type: 'Actuator',
+          status: 'Maintenance',
+          hwVersion: '2.0',
+        },
+        {
+          type: 'Controller',
+          status: 'Normal',
+          hwVersion: '4.0',
+        },
+        {
+          type: 'Safety relay',
+          status: 'Unknown',
+          hwVersion: 'N/A',
+        },
+        {
+          type: 'Power supply',
+          status: 'Normal',
+          hwVersion: '1.8',
+        },
+      ],
+      suppressCellFocus: true,
+    };
+  }
+}
+```
+
+### Angular Standalone Examples
+
+#### aggrid-striped.ts
+```ts
+import { Component, OnInit } from '@angular/core';
+import { CommonModule } from '@angular/common';
+import { getIxTheme } from '@siemens/ix-aggrid';
+import { AgGridAngular } from 'ag-grid-angular';
+import {
+  GridOptions,
+  AllCommunityModule,
+  ModuleRegistry,
+} from 'ag-grid-community';
+
+ModuleRegistry.registerModules([AllCommunityModule]);
+
+@Component({
+  selector: 'app-example',
+  imports: [AgGridAngular, CommonModule],
+  templateUrl: './aggrid.html',
+})
+export default class AGGridStriped implements OnInit {
+  gridOptions: GridOptions | null = null;
+
+  ngOnInit() {
+    const ixTheme = getIxTheme(agGrid, {
+      stripedRows: true,
+    });
+
+    this.gridOptions = {
+      theme: ixTheme,
+      rowDragManaged: true,
+      tooltipShowDelay: 500,
+      rowSelection: {
+        mode: 'multiRow',
+        checkboxes: true,
+        headerCheckbox: true,
+        selectAll: 'filtered',
+      },
+      columnDefs: [
+        {
+          field: 'type',
+          headerName: 'Type',
+          resizable: true,
+          rowDrag: true,
+          tooltipField: 'type',
+        },
+        {
+          field: 'status',
+          headerName: 'Status',
+          resizable: true,
+          sortable: true,
+          filter: true,
+          tooltipValueGetter: (params) => {
+            return `Status: ${params.value} - Type: ${params.data.type}`;
+          },
+        },
+        {
+          field: 'hwVersion',
+          headerName: 'HW version',
+          resizable: true,
+          tooltipValueGetter: (params) => {
+            if (params.value === 'N/A') {
+              return 'Hardware version not available';
+            }
+            return `Hardware Version ${params.value}`;
+          },
+        },
+      ],
+      autoSizeStrategy: {
+        type: 'fitGridWidth',
+      },
+      rowData: [
+        {
+          type: 'Equipment',
+          status: 'Normal',
+          hwVersion: '2.0',
+        },
+        {
+          type: 'Positioner',
+          status: 'Maintenance',
+          hwVersion: '1.0',
+        },
+        {
+          type: 'Pressure sensor',
+          status: 'Unknown',
+          hwVersion: 'N/A',
+        },
+        {
+          type: 'Flow meter',
+          status: 'Normal',
+          hwVersion: '3.1',
+        },
+        {
+          type: 'Temperature sensor',
+          status: 'Warning',
+          hwVersion: '2.2',
+        },
+        {
+          type: 'Valve',
+          status: 'Normal',
+          hwVersion: '1.5',
+        },
+        {
+          type: 'Actuator',
+          status: 'Maintenance',
+          hwVersion: '2.0',
+        },
+        {
+          type: 'Controller',
+          status: 'Normal',
+          hwVersion: '4.0',
+        },
+        {
+          type: 'Safety relay',
+          status: 'Unknown',
+          hwVersion: 'N/A',
+        },
+        {
+          type: 'Power supply',
+          status: 'Normal',
+          hwVersion: '1.8',
+        },
+      ],
+      suppressCellFocus: true,
+    };
+  }
+}
+```
+
+### Vue Examples
+
+#### aggrid-striped.vue
+```vue
+<script setup lang="ts">
+import { ref, onMounted } from 'vue';
+import { AgGridVue } from 'ag-grid-vue3';
+import { getIxTheme } from '@siemens/ix-aggrid';
+import {
+  ModuleRegistry,
+  AllCommunityModule,
+} from 'ag-grid-community';
+import type { GridOptions } from 'ag-grid-community';
+
+ModuleRegistry.registerModules([AllCommunityModule]);
+
+const gridOptions = ref<GridOptions | null>(null);
+
+onMounted(() => {
+  const ixTheme = getIxTheme(agGrid, {
+    stripedRows: true,
+  });
+
+  gridOptions.value = {
+    theme: ixTheme,
+    rowDragManaged: true,
+    tooltipShowDelay: 500,
+    rowSelection: {
+      mode: 'multiRow',
+      checkboxes: true,
+      headerCheckbox: true,
+      selectAll: 'filtered',
+    },
+    columnDefs: [
+      {
+        field: 'type',
+        headerName: 'Type',
+        resizable: true,
+        rowDrag: true,
+        tooltipField: 'type',
+      },
+      {
+        field: 'status',
+        headerName: 'Status',
+        resizable: true,
+        sortable: true,
+        filter: true,
+        tooltipValueGetter: (params) => {
+          return `Status: ${params.value} - Type: ${params.data.type}`;
+        },
+      },
+      {
+        field: 'hwVersion',
+        headerName: 'HW version',
+        resizable: true,
+        tooltipValueGetter: (params) => {
+          if (params.value === 'N/A') {
+            return 'Hardware version not available';
+          }
+          return `Hardware Version ${params.value}`;
+        },
+      },
+    ],
+    autoSizeStrategy: {
+      type: 'fitGridWidth',
+    },
+    rowData: [
+      {
+        type: 'Equipment',
+        status: 'Normal',
+        hwVersion: '2.0',
+      },
+      {
+        type: 'Positioner',
+        status: 'Maintenance',
+        hwVersion: '1.0',
+      },
+      {
+        type: 'Pressure sensor',
+        status: 'Unknown',
+        hwVersion: 'N/A',
+      },
+      {
+        type: 'Flow meter',
+        status: 'Normal',
+        hwVersion: '3.1',
+      },
+      {
+        type: 'Temperature sensor',
+        status: 'Warning',
+        hwVersion: '2.2',
+      },
+      {
+        type: 'Valve',
+        status: 'Normal',
+        hwVersion: '1.5',
+      },
+      {
+        type: 'Actuator',
+        status: 'Maintenance',
+        hwVersion: '2.0',
+      },
+      {
+        type: 'Controller',
+        status: 'Normal',
+        hwVersion: '4.0',
+      },
+      {
+        type: 'Safety relay',
+        status: 'Unknown',
+        hwVersion: 'N/A',
+      },
+      {
+        type: 'Power supply',
+        status: 'Normal',
+        hwVersion: '1.8',
+      },
+    ],
+    suppressCellFocus: true,
+  };
+});
+</script>
+
+<template>
+  <AgGridVue
+    v-if="gridOptions"
+    style="height: 12rem; width: 100%"
+    :gridOptions="gridOptions"
+  >
+  </AgGridVue>
+</template>
+```
