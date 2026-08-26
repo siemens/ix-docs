@@ -41,6 +41,11 @@ import { CategoryButton } from '@site/src/components/CategoryButton';
 ![Input fields and selections](https://www.figma.com/design/wEptRgAezDU1z80Cn3eZ0o/iX-Documentation-illustrations?node-id=5186-298&t=gkh6VNlJun96I6Ac-11)
 </CategoryButton>
 <CategoryButton
+    title="Date and time selections"
+    link="#date-and-time-selection">
+![Date and time selections](https://www.figma.com/design/wEptRgAezDU1z80Cn3eZ0o/iX-Documentation-illustrations?node-id=8261-16&t=26NpDmIuHhqoFRhU-4)
+</CategoryButton>
+<CategoryButton
     title="Buttons and actions"
     link="#buttons-and-actions">
 ![Buttons and actions](https://www.figma.com/design/wEptRgAezDU1z80Cn3eZ0o/iX-Documentation-illustrations?node-id=5186-305&t=gkh6VNlJun96I6Ac-11)
@@ -125,21 +130,29 @@ import { CategoryButton } from '@site/src/components/CategoryButton';
 | [Category filter](./category-filter/index.mdx)   | Category filters allow users to quickly narrow their search by selecting predefined categories.                                                                                                  |
 | [Checkbox](./checkbox/index.mdx)                 | Checkboxes are form controls that allow users to select none, one or more options.                                                                                                               |
 | [Custom field](./custom-field/index.mdx)         | Custom fields are wrapper components that can host any form component.                                                                                                                           |
-| [Date dropdown](./date-dropdown/index.mdx)       | Date dropdowns allow users to select a specific date from a date picker or pre-defined date options.                                                                                             |
-| [Date input](./input-date/index.mdx)             | Date inputs allow users to enter and select dates in a standardized format, ensuring consistency and accuracy.                                                                                   |
-| [Date picker](./date-picker/index.mdx)           | Date pickers provide a versatile calendar that can be used as a standalone element or within a dropdown for date input, offering a seamless way to select dates.                                 |
-| [Date time picker](./date-time-picker/index.mdx) | Date-time pickers offer an interface for selecting both dates and times, which can be used as a standalone element or within a dropdown, providing a seamless way to input date and time values. |
 | [Expanding search](./expanding-search/index.mdx) | Expanding searches are search fields that expand on click to save space.                                                                                                                         |
 | [Number input](./input-number/index.mdx)         | Number inputs allow users to enter and adjust numerical values.                                                                                                                                  |
-| [Range field](./range-field/index.mdx)           | Range fields group two related inputs into a start and end value so users can enter date, time and date-time ranges consistently.                                                             |
 | [Radio](./radio/index.mdx)                       | Radio buttons enable users to choose only one option from a predefined set of mutually exclusive options.                                                                                        |
 | [Select](./select/index.mdx)                     | Selects allow users to choose from a list of options.                                                                                                                                            |
 | [Slider](./slider/index.mdx)                     | Sliders allow users to select a value from a range of values.                                                                                                                                    |
 | [Input](./input/index.mdx)                       | Input fields allow users to enter and edit single-line text, numbers, and other character-based symbols within an application.                                                                   |
 | [Textarea](./textarea/index.mdx)                 | Textareas allow users to enter and edit multi-line text input, making it perfect for forms that require longer entries.                                                                          |
-| [Time picker](./time-picker/index.mdx)           | Time pickers allow users to select specific times ensuring accurate time input.                                                                                                                  |
 | [Toggle](./toggle/index.mdx)                     | Toggle switches enable users to toggle between an on and off state.                                                                                                                              |
 | [Upload](./upload/index.mdx)                     | Uploads allow users to select and upload files from their device via drag-and-drop.                                                                                                              |
+
+## Date and time selection
+
+| Component                                        | Description                                                                                                                                                                                      |
+| :----------------------------------------------- | :----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| [Date dropdown](./date-dropdown/index.mdx)       | Date dropdowns allow users to select a specific date from a date picker or pre-defined date options.                                                                                             |
+| [Date input](./input-date/index.mdx)             | Date inputs allow users to enter and select dates in a standardized format, ensuring consistency and accuracy.                                                                                   |
+| [Time input](./input-time/index.mdx)             | Time inputs allow users to enter and select times in a standardized format, ensuring consistency and accuracy.                                                                                   |
+| [Date time input](./input-date-time/index.mdx)    | Date time input provides a versatile interface for selecting both date and time values, offering a seamless way to input date and time information either as a standalone element or within a dropdown.                                                                                   |
+| [Date picker](./date-picker/index.mdx)           | Date pickers provide a versatile calendar that can be used as a standalone element or within a dropdown for date input, offering a seamless way to select dates.                                 |
+| [Time picker](./time-picker/index.mdx)           | Time pickers allow users to select specific times ensuring accurate time input.                                                                                                                  |
+| [Date time picker](./date-time-picker/index.mdx) | Date-time pickers offer an interface for selecting both dates and times, which can be used as a standalone element or within a dropdown, providing a seamless way to input date and time values. |
+| [Range field](./range-field/index.mdx)           | Range fields group two related inputs into a start and end value so users can enter date, time and date-time ranges consistently.                                                             |
+
 
 ## Buttons and actions
 
