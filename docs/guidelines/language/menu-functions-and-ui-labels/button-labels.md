@@ -244,7 +244,7 @@ Don't use question marks in button labels. Instead show the consequences of the 
 </div>
 </div>
 
-Use ellipses (…) sparingly to indicate that an action requires significant further input or a secondary step before it is performed, such as opening a file explorer or a complex configuration dialog. See [Punctuation](#).
+Use ellipses (…) sparingly to indicate that an action requires significant further input or a secondary step before it is performed, such as opening a file explorer or a complex configuration dialog.
 
 Avoid using ellipses for standard actions or simple navigation to keep the interface clean and modern. The ellipsis serves as a signal that the action is not immediate and requires the user to specify details in a new window or modal.
 
