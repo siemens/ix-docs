@@ -1,22 +1,14 @@
 name: Deploy GitHub Page (prod)
 
 on:
+  push:
+    branches:
+      - main
   workflow_dispatch:
-    inputs:
-      confirm_deployment:
-        description: 'Confirm deployment to production (this will trigger the workflow and deploy to GitHub Pages)'
-        required: true
-        type: boolean
-      create_release:
-        description: 'Confirm creation of a GitHub release (this will trigger the workflow and create a release)'
-        required: true
-        type: boolean
-      version:
-        description: 'Version prefix for release (for example: v4.3.0)'
-        required: true
-        type: string
 
-concurrency: deploy-gh-pages-${{ github.ref }}
+concurrency:
+  group: deploy-gh-pages-production
+  cancel-in-progress: false
 
 jobs:
   deploy-gh-pages:
@@ -27,6 +19,39 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
+
+      - name: Validate and extract release version
+        id: release_version
+        shell: bash
+        run: |
+          set -euo pipefail
+
+          env_file=".env.production"
+          if [[ ! -f "$env_file" ]]; then
+            echo "Expected $env_file to contain IX_REPO_BRANCH='@siemens/ix@<version>'" >&2
+            exit 1
+          fi
+
+          branch_lines=$(grep -E '^IX_REPO_BRANCH=' "$env_file" || true)
+          if [[ -z "$branch_lines" ]]; then
+            echo "Missing IX_REPO_BRANCH assignment in $env_file" >&2
+            exit 1
+          fi
+          if [[ "$branch_lines" == *$'\n'* ]]; then
+            echo "Expected exactly one IX_REPO_BRANCH assignment in $env_file" >&2
+            exit 1
+          fi
+
+          numeric_pattern='(0|[1-9][0-9]*)'
+          identifier_pattern='(0|[1-9][0-9]*|[0-9A-Za-z-]*[A-Za-z-][0-9A-Za-z-]*)'
+          semver_pattern="${numeric_pattern}\.${numeric_pattern}\.${numeric_pattern}(-${identifier_pattern}(\.${identifier_pattern})*)?(\+[0-9A-Za-z-]+(\.[0-9A-Za-z-]+)*)?"
+          branch_pattern="^IX_REPO_BRANCH='@siemens/ix@(${semver_pattern})'[[:space:]]*$"
+          if [[ ! "$branch_lines" =~ $branch_pattern ]]; then
+            echo "Malformed IX_REPO_BRANCH assignment in $env_file; expected IX_REPO_BRANCH='@siemens/ix@<major>.<minor>.<patch>'" >&2
+            exit 1
+          fi
+
+          echo "version=v${BASH_REMATCH[1]}" >> "$GITHUB_OUTPUT"
 
       - uses: ./.github/workflows/actions/turbo
 
@@ -41,22 +66,22 @@ jobs:
           BRAND_URL: ${{ vars.BRAND_URL }}
 
       - name: Deploy GitHub Pages 🚀
-        if: ${{ inputs.confirm_deployment == true }}
         uses: JamesIves/github-pages-deploy-action@6c2d9db40f9296374acc17b90404b6e8864128c8
         with:
           folder: ./build
           clean-exclude: version-*
 
       - name: Create release version
-        if: ${{ inputs.create_release == true }}
+        env:
+          DEPLOYMENT_VERSION: ${{ steps.release_version.outputs.version }}
         id: release_meta
         run: |
+          set -euo pipefail
           timestamp=$(date +%d%m%Y%H%M)
-          release_version="${{ github.event.inputs.version }}-${timestamp}"
+          release_version="${DEPLOYMENT_VERSION}-${timestamp}"
           echo "release_version=${release_version}" >> "$GITHUB_OUTPUT"
 
       - name: Archive build markdown files
-        if: ${{ inputs.create_release == true }}
         run: |
           mkdir -p artifacts
           find build/docs -type f -name '*.md' | sort > artifacts/markdown-files.txt
@@ -69,15 +94,14 @@ jobs:
           tar -czf "artifacts/llmstxt.tar.gz" -T artifacts/markdown-files.txt
 
       - name: Create GitHub release with markdown bundle
-        if: ${{ inputs.create_release == true }}
         uses: softprops/action-gh-release@a06a81a03ee405af7f2048a818ed3f03bbf83c7b # v2.5.0
         with:
           tag_name: deployment-${{ steps.release_meta.outputs.release_version }}
           name: ${{ steps.release_meta.outputs.release_version }}
           body: |
             Automated release created from `deploy-gh-pages.yml`.
-            Deployment version: `${{ github.event.inputs.version }}`
+            Deployment version: `${{ steps.release_version.outputs.version }}`
           files: artifacts/llmstxt.tar.gz
-          draft: true
+          draft: false
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
