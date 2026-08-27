@@ -919,13 +919,13 @@
     "ix-workflow-step",
     "ix-workflow-steps"
   ],
-  "/src/preview-examples/timepicker-format-adjusted.html": [
+  "/src/preview-examples/timepicker-intervals.html": [
     "ix-time-picker"
   ],
   "/src/preview-examples/timepicker-min-max-time.html": [
     "ix-time-picker"
   ],
-  "/src/preview-examples/timepicker-intervals.html": [
+  "/src/preview-examples/timepicker-format-adjusted.html": [
     "ix-time-picker"
   ],
   "/home/runner/work/ix/ix/node_modules/.pnpm/@siemens+ix-icons@3.5.0/node_modules/@siemens/ix-icons/dist/esm/index.js": [

@@ -138,7 +138,7 @@ import { Component } from '@angular/core';
         <ix-chip
           icon="print"
           variant="info"
-          tooltip-text="Open details for this status"
+          tooltipText="Open details for this status"
           aria-label="In review"
           >Info</ix-chip
         >
@@ -148,7 +148,7 @@ import { Component } from '@angular/core';
           icon="print"
           variant="custom"
           background="var(--theme-chart-11)"
-          chip-color="var(--theme-color-inv-std-text)"
+          chipColor="var(--theme-color-inv-std-text)"
           closable
           >Custom</ix-chip
         >
@@ -167,7 +167,7 @@ import { Component } from '@angular/core';
           icon="print"
           variant="info"
           outline
-          tooltip-text="Open details for this status"
+          tooltipText="Open details for this status"
           aria-label="In review"
           >Info</ix-chip
         >
@@ -177,7 +177,7 @@ import { Component } from '@angular/core';
           icon="print"
           variant="custom"
           background="var(--theme-chart-11)"
-          chip-color="var(--theme-chip-outline--color)"
+          chipColor="var(--theme-chip-outline--color)"
           outline
           closable
           >Custom</ix-chip
@@ -225,7 +225,7 @@ import { IxChip } from '@siemens/ix-angular/standalone';
         <ix-chip
           icon="print"
           variant="info"
-          tooltip-text="Open details for this status"
+          tooltipText="Open details for this status"
           aria-label="In review"
           >Info</ix-chip
         >
@@ -235,7 +235,7 @@ import { IxChip } from '@siemens/ix-angular/standalone';
           icon="print"
           variant="custom"
           background="var(--theme-chart-11)"
-          chip-color="var(--theme-color-inv-std-text)"
+          chipColor="var(--theme-color-inv-std-text)"
           closable
           >Custom</ix-chip
         >
@@ -254,7 +254,7 @@ import { IxChip } from '@siemens/ix-angular/standalone';
           icon="print"
           variant="info"
           outline
-          tooltip-text="Open details for this status"
+          tooltipText="Open details for this status"
           aria-label="In review"
           >Info</ix-chip
         >
@@ -264,7 +264,7 @@ import { IxChip } from '@siemens/ix-angular/standalone';
           icon="print"
           variant="custom"
           background="var(--theme-chart-11)"
-          chip-color="var(--theme-chip-outline--color)"
+          chipColor="var(--theme-chip-outline--color)"
           outline
           closable
           >Custom</ix-chip

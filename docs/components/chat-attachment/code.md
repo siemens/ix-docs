@@ -105,15 +105,15 @@ export default class ChatUserMessage {
   <ix-chat-user-message message="Summarize the attached shift report.">
     <ix-chat-attachment
       slot="attachments"
-      file-name="shift_report.pdf"
+      fileName="shift_report.pdf"
       icon="pdf-document"
-      hide-remove-button
+      hideRemoveButton
     ></ix-chat-attachment>
     <ix-chat-attachment
       slot="attachments"
-      file-name="operator_notes.txt"
+      fileName="operator_notes.txt"
       icon="txt-document"
-      hide-remove-button
+      hideRemoveButton
     ></ix-chat-attachment>
     <ix-icon-button
       slot="actions"
@@ -184,15 +184,15 @@ export default class ChatUserMessage {
   <ix-chat-user-message message="Summarize the attached shift report.">
     <ix-chat-attachment
       slot="attachments"
-      file-name="shift_report.pdf"
+      fileName="shift_report.pdf"
       icon="pdf-document"
-      hide-remove-button
+      hideRemoveButton
     ></ix-chat-attachment>
     <ix-chat-attachment
       slot="attachments"
-      file-name="operator_notes.txt"
+      fileName="operator_notes.txt"
       icon="txt-document"
-      hide-remove-button
+      hideRemoveButton
     ></ix-chat-attachment>
     <ix-icon-button
       slot="actions"

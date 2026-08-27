@@ -189,15 +189,15 @@ export default class Chat {
   >
     <ix-chat-attachment
       slot="attachments"
-      file-name="equipment_status.pdf"
+      fileName="equipment_status.pdf"
       icon="pdf-document"
-      hide-remove-button
+      hideRemoveButton
     ></ix-chat-attachment>
     <ix-chat-attachment
       slot="attachments"
-      file-name="maintenance_notes.txt"
+      fileName="maintenance_notes.txt"
       icon="txt-document"
-      hide-remove-button
+      hideRemoveButton
     ></ix-chat-attachment>
     <ix-icon-button
       slot="actions"
@@ -272,9 +272,9 @@ export default class Chat {
   >
     <ix-chat-attachment
       slot="attachments"
-      file-name="customer_feedback.pdf"
+      fileName="customer_feedback.pdf"
       icon="pdf-document"
-      hide-remove-button
+      hideRemoveButton
     ></ix-chat-attachment>
   </ix-chat-user-message>
 
@@ -358,15 +358,15 @@ export default class Chat {
   >
     <ix-chat-attachment
       slot="attachments"
-      file-name="equipment_status.pdf"
+      fileName="equipment_status.pdf"
       icon="pdf-document"
-      hide-remove-button
+      hideRemoveButton
     ></ix-chat-attachment>
     <ix-chat-attachment
       slot="attachments"
-      file-name="maintenance_notes.txt"
+      fileName="maintenance_notes.txt"
       icon="txt-document"
-      hide-remove-button
+      hideRemoveButton
     ></ix-chat-attachment>
     <ix-icon-button
       slot="actions"
@@ -441,9 +441,9 @@ export default class Chat {
   >
     <ix-chat-attachment
       slot="attachments"
-      file-name="customer_feedback.pdf"
+      fileName="customer_feedback.pdf"
       icon="pdf-document"
-      hide-remove-button
+      hideRemoveButton
     ></ix-chat-attachment>
   </ix-chat-user-message>
 

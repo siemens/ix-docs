@@ -102,9 +102,9 @@ import { IxKeyValue, IxKeyValueList } from '@siemens/ix-vue';
 
 <template>
   <IxKeyValueList>
-    <IxKeyValue label="Label" labelPosition="left" value="Value"></IxKeyValue>
-    <IxKeyValue label="Label" labelPosition="left" value="Value"></IxKeyValue>
-    <IxKeyValue label="Label" labelPosition="left" value="Value"></IxKeyValue>
+    <IxKeyValue label="Label" label-position="left" value="Value"></IxKeyValue>
+    <IxKeyValue label="Label" label-position="left" value="Value"></IxKeyValue>
+    <IxKeyValue label="Label" label-position="left" value="Value"></IxKeyValue>
   </IxKeyValueList>
 </template>
 ```
@@ -257,7 +257,7 @@ import { IxKeyValue, IxKeyValueList } from '@siemens/ix-vue';
 
 <template>
   <IxKeyValueList>
-    <IxKeyValue label="Label" labelPosition="left">
+    <IxKeyValue label="Label" label-position="left">
       <input
         class="ix-form-control"
         placeholder="Enter text here"
@@ -265,7 +265,7 @@ import { IxKeyValue, IxKeyValueList } from '@siemens/ix-vue';
         slot="custom-value"
       />
     </IxKeyValue>
-    <IxKeyValue label="Label" labelPosition="left">
+    <IxKeyValue label="Label" label-position="left">
       <input
         class="ix-form-control"
         placeholder="Enter text here"
@@ -273,7 +273,7 @@ import { IxKeyValue, IxKeyValueList } from '@siemens/ix-vue';
         slot="custom-value"
       />
     </IxKeyValue>
-    <IxKeyValue label="Label" labelPosition="left">
+    <IxKeyValue label="Label" label-position="left">
       <input
         class="ix-form-control"
         placeholder="Enter text here"
@@ -416,19 +416,19 @@ import { IxKeyValue, IxKeyValueList } from '@siemens/ix-vue';
     <IxKeyValue
       :icon="iconLocation"
       label="Label"
-      labelPosition="left"
+      label-position="left"
       value="Value"
     ></IxKeyValue>
     <IxKeyValue
       :icon="iconLocation"
       label="Label"
-      labelPosition="left"
+      label-position="left"
       value="Value"
     ></IxKeyValue>
     <IxKeyValue
       :icon="iconLocation"
       label="Label"
-      labelPosition="left"
+      label-position="left"
       value="Value"
     ></IxKeyValue>
   </IxKeyValueList>
@@ -533,9 +533,9 @@ import { IxKeyValue, IxKeyValueList } from '@siemens/ix-vue';
 
 <template>
   <IxKeyValueList striped>
-    <IxKeyValue label="Label" labelPosition="left" value="Value"></IxKeyValue>
-    <IxKeyValue label="Label" labelPosition="left" value="Value"></IxKeyValue>
-    <IxKeyValue label="Label" labelPosition="left" value="Value"></IxKeyValue>
+    <IxKeyValue label="Label" label-position="left" value="Value"></IxKeyValue>
+    <IxKeyValue label="Label" label-position="left" value="Value"></IxKeyValue>
+    <IxKeyValue label="Label" label-position="left" value="Value"></IxKeyValue>
   </IxKeyValueList>
 </template>
 ```

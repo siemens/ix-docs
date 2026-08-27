@@ -1253,8 +1253,8 @@ import { Component } from '@angular/core';
   selector: 'app-example',
   template: `
     <ix-button icon="star">Button</ix-button>
-    <ix-button icon="star" icon-right="bulb">Button</ix-button>
-    <ix-button icon-right="bulb">Button</ix-button>
+    <ix-button icon="star" iconRight="bulb">Button</ix-button>
+    <ix-button iconRight="bulb">Button</ix-button>
     <ix-button variant="subtle-primary" icon="star">Button</ix-button>
     <ix-button variant="subtle-primary" icon="star">Button</ix-button>
     <ix-button variant="tertiary" icon="star">Button</ix-button>
@@ -1287,8 +1287,8 @@ import { IxButton } from '@siemens/ix-angular/standalone';
   imports: [IxButton],
   template: `
     <ix-button icon="star">Button</ix-button>
-    <ix-button icon="star" icon-right="bulb">Button</ix-button>
-    <ix-button icon-right="bulb">Button</ix-button>
+    <ix-button icon="star" iconRight="bulb">Button</ix-button>
+    <ix-button iconRight="bulb">Button</ix-button>
     <ix-button variant="subtle-primary" icon="star">Button</ix-button>
     <ix-button variant="subtle-primary" icon="star">Button</ix-button>
     <ix-button variant="tertiary" icon="star">Button</ix-button>
@@ -1322,8 +1322,8 @@ import { IxButton } from '@siemens/ix-vue';
 
 <template>
   <IxButton :icon="iconStar">Button</IxButton>
-  <IxButton :icon="iconStar" :iconRight="iconBulb">Button</IxButton>
-  <IxButton :iconRight="iconBulb">Button</IxButton>
+  <IxButton :icon="iconStar" :icon-right="iconBulb">Button</IxButton>
+  <IxButton :icon-right="iconBulb">Button</IxButton>
   <IxButton variant="subtle-primary" :icon="iconStar">Button</IxButton>
   <IxButton variant="subtle-primary" :icon="iconStar">Button</IxButton>
   <IxButton variant="tertiary" :icon="iconStar">Button</IxButton>
