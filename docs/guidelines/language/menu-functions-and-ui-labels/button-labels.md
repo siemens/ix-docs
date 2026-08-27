@@ -5,7 +5,7 @@ title: 'Button labels'
 doc-type: 'banner'
 component-tabs: ['']
 no_single_tab: true
-description: 'We ensure clear, actionable button instructions by crafting effective prompts and calls to action that enhance user interaction.'
+description: 'We ensure clear, actionable button instructions by crafting effective calls to action that enhance user interaction.'
 ---
 
 import React from "react";
