@@ -1,5 +1,8 @@
 ---
 doc-type: 'tab-item'
+sidebar_label: 'Overview'
+sidebar_class_name: 'display-none'
+sidebar_position: 1
 description: 'Overview of localization.'
 ---
 

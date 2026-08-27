@@ -1,4 +1,11 @@
 {
   "label": "Localization",
-  "position": 3
+  "position": 3,
+  "link": {
+    "type": "doc",
+    "id": "guidelines/language/support-and-resources/uxw-localization/index"
+  },
+  "className": "category-tabs",
+  "collapsed": true,
+  "collapsible": false
 }
