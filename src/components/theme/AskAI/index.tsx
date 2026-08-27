@@ -4,7 +4,12 @@
 
 import { useLocation } from '@docusaurus/router';
 import { iconAi, iconSingleCheck } from '@siemens/ix-icons/icons';
-import { IxButton, IxIconButton, IxTooltip } from '@siemens/ix-react';
+import {
+  IxButton,
+  IxIconButton,
+  IxTooltip,
+  IxTypography,
+} from '@siemens/ix-react';
 import { useCallback, useEffect, useState } from 'react';
 import styles from './styles.module.css';
 
@@ -55,7 +60,9 @@ export default function AskAI(props: { id: string; prompt: string }) {
         aria-label="View as Markdown"
         onClick={viewAsMarkdown}
       />
-      <IxTooltip for={`#show_markdown_${props.id}`}>View as Markdown</IxTooltip>
+      <IxTooltip for={`#show_markdown_${props.id}`}>
+        <IxTypography format="body">View as Markdown</IxTypography>
+      </IxTooltip>
     </div>
   );
 }
