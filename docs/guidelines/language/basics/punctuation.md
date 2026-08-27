@@ -103,9 +103,11 @@ Note: Consider adding asterisks automatically via attributes within your compone
 
 Use bullet points to break down complex information into scannable, digestible chunks. They help users quickly identify key points and reduce cognitive load. Use consistent bullet styles within a single list or section.
 
-For unordered lists, use round bullets (•). For ordered lists, use numbers followed by a period (1.). Maintain parallel structure; if one item is a complete sentence, make all items complete sentences.
-
-Add one space after the bullet point or number before the text begins.
+For unordered lists, use the HTML `<ul>` element. In iX applications, unordered lists should be displayed using the standard bullet point style.
+ 
+For ordered lists, use the HTML `<ol>` element. Use numbered lists only when the sequence or priority of items matters.
+ 
+Maintain a parallel structure within a list; if one item is a complete sentence, make all items complete sentences.
 
 <div class="dos-and-donts">
   <div class="dos">
