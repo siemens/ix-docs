@@ -16,11 +16,11 @@ Uploads help users add files to a form or workflow from their device. Use them w
 ## Variants
 
 - **Single file:** Use when the task needs one file only, e.g. a profile image, configuration file or certificate. After a successful upload, replace the drop zone with the uploaded item or provide a clear replace action.
-- **Multiple files:** Use when users need to submit a set of files. Show the uploaded files in a list so users can review each file’s name, size, status and available actions.
+- **Multiple files:** Use when users are able to submit more than one file. Show the uploaded files in a list so users can review each file’s name, size, status and available actions.
 
 ## Options
 
-- **Accepted file types:** Describe the allowed file types with familiar names and extensions, e.g. “PDF or PNG”. Use the accepted types to prevent unsupported files from being selected.
+- **Accepted file types:** Describe the permitted file types with familiar names and extensions, e.g. “PDF or PNG”. Use the accepted file types to prevent unsupported files from being uploaded.
 - **Directory upload:** Allow folder selection when the task involves a complete set of files and the target browser supports it. Use multiple-file upload when users need to choose individual files.
 - **Label:** Use short, specific labels for the default, checking, success, failed and disabled states. Keep the action clear, e.g. “Select file” or “Select files”.
 - **Multiline:** Use multiline labels when the available width is limited or the instruction needs more context. Keep the label concise so the upload area remains easy to scan.
@@ -33,15 +33,15 @@ Make the upload form-ready by using [custom fields](../custom-field/), e.g. to a
 
 ## Behavior in context
 
-- **Interaction:** Users select files by clicking the button or dragging files into the target area. Keep both methods available when drag-and-drop is useful, because it isn’t available or convenient in every environment.
+- **Interaction:** Users select files by clicking the button or dragging files into the target area. Keep both methods available. Although drag-and-drop is useful, it isn’t available or convenient in every environment.
 - **Overflow:** Let labels, helper text and validation messages wrap onto multiple lines. Keep file names readable and provide an action such as remove or replace instead of hiding important text with a tooltip.
 - **Placement:** Place uploads near the related form fields or task action. Use [form fields](../forms-field) when the upload needs a label, helper text or validation message.
 - **Responsiveness:** Let the upload area fill the available form width and use the multiline option when its label becomes difficult to scan at narrow widths. Keep the control height aligned with nearby fields when it appears in a form.
-- **Feedback:** Show checking progress and file-level errors next to the affected file or upload area. Use a [toast](../toast) only for system-level feedback that doesn’t need to stay connected to a specific file.
+- **Feedback:** Show loading or checking progress and file-level errors next to the affected file or upload area. Use a [toast](../toast) only for system-level feedback that doesn’t need to stay connected to a specific file.
 
 ## States
 
-Uploads have six states: Default, drag over, checking, success, fail and disabled. The checking states keep users informed while the file is being inspected, while success and fail communicate the result of that check. Multi-file implementations can also show queued or completed statuses on individual file rows.
+Uploads have six states: Default, drag over, checking, success, fail and disabled. The checking states keep users informed while the file is being inspected, while success and fail communicate the result of the upload. Multi-file implementations can also show queued or completed statuses on individual file rows.
 
 ![Upload states](https://www.figma.com/design/wEptRgAezDU1z80Cn3eZ0o/iX-Documentation-illustrations?node-id=8251-245)
 
@@ -59,9 +59,9 @@ Uploads have six states: Default, drag over, checking, success, fail and disable
 </div>
 <div className="donts">
   <ul aria-label="Practices to avoid">
-    <li>Don’t hide file restrictions in a tooltip when they affect whether users can complete the task</li>
+    <li>Don’t hide file restrictions in a tooltip</li>
     <li>Don’t rely on drag-and-drop as the only way to select files</li>
-    <li>Don’t use a toast as the only explanation for a file-level validation error</li>
+    <li>Don’t use toast messages for a file-level validation error</li>
   </ul>
 </div>
 </div>
