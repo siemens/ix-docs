@@ -349,7 +349,7 @@ Use sparingly to give users additional information or clarify messaging. Conside
   </div>
 </div>
 
-### Curly `\{ \}`
+### Curly `{ }`
 
 Use for variables, placeholders and programming.
 
