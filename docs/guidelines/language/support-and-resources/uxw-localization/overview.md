@@ -11,9 +11,9 @@ description: 'Overview of localization.'
 Localization adapts a product to a specific language, region, and culture. It includes
 translation, formats, visual conventions, legal requirements, and user expectations.
 
-## Language and tone
+## Voice, language and tone
 
-Language and tone must be clear, accurate, and appropriate for the target audience. Good
+Voice, language and tone must be clear, accurate, and appropriate for the target audience. Good
 localization preserves meaning, not just words, and must also account for plural rules and
 punctuation.
 
@@ -21,12 +21,11 @@ punctuation.
 
 - Support translatable strings and integration with translation frameworks.
 - Support fallback text for missing translations.
-- Use the [UX Writing Guidelines](../../writing-style-guide-getting-started.md) for tone or wording.
+- Use the [UX Writing Guidelines](../../writing-style-guide-getting-started.md) for voice and tone recommendations.
 
-## Imagery and colors
+## Visuals and colors
 
-Images, symbols, and colors can have different meanings across markets. Review them for cultural
-fit and local expectations.
+Visuals, symbols, and colors can have different meanings across markets. Review them for cultural fit and local expectations.
 
 ### Best practice
 
@@ -59,7 +58,7 @@ RTL can require mirrored navigation, icon direction, alignment, and interaction 
 ### Best practice
 
 - Support RTL-aware behavior in components and overlays.
-- Provide dynamic directionality support for Angular CDK integrations.
+- Provide dynamic directionality support for Angular CDK (Component Development Kit) integrations.
 - Layout and design with variable text length in mind.
 
 ## Payment methods
@@ -82,7 +81,7 @@ The About and Legal components require specific content to comply with Siemens A
 
 ## Customer support
 
-Support channels, contact details, hours, and escalation paths often differ by country or
+Support channels, contact details, hours, and customer escalation paths often differ by country or
 language.
 
 ## Localization (l10n) vs. Internationalization (i18n)
