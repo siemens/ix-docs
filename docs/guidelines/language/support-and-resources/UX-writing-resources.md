@@ -1,5 +1,5 @@
 ---
-sidebar_position: 4
+sidebar_position: 5
 sidebar_label: UX writing resources
 title: UX writing resources
 doc-type: "banner"

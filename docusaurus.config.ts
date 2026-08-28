@@ -212,7 +212,17 @@ const config: Config = {
     llmstxtPostbuildPlugin,
   ],
 
-  headTags: [getSiemensSansFontFaceHeadTag()],
+  headTags: [
+    getSiemensSansFontFaceHeadTag(),
+    {
+      tagName: 'link',
+      attributes: {
+        rel: 'describedby',
+        type: 'text/markdown',
+        href: `${baseUrl}llms.txt`,
+      },
+    },
+  ],
   themeConfig: {
     ...getAnnouncementBarConfig(),
     metadata: [

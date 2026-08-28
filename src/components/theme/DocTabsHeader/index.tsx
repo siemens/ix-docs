@@ -5,7 +5,7 @@ import type { PropSidebarItemLink } from '@docusaurus/plugin-content-docs';
 import { useHistory, useLocation } from '@docusaurus/router';
 import { useScrollPosition } from '@docusaurus/theme-common/internal';
 import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
-import { IxTooltip } from '@siemens/ix-react';
+import { IxTooltip, IxTypography } from '@siemens/ix-react';
 import {
   DeprecatedTag,
   FormReady,
@@ -93,7 +93,9 @@ I want to ask some questions`,
       </div>
 
       <IxTooltip for="#copy-prompt">
-        Copy a prompt to ask an AI assistant about this page.
+        <IxTypography format="body">
+          Copy a prompt to ask an AI assistant about this page.
+        </IxTypography>
       </IxTooltip>
       {description && (
         <div className={clsx(styles.componentHeroHeader, 'HeroHeader')}>

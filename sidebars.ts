@@ -831,6 +831,10 @@ const sidebars: SidebarsConfig = {
           label: 'Upload',
           items: [
             {
+              id: 'components/upload/guide',
+              label: 'Usage',
+            },
+            {
               id: 'components/upload/code',
               label: 'Code',
             },
@@ -952,6 +956,20 @@ const sidebars: SidebarsConfig = {
       label: 'System feedback and status',
       items: [
         createTabItem({
+          id: 'components/badge/index',
+          label: 'Badge',
+          items: [
+            {
+              id: 'components/badge/guide',
+              label: 'Usage',
+            },
+            {
+              id: 'components/badge/code',
+              label: 'Code',
+            },
+          ],
+        }),
+        createTabItem({
           id: 'components/empty-state/index',
           label: 'Empty state',
           items: [
@@ -1050,6 +1068,10 @@ const sidebars: SidebarsConfig = {
           label: 'Tooltip',
           items: [
             {
+              id: 'components/tooltip/guide',
+              label: 'Usage',
+            },
+            {
               id: 'components/tooltip/code',
               label: 'Code',
             },
@@ -1136,6 +1158,85 @@ const sidebars: SidebarsConfig = {
           items: [
             {
               id: 'components/kpi/code',
+              label: 'Code',
+            },
+          ],
+        }),
+      ],
+      collapsed: true,
+    },
+    {
+      type: 'category',
+      className: 'doc-sidebar-item-bold',
+
+      label: 'Chat',
+      items: [
+        createTabItem({
+          id: 'components/chat/index',
+          label: 'Chat',
+          items: [
+            {
+              id: 'components/chat/guide',
+              label: 'Usage',
+            },
+            {
+              id: 'components/chat/code',
+              label: 'Code',
+            },
+          ],
+        }),
+        createTabItem({
+          id: 'components/chat-input/index',
+          label: 'Chat input',
+          items: [
+            {
+              id: 'components/chat-input/guide',
+              label: 'Usage',
+            },
+            {
+              id: 'components/chat-input/code',
+              label: 'Code',
+            },
+          ],
+        }),
+        createTabItem({
+          id: 'components/user-message/index',
+          label: 'User message',
+          items: [
+            {
+              id: 'components/user-message/guide',
+              label: 'Usage',
+            },
+            {
+              id: 'components/user-message/code',
+              label: 'Code',
+            },
+          ],
+        }),
+        createTabItem({
+          id: 'components/ai-message/index',
+          label: 'AI message',
+          items: [
+            {
+              id: 'components/ai-message/guide',
+              label: 'Usage',
+            },
+            {
+              id: 'components/ai-message/code',
+              label: 'Code',
+            },
+          ],
+        }),
+        createTabItem({
+          id: 'components/chat-attachment/index',
+          label: 'Chat attachment',
+          items: [
+            {
+              id: 'components/chat-attachment/guide',
+              label: 'Usage',
+            },
+            {
+              id: 'components/chat-attachment/code',
               label: 'Code',
             },
           ],

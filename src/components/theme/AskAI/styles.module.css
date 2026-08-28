@@ -1,6 +1,9 @@
 /*
  * COPYRIGHT (c) Siemens AG 2018-2026 ALL RIGHTS RESERVED.
  */
-.copy_prompt {
+.actions {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
   margin-right: 0.5rem;
 }

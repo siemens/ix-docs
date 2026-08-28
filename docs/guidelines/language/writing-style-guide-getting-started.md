@@ -12,19 +12,19 @@ description: 'The writing style guide provides support for content designers, wr
 
 ## Basics
 
-Dive into the fundamental principles of UX writing, where you'll learn how to create text that enhances user experience by being clear, concise, and user-friendly. This section lays the groundwork for all your UX writing endeavors. [Read more](./basics)
+Dive into the fundamental principles of UX writing, where you'll learn how to create text that enhances user experience by being clear, concise, and user-friendly. This section lays the groundwork for all your UX writing endeavors. [Read more](./basics/voice-and-tone)
 
 ## Grammar and vocabulary
 
-Discover the importance of proper grammar and vocabulary in UX writing. This subchapter will guide you on how to use language effectively to create professional and easily understandable content. [Read more](./grammar-and-vocabulary)
+Discover the importance of proper grammar and vocabulary in UX writing. These subchapters will guide you on how to use language effectively to create professional and easily understandable content. Read more: [Grammar](./basics/grammar.md) and [Vocabulary](./basics/vocabulary.md)
 
 ## Punctuation
 
-Master the use of punctuation to improve the readability and comprehension of your text. This section covers the rules and best practices for using punctuation marks to ensure your writing is clear and precise. [Read more](./punctuation)
+Master the use of punctuation to improve the readability and comprehension of your text. This section covers the rules and best practices for using punctuation marks to ensure your writing is clear and precise. [Read more](./basics/punctuation.md)
 
-## Proper nouns
+## Capitalization and proper nouns
 
-Learn the guidelines for using proper nouns correctly in your text. This subchapter will help you understand when and how to capitalize names, brands, and other specific terms to maintain consistency and professionalism. [Read more](./proper-nouns)
+Learn the guidelines for using proper nouns correctly in your text. This subchapter will help you understand when and how to capitalize names, brands, and other specific terms to maintain consistency and professionalism. [Read more](./basics/capitalization-and-proper-nouns.md)
 
 ## Formatting 
 
@@ -41,12 +41,16 @@ Learn when and how to write all types of messages including warnings, errors, in
 
 ## Frequent app functions
 
-Get tips for naming common app functions clearly and effectively. This subchapter focuses on how to describe frequent actions and features in a way that users can quickly understand and use. [Read more](./frequent-app-functions)
+Get tips for naming common app functions clearly and effectively. This subchapter focuses on how to describe frequent actions and features in a way that users can quickly understand and use. [Read more](../language/frequent-app-functions.md)
 
 
 ## Dialogs and buttons
 
 Discover guidelines for writing dialogs and button labels to ensure clear and actionable instructions. This section helps you create effective prompts and calls to action that enhance user interaction. [Read more](./dialogs-and-buttons)
+
+## Operational emails 
+
+Explore our guidelines and best practice examples for the most common operational emails in industrial applications. Whether you're managing access requests, assigning workflows, or communicating operational alarms and events, clear and consistent emails are essential. This section covers the UX writing fundamentals to keep operations running smoothly and users well-informed. [Read more](./operational-emails/overview-operational-emails/usage.mdx)
 
 ## Support and resources 
 

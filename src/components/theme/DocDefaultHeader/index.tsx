@@ -6,7 +6,7 @@ import {
   useScrollPosition,
 } from '@docusaurus/theme-common/internal';
 import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
-import { IxTooltip } from '@siemens/ix-react';
+import { IxTooltip, IxTypography } from '@siemens/ix-react';
 import { DeprecatedTag, RedirectTag } from '@site/src/components/UI/Tags';
 import clsx from 'clsx';
 import { useMemo, useState } from 'react';
@@ -65,7 +65,9 @@ I want to ask some questions`,
       </div>
 
       <IxTooltip for="#copy-prompt">
-        Copy a prompt to ask an AI assistant about this page.
+        <IxTypography format="body">
+          Copy a prompt to ask an AI assistant about this page.
+        </IxTypography>
       </IxTooltip>
       {description && (
         <div className={clsx(styles.componentHeroHeader, 'HeroHeader')}>
