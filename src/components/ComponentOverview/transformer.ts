@@ -155,12 +155,12 @@ function sourceDocIdForCategory(
   docs: ComponentOverviewDocs,
   context: string
 ): string {
-  const guideLink = links.find(({ docId }) => docId.endsWith('/guide'));
   const codeLink = links.find(({ docId }) => docId.endsWith('/code'));
-  const preferredSourceDocId = guideLink
-    ? resolveCanonicalSourceDocId(guideLink.docId, docs)
-    : codeLink
-      ? resolveCanonicalSourceDocId(codeLink.docId, docs)
+  const guideLink = links.find(({ docId }) => docId.endsWith('/guide'));
+  const preferredSourceDocId = codeLink
+    ? resolveCanonicalSourceDocId(codeLink.docId, docs)
+    : guideLink
+      ? resolveCanonicalSourceDocId(guideLink.docId, docs)
       : undefined;
 
   if (preferredSourceDocId) {
@@ -185,7 +185,11 @@ function sourceDocIdForCategory(
     ),
   ];
   if (sourceIndexDocIds.length === 1) {
-    return sourceIndexDocIds[0];
+    const sourceIndexDocId = sourceIndexDocIds[0];
+    if (sourceIndexDocId === undefined) {
+      fail(`${context} has no source/index document.`);
+    }
+    return sourceIndexDocId;
   }
 
   if (item.href) {
@@ -195,7 +199,11 @@ function sourceDocIdForCategory(
     );
 
     if (categorySourceDocs.length === 1) {
-      return categorySourceDocs[0].id;
+      const categorySourceDoc = categorySourceDocs[0];
+      if (categorySourceDoc === undefined) {
+        fail(`${context} has no source document for its category link.`);
+      }
+      return categorySourceDoc.id;
     }
     if (categorySourceDocs.length > 1) {
       fail(`${context} has multiple source documents for its category link.`);
@@ -203,6 +211,9 @@ function sourceDocIdForCategory(
   }
 
   const firstDocId = canonicalSourceDocIds[0];
+  if (firstDocId === undefined) {
+    fail(`${context} has no source/index document.`);
+  }
   const lastSlash = firstDocId.lastIndexOf('/');
   if (lastSlash > 0) {
     const inferredSourceDocId = `${firstDocId.slice(0, lastSlash)}/index`;
@@ -250,18 +261,22 @@ function transformTabItem(
     docs,
     context
   );
-  const guideLink = links.find(({ docId }) => docId.endsWith('/guide'));
   const codeLink = links.find(({ docId }) => docId.endsWith('/code'));
-  const preferredLink = guideLink ?? codeLink;
+  const guideLink = links.find(({ docId }) => docId.endsWith('/guide'));
+  const preferredLink = codeLink ?? guideLink;
   const sourceLink = preferredLink ?? links[0];
+  if (sourceLink === undefined) {
+    fail(`${context} has no sidebar link.`);
+  }
   const sourceMetadata = requireDocMetadata(
     docs,
     sourceDocId,
     `${context} source document`
   );
-  const href = preferredLink?.item.href ?? item.href ?? sourceMetadata.permalink;
-
-  requireString(href, `${context} href`);
+  const href = requireString(
+    preferredLink?.item.href ?? item.href ?? sourceMetadata.permalink,
+    `${context} href`
+  );
 
   return toOverviewItem(
     {

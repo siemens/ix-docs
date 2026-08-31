@@ -180,7 +180,7 @@ test('extracts the latest docs version and adapts its server sidebar', () => {
   assert.deepEqual(
     categories[0].items.map((item) => [item.title, item.href]),
     [
-      ['Button', '/docs/components/button/guide'],
+      ['Button', '/docs/components/button/code'],
       ['Spinner', '/docs/components/spinner/code'],
     ]
   );
@@ -209,7 +209,7 @@ test('serializes the overview as an ordered nested Markdown list', () => {
 
   assert.match(
     markdown,
-    /- \*\*Application frame\*\*\n  - \[Button\]\(\/docs\/components\/button\/guide\): Buttons trigger actions/
+    /- \*\*Application frame\*\*\n  - \[Button\]\(\/docs\/components\/button\/code\): Buttons trigger actions/
   );
   assert.match(
     markdown,

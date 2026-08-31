@@ -94,7 +94,7 @@ test('preserves category and component sidebar ordering', () => {
   );
 });
 
-test('uses canonical index metadata and prefers guide links', () => {
+test('uses canonical index metadata and prefers code links', () => {
   const result = transformComponentOverview(
     [
       category('Forms', [
@@ -116,7 +116,7 @@ test('uses canonical index metadata and prefers guide links', () => {
   );
 
   assert.equal(result[0].items[0].docId, 'components/example/index');
-  assert.equal(result[0].items[0].href, '/example/guide');
+  assert.equal(result[0].items[0].href, '/example/code');
   assert.equal(result[0].items[0].title, 'Metadata title');
   assert.equal(result[0].items[0].description, 'Metadata description');
   assert.equal(

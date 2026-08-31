@@ -26,17 +26,13 @@ export default function (context: LoadContext) {
 
     async postBuild() {
       const { outDir, siteDir } = context;
-      try {
-        if (!loadedContent) {
-          throw new Error(
-            'Component overview: docs content was not captured by allContentLoaded.'
-          );
-        }
-
-        await runPostBuild({ outDir, siteDir, loadedContent });
-      } catch (error) {
-        console.error('Error during post-build processing:', error);
+      if (!loadedContent) {
+        throw new Error(
+          'Component overview: docs content was not captured by allContentLoaded.'
+        );
       }
+
+      await runPostBuild({ outDir, siteDir, loadedContent });
     },
   };
 }

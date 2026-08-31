@@ -37,6 +37,7 @@
   "devDependencies": {
     "@cmfcmf/docusaurus-search-local": "^1.2.0",
     "@docusaurus/module-type-aliases": "3.7.0",
+    "@docusaurus/plugin-content-docs": "3.7.0",
     "@docusaurus/tsconfig": "3.7.0",
     "@docusaurus/types": "3.7.0",
     "@dotenvx/dotenvx": "^1.52.0",
