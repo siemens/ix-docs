@@ -25,13 +25,13 @@ importers:
         version: 3.1.0(@types/react@18.3.22)(react@18.3.1)
       '@siemens/ix':
         specifier: ^5.0.0
-        version: 5.0.0(@siemens/ix-icons@3.4.0)
+        version: 5.0.0(@siemens/ix-icons@3.5.0)
       '@siemens/ix-icons':
-        specifier: ^3.4.0
-        version: 3.4.0
+        specifier: ^3.5.0
+        version: 3.5.0
       '@siemens/ix-react':
         specifier: ^5.0.0
-        version: 5.0.0(@siemens/ix-icons@3.4.0)(@stencil/core@4.31.0)(@types/react@18.3.22)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+        version: 5.0.0(@siemens/ix-icons@3.5.0)(@stencil/core@4.31.0)(@types/react@18.3.22)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
       '@stackblitz/sdk':
         specifier: ^1.11.0
         version: 1.11.0
@@ -1912,8 +1912,8 @@ packages:
   '@sideway/pinpoint@2.0.0':
     resolution: {integrity: sha512-RNiOoTPkptFtSVzQevY/yWtZwf/RxyVnPy/OcA9HBM3MlGDnBEYL5B41H0MTn0Uec8Hi+2qUtTfG2WWZBmMejQ==}
 
-  '@siemens/ix-icons@3.4.0':
-    resolution: {integrity: sha512-T6maRV+DJ1MjT29phC/miwwc8fP/D8LQGNjc0UlBZnFCLaDMrtasQTREQzff99uROUmHw4nt5A65/ZWnW/j9Pg==}
+  '@siemens/ix-icons@3.5.0':
+    resolution: {integrity: sha512-FP/7jnjoTfIvIah5OkJ7nLoXjyNy2rcUClGk29NLd4h/If/lz5liu7AMrCNKV9BTNCWQM8UI1wmoeF8xWz5d+A==}
     engines: {node: '>=22.19.x', pnpm: '>=10.x.x'}
 
   '@siemens/ix-react@5.0.0':
@@ -8781,12 +8781,12 @@ snapshots:
 
   '@sideway/pinpoint@2.0.0': {}
 
-  '@siemens/ix-icons@3.4.0': {}
+  '@siemens/ix-icons@3.5.0': {}
 
-  '@siemens/ix-react@5.0.0(@siemens/ix-icons@3.4.0)(@stencil/core@4.31.0)(@types/react@18.3.22)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)':
+  '@siemens/ix-react@5.0.0(@siemens/ix-icons@3.5.0)(@stencil/core@4.31.0)(@types/react@18.3.22)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)':
     dependencies:
-      '@siemens/ix': 5.0.0(@siemens/ix-icons@3.4.0)
-      '@siemens/ix-icons': 3.4.0
+      '@siemens/ix': 5.0.0(@siemens/ix-icons@3.5.0)
+      '@siemens/ix-icons': 3.5.0
       '@stencil/react-output-target': 1.5.2(@stencil/core@4.31.0)(@types/react@18.3.22)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
       react: 18.3.1
       react-dom: 18.3.1(react@18.3.1)
@@ -8795,10 +8795,10 @@ snapshots:
       - '@stencil/core'
       - '@types/react'
 
-  '@siemens/ix@5.0.0(@siemens/ix-icons@3.4.0)':
+  '@siemens/ix@5.0.0(@siemens/ix-icons@3.5.0)':
     dependencies:
       '@floating-ui/dom': 1.7.0
-      '@siemens/ix-icons': 3.4.0
+      '@siemens/ix-icons': 3.5.0
       animejs: 4.2.2
       luxon: 3.6.1
 
