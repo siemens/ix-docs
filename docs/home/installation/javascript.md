@@ -43,7 +43,7 @@ In the following section we will describe how you can build an application with 
 `index.html`
 
 ```html
-<html lang="en">
+<html lang="en" data-ix-theme="classic" data-ix-color-schema="dark">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />

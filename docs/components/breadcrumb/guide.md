@@ -40,10 +40,20 @@ Interactive items can take one of four states: Default, hover, active and focuse
 
 ## Dos and Don’ts
 
-- Do label each item, i.e. use more than icons
-- Do use single-line text entries as breadcrumb items have a fixed height
-- Don’t use breadcrumbs to display a multistep process (use the [workflow](../workflow) control instead)
-- Don’t show multiple breadcrumbs on one screen, e.g. in a content area and in a drawer
+<div class="dos-and-donts">
+  <div class="dos">
+    <ul aria-label="Recommended practices">
+      <li>Do label each item, i.e. use more than icons</li>
+      <li>Do use single-line text entries as breadcrumb items have a fixed height</li>
+    </ul>
+  </div>
+  <div class="donts">
+    <ul aria-label="Practices to avoid">
+      <li>Don’t use breadcrumbs to display a multistep process (use the [workflow](../workflow) control instead)</li>
+      <li>Don’t show multiple breadcrumbs on one screen, e.g. in a content area and in a drawer</li>
+    </ul>
+  </div>
+</div>
 
 ## Related
 

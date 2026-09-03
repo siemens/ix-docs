@@ -18,13 +18,13 @@ description: 'Get tips for naming common app functions clearly and effectively. 
 
 - Cockpit
 
-<div className="dos-and-donts" markdown="true">
-<div className="donts" markdown="true">
-
-- Console
-- Dash
-- Control panel
-
+<div className="dos-and-donts">
+<div className="donts">
+  <ul aria-label="Practices to avoid">
+    <li>Console</li>
+    <li>Dash</li>
+    <li>Control panel</li>
+  </ul>
 </div>
 </div>
 
@@ -34,12 +34,12 @@ description: 'Get tips for naming common app functions clearly and effectively. 
 
 - Anomaly detection
 
-<div className="dos-and-donts" markdown="true">
-<div className="donts" markdown="true">
-
-- Assessment
-- Examination
-
+<div className="dos-and-donts">
+<div className="donts">
+  <ul aria-label="Practices to avoid">
+    <li>Assessment</li>
+    <li>Examination</li>
+  </ul>
 </div>
 </div>
 
@@ -53,11 +53,11 @@ description: 'Get tips for naming common app functions clearly and effectively. 
 
 - Remove from watchlist
 
-<div className="dos-and-donts" markdown="true">
-<div className="donts" markdown="true">
-
-- Watch list
-
+<div className="dos-and-donts">
+<div className="donts">
+  <ul aria-label="Practices to avoid">
+    <li>Watch list</li>
+  </ul>
 </div>
 </div>
 
@@ -69,12 +69,12 @@ description: 'Get tips for naming common app functions clearly and effectively. 
 
 - Details
 
-<div className="dos-and-donts" markdown="true">
-<div className="donts" markdown="true">
-
-- Facts
-- Specifics
-
+<div className="dos-and-donts">
+<div className="donts">
+  <ul aria-label="Practices to avoid">
+    <li>Facts</li>
+    <li>Specifics</li>
+  </ul>
 </div>
 </div>
 
@@ -120,11 +120,11 @@ description: 'Get tips for naming common app functions clearly and effectively. 
 
 - Drag files here or select files
 
-<div className="dos-and-donts" markdown="true">
-<div className="donts" markdown="true">
-
-- Drag and drop here or browse
-
+<div className="dos-and-donts">
+<div className="donts">
+  <ul aria-label="Practices to avoid">
+    <li>Drag and drop here or browse</li>
+  </ul>
 </div>
 </div>
 
@@ -138,11 +138,11 @@ description: 'Get tips for naming common app functions clearly and effectively. 
 
 - Write your comments here
 
-<div className="dos-and-donts" markdown="true">
-<div className="donts" markdown="true">
-
-- Write a comment
-
+<div className="dos-and-donts">
+<div className="donts">
+  <ul aria-label="Practices to avoid">
+    <li>Write a comment</li>
+  </ul>
 </div>
 </div>
 
@@ -168,13 +168,13 @@ description: 'Get tips for naming common app functions clearly and effectively. 
 
 - Notify me when X occurs
 
-<div className="dos-and-donts" markdown="true">
-<div className="donts" markdown="true">
-
-- Error
-- Issue
-- Problem
-
+<div className="dos-and-donts">
+<div className="donts">
+  <ul aria-label="Practices to avoid">
+    <li>Error</li>
+    <li>Issue</li>
+    <li>Problem</li>
+  </ul>
 </div>
 </div>
 
@@ -204,14 +204,14 @@ description: 'Get tips for naming common app functions clearly and effectively. 
 
 - Detected
 
-<div className="dos-and-donts" markdown="true">
-<div className="donts" markdown="true">
-
-- Unacklowedged
-- Unack.
-- Unackn.
-- Unacknl.
-
+<div className="dos-and-donts">
+<div className="donts">
+  <ul aria-label="Practices to avoid">
+    <li>Unacklowedged</li>
+    <li>Unack.</li>
+    <li>Unackn.</li>
+    <li>Unacknl.</li>
+  </ul>
 </div>
 </div>
 

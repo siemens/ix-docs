@@ -61,6 +61,7 @@ const sidebars: SidebarsConfig = {
       className: 'doc-sidebar-item-bold',
       label: 'Migration and upgrade',
       items: [
+        'home/migration/5_0_0/index',
         'home/migration/4_0_0/index',
         'home/migration/3_0_0/index',
         'home/migration/2_0_0/index',
@@ -478,6 +479,24 @@ const sidebars: SidebarsConfig = {
           ],
         }),
         createTabItem({
+          id: 'components/popover/index',
+          label: 'Popover',
+          items: [
+            {
+              id: 'components/popover/guide',
+              label: 'Usage',
+            },
+            {
+              id: 'components/popover/code',
+              label: 'Code',
+            },
+            {
+              id: 'components/popover/uxwriting',
+              label: 'Writing',
+            },
+          ],
+        }),
+        createTabItem({
           id: 'components/tile/index',
           label: 'Tile',
           items: [
@@ -615,13 +634,31 @@ const sidebars: SidebarsConfig = {
           ],
         }),
         createTabItem({
+          id: 'components/input-date-time/index',
+          label: 'Date time input',
+          items: [
+            {
+              id: 'components/input-date-time/guide',
+              label: 'Usage',
+            },
+            {
+              id: 'components/input-date-time/code',
+              label: 'Code',
+            },
+          ],
+        }),
+        createTabItem({
           id: 'components/date-picker/index',
           label: 'Date picker',
           items: [
             {
+              id: 'components/date-picker/guide',
+              label: 'Usage',
+            },
+            {
               id: 'components/date-picker/code',
               label: 'Code',
-            },
+            }
           ],
         }),
         createTabItem({
@@ -629,9 +666,13 @@ const sidebars: SidebarsConfig = {
           label: 'Date time picker',
           items: [
             {
+              id: 'components/date-time-picker/guide',
+              label: 'Usage',
+            },
+                        {
               id: 'components/date-time-picker/code',
               label: 'Code',
-            },
+            }
           ],
         }),
         createTabItem({
@@ -659,8 +700,22 @@ const sidebars: SidebarsConfig = {
           ],
         }),
         createTabItem({
+          id: 'components/range-field/index',
+          label: 'Range field',
+          items: [
+            {
+              id: 'components/range-field/guide',
+              label: 'Usage',
+            },
+            {
+              id: 'components/range-field/code',
+              label: 'Code',
+            },
+          ],
+        }),
+        createTabItem({
           id: 'components/radio/index',
-          label: 'Radio',
+          label: 'Radio button',
           items: [
             {
               id: 'components/radio/guide',
@@ -770,6 +825,10 @@ const sidebars: SidebarsConfig = {
           id: 'components/upload/index',
           label: 'Upload',
           items: [
+            {
+              id: 'components/upload/guide',
+              label: 'Usage',
+            },
             {
               id: 'components/upload/code',
               label: 'Code',
@@ -892,6 +951,20 @@ const sidebars: SidebarsConfig = {
       label: 'System feedback and status',
       items: [
         createTabItem({
+          id: 'components/badge/index',
+          label: 'Badge',
+          items: [
+            {
+              id: 'components/badge/guide',
+              label: 'Usage',
+            },
+            {
+              id: 'components/badge/code',
+              label: 'Code',
+            },
+          ],
+        }),
+        createTabItem({
           id: 'components/empty-state/index',
           label: 'Empty state',
           items: [
@@ -990,6 +1063,10 @@ const sidebars: SidebarsConfig = {
           label: 'Tooltip',
           items: [
             {
+              id: 'components/tooltip/guide',
+              label: 'Usage',
+            },
+            {
               id: 'components/tooltip/code',
               label: 'Code',
             },
@@ -1087,6 +1164,85 @@ const sidebars: SidebarsConfig = {
       type: 'category',
       className: 'doc-sidebar-item-bold',
 
+      label: 'Chat',
+      items: [
+        createTabItem({
+          id: 'components/chat/index',
+          label: 'Chat',
+          items: [
+            {
+              id: 'components/chat/guide',
+              label: 'Usage',
+            },
+            {
+              id: 'components/chat/code',
+              label: 'Code',
+            },
+          ],
+        }),
+        createTabItem({
+          id: 'components/chat-input/index',
+          label: 'Chat input',
+          items: [
+            {
+              id: 'components/chat-input/guide',
+              label: 'Usage',
+            },
+            {
+              id: 'components/chat-input/code',
+              label: 'Code',
+            },
+          ],
+        }),
+        createTabItem({
+          id: 'components/user-message/index',
+          label: 'User message',
+          items: [
+            {
+              id: 'components/user-message/guide',
+              label: 'Usage',
+            },
+            {
+              id: 'components/user-message/code',
+              label: 'Code',
+            },
+          ],
+        }),
+        createTabItem({
+          id: 'components/ai-message/index',
+          label: 'AI message',
+          items: [
+            {
+              id: 'components/ai-message/guide',
+              label: 'Usage',
+            },
+            {
+              id: 'components/ai-message/code',
+              label: 'Code',
+            },
+          ],
+        }),
+        createTabItem({
+          id: 'components/chat-attachment/index',
+          label: 'Chat attachment',
+          items: [
+            {
+              id: 'components/chat-attachment/guide',
+              label: 'Usage',
+            },
+            {
+              id: 'components/chat-attachment/code',
+              label: 'Code',
+            },
+          ],
+        }),
+      ],
+      collapsed: true,
+    },
+    {
+      type: 'category',
+      className: 'doc-sidebar-item-bold',
+
       label: 'Charts',
       items: [
         {
@@ -1104,23 +1260,6 @@ const sidebars: SidebarsConfig = {
         'components/special-chart/overview',
       ],
       collapsed: true,
-    },
-    {
-      type: 'category',
-      className: 'doc-sidebar-item-bold',
-      label: 'Deprecated',
-      items: [
-        createTabItem({
-          id: 'legacy/drawer/index',
-          label: 'Drawer',
-          items: [
-            {
-              id: 'legacy/drawer/code',
-              label: 'Code',
-            },
-          ],
-        }),
-      ],
     },
   ],
 

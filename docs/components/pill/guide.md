@@ -4,6 +4,10 @@ description: 'Usage guide for the ix-pill'
 ---
 # Pill - Usage
 
+:::warning
+Pills are deprecated and removed in V7.0.0. We recommend using [badges](../badge/index.mdx) with type `label` instead, which support the same compact status and category use cases.
+:::
+
 Pills typically contain a concise label and sometimes an icon. They are not clickable or closable, making them ideal for presenting static information succinctly within an application.
 
 ![Pill overview](https://www.figma.com/design/wEptRgAezDU1z80Cn3eZ0o/iX-Pattern-Illustrations?type=design&node-id=1377-3110&mode=design&t=ZmcRP4ggXtr8b7vZ-1)
@@ -45,11 +49,21 @@ Pills are read-only.
 
 ## Dos and Don’ts
 
-- Do use pills to communicate tags and categories
-- Do use pills to indicate the status or characteristics of an item
-- Don’t overuse pills as this leads to cluttered and overwhelming interfaces
-- Don’t use different styles for pills with the same or similar use
-- Don’t use pills if users can interact with the component (e.g. click, close) use chips instead
+<div class="dos-and-donts">
+  <div class="dos">
+    <ul aria-label="Recommended practices">
+      <li>Do use pills to communicate tags and categories</li>
+      <li>Do use pills to indicate the status or characteristics of an item</li>
+    </ul>
+  </div>
+  <div class="donts">
+    <ul aria-label="Practices to avoid">
+      <li>Don’t overuse pills as this leads to cluttered and overwhelming interfaces</li>
+      <li>Don’t use different styles for pills with the same or similar use</li>
+      <li>Don’t use pills if users can interact with the component (e.g. click, close) use chips instead</li>
+    </ul>
+  </div>
+</div>
 
 ## Related
 

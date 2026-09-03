@@ -24,20 +24,20 @@ description: 'Discover guidelines for writing dialogs and button labels to ensur
 
 - Only use ‘OK’ as an option if you cannot find an appropriate verb
 
-<div className="dos-and-donts" markdown="true">
-<div className="dos" markdown="true">
-
-- Title: Add user  / Buttons: Cancel, Add
-- Title: Delete file  / Buttons: Cancel, Delete
-- Title: Edit details  / Buttons: Cancel, Save
-
+<div className="dos-and-donts">
+<div className="dos">
+  <ul aria-label="Recommended practices">
+    <li>Title: Add user  / Buttons: Cancel, Add</li>
+    <li>Title: Delete file  / Buttons: Cancel, Delete</li>
+    <li>Title: Edit details  / Buttons: Cancel, Save</li>
+  </ul>
 </div>
-<div className="donts" markdown="true">
-
-- Title: Add user  / Buttons: Cancel, OK
-- Title: Are you sure  / Buttons: Cancel, Delete
-- Title: Edit details  / Buttons: Cancel, Edit
-
+<div className="donts">
+  <ul aria-label="Practices to avoid">
+    <li>Title: Add user  / Buttons: Cancel, OK</li>
+    <li>Title: Are you sure  / Buttons: Cancel, Delete</li>
+    <li>Title: Edit details  / Buttons: Cancel, Edit</li>
+  </ul>
 </div>
 </div>
 
@@ -47,15 +47,15 @@ description: 'Discover guidelines for writing dialogs and button labels to ensur
 
 - Primary actions can either be positive (Send, Save) or negative (Delete)
 
-<div className="dos-and-donts" markdown="true">
-<div className="dos" markdown="true">
-
-- Cancel, Save
-
+<div className="dos-and-donts">
+<div className="dos">
+  <ul aria-label="Recommended practices">
+    <li>Cancel, Save</li>
+  </ul>
 </div>
-<div className="donts" markdown="true">
-
-- Save, Cancel
-
+<div className="donts">
+  <ul aria-label="Practices to avoid">
+    <li>Save, Cancel</li>
+  </ul>
 </div>
 </div>

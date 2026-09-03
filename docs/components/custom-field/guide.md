@@ -34,11 +34,21 @@ The states depend on the component that you use in the custom field. The custom
 
 ## Dos and Don’ts
 
-- Do use the custom field when your desired solution is not covered by the already existing form field components
-- Do use the custom field in combination with the form component to create complex forms
-- Don’t use the custom field for simple form fields, use the form field component instead
-- Don’t use the custom field without a form component, it is a wrapper component that is meant to be used in combination with the form component
-- Don’t use helper and feedback texts for single fields within a custom field, use the helper and feedback text of the whole custom field instead
+<div class="dos-and-donts">
+  <div class="dos">
+    <ul aria-label="Recommended practices">
+      <li>Do use the custom field when your desired solution is not covered by the already existing form field components</li>
+      <li>Do use the custom field in combination with the form component to create complex forms</li>
+    </ul>
+  </div>
+  <div class="donts">
+    <ul aria-label="Practices to avoid">
+      <li>Don’t use the custom field for simple form fields, use the form field component instead</li>
+      <li>Don’t use the custom field without a form component, it is a wrapper component that is meant to be used in combination with the form component</li>
+      <li>Don’t use helper and feedback texts for single fields within a custom field, use the helper and feedback text of the whole custom field instead</li>
+    </ul>
+  </div>
+</div>
 
 ## Related
 

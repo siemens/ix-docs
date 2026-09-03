@@ -18,47 +18,52 @@ import { CategoryButton } from '@site/src/components/CategoryButton';
 <CategoryButton
     title="Application frame"
     link="#application-frame">
-![](https://www.figma.com/design/wEptRgAezDU1z80Cn3eZ0o/iX-Documentation-illustrations?node-id=5186-249&t=gkh6VNlJun96I6Ac-4)
+![Application frame](https://www.figma.com/design/wEptRgAezDU1z80Cn3eZ0o/iX-Documentation-illustrations?node-id=5186-249&t=gkh6VNlJun96I6Ac-4)
 </CategoryButton>
 <CategoryButton
     title="Navigation and hierarchy"
     link="#navigation-and-hierarchy">
-![](https://www.figma.com/design/wEptRgAezDU1z80Cn3eZ0o/iX-Documentation-illustrations?node-id=5186-259&t=gkh6VNlJun96I6Ac-4)
+![Navigation and hierarchy](https://www.figma.com/design/wEptRgAezDU1z80Cn3eZ0o/iX-Documentation-illustrations?node-id=5186-259&t=gkh6VNlJun96I6Ac-4)
 </CategoryButton>
 <CategoryButton
     title="Containers and layouts"
     link="#containers-and-layouts">
-![](https://www.figma.com/design/wEptRgAezDU1z80Cn3eZ0o/iX-Documentation-illustrations?node-id=5186-269&t=gkh6VNlJun96I6Ac-4)
+![Containers and layouts](https://www.figma.com/design/wEptRgAezDU1z80Cn3eZ0o/iX-Documentation-illustrations?node-id=5186-269&t=gkh6VNlJun96I6Ac-4)
 </CategoryButton>
 <CategoryButton
     title="Forms"
     link="#forms">
-![](https://www.figma.com/design/wEptRgAezDU1z80Cn3eZ0o/iX-Documentation-illustrations?node-id=5186-283&t=gkh6VNlJun96I6Ac-4)
+![Forms](https://www.figma.com/design/wEptRgAezDU1z80Cn3eZ0o/iX-Documentation-illustrations?node-id=5186-283&t=gkh6VNlJun96I6Ac-4)
 </CategoryButton>
 <CategoryButton
     title="Input fields and selections"
     link="#input-fields-and-selections">
-![](https://www.figma.com/design/wEptRgAezDU1z80Cn3eZ0o/iX-Documentation-illustrations?node-id=5186-298&t=gkh6VNlJun96I6Ac-11)
+![Input fields and selections](https://www.figma.com/design/wEptRgAezDU1z80Cn3eZ0o/iX-Documentation-illustrations?node-id=5186-298&t=gkh6VNlJun96I6Ac-11)
 </CategoryButton>
 <CategoryButton
     title="Buttons and actions"
     link="#buttons-and-actions">
-![](https://www.figma.com/design/wEptRgAezDU1z80Cn3eZ0o/iX-Documentation-illustrations?node-id=5186-305&t=gkh6VNlJun96I6Ac-11)
+![Buttons and actions](https://www.figma.com/design/wEptRgAezDU1z80Cn3eZ0o/iX-Documentation-illustrations?node-id=5186-305&t=gkh6VNlJun96I6Ac-11)
 </CategoryButton>
 <CategoryButton
     title="System feedback and status"
     link="#system-feedback-and-status">
-![](https://www.figma.com/design/wEptRgAezDU1z80Cn3eZ0o/iX-Documentation-illustrations?node-id=5186-332&t=gkh6VNlJun96I6Ac-11)
+![System feedback and status](https://www.figma.com/design/wEptRgAezDU1z80Cn3eZ0o/iX-Documentation-illustrations?node-id=5186-332&t=gkh6VNlJun96I6Ac-11)
 </CategoryButton>
 <CategoryButton
     title="Data display"
     link="#data-display">
-![](https://www.figma.com/design/wEptRgAezDU1z80Cn3eZ0o/iX-Documentation-illustrations?node-id=5186-370&t=gkh6VNlJun96I6Ac-11)
+![Data display](https://www.figma.com/design/wEptRgAezDU1z80Cn3eZ0o/iX-Documentation-illustrations?node-id=5186-370&t=gkh6VNlJun96I6Ac-11)
+</CategoryButton>
+<CategoryButton
+    title="Chat"
+    link="#chat">
+![Chat](https://www.figma.com/design/wEptRgAezDU1z80Cn3eZ0o/iX-Documentation-illustrations?node-id=7974-3280&t=HrpSIFfB7yjzt741-4)
 </CategoryButton>
 <CategoryButton
     title="Charts"
     link="#charts">
-![](https://www.figma.com/design/wEptRgAezDU1z80Cn3eZ0o/iX-Documentation-illustrations?node-id=5186-387&t=gkh6VNlJun96I6Ac-11)
+![Charts](https://www.figma.com/design/wEptRgAezDU1z80Cn3eZ0o/iX-Documentation-illustrations?node-id=5186-387&t=gkh6VNlJun96I6Ac-11)
 </CategoryButton>
 </IxRow>
 </IxLayoutGrid>
@@ -97,11 +102,11 @@ import { CategoryButton } from '@site/src/components/CategoryButton';
 | [Card list](./card-list/index.mdx)     | Card lists display a large number of cards or items of the same type in a lightweight, grouped manner.                       |
 | [Flip](./flip/index.mdx)               | Flips are containers that flip when clicked to reveal additional content.                                                    |
 | [Event list](./event-list/index.mdx)   | Event lists display a list of any type of element with additional details.                                                   |
-| [Drawer](legacy/drawer/index.mdx)      | Drawers are containers that open on the click of a button to show additional content.                                        |
 | [Layout auto](./layout-auto/index.mdx) | Auto-layouts are containers that automatically adjust the size of their columns based on the content.                        |
 | [Layout grid](./layout-grid/index.mdx) | Layout grids are used to structure the layout of a page or screen responsively.                                              |
 | [Modal](./modal/index.mdx)             | Modals present information prominently and are useful for gathering essential user input without navigating to another page. |
 | [Panes](./panes/index.mdx)             | Panes are interactive components that allow users to access content that isn&#39;t constantly visible on the screen.         |
+| [Popovers](./popover/index.mdx)             | Popovers display contextual information next to a trigger element.       |
 | [Tile](./tile/index.mdx)               | Tiles are containers that display content in a card-like format.                                                             |
 
 ## Forms
@@ -126,6 +131,7 @@ import { CategoryButton } from '@site/src/components/CategoryButton';
 | [Date time picker](./date-time-picker/index.mdx) | Date-time pickers offer an interface for selecting both dates and times, which can be used as a standalone element or within a dropdown, providing a seamless way to input date and time values. |
 | [Expanding search](./expanding-search/index.mdx) | Expanding searches are search fields that expand on click to save space.                                                                                                                         |
 | [Number input](./input-number/index.mdx)         | Number inputs allow users to enter and adjust numerical values.                                                                                                                                  |
+| [Range field](./range-field/index.mdx)           | Range fields group two related inputs into a start and end value so users can enter date, time and date-time ranges consistently.                                                             |
 | [Radio](./radio/index.mdx)                       | Radio buttons enable users to choose only one option from a predefined set of mutually exclusive options.                                                                                        |
 | [Select](./select/index.mdx)                     | Selects allow users to choose from a list of options.                                                                                                                                            |
 | [Slider](./slider/index.mdx)                     | Sliders allow users to select a value from a range of values.                                                                                                                                    |
@@ -153,7 +159,9 @@ import { CategoryButton } from '@site/src/components/CategoryButton';
 | :------------------------------------------------ | :------------------------------------------------------------------------------------------------------------------------------------------------- |
 | [Empty state](./empty-state/index.mdx)            | Empty states inform users that there is no content to display.                                                                                     |
 | [Message bar](./messagebar/index.mdx)             | Message bars display important information to users, e.g. feedback, warnings or errors.                                                            |
+| [Badge](./badge/index.mdx)                        | Badges display compact status, counter or notification cues on (or next to) UI elements.                                                             |
 | [Pill](./pill/index.mdx)                          | Pills display small pieces of information, e.g. counters or statuses.                                                                              |
+| [Popover](./popover/index.mdx)                    | Popovers display contextual information in a floating panel anchored to a trigger element.                                                         |
 | [Progress indicator](progress-indicator/guide.md) | Progress indicators inform users about the status of ongoing processes, e.g. loading data, submitting forms or processing non-blocking operations. |
 | [Spinner](./spinner/index.mdx)                    | Spinners indicate that a process is running to provide feedback to the user.                                                                       |
 | [Toast](./toast/index.mdx)                        | Toasts are small pop-ups that provide simple feedback on a process.                                                                                |
@@ -168,6 +176,16 @@ import { CategoryButton } from '@site/src/components/CategoryButton';
 | [Key value](./key-value/index.mdx)           | Key value pairs display a label (key) and a value in a structured, easy way.                                                                                                            |
 | [Key value list](./key-value-list/index.mdx) | Key value lists organize and list a series of key value pairs.                                                                                                                          |
 | [KPI](./kpi/index.mdx)                       | KPIs display measured values together with a status indicator to help users interpret data.                                                                                             |
+
+## Chat
+
+| Component                                            | Description                                                                                                                 |
+| :--------------------------------------------------- | :-------------------------------------------------------------------------------------------------------------------------- |
+| [Chat](./chat/index.mdx)                             | Chat component for building conversational chatbot experiences.                                                             |
+| [Chat input](./chat-input/index.mdx)                 | Chat inputs are used to compose and submit messages, attachments and follow-up actions in a conversational AI thread.                      |
+| [User message](./user-message/index.mdx)             | User messages display messages authored by the user in a chat thread.                           |
+| [AI message](./ai-message/index.mdx)                 | AI messages display responses generated by the AI in a conversational chat.                                           |
+| [Chat attachment](./chat-attachment/index.mdx)       | Chat attachments are files attached to chat inputs and user messages.                                                                                        |
 
 ## Charts
 

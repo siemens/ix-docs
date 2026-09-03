@@ -2,107 +2,42 @@
 sidebar_label: Build with AI
 title: Build with AI
 doc-type: 'banner'
-description: 'Use our Model Context Protocol (MCP) server that provides AI assistants (agents) with access to
-Siemens Industrial Experience design system and component API documentation
-through Retrieval-Augmented Generation (RAG). This enables more accurate and relevant assistance
+description: 'Use our Model Context Protocol (MCP) server to give AI assistants (agents) full access to
+the Siemens Industrial Experience design system documentation.
+It uses Retrieval-Augmented Generation (RAG) to enable accurate and relevant assistance
 with design system and component library APIs.'
 ---
-
-## Overview
-
-- Local MCP server installation includes all design system documentation, component APIs, examples
-  and icon information
-- MCP server integration with your AI agent setup of choice, integrated into your IDE, e.g.
-  GitHub Copilot agent integration within VS Code with project-related MCP configuration
-- Use cases include (but are not limited to):
-  - Get design system best practice information
-  - Export components
-  - Review project text according to UX writing guidelines
-  - Generate new pages using design system components
-  - Add and modify pages
 
 ## Installation
 
 ### Prerequisites
 
 - Node.js (20+ recommended)
-- Access the API [https://api.siemens.com/llm](https://api.siemens.com) by creating a free token
-  at [https://my.siemens.com](https://my.siemens.com) with `llm` scope. We use the `embeddings` API. Currently, Siemens access is
-  required to request a token, but we are working on a configurable alternative for all users.
-- IDE/Agent/LLM setup of your choice, e.g. VS Code, GitHub Copilot, Claude Sonnet 4.5
-
-### Version selection
-
-iX builds the components for multiple technology stacks. We ship MCP packages for every technology stack and
-you need to install the npm package related to your ix package.
-
-- For `@siemens/ix` use `@siemens/ix-mcp`
-- For `@siemens/ix-angular` use `@siemens/ix-mcp-angular`
-- For `@siemens/ix-react` use `@siemens/ix-mcp-react`
-- For `@siemens/ix-vue` use `@siemens/ix-mcp-vue`
-
-In the next sections, the instructions only for `@siemens/ix-mcp` are provided. You need to replace it with your technology
-stack if needed.
-
-We distribute a MCP server package `@siemens/ix-mcp` for every `@siemens/ix` version. The version of
-`@siemens/ix-mcp` must match your version of `@siemens/ix`. The version number of the MCP package
-`@siemens/ix-mcp` is a combination of the `@siemens/ix` version and the version of the MCP code.
-
-For example, `@siemens/ix-mcp@4.0.0-v.1.4.8` comes with the data of `@siemens/ix@4.0.0` and
-`v.1.4.8` is the version of the MCP script.
-
-To facilitate the version selection, we use
-[npm distribution tags](https://docs.npmjs.com/cli/commands/npm-dist-tag) `@ix<version>` that match
-the version of `@siemens/ix`. When using the corresponding distribution tag on installation, you get
-the latest version of the MCP package that matches your `@siemens/ix` version and simplifies
-handling in your `package.json`.
-
-```json
-"dependencies": {
-    "@siemens/ix": "4.0.0",
-  },
-  "devDependencies": {
-    "@siemens/ix-mcp": "4.0.0-v.1.4.8",
-  }
-```
-
-New MCP package versions on the same `ix` version are incremented like `4.0.0-v.1.4.9`,
-`4.0.0-v.1.4.10`, `4.0.0-v.1.5.0`.
+- Create a free token at [https://my.siemens.com](https://my.siemens.com) with `llm` scope to get access to the
+  `embeddings` API at [https://api.siemens.com/llm](https://api.siemens.com/llm).
+  (Currently, Siemens access is required to request a token, but we are working on a configurable alternative for all users.)
+- IDE/agent/LLM setup of your choice, e.g. VS Code, GitHub Copilot, Claude Sonnet 4.5, OpenCode
+- Choose the npm package matching your web dev framework. Read the [version selection section](#version-selection) below for more details.
+  > This guide shows only instructions for @siemens/ix-mcp. Adapt the commands to fit your technology stack.
 
 ### Project installation
 
 ```bash
-npm install --save-dev --save-exact @siemens/ix-mcp@ix4.0.0
+npm install --save-dev --save-exact @siemens/ix-mcp@ix5.0.0
 
 # Or with yarn
-yarn add -D --exact @siemens/ix-mcp@ix4.0.0
+yarn add -D --exact @siemens/ix-mcp@ix5.0.0
 ```
 
 ### Global installation
 
 ```bash
-npm install -g @siemens/ix-mcp@ix4.0.0
-```
-
-### Upgrading
-
-Simply install the tag for your version and framework again:
-
-```bash
-# in project
-npm install --save-dev --save-exact @siemens/ix-mcp@ix4.1.0
-
-# with yarn
-yarn add -D --exact @siemens/ix-mcp@ix4.1.0
-
-# global
-npm install -g --save-exact @siemens/ix-mcp@ix4.1.0
+npm install -g @siemens/ix-mcp@ix5.0.0
 ```
 
 ## Quick Start
 
-After a local project or global package installation, initialize the MCP server and
-provide the access token.
+After successful installation you need to initialize the MCP server and provide the access token:
 
 1. **Navigate to your project directory**:
 
@@ -116,7 +51,7 @@ provide the access token.
    npx @siemens/ix-mcp init
    ```
 
-   Or if token is already set up:
+   Or if the token is already set up:
 
    ```bash
    npx @siemens/ix-mcp setup
@@ -125,25 +60,25 @@ provide the access token.
    > Important: Run this command in the root of every project where you want to use the MCP server.
 
 3. **Follow the prompts**:
-   - Enter your LLM token from [https://my.siemens.com/](https://my.siemens.com/) (requires 'llm' scope)
-   - Use this token to generate embeddings for a semantic search of the documentation. The
-     embeddings help find relevant documentation chunks, but your AI tool (e.g.,
-     GitHub Copilot, Claude, etc.) provides the actual LLM (language model) that
-     processes your queries and generates responses separately.
-   - Choose which tools to configure (VS Code, Cline, Zed, etc.).
-   - Optionally set up iX instruction files for AI agents.
-   - The tool creates the MCP configuration files based on your selection. Commit the local
-     configuration to share it (make sure it isn't ignored by `.gitignore`).
+  - **Token setup**: Enter your LLM token from [https://my.siemens.com/](https://my.siemens.com/) (requires 'llm' scope)
+  - **Tool configuration**:
+    1. Choose which tools to configure (VS Code, OpenCode, Claude Code, Zed, etc.).
+    2. Enable logging of MCP queries and responses (optional)
+  - **Agent instructions**:
+    1. Setup can add predefined instruction files to your project that guide agents how to develop with iX
+    2. Use symlinks/aliases to help keep instruction files updated (optional)
+      > This may not work for every package manager or platform (e.g. Windows)
+  - Commit the local configuration to share it (make sure it isn't ignored by `.gitignore`).
 
-4. **Restart your AI tools** (VS Code, Cline, Zed, etc.)
-   - Ensure the server is running and trust the MCP server, e.g. click the "Server" icon in the
+4. **Restart your AI tools** (VS Code, OpenCode, Claude Code, Zed, etc.)
+   - Ensure the server is running and trust the MCP server, e.g., click the "Server" icon in the
      GitHub Copilot Chat panel in VS Code.
-   - **For GitHub Copilot in VS Code**: Make sure you are in Agent Mode not Chat Mode. Use models
-     like **Claude Sonnet 4.5**.
+   - **For GitHub Copilot in VS Code**: Make sure you are in Agent Mode, not Chat Mode. Use models,
+     e.g. **Claude Sonnet 4.5**.
 
 5. **Start prompting**:
    - "How do I use the search component from @siemens/ix?"
-   - "Show me examples of @siemens/charts-ng usage"
+   - "Show me examples of @siemens/ix-echarts usage"
    - "Implement a dashboard with different widgets"
    - "Find icons related to AI or machine learning"
    - "Review the texts of this project"
@@ -156,7 +91,9 @@ During `init` or `setup`, select which configuration(s) to create:
 
 - **Local VS Code / GitHub Copilot (repository)** creates a VS Code MCP configuration file at
   `.vscode/mcp.json` in the current repository
-- **Cline global settings** updates global Cline MCP configuration
+- **OpenCode (repository)** creates `opencode.json` in the current repository for OpenCode AI
+- **OpenCode global settings** updates global OpenCode configuration (`~/.config/opencode/opencode.json`)
+- **Claude Code global settings** updates global Claude Code MCP configuration
 - **VS Code / GitHub Copilot global config** writes user-level MCP config
 - **Zed global settings** configures Zed editor / agent MCP
 
@@ -173,7 +110,8 @@ For this, you have two options:
   otherwise, create links yourself pointing to the installed package's `AGENTS.md` and iX
   instructions.
 
-- **Copy the content** Copy the contents of the package’s `AGENTS.md` into one of the following in
+- **Copy the content**
+  Copy the contents of the package’s `AGENTS.md` into one of the following files in
   your repo:
   - `.github/instructions/ix.instructions.md`
   - `AGENTS.md`
@@ -182,6 +120,62 @@ For this, you have two options:
 If you prefer manual copy, open the package’s `AGENTS.md`, then paste it into your chosen file and
 commit it. Repeat per repository whenever you want to update the instructions.
 
+## Version selection
+
+iX builds components for multiple technology stacks. We ship MCP packages for every technology stack, and
+you need to install the npm package related to your iX package.
+
+- For `@siemens/ix` use `@siemens/ix-mcp`
+- For `@siemens/ix-angular` use `@siemens/ix-mcp-angular`
+- For `@siemens/ix-react` use `@siemens/ix-mcp-react`
+- For `@siemens/ix-vue` use `@siemens/ix-mcp-vue`
+
+In this guide, instructions are provided only for `@siemens/ix-mcp`. Replace it with your technology
+stack as needed.
+
+We distribute an MCP server package `@siemens/ix-mcp` for every `@siemens/ix` version. The version of
+`@siemens/ix-mcp` must match your version of `@siemens/ix`. The version number of the MCP package
+`@siemens/ix-mcp` is a combination of the `@siemens/ix` version and the version of the MCP code.
+
+For instance `@siemens/ix-mcp@5.0.0-v.1.4.8` comes with the data of `@siemens/ix@5.0.0` and
+`v.1.4.8` is the version of the MCP script.
+
+To facilitate version selection, we use
+[npm distribution tags](https://docs.npmjs.com/cli/commands/npm-dist-tag) `@ix<version>` that match
+the version of `@siemens/ix`. When using the corresponding distribution tag on installation, you get
+the latest version of the MCP package that matches your `@siemens/ix` version and simplifies
+handling in your `package.json`.
+
+```json
+"dependencies": {
+    "@siemens/ix": "5.0.0",
+  },
+  "devDependencies": {
+    "@siemens/ix-mcp": "5.0.0-v.1.4.8",
+  }
+```
+
+New MCP package versions on the same `ix` version are incremented like `5.0.0-v.1.4.9`,
+`5.0.0-v.1.4.10`, `5.0.0-v.1.5.0`.
+
+## Upgrading
+
+Simply install the package again with the updated version.
+
+E.g., if you want to upgrade from iX V4 to V5:
+
+```bash
+
+# in project
+npm install --save-dev --save-exact @siemens/ix-mcp@5.0.0
+
+# with yarn
+yarn add -D --exact @siemens/ix-mcp@5.0.0
+
+# global
+npm install -g --save-exact @siemens/ix-mcp@5.0.0
+```
+
 ## Logging
 
 By default, the server performs no logging, but you can enable local-only logging of all search queries and
@@ -189,7 +183,7 @@ retrieval results during setup.
 
 ### Manually enabling logging
 
-In your MCP configuration add the flag `--log` to log all search queries and retrieval results to
+In your MCP configuration, add the `--log` flag to log all search queries and retrieval results to
 local log files in `~/.ix-mcp`.
 
 ```json
@@ -206,12 +200,12 @@ local log files in `~/.ix-mcp`.
 
 ### Viewing and sharing logs
 
-To view logs, use the `npx @siemens/ix-mcp log` command, select any relevant session and look at the
-output or the files copied to your current working directory.
+To view logs, use the `npx @siemens/ix-mcp log` command.
+Select a relevant session and look at the output or the files copied to your current working directory.
 
-To help us improve the MCP agent, please send us feedback regarding your MCP and agent results by creating an issue at
-[https://code.siemens.com/ux/sdl-mcp/issues](https://code.siemens.com/ux/sdl-mcp/issues), share your
-information, and include the relevant logs.
+To help us improve the MCP agent, please send feedback on your MCP and agent results by creating an issue at
+[https://code.siemens.com/ux/sdl-mcp/issues](https://code.siemens.com/ux/sdl-mcp/issues). Share your
+details and include the relevant logs.
 
 ## Usage
 
@@ -236,6 +230,11 @@ npx @siemens/ix-mcp setup
 #### Setup token
 
 Set or update only the LLM token in the system keychain.
+
+This token is used to generate embeddings for a semantic search of the documentation.
+These embeddings help find relevant documentation chunks, but your AI tool
+(e.g. GitHub Copilot, Claude, etc.) provides the actual LLM (language model)
+that processes your queries and generates responses separately.
 
 ```bash
 npx @siemens/ix-mcp setup-token
@@ -269,16 +268,16 @@ npx @siemens/ix-mcp log
 
 If you're using WSL, you need to configure the LLM token using environment variables instead of the
 system keychain. Before running any commands, add the following to a `.env` file in the project root
-(if you're using project installation):
+(if you’re using a project installation):
 
 ```
 SDL_MCP_TOKEN_ENV=true
 OPENAI_API_KEY=<your-key-here>
 ```
 
-Make sure the `.env` file is in your `.gitignore` and can't be committed.
+Make sure the `.env` file is in your `.gitignore` and cannot be committed.
 
-Alternatively, or if you're using global installation, add these to your shell profile
+Alternatively, or if you’re using a global installation, add these to your shell profile
 (`~/.zprofile` or `~/.bash_profile`):
 
 ```bash
@@ -294,7 +293,7 @@ export OPENAI_API_KEY=<your-key-here>
 
 ## Manual configuration
 
-If you prefer to set up the configurations manually, here are the required files and their contents.
+If you prefer to set up configuration manually, here are the required files and their contents.
 
 ### VS Code (.vscode/mcp.json or user/mcp.json)
 
@@ -310,18 +309,84 @@ If you prefer to set up the configurations manually, here are the required files
 }
 ```
 
-### Cline (global Cline MCP settings)
+### OpenCode (local or global)
+
+For repository-level configuration, create `opencode.json` in your project root:
+
+```json
+{
+  "$schema": "https://opencode.ai/config.json",
+  "mcp": {
+    "ix-mcp": {
+      "type": "local",
+      "command": ["npx", "-y", "@siemens/ix-mcp"],
+      "enabled": true
+    }
+  },
+  "instructions": ["ix.instructions.md"]
+}
+```
+
+For global configuration, edit `~/.config/opencode/opencode.json`:
+
+```json
+{
+  "$schema": "https://opencode.ai/config.json",
+  "mcp": {
+    "ix-mcp": {
+      "type": "local",
+      "command": ["npx", "-y", "@siemens/ix-mcp"],
+      "enabled": true
+    }
+  }
+}
+```
+
+Learn more about OpenCode configuration at
+[https://opencode.ai/docs/config](https://opencode.ai/docs/config).
+
+Learn how to install it
+[here](https://code.siemens.com/ai/opencode/#getting-started) or use the script at
+[https://open.code.siemens.io](https://open.code.siemens.io).
+
+### Claude Code (global Claude Code MCP settings)
 
 ```json
 {
   "mcpServers": {
     "@siemens/ix-mcp": {
+      "type": "stdio",
       "command": "npx",
-      "args": ["@siemens/ix-mcp"]
+      "args": ["-y", "@siemens/ix-mcp"],
+      "env": {}
     }
   }
 }
 ```
+
+On Windows, prefer the full path to `npx`, for example:
+
+```json
+{
+  "mcpServers": {
+    "@siemens/ix-mcp": {
+      "type": "stdio",
+      "command": "<path-to-npx, run which/where npx to find>",
+      "args": ["-y", "@siemens/ix-mcp"],
+      "env": {}
+    }
+  }
+}
+```
+
+Consider OpenCode as an open alternative
+
+OpenCode is the established open-source alternative to Claude Code. It offers the same feature set,
+broader model support, and is often considered more stable. As a proprietary closed-source tool,
+Claude Code may not offer the same transparency and data handling guarantees as a fully open
+alternative. See the OpenCode docs for setup.
+
+- [https://code.siemens.com/ai/opencode/#getting-started](https://code.siemens.com/ai/opencode/#getting-started)
 
 ### Zed (global Zed settings)
 
@@ -330,7 +395,7 @@ If you prefer to set up the configurations manually, here are the required files
   "context_servers": {
     "@siemens/ix-mcp": {
       "source": "custom",
-      "command": "<path-to-npx, run which/where npx to find>",
+      "command": "npx",
       "args": ["@siemens/ix-mcp"],
       "env": {}
     }

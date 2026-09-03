@@ -9,11 +9,8 @@ A toggle is a user interface element that enables users to switch between two st
 
 ![Anatomy toggle](https://www.figma.com/design/wEptRgAezDU1z80Cn3eZ0o/iX-Documentation-illustrations?node-id=7147-451930&t=DrLi4Tgyh22TBGiT-4)
 
-1. Label
-2. Required indicator
-3. Toggle
-4. Toggle label
-5. Helper or feedback text
+1. Toggle
+2. Toggle label
 
 ## Options
 
@@ -32,12 +29,22 @@ A toggle is a user interface element that enables users to switch between two st
 
 ## Dos and Don’ts
 
-- Do use toggles for single features or options that need to be switched quickly and easily
-- Do provide clear labels for toggles to indicate what they control
-- Do use toggles consistently throughout the interface for similar actions or settings
-- Don’t use toggles for complex multi-state options or settings
-- Don’t use toggles for actions that require a confirmation or additional input
-- Don’t use toggles for actions that are irreversible or have serious consequences
+<div class="dos-and-donts">
+  <div class="dos">
+    <ul aria-label="Recommended practices">
+      <li>Do use toggles for single features or options that need to be switched quickly and easily</li>
+      <li>Do provide clear labels for toggles to indicate what they control</li>
+      <li>Do use toggles consistently throughout the interface for similar actions or settings</li>
+    </ul>
+  </div>
+  <div class="donts">
+    <ul aria-label="Practices to avoid">
+      <li>Don’t use toggles for complex multi-state options or settings</li>
+      <li>Don’t use toggles for actions that require a confirmation or additional input</li>
+      <li>Don’t use toggles for actions that are irreversible or have serious consequences</li>
+    </ul>
+  </div>
+</div>
 
 ## Related
 

@@ -49,12 +49,22 @@ Buttons have six states: Default, hover, active, disabled, loading and focused. 
 
 ## Dos and Don’ts
 
-- Do use short button labels to allow users to quickly scan, understand and remember them (see our [writing style guide](../../guidelines/language/dialogs-and-buttons.md))
-- Do use ellipsis (…) to indicate that an action requires further input or choice from the user, e.g. "Save as…" which opens a list of file types to choose from
-- Do use the primary variant for buttons to indicate one primary action in a visual unit, all other secondary actions should use the secondary variant
-- Don’t place icons both left and right of the label on the same button
-- Don’t use the danger button excessively or repetitively in lists or tables
-- Don’t rely on standard buttons when many actions are necessary (use [dropdown buttons](../dropdown-button/index.mdx) or [split buttons](../split-button/index.mdx) instead, or move some functionality to a [pane](../panes/index.mdx) or a [dialog](../modal/index.mdx))
+<div class="dos-and-donts">
+  <div class="dos">
+    <ul aria-label="Recommended practices">
+      <li>Do use short button labels to allow users to quickly scan, understand and remember them (see our [writing style guide](../../guidelines/language/dialogs-and-buttons.md))</li>
+      <li>Do use ellipsis (…) to indicate that an action requires further input or choice from the user, e.g. "Save as…" which opens a list of file types to choose from</li>
+      <li>Do use the primary variant for buttons to indicate one primary action in a visual unit, all other secondary actions should use the secondary variant</li>
+    </ul>
+  </div>
+  <div class="donts">
+    <ul aria-label="Practices to avoid">
+      <li>Don’t place icons both left and right of the label on the same button</li>
+      <li>Don’t use the danger button excessively or repetitively in lists or tables</li>
+      <li>Don’t rely on standard buttons when many actions are necessary (use [dropdown buttons](../dropdown-button/index.mdx) or [split buttons](../split-button/index.mdx) instead, or move some functionality to a [pane](../panes/index.mdx) or a [dialog](../modal/index.mdx))</li>
+    </ul>
+  </div>
+</div>
 
 ## Related
 

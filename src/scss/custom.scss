@@ -92,7 +92,8 @@ p {
   --ifm-menu-color: var(--theme-color-std-text);
   --ifm-background-color: var(--theme-color-1);
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.1);
-  --ifm-link-color: var(--theme-color-dynamic);
+  --ifm-link-color: var(--theme-color-primary);
+  --ifm-blockquote-padding-horizontal: 0.5rem;
 }
 
 [data-ix-theme='classic'][data-ix-color-schema='dark'] {
@@ -184,8 +185,11 @@ ix-dropdown {
   * Custom styles for the Blog
   */
 
-.blog-wrapper .margin-bottom--xl {
+.blog-wrapper article.margin-bottom--xl {
   margin: 0rem 1rem 5rem !important;
+  background: var(--ifm-background-color);
+  padding: 24px 32px;
+  border-radius: var(--ifm-alert-border-radius);
 }
 
 .table-full-width {

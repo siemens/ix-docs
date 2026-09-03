@@ -6,8 +6,6 @@ formReady: true
 
 # Date input - Usage
 
-The date input component is typically used in forms, filters and scheduling tools to ensure consistent and accurate date entries. By standardizing date input, it helps maintain data integrity and improves the user experience in applications requiring precise date information.
-
 ![Date input overview](https://www.figma.com/design/wEptRgAezDU1z80Cn3eZ0o/iX-Pattern-Illustrations?node-id=3629-6200&t=ADQCetGKOEH1WG2r-4)
 
 1. Label
@@ -19,20 +17,20 @@ The date input component is typically used in forms, filters and scheduling tool
 7. Month and year selection
 8. Weekdays
 9. Week numbers
-10. Indicator for current day
-11. Indicator for selected day
+10. Current day
+11. Selected date or date range
 
 ## Options
 
-- **Label**: See [form field](../forms-field).
-- **Required**: See [form field](../forms-field).
-- **Helper text**: See [form field](../forms-field).
-- **Feedback text**: See [form field](../forms-field).
-- **Show text as tooltip**: See [form field](../forms-field).
-- **Placeholder**: See [form field](../forms-field). We typically use a placeholder to show an example date format to assist users when the field is empty.
-- **Text alignment:** See [form field](../forms-field) (by default at start).
+- **Label**: See [form field](../forms-field/guide#options).
+- **Required**: See [form field](../forms-field/guide#options).
+- **Helper text**: See [form field](../forms-field/guide#options).
+- **Feedback text**: See [form field](../forms-field/guide#options).
+- **Show text as tooltip**: See [form field](../forms-field/guide#options).
+- **Placeholder**: See [form field](../forms-field/guide#options). We typically use a placeholder to show an example date format to assist users when the field is empty.
+- **Text alignment:** See [form field](../forms-field/guide#options) (by default at start).
 - **Error message**: Feedback text when date is not parsable. We typically use this to inform users that the entered date format is incorrect and guide them to enter a valid date.
-- **Format**: Specify the date format, default ‘yyyy/LL/dd’ to ensure that dates are entered in a consistent and recognizable format.
+- **Format**: Specify the date format, default `yyyy/LL/dd` to ensure that dates are entered in a consistent and recognizable format.
 
 ## Behavior in context
 
@@ -57,12 +55,22 @@ Date input has five states: Default, hover, disabled, read-only and focused.
 
 ## Dos and Don’ts
 
-- Do use consistent date formats throughout the application to avoid confusion
-- Do use separate inputs for start and end dates to simplify date ranges
-- Do provide clear instructions, such as “Enter the date in yyyy/mm/dd format”
-- Do consider localization to adapt date formats to local conventions
-- Don’t use ambiguous formats like 09/08/2006 without giving clear context
-- Don’t allow free text without validation or formatting guidance
+<div class="dos-and-donts">
+  <div class="dos">
+    <ul aria-label="Recommended practices">
+      <li>Do use consistent date formats throughout the application to avoid confusion</li>
+      <li>Do use separate inputs for start and end dates to simplify date ranges</li>
+      <li>Do provide clear instructions, such as “Enter the date in yyyy/mm/dd format”</li>
+      <li>Do consider localization to adapt date formats to local conventions</li>
+    </ul>
+  </div>
+  <div class="donts">
+    <ul aria-label="Practices to avoid">
+      <li>Don’t use ambiguous formats like 09/08/2006 without giving clear context</li>
+      <li>Don’t allow free text without validation or formatting guidance</li>
+    </ul>
+  </div>
+</div>
 
 ## Related
 
@@ -74,3 +82,4 @@ Date input has five states: Default, hover, disabled, read-only and focused.
 - [Dropdown](../dropdown)
 - [Input](../input)
 - [Select](../select)
+- [W3C date picker accessibility reference](https://www.w3.org/WAI/ARIA/apg/patterns/combobox/examples/combobox-datepicker/)

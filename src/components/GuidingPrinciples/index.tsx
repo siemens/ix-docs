@@ -11,7 +11,12 @@ import './GuidingPrincipleCard.scss';
 import './GuidingPrinciples.scss';
 import { IxTypography } from '@siemens/ix-react';
 import { IxIcon } from "@siemens/ix-react";
-import { iconDiamond, iconElement, iconBook } from "@siemens/ix-icons/icons";
+import { iconDiamond, iconElement, iconBook, iconPalette } from "@siemens/ix-icons/icons";
+import ReactLogo from '../../../static/img/react.svg';
+import AngularLogo from '../../../static/img/angular.svg';
+import WebComponentsLogo from '../../../static/img/webcomponents.svg';
+import VueLogo from '../../../static/img/vue.svg';
+import BlazorLogo from '../../../static/img/blazor.svg';
 
 function GuidingPrincipleCard(
   props: React.PropsWithChildren<{ name: string; link?: string; description: string }>
@@ -112,15 +117,13 @@ function GuidingLinks() {
       >
         <IxIcon name={iconDiamond} size="32"></IxIcon>
       </GuidingPrincipleCard>
-{/* Replace SVG with ixIcon once available */}
+
       <GuidingPrincipleCard
         name="Styles"
         link="../styles/colors"
         description="Style definitions including themes, colors, borders, shadows, elevation and typography."
       >
-        <svg viewBox="0 0 256 256" xmlns="http://www.w3.org/2000/svg">
-          <path d="M136 68.5C173.221 68.5 203.5 95.6587 203.5 129.039C203.487 139.548 199.304 149.624 191.872 157.055C184.44 164.485 173.509 169.738 163 169.75H151.267C149.776 169.75 148.412 169.883 147.357 170.937C146.303 171.991 145.901 172.813 145.901 174.305C145.929 175.695 146.447 177.031 147.357 178.082C149.88 180.859 151.272 184.481 151.267 188.233L151.194 189.743C150.847 193.238 149.303 196.526 146.798 199.031L145.677 200.039C142.96 202.266 139.544 203.5 136 203.5C98.7786 203.5 68.5 173.221 68.5 136C68.5 98.7786 98.7786 68.5 136 68.5ZM136 82C106.234 82 82 106.234 82 136C82 165.766 106.234 190 136 190C136.469 190 136.921 189.811 137.253 189.479C137.582 189.149 137.766 188.7 137.767 188.233V188.214C137.767 187.825 137.626 187.447 137.364 187.159L137.253 187.04L137.147 186.922C134.171 183.484 132.495 179.109 132.407 174.562L132.401 174.431V174.305C132.401 172.332 132.667 169.755 133.878 167.008C135.049 164.351 136.681 162.518 137.807 161.392L138.809 160.462C143.864 156.144 149.699 156.25 151.267 156.25H162.987C169.351 156.242 176.99 152.845 182.327 147.51C187.227 142.611 189.987 135.967 190 129.039L189.935 126.738C188.566 103.075 166.21 82 136 82ZM98.875 122.5C104.467 122.5 109 127.033 109 132.625C109 138.217 104.467 142.75 98.875 142.75C93.2831 142.75 88.75 138.217 88.75 132.625C88.75 127.033 93.2831 122.5 98.875 122.5ZM173.125 122.5C178.717 122.5 183.25 127.033 183.25 132.625C183.25 138.217 178.717 142.75 173.125 142.75C167.533 142.75 163 138.217 163 132.625C163 127.033 167.533 122.5 173.125 122.5ZM119.125 95.5C124.717 95.5 129.25 100.033 129.25 105.625C129.25 111.217 124.717 115.75 119.125 115.75C113.533 115.75 109 111.217 109 105.625C109 100.033 113.533 95.5 119.125 95.5ZM152.875 95.5C158.467 95.5 163 100.033 163 105.625C163 111.217 158.467 115.75 152.875 115.75C147.283 115.75 142.75 111.217 142.75 105.625C142.75 100.033 147.283 95.5 152.875 95.5Z"/>
-        </svg>
+        <IxIcon name={iconPalette} size="32"></IxIcon>
       </GuidingPrincipleCard>
     </div>
   );
@@ -134,7 +137,7 @@ function DevelopmentFrameworks(){
       link="/docs/home/installation/react"
       description="Get started with React and build dynamic user interfaces."
       >
-      <img src="/img/react.svg" alt="React"/>
+      <ReactLogo />
       </GuidingPrincipleCard>
 
       <GuidingPrincipleCard
@@ -142,7 +145,7 @@ function DevelopmentFrameworks(){
       link="/docs/home/installation/angular"
       description="Learn how to set up Angular for robust web applications."
       >
-      <img src="/img/angular.svg" alt="Angular" />
+      <AngularLogo />
       </GuidingPrincipleCard>
 
       <GuidingPrincipleCard
@@ -150,7 +153,7 @@ function DevelopmentFrameworks(){
       link="/docs/home/installation/javascript"
       description="Discover how to start developing with a set of web platform APIs."
       >
-      <img src="/img/webcomponents.svg" alt="Web Components"/>
+      <WebComponentsLogo />
       </GuidingPrincipleCard>
 
       <GuidingPrincipleCard
@@ -158,7 +161,7 @@ function DevelopmentFrameworks(){
       link="/docs/home/installation/vue"
       description="Start building with Vue for a progressive framework experience."
       >
-      <img src="/img/vue.svg" alt="Vue"/>
+      <VueLogo />
       </GuidingPrincipleCard>
 
       <GuidingPrincipleCard
@@ -166,7 +169,7 @@ function DevelopmentFrameworks(){
       link="/docs/home/installation/blazor"
       description="Utilize Blazor for building interactive web UIs with C#."
       >
-      <img src="/img/blazor.svg" alt="Blazor"/>
+      <BlazorLogo />
       </GuidingPrincipleCard>
     </div>
   );

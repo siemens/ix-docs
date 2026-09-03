@@ -22,7 +22,6 @@ The number input component is commonly used in forms, calculators and other area
 - **Value**: See [form field](../forms-field).
 - **Required**: See [form field](../forms-field).
 - **Helper text**: See [form field](../forms-field).
-- **Feedback text**: See [form field](../forms-field).
 - **Show text as tooltip**: See [form field](../forms-field).
 - **Placeholder**: See [form field](../forms-field).
 - **Text alignment:** See [form field](../forms-field) (by default at end).
@@ -45,10 +44,18 @@ The number input has five states: default, hover, focused, disabled and read-onl
 
 ## Dos and Don’ts
 
-- Do set appropriate min and max values to prevent invalid entries and guide user input
-- Do provide clear error messages when the input value is out of the allowed range or does not match the required pattern
-- Do consider special cases such as zero, negative numbers and very large numbers to ensure all possible inputs are handled correctly
-- Don’t specify patterns that do not align with your use case, e.g. inappropriate intervals between valid values
+<div class="dos-and-donts">
+  <div class="dos">
+    <ul aria-label="Recommended practices">
+      <li>Do consider special cases such as zero, negative numbers and very large numbers to ensure all possible inputs are handled correctly</li>
+    </ul>
+  </div>
+  <div class="donts">
+    <ul aria-label="Practices to avoid">
+      <li>Don’t specify patterns that do not align with your use case, e.g. inappropriate intervals between valid values</li>
+    </ul>
+  </div>
+</div>
 
 ## Related
 

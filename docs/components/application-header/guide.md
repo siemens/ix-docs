@@ -126,9 +126,19 @@ At breakpoint "sm" the layout changes in the following way:
 
 ## Dos and Don’ts
 
-- Do align other slot usages for Siemens applications with our team to keep a consistent look and feel
-- Do use the avatar dropdown for actions related to the current logged in user
-- Do test layout behavior at all breakpoints to ensure content remains accessible
-- Don’t overload the slots with too many elements to avoid losing clarity and hierarchy
-- Don’t use the avatar if your application does not support user profiles
-- Don’t rely on automatic overflow handling for complex layouts, instead reduce complexity
+<div class="dos-and-donts">
+  <div class="dos">
+    <ul aria-label="Recommended practices">
+      <li>Do align other slot usages for Siemens applications with our team to keep a consistent look and feel</li>
+      <li>Do use the avatar dropdown for actions related to the current logged in user</li>
+      <li>Do test layout behavior at all breakpoints to ensure content remains accessible</li>
+    </ul>
+  </div>
+  <div class="donts">
+    <ul aria-label="Practices to avoid">
+      <li>Don’t overload the slots with too many elements to avoid losing clarity and hierarchy</li>
+      <li>Don’t use the avatar if your application does not support user profiles</li>
+      <li>Don’t rely on automatic overflow handling for complex layouts, instead reduce complexity</li>
+    </ul>
+  </div>
+</div>
