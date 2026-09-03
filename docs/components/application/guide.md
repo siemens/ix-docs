@@ -19,27 +19,6 @@ The application component primarily manages layout and application-wide behavior
 2. [Application menu](/docs/components/application-menu/guide)
 3. [Content](/docs/components/content/guide)
 
-## Skip links
-
-Application provides a skip-link list by default. "Skip to main content" is always the first focusable element within the application shell. "Skip to footer" follows it when the `bottom` slot contains meaningful content. The Footer link is added or removed automatically when the slot content changes.
-
-Each link remains visually hidden until it receives keyboard focus. Moving focus from the Main link to the Footer link replaces it at the same top-start position. The list does not create an additional navigation landmark.
-
-Without additional configuration, the Main link targets the internal main region. Use `skipLinkMainTargetId` to target a more specific content boundary:
-
-- Provide a bare element ID, without `#` or other CSS selector syntax.
-- The ID must identify one visible, usable light-DOM descendant of the same `ix-application`.
-- Application makes a non-interactive destination programmatically focusable when necessary and preserves an existing `tabindex`.
-- An invalid target produces a console warning and falls back to the internal main region.
-
-Activating the Main link moves focus to its destination and scrolls it to the beginning. Activating the Footer link focuses the internal Footer landmark without changing the Main region's scroll position. Neither link changes the URL fragment or browser history.
-
-The built-in list is the first focusable content owned by `ix-application`. Applications remain responsible for any focusable content rendered before the component in the document.
-
-Use `i18nSkipToMain` and `i18nSkipToFooter` to localize the link text. Empty values fall back to "Skip to main content" and "Skip to footer" so both links retain accessible names.
-
-Only set `disableSkipLinks` to `true` when the page provides an equivalent bypass mechanism outside `ix-application`. Disabling the list without an alternative makes repeated application-shell content harder to bypass and can cause a WCAG 2.2 [Bypass Blocks](https://www.w3.org/WAI/WCAG22/Understanding/bypass-blocks.html) failure.
-
 ## Application switch
 
 ![Application switch and modal](https://www.figma.com/design/wEptRgAezDU1z80Cn3eZ0o/iX-Pattern-Illustrations?type=design&node-id=1665-19417&mode=design&t=I0iEEuzKJJPK4Sum-11)
@@ -60,19 +39,17 @@ We typically avoid opening the same application in multiple browser tabs. Instea
 
 ## Options
 
-- **forceBreakpoint:** Forces a specific breakpoint "lg", "md" or "sm". This can be used to force a specific application behavior that ignores the current browser viewport width.
-- **skipLinkMainTargetId:** Sets the ID of a custom light-DOM destination for the Main skip link.
-- **i18nSkipToMain:** Localizes the Main skip-link text.
-- **i18nSkipToFooter:** Localizes the Footer skip-link text.
-- **disableSkipLinks:** Disables the built-in skip-link list when an equivalent bypass mechanism is available.
+- **Breakpoint:** Use “lg”, “md” or “sm” to override responsive behavior regardless of the browser viewport width.
+- **Skip link target:** Set a custom destination when users should bypass the application shell and land at a more specific content boundary.
+- **Disable skip links:** Disable skip links only when you already provide an equivalent document-level bypass.
 
-## Behavior
+## Behavior in context
 
-The application component automatically adapts, by default, to three breakpoints and changes the application layout accordingly:
-
-- "lg" for large screens (min-width 62em)
-- "md" for medium screens (min-width 48em)
-- "sm" for small screens (min-width 36em)
+- **Interaction:** The application component provides a skip-link list by default. “Skip to main content” is always the first focusable element within the application shell. “Skip to footer” follows when the application footer contains meaningful content. Skip links remain hidden until they receive keyboard focus and help users bypass repeated application content. We recommend keeping them enabled unless the page provides an equivalent bypass mechanism.
+- **Responsiveness:** The application component automatically adapts to three breakpoints and changes the application layout accordingly:
+  - `lg` for large screens (min-width 62em)
+  - `md` for medium screens (min-width 48em)
+  - `sm` for small screens (min-width 36em)
 
 ## Related
 

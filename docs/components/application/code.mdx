@@ -20,7 +20,9 @@ The code snippet below shows an example of a combination of different components
 
 ## Skip links
 
-`ix-application` includes a skip-link list with no configuration required. The Main link focuses the application's internal main region by default. Use `skipLinkMainTargetId` to focus a specific content boundary instead:
+`ix-application` includes a skip-link list with no configuration required. The list is the first focusable content owned by `ix-application`; focusable document content rendered before the component remains before it in the tab order. The links remain visually hidden until they receive focus. Moving focus between them replaces the visible link at the same top-start position, and the list does not create an additional navigation landmark.
+
+The main link focuses the application's internal main region by default. Use `skip-link-main-target-id` to focus a specific content boundary instead:
 
 ```html
 <ix-application skip-link-main-target-id="main-content">
@@ -31,9 +33,9 @@ The code snippet below shows an example of a combination of different components
 </ix-application>
 ```
 
-Pass the target as a bare ID, not as `#main-content` or another CSS selector. The target must be a unique, usable light-DOM descendant of the same `ix-application`. If it cannot be used, the component logs a warning and falls back to the internal main region.
+Pass the target as a bare ID, not as `#main-content` or another CSS selector. The target must be a unique, usable light DOM descendant of the same `ix-application`. The component makes a non-interactive destination programmatically focusable when necessary and preserves an existing `tabindex`. If the target cannot be used, the component logs a warning and falls back to the internal main region.
 
-When the `bottom` slot contains meaningful content, a second "Skip to footer" link appears after the Main link. Activating it focuses the internal Footer landmark without changing the Main region's scroll position.
+Activating the main link moves focus to its destination and scrolls it to the beginning. When the `bottom` slot contains meaningful content, a second “Skip to footer” link appears after the main link and updates automatically when the slot content changes. Activating it focuses the internal footer landmark without changing the main region's scroll position. Neither link changes the URL fragment or browser history.
 
 Use `i18n-skip-to-main` and `i18n-skip-to-footer` to localize the link text:
 
@@ -46,31 +48,33 @@ Use `i18n-skip-to-main` and `i18n-skip-to-footer` to localize the link text:
 </ix-application>
 ```
 
+Empty localization values produce a warning and fall back to “Skip to main content” and “Skip to footer” so both links retain accessible names.
+
 Set `disable-skip-links` only when an equivalent document-level bypass mechanism is already available.
 
 ## Breakpoints
 
 <ApplicationBreakpointsPlayground height="30rem" />
 
-## Application Switch
+## Application switch
 
 The navigation to another application is implemented via `window.open` (https://developer.mozilla.org/en-US/docs/Web/API/Window/open). Therefore you can control if the navigation should happen inside the current browser context `target: '_self'` or inside a new tab `target: '_blank'` (more information about target can be found [here](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/a#target))
 
 ```javascript
-  {
+{
   id: 'demo-app-2',
-    name: 'Calculator App',
-    description: 'Example description for Calculator App',
-    iconSrc: '...url to some icon',
+  name: 'Calculator App',
+  description: 'Example description for Calculator App',
+  iconSrc: '...url to some icon',
 
-    url: '...target url',
-    target: '_self', // Define the navigation context (e.g current browser context or new tab)
+  url: '...target url',
+  target: '_self', // Define the navigation context (e.g current browser context or new tab)
 }
 ```
 
 <ApplicationAppSwitchPlayground height="30rem" />
 
-## Application Advanced
+## Application advanced
 
 <ApplicationAdvancedPlayground height="30rem" />
 
