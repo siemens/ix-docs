@@ -31,10 +31,16 @@ type RegistryIndex = {
   versions?: Record<string, RegistryVersion>;
 };
 
-type RegistryFile = {
+type RegistryPathFile = {
+  path: string;
+};
+
+type LegacyRegistryFile = {
   target: string;
   source: string;
 };
+
+type RegistryFile = RegistryPathFile | LegacyRegistryFile;
 
 type RegistryVariant = {
   files: RegistryFile[];
@@ -82,6 +88,52 @@ function getRegistryBaseUrl(registryUrl: string) {
   return new URL('./', registryUrl).toString();
 }
 
+function isRegistryPathFile(file: unknown): file is RegistryPathFile {
+  return (
+    typeof file === 'object' &&
+    file !== null &&
+    'path' in file &&
+    typeof file.path === 'string'
+  );
+}
+
+function isLegacyRegistryFile(file: unknown): file is LegacyRegistryFile {
+  return (
+    typeof file === 'object' &&
+    file !== null &&
+    'target' in file &&
+    'source' in file &&
+    typeof file.target === 'string' &&
+    typeof file.source === 'string'
+  );
+}
+
+type NormalizedRegistryFile = {
+  target: string;
+  source: string;
+  isManifestRelative: boolean;
+};
+
+function normalizeRegistryFile(file: RegistryFile): NormalizedRegistryFile {
+  if (isRegistryPathFile(file)) {
+    return {
+      target: file.path,
+      source: file.path,
+      isManifestRelative: true,
+    };
+  }
+
+  if (isLegacyRegistryFile(file)) {
+    return {
+      target: file.target,
+      source: file.source,
+      isManifestRelative: false,
+    };
+  }
+
+  throw new Error('Invalid block registry file descriptor');
+}
+
 function resolveBlockPreviewUrl(
   previewPath: string | undefined,
   version: string,
@@ -112,11 +164,19 @@ function sanitizeSourcePath(sourcePath: string) {
   return sourcePath.startsWith('/') ? sourcePath.slice(1) : sourcePath;
 }
 
+function resolveManifestFileUrl(manifestUrl: string, filePath: string) {
+  return new URL(
+    sanitizeSourcePath(filePath),
+    new URL('./', manifestUrl),
+  ).toString();
+}
+
 function getSourceCandidates(
   sourcePath: string,
   version: string,
   registryBaseUrl: string,
   sourceBaseUrls?: string[],
+  manifestUrl?: string,
 ) {
   if (sourcePath.startsWith('http://') || sourcePath.startsWith('https://')) {
     return [sourcePath];
@@ -128,6 +188,10 @@ function getSourceCandidates(
     return sourceBaseUrls.map((baseUrl) =>
       resolveUrl(normalizedSourcePath, baseUrl),
     );
+  }
+
+  if (manifestUrl) {
+    return [resolveManifestFileUrl(manifestUrl, normalizedSourcePath)];
   }
 
   return [
@@ -222,7 +286,9 @@ export async function getBlockSourceByName(
       files[framework] = {};
 
       await Promise.all(
-        variant.files.map(async ({ target, source }) => {
+        variant.files.map(async (file) => {
+          const normalizedFile = normalizeRegistryFile(file);
+          const { target, source } = normalizedFile;
           sourcePath[framework][target] = source;
 
           const candidates = getSourceCandidates(
@@ -230,6 +296,9 @@ export async function getBlockSourceByName(
             version,
             registryBaseUrl,
             options.sourceBaseUrls,
+            normalizedFile.isManifestRelative
+              ? blockManifestUrl
+              : undefined,
           );
 
           files[framework][target] = await fetchFirstSuccessfulText(candidates);
