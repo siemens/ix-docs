@@ -44,6 +44,16 @@
   --aa-primary-color-rgb: var(--theme-color-std-text);
   color: var(--theme-color-std-text);
 
+  // The search field is only one part of the form, so the focus ring belongs on
+  // the whole form. Otherwise it is drawn inside the form and overlaps its
+  // border, the submit icon and the clear button.
+  // `!important` is required because autocomplete.js resets the outline with an
+  // equally specific rule that is loaded later.
+  &:focus-within {
+    outline: 1px solid var(--theme-color-focus-bdr) !important;
+    outline-offset: var(--theme-focus-outline-offset);
+  }
+
   .aa-InputWrapperSuffix,
   .aa-InputWrapperPrefix {
     background-color: var(--theme-input--background);
@@ -53,6 +63,13 @@
   .aa-Input {
     background-color: var(--theme-input--background);
     box-shadow: none;
+  }
+
+  // Wins over the global `input:focus` rule from `@siemens/ix`.
+  .aa-Input:focus,
+  .aa-Input:focus-visible {
+    outline: none !important;
+    box-shadow: none !important;
   }
 
   .aa-Input::placeholder {
