@@ -9,33 +9,31 @@ The generic list (`ix-list` and `ix-list-item`) is a single-column collection fo
 
 ## 1. Anatomy
 
-A list fills the available width of its parent and grows in height to fit its content. The standard item:
+A list item fills the available width of its parent and grows in height to fit its content. The standard item:
 
-1. Leading icon
-2. Primary label or title
-3. Supporting description or subtitle
-4. Status label, pill or other supporting content
-5. Actions
+1. Drag indicator
+2. Checkbox
+3. Content with leading icon and label
+4. Actions
+
+Lists:
+
+1. List items
+2. Separator
 
 Multi-line descriptions, notification content, and custom content increase the item height to fit. The default slot places non-interactive custom content after the standard icon, label, and description layout. The `action` slot places trailing interactive controls that do not activate the item.
 
-A divider appears within the item boundary. A separator is a distinct content element that adds space between item groups. Keep those concepts separate: use a divider for item delineation and a separator for a meaningful group boundary.
+A divider appears within the item boundary. A separator is a distinct content element that adds space between item groups. Keep those concepts separate: use a divider (property) for item delineation and a separator (separate component) to group list items visually within a list.
 
 **Additional information**
 
 - The branch implementation renders the list with `role="list"` and items with `role="listitem"`
 
-**Open discussion points**
-
-- ▶️ `ix-list-separator`-> option or separate component? Any special recommendations?
-- ▶️ What are the standard-item anatomy for status labels and pills?
-- ▶️How do we document the templates?
-
 ## 2. When to use
 
 Use the generic list when:
 
-- Content is straightforward, related, and primarily single-column
+- Content is straightforward, related, and primarily single-column -> We typically use single column but can also be multi-column for additional details if focus is not data analysis (use Grid/Table instead).
 - Users need to scan items vertically and possibly activate, select, or reorder them
 - Items need a consistent combination of icon, label, description, status, and actions
 - A lighter alternative to a table is useful for basic data
@@ -59,34 +57,30 @@ Keep the list focused on one item type and one primary purpose. For our software
 - Carbon recommends moving complex, sortable, filterable, or selection-heavy data to a data table
 - Separate list groups may sit side by side when they align to a larger grid, but individual items should remain vertically arranged
 
-**Open discussion points**
-
-- ▶️ Should we include a formal decision table comparing generic list, grid, tree, event list, and card list?
-- ▶️ Define the maximum content complexity before custom content should become a dedicated component or pattern
-- ▶️ If content is non-interactive and simple text -> should native HTML lists be used?
-
 ## Variants
 
 - Filled (default): Use for standard row
 - Ghost: Surrounding surface already provides containment
 - Outline: If stronger item boundary is needed
 
-▶️ Is mixing within a list encouraged / in specific scenarios?
-
 ## 3. Options
 
 ### List
 
 - **`hasDivider`:**
-
-   Displays dividers between direct list items. ▶️ when?
+  Displays dividers between direct list items. ▶️ when?
 - **`itemGap`:** Sets the space between list items in pixels
-    - Use 0 for cotinuous list
-    - Use 4 or 8 for light separation
-    - Use 12 (default) for strong separation (if item content needs clearer grouping)
+    - Use 0 for continuous list
+    - Use 4 or 8 for light separation (8px default)
+    - Use 12 for strong separation (if item content needs clearer grouping)
 - **`checkbox`:** Sets the default selection-checkbox setting for items that do not define their own setting
 - **`actionOnHover`:** Sets the default behavior for showing action content on hover or focus
 - **`actionSlotAlignment`:** Sets the default vertical alignment of action content to `start` or `center`
+- **`content`:** Is a slot for non-interactive custom content, there are several templates prepared
+    - Simple (icon + title): Use for standard list items
+    - Advanced (icon + title + description): Use for items with supporting text and status badges
+    - Custom: Use to realize e.g. notifications or event lists
+- **`action`:** For interactive controls that do not activate the item; we recommend to use up to four icon buttons, up to two text buttons or a toggle switch
 - **`draggable`:** Enables pointer and keyboard reordering
 - **`dragBehavior`:** Chooses the visual behavior while dragging; supported values are `dynamic` (default) and `separator`
 
@@ -111,13 +105,6 @@ Keep the list focused on one item type and one primary purpose. For our software
 - Set list-level defaults when most items share the same treatment, then override only genuine exceptions at item level
 - Reserve hover-only actions for supplementary actions; keep essential actions visible or keyboard reachable
 - Use custom content when the standard layout cannot represent the item, not to bypass consistent alignment
-
-**Additional discussion points**
-
-- ▶️ Is`actionSlotAlignment` a visual option or reserved for advanced layouts?
-- ▶️ Is `itemGap: 12` also default in Figma?
-- ▶️ Are "max 4 icon buttons" and "max 2 buttons" hard limits or design recommendations?
-- ▶️ Confirm the intended label truncation and tooltip behavior; the branch API has no truncation option
 
 ## 4. Behavior in context
 
@@ -146,9 +133,10 @@ Keep the list width fluid and allow item height to grow with descriptions, notif
 - List
     - list width as fill or 100% of the parent and the height as hug or content-driven
     - A scrollable list should make overflow discoverable with a scrollbar
+    - Height or width of list can be overridden als will show
 - List item
-    - ▶️ Does text truncate or wrap? (-> long identifiers in industrial contexts)
-    - ▶️ Tooltips?
+    - The title truncates on overflow and shows a tooltip with the full text; if a status badge is shown, the badge is always visible and the title truncates before the badge
+    - Height of a list item can be overridden but content doesn't grow (still truncates on one line)
 
 ### Screen readers and accessible input
 
@@ -161,10 +149,6 @@ Use semantic list roles, preserve logical reading order, and provide accessible 
 - It cancels an active reorder when focus leaves the list in the relevant interaction path
 - Element and Material both emphasize responsive layouts, concise content, and predictable item alignment
 - Figma documents reading order as icon, title, label or subtitle, then action
-
-**Open discussion points**
-
-- ▶️ Validate the exact Tab behavior for custom focusable content in the default slot -> do??
 
 ## 5. Statuses
 
@@ -184,17 +168,15 @@ The component should document these states separately for list items and control
 - The action slot can remain persistent or appear on hover/focus depending on `actionOnHover`
 - The Figma edge-case examples include long text, tooltip disclosure, always-visible pills, multi-line content, and scrollbars
 
-**Open discussion points**
-
-- ▶️ How about loading, error and empty states?
-- ▶️ Is overflow tooltip a component guarantee or an author responsibility?
-
 ## 6. Other Dos and Don’ts
 
 - Do use one consistent item type, alignment, and spacing model within a list
 - Do make essential actions visible and keyboard accessible
+- Do take care of keyboard interaction when using the custom template
+- Do use empty states and spinners for empty or loading lists
 - Don’t use a generic list for multi-column comparison, sorting, filtering, or dense editing, use Grid/Tables instead
 - Don’t hide the only way to complete an essential task behind hover
+- Don't mix list item variants, instead use content to highlight specific items if necessary
 
 **Additional information**
 
@@ -203,9 +185,15 @@ The component should document these states separately for list items and control
 - Element recommends concise items and responsive behavior in cards, modals, side panels, and similar containers
 - Industrial interfaces may involve glare, high-contrast displays, gloves, and time pressure; validate more than a conventional mouse-and-keyboard path
 
-**Open discussion points**
+▶️ Identify representative industrial examples for the final documentation playgrounds -> example image will be added to dos and donts
 
-- ▶️ Identify representative industrial examples for the final documentation playgrounds
+## 7. Related components
+
+- Grid
+- Tree
+- Table
+- Card list
+- Group
 
 ## References
 
