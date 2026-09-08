@@ -49,7 +49,7 @@ Use one variant consistently within a list. When one item needs emphasis, use it
 ### List
 
 - **Dividers:** Use dividers between direct list items, primarily with the ghost variant.
-- **Item gap:** Control the gap between items in pixels. We recommend using no gap for a continuous list, 4 or 8 pixels for light separation (default), and 12 pixels when groups need stronger visual distinction.
+- **Item gap:** Control the gap between items. We recommend `none` for a continuous list, `sm` or `md` for light separation between items, or `lg` when groups need stronger visual distinction.
 - **Selection:** Allow selecting an item in the list.
 - **Action visibility:** Keep essential actions visible. Show supplementary actions on hover and focus when space is limited
 - **Action alignment:** Align actions to the center for single-line items. Align them to the start when descriptions or custom content create taller items
