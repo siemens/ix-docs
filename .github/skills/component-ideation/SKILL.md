@@ -236,6 +236,6 @@ Before finishing:
 4. Confirm every section ends with additional information followed by open discussion points.
 5. Confirm every open discussion point begins with `▶️`.
 6. Confirm References is the final section.
-7. Run `git diff --check -- docs/components/<component>/ideation.md`.
+7. Set the component path before running the check, then use a quoted variable: `component=list; git diff --check -- "docs/components/${component}/ideation.md"`.
 8. Run repository diagnostics for the file when available.
 9. Run the docs build. If the build is blocked by repository credentials, missing generated artifacts, or another unrelated environment problem, report the exact blocker and run the narrowest available direct documentation build.

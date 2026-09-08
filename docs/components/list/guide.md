@@ -5,9 +5,8 @@ description: 'Usage guide for the ix-list and ix-list-item'
 
 # List - Usage
 
-Use lists when people need to scan related items vertically and may need to select, activate, reorder, or manage them. It works well in cards, modals, side panels, and other contained layouts when a table would add unnecessary structure.
+Use lists when users need to scan related items vertically and might need to select or reorder them. Lists work well in [cards](../card/), [modals](../modal/), [panes](../panes/) and similar layouts.
 
-Keep lists focused on one item type and one primary purpose. Use a single column for straightforward content; use a [grid](../grid) or [HTML table](../html-grid) when additional columns support data analysis rather than simple scanning.
 
 ![List anatomy](https://www.figma.com/design/wEptRgAezDU1z80Cn3eZ0o/iX-Documentation-illustrations?node-id=8309-10950&t=xnc4u6vlAsTkE0Uc-11)
 
@@ -17,6 +16,8 @@ Keep lists focused on one item type and one primary purpose. Use a single column
 4. Actions
 5. Divider
 6. Separator
+
+Keep lists focused on one item type. Use a single column for straightforward content; use [grids](../grid) or [tables](../html-grid) when additional columns support data analysis rather than simple scanning.
 
 Use a divider to distinguish items within lists. Use a separator to create space between groups of items. Keep these two patterns distinct so users can understand both item boundaries and group boundaries at a glance.
 
@@ -33,6 +34,7 @@ Use one variant consistently within a list. When one item needs emphasis, use it
 ## Options
 
 ### List item
+
 - **Checkbox:** Use a checkbox when users select items independently of activating the item.
 - **Icon:** Use a meaningful icon and provide a meaningful accessible name when the icon carries information.
 - **Label:** Keep the primary title short and specific so items remain easy to scan.
@@ -45,6 +47,7 @@ Use one variant consistently within a list. When one item needs emphasis, use it
 - **Action content:** Place controls that do not activate the item in the trailing action area. We recommend to use up to four icon buttons or up to two text buttons
 
 ### List
+
 - **Dividers:** Use dividers between direct list items, primarily with the ghost variant.
 - **Item gap:** Control the gap between items in pixels. We recommend using no gap for a continuous list, 4 or 8 pixels for light separation (default), and 12 pixels when groups need stronger visual distinction.
 - **Selection:** Allow selecting an item in the list.
@@ -66,7 +69,7 @@ Use one variant consistently within a list. When one item needs emphasis, use it
 
 ## States
 
-List items have these states: default, hover, active, focus, disabled and dragging.
+List items have these states: Default, hover, active, focus, disabled and dragging.
 
 ![List states](https://www.figma.com/design/wEptRgAezDU1z80Cn3eZ0o/iX-Documentation-illustrations?node-id=8309-32187)
 
