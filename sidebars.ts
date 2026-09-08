@@ -514,11 +514,15 @@ const sidebars: SidebarsConfig = {
           ],
         }),
         createTabItem({
-          id: 'components/generic-list/index',
-          label: 'Generic List',
+          id: 'components/list/index',
+          label: 'List',
           items: [
             {
-              id: 'components/generic-list/code',
+              id: 'components/list/guide',
+              label: 'Usage',
+            },
+            {
+              id: 'components/list/code',
               label: 'Code',
             },
           ],
