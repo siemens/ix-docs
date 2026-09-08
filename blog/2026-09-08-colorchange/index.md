@@ -11,24 +11,24 @@ import { iconAddCircleFilled } from "@siemens/ix-icons/icons";
 
 ![banner](../2026-09-08-colorchange/2609_blog_colorchange.svg)
 
-With the upcoming version 6 release we are updating and refining our status and risk level terminology to align with international standards and improve accessibility. In this post, we explain what will change and why.
+With the upcoming version 6 release, we're updating and refining our status and risk-level terminology to align with international standards and improve accessibility. In this post, we explain what will change and why.
 <!-- truncate -->
 
-## Update of status names
+## Status names update
 
 ![banner](../2026-09-08-colorchange/2609_blog_colorchange_mapping.svg)
 
-We are refining our status color names to align with a unified color token set that will be part of our next major release. The table below shows how each status name is being updated:
+We're refining our status color names to align with a unified color token set that will be part of our next major release. The table below shows how each status name is being updated:
 
 <div class="table-full-width table-column-equal-width">
 | Previous | New |
 |----------|-----|
-| Alarm (Red) | Danger (Red) |
-| Critical (Orange) | Warning (Orange) |
-| Warning (Yellow) | Caution (Yellow) |
-| Success (Green) | Success (Green) |
-| Info (Blue) | Information (Blue) |
-| Neutral (Gray) | Neutral (Gray) |
+| Alarm (red) | Danger (red) |
+| Critical (orange) | Warning (orange) |
+| Warning (yellow) | Caution (yellow) |
+| Success (green) | Success (green) |
+| Info (blue) | Information (blue) |
+| Neutral (gray) | Neutral (gray) |
 </div>
 
 
@@ -51,7 +51,7 @@ ISO 7010 additionally uses:
 
 ![banner](../2026-09-08-colorchange/2609_blog_colorchange_critical.svg)
 
-We are introducing the **new status color purple** in iX version 6.
+We're introducing the **new status color purple** in iX version 6.
 
 Use purple for:
 - Events that are more severe than danger (red).
@@ -74,4 +74,4 @@ The color purple is used for Critical to continue the color spectrum and to prov
 
 ## Way forward
 
-We know that these changes have effects on your project. We are reaching out early to show what you can expect. With the release we will provide migration documentation in the breaking changes guide. If you have any questions do not hesitate to reach out via our [support channels](https://ix.siemens.io/docs/home/support/contact-us).
+We understand that these changes may have affect your projects. Because of that, we're reaching out early to show you what to expect in the next version. With the release, we'll provide migration documentation in the breaking changes guide. If you have any questions, do not hesitate to reach out via our [support channels](https://ix.siemens.io/docs/home/support/contact-us).
