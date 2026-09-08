@@ -74,4 +74,4 @@ The color purple is used for Critical to continue the color spectrum and to prov
 
 ## Way forward
 
-We understand that these changes may have affect your projects. Because of that, we're reaching out early to show you what to expect in the next version. With the release, we'll provide migration documentation in the breaking changes guide. If you have any questions, do not hesitate to reach out via our [support channels](https://ix.siemens.io/docs/home/support/contact-us).
+We understand that these changes may affect your projects. Because of that, we're reaching out early to show you what to expect in the next version. With the release, we'll provide migration documentation in the breaking changes guide. If you have any questions, do not hesitate to reach out via our [support channels](https://ix.siemens.io/docs/home/support/contact-us).
