@@ -1,11 +1,11 @@
 ---
-title: 'Generic list - ideation'
+title: 'List - ideation'
 description: 'Research and design notes for the generic list component.'
 ---
 
-# Generic list - ideation
+# List - ideation
 
-The generic list (`ix-list` and `ix-list-item`) is a single-column collection for related items that need more structure or interaction than a plain list, but do not need the columns and data operations of a table.
+The list (`ix-list` and `ix-list-item`) is a single-column collection for related items that need more structure or interaction than a plain list, but do not need the columns and data operations of a table.
 
 ## 1. Anatomy
 
