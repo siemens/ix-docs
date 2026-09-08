@@ -68,7 +68,7 @@ Keep the list focused on one item type and one primary purpose. For our software
 ### List
 
 - **`hasDivider`:**
-  Displays dividers between direct list items. ▶️ when?
+  Displays dividers between direct list items, primarily for ghost variant - except if you're using separators
 - **`itemGap`:** Sets the space between list items in pixels
     - Use 0 for continuous list
     - Use 4 or 8 for light separation (8px default)
@@ -134,6 +134,7 @@ Keep the list width fluid and allow item height to grow with descriptions, notif
     - list width as fill or 100% of the parent and the height as hug or content-driven
     - A scrollable list should make overflow discoverable with a scrollbar
     - Height or width of list can be overridden als will show
+    - Pagination or lazy loading is not covered in the component but needs to be implemented by developers
 - List item
     - The title truncates on overflow and shows a tooltip with the full text; if a status badge is shown, the badge is always visible and the title truncates before the badge
     - Height of a list item can be overridden but content doesn't grow (still truncates on one line)
