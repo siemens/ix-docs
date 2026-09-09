@@ -41,7 +41,7 @@ Learn when and how to write all types of messages including warnings, errors, in
 
 ## Frequent app functions
 
-Get tips for naming common app functions clearly and effectively. This subchapter focuses on how to describe frequent actions and features in a way that users can quickly understand and use. [Read more](../language/frequent-app-functions.md)
+Get tips for naming common app functions clearly and effectively. This subchapter focuses on how to describe frequent actions and features in a way that users can quickly understand and use. [Read more](./frequent-app-functions.md)
 
 
 ## Dialogs and buttons
