@@ -15,7 +15,7 @@ export function CategoryButton(
   props: React.PropsWithChildren<{
     title: string;
     link: string;
-    image: string;
+    image?: string;
     buttonWidth?: string;
     imageWidth?: string;
   }>
