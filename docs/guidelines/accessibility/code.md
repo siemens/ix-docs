@@ -245,6 +245,8 @@ The `navigation` role can also be used instead of the `<nav>` element:
 </div>
 ```
 
+When using the [application](../../components/application/) component, a built-in skip-link list lets keyboard and screen reader users bypass repeated application-shell content. It is enabled by default. The main link always appears first and targets the internal main region unless `skipLinkMainTargetId` identifies a usable light-DOM descendant. A footer link appears only when meaningful content is assigned to the `bottom` slot. Set `disableSkipLinks` only when the document provides an equivalent bypass mechanism.
+
 ### Lists
 
 Lists must be correctly structured to be recognized by screen readers. This means that parent (`<ul>` or `<ol>`) must be directly followed by `<li>` and no other content element is allowed to be in-between.
