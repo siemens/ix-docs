@@ -12,16 +12,12 @@ Use lists when users need to scan related items vertically and might need to sel
 
 1. Drag indicator
 2. Checkbox
-3. Content
+3. Content with icon, label and status badge
 4. Actions
 5. Divider
 6. Separator
 
-Keep lists focused on one item type. Use a single column for straightforward content; use [grids](../grid) or [tables](../html-grid) when additional columns support data analysis rather than simple scanning.
-
-Use a divider to distinguish items within lists. Use a separator to create space between groups of items. Keep these two patterns distinct so users can understand both item boundaries and group boundaries at a glance.
-
-Choose [grids](../grid) or [tables](../html-grid) when data needs multiple columns, sorting, filtering, comparison, or dense editing. Choose [trees](../tree) for parent-child hierarchy or [card lists](../card-list) for visual summaries. For text with no interaction or additional structure, use native HTML lists.
+Keep lists focused on one item type. Use a divider to distinguish items within lists. Use a separator to create space between groups of items. Keep these two patterns distinct so users can understand both item boundaries and group boundaries at a glance.
 
 ## Variants
 
@@ -36,26 +32,25 @@ Use one variant consistently within a list. When one item needs emphasis, use it
 ### List item
 
 - **Checkbox:** Use a checkbox when users select items independently of activating the item.
-- **Icon:** Use a meaningful icon and provide a meaningful accessible name when the icon carries information.
+- **Icon:** Use a meaningful icon and provide a descriptive accessible name when the icon carries information.
 - **Label:** Keep the primary title short and specific so items remain easy to scan.
 - **Description:** Add supporting information only when it helps users identify or act on the item.
 - **Selected:** Use selected state when an item is currently chosen or active.
-- **Default content:** We prepared templates for common content patterns, but you can also create your own custom layout. Use the following templates as a starting point:
-  - Simple template (icon and title)
-  - Advanced template (title with supporting text and status)
-  - Custom, e.g. for notifications or other patterns
-- **Action content:** Place controls that do not activate the item in the trailing action area. We recommend to use up to four icon buttons or up to two text buttons
+- **Content:** Use the built-in icon, label and description properties for all common list item layouts. Alternatively, create your own custom layout, e.g. notifications or events.
+- **Action content:** Place controls that do not activate the item in the trailing action area. We recommend to use up to four icon buttons or up to two text buttons.
 
 ### List
 
 - **Dividers:** Use dividers between direct list items, primarily with the ghost variant.
-- **Item gap:** Control the gap between items. We recommend `none` for a continuous list, `sm` or `md` for light separation between items, or `lg` when groups need stronger visual distinction.
+- **Item gap:** Control the gap between items. We recommend `none` for a continuous list, `sm` (default) or `md` for light separation between items, or `lg` when groups need stronger visual distinction.
 - **Selection:** Allow selecting an item in the list.
-- **Action visibility:** Keep essential actions visible. Show supplementary actions on hover and focus when space is limited
-- **Action alignment:** Align actions to the center for single-line items. Align them to the start when descriptions or custom content create taller items
-- **Reordering:** Enable dragging only when item order has meaning
+- **Action on hover:** Show supplementary actions only when the list item is hovered or focused to keep the list uncluttered. Use this approach only if they are also accessible elsewhere in the workflow, e.g. to enable shortcuts for actions available in a detail view.
+- **Action alignment:** Center-align actions vertically for single-line items. Top-align them (`start`) when descriptions or custom content create taller items.
+- **Reordering:** Enable dragging only when item order has meaning.
   - **Dynamic behavior:** The drop target is indicated by the other items moving. Use for short lists or if users should only reorder items roughly, e.g. to quickly prioritize work items.
   - **Separator behavior:** The drop target is indicated by a separator. Use for long, scrollable lists or where users need to place items between specific items, e.g. to define the exact position of work items in a queue.
+
+![List examples](https://www.figma.com/design/wEptRgAezDU1z80Cn3eZ0o/iX-Documentation-illustrations?node-id=8338-10306&t=wY8oAkKcZaMecojj-11)
 
 ## Behavior in context
 
@@ -69,7 +64,7 @@ Use one variant consistently within a list. When one item needs emphasis, use it
 
 ## States
 
-List items have these states: Default, hover, active, focus, disabled and dragging.
+List items have these states: Default, hover, active, focused, dragging and disabled.
 
 ![List states](https://www.figma.com/design/wEptRgAezDU1z80Cn3eZ0o/iX-Documentation-illustrations?node-id=8309-32187)
 
@@ -86,8 +81,7 @@ List items have these states: Default, hover, active, focus, disabled and draggi
   </div>
   <div class="donts">
     <ul aria-label="Practices to avoid">
-      <li>Don’t use lists for multi-column comparison, sorting, filtering, or dense editing, use [grids](../grid) or [tables](../html-grid) instead</li>
-      <li>Don’t hide the only way to complete an essential task behind hover</li>
+      <li>Don’t use lists for multi-column data comparison, sorting, filtering, or dense editing, use [grids](../grid) or [tables](../html-grid) instead</li>
       <li>Don’t mix list item variants to highlight individual items</li>
       <li>Don’t make pointer dragging the only way to reorder items on touch devices</li>
     </ul>
