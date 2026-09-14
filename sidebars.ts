@@ -458,6 +458,20 @@ const sidebars: SidebarsConfig = {
           ],
         }),
         createTabItem({
+          id: 'components/list/index',
+          label: 'List',
+          items: [
+            {
+              id: 'components/list/guide',
+              label: 'Usage',
+            },
+            {
+              id: 'components/list/code',
+              label: 'Code',
+            },
+          ],
+        }),
+        createTabItem({
           id: 'components/modal/index',
           label: 'Modal',
           items: [
@@ -512,21 +526,7 @@ const sidebars: SidebarsConfig = {
               label: 'Code',
             },
           ],
-        }),
-        createTabItem({
-          id: 'components/list/index',
-          label: 'List',
-          items: [
-            {
-              id: 'components/list/guide',
-              label: 'Usage',
-            },
-            {
-              id: 'components/list/code',
-              label: 'Code',
-            },
-          ],
-        }),
+        })
       ],
       collapsed: true,
     },
