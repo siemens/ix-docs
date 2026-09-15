@@ -21,9 +21,9 @@ Keep lists focused on one item type. Use a divider to distinguish items within l
 
 ## Variants
 
-- **Ghost (default):** Use when the surrounding surface already groups the list visually, e.g. in a card or modal
-- **Filled:** Use when list items need a distinct background to stand out from the surrounding surface
-- **Outline:** Use when placed within a grouping surface e.g. cards, but with stronger boundaries than the ghost variant provides
+- **Ghost (default):** Use when the surrounding surface already groups the list visually, e.g. in a card or modal.
+- **Filled:** Use when list items need a distinct background to stand out from the surrounding surface.
+- **Outline:** Use when placed within a grouping surface, e.g. cards, but with stronger boundaries than the ghost variant provides.
 
 Use one variant consistently within a list. When one item needs emphasis, use its content or status rather than mixing item variants.
 
@@ -37,13 +37,13 @@ Use one variant consistently within a list. When one item needs emphasis, use it
 - **Description:** Add supporting information only when it helps users identify or act on the item.
 - **Selected:** Use selected state when an item is currently chosen or active.
 - **Content:** Use the built-in icon, label and description properties for all common list item layouts. Alternatively, create your own custom layout, e.g. notifications or events.
-- **Action content:** Place controls that do not activate the item in the trailing action area. We recommend to use up to four icon buttons or up to two text buttons.
+- **Action content:** Place controls that do not activate the item in the trailing action area. We recommend using up to four icon buttons or up to two text buttons.
 
 ### List
 
 - **Dividers:** Use dividers between direct list items, primarily with the ghost variant.
 - **Item gap:** Control the gap between items. We recommend `none` for a continuous list, `sm` (default) or `md` for light separation between items, or `lg` when groups need stronger visual distinction.
-- **Selection:** Allow selecting an item in the list.
+- **Selection:** Allow the selection of an item in the list.
 - **Action on hover:** Show supplementary actions only when the list item is hovered or focused to keep the list uncluttered. Use this approach only if they are also accessible elsewhere in the workflow, e.g. to enable shortcuts for actions available in a detail view.
 - **Action alignment:** Center-align actions vertically for single-line items. Top-align them (`start`) when descriptions or custom content create taller items.
 - **Reordering:** Enable dragging only when item order has meaning.
@@ -56,10 +56,10 @@ Use one variant consistently within a list. When one item needs emphasis, use it
 
 - **Interaction:** The primary item surface supports activation with Enter or Space. Arrow keys move between enabled, visible items, while Home and End move to the first and last item.
   - **Focus:** The list uses roving focus so only the active enabled item enters the tab sequence. Tab moves through available control groups and then out of the list. Arrow right enters the primary or action controls, while arrow left moves within the active control group.
-  - **Actions:** The action area can remain visible or appear on hover and focus according to the action visibility setting.
+  - **Actions:** The action area can remain visible or appear on hover and focus according to the action's visibility setting.
   - **Reordering:** Start pointer dragging from the drag indicator. Disabled and hidden items cannot be reordered. For keyboard input, use Space or Enter to start, the arrow keys to move, Space or Enter to drop and Escape to cancel.
 - **Placement:** Keep the list within the layout container that gives it context, e.g. [cards](../card/), [modals](../modal/) or [panes](../panes/). Use a separate list when the purpose or item type changes. Separate list groups may sit side by side in a larger grid, but individual items remain vertically arranged.
-  - **Overflow:** List width fills its parent. Items grow with their content in height. Make scrolling discoverable with a scrollbar when the list has constrained height.
+  - **Overflow:** List width fills its parent. Items grow with their content in height. Make scrolling discoverable with a scrollbar when the list has a constrained height.
   - **Loading more content:** Pagination and lazy loading are outside the component’s scope and need to be added by the application.
 
 ## States
