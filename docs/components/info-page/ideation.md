@@ -54,6 +54,8 @@ Keep the page focused on one situation. Choose a clear title, a short explanatio
 - Element lists error reporting and user information or actions as primary use cases for info pages.
 - The local [error-page language guidance](../../guidelines/language/messaging/error-pages.md) recommends giving users a way out and adapting actions to what the application can technically support.
 - The current components overview does not yet list an info page component.
+- The design-systems assistant comparison found a converging principle in Carbon: do not truncate page headers, titles, or error messages. This supports keeping the info-page title and recovery message readable at narrow widths.
+- Polaris guidance similarly recommends short labels that clearly communicate an action’s purpose. This supports using concise, outcome-oriented labels in the `actions` slot.
 
 **Open discussion points**
 
@@ -138,5 +140,7 @@ Hover, active, disabled, loading, and error states of the component itself are n
 - [Figma: Add Info Page](https://www.figma.com/design/iWp1z1dCQ7HrTLz5nL1LMm/Add-Info-Page?node-id=145668-12021)
 - [Element: Info page](https://element.siemens.io/development/components/pages/info-page/)
 - [Element: HTTP error pages](https://element.siemens.io/development/patterns/http-error-pages/)
+- [Carbon: Overflow content](https://carbondesignsystem.com/patterns/overflow-content/)
+- [Polaris: Common actions best practices](https://raw.githubusercontent.com/Shopify/polaris-react-archive/main/polaris.shopify.com/content/patterns/common-actions/variants/best-practices.mdx)
 - [Local error-page language guidance](../../guidelines/language/messaging/error-pages.md)
 - [Local empty-state component](../empty-state/)
