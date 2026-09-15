@@ -37,7 +37,7 @@ Pass the target as a bare ID, not as `#main-content` or another CSS selector. Th
 
 Activating the main link moves focus to its destination and scrolls it to the beginning. When the `bottom` slot contains meaningful content, a second “Skip to footer” link appears after the main link and updates automatically when the slot content changes. Activating it focuses the internal footer landmark without changing the main region's scroll position. Neither link changes the URL fragment or browser history.
 
-Use `i18n-skip-to-main` and `i18n-skip-to-footer` to localize the link text:
+Use `i18n-skip-to-main` and `i18n-skip-to-footer` to translate the skip-link text. This example translates it into German:
 
 ```html
 <ix-application
@@ -68,7 +68,7 @@ The navigation to another application is implemented via `window.open` (https://
   iconSrc: '...url to some icon',
 
   url: '...target url',
-  target: '_self', // Define the navigation context (e.g current browser context or new tab)
+  target: '_self', // Define the navigation context, e.g current browser context or new tab
 }
 ```
 
