@@ -1,6 +1,6 @@
 ---
 name: component-ideation
-description: 'Create or update component ideation documents for Siemens Industrial Experience docs. Use when researching a component from its implementation branch, Figma specification, Siemens Element, IX design-system knowledge, and external design systems, then structuring the result into Anatomy, When to use, Options, Behavior in context, Statuses, and Other Dos and Don’ts.'
+description: 'Create or update component ideation documents for Siemens Industrial Experience docs. Use when researching a component from its implementation branch, Figma specification, Siemens Element, iX design-system knowledge, and external design systems, then structuring the result into Anatomy, When to use, Options, Behavior in context, Statuses, and Other Dos and Don’ts.'
 argument-hint: 'Which component should be researched? Provide its docs folder, implementation branch or pull request, Figma component URL, and Element URL when available.'
 ---
 
@@ -18,7 +18,7 @@ Ask for or identify these inputs before researching:
 - Implementation branch, pull request, or source path
 - Figma component URL with a node ID
 - Siemens Element component URL, if a related component exists
-- IX design-system knowledge category or search topic
+- iX design system knowledge category or search topic
 
 When a source is unavailable, record that limitation in the document and continue with the remaining sources. Do not invent missing properties or behavior.
 
@@ -71,12 +71,14 @@ Collect recommendations about:
 - Responsive behavior and overflow
 - Accessibility and localization
 - Reuse of existing IX components and tokens
+- UX writing 
+
 
 Prefer specific, relevant results over a broad catalogue dump. Record the category or query used so the final references remain traceable.
 
 ### 5. Compare external design systems
 
-Use two or three established design systems with strong, relevant guidance. Good defaults include Material 3, Carbon, Fluent, Spectrum, Atlassian, or PatternFly. Fetch their usage guidance rather than relying on component names alone.
+Use two or three established design systems with strong, relevant guidance. Good defaults include Material 3, Carbon, Fluent, Spectrum, Atlassian, PatternFly or [Intuit](https://contentdesign.intuit.com/). Fetch their usage guidance rather than relying on component names alone.
 
 Compare:
 
@@ -86,8 +88,10 @@ Compare:
 - Keyboard and screen-reader behavior
 - Overflow and responsive rules
 - Guidance for tables, trees, grids, and other alternatives
+- Any dos and don'ts 
 
-Use comparisons to identify converging principles and useful questions. Do not copy another system’s API or terminology into IX guidance.
+
+Use comparisons to identify converging principles and useful questions. Do not copy another system’s API or terminology into IX guidance. Do not infringe copyright. Cite all references correctly so the source can be found. 
 
 ## Output location and frontmatter
 
@@ -144,7 +148,7 @@ End the section with these subsections, in this order:
 
 Explain when the component is appropriate and when to choose an alternative. Cover likely alternatives such as tables, grids, trees, event lists, card lists, menus, or native HTML where relevant.
 
-Include practical guidance for single-column content, complexity, placement, scanning, and operational context. Keep recommendations useful outside Siemens as well.
+Include practical guidance for single-column content, complexity, placement, scanning, and operational context. Keep recommendations useful for an open-source design system - meaning that we can recommend guidance to users outside of Siemens as well. 
 
 End with `**Additional information**`, then `**Open discussion points**`; every open question must begin with `▶️`.
 
@@ -205,15 +209,15 @@ End with `**Additional information**`, then `**Open discussion points**`; every 
 
 ### 6. Other Dos and Don’ts
 
-Use concise imperative bullets. Keep dos first and don’ts second. Start every bullet with `Do` or `Don’t`. Keep each bullet to one sentence and no more than five dos and five don’ts.
+Use concise imperative bullets. Keep dos first and don’ts second. Start every bullet with `Do` or `Don’t`. Keep each bullet to one sentence and no more than five dos and five don’ts. Dos and Don'ts do not have periods (full stops). 
 
-Recommendations should cover content clarity, consistency, accessibility, responsive use, interaction boundaries, and choosing a better alternative when appropriate.
+Recommendations should cover content clarity, consistency, accessibility, responsive use, interaction boundaries, and choosing a better alternative when appropriate. When recommending an alternative use ", instead use " 
 
 End with `**Additional information**`, then `**Open discussion points**`; every open question must begin with `▶️`.
 
 ## Evidence and writing rules
 
-- Prefer source-backed statements and name the source in the surrounding text when the distinction matters
+- Prioritize source-backed statements and name the source in the surrounding text when the distinction matters
 - Use “The branch implements…” for code facts, “The Figma specification shows…” for design evidence, and “We recommend…” for proposed guidance
 - Keep implementation properties complete under Options, but keep the rest of the document decision-oriented
 - Do not merge speculative recommendations into confirmed API behavior
@@ -221,7 +225,7 @@ End with `**Additional information**`, then `**Open discussion points**`; every 
 - Treat Siemens-specific product habits as examples or context, not universal requirements
 - Prefer existing IX components, tokens, icons, and accessibility patterns
 - Do not create new component APIs, slots, states, or limits from comparison systems
-- Keep terminology consistent with nearby docs and the source component
+- Keep terminology consistent with iX docs and the source component
 - Use relative links for local component alternatives and direct links for external references
 - Avoid duplicated content across sections; place API details in Options and usage consequences in Behavior in context
 - Use ASCII by default when creating the file, except where the repository’s established prose uses typographic punctuation
