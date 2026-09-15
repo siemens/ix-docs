@@ -81,7 +81,7 @@ List items have these states: Default, hover, active, focused, dragging and disa
   </div>
   <div class="donts">
     <ul aria-label="Practices to avoid">
-      <li>Don’t use lists for multi-column data comparison, sorting, filtering, or dense editing, use [grids](../grid) or [tables](../html-grid) instead</li>
+      <li>Don't use lists for multi-column data comparison, sorting, filtering, or dense editing, use [grids](../grid) or [tables](../html-grid) instead</li>
       <li>Don’t mix list item variants to highlight individual items</li>
       <li>Don’t make pointer dragging the only way to reorder items on touch devices</li>
     </ul>
