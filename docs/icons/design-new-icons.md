@@ -33,7 +33,7 @@ Icons in our design system are monochromatic. They will be colored during runtim
 
 ### Formal requirements
 
-New icons should follow the app icon guidelines below for a consistent look & feel across applications. For Siemens applications it is mandatory to follow these guidelines.
+New icons should follow the app icon guidelines below for a consistent look and feel across applications. For Siemens applications it is mandatory to follow these guidelines.
 
 ## Icon design guidelines
 
@@ -43,13 +43,12 @@ These guidelines extend the basic guidelines on [Siemens brandville](https://bra
 
 #### Design grid and key shapes
 
-- The base grid is size 24×24
+- The base grid is 24×24
 - When designing icons, use the “Icon Design Grid” component from the Figma “iX UI Icons” library as your working background
-- The grid defines key shapes and a clearance zone (red area) icons should not touch
+- The grid defines key shapes and a clearance zone (red area), which icons should not touch
 
-  ![Basic grid](https://www.figma.com/design/wEptRgAezDU1z80Cn3eZ0o/iX-Pattern-Illustrations?type=design&node-id=801-253&mode=design&t=LqIxNidruCmTfYDF-4)
+  ![Basic grid](https://www.figma.com/design/wEptRgAezDU1z80Cn3eZ0o/iX-Documentation-illustrations?node-id=8377-9867&t=qiaAqhaBmxdLHEbz-4)
 
-  ![In-app icon design grid](https://www.figma.com/design/wEptRgAezDU1z80Cn3eZ0o/iX-Pattern-Illustrations?type=design&node-id=801-856&mode=design&t=LqIxNidruCmTfYDF-4)
 
 - Choose the key shape based on icon orientation
 - Portrait key shape for vertically oriented icons
@@ -102,14 +101,14 @@ These guidelines extend the basic guidelines on [Siemens brandville](https://bra
 
   ![Stroke widths](https://www.figma.com/design/wEptRgAezDU1z80Cn3eZ0o/iX-Pattern-Illustrations?type=design&node-id=809-23096&mode=design&t=LqIxNidruCmTfYDF-4)
 
-### 6. Gaps
+#### Gaps
 
 - Use 2px gaps between shapes to ensure clear separation
 - Avoid unsafe patterns of alternating between set pixel and no pixel, as they may become indistinguishable at certain scales or on low-resolution displays
 
   ![Gaps and unsafe pattern](https://www.figma.com/design/wEptRgAezDU1z80Cn3eZ0o/iX-Pattern-Illustrations?type=design&node-id=809-23097&mode=design&t=LqIxNidruCmTfYDF-4)
 
-### 7. Strike-through, cuts and cutouts
+#### Strike-through, cuts and cutouts
 
 - Diagonal strike-through symbolizes the opposite of an icon or an unavailability (e.g. show & hide, mute microphone, mute alarm)
 - A diagonal strike-through goes from top left to bottom right (like the crossbar of letter “N” for “No”), followed by a 2px space above right
@@ -128,8 +127,8 @@ Make sure your icon meets the following specifications:
 - In Figma, all parts are combined into a single shape named "Vector"
 - In Figma, all layout constraints are set to "Scale" and resizing behavior is tested
 - Before you export, set the icon color to #000 to ensure proper visibility in typical SVG preview tools
-- Exported SVG contains viewBox, width, and height (24×24)
-- Exported SVG must not contain a `<title>` element (causes unintended browser tooltips)
+- The exported SVG must contain viewBox, width, and height (24×24)
+- The exported SVG must not contain a `<title>` element (causes unintended browser tooltips)
 
 #### iX internal release process
 
