@@ -18,8 +18,6 @@ Use an asterisk (*) for required fields after (not before) UI text.
 
 ![UI example showing the label Username followed immediately by an asterisk (*) without a space, illustrating the rule for required field indicators.](https://www.figma.com/design/wEptRgAezDU1z80Cn3eZ0o/iX-Documentation-illustrations?node-id=7675-10143&t=dcYeZzedB1IshHMS-4)
 
-![UI example showing the label Username followed immediately by an asterisk (*) without a space, illustrating the rule for required field indicators.](https://www.figma.com/design/wEptRgAezDU1z80Cn3eZ0o/iX-Documentation-illustrations?node-id=7675-10143&t=dcYeZzedB1IshHMS-4)
-
 <div class="dos-and-donts">
   <div class="dos">
     <ul aria-label="Recommended practices">
