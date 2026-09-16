@@ -8,11 +8,15 @@ no_single_tab: true
 description: 'Form and text input fields provide essential context for users to enter data accurately and move through processes. Clear, concise microcopy within these elements reduces friction and ensures a smooth path to completion.'
 ---
 
+
+
 #
 
 ## Overview
 
-Use an asterisk (`*`) for required fields after (not before) UI text.
+Use an asterisk (*) for required fields after (not before) UI text.
+
+![UI example showing the label Username followed immediately by an asterisk (*) without a space, illustrating the rule for required field indicators.](https://www.figma.com/design/wEptRgAezDU1z80Cn3eZ0o/iX-Documentation-illustrations?node-id=7675-10143&t=dcYeZzedB1IshHMS-4)
 
 <div class="dos-and-donts">
   <div class="dos">
@@ -28,7 +32,7 @@ Use an asterisk (`*`) for required fields after (not before) UI text.
   </div>
 </div>
 
-Never include spaces between the word and the asterisk (`*`).
+Never include spaces between the word and the asterisk (*).
 
 <div class="dos-and-donts">
   <div class="dos">
