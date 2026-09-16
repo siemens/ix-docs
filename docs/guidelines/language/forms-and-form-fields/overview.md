@@ -93,12 +93,12 @@ Do not use urgent error or warning messages when users are reaching or have reac
 <div class="dos-and-donts">
   <div class="dos">
     <ul aria-label="Recommended practices">
-      <li>Do ensure mandatory input fields are clearly labeled.</li>
+      <li>Do ensure mandatory input fields are clearly labeled</li>
     </ul>
   </div>
   <div class="donts">
     <ul aria-label="Practices to avoid">
-      <li>Don't alarm the user with red error messages for simple input requirements.</li>
+      <li>Don't alarm the user with red error messages for simple input requirements</li>
     </ul>
   </div>
 </div>
