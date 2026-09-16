@@ -30,11 +30,9 @@ Six predefined HTTP illustrations (400, 401, 404, 418, 500, and 504) are mapped 
 The implementation renders the title as an `h1`, followed by optional copy text and optional instructions. The default icon is decorative and uses `aria-hidden="true"`; slotted images remain responsible for their own accessible alternative text.
 
 **Open discussion points**
-
 - ▶️ Is it always used for a full page? (what about if e.g. user enters the correct main url with the wrong query parameters)
 - ▶️ Which components are allowed in the action slot? (e.g. only button, or icon button, button link, custom components) Should we recommend a specific action component set for the `actions` slot?
-
-▶️ TODO IN FIGMA: Fix typo `Tilte` in the component layer name before the final specification is published.
+- ▶️ Header vs. title vs. title text? -> differences between Figma + Code
 
 ## 2. When to use
 
