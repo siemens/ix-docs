@@ -25,7 +25,7 @@ Before you start designing your specific icon set for your application, consider
 
 - Ask other designers within your company about the existence of an icon to prevent the creation of duplicates
 
-- Finally, we strongly recommend to entrust a professional designer with the task of designing an icon
+- Finally, we strongly recommend entrusting a professional designer with the task of designing an icon
 
 ### Icon colors
 
@@ -111,7 +111,7 @@ These guidelines extend the basic guidelines on [Siemens brandville](https://bra
 #### Strike-through, cuts and cutouts
 
 - Diagonal strike-through symbolizes the opposite of an icon or an unavailability (e.g. show & hide, mute microphone, mute alarm)
-- A diagonal strike-through goes from top left to bottom right (like the crossbar of letter "N" for "No"), followed by a 2px gap up-right
+- A diagonal strike-through goes from top left to bottom right (like the diagonal stroke of letter "N" for "No"), followed by a 2px gap up-right
 - Cuts/cutouts: use at least 1px spacing, beware of unsafe patterns (see Gaps)
 
   ![Strike-through and gaps](https://www.figma.com/design/wEptRgAezDU1z80Cn3eZ0o/iX-Pattern-Illustrations?type=design&node-id=810-23098&mode=design&t=LqIxNidruCmTfYDF-4)
@@ -121,7 +121,7 @@ These guidelines extend the basic guidelines on [Siemens brandville](https://bra
 #### General icon specs
 
 Make sure your icon meets the following specifications:
-- Short, descriptive and unique icon name
+- Icon name is short, descriptive and unique
 - Designed at 24×24
 - All strokes converted to outlines
 - In Figma, all parts are combined into a single shape named "Vector"
