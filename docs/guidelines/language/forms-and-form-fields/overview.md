@@ -75,6 +75,8 @@ Use counters for form or text input fields, or text areas with character limits,
 
 Do not use urgent error or warning messages when users are reaching or have reached limits.
 
+![UI example showing the label Username followed immediately by an asterisk (*) without a space, illustrating the rule for required field indicators.](https://www.figma.com/design/wEptRgAezDU1z80Cn3eZ0o/iX-Documentation-illustrations?node-id=8388-5196&t=X9obs5i7SQGuQmue-4)
+
 <div class="dos-and-donts">
   <div class="dos">
     <ul aria-label="Recommended practices">
