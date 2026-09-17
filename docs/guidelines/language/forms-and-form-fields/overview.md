@@ -12,8 +12,6 @@ description: 'Form and text input fields provide essential context for users to 
 
 #
 
-## Overview
-
 Use an asterisk (*) for required fields after (not before) UI text.
 
 ![UI example showing the label Username followed immediately by an asterisk (*) without a space, illustrating the rule for required field indicators.](https://www.figma.com/design/wEptRgAezDU1z80Cn3eZ0o/iX-Documentation-illustrations?node-id=7675-10143&t=ZpwJdyAT3r3yIo4A-4)
