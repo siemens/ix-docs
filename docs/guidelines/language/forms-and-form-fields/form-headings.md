@@ -10,8 +10,6 @@ description: 'Forms guide users as they provide information and move through wor
 
 #
 
-## Form headings
-
 Use sentence case for all form headings without periods (full stops).
 
 <div class="dos-and-donts">
