@@ -27,6 +27,8 @@ Use sentence casing for all labels without periods (full stops).
   </div>
 </div>
 
+![Serial number](https://www.figma.com/design/wEptRgAezDU1z80Cn3eZ0o/iX-Documentation-illustrations?node-id=8392-5420&t=jphHAjo9aSup2ZcT-4)
+
 Use short labels, ideally 1-3 words.
 
 <div class="dos-and-donts">

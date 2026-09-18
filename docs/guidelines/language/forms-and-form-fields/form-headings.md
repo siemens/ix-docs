@@ -25,7 +25,7 @@ Use sentence case for all form headings without periods (full stops).
   </div>
 </div>
 
-Keep form headings (sometimes called form names or form titles) short and don’t give instructions in the heading.
+Keep form headings (sometimes called form names or form titles) short and don't give instructions in the heading.
 
 <div class="dos-and-donts">
   <div class="dos">
@@ -50,7 +50,7 @@ Use strong verbs for form headings and keep them action-oriented.
   </div>
   <div class="donts">
     <ul aria-label="Practices to avoid">
-      <li>Tell us a little about yourself and how you’ll use the app.</li>
+      <li>Tell us a little about yourself and how you'll use the app.</li>
     </ul>
   </div>
 </div>
@@ -101,7 +101,7 @@ Only add subheadings when there is additional information that benefits users.
 <div class="dos-and-donts">
   <div class="dos">
     <ul aria-label="Recommended practices">
-      <li>Heading: Security verification<br />Subheading: We’ll send a code to your registered mobile number to confirm it’s you.</li>
+      <li>Heading: Security verification<br />Subheading: We'll send a code to your registered mobile number to confirm it's you.</li>
       <li>Heading: Schedule maintenance<br />Subheading: Choose a time window when the machine can be safely taken offline for up to 2 hours.</li>
       <li>Heading: Payment details<br />Subheading: Enter the card you'd like to use for this order. We accept Visa, Mastercard and Amex.</li>
     </ul>

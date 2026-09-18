@@ -32,7 +32,7 @@ Use placeholder text within text area / input fields to provide short examples a
   </div>
 </div>
 
-Provide helpful or precise format examples as placeholder texts when localization, helper texts or tooltips are not possible or available. See [Helper / info text](#).
+Provide helpful or precise format examples as placeholder texts when localization, helper texts or tooltips are not possible or available. See [Helper / info text](../forms-and-form-fields/helper-info-text.md).
 
 <div class="dos-and-donts">
   <div class="dos">
