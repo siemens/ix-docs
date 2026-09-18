@@ -19,7 +19,7 @@ Before you start designing your specific icon set for your application, consider
 
 - The icon may already exist under a slightly different name, or it may be planned for a future release. Please double-check or ask us when in doubt.
 
-- We recommend using more generic icons instead of creating multiple very specific new ones (e.g., use the generic "add" icon instead of creating an "add-wireless-device" icon)
+- We recommend using generic icons instead of creating multiple, specific new ones, e.g. use the generic "add" icon instead of creating an "add-wireless-device" icon.
 
 - Do not create alternatives to existing icons just for the sake of your own taste
 
