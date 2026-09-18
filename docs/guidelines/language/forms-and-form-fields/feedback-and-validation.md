@@ -51,10 +51,6 @@ Provide invalid text when the user input has not met the specified requirements 
     <ul aria-label="Recommended practices">
       <li>Field label: Username</li>
       <li>Invalid text: Username unavailable</li>
-    </ul>
-  </div>
-  <div class="dos">
-    <ul aria-label="Recommended practices">
       <li>Field label: Email address</li>
       <li>Invalid text: Missing @ symbol</li>
     </ul>
@@ -76,10 +72,6 @@ Provide warning text when there is a critical issue or a suggestion related to t
     <ul aria-label="Recommended practices">
       <li>Field label: Upload file</li>
       <li>Warning text: Upload max. 10 MB. Select another file.</li>
-    </ul>
-  </div>
-  <div class="dos">
-    <ul aria-label="Recommended practices">
       <li>Field label: Temperature</li>
       <li>Warning text: Hot water temperature limit is too high. There is a risk of scalding.</li>
     </ul>
