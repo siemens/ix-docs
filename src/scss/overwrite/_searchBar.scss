@@ -49,9 +49,22 @@
   // border, the submit icon and the clear button.
   // `!important` is required because autocomplete.js resets the outline with an
   // equally specific rule that is loaded later.
-  &:focus-within {
+  // Scoped to input focus via `:has()` so tabbing to the clear button does
+  // not keep the container ring and avoids a double outline.
+  // Uses the same color and offset tokens as the ix input focus mixin.
+  &:has(.aa-Input:focus) {
     outline: 1px solid var(--theme-color-focus-bdr) !important;
-    outline-offset: var(--theme-focus-outline-offset);
+    outline-offset: var(
+      --theme-input--focus--outline-offset,
+      var(--theme-focus-outline-offset)
+    );
+  }
+
+  // Algolia adds a blue glow via `:focus-within`. Suppress it so the only
+  // visible ring is the ix container outline while typing.
+  &:focus-within {
+    outline: none !important;
+    box-shadow: none !important;
   }
 
   .aa-InputWrapperSuffix,
@@ -85,6 +98,14 @@
 
   .aa-ClearButton {
     color: var(--theme-color-std-text);
+  }
+
+  // The clear button sits flush against the form edge, so any outline there
+  // looks clipped. It is mouse only, so remove its ring entirely.
+  .aa-ClearButton:focus,
+  .aa-ClearButton:focus-visible {
+    outline: none !important;
+    box-shadow: none !important;
   }
 }
 
