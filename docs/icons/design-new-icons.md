@@ -21,7 +21,7 @@ Before you start designing your specific icon set for your application, consider
 
 - We recommend using generic icons instead of creating multiple, specific new ones, e.g. use the generic "add" icon instead of creating an "add-wireless-device" icon.
 
-- Do not create alternatives to existing icons for no reason.
+- Do not create alternatives to existing icons.
 
 - Ask other designers within your company about the existence of an icon to prevent the creation of duplicates
 
@@ -128,7 +128,7 @@ Make sure your icon meets the following specifications:
 - In Figma, all layout constraints are set to "Scale" and resizing behavior is tested
 - Before you export, set the icon color to #000 to ensure proper visibility in typical SVG preview tools
 - The exported SVG must contain viewBox, width and height (24×24)
-- The exported SVG cannot contain a `<title>` element. It can cause unintended browser tooltips.
+- The exported SVG must not contain a `<title>` element. It can cause unintended browser tooltips.
 
 #### iX internal release process
 
