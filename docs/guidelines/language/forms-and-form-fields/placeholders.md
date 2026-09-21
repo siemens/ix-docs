@@ -12,6 +12,8 @@ description: 'Placeholders offer a hint or example of the expected input, but th
 
 Use placeholder text in search fields. See [Search and filter](../menu-functions-and-ui-labels/search-and-filter.md).
 
+![UI example showing a search field with the placeholder text Search assets….](https://www.figma.com/design/wEptRgAezDU1z80Cn3eZ0o/iX-Documentation-illustrations?node-id=8392-12417&t=EjTZKAJDhIkv5ICF-4)
+
 <div class="dos-and-donts">
   <div class="dos">
     <ul aria-label="Recommended practices">
@@ -33,6 +35,8 @@ Use placeholder text within text area / input fields to provide short examples a
 </div>
 
 Provide helpful or precise format examples as placeholder texts when localization, helper texts or tooltips are not possible or available. See [Helper / info text](../forms-and-form-fields/helper-info-text.md).
+
+![UI example showing field label Date with the placeholder text YYYY/MM/DD.](https://www.figma.com/design/wEptRgAezDU1z80Cn3eZ0o/iX-Documentation-illustrations?node-id=8406-2032&t=EjTZKAJDhIkv5ICF-4)
 
 <div class="dos-and-donts">
   <div class="dos">
@@ -58,6 +62,8 @@ Provide helpful or precise format examples as placeholder texts when localizatio
 </div>
 
 Add helpful examples within text areas for comments or notes. See [Textarea](../../../components/textarea/guide.md).
+
+![UI example showing field label Comments with the placeholder text Share any details that might help, e.g. "The issue occurs when…".](https://www.figma.com/design/wEptRgAezDU1z80Cn3eZ0o/iX-Documentation-illustrations?node-id=8406-1752&t=EjTZKAJDhIkv5ICF-4)
 
 <div class="dos-and-donts">
   <div class="dos">

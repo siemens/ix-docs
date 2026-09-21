@@ -8,20 +8,17 @@ no_single_tab: true
 description: 'Form and text input fields provide essential context for users to enter data accurately and move through processes. Clear, concise microcopy within these elements reduces friction and ensures a smooth path to completion.'
 ---
 
-
-
 #
 
 Use an asterisk (*) for required fields after (not before) UI text.
 
-![UI example showing the label Username followed immediately by an asterisk (*) without a space, illustrating the rule for required field indicators.](https://www.figma.com/design/wEptRgAezDU1z80Cn3eZ0o/iX-Documentation-illustrations?node-id=7675-10143&t=ZpwJdyAT3r3yIo4A-4)
+![UI example showing the field label Username followed immediately by an asterisk (*) without a space, illustrating the rule for required field indicators.](https://www.figma.com/design/wEptRgAezDU1z80Cn3eZ0o/iX-Documentation-illustrations?node-id=7675-10143&t=EjTZKAJDhIkv5ICF-4)
 
 <div class="dos-and-donts">
   <div class="dos">
     <ul aria-label="Recommended practices">
       <li>Username*</li>
     </ul>
-    ![UI example showing the field label Username followed immediately by an asterisk (*) without a space, illustrating the rule for required field indicators.](https://www.figma.com/design/wEptRgAezDU1z80Cn3eZ0o/iX-Documentation-illustrations?node-id=8408-2193&t=jphHAjo9aSup2ZcT-4)
   </div>
   <div class="donts">
     <ul aria-label="Practices to avoid">
@@ -76,6 +73,8 @@ Use counters for form or text input fields, or text areas with character limits,
 
 Do not use urgent error or warning messages when users are reaching or have reached limits.
 
+![UI example of a field label Username* containing JohnDoe. A blue info icon and the text 13 characters left illustrate an informational style for character limits, rather than an urgent warning.](https://www.figma.com/design/wEptRgAezDU1z80Cn3eZ0o/iX-Documentation-illustrations?node-id=8388-5196&t=EjTZKAJDhIkv5ICF-4)
+
 <div class="dos-and-donts">
   <div class="dos">
     <ul aria-label="Recommended practices">
@@ -90,8 +89,6 @@ Do not use urgent error or warning messages when users are reaching or have reac
     </ul>
   </div>
 </div>
-
-![UI example showing the field label Username*, a placeholder text JoneDoe and below the input fiel, a blue information 'i' icon with the information that 13 characters are left. This demonstrates using informational rather than urgent warning styles for reaching limits.](https://www.figma.com/design/wEptRgAezDU1z80Cn3eZ0o/iX-Documentation-illustrations?node-id=8388-5196&t=X9obs5i7SQGuQmue-4)
 
 ## Dos and Don'ts
 

@@ -12,6 +12,8 @@ description: 'Helper / info text gives users the extra context or instructions t
 
 Use helper / info text to add constraints.
 
+![UI example showing a field label Password* with the helper text Minimum 8 characters, letters and numbers only.](https://www.figma.com/design/wEptRgAezDU1z80Cn3eZ0o/iX-Documentation-illustrations?node-id=8392-12519&t=EjTZKAJDhIkv5ICF-4)
+
 <div class="dos-and-donts">
   <div class="dos">
     <ul aria-label="Recommended practices">
@@ -73,6 +75,8 @@ Use helper / info text to add constraints.
 </div>
 
 Use clear helper texts, instead of placeholders, in high-friction and error-prone fields requiring numbers and specific formats.
+
+![UI example showing a field label Date with the helper text Format: YYYY/MM/DD.](https://www.figma.com/design/wEptRgAezDU1z80Cn3eZ0o/iX-Documentation-illustrations?node-id=8406-2116&t=EjTZKAJDhIkv5ICF-4)
 
 <div class="dos-and-donts">
   <div class="dos">

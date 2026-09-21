@@ -12,6 +12,8 @@ description: 'Labels tell users exactly what information is expected before they
 
 Use sentence casing for all labels without periods (full stops).
 
+![UI example showing the field label Asset name, without a period (full stop), illustrating the rule for punctuation of field labels.](https://www.figma.com/design/wEptRgAezDU1z80Cn3eZ0o/iX-Documentation-illustrations?node-id=8392-5420&t=EjTZKAJDhIkv5ICF-4)
+
 <div class="dos-and-donts">
   <div class="dos">
     <ul aria-label="Recommended practices">
@@ -26,8 +28,6 @@ Use sentence casing for all labels without periods (full stops).
     </ul>
   </div>
 </div>
-
-![Serial number](https://www.figma.com/design/wEptRgAezDU1z80Cn3eZ0o/iX-Documentation-illustrations?node-id=8392-5420&t=jphHAjo9aSup2ZcT-4)
 
 Use short labels, ideally 1-3 words.
 

@@ -12,6 +12,8 @@ description: 'Field input validation gives users feedback on their input to ensu
 
 Provide any requirements first as helper / info text to avoid users falling immediately into invalid states. See [Forms validation](../../../components/forms-validation/guide.md).
 
+![UI example showing a field label Password with the helper text Minimum 8 characters, 1 uppercase letter (A-Z), 1 special character (!@#$%^&*).](https://www.figma.com/design/wEptRgAezDU1z80Cn3eZ0o/iX-Documentation-illustrations?node-id=8399-8833&t=EjTZKAJDhIkv5ICF-4)
+
 <div class="dos-and-donts">
   <div class="dos">
     <ul aria-label="Recommended practices">
@@ -29,6 +31,8 @@ Provide any requirements first as helper / info text to avoid users falling imme
 
 Provide clear, valid wording when the user has met all the validation criteria and can move on.
 
+![UI example showing a field label Username with the Valid text Username available.](https://www.figma.com/design/wEptRgAezDU1z80Cn3eZ0o/iX-Documentation-illustrations?node-id=8392-12664&t=EjTZKAJDhIkv5ICF-4)
+
 <div class="dos-and-donts">
   <div class="dos">
     <ul aria-label="Recommended practices">
@@ -45,6 +49,8 @@ Provide clear, valid wording when the user has met all the validation criteria a
 </div>
 
 Provide invalid text when the user input has not met the specified requirements and explain exactly what requirement is missing.
+
+![UI example showing a field label Username with the Invalid text Username unavailable.](https://www.figma.com/design/wEptRgAezDU1z80Cn3eZ0o/iX-Documentation-illustrations?node-id=8399-8321&t=EjTZKAJDhIkv5ICF-4)
 
 <div class="dos-and-donts">
   <div class="dos">
@@ -66,6 +72,8 @@ Provide invalid text when the user input has not met the specified requirements 
 </div>
 
 Provide warning text when there is a critical issue or a suggestion related to the success or failure of the users' input and explain any consequences clearly.
+
+![UI example showing a field label Upload file with the Warning text Upload max. 10 MB. Select another file.](https://www.figma.com/design/wEptRgAezDU1z80Cn3eZ0o/iX-Documentation-illustrations?node-id=8399-8594&t=EjTZKAJDhIkv5ICF-4)
 
 <div class="dos-and-donts">
   <div class="dos">
