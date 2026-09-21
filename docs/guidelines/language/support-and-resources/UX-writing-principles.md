@@ -1,5 +1,5 @@
 ---
-sidebar_position: 1
+sidebar_position: 2
 sidebar_label: UX writing principles
 title: UX writing principles
 doc-type: 'banner'

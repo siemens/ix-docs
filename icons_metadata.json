@@ -30,7 +30,7 @@
         "folder-application-screen",
         "document",
         "doublet",
-        "print"
+        "server-rack-filled"
       ]
     },
     {
@@ -223,13 +223,13 @@
         "coin-stack",
         "coins-filled",
         "coins",
+        "money",
         "success-multiple",
         "coin-filled",
         "coin",
         "success-multiple-filled",
         "product-management",
-        "info-multiple",
-        "info-multiple-filled"
+        "info-multiple"
       ]
     },
     {
@@ -1076,11 +1076,11 @@
         "shield-half",
         "electrical-energy-filled",
         "cloud-thunder-filled",
+        "shield-ai-filled",
         "shield-check-filled",
         "electrical-energy",
         "power-supply",
-        "add-shield-half",
-        "voltage"
+        "add-shield-half"
       ]
     },
     {
@@ -1368,14 +1368,14 @@
       "relatedIcons": [
         "box-ipc",
         "subtitle-filled",
+        "server-rack-filled",
         "subtitle",
         "ipcs",
         "plc-device",
         "info-feed",
         "item-details-filled",
         "control-value-bar",
-        "application-screen",
-        "calendar-week-filled"
+        "application-screen"
       ]
     },
     {
@@ -1664,13 +1664,13 @@
         "alarm-bell-cancelled-filled",
         "sound-off",
         "sound-off-filled",
+        "microphone-cancelled",
+        "microphone-cancelled-filled",
         "radio-waves-off",
         "alarm-bell",
         "battery-slash",
         "sound-mute-filled",
-        "cloud-cancelled",
-        "alarm-clock-cancelled",
-        "sound-mute"
+        "cloud-cancelled"
       ]
     },
     {
@@ -2082,6 +2082,7 @@
       "description": "A solid black icon of a vertical error bar with horizontal caps, representing statistical uncertainty or variability in charted data.",
       "relatedIcons": [
         "chain-parallel",
+        "prompts",
         "chain-step",
         "align-objects-vertically",
         "align-objects-centered",
@@ -2089,8 +2090,7 @@
         "distribute-objects-vertically",
         "chain-alternative",
         "align-object-width",
-        "line-cap-flat",
-        "function-block"
+        "line-cap-flat"
       ]
     },
     {
@@ -2187,9 +2187,9 @@
         "align-objects-bottom",
         "keyboard-floating",
         "ganttchart",
+        "server-rack-filled",
         "subtitle",
-        "workspaces",
-        "rectangle"
+        "workspaces"
       ]
     },
     {
@@ -3235,15 +3235,15 @@
       "description": "A solid black icon of a microphone, representing audio recording and voice input.",
       "relatedIcons": [
         "microphone",
+        "microphone-cancelled",
+        "microphone-cancelled-filled",
         "sound-loud-filled",
         "sound-loud",
         "sound-off-filled",
         "sound-off",
         "audio-description2",
         "music-note",
-        "comment-alt",
-        "waveform",
-        "support"
+        "comment-alt"
       ]
     },
     {
@@ -3831,9 +3831,9 @@
         "add-shield-half",
         "shield-broken",
         "generic-device-shield",
+        "shield-ai-filled",
         "shield-broken-filled",
-        "lock-filled",
-        "lock"
+        "lock-filled"
       ]
     },
     {
@@ -4159,8 +4159,8 @@
         "warning-multiple-filled",
         "warning-multiple",
         "inquiry",
-        "inquiry-mail",
-        "alarm-filled"
+        "question-ai",
+        "inquiry-mail"
       ]
     },
     {
@@ -4845,11 +4845,11 @@
         "txt-document-filled",
         "magnet-cancelled",
         "generic-device-forced-mode",
+        "aas-project-tcx",
         "sensor",
         "xls-document-filled",
         "shapes-filled",
-        "p-and-i-symbols",
-        "clear"
+        "p-and-i-symbols"
       ]
     },
     {
@@ -5267,14 +5267,14 @@
       "relatedIcons": [
         "image-filled",
         "no-image",
+        "image-ai-filled",
         "photo-camera",
         "photo-camera-cancelled-filled",
         "photo-camera-cancelled",
         "photo-cameras",
         "photo-camera-filled",
         "editor-resources",
-        "photo-camera-add",
-        "video-file"
+        "photo-camera-add"
       ]
     },
     {
@@ -5492,6 +5492,7 @@
       "description": "A solid black icon of a code bracket pair with a forward slash, representing editing or viewing source code and scripts.",
       "relatedIcons": [
         "code",
+        "code-ai",
         "document-code-filled",
         "document-code",
         "parameter",
@@ -5499,8 +5500,7 @@
         "document-program-filled",
         "interpreter",
         "firmware",
-        "script",
-        "document-program"
+        "script"
       ]
     },
     {
@@ -6182,13 +6182,13 @@
         "alarm-bell-cancelled",
         "sound-off-filled",
         "sound-off",
+        "microphone-cancelled-filled",
+        "microphone-cancelled",
         "radio-waves-off",
         "sound-mute-filled",
         "alarm-bell",
         "battery-slash",
-        "cloud-cancelled",
-        "sound-mute",
-        "battery-upright-slash"
+        "cloud-cancelled"
       ]
     },
     {
@@ -6220,8 +6220,8 @@
         "radio-waves-off",
         "sound-off-filled",
         "sound-off",
-        "alarm-bell-cancelled-filled",
-        "wlan-off"
+        "microphone-cancelled-filled",
+        "microphone-cancelled"
       ]
     },
     {
@@ -6415,11 +6415,11 @@
         "namur-out-of-spec-filled",
         "inquiry-filled",
         "inquiry",
+        "question-ai",
         "exclamation-mark",
         "inquiry-mail",
         "photo-camera-cancelled",
-        "photo-camera-cancelled-filled",
-        "namur-out-of-spec"
+        "photo-camera-cancelled-filled"
       ]
     },
     {
@@ -6575,6 +6575,7 @@
       "description": "A solid black icon of a desktop PC tower, representing a computer device or workstation hardware.",
       "relatedIcons": [
         "pc-tower",
+        "server-rack-filled",
         "screen-pc-tower-filled",
         "screen-pc-tower",
         "controller-device",
@@ -6582,8 +6583,7 @@
         "screen-filled",
         "pc-tower-settings-filled",
         "generic-device",
-        "screen-pc-tower-settings-filled",
-        "hardware-cabinet"
+        "screen-pc-tower-settings-filled"
       ]
     },
     {
@@ -6770,14 +6770,14 @@
       "relatedIcons": [
         "sound-off-filled",
         "sound-mute-filled",
+        "microphone-cancelled",
+        "microphone-cancelled-filled",
         "alarm-bell-cancelled",
         "sound-mute",
         "alarm-bell-cancelled-filled",
         "radio-waves-off",
         "sound-loud-filled",
-        "sound-loud",
-        "battery-slash",
-        "battery-upright-slash"
+        "sound-loud"
       ]
     },
     {
@@ -7162,12 +7162,12 @@
         "shield-half",
         "voltage-filled",
         "shield",
+        "shield-ai-filled",
         "shield-check",
         "cloud-thunder-filled",
         "electrical-energy",
         "shield-check-filled",
-        "add-shield-half",
-        "electrical-energy-filled"
+        "add-shield-half"
       ]
     },
     {
@@ -7453,15 +7453,15 @@
       "description": "A solid black icon of a microphone, representing audio input, recording, and voice communication.",
       "relatedIcons": [
         "microphone-filled",
+        "microphone-cancelled",
+        "microphone-cancelled-filled",
         "sound-loud",
         "sound-loud-filled",
         "audio-description2",
         "phone",
         "sound-off",
         "music-note",
-        "attach",
-        "support",
-        "shout"
+        "attach"
       ]
     },
     {
@@ -7549,6 +7549,7 @@
       ],
       "description": "A black outline icon of an empty square checkbox, representing an unselected option or state.",
       "relatedIcons": [
+        "square",
         "editor-grid-none",
         "namur-diagnostics-passive",
         "stop",
@@ -7557,8 +7558,7 @@
         "checkbox",
         "split-vertically",
         "namur-ok",
-        "split-horizontally",
-        "control-button"
+        "split-horizontally"
       ]
     },
     {
@@ -8075,7 +8075,7 @@
         "calculator",
         "table-tag",
         "editor-grid-dots",
-        "table-rows"
+        "table-ai"
       ]
     },
     {
@@ -8198,14 +8198,14 @@
       "relatedIcons": [
         "edit-document-filled",
         "pen",
+        "pen-ai",
         "edit-document",
         "drawing-document",
         "user-pen",
         "capacity-pen-filled",
         "add-document-note",
         "upload-document-note",
-        "highlight",
-        "dashboard-pen-filled"
+        "highlight"
       ]
     },
     {
@@ -8911,6 +8911,7 @@
       "description": "A solid black icon of a pair of angle brackets, representing coding or editing source code.",
       "relatedIcons": [
         "code-script",
+        "code-ai",
         "document-code-filled",
         "document-code",
         "parameter",
@@ -8918,8 +8919,7 @@
         "document-program-filled",
         "script",
         "interpreter",
-        "firmware",
-        "document-program"
+        "firmware"
       ]
     },
     {
@@ -9015,8 +9015,8 @@
         "json-document-filled",
         "document-code-filled",
         "document-code",
-        "parameter",
-        "shield-half"
+        "code-ai",
+        "parameter"
       ]
     },
     {
@@ -9306,9 +9306,9 @@
         "align-center-vertically",
         "align-center-horizontally",
         "folder-collapse-all",
+        "aas-shell",
         "variable",
-        "polygon-line",
-        "line-cap-square"
+        "polygon-line"
       ]
     },
     {
@@ -9434,13 +9434,13 @@
         "diamond",
         "audit-report",
         "report-text",
+        "document-ai-filled",
         "certificate",
+        "dashboard-ai-filled",
         "label",
         "generic-device-shield",
         "generic-device-success",
-        "tag-logging",
-        "product-catalog",
-        "report-general"
+        "tag-logging"
       ]
     },
     {
@@ -9539,7 +9539,7 @@
         "dashboard-pen-filled",
         "threshold-off",
         "plant-details-filled",
-        "dashboard-pen"
+        "dashboard-ai-filled"
       ]
     },
     {
@@ -9699,9 +9699,9 @@
         "drawing-document",
         "pen-cancelled",
         "drawing-document-filled",
+        "pen-ai",
         "group-objects",
-        "edit-document-filled",
-        "theme"
+        "edit-document-filled"
       ]
     },
     {
@@ -9762,12 +9762,12 @@
         "coins",
         "coins-filled",
         "success-multiple",
+        "money",
         "coin",
         "coin-filled",
         "success-multiple-filled",
         "product-management",
-        "info-multiple",
-        "info-multiple-filled"
+        "info-multiple"
       ]
     },
     {
@@ -9994,7 +9994,7 @@
         "drawing-document",
         "capacity-pen",
         "pen-filled",
-        "data-type-boolean"
+        "pen-ai"
       ]
     },
     {
@@ -10052,15 +10052,15 @@
       "description": "A solid black icon of a pair of four-pointed sparkles, representing magic, enhancement, or AI-powered effects.",
       "relatedIcons": [
         "star-filled",
+        "code-ai",
         "star",
         "flare",
         "star-add-filled",
         "star-add",
-        "sun-filled",
-        "sun",
-        "mandatory-done",
-        "asterisk",
-        "mouse-click-filled"
+        "shield-ai-filled",
+        "shorter-ai",
+        "document-ai-filled",
+        "image-ai-filled"
       ]
     },
     {
@@ -10802,10 +10802,10 @@
         "start-data-analysis",
         "dashboard-filled",
         "barchart",
+        "dashboard-ai-filled",
         "threshold-on",
         "dashboard",
-        "dashboard-pen",
-        "threshold-off"
+        "dashboard-pen"
       ]
     },
     {
@@ -10997,12 +10997,12 @@
         "split-horizontally",
         "remove-circle",
         "editor-grid-none",
+        "square",
         "checkbox-empty",
         "remove-circle-filled",
         "distribute-objects-vertically",
         "split-vertically",
-        "namur-diagnostics-passive",
-        "stop"
+        "namur-diagnostics-passive"
       ]
     },
     {
@@ -11028,14 +11028,14 @@
       "relatedIcons": [
         "box-ipc-fail",
         "rack-ipc-success",
+        "aas-shell-check-error-filled",
         "generic-device-error",
         "rack-ipc-question",
         "panel-ipc-fail",
         "box-ipc-success",
         "application-screen-alarm-classes",
         "generic-device-cancelled",
-        "projects-close",
-        "box-ipc-question"
+        "projects-close"
       ]
     },
     {
@@ -11200,8 +11200,8 @@
         "subtitle-filled",
         "hardware-cabinet",
         "align-object-dimensions",
-        "control-list-box",
-        "ruler-vertical"
+        "server-rack-filled",
+        "control-list-box"
       ]
     },
     {
@@ -11358,9 +11358,9 @@
         "sound-quiet",
         "sound-loud-filled",
         "radio-waves-off",
-        "alarm-bell-cancelled-filled",
-        "sound-loud",
-        "alarm-bell-cancelled"
+        "microphone-cancelled-filled",
+        "microphone-cancelled",
+        "alarm-bell-cancelled-filled"
       ]
     },
     {
@@ -11491,8 +11491,8 @@
         "dashboard-pen-filled",
         "report-text",
         "threshold-off",
-        "chart-types",
-        "chart-types-filled"
+        "dashboard-ai-filled",
+        "chart-types"
       ]
     },
     {
@@ -11786,8 +11786,8 @@
         "keyboard-floating",
         "control-value-bar",
         "plc-device-tag",
-        "pc-tower",
-        "pc-tower-filled"
+        "server-rack-filled",
+        "pc-tower"
       ]
     },
     {
@@ -11852,9 +11852,9 @@
         "inquiry",
         "about",
         "info",
+        "question-ai",
         "alarm-filled",
-        "about-filled",
-        "info-filled"
+        "about-filled"
       ]
     },
     {
@@ -12401,14 +12401,14 @@
       "relatedIcons": [
         "dashboard-pen",
         "dashboard-filled",
+        "dashboard-ai-filled",
         "dashboard",
         "chart-types-filled",
         "chart-types",
         "analyze",
         "report-barchart",
         "start-data-analysis",
-        "grid-pen",
-        "threshold-on"
+        "grid-pen"
       ]
     },
     {
@@ -12897,9 +12897,9 @@
         "width",
         "minimize",
         "height",
+        "shorter-ai",
         "editor-guides",
-        "compare",
-        "sort"
+        "compare"
       ]
     },
     {
@@ -12964,8 +12964,8 @@
         "code-document-check",
         "code-script",
         "code",
-        "firmware",
-        "document"
+        "code-ai",
+        "firmware"
       ]
     },
     {
@@ -13087,14 +13087,14 @@
       "relatedIcons": [
         "checkbox-empty",
         "editor-grid-none",
+        "square",
         "stop",
         "rectangle",
         "missing-symbol",
         "namur-ok",
         "checkbox",
         "namur-diagnostics-passive-filled",
-        "checkbox-empty-filled",
-        "stop-filled"
+        "checkbox-empty-filled"
       ]
     },
     {
@@ -13117,6 +13117,7 @@
       "description": "A solid black icon of an empty square canvas inside a border, representing turning off or hiding the editor grid.",
       "relatedIcons": [
         "checkbox-empty",
+        "square",
         "namur-diagnostics-passive",
         "stop",
         "rectangle",
@@ -13124,8 +13125,7 @@
         "checkbox",
         "split-vertically",
         "namur-ok",
-        "split-horizontally",
-        "control-button"
+        "split-horizontally"
       ]
     },
     {
@@ -14418,6 +14418,7 @@
       "description": "A solid black icon of two opposing arrows pointing toward a central vertical bar, representing horizontally shrinking or compressing content.",
       "relatedIcons": [
         "longer",
+        "shorter-ai",
         "width",
         "move-horizontally",
         "maximize",
@@ -14425,8 +14426,7 @@
         "height",
         "move-vertically",
         "compare",
-        "limits-check",
-        "editor-guides"
+        "limits-check"
       ]
     },
     {
@@ -14621,11 +14621,11 @@
         "sound-off-filled",
         "alarm-bell-cancelled",
         "alarm-bell-cancelled-filled",
+        "microphone-cancelled",
+        "microphone-cancelled-filled",
         "sound-mute-filled",
         "sound-mute",
-        "eye-cancelled",
-        "generic-device-slash",
-        "sound-loud-filled"
+        "eye-cancelled"
       ]
     },
     {
@@ -14818,9 +14818,9 @@
         "stop",
         "circle-dot",
         "circle-play",
+        "square",
         "editor-grid-none",
-        "checkbox-empty",
-        "standby"
+        "checkbox-empty"
       ]
     },
     {
@@ -16189,10 +16189,10 @@
         "image",
         "image-filled",
         "photo-cameras",
+        "image-ai-filled",
         "photo-camera-filled",
         "question-mark",
-        "pdf-document-filled",
-        "photo-camera-add"
+        "pdf-document-filled"
       ]
     },
     {
@@ -17286,15 +17286,15 @@
       "description": "A solid black icon of a nested rectangular block diagram with a highlighted inner block, representing editing or configuring a macro component.",
       "relatedIcons": [
         "simit-macro",
+        "aas-project-c",
         "mastodon-logo",
+        "aas-project-tcx",
         "compound-block",
         "line-cap-square",
         "coin-filled",
         "combine",
         "line-cap-flat",
-        "coin",
-        "shapes",
-        "text-underline"
+        "coin"
       ]
     },
     {
@@ -17890,9 +17890,9 @@
         "image",
         "photo-camera-cancelled",
         "image-filled",
+        "image-ai-filled",
         "no-image",
-        "video-camera-record",
-        "video-camera-record-filled"
+        "video-camera-record"
       ]
     },
     {
@@ -18251,8 +18251,8 @@
         "eye-cancelled-filled",
         "sound-off",
         "sound-off-filled",
-        "wlan-off",
-        "cloud-cancelled"
+        "microphone-cancelled",
+        "microphone-cancelled-filled"
       ]
     },
     {
@@ -19169,10 +19169,10 @@
         "move-horizontally",
         "maximize",
         "limits-check",
+        "shorter-ai",
         "minimize",
         "compare",
-        "reorder",
-        "move-vertically"
+        "reorder"
       ]
     },
     {
@@ -19337,9 +19337,9 @@
         "photo-cameras",
         "photo-camera-filled",
         "image-filled",
+        "image-ai-filled",
         "photo-camera-add",
-        "pdf-document-filled",
-        "question-mark"
+        "pdf-document-filled"
       ]
     },
     {
@@ -19764,9 +19764,9 @@
         "distribute-objects-horizontally",
         "application-screen",
         "align-objects-right",
+        "square",
         "editor-grid-none",
-        "checkbox-empty",
-        "frames-filled"
+        "checkbox-empty"
       ]
     },
     {
@@ -20221,14 +20221,14 @@
       "relatedIcons": [
         "dashboard-filled",
         "dashboard-pen",
+        "dashboard-ai-filled",
         "dashboard-pen-filled",
         "chart-types",
         "chart-types-filled",
         "report-barchart",
         "report-general",
         "threshold-on",
-        "report-linechart",
-        "analyze"
+        "report-linechart"
       ]
     },
     {
@@ -20812,9 +20812,9 @@
         "document-code",
         "parameter",
         "script",
+        "code-ai",
         "scripts",
-        "interpreter",
-        "document-program-filled"
+        "interpreter"
       ]
     },
     {
@@ -20974,11 +20974,11 @@
         "txt-document-filled",
         "generic-device-forced-mode",
         "xls-document-filled",
+        "aas-project-tcx",
         "shapes-filled",
         "coin-filled",
         "magnet-cancelled",
-        "text-underline",
-        "namur-failure-filled"
+        "text-underline"
       ]
     },
     {
@@ -21733,7 +21733,7 @@
         "star-filled",
         "star-cancelled",
         "mandatory-done",
-        "star-cancelled-filled"
+        "document-ai-filled"
       ]
     },
     {
@@ -23763,8 +23763,8 @@
         "sound-loud-filled",
         "sound-loud",
         "radio-waves-off",
-        "battery-xmark",
-        "alarm-bell-cancelled"
+        "microphone-cancelled",
+        "microphone-cancelled-filled"
       ]
     },
     {
@@ -23893,8 +23893,8 @@
         "doughnutchart",
         "success-multiple",
         "doughnutchart-filled",
-        "info-multiple",
-        "link"
+        "aas-project-c",
+        "info-multiple"
       ]
     },
     {
@@ -24343,11 +24343,11 @@
         "stop",
         "generic-device-stop",
         "circle-pause",
+        "square",
         "checkbox-empty",
         "editor-grid-none",
         "capture",
-        "circle-dot",
-        "movie"
+        "circle-dot"
       ]
     },
     {
@@ -25029,9 +25029,9 @@
         "user-pen",
         "add-document-note",
         "capacity-pen-filled",
+        "pen-ai",
         "upload-document-note",
-        "drawing-document-filled",
-        "grid-pen"
+        "drawing-document-filled"
       ]
     },
     {
@@ -25122,14 +25122,14 @@
       "relatedIcons": [
         "pc-tower-filled",
         "controller-device",
+        "server-rack-filled",
         "calendar-day",
         "storage",
         "generic-device",
         "calendar-week",
         "calendar-day-filled",
         "screen-pc-tower",
-        "screen-pc-tower-filled",
-        "capacity-locked"
+        "screen-pc-tower-filled"
       ]
     },
     {
@@ -25550,11 +25550,11 @@
         "pen",
         "image",
         "screenshot-filled",
+        "image-ai-filled",
         "text-circle-rectangle",
         "edit-document",
         "image-filled",
-        "align-objects-horizontally",
-        "info-feed"
+        "align-objects-horizontally"
       ]
     },
     {
@@ -26790,13 +26790,13 @@
         "photo-camera",
         "photo-camera-filled",
         "photo-cameras",
+        "image-ai-filled",
         "add-user",
         "zoom-in",
         "add-eye",
         "add-document-note",
         "image",
-        "monitoring-add",
-        "add-eye-filled"
+        "monitoring-add"
       ]
     },
     {
@@ -26987,11 +26987,11 @@
         "doughnutchart-filled",
         "doughnutchart",
         "radarchart",
+        "dashboard-ai-filled",
         "piechart",
         "diamond",
         "piechart-filled",
-        "chart-types-filled",
-        "chart-types"
+        "chart-types-filled"
       ]
     },
     {
@@ -27577,9 +27577,9 @@
         "ipcs",
         "details",
         "folder-open",
+        "server-rack-filled",
         "library",
-        "folder-application-screen",
-        "folder"
+        "folder-application-screen"
       ]
     },
     {
@@ -28073,10 +28073,10 @@
         "code",
         "label-filled",
         "document-code-filled",
+        "code-ai",
         "label",
         "editor-grid",
-        "tag-filled",
-        "document-program-filled"
+        "tag-filled"
       ]
     },
     {
@@ -28136,13 +28136,13 @@
         "screenshot",
         "group-objects",
         "editor-resources",
+        "image-ai-filled",
         "align-object-dimensions",
         "image",
         "send-backward",
         "drag-and-drop",
         "image-filled",
-        "bring-to-front",
-        "ungroup-objects"
+        "bring-to-front"
       ]
     },
     {
@@ -28168,14 +28168,14 @@
       "relatedIcons": [
         "screenshot-filled",
         "group-objects",
+        "image-ai-filled",
         "editor-resources",
         "image",
         "image-filled",
         "reference-point-top-right",
         "reference-point-bottom-right",
         "drag-and-drop",
-        "reference-point-bottom-left",
-        "reference-point-top-left"
+        "reference-point-bottom-left"
       ]
     },
     {
@@ -28436,8 +28436,8 @@
         "list",
         "tasks-open",
         "card-layout",
-        "item-details-filled",
-        "frames-filled"
+        "server-rack-filled",
+        "item-details-filled"
       ]
     },
     {
@@ -28499,11 +28499,11 @@
         "dashboard-pen-filled",
         "chart-types-filled",
         "dashboard-filled",
+        "dashboard-ai-filled",
         "dashboard",
         "barchart",
         "dashboard-pen",
-        "threshold-on",
-        "threshold-off"
+        "threshold-on"
       ]
     },
     {
@@ -28792,10 +28792,10 @@
         "align-objects-bottom",
         "plant-filled",
         "hierarchy",
+        "server-rack-filled",
         "barchart",
         "screen-pc-tower",
-        "plant-details",
-        "screen-pc-tower-filled"
+        "plant-details"
       ]
     },
     {
@@ -29148,16 +29148,16 @@
       ],
       "description": "A black outline icon of a rectangle, representing drawing or selecting a rectangular shape.",
       "relatedIcons": [
-        "editor-grid-none",
         "checkbox-empty",
+        "editor-grid-none",
+        "square",
         "namur-diagnostics-passive",
         "stop",
         "control-button",
         "panel-ipc",
         "application-screen",
         "align-object-width",
-        "subtitle",
-        "align-object-dimensions"
+        "subtitle"
       ]
     },
     {
@@ -29417,9 +29417,9 @@
         "text-document",
         "folder-open",
         "ipcs",
+        "server-rack-filled",
         "folder-open-filled",
-        "folder-application-screen",
-        "details"
+        "folder-application-screen"
       ]
     },
     {
@@ -29648,8 +29648,8 @@
         "edit-document-filled",
         "edit-document",
         "pen-filled",
-        "theme",
-        "highlight"
+        "pen-ai",
+        "theme"
       ]
     },
     {
@@ -29674,13 +29674,13 @@
         "highlight-filled",
         "pen-filled",
         "edit-document-filled",
+        "pen-ai",
         "drawing-document",
         "pen",
         "dashboard-pen",
         "user-pen",
         "create-plant",
-        "ink-pen",
-        "ink-pen-filled"
+        "ink-pen"
       ]
     },
     {
@@ -29838,11 +29838,11 @@
         "shield-half",
         "generic-device-shield",
         "shield",
+        "shield-ai-filled",
         "shield-broken-filled",
         "cloud-new-filled",
         "shield-broken",
-        "shield-filled",
-        "plant-security-filled"
+        "shield-filled"
       ]
     },
     {
@@ -30203,12 +30203,12 @@
         "code",
         "script",
         "topic-filled",
+        "code-ai",
         "group",
         "document-code-filled",
         "code-function",
         "interpreter-filled",
-        "document-code",
-        "script-add"
+        "document-code"
       ]
     },
     {
@@ -30559,10 +30559,10 @@
         "folder-tag",
         "plc-tag",
         "simulation-table",
+        "table-ai",
         "calendar-filled",
         "trend-companion",
-        "scheduler-filled",
-        "paste"
+        "scheduler-filled"
       ]
     },
     {
@@ -30751,13 +30751,13 @@
         "control-text-button",
         "text-circle-rectangle-filled",
         "text-circle-rectangle",
+        "prompts",
         "chart-error-bar",
         "tree-two-level",
         "editor-resources",
         "prio-low",
         "heading",
-        "frames-filled",
-        "txt-document"
+        "frames-filled"
       ]
     },
     {
@@ -31313,7 +31313,7 @@
         "upload-document-note",
         "ink-pen",
         "ink-pen-filled",
-        "theme"
+        "pen-ai"
       ]
     },
     {
@@ -31903,8 +31903,8 @@
         "edit-document-filled",
         "edit-document",
         "pen-filled",
-        "theme",
-        "highlight"
+        "pen-ai",
+        "theme"
       ]
     },
     {
@@ -32226,12 +32226,12 @@
         "distribute-objects-vertically",
         "checkbox-mixed",
         "application-screen",
+        "square",
         "checkbox-empty",
         "editor-grid-none",
         "text-alginment-center",
         "align-center-horizontally",
-        "trend-flat-curve",
-        "stop"
+        "trend-flat-curve"
       ]
     },
     {
@@ -32389,10 +32389,10 @@
         "cloud-fail",
         "alarm-bell-cancelled",
         "cloud",
+        "microphone-cancelled",
         "battery-slash",
-        "sound-off",
-        "eye-cancelled",
-        "sound-off-filled"
+        "microphone-cancelled-filled",
+        "sound-off"
       ]
     },
     {
@@ -32783,9 +32783,9 @@
         "add-shield-half",
         "shield-broken",
         "lock",
+        "shield-ai-filled",
         "lock-filled",
-        "generic-device-shield",
-        "certificate-success"
+        "generic-device-shield"
       ]
     },
     {
@@ -33868,11 +33868,11 @@
         "chart-curve-stepped",
         "variable",
         "function-block",
+        "aas-shell",
         "align-center-horizontally",
         "distribute-objects-horizontally",
         "trend-flat-curve",
-        "align-center-vertically",
-        "chain-alternative"
+        "align-center-vertically"
       ]
     },
     {
@@ -35019,8 +35019,8 @@
         "text-document",
         "clipboard",
         "add-document-note",
-        "grid-pen",
-        "drawing-document-filled"
+        "pen-ai",
+        "grid-pen"
       ]
     },
     {
@@ -35476,8 +35476,8 @@
         "text-document",
         "document-success",
         "document-filled",
-        "user-manual-filled",
-        "drawing-document"
+        "money",
+        "user-manual-filled"
       ]
     },
     {
@@ -35607,9 +35607,9 @@
         "scheduler",
         "pc-tower",
         "calendar-filled",
+        "server-rack-filled",
         "subtitle",
-        "subtitle-filled",
-        "application-screens"
+        "subtitle-filled"
       ]
     },
     {
@@ -35670,12 +35670,12 @@
         "rack-ipc-fail",
         "generic-device-success",
         "panel-ipc-success",
+        "aas-shell-check-ok-filled",
         "rack-ipc-question",
         "box-ipc-fail",
         "box-ipc-question",
         "label",
-        "document-success",
-        "label-filled"
+        "document-success"
       ]
     },
     {
@@ -35836,7 +35836,7 @@
         "info-feed",
         "align-objects-bottom",
         "subtitle",
-        "ipcs"
+        "server-rack-filled"
       ]
     },
     {
@@ -37013,9 +37013,9 @@
         "operate-plant-filled",
         "global-plant",
         "global-plant-filled",
+        "aas-shell-search-filled",
         "plant-handbook",
-        "plant-handbook-filled",
-        "plant"
+        "plant-handbook-filled"
       ]
     },
     {
@@ -37175,10 +37175,10 @@
         "coin-filled",
         "coin",
         "success-multiple",
+        "money",
         "success-multiple-filled",
         "info-multiple",
-        "info-multiple-filled",
-        "doughnutchart-filled"
+        "info-multiple-filled"
       ]
     },
     {
@@ -37596,11 +37596,11 @@
         "control-value-bar",
         "stacked-barchart",
         "info-feed",
+        "server-rack-filled",
         "card-layout",
         "box-plot",
         "ipcs",
-        "monitorings",
-        "box-plot-filled"
+        "monitorings"
       ]
     },
     {
@@ -37825,12 +37825,12 @@
         "panel-ipc",
         "align-object-width",
         "application-screen",
+        "square",
         "editor-grid-none",
         "checkbox-empty",
         "generic-device",
         "battery-empty",
-        "distribute-objects-vertically",
-        "namur-diagnostics-passive"
+        "distribute-objects-vertically"
       ]
     },
     {
@@ -38185,7 +38185,7 @@
         "dashboard-filled",
         "report-text",
         "dashboard-pen-filled",
-        "monitoring-add"
+        "dashboard-ai-filled"
       ]
     },
     {
@@ -38311,12 +38311,12 @@
         "calendar",
         "table-tag",
         "calendar-filled",
+        "table-ai",
         "table-settings",
         "dashboard-pen-filled",
         "scheduler",
         "edit-document-filled",
-        "scheduler-filled",
-        "calendar-settings"
+        "scheduler-filled"
       ]
     },
     {
@@ -38445,10 +38445,10 @@
         "image",
         "image-filled",
         "photo-camera-cancelled-filled",
+        "image-ai-filled",
         "photo-camera-cancelled",
         "no-image",
-        "video-camera-record-filled",
-        "profisafe-logo"
+        "video-camera-record-filled"
       ]
     },
     {
@@ -38544,7 +38544,7 @@
         "star",
         "shield-half",
         "certificate-success-filled",
-        "certificate-success"
+        "shield-ai-filled"
       ]
     },
     {
@@ -38570,12 +38570,12 @@
         "photo-camera-cancelled-filled",
         "photo-camera-cancelled",
         "image-filled",
+        "image-ai-filled",
         "photo-camera",
         "photo-cameras",
         "cancelled",
         "photo-camera-filled",
-        "generic-device-slash",
-        "editor-resources"
+        "generic-device-slash"
       ]
     },
     {
@@ -38832,11 +38832,11 @@
         "chart-curve-stepped",
         "variable",
         "function-block",
+        "aas-shell",
         "align-center-horizontally",
         "distribute-objects-horizontally",
         "trend-flat-curve",
-        "align-center-vertically",
-        "chain-alternative"
+        "align-center-vertically"
       ]
     },
     {
@@ -38928,13 +38928,13 @@
         "edit-document",
         "pen-filled",
         "edit-document-filled",
+        "pen-ai",
         "drawing-document",
         "pen-cancelled",
         "clipboard",
         "drawing-document-filled",
         "add-document-note",
-        "pin",
-        "user-pen"
+        "pin"
       ]
     },
     {
@@ -39550,10 +39550,10 @@
         "coin",
         "coin-filled",
         "success-multiple",
+        "money",
         "success-multiple-filled",
         "info-multiple",
-        "info-multiple-filled",
-        "doughnutchart-filled"
+        "info-multiple-filled"
       ]
     },
     {
@@ -39651,8 +39651,8 @@
         "library",
         "text-document",
         "document",
-        "ticket-filled",
-        "checkbox"
+        "money",
+        "ticket-filled"
       ]
     },
     {
@@ -40792,12 +40792,12 @@
         "dashboard-filled",
         "analyze",
         "dashboard",
+        "dashboard-ai-filled",
         "dashboard-pen-filled",
         "threshold-off",
         "threshold-on",
         "barchart",
-        "dashboard-pen",
-        "piechart-filled"
+        "dashboard-pen"
       ]
     },
     {
@@ -41632,6 +41632,7 @@
       "description": "A solid black icon of a crossed-out square with a diagonal line and small corner marks, representing a missing or unavailable symbol or asset.",
       "relatedIcons": [
         "namur-diagnostics-passive",
+        "square",
         "checkbox-empty",
         "editor-grid-none",
         "close-small",
@@ -41639,8 +41640,7 @@
         "close",
         "stop",
         "namur-ok",
-        "namur-failure",
-        "editor-grid-lines"
+        "namur-failure"
       ]
     },
     {
@@ -41898,14 +41898,14 @@
       "relatedIcons": [
         "sound-off",
         "sound-mute-filled",
+        "microphone-cancelled-filled",
+        "microphone-cancelled",
         "sound-mute",
         "alarm-bell-cancelled",
         "alarm-bell-cancelled-filled",
         "sound-loud-filled",
         "radio-waves-off",
-        "sound-loud",
-        "battery-slash",
-        "battery-upright-slash"
+        "sound-loud"
       ]
     },
     {
@@ -42939,6 +42939,7 @@
       "description": "A solid black icon of a landscape photo with mountains and a sun inside a rectangle, representing images or photo content.",
       "relatedIcons": [
         "image",
+        "image-ai-filled",
         "no-image",
         "photo-camera",
         "photo-cameras",
@@ -42946,8 +42947,7 @@
         "photo-camera-filled",
         "photo-camera-cancelled",
         "editor-resources",
-        "user-profile-filled",
-        "screenshot-filled"
+        "user-profile-filled"
       ]
     },
     {
@@ -43139,8 +43139,8 @@
         "chart-types",
         "polarchart",
         "radarchart",
-        "draw-circle-segment",
-        "dashboard-filled"
+        "dashboard-ai-filled",
+        "draw-circle-segment"
       ]
     },
     {
@@ -43265,12 +43265,12 @@
         "dashboard-filled",
         "dashboard-pen-filled",
         "analyze",
+        "dashboard-ai-filled",
         "dashboard",
         "dashboard-pen",
         "piechart-filled",
         "threshold-off",
-        "threshold-on",
-        "barchart"
+        "threshold-on"
       ]
     },
     {
@@ -43299,11 +43299,11 @@
         "plant-settings",
         "operate-plant-filled",
         "operate-plant",
+        "aas-shell-search-filled",
         "global-plant-filled",
         "global-plant",
         "plant-handbook-filled",
-        "plant-handbook",
-        "analyze"
+        "plant-handbook"
       ]
     },
     {
@@ -43684,6 +43684,7 @@
       ],
       "description": "A solid black icon of a sword with motion lines, representing an attack or melee strike action.",
       "relatedIcons": [
+        "shield-ai-filled",
         "shield-half",
         "cut-filled",
         "add-shield-half",
@@ -43692,8 +43693,7 @@
         "leaf",
         "shield-filled",
         "rocket-filled",
-        "generic-device-shield",
-        "shield-broken"
+        "generic-device-shield"
       ]
     },
     {
@@ -44310,8 +44310,8 @@
         "polarchart",
         "piechart",
         "piechart-filled",
-        "diamond",
-        "chart-types"
+        "dashboard-ai-filled",
+        "diamond"
       ]
     },
     {
@@ -44403,6 +44403,7 @@
       "description": "A solid black icon of a square, representing stopping or halting media or an ongoing process.",
       "relatedIcons": [
         "checkbox-empty",
+        "square",
         "editor-grid-none",
         "namur-diagnostics-passive",
         "rectangle",
@@ -44410,8 +44411,7 @@
         "circle-stop",
         "circle-stop-filled",
         "namur-diagnostics-passive-filled",
-        "distribute-objects-vertically",
-        "movie"
+        "distribute-objects-vertically"
       ]
     },
     {
@@ -44757,13 +44757,13 @@
         "dashboard",
         "dashboard-pen-filled",
         "chart-types-filled",
+        "dashboard-ai-filled",
         "chart-types",
         "dashboard-pen",
         "report-barchart",
         "analyze",
         "report-general",
-        "threshold-on",
-        "report-linechart"
+        "threshold-on"
       ]
     },
     {
@@ -45117,13 +45117,13 @@
         "rhomb-filled",
         "triangle",
         "warning-rhomb",
+        "square",
         "checkbox-empty",
         "editor-grid-none",
         "triangle-filled",
         "namur-diagnostics-passive",
         "play",
-        "warning-rhomb-multiple",
-        "missing-symbol"
+        "warning-rhomb-multiple"
       ]
     },
     {
@@ -45155,8 +45155,8 @@
         "cam",
         "cam-track",
         "polygon",
-        "line-cap-square",
-        "line-cap-flat"
+        "prompts",
+        "line-cap-square"
       ]
     },
     {
@@ -45510,6 +45510,7 @@
       ],
       "description": "A solid black icon of a stacked, interlocking block structure, representing combining or grouping multiple elements into a single compound unit.",
       "relatedIcons": [
+        "aas-project-c",
         "coin",
         "function-block",
         "connector-rect",
@@ -45518,8 +45519,7 @@
         "client-interface",
         "switch-slider",
         "coin-filled",
-        "asset-network",
-        "line-cap-square"
+        "asset-network"
       ]
     },
     {
@@ -45809,13 +45809,13 @@
         "dashboard-pen-filled",
         "dashboard",
         "dashboard-filled",
+        "dashboard-ai-filled",
         "chart-types",
         "chart-types-filled",
         "analyze",
         "create-plant",
         "report-barchart",
-        "threshold-on",
-        "edit-plant"
+        "threshold-on"
       ]
     },
     {
@@ -46205,7 +46205,7 @@
         "generic-device-error",
         "project-close",
         "panel-ipc-fail",
-        "mail-alarm-classes"
+        "aas-shell-check-error-filled"
       ]
     },
     {
@@ -46237,6 +46237,1671 @@
         "circle-dot",
         "ellipse-arc",
         "ellipse-filled"
+      ]
+    },
+    {
+      "id": 1415,
+      "name": "server-rack",
+      "categories": [
+        "Devices and hardware",
+        "Data and analytics"
+      ],
+      "tags": [
+        "server",
+        "server rack",
+        "data center",
+        "hosting",
+        "backend",
+        "infrastructure",
+        "network",
+        "database",
+        "cloud",
+        "hardware"
+      ],
+      "description": "A solid black icon of a vertical stack of server units in a rack, representing backend infrastructure or data center hardware.",
+      "relatedIcons": []
+    },
+    {
+      "id": 1416,
+      "name": "aas-project-c-filled",
+      "categories": [
+        "Data and analytics",
+        "Status and feedback"
+      ],
+      "tags": [
+        "project",
+        "project-status",
+        "project-phase",
+        "stage-c",
+        "milestone",
+        "workflow",
+        "pipeline",
+        "step-indicator",
+        "progress",
+        "status"
+      ],
+      "description": "A solid black icon of a vertical stack of three labeled blocks with the letter C on the middle block, representing a specific project stage or status in a multi-step workflow.",
+      "relatedIcons": []
+    },
+    {
+      "id": 1417,
+      "name": "movie-ai",
+      "categories": [
+        "Media and communication",
+        "Data and analytics"
+      ],
+      "tags": [
+        "movie",
+        "film",
+        "video",
+        "ai",
+        "artificial-intelligence",
+        "automation",
+        "media-processing",
+        "video-analysis",
+        "smart-media",
+        "machine-learning"
+      ],
+      "description": "A solid black icon of a film strip with the letters 'AI' inside, representing artificial intelligence for movies or video content.",
+      "relatedIcons": []
+    },
+    {
+      "id": 1418,
+      "name": "aas-shell-check-warning",
+      "categories": [
+        "Status and feedback",
+        "Actions"
+      ],
+      "tags": [
+        "warning",
+        "alert",
+        "error",
+        "caution",
+        "shell",
+        "command-line",
+        "terminal",
+        "check",
+        "validation",
+        "lint"
+      ],
+      "description": "A solid black icon of a terminal window with an exclamation mark inside a triangle, representing a shell command warning or validation alert.",
+      "relatedIcons": []
+    },
+    {
+      "id": 1419,
+      "name": "longer-ai",
+      "categories": [
+        "Actions",
+        "Media and communication"
+      ],
+      "tags": [
+        "text length",
+        "extend text",
+        "expand content",
+        "longer message",
+        "increase length",
+        "ai writing",
+        "content expansion",
+        "text editing",
+        "copywriting",
+        "rewrite longer"
+      ],
+      "description": "A solid black icon of a stylized letter L with an extended horizontal bar, representing making text or content longer using AI.",
+      "relatedIcons": []
+    },
+    {
+      "id": 1420,
+      "name": "savings",
+      "categories": [
+        "Data and analytics",
+        "Status and feedback"
+      ],
+      "tags": [
+        "savings",
+        "piggy-bank",
+        "budget",
+        "finance",
+        "money",
+        "bank",
+        "deposit",
+        "save",
+        "account",
+        "funds"
+      ],
+      "description": "A solid black icon of a piggy bank with a coin, representing saving money or managing financial reserves.",
+      "relatedIcons": []
+    },
+    {
+      "id": 1421,
+      "name": "aas-project-generic-filled",
+      "categories": [
+        "Actions"
+      ],
+      "tags": [
+        "project",
+        "generic project",
+        "workspace",
+        "dashboard",
+        "app window",
+        "application",
+        "panel",
+        "interface",
+        "layout",
+        "module"
+      ],
+      "description": "A solid black icon of a generic application window with a header bar and content area, representing a project or workspace container.",
+      "relatedIcons": []
+    },
+    {
+      "id": 1422,
+      "name": "movie-ai-filled",
+      "categories": [
+        "Media and communication",
+        "Data and analytics"
+      ],
+      "tags": [
+        "movie",
+        "film",
+        "video",
+        "ai",
+        "artificial-intelligence",
+        "automation",
+        "media-processing",
+        "video-analysis",
+        "smart-media",
+        "machine-learning"
+      ],
+      "description": "A solid black icon of a filmstrip with the letters 'AI' inside, representing AI-powered movie or video processing.",
+      "relatedIcons": []
+    },
+    {
+      "id": 1423,
+      "name": "aas-shell-filled",
+      "categories": [
+        "Industrial"
+      ],
+      "tags": [
+        "shell",
+        "seashell",
+        "clam",
+        "marine",
+        "ocean",
+        "coastal",
+        "decorative",
+        "nature",
+        "nautical"
+      ],
+      "description": "A solid black icon of a stylized seashell with radiating ridges, representing marine or coastal themes.",
+      "relatedIcons": []
+    },
+    {
+      "id": 1424,
+      "name": "image-ai",
+      "categories": [
+        "Media and communication",
+        "Data and analytics"
+      ],
+      "tags": [
+        "image",
+        "photo",
+        "picture",
+        "ai",
+        "artificial-intelligence",
+        "image-generation",
+        "image-processing",
+        "computer-vision",
+        "media"
+      ],
+      "description": "A solid black icon of a landscape photo with a small AI badge, representing AI-powered image generation and processing.",
+      "relatedIcons": []
+    },
+    {
+      "id": 1425,
+      "name": "aas-project-empty",
+      "categories": [
+        "Actions",
+        "Data and analytics"
+      ],
+      "tags": [
+        "project",
+        "new project",
+        "empty project",
+        "add project",
+        "create project",
+        "project template",
+        "project placeholder",
+        "project structure",
+        "project outline"
+      ],
+      "description": "A black outline icon of a simplified project window with an empty content area, representing creating or viewing an empty project workspace.",
+      "relatedIcons": []
+    },
+    {
+      "id": 1426,
+      "name": "prompt",
+      "categories": [
+        "Actions",
+        "Media and communication"
+      ],
+      "tags": [
+        "prompt",
+        "message",
+        "question",
+        "dialog",
+        "input",
+        "ask",
+        "query",
+        "command",
+        "interaction",
+        "chat"
+      ],
+      "description": "A solid black icon of a speech bubble with three horizontal lines, representing a text prompt or message input.",
+      "relatedIcons": []
+    },
+    {
+      "id": 1427,
+      "name": "aas-project-ax",
+      "categories": [
+        "Actions",
+        "Data and analytics"
+      ],
+      "tags": [
+        "project",
+        "plan",
+        "roadmap",
+        "timeline",
+        "workflow",
+        "process",
+        "strategy",
+        "planning",
+        "project-management",
+        "initiative"
+      ],
+      "description": "A solid black icon of a branching project roadmap with nodes and connecting lines, representing project planning and workflow management.",
+      "relatedIcons": []
+    },
+    {
+      "id": 1428,
+      "name": "aas-project-tcx-filled",
+      "categories": [
+        "Data and analytics",
+        "Navigation"
+      ],
+      "tags": [
+        "route",
+        "track",
+        "tcx",
+        "gps",
+        "path",
+        "course",
+        "activity",
+        "training",
+        "navigation",
+        "mapping"
+      ],
+      "description": "A solid black icon of a stylized route with connected waypoints and a TCX label, representing GPS track or training course data.",
+      "relatedIcons": []
+    },
+    {
+      "id": 1429,
+      "name": "pen-ai-filled",
+      "categories": [
+        "Actions",
+        "Media and communication"
+      ],
+      "tags": [
+        "pen",
+        "edit",
+        "write",
+        "compose",
+        "ai",
+        "artificial-intelligence",
+        "assist",
+        "smart-edit",
+        "auto-generate",
+        "content-creation"
+      ],
+      "description": "A solid black icon of a fountain pen combined with an AI chip, representing intelligent writing and AI-assisted editing.",
+      "relatedIcons": []
+    },
+    {
+      "id": 1430,
+      "name": "aas-shell-export",
+      "categories": [
+        "Actions",
+        "Data and analytics"
+      ],
+      "tags": [
+        "export",
+        "upload",
+        "send",
+        "share",
+        "data-out",
+        "arrow-up",
+        "shell",
+        "container",
+        "transfer"
+      ],
+      "description": "A black outline icon of an upward arrow emerging from a rectangular container, representing exporting or sending data out of a shell or container.",
+      "relatedIcons": []
+    },
+    {
+      "id": 1431,
+      "name": "shield-ai",
+      "categories": [
+        "Status and feedback",
+        "Actions"
+      ],
+      "tags": [
+        "shield",
+        "security",
+        "protection",
+        "ai",
+        "artificial-intelligence",
+        "secure-ai",
+        "privacy",
+        "defense",
+        "safety",
+        "trust"
+      ],
+      "description": "A solid black icon of a shield with the letters 'AI' inside, representing protected or secure artificial intelligence.",
+      "relatedIcons": []
+    },
+    {
+      "id": 1432,
+      "name": "aas-shell-import-filled",
+      "categories": [
+        "Actions",
+        "Data and analytics"
+      ],
+      "tags": [
+        "import",
+        "download",
+        "bring-in",
+        "ingest",
+        "data-import",
+        "shell",
+        "container",
+        "arrow-down",
+        "upload-to-system",
+        "aas"
+      ],
+      "description": "A solid black icon of a container or shell with a downward arrow entering it, representing importing data or content into a shell or system.",
+      "relatedIcons": []
+    },
+    {
+      "id": 1433,
+      "name": "aas-shell-search",
+      "categories": [
+        "Actions",
+        "Navigation"
+      ],
+      "tags": [
+        "search",
+        "find",
+        "lookup",
+        "inspect",
+        "magnifying-glass",
+        "shell",
+        "command-line",
+        "terminal",
+        "query",
+        "filter"
+      ],
+      "description": "A solid black icon of a magnifying glass over a command-line shell window, representing searching or querying within a shell or terminal.",
+      "relatedIcons": []
+    },
+    {
+      "id": 1434,
+      "name": "piechart-ai-filled",
+      "categories": [
+        "Data and analytics"
+      ],
+      "tags": [
+        "pie chart",
+        "analytics",
+        "statistics",
+        "data visualization",
+        "reporting",
+        "dashboard",
+        "chart",
+        "insights",
+        "metrics"
+      ],
+      "description": "A solid black icon of a segmented pie chart, representing data analytics and statistical visualization.",
+      "relatedIcons": []
+    },
+    {
+      "id": 1435,
+      "name": "aas-project-generic",
+      "categories": [
+        "Actions",
+        "Data and analytics"
+      ],
+      "tags": [
+        "project",
+        "generic project",
+        "workspace",
+        "dashboard",
+        "overview",
+        "project list",
+        "project home",
+        "project summary",
+        "project hub",
+        "project landing"
+      ],
+      "description": "A solid black icon of a simplified project dashboard with a header bar and content blocks, representing a generic project or workspace overview.",
+      "relatedIcons": []
+    },
+    {
+      "id": 1436,
+      "name": "document-ai",
+      "categories": [
+        "Data and analytics",
+        "Actions"
+      ],
+      "tags": [
+        "document",
+        "ai",
+        "automation",
+        "ocr",
+        "document-processing",
+        "machine-learning",
+        "file-analysis",
+        "intelligent-document",
+        "data-extraction"
+      ],
+      "description": "A solid black icon of a document with AI circuitry, representing automated document analysis and processing.",
+      "relatedIcons": []
+    },
+    {
+      "id": 1437,
+      "name": "aas-project-tc-filled",
+      "categories": [
+        "Actions",
+        "Data and analytics"
+      ],
+      "tags": [
+        "project",
+        "test case",
+        "test plan",
+        "quality assurance",
+        "validation",
+        "verification",
+        "requirements",
+        "specification",
+        "aas",
+        "engineering"
+      ],
+      "description": "A solid black icon of a structured document with a highlighted section, representing project test case definition and management.",
+      "relatedIcons": []
+    },
+    {
+      "id": 1438,
+      "name": "aas-shell-export-filled",
+      "categories": [
+        "Actions",
+        "Data and analytics"
+      ],
+      "tags": [
+        "export",
+        "upload",
+        "send",
+        "share",
+        "data-out",
+        "shell",
+        "command-line",
+        "terminal",
+        "pipeline",
+        "output"
+      ],
+      "description": "A solid black icon of a terminal window with an upward arrow, representing exporting or sending data out from a shell or command-line environment.",
+      "relatedIcons": []
+    },
+    {
+      "id": 1439,
+      "name": "piechart-ai",
+      "categories": [
+        "Data and analytics"
+      ],
+      "tags": [
+        "pie chart",
+        "analytics",
+        "data visualization",
+        "statistics",
+        "reporting",
+        "dashboard",
+        "insights",
+        "metrics",
+        "chart"
+      ],
+      "description": "A solid black icon of a segmented pie chart with a detached slice, representing data visualization and analytical insights.",
+      "relatedIcons": []
+    },
+    {
+      "id": 1440,
+      "name": "aas-project-tc",
+      "categories": [
+        "Data and analytics",
+        "Status and feedback"
+      ],
+      "tags": [
+        "project",
+        "timeline",
+        "gantt",
+        "schedule",
+        "planning",
+        "roadmap",
+        "tasks",
+        "milestones",
+        "project-management",
+        "progress"
+      ],
+      "description": "A solid black icon of a horizontal timeline with segmented bars and markers, representing project scheduling and progress tracking.",
+      "relatedIcons": []
+    },
+    {
+      "id": 1441,
+      "name": "aas-shell-import",
+      "categories": [
+        "Actions",
+        "Data and analytics"
+      ],
+      "tags": [
+        "import",
+        "download",
+        "inbound",
+        "data-transfer",
+        "shell",
+        "container",
+        "arrow-down",
+        "ingest",
+        "upload-to-shell",
+        "receive"
+      ],
+      "description": "A solid black icon of a container-like shell with a downward arrow, representing importing or ingesting data into a shell or system.",
+      "relatedIcons": []
+    },
+    {
+      "id": 1442,
+      "name": "calculate-ai",
+      "categories": [
+        "Data and analytics",
+        "Actions"
+      ],
+      "tags": [
+        "calculate",
+        "calculator",
+        "ai",
+        "automation",
+        "math",
+        "analytics",
+        "compute",
+        "prediction",
+        "algorithm",
+        "smart-calculation"
+      ],
+      "description": "A solid black icon of a calculator combined with a neural-network chip, representing AI-powered calculations and automated analytics.",
+      "relatedIcons": []
+    },
+    {
+      "id": 1443,
+      "name": "money-alt",
+      "categories": [
+        "Data and analytics"
+      ],
+      "tags": [
+        "money",
+        "cash",
+        "banknote",
+        "payment",
+        "finance",
+        "currency",
+        "price",
+        "cost",
+        "billing",
+        "transaction"
+      ],
+      "description": "A solid black icon of a stylized banknote with a central circle and corner markings, representing money, payments, and financial transactions.",
+      "relatedIcons": []
+    },
+    {
+      "id": 1444,
+      "name": "aas-shell-check-error",
+      "categories": [
+        "Status and feedback",
+        "Actions"
+      ],
+      "tags": [
+        "shell",
+        "terminal",
+        "command line",
+        "script",
+        "check",
+        "validation",
+        "error",
+        "failure",
+        "lint",
+        "diagnostics"
+      ],
+      "description": "A black outline icon of a terminal window with an exclamation mark inside a circle, representing a shell script check failure or command error.",
+      "relatedIcons": []
+    },
+    {
+      "id": 1445,
+      "name": "aas-project-ax-filled",
+      "categories": [
+        "Data and analytics",
+        "Actions"
+      ],
+      "tags": [
+        "project",
+        "workspace",
+        "dashboard",
+        "analytics",
+        "data",
+        "grid",
+        "layout",
+        "panel",
+        "management",
+        "configuration"
+      ],
+      "description": "A solid black icon of a stylized project dashboard with multiple panels, representing project or workspace management in analytics solutions.",
+      "relatedIcons": []
+    },
+    {
+      "id": 1446,
+      "name": "barchart-ai",
+      "categories": [
+        "Data and analytics"
+      ],
+      "tags": [
+        "bar chart",
+        "analytics",
+        "statistics",
+        "data visualization",
+        "report",
+        "dashboard",
+        "metrics",
+        "performance",
+        "chart"
+      ],
+      "description": "A solid black icon of a vertical bar chart with three bars of varying heights, representing data analytics and performance metrics.",
+      "relatedIcons": []
+    },
+    {
+      "id": 1447,
+      "name": "square-filled",
+      "categories": [
+        "Status and feedback",
+        "Navigation"
+      ],
+      "tags": [
+        "square",
+        "filled",
+        "stop",
+        "indicator",
+        "status",
+        "checkbox",
+        "selection",
+        "block",
+        "shape",
+        "button"
+      ],
+      "description": "A solid black icon of a filled square, representing a generic indicator, selection state, or stop control.",
+      "relatedIcons": []
+    },
+    {
+      "id": 1448,
+      "name": "dashboard-ai",
+      "categories": [
+        "Data and analytics",
+        "Navigation",
+        "Status and feedback"
+      ],
+      "tags": [
+        "dashboard",
+        "analytics",
+        "control panel",
+        "ai",
+        "artificial intelligence",
+        "metrics",
+        "monitoring",
+        "overview",
+        "data visualization",
+        "insights"
+      ],
+      "description": "A solid black icon of a dashboard panel with AI circuitry, representing an AI-powered analytics or monitoring interface.",
+      "relatedIcons": []
+    },
+    {
+      "id": 1449,
+      "name": "prompt-new",
+      "categories": [
+        "Actions"
+      ],
+      "tags": [
+        "prompt",
+        "new-prompt",
+        "add",
+        "plus",
+        "create",
+        "start",
+        "compose",
+        "insert",
+        "command",
+        "input"
+      ],
+      "description": "A solid black icon of a square dialog with a plus sign, representing creating a new prompt or input.",
+      "relatedIcons": []
+    },
+    {
+      "id": 1450,
+      "name": "optimize-ai",
+      "categories": [
+        "Actions",
+        "Data and analytics"
+      ],
+      "tags": [
+        "optimize",
+        "optimization",
+        "ai",
+        "artificial-intelligence",
+        "automation",
+        "performance",
+        "efficiency",
+        "tuning",
+        "improvement",
+        "smart"
+      ],
+      "description": "A solid black icon of a gear combined with a neural-network style node graph, representing AI-powered optimization and automated performance tuning.",
+      "relatedIcons": []
+    },
+    {
+      "id": 1451,
+      "name": "question-ai-filled",
+      "categories": [
+        "Actions",
+        "Status and feedback",
+        "Media and communication"
+      ],
+      "tags": [
+        "help",
+        "support",
+        "question",
+        "faq",
+        "assistant",
+        "ai",
+        "chatbot",
+        "information",
+        "guidance",
+        "customer-support"
+      ],
+      "description": "A solid black icon of a speech bubble with a question mark and stylized AI text, representing intelligent help or AI-powered assistance.",
+      "relatedIcons": []
+    },
+    {
+      "id": 1452,
+      "name": "audio-description-2-ai",
+      "categories": [
+        "Media and communication",
+        "Status and feedback"
+      ],
+      "tags": [
+        "audio description",
+        "ad",
+        "accessibility",
+        "assistive audio",
+        "described video",
+        "media controls",
+        "subtitles",
+        "captioning",
+        "audio track",
+        "video player"
+      ],
+      "description": "A solid black icon of a rectangle with the letters 'AD' inside, representing audio description accessibility for media content.",
+      "relatedIcons": []
+    },
+    {
+      "id": 1453,
+      "name": "support-ai",
+      "categories": [
+        "Media and communication",
+        "Status and feedback",
+        "Actions"
+      ],
+      "tags": [
+        "support",
+        "help",
+        "customer-service",
+        "chatbot",
+        "ai-assistant",
+        "headset",
+        "call-center",
+        "technical-support",
+        "service-desk",
+        "live-chat"
+      ],
+      "description": "A solid black icon of a headset with a speech bubble and AI circuit details, representing AI-powered customer support and virtual assistance.",
+      "relatedIcons": []
+    },
+    {
+      "id": 1454,
+      "name": "document-ai-filled",
+      "categories": [
+        "Actions",
+        "Data and analytics"
+      ],
+      "tags": [
+        "document",
+        "file",
+        "ai",
+        "artificial-intelligence",
+        "automation",
+        "document-processing",
+        "ocr",
+        "analysis",
+        "machine-learning",
+        "smart-document"
+      ],
+      "description": "A solid black icon of a document with an AI badge, representing automated AI-powered document analysis and processing.",
+      "relatedIcons": [
+        "pen-ai",
+        "document-success",
+        "add-document-note",
+        "document-filled",
+        "ingestion-report",
+        "document",
+        "drawing-document",
+        "upload-document-note",
+        "document-settings",
+        "dashboard-ai-filled"
+      ]
+    },
+    {
+      "id": 1455,
+      "name": "aas-project-tcx",
+      "categories": [
+        "Data and analytics",
+        "Status and feedback"
+      ],
+      "tags": [
+        "tcx",
+        "file",
+        "document",
+        "format",
+        "data",
+        "analytics",
+        "export",
+        "import",
+        "gps",
+        "training-center"
+      ],
+      "description": "A solid black icon of a rectangular file with the letters 'TCX' inside, representing a TCX data file format or project export.",
+      "relatedIcons": [
+        "aas-project-c",
+        "txt-document-filled",
+        "compound-block",
+        "txt-document",
+        "aas-project-tia",
+        "rules",
+        "projects-close",
+        "control-text-button",
+        "text",
+        "project-close"
+      ]
+    },
+    {
+      "id": 1456,
+      "name": "aas-shell-check-warning-filled",
+      "categories": [
+        "Status and feedback"
+      ],
+      "tags": [
+        "warning",
+        "alert",
+        "caution",
+        "shell",
+        "command-line",
+        "terminal",
+        "script",
+        "validation",
+        "check",
+        "error"
+      ],
+      "description": "A solid black icon of a terminal window with a warning symbol, representing command-line script validation warnings.",
+      "relatedIcons": [
+        "aas-shell-check-error-filled",
+        "aas-shell-check-ok-filled",
+        "generic-device-alarm",
+        "aas-shell-search-filled",
+        "aas-shell-check-ok",
+        "application-screen-alarm-classes",
+        "warning-multiple-filled",
+        "drive-safety",
+        "generic-device-software-alarm",
+        "warning-octagon"
+      ]
+    },
+    {
+      "id": 1457,
+      "name": "aas-project-tia-filled",
+      "categories": [
+        "Data and analytics",
+        "Industrial"
+      ],
+      "tags": [
+        "project",
+        "automation",
+        "industrial-project",
+        "engineering",
+        "tia-portal",
+        "configuration",
+        "asset-administration-shell",
+        "digital-twin",
+        "project-file",
+        "industrial-software"
+      ],
+      "description": "A solid black icon of a stylized industrial project document with a central circular emblem, representing an automation or engineering project configuration in an asset administration or TIA context.",
+      "relatedIcons": [
+        "aas-project-tia",
+        "text-circle-rectangle-filled",
+        "txt-document-filled",
+        "control-textbox",
+        "id-filled",
+        "data-type-string",
+        "aas-project-tcx",
+        "shapes-filled",
+        "control-label",
+        "id"
+      ]
+    },
+    {
+      "id": 1458,
+      "name": "aas-project-tia",
+      "categories": [
+        "Industrial",
+        "Data and analytics"
+      ],
+      "tags": [
+        "project",
+        "tia",
+        "automation",
+        "industrial-project",
+        "engineering-project",
+        "configuration",
+        "project-file",
+        "project-management"
+      ],
+      "description": "A solid black icon of a stylized project document with the letters 'TIA', representing an industrial automation project or configuration file.",
+      "relatedIcons": [
+        "aas-project-tia-filled",
+        "aas-project-tcx",
+        "text-circle-rectangle-filled",
+        "id",
+        "txt-document-filled",
+        "aas-project-c",
+        "id-filled",
+        "shapes-filled",
+        "data-type-string",
+        "control-label"
+      ]
+    },
+    {
+      "id": 1459,
+      "name": "shorter-ai",
+      "categories": [
+        "Actions"
+      ],
+      "tags": [
+        "shorten",
+        "summarize",
+        "compress text",
+        "reduce length",
+        "ai writing",
+        "text editing",
+        "content trimming",
+        "summary"
+      ],
+      "description": "A solid black icon of a stylized AI chip with a downward arrow, representing automated text shortening or summarization.",
+      "relatedIcons": [
+        "shorter",
+        "longer",
+        "width",
+        "minimize",
+        "limits-check",
+        "height",
+        "data-ingress-egress",
+        "maximize",
+        "editor-guides",
+        "control-touch-area"
+      ]
+    },
+    {
+      "id": 1460,
+      "name": "code-ai",
+      "categories": [
+        "Actions",
+        "Data and analytics"
+      ],
+      "tags": [
+        "code",
+        "ai",
+        "artificial-intelligence",
+        "automation",
+        "developer-tools",
+        "programming",
+        "machine-learning",
+        "code-generation",
+        "assistant",
+        "bot"
+      ],
+      "description": "A black outline icon of a code bracket with an AI label, representing AI-assisted coding and automation.",
+      "relatedIcons": [
+        "code",
+        "code-script",
+        "document-code-filled",
+        "document-code",
+        "interpreter-filled",
+        "document-program-filled",
+        "parameter",
+        "interpreter",
+        "document-program",
+        "ai"
+      ]
+    },
+    {
+      "id": 1461,
+      "name": "prompts",
+      "categories": [
+        "Actions",
+        "Media and communication"
+      ],
+      "tags": [
+        "prompt",
+        "message",
+        "chat",
+        "conversation",
+        "dialog",
+        "input",
+        "command",
+        "instruction",
+        "ai",
+        "assistant"
+      ],
+      "description": "A solid black icon of a speech bubble with a star inside, representing user prompts, highlighted messages, or featured instructions.",
+      "relatedIcons": [
+        "chart-error-bar",
+        "chain-parallel",
+        "chain-alternative",
+        "variable",
+        "align-objects-vertically",
+        "distribute-objects-horizontally",
+        "align-center-vertically",
+        "align-objects-centered",
+        "align-center-horizontally",
+        "line-cap-flat"
+      ]
+    },
+    {
+      "id": 1462,
+      "name": "image-ai-filled",
+      "categories": [
+        "Media and communication",
+        "Data and analytics",
+        "Actions"
+      ],
+      "tags": [
+        "image ai",
+        "ai image",
+        "image generation",
+        "image processing",
+        "computer vision",
+        "photo ai",
+        "media automation",
+        "visual intelligence",
+        "image editing",
+        "machine learning"
+      ],
+      "description": "A solid black icon of a stylized image with an embedded AI chip, representing AI-powered image generation and processing.",
+      "relatedIcons": [
+        "image-filled",
+        "image",
+        "no-image",
+        "photo-camera-add",
+        "photo-camera",
+        "photo-cameras",
+        "photo-camera-filled",
+        "photo-camera-cancelled-filled",
+        "screenshot-filled",
+        "editor-resources"
+      ]
+    },
+    {
+      "id": 1463,
+      "name": "server-rack-filled",
+      "categories": [
+        "Data and analytics",
+        "Devices and hardware"
+      ],
+      "tags": [
+        "server",
+        "server rack",
+        "data center",
+        "database",
+        "hosting",
+        "infrastructure",
+        "backend",
+        "cloud",
+        "network",
+        "storage"
+      ],
+      "description": "A solid black icon of a server rack with stacked units and status indicators, representing backend infrastructure and data center servers.",
+      "relatedIcons": [
+        "info-feed",
+        "subtitle-filled",
+        "pc-tower-filled",
+        "card-layout",
+        "subtitle",
+        "details",
+        "application-screens",
+        "ipcs",
+        "align-objects-bottom",
+        "pc-tower"
+      ]
+    },
+    {
+      "id": 1464,
+      "name": "aas-shell",
+      "categories": [
+        "Industrial",
+        "Status and feedback"
+      ],
+      "tags": [
+        "shell",
+        "protective shell",
+        "housing",
+        "enclosure",
+        "container",
+        "asset shell",
+        "aas",
+        "structure",
+        "framework",
+        "wrapper"
+      ],
+      "description": "A solid black icon of a segmented shell or housing, representing a protective container or structural wrapper for an asset.",
+      "relatedIcons": [
+        "align-center-horizontally",
+        "line-cap-square",
+        "align-center-vertically",
+        "chain-alternative",
+        "line-cap-flat",
+        "cam-track",
+        "areachart",
+        "workspaces",
+        "function-block",
+        "output-cam"
+      ]
+    },
+    {
+      "id": 1465,
+      "name": "shield-ai-filled",
+      "categories": [
+        "Status and feedback",
+        "Actions"
+      ],
+      "tags": [
+        "shield",
+        "security",
+        "protection",
+        "ai",
+        "artificial-intelligence",
+        "privacy",
+        "defense",
+        "secure-mode",
+        "safety",
+        "trust"
+      ],
+      "description": "A solid black icon of a shield with stylized AI lettering, representing artificial intelligence security and protection.",
+      "relatedIcons": [
+        "shield-half",
+        "add-shield-half",
+        "shield-check-filled",
+        "shield-broken",
+        "shield-broken-filled",
+        "shield-check",
+        "shield",
+        "shield-filled",
+        "sword-swing",
+        "generic-device-shield"
+      ]
+    },
+    {
+      "id": 1466,
+      "name": "aas-shell-check-ok",
+      "categories": [
+        "Status and feedback",
+        "Actions"
+      ],
+      "tags": [
+        "check",
+        "success",
+        "validated",
+        "approved",
+        "ok",
+        "shell",
+        "terminal",
+        "command",
+        "script",
+        "status"
+      ],
+      "description": "A solid black icon of a terminal window with a check mark, representing successful shell command execution or validation.",
+      "relatedIcons": [
+        "aas-shell-check-ok-filled",
+        "aas-shell-check-warning-filled",
+        "aas-shell-check-error-filled",
+        "aas-shell-search-filled",
+        "rack-ipc-success",
+        "generic-device-success",
+        "panel-ipc-success",
+        "consistency-check",
+        "capacity-check-filled",
+        "box-ipc-success"
+      ]
+    },
+    {
+      "id": 1467,
+      "name": "aas-project-c",
+      "categories": [
+        "Actions",
+        "Data and analytics"
+      ],
+      "tags": [
+        "project",
+        "project-plan",
+        "workflow",
+        "process",
+        "pipeline",
+        "automation",
+        "orchestration",
+        "data-flow",
+        "integration",
+        "aas"
+      ],
+      "description": "A black outline icon of a connected network of nodes forming a project flow, representing project orchestration and workflow management.",
+      "relatedIcons": [
+        "compound-block",
+        "coin",
+        "coin-filled",
+        "aas-project-tcx",
+        "asset-outdoor",
+        "coins-filled",
+        "coins",
+        "line-cap-square",
+        "shapes",
+        "maintenance-octagon"
+      ]
+    },
+    {
+      "id": 1468,
+      "name": "aas-shell-check-error-filled",
+      "categories": [
+        "Status and feedback",
+        "Actions"
+      ],
+      "tags": [
+        "shell",
+        "terminal",
+        "command-line",
+        "script",
+        "check",
+        "validation",
+        "error",
+        "failure",
+        "lint",
+        "status"
+      ],
+      "description": "A solid black icon of a terminal window with a check mark and an error symbol, representing shell script validation with errors.",
+      "relatedIcons": [
+        "aas-shell-check-warning-filled",
+        "aas-shell-check-ok-filled",
+        "rack-ipc-fail",
+        "projects-close",
+        "generic-device-error",
+        "aas-shell-check-ok",
+        "project-close",
+        "aas-shell-search-filled",
+        "panel-ipc-fail",
+        "application-screen-alarm-classes"
+      ]
+    },
+    {
+      "id": 1469,
+      "name": "pen-ai",
+      "categories": [
+        "Actions",
+        "Media and communication"
+      ],
+      "tags": [
+        "pen",
+        "edit",
+        "write",
+        "compose",
+        "annotation",
+        "drawing",
+        "signature",
+        "pencil",
+        "ai-assist",
+        "content-creation"
+      ],
+      "description": "A solid black icon of a fountain pen nib with a circular AI badge, representing AI-assisted writing and editing.",
+      "relatedIcons": [
+        "pen-filled",
+        "pen",
+        "edit-document-filled",
+        "drawing-document",
+        "edit-document",
+        "document-ai-filled",
+        "highlight",
+        "add-document-note",
+        "user-pen",
+        "drawing-document-filled"
+      ]
+    },
+    {
+      "id": 1470,
+      "name": "table-ai",
+      "categories": [
+        "Data and analytics",
+        "Actions"
+      ],
+      "tags": [
+        "table",
+        "data-table",
+        "spreadsheet",
+        "grid",
+        "ai",
+        "automation",
+        "auto-fill",
+        "smart-table",
+        "data-entry",
+        "generate-table"
+      ],
+      "description": "A black outline icon of a data table with a small AI badge, representing AI-assisted table creation and editing.",
+      "relatedIcons": [
+        "grid-pen",
+        "table",
+        "table-tag",
+        "table-settings",
+        "trend-companion",
+        "document-ai-filled",
+        "process-control",
+        "dashboard-ai-filled",
+        "calendar-filled",
+        "calendar"
+      ]
+    },
+    {
+      "id": 1471,
+      "name": "question-ai",
+      "categories": [
+        "Actions",
+        "Media and communication",
+        "Status and feedback"
+      ],
+      "tags": [
+        "question",
+        "help",
+        "support",
+        "ask",
+        "chatbot",
+        "assistant",
+        "ai",
+        "faq",
+        "inquiry",
+        "information"
+      ],
+      "description": "A solid black icon of a speech bubble with a question mark, representing AI-powered help or assistance.",
+      "relatedIcons": [
+        "question",
+        "question-filled",
+        "namur-out-of-spec-filled",
+        "question-mark",
+        "inquiry-filled",
+        "inquiry",
+        "inquiry-mail",
+        "about",
+        "info",
+        "namur-out-of-spec"
+      ]
+    },
+    {
+      "id": 1472,
+      "name": "microphone-cancelled-filled",
+      "categories": [
+        "Media and communication",
+        "Status and feedback",
+        "Actions"
+      ],
+      "tags": [
+        "microphone",
+        "mute",
+        "audio off",
+        "mic off",
+        "recording disabled",
+        "sound off",
+        "voice mute",
+        "no audio",
+        "silence",
+        "communication"
+      ],
+      "description": "A solid black icon of a crossed-out microphone, representing muted or disabled audio input.",
+      "relatedIcons": [
+        "microphone-cancelled",
+        "sound-off-filled",
+        "sound-off",
+        "alarm-bell-cancelled",
+        "alarm-bell-cancelled-filled",
+        "microphone-filled",
+        "radio-waves-off",
+        "sound-mute-filled",
+        "battery-slash",
+        "microphone"
+      ]
+    },
+    {
+      "id": 1473,
+      "name": "money",
+      "categories": [
+        "Data and analytics"
+      ],
+      "tags": [
+        "money",
+        "cash",
+        "payment",
+        "finance",
+        "currency",
+        "budget",
+        "price",
+        "cost",
+        "billing",
+        "transaction"
+      ],
+      "description": "A solid black icon of a stack of banknotes with a dollar symbol, representing money, payments, and financial transactions.",
+      "relatedIcons": [
+        "coin-stack-filled",
+        "coin-stack",
+        "certificate",
+        "analyze",
+        "license",
+        "calculator",
+        "product-management",
+        "user-group",
+        "document-management",
+        "chart-types"
+      ]
+    },
+    {
+      "id": 1474,
+      "name": "aas-shell-search-filled",
+      "categories": [
+        "Actions",
+        "Navigation"
+      ],
+      "tags": [
+        "search",
+        "find",
+        "lookup",
+        "query",
+        "magnifying-glass",
+        "shell",
+        "terminal",
+        "command-line",
+        "filter",
+        "inspect"
+      ],
+      "description": "A solid black icon of a magnifying glass over a shell or terminal window, representing searching or querying within a command-line environment.",
+      "relatedIcons": [
+        "plant-search-filled",
+        "plant-search",
+        "aas-shell-check-ok-filled",
+        "aas-shell-check-warning-filled",
+        "monitor-filled",
+        "aas-shell-check-error-filled",
+        "aas-shell-check-ok",
+        "zoom-selection",
+        "analyze",
+        "monitor"
+      ]
+    },
+    {
+      "id": 1475,
+      "name": "microphone-cancelled",
+      "categories": [
+        "Media and communication",
+        "Status and feedback"
+      ],
+      "tags": [
+        "microphone",
+        "mute",
+        "mic-off",
+        "audio-off",
+        "voice-off",
+        "sound-muted",
+        "recording-disabled",
+        "no-audio",
+        "communication-off"
+      ],
+      "description": "A solid black icon of a crossed-out microphone, representing muted audio or disabled voice input.",
+      "relatedIcons": [
+        "microphone-cancelled-filled",
+        "sound-off",
+        "sound-off-filled",
+        "alarm-bell-cancelled",
+        "alarm-bell-cancelled-filled",
+        "microphone-filled",
+        "radio-waves-off",
+        "microphone",
+        "sound-mute-filled",
+        "battery-slash"
+      ]
+    },
+    {
+      "id": 1476,
+      "name": "aas-shell-check-ok-filled",
+      "categories": [
+        "Status and feedback",
+        "Industrial"
+      ],
+      "tags": [
+        "shell",
+        "container",
+        "check",
+        "ok",
+        "approved",
+        "validated",
+        "status",
+        "success",
+        "compliance",
+        "inspection"
+      ],
+      "description": "A solid black icon of a container shell with an overlaid check mark, representing successful validation or approval of a shell or container.",
+      "relatedIcons": [
+        "aas-shell-check-ok",
+        "aas-shell-check-error-filled",
+        "aas-shell-check-warning-filled",
+        "rack-ipc-success",
+        "aas-shell-search-filled",
+        "generic-device-success",
+        "box-ipc-success",
+        "panel-ipc-success",
+        "consistency-check",
+        "document-success"
+      ]
+    },
+    {
+      "id": 1477,
+      "name": "dashboard-ai-filled",
+      "categories": [
+        "Data and analytics",
+        "Media and communication"
+      ],
+      "tags": [
+        "dashboard",
+        "ai",
+        "analytics",
+        "control panel",
+        "metrics",
+        "monitoring",
+        "overview",
+        "reporting",
+        "data visualization",
+        "console"
+      ],
+      "description": "A solid black icon of a dashboard panel with the letters AI, representing an analytics or monitoring interface enhanced by artificial intelligence.",
+      "relatedIcons": [
+        "dashboard-filled",
+        "dashboard-pen-filled",
+        "dashboard",
+        "dashboard-pen",
+        "chart-types-filled",
+        "chart-types",
+        "analyze",
+        "report-barchart",
+        "threshold-on",
+        "start-data-analysis"
+      ]
+    },
+    {
+      "id": 1478,
+      "name": "square",
+      "categories": [
+        "Actions",
+        "Status and feedback"
+      ],
+      "tags": [
+        "square",
+        "stop",
+        "stop button",
+        "stop icon",
+        "stop media",
+        "shape",
+        "geometry",
+        "block",
+        "pause alternative"
+      ],
+      "description": "A solid black icon of a square, representing a stop control or generic shape element.",
+      "relatedIcons": [
+        "checkbox-empty",
+        "editor-grid-none",
+        "namur-diagnostics-passive",
+        "stop",
+        "rectangle",
+        "missing-symbol",
+        "checkbox",
+        "split-vertically",
+        "namur-ok",
+        "split-horizontally"
       ]
     }
   ]

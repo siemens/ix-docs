@@ -831,6 +831,10 @@ const sidebars: SidebarsConfig = {
           label: 'Upload',
           items: [
             {
+              id: 'components/upload/guide',
+              label: 'Usage',
+            },
+            {
               id: 'components/upload/code',
               label: 'Code',
             },

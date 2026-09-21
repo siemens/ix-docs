@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://ix.siemens.io/sitemap.xml

@@ -212,7 +212,17 @@ const config: Config = {
     llmstxtPostbuildPlugin,
   ],
 
-  headTags: [getSiemensSansFontFaceHeadTag()],
+  headTags: [
+    getSiemensSansFontFaceHeadTag(),
+    {
+      tagName: 'link',
+      attributes: {
+        rel: 'describedby',
+        type: 'text/markdown',
+        href: `${baseUrl}llms.txt`,
+      },
+    },
+  ],
   themeConfig: {
     ...getAnnouncementBarConfig(),
     metadata: [
@@ -271,12 +281,14 @@ const config: Config = {
           position: 'left',
           label: 'Styles',
         },
+        /* Hide news pill until next major release
         {
           type: 'custom-news-pill',
           position: 'left',
           label: 'Release 5.0.0',
           value: '/blog/2026/05/21/release-5',
         },
+        */
         {
           type: 'custom-version-selection',
           position: 'right',
@@ -324,8 +336,8 @@ const config: Config = {
               href: 'https://github.com/siemens/ix',
             },
             {
-              label: 'iX Community',
-              href: 'https://community.siemens.com/c/ix',
+              label: 'Viva Engage Community',
+              href: 'https://engage.cloud.microsoft/main/org/siemens.com/groups/eyJfdHlwZSI6Ikdyb3VwIiwiaWQiOiI1ODIzNzc5NjM1MiJ9',
             },
             {
               label: 'Siemens Xcelerator Developer Portal',
