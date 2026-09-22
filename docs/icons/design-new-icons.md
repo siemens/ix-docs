@@ -17,132 +17,137 @@ Before you start designing your specific icon set for your application, consider
 
 - Make sure the icons you need are not already in the library
 
-- Maybe the icon already exists under a slightly different name or it might be planned for a future release so please double check or ask us when in doubt
+- The icon may already exist under a slightly different name, or it may be planned for a future release. Please double-check or ask us when in doubt.
 
-- Consider using more generic icons than creating multiple very specific new ones (e.g.: Use the generic "add" icon instead of creating an "add-wireless-device" icon)
+- We recommend using generic icons instead of creating multiple, specific new ones, e.g. use the generic "add" icon instead of creating an "add-wireless-device" icon.
 
-- Do not create alternatives to existing icons just for the sake of your own look
+- Do not create alternatives to existing icons.
 
-- Ask other designers within your company about the existence of an icon, to prevent creation of duplicates
+- Ask other designers within your company about the existence of an icon to prevent the creation of duplicates
 
-- Finally: Entrust a professional designer with the task of designing an icon
+- Finally, we strongly recommend entrusting a professional designer with the task of designing an icon
 
-### Technical requirements
+### Icon colors
 
-Icons in our design system are monochromatic. They will be colored during runtime, depending on the context they are being used in. For more technical requirements see the "Code" tab above.
+Icons in our design system are monochromatic. They will be colored during runtime, depending on the context they are being used in. In some components we combine differently colored icons to achieve multi-color appearance.
 
 ### Formal requirements
 
-New icons should follow the app icon guidelines below for a consistent look & feel across applications. For Siemens applications it is mandatory to follow these guidelines.
+New icons should follow the app icon guidelines below for a consistent look and feel across applications. Siemens applications must follow these guidelines.
 
 ## Icon design guidelines
 
 These guidelines extend the basic guidelines on [Siemens brandville](https://brandville.siemens.com/en/design-elements/icons/ui-icons).
 
-### 1. Icon grid size
+### 1. Design grid
 
-- The basic icon grid size is 24✕24
+#### Design grid and key shapes
 
-  ![Basic grid](https://www.figma.com/design/wEptRgAezDU1z80Cn3eZ0o/iX-Pattern-Illustrations?type=design&node-id=801-253&mode=design&t=LqIxNidruCmTfYDF-4)
+- The base grid is 24×24
+- When designing icons, use the "Icon Design Grid" component from the Figma "iX UI Icons" library as your working background
+- The grid defines key shapes and a clearance zone (red area), which icons should not touch
 
-### 2. In-app icon design grid
+  ![Basic grid](https://www.figma.com/design/wEptRgAezDU1z80Cn3eZ0o/iX-Documentation-illustrations?node-id=8377-9867&t=qiaAqhaBmxdLHEbz-4)
 
-- Use the design grid component “Icon Design Grid” from the “Assets” library as background for creating new icons
-- The design grid helps to limit the icon boundaries to achieve an evenly optical weight of different icon shapes
-- The clearance zone (red area) should not be touched by the icon (for exceptions see below)
-- The lines represent the boundaries of key shapes or just mark the center
 
-  ![In-app icon design grid](https://www.figma.com/design/wEptRgAezDU1z80Cn3eZ0o/iX-Pattern-Illustrations?type=design&node-id=801-856&mode=design&t=LqIxNidruCmTfYDF-4)
-
-- Use the portrait key shape for vertically oriented shapes
+- Choose the key shape based on icon orientation
+- Portrait key shape for vertically oriented icons
 
   ![Portrait key shapes](https://www.figma.com/design/wEptRgAezDU1z80Cn3eZ0o/iX-Pattern-Illustrations?type=design&node-id=802-17540&mode=design&t=LqIxNidruCmTfYDF-4)
 
-- Use the landscape key shape for horizontally oriented shapes
+- Landscape key shape for horizontally oriented icons
 
   ![Landscape key shapes](https://www.figma.com/design/wEptRgAezDU1z80Cn3eZ0o/iX-Pattern-Illustrations?type=design&node-id=802-19334&mode=design&t=LqIxNidruCmTfYDF-4)
 
-- Use the square key shape for square icons
+- Square key shape for square-proportioned icons
 
   ![Square key shapes](https://www.figma.com/design/wEptRgAezDU1z80Cn3eZ0o/iX-Pattern-Illustrations?type=design&node-id=802-23090&mode=design&t=LqIxNidruCmTfYDF-4)
 
-- Use the circle key shape for round icons
+- Circle key shape for round icons
 
   ![Circle key shapes](https://www.figma.com/design/wEptRgAezDU1z80Cn3eZ0o/iX-Pattern-Illustrations?type=design&node-id=802-23091&mode=design&t=LqIxNidruCmTfYDF-4)
 
-#### Exceptions to the clearance zone
+#### Clearance zone exceptions
 
-- Icons with attributes: Icons can be enhanced with attributes. These attributes are allowed to touch the clearance zone but should keep at least 1px space to the outer boundary
+- Attribute icons may extend into the clearance zone but must keep at least 1px from the outer boundary
 
   ![Exception 1: icon attributes](https://www.figma.com/design/wEptRgAezDU1z80Cn3eZ0o/iX-Pattern-Illustrations?type=design&node-id=802-23092&mode=design&t=LqIxNidruCmTfYDF-4)
 
-- Optical fixes: Shapes are allowed to touch the clearance zone to equalize visual effects with pointed shapes or single strokes
+- For optical correction, pointed shapes or single strokes may touch the clearance zone to equalize visual weight
 
   ![Exception 2: optical fixes](https://www.figma.com/design/wEptRgAezDU1z80Cn3eZ0o/iX-Pattern-Illustrations?type=design&node-id=802-23093&mode=design&t=LqIxNidruCmTfYDF-4)
 
-### 3. Light weight icons
+### 2. Icon style
 
-- Prefer strokes and outlines over filled shapes
-- Please provide a filled variant of the icon as well, where possible and potentially useful. It can be used in situations when more visual weight is required. The filled variant gets the name suffix “-filled”.
+#### Simple and geometric
 
-  ![Normal and filled variant](https://www.figma.com/design/wEptRgAezDU1z80Cn3eZ0o/iX-Pattern-Illustrations?type=design&node-id=808-23094&mode=design&t=LqIxNidruCmTfYDF-4)
-
-### 4. Simple and geometric
-
-- Keep icons as simple as possible
-- Avoid complex symbols or symbol combinations whenever possible
-- Create icons from geometric shapes
-- Prefer sharp corners and straight lines
-- Use rounded corners and endings only to support the characteristics of the represented object
+- Keep icons simple
+- Build from geometric shapes with sharp corners and straight lines
+- Use rounded corners only when the character of the depicted object requires it
 
   ![Simple and geometric shapes](https://www.figma.com/design/wEptRgAezDU1z80Cn3eZ0o/iX-Pattern-Illustrations?type=design&node-id=808-23095&mode=design&t=LqIxNidruCmTfYDF-4)
 
-### 5. Stroke widths
+#### Stroke and fill style
+
+- The default style is stroked/outlined
+- Optionally provide a filled variant (suffix "_filled") for use in active/toggled states or where higher visual weight is needed
+
+  ![Normal and filled variant](https://www.figma.com/design/wEptRgAezDU1z80Cn3eZ0o/iX-Pattern-Illustrations?type=design&node-id=808-23094&mode=design&t=LqIxNidruCmTfYDF-4)
+
+#### Stroke width
 
 - Default stroke width is 2px
-- In case icon readability can't be guaranteed otherwise, stroke widths of 1.5px or even 1x are also allowed. Before doing that please make sure all rules from section 4 are followed.
+- 1.5px or 1px is allowed when object character or icon complexity requires it
 
   ![Stroke widths](https://www.figma.com/design/wEptRgAezDU1z80Cn3eZ0o/iX-Pattern-Illustrations?type=design&node-id=809-23096&mode=design&t=LqIxNidruCmTfYDF-4)
 
-### 6. Gaps
+#### Gaps
 
-- Anti-aliasing effects can lead to blurry borders and edges
-- Use 2px gaps to visually separate two shapes from each other
-- Avoid unsafe patterns of alternating between set pixel and no pixel. In the worst case such shapes cannot be visually distinguished anymore.
+- Use 2px gaps between shapes to ensure clear separation
+- Avoid unsafe patterns of alternating between set pixel and no pixel, as they may become indistinguishable at certain scales or on low-resolution displays
 
   ![Gaps and unsafe pattern](https://www.figma.com/design/wEptRgAezDU1z80Cn3eZ0o/iX-Pattern-Illustrations?type=design&node-id=809-23097&mode=design&t=LqIxNidruCmTfYDF-4)
 
-### 7. Strikethrough, cuts and cutouts
+#### Strike-through, cuts and cutouts
 
-- A diagonal strikethrough is used to symbolize the opposite of an icon or an unavailability (e.g. show & hide, switch off alarm)
-- A diagonal strikethrough starts from top left and ends at the bottom right (refers to the crossbar of letter “N” for “No”), followed by a 2px space above right
-- Use at least 1px space for cuts or cutouts (be aware of “unsafe patterns”, see 6.)
+- Diagonal strike-through symbolizes the opposite of an icon or an unavailability (e.g. show & hide, mute microphone, mute alarm)
+- A diagonal strike-through goes from top left to bottom right (like the diagonal stroke of letter "N" for "No"), followed by a 2px gap up-right
+- Cuts/cutouts: use at least 1px spacing, beware of unsafe patterns (see Gaps)
 
-  ![Strikethroughs and gaps](https://www.figma.com/design/wEptRgAezDU1z80Cn3eZ0o/iX-Pattern-Illustrations?type=design&node-id=810-23098&mode=design&t=LqIxNidruCmTfYDF-4)
+  ![Strike-through and gaps](https://www.figma.com/design/wEptRgAezDU1z80Cn3eZ0o/iX-Pattern-Illustrations?type=design&node-id=810-23098&mode=design&t=LqIxNidruCmTfYDF-4)
 
-### 8. The technical finish
+### 3. Export and technical requirements
 
-#### Prepare your icon for integration
+#### General icon specs
 
-- The icon size (including clearance zone) must be 24x24
-- The icon must not contain strokes (convert all strokes to outlines)
-- Combine all icon parts to one single shape by using boolean operations
-- Name the remaining shape “Vector”, otherwise color overrides will not work properly in Figma
-- Make sure the shape is set to “Scale” in the “Constraints” settings in Figma, otherwise the resizing will not work properly
+Make sure your icon meets the following specifications:
+- Icon name is short, descriptive and unique
+- Designed at 24×24
+- All strokes converted to outlines
+- In Figma, all parts are combined into a single shape named "Vector"
+- In Figma, all layout constraints are set to "Scale" and resizing behavior is tested
+- Before you export, set the icon color to #000 to ensure proper visibility in typical SVG preview tools
+- The exported SVG must contain viewBox, width and height (24×24)
+- The exported SVG must not contain a `<title>` element. It can cause unintended browser tooltips.
 
-#### Integrate in Figma
+#### iX internal release process
 
-- Create a component from your icon
-- Use a short, descriptive and unique name - also consider adding a project or application suffix to the icon name to prevent naming collisions with other external icons
-- "Publish" the document with your icon(s) and it will be available as library in your document assets
-- Activate your library in the design document
+On GitHub ([github.com/siemens/ix-icons](https://github.com/siemens/ix-icons)):
+- Create branch
+- Add SVG icon files to folder `incoming-svg/`
+- Create pull request (PR)
+- Contact a maintainer to test, merge and release
 
-#### Export for development
+In Figma:
+- Set icon to iX default text color
+- Convert your icon to a component
+- Resize to 20×20 (iX default since v6.0)
+- Prefix icon names with 🔶 as long as the release is pending to indicate the icon is not available in code yet
+- Publish in Figma
 
-- Create an instance of your icon (this can be done in the same document the icon is stored in)
-- Resize this instance to 512×512 (target size for development integration)
-- Check if the scaling works properly (check scaling settings, if not)
-- Export the instance as SVG
-- Check the SVG code and remove any title attributes (`<title> ... </title>`) to make sure no unintentional tooltips appear on the icon
-- Make sure the name of the SVG file matches the icon name to avoid confusion
-- Hand the SVG over to your development
+#### Release process for custom or project-specific icons:
+
+- Hand over SVG files to your developer
+- Create a Figma component and resize it to 20×20 (iX default size since v6.0)
+- Set the color to the iX default text color
+- Publish the Figma component in your team assets
