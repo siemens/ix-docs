@@ -10,13 +10,17 @@ description: 'Form and text input fields provide essential context for users to 
 
 #
 
-![UI example of a UI input field with numbered callouts: 1) Label Username*, 2) Text area with placeholder Enter user name, 3) Helper text Letters and numbers only, 4) Asterisk indicating a required field, and 5) Character counter showing 0/25.](https://www.figma.com/design/wEptRgAezDU1z80Cn3eZ0o/iX-Documentation-illustrations?node-id=8439-2549&t=AvEG5nW65SMQ8nvR-4)
+We've added the labeled iX component here to guide you though this section with the terms we use throughout the Forms and form field chapters. See [Input(component)](../../../components/input/guide.md) and [Textarea (component)](../../../components/textarea/guide.md)
+
+![UI example of a UI form field with numbered callouts: 1) Label Username*, 2) Text area with placeholder Enter user name, 3) Helper text Letters and numbers only, 4) Asterisk indicating a required field, and 5) Character counter showing 0/25.](https://www.figma.com/design/wEptRgAezDU1z80Cn3eZ0o/iX-Documentation-illustrations?node-id=8439-2549&t=AvEG5nW65SMQ8nvR-4)
 
 1. Field label
 2. Placeholder
 3. Helper / info text 
 4. Asterisk for required fields
 5. Counter (input and textarea field only)
+
+## General rules
 
 Use an asterisk (*) for required fields after (not before) UI text.
 
@@ -79,7 +83,7 @@ Use counters for form or text input fields, or text areas with character limits,
   </div>
 </div>
 
-Do not use urgent error or warning messages when users are reaching or have reached limits.
+Don't use urgent error or warning messages when users are reaching or have reached limits.
 
 ![UI example of a field label Username* containing JohnDoe. A blue info icon and the text 13 characters left illustrate an informational style for character limits, rather than an urgent warning.](https://www.figma.com/design/wEptRgAezDU1z80Cn3eZ0o/iX-Documentation-illustrations?node-id=8388-5196&t=EjTZKAJDhIkv5ICF-4)
 
@@ -115,5 +119,5 @@ Do not use urgent error or warning messages when users are reaching or have reac
 
 ## Related
 
-- [Punctuation](../basics/punctuation.md#asterisk-)
+- [Asterisk (Punctuation)](../basics/punctuation.md#asterisk-)
 - [Forms field (component)](../../../components/forms-field/guide.md)

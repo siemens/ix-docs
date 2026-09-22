@@ -17,7 +17,6 @@ Use placeholder text in search fields. See [Search and filter](../menu-functions
 <div class="dos-and-donts">
   <div class="dos">
     <ul aria-label="Recommended practices">
-      <li>ARIA label: Search assets</li>
       <li>Placeholder text: Search assets…</li>
     </ul>
   </div>
@@ -43,7 +42,7 @@ Provide helpful or precise format examples as placeholder texts when localizatio
     <ul aria-label="Recommended practices">
       <li>YYYY/MM/DD</li>
       <li>+1 (555) 123-4567</li>
-      <li>name@company.com</li>
+      <li>{'name@company.com'}</li>
       <li>123-45-6789</li>
       <li>14:00 (24-hour clock)</li>
       <li>EQ-2024-00123</li>
@@ -68,14 +67,14 @@ Add helpful examples within text areas for comments or notes. See [Textarea](../
 <div class="dos-and-donts">
   <div class="dos">
     <ul aria-label="Recommended practices">
-      <li>Field label: Comments</li>
-      <li>Placeholder text: Share any details that might help, e.g. "The issue occurs when…"</li>
+      <li>Field label: Comments<br/>
+      Placeholder text: Share any details that might help, e.g. "The issue occurs when…"</li>
     </ul>
   </div>
   <div class="donts">
     <ul aria-label="Practices to avoid">
-      <li>Field label: Comments</li>
-      <li>Placeholder text: Write your comments here…</li>
+      <li>Field label: Comments<br/>
+      Placeholder text: Write your comments here…</li>
     </ul>
   </div>
 </div>
@@ -85,10 +84,10 @@ Never use placeholder texts instead of field labels as they are not reliably acc
 <div class="dos-and-donts">
   <div class="donts">
     <ul aria-label="Practices to avoid">
-      <li>Field label: (empty)</li>
-      <li>Placeholder text: Enter phone number</li>
-      <li>Field label: (empty)</li>
-      <li>Placeholder text: Enter email address</li>
+      <li>Field label: (empty)<br/>
+      Placeholder text: Enter phone number</li>
+      <li>Field label: (empty)<br/>
+      Placeholder text: Enter email address</li>
     </ul>
   </div>
 </div>
@@ -98,10 +97,10 @@ Never add critical information or instructions as placeholder text.
 <div class="dos-and-donts">
   <div class="donts">
     <ul aria-label="Practices to avoid">
-      <li>Field label: Password*</li>
-      <li>Placeholder text: Minimum 8 characters with at least one number.</li>
-      <li>Field label: Upload certificate*</li>
-      <li>Placeholder text: PDF only. Max 5MB. Must be valid for at least 90 days.</li>
+      <li>Field label: Password*<br/>
+      Placeholder text: Minimum 8 characters with at least one number.</li>
+      <li>Field label: Upload certificate*<br/>
+      Placeholder text: PDF only. Max 5MB. Must be valid for at least 90 days.</li>
     </ul>
   </div>
 </div>
@@ -127,3 +126,4 @@ Never add critical information or instructions as placeholder text.
 
 - [Formatting](../formatting/addresses.mdx)
 - [Accessibility](../../accessibility/overview.md)
+- [Logging in and out](../menu-functions-and-ui-labels/logging-in-and-out.md)

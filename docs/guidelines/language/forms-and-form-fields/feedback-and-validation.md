@@ -17,14 +17,14 @@ Provide any requirements first as helper / info text to avoid users falling imme
 <div class="dos-and-donts">
   <div class="dos">
     <ul aria-label="Recommended practices">
-      <li>Field label: Password</li>
-      <li>Helper text: Minimum 8 characters, 1 uppercase letter (A-Z), 1 special character (!@#$%^&*)</li>
+      <li>Field label: Password*<br/>
+      Helper text: Minimum 8 characters, 1 uppercase letter (A-Z), 1 special character (!@#$%^&*)</li>
     </ul>
   </div>
   <div class="donts">
     <ul aria-label="Practices to avoid">
-      <li>Field label: Password</li>
-      <li>Helper text: (empty and requirement only appears after user starts typing) Invalid: Password must have 8 characters.</li>
+      <li>Field label: Password*<br/>
+      Helper text: (empty and requirement only appears after user starts typing) Invalid: Password must have 8 characters.</li>
     </ul>
   </div>
 </div>
@@ -36,14 +36,14 @@ Provide clear, valid wording when the user has met all the validation criteria a
 <div class="dos-and-donts">
   <div class="dos">
     <ul aria-label="Recommended practices">
-      <li>Field label: Username</li>
-      <li>Valid text: Username available</li>
+      <li>Field label: Username*<br/>
+      Valid text: Username available</li>
     </ul>
   </div>
   <div class="donts">
     <ul aria-label="Practices to avoid">
-      <li>Field label: Username</li>
-      <li>Valid text: OK</li>
+      <li>Field label: Username*<br/>
+      Valid text: OK</li>
     </ul>
   </div>
 </div>
@@ -55,18 +55,18 @@ Provide invalid text when the user input has not met the specified requirements 
 <div class="dos-and-donts">
   <div class="dos">
     <ul aria-label="Recommended practices">
-      <li>Field label: Username</li>
-      <li>Invalid text: Username unavailable</li>
-      <li>Field label: Email address</li>
-      <li>Invalid text: Missing @ symbol</li>
+      <li>Field label: Username*<br/>
+      Invalid text: Username unavailable</li>
+      <li>Field label: Email address<br/>
+      Invalid text: Missing @ symbol</li>
     </ul>
   </div>
   <div class="donts">
     <ul aria-label="Practices to avoid">
-      <li>Field label: Username</li>
-      <li>Invalid text: Bad username</li>
-      <li>Field label: Email address</li>
-      <li>Invalid text: Invalid email address</li>
+      <li>Field label: Username*<br/>
+      Invalid text: Bad username</li>
+      <li>Field label: Email address<br/>
+      Invalid text: Invalid email address</li>
     </ul>
   </div>
 </div>
@@ -78,18 +78,18 @@ Provide warning text when there is a critical issue or a suggestion related to t
 <div class="dos-and-donts">
   <div class="dos">
     <ul aria-label="Recommended practices">
-      <li>Field label: Upload file</li>
-      <li>Warning text: Upload max. 10 MB. Select another file.</li>
-      <li>Field label: Temperature</li>
-      <li>Warning text: Hot water temperature limit is too high. There is a risk of scalding.</li>
+      <li>Field label: Upload file<br/>
+      Warning text: Upload max 10 MB. Select another file.</li>
+      <li>Field label: Temperature<br/>
+      Warning text: Hot water temperature limit is too high. There is a risk of scalding.</li>
     </ul>
   </div>
   <div class="donts">
     <ul aria-label="Practices to avoid">
-      <li>Field label: Password</li>
-      <li>Warning text: Warning: This is a weak password and not secure.</li>
-      <li>Field label: Min threshold</li>
-      <li>Warning text: Warning! Wrong threshold!</li>
+      <li>Field label: Password<br/>
+      Warning text: Warning: This is a weak password and not secure.</li>
+      <li>Field label: Min threshold<br/>
+      Warning text: Warning! Wrong threshold!</li>
     </ul>
   </div>
 </div>
@@ -113,5 +113,8 @@ Provide warning text when there is a critical issue or a suggestion related to t
 
 ## Related
 
-- [Tooltips](../messaging/tooltips.mdx)
 - [Forms validation](../../../components/forms-validation/guide.md)
+- [Error messages](../messaging/error-messages.mdx)
+- [Warning messages](../messaging/warning-messages.mdx)
+- [Non-critical information messages](../messaging/non-critical-information-messages.mdx)
+- [Tooltips](../messaging/tooltips.mdx)

@@ -23,7 +23,7 @@ Use sentence casing for all labels without periods (full stops).
   </div>
   <div class="donts">
     <ul aria-label="Practices to avoid">
-      <li>Asset name.</li>
+      <li>Asset Name</li>
       <li>Serial number.</li>
     </ul>
   </div>
@@ -43,7 +43,7 @@ Use short labels, ideally 1-3 words.
     <ul aria-label="Practices to avoid">
       <li>Please enter the name of the asset here</li>
       <li>Enter the asset ID of the asset</li>
-      <li>Enter your email address into the field below so we can contact you</li>
+      <li>Enter your email address into the field below</li>
     </ul>
   </div>
 </div>
@@ -111,4 +111,5 @@ Don't use "please" in labels. See [Voice and tone](../basics/voice-and-tone.md#u
 
 ## Related
 
-- [Voice and tone](../basics/voice-and-tone.md#use-polite-language)
+- [Use polite language (Voice and tone)](../basics/voice-and-tone.md#use-polite-language)
+- [Capitalization and proper nouns](../basics/capitalization-and-proper-nouns.md)
