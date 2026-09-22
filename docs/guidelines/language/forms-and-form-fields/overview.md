@@ -10,6 +10,14 @@ description: 'Form and text input fields provide essential context for users to 
 
 #
 
+![UI example of a UI input field with numbered callouts: 1) Label Username*, 2) Text area with placeholder Enter user name, 3) Helper text Letters and numbers only, 4) Asterisk indicating a required field, and 5) Character counter showing 0/25.](https://www.figma.com/design/wEptRgAezDU1z80Cn3eZ0o/iX-Documentation-illustrations?node-id=8439-2549&t=AvEG5nW65SMQ8nvR-4)
+
+1. Field label
+2. Placeholder
+3. Helper / info text 
+4. Asterisk for required fields
+5. Counter (input and textarea field only)
+
 Use an asterisk (*) for required fields after (not before) UI text.
 
 ![UI example showing the field label Username followed immediately by an asterisk (*) without a space, illustrating the rule for required field indicators.](https://www.figma.com/design/wEptRgAezDU1z80Cn3eZ0o/iX-Documentation-illustrations?node-id=7675-10143&t=EjTZKAJDhIkv5ICF-4)
