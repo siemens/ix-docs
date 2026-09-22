@@ -7,11 +7,7 @@ description: 'Research and design notes for the info page component.'
 
 This document collects design, usage, and implementation evidence for the info page. Confirmed Figma and implementation behavior is separated from recommendations and open questions.
 
-▶️ In which group should we put it?
-
-- Separate group "Page"?
-- System feedback and status?
-- Application frame?
+In sidebar and component overview, it will be part of the system feedback and status group.
 
 We will add this as writing tab: https://ix.siemens.io/docs/guidelines/language/messaging/error-pages
 
@@ -22,21 +18,21 @@ The Figma specification shows a centered info page content area with a single ve
 1. **Illustration or icon slot**: The optional named `image` slot replaces the default icon with an illustration, image, or custom icon. Without slotted content, the component renders the configured icon in a `260 × 196 px` container.
 2. **Title**: The primary heading that names the problem, status, or purpose of the page.
 3. **Instruction text**: Optional supporting text that explains the situation and guides the user toward the next step.
-4. **Action slot**: Optional content in the named `actions` slot. The implementation displays this region only when the slot contains an element or non-empty text.
+4. **Action slot**: Optional content.
 5. **Page background**: The component is presented as a full-page message rather than as an inline notification or modal.
 
 Six predefined HTTP illustrations (400, 401, 404, 418, 500, and 504) are mapped to families of error codes: magnifier, hourglass, lock, plug, document and teapot.
 
 The implementation renders the title as an `h1`, followed by optional copy text and optional instructions. The default icon is decorative and uses `aria-hidden="true"`; slotted images remain responsible for their own accessible alternative text.
 
+We will not use the error page as our main use case, and not have a separate pattern page for now.
+
 **Open discussion points**
-- ▶️ Is it always used for a full page? (what about if e.g. user enters the correct main url with the wrong query parameters)
-- ▶️ Which components are allowed in the action slot? (e.g. only button, or icon button, button link, custom components) Should we recommend a specific action component set for the `actions` slot?
 - ▶️ Header vs. title vs. title text? -> differences between Figma + Code
 
 ## 2. When to use
 
-We recommend an info page as base layout for standalone error pages = when the user has reached a page-level state that needs a clear explanation and a meaningful next step, e.g. missing permissions, a missing route, an unavailable resource, an authorization boundary, a server-side failure
+We recommend an info page as base layout for full page / content area usage, typically standalone error pages = when the user has reached a page-level state that needs a clear explanation and a meaningful next step, e.g. missing permissions, a missing route, an unavailable resource, an authorization boundary, a server-side failure, including it being shown when no framework is present. There are rare edge cases where an info page might be used in a non-full-page context, e.g. for micro-frontends or use cases with an application header (e.g. invite to workspace, page under construction).
 
 Do **not** use an info page...
 
@@ -56,7 +52,6 @@ Keep the page focused on one situation. Choose a clear title, a short explanatio
 - Polaris guidance similarly recommends short labels that clearly communicate an action’s purpose. This supports using concise, outcome-oriented labels in the `actions` slot.
 
 **Open discussion points**
-
 - ▶️ How are non-error informational pages in scope for the component or should use a separate pattern? (as it is called "Info" page)
 
 ## 3. Options
@@ -65,17 +60,15 @@ The implementation in [siemens/ix#2777](https://github.com/siemens/ix/pull/2777)
 
 ### Content
 
-- **`icon`**: Icon name displayed above the title when no `image` slot is populated. The default is `iconWarning`.
-- **`iconColor`**: Color token or value for the default icon. The PR declares `color-warning-text` as the default; the implementation review notes that the token may need to change to `--si-sys-background-warning` to match the latest main-branch token refactoring.
-- **`titleText`**: Required short title (H1!)
-- **`copyText`**: Optional explanation of the topic and how it can be resolved. ▶️?
-- **`instructions`**: Optional instructions describing what the user should do next. The implementation renders this text with a soft text color.
-- **`image` slot**: Optional illustration or custom icon that replaces the default icon. Slotted content is constrained to the image container with `max-width: 100%`, `max-height: 100%`, and `object-fit: contain`. ▶️  Alt text needed?
-- **`actions` slot**: Optional actions related to the message. The component supports arbitrary slotted content at the API level; the implementation does not impose a button count or emit action events.
+- **`icon`**: Icon name displayed above the title when no `image` slot is populated (default `iconWarning`). Adapt the icon color if `--si-sys-text-warning` is not suitable for your use case.
+- **`header`**: Required short title (H1!)
+- **`description`**: Optional instructions describing what the user should do next.
+- **`image`**: Optional illustration or custom icon that replaces the default icon. Needs Alt-Text. 260 × 196 px is recommended but not restricted
+- **`actions` slot**: Optional actions related to the message. We recommend to use buttons only (no icon or link buttons).
 
 ### Illustration mapping
 
-The Figma specification documents six predefined HTTP illustrations - ▶️ how do we handle these? - example, pattern?
+The Figma specification documents six predefined HTTP illustrations - ▶️ TODO for code.mdx: Add all illustration mappings as code examples.
 
 - **Magnifier**: 404 Not found and 410 Gone
 - **Hourglass**: 408 Request timeout, 425 Too early, 426 Too many requests, and 504 Gateway timeout
@@ -96,13 +89,11 @@ The Figma specification documents six predefined HTTP illustrations - ▶️ how
 
 The Figma specification includes a keyboard interaction section with Tab movement and a visible focus example. The component renders slotted actions in normal document order after the heading and message. Make every supplied action reachable with the keyboard; focus behavior belongs to the slotted controls because the info page has no custom focus API.
 
-▶️ Where is the focus when it's shown e.g. on a failed route? Is it part of the component, or do applications need to take care of that?
+The first focusable element is the first button.
 
 ### Responsive behavior
 
-The Figma edge-case specification shows the component at wide and narrow content widths. Titles and instruction text wrap when space is constrained, while the illustration remains centered above the text. The implementation gives the content a maximum width of `50rem`, the message a maximum width of `40rem`, and allows the action row to wrap with a small gap. On small screens, the host padding changes from extra-large/default spacing to large/default spacing.
-
-▶️ Do actions stack at some point or only wrap according to available width?
+The Figma edge-case specification shows the component at wide and narrow content widths. Titles and instruction text wrap when space is constrained, while the illustration remains centered above the text. The implementation gives the content a maximum width of `50rem`, the message a maximum width of `40rem`, and allows the action row to wrap with a small gap. On small screens, the host padding changes from extra-large/default spacing to large/default spacing, and the buttons stack vertically and fill the available width.
 
 ### Overflow and content
 
@@ -121,13 +112,10 @@ Hover, active, disabled, loading, and error states of the component itself are n
 
 ### Don’t
 
+- Don't use it for empty states, use the dedicated empty-state component instead.
 - Don’t use an info page for transient background failures, instead use an inline notification or toast
 - Don’t make an error page a dead end with only “Try again” when another useful way out is available
 - Don’t let long diagnostics or action labels force important content to truncate
-
-**Open discussion points**
-
-- ▶️ Should we include a dedicated error-page composition example or link to a separate pattern page?
 
 ## References
 
