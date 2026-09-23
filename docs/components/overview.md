@@ -158,6 +158,7 @@ import { CategoryButton } from '@site/src/components/CategoryButton';
 | Component                                         | Description                                                                                                                                        |
 | :------------------------------------------------ | :------------------------------------------------------------------------------------------------------------------------------------------------- |
 | [Empty state](./empty-state/index.mdx)            | Empty states inform users that there is no content to display.                                                                                     |
+| [Info page](./info-page/index.mdx)                | Info pages explain a page-level situation and guide users toward a useful next step.                                                               |
 | [Message bar](./messagebar/index.mdx)             | Message bars display important information to users, e.g. feedback, warnings or errors.                                                            |
 | [Badge](./badge/index.mdx)                        | Badges display compact status, counter or notification cues on (or next to) UI elements.                                                             |
 | [Pill](./pill/index.mdx)                          | Pills display small pieces of information, e.g. counters or statuses.                                                                              |
