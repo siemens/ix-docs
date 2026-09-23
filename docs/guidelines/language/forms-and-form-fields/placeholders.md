@@ -28,7 +28,7 @@ Use placeholder text within text area / input fields to provide short examples a
   <div class="dos">
     <ul aria-label="Recommended practices">
       <li>Form field label: Asset name<br/>
-      <li>Placeholder text: Enter asset name, e.g. pump-A-097</li>
+      Placeholder text: Enter asset name, e.g. pump-A-097</li>
     </ul>
   </div>
 </div>
