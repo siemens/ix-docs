@@ -7,8 +7,6 @@ description: 'Usage guide for the ix-info-page'
 
 Use info pages when a page-level situation interrupts the normal route and users need a clear explanation and a way forward. Info pages suit missing routes, unavailable resources, authorization boundaries and server-side failures, as well as other standalone informational pages that need the same focused layout.
 
-Some special cases
-
 ![Info page anatomy](https://www.figma.com/design/wEptRgAezDU1z80Cn3eZ0o/iX-Documentation-illustrations?node-id=8464-3)
 
 1. Illustration or icon slot
@@ -37,7 +35,7 @@ Info pages have no separate hover, active, disabled, loading or error state. The
 
 ![Info page states](https://www.figma.com/design/wEptRgAezDU1z80Cn3eZ0o/iX-Documentation-illustrations?node-id=8464-68)
 
-## Dos and Don’ts
+## Dos and Don'ts
 
 <div className="dos-and-donts">
 <div className="dos">
@@ -49,9 +47,9 @@ Info pages have no separate hover, active, disabled, loading or error state. The
 </div>
 <div className="donts">
   <ul aria-label="Practices to avoid">
-    <li>Don’t use info pages for transient failures while users remain in their current workflow</li>
-    <li>Don’t use info pages for an ordinary lack of content; use an [empty state](../empty-state/) instead</li>
-    <li>Don’t replace the writing guidance with longer technical diagnostics in the main message</li>
+    <li>Don't use info pages for transient failures while users remain in their current workflow</li>
+    <li>Don't use info pages for an ordinary lack of content, use an [empty state](../empty-state/) instead</li>
+    <li>Don't replace the writing guidance with longer technical diagnostics in the main message</li>
   </ul>
 </div>
 </div>
