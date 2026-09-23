@@ -12,7 +12,7 @@ description: 'Labels tell users exactly what information is expected before they
 
 Use sentence casing for all labels without periods (full stops).
 
-![UI example showing the field label Asset name, without a period (full stop), illustrating the rule for punctuation of field labels.](https://www.figma.com/design/wEptRgAezDU1z80Cn3eZ0o/iX-Documentation-illustrations?node-id=8392-5420&t=EjTZKAJDhIkv5ICF-4)
+![UI example showing the field label Asset name without a period.](https://www.figma.com/design/wEptRgAezDU1z80Cn3eZ0o/iX-Documentation-illustrations?node-id=8392-5420&t=EjTZKAJDhIkv5ICF-4)
 
 <div class="dos-and-donts">
   <div class="dos">
@@ -78,7 +78,7 @@ Use nouns, not verbs, for labels whenever possible.
   </div>
 </div>
 
-Don't use "please" in labels. See [Voice and tone](../basics/voice-and-tone.md#use-polite-language).
+Don't use "please" in labels. See [Use polite language (Voice and tone)](../basics/voice-and-tone.md#use-polite-language).
 
 <div class="dos-and-donts">
   <div class="dos">

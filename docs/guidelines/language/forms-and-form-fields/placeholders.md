@@ -60,7 +60,7 @@ Provide helpful or precise format examples as placeholder texts when localizatio
   </div>
 </div>
 
-Add helpful examples within text areas for comments or notes. See [Textarea](../../../components/textarea/guide.md).
+Add helpful examples within text areas for comments or notes. See [Textarea (component)](../../../components/textarea/guide.md).
 
 ![UI example showing field label Comments with the placeholder text Share any details that might help, e.g. "The issue occurs when…".](https://www.figma.com/design/wEptRgAezDU1z80Cn3eZ0o/iX-Documentation-illustrations?node-id=8406-1752&t=EjTZKAJDhIkv5ICF-4)
 
@@ -124,6 +124,6 @@ Never add critical information or instructions as placeholder text.
 
 ## Related
 
-- [Formatting](../formatting/addresses.mdx)
+- [Addresses (Formatting)](../formatting/addresses.mdx)
 - [Accessibility](../../accessibility/overview.md)
 - [Logging in and out](../menu-functions-and-ui-labels/logging-in-and-out.md)

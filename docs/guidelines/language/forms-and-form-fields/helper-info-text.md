@@ -81,7 +81,7 @@ Add helper text to build trust and improve the chances of a successful input fie
 
 Use clear helper texts, instead of placeholders, in high-friction and error-prone fields requiring numbers and specific formats.
 
-![UI example showing a field label Date with the helper text Format: YYYY/MM/DD.](https://www.figma.com/design/wEptRgAezDU1z80Cn3eZ0o/iX-Documentation-illustrations?node-id=8406-2116&t=EjTZKAJDhIkv5ICF-4)
+![UI example showing a field label Date with the helper text saying Format: YYYY/MM/DD.](https://www.figma.com/design/wEptRgAezDU1z80Cn3eZ0o/iX-Documentation-illustrations?node-id=8406-2116&t=EjTZKAJDhIkv5ICF-4)
 
 <div class="dos-and-donts">
   <div class="dos">

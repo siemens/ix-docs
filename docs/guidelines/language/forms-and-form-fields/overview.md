@@ -12,7 +12,7 @@ description: 'Form and text input fields provide essential context for users to 
 
 We've added the labeled iX component here to guide you though this section with the terms we use throughout the Forms and form field chapters. See [Input (component)](../../../components/input/guide.md) and [Textarea (component)](../../../components/textarea/guide.md).
 
-![UI example of a UI form field with numbered callouts: 1) Label Username*, 2) Text area with placeholder Enter user name, 3) Helper text Letters and numbers only, 4) Asterisk indicating a required field, and 5) Character counter showing 0/25.](https://www.figma.com/design/wEptRgAezDU1z80Cn3eZ0o/iX-Documentation-illustrations?node-id=8439-2549&t=AvEG5nW65SMQ8nvR-4)
+![UI form field numbered example: 1) Label Username*, 2) Text area placeholder Enter user name, 3) Helper text Letters and numbers only, 4) Asterisk indicates required field and 5) Character counter shows 0/25.](https://www.figma.com/design/wEptRgAezDU1z80Cn3eZ0o/iX-Documentation-illustrations?node-id=8439-2549&t=AvEG5nW65SMQ8nvR-4)
 
 1. Field label
 2. Placeholder
@@ -24,7 +24,7 @@ We've added the labeled iX component here to guide you though this section with 
 
 Use an asterisk (*) for required fields after (not before) UI text.
 
-![UI example showing the field label Username followed immediately by an asterisk (*) without a space, illustrating the rule for required field indicators.](https://www.figma.com/design/wEptRgAezDU1z80Cn3eZ0o/iX-Documentation-illustrations?node-id=7675-10143&t=EjTZKAJDhIkv5ICF-4)
+![UI example showing the field label Username followed immediately by an asterisk without space.](https://www.figma.com/design/wEptRgAezDU1z80Cn3eZ0o/iX-Documentation-illustrations?node-id=7675-10143&t=EjTZKAJDhIkv5ICF-4)
 
 <div class="dos-and-donts">
   <div class="dos">
@@ -85,7 +85,7 @@ Use counters for form or text input fields, or text areas with character limits,
 
 Don't use urgent error or warning messages when users are reaching or have reached limits.
 
-![UI example of a field label Username* containing JohnDoe. A blue info icon and the text 13 characters left illustrate an informational style for character limits, rather than an urgent warning.](https://www.figma.com/design/wEptRgAezDU1z80Cn3eZ0o/iX-Documentation-illustrations?node-id=8388-5196&t=EjTZKAJDhIkv5ICF-4)
+![UI example of a field label Username* containing JohnDoe with a blue info icon and the text 13 characters left.](https://www.figma.com/design/wEptRgAezDU1z80Cn3eZ0o/iX-Documentation-illustrations?node-id=8388-5196&t=EjTZKAJDhIkv5ICF-4)
 
 <div class="dos-and-donts">
   <div class="dos">
