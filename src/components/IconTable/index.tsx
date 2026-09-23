@@ -27,6 +27,7 @@ import {
   iconUpload,
   iconUser,
   iconWarning,
+  iconWarningOctagon,
   iconWarningRhomb,
 } from "@siemens/ix-icons/icons";
 
@@ -104,40 +105,88 @@ export const IconExamplesClarity = [
 
 export const IconExamplesStatus = [
   {
+    icon: iconWarningOctagon,
+    color: "color-critical",
+    name: "warning-octagon",
+    description: (
+      <>
+        <strong>Critical</strong>
+        <br />
+        Use for states beyond danger
+      </>
+    ),
+  },
+  {
     icon: iconAlarm,
-    color: "color-alarm",
+    color: "color-danger",
     name: "alarm",
-    description: "Use for hazardous states",
+    description: (
+      <>
+        <strong>Danger</strong>
+        <br />
+        Use for dangerous states
+      </>
+    ),
   },
   {
     icon: iconError,
-    color: "color-alarm",
+    color: "color-danger",
     name: "error",
-    description: "Use for error states",
-  },
-  {
-    icon: iconWarningRhomb,
-    color: "color-critical",
-    name: "warning-rhomb",
-    description: "Use for critical states",
+    description: (
+      <>
+        <strong>Error</strong>
+        <br />
+        Use for error states
+      </>
+    ),
   },
   {
     icon: iconWarning,
     color: "color-warning",
     name: "warning",
-    description: "Use for warning states",
+    description: (
+      <>
+        <strong>Warning</strong>
+        <br />
+        Use for warning states
+      </>
+    ),
+  },
+  {
+    icon: iconWarningRhomb,
+    color: "color-caution",
+    name: "warning-rhomb",
+    description: (
+      <>
+        <strong>Caution</strong>
+        <br />
+        Use for states with low severity
+      </>
+    ),
   },
   {
     icon: iconSuccess,
     color: "color-success",
     name: "success",
-    description: "Use for success states",
+    description: (
+      <>
+        <strong>Success</strong>
+        <br />
+        Use for success states
+      </>
+    ),
   },
   {
     icon: iconInfo,
-    color: "color-info",
+    color: "color-information",
     name: "info",
-    description: "Use for info states",
+    description: (
+      <>
+        <strong>Information</strong>
+        <br />
+        Use for info states
+      </>
+    ),
   },
 ];
 
@@ -172,6 +221,6 @@ export const IconExamplesMenu = [
   {
     icon: iconMoreMenu,
     name: "more-menu",
-    description: "Use for additional options, e.g. in toolbars",
+    description: "Use for overflow and additional options, e.g. in toolbars",
   },
 ];
