@@ -1,6 +1,6 @@
 ---
 sidebar_position: 5
-sidebar_label: UX writing and accessibility
+sidebar_label: Accessibility and UX writing
 title: UX writing and accessibility
 doc-type: 'banner'
 component-tabs: ['']
@@ -11,18 +11,18 @@ description: 'Accessibility ensures that information is clear, inclusive and eas
 import React from "react";
 import { IxIcon } from "@siemens/ix-react";
 import { iconPdfDocument } from "@siemens/ix-icons/icons";
+import { iconOpenExternal } from "@siemens/ix-icons/icons";
 
 # 
-
-## General rules
 
 :::info
 Many rules here direct you to further information and examples either within iX or the Web Content Accessibility Guidelines (WCAG).
 
-We aim to conform to WCAG 2.2 level AA (the global standard) which includes level A (the basic foundation) plus more standards to ensure your UX writing is accessible for all readers. See [WCAG 2.2](https://www.w3.org/TR/WCAG22/).
+We aim to conform to WCAG 2.2 level AA (the global standard) which includes level A (the basic foundation) plus more standards to ensure your UX writing is accessible for all readers. See [WCAG 2.2](https://www.w3.org/TR/WCAG22/) <IxIcon name={iconOpenExternal} size="16" aria-label="external" role="img"></IxIcon>.
 :::
 
-Use simple, plain language to make the text easier to read and understand. We use language at a lower secondary / grade eight education level, i.e. the reading level of a 13 or 14-year-old. See [Reading level](https://www.w3.org/TR/WCAG22/#reading-level).
+## General rules
+Use simple, plain language to make the text easier to read and understand. We use language at a lower secondary / grade eight education level, i.e. the reading level of a 13 or 14-year-old. See [WCAG Reading level](https://www.w3.org/TR/WCAG22/#reading-level) <IxIcon name={iconOpenExternal} size="16" aria-label="external" role="img"></IxIcon>.
 
 <div className="dos-and-donts">
 <div className="dos">
@@ -39,7 +39,7 @@ Use simple, plain language to make the text easier to read and understand. We us
 </div>
 </div>
 
-Continue to use domain-specific industry and technical terms while writing in plain language. See [Vocabulary](https://ix.siemens.io/docs/guidelines/language/basics/vocabulary).
+Continue to use domain-specific industry and technical terms while writing in plain language. See [Vocabulary](./vocabulary.md).
 
 <div className="dos-and-donts">
 <div className="dos">
@@ -56,7 +56,7 @@ Continue to use domain-specific industry and technical terms while writing in pl
 </div>
 </div>
 
-Use active voice as it’s shorter and easier to understand. See [Use active voice](https://ix.siemens.io/docs/guidelines/language/basics/grammar#use-active-voice).
+Use active voice as it’s shorter and easier to understand. See [Use active voice](./grammar.md#use-active-voice).
 
 <div className="dos-and-donts">
 <div className="dos">
@@ -88,7 +88,7 @@ Use concise, descriptive headings so users understand the content and purpose of
 </div>
 </div>
 
-Use short, descriptive form field labels so users know what information to enter. Aim to identify and remove unnecessary words. See [Headings and Labels](https://www.w3.org/TR/WCAG22/#headings-and-labels).
+Use short, descriptive form field labels so users know what information to enter. Aim to identify and remove unnecessary words. See [WCAG Headings and Labels](https://www.w3.org/TR/WCAG22/#headings-and-labels) <IxIcon name={iconOpenExternal} size="16" aria-label="external" role="img"></IxIcon>.
 
 <div className="dos-and-donts">
 <div className="dos">
@@ -100,7 +100,7 @@ Use short, descriptive form field labels so users know what information to enter
 <div className="donts">
   <ul aria-label="Practices to avoid">
     <li>Enter the asset ID of the asset</li>
-    <li>Enter your email address into the field below so we can contact you</li>
+    <li>Enter your email address into the field below</li>
   </ul>
 </div>
 </div>
@@ -120,7 +120,7 @@ Break complex ideas, workflow, steps and instructions into shorter sentences.
 </div>
 </div>
 
-Use lists for two or more items. Choose ordered lists when steps must happen in a specific sequence, and unordered lists when the order does not matter. See [Info and Relationships](https://www.w3.org/TR/WCAG22/#info-and-relationships).
+Use lists for two or more items. Choose ordered lists when steps must happen in a specific sequence, and unordered lists when the order does not matter. See [WCAG Info and Relationships](https://www.w3.org/TR/WCAG22/#info-and-relationships) <IxIcon name={iconOpenExternal} size="16" aria-label="external" role="img"></IxIcon>.
 
 <div className="dos-and-donts">
 <div className="dos">
@@ -137,7 +137,24 @@ Use lists for two or more items. Choose ordered lists when steps must happen in 
 
 ## Accessible links
 
-Describe clearly in the link text where the link goes.
+Describe what happens when users click on the link, e.g. opens a new tab or an external link. 
+
+<div className="dos-and-donts">
+<div className="dos">
+  <ul aria-label="Recommended practices">
+    <li>SIMATIC S7-1500 firmware updates <IxIcon name={iconOpenExternal} size="16" aria-label="external" role="img"></IxIcon></li>
+    <li>Demonstration projects <IxIcon name={iconOpenExternal} size="16" aria-label="external" role="img"></IxIcon></li>
+  </ul>
+</div>
+<div className="donts">
+  <ul aria-label="Practices to avoid">
+    <li>{'https://www.company.com/s7-1500-firmware'}</li>
+    <li>Remote access</li>
+  </ul>
+</div>
+</div>
+
+Describe the resource function and type and pair the download of resources with both file type and size whenever possible.
 
 <div className="dos-and-donts">
 <div className="dos">
@@ -152,7 +169,7 @@ Describe clearly in the link text where the link goes.
 </div>
 </div>
 
-Avoid generic phrases like "click here" or "read more". See [External links and resources](https://ix.siemens.io/docs/guidelines/language/menu-functions-and-ui-labels/external-links-and-resources).
+Avoid generic phrases like "click here" or "read more". See [External links and resources](../menu-functions-and-ui-labels/external-links-and-resources.md).
 
 <div className="dos-and-donts">
 <div className="dos">
@@ -163,13 +180,13 @@ Avoid generic phrases like "click here" or "read more". See [External links and 
 </div>
 <div className="donts">
   <ul aria-label="Practices to avoid">
-    <li>Click here</li>
-    <li>Read more</li>
+    <li>Click here.</li>
+    <li>Read more.</li>
   </ul>
 </div>
 </div>
 
-Make sure each link makes sense on its own, even out of context, as screen reader users often scan a list of links without reading the surrounding text. See [Link Purpose (In Context)](https://www.w3.org/TR/WCAG22/#link-purpose-in-context).
+Make sure each link makes sense on its own, even out of context, as screen reader users often scan a list of links without reading the surrounding text. See [WCAG Link Purpose (In Context)](https://www.w3.org/TR/WCAG22/#link-purpose-in-context) <IxIcon name={iconOpenExternal} size="16" aria-label="external" role="img"></IxIcon>.
 
 <div className="dos-and-donts">
 <div className="dos">
@@ -179,14 +196,14 @@ Make sure each link makes sense on its own, even out of context, as screen reade
 </div>
 <div className="donts">
   <ul aria-label="Practices to avoid">
-    <li>Read more</li>
+    <li>Read more.</li>
   </ul>
 </div>
 </div>
 
-## Input fields / Labels
+## Input fields / labels
 
-Provide descriptive labels with plain language to make the content’s purpose clear. See [Forms and form fields](#) and [Identify Input Purpose](https://www.w3.org/TR/WCAG22/#identify-input-purpose).
+Provide descriptive labels with plain language to make the content’s purpose clear. See [Forms and form fields](#) and [WCAG Identify Input Purpose](https://www.w3.org/TR/WCAG22/#identify-input-purpose) <IxIcon name={iconOpenExternal} size="16" aria-label="external" role="img"></IxIcon>.
 
 <div className="dos-and-donts">
 <div className="dos">
@@ -199,7 +216,7 @@ Provide descriptive labels with plain language to make the content’s purpose c
 </div>
 </div>
 
-Group similar labels together. See [Labels or Instructions](https://www.w3.org/TR/WCAG22/#labels-or-instructions).
+Group similar labels together. See [WCAGLabels or Instructions](https://www.w3.org/TR/WCAG22/#labels-or-instructions) <IxIcon name={iconOpenExternal} size="16" aria-label="external" role="img"></IxIcon>.
 
 <div className="dos-and-donts">
 <div className="dos">
@@ -214,7 +231,7 @@ Group similar labels together. See [Labels or Instructions](https://www.w3.org/T
 </div>
 </div>
 
-Use an asterisk (*) for required fields. When inserting the asterisk manually, set the font size of the asterisk at 150% to support users with impaired vision.
+Use an asterisk (*) for required fields. 
 
 <div className="dos-and-donts">
 <div className="dos">
@@ -235,8 +252,8 @@ When all form fields are required, add clear instructions below the form heading
 <div className="dos-and-donts">
 <div className="dos">
   <ul aria-label="Recommended practices">
-    <li>All form fields are required</li>
-    <li>Complete all fields</li>
+    <li>All form fields are required.</li>
+    <li>Complete all fields.</li>
   </ul>
 </div>
 <div className="donts">
@@ -249,7 +266,7 @@ When all form fields are required, add clear instructions below the form heading
 
 ## Error suggestion and prevention
 
-Describe errors clearly in plain text, explain what happened, and provide solutions. See our template [Error messages](https://ix.siemens.io/docs/guidelines/language/messaging/error-messages) and [Error Identification](https://www.w3.org/TR/WCAG22/#error-identification).
+Describe errors clearly in plain text, explain what happened, and provide solutions. See our template [Error messages](../messaging/error-messages.mdx) and [WCAG Error Identification](https://www.w3.org/TR/WCAG22/#error-identification) <IxIcon name={iconOpenExternal} size="16" aria-label="external" role="img"></IxIcon>.
 
 <div className="dos-and-donts">
 <div className="dos">
@@ -264,7 +281,7 @@ Describe errors clearly in plain text, explain what happened, and provide soluti
 </div>
 </div>
 
-Explain format requirements and constraints to prevent errors before they happen in helper texts. See [Forms and form fields](#) and [Error Prevention](https://www.w3.org/TR/WCAG22/#error-identification).
+Explain format requirements and constraints to prevent errors before they happen in helper texts. See [Forms and form fields](#) and [WCAG Error Prevention](https://www.w3.org/TR/WCAG22/#error-identification) <IxIcon name={iconOpenExternal} size="16" aria-label="external" role="img"></IxIcon>.
 
 <div className="dos-and-donts">
 <div className="dos">
@@ -274,7 +291,7 @@ Explain format requirements and constraints to prevent errors before they happen
 </div>
 <div className="donts">
   <ul aria-label="Practices to avoid">
-    <li>Field label: Upload files<br/>Helper text: Use the right format</li>
+    <li>Field label: Upload files<br/>Helper text: Use the right format.</li>
   </ul>
 </div>
 </div>
@@ -284,7 +301,7 @@ Don't rely solely on colors or icons to indicate there’s been an error.
 <div className="dos-and-donts">
 <div className="dos">
   <ul aria-label="Recommended practices">
-    <li>Error: Password must be at least 8 characters</li>
+    <li>Error: Password must be at least 8 characters.</li>
   </ul>
 </div>
 <div className="donts">
@@ -299,13 +316,12 @@ Provide suggestions for correction and help users fix problems with clear, actio
 <div className="dos-and-donts">
 <div className="dos">
   <ul aria-label="Recommended practices">
-    <li>Error: Email format is incorrect. Use the format: name@example.com</li>
+    <li>Error: Email format is incorrect. Use the format: {'name@example.com'}</li>
     <li>Missing @ symbol</li>
   </ul>
 </div>
 <div className="donts">
   <ul aria-label="Practices to avoid">
-    <li>Invalid email</li>
     <li>Invalid email</li>
   </ul>
 </div>
@@ -328,7 +344,7 @@ Provide clear and consistent wording for users to reverse actions and submission
 </div>
 </div>
 
-Warn users of any consequences before automatic or unexpected actions occur. See our template [Warning messages](https://ix.siemens.io/docs/guidelines/language/messaging/warning-messages) and [On Input](https://www.w3.org/TR/WCAG22/#on-input).
+Warn users of any consequences before automatic or unexpected actions occur. See [Warning messages](../messaging/warning-messages.mdx) and [WCAG On Input](https://www.w3.org/TR/WCAG22/#on-input) <IxIcon name={iconOpenExternal} size="16" aria-label="external" role="img"></IxIcon>.
 
 <div className="dos-and-donts">
 <div className="dos">
@@ -348,14 +364,14 @@ Provide confirmation messages for users to review, confirm or correct their inpu
 <div className="dos-and-donts">
 <div className="dos">
   <ul aria-label="Recommended practices">
-    <li>Message: Review your changes: Device maintenance postponed until September 2027.<br/>Button text: Postpone maintenance<br/>Button text: Cancel</li>
+    <li>Message: Review your changes: Device maintenance postponed until September 2027.<br/>Buttons: Cancel, Postpone maintenance</li>
   </ul>
 </div>
 </div>
 
 ## Time-related messages
 
-Tell users when there are time limits. See [Time-related messages](https://ix.siemens.io/docs/guidelines/language/messaging/time-related-messages).
+Tell users when there are time limits. See [Time-related messages](../messaging/time-related-messages.mdx).
 
 <div className="dos-and-donts">
 <div className="dos">
@@ -372,7 +388,7 @@ Tell users when there are time limits. See [Time-related messages](https://ix.si
 </div>
 </div>
 
-Provide options to extend time limits. See [WCAG 2.2 - 2.2.1 Timing Adjustable (Level A)](https://www.w3.org/TR/WCAG22/#timing-adjustable).
+Provide options to extend time limits. See [WCAG 2.2 - 2.2.1 Timing Adjustable (Level A)](https://www.w3.org/TR/WCAG22/#timing-adjustable) <IxIcon name={iconOpenExternal} size="16" aria-label="external" role="img"></IxIcon>.
 
 <div className="dos-and-donts">
 <div className="dos">
@@ -384,7 +400,7 @@ Provide options to extend time limits. See [WCAG 2.2 - 2.2.1 Timing Adjustable (
 
 ## Audio controls
 
-Write clear, descriptive button labels for audio controls. If a page has only one audio control, a short, simple label is acceptable. See [WCAG 2.2 - 1.4.2 Audio Control (Level A)](https://www.w3.org/TR/WCAG22/#audio-control).
+Write clear, descriptive button labels for audio controls. If a page has only one audio control, a short, simple label is acceptable. See [WCAG 2.2 - 1.4.2 Audio Control (Level A)](https://www.w3.org/TR/WCAG22/#audio-control) <IxIcon name={iconOpenExternal} size="16" aria-label="external" role="img"></IxIcon>.
 
 <div className="dos-and-donts">
 <div className="dos">
@@ -451,7 +467,7 @@ Alternative text is part of UX writing and accessibility. It represents a text r
 | Map | Location and what it shows, e.g. Factory site areas in Europe |
 | Video thumbnail | Video theme |
 
-Write clear and descriptive alternative text for all non-text content. See [WCAG 2.2 - 1.1.1 Non-text Content (Level A)](https://www.w3.org/TR/WCAG22/#non-text-content).
+Write clear and descriptive ALT-text for all non-text content. See [WCAG 2.2 - 1.1.1 Non-text Content (Level A)](https://www.w3.org/TR/WCAG22/#non-text-content) <IxIcon name={iconOpenExternal} size="16" aria-label="external" role="img"></IxIcon>.
 
 <div className="dos-and-donts">
 <div className="dos">
@@ -467,7 +483,7 @@ Write clear and descriptive alternative text for all non-text content. See [WCAG
 </div>
 </div>
 
-All alternative text must present and convey the same information as the non-text content.
+All ALT-text must present and convey the same information as the non-text content.
 
 <div className="dos-and-donts">
 <div className="dos">
@@ -498,9 +514,9 @@ For decorative images, it’s not necessary to write alternative text. Instead, 
 </div>
 </div>
 
-## ARIA-labels
+## ARIA labels
 
-ARIA (Accessible Rich Internet Applications) labels are part of UX writing and accessibility. They represent a text name for interactive controls that have no visible text. The table below describes some of the most common interactive elements that require aria labels.
+ARIA (Accessible Rich Internet Applications) labels are part of UX writing and accessibility. They represent a text name for interactive controls that have no visible text. The table below describes some of the most common interactive elements that require ARIA labels.
 
 | Interactive control | Name |
 | ---- | ---- |
@@ -514,7 +530,7 @@ ARIA (Accessible Rich Internet Applications) labels are part of UX writing and a
 | Modal / dialog | Dialog purpose, e.g. Confirm additional users |
 | Navigation landmarks (banners, search, main menu, etc.) | Navigation type, e.g. Main navigation, Sidebar menu, Quick links, Banner |
 
-Write clear and concise aria labels for all interactive controls without visible text. See [WCAG 2.2 - 2.5.3 Label in Name (Level A)](https://www.w3.org/WAI/WCAG22/quickref/?showtechniques=111%2C332%2C144&currentsidebar=%23col_overview#label-in-name).
+Write clear and concise ARIA labels for all interactive controls without visible text. See [WCAG 2.2 - 2.5.3 Label in Name (Level A)](https://www.w3.org/WAI/WCAG22/quickref/?showtechniques=111%2C332%2C144&currentsidebar=%23col_overview#label-in-name) <IxIcon name={iconOpenExternal} size="16" aria-label="external" role="img"></IxIcon>.
 
 <div className="dos-and-donts">
 <div className="dos">
@@ -537,7 +553,7 @@ Write clear and concise aria labels for all interactive controls without visible
 </div>
 </div>
 
-All aria labels must be concise, action-oriented, and match the visible context of the control.
+All ARIA labels must be concise, action-oriented, and match the visible context of the control.
 
 <div className="dos-and-donts">
 <div className="dos">
@@ -552,7 +568,7 @@ All aria labels must be concise, action-oriented, and match the visible context 
 </div>
 </div>
 
-Never use aria labels to override or duplicate visible text. If a button displays "Submit," do not add an aria-label as this confuses voice control users and assistive technology.
+Never use ARIA labels to override or duplicate visible text. If a button displays "Submit," do not add an aria-label as this confuses voice control users and assistive technology.
 
 <div className="dos-and-donts">
 <div className="dos">
@@ -567,7 +583,7 @@ Never use aria labels to override or duplicate visible text. If a button display
 </div>
 </div>
 
-Use unique aria labels when pages have more than one navigation landmark, e.g. banners, main and navigation menus.
+Use unique ARIA labels when pages have more than one navigation landmark, e.g. banners, main and navigation menus.
 
 <div className="dos-and-donts">
 <div className="dos">
@@ -585,12 +601,12 @@ Use unique aria labels when pages have more than one navigation landmark, e.g. b
 ## Related
 
 - [iX Accessibility guidelines](../../accessibility/overview.md)
-- [WCAG 2.2 official homepage](https://www.w3.org/TR/WCAG22/)
-- [WCAG 2.2 explanations and success criteria](https://www.w3.org/WAI/WCAG22/Understanding/)
-- [WCAG 2.2 quick reference guide](https://www.w3.org/WAI/WCAG22/quickref/)
+- [WCAG 2.2 official homepage](https://www.w3.org/TR/WCAG22/) <IxIcon name={iconOpenExternal} size="16" aria-label="external" role="img"></IxIcon>
+- [WCAG 2.2 explanations and success criteria](https://www.w3.org/WAI/WCAG22/Understanding/) <IxIcon name={iconOpenExternal} size="16" aria-label="external" role="img"></IxIcon>
+- [WCAG 2.2 quick reference guide](https://www.w3.org/WAI/WCAG22/quickref/) <IxIcon name={iconOpenExternal} size="16" aria-label="external" role="img"></IxIcon>
 
 :::info
-Official Siemens accessibility resources are exclusively available for Siemens AG employees and partners and can be accessed on [Siemens Brandville](https://brandville.siemens.com/en/design-elements/accessibility).
+Official Siemens accessibility resources are exclusively available for Siemens AG employees and partners and can be accessed on [Siemens Brandville](https://brandville.siemens.com/en/design-elements/accessibility) <IxIcon name={iconOpenExternal} size="16" aria-label="external" role="img"></IxIcon>.
 :::
 
 
