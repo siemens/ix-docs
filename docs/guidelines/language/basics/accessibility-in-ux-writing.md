@@ -13,8 +13,6 @@ import { IxIcon } from "@siemens/ix-react";
 import { iconPdfDocument } from "@siemens/ix-icons/icons";
 import { iconOpenExternal } from "@siemens/ix-icons/icons";
 
-# 
-
 :::info
 Many rules here direct you to further information and examples either within iX or the Web Content Accessibility Guidelines (WCAG).
 
@@ -56,7 +54,7 @@ Continue to use domain-specific industry and technical terms while writing in pl
 </div>
 </div>
 
-Use active voice as it’s shorter and easier to understand. See [Use active voice](./grammar.md#use-active-voice).
+Use active voice as it's shorter and easier to understand. See [Use active voice](./grammar.md#use-active-voice).
 
 <div className="dos-and-donts">
 <div className="dos">
@@ -124,9 +122,11 @@ Use lists for two or more items. Choose ordered lists when steps must happen in 
 
 <div className="dos-and-donts">
 <div className="dos">
-  <ul aria-label="Recommended practices">
-    <li>1. Connect the sensor.<br/>2. Power on the PLC.<br/>3. Calibrate the system using the control panel.</li>
-  </ul>
+  <ol aria-label="Recommended practices">
+    <li>Connect the sensor.</li>
+    <li>Power on the PLC.</li>
+    <li>Calibrate the system using the control panel.</li>
+  </ol>
 </div>
 <div className="donts">
   <ul aria-label="Practices to avoid">
@@ -203,7 +203,7 @@ Make sure each link makes sense on its own, even out of context, as screen reade
 
 ## Input fields / labels
 
-Provide descriptive labels with plain language to make the content’s purpose clear. See [Forms and form fields](#) and [WCAG Identify Input Purpose](https://www.w3.org/TR/WCAG22/#identify-input-purpose) <IxIcon name={iconOpenExternal} size="16" aria-label="external" role="img"></IxIcon>.
+Provide descriptive labels with plain language to make the content's purpose clear. See [Forms and form fields](#) and [WCAG Identify Input Purpose](https://www.w3.org/TR/WCAG22/#identify-input-purpose) <IxIcon name={iconOpenExternal} size="16" aria-label="external" role="img"></IxIcon>.
 
 <div className="dos-and-donts">
 <div className="dos">
@@ -247,7 +247,7 @@ Use an asterisk (*) for required fields.
 </div>
 </div>
 
-When all form fields are required, add clear instructions below the form heading and add the asterisk to all required form fields. Don’t use the abbreviation “req.” even in space-constrained UIs.
+When all form fields are required, add clear instructions below the form heading and add the asterisk to all required form fields. Don't use the abbreviation "req." even in space-constrained UIs.
 
 <div className="dos-and-donts">
 <div className="dos">
@@ -296,7 +296,7 @@ Explain format requirements and constraints to prevent errors before they happen
 </div>
 </div>
 
-Don't rely solely on colors or icons to indicate there’s been an error.
+Don't rely solely on colors or icons to indicate there's been an error.
 
 <div className="dos-and-donts">
 <div className="dos">
@@ -383,7 +383,7 @@ Tell users when there are time limits. See [Time-related messages](../messaging/
 <div className="donts">
   <ul aria-label="Practices to avoid">
     <li>Your session will expire soon.</li>
-    <li>Your session is over. We’re logging you out.</li>
+    <li>Your session is over. We're logging you out.</li>
   </ul>
 </div>
 </div>
@@ -409,12 +409,12 @@ Write clear, descriptive button labels for audio controls. If a page has only on
     <li>Stop</li>
     <li>Mute</li>
     <li>Record</li>
+    <li>Play</li>
   </ul>
 </div>
 <div className="donts">
   <ul aria-label="Practices to avoid">
     <li>Click</li>
-    <li>Play</li>
   </ul>
 </div>
 </div>
@@ -440,7 +440,7 @@ If there is more than one audio player or recording on the same page, each label
 </div>
 </div>
 
-If audio plays automatically for more than 3 seconds, provide clear controls to pause, stop, and adjust volume independently of the system volume. Even when audio is shorter than 3 seconds, giving users this control is still recommended.
+If audio plays automatically for more than 3 seconds, provide either a mechanism to pause or stop the audio or a mechanism to adjust its volume independently of the system volume. We recommend providing pause, stop and independent volume controls, even when audio is shorter than 3 seconds.
 
 <div className="dos-and-donts">
 <div className="dos">
@@ -488,7 +488,7 @@ All ALT-text must present and convey the same information as the non-text conten
 <div className="dos-and-donts">
 <div className="dos">
   <ul aria-label="Recommended practices">
-    <li>Image: Line graph with multiple data series<br/>ALT-text: Line chart comparing energy consumption across three production lines over Q1–Q4 2025, showing a 12% reduction in Line A and 8% in Line B.</li>
+    <li>Image: Line graph with multiple data series<br/>ALT-text: Line chart comparing energy consumption across three production lines over Q1 to Q4 2025, showing a 12% reduction in Line A and 8% in Line B.</li>
     <li>Image: Map showing colored regions<br/>ALT-text: Map of Europe highlighting service centers in 12 countries, with red pins indicating locations in Germany, France, Poland, and Italy, and blue pins for Nordic regions.</li>
     <li>Image: Overhead view of industrial facility<br/>ALT-text: Facility map showing the manufacturing plant in Stuttgart with green pins indicating three production halls, warehouse zones, and emergency assembly points.</li>
     <li>A technician in a hard hat and safety vest is operating a CNC machine while monitoring the control panel display.</li>
@@ -504,7 +504,7 @@ All ALT-text must present and convey the same information as the non-text conten
 </div>
 </div>
 
-For decorative images, it’s not necessary to write alternative text. Instead, use empty alt text (alt="") so it is ignored by assistive technology.
+For decorative images, it's not necessary to write alternative text. Instead, use empty alt text (alt="") so it is ignored by assistive technology.
 
 <div className="dos-and-donts">
 <div className="dos">
