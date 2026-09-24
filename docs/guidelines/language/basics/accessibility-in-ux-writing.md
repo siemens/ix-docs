@@ -20,7 +20,7 @@ We aim to conform to WCAG 2.2 level AA (the global standard) which includes leve
 :::
 
 ## General rules
-Use simple, plain language to make the text easier to read and understand. We use language at a lower secondary / grade eight education level, i.e. the reading level of a 13 or 14-year-old. See [WCAG Reading level](https://www.w3.org/TR/WCAG22/#reading-level) <IxIcon name={iconOpenExternal} size="16" aria-label="external" role="img"></IxIcon>.
+Use simple, plain language to make the text easier to read and understand. We aim to use language at a lower secondary / grade eight education level, i.e. the reading level of a 13 or 14-year-old, to reach the WCAG 2.2. level AAA standard (the gold standard). See [WCAG Reading level](https://www.w3.org/TR/WCAG22/#reading-level) <IxIcon name={iconOpenExternal} size="16" aria-label="external" role="img"></IxIcon>.
 
 <div className="dos-and-donts">
 <div className="dos">
@@ -216,7 +216,7 @@ Provide descriptive labels with plain language to make the content's purpose cle
 </div>
 </div>
 
-Group similar labels together. See [WCAGLabels or Instructions](https://www.w3.org/TR/WCAG22/#labels-or-instructions) <IxIcon name={iconOpenExternal} size="16" aria-label="external" role="img"></IxIcon>.
+Group similar labels together. See [WCAG Labels or Instructions](https://www.w3.org/TR/WCAG22/#labels-or-instructions) <IxIcon name={iconOpenExternal} size="16" aria-label="external" role="img"></IxIcon>.
 
 <div className="dos-and-donts">
 <div className="dos">
@@ -264,7 +264,7 @@ When all form fields are required, add clear instructions below the form heading
 </div>
 </div>
 
-## Error suggestion and prevention
+## Error identification and prevention
 
 Describe errors clearly in plain text, explain what happened, and provide solutions. See our template [Error messages](../messaging/error-messages.mdx) and [WCAG Error Identification](https://www.w3.org/TR/WCAG22/#error-identification) <IxIcon name={iconOpenExternal} size="16" aria-label="external" role="img"></IxIcon>.
 
@@ -467,7 +467,7 @@ Alternative text is part of UX writing and accessibility. It represents a text r
 | Map | Location and what it shows, e.g. Factory site areas in Europe |
 | Video thumbnail | Video theme |
 
-Write clear and descriptive ALT-text for all non-text content. See [WCAG 2.2 - 1.1.1 Non-text Content (Level A)](https://www.w3.org/TR/WCAG22/#non-text-content) <IxIcon name={iconOpenExternal} size="16" aria-label="external" role="img"></IxIcon>.
+Write clear and descriptive ALT-text for non-text content. See [WCAG 2.2 - 1.1.1 Non-text Content (Level A)](https://www.w3.org/TR/WCAG22/#non-text-content) <IxIcon name={iconOpenExternal} size="16" aria-label="external" role="img"></IxIcon>.
 
 <div className="dos-and-donts">
 <div className="dos">
@@ -530,7 +530,7 @@ ARIA (Accessible Rich Internet Applications) labels are part of UX writing and a
 | Modal / dialog | Dialog purpose, e.g. Confirm additional users |
 | Navigation landmarks (banners, search, main menu, etc.) | Navigation type, e.g. Main navigation, Sidebar menu, Quick links, Banner |
 
-Write clear and concise ARIA labels for all interactive controls without visible text. See [WCAG 2.2 - 2.5.3 Label in Name (Level A)](https://www.w3.org/WAI/WCAG22/quickref/?showtechniques=111%2C332%2C144&currentsidebar=%23col_overview#label-in-name) <IxIcon name={iconOpenExternal} size="16" aria-label="external" role="img"></IxIcon>.
+Write clear and concise ARIA labels for interactive controls without visible text. Labels should describe the action and the object, e.g. Download report instead of just Download. See [WCAG Name, Role, Value] https://www.w3.org/TR/WCAG22/#name-role-value <IxIcon name={iconOpenExternal} size="16" aria-label="external" role="img"></IxIcon>.
 
 <div className="dos-and-donts">
 <div className="dos">
@@ -568,7 +568,7 @@ All ARIA labels must be concise, action-oriented, and match the visible context 
 </div>
 </div>
 
-Never use ARIA labels to override or duplicate visible text. If a button displays "Submit," do not add an aria-label as this confuses voice control users and assistive technology.
+Don’t use aria labels to duplicate visible text. If a button displays "Submit", adding an aria-label also titled “Submit” can confuse voice control users and assistive technology. 
 
 <div className="dos-and-donts">
 <div className="dos">
