@@ -530,7 +530,7 @@ ARIA (Accessible Rich Internet Applications) labels are part of UX writing and a
 | Modal / dialog | Dialog purpose, e.g. Confirm additional users |
 | Navigation landmarks (banners, search, main menu, etc.) | Navigation type, e.g. Main navigation, Sidebar menu, Quick links, Banner |
 
-Write clear and concise ARIA labels for interactive controls without visible text. Labels should describe the action and the object, e.g. Download report instead of just Download. See [WCAG Name, Role, Value] https://www.w3.org/TR/WCAG22/#name-role-value <IxIcon name={iconOpenExternal} size="16" aria-label="external" role="img"></IxIcon>.
+Write clear and concise ARIA labels for interactive controls without visible text. Labels should describe the action and the object, e.g. Download report instead of just Download. See [WCAG Name, Role, and Value](https://www.w3.org/TR/WCAG22/#name-role-value) <IxIcon name={iconOpenExternal} size="16" aria-label="external" role="img"></IxIcon>.
 
 <div className="dos-and-donts">
 <div className="dos">
