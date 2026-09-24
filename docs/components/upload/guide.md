@@ -49,21 +49,21 @@ Uploads have six states: Default, drag over, checking, success, fail and disable
 ## Dos and Don’ts
 
 <div className="dos-and-donts">
-<div className="dos">
-  <ul aria-label="Recommended practices">
-    <li>Do state the allowed file types, maximum size and whether users can select multiple files</li>
-    <li>Do keep upload feedback close to the upload area or the affected file</li>
-    <li>Do provide a replace or remove action after users select a file</li>
-    <li>Do keep the upload area aligned with adjacent form controls</li>
-  </ul>
-</div>
-<div className="donts">
-  <ul aria-label="Practices to avoid">
-    <li>Don’t hide file restrictions in a tooltip</li>
-    <li>Don’t rely on drag-and-drop as the only way to select files</li>
-    <li>Don’t use toast messages for a file-level validation error</li>
-  </ul>
-</div>
+  <div className="dos">
+    <ul aria-label="Recommended practices">
+      <li>Do state the allowed file types, maximum size and whether users can select multiple files</li>
+      <li>Do keep upload feedback close to the upload area or the affected file</li>
+      <li>Do provide a replace or remove action after users select a file</li>
+      <li>Do keep the upload area aligned with adjacent form controls</li>
+    </ul>
+  </div>
+  <div className="donts">
+    <ul aria-label="Practices to avoid">
+      <li>Don’t hide file restrictions in a tooltip</li>
+      <li>Don’t rely on drag-and-drop as the only way to select files</li>
+      <li>Don’t use toast messages for a file-level validation error</li>
+    </ul>
+  </div>
 </div>
 
 ## Related

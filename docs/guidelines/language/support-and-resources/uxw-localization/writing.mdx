@@ -17,16 +17,16 @@ In the example below, UX writers should ask themselves whether a tool instance i
 It is also unclear whether “complete” is an adjective or a verb.
 
 <div className="dos-and-donts">
-<div className="dos">
-	<ul aria-label="Recommended practices">
-		<li>"Delete template for tool instance IDs"</li>
-	</ul>
-</div>
-<div className="donts">
-	<ul aria-label="Practices to avoid">
-		<li>"Delete complete tool instance ID naming"</li>
-	</ul>
-</div>
+  <div className="dos">
+    <ul aria-label="Recommended practices">
+      <li>"Delete template for tool instance IDs"</li>
+    </ul>
+  </div>
+  <div className="donts">
+    <ul aria-label="Practices to avoid">
+      <li>"Delete complete tool instance ID naming"</li>
+    </ul>
+  </div>
 </div>
 
 For translators, user interface texts are stand-alone, short, and to the point. And they often get little to no context. Thus, translators and AI can only produce a reliable translation if the terms are:
@@ -40,16 +40,16 @@ For translators, user interface texts are stand-alone, short, and to the point. 
 Use terms from standardization bodies (e.g. [ISO](https://iso.org), [EN](https://cen.eu), [UL](https://ul.com), [IEC](https://iec.ch)) or experts from universities and global specialized companies, but avoid terms from quasi-industrial standards.
 
 <div className="dos-and-donts">
-<div className="dos">
-	<ul aria-label="Recommended practices">
-		<li>"Economy"</li>
-	</ul>
-</div>
-<div className="donts">
-	<ul aria-label="Practices to avoid">
-		<li>"Standby"</li>
-	</ul>
-</div>
+  <div className="dos">
+    <ul aria-label="Recommended practices">
+      <li>"Economy"</li>
+    </ul>
+  </div>
+  <div className="donts">
+    <ul aria-label="Practices to avoid">
+      <li>"Standby"</li>
+    </ul>
+  </div>
 </div>
 
 Note: The [Commission Regulation (EU) 2023/826](https://eur-lex.europa.eu/eli/reg/2023/826/oj?uri=CELEX:32023R0826) specifies the maximum power consumed by a device (e.g., 0.5 W) in order to use the term “standby".
@@ -80,22 +80,22 @@ Then UX writers should review the UI texts together with domain experts, and ens
 One meaning always dominates regardless of context. That is the meaning that can be used without creating confusion. However, if this dominant meaning does not fit the context, an alternative term (unambiguous synonym) must be used to eliminate misunderstandings.
 
 <div className="dos-and-donts">
-<div className="dos">
-	<ul aria-label="Recommended practices">
-		<li>Academic title</li>
-		<li>Heading</li>
-		<li>Name</li>
-		<li>Ownership</li>
-	</ul>
-</div>
-<div className="donts">
-	<ul aria-label="Practices to avoid">
-		<li>Title (professor, doctor xyz)</li>
-		<li>Title of a book (War and peace)</li>
-		<li>Title of an object (Intelligent Valve)</li>
-		<li>Title to an asset (Owned by Mr./Ms. xyz)</li>
-	</ul>
-</div>
+  <div className="dos">
+    <ul aria-label="Recommended practices">
+      <li>Academic title</li>
+      <li>Heading</li>
+      <li>Name</li>
+      <li>Ownership</li>
+    </ul>
+  </div>
+  <div className="donts">
+    <ul aria-label="Practices to avoid">
+      <li>Title (professor, doctor xyz)</li>
+      <li>Title of a book (War and peace)</li>
+      <li>Title of an object (Intelligent Valve)</li>
+      <li>Title to an asset (Owned by Mr./Ms. xyz)</li>
+    </ul>
+  </div>
 </div>
 
 In addition, the alternative term substantially increases the probability of correct interpretation by artificial intelligence (as part of translation, machine learning, or any other use).
@@ -114,18 +114,18 @@ Directional terms might be incorrect if the user interface is mirrored for [RTL 
 Use direction agnostic texts instead.
 
 <div className="dos-and-donts">
-<div className="dos">
-	<ul aria-label="Recommended practices">
-		<li>Site pane</li>
-		<li>Vertical navigation</li>
-	</ul>
-</div>
-<div className="donts">
-	<ul aria-label="Practices to avoid">
-		<li>Right pane</li>
-		<li>Left navigation</li>
-	</ul>
-</div>
+  <div className="dos">
+    <ul aria-label="Recommended practices">
+      <li>Site pane</li>
+      <li>Vertical navigation</li>
+    </ul>
+  </div>
+  <div className="donts">
+    <ul aria-label="Practices to avoid">
+      <li>Right pane</li>
+      <li>Left navigation</li>
+    </ul>
+  </div>
 </div>
 
 
@@ -194,18 +194,18 @@ Pluralization of the Polish term "Plik"  (English:file):
 Pluralization cannot be handled by product code or writing style. Use localization (e.g. ICU or framework plural rules) instead.
 
 <div className="dos-and-donts">
-<div className="dos">
-	<ul aria-label="Recommended practices">
-		<li>"Delete &#123;count&#125; rows?"</li>
-		<li>"Delete &#123;rowName&#125;?"</li>
-	</ul>
-</div>
-<div className="donts">
-	<ul aria-label="Practices to avoid">
-		<li>"Delete &#123;count&#125; row(s)?"</li>
-		<li>`if (count == 1) { "1 row" } else { "{count} rows" }`</li>
-	</ul>
-</div>
+  <div className="dos">
+    <ul aria-label="Recommended practices">
+      <li>"Delete &#123;count&#125; rows?"</li>
+      <li>"Delete &#123;rowName&#125;?"</li>
+    </ul>
+  </div>
+  <div className="donts">
+    <ul aria-label="Practices to avoid">
+      <li>"Delete &#123;count&#125; row(s)?"</li>
+      <li>`if (count == 1) { "1 row" } else { "{count} rows" }`</li>
+    </ul>
+  </div>
 </div>
 
 ## Consider different linguistic rules
@@ -234,26 +234,26 @@ The [plural rules specification](https://cldr.unicode.org/index/cldr-spec/plural
 Provide each language name in the target language for the language switcher.
 
 <div className="dos-and-donts">
-<div className="dos">
-	<ul aria-label="Recommended practices">
-		<li>English</li>
-		<li>Deutsch</li>
-		<li>Français</li>
-		<li>Italiano</li>
-		<li>Ελληνικά</li>
-		<li>中文</li>
-	</ul>
-</div>
-<div className="donts">
-	<ul aria-label="Practices to avoid">
-		<li>英语</li>
-		<li>德语</li>
-		<li>法语</li>
-		<li>意大利语</li>
-		<li>希腊</li>
-		<li>中文</li>
-	</ul>
-</div>
+  <div className="dos">
+    <ul aria-label="Recommended practices">
+      <li>English</li>
+      <li>Deutsch</li>
+      <li>Français</li>
+      <li>Italiano</li>
+      <li>Ελληνικά</li>
+      <li>中文</li>
+    </ul>
+  </div>
+  <div className="donts">
+    <ul aria-label="Practices to avoid">
+      <li>英语</li>
+      <li>德语</li>
+      <li>法语</li>
+      <li>意大利语</li>
+      <li>希腊</li>
+      <li>中文</li>
+    </ul>
+  </div>
 </div>
 
 ## Avoid text concatenations
@@ -262,18 +262,18 @@ Building sentences from fragments prevents correct grammar in many languages.
 Keep sentences as one unit with placeholders.
 
 <div className="dos-and-donts">
-<div className="dos">
-	<ul aria-label="Recommended practices">
-		<li>EN: "Select site &#123;site&#125; of &#123;company&#125;?"</li>
-		<li>DE: "Standort &#123;site&#125; von &#123;company&#125; auswählen?"</li>
-	</ul>
-</div>
-<div className="donts">
-	<ul aria-label="Practices to avoid">
-		<li>EN: "Select site " `+` `&#123;site&#125;` `+` " of " `+` `&#123;company&#125;` `+` "?"</li>
-		<li>DE: "Standort auswählen " `+` `&#123;site&#125;` `+` " von " `+` `&#123;company&#125;` `+` "?"</li>
-	</ul>
-</div>
+  <div className="dos">
+    <ul aria-label="Recommended practices">
+      <li>EN: "Select site &#123;site&#125; of &#123;company&#125;?"</li>
+      <li>DE: "Standort &#123;site&#125; von &#123;company&#125; auswählen?"</li>
+    </ul>
+  </div>
+  <div className="donts">
+    <ul aria-label="Practices to avoid">
+      <li>EN: "Select site " `+` `&#123;site&#125;` `+` " of " `+` `&#123;company&#125;` `+` "?"</li>
+      <li>DE: "Standort auswählen " `+` `&#123;site&#125;` `+` " von " `+` `&#123;company&#125;` `+` "?"</li>
+    </ul>
+  </div>
 </div>
 
 Note: The verb (EN:"select" / DE:"auswählen") is at the beginning of the sentence in English but at the end in German.
@@ -283,16 +283,16 @@ Note: The verb (EN:"select" / DE:"auswählen") is at the beginning of the senten
 Keep sentences understandable even with placeholders.
 
 <div className="dos-and-donts">
-<div className="dos">
-	<ul aria-label="Recommended practices">
-		<li>"Reactivating site &#123;name&#125; within activation period: &#123;startDate&#125; – &#123;endDate&#125;"</li>
-	</ul>
-</div>
-<div className="donts">
-	<ul aria-label="Practices to avoid">
-		<li>"Reactivating site &#123;1&#125; within activation period: &#123;2&#125; – &#123;3&#125;"</li>
-	</ul>
-</div>
+  <div className="dos">
+    <ul aria-label="Recommended practices">
+      <li>"Reactivating site &#123;name&#125; within activation period: &#123;startDate&#125; – &#123;endDate&#125;"</li>
+    </ul>
+  </div>
+  <div className="donts">
+    <ul aria-label="Practices to avoid">
+      <li>"Reactivating site &#123;1&#125; within activation period: &#123;2&#125; – &#123;3&#125;"</li>
+    </ul>
+  </div>
 </div>
 
 ## Avoid hard-coding formats
@@ -300,18 +300,18 @@ Keep sentences understandable even with placeholders.
 Use locale-aware formatting, and avoid creating UI text that depends on one single format. This helps users to understand times, values, etc. and strengthens their confidence in using the system.
 
 <div className="dos-and-donts">
-<div className="dos">
-	<ul aria-label="Recommended practices">
-		<li>Use the localization framework</li>
-		<li>Use placeholders in text: "Saved on &#123;date&#125;"</li>
-	</ul>
-</div>
-<div className="donts">
-	<ul aria-label="Practices to avoid">
-		<li>"02/03/2026" (ambiguous)</li>
-		<li>"1,234" in all languages (ambiguous, less or greater than 2?)</li>
-	</ul>
-</div>
+  <div className="dos">
+    <ul aria-label="Recommended practices">
+      <li>Use the localization framework</li>
+      <li>Use placeholders in text: "Saved on &#123;date&#125;"</li>
+    </ul>
+  </div>
+  <div className="donts">
+    <ul aria-label="Practices to avoid">
+      <li>"02/03/2026" (ambiguous)</li>
+      <li>"1,234" in all languages (ambiguous, less or greater than 2?)</li>
+    </ul>
+  </div>
 </div>
 
 ## Provide UX writing specifications
@@ -326,40 +326,40 @@ In order to understand the context and maintain consistency, it is necessary to 
 Related texts can be brought together by grouping texts based on use cases (e.g. My account → Theme selection) along with meaningful (key) names.
 
 <div className="dos-and-donts">
-<div className="dos">
-	<ul aria-label="Recommended practices">
-		<li>`ACCOUNT.LOGOUT.CANCEL:` Cancel</li>
-		<li>`ACCOUNT.LOGOUT.HEADING:` Log out</li>
-		<li>`ACCOUNT.LOGOUT.LOG_OUT_NOW:` Log out now?</li>
-		<li>`ACCOUNT.LOGOUT.LOGGING_OUT:` Logging out…</li>
-		<li>`ACCOUNT.SETTINGS.HEADING:` Settings</li>
-		<li>`ACCOUNT.SETTINGS.THEME:` Theme</li>
-		<li>`ACCOUNT.SETTINGS.THEME_OPTIONS.AUTO:` Auto</li>
-		<li>`ACCOUNT.SETTINGS.THEME_OPTIONS.DARK:` Dark</li>
-		<li>`ACCOUNT.SETTINGS.THEME_OPTIONS.LIGHT:` Light</li>
-		<li>`LEGAL.ABOUT:` About</li>
-		<li>`LEGAL.IMPRINT:` Corporate Information</li>
-		<li>`LEGAL.PRIVACY_POLICY:` Privacy Notice</li>
-		<li>`LEGAL.VERSION:` Version &#123;&#123;version&#125;&#125;</li>
-	</ul>
-</div>
-<div className="donts">
-	<ul aria-label="Practices to avoid">
-		<li>`ABOUT:` About</li>
-		<li>`AUTO:` Auto</li>
-		<li>`CANCEL:` Cancel</li>
-		<li>`DARK:` Dark</li>
-		<li>`IMPRINT:` Corporate Information</li>
-		<li>`LIGHT:` Light</li>
-		<li>`LOG_OUT_NOW:` Log out now?</li>
-		<li>`LOGGING_OUT:` Logging out…</li>
-		<li>`LOGOUT:` Log out</li>
-		<li>`PRIVACY_POLICY:` Privacy Notice</li>
-		<li>`SETTINGS:` Settings</li>
-		<li>`THEME:` Theme</li>
-		<li>`VERSION:` Version &#123;&#123;version&#125;&#125;</li>
-	</ul>
-</div>
+  <div className="dos">
+    <ul aria-label="Recommended practices">
+      <li>`ACCOUNT.LOGOUT.CANCEL:` Cancel</li>
+      <li>`ACCOUNT.LOGOUT.HEADING:` Log out</li>
+      <li>`ACCOUNT.LOGOUT.LOG_OUT_NOW:` Log out now?</li>
+      <li>`ACCOUNT.LOGOUT.LOGGING_OUT:` Logging out…</li>
+      <li>`ACCOUNT.SETTINGS.HEADING:` Settings</li>
+      <li>`ACCOUNT.SETTINGS.THEME:` Theme</li>
+      <li>`ACCOUNT.SETTINGS.THEME_OPTIONS.AUTO:` Auto</li>
+      <li>`ACCOUNT.SETTINGS.THEME_OPTIONS.DARK:` Dark</li>
+      <li>`ACCOUNT.SETTINGS.THEME_OPTIONS.LIGHT:` Light</li>
+      <li>`LEGAL.ABOUT:` About</li>
+      <li>`LEGAL.IMPRINT:` Corporate Information</li>
+      <li>`LEGAL.PRIVACY_POLICY:` Privacy Notice</li>
+      <li>`LEGAL.VERSION:` Version &#123;&#123;version&#125;&#125;</li>
+    </ul>
+  </div>
+  <div className="donts">
+    <ul aria-label="Practices to avoid">
+      <li>`ABOUT:` About</li>
+      <li>`AUTO:` Auto</li>
+      <li>`CANCEL:` Cancel</li>
+      <li>`DARK:` Dark</li>
+      <li>`IMPRINT:` Corporate Information</li>
+      <li>`LIGHT:` Light</li>
+      <li>`LOG_OUT_NOW:` Log out now?</li>
+      <li>`LOGGING_OUT:` Logging out…</li>
+      <li>`LOGOUT:` Log out</li>
+      <li>`PRIVACY_POLICY:` Privacy Notice</li>
+      <li>`SETTINGS:` Settings</li>
+      <li>`THEME:` Theme</li>
+      <li>`VERSION:` Version &#123;&#123;version&#125;&#125;</li>
+    </ul>
+  </div>
 </div>
 
 ## Reuse texts
@@ -367,17 +367,17 @@ Related texts can be brought together by grouping texts based on use cases (e.g.
 Before writing a new text, check whether one with the exact same meaning already exists.
 
 <div className="dos-and-donts">
-<div className="dos">
-	<ul aria-label="Recommended practices">
-		<li>`COMMON.SAVE:` Save</li>
-	</ul>
-</div>
-<div className="donts">
-	<ul aria-label="Practices to avoid">
-		<li>`USERS.EDIT_USER.SAVE:` Save</li>
-		<li>`DEVICES.EDIT_DEVICE.SAVE:` Save</li>
-	</ul>
-</div>
+  <div className="dos">
+    <ul aria-label="Recommended practices">
+      <li>`COMMON.SAVE:` Save</li>
+    </ul>
+  </div>
+  <div className="donts">
+    <ul aria-label="Practices to avoid">
+      <li>`USERS.EDIT_USER.SAVE:` Save</li>
+      <li>`DEVICES.EDIT_DEVICE.SAVE:` Save</li>
+    </ul>
+  </div>
 </div>
 
 Reusing the same instance of text has the following advantages:
@@ -396,20 +396,20 @@ In such cases, a separate text must be created.
 If in doubt, create a separate text for each use, even if the English text appears to be identical.
 
 <div className="dos-and-donts">
-<div className="dos">
-	<ul aria-label="Recommended practices">
-		<li>`COMMON.CANCEL:` "Cancel" for processes only</li>
-		<li>Translation to German: "Abbrechen"</li>
-		<li>Add `CONTRACT.CANCEL:` "Cancel" for contracts</li>
-		<li>Translation to German: "Stornieren"</li>
-	</ul>
-</div>
-<div className="donts">
-	<ul aria-label="Practices to avoid">
-		<li>`CANCEL:` "Cancel" in context of process and contract</li>
-		<li>Translation to German: "Abbrechen" or "Stornieren"?</li>
-	</ul>
-</div>
+  <div className="dos">
+    <ul aria-label="Recommended practices">
+      <li>`COMMON.CANCEL:` "Cancel" for processes only</li>
+      <li>Translation to German: "Abbrechen"</li>
+      <li>Add `CONTRACT.CANCEL:` "Cancel" for contracts</li>
+      <li>Translation to German: "Stornieren"</li>
+    </ul>
+  </div>
+  <div className="donts">
+    <ul aria-label="Practices to avoid">
+      <li>`CANCEL:` "Cancel" in context of process and contract</li>
+      <li>Translation to German: "Abbrechen" or "Stornieren"?</li>
+    </ul>
+  </div>
 </div>
 
 
