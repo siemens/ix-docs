@@ -51,7 +51,7 @@ Buttons have six states: Default, hover, active, disabled, loading and focused. 
 
   
     
-      Do use short button labels to allow users to quickly scan, understand and remember them (see our [writing style guide](../../guidelines/language/dialogs-and-buttons.md))
+      Do use short button labels to allow users to quickly scan, understand and remember them (see our [writing style guide](../../guidelines/language/menu-functions-and-ui-labels/button-labels.md))
       Do use ellipsis (…) to indicate that an action requires further input or choice from the user, e.g. "Save as…" which opens a list of file types to choose from
       Do use the primary variant for buttons to indicate one primary action in a visual unit, all other secondary actions should use the secondary variant
     

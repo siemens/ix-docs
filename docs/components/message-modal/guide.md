@@ -29,7 +29,7 @@ Message modals present short messages, confirmations or important alerts that re
 
 ## Options
 
-- **Title:** Use a clear, outcome-oriented title (e.g. "Delete item", see [writing guidelines](/docs/guidelines/language/dialogs-and-buttons)).
+- **Title:** Use a clear, outcome-oriented title (e.g. "Delete item", see [writing guidelines](../../guidelines/language/messaging/messages-overview.md)).
 - **Message:** Include if you need to provide additional information, e.g. consequences (see [writing guidelines](/docs/guidelines/language/messaging/error-messages)).
 - **Confirm action:** Use precise action text, e.g. "Delete", "Confirm", or "Continue".
 - **Cancel action:** Use "Cancel" or "Close". We recommend returning to the previous context the user was in.

@@ -13,7 +13,7 @@ Loading modals communicate that the system is performing an operation that takes
 
 ## Options
 
-- **Message**: Provide a concise, contextual message that explains what is happening (e.g. "Uploading files" instead of "Loading", see [writing guidelines](../../guidelines/language/dialogs-and-buttons)).
+- **Message**: Provide a concise, contextual message that explains what is happening (e.g. "Uploading files" instead of "Loading", see [writing guidelines](../../guidelines/language/messaging/messages-overview)).
 - **Centered**: Center- or top-align loading modals consistently with other [modals](../modal) in your app.
 
 ## Behavior in context
