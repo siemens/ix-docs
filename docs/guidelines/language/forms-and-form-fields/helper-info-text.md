@@ -18,36 +18,14 @@ Use helper / info text to add constraints.
   <div class="dos">
     <ul aria-label="Recommended practices">
       <li>Field label: Password<br />Helper text: Minimum 8 characters, letters and numbers only</li>
-    </ul>
-  </div>
-  <div class="donts">
-    <ul aria-label="Practices to avoid">
-      <li>Field label: Password<br />Helper text: Pick a password.</li>
-    </ul>
-  </div>
-</div>
-
-<div class="dos-and-donts">
-  <div class="dos">
-    <ul aria-label="Recommended practices">
       <li>Field label: Upload files<br />Helper text: Supported formats: PDF, DOCX, XLSX (max 10 MB)</li>
-    </ul>
-  </div>
-  <div class="donts">
-    <ul aria-label="Practices to avoid">
-      <li>Field label: Upload files<br />Helper text: Only upload supported files.</li>
-    </ul>
-  </div>
-</div>
-
-<div class="dos-and-donts">
-  <div class="dos">
-    <ul aria-label="Recommended practices">
       <li>Field label: Phone number<br />Helper text: Include country code, e.g. +49 30 1234567</li>
     </ul>
   </div>
   <div class="donts">
     <ul aria-label="Practices to avoid">
+      <li>Field label: Password<br />Helper text: Pick a password.</li>
+      <li>Field label: Upload files<br />Helper text: Only upload supported files.</li>
       <li>Field label: Phone number<br />Helper text: Type your phone number here.</li>
     </ul>
   </div>
@@ -59,21 +37,7 @@ Add helper text to build trust and improve the chances of a successful input fie
   <div class="dos">
     <ul aria-label="Recommended practices">
       <li>Field label: Create password<br />Helper text: Minimum 8 characters, 1 uppercase letter (A-Z), 1 special character (!@#$%^&*)</li>
-    </ul>
-  </div>
-</div>
-
-<div class="dos-and-donts">
-  <div class="dos">
-    <ul aria-label="Recommended practices">
       <li>Field label: Device name<br />Helper text: Maximum 50 characters</li>
-    </ul>
-  </div>
-</div>
-
-<div class="dos-and-donts">
-  <div class="dos">
-    <ul aria-label="Recommended practices">
       <li>Field label: Max threshold<br />Helper text: Use decimal point for precision (e.g. 15.5).</li>
     </ul>
   </div>

@@ -71,7 +71,7 @@ Provide invalid text when user input has not met the specified requirements and 
   </div>
 </div>
 
-Provide warning text when there is a critical issue or a suggestion related to the success or failure of user input and explain any consequences clearly.
+Provide warning text when there is a critical issue or a suggestion related to the success or failure of the user input and explain any consequences clearly.
 
 ![UI example showing a field Upload file with the warning text Upload max 10 MB. Select another file.](https://www.figma.com/design/wEptRgAezDU1z80Cn3eZ0o/iX-Documentation-illustrations?node-id=8484-6760&t=DqVZwQbqqLyQk2S8-4)
 
