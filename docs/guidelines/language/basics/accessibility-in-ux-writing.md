@@ -388,7 +388,7 @@ Tell users when there are time limits. See [Time-related messages](../messaging/
 </div>
 </div>
 
-Provide options to extend time limits. See [WCAG 2.2 - 2.2.1 Timing Adjustable (Level A)](https://www.w3.org/TR/WCAG22/#timing-adjustable) <IxIcon name={iconOpenExternal} size="16" aria-label="external" role="img"></IxIcon>.
+Provide options to extend time limits. See [WCAG Timing Adjustable](https://www.w3.org/TR/WCAG22/#timing-adjustable) <IxIcon name={iconOpenExternal} size="16" aria-label="external" role="img"></IxIcon>.
 
 <div className="dos-and-donts">
 <div className="dos">
@@ -400,7 +400,7 @@ Provide options to extend time limits. See [WCAG 2.2 - 2.2.1 Timing Adjustable (
 
 ## Audio controls
 
-Write clear, descriptive button labels for audio controls. If a page has only one audio control, a short, simple label is acceptable. See [WCAG 2.2 - 1.4.2 Audio Control (Level A)](https://www.w3.org/TR/WCAG22/#audio-control) <IxIcon name={iconOpenExternal} size="16" aria-label="external" role="img"></IxIcon>.
+Write clear, descriptive button labels for audio controls. If a page has only one audio control, a short, simple label is acceptable. See [WCAG Audio Control](https://www.w3.org/TR/WCAG22/#audio-control) <IxIcon name={iconOpenExternal} size="16" aria-label="external" role="img"></IxIcon>.
 
 <div className="dos-and-donts">
 <div className="dos">
@@ -467,7 +467,7 @@ Alternative text is part of UX writing and accessibility. It represents a text r
 | Map | Location and what it shows, e.g. Factory site areas in Europe |
 | Video thumbnail | Video theme |
 
-Write clear and descriptive ALT-text for non-text content. See [WCAG 2.2 - 1.1.1 Non-text Content (Level A)](https://www.w3.org/TR/WCAG22/#non-text-content) <IxIcon name={iconOpenExternal} size="16" aria-label="external" role="img"></IxIcon>.
+Write clear and descriptive ALT-text for non-text content. See [WCAG Non-text Content](https://www.w3.org/TR/WCAG22/#non-text-content) <IxIcon name={iconOpenExternal} size="16" aria-label="external" role="img"></IxIcon>.
 
 <div className="dos-and-donts">
 <div className="dos">
