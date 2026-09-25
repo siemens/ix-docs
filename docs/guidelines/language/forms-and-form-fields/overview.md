@@ -24,7 +24,7 @@ The labeled iX component is here to guide you through this section with the term
 
 Use an asterisk (*) for required fields after (not before) UI text.
 
-![UI example showing the field label Username followed immediately by an asterisk without space.](https://www.figma.com/design/wEptRgAezDU1z80Cn3eZ0o/iX-Documentation-illustrations?node-id=7675-10143&t=EjTZKAJDhIkv5ICF-4)
+![UI example showing the field label Username followed immediately by an asterisk without space.](https://www.figma.com/design/wEptRgAezDU1z80Cn3eZ0o/iX-Documentation-illustrations?node-id=7675-10143&t=DqVZwQbqqLyQk2S8-4)
 
 <div class="dos-and-donts">
   <div class="dos">

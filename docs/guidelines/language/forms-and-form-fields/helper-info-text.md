@@ -12,7 +12,7 @@ description: 'Helper / info text gives users the extra context or instructions t
 
 Use helper / info text to add constraints.
 
-![UI example showing a field label Password* with the helper text Minimum 8 characters, letters and numbers only.](https://www.figma.com/design/wEptRgAezDU1z80Cn3eZ0o/iX-Documentation-illustrations?node-id=8392-12519&t=EjTZKAJDhIkv5ICF-4)
+![UI example showing a field label Password* with the helper text Minimum 8 characters, letters and numbers only.](https://www.figma.com/design/wEptRgAezDU1z80Cn3eZ0o/iX-Documentation-illustrations?node-id=8392-12519&t=DqVZwQbqqLyQk2S8-4)
 
 <div class="dos-and-donts">
   <div class="dos">
