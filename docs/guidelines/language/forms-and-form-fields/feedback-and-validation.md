@@ -29,7 +29,7 @@ Provide any requirements first as helper / info text to avoid users falling imme
   </div>
 </div>
 
-Provide clear, valid wording when the user has met all the validation criteria and can move on.
+Provide clear, valid wording when users have met all the validation criteria and can move on.
 
 ![UI example showing a field label Username* with the valid text Username available.](https://www.figma.com/design/wEptRgAezDU1z80Cn3eZ0o/iX-Documentation-illustrations?node-id=8392-12664&t=EjTZKAJDhIkv5ICF-4)
 
@@ -48,7 +48,7 @@ Provide clear, valid wording when the user has met all the validation criteria a
   </div>
 </div>
 
-Provide invalid text when the user input has not met the specified requirements and explain exactly what requirement is missing.
+Provide invalid text when user input has not met the specified requirements and explain exactly what requirement is missing.
 
 ![UI example showing a field label Username* with the invalid text Username unavailable.](https://www.figma.com/design/wEptRgAezDU1z80Cn3eZ0o/iX-Documentation-illustrations?node-id=8399-8321&t=EjTZKAJDhIkv5ICF-4)
 
@@ -71,7 +71,7 @@ Provide invalid text when the user input has not met the specified requirements 
   </div>
 </div>
 
-Provide warning text when there is a critical issue or a suggestion related to the success or failure of the users' input and explain any consequences clearly.
+Provide warning text when there is a critical issue or a suggestion related to the success or failure of user input and explain any consequences clearly.
 
 ![UI example showing a field Upload file with the warning text Upload max 10 MB. Select another file.](https://www.figma.com/design/wEptRgAezDU1z80Cn3eZ0o/iX-Documentation-illustrations?node-id=8484-6760&t=DqVZwQbqqLyQk2S8-4)
 
@@ -99,14 +99,14 @@ Provide warning text when there is a critical issue or a suggestion related to t
 <div class="dos-and-donts">
   <div class="dos">
     <ul aria-label="Recommended practices">
-      <li>Do provide all the information the user needs upfront</li>
+      <li>Do provide all the information users need upfront</li>
       <li>Do ensure all constraints are clear</li>
     </ul>
   </div>
   <div class="donts">
     <ul aria-label="Practices to avoid">
-      <li>Don't shame the user for making a mistake</li>
-      <li>Don't use wording that makes the user feel stupid when their input is invalid</li>
+      <li>Don't shame users for making a mistake</li>
+      <li>Don't use wording that makes users feel stupid when their input is invalid</li>
     </ul>
   </div>
 </div>
