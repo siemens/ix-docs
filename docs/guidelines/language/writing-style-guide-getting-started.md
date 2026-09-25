@@ -32,7 +32,7 @@ Discover how we address formatting themes such as writing addresses, dates, meas
 
 ## Forms and form fields
 
-To ensure a smooth experience, every form should provide clear guidance and immediate feedback. This section outlines how to use concise form field labels, helper text, and specific validation messages to help users complete forms effortlessly. [Forms and form fields](../language/forms-and-form-fields/overview.md)
+Every form should provide clear guidance and immediate feedback to ensure a smooth experience. This section outlines how to use concise form field labels, helper texts, and specific validation messages to help users complete forms effortlessly. [Forms and form fields](../language/forms-and-form-fields/overview.md)
 
 ## Menu functions and UI labels
 

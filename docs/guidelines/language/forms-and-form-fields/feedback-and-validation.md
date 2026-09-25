@@ -12,13 +12,13 @@ description: 'Field input validation gives users feedback on their input to ensu
 
 Provide any requirements first as helper / info text to avoid users falling immediately into invalid states. See [Forms validation (component)](../../../components/forms-validation/guide.md).
 
-![UI example showing a field label Password* with the helper text Minimum 8 characters, 1 uppercase letter (A-Z), 1 special character (!@#$%^&*).](https://www.figma.com/design/wEptRgAezDU1z80Cn3eZ0o/iX-Documentation-illustrations?node-id=8399-8833&t=EjTZKAJDhIkv5ICF-4)
+![UI example showing a field label Phone number with the helper text Include country code, e.g. +49 30 1234567](https://www.figma.com/design/wEptRgAezDU1z80Cn3eZ0o/iX-Documentation-illustrations?node-id=8399-8833&t=EjTZKAJDhIkv5ICF-4)
 
 <div class="dos-and-donts">
   <div class="dos">
     <ul aria-label="Recommended practices">
-      <li>Field label: Password*<br/>
-      Helper text: Minimum 8 characters, 1 uppercase letter (A-Z), 1 special character (!@#$%^&*)</li>
+      <li>Field label: Phone number<br/>
+      Helper text: Include country code, e.g. +49 30 1234567</li>
     </ul>
   </div>
   <div class="donts">
@@ -73,7 +73,7 @@ Provide invalid text when the user input has not met the specified requirements 
 
 Provide warning text when there is a critical issue or a suggestion related to the success or failure of the users' input and explain any consequences clearly.
 
-![UI example showing a field label Upload file with the warning text Upload max 10 MB. Select another file.](https://www.figma.com/design/wEptRgAezDU1z80Cn3eZ0o/iX-Documentation-illustrations?node-id=8399-8594&t=EjTZKAJDhIkv5ICF-4)
+![UI example showing a field Upload file with the warning text Upload max 10 MB. Select another file.](https://www.figma.com/design/wEptRgAezDU1z80Cn3eZ0o/iX-Documentation-illustrations?node-id=8484-6760&t=DqVZwQbqqLyQk2S8-4)
 
 <div class="dos-and-donts">
   <div class="dos">

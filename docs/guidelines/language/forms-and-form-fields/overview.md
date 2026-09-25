@@ -10,7 +10,7 @@ description: 'Form and text input fields provide essential context for users to 
 
 #
 
-We've added the labeled iX component here to guide you though this section with the terms we use throughout the Forms and form field chapters. See [Input (component)](../../../components/input/guide.md) and [Textarea (component)](../../../components/textarea/guide.md).
+The labeled iX component is here to guide you through this section with the terms we use throughout the Forms and form field chapters. See [Input (component)](../../../components/input/guide.md) and [Textarea (component)](../../../components/textarea/guide.md).
 
 ![UI form field numbered example: 1) Label Username*, 2) Text area placeholder Enter user name, 3) Helper text Letters and numbers only, 4) Asterisk indicates required field and 5) Character counter shows 0/25.](https://www.figma.com/design/wEptRgAezDU1z80Cn3eZ0o/iX-Documentation-illustrations?node-id=8439-2549&t=AvEG5nW65SMQ8nvR-4)
 
