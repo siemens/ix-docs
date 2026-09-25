@@ -1,0 +1,120 @@
+---
+sidebar_position: 6
+sidebar_label: Feedback and validation
+title: Feedback and validation
+doc-type: 'banner'
+component-tabs: ['']
+no_single_tab: true
+description: 'Field input validation gives users feedback on their input to ensure accurate, consistent data is submitted. Careful wording is required here to ensure users do not feel stupid or shamed for getting it wrong.'
+---
+
+#
+
+Provide any requirements first as helper / info text to avoid users falling immediately into invalid states. See [Forms validation (component)](../../../components/forms-validation/guide.md).
+
+![UI example showing a field label Phone number with the helper text Include country code, e.g. +49 30 1234567](https://www.figma.com/design/wEptRgAezDU1z80Cn3eZ0o/iX-Documentation-illustrations?node-id=8399-8833&t=EjTZKAJDhIkv5ICF-4)
+
+<div class="dos-and-donts">
+  <div class="dos">
+    <ul aria-label="Recommended practices">
+      <li>Field label: Phone number<br/>
+      Helper text: Include country code, e.g. +49 30 1234567</li>
+    </ul>
+  </div>
+  <div class="donts">
+    <ul aria-label="Practices to avoid">
+      <li>Field label: Password*<br/>
+      Helper text: (empty and requirement only appears after user starts typing) Invalid: Password must have 8 characters.</li>
+    </ul>
+  </div>
+</div>
+
+Provide clear, valid wording when users have met all the validation criteria and can move on.
+
+![UI example showing a field label Username* with the valid text Username available.](https://www.figma.com/design/wEptRgAezDU1z80Cn3eZ0o/iX-Documentation-illustrations?node-id=8392-12664&t=EjTZKAJDhIkv5ICF-4)
+
+<div class="dos-and-donts">
+  <div class="dos">
+    <ul aria-label="Recommended practices">
+      <li>Field label: Username*<br/>
+      Valid text: Username available</li>
+    </ul>
+  </div>
+  <div class="donts">
+    <ul aria-label="Practices to avoid">
+      <li>Field label: Username*<br/>
+      Valid text: OK</li>
+    </ul>
+  </div>
+</div>
+
+Provide invalid text when user input has not met the specified requirements and explain exactly what requirement is missing.
+
+![UI example showing a field label Username* with the invalid text Username unavailable.](https://www.figma.com/design/wEptRgAezDU1z80Cn3eZ0o/iX-Documentation-illustrations?node-id=8399-8321&t=EjTZKAJDhIkv5ICF-4)
+
+<div class="dos-and-donts">
+  <div class="dos">
+    <ul aria-label="Recommended practices">
+      <li>Field label: Username*<br/>
+      Invalid text: Username unavailable</li>
+      <li>Field label: Email address<br/>
+      Invalid text: Missing @ symbol</li>
+    </ul>
+  </div>
+  <div class="donts">
+    <ul aria-label="Practices to avoid">
+      <li>Field label: Username*<br/>
+      Invalid text: Bad username</li>
+      <li>Field label: Email address<br/>
+      Invalid text: Invalid email address</li>
+    </ul>
+  </div>
+</div>
+
+Provide warning text when there is a critical issue or a suggestion related to the success or failure of the user input and explain any consequences clearly.
+
+![UI example showing a field Upload file with the warning text Upload max 10 MB. Select another file.](https://www.figma.com/design/wEptRgAezDU1z80Cn3eZ0o/iX-Documentation-illustrations?node-id=8484-6760&t=DqVZwQbqqLyQk2S8-4)
+
+<div class="dos-and-donts">
+  <div class="dos">
+    <ul aria-label="Recommended practices">
+      <li>Field label: Upload file<br/>
+      Warning text: Upload max 10 MB. Select another file.</li>
+      <li>Field label: Temperature<br/>
+      Warning text: Hot water temperature limit is too high. There is a risk of scalding.</li>
+    </ul>
+  </div>
+  <div class="donts">
+    <ul aria-label="Practices to avoid">
+      <li>Field label: Password<br/>
+      Warning text: Warning: This is a weak password and not secure.</li>
+      <li>Field label: Min threshold<br/>
+      Warning text: Warning! Wrong threshold!</li>
+    </ul>
+  </div>
+</div>
+
+## Dos and Don'ts
+
+<div class="dos-and-donts">
+  <div class="dos">
+    <ul aria-label="Recommended practices">
+      <li>Do provide all the information users need upfront</li>
+      <li>Do ensure all constraints are clear</li>
+    </ul>
+  </div>
+  <div class="donts">
+    <ul aria-label="Practices to avoid">
+      <li>Don't shame users for making a mistake</li>
+      <li>Don't use wording that makes users feel stupid when their input is invalid</li>
+    </ul>
+  </div>
+</div>
+
+## Related
+
+- [Forms validation (component)](../../../components/forms-validation/guide.md)
+- [Error messages](../messaging/error-messages.mdx)
+- [Warning messages](../messaging/warning-messages.mdx)
+- [Non-critical information messages](../messaging/non-critical-information-messages.mdx)
+- [Tooltips](../messaging/tooltips.mdx)
