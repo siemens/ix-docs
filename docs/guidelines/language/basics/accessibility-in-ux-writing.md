@@ -203,7 +203,7 @@ Make sure each link makes sense on its own, even out of context, as screen reade
 
 ## Input fields / labels
 
-Provide descriptive labels with plain language to make the content's purpose clear. See [Forms and form fields](#) and [WCAG Identify Input Purpose](https://www.w3.org/TR/WCAG22/#identify-input-purpose) <IxIcon name={iconOpenExternal} size="16" aria-label="external" role="img"></IxIcon>.
+Provide descriptive labels with plain language to make the content's purpose clear. See [Forms and form fields](../forms-and-form-fields/overview.md) and [WCAG Identify Input Purpose](https://www.w3.org/TR/WCAG22/#identify-input-purpose) <IxIcon name={iconOpenExternal} size="16" aria-label="external" role="img"></IxIcon>.
 
 <div className="dos-and-donts">
 <div className="dos">
@@ -281,7 +281,7 @@ Describe errors clearly in plain text, explain what happened, and provide soluti
 </div>
 </div>
 
-Explain format requirements and constraints to prevent errors before they happen in helper texts. See [Forms and form fields](#) and [WCAG Error Prevention](https://www.w3.org/TR/WCAG22/#error-identification) <IxIcon name={iconOpenExternal} size="16" aria-label="external" role="img"></IxIcon>.
+Explain format requirements and constraints to prevent errors before they happen in helper texts. See [Forms and form fields](../forms-and-form-fields/overview.md) and [WCAG Error Identification](https://www.w3.org/TR/WCAG22/#error-identification) <IxIcon name={iconOpenExternal} size="16" aria-label="external" role="img"></IxIcon>.
 
 <div className="dos-and-donts">
 <div className="dos">
