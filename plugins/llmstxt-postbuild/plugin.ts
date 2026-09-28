@@ -14,6 +14,7 @@ export default function (context: LoadContext) {
         await runPostBuild({ outDir, siteDir });
       } catch (error) {
         console.error('Error during post-build processing:', error);
+        throw error;
       }
     },
   };

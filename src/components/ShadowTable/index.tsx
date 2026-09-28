@@ -7,67 +7,69 @@
  * LICENSE file in the root directory of this source tree.
  */
 import BrowserOnly from '@docusaurus/BrowserOnly';
+import { usePluginData } from '@docusaurus/useGlobalData';
 import ApiTable, { AnchorHeader } from '@site/src/components/ApiTable';
 import { usePlaygroundThemeVariant } from '@site/src/hooks/use-playground-theme';
-import { useEffect, useMemo, useRef, useState } from 'react';
+import {
+  queryDesignTokens,
+  type DesignTokenEntry,
+  type DesignTokenManifest,
+} from '@site/src/lib/design-tokens';
+import { useMemo, useRef, useState } from 'react';
 import { ColorContainerFix, ThemeContext } from '../ContainerFix';
 import CopyButton from '../UI/CopyButton';
-import ThemeSelection, { useDefaultTheme } from '../UI/ThemeSelection';
+import ThemeSelection from '../UI/ThemeSelection';
 import ThemeVariantToggle from '../UI/ThemeVariantToggle';
 import styles from './ShadowTable.module.css';
 
-function BoxShadowRect({ boxShadow }) {
+function BoxShadowRect({ tokenName }: { tokenName: string }) {
   return (
     <div className={styles.shadowCircle}>
-      <ColorContainerFix>
-        <div
-          className={styles.shadowCircleInner}
-          style={{ boxShadow: `var(--theme-${boxShadow})` }}
-        ></div>
-      </ColorContainerFix>
+      <div
+        className={styles.shadowCircleInner}
+        style={{ boxShadow: `var(${tokenName})` }}
+      />
     </div>
   );
 }
 
-function BrowserOnlyBorderTable({ shadowName }) {
-  const [theme, setTheme] = useState(useDefaultTheme());
+function BrowserOnlyShadowTable({ entry }: { entry: DesignTokenEntry }) {
+  const [theme, setTheme] = useState('classic');
   const { playgroundThemeVariant } = usePlaygroundThemeVariant();
-  const [isDarkColor, setIsDarkColor] = useState(
-    playgroundThemeVariant === 'dark'
-  );
-
-  const themeRef = useRef<HTMLDivElement>();
-
-  useEffect(() => {
-    setIsDarkColor(playgroundThemeVariant === 'dark');
-  }, [playgroundThemeVariant]);
-
+  const isDarkColor = playgroundThemeVariant === 'dark';
+  const themeRef = useRef<HTMLDivElement>(null);
   const themeContext = useMemo(
     () => ({ currentTheme: theme, isDarkColor }),
     [theme, isDarkColor]
   );
+  const anchorName = `shadow-${entry.name.slice(
+    '--si-sys-color-effects-shadow-'.length
+  )}`;
 
   return (
     <ThemeContext.Provider value={themeContext}>
       <ColorContainerFix ref={themeRef}>
-        <ApiTable id={`shadow-${shadowName}`}>
+        <ApiTable id={anchorName}>
           <AnchorHeader
             noBottomBorder={true}
-            anchorName={`shadow-${shadowName}`}
-            anchorLabel="Direct link to the border"
+            anchorName={anchorName}
+            anchorLabel={`Direct link to ${entry.name}`}
             right={
               <>
                 <div className={styles.DesktopOnly}>
-                  <CopyButton text={`var(--theme-${shadowName})`}></CopyButton>
+                  <CopyButton text={`var(${entry.name})`} />
                 </div>
-                <ThemeSelection onThemeChange={setTheme}></ThemeSelection>
+                <ThemeSelection
+                  availableThemes={['classic']}
+                  onThemeChange={setTheme}
+                />
                 <ThemeVariantToggle />
               </>
             }
           >
-            <div className={styles.shadowRow}>
-              <BoxShadowRect boxShadow={shadowName}></BoxShadowRect>
-              <span className={styles.headColorName}>--theme-{shadowName}</span>
+            <div className={styles.shadowRow} title={entry.description}>
+              <BoxShadowRect tokenName={entry.name} />
+              <span className={styles.headColorName}>{entry.name}</span>
             </div>
           </AnchorHeader>
         </ApiTable>
@@ -76,16 +78,21 @@ function BrowserOnlyBorderTable({ shadowName }) {
   );
 }
 
-const BorderTable = ({ shadowName }) => {
+const ShadowTable = () => {
+  const manifest = usePluginData('design-tokens') as DesignTokenManifest;
+  const entries = queryDesignTokens(manifest, { type: 'shadow' });
+
   return (
     <BrowserOnly>
       {() => (
-        <BrowserOnlyBorderTable
-          shadowName={shadowName}
-        ></BrowserOnlyBorderTable>
+        <>
+          {entries.map((entry) => (
+            <BrowserOnlyShadowTable entry={entry} key={entry.name} />
+          ))}
+        </>
       )}
     </BrowserOnly>
   );
 };
 
-export default BorderTable;
+export default ShadowTable;

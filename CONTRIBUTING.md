@@ -10,9 +10,10 @@
 2. [How to Contribute](#how-to-contribute)
 3. [Getting Started](#getting-started)
 4. [Development Workflows](#development-workflows)
-5. [Pull Request Process](#pull-request-process)
-6. [Code of Conduct](#code-of-conduct)
-7. [Additional Resources](#additional-resources)
+5. [Design Token References](#design-token-references)
+6. [Pull Request Process](#pull-request-process)
+7. [Code of Conduct](#code-of-conduct)
+8. [Additional Resources](#additional-resources)
 
 ---
 
@@ -122,6 +123,53 @@ If you need to refresh Figma design assets:
 4. Commit the updated images and references as part of your PR.
 
 The script downloads new images and replaces outdated ones in the `static/figma/` directory based on Figma asset references in your docs.
+
+## Design Token References
+
+The token reference chain is authoritative from source to published package:
+`@siemens-ux/design-tokens` supplies canonical names, paths, types, and
+descriptions; the generator emits the source manifest and validates Classic as
+a value and structure delta; and IX validates that manifest while building CSS.
+When publishing, IX adds the final package `{ name, version }` and Classic CSS
+asset metadata and hashes to `dist/tokens/manifest.json`. The docs consume the
+published `@siemens/ix/tokens/manifest.json` export and validate its schema,
+contract, package identity and version, provenance, coverage, entries, and CSS
+asset hashes. The IX source manifest has no package metadata.
+
+To update a reference, publish the system-token and IX changes, update
+`@siemens/ix` and its lockfile to the matching release, then run `pnpm install`
+and the documentation checks (`pnpm test` plus `pnpm start` and/or `pnpm build`).
+
+To verify an unpublished IX change locally without publishing:
+
+1. From the IX checkout, build the package:
+   ```bash
+   pnpm --filter @siemens/ix build.scss
+   pnpm --filter @siemens/ix test.manifest
+   ```
+2. From the ix-docs checkout, link the local package and run the documentation
+   checks. Use the `.docs` scripts to bypass the IX artifact download performed
+   by `prepare.docs`; a local package version does not have a matching CI
+   artifact:
+   ```bash
+   pnpm link <ix-repo>/packages/core
+   pnpm test
+   pnpm start.docs
+   # or, instead of pnpm start.docs:
+   pnpm build.docs
+   ```
+3. Unlink the package, restore `package.json` and `pnpm-lock.yaml` to their
+   pre-link contents, and reinstall:
+   ```bash
+   pnpm unlink @siemens/ix
+   pnpm install --frozen-lockfile
+   ```
+
+With pnpm 10, `pnpm link <path>` can add a local override to `package.json` and
+rewrite `pnpm-lock.yaml`. Treat those changes as temporary and verify that
+neither file contains the local worktree path before committing. Do not work
+around validation failures with a committed local path dependency, a copied
+manifest, or a hardcoded fallback.
 
 ## Pull Request Process
 

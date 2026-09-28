@@ -125,49 +125,79 @@ export function replaceSinceTags(content: string) {
   );
 }
 
-function buildTypographySnippetBlock(format: string) {
-  return [
-    'HTML:',
-    '```html',
-    `<ix-typography format="${format}"></ix-typography>`,
-    '```',
-    '',
-    'Angular:',
-    '```html',
-    `<ix-typography format="${format}"></ix-typography>`,
-    '```',
-    '',
-    'Angular standalone:',
-    '```html',
-    `<ix-typography format="${format}"></ix-typography>`,
-    '```',
-    '',
-    'React:',
-    '```jsx',
-    `<IxTypography format="${format}"></IxTypography>`,
-    '```',
-    '',
-    'Vue:',
-    '```vue',
-    `<IxTypography format="${format}"></IxTypography>`,
-    '```',
-  ].join('\n');
+type TokenManifestEntry = {
+  name: string;
+  sourcePath: string;
+  group: string;
+  type: string;
+  description?: string;
+};
+
+function tokenManifestTable(entries: TokenManifestEntry[]) {
+  const lines: string[] = [];
+  let currentGroup: string | undefined;
+
+  for (const entry of entries) {
+    if (entry.group !== currentGroup) {
+      currentGroup = entry.group;
+      const groupTitle = entry.group
+        .split('.')
+        .map((part) => part.replaceAll('-', ' '))
+        .join(' / ')
+        .replace(/(^| \/ )\w/g, (letter) => letter.toUpperCase());
+      lines.push(`### ${groupTitle}`, '');
+      lines.push(
+        '| Token | Description | CSS expression | Source token |',
+        '| --- | --- | --- | --- |'
+      );
+    }
+
+    lines.push(
+      `| \`${escapeMarkdownTableValue(entry.name)}\` | ${escapeMarkdownTableValue(entry.description ?? 'No description is provided by the package manifest.')} | \`var(${escapeMarkdownTableValue(entry.name)})\` | \`${escapeMarkdownTableValue(entry.sourcePath)}\` |`
+    );
+  }
+
+  return lines.join('\n');
 }
 
-export function replaceTypographyTablesWithMarkdown(content: string) {
-  const typographyTableRegex =
-    /<TypographyTable\b[^>]*typographyName=("([^"]+)"|'([^']+)')[^>]*\/?>(?:<\/TypographyTable>)?/g;
+const tokenTableFilters = {
+  ColorTable: (entry: TokenManifestEntry) =>
+    entry.type === 'color' && entry.group !== 'color.border',
+  BorderTable: (entry: TokenManifestEntry) =>
+    entry.type === 'color' && entry.group === 'color.border',
+  ShadowTable: (entry: TokenManifestEntry) => entry.type === 'shadow',
+  TypographyTable: (entry: TokenManifestEntry) => entry.type === 'typography',
+} as const;
 
-  return content.replace(
-    typographyTableRegex,
-    (_fullMatch, _attr, doubleQuoted, singleQuoted) => {
-      const format = doubleQuoted ?? singleQuoted;
-      if (!format) {
-        return _fullMatch;
+export function replaceTokenTablesWithMarkdown(
+  content: string,
+  allEntries: TokenManifestEntry[]
+) {
+  let transformed = content;
+
+  for (const [componentName, filter] of Object.entries(tokenTableFilters)) {
+    const tokenTableRegex = new RegExp(
+      `<${componentName}\\b[^>]*?(?:\\/>|>\\s*<\\/${componentName}>)`,
+      'g'
+    );
+    transformed = transformed.replace(tokenTableRegex, () => {
+      const entries = allEntries.filter(filter);
+      if (entries.length === 0) {
+        throw new Error(
+          `Cannot render ${componentName} from the generated manifest`
+        );
       }
+      return tokenManifestTable(entries);
+    });
+  }
 
-      return buildTypographySnippetBlock(format);
-    }
+  return transformed;
+}
+
+export function removeTokenTableImports(content: string) {
+  return content.replace(
+    /import\s+(ColorTable|BorderTable|ShadowTable|TypographyTable)\s+from\s+['"]@site\/src\/components\/\1['"];?/g,
+    ''
   );
 }
 

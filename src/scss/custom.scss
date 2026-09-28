@@ -3,8 +3,8 @@
  * bundles Infima by default. Infima is a CSS framework designed to
  * work well for content-centric websites.
  */
-@use '@siemens/ix/scss/theme/core/common' as common;
-@use '@siemens/ix/scss/theme/core/components' as components;
+@use '@siemens/ix/scss/foundation';
+@use '@siemens/ix/scss/deprecated/components' as components;
 
 @use './overwrite/doc-sidebar';
 @use './overwrite/navbar';
@@ -33,7 +33,6 @@
 $font-family: 'Siemens Sans', Arial, Helvetica, sans-serif;
 
 body {
-  @include common.setVars;
   @include components.setComponentVars;
 }
 

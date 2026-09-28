@@ -8,6 +8,7 @@
  */
 import BrowserOnly from '@docusaurus/BrowserOnly';
 import { useLocation } from '@docusaurus/router';
+import { usePluginData } from '@docusaurus/useGlobalData';
 import {
   iconChevronDownSmall,
   iconChevronRightSmall,
@@ -15,11 +16,18 @@ import {
 import { IxIcon } from '@siemens/ix-react';
 import ApiTable, { AnchorHeader } from '@site/src/components/ApiTable';
 import { usePlaygroundThemeVariant } from '@site/src/hooks/use-playground-theme';
+import {
+  formatTokenGroup,
+  groupDesignTokens,
+  queryDesignTokens,
+  tokenGroupAnchor,
+  type DesignTokenEntry,
+  type DesignTokenManifest,
+} from '@site/src/lib/design-tokens';
 import clsx from 'clsx';
 import {
   createContext,
   useContext,
-  useEffect,
   useLayoutEffect,
   useMemo,
   useRef,
@@ -27,206 +35,93 @@ import {
 } from 'react';
 import { ColorContainerFix, ThemeContext } from '../ContainerFix';
 import CopyButton from '../UI/CopyButton';
-import ThemeSelection, { useDefaultTheme } from '../UI/ThemeSelection';
+import ThemeSelection from '../UI/ThemeSelection';
 import ThemeVariantToggle from '../UI/ThemeVariantToggle';
 import styles from './ColorTable.module.css';
 
-function capitalizeFirstLetter(input: string): string {
-  if (input.length === 0) return input;
-  return input.charAt(0).toUpperCase() + input.slice(1);
+type ColorContextType = {
+  value: string;
+};
+
+const ColorContext = createContext<ColorContextType>({
+  value: '',
+});
+
+function formatColor(value: string): string {
+  const normalized = value.trim().toUpperCase();
+  if (!normalized.startsWith('#')) {
+    return normalized;
+  }
+
+  const hex = normalized.slice(1);
+  if (hex.length === 3) {
+    return `#${hex
+      .split('')
+      .map((character) => character + character)
+      .join('')}`;
+  }
+
+  if (hex.length === 4 || hex.length === 8) {
+    const alphaLength = hex.length === 8 ? 2 : 1;
+    const color = hex.slice(0, -alphaLength);
+    const alpha = hex.slice(-alphaLength);
+    const alphaPercentage = Math.round(
+      (parseInt(alpha, 16) / (alphaLength === 2 ? 255 : 15)) * 100
+    );
+    return alphaPercentage < 100
+      ? `#${color} ${alphaPercentage}%`
+      : `#${color}`;
+  }
+
+  return normalized;
 }
 
-function ColorCircle({ color }) {
+function ColorCircle({ tokenName }: { tokenName: string }) {
   return (
     <div className={styles.colorCircle}>
-      <ColorContainerFix>
-        <div
-          className={styles.colorCircleInner}
-          style={{ backgroundColor: `var(--theme-${color})` }}
-        ></div>
-      </ColorContainerFix>
+      <div
+        className={styles.colorCircleInner}
+        style={{ backgroundColor: `var(${tokenName})` }}
+      />
     </div>
   );
 }
 
-type Color = {
-  name: string;
-  hex: string;
-};
-
-type ColorContextType = Color & {
-  children: (Color & { rawName: string })[];
-};
-
-type ThemeContextType = {
-  currentTheme: string;
-  isDarkColor: boolean;
-};
-
-const ColorContext = createContext<ColorContextType>({
-  name: '',
-  hex: '',
-  children: [],
-});
-
-function BrowserOnlyColorTable({ children, colorName }) {
+function BrowserOnlyColorTable({ entry }: { entry: DesignTokenEntry }) {
   const location = useLocation();
-
-  const [theme, setTheme] = useState(useDefaultTheme());
-
+  const [theme, setTheme] = useState('classic');
   const { playgroundThemeVariant } = usePlaygroundThemeVariant();
-  const [isDarkColor, setIsDarkColor] = useState(
-    playgroundThemeVariant === 'dark'
-  );
-
+  const isDarkColor = playgroundThemeVariant === 'dark';
+  const anchorName = `color-${entry.name.slice('--si-sys-color-'.length)}`;
   const [expanded, setExpanded] = useState(
-    location.hash === `#color-${colorName}`
+    location.hash === `#${anchorName}`
   );
-  const [color, setColor] = useState<ColorContextType>({
-    name: '',
-    hex: '',
-    children: [],
-  });
+  const [value, setValue] = useState('');
+  const themeRef = useRef<HTMLDivElement>(null);
 
-  const themeRef = useRef<HTMLDivElement>();
-
-  function getCustomCSSValue(name: string) {
+  useLayoutEffect(() => {
     const themeContainer = themeRef.current;
     if (!themeContainer) {
       return;
     }
 
-    const computedStyle = getComputedStyle(themeContainer);
-    const colorHex = computedStyle.getPropertyValue(name);
-
-    return formatHex(colorHex.toUpperCase());
-  }
-
-  function getCustomCSSPropertyByPrefix(prefix: string): string[] {
-    return Array.from(allCustomCSSProperties)
-      .filter((property) => property !== prefix)
-      .filter((property) => property.startsWith(prefix + '--'));
-  }
-
-  function getAllCustomCSSProperties(): Set<string> {
-    const customProperties = new Set<string>();
-
-    for (const styleSheet of Array.from(document.styleSheets)) {
-      for (const cssRule of Array.from(styleSheet.cssRules)) {
-        if (cssRule instanceof CSSStyleRule) {
-          for (const style of Array.from(cssRule.style)) {
-            if (style.startsWith('--theme')) {
-              customProperties.add(style);
-            }
-          }
-        }
-      }
-    }
-
-    return customProperties;
-  }
-
-  const allCustomCSSProperties: Set<string> = useMemo(
-    () => getAllCustomCSSProperties(),
-    []
-  );
-
-  function generateColorChildren() {
-    const name = `--theme-${colorName}`;
-
-    const children = getCustomCSSPropertyByPrefix(name).map((childName) => {
-      const childHex = getCustomCSSValue(childName);
-      return {
-        rawName: childName.substring('--theme-'.length),
-        name: capitalizeFirstLetter(childName.substring(name.length + 2)),
-        hex: childHex,
-      };
-    });
-
-    return children;
-  }
-
-  useEffect(() => {
-    setIsDarkColor(playgroundThemeVariant === 'dark');
-  }, [playgroundThemeVariant]);
-
-  function formatHex(value: string) {
-    if (!value) {
-      return '';
-    }
-
-    if (!value.startsWith('#')) {
-      return value;
-    }
-
-    const hex = value.replace('#', '');
-
-    if (hex.length === 3) {
-      // Expand shorthand hex (e.g., #abc -> #aabbcc)
-      return `#${hex
-        .split('')
-        .map((char) => char + char)
-        .join('')}`;
-    }
-
-    if (hex.length % 4 === 0) {
-      const subtractSuffix = hex.length === 8 ? 2 : 1;
-      // Handle 8-character or 4-character hex
-      // #rgba -> #rgb + alpha in percentage
-      // #rrggbbaa -> #rrggbb + alpha in percentage
-      const color = hex.substring(0, hex.length - subtractSuffix);
-      const alphaHex = hex.substring(hex.length - subtractSuffix);
-      const alphaPercentage = Math.round((parseInt(alphaHex, 16) / 255) * 100);
-      return alphaPercentage < 100
-        ? `#${color} ${alphaPercentage}%`
-        : `#${color}`;
-    }
-
-    return value;
-  }
-
-  function getHexColors() {
-    const name = `--theme-${colorName}`;
-    const colorHex = getCustomCSSValue(name);
-    const children = generateColorChildren();
-
-    return {
-      name: colorName,
-      hex: formatHex(colorHex),
-      children: children,
+    const updateValue = () => {
+      setValue(
+        formatColor(getComputedStyle(themeContainer).getPropertyValue(entry.name))
+      );
     };
-  }
-
-  const observerRef = useRef(
-    new MutationObserver(() => setColor(getHexColors()))
-  );
-
-  useEffect(() => {
-    const children = generateColorChildren();
-    setColor({
-      ...getHexColors(),
-      children: children,
-    });
-  }, [colorName, themeRef.current]);
-
-  useLayoutEffect(() => {
-    const observer = observerRef.current;
-    if (!themeRef.current) {
-      return;
-    }
-
-    observer.observe(themeRef.current, {
+    const observer = new MutationObserver(updateValue);
+    observer.observe(themeContainer, {
       attributes: true,
+      attributeFilter: ['data-ix-theme', 'data-ix-color-schema'],
     });
-
-    setTimeout(() => {
-      setColor(getHexColors());
-    }, 250);
+    const timeout = window.setTimeout(updateValue, 250);
 
     return () => {
       observer.disconnect();
+      window.clearTimeout(timeout);
     };
-  }, [isDarkColor, theme]);
+  }, [entry.name, isDarkColor, theme]);
 
   const themeContext = useMemo(
     () => ({ currentTheme: theme, isDarkColor }),
@@ -235,20 +130,23 @@ function BrowserOnlyColorTable({ children, colorName }) {
 
   return (
     <ThemeContext.Provider value={themeContext}>
-      <ColorContext.Provider value={color}>
+      <ColorContext.Provider value={{ value }}>
         <ColorContainerFix ref={themeRef}>
-          <ApiTable id={`color-${colorName}`}>
+          <ApiTable id={anchorName}>
             <AnchorHeader
               noBottomBorder={!expanded}
               onClick={() => setExpanded(!expanded)}
-              anchorName={`color-${colorName}`}
-              anchorLabel="Direct link to the color"
+              anchorName={anchorName}
+              anchorLabel={`Direct link to ${entry.name}`}
               right={
                 <>
                   <div className={styles.DesktopOnly}>
-                    <CopyButton text={`var(--theme-${colorName})`}></CopyButton>
+                    <CopyButton text={`var(${entry.name})`} />
                   </div>
-                  <ThemeSelection onThemeChange={setTheme}></ThemeSelection>
+                  <ThemeSelection
+                    availableThemes={['classic']}
+                    onThemeChange={setTheme}
+                  />
                   <ThemeVariantToggle />
                 </>
               }
@@ -256,15 +154,26 @@ function BrowserOnlyColorTable({ children, colorName }) {
               <div className={styles.colorRow}>
                 <IxIcon
                   name={expanded ? iconChevronDownSmall : iconChevronRightSmall}
-                ></IxIcon>
-                <ColorCircle color={colorName}></ColorCircle>
-                <span className={styles.headColorName}>
-                  --theme-{colorName}
-                </span>
+                />
+                <ColorCircle tokenName={entry.name} />
+                <span className={styles.headColorName}>{entry.name}</span>
               </div>
             </AnchorHeader>
 
-            {expanded && children}
+            {expanded && (
+              <>
+                <ColorTable.Text name="Description">
+                  {entry.description ??
+                    'No description is provided by the package manifest.'}
+                </ColorTable.Text>
+                <ColorTable.Text name="Value">
+                  <code>{value}</code>
+                </ColorTable.Text>
+                <ColorTable.Text name="Source token">
+                  <code>{entry.sourcePath}</code>
+                </ColorTable.Text>
+              </>
+            )}
           </ApiTable>
         </ColorContainerFix>
       </ColorContext.Provider>
@@ -272,64 +181,54 @@ function BrowserOnlyColorTable({ children, colorName }) {
   );
 }
 
-function Hex() {
-  const color = useContext(ColorContext);
-  return (
-    <ApiTable.Text name="Hex">
-      <code>{color.hex}</code>
-    </ApiTable.Text>
-  );
-}
-
-function Children() {
-  const color = useContext(ColorContext);
-  return color.children?.map((child) => (
-    <ColorTable.Text name={child.name} key={child.name + '_' + child.hex}>
-      <div className={clsx(styles.colorRow)}>
-        <div className={clsx(styles.colorColumn, 'column-w-100')}>
-          <ColorCircle color={child.rawName}></ColorCircle>
-          {child.rawName}
-          <CopyButton
-            className={clsx('ml-auto', styles.DesktopOnly)}
-            text={`var(--theme-${child.rawName})`}
-            label=""
-          ></CopyButton>
-        </div>
-        <div className={clsx(styles.colorColumn, styles.colorColumnHex)}>
-          <code>{child.hex}</code>
-        </div>
-      </div>
-    </ColorTable.Text>
-  ));
-}
-
-function ColorTableWithChildren({ colorName }) {
-  return (
-    <ColorTable colorName={colorName}>
-      <Hex></Hex>
-      <Children></Children>
-    </ColorTable>
-  );
-}
-
-function Text({ children, name }) {
+function Text({
+  children,
+  name,
+}: {
+  children: React.ReactNode;
+  name: string;
+}) {
   return (
     <div className={clsx(styles.colorTextRow, 'api-row')}>
       <div className="px-8 py-4 font-bold w-auto border-solid border-0 border-r border-[var(--theme-color-soft-bdr)]">
         {name}
       </div>
-      <div className="w-auto">{children}</div>
+      <div className="w-auto p-4">{children}</div>
     </div>
   );
 }
 
-const ColorTable = ({ children, colorName }) => {
+function Hex() {
+  const color = useContext(ColorContext);
+  return (
+    <ColorTable.Text name="Value">
+      <code>{color.value}</code>
+    </ColorTable.Text>
+  );
+}
+
+const ColorTable = () => {
+  const manifest = usePluginData('design-tokens') as DesignTokenManifest;
+  const groups = groupDesignTokens(
+    queryDesignTokens(manifest, {
+      type: 'color',
+      excludeGroups: ['color.border'],
+    })
+  );
+
   return (
     <BrowserOnly>
       {() => (
-        <BrowserOnlyColorTable colorName={colorName}>
-          {children}
-        </BrowserOnlyColorTable>
+        <>
+          {groups.map(({ group, entries }) => (
+            <section key={group}>
+              <h2 id={tokenGroupAnchor(group)}>{formatTokenGroup(group)}</h2>
+              {entries.map((entry) => (
+                <BrowserOnlyColorTable entry={entry} key={entry.name} />
+              ))}
+            </section>
+          ))}
+        </>
       )}
     </BrowserOnly>
   );
@@ -337,8 +236,5 @@ const ColorTable = ({ children, colorName }) => {
 
 ColorTable.Text = Text;
 ColorTable.Hex = Hex;
-ColorTable.Children = Children;
-
-ColorTable.WithChildren = ColorTableWithChildren;
 
 export default ColorTable;

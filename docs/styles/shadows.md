@@ -6,25 +6,21 @@ hide_table_of_contents: false
 doc-type: 'banner'
 component-tabs: ['']
 no_single_tab: true
-description: 'Shadows serve as crucial visual elements that add depth, create dimension, and enhance the perception of hierarchy within your application.'
+description: 'Shadow tokens add depth and communicate the elevation of temporary and layered surfaces.'
 ---
 
 import ShadowTable from '@site/src/components/ShadowTable';
-import ColorTable from '@site/src/components/ColorTable';
 
-#
-
-All shadows are provided as custom properties.
-To access them the `var()` CSS function can be called with the shadow's name:
+Apply a complete system shadow value with `box-shadow`:
 
 ```css
 .some-example {
-  box-shadow: var(--theme-shadow-1);
+  box-shadow: var(--si-sys-color-effects-shadow-1);
 }
 ```
 
-<ShadowTable shadowName="shadow-1"/>
-<ShadowTable shadowName="shadow-2"/>
-<ShadowTable shadowName="shadow-3"/>
-<ShadowTable shadowName="shadow-4"/>
-<ShadowTable shadowName="inset-shadow-1"/>
+Choose a shadow according to the surface hierarchy. Do not decompose or
+reconstruct the value: a token can contain multiple shadow layers whose colors
+adapt to the selected color scheme.
+
+<ShadowTable />

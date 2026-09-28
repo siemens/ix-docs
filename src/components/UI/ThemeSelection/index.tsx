@@ -35,13 +35,14 @@ export function useDefaultTheme() {
 
 type ThemeSelectionProps = {
   onThemeChange?: (theme: string) => void;
+  availableThemes?: readonly string[];
 };
 
 export function ThemeSelection(props: Readonly<ThemeSelectionProps>) {
-  const { playgroundTheme: activeTheme, setPlaygroundTheme: setTheme } =
+  const { playgroundTheme, setPlaygroundTheme: setTheme } =
     usePlaygroundTheme();
   const context = useDocusaurusContext();
-  const [availableThemes] = useState(() => {
+  const [configuredThemes] = useState(() => {
     const themes = [classicTheme];
     if (context.siteConfig.customFields.withBrandTheme) {
       themes.push(brandTheme);
@@ -49,6 +50,13 @@ export function ThemeSelection(props: Readonly<ThemeSelectionProps>) {
 
     return themes;
   });
+  const availableThemes =
+    props.availableThemes?.length > 0
+      ? props.availableThemes
+      : configuredThemes;
+  const activeTheme = availableThemes.includes(playgroundTheme)
+    ? playgroundTheme
+    : availableThemes[0];
 
   const [ref, setRef] = useState<HTMLButtonElement>(null);
   const displayTheme = toUppercase(activeTheme);

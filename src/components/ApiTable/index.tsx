@@ -20,17 +20,43 @@ export type ApiTableProps = {
   readonly singleFramework?: boolean;
 };
 
+function FrameworkHeaderName({
+  name,
+  type,
+}: Pick<ApiTableProps, 'name' | 'type'>) {
+  const { framework } = useFramework();
+  let anchorName = name;
+
+  if (type === 'event' && framework === 'react') {
+    anchorName = `on${name.charAt(0).toUpperCase()}${name.slice(1)}`;
+  }
+
+  let displayName = anchorName;
+
+  if (framework === 'vue' || framework === 'angular' || framework === 'html') {
+    displayName = toKebabCase(anchorName);
+  }
+
+  return (
+    <>
+      {displayName}
+      <a
+        href={`#${type ?? 'property'}-${anchorName}`}
+        className="hash-link"
+        aria-label={`Direct link to ${anchorName}`}
+        title={`Direct link to ${anchorName}`}
+      ></a>
+    </>
+  );
+}
+
 function ApiTable({ children, id }) {
   return (
-    <BrowserOnly>
-      {() => (
-        <div className="api-table container ml-0 mb-8" id={id}>
-          <div className="bg-[transparent] rounded-lg overflow-hidden border-solid border-[1px] border-[var(--theme-color-soft-bdr)]">
-            {children}
-          </div>
-        </div>
-      )}
-    </BrowserOnly>
+    <div className="api-table container ml-0 mb-8" id={id}>
+      <div className="bg-[transparent] rounded-lg overflow-hidden border-solid border-[1px] border-[var(--theme-color-soft-bdr)]">
+        {children}
+      </div>
+    </div>
   );
 }
 
@@ -40,24 +66,12 @@ function PropertyHeader({
   type,
   singleFramework,
 }: ApiTableProps) {
-  const { framework } = useFramework();
-
-  let propertyName = name;
-
-  if (framework === 'vue' || framework === 'angular' || framework === 'html') {
-    propertyName = toKebabCase(name);
-  }
-
   return (
     <div className="flex bg-[var(--theme-color-2)] text-[var(--theme-color-std-text)] p-4 border-solid border-0 border-b border-[var(--theme-color-soft-bdr)] anchor">
       <div className="flex items-center font-bold">
-        {propertyName}
-        <a
-          href={`#${type ?? 'property'}-${name}`}
-          className="hash-link"
-          aria-label={`Direct link to ${name}`}
-          title={`Direct link to ${name}`}
-        ></a>
+        <BrowserOnly>
+          {() => <FrameworkHeaderName name={name} type={type} />}
+        </BrowserOnly>
       </div>
       <div className="flex items-center ml-auto gap-2">
         {children}
@@ -68,16 +82,8 @@ function PropertyHeader({
 }
 
 function EventHeader({ children, name }: ApiTableProps) {
-  const { framework } = useFramework();
-
-  let eventName = name;
-
-  if (framework === 'react') {
-    eventName = `on${name.charAt(0).toUpperCase()}${name.slice(1)}`;
-  }
-
   return (
-    <PropertyHeader name={eventName} type="event">
+    <PropertyHeader name={name} type="event">
       {children}
     </PropertyHeader>
   );

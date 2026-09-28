@@ -3,6 +3,7 @@ import type { Config } from '@docusaurus/types';
 import { config as dotenv } from '@dotenvx/dotenvx';
 import path from 'path';
 import { themes as prismThemes } from 'prism-react-renderer';
+import designTokensPlugin from './plugins/design-tokens/plugin';
 import { figmaPlugin } from './plugins/figma-pictures/figma';
 import versionDeployment from './version-deployment.json' with { type: 'json ' };
 import llmstxtPostbuildPlugin from './plugins/llmstxt-postbuild/plugin';
@@ -68,11 +69,9 @@ try {
   console.log('Found optionalDependency @siemens-ix/corporate-theme.');
   customCss.push(path);
   customCss.push('./src/scss/prod.scss');
-  customCss.push('./src/scss/classic-theme.scss');
   withBrandTheme = true;
 } catch (e) {
   console.warn('optionalDependency @siemens-ix/corporate-theme not found!');
-  customCss.push('./src/scss/classic-theme.scss');
 }
 
 const brokenLinks = 'throw';
@@ -159,6 +158,7 @@ const config: Config = {
     ],
   ],
   plugins: [
+    designTokensPlugin,
     'docusaurus-plugin-sass',
     [
       '@docusaurus/plugin-client-redirects',

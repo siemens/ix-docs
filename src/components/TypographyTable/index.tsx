@@ -8,21 +8,26 @@
  */
 import BrowserOnly from '@docusaurus/BrowserOnly';
 import { useLocation } from '@docusaurus/router';
+import { usePluginData } from '@docusaurus/useGlobalData';
 import { useColorMode } from '@docusaurus/theme-common';
 import {
   iconChevronDownSmall,
   iconChevronRightSmall,
 } from '@siemens/ix-icons/icons';
-import { IxIcon, IxTypography } from '@siemens/ix-react';
+import { IxIcon } from '@siemens/ix-react';
 import ApiTable, { AnchorHeader } from '@site/src/components/ApiTable';
 import { useFramework } from '@site/src/hooks/use-framework';
+import {
+  queryDesignTokens,
+  type DesignTokenEntry,
+  type DesignTokenManifest,
+} from '@site/src/lib/design-tokens';
 import { capitalize } from '@site/src/lib/utils/string-format';
 import CodeBlock from '@theme/CodeBlock';
 import clsx from 'clsx';
 import {
   createContext,
   useContext,
-  useEffect,
   useLayoutEffect,
   useMemo,
   useRef,
@@ -30,53 +35,43 @@ import {
 } from 'react';
 import CopyButton from '../UI/CopyButton';
 import FrameworkSelection from '../UI/FrameworkSelection';
-import ThemeSelection, { useDefaultTheme } from '../UI/ThemeSelection';
-import {
-  ColorContainerFix,
-  ThemeContext,
-} from './../../components/ContainerFix';
+import ThemeSelection from '../UI/ThemeSelection';
+import { ColorContainerFix, ThemeContext } from '../ContainerFix';
 import styles from './TypographyTable.module.css';
-type Typography = {
-  name: string;
+
+type TypographyContextType = {
+  displayName: string;
+  entry: DesignTokenEntry | null;
   fontFamily: string;
   fontSize: string;
-  lineHeight: string;
   fontWeight: string;
+  lineHeight: string;
   letterSpacing: string;
 };
 
-type TypographyContextType = Typography & { displayName: string };
-
 const TypographyContext = createContext<TypographyContextType>({
-  name: '',
+  displayName: '',
+  entry: null,
   fontFamily: '',
   fontSize: '',
-  lineHeight: '',
   fontWeight: '',
+  lineHeight: '',
   letterSpacing: '',
-  displayName: '',
 });
 
-function useTypographySnippet(format: string) {
+function useTypographySnippet(tokenName: string) {
   const { framework } = useFramework();
-  let snippet = `<ix-typography format="${format}"></ix-typography>`;
+  const expression = `var(${tokenName})`;
 
-  if (framework === 'angular') {
-    snippet = `<ix-typography format="${format}"></ix-typography>`;
-  }
   if (framework === 'react') {
-    snippet = `<IxTypography format="${format}"></IxTypography>`;
-  }
-  if (framework === 'vue') {
-    snippet = `<ix-typography format="${format}"></ix-typography>`;
+    return `<span style={{ font: '${expression}' }}>Lorem ipsum dolor sit amet consectutor.</span>`;
   }
 
-  return snippet;
+  return `<span style="font: ${expression}">Lorem ipsum dolor sit amet consectutor.</span>`;
 }
 
-function TypographyCodeBlock({ format }) {
-  const snippet = useTypographySnippet(format);
-
+function TypographyCodeBlock({ tokenName }: { tokenName: string }) {
+  const snippet = useTypographySnippet(tokenName);
   return (
     <div className={clsx(styles.CodeBlockPreview, 'code-block-no-copy')}>
       <CodeBlock language="html">{snippet}</CodeBlock>
@@ -84,104 +79,76 @@ function TypographyCodeBlock({ format }) {
   );
 }
 
-function TypographyCopyButton({ format }) {
+function TypographyCopyButton({ tokenName }: { tokenName: string }) {
+  const snippet = useTypographySnippet(tokenName);
   return (
     <CopyButton
-      text="bla"
-      preview={<TypographyCodeBlock format={format}></TypographyCodeBlock>}
-    ></CopyButton>
+      text={snippet}
+      preview={<TypographyCodeBlock tokenName={tokenName} />}
+    />
   );
 }
 
-function BrowserOnlyTypographyTable({ children, typographyName }) {
+function BrowserOnlyTypographyTable({ entry }: { entry: DesignTokenEntry }) {
   const location = useLocation();
-
-  const [theme, setTheme] = useState(useDefaultTheme());
+  const [theme, setTheme] = useState('classic');
   const { colorMode } = useColorMode();
-
-  const [isDarkColor, setIsDarkColor] = useState(colorMode === 'dark');
-
+  const isDarkColor = colorMode === 'dark';
+  const anchorName = `typography-${entry.name.slice(
+    '--si-sys-typography-'.length
+  )}`;
   const [expanded, setExpanded] = useState(
-    location.hash === `#typography-${typographyName}`
+    location.hash === `#${anchorName}`
   );
   const [typography, setTypography] = useState<TypographyContextType>({
-    displayName: '',
-    name: '',
+    displayName: capitalize(
+      entry.name.slice('--si-sys-typography-'.length),
+      true
+    ),
+    entry,
     fontFamily: '',
     fontSize: '',
     fontWeight: '',
     lineHeight: '',
     letterSpacing: '',
   });
-
-  const themeRef = useRef<HTMLDivElement>();
-
-  function getCustomCSSValue(name: string) {
-    const themeContainer = themeRef.current;
-    if (!themeContainer) {
-      return;
-    }
-
-    const computedStyle = getComputedStyle(themeContainer);
-    const colorHex = computedStyle.getPropertyValue(name);
-
-    return colorHex.toUpperCase();
-  }
-
-  useEffect(() => {
-    setIsDarkColor(colorMode === 'dark');
-  }, [colorMode]);
-
-  function getFontValues() {
-    const name = `--theme-${typographyName}`;
-    const customValue = getCustomCSSValue(name);
-    const regexResult = /(\d*)\s(.*REM)\/(.*)\s((?:"|').*(?:"|'))/g.exec(
-      customValue
-    );
-
-    let [_, fontWeight, fontSize, lineHeight, fontFamily] = regexResult;
-    const displayName = capitalize(typographyName, true);
-
-    if (!lineHeight.includes('%')) {
-      lineHeight = (parseFloat(lineHeight) * 100).toString();
-    }
-
-    return {
-      displayName,
-      name,
-      fontFamily,
-      fontSize,
-      fontWeight,
-      lineHeight,
-    } as TypographyContextType;
-  }
-
-  const observerRef = useRef(
-    new MutationObserver(() => setTypography(getFontValues()))
-  );
-
-  useEffect(() => {
-    setTypography(getFontValues());
-  }, [typographyName, themeRef.current]);
+  const themeRef = useRef<HTMLDivElement>(null);
+  const probeRef = useRef<HTMLSpanElement>(null);
 
   useLayoutEffect(() => {
-    const observer = observerRef.current;
-    if (!themeRef.current) {
+    const themeContainer = themeRef.current;
+    const probe = probeRef.current;
+    if (!themeContainer || !probe) {
       return;
     }
 
-    observer.observe(themeRef.current, {
+    const updateTypography = () => {
+      const computed = getComputedStyle(probe);
+      setTypography({
+        displayName: capitalize(
+          entry.name.slice('--si-sys-typography-'.length),
+          true
+        ),
+        entry,
+        fontFamily: computed.fontFamily,
+        fontSize: computed.fontSize,
+        fontWeight: computed.fontWeight,
+        lineHeight: computed.lineHeight,
+        letterSpacing: computed.letterSpacing,
+      });
+    };
+    const observer = new MutationObserver(updateTypography);
+    observer.observe(themeContainer, {
       attributes: true,
+      attributeFilter: ['data-ix-theme', 'data-ix-color-schema'],
     });
-
-    setTimeout(() => {
-      setTypography(getFontValues());
-    }, 250);
+    const timeout = window.setTimeout(updateTypography, 250);
 
     return () => {
       observer.disconnect();
+      window.clearTimeout(timeout);
     };
-  }, [isDarkColor, theme]);
+  }, [entry, isDarkColor, theme]);
 
   const themeContext = useMemo(
     () => ({ currentTheme: theme, isDarkColor }),
@@ -189,149 +156,135 @@ function BrowserOnlyTypographyTable({ children, typographyName }) {
   );
 
   return (
-    <ApiTable id={`typography-${typographyName}`}>
-      <ThemeContext.Provider value={themeContext}>
-        <TypographyContext.Provider value={typography}>
-          <ColorContainerFix ref={themeRef}></ColorContainerFix>
-          <AnchorHeader
-            noBottomBorder={!expanded}
-            onClick={() => setExpanded(!expanded)}
-            anchorName={`typography-${typographyName}`}
-            anchorLabel="Direct link to the typography"
-            className={styles.AnchorHeader}
-            leftClassName={styles.Header}
-            rightClassName={styles.Toolbar}
-            right={
-              <>
-                <TypographyCopyButton format={typographyName} />
-                <div className={styles.DesktopOnly}>
-                  <ThemeSelection onThemeChange={setTheme}></ThemeSelection>
-                </div>
-                <FrameworkSelection />
-              </>
-            }
-          >
-            <div className={styles.typographyRow}>
-              <IxIcon
-                name={expanded ? iconChevronDownSmall : iconChevronRightSmall}
-              ></IxIcon>
-              <span className={styles.headColorName}>
-                {typography.displayName}
-              </span>
-            </div>
-          </AnchorHeader>
+    <ThemeContext.Provider value={themeContext}>
+      <TypographyContext.Provider value={typography}>
+        <ColorContainerFix ref={themeRef}>
+          <ApiTable id={anchorName}>
+            <span
+              aria-hidden="true"
+              ref={probeRef}
+              style={{
+                font: `var(${entry.name})`,
+                position: 'absolute',
+                visibility: 'hidden',
+              }}
+            />
+            <AnchorHeader
+              noBottomBorder={!expanded}
+              onClick={() => setExpanded(!expanded)}
+              anchorName={anchorName}
+              anchorLabel={`Direct link to ${entry.name}`}
+              className={styles.AnchorHeader}
+              leftClassName={styles.Header}
+              rightClassName={styles.Toolbar}
+              right={
+                <>
+                  <TypographyCopyButton tokenName={entry.name} />
+                  <div className={styles.DesktopOnly}>
+                    <ThemeSelection
+                      availableThemes={['classic']}
+                      onThemeChange={setTheme}
+                    />
+                  </div>
+                  <FrameworkSelection />
+                </>
+              }
+            >
+              <div className={styles.typographyRow}>
+                <IxIcon
+                  name={expanded ? iconChevronDownSmall : iconChevronRightSmall}
+                />
+                <span className={styles.headColorName}>
+                  {typography.displayName}
+                </span>
+              </div>
+            </AnchorHeader>
 
-          {expanded && children}
-        </TypographyContext.Provider>
-      </ThemeContext.Provider>
-    </ApiTable>
+            {expanded && <TypographyStyle />}
+          </ApiTable>
+        </ColorContainerFix>
+      </TypographyContext.Provider>
+    </ThemeContext.Provider>
   );
 }
 
 function TypographyStyle() {
   const typography = useContext(TypographyContext);
-  const typographyName = typography.name.slice('--theme-'.length);
-  const typographySnippet = useTypographySnippet(typographyName);
+  const entry = typography.entry;
+  if (!entry) {
+    return null;
+  }
+  const typographySnippet = useTypographySnippet(entry.name);
+
   return (
     <>
-      <TypographyTable.Text name={'Preview'}>
+      <TypographyTable.Text name="Preview">
         <div className={clsx(styles.typographyRow, styles.typographyPreview)}>
           <div
             className={clsx(
               styles.typographyColumn,
               styles.typographyColumnChildName
             )}
+            style={{ font: `var(${entry.name})` }}
           >
-            <IxTypography
-              format={typography.name.slice('--theme-'.length) as any}
-            >
-              Lorem ipsum dolor sit amet consectutor.
-            </IxTypography>
+            Lorem ipsum dolor sit amet consectutor.
           </div>
         </div>
       </TypographyTable.Text>
 
-      <TypographyTable.Text name={'Code'}>
-        <div className={clsx(styles.typographyRow)}>
+      <TypographyTable.Text name="Code">
+        <div className={styles.typographyRow}>
           <div
             className={clsx(
               styles.typographyColumn,
               styles.typographyColumnChildName
             )}
           >
-            <TypographyCodeBlock
-              format={typography.name.slice('--theme-'.length) as any}
-            ></TypographyCodeBlock>
-
+            <TypographyCodeBlock tokenName={entry.name} />
             <CopyButton
               label=""
               text={typographySnippet}
               className={styles.typographyRowCopyCode}
-            ></CopyButton>
+            />
           </div>
         </div>
       </TypographyTable.Text>
 
-      <TypographyTable.Text name={'Font family'}>
-        <div className={clsx(styles.typographyRow)}>
-          <div
-            className={clsx(
-              styles.typographyColumn,
-              styles.typographyColumnChildName
-            )}
-          >
-            <code className={styles.typographyFontFamilyValue}>
-              {typography.fontFamily.toLowerCase()}
-            </code>
-          </div>
-        </div>
+      <TypographyTable.Text name="Description">
+        {entry.description ??
+          'No description is provided by the package manifest.'}
       </TypographyTable.Text>
 
-      <TypographyTable.Text name={'Font size'}>
-        <div className={clsx(styles.typographyRow)}>
-          <div
-            className={clsx(
-              styles.typographyColumn,
-              styles.typographyColumnChildName
-            )}
-          >
-            <code className={styles.typographyFontSizeValue}>
-              {typography.fontSize}
-            </code>
-          </div>
-        </div>
+      <TypographyTable.Text name="Font family">
+        <code className={styles.typographyFontFamilyValue}>
+          {typography.fontFamily}
+        </code>
       </TypographyTable.Text>
 
-      <TypographyTable.Text name={'Line height'}>
-        <div className={clsx(styles.typographyRow)}>
-          <div
-            className={clsx(
-              styles.typographyColumn,
-              styles.typographyColumnChildName
-            )}
-          >
-            <code>{typography.lineHeight}%</code>
-          </div>
-        </div>
+      <TypographyTable.Text name="Font size">
+        <code className={styles.typographyFontSizeValue}>
+          {typography.fontSize}
+        </code>
       </TypographyTable.Text>
 
-      <TypographyTable.Text name={'Font weight'}>
-        <div className={clsx(styles.typographyRow)}>
-          <div
-            className={clsx(
-              styles.typographyColumn,
-              styles.typographyColumnChildName
-            )}
-          >
-            <code>{typography.fontWeight}</code>
-          </div>
-        </div>
+      <TypographyTable.Text name="Line height">
+        <code>{typography.lineHeight}</code>
+      </TypographyTable.Text>
+
+      <TypographyTable.Text name="Font weight">
+        <code>{typography.fontWeight}</code>
       </TypographyTable.Text>
     </>
   );
 }
 
-function Text({ children, name }) {
+function Text({
+  children,
+  name,
+}: {
+  children: React.ReactNode;
+  name: string;
+}) {
   return (
     <div className={styles.typographyTextRow}>
       <div className="px-8 py-4 font-bold w-auto border-solid border-0 border-r border-[var(--theme-color-soft-bdr)]">
@@ -342,13 +295,18 @@ function Text({ children, name }) {
   );
 }
 
-const TypographyTable = ({ typographyName }) => {
+const TypographyTable = () => {
+  const manifest = usePluginData('design-tokens') as DesignTokenManifest;
+  const entries = queryDesignTokens(manifest, { type: 'typography' });
+
   return (
     <BrowserOnly>
       {() => (
-        <BrowserOnlyTypographyTable typographyName={typographyName}>
-          <TypographyStyle />
-        </BrowserOnlyTypographyTable>
+        <>
+          {entries.map((entry) => (
+            <BrowserOnlyTypographyTable entry={entry} key={entry.name} />
+          ))}
+        </>
       )}
     </BrowserOnly>
   );
