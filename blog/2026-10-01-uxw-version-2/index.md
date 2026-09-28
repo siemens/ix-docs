@@ -23,8 +23,6 @@ You’ll notice that Version 2.0 is more than three times the size of the origin
 
 ### Broader and deeper content
 
-
-
 We’ve introduced a wide range of new topics and provided much deeper technical detail on existing guidelines to answer the questions we hear most often.
 
 ### Accessibility and clarity
