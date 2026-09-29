@@ -7,7 +7,7 @@ tags:
 
 # Announcing UX Writing Guidelines 2.0
 
-![banner](./2610_uxw_v2_title_announcement.png)
+![](./2610_uxw_v2_title_announcement.png)
 
 We are thrilled to share that UXW Version 2.0 is officially here!
 
