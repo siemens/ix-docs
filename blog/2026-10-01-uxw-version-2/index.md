@@ -5,7 +5,7 @@ tags:
   - UX writing
 ---
 
-# Announcing UX Writing Guidelines 2.0
+# Huge UX Writing evolution
 
 ![](./2610_uxw_v2_title_announcement.png)
 
