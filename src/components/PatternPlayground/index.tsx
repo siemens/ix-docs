@@ -5,14 +5,14 @@
 import Playground from '../Playground';
 import { FrameworkTypes } from '@site/src/hooks/use-framework';
 import {
-  mapRegistryFrameworkToPlayground,
-  mapRegistrySourcePathToPlayground,
-  useBlockSource,
-} from '@site/src/hooks/use-block-source';
+  mapPatternRegistryFrameworkToPlayground,
+  mapPatternRegistrySourcePathToPlayground,
+  usePatternSource,
+} from '@site/src/hooks/use-pattern-source';
 import CodeBlock from '@theme/CodeBlock';
 import { useEffect, useMemo, useRef, useState, type FC } from 'react';
 import { CodePreviewFiles, SourceFiles } from '../CodePreview';
-import styles from './block.module.css';
+import styles from './pattern.module.css';
 import { IxIcon, IxTooltip } from '@siemens/ix-react';
 import { iconCheck, iconCopy } from '@siemens/ix-icons/icons';
 import Link from '@docusaurus/Link';
@@ -46,7 +46,7 @@ function detectLanguage(fileName: string) {
   return 'tsx';
 }
 
-export default function BlockPlayground(
+export default function PatternPlayground(
   props: Readonly<{
     name: string;
     height: string;
@@ -56,10 +56,10 @@ export default function BlockPlayground(
   const showPrepare = props.showPreparing ?? false;
   const [isCopied, setIsCopied] = useState(false);
   const copiedTimeoutRef = useRef<ReturnType<typeof setTimeout> | null>(null);
-  const { data, isLoading, error } = useBlockSource(props.name);
+  const { data, isLoading, error } = usePatternSource(props.name);
 
   const cliUrl = useBaseUrl(
-    `docs/examples/blocks/overview#what-is-siemens-ix-cli`
+    `docs/examples/patterns/overview#what-is-siemens-ix-cli`
   );
 
   useEffect(() => {
@@ -75,7 +75,7 @@ export default function BlockPlayground(
       return {};
     }
 
-    return mapRegistrySourcePathToPlayground(
+    return mapPatternRegistrySourcePathToPlayground(
       data.sourcePath
     ) as CodePreviewFiles;
   }, [data]);
@@ -85,7 +85,7 @@ export default function BlockPlayground(
       return {};
     }
 
-    const frameworkFiles = mapRegistryFrameworkToPlayground(data.files);
+    const frameworkFiles = mapPatternRegistryFrameworkToPlayground(data.files);
 
     return Object.entries(frameworkFiles).reduce(
       (accumulator, [frameworkName, sourceFiles]) => {
@@ -186,7 +186,7 @@ export default function BlockPlayground(
           </button>
           <IxTooltip for={`#copy-cli-command-${props.name}`} interactive>
             Copy the <Link to={cliUrl}>ix-cli</Link> command to the clipboard.
-            You can use this command to add the block to your project using the{' '}
+            You can use this command to add the pattern to your project using the{' '}
             <Link to={cliUrl}>ix-cli</Link>.
           </IxTooltip>
         </Playground.SubHeader>

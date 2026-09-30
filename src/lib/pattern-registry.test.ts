@@ -9,10 +9,7 @@
 
 import assert from 'node:assert/strict';
 import test from 'node:test';
-import {
-  getBlockSourceByName,
-  type BlockSourceResult,
-} from './block-registry';
+import { getPatternSourceByName } from './pattern-registry';
 
 type MockResponse = {
   body: string;
@@ -56,14 +53,14 @@ function jsonResponse(value: unknown): MockResponse {
   };
 }
 
-test('loads current path-based block files relative to the manifest', async () => {
+test('loads path-based pattern files relative to the manifest', async () => {
   const registryUrl = 'https://registry.example/registry.json';
   const manifestUrl =
-    'https://registry.example/v5.2.1/blocks/manifests/change-password.json';
+    'https://registry.example/v5.2.1/patterns/manifests/change-password.json';
   const reactSourceUrl =
-    'https://registry.example/v5.2.1/blocks/manifests/react/change-password.tsx';
+    'https://registry.example/v5.2.1/patterns/manifests/react/change-password.tsx';
   const angularSourceUrl =
-    'https://registry.example/v5.2.1/blocks/manifests/angular/change-password.ts';
+    'https://registry.example/v5.2.1/patterns/manifests/angular/change-password.ts';
 
   await withFetchMock(
     {
@@ -71,10 +68,10 @@ test('loads current path-based block files relative to the manifest', async () =
         'dist-tags': { latest: 'v5.2.1' },
         versions: {
           'v5.2.1': {
-            blocks: [
+            patterns: [
               {
                 name: 'change-password',
-                path: 'v5.2.1/blocks/manifests/change-password.json',
+                path: 'v5.2.1/patterns/manifests/change-password.json',
               },
             ],
           },
@@ -82,7 +79,7 @@ test('loads current path-based block files relative to the manifest', async () =
       }),
       [manifestUrl]: jsonResponse({
         name: 'change-password',
-        preview: 'react-blocks/dist/ix/change-password',
+        preview: 'react-patterns/dist/ix/change-password',
         variants: {
           react: {
             files: [{ path: 'react/change-password.tsx' }],
@@ -96,7 +93,7 @@ test('loads current path-based block files relative to the manifest', async () =
       [angularSourceUrl]: { body: 'angular source' },
     },
     async (calls) => {
-      const source = await getBlockSourceByName('change-password', {
+      const source = await getPatternSourceByName('change-password', {
         registryUrl,
       });
 
@@ -119,80 +116,13 @@ test('loads current path-based block files relative to the manifest', async () =
       });
       assert.equal(
         source.previewUrl,
-        'https://registry.example/v5.2.1/blocks/react-blocks/dist/#/change-password',
+        'https://registry.example/v5.2.1/patterns/react-patterns/dist/#/change-password',
       );
+      assert.equal(calls.length, 4);
       assert.ok(calls.includes(registryUrl));
       assert.ok(calls.includes(manifestUrl));
       assert.ok(calls.includes(reactSourceUrl));
       assert.ok(calls.includes(angularSourceUrl));
-    },
-  );
-
-});
-
-test('loads legacy source and target block files', async () => {
-  const registryUrl = 'https://registry.example/registry.json';
-  const manifestUrl =
-    'https://registry.example/v5.2.0/blocks/legacy-block.json';
-  const sourceUrl =
-    'https://registry.example/v5.2.0/blocks/react-blocks/src/legacy-block.tsx';
-
-  await withFetchMock(
-    {
-      [registryUrl]: jsonResponse({
-        versions: {
-          'v5.2.0': {
-            blocks: [
-              {
-                name: 'legacy-block',
-                path: 'v5.2.0/blocks/legacy-block.json',
-              },
-            ],
-          },
-        },
-      }),
-      [manifestUrl]: jsonResponse({
-        name: 'legacy-block',
-        variants: {
-          react: {
-            files: [
-              {
-                target: 'react/legacy-block.tsx',
-                source: 'react-blocks/src/legacy-block.tsx',
-              },
-            ],
-          },
-        },
-      }),
-      [sourceUrl]: { body: 'legacy source' },
-    },
-    async (calls) => {
-      const source = await getBlockSourceByName('legacy-block', {
-        registryUrl,
-        registryTagOrVersion: 'v5.2.0',
-      });
-
-      const expected: Pick<BlockSourceResult, 'files' | 'sourcePath'> = {
-        files: {
-          react: {
-            'react/legacy-block.tsx': 'legacy source',
-          },
-        },
-        sourcePath: {
-          react: {
-            'react/legacy-block.tsx': 'react-blocks/src/legacy-block.tsx',
-          },
-        },
-      };
-
-      assert.deepEqual(
-        {
-          files: source.files,
-          sourcePath: source.sourcePath,
-        },
-        expected,
-      );
-      assert.ok(calls.includes(sourceUrl));
     },
   );
 });

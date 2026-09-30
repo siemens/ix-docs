@@ -26,7 +26,7 @@ description: 'We’re constantly improving our design system for you by extendin
 ### 🗓️ Scheduled
 
 - **Generic list**: The generic list extends our component set with a more flexible solution for lists. It comes as a customizable variant providing a slot and a pre-defined variant with a useful default of checkbox selection, icon, title and actions.
-- **Building blocks**: Blocks are curated, copy‑paste code examples that show how multiple components work together in real UI scenarios. Blocks bridge the gap between individual components and larger patterns, giving users practical, ready‑to-use starting points.
+- **iX patterns**: iX patterns are curated, copy‑paste implementations composed of multiple iX components for common UI scenarios. They give users practical, ready‑to‑use starting points that can be copied, adapted, or installed in a project.
 - **Vertical navigation menu rework**: Our vertical navigation will change in alignment with other design systems at Siemens.
 - **Settings and about as modal**: Currently, settings and the about information are presented in an overlay that is bound to the vertical navigation menu. For a more flexible version, we will provide a template for settings and about information in a modal that can either come at a fixed width or full-screen. Access to this modal will move from the bottom left menu navigation to the header.
 

@@ -24,7 +24,7 @@ import {
 } from '@site/src/context/framework-selection-context';
 
 const PREVIEW_OVERLAY_EVENT = 'ix-preview-loading-overlay';
-const PREVIEW_OVERLAY_SOURCE = 'ix-react-blocks';
+const PREVIEW_OVERLAY_SOURCE = 'ix-react-patterns';
 const DEFAULT_PREPARING_MESSAGE = 'Prepare preview';
 
 function getAvailableFrameworks(

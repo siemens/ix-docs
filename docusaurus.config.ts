@@ -271,9 +271,9 @@ const config: Config = {
         },
         {
           type: 'docSidebar',
-          sidebarId: 'blocks',
+          sidebarId: 'patterns',
           position: 'left',
-          label: 'Examples',
+          label: 'Patterns',
         },
         {
           type: 'docSidebar',

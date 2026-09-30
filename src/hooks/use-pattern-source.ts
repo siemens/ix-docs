@@ -8,19 +8,19 @@
  */
 import { FrameworkTypes } from './use-framework';
 import {
-  BlockSourceResult,
-  getBlockSourceByName,
-  GetBlockSourceOptions,
-} from '../lib/block-registry';
+  PatternSourceResult,
+  getPatternSourceByName,
+  GetPatternSourceOptions,
+} from '../lib/pattern-registry';
 import { useEffect, useState } from 'react';
 
-type HookState = {
-  data: BlockSourceResult | null;
+type PatternHookState = {
+  data: PatternSourceResult | null;
   isLoading: boolean;
   error: Error | null;
 };
 
-const registryFrameworkMap: Record<string, FrameworkTypes> = {
+const patternRegistryFrameworkMap: Record<string, FrameworkTypes> = {
   angular: 'angular_standalone',
   'angular-standalone': 'angular_standalone',
   react: 'react',
@@ -28,12 +28,12 @@ const registryFrameworkMap: Record<string, FrameworkTypes> = {
   html: 'html',
 };
 
-export function mapRegistryFrameworkToPlayground(
-  data: BlockSourceResult['files'],
+export function mapPatternRegistryFrameworkToPlayground(
+  data: PatternSourceResult['files'],
 ): Partial<Record<FrameworkTypes, Record<string, string>>> {
   return Object.entries(data).reduce(
     (accumulator, [framework, files]) => {
-      const mappedFramework = registryFrameworkMap[framework];
+      const mappedFramework = patternRegistryFrameworkMap[framework];
 
       if (!mappedFramework || !files) {
         return accumulator;
@@ -46,12 +46,12 @@ export function mapRegistryFrameworkToPlayground(
   );
 }
 
-export function mapRegistrySourcePathToPlayground(
-  data: BlockSourceResult['sourcePath'],
+export function mapPatternRegistrySourcePathToPlayground(
+  data: PatternSourceResult['sourcePath'],
 ): Partial<Record<FrameworkTypes, Record<string, string>>> {
   return Object.entries(data).reduce(
     (accumulator, [framework, files]) => {
-      const mappedFramework = registryFrameworkMap[framework];
+      const mappedFramework = patternRegistryFrameworkMap[framework];
 
       if (!mappedFramework || !files) {
         return accumulator;
@@ -64,11 +64,11 @@ export function mapRegistrySourcePathToPlayground(
   );
 }
 
-export function useBlockSource(
-  name: string,
-  options: GetBlockSourceOptions = {},
+export function usePatternSource(
+  patternName: string,
+  options: GetPatternSourceOptions = {},
 ) {
-  const [state, setState] = useState<HookState>({
+  const [state, setState] = useState<PatternHookState>({
     data: null,
     isLoading: true,
     error: null,
@@ -79,7 +79,7 @@ export function useBlockSource(
 
     setState((current) => ({ ...current, isLoading: true, error: null }));
 
-    getBlockSourceByName(name, options)
+    getPatternSourceByName(patternName, options)
       .then((data) => {
         if (!isMounted) {
           return;
@@ -103,10 +103,9 @@ export function useBlockSource(
       isMounted = false;
     };
   }, [
-    name,
+    patternName,
     options.registryTagOrVersion,
     options.registryUrl,
-    options.sourceBaseUrls,
   ]);
 
   return state;
