@@ -36,17 +36,21 @@ We offer three types of cards:
 
 ## Variants
 
-Cards are available in nine variants:
+Cards can either outlined or filled.
 
 * Outline: Use as default for a balanced and subtle appearance.
-* Filled
-* Alarm
+* Filled: Use when the card needs a solid background to remain distinct from the surface behind it.
+
+Cards are available in eight status variants:
+
 * Critical
+* Danger
 * Warning
+* Caution
 * Success
-* Info
+* Information
 * Neutral
-* Primary
+* Accent
 
 Each variant emphasizes different aspects to guide the user's attention. These variants differ visually through the presence of an outline and a distinct container fill color, but they all follow the same interaction pattern.
 
