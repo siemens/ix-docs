@@ -138,7 +138,7 @@ Use lists for two or more items. Choose ordered lists when steps must happen in 
 
 ## Accessible links
 
-Use brief, meaningful link text to explain the function of the target web page or resource. Pair link text with universal icons, e.g. the open-external or application-screen icons. 
+Use brief, meaningful link text to explain the function of the target web page or resource. Pair link text with universal icons, e.g. the open-external or application-screen icons.
 
 <div className="dos-and-donts">
 <div className="dos">
@@ -232,7 +232,7 @@ Group similar labels together. See [WCAG Labels or Instructions](https://www.w3.
 </div>
 </div>
 
-Use an asterisk (*) for required fields. 
+Use an asterisk (*) for required fields.
 
 <div className="dos-and-donts">
 <div className="dos">
@@ -492,7 +492,7 @@ All ALT-text must present and convey the same information as the non-text conten
     <li>Image: Line graph with multiple data series<br/>ALT-text: Line chart comparing energy consumption across three production lines over Q1 to Q4 2025, showing a 12% reduction in Line A and 8% in Line B.</li>
     <li>Image: Map showing colored regions<br/>ALT-text: Map of Europe highlighting service centers in 12 countries, with red pins indicating locations in Germany, France, Poland, and Italy, and blue pins for Nordic regions.</li>
     <li>Image: Overhead view of industrial facility<br/>ALT-text: Facility map showing the manufacturing plant in Stuttgart with green pins indicating three production halls, warehouse zones, and emergency assembly points.</li>
-    <li>Image: Technician working.<br/>ALT-text:A technician in a hard hat and safety vest is operating a CNC machine while monitoring the control panel display.</li>
+    <li>Image: Technician working<br/>ALT-text:A technician in a hard hat and safety vest is operating a CNC machine while monitoring the control panel display.</li>
   </ul>
 </div>
 <div className="donts">
@@ -500,7 +500,7 @@ All ALT-text must present and convey the same information as the non-text conten
     <li>Image: Line graph with multiple data series<br/>ALT-text: Chart showing data.</li>
     <li>Image: Map showing colored regions<br/>ALT-text: Map of Europe.</li>
     <li>Image: Overhead view of industrial facility<br/>ALT-text: Factory map.</li>
-    <li>Image: Technician working.<br/>ALT-text: Person working with machine.</li>
+    <li>Image: Technician working<br/>ALT-text: Person working with machine.</li>
   </ul>
 </div>
 </div>
@@ -539,14 +539,14 @@ Write clear and concise ARIA labels for interactive controls without visible tex
     <li>Icon without text: Download icon on download icon button<br/>ARIA label: Download installation file</li>
     <li>Icon without text: Gear icon on settings menu toggle<br/>ARIA label: Open settings menu</li>
     <li>Input field (no visible label): Search box in search field<br/>ARIA label: Search product documentation</li>
-    <li>Icon without text: Chevron icon to expand technical details<br/>ARIAlabel: Expand technical specifications</li>
+    <li>Icon without text: Chevron icon to expand technical details<br/>ARIA label: Expand technical specifications</li>
     <li>Icon without text: X icon to close modal dialog<br/>ARIA label: Close order confirmation dialog</li>
   </ul>
 </div>
 <div className="donts">
   <ul aria-label="Practices to avoid">
-    <li>Icon without text: Download icon<br/>ARIA label: Icon</li>
-    <li>Icon without text: Gear icon<br/>ARIA label: Settings</li>
+    <li>Icon without text: Download icon on download icon button<br/>ARIA label: Icon</li>
+    <li>Icon without text: Gear icon on settings menu toggle<br/>ARIA label: Settings</li>
     <li>Input field (no visible label): Search box in search field<br/>ARIA label: Search</li>
     <li>Icon without text: Chevron icon to expand technical details<br/>ARIA label: Expand</li>
     <li>Icon without text: X icon to close modal dialog<br/>ARIA label: X</li>
@@ -569,7 +569,7 @@ All ARIA labels must be concise, action-oriented, and match the visible context 
 </div>
 </div>
 
-Don’t use aria labels to duplicate visible text. If a button displays "Submit", adding an aria-label also titled “Submit” can confuse voice control users and assistive technology. 
+Don’t use aria labels to duplicate visible text. If a button displays "Submit", adding an aria-label also titled “Submit” can confuse voice control users and assistive technology.
 
 <div className="dos-and-donts">
 <div className="dos">
