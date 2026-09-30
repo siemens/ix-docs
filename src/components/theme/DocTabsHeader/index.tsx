@@ -16,7 +16,7 @@ import { useCallback, useMemo, useState } from 'react';
 import AskAI from '../AskAI';
 import styles from './styles.module.css';
 
-function Tabs({ children }) {
+function Tabs({ children }: React.PropsWithChildren<{}>) {
   const [isScrolling, setIsScrolling] = useState(false);
   useScrollPosition(({ scrollY }) => {
     setIsScrolling(scrollY > 50);
