@@ -12,6 +12,7 @@ import React from "react";
 import { IxIcon } from "@siemens/ix-react";
 import { iconPdfDocument } from "@siemens/ix-icons/icons";
 import { iconOpenExternal } from "@siemens/ix-icons/icons";
+import { iconApplicationScreen } from "@siemens/ix-icons/icons";
 
 :::info
 Many rules here direct you to further information and examples either within iX or the Web Content Accessibility Guidelines (WCAG).
@@ -69,7 +70,7 @@ Use active voice as it's shorter and easier to understand. See [Use active voice
 </div>
 </div>
 
-Use concise, descriptive headings so users understand the content and purpose of the page. Identify and remove unnecessary words. See [Form headings](#).
+Use concise, descriptive headings so users understand the content and purpose of the page. Identify and remove unnecessary words. See [Form headings](../forms-and-form-fields/form-headings.md).
 
 <div className="dos-and-donts">
 <div className="dos">
@@ -137,13 +138,13 @@ Use lists for two or more items. Choose ordered lists when steps must happen in 
 
 ## Accessible links
 
-Describe what happens when users click on the link, e.g. opens a new tab or an external link. 
+Use brief, meaningful link text to explain the function of the target web page or resource. Pair link text with universal icons, e.g. the open-external or application-screen icons. 
 
 <div className="dos-and-donts">
 <div className="dos">
   <ul aria-label="Recommended practices">
     <li>SIMATIC S7-1500 firmware updates <IxIcon name={iconOpenExternal} size="16" aria-label="external" role="img"></IxIcon></li>
-    <li>Demonstration projects <IxIcon name={iconOpenExternal} size="16" aria-label="external" role="img"></IxIcon></li>
+    <li>Demonstration projects <IxIcon name={iconApplicationScreen} size="16" aria-label="external application" role="img"></IxIcon></li>
   </ul>
 </div>
 <div className="donts">
@@ -154,7 +155,7 @@ Describe what happens when users click on the link, e.g. opens a new tab or an e
 </div>
 </div>
 
-Describe the resource function and type and pair the download of resources with both file type and size whenever possible.
+Pair the download of resources with both file type and size when possible.
 
 <div className="dos-and-donts">
 <div className="dos">
@@ -393,7 +394,7 @@ Provide options to extend time limits. See [WCAG Timing Adjustable](https://www.
 <div className="dos-and-donts">
 <div className="dos">
   <ul aria-label="Recommended practices">
-    <li>Message: Your session will expire in 5 minutes.<br/>Button label: Extend session<br/>Button label: End session now</li>
+    <li>Message: Your session will expire in 5 minutes.<br/>Buttons: Extend session, End session now</li>
   </ul>
 </div>
 </div>
@@ -425,7 +426,6 @@ If there is more than one audio player or recording on the same page, each label
 <div className="dos">
   <ul aria-label="Recommended practices">
     <li>Start diagnostic playback</li>
-    <li>Stop safety announcement</li>
     <li>Stop voice memo recording</li>
     <li>Mute machine alarm</li>
   </ul>
@@ -433,7 +433,6 @@ If there is more than one audio player or recording on the same page, each label
 <div className="donts">
   <ul aria-label="Practices to avoid">
     <li>Start</li>
-    <li>Stop</li>
     <li>Stop</li>
     <li>Mute</li>
   </ul>
@@ -446,7 +445,9 @@ If audio plays automatically for more than 3 seconds, provide either a mechanism
 <div className="dos">
   <ul aria-label="Recommended practices">
     <li>Pause audio</li>
-    <li>Volume</li>
+    <li>Stop audio</li>
+    <li>Volume up</li>
+    <li>Volume down</li>
   </ul>
 </div>
 </div>
@@ -491,15 +492,15 @@ All ALT-text must present and convey the same information as the non-text conten
     <li>Image: Line graph with multiple data series<br/>ALT-text: Line chart comparing energy consumption across three production lines over Q1 to Q4 2025, showing a 12% reduction in Line A and 8% in Line B.</li>
     <li>Image: Map showing colored regions<br/>ALT-text: Map of Europe highlighting service centers in 12 countries, with red pins indicating locations in Germany, France, Poland, and Italy, and blue pins for Nordic regions.</li>
     <li>Image: Overhead view of industrial facility<br/>ALT-text: Facility map showing the manufacturing plant in Stuttgart with green pins indicating three production halls, warehouse zones, and emergency assembly points.</li>
-    <li>A technician in a hard hat and safety vest is operating a CNC machine while monitoring the control panel display.</li>
+    <li>Image: Technician working.<br/>ALT-text:A technician in a hard hat and safety vest is operating a CNC machine while monitoring the control panel display.</li>
   </ul>
 </div>
 <div className="donts">
   <ul aria-label="Practices to avoid">
-    <li>ALT-text: Chart showing data.</li>
-    <li>ALT-text: Map of Europe.</li>
-    <li>ALT-text: Factory map.</li>
-    <li>Person working with machine.</li>
+    <li>Image: Line graph with multiple data series<br/>ALT-text: Chart showing data.</li>
+    <li>Image: Map showing colored regions<br/>ALT-text: Map of Europe.</li>
+    <li>Image: Overhead view of industrial facility<br/>ALT-text: Factory map.</li>
+    <li>Image: Technician working.<br/>ALT-text: Person working with machine.</li>
   </ul>
 </div>
 </div>
@@ -535,20 +536,20 @@ Write clear and concise ARIA labels for interactive controls without visible tex
 <div className="dos-and-donts">
 <div className="dos">
   <ul aria-label="Recommended practices">
-    <li>Icon without text: Download icon on download icon button<br/>ARIA-label: Download installation file</li>
-    <li>Icon without text: Gear icon on settings menu toggle<br/>aria-label: Open settings menu</li>
-    <li>Input field (no visible label): Search box in search field<br/>aria-label: Search product documentation</li>
-    <li>Icon without text: Chevron icon to expand technical details<br/>aria-label: Expand technical specifications</li>
-    <li>Icon without text: X icon to close modal dialog<br/>aria-label: Close order confirmation dialog</li>
+    <li>Icon without text: Download icon on download icon button<br/>ARIA label: Download installation file</li>
+    <li>Icon without text: Gear icon on settings menu toggle<br/>ARIA label: Open settings menu</li>
+    <li>Input field (no visible label): Search box in search field<br/>ARIA label: Search product documentation</li>
+    <li>Icon without text: Chevron icon to expand technical details<br/>ARIAlabel: Expand technical specifications</li>
+    <li>Icon without text: X icon to close modal dialog<br/>ARIA label: Close order confirmation dialog</li>
   </ul>
 </div>
 <div className="donts">
   <ul aria-label="Practices to avoid">
-    <li>Icon without text: Download icon<br/>ARIA-label: Icon</li>
-    <li>Icon without text: Gear icon<br/>aria-label: Settings</li>
-    <li>aria-label: Search</li>
-    <li>aria-label: Expand</li>
-    <li>aria-label: X</li>
+    <li>Icon without text: Download icon<br/>ARIA label: Icon</li>
+    <li>Icon without text: Gear icon<br/>ARIA label: Settings</li>
+    <li>Input field (no visible label): Search box in search field<br/>ARIA label: Search</li>
+    <li>Icon without text: Chevron icon to expand technical details<br/>ARIA label: Expand</li>
+    <li>Icon without text: X icon to close modal dialog<br/>ARIA label: X</li>
   </ul>
 </div>
 </div>
@@ -573,12 +574,12 @@ Don’t use aria labels to duplicate visible text. If a button displays "Submit"
 <div className="dos-and-donts">
 <div className="dos">
   <ul aria-label="Recommended practices">
-    <li>Button with visible text: Submit (no aria-label needed)</li>
+    <li>Button with visible text: Submit (no ARIA label needed)</li>
   </ul>
 </div>
 <div className="donts">
   <ul aria-label="Practices to avoid">
-    <li>Button with visible text: Submit<br/>aria-label: Submit form</li>
+    <li>Button with visible text: Submit<br/>ARIA label: Submit form</li>
   </ul>
 </div>
 </div>
@@ -602,11 +603,10 @@ Use unique ARIA labels when pages have more than one navigation landmark, e.g. b
 
 - [iX Accessibility guidelines](../../accessibility/overview.md)
 - [WCAG 2.2 official homepage](https://www.w3.org/TR/WCAG22/) <IxIcon name={iconOpenExternal} size="16" aria-label="external" role="img"></IxIcon>
-- [WCAG 2.2 explanations and success criteria](https://www.w3.org/WAI/WCAG22/Understanding/) <IxIcon name={iconOpenExternal} size="16" aria-label="external" role="img"></IxIcon>
 - [WCAG 2.2 quick reference guide](https://www.w3.org/WAI/WCAG22/quickref/) <IxIcon name={iconOpenExternal} size="16" aria-label="external" role="img"></IxIcon>
 
 :::info
-Official Siemens accessibility resources are exclusively available for Siemens AG employees and partners and can be accessed on [Siemens Brandville](https://brandville.siemens.com/en/design-elements/accessibility) <IxIcon name={iconOpenExternal} size="16" aria-label="external" role="img"></IxIcon>.
+Official Siemens accessibility resources are exclusively available for Siemens AG employees and partners and can be accessed on [Siemens Design Language Accessibility](https://design-language.siemens.io/accessibility/) <IxIcon name={iconOpenExternal} size="16" aria-label="external" role="img"></IxIcon>.
 :::
 
 
