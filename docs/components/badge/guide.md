@@ -31,11 +31,12 @@ Semantic color variants communicate clear meanings:
 
 ![Badge variants](https://www.figma.com/design/wEptRgAezDU1z80Cn3eZ0o/iX-Documentation-illustrations?node-id=8141-4066&t=v625YpvIn3UzoFuJ-4)
 
-- **Primary:** Highlight new features or exploratory information.
-- **Alarm:** Show negative values, removals or high-urgency counts, e.g. critical equipment faults or imminent system failures.
-- **Critical:** Emphasize severe conditions that require strong attention.
-- **Warning:** Call attention to information that requires caution, e.g. pending actions.
-- **Info:** Draw attention to new or updated information or informative numeric data.
+- **Accent:** Highlight new features or exploratory information.
+- **Critical:** Reserve for rare events more severe than Danger, such as threats to safety, operations or critical infrastructure.
+- **Danger:** Show negative values, removals or high-urgency counts, e.g. equipment faults or imminent system failures.
+- **Warning:** Emphasize developing severe conditions that require timely attention.
+- **Caution:** Call attention to information that requires caution, e.g. pending actions.
+- **Information:** Draw attention to new or updated information or informative numeric data.
 - **Success:** Show positive values or additions, e.g. growth metrics.
 - **Neutral:** Use for general-purpose information that doesn’t carry semantic meaning.
 - **Custom:** Set an explicit background and badge color when you need a product-specific palette.
