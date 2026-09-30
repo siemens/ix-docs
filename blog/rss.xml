@@ -4,10 +4,32 @@
         <title>Siemens Industrial Experience Blog</title>
         <link>https://ix.siemens.io/blog</link>
         <description>Siemens Industrial Experience Blog</description>
-        <lastBuildDate>Tue, 08 Sep 2026 00:00:00 GMT</lastBuildDate>
+        <lastBuildDate>Thu, 01 Oct 2026 00:00:00 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <generator>https://github.com/jpmonette/feed</generator>
         <language>en</language>
+        <item>
+            <title><![CDATA[Huge UX Writing evolution]]></title>
+            <link>https://ix.siemens.io/blog/2026/10/01/uxw-version-2</link>
+            <guid>https://ix.siemens.io/blog/2026/10/01/uxw-version-2</guid>
+            <pubDate>Thu, 01 Oct 2026 00:00:00 GMT</pubDate>
+            <description><![CDATA[We are thrilled to share that UXW Version 2.0 is officially here!]]></description>
+            <content:encoded><![CDATA[<p><img decoding="async" loading="lazy" src="https://ix.siemens.io/assets/images/2610_uxw_v2_title_announcement-7b6d3401b69ad95f68d85f57314bc793.png" width="896" height="360" class="img_QgcI"></p>
+<p>We are thrilled to share that UXW Version 2.0 is officially here!</p>
+<p>Following the launch of our initial version, we gathered a wealth of insights and feedback from teams across our entire organization. It quickly became clear: to truly support the diverse needs of global product teams creating industrial applications, we needed to think bigger.</p>
+<h2 class="anchor anchorWithStickyNavbar_loeA" id="why-is-it-3x-bigger">Why is it 3x bigger?<a href="https://ix.siemens.io/blog/2026/10/01/uxw-version-2#why-is-it-3x-bigger" class="hash-link" aria-label="Direct link to Why is it 3x bigger?" title="Direct link to Why is it 3x bigger?">​</a></h2>
+<p><img decoding="async" loading="lazy" alt="triple content" src="https://ix.siemens.io/assets/images/2610_triple_content-b63975cb90b5ebd69831d78b1aa7737e.png" width="896" height="360" class="img_QgcI"></p>
+<p>You’ll notice that Version 2.0 is more than three times the size of the original guide. This isn’t just about “more words”; it’s about providing more value. We expanded the guide for two key reasons:</p>
+<h3 class="anchor anchorWithStickyNavbar_loeA" id="broader-and-deeper-content">Broader and deeper content<a href="https://ix.siemens.io/blog/2026/10/01/uxw-version-2#broader-and-deeper-content" class="hash-link" aria-label="Direct link to Broader and deeper content" title="Direct link to Broader and deeper content">​</a></h3>
+<p>We’ve introduced a wide range of new topics and provided much deeper technical detail on existing guidelines to answer the questions we hear most often.</p>
+<h3 class="anchor anchorWithStickyNavbar_loeA" id="accessibility-and-clarity">Accessibility and clarity<a href="https://ix.siemens.io/blog/2026/10/01/uxw-version-2#accessibility-and-clarity" class="hash-link" aria-label="Direct link to Accessibility and clarity" title="Direct link to Accessibility and clarity">​</a></h3>
+<p>Inclusivity is at our core. We’ve redesigned our guidelines to be navigated easily by everyone (even AI agents), with a specific focus on supporting non-native English speakers. By providing more context and clearer “Dos and Don’ts” examples, we hope our guidelines are accessible to all.</p>
+<h2 class="anchor anchorWithStickyNavbar_loeA" id="get-involved">Get involved<a href="https://ix.siemens.io/blog/2026/10/01/uxw-version-2#get-involved" class="hash-link" aria-label="Direct link to Get involved" title="Direct link to Get involved">​</a></h2>
+<p><img decoding="async" loading="lazy" alt="write stuff" src="https://ix.siemens.io/assets/images/2610_uxw_write_stuff-cbb828e8b91b12add187f56ea742f802.png" width="896" height="360" class="img_QgcI"></p>
+<p>This release was made possible by the dedicated effort of our cross-functional contributors, including our design system partners, accessibility specialists, and meticulous editorial team. Thank you for helping us build a better voice for our users.</p>
+<p>Explore the new guidelines and integrate them into your workflow, starting here: <a href="https://ix.siemens.io/docs/guidelines/language/writing-style-guide-getting-started">UXW Writing Getting Started</a> and if you have any questions or a contribution, do not hesitate to reach out via our <a href="https://ix.siemens.io/docs/home/support/contact-us">support channels</a>.</p>]]></content:encoded>
+            <category>UX writing</category>
+        </item>
         <item>
             <title><![CDATA[Status color update]]></title>
             <link>https://ix.siemens.io/blog/2026/09/08/colorchange</link>
