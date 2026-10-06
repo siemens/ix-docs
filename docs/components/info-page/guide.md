@@ -10,10 +10,9 @@ Use info pages when a page-level situation interrupts the normal route and users
 ![Info page anatomy](https://www.figma.com/design/wEptRgAezDU1z80Cn3eZ0o/iX-Documentation-illustrations?node-id=8464-3)
 
 1. Illustration or icon slot
-2. Title
-3. Instruction text
+2. Header
+3. Description
 4. Action slot
-5. Page background
 
 ## Options
 
