@@ -7,3 +7,43 @@
   gap: 0.25rem;
   margin-right: 0.5rem;
 }
+
+.markdown {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+  width: 2rem;
+  min-width: 2rem;
+  height: 2rem;
+  min-height: 2rem;
+  border: var(--theme-btn--border-thickness) solid
+    var(--theme-btn-tertiary--border-color);
+  border-radius: var(--theme-btn--border-radius);
+  background-color: var(--theme-btn-tertiary--background);
+  color: var(--theme-btn-tertiary--color);
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.markdown:hover {
+  border-color: var(--theme-btn-tertiary--border-color--hover);
+  background-color: var(--theme-btn-tertiary--background--hover);
+  color: var(--theme-btn-tertiary--color--hover);
+  text-decoration: none;
+}
+
+.markdown:active {
+  border-color: var(--theme-btn-tertiary--border-color--active);
+  background-color: var(--theme-btn-tertiary--background--active);
+  color: var(--theme-btn-tertiary--color--active);
+}
+
+.markdown:focus-visible {
+  outline: 1px solid var(--theme-color-focus-bdr);
+  outline-offset: var(--theme-btn--focus--outline-offset);
+}
+
+.markdown > ix-icon {
+  pointer-events: none;
+}

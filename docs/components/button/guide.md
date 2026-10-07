@@ -52,7 +52,7 @@ Buttons have six states: Default, hover, active, disabled, loading and focused. 
 <div class="dos-and-donts">
   <div class="dos">
     <ul aria-label="Recommended practices">
-      <li>Do use short button labels to allow users to quickly scan, understand and remember them (see our [writing style guide](../../guidelines/language/dialogs-and-buttons.md))</li>
+      <li>Do use short button labels to allow users to quickly scan, understand and remember them (see our [writing style guide](../../guidelines/language/menu-functions-and-ui-labels/button-labels.md))</li>
       <li>Do use ellipsis (…) to indicate that an action requires further input or choice from the user, e.g. "Save as…" which opens a list of file types to choose from</li>
       <li>Do use the primary variant for buttons to indicate one primary action in a visual unit, all other secondary actions should use the secondary variant</li>
     </ul>
