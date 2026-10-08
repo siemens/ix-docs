@@ -5,7 +5,7 @@ description: 'Usage guide for the ix-info-page'
 
 # Info page - Usage
 
-Use info pages when a page-level situation interrupts the normal route and users need a clear explanation and a way forward. Info pages suit missing routes, unavailable resources, authorization boundaries and server-side failures, as well as other standalone informational pages that need the same focused layout.
+Use info pages when a page-level situation interrupts the normal route and users need a clear explanation and a way forward. Info pages are helpful to display missing routes, unavailable resources, authorization boundaries and server-side failures, as well as other standalone informational pages that need the same focused layout.
 
 ![Info page anatomy](https://www.figma.com/design/wEptRgAezDU1z80Cn3eZ0o/iX-Documentation-illustrations?node-id=8464-3)
 
@@ -18,9 +18,9 @@ Use info pages when a page-level situation interrupts the normal route and users
 
 - **Icon:** The default icon is `warning`. Choose another icon when the situation needs a different visual cue.
 - **Image:** Replace the icon with a suitable illustration whenever one is available. Use the default icon only when no meaningful image fits the situation. We recommend a size of `260 × 196 px`.
-- **Header:** Provide a short, specific title as the main page heading (see [writing guidelines](./language)).
-- **Description:** Add brief supporting text that explains the situation or the next step (see [writing guidelines](./language)).
-- **Actions:** Add buttons that help users recover, navigate away or request support (see [writing guidelines](./language)).
+- **Header:** Provide a short, specific title as the main page heading (see [UX writing guidelines](./language)).
+- **Description:** Add brief supporting text that explains the situation or the next step (see [UX writing guidelines](./language)).
+- **Actions:** Add buttons that help users recover, navigate away or request support (see [UX writing guidelines](./language)).
 
 ## Behavior in context
 
@@ -40,8 +40,8 @@ Info pages have no separate hover, active, disabled, loading or error state. The
 <div className="dos">
   <ul aria-label="Recommended practices">
     <li>Do focus the page on one situation and one clear next step</li>
-    <li>Do generally use info pages as full-page messages, with exceptions such as flows that include app-header (e.g. workspace invite) or micro-frontend and iframe contexts</li>
-    <li>Do use the [error-page writing guidelines](../../guidelines/language/messaging/error-pages.md) when writing status messages and recovery actions</li>
+    <li>Do aim to use info pages as full-page messages (exceptions include flows with app-headers or micro-frontend and iframe contexts)</li>
+    <li>Do use the [error-page UX writing guidelines](../../guidelines/language/messaging/error-pages.md) when writing status messages and recovery actions</li>
   </ul>
 </div>
 <div className="donts">
@@ -57,5 +57,5 @@ Info pages have no separate hover, active, disabled, loading or error state. The
 
 - [Empty state](../empty-state/)
 - [Message bar](../messagebar/)
-- [Error-page writing guidelines](../../guidelines/language/messaging/error-pages.md)
+- [Error-page UX writing guidelines](../../guidelines/language/messaging/error-pages.md)
 - [Accessibility](../../guidelines/accessibility)
