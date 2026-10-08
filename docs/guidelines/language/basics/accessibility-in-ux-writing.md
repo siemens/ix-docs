@@ -15,13 +15,13 @@ import { iconOpenExternal } from "@siemens/ix-icons/icons";
 import { iconApplicationScreen } from "@siemens/ix-icons/icons";
 
 :::info
-Many rules here direct you to further information and examples either within iX or the Web Content Accessibility Guidelines (WCAG).
+Many rules here direct you to further information and examples either within iX or the [Web Content Accessibility Guidelines (WCAG 2.2)](https://www.w3.org/TR/WCAG22/) <IxIcon name={iconOpenExternal} size="16" aria-label="external" role="img"></IxIcon>.
 
-We aim to conform to WCAG 2.2 level AA (the global standard) which includes level A (the basic foundation) plus more standards to ensure your UX writing is accessible for all readers. See [WCAG 2.2](https://www.w3.org/TR/WCAG22/) <IxIcon name={iconOpenExternal} size="16" aria-label="external" role="img"></IxIcon>.
+Our accessibility target is conformance with WCAG 2.2 Level AA (the global standard). Where technically and contextually feasible, we additionally adopt selected Level AAA best practices (the gold standard), such as plain language and reduced reading complexity to ensure your UX writing is accessible for all readers.
 :::
 
 ## General rules
-Use simple, plain language to make the text easier to read and understand. We aim to use language at a lower secondary / grade eight education level, i.e. the reading level of a 13 or 14-year-old, to reach the WCAG 2.2. level AAA standard (the gold standard). See [WCAG Reading level](https://www.w3.org/TR/WCAG22/#reading-level) <IxIcon name={iconOpenExternal} size="16" aria-label="external" role="img"></IxIcon>.
+Use simple, plain language to make the text easier to read and understand. We aim to use language at a lower secondary / grade eight education level, i.e. the reading level of a 13- or 14-year-old, to reach the WCAG 2.2 Level AAA standard (the gold standard). See [WCAG Reading Level](https://www.w3.org/TR/WCAG22/#reading-level) <IxIcon name={iconOpenExternal} size="16" aria-label="external" role="img"></IxIcon>.
 
 <div className="dos-and-donts">
 <div className="dos">
@@ -248,7 +248,7 @@ Use an asterisk (*) for required fields.
 </div>
 </div>
 
-When all form fields are required, add clear instructions below the form heading and add the asterisk to all required form fields. Don't use the abbreviation "req." even in space-constrained UIs.
+When all form fields are required, add a clear statement below the form heading informing users that all fields are mandatory. Add the asterisk (*) to all required form fields and ensure they are programmatically identified. Don't use the abbreviation "req." even in space-constrained UIs.
 
 <div className="dos-and-donts">
 <div className="dos">
@@ -517,7 +517,7 @@ For decorative images, it's not necessary to write alternative text. Instead, us
 
 ## ARIA labels
 
-ARIA (Accessible Rich Internet Applications) labels are part of UX writing and accessibility. They represent a text name for interactive controls that have no visible text. The table below describes some of the most common interactive elements that require ARIA labels.
+ARIA [(Accessible Rich Internet Applications)](https://www.w3.org/TR/wai-aria/) labels are part of UX writing and accessibility. They represent a text name for interactive controls that have no visible text. The table below describes some of the most common interactive elements that require ARIA labels.
 
 | Interactive control | Name |
 | ---- | ---- |
@@ -531,7 +531,7 @@ ARIA (Accessible Rich Internet Applications) labels are part of UX writing and a
 | Modal / dialog | Dialog purpose, e.g. Confirm additional users |
 | Navigation landmarks (banners, search, main menu, etc.) | Navigation type, e.g. Main navigation, Sidebar menu, Quick links, Banner |
 
-Write clear and concise ARIA labels for interactive controls without visible text. Labels should describe the action and the object, e.g. Download report instead of just Download. See [WCAG Name, Role, and Value](https://www.w3.org/TR/WCAG22/#name-role-value) <IxIcon name={iconOpenExternal} size="16" aria-label="external" role="img"></IxIcon>.
+Write clear and concise ARIA labels for interactive controls without visible text. Labels should describe the action and the object, e.g. "Download report" instead of just "Download". See [WCAG Name, Role, and Value](https://www.w3.org/TR/WCAG22/#name-role-value) <IxIcon name={iconOpenExternal} size="16" aria-label="external" role="img"></IxIcon>.
 
 <div className="dos-and-donts">
 <div className="dos">
@@ -598,6 +598,26 @@ Use unique ARIA labels when pages have more than one navigation landmark, e.g. b
   </ul>
 </div>
 </div>
+
+## Dos and Don’ts
+
+<div className="dos-and-donts">
+<div className="dos">
+  <ul aria-label="Recommended practices">
+    <li>Do keep writing clear and accessible with plain language</li>
+    <li>Do collaborate with developers to ensure ARIA labels and ALT-text are aligned with UI text</li>
+    <li>Do provide every image, icon, and link with concise, meaningful text alternatives that make sense out of context</li>
+  </ul>
+</div>
+<div className="donts">
+  <ul aria-label="Practices to avoid">
+    <li>Don’t rely solely on visual asterisks without checking accessibility implementation</li>
+    <li>Don’t use vague or generic helper text, link text, or button labels that leave users guessing</li>
+    <li>Don’t duplicate visible text with redundant ARIA labels or clutter screens with unnecessary jargon</li>
+  </ul>
+</div>
+</div>
+
 
 ## Related
 
