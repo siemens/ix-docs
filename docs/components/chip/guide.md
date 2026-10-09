@@ -19,8 +19,8 @@ With our chip variants, you can apply different colors based on their purpose, i
 
 Chip variants:
 
-- **Primary**: For high visual emphasis
-- **State-related variants**: Alarm, critical, warning, success, info and neutral
+- **Accent**: For high visual emphasis
+- **State-related variants**: Critical, Danger, Warning, Caution, Success, Information and Neutral
 - **Custom**: For a customized background and label color
 
 ![Chip variants](https://www.figma.com/design/wEptRgAezDU1z80Cn3eZ0o/iX-Pattern-Illustrations?type=design&node-id=1201-9512&mode=design&t=ruQOzpPQJMKwnk8f-1)
