@@ -17,7 +17,7 @@ import { iconApplicationScreen } from "@siemens/ix-icons/icons";
 :::info
 Many rules here direct you to further information and examples either within iX or the [Web Content Accessibility Guidelines (WCAG 2.2)](https://www.w3.org/TR/WCAG22/) <IxIcon name={iconOpenExternal} size="16" aria-label="external" role="img"></IxIcon>.
 
-Our accessibility target is conformance with WCAG 2.2 Level AA (the global standard). Where technically and contextually feasible, we additionally adopt selected Level AAA best practices (the gold standard), such as plain language and reduced reading complexity to ensure your UX writing is accessible for all readers.
+Our accessibility target is conformance with WCAG 2.2 Level AA (the global standard). Where technically and contextually feasible, we additionally adopt selected Level AAA best practices (the gold standard), such as plain language and reduced reading complexity.
 :::
 
 ## General rules
@@ -232,7 +232,7 @@ Group similar labels together. See [WCAG Labels or Instructions](https://www.w3.
 </div>
 </div>
 
-Use an asterisk (*) for required fields.
+Use an asterisk (*) for required fields. Ensure that required fields are also programmatically identified for screen readers. 
 
 <div className="dos-and-donts">
 <div className="dos">
