@@ -985,6 +985,24 @@ const sidebars: SidebarsConfig = {
           ],
         }),
         createTabItem({
+          id: 'components/info-page/index',
+          label: 'Info page',
+          items: [
+            {
+              id: 'components/info-page/guide',
+              label: 'Usage',
+            },
+            {
+              id: 'components/info-page/code',
+              label: 'Code',
+            },
+            {
+              id: 'components/info-page/language',
+              label: 'Writing'
+            }
+          ],
+        }),
+        createTabItem({
           id: 'components/loading-modal/index',
           label: 'Loading modal',
           items: [
