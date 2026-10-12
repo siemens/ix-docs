@@ -64,6 +64,11 @@
 }
 
 .Scrolled {
+  box-shadow: 0px 10px 30px -10px rgba(0, 0, 40, 0.1);
+  clip-path: inset(0 0 -40px 0);
+}
+
+:global([data-theme='dark']) .Scrolled {
   box-shadow: 0px 10px 30px -10px rgba(0, 0, 0, 0.6);
 }
 
