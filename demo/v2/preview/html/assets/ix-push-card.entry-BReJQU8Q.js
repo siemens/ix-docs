@@ -1,0 +1,48 @@
+import { r as registerInstance, h, H as Host } from "./global-nUAVWB12.js";
+const pushCardCss = () => `:host{display:block;position:relative}:host ix-card{cursor:default}:host ix-card-accordion{cursor:pointer}:host .icon{height:2.5rem;width:2.5rem}:host ix-card-title{height:2.5rem}:host ix-card-content{height:11rem}:host(.card-outline) ix-card-content{border-bottom:var(--theme-push-card--border-width) solid var(--theme-push-card-outline-accordion--border-color)}:host(.card-outline) ix-card-accordion{--theme-push-card-outline-accordion--background--hover:var(--theme-push-card-outline-accordion--background);--theme-push-card-outline-accordion--background--active:var(--theme-push-card-outline-accordion--background);--theme-push-card-outline-accordion-frame--border-color:var(--theme-push-card-outline-accordion--background);--ix-card-accordion-expand-content--border-radius:0 0 var(--theme-default-border-radius) var(--theme-default-border-radius);--ix-card-background:var(--theme-color-component-1);--theme-push-card-outline-accordion-frame--border-color:var(--theme-color-soft-bdr)}:host(.card-outline) ix-card{--ix-card-border-color:var(--theme-color-soft-bdr)}:host(.card-outline) ix-card:hover,:host(.card-outline) ix-card:active{--ix-card-border-color:var(--theme-color-soft-bdr)}:host(.card-filled) ix-card-content{border-bottom:var(--theme-push-card--border-width) solid var(--theme-push-card-filled-accordion--border-color)}:host(.card-filled) ix-card-accordion{--theme-push-card-filled-accordion--background--hover:var(--theme-push-card-filled-accordion--background);--theme-push-card-filled-accordion--background--active:var(--theme-push-card-filled-accordion--background);--theme-push-card-filled-accordion-frame--border-color:var(--theme-push-card-filled-accordion--background);--ix-card-accordion-expand-content--border-radius:0 0 var(--theme-default-border-radius) var(--theme-default-border-radius);--ix-card-background:var(--theme-color-component-1)}:host(.card-alarm) ix-card-content{border-bottom:var(--theme-push-card--border-width) solid var(--theme-push-card-alarm-accordion--border-color)}:host(.card-alarm) ix-card-accordion{--theme-push-card-alarm-accordion--background--hover:var(--theme-push-card-alarm-accordion--background);--theme-push-card-alarm-accordion--background--active:var(--theme-push-card-alarm-accordion--background);--theme-push-card-alarm-accordion-frame--border-color:var(--theme-push-card-alarm-accordion--background);--ix-card-accordion-expand-content--border-radius:0 0 var(--theme-default-border-radius) var(--theme-default-border-radius);--ix-card-accordion-expand-content--border-radius:0 0 calc(var(--theme-default-border-radius) + var(--theme-push-card--border-width)) calc(var(--theme-default-border-radius) + var(--theme-push-card--border-width))}:host(.card-critical) ix-card-content{border-bottom:var(--theme-push-card--border-width) solid var(--theme-push-card-critical-accordion--border-color)}:host(.card-critical) ix-card-accordion{--theme-push-card-critical-accordion--background--hover:var(--theme-push-card-critical-accordion--background);--theme-push-card-critical-accordion--background--active:var(--theme-push-card-critical-accordion--background);--theme-push-card-critical-accordion-frame--border-color:var(--theme-push-card-critical-accordion--background);--ix-card-accordion-expand-content--border-radius:0 0 var(--theme-default-border-radius) var(--theme-default-border-radius);--ix-card-accordion-expand-content--border-radius:0 0 calc(var(--theme-default-border-radius) + var(--theme-push-card--border-width)) calc(var(--theme-default-border-radius) + var(--theme-push-card--border-width))}:host(.card-warning) ix-card-content{border-bottom:var(--theme-push-card--border-width) solid var(--theme-push-card-warning-accordion--border-color)}:host(.card-warning) ix-card-accordion{--theme-push-card-warning-accordion--background--hover:var(--theme-push-card-warning-accordion--background);--theme-push-card-warning-accordion--background--active:var(--theme-push-card-warning-accordion--background);--theme-push-card-warning-accordion-frame--border-color:var(--theme-push-card-warning-accordion--background);--ix-card-accordion-expand-content--border-radius:0 0 var(--theme-default-border-radius) var(--theme-default-border-radius);--ix-card-accordion-expand-content--border-radius:0 0 calc(var(--theme-default-border-radius) + var(--theme-push-card--border-width)) calc(var(--theme-default-border-radius) + var(--theme-push-card--border-width))}:host(.card-success) ix-card-content{border-bottom:var(--theme-push-card--border-width) solid var(--theme-push-card-success-accordion--border-color)}:host(.card-success) ix-card-accordion{--theme-push-card-success-accordion--background--hover:var(--theme-push-card-success-accordion--background);--theme-push-card-success-accordion--background--active:var(--theme-push-card-success-accordion--background);--theme-push-card-success-accordion-frame--border-color:var(--theme-push-card-success-accordion--background);--ix-card-accordion-expand-content--border-radius:0 0 var(--theme-default-border-radius) var(--theme-default-border-radius);--ix-card-accordion-expand-content--border-radius:0 0 calc(var(--theme-default-border-radius) + var(--theme-push-card--border-width)) calc(var(--theme-default-border-radius) + var(--theme-push-card--border-width))}:host(.card-info) ix-card-content{border-bottom:var(--theme-push-card--border-width) solid var(--theme-push-card-info-accordion--border-color)}:host(.card-info) ix-card-accordion{--theme-push-card-info-accordion--background--hover:var(--theme-push-card-info-accordion--background);--theme-push-card-info-accordion--background--active:var(--theme-push-card-info-accordion--background);--theme-push-card-info-accordion-frame--border-color:var(--theme-push-card-info-accordion--background);--ix-card-accordion-expand-content--border-radius:0 0 var(--theme-default-border-radius) var(--theme-default-border-radius);--ix-card-accordion-expand-content--border-radius:0 0 calc(var(--theme-default-border-radius) + var(--theme-push-card--border-width)) calc(var(--theme-default-border-radius) + var(--theme-push-card--border-width))}:host(.card-neutral) ix-card-content{border-bottom:var(--theme-push-card--border-width) solid var(--theme-push-card-neutral-accordion--border-color)}:host(.card-neutral) ix-card-accordion{--theme-push-card-neutral-accordion--background--hover:var(--theme-push-card-neutral-accordion--background);--theme-push-card-neutral-accordion--background--active:var(--theme-push-card-neutral-accordion--background);--theme-push-card-neutral-accordion-frame--border-color:var(--theme-push-card-neutral-accordion--background);--ix-card-accordion-expand-content--border-radius:0 0 var(--theme-default-border-radius) var(--theme-default-border-radius);--ix-card-accordion-expand-content--border-radius:0 0 calc(var(--theme-default-border-radius) + var(--theme-push-card--border-width)) calc(var(--theme-default-border-radius) + var(--theme-push-card--border-width))}:host(.card-primary) ix-card-content{border-bottom:var(--theme-push-card--border-width) solid var(--theme-push-card-primary-accordion--border-color)}:host(.card-primary) ix-card-accordion{--theme-push-card-primary-accordion--background--hover:var(--theme-push-card-primary-accordion--background);--theme-push-card-primary-accordion--background--active:var(--theme-push-card-primary-accordion--background);--theme-push-card-primary-accordion-frame--border-color:var(--theme-push-card-primary-accordion--background);--ix-card-accordion-expand-content--border-radius:0 0 var(--theme-default-border-radius) var(--theme-default-border-radius);--ix-card-accordion-expand-content--border-radius:0 0 calc(var(--theme-default-border-radius) + var(--theme-push-card--border-width)) calc(var(--theme-default-border-radius) + var(--theme-push-card--border-width))}`;
+const PushCard = class {
+  constructor(hostRef) {
+    registerInstance(this, hostRef);
+  }
+  /**
+   * Card icon
+   */
+  icon;
+  /**
+   * ARIA label for the icon
+   *
+   * @since 3.2.0
+   */
+  ariaLabelIcon;
+  /**
+   * Card KPI value
+   */
+  notification;
+  /**
+   * Card heading
+   */
+  heading;
+  /**
+   * Card subheading
+   */
+  subheading;
+  /**
+   * Card variant
+   */
+  variant = "outline";
+  /**
+   * Expand the card
+   */
+  expanded = false;
+  /**
+   * If true, disables hover and active styles and changes cursor to default
+   */
+  passive = false;
+  render() {
+    return h(Host, { key: "04a025e7c15338c247ab3074b63e13bc15cdbb97", class: `card-${this.variant}` }, h("ix-card", { key: "a24fff7a7ff38c9142139862f2bda694024a6dde", variant: this.variant, passive: this.passive }, h("ix-card-content", { key: "59e8038f254074c328cf4c06e4b2d23d8d8da083" }, h("ix-card-title", { key: "5a1849584599cef27e71a891d0f5fbaa436214cd" }, this.icon ? h("ix-icon", { class: "icon", name: this.icon, size: "32", "aria-label": this.ariaLabelIcon }) : null, h("ix-typography", { key: "5a6f65eea44dfe5fe5584fc1ebf75ab0a3fe4866", format: "display-xxl" }, this.notification ?? 0), h("slot", { key: "ec8588bf6098d1121e44095bea2825d4a6d2dc99", name: "title-action" })), h("ix-typography", { key: "c54ee192417af5fd31f9072d523169d93ab581de", format: "h4" }, this.heading), h("ix-typography", { key: "39b9dab690c51084d627263c915dbbf4817a37cb" }, this.subheading)), h("ix-card-accordion", { key: "eada1fe85517804776e21400ccd5cd3a9d6bdc5b", collapse: !this.expanded, variant: this.variant }, h("slot", { key: "07228d1517c8e324ee7d03612603e8fc009aab1b" }))));
+  }
+};
+PushCard.style = pushCardCss();
+export {
+  PushCard as ix_push_card
+};

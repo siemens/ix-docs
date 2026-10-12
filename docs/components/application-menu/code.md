@@ -163,7 +163,11 @@ export default () => {
           Home
         </IxMenuItem>
         <IxMenuItem icon={iconGlobe}>Normal Tab</IxMenuItem>
-        <IxMenuCategory label="Top level Category" icon={iconRocket}>
+        <IxMenuCategory
+          label="Top level Category"
+          icon={iconRocket}
+          disableTooltip
+        >
           <IxMenuItem icon={iconGlobe}>Nested Tab</IxMenuItem>
           <IxMenuItem icon={iconGlobe}>Nested Tab</IxMenuItem>
         </IxMenuCategory>
@@ -193,7 +197,11 @@ export default class MenuCategory {}
   <ix-menu>
     <ix-menu-item home icon="home">Home</ix-menu-item>
     <ix-menu-item icon="globe">Normal Tab</ix-menu-item>
-    <ix-menu-category label="Top level Category" icon="rocket">
+    <ix-menu-category
+      label="Top level Category"
+      icon="rocket"
+      disableTooltip
+    >
       <ix-menu-item icon="globe">Nested Tab</ix-menu-item>
       <ix-menu-item icon="globe">Nested Tab</ix-menu-item>
     </ix-menu-category>
@@ -227,7 +235,11 @@ export default class MenuCategory {}
   <ix-menu>
     <ix-menu-item home icon="home">Home</ix-menu-item>
     <ix-menu-item icon="globe">Normal Tab</ix-menu-item>
-    <ix-menu-category label="Top level Category" icon="rocket">
+    <ix-menu-category
+      label="Top level Category"
+      icon="rocket"
+      disableTooltip
+    >
       <ix-menu-item icon="globe">Nested Tab</ix-menu-item>
       <ix-menu-item icon="globe">Nested Tab</ix-menu-item>
     </ix-menu-category>
@@ -254,7 +266,11 @@ import {
     <IxMenu>
       <IxMenuItem home :icon="iconHome"> Home </IxMenuItem>
       <IxMenuItem :icon="iconGlobe">Normal Tab</IxMenuItem>
-      <IxMenuCategory label="Top level Category" :icon="iconRocket">
+      <IxMenuCategory
+        label="Top level Category"
+        :icon="iconRocket"
+        disable-tooltip
+      >
         <IxMenuItem :icon="iconGlobe">Nested Tab</IxMenuItem>
         <IxMenuItem :icon="iconGlobe">Nested Tab</IxMenuItem>
       </IxMenuCategory>
@@ -455,6 +471,7 @@ toggleSettings(show: boolean): Promise&lt;void&gt;;
 | --- | --- | --- | --- | --- |
 | active | { "State to display active" } | active | boolean | false |
 | bottom | { "Caution: this is no longer working. Please use slot=\"bottom\" instead.\n\nPlace tab on bottom" } | bottom | boolean | false |
+| disableTooltip | { "Disable the tooltip for this menu item." } | disable-tooltip | boolean | false |
 | disabled | { "Disable tab and remove event handlers" } | disabled | boolean | false |
 | home | { "Move the Tab to a top position." } | home | boolean | false |
 | href | { "URL for the button link. When provided, the button will render as an anchor tag." } | href | string \| undefined |  |
@@ -475,12 +492,13 @@ toggleSettings(show: boolean): Promise&lt;void&gt;;
 
 ### Properties
 
-| Name | Description | Attribute | Type |
-| --- | --- | --- | --- |
-| icon | { "Icon of the category" } | icon | string \| undefined |
-| label | { "Display name of the category" } | label | string \| undefined |
-| notifications | { "Show notification count on the category" } | notifications | number \| undefined |
-| tooltipText | { "Will be shown as tooltip text, if not provided menu text content will be used." } | tooltip-text | string \| undefined |
+| Name | Description | Attribute | Type | Default |
+| --- | --- | --- | --- | --- |
+| disableTooltip | { "Disable the tooltip for this menu category." } | disable-tooltip | boolean | false |
+| icon | { "Icon of the category" } | icon | string \| undefined |  |
+| label | { "Display name of the category" } | label | string \| undefined |  |
+| notifications | { "Show notification count on the category" } | notifications | number \| undefined |  |
+| tooltipText | { "Will be shown as tooltip text, if not provided menu text content will be used." } | tooltip-text | string \| undefined |  |
 
 ### Slot
 

@@ -43,6 +43,13 @@
     "ix-menu",
     "ix-menu-item"
   ],
+  "/src/preview-examples/application-header.html": [
+    "ix-application-header",
+    "ix-avatar",
+    "ix-dropdown-button",
+    "ix-dropdown-item",
+    "ix-icon-button"
+  ],
   "/src/preview-examples/application-breakpoints.html": [
     "ix-application",
     "ix-application-header",
@@ -56,12 +63,8 @@
     "ix-radio",
     "ix-radio-group"
   ],
-  "/src/preview-examples/application-header.html": [
-    "ix-application-header",
-    "ix-avatar",
-    "ix-dropdown-button",
-    "ix-dropdown-item",
-    "ix-icon-button"
+  "/src/preview-examples/aria-label-properties.html": [
+    "ix-date-picker"
   ],
   "/src/preview-examples/application.html": [
     "ix-application",
@@ -70,9 +73,6 @@
     "ix-content-header",
     "ix-menu",
     "ix-menu-item"
-  ],
-  "/src/preview-examples/aria-label-properties.html": [
-    "ix-date-picker"
   ],
   "/src/preview-examples/avatar-image.html": [
     "ix-avatar"
@@ -152,10 +152,10 @@
   "/src/preview-examples/button-subtle-tertiary.html": [
     "ix-button"
   ],
-  "/src/preview-examples/button-text-icon.html": [
+  "/src/preview-examples/button-tertiary.html": [
     "ix-button"
   ],
-  "/src/preview-examples/button-tertiary.html": [
+  "/src/preview-examples/button-text-icon.html": [
     "ix-button"
   ],
   "/src/preview-examples/button-with-icon.html": [
@@ -442,18 +442,18 @@
     "ix-row",
     "ix-typography"
   ],
-  "/src/preview-examples/group-context-menu.html": [
-    "ix-dropdown",
-    "ix-dropdown-item",
-    "ix-group",
-    "ix-group-item"
-  ],
   "/src/preview-examples/group-custom-entry.html": [
     "ix-button",
     "ix-group",
     "ix-group-item"
   ],
   "/src/preview-examples/group-header-suppressed.html": [
+    "ix-group",
+    "ix-group-item"
+  ],
+  "/src/preview-examples/group-context-menu.html": [
+    "ix-dropdown",
+    "ix-dropdown-item",
     "ix-group",
     "ix-group-item"
   ],
@@ -530,12 +530,12 @@
   "/src/preview-examples/key-value.html": [
     "ix-key-value"
   ],
+  "/src/preview-examples/kpi.html": [
+    "ix-kpi"
+  ],
   "/src/preview-examples/layout-auto-custom.html": [
     "ix-layout-auto",
     "ix-typography"
-  ],
-  "/src/preview-examples/kpi.html": [
-    "ix-kpi"
   ],
   "/src/preview-examples/layout-auto.html": [
     "ix-layout-auto",
@@ -611,13 +611,13 @@
   "/src/preview-examples/number-input-stepper-button.html": [
     "ix-number-input"
   ],
+  "/src/preview-examples/number-input-validation.html": [
+    "ix-number-input"
+  ],
   "/src/preview-examples/number-input-with-slots.html": [
     "ix-icon",
     "ix-number-input",
     "ix-typography"
-  ],
-  "/src/preview-examples/number-input-validation.html": [
-    "ix-number-input"
   ],
   "/src/preview-examples/number-input.html": [
     "ix-number-input"
@@ -672,10 +672,10 @@
   "/src/preview-examples/progress-indicator-circular.html": [
     "ix-progress-indicator"
   ],
-  "/src/preview-examples/progress-indicator-linear-status.html": [
+  "/src/preview-examples/progress-indicator-linear-sizes.html": [
     "ix-progress-indicator"
   ],
-  "/src/preview-examples/progress-indicator-linear-sizes.html": [
+  "/src/preview-examples/progress-indicator-linear-status.html": [
     "ix-progress-indicator"
   ],
   "/src/preview-examples/progress-indicator.html": [
@@ -825,7 +825,7 @@
   "/src/preview-examples/time-input.html": [
     "ix-time-input"
   ],
-  "/src/preview-examples/timepicker-format-adjusted.html": [
+  "/src/preview-examples/timepicker-min-max-time.html": [
     "ix-time-picker"
   ],
   "/src/preview-examples/timepicker.html": [
@@ -918,10 +918,10 @@
     "ix-workflow-step",
     "ix-workflow-steps"
   ],
-  "/src/preview-examples/timepicker-intervals.html": [
+  "/src/preview-examples/timepicker-format-adjusted.html": [
     "ix-time-picker"
   ],
-  "/src/preview-examples/timepicker-min-max-time.html": [
+  "/src/preview-examples/timepicker-intervals.html": [
     "ix-time-picker"
   ],
   "/src/preview-examples/time-range.html": [
