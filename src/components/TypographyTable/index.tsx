@@ -217,7 +217,7 @@ function TypographyStyle() {
 
   return (
     <>
-      <TypographyTable.Text name="Preview">
+      <TypographyTable.Text name="Preview" flush>
         <div className={clsx(styles.typographyRow, styles.typographyPreview)}>
           <div
             className={clsx(
@@ -231,7 +231,7 @@ function TypographyStyle() {
         </div>
       </TypographyTable.Text>
 
-      <TypographyTable.Text name="Code">
+      <TypographyTable.Text name="Code" flush>
         <div className={styles.typographyRow}>
           <div
             className={clsx(
@@ -280,16 +280,18 @@ function TypographyStyle() {
 function Text({
   children,
   name,
+  flush = false,
 }: {
   children: React.ReactNode;
   name: string;
+  flush?: boolean;
 }) {
   return (
     <div className={styles.typographyTextRow}>
       <div className="px-8 py-4 font-bold w-auto border-solid border-0 border-r border-[var(--si-sys-color-border-3)]">
         {name}
       </div>
-      <div className="w-auto">{children}</div>
+      <div className={flush ? 'w-auto' : 'w-auto p-4'}>{children}</div>
     </div>
   );
 }
