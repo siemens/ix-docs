@@ -29,7 +29,7 @@
 @tailwind components;
 @tailwind utilities;
 
-$font-family: 'Siemens Sans', Arial, Helvetica, sans-serif;
+$font-family: 'SiemensSans Pro', Arial, Helvetica, sans-serif;
 
 #__docusaurus {
   color: var(--si-sys-color-text-primary);
@@ -67,9 +67,8 @@ $font-family: 'Siemens Sans', Arial, Helvetica, sans-serif;
   --ifm-list-item-margin: 1rem;
   --ifm-list-paragraph-margin: 0rem;
 
-  font-family: $font-family;
   --ifm-font-color-base: var(--si-sys-color-text-primary);
-  --ifm-heading-font-family: $font-family;
+  --ifm-heading-font-family: var(--si-ref-typography-font-family-sans);
   --ifm-heading-font-weight: var(--ifm-font-weight-bold);
   --ifm-navbar-link-color: var(--si-sys-color-text-primary);
 }

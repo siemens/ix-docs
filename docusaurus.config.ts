@@ -26,12 +26,14 @@ function getAnnouncementBarConfig() {
   }
 }
 
-const fontBaseUrl = 'https://cdn.c2comms.cloud/fonts/global/2.0';
+const fontBaseUrl = 'https://cdn.siemens-web.com/fonts/professional/7.0-variable';
 const siemensSansFontFaces = [
-  { file: 'Roman', weight: 400, style: 'normal' },
-  { file: 'Italic', weight: 400, style: 'italic' },
-  { file: 'Bold', weight: 700, style: 'normal' },
-  { file: 'BoldItalic', weight: 700, style: 'italic' },
+  { file: 'SiemensSansProVF_W_Wght', localName: 'SiemensSans Pro', style: 'normal' },
+  {
+    file: 'SiemensSansProVF_Italics_W_Wght',
+    localName: 'SiemensSans Pro Italic',
+    style: 'italic',
+  },
 ];
 
 function getSiemensSansFontFaceHeadTag() {
@@ -42,11 +44,11 @@ function getSiemensSansFontFaceHeadTag() {
     },
     innerHTML: siemensSansFontFaces
       .map(
-        ({ file, weight, style }) => `
+        ({ file, localName, style }) => `
 @font-face {
-  font-family: 'Siemens Sans';
-  src: url('${fontBaseUrl}/SiemensSans_Global_${file}.ttf') format('truetype');
-  font-weight: ${weight};
+  font-family: 'SiemensSans Pro';
+  src: local('${localName}'), url('${fontBaseUrl}/${file}.woff2') format('woff2-variations'), url('${fontBaseUrl}/${file}.woff2') format('woff2');
+  font-weight: 1 1000;
   font-style: ${style};
   font-display: swap;
 }`
