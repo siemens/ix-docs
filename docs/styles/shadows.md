@@ -23,4 +23,4 @@ Choose a shadow according to the surface hierarchy. Do not decompose or
 reconstruct the value: a token can contain multiple shadow layers whose colors
 adapt to the selected color scheme.
 
-<ShadowTable />
+<ShadowTable section="color.effects.shadow" />

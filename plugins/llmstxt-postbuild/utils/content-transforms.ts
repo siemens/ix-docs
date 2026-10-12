@@ -1,3 +1,9 @@
+import {
+  extractTokenTableUsages,
+  selectTokenTableSection,
+  createTokenTableTagRegex,
+} from '../../../src/lib/design-tokens/sections';
+
 export function extractPlaygroundImports(content: string) {
   const imports = new Map<string, string>();
 
@@ -134,64 +140,32 @@ type TokenManifestEntry = {
 };
 
 function tokenManifestTable(entries: TokenManifestEntry[]) {
-  const lines: string[] = [];
-  let currentGroup: string | undefined;
-
-  for (const entry of entries) {
-    if (entry.group !== currentGroup) {
-      currentGroup = entry.group;
-      const groupTitle = entry.group
-        .split('.')
-        .map((part) => part.replaceAll('-', ' '))
-        .join(' / ')
-        .replace(/(^| \/ )\w/g, (letter) => letter.toUpperCase());
-      lines.push(`### ${groupTitle}`, '');
-      lines.push(
-        '| Token | Description | CSS expression | Source token |',
-        '| --- | --- | --- | --- |'
-      );
-    }
-
-    lines.push(
-      `| \`${escapeMarkdownTableValue(entry.name)}\` | ${escapeMarkdownTableValue(entry.description ?? 'No description is provided by the package manifest.')} | \`var(${escapeMarkdownTableValue(entry.name)})\` | \`${escapeMarkdownTableValue(entry.sourcePath)}\` |`
-    );
-  }
-
-  return lines.join('\n');
+  return [
+    '| Token | Description | CSS expression | Source token |',
+    '| --- | --- | --- | --- |',
+    ...entries.map(
+      (entry) =>
+        `| \`${escapeMarkdownTableValue(entry.name)}\` | ${escapeMarkdownTableValue(entry.description ?? 'No description is provided by the package manifest.')} | \`var(${escapeMarkdownTableValue(entry.name)})\` | \`${escapeMarkdownTableValue(entry.sourcePath)}\` |`
+    ),
+  ].join('\n');
 }
-
-const tokenTableFilters = {
-  ColorTable: (entry: TokenManifestEntry) =>
-    entry.type === 'color' && entry.group !== 'color.border',
-  BorderTable: (entry: TokenManifestEntry) =>
-    entry.type === 'color' && entry.group === 'color.border',
-  ShadowTable: (entry: TokenManifestEntry) => entry.type === 'shadow',
-  TypographyTable: (entry: TokenManifestEntry) => entry.type === 'typography',
-} as const;
 
 export function replaceTokenTablesWithMarkdown(
   content: string,
   allEntries: TokenManifestEntry[]
 ) {
-  let transformed = content;
-
-  for (const [componentName, filter] of Object.entries(tokenTableFilters)) {
-    const tokenTableRegex = new RegExp(
-      `<${componentName}\\b[^>]*?(?:\\/>|>\\s*<\\/${componentName}>)`,
-      'g'
-    );
-    transformed = transformed.replace(tokenTableRegex, () => {
-      const entries = allEntries.filter(filter);
-      if (entries.length === 0) {
-        throw new Error(
-          `Cannot render ${componentName} from the generated manifest`
-        );
-      }
-      return tokenManifestTable(entries);
-    });
-  }
-
-  return transformed;
+  return content.replace(createTokenTableTagRegex(), (tag, componentName) => {
+    const [usage] = extractTokenTableUsages(tag, 'llms');
+    try {
+      return tokenManifestTable(
+        selectTokenTableSection(allEntries, usage.table, usage.section)
+      );
+    } catch (error) {
+      throw new Error(
+        `Cannot render ${componentName} from the generated manifest: ${(error as Error).message}`
+      );
+    }
+  });
 }
 
 export function removeTokenTableImports(content: string) {

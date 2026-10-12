@@ -6,4 +6,5 @@
 
 export * from './manifest';
 export * from './query';
+export * from './sections';
 export * from './types';

@@ -24,4 +24,4 @@ The rendered reference reads browser-computed font longhands for each token.
 These CSS token names are not automatically equivalent to `ix-typography`
 `format` values; use only formats documented by that component.
 
-<TypographyTable />
+<TypographyTable section="typography" />

@@ -18,7 +18,7 @@ import { IxIcon } from '@siemens/ix-react';
 import ApiTable, { AnchorHeader } from '@site/src/components/ApiTable';
 import { useFramework } from '@site/src/hooks/use-framework';
 import {
-  queryDesignTokens,
+  selectTokenTableSection,
   type DesignTokenEntry,
   type DesignTokenManifest,
 } from '@site/src/lib/design-tokens';
@@ -294,9 +294,13 @@ function Text({
   );
 }
 
-const TypographyTable = () => {
+const TypographyTable = ({ section }: { section: string }) => {
   const manifest = usePluginData('design-tokens') as DesignTokenManifest;
-  const entries = queryDesignTokens(manifest, { type: 'typography' });
+  const entries = selectTokenTableSection(
+    manifest.entries,
+    'TypographyTable',
+    section
+  );
 
   return (
     <BrowserOnly>

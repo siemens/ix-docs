@@ -42,13 +42,15 @@ const entries = [
   },
 ];
 
-test('renders manifest-backed preview tables as useful Markdown', () => {
+test('renders only the selected manifest section as Markdown', () => {
   const source = [
     "import ColorTable from '@site/src/components/ColorTable';",
     "import BorderTable from '@site/src/components/BorderTable';",
     '',
-    '<ColorTable />',
-    '<BorderTable />',
+    '## Color / Background {#token-group-color-background}',
+    '',
+    '<ColorTable section="color.background" />',
+    '<BorderTable section="color.border" />',
   ].join('\n');
 
   const transformed = removeTokenTableImports(
@@ -56,9 +58,11 @@ test('renders manifest-backed preview tables as useful Markdown', () => {
   );
 
   assert.doesNotMatch(transformed, /ColorTable|BorderTable/);
-  assert.match(transformed, /### Color \/ Background/);
+  assert.doesNotMatch(transformed, /###/);
+  assert.equal(transformed.match(/\| Token \|/g)?.length, 2);
   assert.match(transformed, /`--si-sys-color-background-1`/);
   assert.match(transformed, /`--si-sys-color-border-1`/);
+  assert.doesNotMatch(transformed, /shadow|typography/);
 });
 
 test('removes preview imports embedded in generated summary text', () => {
@@ -74,9 +78,13 @@ test('fails rather than emitting an unrendered empty reference', () => {
   assert.throws(
     () =>
       replaceTokenTablesWithMarkdown(
-        '<ColorTable />',
+        '<ColorTable section="color.background" />',
         entries.filter((entry) => entry.type === 'shadow')
       ),
     /Cannot render ColorTable/
+  );
+  assert.throws(
+    () => replaceTokenTablesWithMarkdown('<ColorTable />', entries),
+    /requires a "section" prop/
   );
 });

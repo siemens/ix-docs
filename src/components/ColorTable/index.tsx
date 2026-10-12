@@ -17,10 +17,7 @@ import { IxIcon } from '@siemens/ix-react';
 import ApiTable, { AnchorHeader } from '@site/src/components/ApiTable';
 import { usePlaygroundThemeVariant } from '@site/src/hooks/use-playground-theme';
 import {
-  formatTokenGroup,
-  groupDesignTokens,
-  queryDesignTokens,
-  tokenGroupAnchor,
+  selectTokenTableSection,
   type DesignTokenEntry,
   type DesignTokenManifest,
 } from '@site/src/lib/design-tokens';
@@ -206,26 +203,20 @@ function Hex() {
   );
 }
 
-const ColorTable = () => {
+const ColorTable = ({ section }: { section: string }) => {
   const manifest = usePluginData('design-tokens') as DesignTokenManifest;
-  const groups = groupDesignTokens(
-    queryDesignTokens(manifest, {
-      type: 'color',
-      excludeGroups: ['color.border'],
-    })
+  const entries = selectTokenTableSection(
+    manifest.entries,
+    'ColorTable',
+    section
   );
 
   return (
     <BrowserOnly>
       {() => (
         <>
-          {groups.map(({ group, entries }) => (
-            <section key={group}>
-              <h2 id={tokenGroupAnchor(group)}>{formatTokenGroup(group)}</h2>
-              {entries.map((entry) => (
-                <BrowserOnlyColorTable entry={entry} key={entry.name} />
-              ))}
-            </section>
+          {entries.map((entry) => (
+            <BrowserOnlyColorTable entry={entry} key={entry.name} />
           ))}
         </>
       )}

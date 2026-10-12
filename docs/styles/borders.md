@@ -28,4 +28,4 @@ and status roles only when the border communicates that status. Use a
 The generated swatches below set `border-color`; they do not infer a legacy
 composite border or interaction-state relationship.
 
-<BorderTable />
+<BorderTable section="color.border" />

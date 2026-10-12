@@ -171,6 +171,41 @@ neither file contains the local worktree path before committing. Do not work
 around validation failures with a committed local path dependency, a copied
 manifest, or a hardcoded fallback.
 
+### Placing token groups on a page
+
+Each token table renders exactly one manifest group, selected with the
+`section` prop. Write the heading, and any text or images, in Markdown before
+the table. Use the heading levels to express the group hierarchy, and keep the
+explicit `token-group-*` heading ID so existing links still work:
+
+```mdx
+## Background {#token-group-color-background}
+
+Optional guidance, images, or examples.
+
+<ColorTable section="color.background" />
+
+## Data {#token-group-color-data}
+
+### Sequential {#token-group-color-data-sequential}
+
+#### Yellow {#token-group-color-data-sequential-yellow}
+
+<ColorTable section="color.data.sequential.yellow" />
+```
+
+| Component         | Allowed `section` values                     |
+| ----------------- | -------------------------------------------- |
+| `ColorTable`      | Every `color` group except `color.border`    |
+| `BorderTable`     | `color.border`                               |
+| `ShadowTable`     | `shadow` groups, e.g. `color.effects.shadow` |
+| `TypographyTable` | `typography` groups, e.g. `typography`       |
+
+`pnpm start` and `pnpm build` fail if a table has no `section`, a section
+does not match an allowed manifest group, a group is placed twice, or a
+manifest group is not placed on any page under `docs/`. When IX adds a group,
+add a heading and a matching table where it belongs.
+
 ## Pull Request Process
 
 1. **Prepare your changes:**

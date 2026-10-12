@@ -17,7 +17,7 @@ import { IxIcon } from '@siemens/ix-react';
 import ApiTable, { AnchorHeader } from '@site/src/components/ApiTable';
 import { usePlaygroundThemeVariant } from '@site/src/hooks/use-playground-theme';
 import {
-  queryDesignTokens,
+  selectTokenTableSection,
   type DesignTokenEntry,
   type DesignTokenManifest,
 } from '@site/src/lib/design-tokens';
@@ -156,12 +156,13 @@ function Text({
   );
 }
 
-const BorderTable = () => {
+const BorderTable = ({ section }: { section: string }) => {
   const manifest = usePluginData('design-tokens') as DesignTokenManifest;
-  const entries = queryDesignTokens(manifest, {
-    type: 'color',
-    groups: ['color.border'],
-  });
+  const entries = selectTokenTableSection(
+    manifest.entries,
+    'BorderTable',
+    section
+  );
 
   return (
     <BrowserOnly>

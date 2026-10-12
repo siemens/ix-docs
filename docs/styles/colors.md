@@ -3,6 +3,7 @@ sidebar_position: 1
 sidebar_label: Colors
 title: Color palette
 hide_table_of_contents: false
+toc_max_heading_level: 4
 doc-type: 'banner'
 component-tabs: ['']
 no_single_tab: true
@@ -45,4 +46,86 @@ The reference below is generated from the system-token manifest shipped by the
 installed `@siemens/ix` package. It intentionally excludes reference and legacy
 tokens.
 
-<ColorTable />
+## Background {#token-group-color-background}
+
+<ColorTable section="color.background" />
+
+## Code {#token-group-color-code}
+
+<ColorTable section="color.code" />
+
+## Data {#token-group-color-data}
+
+### Categorical {#token-group-color-data-categorical}
+
+<ColorTable section="color.data.categorical" />
+
+### Rating {#token-group-color-data-rating}
+
+<ColorTable section="color.data.rating" />
+
+### Sequential {#token-group-color-data-sequential}
+
+#### Avocado {#token-group-color-data-sequential-avocado}
+
+<ColorTable section="color.data.sequential.avocado" />
+
+#### Blue {#token-group-color-data-sequential-blue}
+
+<ColorTable section="color.data.sequential.blue" />
+
+#### Deep blue {#token-group-color-data-sequential-deep-blue}
+
+<ColorTable section="color.data.sequential.deep-blue" />
+
+#### Green {#token-group-color-data-sequential-green}
+
+<ColorTable section="color.data.sequential.green" />
+
+#### Interactive coral {#token-group-color-data-sequential-interactive-coral}
+
+<ColorTable section="color.data.sequential.interactive-coral" />
+
+#### Orange {#token-group-color-data-sequential-orange}
+
+<ColorTable section="color.data.sequential.orange" />
+
+#### Orchid {#token-group-color-data-sequential-orchid}
+
+<ColorTable section="color.data.sequential.orchid" />
+
+#### Plum {#token-group-color-data-sequential-plum}
+
+<ColorTable section="color.data.sequential.plum" />
+
+#### Purple {#token-group-color-data-sequential-purple}
+
+<ColorTable section="color.data.sequential.purple" />
+
+#### Red {#token-group-color-data-sequential-red}
+
+<ColorTable section="color.data.sequential.red" />
+
+#### Royal blue {#token-group-color-data-sequential-royal-blue}
+
+<ColorTable section="color.data.sequential.royal-blue" />
+
+#### Sand {#token-group-color-data-sequential-sand}
+
+<ColorTable section="color.data.sequential.sand" />
+
+#### Turquoise {#token-group-color-data-sequential-turquoise}
+
+<ColorTable section="color.data.sequential.turquoise" />
+
+#### Yellow {#token-group-color-data-sequential-yellow}
+
+<ColorTable section="color.data.sequential.yellow" />
+
+## Effects {#token-group-color-effects}
+
+<ColorTable section="color.effects" />
+
+## Text {#token-group-color-text}
+
+<ColorTable section="color.text" />
