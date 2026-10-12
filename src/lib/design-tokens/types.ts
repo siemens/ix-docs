@@ -42,20 +42,9 @@ export type DesignTokenEntry = {
   };
 };
 
-export type DesignTokenAsset = {
-  family: 'classic';
-  mode: DesignTokenMode;
-  path: string;
-  sha256: string;
-};
-
 export type DesignTokenManifest = {
   schemaVersion: typeof DESIGN_TOKEN_SCHEMA_VERSION;
   contract: typeof DESIGN_TOKEN_CONTRACT;
-  package: {
-    name: typeof DESIGN_TOKEN_PACKAGE;
-    version: string;
-  };
   provenance: {
     tokenSourceVersion: string;
     tokenBuildId: string;
@@ -75,5 +64,4 @@ export type DesignTokenManifest = {
     ];
   };
   entries: DesignTokenEntry[];
-  assets: DesignTokenAsset[];
 };

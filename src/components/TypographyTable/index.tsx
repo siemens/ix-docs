@@ -182,7 +182,6 @@ function BrowserOnlyTypographyTable({ entry }: { entry: DesignTokenEntry }) {
                   <TypographyCopyButton tokenName={entry.name} />
                   <div className={styles.DesktopOnly}>
                     <ThemeSelection
-                      availableThemes={['classic']}
                       onThemeChange={setTheme}
                     />
                   </div>
@@ -287,7 +286,7 @@ function Text({
 }) {
   return (
     <div className={styles.typographyTextRow}>
-      <div className="px-8 py-4 font-bold w-auto border-solid border-0 border-r border-[var(--theme-color-soft-bdr)]">
+      <div className="px-8 py-4 font-bold w-auto border-solid border-0 border-r border-[var(--si-sys-color-border-3)]">
         {name}
       </div>
       <div className="w-auto">{children}</div>

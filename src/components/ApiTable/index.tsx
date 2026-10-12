@@ -53,7 +53,7 @@ function FrameworkHeaderName({
 function ApiTable({ children, id }) {
   return (
     <div className="api-table container ml-0 mb-8" id={id}>
-      <div className="bg-[transparent] rounded-lg overflow-hidden border-solid border-[1px] border-[var(--theme-color-soft-bdr)]">
+      <div className="bg-[transparent] rounded-lg overflow-hidden border-solid border-[1px] border-[var(--si-sys-color-border-3)]">
         {children}
       </div>
     </div>
@@ -67,7 +67,7 @@ function PropertyHeader({
   singleFramework,
 }: ApiTableProps) {
   return (
-    <div className="flex bg-[var(--theme-color-2)] text-[var(--theme-color-std-text)] p-4 border-solid border-0 border-b border-[var(--theme-color-soft-bdr)] anchor">
+    <div className="flex bg-[var(--si-sys-color-background-1)] text-[var(--si-sys-color-text-primary)] p-4 border-solid border-0 border-b border-[var(--si-sys-color-border-3)] anchor">
       <div className="flex items-center font-bold">
         <BrowserOnly>
           {() => <FrameworkHeaderName name={name} type={type} />}
@@ -100,7 +100,7 @@ function SlotHeader({ children, name }: ApiTableProps) {
 function Text({ children, name }: ApiTableProps) {
   return (
     <div className={clsx(styles.ApiTableText, 'api-row')}>
-      <div className="px-8 py-4 font-bold w-auto border-solid border-0 border-r border-[var(--theme-color-soft-bdr)]">
+      <div className="px-8 py-4 font-bold w-auto border-solid border-0 border-r border-[var(--si-sys-color-border-3)]">
         {name}
       </div>
       <div className="w-auto p-4">{children}</div>

@@ -60,7 +60,6 @@ function BrowserOnlyShadowTable({ entry }: { entry: DesignTokenEntry }) {
                   <CopyButton text={`var(${entry.name})`} />
                 </div>
                 <ThemeSelection
-                  availableThemes={['classic']}
                   onThemeChange={setTheme}
                 />
                 <ThemeVariantToggle />

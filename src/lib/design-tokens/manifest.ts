@@ -25,11 +25,6 @@ const sourceTypeByType: Record<DesignTokenType, DesignTokenSourceType> = {
   sizing: 'dimension',
 };
 
-const expectedAssetPaths = {
-  dark: 'dist/siemens-ix/theme/classic-dark.css',
-  light: 'dist/siemens-ix/theme/classic-light.css',
-} as const;
-
 export class DesignTokenManifestError extends Error {
   constructor(detail: string) {
     super(
@@ -109,30 +104,6 @@ function assertExactStringArray(
     values.some((item, index) => item !== expected[index])
   ) {
     fail(`${location} must be [${expected.join(', ')}] in that order`);
-  }
-}
-
-function validatePackage(
-  value: unknown,
-  installedPackage: { name: string; version: string }
-) {
-  const packageMetadata = objectAt(value, 'package');
-  assertExactKeys(packageMetadata, ['name', 'version'], 'package');
-
-  if (packageMetadata.name !== DESIGN_TOKEN_PACKAGE) {
-    fail(`package.name must be "${DESIGN_TOKEN_PACKAGE}"`);
-  }
-  if (installedPackage.name !== DESIGN_TOKEN_PACKAGE) {
-    fail(
-      `installed package identity is "${installedPackage.name}", expected "${DESIGN_TOKEN_PACKAGE}"`
-    );
-  }
-
-  const manifestVersion = stringAt(packageMetadata.version, 'package.version');
-  if (manifestVersion !== installedPackage.version) {
-    fail(
-      `package.version "${manifestVersion}" does not match installed ${DESIGN_TOKEN_PACKAGE} version "${installedPackage.version}"; install the matching package instead of using stale metadata`
-    );
   }
 }
 
@@ -298,11 +269,6 @@ function validateEntry(value: unknown, index: number): DesignTokenEntry {
       `${location}.applicability.densityOverrides may only contain "compact"`
     );
   }
-  if (type !== 'sizing' && densityOverrides.length > 0) {
-    fail(
-      `${location}.applicability.densityOverrides is only valid for sizing tokens`
-    );
-  }
 
   const validatedEntry: DesignTokenEntry = {
     name,
@@ -339,42 +305,8 @@ function validateEntries(value: unknown): DesignTokenEntry[] {
   return entries;
 }
 
-function validateAssets(value: unknown) {
-  const values = arrayAt(value, 'assets');
-  if (values.length !== 2) {
-    fail('assets must contain the classic dark and light CSS assets');
-  }
-
-  for (const [index, expectedMode] of ['dark', 'light'].entries()) {
-    const location = `assets[${index}]`;
-    const asset = objectAt(values[index], location);
-    assertExactKeys(asset, ['family', 'mode', 'path', 'sha256'], location);
-    if (asset.family !== 'classic') {
-      fail(`${location}.family must be "classic"`);
-    }
-    if (asset.mode !== expectedMode) {
-      fail(`${location}.mode must be "${expectedMode}"`);
-    }
-    if (
-      asset.path !==
-      expectedAssetPaths[expectedMode as keyof typeof expectedAssetPaths]
-    ) {
-      fail(
-        `${location}.path must identify the matching classic ${expectedMode} CSS asset`
-      );
-    }
-    if (
-      typeof asset.sha256 !== 'string' ||
-      !/^[a-f0-9]{64}$/.test(asset.sha256)
-    ) {
-      fail(`${location}.sha256 must be a lowercase SHA-256 digest`);
-    }
-  }
-}
-
 export function parseDesignTokenManifest(
-  value: unknown,
-  installedPackage: { name: string; version: string }
+  value: unknown
 ): DesignTokenManifest {
   const manifest = objectAt(value, 'manifest');
   assertExactKeys(
@@ -382,11 +314,9 @@ export function parseDesignTokenManifest(
     [
       'schemaVersion',
       'contract',
-      'package',
       'provenance',
       'coverage',
       'entries',
-      'assets',
     ],
     'manifest'
   );
@@ -400,11 +330,9 @@ export function parseDesignTokenManifest(
     fail(`contract must be "${DESIGN_TOKEN_CONTRACT}"`);
   }
 
-  validatePackage(manifest.package, installedPackage);
   validateProvenance(manifest.provenance);
   validateCoverage(manifest.coverage);
   const entries = validateEntries(manifest.entries);
-  validateAssets(manifest.assets);
 
   return {
     ...(manifest as Omit<DesignTokenManifest, 'entries'>),

@@ -4,7 +4,6 @@
  * SPDX-License-Identifier: MIT
  */
 
-import { createHash } from 'node:crypto';
 import { readFile, realpath } from 'node:fs/promises';
 import { createRequire } from 'node:module';
 import path from 'node:path';
@@ -84,7 +83,7 @@ async function load(siteDir: string): Promise<DesignTokenManifest> {
   }
 
   const packageJsonPath = path.join(packageRoot, 'package.json');
-  let packageJson: { name?: unknown; version?: unknown };
+  let packageJson: { name?: unknown };
   let manifestJson: unknown;
   try {
     [packageJson, manifestJson] = await Promise.all([
@@ -100,67 +99,20 @@ async function load(siteDir: string): Promise<DesignTokenManifest> {
     );
   }
 
-  if (
-    typeof packageJson.name !== 'string' ||
-    typeof packageJson.version !== 'string'
-  ) {
-    throw unavailable(`${packageJsonPath} has no valid name and version`);
+  if (packageJson.name !== DESIGN_TOKEN_PACKAGE) {
+    throw unavailable(
+      `${packageJsonPath} identifies "${String(packageJson.name)}", expected "${DESIGN_TOKEN_PACKAGE}"`
+    );
   }
 
-  let manifest: DesignTokenManifest;
   try {
-    manifest = parseDesignTokenManifest(manifestJson, {
-      name: packageJson.name,
-      version: packageJson.version,
-    });
+    return parseDesignTokenManifest(manifestJson);
   } catch (error) {
     if (error instanceof DesignTokenManifestError) {
       throw unavailable(error.message, error);
     }
     throw error;
   }
-
-  for (const asset of manifest.assets) {
-    const unresolvedAssetPath = path.resolve(packageRoot, asset.path);
-    if (!isInside(packageRoot, unresolvedAssetPath)) {
-      throw unavailable(
-        `manifest asset "${asset.path}" resolves outside the installed package`
-      );
-    }
-
-    let assetPath: string;
-    let assetContents: Buffer;
-    try {
-      assetPath = await realpath(unresolvedAssetPath);
-    } catch (error) {
-      throw unavailable(
-        `cannot read the matching installed CSS asset "${asset.path}"`,
-        error
-      );
-    }
-    if (!isInside(packageRoot, assetPath)) {
-      throw unavailable(
-        `manifest asset "${asset.path}" resolves outside the installed package`
-      );
-    }
-    try {
-      assetContents = await readFile(assetPath);
-    } catch (error) {
-      throw unavailable(
-        `cannot read the matching installed CSS asset "${asset.path}"`,
-        error
-      );
-    }
-
-    const digest = createHash('sha256').update(assetContents).digest('hex');
-    if (digest !== asset.sha256) {
-      throw unavailable(
-        `SHA-256 mismatch for ${asset.path}: manifest has ${asset.sha256}, installed asset is ${digest}. Reinstall or rebuild the matching ${DESIGN_TOKEN_PACKAGE} package`
-      );
-    }
-  }
-
-  return manifest;
 }
 
 export function loadInstalledDesignTokenManifest(

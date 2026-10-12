@@ -21,7 +21,6 @@ function validManifest(): unknown {
   return {
     schemaVersion: 1,
     contract: 'siemens-ix-system-token-manifest',
-    package: { name: '@siemens/ix', version: '5.2.1' },
     provenance: {
       tokenSourceVersion: '0.12.0',
       tokenBuildId: 'a'.repeat(64),
@@ -65,20 +64,6 @@ function validManifest(): unknown {
         },
       },
     ],
-    assets: [
-      {
-        family: 'classic',
-        mode: 'dark',
-        path: 'dist/siemens-ix/theme/classic-dark.css',
-        sha256: 'b'.repeat(64),
-      },
-      {
-        family: 'classic',
-        mode: 'light',
-        path: 'dist/siemens-ix/theme/classic-light.css',
-        sha256: 'c'.repeat(64),
-      },
-    ],
   };
 }
 
@@ -87,10 +72,7 @@ function cloneManifest(): Record<string, unknown> {
 }
 
 test('parses the complete v6 system-token contract', () => {
-  const manifest = parseDesignTokenManifest(validManifest(), {
-    name: '@siemens/ix',
-    version: '5.2.1',
-  });
+  const manifest = parseDesignTokenManifest(validManifest());
 
   assert.equal(manifest.contract, 'siemens-ix-system-token-manifest');
   assert.equal(manifest.entries.length, 2);
@@ -101,24 +83,21 @@ test('accepts entries whose upstream source does not provide a description', () 
   const entries = input.entries as Array<Record<string, unknown>>;
   delete entries[0].description;
 
-  const manifest = parseDesignTokenManifest(input, {
-    name: '@siemens/ix',
-    version: '5.2.1',
-  });
+  const manifest = parseDesignTokenManifest(input);
   assert.equal(manifest.entries[0].description, undefined);
 });
 
-test('rejects a stale manifest from another installed package version', () => {
-  assert.throws(
-    () =>
-      parseDesignTokenManifest(validManifest(), {
-        name: '@siemens/ix',
-        version: '6.0.0',
-      }),
-    (error: unknown) =>
-      error instanceof DesignTokenManifestError &&
-      error.message.includes('does not match installed')
-  );
+test('rejects the retired publication envelope', () => {
+  for (const key of ['package', 'assets']) {
+    const manifest = cloneManifest();
+    manifest[key] = {};
+    assert.throws(
+      () => parseDesignTokenManifest(manifest),
+      (error: unknown) =>
+        error instanceof DesignTokenManifestError &&
+        error.message.includes('manifest must contain exactly')
+    );
+  }
 });
 
 test('rejects retired target/family metadata, leaking paths, and non-system tokens', () => {
@@ -126,10 +105,7 @@ test('rejects retired target/family metadata, leaking paths, and non-system toke
   retiredTarget.target = 'v6';
   assert.throws(
     () =>
-      parseDesignTokenManifest(retiredTarget, {
-        name: '@siemens/ix',
-        version: '5.2.1',
-      }),
+      parseDesignTokenManifest(retiredTarget),
     /manifest must contain exactly/
   );
 
@@ -138,10 +114,7 @@ test('rejects retired target/family metadata, leaking paths, and non-system toke
   coverage.family = 'classic';
   assert.throws(
     () =>
-      parseDesignTokenManifest(retiredCoverageFamily, {
-        name: '@siemens/ix',
-        version: '5.2.1',
-      }),
+      parseDesignTokenManifest(retiredCoverageFamily),
     /coverage must contain exactly/
   );
 
@@ -152,10 +125,7 @@ test('rejects retired target/family metadata, leaking paths, and non-system toke
   applicability.family = 'classic';
   assert.throws(
     () =>
-      parseDesignTokenManifest(retiredEntryFamily, {
-        name: '@siemens/ix',
-        version: '5.2.1',
-      }),
+      parseDesignTokenManifest(retiredEntryFamily),
     /entries\[0\]\.applicability must contain exactly/
   );
 
@@ -164,10 +134,7 @@ test('rejects retired target/family metadata, leaking paths, and non-system toke
   entries[0].sourcePath = '../../tokens/private.json';
   assert.throws(
     () =>
-      parseDesignTokenManifest(leakingPath, {
-        name: '@siemens/ix',
-        version: '5.2.1',
-      }),
+      parseDesignTokenManifest(leakingPath),
     /logical si\.sys token path/
   );
 
@@ -178,24 +145,18 @@ test('rejects retired target/family metadata, leaking paths, and non-system toke
   referenceEntries[0].name = '--si-ref-color-blue-500';
   assert.throws(
     () =>
-      parseDesignTokenManifest(referenceToken, {
-        name: '@siemens/ix',
-        version: '5.2.1',
-      }),
+      parseDesignTokenManifest(referenceToken),
     /--si-sys-\*/
   );
 });
 
-test('rejects unknown type mappings, invalid coverage, and bad assets', () => {
+test('rejects unknown type mappings and invalid coverage', () => {
   const wrongSourceType = cloneManifest();
   const entries = wrongSourceType.entries as Array<Record<string, unknown>>;
   entries[0].sourceType = 'dimension';
   assert.throws(
     () =>
-      parseDesignTokenManifest(wrongSourceType, {
-        name: '@siemens/ix',
-        version: '5.2.1',
-      }),
+      parseDesignTokenManifest(wrongSourceType),
     /incompatible with semantic type/
   );
 
@@ -204,23 +165,8 @@ test('rejects unknown type mappings, invalid coverage, and bad assets', () => {
   coverage.modes = ['light', 'dark'];
   assert.throws(
     () =>
-      parseDesignTokenManifest(wrongCoverage, {
-        name: '@siemens/ix',
-        version: '5.2.1',
-      }),
+      parseDesignTokenManifest(wrongCoverage),
     /coverage\.modes/
-  );
-
-  const wrongAsset = cloneManifest();
-  const assets = wrongAsset.assets as Array<Record<string, unknown>>;
-  assets[0].path = '../classic-dark.css';
-  assert.throws(
-    () =>
-      parseDesignTokenManifest(wrongAsset, {
-        name: '@siemens/ix',
-        version: '5.2.1',
-      }),
-    /matching classic dark CSS asset/
   );
 });
 
@@ -231,19 +177,13 @@ test('rejects duplicate or non-deterministically ordered names', () => {
 
   assert.throws(
     () =>
-      parseDesignTokenManifest(duplicate, {
-        name: '@siemens/ix',
-        version: '5.2.1',
-      }),
+      parseDesignTokenManifest(duplicate),
     /unique names in deterministic ascending order/
   );
 });
 
 test('queries and groups generated token metadata without inventing relations', () => {
-  const manifest = parseDesignTokenManifest(validManifest(), {
-    name: '@siemens/ix',
-    version: '5.2.1',
-  }) as DesignTokenManifest;
+  const manifest = parseDesignTokenManifest(validManifest()) as DesignTokenManifest;
 
   assert.deepEqual(
     queryDesignTokens(manifest, { type: 'color' }).map((entry) => entry.name),

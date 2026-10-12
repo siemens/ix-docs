@@ -59,7 +59,7 @@
   padding: 0 97px 0 66px;
   height: calc(100vh - var(--ifm-navbar-height));
   overflow: hidden;
-  background-color: var(--theme-color-1);
+  background-color: var(--si-sys-color-background-0);
 }
 .container.industrial_experience .logo {
   margin-bottom: 45px;
@@ -236,7 +236,7 @@
 .description {
   width: 500px;
   margin: 30px 0 0 24px;
-  color: var(--theme-color-std-text);
+  color: var(--si-sys-color-text-primary);
 }
 .Card_Box {
   display: flex;
@@ -290,7 +290,7 @@
   }
 }
 .Card_Icon {
-  color: var(--theme-color-primary) !important;
+  color: var(--si-sys-color-text-accent) !important;
 }
 .Button {
   display: flex;
@@ -307,8 +307,8 @@
   justify-content: center;
 }
 .Button.Primary {
-  background-color: var(--theme-color-primary);
-  border: 1px solid var(--theme-color-primary);
+  background-color: var(--si-sys-color-background-accent);
+  border: 1px solid var(--si-sys-color-border-accent);
 }
 @media (max-width: 576px) {
   .Button.Primary {
@@ -316,26 +316,26 @@
   }
 }
 .Button.Primary:hover {
-  background-color: var(--theme-btn-primary--background--hover) !important;
-  color: var(--theme-btn-primary--color--hover) !important;
+  background-color: var(--si-sys-color-background-accent-hover) !important;
+  color: var(--si-sys-color-text-on-accent) !important;
 }
 .Button.Primary:active {
-  background-color: var(--theme-btn-primary--background--active) !important;
-  color: var(--theme-btn-primary--color--active) !important;
+  background-color: var(--si-sys-color-background-accent-active) !important;
+  color: var(--si-sys-color-text-on-accent) !important;
 }
 .Button.Secondary {
-  background-color: var(--theme-color-1);
-  border: 1px solid var(--theme-color-primary);
+  background-color: var(--si-sys-color-background-0);
+  border: 1px solid var(--si-sys-color-border-accent);
 }
 .Button.Secondary:hover {
-  background-color: var(--theme-btn-secondary--background--hover) !important;
-  color: var(--theme-btn-secondary--color--hover) !important;
-  border-color: var(--theme-btn-outline-primary--border-color--hover);
+  background-color: var(--si-sys-color-background-accent-secondary-hover) !important;
+  color: var(--si-sys-color-text-accent-hover) !important;
+  border-color: var(--si-sys-color-border-accent-hover);
 }
 .Button.Secondary:active {
-  background-color: var(--theme-btn-secondary--background--active) !important;
-  color: var(--theme-btn-secondary--color--active) !important;
-  border-color: var(--theme-btn-outline-primary--border-color--active);
+  background-color: var(--si-sys-color-background-accent-secondary-active) !important;
+  color: var(--si-sys-color-text-accent-active) !important;
+  border-color: var(--si-sys-color-border-accent-active);
 }
 .Button .IconDiv {
   position: relative;
@@ -343,7 +343,7 @@
   align-items: center;
   height: 100%;
   justify-content: center;
-  color: var(--theme-color-1);
+  color: var(--si-sys-color-text-inverse);
   padding-right: 15px;
   padding-left: 5px;
 }
@@ -355,10 +355,10 @@
   height: 3rem;
 }
 .Button .IconDiv .Icon.Primary {
-  color: var(--theme-btn-primary--color);
+  color: var(--si-sys-color-text-on-accent);
 }
 .Button .IconDiv .Icon.Secondary {
-  color: var(--theme-color-primary);
+  color: var(--si-sys-color-text-accent);
 }
 .Button .Label {
   font-size: 20px;
@@ -367,10 +367,10 @@
   justify-content: center;
 }
 .Button .Label.Primary {
-  color: var(--theme-btn-primary--color);
+  color: var(--si-sys-color-text-on-accent);
 }
 .Button .Label.Secondary {
-  color: var(--theme-color-primary);
+  color: var(--si-sys-color-text-accent);
 }
 @media (max-width: 768px) {
   .Button {

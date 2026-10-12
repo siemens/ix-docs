@@ -104,7 +104,6 @@ function BrowserOnlyBorderTable({ entry }: { entry: DesignTokenEntry }) {
                   <CopyButton text={`var(${entry.name})`} />
                 </div>
                 <ThemeSelection
-                  availableThemes={['classic']}
                   onThemeChange={setTheme}
                 />
                 <ThemeVariantToggle />
@@ -149,7 +148,7 @@ function Text({
 }) {
   return (
     <div className={clsx(styles.borderTextRow, 'api-row')}>
-      <div className="px-8 py-4 font-bold w-auto border-solid border-0 border-r border-[var(--theme-color-soft-bdr)]">
+      <div className="px-8 py-4 font-bold w-auto border-solid border-0 border-r border-[var(--si-sys-color-border-3)]">
         {name}
       </div>
       <div className="w-auto">{children}</div>

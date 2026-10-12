@@ -129,16 +129,16 @@ The script downloads new images and replaces outdated ones in the `static/figma/
 The token reference chain is authoritative from source to published package:
 `@siemens-ux/design-tokens` supplies canonical names, paths, types, and
 descriptions; the generator emits the source manifest and validates Classic as
-a value and structure delta; and IX validates that manifest while building CSS.
-When publishing, IX adds the final package `{ name, version }` and Classic CSS
-asset metadata and hashes to `dist/tokens/manifest.json`. The docs consume the
-published `@siemens/ix/tokens/manifest.json` export and validate its schema,
-contract, package identity and version, provenance, coverage, entries, and CSS
-asset hashes. The IX source manifest has no package metadata.
+a value and structure delta; and IX publishes that manifest as
+`@siemens/ix/tokens/manifest.json`. The docs validate its schema, contract,
+provenance, coverage, and entries. The manifest contains metadata only: Classic
+values come from the installed IX CSS, and Brand values come from the installed
+`@siemens-ix/corporate-theme` CSS.
 
-To update a reference, publish the system-token and IX changes, update
-`@siemens/ix` and its lockfile to the matching release, then run `pnpm install`
-and the documentation checks (`pnpm test` plus `pnpm start` and/or `pnpm build`).
+To update a reference, publish the system-token, IX, and corporate-theme
+changes; update `@siemens/ix`, `BRAND_VERSION`, and the lockfile to matching
+releases; then run `pnpm install` and the documentation checks (`pnpm test` plus
+`pnpm start` and/or `pnpm build`).
 
 To verify an unpublished IX change locally without publishing:
 
