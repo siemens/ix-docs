@@ -58,7 +58,7 @@ setAssetPath('/svg');
 It is also possible to import individual icons without an asset folder via [addIcons](#reference-icons-by-name).
 
 Then you can reference iX icons by name anywhere in your application.
-Valid icon sizes are 12, 16, 20, 24, 32 and 48. The default size is.
+Valid icon sizes are 12, 16, 20, 24, 32 and 48. The default size is 20.
 
 ```html
 <ix-icon name="star"></ix-icon>
