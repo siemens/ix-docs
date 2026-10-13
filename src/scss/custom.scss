@@ -3,8 +3,7 @@
  * bundles Infima by default. Infima is a CSS framework designed to
  * work well for content-centric websites.
  */
-@use '@siemens/ix/scss/theme/core/common' as common;
-@use '@siemens/ix/scss/theme/core/components' as components;
+@use '@siemens/ix/scss/foundation';
 
 @use './overwrite/doc-sidebar';
 @use './overwrite/navbar';
@@ -30,22 +29,32 @@
 @tailwind components;
 @tailwind utilities;
 
-$font-family: 'Siemens Sans', Arial, Helvetica, sans-serif;
-
-body {
-  @include common.setVars;
-  @include components.setComponentVars;
-}
+$font-family: 'SiemensSans Pro', Arial, Helvetica, sans-serif;
 
 #__docusaurus {
-  color: var(--theme-color-std-text);
+  color: var(--si-sys-color-text-primary);
 
-  --ifm-font-color-base: var(--theme-color-std-text);
-  --ifm-heading-color: var(--theme-color-std-text);
-  --ifm-navbar-link-hover-color: var(--theme-color-dynamic);
-  --ifm-menu-color-active: var(--theme-color-dynamic);
+  --ifm-font-color-base: var(--si-sys-color-text-primary);
 
-  --ifm-background-color: var(--theme-color-2);
+  --ifm-heading-color: var(--si-sys-color-text-primary);
+  --ifm-navbar-link-hover-color: var(--si-sys-color-text-accent-hover);
+  --ifm-menu-color-active: var(--si-sys-color-text-accent-hover);
+
+  --ifm-background-color: var(--si-sys-color-background-1);
+}
+
+// Docusaurus reuses its primary/link colors for border and progress surfaces.
+// Keep those uses on the matching system-token role instead of the text alias.
+#__docusaurus [class*='cardContainer']:hover {
+  border-color: var(--si-sys-color-border-accent-hover);
+}
+
+#__docusaurus [class*='tag']:hover {
+  --docusaurus-tag-list-border: var(--si-sys-color-border-accent);
+}
+
+#nprogress {
+  --docusaurus-progress-bar-color: var(--si-sys-color-background-accent-hover);
 }
 
 :root {
@@ -59,11 +68,10 @@ body {
   --ifm-list-item-margin: 1rem;
   --ifm-list-paragraph-margin: 0rem;
 
-  font-family: $font-family;
-  --ifm-font-color-base: var(--theme-color-std-text);
-  --ifm-heading-font-family: $font-family;
+  --ifm-font-color-base: var(--si-sys-color-text-primary);
+  --ifm-heading-font-family: var(--si-ref-typography-font-family-sans);
   --ifm-heading-font-weight: var(--ifm-font-weight-bold);
-  --ifm-navbar-link-color: var(--theme-color-std-text);
+  --ifm-navbar-link-color: var(--si-sys-color-text-primary);
 }
 
 .markdown li,
@@ -82,22 +90,22 @@ p {
 }
 
 [data-ix-theme] {
-  --ifm-color-primary: var(--theme-color-dynamic);
+  --ifm-color-primary: var(--si-sys-color-text-accent);
   --ifm-code-font-size: 95%;
-  --ifm-toc-border-color: var(--theme-color-x-weak-bdr);
+  --ifm-toc-border-color: var(--si-sys-color-border-4);
   --ifm-spacing-horizontal: 0rem;
-  --ifm-footer-background-color: var(--theme-color-1);
-  --ifm-navbar-background-color: var(--theme-color-1);
-  --ifm-menu-color-active: var(--theme-color-dynamic);
-  --ifm-menu-color: var(--theme-color-std-text);
-  --ifm-background-color: var(--theme-color-1);
+  --ifm-footer-background-color: var(--si-sys-color-background-0);
+  --ifm-navbar-background-color: var(--si-sys-color-background-0);
+  --ifm-menu-color-active: var(--si-sys-color-text-accent-hover);
+  --ifm-menu-color: var(--si-sys-color-text-primary);
+  --ifm-background-color: var(--si-sys-color-background-0);
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.1);
-  --ifm-link-color: var(--theme-color-primary);
+  --ifm-link-color: var(--si-sys-color-text-accent);
   --ifm-blockquote-padding-horizontal: 0.5rem;
 }
 
 [data-ix-theme='classic'][data-ix-color-schema='dark'] {
-  --ix-docs-hero-background: var(--theme-color-1);
+  --ix-docs-hero-background: var(--si-sys-color-background-0);
   --ix-docs-hero-tab-active: transparent;
 }
 
@@ -107,14 +115,14 @@ p {
 }
 
 [data-ix-theme='brand'][data-ix-color-schema='dark'] {
-  --ix-docs-hero-background: var(--theme-color-1);
-  --ix-docs-hero-tab-active: var(--theme-color-1);
+  --ix-docs-hero-background: var(--si-sys-color-background-0);
+  --ix-docs-hero-tab-active: var(--si-sys-color-background-0);
 }
 
 [data-ix-theme='brand'][data-ix-color-schema='light'] {
   --ix-docs-hero-background: #fff;
   --ix-docs-hero-tab-active: #fff;
-  --ifm-menu-color-active: var(--theme-color-primary);
+  --ifm-menu-color-active: var(--si-sys-color-text-accent);
 }
 
 #__docusaurus {

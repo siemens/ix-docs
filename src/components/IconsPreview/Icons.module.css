@@ -44,7 +44,8 @@
   align-items: center;
   justify-content: space-between;
 
-  border: var(--theme-std-bdr-1);
+  border: var(--si-sys-sizing-border-width-default) solid
+    var(--si-sys-color-border-2);
   border-radius: 4px;
 
   width: 8rem;
@@ -57,17 +58,19 @@
 }
 
 .Icon__Tile:focus-visible {
-  outline: 1px solid var(--theme-color-focus-bdr);
+  outline: 1px solid var(--si-sys-color-effects-focus);
   outline-offset: 2px;
 }
 
 .Icon__Tile.Selected {
-  border: var(--theme-primary-bdr-1);
-  background-color: var(--theme-color-2);
+  border: var(--si-sys-sizing-border-width-default) solid
+    var(--si-sys-color-border-accent);
+  background-color: var(--si-sys-color-background-1);
 }
 
 .Icon__Tile:hover {
-  border: var(--theme-primary-bdr-1);
+  border: var(--si-sys-sizing-border-width-default) solid
+    var(--si-sys-color-border-accent);
   transform: scale(1.1);
 }
 
@@ -120,14 +123,14 @@
 }
 
 .Search__AdaptOrRequest {
-  color: var(--theme-color-soft-text);
+  color: var(--si-sys-color-text-secondary);
   text-align: center;
 }
 
 .Search__NoResults a,
 .Search__NoResults a:hover {
   text-decoration: underline;
-  color: var(--theme-color-soft-text);
+  color: var(--si-sys-color-text-secondary);
 }
 
 .Icon__ContainerDetails {
@@ -153,8 +156,9 @@
   align-items: flex-start;
   gap: 0.625rem;
 
-  background-color: var(--theme-color-2);
-  border: var(--theme-std-bdr-1);
+  background-color: var(--si-sys-color-background-1);
+  border: var(--si-sys-sizing-border-width-default) solid
+    var(--si-sys-color-border-2);
   border-radius: 4px;
 
   width: 100%;
@@ -165,7 +169,7 @@
 }
 
 .Icon__Details:focus-visible {
-  outline: 1px solid var(--theme-color-focus-bdr);
+  outline: 1px solid var(--si-sys-color-effects-focus);
   outline-offset: 2px;
 }
 
@@ -187,7 +191,7 @@
 }
 
 .Icon__Details .Icon__NameContainer [class*='hash-link']:focus-visible {
-  border: 1px solid var(--theme-color-focus-bdr);
+  border: 1px solid var(--si-sys-color-effects-focus);
 }
 
 .Icon__Details [class*='prism-code'] {
@@ -196,7 +200,7 @@
 
 ix-typography:focus-visible,
 .Icon__Code [class*='prism-code']:focus-visible [class*='token-line'] {
-  background-color: var(--theme-color-info-40);
+  background-color: var(--si-sys-color-background-information-subtle);
   outline: none;
 }
 
@@ -225,7 +229,7 @@ ix-typography:focus-visible,
 }
 
 .Icon__Tags ix-typography {
-  color: var(--theme-color-soft-text);
+  color: var(--si-sys-color-text-secondary);
 }
 
 .Icon__RelatedIcons {
@@ -235,7 +239,7 @@ ix-typography:focus-visible,
 }
 
 .Icon__RelatedIcons ix-typography {
-  color: var(--theme-color-soft-text);
+  color: var(--si-sys-color-text-secondary);
   white-space: nowrap;
 }
 
