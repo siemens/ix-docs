@@ -25,7 +25,7 @@ import PlaygroundPropToggle from '@site/src/components/PlaygroundPropToggle';
 By default, every pick is applied immediately.
 Set `requireConfirmation` to only apply the selection when users click **Confirm**.
 **Cancel** restores the last confirmed value.
-Note: `dateChange` event is emitted for every pick, `dateSelect` only when the selection is confirmed.
+Note: `dateChange` event is emitted for every pick, `dateSelect` only when the selection is applied: with **Done** or **Confirm**, or on pick in single selection without `requireConfirmation`.
 
 <PlaygroundPropToggle
   prop="requireConfirmation"

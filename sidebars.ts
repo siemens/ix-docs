@@ -620,6 +620,10 @@ const sidebars: SidebarsConfig = {
           label: 'Date dropdown',
           items: [
             {
+              id: 'components/date-dropdown/guide',
+              label: 'Usage',
+            },
+            {
               id: 'components/date-dropdown/code',
               label: 'Code',
             },

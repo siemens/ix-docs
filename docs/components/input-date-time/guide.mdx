@@ -39,7 +39,7 @@ formReady: true
   - Use mouse or keyboard arrows to navigate to the desired date and adjust the time.
   - Done closes the date time picker. With `requireConfirmation` set, confirm applies the selection and closes the date time picker.
   - Typing a valid date and time into input field closes the picker.
-  - Escape key closes the date time picker.
+  - Escape key closes the date time picker. With require confirmation, the pending selection is discarded.
 - **Validation**:
   - Use feedback text for validation types valid, info, warning and invalid.
   - Invalid feedback is automatically provided if the entered date or time is not parsable.
@@ -51,6 +51,8 @@ formReady: true
 ## States
 
 Date time input has five states: Default, hover, disabled, read-only and focused.
+
+The done and confirm buttons in the date time picker are disabled while no date is picked or the value is unchanged.
 
 ![Date time input states](https://www.figma.com/design/wEptRgAezDU1z80Cn3eZ0o/iX-Documentation-illustrations?node-id=7441-86123&t=BStIEA03mmCLaHAL-4)
 

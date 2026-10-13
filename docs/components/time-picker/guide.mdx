@@ -13,7 +13,7 @@ Time pickers are primarily used within [time inputs](../input-time) but can also
 2. Time unit (column) headers
 3. Selected time
 4. AM/PM select (12-hour format only)
-5. Confirm [button](../button)
+5. Cancel and confirm [buttons](../button)
 
 ## Options
 
@@ -33,10 +33,13 @@ Unlike date pickers, time pickers have no require confirmation option. Hours, mi
   - **Tab**: Navigate between areas of the time picker (header, body, footer).
   - **Arrow keys or scroll**: Move through time options.
   - **Enter or click**: Select the highlighted time.
+- **Confirmation**: A selected time is only applied when users click confirm. Cancel restores the last confirmed time.
 
 ## States
 
 An individual time item of a time picker has five states: Default, hover, active, disabled and focused.
+
+The confirm button is disabled until the selected time differs from the confirmed time. Without a confirmed time, the time shown in the picker can be confirmed as it is.
 
 ![Time picker states](https://www.figma.com/design/wEptRgAezDU1z80Cn3eZ0o/iX-Documentation-illustrations?node-id=5730-2897&t=ZhOOQlwBUWtHJWDA-4)
 
