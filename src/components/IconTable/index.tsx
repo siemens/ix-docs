@@ -49,7 +49,7 @@ const IconTable: React.FC<{
             <tr key={item.name}>
               <td className={styles.IconCell}>
                 <a href={href}>
-                  <IxIcon name={item.icon} color={item.color ?? "color-text-primary"} />
+                  <IxIcon name={item.icon} color={item.color ?? "color-std-text"} />
                 </a>
               </td>
               <td className={styles.NameCell}>
