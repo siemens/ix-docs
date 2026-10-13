@@ -11,6 +11,7 @@ import { IxIcon } from "@siemens/ix-react";
 import styles from "./styles.module.css";
 import {
   iconAlarm,
+  iconAlarmFilled,
   iconAppMenu,
   iconApps,
   iconCogwheel,
@@ -26,9 +27,14 @@ import {
   iconTrashcan,
   iconUpload,
   iconUser,
+  iconUserFilled,
   iconWarning,
   iconWarningOctagon,
   iconWarningRhomb,
+  iconVideoCamera,
+  iconVideoCameraFilled,
+  iconPin,
+  iconPinFilled
 } from "@siemens/ix-icons/icons";
 
 const IconTable: React.FC<{
@@ -43,7 +49,7 @@ const IconTable: React.FC<{
             <tr key={item.name}>
               <td className={styles.IconCell}>
                 <a href={href}>
-                  <IxIcon name={item.icon} color={item.color ?? "color-std-text"} />
+                  <IxIcon name={item.icon} color={item.color ?? "color-text-primary"} />
                 </a>
               </td>
               <td className={styles.NameCell}>
@@ -100,6 +106,49 @@ export const IconExamplesClarity = [
     icon: iconUpload,
     name: "upload",
     description: "Use for uploading files",
+  },
+];
+
+export const IconExamplesFilled = [
+  {
+    icon: iconVideoCamera,
+    name: "video-camera",
+    description: "Standard",
+  },
+  {
+    icon: iconVideoCameraFilled,
+    name: "video-camera-filled",
+    description: "Filled",
+  },
+  {
+    icon: iconUser,
+    name: "user",
+    description: "Standard",
+  },
+  {
+    icon: iconUserFilled,
+    name: "user-filled",
+    description: "Filled",
+  },
+  {
+    icon: iconPin,
+    name: "pin",
+    description: "Standard",
+  },
+  {
+    icon: iconPinFilled,
+    name: "pin-filled",
+    description: "Filled",
+  },
+  {
+    icon: iconAlarm,
+    name: "alarm",
+    description: "Standard",
+  },
+  {
+    icon: iconAlarmFilled,
+    name: "alarm-filled",
+    description: "Filled",
   },
 ];
 
