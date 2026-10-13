@@ -6,7 +6,11 @@
 
 import type { DesignTokenManifest } from './types';
 
-type SectionEntry = { group: string; type: string };
+type SectionEntry = {
+  group: string;
+  type: string;
+  applicability?: { densityOverrides: readonly string[] };
+};
 
 export const tokenTableSectionRules = {
   ColorTable: (entry: SectionEntry) =>
@@ -15,6 +19,9 @@ export const tokenTableSectionRules = {
     entry.type === 'color' && entry.group === 'color.border',
   ShadowTable: (entry: SectionEntry) => entry.type === 'shadow',
   TypographyTable: (entry: SectionEntry) => entry.type === 'typography',
+  DensityTable: (entry: SectionEntry) =>
+    entry.type === 'sizing' &&
+    (entry.applicability?.densityOverrides.includes('compact') ?? false),
 } as const;
 
 export type TokenTableName = keyof typeof tokenTableSectionRules;

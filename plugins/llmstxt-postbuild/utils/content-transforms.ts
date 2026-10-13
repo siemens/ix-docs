@@ -2,6 +2,7 @@ import {
   extractTokenTableUsages,
   selectTokenTableSection,
   createTokenTableTagRegex,
+  tokenTableNames,
 } from '../../../src/lib/design-tokens/sections';
 
 export function extractPlaygroundImports(content: string) {
@@ -137,6 +138,7 @@ type TokenManifestEntry = {
   group: string;
   type: string;
   description?: string;
+  applicability?: { densityOverrides: readonly string[] };
 };
 
 function tokenManifestTable(entries: TokenManifestEntry[]) {
@@ -170,7 +172,10 @@ export function replaceTokenTablesWithMarkdown(
 
 export function removeTokenTableImports(content: string) {
   return content.replace(
-    /import\s+(ColorTable|BorderTable|ShadowTable|TypographyTable)\s+from\s+['"]@site\/src\/components\/\1['"];?/g,
+    new RegExp(
+      `import\\s+(${tokenTableNames.join('|')})\\s+from\\s+['"]@site\\/src\\/components\\/\\1['"];?`,
+      'g'
+    ),
     ''
   );
 }

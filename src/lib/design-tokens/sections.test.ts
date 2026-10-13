@@ -20,6 +20,16 @@ const manifest = {
     { group: 'color.border', type: 'color' },
     { group: 'color.effects.shadow', type: 'shadow' },
     { group: 'typography', type: 'typography' },
+    {
+      group: 'sizing.size',
+      type: 'sizing',
+      applicability: { densityOverrides: ['compact'] },
+    },
+    {
+      group: 'sizing.border-radius',
+      type: 'sizing',
+      applicability: { densityOverrides: [] },
+    },
   ],
 } as Parameters<typeof validateTokenTableSections>[0];
 
@@ -32,6 +42,7 @@ const completePage = [
   '<BorderTable section={"color.border"} />',
   '<ShadowTable section="color.effects.shadow" />',
   '<TypographyTable section="typography" />',
+  '<DensityTable section="sizing.size" />',
 ].join('\n');
 
 test('extracts token table usages with section and line', () => {
@@ -41,6 +52,7 @@ test('extracts token table usages with section and line', () => {
     { table: 'BorderTable', section: 'color.border', file: 'colors.md', line: 6 },
     { table: 'ShadowTable', section: 'color.effects.shadow', file: 'colors.md', line: 7 },
     { table: 'TypographyTable', section: 'typography', file: 'colors.md', line: 8 },
+    { table: 'DensityTable', section: 'sizing.size', file: 'colors.md', line: 9 },
   ]);
 });
 
@@ -82,7 +94,29 @@ test('reports manifest groups that no page documents', () => {
 
   assert.deepEqual(
     errors.map((error) => error.match(/"([^"]+)"/)?.[1]),
-    ['color.text', 'color.border', 'color.effects.shadow', 'typography']
+    ['color.text', 'color.border', 'color.effects.shadow', 'typography', 'sizing.size']
+  );
+});
+
+test('only accepts sizing groups with compact overrides for density tables', () => {
+  assert.equal(
+    selectTokenTableSection(manifest.entries, 'DensityTable', 'sizing.size')
+      .length,
+    1
+  );
+  assert.throws(
+    () =>
+      selectTokenTableSection(
+        manifest.entries,
+        'DensityTable',
+        'sizing.border-radius'
+      ),
+    /does not match/
+  );
+  assert.throws(
+    () =>
+      selectTokenTableSection(manifest.entries, 'DensityTable', 'typography'),
+    /does not match/
   );
 });
 

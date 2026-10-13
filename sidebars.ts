@@ -1385,6 +1385,7 @@ const sidebars: SidebarsConfig = {
     }),
     'styles/borders',
     'styles/shadows',
+    'styles/density',
     'styles/elevation',
     'styles/animation',
     {

@@ -72,6 +72,12 @@ test('removes preview imports embedded in generated summary text', () => {
     ),
     'Summary: '
   );
+  assert.equal(
+    removeTokenTableImports(
+      "import DensityTable from '@site/src/components/DensityTable';"
+    ),
+    ''
+  );
 });
 
 test('fails rather than emitting an unrendered empty reference', () => {
