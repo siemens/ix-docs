@@ -3,7 +3,7 @@ sidebar_position: 1
 sidebar_label: Colors
 title: Color palette
 hide_table_of_contents: false
-toc_max_heading_level: 4
+toc_max_heading_level: 3
 doc-type: 'banner'
 component-tabs: ['']
 no_single_tab: true
