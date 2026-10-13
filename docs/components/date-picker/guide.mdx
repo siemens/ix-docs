@@ -10,7 +10,7 @@ doc-type: 'tab-item'
 2. Weekday labels
 3. Week numbers
 4. Selected date or date range
-5. Confirm [button](../button)
+5. Done [button](../button) in range mode, or cancel and confirm buttons with require confirmation
 
 ## Options
 
@@ -31,11 +31,13 @@ doc-type: 'tab-item'
   - **Tab**: Navigate between areas of the date picker (header, body, footer).
   - **Arrow keys**: Move through dates in the calendar.
   - **Enter or click**: Select the highlighted date.
-  - **Escape**: Close date pickers when used in a dropdown. If header dropdown for month/year selection is open, it closes first.
+  - **Escape**: Close date pickers when used in a dropdown. With require confirmation, pending selections are discarded. If header dropdown for month/year selection is open, it closes first.
 
 ## States
 
 Individual calendar dates within a date picker have five states: Default, hover, active, disabled and focused. Dates outside the allowed range appear in a disabled state and cannot be selected.
+
+The done and confirm buttons are disabled while the selection is incomplete (e.g. a range with only a start date) or unchanged from the applied value.
 
 ![Date picker states](https://www.figma.com/design/wEptRgAezDU1z80Cn3eZ0o/iX-Documentation-illustrations?node-id=7436-1708&t=BStIEA03mmCLaHAL-4)
 

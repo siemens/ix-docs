@@ -8,7 +8,7 @@ doc-type: 'tab-item'
 
 1. [Date picker](../date-picker)
 2. [Time picker](../time-picker)
-3. Confirm [button](../button)
+3. Done [button](../button), or cancel and confirm buttons with require confirmation
 
 ## Options
 
@@ -33,11 +33,13 @@ doc-type: 'tab-item'
   - **Tab**: Navigate between areas of the picker (header, body, time input, footer).
   - **Arrow keys**: Move through dates in the date picker and times in the time picker.
   - **Enter or click**: Select the highlighted date or time.
-  - **Escape**: Close the date time picker when used in a dropdown. If the header dropdown for month/year selection is open, it closes first.
+  - **Escape**: Close the date time picker when used in a dropdown. With require confirmation, pending selections are discarded. If the header dropdown for month/year selection is open, it closes first.
 
 ## States
 
 Individual calendar dates within a date time picker have five states: Default, hover, active, disabled and focused. Dates outside the allowed range appear in a disabled state and cannot be selected (see [date picker](../date-picker/guide#states) and [time picker](../time-picker/guide#states) for reference).
+
+The done and confirm buttons are disabled while the selection is incomplete (e.g. no date picked or a range with only a start date) or unchanged from the applied value.
 
 ## Dos and Don’ts
 

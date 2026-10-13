@@ -40,7 +40,7 @@ formReady: true
   - Use mouse or keyboard arrows to navigate to the desired date.
   - Selecting a date in date picker with mouse click or enter closes the date picker. With `requireConfirmation` set, the confirm button applies the date and closes the date picker.
   - Typing a date into input field with valid format closes the date picker.
-  - Escape key closes the date picker.
+  - Escape key closes the date picker. With require confirmation, the pending selection is discarded.
 - **Validation**:
   - Use feedback text for validation types valid, info, warning and invalid.
   - Invalid feedback is automatically provided if the entered date is not parsable.
@@ -51,6 +51,8 @@ formReady: true
 ## States
 
 Date input has five states: Default, hover, disabled, read-only and focused.
+
+With require confirmation, the confirm button in the date picker is disabled until a date is picked that differs from the applied value.
 
 ![Date input states](https://www.figma.com/design/wEptRgAezDU1z80Cn3eZ0o/iX-Pattern-Illustrations?node-id=3989-2545&t=ADQCetGKOEH1WG2r-4)
 
