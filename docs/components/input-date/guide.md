@@ -31,13 +31,14 @@ formReady: true
 - **Text alignment:** See [form field](../forms-field/guide#options) (by default at start).
 - **Error message**: Feedback text when date is not parsable. We typically use this to inform users that the entered date format is incorrect and guide them to enter a valid date.
 - **Format**: Specify the date format, default `yyyy/LL/dd` to ensure that dates are entered in a consistent and recognizable format.
+- **Require confirmation**: When false, selected dates are applied immediately. Set to true to apply a selection only when users click the confirm button. **Escape**, **Cancel** and clicking outside revert any pending selections.
 
 ## Behavior in context
 
 - **Interaction**:
   - Click or focus opens the date picker.
   - Use mouse or keyboard arrows to navigate to the desired date.
-  - Selecting a date in date picker with mouse click or enter closes the date picker.
+  - Selecting a date in date picker with mouse click or enter closes the date picker. With `requireConfirmation` set, the confirm button applies the date and closes the date picker.
   - Typing a date into input field with valid format closes the date picker.
   - Escape key closes the date picker.
 - **Validation**:

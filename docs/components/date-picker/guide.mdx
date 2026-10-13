@@ -16,10 +16,11 @@ doc-type: 'tab-item'
 
 - **Value**: Defines the selected date or date range.
 - **Single selection**: By default, users select date ranges. Use single selection to allow selecting a single date.
-- **Format**: Define the date format that determines how dates are displayed, e.g. `yyyy/LL/dd` for `2024/06/15`.
+- **Format**: Define the date format that determines how dates are displayed, e.g. `yyyy/LL/dd` for `2024/06/15`. See options [here](https://moment.github.io/luxon/#/formatting?id=table-of-tokens)
 - **Week start**: Define which day the week starts on. By default, it will be defined based on the locale.
 - **Week numbers**: Show calendar weeks on the left side of the calendar when needed for reference.
 - **Min and max dates**: Restrict the selectable date range by defining the earliest and latest dates users can choose.
+- **Require confirmation**: When false, selected dates are applied immediately. Set to true to apply a selection only when users click the confirm button. **Escape**, **Cancel** and clicking outside revert any pending selections.
 - **Corners**: By default, date pickers show rounded corners to be consistent with the [dropdown](../dropdown). Use straight, left or right corners to combine with other components.
 
 ## Behavior in context
