@@ -5,9 +5,9 @@ description: 'Usage guide for chat input.'
 
 # Chat input - Usage
 
-In chat inputs users write and send messages . We recommend using them for quick, iterative exchanges, not for multi-step data entries.
+In chat inputs, users write and send messages. We recommend using them for quick, iterative exchanges, not for multi-step data entries.
 
-![Anatomy component](https://www.figma.com/design/wEptRgAezDU1z80Cn3eZ0o/iX-Documentation-illustrations?node-id=7940-7427&t=mrtbkWj76QJhvNLI-11)
+![Chat input anatomy](https://www.figma.com/design/wEptRgAezDU1z80Cn3eZ0o/iX-Documentation-illustrations?node-id=7940-7427&t=mrtbkWj76QJhvNLI-11)
 
 1. Follow-up prompts
 2. Attachments

@@ -1,5 +1,5 @@
 ---
-sidebar_position: 7
+sidebar_position: 9
 sidebar_label: External links and resources
 title: 'External links and resources'
 doc-type: 'banner'

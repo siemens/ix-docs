@@ -832,6 +832,10 @@ const sidebars: SidebarsConfig = {
           label: 'Upload',
           items: [
             {
+              id: 'components/upload/guide',
+              label: 'Usage',
+            },
+            {
               id: 'components/upload/code',
               label: 'Code',
             },
@@ -953,6 +957,20 @@ const sidebars: SidebarsConfig = {
       label: 'System feedback and status',
       items: [
         createTabItem({
+          id: 'components/badge/index',
+          label: 'Badge',
+          items: [
+            {
+              id: 'components/badge/guide',
+              label: 'Usage',
+            },
+            {
+              id: 'components/badge/code',
+              label: 'Code',
+            },
+          ],
+        }),
+        createTabItem({
           id: 'components/empty-state/index',
           label: 'Empty state',
           items: [
@@ -964,6 +982,24 @@ const sidebars: SidebarsConfig = {
               id: 'components/empty-state/uxwriting',
               label: 'Writing',
             },
+          ],
+        }),
+        createTabItem({
+          id: 'components/info-page/index',
+          label: 'Info page',
+          items: [
+            {
+              id: 'components/info-page/guide',
+              label: 'Usage',
+            },
+            {
+              id: 'components/info-page/code',
+              label: 'Code',
+            },
+            {
+              id: 'components/info-page/language',
+              label: 'Writing'
+            }
           ],
         }),
         createTabItem({
@@ -1050,6 +1086,10 @@ const sidebars: SidebarsConfig = {
           id: 'components/tooltip/index',
           label: 'Tooltip',
           items: [
+            {
+              id: 'components/tooltip/guide',
+              label: 'Usage',
+            },
             {
               id: 'components/tooltip/code',
               label: 'Code',
