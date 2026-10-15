@@ -29,7 +29,7 @@ A valid `GITHUB_TOKEN` is required to build or start the documentation site (`pn
 - Examples (code and preview) are automatically provided via artifacts from the [siemens/ix](https://github.com/siemens/ix) repository during the start and build process
 - By default, examples are taken from the `siemens/ix` release set in `.env.production` (e.g. `IX_REPO_BRANCH='@siemens/ix@5.3.0'`)
 - If your contribution depends on new or updated examples from an open `siemens/ix` pull request, point the build at that pull request's artifacts (see [Depending on an Open siemens/ix Pull Request](#depending-on-an-open-siemensix-pull-request)). The docs PR can be built and reviewed this way, but can only be merged once the examples are part of a `siemens/ix` release.
-- Non-maintainers should ensure their example changes are accepted upstream first, then reference them in their documentation PR here.
+- This applies to all contributors, including non-maintainers: you can open your docs PR while the `siemens/ix` pull request is still in progress, but it can't be merged until the examples are included in a `siemens/ix` release.
 
 ### Figma API Token (Optional)
 
@@ -175,7 +175,7 @@ The script downloads new images and replaces outdated ones in the `static/figma/
 4. **Review process:**
    - Respond to review feedback promptly
    - Make requested changes and push updates
-   - Your PR will be merged once approved
+   - Your PR will be merged once approved. If it depends on an open `siemens/ix` pull request, it's merged only after those examples are released (see [Depending on an Open siemens/ix Pull Request](#depending-on-an-open-siemensix-pull-request))
 
 ## Code of Conduct
 

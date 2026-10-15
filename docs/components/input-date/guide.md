@@ -38,7 +38,7 @@ formReady: true
 - **Interaction**:
   - Click or focus opens the date picker.
   - Use mouse or keyboard arrows to navigate to the desired date.
-  - Selecting a date in date picker with mouse click or enter closes the date picker. With `requireConfirmation` set, the confirm button applies the date and closes the date picker.
+  - Without require confirmation, selecting a date in date picker with mouse click or enter applies the date and closes the date picker. With require confirmation, the date picker stays open after selecting a date until the confirm button applies the date and closes it.
   - Typing a date into input field with valid format closes the date picker.
   - Escape key closes the date picker. With require confirmation, the pending selection is discarded.
 - **Validation**:
