@@ -100,11 +100,13 @@
     color: var(--theme-color-std-text);
   }
 
-  // The clear button sits flush against the form edge, so any outline there
-  // looks clipped. It is mouse only, so remove its ring entirely.
+  // Keep a keyboard ring on the clear button. The form ring is scoped to
+  // `.aa-Input:focus`, so this is the only outline while the button is focused.
+  // Negative offset keeps the ring inside the form so it is not clipped.
   .aa-ClearButton:focus,
   .aa-ClearButton:focus-visible {
-    outline: none !important;
+    outline: 1px solid var(--theme-color-focus-bdr) !important;
+    outline-offset: -2px;
     box-shadow: none !important;
   }
 }
