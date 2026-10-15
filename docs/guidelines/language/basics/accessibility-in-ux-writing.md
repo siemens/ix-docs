@@ -1,6 +1,6 @@
 ---
 sidebar_position: 5
-sidebar_label: Accessibility and UX writing
+sidebar_label: UX writing and accessibility
 title: UX writing and accessibility
 doc-type: 'banner'
 component-tabs: ['']
@@ -17,11 +17,11 @@ import { iconApplicationScreen } from "@siemens/ix-icons/icons";
 :::info
 Many rules here direct you to further information and examples either within iX or the [Web Content Accessibility Guidelines (WCAG 2.2)](https://www.w3.org/TR/WCAG22/) <IxIcon name={iconOpenExternal} size="16" aria-label="external" role="img"></IxIcon>.
 
-Our accessibility target is conformance with WCAG 2.2 Level AA (the global standard). Where technically and contextually feasible, we additionally adopt selected Level AAA best practices (the gold standard), such as plain language and reduced reading complexity.
+Our accessibility target is conformance with WCAG 2.2 Level AA (the global standard). Where technically and contextually feasible, we additionally adopt selected Level AAA best practices, e.g. plain language and reduced reading complexity.
 :::
 
 ## General rules
-Use simple, plain language to make the text easier to read and understand. We aim to use language at a lower secondary / grade eight education level, i.e. the reading level of a 13- or 14-year-old, to reach the WCAG 2.2 Level AAA standard (the gold standard). See [WCAG Reading Level](https://www.w3.org/TR/WCAG22/#reading-level) <IxIcon name={iconOpenExternal} size="16" aria-label="external" role="img"></IxIcon>.
+Use simple, plain language to make the text easier to read and understand. We aim to use language at a lower secondary / grade eight education level (about the reading level of a 13- or 14-year-old), to reach the WCAG 2.2 Level AAA standard (the gold standard). See [WCAG Reading Level](https://www.w3.org/TR/WCAG22/#reading-level) <IxIcon name={iconOpenExternal} size="16" aria-label="external" role="img"></IxIcon>.
 
 <div className="dos-and-donts">
 <div className="dos">
@@ -55,7 +55,7 @@ Continue to use domain-specific industry and technical terms while writing in pl
 </div>
 </div>
 
-Use active voice as it's shorter and easier to understand. See [Use active voice](./grammar.md#use-active-voice).
+Use active voice as it's shorter and easier to understand. See [Grammar](./grammar.md#use-active-voice).
 
 <div className="dos-and-donts">
 <div className="dos">
@@ -377,13 +377,13 @@ Tell users when there are time limits. See [Time-related messages](../messaging/
 <div className="dos-and-donts">
 <div className="dos">
   <ul aria-label="Recommended practices">
-    <li>Your session will expire in 5 minutes.</li>
-    <li>Your session will expire in 3 minutes. Press the space bar to extend your session.</li>
+    <li>Your session expires in 5 minutes.</li>
+    <li>Your session expires in 3 minutes. Press the space bar to extend your session.</li>
   </ul>
 </div>
 <div className="donts">
   <ul aria-label="Practices to avoid">
-    <li>Your session will expire soon.</li>
+    <li>Your session expires soon.</li>
     <li>Your session is over. We're logging you out.</li>
   </ul>
 </div>
@@ -569,7 +569,7 @@ All ARIA labels must be concise, action-oriented, and match the visible context 
 </div>
 </div>
 
-Don’t use aria labels to duplicate visible text. If a button displays "Submit", adding an aria-label also titled “Submit” can confuse voice control users and assistive technology.
+Don’t use ARIA labels to duplicate visible text. If a button displays "Submit", adding an ARIA label also titled "Submit" can confuse voice control users and assistive technology.
 
 <div className="dos-and-donts">
 <div className="dos">
