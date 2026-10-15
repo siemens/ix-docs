@@ -21,7 +21,7 @@ import PlaygroundPropToggle from '@site/src/components/PlaygroundPropToggle';
 
 ## Require confirmation
 
-By default, a range is applied and the dropdown closes as soon as the range is complete. Set `requireConfirmation` to only apply the range when users click **Confirm**. **Cancel**, <kbd>Escape</kbd> or clicking outside discards the pending selection. `dateRangeChange` is emitted for every pick, `dateSelect` only when the range is applied.
+By default, the date dropdown applies the range and closes as soon as the range is complete. Set `requireConfirmation` to only apply the range when users click **Confirm**. **Cancel**, <kbd>Escape</kbd> or clicking outside discards the pending selection. The date dropdown emits `dateRangeChange` for every pick and `dateSelect` only when it applies the range.
 
 <PlaygroundPropToggle
   prop="requireConfirmation"
