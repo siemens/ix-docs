@@ -17,7 +17,7 @@
 }
 
 .AnchorButton:focus-visible {
-  outline: 1px solid var(--theme-color-focus-bdr);
+  outline: 1px solid var(--si-sys-color-effects-focus);
 }
 
 .AnchorHeader {
@@ -27,9 +27,9 @@
   width: 100%;
   flex-wrap: nowrap;
   padding: 1rem;
-  border-bottom: 1px solid var(--theme-color-soft-bdr);
-  background-color: var(--theme-color-2);
-  color: var(--theme-color-std-text);
+  border-bottom: 1px solid var(--si-sys-color-border-3);
+  background-color: var(--si-sys-color-background-1);
+  color: var(--si-sys-color-text-primary);
 }
 
 .AnchorHeader.NoButtonBorder {
@@ -39,7 +39,7 @@
 .ApiTableText {
   display: grid;
   grid-template-columns: minmax(100px, 20%) 1fr;
-  border-bottom: 1px solid var(--theme-color-soft-bdr);
+  border-bottom: 1px solid var(--si-sys-color-border-3);
 }
 
 .ApiTableText:last-child {

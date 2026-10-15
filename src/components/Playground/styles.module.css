@@ -27,20 +27,20 @@
   padding: 0.5rem 1rem;
   gap: 0.25rem;
   border-radius: 0.5rem 0.5rem 0rem 0rem;
-  border: 1px solid var(--theme-color-soft-bdr);
+  border: 1px solid var(--si-sys-color-border-3);
   z-index: 1;
-  background-color: var(--theme-color-1);
+  background-color: var(--si-sys-color-background-0);
 }
 
 .preview {
   display: block;
   position: relative;
   border-radius: 0rem 0rem 0.5rem 0.5rem;
-  border-right: 1px solid var(--theme-color-soft-bdr, rgba(235, 240, 245, 0.4));
-  border-bottom: 1px solid var(--theme-color-soft-bdr, rgba(235, 240, 245, 0.4));
-  border-left: 1px solid var(--theme-color-soft-bdr, rgba(235, 240, 245, 0.4));
+  border-right: 1px solid var(--si-sys-color-border-3, rgba(235, 240, 245, 0.4));
+  border-bottom: 1px solid var(--si-sys-color-border-3, rgba(235, 240, 245, 0.4));
+  border-left: 1px solid var(--si-sys-color-border-3, rgba(235, 240, 245, 0.4));
   padding: 1.5rem;
-  background-color: var(--theme-color-1);
+  background-color: var(--si-sys-color-background-0);
 }
 
 .preview.code {
@@ -60,7 +60,7 @@
 .spacer {
   height: 1.5rem;
   width: 2px;
-  background: var(--theme-color-x-weak-bdr);
+  background: var(--si-sys-color-border-4);
   margin-inline: 0.5rem;
 }
 
