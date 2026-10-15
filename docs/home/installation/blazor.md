@@ -64,3 +64,5 @@ Add required `CSS` and `Javascript` packages into the `index.html` file.
   </body>
 </html>
 ```
+
+The Blazor package currently exposes the bundled `siemens-ix.css` asset. This asset remains compatible while the package maintainers add the split `default`, foundation, theme and optional global stylesheets. When the split assets become available, prefer the default stylesheet and add global styles only when your application needs them.

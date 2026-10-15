@@ -4,7 +4,6 @@
 
 import BrowserOnly from '@docusaurus/BrowserOnly';
 import useBaseUrl from '@docusaurus/useBaseUrl';
-import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 import {
   iconArrowRight,
   iconChevronDown,
@@ -13,7 +12,7 @@ import {
 import { IxIcon } from '@siemens/ix-react';
 import Layout from '@theme/Layout';
 import clsx from 'clsx';
-import React, { useEffect } from 'react';
+import React from 'react';
 import styles from './index.module.css';
 import Link from '@docusaurus/Link';
 
@@ -102,15 +101,6 @@ function Headline({
 }
 
 function Homepage() {
-  const context = useDocusaurusContext();
-
-  useEffect(() => {
-    const withBrandTheme = context.siteConfig.customFields.withBrandTheme;
-    document.body.className = withBrandTheme
-      ? 'theme-brand-dark'
-      : 'theme-classic-dark';
-  }, [context]);
-
   return (
     <div className={clsx(styles.container, styles.industrial_experience)}>
       <div className={styles.content}>
