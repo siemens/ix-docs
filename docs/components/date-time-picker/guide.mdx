@@ -8,13 +8,13 @@ doc-type: 'tab-item'
 
 1. [Date picker](../date-picker)
 2. [Time picker](../time-picker)
-3. Confirm [button](../button)
+3. Done [button](../button), or cancel and confirm buttons with require confirmation
 
 ## Options
 
 - **Value**: See [date picker](../date-picker/guide#options) and [time picker](../time-picker/guide#options).
 - **Single selection**: See [date picker](../date-picker/guide#options).
-- **Format**: Choose the date and time format, e.g. `yyyy/LL/dd` and `HH:mm:ss`.
+- **Format**: Define the date format that determines how dates are displayed, e.g. `yyyy/LL/dd` for `2024/06/15`. See options [here](https://moment.github.io/luxon/#/formatting?id=table-of-tokens)
 - **Min and max dates**: See [date picker](../date-picker/guide#options).
 - **Date picker appearance**: See [date picker](../date-picker/guide#options).
   - **Week start**: Define which day the week starts on. By default, it will be defined based on the locale.
@@ -22,22 +22,24 @@ doc-type: 'tab-item'
 - **Time picker appearance**: See [time picker](../time-picker/guide#options).
   - **Time reference**: Show time reference input for AM/PM notation when using 12-hour time format.
   - **Header**: Customize the header of the time picker.
+- **Require confirmation**: When false, selected dates are applied immediately and users finish with the done button. Set to true to apply a selection only when users click the confirm button. **Escape**, **Cancel** and clicking outside revert any pending selections.
 - **Corners**: By default, date time pickers show rounded corners to be consistent with the [dropdown](../dropdown). Use straight, left or right corners to combine with other components.
-
 ## Behavior in context
 
-- **Combined selection**: Users select both a date and a time before confirming their choice. The selection is only finalized when the confirmation button is clicked.
+- **Combined selection**: Users select both a date and a time and finish with the done button. With `requireConfirmation` set, the selection is only confirmed when the **Confirm** button is clicked.
 - **Range selection**: Range mode allows users to select a start and end date while using one shared time value for both. If start and end need different times, use two separate date time pickers instead.
 - **Month navigation**: Users can navigate between months using the previous and next buttons in the header. This allows quick access to dates outside the current view.
 - **Interaction**: Users can navigate through the date time picker using the keyboard. The following keys are supported:
   - **Tab**: Navigate between areas of the picker (header, body, time input, footer).
   - **Arrow keys**: Move through dates in the date picker and times in the time picker.
   - **Enter or click**: Select the highlighted date or time.
-  - **Escape**: Close the date time picker when used in a dropdown. If the header dropdown for month/year selection is open, it closes first.
+  - **Escape**: Close the date time picker when used in a dropdown. With require confirmation, pending selections are discarded. If the header dropdown for month/year selection is open, it closes first.
 
 ## States
 
 Individual calendar dates within a date time picker have five states: Default, hover, active, disabled and focused. Dates outside the allowed range appear in a disabled state and cannot be selected (see [date picker](../date-picker/guide#states) and [time picker](../time-picker/guide#states) for reference).
+
+The done and confirm buttons are disabled while the selection is incomplete (e.g. no date picked or a range with only a start date) or unchanged from the applied value.
 
 ## Dos and Don’ts
 

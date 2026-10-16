@@ -1,0 +1,41 @@
+---
+doc-type: 'tab-item'
+description: 'Usage guide for the ix-date-dropdown'
+---
+
+# Date dropdown - Usage
+
+Date dropdowns combine a [button](../button) showing the selected date or date range with a [date picker](../date-picker) in a [dropdown](../dropdown). Use them in toolbars and filters, e.g. to select the time period of a report.
+
+## Options
+
+- **Value:** Defines the selected date or date range. When no range is set, the button shows a placeholder text, by default "No range set".
+- **Single selection:** By default, users select date ranges. Use single selection to allow selecting a single date.
+- **Predefined ranges:** Offer frequently used ranges, e.g. "Last 7 days", next to the date picker for a faster selection.
+- **Format:** Define the date format that determines how dates are displayed, e.g. `yyyy/LL/dd` for `2024/06/15`. See options [here](https://moment.github.io/luxon/#/formatting?id=table-of-tokens)
+- **Min and max dates:** See [date picker](../date-picker/guide#options).
+- **Date picker appearance:** See [date picker](../date-picker/guide#options).
+  - **Week start:** Define which day the week starts on.
+  - **Week numbers:** Show calendar weeks on the left side of the calendar when needed for reference.
+- **Button variant:** See [button](../button/guide#options).
+- **Require confirmation:** When false, a range is applied as soon as it is complete. Set to true to apply a selection only when users click the confirm button. **Escape**, **Cancel** and clicking outside revert any pending selections.
+
+## Behavior in context
+
+- **Range selection:** Users select a start date and then an end date. While only a start date is picked, the button label shows a trailing separator (e.g. `2024/06/15 - `) to indicate that an end date is missing.
+- **Applying a range:** Without require confirmation, a complete range or a predefined range is applied immediately and the dropdown closes. With require confirmation, the selection is only applied when the confirm button is clicked.
+- **Closing without applying:** Closing the dropdown with only a start date picked reverts to the previously applied range. With require confirmation, closing without confirming discards the pending selection and reopening shows the applied range.
+- **Interaction:** See [date picker](../date-picker/guide#behavior-in-context) for keyboard navigation within the calendar. **Escape** closes the dropdown.
+
+## States
+
+Date dropdowns have the same states as the [button](../button/guide#states). Additionally, the button can show a loading state, e.g. while data for the selected range is loaded. Calendar dates inside the dropdown follow the [date picker states](../date-picker/guide#states).
+
+With require confirmation, the confirm button is disabled while the selection is incomplete (e.g. a range with only a start date) or unchanged from the applied range.
+
+## Related
+
+- [Date picker](../date-picker)
+- [Date input](../input-date)
+- [Dropdown](../dropdown)
+- [Writing guidelines for date and time](../../guidelines/language/formatting/date.mdx)
