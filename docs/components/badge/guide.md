@@ -31,7 +31,7 @@ Semantic color variants communicate clear meanings:
 
 ![Badge variants](https://www.figma.com/design/wEptRgAezDU1z80Cn3eZ0o/iX-Documentation-illustrations?node-id=8141-4066&t=v625YpvIn3UzoFuJ-4)
 
-- **Accent:** Highlight new features or exploratory information.
+- **Accent:** Highlight new features or provide exploratory information.
 - **Critical:** Reserve for rare events more severe than Danger, e.g. threats to safety, operations or critical infrastructure.
 - **Danger:** Show negative values, removals or high-urgency counts, e.g. equipment faults or imminent system failures.
 - **Warning:** Emphasize developing severe conditions that require timely attention.

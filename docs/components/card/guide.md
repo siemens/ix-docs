@@ -36,7 +36,7 @@ We offer three types of cards:
 
 ## Variants
 
-Cards can either outlined or filled.
+Cards can either be outlined or filled.
 
 * Outline: Use as default for a balanced and subtle appearance.
 * Filled: Use when the card needs a solid background to remain distinct from the surface behind it.
@@ -59,9 +59,9 @@ Each variant emphasizes different aspects to guide the user's attention. These v
 ## Options
 
 - **Card:**
-	- **Outline:** Use the boolean property to show the card in an outline variant without any fill color.
+  - **Outline:** Use the boolean property to show the card in an outline variant without any fill color.
   - **Selected:** Use the selected state to indicate that the corresponding action is currently active.
-	- **Content area:** Cards can contain various types of content, e.g. images, charts, key data. It is positioned below the heading and subheading. We recommend a padding of `1rem`.
+  - **Content area:** Cards can contain various types of content, e.g. images, charts, key data. It is positioned below the heading and subheading. We recommend a padding of `1rem`.
 - **Action card & push card**:
 	- **Selected (action card only):** Use the selected state in action cards to indicate that the corresponding action is currently active.
 	- **Icon:** Use icons that are widely recognized by users for the intended action.
