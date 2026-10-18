@@ -38,3 +38,18 @@ jobs:
             build/docs/*.md
             build/docs/**/*.md
           if-no-files-found: error
+
+  check-pr-env:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Fail if .env.pullrequest exists
+        run: |
+          if [ -f .env.pullrequest ]; then
+            echo "::error file=.env.pullrequest::Delete .env.pullrequest before merging. See CONTRIBUTING.md."
+            exit 1
+          fi

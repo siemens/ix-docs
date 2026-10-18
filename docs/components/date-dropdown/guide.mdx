@@ -18,20 +18,38 @@ Date dropdowns combine a [button](../button) showing the selected date or date r
   - **Week start:** Define which day the week starts on.
   - **Week numbers:** Show calendar weeks on the left side of the calendar when needed for reference.
 - **Button variant:** See [button](../button/guide#options).
-- **Require confirmation:** When false, a range is applied as soon as it is complete. Set to true to apply a selection only when users click the confirm button. **Escape**, **Cancel** and clicking outside revert any pending selections.
+- **Require confirmation:** Define if selected ranges are applied directly after date / date range selection or on click on the confirm button.
 
 ## Behavior in context
 
 - **Range selection:** Users select a start date and then an end date. While only a start date is picked, the button label shows a trailing separator (e.g. `2024/06/15 - `) to indicate that an end date is missing.
 - **Applying a range:** Without require confirmation, a complete range or a predefined range is applied immediately and the dropdown closes. With require confirmation, the selection is only applied when the confirm button is clicked.
-- **Closing without applying:** Closing the dropdown with only a start date picked reverts to the previously applied range. With require confirmation, closing without confirming discards the pending selection and reopening shows the applied range.
+- **Closing without applying:** Closing the dropdown with only a start date picked reverts to the previously applied range. With require confirmation, clicking the cancel button or outside the dropdown, or pressing the `Escape` key reverts any pending selections. Reopening the dropdown shows the previously applied range.
+- **Confirm button:** With require confirmation, the confirm button is disabled while the selection is incomplete (e.g. a range with only a start date) or unchanged from the applied range.
 - **Interaction:** See [date picker](../date-picker/guide#behavior-in-context) for keyboard navigation within the calendar. **Escape** closes the dropdown.
 
 ## States
 
-Date dropdowns have the same states as the [button](../button/guide#states). Additionally, the button can show a loading state, e.g. while data for the selected range is loaded. Calendar dates inside the dropdown follow the [date picker states](../date-picker/guide#states).
+Date dropdowns have the same states as [buttons](../button/guide#states). Calendar dates inside the dropdown follow the [date picker states](../date-picker/guide#states).
 
-With require confirmation, the confirm button is disabled while the selection is incomplete (e.g. a range with only a start date) or unchanged from the applied range.
+## Dos and Don’ts
+
+<div class="dos-and-donts">
+<div class="dos">
+  <ul aria-label="Recommended practices">
+    <li>Do use date dropdowns in toolbars and filters to select a date or time period</li>
+    <li>Do offer predefined ranges for frequently used time periods</li>
+    <li>Do use require confirmation when applying a range triggers time-consuming actions, e.g. reloading report data</li>
+    <li>Do show the loading state while data for the selected range is loaded</li>
+  </ul>
+</div>
+<div class="donts">
+  <ul aria-label="Practices to avoid">
+    <li>Don’t use date dropdowns in forms, use [date inputs](../input-date) instead</li>
+    <li>Don’t overload the dropdown with too many predefined ranges</li>
+  </ul>
+</div>
+</div>
 
 ## Related
 

@@ -31,7 +31,7 @@ formReady: true
 - **Text alignment:** See [form field](../forms-field/guide#options) (by default at start).
 - **Error message**: Feedback text when date is not parsable. We typically use this to inform users that the entered date format is incorrect and guide them to enter a valid date.
 - **Format**: Specify the date format, default `yyyy/LL/dd` to ensure that dates are entered in a consistent and recognizable format.
-- **Require confirmation**: When false, selected dates are applied immediately. Set to true to apply a selection only when users click the confirm button. **Escape**, **Cancel** and clicking outside revert any pending selections.
+- **Require confirmation**: Define if dates selected in the date picker are applied directly after selection or on click on the confirm button.
 
 ## Behavior in context
 
@@ -39,8 +39,10 @@ formReady: true
   - Click or focus opens the date picker.
   - Use mouse or keyboard arrows to navigate to the desired date.
   - Without require confirmation, selecting a date in date picker with mouse click or enter applies the date and closes the date picker. With require confirmation, the date picker stays open after selecting a date until the confirm button applies the date and closes it.
-  - Typing a date into input field with valid format closes the date picker.
-  - Escape key closes the date picker. With require confirmation, the pending selection is discarded.
+  - Typing a date into input field with valid format applies the date immediately, emits `valueChange` and closes the date picker, regardless of require confirmation. Require confirmation only applies to dates selected in the date picker.
+  - Escape key closes the date picker.
+  - With require confirmation, clicking the cancel button or outside the date picker, or pressing the `Escape` key reverts any pending selections.
+  - With require confirmation, the confirm button in the date picker is disabled until a date is picked that differs from the applied value.
 - **Validation**:
   - Use feedback text for validation types valid, info, warning and invalid.
   - Invalid feedback is automatically provided if the entered date is not parsable.
@@ -51,8 +53,6 @@ formReady: true
 ## States
 
 Date input has five states: Default, hover, disabled, read-only and focused.
-
-With require confirmation, the confirm button in the date picker is disabled until a date is picked that differs from the applied value.
 
 ![Date input states](https://www.figma.com/design/wEptRgAezDU1z80Cn3eZ0o/iX-Pattern-Illustrations?node-id=3989-2545&t=ADQCetGKOEH1WG2r-4)
 

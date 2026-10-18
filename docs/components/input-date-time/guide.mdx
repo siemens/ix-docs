@@ -27,7 +27,7 @@ formReady: true
 - **Error message**: Feedback text when date or time is not parsable. We typically use this to inform users that the entered date time format is incorrect and guide them to enter a valid date and time.
 - **Format**: Choose the date and time format, e.g. `yyyy/LL/dd` and `HH:mm:ss`.
 - **Min and max dates**: Restrict the selectable date range by defining the earliest and latest dates users can choose.
-- **Require confirmation**: When false, selected dates are applied immediately and users finish with the done button. Set to true to apply a selection only when users click the confirm button. **Escape**, **Cancel** and clicking outside revert any pending selections.
+- **Require confirmation**: Define if dates and times selected in the date time picker are applied directly after selection or on click on the confirm button.
 - **Date time picker appearance**: See [date time picker](../date-time-picker/guide#options).
   - **Week start**: Define which day the week starts on. By default, it will be defined based on the locale.
   - **Week numbers**: Show calendar weeks on the left side of the calendar when needed for reference.
@@ -38,21 +38,19 @@ formReady: true
   - Click opens date time pickers. Via keyboard focus followed by arrow down key also opens it.
   - Use mouse or keyboard arrows to navigate to the desired date and adjust the time.
   - Done closes the date time picker. With `requireConfirmation` set, confirm applies the selection and closes the date time picker.
-  - Typing a valid date and time into input field closes the picker.
-  - Escape key closes the date time picker. With require confirmation, the pending selection is discarded.
+  - Typing a valid date and time into input field applies the value immediately, emits `valueChange` and closes the picker, regardless of require confirmation. Require confirmation only applies to values selected in the date time picker.
+  - Escape key closes the date time picker.
 - **Validation**:
   - Use feedback text for validation types valid, info, warning and invalid.
   - Invalid feedback is automatically provided if the entered date or time is not parsable.
   - Refer to the [validation](../forms-validation) chapter for detailed guidelines.
 - **Overflow**: The input field should be wide enough to display the full date and time without truncation.
 - **Alignment**: Date time inputs are aligned to the left by default.
-- **Combined selection**: Users select both a date and a time. With `requireConfirmation` enabled, the selection is only applied when the confirm button is clicked. **Escape**, **Cancel** and clicking outside revert any pending selections.
+- **Combined selection**: Users select both a date and a time. With require confirmation, the selection is only applied when the confirm button is clicked. Clicking the cancel button or outside the picker, or pressing the `Escape` key reverts any pending selections. The done and confirm buttons are disabled while no date is picked or the value is unchanged.
 
 ## States
 
 Date time input has five states: Default, hover, disabled, read-only and focused.
-
-The done and confirm buttons in the date time picker are disabled while no date is picked or the value is unchanged.
 
 ![Date time input states](https://www.figma.com/design/wEptRgAezDU1z80Cn3eZ0o/iX-Documentation-illustrations?node-id=7441-86123&t=BStIEA03mmCLaHAL-4)
 
