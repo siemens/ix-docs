@@ -9,7 +9,7 @@ Application is a technical and infrastructural component without a direct visual
 
 The component itself is designed with modularity in mind. It can be seamlessly integrated with other components such as [application header](/docs/components/application-header/guide.md), [application menu](/docs/components/application-menu/guide.md), [content](/docs/components/content/guide.md) and more. This modular approach allows you to mix and match components based on your specific application requirements, providing flexibility and customization options.
 
-It's important to note that the application component focuses solely on layouting and does not dictate visual design.
+The application component primarily manages layout and application-wide behavior.
 
 ## Application example
 
@@ -39,12 +39,20 @@ We typically avoid opening the same application in multiple browser tabs. Instea
 
 ## Options
 
-- **forceBreakpoint:** Forces a specific breakpoint "lg", "md" or "sm". This can be used to force a specific application behavior that ignores the current browser viewport width.
+- **Breakpoint:** Use “lg”, “md” or “sm” to override responsive behavior regardless of the browser viewport width.
+- **Skip link target:** Set a custom destination when users should bypass the application shell and land at a more specific content boundary.
+- **Disable skip links:** Disable skip links only when you already provide an equivalent document-level bypass.
 
-## Behavior
+## Behavior in context
 
-The application component automatically adapts, by default, to three breakpoints and changes the application layout accordingly:
+- **Interaction:** The application component provides a skip-link list by default. “Skip to main content” is always the first focusable element within the application shell. “Skip to footer” follows when the application footer contains meaningful content. Skip links remain hidden until they receive keyboard focus and help users bypass repeated application content. We recommend keeping them enabled unless the page provides an equivalent bypass mechanism.
+- **Responsiveness:** The application component automatically adapts to three breakpoints and changes the application layout accordingly:
+  - `lg` for large screens (min-width 62em)
+  - `md` for medium screens (min-width 48em)
+  - `sm` for small screens (min-width 36em)
 
-- "lg" for large screens (min-width 62em)
-- "md" for medium screens (min-width 48em)
-- "sm" for small screens (min-width 36em)
+## Related
+
+- [Accessibility](../../guidelines/accessibility)
+- [WCAG 2.2: Bypass Blocks](https://www.w3.org/WAI/WCAG22/Understanding/bypass-blocks.html)
+- [W3C Technique G1: Adding a link to main content](https://www.w3.org/WAI/WCAG22/Techniques/general/G1)
