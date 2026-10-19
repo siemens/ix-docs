@@ -6,6 +6,7 @@ import { themes as prismThemes } from 'prism-react-renderer';
 import designTokensPlugin from './plugins/design-tokens/plugin';
 import { figmaPlugin } from './plugins/figma-pictures/figma';
 import versionDeployment from './version-deployment.json' with { type: 'json ' };
+import packageJson from './package.json' with { type: 'json' };
 import llmstxtPostbuildPlugin from './plugins/llmstxt-postbuild/plugin';
 
 dotenv();
@@ -123,7 +124,9 @@ const config: Config = {
 
   customFields: {
     withBrandTheme,
-    playgroundVersion: '^5',
+    // Keep exported playgrounds on the same packages the docs are built with.
+    playgroundVersion: packageJson.dependencies['@siemens/ix'],
+    playgroundIconsVersion: packageJson.dependencies['@siemens/ix-icons'],
   },
 
   presets: [

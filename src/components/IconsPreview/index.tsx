@@ -231,7 +231,7 @@ const IconDetails: React.FC<IconDetailsProps> = ({
               <div className={styles.TooltipSuccess}>
                 <IxIcon
                   name={iconSuccess}
-                  color="color-success"
+                  color="--si-sys-color-text-success"
                   size="16"
                 ></IxIcon>
                 Copied
@@ -507,7 +507,7 @@ const Icons: React.FC = () => {
             >
               <IxIcon
                 name={iconSearch}
-                color="color-dynamic"
+                color="--si-sys-color-text-accent"
                 slot="start"
                 size="16"
               ></IxIcon>
@@ -515,7 +515,7 @@ const Icons: React.FC = () => {
                 <IxIconButton
                   variant="tertiary"
                   oval
-                  iconColor="color-soft-text"
+                  iconColor="--si-sys-color-text-secondary"
                   icon={iconClear}
                   slot="end"
                   size="16"
@@ -554,7 +554,7 @@ const Icons: React.FC = () => {
               <IxIcon
                 className={styles.Search__NoResultsIcon}
                 name={iconSearch}
-                color="color-soft-text"
+                color="--si-sys-color-text-secondary"
               ></IxIcon>
               <div className={styles.Search__NoIconsFound}>No icons found</div>
               <div className={styles.Search__AdaptOrRequest}>

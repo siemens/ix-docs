@@ -37,9 +37,12 @@ export default function OpenStackblitz(
               framework: props.framework,
               name: props.mount,
               sourcePath: props.files,
-              version:
-                (context.siteConfig.customFields.playgroundVersion as string) ??
-                'latest',
+              version: {
+                ix: context.siteConfig.customFields
+                  .playgroundVersion as string,
+                icons: context.siteConfig.customFields
+                  .playgroundIconsVersion as string,
+              },
             });
           }}
         >

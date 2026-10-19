@@ -14,18 +14,20 @@ import {
 
 const manifest = {
   entries: [
-    { group: 'color.background', type: 'color' },
-    { group: 'color.background', type: 'color' },
-    { group: 'color.text', type: 'color' },
-    { group: 'color.border', type: 'color' },
-    { group: 'color.effects.shadow', type: 'shadow' },
-    { group: 'typography', type: 'typography' },
+    { name: '--si-sys-color-background-1', group: 'color.background', type: 'color' },
+    { name: '--si-sys-color-background-2', group: 'color.background', type: 'color' },
+    { name: '--si-sys-color-text-primary', group: 'color.text', type: 'color' },
+    { name: '--si-sys-color-border-1', group: 'color.border', type: 'color' },
+    { name: '--si-sys-shadow-1', group: 'color.effects.shadow', type: 'shadow' },
+    { name: '--si-sys-typography-body', group: 'typography', type: 'typography' },
     {
+      name: '--si-sys-sizing-size-1',
       group: 'sizing.size',
       type: 'sizing',
       applicability: { densityOverrides: ['compact'] },
     },
     {
+      name: '--si-sys-sizing-border-radius-1',
       group: 'sizing.border-radius',
       type: 'sizing',
       applicability: { densityOverrides: [] },
@@ -134,5 +136,20 @@ test('selects exactly one section for a table', () => {
     () =>
       selectTokenTableSection(manifest.entries, 'BorderTable', 'color.text'),
     /does not match/
+  );
+});
+
+test('orders numbered token series naturally', () => {
+  const entries = ['10', '2', '1', '11', '9'].map((index) => ({
+    name: `--si-sys-color-data-categorical-${index}`,
+    group: 'color.data',
+    type: 'color',
+  }));
+
+  assert.deepEqual(
+    selectTokenTableSection(entries, 'ColorTable', 'color.data').map(
+      (entry) => entry.name.split('-').pop()
+    ),
+    ['1', '2', '9', '10', '11']
   );
 });

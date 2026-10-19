@@ -16,6 +16,7 @@ import {
 } from '@site/src/lib/design-tokens';
 import { useLayoutEffect, useMemo, useRef, useState } from 'react';
 import CopyButton from '../UI/CopyButton';
+import TokenDescription from '../UI/TokenDescription';
 import styles from './DensityTable.module.css';
 
 type ResolvedValue = { value: string; px?: string };
@@ -128,8 +129,7 @@ function BrowserOnlyDensityTable({
               <ValueCell resolved={values[entry.name]?.default} />
               <ValueCell resolved={values[entry.name]?.compact} />
               <td>
-                {entry.description ??
-                  'No description is provided by the package manifest.'}
+                <TokenDescription description={entry.description} />
               </td>
             </tr>
           ))}
@@ -142,10 +142,7 @@ function BrowserOnlyDensityTable({
 const DensityTable = ({ section }: { section: string }) => {
   const manifest = usePluginData('design-tokens') as DesignTokenManifest;
   const entries = useMemo(
-    () =>
-      selectTokenTableSection(manifest.entries, 'DensityTable', section).sort(
-        (a, b) => a.name.localeCompare(b.name, 'en', { numeric: true })
-      ),
+    () => selectTokenTableSection(manifest.entries, 'DensityTable', section),
     [manifest, section]
   );
 
