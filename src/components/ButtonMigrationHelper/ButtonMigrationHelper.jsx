@@ -79,7 +79,8 @@ export default function ButtonMigrationHelper() {
   return (
     <div
       style={{
-        border: 'var(--theme-std-bdr-1)',
+        border:
+          'var(--si-sys-sizing-border-width-default) solid var(--si-sys-color-border-2)',
         padding: '1rem',
         borderRadius: '8px',
       }}

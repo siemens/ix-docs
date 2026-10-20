@@ -53,7 +53,9 @@ export default function VersionSelection({ value }: { value: VersionFile }) {
     }
     if (el) {
       const handler = (e: Event) => {
-        (e.target as HTMLElement).querySelector<HTMLAnchorElement>('a[href]')?.click();
+        (e.target as HTMLElement)
+          .querySelector<HTMLAnchorElement>('a[href]')
+          ?.click();
       };
       el.addEventListener('itemClick', handler);
       dropdownListenerRef.current = { el, handler };
@@ -72,10 +74,13 @@ export default function VersionSelection({ value }: { value: VersionFile }) {
             aria-haspopup="listbox"
           >
             <span>
-              <IxTypography textColor="std" format="label-lg">
+              <IxTypography textColor="std" format="body-lg">
                 {currentVersion?.label}
               </IxTypography>
-              <IxIcon color="color-std-text" name={iconChevronDown} />
+              <IxIcon
+                color="--si-sys-color-text-primary"
+                name={iconChevronDown}
+              />
             </span>
           </IxButton>
           <IxDropdown ref={dropdownRef} trigger="custom-version-selection">

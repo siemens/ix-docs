@@ -13,7 +13,7 @@
     "@siemens/ix-vue": "<VERSION>",
     "@siemens/ix-aggrid": "<VERSION>",
     "@siemens/ix-echarts": "latest",
-    "@siemens/ix-icons": "latest",
+    "@siemens/ix-icons": "<ICONS_VERSION>",
     "@vuelidate/core": "^2.0.3",
     "@vuelidate/validators": "^2.0.4",
     "ag-grid-community": "^30.2.0",

@@ -1,3 +1,10 @@
+import {
+  extractTokenTableUsages,
+  selectTokenTableSection,
+  createTokenTableTagRegex,
+  tokenTableNames,
+} from '../../../src/lib/design-tokens/sections';
+
 export function extractPlaygroundImports(content: string) {
   const imports = new Map<string, string>();
 
@@ -125,49 +132,51 @@ export function replaceSinceTags(content: string) {
   );
 }
 
-function buildTypographySnippetBlock(format: string) {
+type TokenManifestEntry = {
+  name: string;
+  sourcePath: string;
+  group: string;
+  type: string;
+  description?: string;
+  applicability?: { densityOverrides: readonly string[] };
+};
+
+function tokenManifestTable(entries: TokenManifestEntry[]) {
   return [
-    'HTML:',
-    '```html',
-    `<ix-typography format="${format}"></ix-typography>`,
-    '```',
-    '',
-    'Angular:',
-    '```html',
-    `<ix-typography format="${format}"></ix-typography>`,
-    '```',
-    '',
-    'Angular standalone:',
-    '```html',
-    `<ix-typography format="${format}"></ix-typography>`,
-    '```',
-    '',
-    'React:',
-    '```jsx',
-    `<IxTypography format="${format}"></IxTypography>`,
-    '```',
-    '',
-    'Vue:',
-    '```vue',
-    `<IxTypography format="${format}"></IxTypography>`,
-    '```',
+    '| Token | Description | CSS expression | Source token |',
+    '| --- | --- | --- | --- |',
+    ...entries.map(
+      (entry) =>
+        `| \`${escapeMarkdownTableValue(entry.name)}\` | ${escapeMarkdownTableValue(entry.description ?? 'No description is provided by the package manifest.')} | \`var(${escapeMarkdownTableValue(entry.name)})\` | \`${escapeMarkdownTableValue(entry.sourcePath)}\` |`
+    ),
   ].join('\n');
 }
 
-export function replaceTypographyTablesWithMarkdown(content: string) {
-  const typographyTableRegex =
-    /<TypographyTable\b[^>]*typographyName=("([^"]+)"|'([^']+)')[^>]*\/?>(?:<\/TypographyTable>)?/g;
-
-  return content.replace(
-    typographyTableRegex,
-    (_fullMatch, _attr, doubleQuoted, singleQuoted) => {
-      const format = doubleQuoted ?? singleQuoted;
-      if (!format) {
-        return _fullMatch;
-      }
-
-      return buildTypographySnippetBlock(format);
+export function replaceTokenTablesWithMarkdown(
+  content: string,
+  allEntries: TokenManifestEntry[]
+) {
+  return content.replace(createTokenTableTagRegex(), (tag, componentName) => {
+    const [usage] = extractTokenTableUsages(tag, 'llms');
+    try {
+      return tokenManifestTable(
+        selectTokenTableSection(allEntries, usage.table, usage.section)
+      );
+    } catch (error) {
+      throw new Error(
+        `Cannot render ${componentName} from the generated manifest: ${(error as Error).message}`
+      );
     }
+  });
+}
+
+export function removeTokenTableImports(content: string) {
+  return content.replace(
+    new RegExp(
+      `import\\s+(${tokenTableNames.join('|')})\\s+from\\s+['"]@site\\/src\\/components\\/\\1['"];?`,
+      'g'
+    ),
+    ''
   );
 }
 
