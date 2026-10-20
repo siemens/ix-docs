@@ -3,7 +3,6 @@
  * bundles Infima by default. Infima is a CSS framework designed to
  * work well for content-centric websites.
  */
-@use '@siemens/ix/scss/foundation';
 
 @use './overwrite/doc-sidebar';
 @use './overwrite/navbar';
@@ -29,7 +28,12 @@
 @tailwind components;
 @tailwind utilities;
 
-$font-family: 'SiemensSans Pro', Arial, Helvetica, sans-serif;
+$font-family:
+  'SiemensSans Pro VF', 'SiemensSans Pro', Arial, Helvetica, sans-serif;
+
+body {
+  font-family: $font-family;
+}
 
 #__docusaurus {
   color: var(--si-sys-color-text-primary);
@@ -71,10 +75,6 @@ $font-family: 'SiemensSans Pro', Arial, Helvetica, sans-serif;
   --ifm-font-weight-bold: var(--si-ref-typography-font-weight-sbold);
   --ifm-heading-font-weight: var(--ifm-font-weight-bold);
   --ifm-navbar-link-color: var(--si-sys-color-text-primary);
-}
-
-.markdown {
-  font: var(--si-sys-typography-body-paragraph);
 }
 
 b,
