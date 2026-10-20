@@ -29,6 +29,8 @@ Dropdown containers allow users to select one option from a list. Selecting one 
 - **Label:** Set a label for the dropdown item. We typically use short labels including verbs.
 - **Trigger:** The trigger defines which element opens the dropdown. A trigger should also be defined for a dropdown submenu. We typically use a button as the trigger element.
 - **Anchor:** An anchor defines where the dropdown is placed. When no anchor is defined the trigger element is used as the anchor.
+- **Anchor position:** Set `anchorPosition` to place a dropdown at viewport coordinates without a trigger or anchor. This is useful e.g. for a context menu whose position is known when the dropdown is rendered.
+- **Point positioning:** Call `showAt(x, y)` to open a dropdown at viewport coordinates, or move it while it is open. This position lasts until the dropdown closes and does not change `anchorPosition`.
 - **Close behavior:** Defines whether a click inside and/or outside the dropdown closes the dropdown. A submenu is always closed together with the parent dropdown. Three Options are possible:
   - Inside: clicking within the dropdown closes the dropdown.
   - Outside: clicking outside the dropdown closes the dropdown.
@@ -43,7 +45,7 @@ Dropdown containers allow users to select one option from a list. Selecting one 
 
 - **Text truncation:** The labels of the items and the header only consist of one line. A truncation only occurs if there is not enough space on the screen.
 - **Scrollbar:** A dropdown is provided with a scrollbar when the dropdown takes up 50% of the screen.
-- **Placement:** The position depends on the trigger/anchor element (e.g. a button). By default, the dropdown is displayed at the bottom right of the trigger element. When there is not enough space for the selected placement, it is corrected automatically. The placement of the submenu is always generated automatically.
+- **Placement:** By default, the dropdown is positioned relative to its trigger or anchor, and displayed at the bottom right. If there is not enough room, its placement is adjusted automatically. Submenu placement is also determined automatically. When `anchorPosition` or `showAt` is used, the supplied viewport point positions the dropdown instead of the trigger or anchor.
 - **Quick actions:** Quick actions only consist of icons, therefore, it is important to use icons that are understandable without a label or tooltip. A quick action bar can also be used without additional items in the dropdown.
 
 ![Dropdown in Context](https://www.figma.com/design/wEptRgAezDU1z80Cn3eZ0o/iX-Pattern-Illustrations?node-id=2463-3302&t=QaiBJKNOwHMdBuk2-4)
