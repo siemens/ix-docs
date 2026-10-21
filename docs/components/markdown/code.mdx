@@ -15,6 +15,14 @@ Set the `markdown` property to the Markdown source. Place `ix-markdown` in the d
 
 <MarkdownPlayground height="40rem" />
 
+Fenced code is shown in a [code block](../code-block). The info string sets the language, and a name in square brackets sets the filename:
+
+````md
+```ts [check.ts]
+export const limit = 6.5;
+```
+````
+
 ## Streaming
 
 Set `streaming` while the Markdown source is still growing, e.g. while an LLM response arrives, and update `markdown` with the complete source received so far (not only the new chunk).
@@ -41,7 +49,6 @@ Directives use the [generic directives syntax](https://talk.commonmark.org/t/gen
 - **Actions:** When a button with an `action` attribute is clicked, `ix-markdown` emits `actionClick` with `{ name, attributes }`. `name` is the value of `action`, `attributes` contains `variant`, `icon` and `action`.
 - **Callout types:** `info` (also `note`), `success` (also `tip`), `warning` (also `caution`), `danger` (shown as alarm) and `critical`. Unknown types fall back to `info`.
 - **Icons:** Icons used in Directives must be [registered](../../icons/developing-with-icons.md#reference-icons-by-name) by the application. Icons without `label` are hidden from assistive technologies.
-- **Allowed attributes:** Built-in Directives only pass the attributes listed above.
 - **Unknown Directives:** Directives without a mapping show their content. Directives without label or content keep their source text, so prose like `Ask me:later` is not affected.
 
 ```md
@@ -77,7 +84,7 @@ Each framework package provides `createMarkdownComponent` to use components of y
 | `@siemens/ix-react`   | `createMarkdownComponent(MyComponent)`. The component receives the context as `ctx` prop. It's mounted in its own React root, so React context of the surrounding tree is not available.                                                                                                                                 |
 | `@siemens/ix-vue`     | `createMarkdownComponent(MyComponent)`. The context fields are passed as props. Call it inside `setup()` (or pass the app context as second argument) so plugins, provide/inject, router and i18n keep working.                                                                                                          |
 
-## Options
+## Rendering options
 
 The `options` property takes a plain object. Share one object between views and replace the object to apply changes.
 
@@ -95,8 +102,26 @@ Rendering is safe by default, also for the output of plugins:
 - Raw HTML is shown as text, only `<br>` becomes a line break.
 - Links are limited to http(s), mailto and relative URLs and open in a new tab.
 - Images are limited to http(s) URLs.
-- Built-in Directives only pass allowlisted attributes.
+- Built-in Directives only pass their listed attributes, see [Directives](#directives).
 
 Content is rendered on the client only.
+
+## Styling
+
+Adjust the density and look of a Markdown view with these CSS custom properties on `ix-markdown`. They default to iX theme tokens.
+
+- **Text and spacing:** `--ix-markdown--color`, `--ix-markdown--font`, `--ix-markdown-block--gap`, `--ix-markdown-heading--margin-top`, `--ix-markdown-heading-1--font` to `--ix-markdown-heading-6--font`
+- **Lists:** `--ix-markdown-list--padding-inline-start`, `--ix-markdown-list-item--gap`
+- **Block quotes:** `--ix-markdown-blockquote--border-color`, `--ix-markdown-blockquote--border-width`, `--ix-markdown-blockquote--color`, `--ix-markdown-blockquote--padding-inline-start`
+- **Links:** `--ix-markdown-link--color`, `--ix-markdown-link--color--hover`, `--ix-markdown-link--color--active`, `--ix-markdown-link--outline-color--focus`, `--ix-markdown-link--outline-width--focus`
+- **Code:** `--ix-markdown-code--font`, `--ix-markdown-code--background-color`, `--ix-markdown-code--border-color`, `--ix-markdown-code--border-radius`, `--ix-markdown-code--border-width`, `--ix-markdown-inline-code--padding-x`, `--ix-markdown-code-block--padding`
+- **Tables:** `--ix-markdown-table--font`, `--ix-markdown-table--border-color`, `--ix-markdown-table--border-width`, `--ix-markdown-table-cell--padding`, `--ix-markdown-table-header--font`, `--ix-markdown-table-header--color`, `--ix-markdown-table-header--background-color`, `--ix-markdown-table-actions--gap`
+
+```css
+ix-markdown {
+  --ix-markdown-block--gap: 0.5rem;
+  --ix-markdown-table-cell--padding: 0.25rem 0.5rem;
+}
+```
 
 <PropsApi />

@@ -19,8 +19,7 @@ The Markdown view shows Markdown source as iX-styled content. We recommend using
 ## Behavior in context
 
 - **Responsiveness:** The Markdown view takes the full width of its container. Tables and code scroll horizontally instead of growing the layout.
-- **Links:** Links open in a new tab. Only http(s), mailto and relative links are kept. Images are only loaded from http(s) URLs.
-- **Raw HTML:** HTML in the Markdown source is shown as text, so generated content can't inject markup. Only `<br>` becomes a line break.
+- **Safe content:** Links open in a new tab, and HTML in the Markdown source is shown as text, so generated content can't inject markup (see [Security](./code.mdx#security)).
 - **Accessibility:** While streaming, the Markdown view is marked as busy for assistive technologies. Icons without a label are hidden from assistive technologies.
 
 ## Dos and Don’ts
