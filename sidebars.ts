@@ -1247,6 +1247,34 @@ const sidebars: SidebarsConfig = {
           ],
         }),
         createTabItem({
+          id: 'components/markdown/index',
+          label: 'Markdown view',
+          items: [
+            {
+              id: 'components/markdown/guide',
+              label: 'Usage',
+            },
+            {
+              id: 'components/markdown/code',
+              label: 'Code',
+            },
+          ],
+        }),
+        createTabItem({
+          id: 'components/code-block/index',
+          label: 'Code block',
+          items: [
+            {
+              id: 'components/code-block/guide',
+              label: 'Usage',
+            },
+            {
+              id: 'components/code-block/code',
+              label: 'Code',
+            },
+          ],
+        }),
+        createTabItem({
           id: 'components/chat-attachment/index',
           label: 'Chat attachment',
           items: [
