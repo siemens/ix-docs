@@ -1388,6 +1388,7 @@ const sidebars: SidebarsConfig = {
     'styles/density',
     'styles/elevation',
     'styles/animation',
+    'styles/global-styles',
     {
       type: 'category',
       className: 'doc-sidebar-item-bold',

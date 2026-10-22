@@ -7,6 +7,7 @@
  * LICENSE file in the root directory of this source tree.
  */
 
+import '@siemens/ix/css/default.css';
 import './styles/global.css';
 
 import { ixPlugin } from '@siemens/ix-vue';
