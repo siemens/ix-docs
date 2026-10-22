@@ -5,6 +5,11 @@ description: 'Usage guide for the ix-date-dropdown'
 
 # Date dropdown - Usage
 
+![Date Dropdown Anatomy](https://www.figma.com/design/wEptRgAezDU1z80Cn3eZ0o/iX-Documentation-illustrations?node-id=8666-756&t=bDfNcnFLkz9AMNJS-0)
+
+1. Trigger [button](../button/guide)
+2. [Datepicker](../date-picker/guide)
+
 Date dropdowns combine a [button](../button) showing the selected date or date range with a [date picker](../date-picker) in a [dropdown](../dropdown). Use them in toolbars and filters, e.g. to select the time period of a report.
 
 ## Options
@@ -26,9 +31,11 @@ Date dropdowns combine a [button](../button) showing the selected date or date r
 - **Applying a range:** Without require confirmation, a complete range or a predefined range is applied immediately and the dropdown closes. With require confirmation, the selection is only applied when the confirm button is clicked.
 - **Closing without applying:** Closing the dropdown with only a start date picked reverts to the previously applied range. With require confirmation, clicking the cancel button or outside the dropdown, or pressing the `Escape` key reverts any pending selections. Reopening the dropdown shows the previously applied range.
 - **Confirm button:** With require confirmation, the confirm button is disabled while the selection is incomplete (e.g. a range with only a start date) or unchanged from the applied range.
-- **Interaction:** See [date picker](../date-picker/guide#behavior-in-context) for keyboard navigation within the calendar. **Escape** closes the dropdown.
+- **Interaction:** See [date picker](../date-picker/guide#behavior-in-context) for keyboard navigation within the calendar. `Escape` closes the dropdown.
 
 ## States
+
+![Dropdown States](https://www.figma.com/design/wEptRgAezDU1z80Cn3eZ0o/iX-Documentation-illustrations?node-id=8666-764&t=XjbfL7na1o1pgeN1-11)
 
 Date dropdowns have the same states as [buttons](../button/guide#states). Calendar dates inside the dropdown follow the [date picker states](../date-picker/guide#states).
 
@@ -47,7 +54,7 @@ Date dropdowns have the same states as [buttons](../button/guide#states). Calend
 </div>
 <div class="donts">
   <ul aria-label="Practices to avoid">
-    <li>Don’t use date dropdowns in forms, use [date inputs](../input-date) instead</li>
+    <li>Don’t use date dropdowns in forms, use <a href="../input-date">date inputs</a> instead</li>
     <li>Don’t overload the dropdown with too many predefined ranges</li>
   </ul>
 </div>
