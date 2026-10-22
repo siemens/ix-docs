@@ -33,6 +33,7 @@ import CodeBlock from '@theme/CodeBlock';
 import { fromKebabCaseToCamelCase } from '@site/src/lib/utils/string-format';
 import { debounce } from '@site/src/lib/utils/debounce';
 import BrowserOnly from '@docusaurus/BrowserOnly';
+import useBrokenLinks from '@docusaurus/useBrokenLinks';
 import { getIcon } from '@site/src/utils/icons';
 import { getIconSearch, IconSearchApi } from './iconSearch';
 
@@ -86,9 +87,7 @@ function getFocusableElements(container: HTMLElement): HTMLElement[] {
   return Array.from(
     container.querySelectorAll<HTMLElement>(FOCUSABLE_SELECTOR)
   ).filter(
-    (el) =>
-      !el.hasAttribute('disabled') &&
-      el.getClientRects().length > 0
+    (el) => !el.hasAttribute('disabled') && el.getClientRects().length > 0
   );
 }
 
@@ -175,7 +174,11 @@ const IconDetails: React.FC<IconDetailsProps> = ({
     const active = document.activeElement as HTMLElement | null;
 
     if (event.shiftKey) {
-      if (active === first || active === container || !container.contains(active)) {
+      if (
+        active === first ||
+        active === container ||
+        !container.contains(active)
+      ) {
         event.preventDefault();
         last.focus();
       }
@@ -388,9 +391,7 @@ const IconTiles: React.FC<{
                     name: getIcon(icon),
                   })}
                   <div className={styles.Icon__Name}>
-                    <IxTypography format="body">
-                      {icon}
-                    </IxTypography>
+                    <IxTypography format="body">{icon}</IxTypography>
                   </div>
                 </button>
                 {selectedIcon === icon && props.columnCount > 2 && (
@@ -420,6 +421,10 @@ const Icons: React.FC = () => {
   const [showRegularIcons, setShowRegularIcons] = useState<boolean>(true);
   const [showFilledIcons, setShowFilledIcons] = useState<boolean>(true);
   const [icons] = useState<string[]>(ICON_LIST.icons);
+
+  // Icon tiles render client-only, so register their hash anchors for the SSR broken-anchor check
+  const brokenLinks = useBrokenLinks();
+  icons.forEach((icon) => brokenLinks.collectAnchor(icon));
   const [columnCount, setColumnCount] = useState<number>(2);
   const [searchApi, setSearchApi] = useState<IconSearchApi | null>(null);
   const filterInputRef = useRef<HTMLIxInputElement>(null);
@@ -450,9 +455,7 @@ const Icons: React.FC = () => {
     (names: string[]) =>
       names.filter((icon) => {
         const isFilled = icon.endsWith('-filled');
-        return (
-          (showRegularIcons && !isFilled) || (showFilledIcons && isFilled)
-        );
+        return (showRegularIcons && !isFilled) || (showFilledIcons && isFilled);
       }),
     [showRegularIcons, showFilledIcons]
   );
