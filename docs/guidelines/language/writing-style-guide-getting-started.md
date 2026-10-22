@@ -26,9 +26,9 @@ Master the use of punctuation to improve the readability and comprehension of yo
 
 Learn the guidelines for using proper nouns correctly in your text. This subchapter will help you understand when and how to capitalize names, brands, and other specific terms to maintain consistency and professionalism. [Read more](./basics/capitalization-and-proper-nouns.md)
 
-## Formatting 
+## Formatting
 
-Discover how we address formatting themes such as writing addresses, dates, measurements and units, names and titles, and money and currency. This section helps you address common formatting wording issues to enhance overall user efficiency. [Read more]( ./formatting/addresses.mdx)
+Discover how we address formatting themes such as writing addresses, dates, measurements and units, names and titles, and money and currency. This section helps you address common formatting wording issues to enhance overall user efficiency. [Read more](./formatting/addresses.mdx)
 
 ## Forms and form fields
 
@@ -40,12 +40,12 @@ Explore best practices for writing common menu functions, e.g. logging in and we
 
 ## Messages
 
-Learn when and how to write all types of messages including warnings, errors, infotips, tooltips and notifications that are helpful and user-friendly. This subchapter provides strategies for communicating issues in a way that guides users towards solutions. [Read more](./messaging/messages-overview.md) 
+Learn when and how to write all types of messages including warnings, errors, infotips, tooltips and notifications that are helpful and user-friendly. This subchapter provides strategies for communicating issues in a way that guides users towards solutions. [Read more](./messaging/messages-overview.md)
 
-## Operational emails 
+## Operational emails
 
 Explore our guidelines and best practice examples for the most common operational emails in industrial applications. Whether you're managing access requests, assigning workflows, or communicating operational alarms and events, clear and consistent emails are essential. This section covers the UX writing fundamentals to keep operations running smoothly and users well-informed. [Read more](./operational-emails/overview-operational-emails/usage.mdx)
 
-## Support and resources 
+## Support and resources
 
 Learn about the UX writer role, how writers work in teams and with stakeholders, and explore the UX writing library and AI resources to build your UX writing skills. [Read more](./support-and-resources/UX-writing-principles.md)
