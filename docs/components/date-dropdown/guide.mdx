@@ -1,0 +1,68 @@
+---
+doc-type: 'tab-item'
+description: 'Usage guide for the ix-date-dropdown'
+---
+
+# Date dropdown - Usage
+
+![Date Dropdown Anatomy](https://www.figma.com/design/wEptRgAezDU1z80Cn3eZ0o/iX-Documentation-illustrations?node-id=8666-756&t=bDfNcnFLkz9AMNJS-0)
+
+1. Trigger [button](../button/guide)
+2. [Datepicker](../date-picker/guide)
+
+Date dropdowns combine a [button](../button) showing the selected date or date range with a [date picker](../date-picker) in a [dropdown](../dropdown). Use them in toolbars and filters, e.g. to select the time period of a report.
+
+## Options
+
+- **Value:** Defines the selected date or date range. When no range is set, the button shows a placeholder text, by default "No range set".
+- **Single selection:** By default, users select date ranges. Use single selection to allow selecting a single date.
+- **Predefined ranges:** Offer frequently used ranges, e.g. "Last 7 days", next to the date picker for a faster selection.
+- **Format:** Define the date format that determines how dates are displayed, e.g. `yyyy/LL/dd` for `2024/06/15`. See options [here](https://moment.github.io/luxon/#/formatting?id=table-of-tokens)
+- **Min and max dates:** See [date picker](../date-picker/guide#options).
+- **Date picker appearance:** See [date picker](../date-picker/guide#options).
+  - **Week start:** Define which day the week starts on.
+  - **Week numbers:** Show calendar weeks on the left side of the calendar when needed for reference.
+- **Button variant:** See [button](../button/guide#options).
+- **Require confirmation:** Define if selected ranges are applied directly after date / date range selection or on click on the confirm button.
+
+## Behavior in context
+
+- **Range selection:** Users select a start date and then an end date. While only a start date is picked, the button label shows a trailing separator (e.g. `2024/06/15 - `) to indicate that an end date is missing.
+- **Applying a range:** Without require confirmation, a complete range or a predefined range is applied immediately and the dropdown closes. With require confirmation, the selection is only applied when the confirm button is clicked.
+- **Closing without applying:** Closing the dropdown with only a start date picked reverts to the previously applied range. With require confirmation, clicking the cancel button or outside the dropdown, or pressing the `Escape` key reverts any pending selections. Reopening the dropdown shows the previously applied range.
+- **Confirm button:** With require confirmation, the confirm button is disabled while the selection is incomplete (e.g. a range with only a start date) or unchanged from the applied range.
+- **Interaction:** See [date picker](../date-picker/guide#behavior-in-context) for keyboard navigation within the calendar. `Escape` closes the dropdown.
+
+## States
+
+![Dropdown States](https://www.figma.com/design/wEptRgAezDU1z80Cn3eZ0o/iX-Documentation-illustrations?node-id=8666-764&t=XjbfL7na1o1pgeN1-11)
+
+Date dropdowns have the same states as [buttons](../button/guide#states). Calendar dates inside the dropdown follow the [date picker states](../date-picker/guide#states).
+
+![Date Dropdown States]( https://www.figma.com/design/wEptRgAezDU1z80Cn3eZ0o/iX-Documentation-illustrations?node-id=8666-764&t=XjbfL7na1o1pgeN1-11)
+
+## Dos and Don'ts
+
+<div class="dos-and-donts">
+<div class="dos">
+  <ul aria-label="Recommended practices">
+    <li>Do use date dropdowns in toolbars and filters to select a date or time period</li>
+    <li>Do offer predefined ranges for frequently used time periods</li>
+    <li>Do use require confirmation when applying a range triggers time-consuming actions, e.g. reloading report data</li>
+    <li>Do show the loading state while data for the selected range is loaded</li>
+  </ul>
+</div>
+<div class="donts">
+  <ul aria-label="Practices to avoid">
+    <li>Don’t use date dropdowns in forms, use <a href="../input-date">date inputs</a> instead</li>
+    <li>Don’t overload the dropdown with too many predefined ranges</li>
+  </ul>
+</div>
+</div>
+
+## Related
+
+- [Date picker](../date-picker)
+- [Date input](../input-date)
+- [Dropdown](../dropdown)
+- [Writing guidelines for date and time](../../guidelines/language/formatting/date.mdx)
