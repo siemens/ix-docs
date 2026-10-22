@@ -18,11 +18,14 @@ Toasts are UI elements where an event causes a small text field to appear on scr
 
 ## Options
 
-- **Toast types:** There are four preset toast types and one custom type:
-  - Info: Provides users with additional information about the performed action.
-  - Success: Informs users of a successfully performed action.
-  - Warning: Warns users of potential problems that could occur due to the action.
+- **Toast types:** There are seven preset toast types and one custom type:
+  - Critical: Reserve for rare, severe events threatening safety, operations or critical infrastructure. Use a toast only when users can continue working; use a modal or message bar if they must respond first.
+  - Danger: Use for destructive or irreversible actions with significant impact, e.g. deleting a configuration or stopping a production process.
   - Error: Notifies users that the action cannot be performed due to a specific problem.
+  - Warning: Use for a developing issue that needs timely attention but does not stop work, e.g. a machine approaching its operating limit.
+  - Caution: Warns users of potential problems that could occur due to the action.
+  - Information: Provides users with additional information about the performed action.
+  - Success: Informs users of a successfully performed action.
   - Custom: Adjust the icon and its color to customize your own toast messages.
 - **Header:** Add a header for the toast. Use short and concise words. We typically use 1 to 3 keywords, such as "Error occurred" or "Action completed".
 - **Message:** Add a clear and concise message providing more detailed information about the toast event. We typically provide additional context or instructions related to the event, e.g. "Please check your email for further instructions" or "Your changes have been saved successfully".
@@ -54,7 +57,7 @@ Toasts are UI elements where an event causes a small text field to appear on scr
   <div class="donts">
     <ul aria-label="Practices to avoid">
       <li>Don’t use toasts for high-priority or critical alerts that prevent the user from continuing their work (use a [modal](../messagebar) instead)</li>
-      <li>Don’t edit or reuse icons or icon colors from the four predefined toast types when creating custom toasts</li>
+      <li>Don’t edit or reuse icons or icon colors from the seven predefined toast types when creating custom toasts</li>
     </ul>
   </div>
 </div>
