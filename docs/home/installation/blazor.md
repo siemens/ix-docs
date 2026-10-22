@@ -65,4 +65,4 @@ Add required `CSS` and `Javascript` packages into the `index.html` file.
 </html>
 ```
 
-The Blazor package currently exposes the bundled `siemens-ix.css` asset. This asset remains compatible while the package maintainers add the split `default`, foundation, theme and optional global stylesheets. When the split assets become available, prefer the default stylesheet and add global styles only when your application needs them.
+SiemensIXBlazor currently requires the bundled `siemens-ix.css` stylesheet. Keep this import until the package exposes the new v6 stylesheet entry points. Once available, use `default.css` and add optional global styles only as needed.
