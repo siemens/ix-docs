@@ -23,7 +23,7 @@ The next chapter of the Industrial Experience Design System is here. This versio
 
 The time of confusing button naming is officially behind us. With this release, we’ve introduced a clear and intuitive naming convention: primary, secondary, and tertiary [buttons](/docs/components/button/guide). Now labeled exactly as such. This change improves clarity, making it easier to choose the right button for the right context.
 
-To implement this improvement, we had to introduce a breaking change. Existing variant names will need to be updated manually. Please refer to our [migration guide](/docs/home/migration/4_0_0) for detailed instructions.
+To implement this improvement, we had to introduce a breaking change. Existing variant names will need to be updated manually. Please refer to our [migration guide](https://ix.siemens.io/version-4.4.0/docs/home/migration/4_0_0) for detailed instructions.
 
 In line with brand consistency efforts, all buttons now feature slightly rounded corners, offering a more modern and approachable look. Additionally, we’ve added support for placing icons to the right of the label. Especially useful for “Next” actions, where a left-aligned arrow often felt visually off.
 
@@ -59,7 +59,7 @@ The new colors are applied automatically when migrating to this version. Therefo
 
 This release brings full compatibility with Angular 20 and up, helping teams keep their projects aligned with the latest framework improvements.
 
-To reflect this, the Angular specific peer dependencies have been updated to require at least version 20. Projects using this package will need to upgrade to Angular 20 or higher before migrating to the latest version of iX. See more in the [migration guide](/docs/home/migration/4_0_0).
+To reflect this, the Angular specific peer dependencies have been updated to require at least version 20. Projects using this package will need to upgrade to Angular 20 or higher before migrating to the latest version of iX. See more in the [migration guide](https://ix.siemens.io/version-4.4.0/docs/home/migration/4_0_0).
 
 # AG Grid update
 
