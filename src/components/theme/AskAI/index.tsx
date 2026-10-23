@@ -6,7 +6,7 @@ import { useLocation } from '@docusaurus/router';
 import { iconAi, iconSingleCheck } from '@siemens/ix-icons/icons';
 import {
   IxButton,
-  IxIconButton,
+  IxIcon,
   IxTooltip,
   IxTypography,
 } from '@siemens/ix-react';
@@ -24,10 +24,6 @@ export default function AskAI(props: { id: string; prompt: string }) {
     await navigator.clipboard.writeText(props.prompt);
     setIsCopied(true);
   }, [props.prompt]);
-
-  const viewAsMarkdown = useCallback(() => {
-    window.location.assign(`${pathname}.md`);
-  }, [pathname]);
 
   useEffect(() => {
     if (!isCopied) {
@@ -53,13 +49,14 @@ export default function AskAI(props: { id: string; prompt: string }) {
       >
         {isCopied ? 'Copied!' : 'Ask AI'}
       </IxButton>
-      <IxIconButton
+      <a
+        href={`${pathname}.md`}
         id={`show_markdown_${props.id}`}
-        icon={iconMarkdown}
-        variant="tertiary"
+        className={styles.markdown}
         aria-label="View as Markdown"
-        onClick={viewAsMarkdown}
-      />
+      >
+        <IxIcon name={iconMarkdown} size="24" aria-hidden="true" />
+      </a>
       <IxTooltip for={`#show_markdown_${props.id}`}>
         <IxTypography format="body">View as Markdown</IxTypography>
       </IxTooltip>
