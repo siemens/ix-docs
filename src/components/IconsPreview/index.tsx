@@ -332,13 +332,6 @@ const IconTiles: React.FC<{
   }, [props.iconList, props.columnCount]);
 
   useEffect(() => {
-    const hash = window.location.hash.replace('#', '');
-    if (hash) {
-      handleIconClick(hash);
-    }
-  }, []);
-
-  useEffect(() => {
     const target = pendingScrollRef.current;
     if (!target) {
       return;
@@ -358,6 +351,15 @@ const IconTiles: React.FC<{
       });
     });
   }, [selectedIcon, props.iconList, props.columnCount]);
+
+  // Must run after the scroll effect, otherwise the scroll effect clears the
+  // pending target before the selected icon state is applied.
+  useEffect(() => {
+    const hash = window.location.hash.replace('#', '');
+    if (hash) {
+      handleIconClick(hash);
+    }
+  }, []);
 
   return (
     <div className={clsx(styles.Icons)}>

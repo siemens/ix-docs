@@ -1273,11 +1273,11 @@
         "warning-rhomb",
         "warning-rhomb-filled",
         "warning-rhomb-multiple-filled",
+        "hexagon-filled",
+        "octagon-filled",
         "triangle",
         "notification-filled",
-        "warning-rhomb-multiple",
-        "flag-alt-filled",
-        "play"
+        "warning-rhomb-multiple"
       ]
     },
     {
@@ -1408,8 +1408,8 @@
         "notifications-filled",
         "notifications",
         "conversation-filled",
-        "conversation",
-        "document-filled"
+        "hexagon-filled",
+        "conversation"
       ]
     },
     {
@@ -2313,14 +2313,14 @@
       "relatedIcons": [
         "polygon",
         "polygon-line",
+        "hexagon-filled",
         "hourglass-filled",
         "signal-strength-8",
         "areachart",
         "bring-to-front",
         "star-half-filled",
         "folder-filled",
-        "notification-filled",
-        "play-stepwise-filled"
+        "notification-filled"
       ]
     },
     {
@@ -2449,10 +2449,10 @@
         "box-closed",
         "product",
         "package-filled",
+        "hexagon",
         "project-simulation",
         "project-scenarios",
-        "project-new",
-        "box-open"
+        "hexagon-filled"
       ]
     },
     {
@@ -6379,13 +6379,13 @@
         "shield-half",
         "shield",
         "shield-check-filled",
+        "hexagon-filled",
         "lock-filled",
         "shield-check",
         "add-shield-half",
         "folder-filled",
         "heart-filled",
-        "lock",
-        "tag-filled"
+        "lock"
       ]
     },
     {
@@ -7558,7 +7558,7 @@
         "checkbox",
         "split-vertically",
         "namur-ok",
-        "split-horizontally"
+        "octagon"
       ]
     },
     {
@@ -9793,13 +9793,13 @@
         "circle-filled",
         "record-filled",
         "ellipse",
+        "hexagon-filled",
         "circle",
         "draw-circle",
         "namur-diagnostics-passive-filled",
         "checkbox-empty-filled",
         "record",
-        "stop-filled",
-        "rectangle-filled"
+        "stop-filled"
       ]
     },
     {
@@ -10054,13 +10054,13 @@
         "star-filled",
         "code-ai",
         "star",
+        "ai-agent",
         "flare",
         "star-add-filled",
         "star-add",
         "shield-ai-filled",
         "shorter-ai",
-        "document-ai-filled",
-        "image-ai-filled"
+        "document-ai-filled"
       ]
     },
     {
@@ -12599,13 +12599,13 @@
         "hexagon-vertical-bars",
         "asset-outdoor",
         "product",
+        "hexagon",
         "waveform",
         "package-filled",
         "projects",
         "asset-indoor",
-        "package",
-        "box-closed",
-        "project"
+        "hexagon-filled",
+        "ai-agent"
       ]
     },
     {
@@ -13093,8 +13093,8 @@
         "missing-symbol",
         "namur-ok",
         "checkbox",
-        "namur-diagnostics-passive-filled",
-        "checkbox-empty-filled"
+        "octagon",
+        "namur-diagnostics-passive-filled"
       ]
     },
     {
@@ -13125,7 +13125,7 @@
         "checkbox",
         "split-vertically",
         "namur-ok",
-        "split-horizontally"
+        "octagon"
       ]
     },
     {
@@ -14818,9 +14818,9 @@
         "stop",
         "circle-dot",
         "circle-play",
+        "octagon",
         "square",
-        "editor-grid-none",
-        "checkbox-empty"
+        "editor-grid-none"
       ]
     },
     {
@@ -24150,11 +24150,11 @@
         "hourglass-empty",
         "hourglass",
         "polygon-filled",
+        "hexagon-filled",
         "product",
         "bring-to-front",
-        "hexagon-vertical-bars-filled",
-        "package-filled",
-        "align-center-horizontally"
+        "hexagon",
+        "hexagon-vertical-bars-filled"
       ]
     },
     {
@@ -24346,8 +24346,8 @@
         "square",
         "checkbox-empty",
         "editor-grid-none",
-        "capture",
-        "circle-dot"
+        "octagon",
+        "capture"
       ]
     },
     {
@@ -26136,10 +26136,10 @@
         "product",
         "projects",
         "align-center-horizontally",
+        "hexagon",
         "machine-b",
         "package",
-        "box-closed",
-        "distribute-objects-horizontally"
+        "box-closed"
       ]
     },
     {
@@ -26985,13 +26985,13 @@
         "spiderchart",
         "polarchart-filled",
         "doughnutchart-filled",
+        "ai-agent",
         "doughnutchart",
         "radarchart",
         "dashboard-ai-filled",
         "piechart",
         "diamond",
-        "piechart-filled",
-        "chart-types-filled"
+        "piechart-filled"
       ]
     },
     {
@@ -28104,12 +28104,12 @@
         "asset-outdoor",
         "asset-indoor",
         "product",
+        "ai-sub-agent",
         "projects",
+        "ai-agent",
         "package-filled",
-        "asset-network",
-        "folder-collapse-all",
-        "prio-high",
-        "polygon"
+        "hexagon",
+        "asset-network"
       ]
     },
     {
@@ -33048,9 +33048,9 @@
         "align-center-horizontally",
         "polygon-line",
         "chain-alternative",
+        "hexagon",
         "align-center-vertically",
-        "product",
-        "clock"
+        "product"
       ]
     },
     {
@@ -35246,9 +35246,9 @@
         "document-code-filled",
         "code-document-check",
         "document-code",
+        "ai-skill",
         "interpreter",
-        "group",
-        "document-bulk"
+        "group"
       ]
     },
     {
@@ -39060,13 +39060,13 @@
         "hexagon-vertical-bars",
         "hexagon-vertical-bars-filled",
         "asset-indoor",
+        "hexagon",
+        "ai-agent",
         "projects",
         "product",
         "align-center-horizontally",
         "polygon",
-        "package-filled",
-        "line-cap-square",
-        "package"
+        "package-filled"
       ]
     },
     {
@@ -40044,8 +40044,8 @@
         "star-add-filled",
         "star-cancelled-filled",
         "flag-filled",
-        "star-list-filled",
-        "polygon"
+        "hexagon-filled",
+        "star-list-filled"
       ]
     },
     {
@@ -44308,10 +44308,10 @@
         "radarchart",
         "doughnutchart-filled",
         "polarchart",
+        "ai-agent",
         "piechart",
         "piechart-filled",
-        "dashboard-ai-filled",
-        "diamond"
+        "dashboard-ai-filled"
       ]
     },
     {
@@ -47300,14 +47300,14 @@
       "relatedIcons": [
         "code",
         "code-script",
+        "ai-skill",
         "document-code-filled",
         "document-code",
         "interpreter-filled",
         "document-program-filled",
         "parameter",
         "interpreter",
-        "document-program",
-        "ai"
+        "document-program"
       ]
     },
     {
@@ -47464,6 +47464,7 @@
       ],
       "description": "A solid black icon of a shield with stylized AI lettering, representing artificial intelligence security and protection.",
       "relatedIcons": [
+        "ai-agent",
         "shield-half",
         "add-shield-half",
         "shield-check-filled",
@@ -47472,8 +47473,7 @@
         "shield-check",
         "shield",
         "shield-filled",
-        "sword-swing",
-        "generic-device-shield"
+        "sword-swing"
       ]
     },
     {
@@ -47537,9 +47537,9 @@
         "asset-outdoor",
         "coins-filled",
         "coins",
+        "hexagon",
         "line-cap-square",
-        "shapes",
-        "maintenance-octagon"
+        "shapes"
       ]
     },
     {
@@ -47669,10 +47669,10 @@
         "question-mark",
         "inquiry-filled",
         "inquiry",
+        "ai-agent",
         "inquiry-mail",
         "about",
-        "info",
-        "namur-out-of-spec"
+        "info"
       ]
     },
     {
@@ -47901,7 +47901,236 @@
         "checkbox",
         "split-vertically",
         "namur-ok",
-        "split-horizontally"
+        "octagon"
+      ]
+    },
+    {
+      "id": 1479,
+      "name": "ai-skill",
+      "categories": [
+        "Actions",
+        "Data and analytics"
+      ],
+      "tags": [
+        "ai",
+        "skill",
+        "capability",
+        "model",
+        "code",
+        "function",
+        "automation",
+        "intelligence",
+        "feature",
+        "plugin"
+      ],
+      "description": "A solid black icon of a star-like spark inside curly brackets, representing an AI-powered skill or capability within code or a system.",
+      "relatedIcons": [
+        "code-ai",
+        "ai-agent",
+        "scripts",
+        "script-add",
+        "script",
+        "parameter",
+        "code-function",
+        "document-program-filled",
+        "document-code-filled",
+        "code"
+      ]
+    },
+    {
+      "id": 1480,
+      "name": "hexagon",
+      "categories": [
+        "Navigation",
+        "Status and feedback"
+      ],
+      "tags": [
+        "hexagon",
+        "polygon",
+        "shape",
+        "badge",
+        "frame",
+        "container",
+        "border",
+        "marker",
+        "highlight"
+      ],
+      "description": "A black outline icon of a hexagon, representing a generic container or badge for highlighting content or status.",
+      "relatedIcons": [
+        "hexagon-filled",
+        "project",
+        "octagon",
+        "spatial",
+        "hexagon-vertical-bars-filled",
+        "package",
+        "box-closed",
+        "product",
+        "ai-agent",
+        "warning-hexagon"
+      ]
+    },
+    {
+      "id": 1481,
+      "name": "octagon",
+      "categories": [
+        "Navigation",
+        "Status and feedback"
+      ],
+      "tags": [
+        "octagon",
+        "stop",
+        "warning",
+        "alert",
+        "error",
+        "boundary",
+        "shape",
+        "frame",
+        "badge",
+        "indicator"
+      ],
+      "description": "A black outline icon of an octagonal frame, representing stop or warning status indicators.",
+      "relatedIcons": [
+        "octagon-filled",
+        "warning-octagon",
+        "hexagon",
+        "warning-octagon-filled",
+        "namur-diagnostics-passive",
+        "square",
+        "checkbox-empty",
+        "editor-grid-none",
+        "hexagon-filled",
+        "circle-stop"
+      ]
+    },
+    {
+      "id": 1482,
+      "name": "ai-sub-agent",
+      "categories": [
+        "Actions",
+        "Data and analytics"
+      ],
+      "tags": [
+        "ai",
+        "agent",
+        "sub-agent",
+        "assistant",
+        "automation",
+        "task-bot",
+        "microservice",
+        "worker",
+        "delegation",
+        "orchestration"
+      ],
+      "description": "A solid black icon of three hexagonal nodes with star-like centers, representing specialized AI sub-agents or delegated automated tasks.",
+      "relatedIcons": [
+        "ai-agent",
+        "hexagon-vertical-bars",
+        "hexagon-vertical-bars-filled",
+        "hexagon",
+        "asset-outdoor",
+        "projects",
+        "product",
+        "hexagon-filled",
+        "machine-c-filled",
+        "asset-indoor"
+      ]
+    },
+    {
+      "id": 1483,
+      "name": "hexagon-filled",
+      "categories": [
+        "Navigation",
+        "Status and feedback"
+      ],
+      "tags": [
+        "hexagon",
+        "shape",
+        "badge",
+        "marker",
+        "token",
+        "tile",
+        "indicator",
+        "status",
+        "container",
+        "background"
+      ],
+      "description": "A solid black icon of a hexagon, representing a generic container or marker shape.",
+      "relatedIcons": [
+        "hexagon",
+        "project",
+        "octagon-filled",
+        "shield-filled",
+        "spatial",
+        "notification-filled",
+        "ellipse-filled",
+        "checkbox-empty-filled",
+        "product",
+        "octagon"
+      ]
+    },
+    {
+      "id": 1484,
+      "name": "ai-agent",
+      "categories": [
+        "Actions",
+        "Data and analytics"
+      ],
+      "tags": [
+        "ai",
+        "agent",
+        "assistant",
+        "automation",
+        "bot",
+        "intelligence",
+        "smart",
+        "autonomous",
+        "service",
+        "helper"
+      ],
+      "description": "A solid black icon of a hexagonal badge with a central four-pointed star, representing an autonomous AI assistant or agent.",
+      "relatedIcons": [
+        "ai-sub-agent",
+        "shield-ai-filled",
+        "ai-skill",
+        "hexagon",
+        "hexagon-vertical-bars-filled",
+        "ai",
+        "asset-outdoor",
+        "projects",
+        "hexagon-vertical-bars",
+        "code-ai"
+      ]
+    },
+    {
+      "id": 1485,
+      "name": "octagon-filled",
+      "categories": [
+        "Navigation",
+        "Status and feedback"
+      ],
+      "tags": [
+        "octagon",
+        "stop",
+        "warning",
+        "alert",
+        "error",
+        "prohibition",
+        "block",
+        "shape",
+        "badge"
+      ],
+      "description": "A solid black icon of an octagonal shape, representing stop, warning, or highlighted status.",
+      "relatedIcons": [
+        "octagon",
+        "hexagon-filled",
+        "warning-octagon-filled",
+        "rhomb-filled",
+        "ellipse-filled",
+        "hexagon",
+        "warning-octagon",
+        "shield-filled",
+        "circle-filled",
+        "namur-diagnostics-passive"
       ]
     }
   ]
