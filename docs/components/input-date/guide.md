@@ -31,7 +31,7 @@ formReady: true
 - **Text alignment:** See [form field](../forms-field/guide#options) (by default at start).
 - **Error message**: Feedback text when date is not parsable. We typically use this to inform users that the entered date format is incorrect and guide them to enter a valid date.
 - **Format**: Specify the date format, default `yyyy/LL/dd` to ensure that dates are entered in a consistent and recognizable format.
-- **Require confirmation**: Define if dates selected in the date picker are applied directly after selection or on click on the confirm button.
+- **Require confirmation**: Define if dates selected in the date picker are applied directly after selection or on clicking the confirm button.
 
 ## Behavior in context
 

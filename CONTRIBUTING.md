@@ -28,8 +28,8 @@ A valid `GITHUB_TOKEN` is required to build or start the documentation site (`pn
 
 - Examples (code and preview) are automatically provided via artifacts from the [siemens/ix](https://github.com/siemens/ix) repository during the start and build process
 - By default, examples are taken from the `siemens/ix` release set in `.env.production` (e.g. `IX_REPO_BRANCH='@siemens/ix@5.3.0'`)
-- If your contribution depends on new or updated examples from an open `siemens/ix` pull request, point the build at that pull request's artifacts (see [Using Examples from an Open siemens/ix Pull Request](#using-examples-from-an-open-siemensix-pull-request)). The docs PR can be built and reviewed this way, but can only be merged once the examples are part of a `siemens/ix` release.
-- This applies to all contributors, including non-maintainers: you can open your docs PR while the `siemens/ix` pull request is still in progress, but it can't be merged until the examples are included in a `siemens/ix` release.
+- If your contribution depends on new or updated examples from an open `siemens/ix` pull request, point the build at that pull request's artifacts (see [Using Examples from an Open siemens/ix Pull Request](#using-examples-from-an-open-siemensix-pull-request)).
+- This applies to all contributors, including non-maintainers. While the `siemens/ix` pull request is still in progress, docs PRs can be open, but they can't be merged until the examples are included in a `siemens/ix` release.
 
 ### Figma API Token (Optional)
 
@@ -100,11 +100,11 @@ IX_REPO_PR='1234' # Number of the siemens/ix pull request
 
 - Both `IX_REPO_TYPE='pull request'` and `IX_REPO_PR` are required. Setting the PR number alone has no effect.
 - Values in `.env.pullrequest` override `.env.production`, both locally and in the PR build. Don't edit `.env.production` for this.
-- The `siemens/ix` pull request's CI must have completed successfully so its artifacts are available for download.
+- The `siemens/ix` pull request's build workflow (continuous integration, CI) must have completed successfully so its artifacts are available for download.
 - The deploy workflows delete `.env.pullrequest` before building, so deployments always use the release in `.env.production`.
 - The `check-pr-env` job in the PR workflow fails as long as `.env.pullrequest` exists. This is expected while your PR depends on unreleased `siemens/ix` changes.
 
-Before merging your docs PR:
+Before merging your PR:
 
 1. Wait until the `siemens/ix` changes are merged and released.
 2. Update `IX_REPO_BRANCH` in `.env.production` to the new release (e.g. `'@siemens/ix@5.4.0'`).

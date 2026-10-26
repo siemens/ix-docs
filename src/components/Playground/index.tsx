@@ -82,7 +82,7 @@ export type PlaygroundProps = Readonly<{
 }>;
 
 /**
- * Allows a parent (e.g. PlaygroundPropToggle) to share the preview/code
+ * Allows a parent, e.g. PlaygroundPropToggle, to share the preview/code
  * selection between multiple playgrounds that replace each other.
  */
 export const PlaygroundViewContext = createContext<{
