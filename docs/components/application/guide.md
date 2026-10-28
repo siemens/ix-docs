@@ -23,15 +23,15 @@ It's important to note that the application component focuses solely on layoutin
 
 ![Application without menu](https://www.figma.com/design/wEptRgAezDU1z80Cn3eZ0o/iX-Documentation-illustrations?node-id=8703-2228&t=uzu3t0dnfGlKiQQi-11)
 
-1. [Application header](/docs/components/application-header/guide)
-2. [Content](/docs/components/content/guide)
+1. [Application header](../application-header/guide)
+2. [Content](../content/guide)
 
-The [application menu](/docs/components/application-menu/guide) is optional. As an exception, you can omit it in single-page applications. A single-page application has one view and no main navigation, so a menu has nothing to navigate to. If your application has more than one main section, use the application menu.
+The [application menu](../application-menu/guide) is part of the standard layout. We recommend omitting it only if your application has one view and no main navigation, e.g. a single-page application, because then a menu has nothing to navigate to. If your application has more than one main section, use the application menu.
 
 Without the menu, the layout behaves as follows:
 - The content uses the full width of the application below the header (2).
 - At breakpoint "sm", the header (1) shows no menu icon, because there is no menu to open.
-- At breakpoint "sm", the application switch isn't available either, because it normally moves into the menu. If you need it, add your own trigger, e.g. a button in the content or in a slot of the [application header](/docs/components/application-header/guide).
+- At breakpoint "sm", the application switch isn't available either, because it normally moves into the menu. If you need it, add your own trigger, e.g. a button in the content or in a slot of the [application header](../application-header/guide).
 
 ## Application switch
 
