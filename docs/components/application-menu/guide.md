@@ -6,6 +6,8 @@ description: 'Usage guide for the ix-menu-settings, ix-menu, ix-menu-item, ix-me
 
 The navigation menu is an essential part of your application. It offers a way to directly navigate to the main application parts and it can give your users access to legal and version information, and access to settings.
 
+The application menu is optional. As an exception, you can omit it in single-page applications without main navigation. See [application without menu](../application#application-without-menu) for the resulting layout.
+
 ![Navigation menu collapsed and expanded](https://www.figma.com/design/wEptRgAezDU1z80Cn3eZ0o/iX-Documentation-illustrations?node-id=990-122297&t=ePzRHLjXBksLOgto-4)
 
 1. Expand/collapse icon button
