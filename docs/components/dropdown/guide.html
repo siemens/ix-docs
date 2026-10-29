@@ -48,7 +48,7 @@
   font-display: swap;
 }</style>
 <link rel="describedby" type="text/markdown" href="/llms.txt"><link rel="stylesheet" href="/assets/css/styles.59cf43b1.css">
-<script src="/assets/js/runtime~main.4b7f13fc.js" defer="defer"></script>
+<script src="/assets/js/runtime~main.2cb061f2.js" defer="defer"></script>
 <script src="/assets/js/main.559054ef.js" defer="defer"></script>
 </head>
 <body class="navigation-with-keyboard" data-theme="light">
@@ -76,7 +76,9 @@
 <li><strong>Icon:</strong> Icons can be displayed to support the label and make the item more easy to discover by the user. The icon should be widely known for representing the action or function among your users.</li>
 <li><strong>Label:</strong> Set a label for the dropdown item. We typically use short labels including verbs.</li>
 <li><strong>Trigger:</strong> The trigger defines which element opens the dropdown. A trigger should also be defined for a dropdown submenu. We typically use a button as the trigger element.</li>
-<li><strong>Anchor:</strong> An anchor defines where the dropdown is placed. When no anchor is defined the trigger element is used as the anchor.</li>
+<li><strong>Anchor:</strong> An anchor defines where the dropdown is placed. When no anchor is defined, the trigger element is used as the anchor.</li>
+<li><strong>Anchor position:</strong> Set <code>anchorPosition</code> to place a dropdown at viewport coordinates, independent of a trigger or anchor. While set, it takes precedence over both for positioning. It doesn&#x27;t open the dropdown by itself. This is useful, e.g. for a context menu where the position is known when the dropdown is rendered.</li>
+<li><strong>Point positioning:</strong> Call <code>showAt(x, y)</code> to open a dropdown at viewport coordinates, or move it while it is open. While the dropdown is open, this position takes precedence over <code>anchorPosition</code>, the anchor and the trigger. It is discarded when the dropdown closes and does not change <code>anchorPosition</code>, so the next time the dropdown opens it is positioned by <code>anchorPosition</code> again if set, otherwise by the anchor or trigger.</li>
 <li><strong>Close behavior:</strong> Defines whether a click inside and/or outside the dropdown closes the dropdown. A submenu is always closed together with the parent dropdown. Three Options are possible:<!-- -->
 <ul>
 <li>Inside: clicking within the dropdown closes the dropdown.</li>
@@ -93,8 +95,9 @@
 <ul>
 <li><strong>Text truncation:</strong> The labels of the items and the header only consist of one line. A truncation only occurs if there is not enough space on the screen.</li>
 <li><strong>Scrollbar:</strong> A dropdown is provided with a scrollbar when the dropdown takes up 50% of the screen.</li>
-<li><strong>Placement:</strong> The position depends on the trigger/anchor element (e.g. a button). By default, the dropdown is displayed at the bottom right of the trigger element. When there is not enough space for the selected placement, it is corrected automatically. The placement of the submenu is always generated automatically.</li>
-<li><strong>Quick actions:</strong> Quick actions only consist of icons, therefore, it is important to use icons that are understandable without a label or tooltip. A quick action bar can also be used without additional items in the dropdown.</li>
+<li><strong>Placement:</strong> By default, the dropdown is positioned relative to its trigger or anchor, and displayed at the bottom right. If there is not enough room, its placement is adjusted automatically. Submenu placement is also determined automatically. When <code>anchorPosition</code> or <code>showAt</code> is used, the supplied viewport point positions the dropdown instead of the trigger or anchor.</li>
+<li><strong>Focus:</strong> When a dropdown is opened with <code>showAt</code>, or at <code>anchorPosition</code> without a trigger, there is no trigger element to keep focus. Focus therefore moves into the dropdown, and returns to the previously focused element when the dropdown closes. Assistive technologies are informed about the active item.</li>
+<li><strong>Quick actions:</strong> Quick actions only consist of icons, therefore it&#x27;s important to use icons that are understandable without a label or tooltip. A quick action bar can also be used without additional items in the dropdown.</li>
 </ul>
 <p><img decoding="async" loading="lazy" src="/figma/wEptRgAezDU1z80Cn3eZ0o_2463_3302.png" alt="Dropdown in Context" class="img_QgcI"></p>
 <h2 class="anchor anchorWithStickyNavbar_loeA" id="states">States<a href="#states" class="hash-link" aria-label="Direct link to States" title="Direct link to States">​</a></h2>

@@ -493,6 +493,31 @@ import { IxButton, IxDropdown, IxDropdownItem } from '@siemens/ix-vue';
 </template>
 ```
 
+## Open a dropdown at a pointer location (e.g. context menu)
+
+Example is supported since version 6.0.0
+
+Use `showAt(x, y)` with the viewport coordinates from the `contextmenu` event. The dropdown can also be positioned declaratively with its `anchorPosition` property (see the API below).
+
+```html
+Right-click here
+
+<ix-dropdown id="context-menu" role="menu">
+	<ix-dropdown-item label="Open"></ix-dropdown-item>
+	<ix-dropdown-item label="Delete"></ix-dropdown-item>
+</ix-dropdown>
+
+<script>
+	const target = document.querySelector('#target');
+	const menu = document.querySelector('#context-menu');
+
+	target.addEventListener('contextmenu', (event) => {
+		event.preventDefault();
+		menu.showAt(event.clientX, event.clientY);
+	});
+</script>
+```
+
 ## API for ix-dropdown
 
 ### Properties
