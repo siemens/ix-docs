@@ -30,7 +30,7 @@ Dropdown containers allow users to select one option from a list. Selecting one 
 - **Trigger:** The trigger defines which element opens the dropdown. A trigger should also be defined for a dropdown submenu. We typically use a button as the trigger element.
 - **Anchor:** An anchor defines where the dropdown is placed. When no anchor is defined, the trigger element is used as the anchor.
 - **Anchor position:** Set `anchorPosition` to place a dropdown at viewport coordinates, independent of a trigger or anchor. While set, it takes precedence over both for positioning. It doesn't open the dropdown by itself. This is useful, e.g. for a context menu where the position is known when the dropdown is rendered.
-- **Point positioning:** Call `showAt(x, y)` to open a dropdown at viewport coordinates, or move it while it is open. This position lasts until the dropdown closes and does not change `anchorPosition`.
+- **Point positioning:** Call `showAt(x, y)` to open a dropdown at viewport coordinates, or move it while it is open. While the dropdown is open, this position takes precedence over `anchorPosition`, the anchor and the trigger. It is discarded when the dropdown closes and does not change `anchorPosition`, so the next time the dropdown opens it is positioned by `anchorPosition` again if set, otherwise by the anchor or trigger.
 - **Close behavior:** Defines whether a click inside and/or outside the dropdown closes the dropdown. A submenu is always closed together with the parent dropdown. Three Options are possible:
   - Inside: clicking within the dropdown closes the dropdown.
   - Outside: clicking outside the dropdown closes the dropdown.
