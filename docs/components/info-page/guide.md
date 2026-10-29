@@ -25,6 +25,7 @@ Use info pages when a page-level situation interrupts the normal route and users
 ![Info page options](https://www.figma.com/design/wEptRgAezDU1z80Cn3eZ0o/iX-Documentation-illustrations?node-id=8464-68)
 
 :::info
+```Siemens employees and partners can access more illustrations in the ....
 Siemens designers can find more illustrations in the [Product illustrations Figma file](https://www.figma.com/design/7QfrdFpMmjDSDFDhTXwhZs/Product-illustrations?node-id=1-3133).
 :::
 
