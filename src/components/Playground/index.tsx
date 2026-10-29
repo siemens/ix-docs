@@ -8,7 +8,7 @@ import { FrameworkTypes } from '@site/src/hooks/use-framework';
 import { usePlaygroundThemeVariant } from '@site/src/hooks/use-playground-theme';
 import CodeBlock from '@theme/CodeBlock';
 import clsx from 'clsx';
-import React, { createContext, useContext, useEffect, useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import CodePreview, { CodePreviewFiles, SourceFiles } from '../CodePreview';
 import FrameworkSelection from '../UI/FrameworkSelection';
 import OpenStackblitz from '../UI/OpenStackblitz';
@@ -81,15 +81,6 @@ export type PlaygroundProps = Readonly<{
   onlyFramework?: FrameworkTypes;
 }>;
 
-/**
- * Allows a parent, e.g. PlaygroundPropToggle, to share the preview/code
- * selection between multiple playgrounds that replace each other.
- */
-export const PlaygroundViewContext = createContext<{
-  isPreview: boolean;
-  setIsPreview: (isPreview: boolean) => void;
-} | null>(null);
-
 function normalizeEmbeddedPreviewDocument(iframe: HTMLIFrameElement): void {
   const doc = iframe.contentDocument;
   const win = iframe.contentWindow;
@@ -119,11 +110,7 @@ function Playground(props: PlaygroundProps) {
   const defaultTheme = useDefaultTheme();
   const { playgroundThemeVariant } = usePlaygroundThemeVariant();
   const [isDark, setIsDark] = useState(playgroundThemeVariant === 'dark');
-  const sharedView = useContext(PlaygroundViewContext);
-  const [localIsPreview, setLocalIsPreview] = useState(!props.noPreview);
-  const isPreview =
-    !props.noPreview && sharedView ? sharedView.isPreview : localIsPreview;
-  const setIsPreview = sharedView?.setIsPreview ?? setLocalIsPreview;
+  const [isPreview, setIsPreview] = useState(!props.noPreview);
   const [theme, setTheme] = useState(defaultTheme);
   const iframeSrc = useBaseUrl(
     `/demo/v2/preview/html/preview-examples/${
