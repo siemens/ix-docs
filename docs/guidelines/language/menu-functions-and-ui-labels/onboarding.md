@@ -149,11 +149,21 @@ Provide a clear way for users to dismiss or postpone onboarding without confusio
 
 ## Dos and Don’ts
 
-* Do reveal information step-by-step to avoid cognitive overload
-* Do personalize the onboarding process to increase engagement and retainment
-* Don’t overload users with too much information on one screen, instead use pages or split news
-* Don’t embed critical text in images as it’s hard to translate and read
-* Don’t rely on dismissible popups for essential setup steps
+<div className="dos-and-donts">
+<div className="dos">
+  <ul aria-label="Recommended practices">
+    <li>Do reveal information step-by-step to avoid cognitive overload</li>
+    <li>Do personalize the onboarding process to increase engagement and retainment</li>
+  </ul>
+</div>
+<div className="donts">
+  <ul aria-label="Practices to avoid">
+    <li>Don’t overload users with too much information on one screen, instead use pages or split news</li>
+    <li>Don’t embed critical text in images as it’s hard to translate and read</li>
+    <li>Don’t rely on dismissible popups for essential setup steps</li>
+  </ul>
+</div>
+</div>
 
 ## Related
 

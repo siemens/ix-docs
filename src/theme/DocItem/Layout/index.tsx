@@ -3,6 +3,7 @@ import {
   useDoc,
   useDocById,
 } from '@docusaurus/plugin-content-docs/client';
+import Head from '@docusaurus/Head';
 import { useHistory } from '@docusaurus/router';
 import { useWindowSize } from '@docusaurus/theme-common';
 
@@ -27,9 +28,35 @@ import styles from './styles.module.css';
 
 type Props = WrapperProps<typeof LayoutType>;
 
+function MarkdownAlternative(): JSX.Element {
+  const { metadata } = useDoc();
+
+  return (
+    <Head>
+      <link
+        rel="alternate"
+        type="text/markdown"
+        href={`${metadata.permalink}.md`}
+      />
+    </Head>
+  );
+}
+
 export default function LayoutWrapper(props: Readonly<Props>): JSX.Element {
   const docType = useDocType();
 
+  return (
+    <>
+      <MarkdownAlternative />
+      <DocItemLayout docType={docType} {...props} />
+    </>
+  );
+}
+
+function DocItemLayout({
+  docType,
+  ...props
+}: Readonly<Props> & { docType: ReturnType<typeof useDocType> }): JSX.Element {
   if (docType === 'banner') {
     return <BannerDocItemLayout {...props} />;
   }
@@ -138,7 +165,7 @@ export function DocItemTabItemLayout({ children }: Props): JSX.Element {
 
   const sidebar = useCurrentSidebarCategory();
 
-  const parentId = metadata.id.split('/').splice(0, 2).join('/') + '/index';
+  const parentId = metadata.id.split('/').slice(0, -1).join('/') + '/index';
   const parentDoc = useDocById(parentId);
 
   return (
