@@ -123,7 +123,7 @@ At breakpoint "sm" the layout changes in the following way:
 - If slots are used, their elements move into dedicated sections in the overflow dropdown (4), accessible via the overflow icon (5).
 - If the manual overflow slot is used, its content appears at lowest position within the overflow dropdown (7).
 
-If the application has no [application menu](../application-menu) (see [application without menu](../application/guide#application-without-menu)), neither the menu icon nor the application switch is shown at breakpoint "sm". The application must provide its own trigger for the application switch if needed, e.g. a button in the content or in a header slot.
+If your application has no [application menu](../application-menu) (see [application without menu](../application/guide#application-without-menu)), neither the menu icon nor the application switch is shown at breakpoint "sm". If you need the application switch, provide another trigger, e.g. a button in the content or in a slot of the application header.
 
 ### Manual overflow menu
 - The overflow slot can be manually filled to trigger the overflow menu at any breakpoint.
