@@ -64,3 +64,5 @@ Add required `CSS` and `Javascript` packages into the `index.html` file.
   </body>
 </html>
 ```
+
+SiemensIXBlazor currently requires the bundled `siemens-ix.css` stylesheet. Keep this import until the package exposes the new v6 stylesheet entry points. Once available, use `default.css` and add optional global styles only as needed.
