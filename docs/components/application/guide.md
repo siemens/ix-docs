@@ -19,6 +19,20 @@ It's important to note that the application component focuses solely on layoutin
 2. [Application menu](/docs/components/application-menu/guide)
 3. [Content](/docs/components/content/guide)
 
+## Application without menu
+
+![Application without menu](https://www.figma.com/design/wEptRgAezDU1z80Cn3eZ0o/iX-Documentation-illustrations?node-id=8703-2228&t=uzu3t0dnfGlKiQQi-11)
+
+1. [Application header](../application-header/guide)
+2. [Content](../content/guide)
+
+The [application menu](../application-menu/guide) is part of the standard layout. We recommend omitting it only if your application has one view and no main navigation, e.g. a single-page application, because then a menu has nothing to navigate to. If your application has more than one main section, use the application menu.
+
+Without the menu, the layout behaves as follows:
+- The content uses the full width of the application below the header (2).
+- At breakpoint "sm", the header (1) shows no menu icon, because there is no menu to open.
+- At breakpoint "sm", the application switch isn't available either, because it normally moves into the menu. If you need it, add your own trigger, e.g. a button in the content or in a slot of the [application header](../application-header/guide).
+
 ## Application switch
 
 ![Application switch and modal](https://www.figma.com/design/wEptRgAezDU1z80Cn3eZ0o/iX-Pattern-Illustrations?type=design&node-id=1665-19417&mode=design&t=I0iEEuzKJJPK4Sum-11)
@@ -29,6 +43,8 @@ It's important to note that the application component focuses solely on layoutin
 4. Link to another application with icon, name and optional description
 5. Indicator "open in a new browser tab"
 6. Close icon
+
+The application switch is optional. We recommend using it only if users need to navigate across applications, e.g. in an application portfolio or system. Omit it in standalone applications.
 
 With the application switch, users can navigate across applications. The interaction control – the application switch button (1) – is in the [application header](../application-header). Clicking the button opens a modal (2) with a list of available applications your users can switch to. This list is technically defined in the application component and its content depends on your product strategy. Our lists typically contain applications belonging to a software suite, applications with a similar scope or applications a user has purchased.
 
