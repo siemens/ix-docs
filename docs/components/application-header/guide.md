@@ -45,11 +45,15 @@ For applications that allow usage without login, consider alternative approaches
 
 Use the application switch (see [application](../application)) to launch and navigate between related applications. Clicking the application switch (1) opens a modal (2) with a list of available applications.
 
+The application switch is optional. We recommend using it only if users need to navigate across applications, e.g. in an application portfolio or system. Omit it in standalone applications.
+
 ### Application icon
 
 ![Application icon](https://www.figma.com/file/wEptRgAezDU1z80Cn3eZ0o?type=design&node-id=6427%3A39393&mode=design)
 
 The application icon (1) is a non-interactive visual element placed in the header to represent the application. It is displayed within a fixed size and uses a defined border radius. The standard web image formats are supported. The provided image is scaled if necessary while maintaining the aspect ratio.
+
+The application icon is optional. We recommend omitting it in general and using it only if you need to differentiate between similar applications within a system.
 
 An optional outline (2) can be added to visually separate the icon from the background when needed. It should only be used when contrast or clarity requires it.
 
@@ -117,6 +121,8 @@ At breakpoint "sm" the layout changes in the following way:
 - If the application switch (3) is used, it moves to the application menu.
 - If slots are used, their elements move into dedicated sections in the overflow dropdown (4), accessible via the overflow icon (5).
 - If the manual overflow slot is used, its content appears at lowest position within the overflow dropdown (7).
+
+If your application has no [application menu](../application-menu) (see [application without menu](../application/guide#application-without-menu)), neither the menu icon nor the application switch is shown at breakpoint "sm". If you need the application switch, provide another trigger, e.g. a button in the content or in a slot of the application header.
 
 ### Manual overflow menu
 - The overflow slot can be manually filled to trigger the overflow menu at any breakpoint.
