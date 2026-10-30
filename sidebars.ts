@@ -513,6 +513,16 @@ const sidebars: SidebarsConfig = {
             },
           ],
         }),
+        createTabItem({
+          id: 'components/generic-list/index',
+          label: 'Generic List',
+          items: [
+            {
+              id: 'components/generic-list/code',
+              label: 'Code',
+            },
+          ],
+        }),
       ],
       collapsed: true,
     },
@@ -665,7 +675,7 @@ const sidebars: SidebarsConfig = {
             {
               id: 'components/date-picker/code',
               label: 'Code',
-            }
+            },
           ],
         }),
         createTabItem({
@@ -676,10 +686,10 @@ const sidebars: SidebarsConfig = {
               id: 'components/date-time-picker/guide',
               label: 'Usage',
             },
-                        {
+            {
               id: 'components/date-time-picker/code',
               label: 'Code',
-            }
+            },
           ],
         }),
         createTabItem({
