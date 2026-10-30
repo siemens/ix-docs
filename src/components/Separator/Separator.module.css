@@ -11,6 +11,6 @@
   position: relative;
   width: 100%;
   height: 2px;
-  background-color: var(--theme-color-3);
+  background-color: var(--si-sys-color-background-2);
   margin: 1.5rem 0;
 }
