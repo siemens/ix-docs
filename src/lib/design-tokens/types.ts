@@ -13,6 +13,7 @@ export const designTokenTypes = [
   'shadow',
   'typography',
   'sizing',
+  'number',
 ] as const;
 
 export type DesignTokenType = (typeof designTokenTypes)[number];
@@ -22,6 +23,7 @@ export const designTokenSourceTypes = [
   'shadow',
   'typography',
   'dimension',
+  'number',
 ] as const;
 
 export type DesignTokenSourceType = (typeof designTokenSourceTypes)[number];

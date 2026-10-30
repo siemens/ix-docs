@@ -23,6 +23,7 @@ const sourceTypeByType: Record<DesignTokenType, DesignTokenSourceType> = {
   shadow: 'shadow',
   typography: 'typography',
   sizing: 'dimension',
+  number: 'number',
 };
 
 export class DesignTokenManifestError extends Error {
