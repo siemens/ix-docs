@@ -166,7 +166,7 @@ const config: Config = {
         redirects: [
           {
             from: '/docs/migration/uxt',
-            to: '/docs/home/migration/uxt',
+            to: '/docs/home/migration/migrationoverview',
           },
           {
             from: '/docs/home/theming/usage-developers',
