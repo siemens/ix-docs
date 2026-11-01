@@ -22,8 +22,8 @@ With our pill variants, you can apply different colors based on their purpose, i
 
 Pill variants:
 
-- **Primary**: For high visual emphasis.
-- **State-related variants**: Alarm, critical, warning, success, info and neutral.
+- **Accent**: For high visual emphasis.
+- **State-related variants**: critical, danger, warning, caution, success, information and neutral
 - **Custom**: For a customized background and label color.
 
 ![Pill variants](https://www.figma.com/design/wEptRgAezDU1z80Cn3eZ0o/iX-Pattern-Illustrations?type=design&node-id=1375-1985&mode=design&t=ZmcRP4ggXtr8b7vZ-1)
