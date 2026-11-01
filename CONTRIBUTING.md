@@ -102,13 +102,12 @@ IX_REPO_PR='1234' # Number of the siemens/ix pull request
 - Values in `.env.pullrequest` override `.env.production`, both locally and in the PR build. Don't edit `.env.production` for this.
 - The `siemens/ix` pull request's build workflow (continuous integration, CI) must have completed successfully so its artifacts are available for download.
 - The deploy workflows delete `.env.pullrequest` before building, so deployments always use the release in `.env.production`.
-- The `check-pr-env` job in the PR workflow fails as long as `.env.pullrequest` exists. This is expected while your PR depends on unreleased `siemens/ix` changes.
 
 Before merging your PR:
 
 1. Wait until the `siemens/ix` changes are merged and released.
 2. Update `IX_REPO_BRANCH` in `.env.production` to the new release (e.g. `'@siemens/ix@5.4.0'`).
-3. Delete `.env.pullrequest`. If it's merged to `main`, later local and PR builds use outdated pull request artifacts. The `check-pr-env` job passes once the file is gone.
+3. Delete `.env.pullrequest`. If it's merged to `main`/`development`, later local and PR builds use outdated pull request artifacts.
 
 The deploy workflows always build against the release in `.env.production`. If it doesn't contain the new examples yet, the deployment from `main` fails with the same `Module not found` error.
 
