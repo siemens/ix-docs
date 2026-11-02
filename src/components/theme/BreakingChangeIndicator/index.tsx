@@ -117,8 +117,7 @@ export function BreakingChangeTooltip({
       titleContent={`Changes in v${version}`}
     >
       <IxTypography format="body">
-        This component changes with v{version}. You can keep using it, check the
-        migration notes on its page when upgrading.
+        This component has breaking changes in v{version}. Click on the badge in the component to see migration notes
       </IxTypography>
     </IxTooltip>
   );
