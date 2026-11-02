@@ -45,6 +45,13 @@
   margin: 0;
 }
 
+.Title {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  min-width: 0;
+}
+
 .Tabs {
   display: flex;
   flex-direction: row;

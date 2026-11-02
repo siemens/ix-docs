@@ -10,7 +10,9 @@ import {
   DeprecatedTag,
   FormReady,
   RedirectTag,
+  SinceTag,
 } from '@site/src/components/UI/Tags';
+import { useIxVersions } from '@site/src/utils/hooks/useIxVersions';
 import clsx from 'clsx';
 import { useCallback, useMemo, useState } from 'react';
 import AskAI from '../AskAI';
@@ -64,6 +66,9 @@ export default function DocTabsHeader(
 ) {
   const { description, tabs, title, frontMatter, id } = props;
   const { siteConfig } = useDocusaurusContext();
+  const ixVersions = useIxVersions();
+  const componentVersion =
+    ixVersions?.pages[id.split('/').slice(0, -1).join('/')];
 
   const prompt = useMemo(
     () => `Use web browsing to access links and information:
@@ -79,16 +84,21 @@ I want to ask some questions`,
   return (
     <>
       <div className={styles.sticky_h1}>
-        <h1>
-          {title}
+        <div className={styles.Title}>
+          <h1>
+            {title}
 
-          <a
-            href={`#${id.replaceAll('/', '-')}`}
-            className="hash-link"
-            aria-label={title}
-            title={title}
-          ></a>
-        </h1>
+            <a
+              href={`#${id.replaceAll('/', '-')}`}
+              className="hash-link"
+              aria-label={title}
+              title={title}
+            ></a>
+          </h1>
+          {componentVersion?.since && (
+            <SinceTag message={componentVersion.since} />
+          )}
+        </div>
         <AskAI id="copy-prompt" prompt={prompt} />
       </div>
 

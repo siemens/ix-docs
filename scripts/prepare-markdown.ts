@@ -13,6 +13,7 @@ import fs from 'fs-extra';
 import os from 'os';
 import path from 'path';
 import copyTheme from './copy-theme';
+import prepareIxVersions from './prepare-ix-versions';
 
 const __dirname = path.resolve();
 
@@ -92,6 +93,7 @@ async function main() {
 
   const branch = getBranch(defaults);
   await downloadLatestArtifact(branch);
+  await prepareIxVersions();
 }
 
 function getBranch(config: BranchConfig) {
