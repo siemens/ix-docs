@@ -114,10 +114,10 @@ export function BreakingChangeTooltip({
   return (
     <IxTooltip
       for={`[${markerAttribute}]`}
-      titleContent={`Changes in v${version}`}
+      titleContent={`Breaking changes in v${version}`}
     >
       <IxTypography format="body">
-        This component has breaking changes in v{version}. Click on the badge in the component to see migration notes
+        Click on the badge in the component to see migration notes
       </IxTypography>
     </IxTooltip>
   );
