@@ -14,6 +14,14 @@ import type { PropSidebarItem } from '@docusaurus/plugin-content-docs';
 import { useLocalStorage } from './../../../../hooks/use-localStorage';
 import styles from './styles.module.css';
 import SortSwitch from '@site/src/components/theme/SortSwitch';
+import {
+  BreakingChangeIndicatorStyle,
+  BreakingChangeIndicatorSwitch,
+  BreakingChangeTooltip,
+  getBreakingChangeIndicatorVars,
+  withBreakingChangeIndicators,
+} from '@site/src/components/theme/BreakingChangeIndicator';
+import { useIxVersions } from '@site/src/utils/hooks/useIxVersions';
 
 // Reset sidebar state when sidebar changes
 // Use React key to unmount/remount the children
@@ -40,6 +48,15 @@ export default function DocRootLayoutSidebar({
   const [componentListStyle, setComponentListStyle] = useLocalStorage<
     'grouped' | 'sorted'
   >('components_list_style', 'grouped');
+
+  // TRIAL: temporary switch to compare breaking change indicator styles
+  const ixVersions = useIxVersions();
+  const breakingVersion = ixVersions?.breakingChanges?.version;
+  const [breakingIndicator, setBreakingIndicator] =
+    useLocalStorage<BreakingChangeIndicatorStyle>(
+      'trial_breaking_change_indicator',
+      'off'
+    );
 
   const [hiddenSidebar, setHiddenSidebar] = useState(false);
   const toggleSidebar = useCallback(() => {
@@ -78,6 +95,14 @@ export default function DocRootLayoutSidebar({
   if (isComponentsPath) {
     sidebarItems =
       componentListStyle === 'grouped' ? sidebar : flatSidebarItems;
+
+    if (breakingVersion) {
+      sidebarItems = withBreakingChangeIndicators(
+        sidebarItems as PropSidebarItem[],
+        ixVersions.pages,
+        breakingIndicator
+      );
+    }
   }
 
   return (
@@ -87,6 +112,7 @@ export default function DocRootLayoutSidebar({
         styles.docSidebarContainer,
         hiddenSidebarContainer && styles.docSidebarContainerHidden
       )}
+      style={getBreakingChangeIndicatorVars()}
       onTransitionEnd={(e) => {
         if (!e.currentTarget.classList.contains(styles.docSidebarContainer!)) {
           return;
@@ -97,6 +123,18 @@ export default function DocRootLayoutSidebar({
         }
       }}
     >
+      {isComponentsPath && breakingVersion && (
+        <>
+          <BreakingChangeIndicatorSwitch
+            value={breakingIndicator}
+            version={breakingVersion}
+            onChange={setBreakingIndicator}
+          />
+          {breakingIndicator !== 'off' && (
+            <BreakingChangeTooltip version={breakingVersion} />
+          )}
+        </>
+      )}
       {isComponentsPath && (
         <SortSwitch
           grouped={componentListStyle === 'grouped'}

@@ -41,7 +41,7 @@ Create a `.env` file in the project root with the required tokens:
 ```env
 GITHUB_TOKEN=your-github-token-here
 FIGMA_API_TOKEN=your-figma-api-token-here  # Optional, only for Figma updates
-IX_CHANGESETS_BRANCH=main  # Optional, IX branch used for since tags (default: main)
+IX_CHANGESETS_BRANCH=main  # Optional, IX branch used for since/breaking change tags (default: main)
 ```
 
 ---
@@ -86,7 +86,7 @@ There are several ways to contribute to this project:
   - `docs/components/[component-name]/code.mdx` - Development examples and APIs
 - Test locally: `pnpm start`
 
-### Since Tags
+### Since and Breaking Change Tags
 
 `Since x.x.x` tags are only shown for the latest and the maintenance major version (e.g. `6.x.x` and `5.x.x`), tags of end of life versions are hidden automatically.
 
@@ -95,6 +95,8 @@ There are several ways to contribute to this project:
 - **Manual:** Use `<SinceTag message="5.3.0" />` from `@site/src/components/UI/Tags` within the docs; it follows the same rules.
 
 During `pnpm start` / `pnpm build`, `scripts/prepare-ix-versions.ts` resolves the upcoming IX version from `packages/core/package.json` and the pending changesets of the IX branch set in `IX_CHANGESETS_BRANCH` (default: `main`). If the IX repository can't be reached, the version of the downloaded artifact (or `@siemens/ix` in `package.json`) is used instead.
+
+Components and properties described in the `BREAKING_CHANGES/vX.md` document of the IX repository get a `Breaking change in vX.0.0` tag linking to the related section of that document. While a major release is pending, the tags show its upcoming breaking changes based on the pending changesets. After the release, they are kept based on the major changes in `CHANGELOG.md` until the next major version replaces them.
 
 ### Blog Posts
 

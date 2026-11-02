@@ -7,6 +7,7 @@ import { useScrollPosition } from '@docusaurus/theme-common/internal';
 import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 import { IxTooltip, IxTypography } from '@siemens/ix-react';
 import {
+  BreakingChangeTag,
   DeprecatedTag,
   FormReady,
   RedirectTag,
@@ -97,6 +98,13 @@ I want to ask some questions`,
           </h1>
           {componentVersion?.since && (
             <SinceTag message={componentVersion.since} />
+          )}
+          {componentVersion?.breaking && (
+            <BreakingChangeTag
+              message={componentVersion.breaking.version}
+              href={componentVersion.breaking.href}
+              title={componentVersion.breaking.title}
+            />
           )}
         </div>
         <AskAI id="copy-prompt" prompt={prompt} />

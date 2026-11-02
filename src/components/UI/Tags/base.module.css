@@ -31,6 +31,18 @@
   color: var(--theme-color-inv-std-text);
 }
 
+/* Outline via inset shadow to keep the height of the filled tags */
+.BreakingChange {
+  background-color: transparent;
+  box-shadow: inset 0 0 0 1px var(--theme-color-warning-bdr);
+  color: var(--theme-color-warning-text);
+}
+
+.BreakingChangeLink:hover {
+  color: var(--theme-color-warning-text);
+  text-decoration: underline;
+}
+
 .Redirect {
   display: flex;
   justify-content: center;
