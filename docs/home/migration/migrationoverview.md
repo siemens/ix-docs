@@ -74,10 +74,10 @@ This keeps each batch of changes small and reviewable.
 
 ## Migration guides
 
-- [Migration guide V5 → V6](../migration/6_0_0/index.md)
-- [Migration guide V4 → V5](../migration/5_0_0/index.md)
-- [Archived: Migration guide V3 → V4](https://ix.siemens.io/version-4.4.0/docs/home/migration/4_0_0), 
-- [Archived: Migration guide V2 → V3](https://ix.siemens.io/version-4.4.0/docs/home/migration/3_0_0)
-- [Archived: Migration guide V1 → V2](https://ix.siemens.io/version-4.4.0/docs/home/migration/2_0_0)
-- [Archived: Migration guide CoreUI → iX](https://ix.siemens.io/version-4.4.0/docs/home/migration/core-ui)
-- [Archived: Migration guide UXT → iX](https://ix.siemens.io/version-4.4.0/docs/home/migration/uxt)
+- [Migration guide V5 → V6](./6_0_0/index.md)
+- [Migration guide V4 → V5](./5_0_0/index.md)
+- [Migration guide V3 → V4](./4_0_0/index.md)
+- [Migration guide V2 → V3](./3_0_0/index.md)
+- [Migration guide V1 → V2](./2_0_0/index.md)
+- [Migration guide CoreUI → iX](./core-ui.md)
+- [Migration guide UXT → iX](./uxt.md)
