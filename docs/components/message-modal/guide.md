@@ -19,17 +19,20 @@ Message modals present short messages, confirmations or important alerts that re
 
 ## Variants
 
+- **Critical:** Reserve for rare, severe events that threaten safety, operations or critical infrastructure and require immediate action.
+- **Danger:** Use for destructive or irreversible actions with significant consequences, e.g. deleting a configuration or stopping a production process.
 - **Error:** Use for system failures, validation issues or blocking errors.
+- **Warning:** Use for a developing issue that needs timely attention but is not yet critical, e.g. a machine approaching its operating limit.
+- **Caution:** Use for potential issues or action consequences, e.g. overwrite files.
 - **Info:** Use for neutral information, instructions or notifications.
 - **Question:** Use for confirmations requiring user decisions.
 - **Success:** Use for completed actions when another action is needed, e.g. download backup or copy generated link.
-- **Warning:** Use for potential issues or action consequences, e.g. overwrite files.
 
 ![Message modal variants](https://www.figma.com/design/wEptRgAezDU1z80Cn3eZ0o/iX-Documentation-illustrations?node-id=7376-535&t=APgwguIwWKMbj5sA-4)
 
 ## Options
 
-- **Title:** Use a clear, outcome-oriented title (e.g. "Delete item", see [writing guidelines](/docs/guidelines/language/dialogs-and-buttons)).
+- **Title:** Use a clear, outcome-oriented title (e.g. "Delete item", see [writing guidelines](../../guidelines/language/messaging/messages-overview.md)).
 - **Message:** Include if you need to provide additional information, e.g. consequences (see [writing guidelines](/docs/guidelines/language/messaging/error-messages)).
 - **Confirm action:** Use precise action text, e.g. "Delete", "Confirm", or "Continue".
 - **Cancel action:** Use "Cancel" or "Close". We recommend returning to the previous context the user was in.

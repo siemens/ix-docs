@@ -93,6 +93,7 @@ const sidebars: SidebarsConfig = {
       items: [
         'home/releases/roadmap',
         'home/releases/release-version',
+        'home/releases/compatibility-v5',
         {
           type: 'link',
           href: 'https://github.com/siemens/ix/releases',
@@ -978,6 +979,24 @@ const sidebars: SidebarsConfig = {
               id: 'components/empty-state/uxwriting',
               label: 'Writing',
             },
+          ],
+        }),
+        createTabItem({
+          id: 'components/info-page/index',
+          label: 'Info page',
+          items: [
+            {
+              id: 'components/info-page/guide',
+              label: 'Usage',
+            },
+            {
+              id: 'components/info-page/code',
+              label: 'Code',
+            },
+            {
+              id: 'components/info-page/language',
+              label: 'Writing'
+            }
           ],
         }),
         createTabItem({
