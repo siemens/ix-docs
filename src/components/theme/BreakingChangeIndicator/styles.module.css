@@ -7,112 +7,21 @@
  * LICENSE file in the root directory of this source tree.
  */
 
-/* TRIAL: see index.tsx */
-
-/* Marker after the sidebar label and in the legend,
-   colors match the BreakingChangeTag */
+/* Icon after the sidebar label, colors match the BreakingChangeTag */
 .Marker {
   display: inline-flex;
   flex-shrink: 0;
-  align-items: center;
-  justify-content: center;
+  width: 1rem;
+  height: 1rem;
   margin-inline-start: 0.5rem;
   color: var(--theme-color-warning-text);
 }
 
-.Legend .Marker {
-  margin-inline-start: 0;
-}
-
-/* Dot and icon get a larger hover target for the tooltip */
-.Dot,
-.Icon {
-  width: 0.875rem;
-  height: 0.875rem;
-}
-
-/* Option 1: small dot */
-.Dot::before {
-  content: '';
-  width: 0.375rem;
-  height: 0.375rem;
-  border-radius: 50%;
-  background-color: currentColor;
-}
-
-/* Option 2: outlined version pill */
-.Pill {
-  padding: 0 0.25rem;
-  border-radius: 0.25rem;
-  box-shadow: inset 0 0 0 1px var(--theme-color-warning-bdr);
-  font-size: 0.625rem;
-  line-height: 1rem;
-}
-
-/* Option 3: info icon */
-.Icon::before {
+.Marker::before {
   content: '';
   width: 100%;
   height: 100%;
   background-color: currentColor;
-  mask: var(--ix-docs-info-icon) center / contain no-repeat;
-  -webkit-mask: var(--ix-docs-info-icon) center / contain no-repeat;
-}
-
-/* Temporary style switch */
-.Switch {
-  display: flex;
-  flex-direction: column;
-  gap: 0.375rem;
-  margin: 0 8px;
-  padding: 0 0.5rem 1rem 0.5rem;
-  color: var(--theme-color-soft-text);
-  font-size: 0.75rem;
-}
-
-.SwitchHeader {
-  display: flex;
-  align-items: center;
-  gap: 0.375rem;
-}
-
-.Trial {
-  padding: 0 0.25rem;
-  border-radius: 0.25rem;
-  box-shadow: inset 0 0 0 1px var(--theme-color-x-weak-bdr);
-  font-size: 0.625rem;
-  text-transform: uppercase;
-}
-
-.SwitchButtons {
-  display: flex;
-  gap: 4px;
-}
-
-.SwitchButton {
-  flex: 1 0 0;
-  height: 1.5rem;
-  padding: 0 4px;
-  border: 1px solid var(--theme-color-x-weak-bdr);
-  border-radius: 4px;
-  background-color: transparent;
-  color: var(--theme-color-std-text);
-  font-family: inherit;
-  font-size: 0.75rem;
-  cursor: pointer;
-}
-
-.SwitchButton.Active {
-  background: var(--theme-color-2);
-  font-weight: bold;
-}
-
-.SwitchButton:hover {
-  background: var(--theme-color-1--hover);
-}
-
-.Legend {
-  display: flex;
-  align-items: center;
-  gap: 0.375rem;
+  mask: var(--ix-docs-breaking-change-icon) center / contain no-repeat;
+  -webkit-mask: var(--ix-docs-breaking-change-icon) center / contain no-repeat;
 }

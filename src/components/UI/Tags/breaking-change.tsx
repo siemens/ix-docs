@@ -8,6 +8,8 @@
  */
 import Link from '@docusaurus/Link';
 import isInternalUrl from '@docusaurus/isInternalUrl';
+import { iconElectricalEnergyFilled } from '@siemens/ix-icons/icons';
+import { IxIcon } from '@siemens/ix-react';
 import clsx from 'clsx';
 import BaseTag from './baseTag';
 import styles from './base.module.css';
@@ -21,7 +23,16 @@ export function BreakingChangeTag({
   href?: string;
   title?: string;
 }>) {
-  const label = `Breaking change in v${message}`;
+  const label = (
+    <>
+      <IxIcon
+        name={iconElectricalEnergyFilled}
+        color="color-warning-text"
+        size="16"
+      />
+      Breaking change in v{message}
+    </>
+  );
 
   return (
     <BaseTag>

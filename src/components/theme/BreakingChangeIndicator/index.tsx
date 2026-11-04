@@ -8,36 +8,18 @@
  */
 
 /**
- * TRIAL: Indicates components with breaking changes of the upcoming/current major
- * in the sidebar. The style switch is temporary to compare the options,
- * remove it once a style is chosen.
+ * Indicates components with breaking changes of the upcoming/current major
+ * in the sidebar.
  */
 import type { PropSidebarItem } from '@docusaurus/plugin-content-docs';
 import type { IxPageVersionInfo } from '@site/src/lib/ix-versions';
-import { iconInfo } from '@siemens/ix-icons/icons';
+import { iconElectricalEnergyFilled } from '@siemens/ix-icons/icons';
 import { IxTooltip, IxTypography } from '@siemens/ix-react';
-import clsx from 'clsx';
 import type { CSSProperties } from 'react';
 import styles from './styles.module.css';
 
-export type BreakingChangeIndicatorStyle = 'off' | 'dot' | 'pill' | 'icon';
-
 export type BreakingChangeIndicator = {
-  style: Exclude<BreakingChangeIndicatorStyle, 'off'>;
   version: string;
-};
-
-const options: { value: BreakingChangeIndicatorStyle; label: string }[] = [
-  { value: 'off', label: 'Off' },
-  { value: 'dot', label: 'Dot' },
-  { value: 'pill', label: 'Pill' },
-  { value: 'icon', label: 'Icon' },
-];
-
-const indicatorClass = {
-  dot: styles.Dot,
-  pill: styles.Pill,
-  icon: styles.Icon,
 };
 
 const markerAttribute = 'data-ix-docs-breaking-marker';
@@ -55,13 +37,8 @@ function getPageKey(href?: string) {
  */
 export function withBreakingChangeIndicators(
   items: PropSidebarItem[],
-  pages: Record<string, IxPageVersionInfo>,
-  style: BreakingChangeIndicatorStyle
+  pages: Record<string, IxPageVersionInfo>
 ): PropSidebarItem[] {
-  if (style === 'off') {
-    return items;
-  }
-
   return items.map((item) => {
     if (item.type !== 'category') {
       return item;
@@ -69,7 +46,6 @@ export function withBreakingChangeIndicators(
 
     const breaking = pages[getPageKey(item.href) ?? '']?.breaking;
     const indicator: BreakingChangeIndicator | undefined = breaking && {
-      style,
       version: breaking.version,
     };
 
@@ -78,7 +54,7 @@ export function withBreakingChangeIndicators(
       customProps: indicator
         ? { ...item.customProps, breakingChangeIndicator: indicator }
         : item.customProps,
-      items: withBreakingChangeIndicators(item.items, pages, style),
+      items: withBreakingChangeIndicators(item.items, pages),
     };
   });
 }
@@ -89,19 +65,15 @@ export function getBreakingChangeIndicator(item: PropSidebarItem) {
 }
 
 export function BreakingChangeMarker({
-  style,
   version,
-  withTooltip = true,
-}: Readonly<BreakingChangeIndicator & { withTooltip?: boolean }>) {
+}: Readonly<BreakingChangeIndicator>) {
   return (
     <span
-      className={clsx(styles.Marker, indicatorClass[style])}
+      className={styles.Marker}
       role="img"
-      aria-label={`Changes in v${version}`}
-      {...(withTooltip ? { [markerAttribute]: '' } : {})}
-    >
-      {style === 'pill' ? `v${version.split('.')[0]}` : null}
-    </span>
+      aria-label={`Breaking changes in v${version}`}
+      {...{ [markerAttribute]: '' }}
+    />
   );
 }
 
@@ -128,54 +100,6 @@ export function BreakingChangeTooltip({
  */
 export function getBreakingChangeIndicatorVars() {
   return {
-    // Icons are filled by ix-icon, a mask needs an opaque fill
-    '--ix-docs-info-icon': `url("${iconInfo.replace(
-      "fill='none'",
-      "fill='black'"
-    )}")`,
+    '--ix-docs-breaking-change-icon': `url("${iconElectricalEnergyFilled}")`,
   } as CSSProperties;
-}
-
-export function BreakingChangeIndicatorSwitch({
-  value,
-  version,
-  onChange,
-}: Readonly<{
-  value: BreakingChangeIndicatorStyle;
-  version: string;
-  onChange: (value: BreakingChangeIndicatorStyle) => void;
-}>) {
-  return (
-    <div className={styles.Switch}>
-      <div className={styles.SwitchHeader}>
-        <span>Change indicator</span>
-        <span className={styles.Trial}>Trial</span>
-      </div>
-      <div className={styles.SwitchButtons} role="radiogroup">
-        {options.map((option) => (
-          <button
-            key={option.value}
-            role="radio"
-            aria-checked={value === option.value}
-            className={clsx(styles.SwitchButton, {
-              [styles.Active]: value === option.value,
-            })}
-            onClick={() => onChange(option.value)}
-          >
-            {option.label}
-          </button>
-        ))}
-      </div>
-      {value !== 'off' && (
-        <div className={styles.Legend}>
-          <BreakingChangeMarker
-            style={value}
-            version={version}
-            withTooltip={false}
-          />
-          <span>Breaking changes in v{version}</span>
-        </div>
-      )}
-    </div>
-  );
 }

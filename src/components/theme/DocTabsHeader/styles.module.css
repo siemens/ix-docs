@@ -45,13 +45,6 @@
   margin: 0;
 }
 
-.Title {
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
-  min-width: 0;
-}
-
 .Tabs {
   display: flex;
   flex-direction: row;
@@ -126,9 +119,14 @@
   color: var(--theme-color-dynamic);
 }
 
+.Tags:empty {
+  display: none;
+}
+
 .Tags {
   display: flex;
   flex-direction: row;
+  flex-wrap: wrap;
   gap: 0.5rem;
   margin-block-end: 1rem;
 }

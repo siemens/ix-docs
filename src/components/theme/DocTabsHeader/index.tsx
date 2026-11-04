@@ -85,28 +85,16 @@ I want to ask some questions`,
   return (
     <>
       <div className={styles.sticky_h1}>
-        <div className={styles.Title}>
-          <h1>
-            {title}
+        <h1>
+          {title}
 
-            <a
-              href={`#${id.replaceAll('/', '-')}`}
-              className="hash-link"
-              aria-label={title}
-              title={title}
-            ></a>
-          </h1>
-          {componentVersion?.since && (
-            <SinceTag message={componentVersion.since} />
-          )}
-          {componentVersion?.breaking && (
-            <BreakingChangeTag
-              message={componentVersion.breaking.version}
-              href={componentVersion.breaking.href}
-              title={componentVersion.breaking.title}
-            />
-          )}
-        </div>
+          <a
+            href={`#${id.replaceAll('/', '-')}`}
+            className="hash-link"
+            aria-label={title}
+            title={title}
+          ></a>
+        </h1>
         <AskAI id="copy-prompt" prompt={prompt} />
       </div>
 
@@ -115,7 +103,7 @@ I want to ask some questions`,
           Copy a prompt to ask an AI assistant about this page.
         </IxTypography>
       </IxTooltip>
-      {description && (
+      {(description || componentVersion) && (
         <div className={clsx(styles.componentHeroHeader, 'HeroHeader')}>
           <div className={styles.Tags}>
             {frontMatter.deprecated &&
@@ -143,8 +131,18 @@ I want to ask some questions`,
                 }
               )}
             {frontMatter.formReady && <FormReady />}
+            {componentVersion?.since && (
+              <SinceTag message={componentVersion.since} />
+            )}
+            {componentVersion?.breaking && (
+              <BreakingChangeTag
+                message={componentVersion.breaking.version}
+                href={componentVersion.breaking.href}
+                title={componentVersion.breaking.title}
+              />
+            )}
           </div>
-          <p className={styles.Description}>{description}</p>
+          {description && <p className={styles.Description}>{description}</p>}
         </div>
       )}
 

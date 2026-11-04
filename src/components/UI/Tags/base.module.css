@@ -18,23 +18,26 @@
 .Tag > * {
   border-radius: 0.25rem;
   padding: 0.25rem 0.5rem;
+  border: 1px solid;
+  background-color: transparent;
 }
 
 .Since,
 .FormReady {
-  background-color: var(--theme-color-primary);
-  color: var(--theme-color-inv-std-text);
+  border-color: var(--theme-color-primary);
+  color: var(--theme-color-primary);
 }
 
 .Deprecated {
-  background-color: var(--theme-color-alarm);
-  color: var(--theme-color-inv-std-text);
+  border-color: var(--theme-color-alarm);
+  color: var(--theme-color-alarm-text);
 }
 
-/* Outline via inset shadow to keep the height of the filled tags */
 .BreakingChange {
-  background-color: transparent;
-  box-shadow: inset 0 0 0 1px var(--theme-color-warning-bdr);
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+  border-color: var(--theme-color-warning-bdr);
   color: var(--theme-color-warning-text);
 }
 
@@ -48,8 +51,7 @@
   justify-content: center;
   align-items: center;
   gap: 0.25rem;
-  background-color: transparent;
-  border: 1px solid var(--theme-color-primary);
+  border-color: var(--theme-color-primary);
 }
 
 .Redirect .Link {
