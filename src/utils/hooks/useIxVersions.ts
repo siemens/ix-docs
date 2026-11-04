@@ -20,7 +20,7 @@ export function useIxVersions(): IxVersionInfo {
 /**
  * Since tags are only shown for the latest and the maintenance major version
  */
-export function useIsSupportedVersion(version: string) {
+export function useIsSupportedVersion(version: string | undefined) {
   const { currentMajor } = useIxVersions();
-  return isSupportedVersion(version, currentMajor);
+  return !!version && isSupportedVersion(version, currentMajor);
 }

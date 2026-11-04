@@ -17,20 +17,22 @@ import type CategoryType from '@theme/DocSidebarItem/Category';
 type Props = WrapperProps<typeof CategoryType>;
 
 export default function CategoryWrapper(props: Readonly<Props>): JSX.Element {
-  const indicator = getBreakingChangeIndicator(props.item);
+  const { item } = props;
+  const indicator = getBreakingChangeIndicator(item);
 
-  if (!indicator) {
+  // The label is typed as string, but only rendered as link content.
+  // The collapse button (only shown for collapsible categories with a link)
+  // uses it as text in its aria label, keep the plain label there.
+  if (!indicator || (item.collapsible && item.href)) {
     return <Category {...props} />;
   }
 
-  // The label is only rendered as link content (and as aria label of the
-  // collapse button, which is not used for the non collapsible component entries)
   const label = (
     <>
-      {props.item.label}
+      {item.label}
       <BreakingChangeMarker {...indicator} />
     </>
   ) as unknown as string;
 
-  return <Category {...props} item={{ ...props.item, label }} />;
+  return <Category {...props} item={{ ...item, label }} />;
 }

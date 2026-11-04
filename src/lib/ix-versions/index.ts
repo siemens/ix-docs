@@ -93,6 +93,36 @@ export function parseVersion(
 }
 
 /**
+ * Version of a dependency range like `^5.3.0` or `npm:@siemens/ix@5.3.0`
+ */
+export function parseDependencyVersion(range: string | undefined) {
+  const match = /(\d+\.\d+\.\d+(?:-[0-9A-Za-z.-]+)?)/.exec(range ?? '');
+  return match && parseVersion(match[1]) ? match[1] : undefined;
+}
+
+/**
+ * Version info of a page by doc id (`components/blind/code`) or URL (`/base/docs/components/blind`).
+ * Pages are keyed by doc directory, so the path itself or its parent is matched.
+ */
+export function findPageVersionInfo(
+  pages: Record<string, IxPageVersionInfo>,
+  pathOrId: string | undefined
+): IxPageVersionInfo | undefined {
+  if (!pathOrId) {
+    return undefined;
+  }
+
+  const key = pathOrId
+    .split(/[?#]/)[0]
+    .replace(/^.*?\/docs\//, '')
+    .replace(/^\/+|\/+$/g, '')
+    .replace(/\/index$/, '');
+  const parent = key.split('/').slice(0, -1).join('/');
+
+  return pages[key] ?? (parent ? pages[parent] : undefined);
+}
+
+/**
  * Only the latest major and the previous (maintenance) major are supported,
  * every older major is end of life. Newer majors (e.g. preview docs) are always shown.
  */
@@ -324,13 +354,91 @@ export function parseComponentSince(content: string) {
   return sinceTagPattern.exec(content)?.[1];
 }
 
+type SectionBlock = {
+  tags: Set<string>;
+  code: Set<string>;
+  /** Below a level 3+ heading */
+  nested: boolean;
+};
+
+/**
+ * Split a section body into blocks (paragraphs, list items, table rows, code blocks).
+ * Tags of a level 3+ heading apply to all blocks below it.
+ */
+export function splitSectionBlocks(
+  body: string,
+  knownTags: Set<string>
+): SectionBlock[] {
+  const blocks: SectionBlock[] = [];
+  let lines: string[] = [];
+  let headingTags = new Set<string>();
+  let nested = false;
+  let inCodeBlock = false;
+
+  const flush = () => {
+    const text = lines.join('\n');
+    lines = [];
+    if (!text.trim()) {
+      return;
+    }
+    blocks.push({
+      tags: new Set([...headingTags, ...findComponentTags(text, knownTags)]),
+      code: findInlineCode(text),
+      nested,
+    });
+  };
+
+  for (const line of body.split(/\r?\n/)) {
+    const isFence = /^\s*(```|~~~)/.test(line);
+    if (inCodeBlock) {
+      lines.push(line);
+      if (isFence) {
+        inCodeBlock = false;
+        flush();
+      }
+      continue;
+    }
+    if (isFence) {
+      flush();
+      inCodeBlock = true;
+      lines.push(line);
+      continue;
+    }
+
+    const heading = /^#{3,6}\s+(.*)$/.exec(line);
+    if (heading) {
+      flush();
+      headingTags = findComponentTags(heading[1], knownTags);
+      nested = true;
+      continue;
+    }
+    if (!line.trim()) {
+      flush();
+      continue;
+    }
+    // List items and table rows are blocks of their own
+    if (/^\s*([-*+]|\d+\.)\s|^\s*\|/.test(line)) {
+      flush();
+    }
+    lines.push(line);
+  }
+  flush();
+
+  return blocks;
+}
+
 /**
  * Collect breaking changes of the upcoming major version.
  *
  * A component is affected if it is mentioned in a pending major changeset and
- * described in the breaking change document. Properties and events are affected
- * if they are mentioned as inline code in a section that covers the component,
- * except members that are newly introduced with the upcoming major.
+ * described in the breaking change document, either in a section dedicated to it
+ * (named in the title) or in a general section (no component in the title).
+ * Sections dedicated to other components are ignored, they only cross-reference.
+ *
+ * Properties and events are affected if they are mentioned as inline code in a
+ * section about the component (named in the title or the first paragraph), or in
+ * a block of a general section that mentions the component, except members that
+ * are newly introduced with the upcoming major.
  */
 export function collectBreakingChanges(options: {
   version: string;
@@ -355,24 +463,37 @@ export function collectBreakingChanges(options: {
       )
     );
 
-  const sections = parseBreakingChangeSections(breakingChangeDoc).map(
-    (section) => ({
+  const sections = parseBreakingChangeSections(breakingChangeDoc)
+    .map((section) => ({
       ...section,
       titleTags: findComponentTags(section.title, knownTags),
       tags: findComponentTags(`${section.title}\n${section.body}`, knownTags),
       code: findInlineCode(`${section.title}\n${section.body}`),
-    })
-  );
+      blocks: splitSectionBlocks(section.body, knownTags),
+    }))
+    .map((section) => {
+      const intro = section.blocks[0]?.nested ? undefined : section.blocks[0];
+      return {
+        ...section,
+        subjectTags: new Set([...section.titleTags, ...(intro?.tags ?? [])]),
+      };
+    });
 
   const result: BreakingChangeInfo = { version, docUrl, components: {} };
 
   for (const tag of changesetTags) {
     const related = sections
-      .filter((section) => section.tags.has(tag))
-      // Sections dedicated to the component first, then the most specific ones
+      .filter(
+        (section) =>
+          section.tags.has(tag) &&
+          (section.titleTags.has(tag) || section.titleTags.size === 0)
+      )
+      // Sections dedicated to the component first, then sections about it,
+      // then the most specific ones
       .sort(
         (a, b) =>
           Number(b.titleTags.has(tag)) - Number(a.titleTags.has(tag)) ||
+          Number(b.subjectTags.has(tag)) - Number(a.subjectTags.has(tag)) ||
           a.tags.size - b.tags.size
       );
 
@@ -380,12 +501,19 @@ export function collectBreakingChanges(options: {
       continue;
     }
 
+    const code = new Set<string>();
+    for (const section of related) {
+      const sources = section.subjectTags.has(tag)
+        ? [section]
+        : section.blocks.filter((block) => block.tags.has(tag));
+      sources.forEach((source) => source.code.forEach((c) => code.add(c)));
+    }
+
     const isNew = (member: ApiMember) =>
       parseVersion(member.since)?.major === major;
     const affected = (members: ApiMember[]) =>
       members
-        .filter((member) => !isNew(member))
-        .filter((member) => related.some(({ code }) => code.has(member.name)))
+        .filter((member) => !isNew(member) && code.has(member.name))
         .map(({ name }) => name);
 
     result.components[tag] = {

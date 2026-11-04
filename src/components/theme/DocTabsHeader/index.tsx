@@ -13,7 +13,11 @@ import {
   RedirectTag,
   SinceTag,
 } from '@site/src/components/UI/Tags';
-import { useIxVersions } from '@site/src/utils/hooks/useIxVersions';
+import { findPageVersionInfo } from '@site/src/lib/ix-versions';
+import {
+  useIsSupportedVersion,
+  useIxVersions,
+} from '@site/src/utils/hooks/useIxVersions';
 import clsx from 'clsx';
 import { useCallback, useMemo, useState } from 'react';
 import AskAI from '../AskAI';
@@ -68,8 +72,14 @@ export default function DocTabsHeader(
   const { description, tabs, title, frontMatter, id } = props;
   const { siteConfig } = useDocusaurusContext();
   const ixVersions = useIxVersions();
-  const componentVersion =
-    ixVersions?.pages[id.split('/').slice(0, -1).join('/')];
+  const componentVersion = findPageVersionInfo(ixVersions.pages, id);
+  const since = componentVersion?.since;
+  const showSince = useIsSupportedVersion(since);
+  const hasTags =
+    !!frontMatter.deprecated ||
+    !!frontMatter.formReady ||
+    showSince ||
+    !!componentVersion?.breaking;
 
   const prompt = useMemo(
     () => `Use web browsing to access links and information:
@@ -103,7 +113,7 @@ I want to ask some questions`,
           Copy a prompt to ask an AI assistant about this page.
         </IxTypography>
       </IxTooltip>
-      {(description || componentVersion) && (
+      {(description || hasTags) && (
         <div className={clsx(styles.componentHeroHeader, 'HeroHeader')}>
           <div className={styles.Tags}>
             {frontMatter.deprecated &&
@@ -131,9 +141,7 @@ I want to ask some questions`,
                 }
               )}
             {frontMatter.formReady && <FormReady />}
-            {componentVersion?.since && (
-              <SinceTag message={componentVersion.since} />
-            )}
+            {since && showSince && <SinceTag message={since} />}
             {componentVersion?.breaking && (
               <BreakingChangeTag
                 message={componentVersion.breaking.version}

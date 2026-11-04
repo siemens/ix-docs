@@ -2,6 +2,7 @@ import assert from 'node:assert/strict';
 import test from 'node:test';
 import {
   collectBreakingChanges,
+  findPageVersionInfo,
   getUpcomingVersion,
   githubSlug,
   injectBreakingChangeTags,
@@ -10,6 +11,7 @@ import {
   parseBreakingChangeSections,
   parseChangelogMajorChanges,
   parseChangeset,
+  parseDependencyVersion,
   parseComponentSince,
   removeBreakingChangeTags,
 } from '.';
@@ -25,6 +27,36 @@ test('#isSupportedVersion only accepts latest and maintenance major', () => {
   assert.equal(isSupportedVersion('1.5.0', 6), false);
   assert.equal(isSupportedVersion('7.0.0', 6), true);
   assert.equal(isSupportedVersion('TODO: Define', 6), false);
+});
+
+test('#parseDependencyVersion reads the version of a dependency range', () => {
+  assert.equal(parseDependencyVersion('5.3.0'), '5.3.0');
+  assert.equal(parseDependencyVersion('^5.3.0'), '5.3.0');
+  assert.equal(parseDependencyVersion('~6.0.0-beta.1'), '6.0.0-beta.1');
+  assert.equal(parseDependencyVersion('npm:@siemens/ix@5.3.0'), '5.3.0');
+  assert.equal(parseDependencyVersion('workspace:*'), undefined);
+  assert.equal(parseDependencyVersion(undefined), undefined);
+});
+
+test('#findPageVersionInfo matches doc ids and URLs', () => {
+  const blind = { tag: 'ix-blind' };
+  const pages = { 'components/blind': blind };
+
+  assert.equal(findPageVersionInfo(pages, 'components/blind/code'), blind);
+  assert.equal(findPageVersionInfo(pages, 'components/blind/index'), blind);
+  assert.equal(findPageVersionInfo(pages, '/docs/components/blind'), blind);
+  assert.equal(findPageVersionInfo(pages, '/docs/components/blind/'), blind);
+  assert.equal(
+    findPageVersionInfo(pages, '/version-5/docs/components/blind/code#api'),
+    blind
+  );
+  assert.equal(
+    findPageVersionInfo(pages, 'components/blind-x/code'),
+    undefined
+  );
+  assert.equal(findPageVersionInfo(pages, 'components/blind/a/b'), undefined);
+  assert.equal(findPageVersionInfo(pages, '/docs/components'), undefined);
+  assert.equal(findPageVersionInfo(pages, undefined), undefined);
 });
 
 test('#parseChangeset reads releases and summary', () => {
@@ -237,6 +269,156 @@ test('#collectBreakingChanges combines changesets and breaking change document',
   });
 });
 
+test('#collectBreakingChanges ignores cross-references and unrelated blocks', () => {
+  const docUrl = 'https://example.com/v6.md';
+  const doc = `## \`ix-time-picker\`: \`i18nConfirmTime\` renamed
+
+Use \`i18nConfirm\` instead of \`i18nConfirmTime\`.
+
+\`ix-time-input\` is not affected and keeps \`i18nSelectTime\`.
+
+## Default icon size is 20
+
+Icons render 20px instead of 24px.
+
+Omitted icon \`size\` on \`ix-icon-button\` renders 20px.
+
+\`ix-checkbox\` glyphs also move to 20, see \`checked\`.
+
+- \`ix-icon-button\` keeps \`icon\`.
+- Inputs emit \`valueChange\` on confirm.
+
+### \`ix-checkbox\` details
+
+The \`indeterminate\` state is smaller.
+`;
+
+  const result = collectBreakingChanges({
+    version: '6.0.0',
+    docUrl,
+    breakingChangeDoc: doc,
+    changesets: [
+      changeset(
+        'all',
+        `'@siemens/ix': major`,
+        'ix-time-picker, ix-time-input, ix-icon-button, ix-checkbox'
+      ),
+    ],
+    components: {
+      'ix-time-picker': {
+        props: [
+          { name: 'i18nConfirm', since: '6.0.0' },
+          { name: 'i18nConfirmTime' },
+        ],
+        events: [],
+      },
+      'ix-time-input': { props: [{ name: 'i18nSelectTime' }], events: [] },
+      'ix-icon-button': {
+        props: [{ name: 'size' }, { name: 'icon' }, { name: 'checked' }],
+        events: [{ name: 'valueChange' }],
+      },
+      'ix-checkbox': {
+        props: [
+          { name: 'checked' },
+          { name: 'indeterminate' },
+          { name: 'size' },
+        ],
+        events: [],
+      },
+    },
+  });
+
+  const href = (anchor: string) => `${docUrl}#${anchor}`;
+  assert.deepEqual(result.components, {
+    'ix-time-picker': {
+      links: [
+        {
+          title: 'ix-time-picker: i18nConfirmTime renamed',
+          href: href('ix-time-picker-i18nconfirmtime-renamed'),
+        },
+      ],
+      props: ['i18nConfirmTime'],
+      events: [],
+    },
+    // ix-time-input: only mentioned in a section of another component
+    'ix-icon-button': {
+      links: [
+        {
+          title: 'Default icon size is 20',
+          href: href('default-icon-size-is-20'),
+        },
+      ],
+      // `checked` and `valueChange` are mentioned in blocks of other components
+      props: ['size', 'icon'],
+      events: [],
+    },
+    'ix-checkbox': {
+      links: [
+        {
+          title: 'Default icon size is 20',
+          href: href('default-icon-size-is-20'),
+        },
+      ],
+      // `indeterminate` is below a heading of the component
+      props: ['checked', 'indeterminate'],
+      events: [],
+    },
+  });
+});
+
+test('#collectBreakingChanges links sections about the component first', () => {
+  const doc = `## Global tokens
+
+Tokens are renamed.
+
+\`ix-card\`, \`ix-blind\` and \`ix-chip\` use new tokens. See \`label\`.
+
+## Card family
+
+\`ix-card\` and \`ix-blind\` use \`StatusVariant\`.
+
+Default \`variant\` is now \`base\`.
+
+## Status rename
+
+Statuses are renamed.
+
+\`ix-card\` uses \`StatusVariant\`.
+
+## \`ix-card\`: outline
+
+Card details.
+`;
+
+  const result = collectBreakingChanges({
+    version: '6.0.0',
+    docUrl: '',
+    breakingChangeDoc: doc,
+    changesets: [changeset('card', `'@siemens/ix': major`, 'ix-card')],
+    components: {
+      'ix-card': {
+        props: [{ name: 'variant' }, { name: 'label' }, { name: 'outline' }],
+        events: [],
+      },
+      'ix-blind': { props: [], events: [] },
+      'ix-chip': { props: [], events: [] },
+    },
+  });
+
+  assert.deepEqual(result.components['ix-card'], {
+    links: [
+      { title: 'ix-card: outline', href: '#ix-card-outline' },
+      { title: 'Card family', href: '#card-family' },
+      { title: 'Status rename', href: '#status-rename' },
+      { title: 'Global tokens', href: '#global-tokens' },
+    ],
+    // The whole "Card family" section is about ix-card (named in the first paragraph),
+    // `label` is mentioned next to ix-card in "Global tokens"
+    props: ['variant', 'label'],
+    events: [],
+  });
+});
+
 test('#injectBreakingChangeTags adds tags to affected headers only once', () => {
   const component = {
     links: [{ title: 'Card', href: 'https://example.com#card' }],
@@ -268,7 +450,10 @@ test('#injectBreakingChangeTags adds tags to affected headers only once', () => 
   });
   assert.equal(relinked.match(/<BreakingChangeTag /g)?.length, 1);
   assert.equal(relinked.match(/import \{ BreakingChangeTag \}/g)?.length, 1);
-  assert.match(relinked, /href=\{`https:\/\/example\.com\/v6\.md#card-family`\}/);
+  assert.match(
+    relinked,
+    /href=\{`https:\/\/example\.com\/v6\.md#card-family`\}/
+  );
   assert.equal(removeBreakingChangeTags(result), apiMdx);
   assert.equal(
     injectBreakingChangeTags(apiMdx, '6.0.0', {

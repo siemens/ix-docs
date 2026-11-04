@@ -7,6 +7,7 @@ import { themes as prismThemes } from 'prism-react-renderer';
 import { figmaPlugin } from './plugins/figma-pictures/figma';
 import versionDeployment from './version-deployment.json' with { type: 'json ' };
 import llmstxtPostbuildPlugin from './plugins/llmstxt-postbuild/plugin';
+import { getFallbackVersionInfo } from './scripts/ix-versions-fallback';
 import type { IxVersionInfo } from './src/lib/ix-versions';
 
 dotenv();
@@ -19,20 +20,7 @@ function getIxVersionInfo(): IxVersionInfo {
   if (fs.existsSync(file)) {
     return JSON.parse(fs.readFileSync(file, 'utf8'));
   }
-
-  const packageJson = JSON.parse(
-    fs.readFileSync(path.join(__dirname, 'package.json'), 'utf8')
-  );
-  const version: string = packageJson.dependencies['@siemens/ix'].replace(
-    /^[^\d]*/,
-    ''
-  );
-  return {
-    version,
-    currentMajor: parseInt(version, 10),
-    source: 'package',
-    pages: {},
-  };
+  return getFallbackVersionInfo(__dirname);
 }
 
 function getAnnouncementBarConfig() {

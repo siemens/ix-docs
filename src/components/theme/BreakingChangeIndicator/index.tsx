@@ -12,7 +12,10 @@
  * in the sidebar.
  */
 import type { PropSidebarItem } from '@docusaurus/plugin-content-docs';
-import type { IxPageVersionInfo } from '@site/src/lib/ix-versions';
+import {
+  findPageVersionInfo,
+  type IxPageVersionInfo,
+} from '@site/src/lib/ix-versions';
 import { iconElectricalEnergyFilled } from '@siemens/ix-icons/icons';
 import { IxTooltip, IxTypography } from '@siemens/ix-react';
 import type { CSSProperties } from 'react';
@@ -24,15 +27,8 @@ export type BreakingChangeIndicator = {
 
 const markerAttribute = 'data-ix-docs-breaking-marker';
 
-function getPageKey(href?: string) {
-  return href
-    ?.split('/docs/')[1]
-    ?.replace(/\/index$/, '')
-    .replace(/\/$/, '');
-}
-
 /**
- * Mark sidebar entries of pages with breaking changes,
+ * Mark sidebar categories of pages with breaking changes,
  * rendered by `src/theme/DocSidebarItem/Category`
  */
 export function withBreakingChangeIndicators(
@@ -44,7 +40,7 @@ export function withBreakingChangeIndicators(
       return item;
     }
 
-    const breaking = pages[getPageKey(item.href) ?? '']?.breaking;
+    const breaking = findPageVersionInfo(pages, item.href)?.breaking;
     const indicator: BreakingChangeIndicator | undefined = breaking && {
       version: breaking.version,
     };
@@ -98,7 +94,11 @@ export function BreakingChangeTooltip({
 /**
  * CSS variables used by the indicators, set on a common parent of the sidebar
  */
-export function getBreakingChangeIndicatorVars() {
+export function getBreakingChangeIndicatorVars(version: string | undefined) {
+  if (!version) {
+    return undefined;
+  }
+
   return {
     '--ix-docs-breaking-change-icon': `url("${iconElectricalEnergyFilled}")`,
   } as CSSProperties;
