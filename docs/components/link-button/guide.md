@@ -30,11 +30,11 @@ Use inline [hyperlinks](https://developer.mozilla.org/de/docs/Web/HTML/Reference
     - `_parent`: Opens the target in the parent frame.
     - `_top`: Opens the target in the full body of the window.
 - **Icon:** Use the icon to match the type of the link.
-    - **none**: Use when the label alone makes the destination clear.
-    - **internal**: Use for destinations within the application.
-    - **external**: Use for destinations outside the application.
-    - **file**: Use for links to any type of file, usually opened in a new tab.
-    - **action**: Use for navigation to a next step in a task.
+    - **None**: Use when the label alone makes the destination clear.
+    - **Internal**: Use for destinations within the application.
+    - **External**: Use for destinations outside the application.
+    - **File**: Use for links to any type of file, usually opened in a new tab.
+    - **Action**: Use for navigation to a next step in a task.
 - **Position:** Define the position of the icon relative to the link label.
     - `start`: Shows the icon before the label.
     - `end`: Shows the icon after the label.
