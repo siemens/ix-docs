@@ -22,9 +22,9 @@ Use the canonical default import for components:
 @import '@siemens/ix/css/default.css';
 ```
 
-The existing `@siemens/ix/dist/siemens-ix/siemens-ix.css` import path remains available and resolves to the same default bundle. It includes the selected utilities and foundation defaults, but not the reset, body margin reset, complete utility layer or legacy native form styles.
+The current `@siemens/ix/dist/siemens-ix/siemens-ix.css` import path remains available and resolves to the same default bundle. It includes the selected utilities and foundation defaults, but not the reset, body margin reset, complete utility layer or legacy native form styles.
 
-See [Global styles](/docs/styles/global-styles) to select reset, base, scoped scrollbar, complete utility and legacy styles individually.
+See [Global styles](/docs/styles/global-styles) to select reset, base, scrollbar, complete utility and legacy styles individually.
 
 ### Preserve previous global behavior
 
@@ -35,7 +35,7 @@ Combine the default and legacy stylesheets while migrating an application that d
 @import '@siemens/ix/css/legacy.css';
 ```
 
-Applications that keep the existing distribution path can restore the same behavior with:
+Applications that keep the current distribution path can restore the same behavior with:
 
 ```css
 @import '@siemens/ix/dist/siemens-ix/siemens-ix.css';
@@ -46,7 +46,7 @@ The legacy stylesheet restores native form classes, utilities, reset and base st
 
 ### Opt into scrollbar styles
 
-Foundation styles document scrollbars automatically. Add `disable-scrollbar` to `body` to disable that behavior. The scoped scrollbar stylesheet can then enable themed scrollbars for a selected subtree:
+Foundation styles document scrollbars automatically. Add `disable-scrollbar` to `body` to disable that behavior. The scrollbar stylesheet (`scrollbar.css`) then themes scrollbars only on elements with `data-ix-scrollbars` and their descendants:
 
 ```css
 @import '@siemens/ix/css/scrollbar.css';

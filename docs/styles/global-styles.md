@@ -2,7 +2,7 @@
 sidebar_label: Global styles
 title: Global styles
 doc-type: 'banner'
-description: 'Siemens Industrial Experience components are self-contained. Applications can opt into reset, base, scoped scrollbar, complete utility and legacy global styles when needed.'
+description: 'Siemens Industrial Experience components are self-contained. Applications can opt into reset, base, scrollbar, complete utility and legacy global styles when needed.'
 ---
 
 #
@@ -23,9 +23,9 @@ Foundation applies the SiemensSans Pro font stack to `[data-ix-theme]` and sets 
 | `@siemens/ix/css/foundation.css` | `@siemens/ix/scss/foundation` | Variables and foundation behavior required by components                                       | Sets the theme font stack and applies body typography, color, background and document scrollbars   |
 | `@siemens/ix/css/reset.css`      | `@siemens/ix/scss/reset`      | Normalized browser defaults and `box-sizing`                                                   | Styles native HTML elements globally                                                              |
 | `@siemens/ix/css/base.css`       | `@siemens/ix/scss/base`       | System primary text color and body margin reset                                                | Sets color on `[data-ix-theme]` and resets the `body` margin                                      |
-| `@siemens/ix/css/scrollbar.css`  | `@siemens/ix/scss/scrollbar`  | Scoped themed scrollbar colors and dimensions                                                  | Styles scrollbars only on an element with `data-ix-scrollbars` and its descendants                |
+| `@siemens/ix/css/scrollbar.css`  | `@siemens/ix/scss/scrollbar`  | Themed scrollbar colors and dimensions                                                         | Styles scrollbars only on an element with `data-ix-scrollbars` and its descendants                |
 | `@siemens/ix/css/utilities.css`  | `@siemens/ix/scss/utilities`  | Default utilities plus shadows and input groups                                                 | Adds the complete utility layer                                                                   |
-| `@siemens/ix/css/globals.css`    | `@siemens/ix/scss/globals`    | Reset, base, scoped scrollbar and complete utilities                                            | Adds all current global styles, but no legacy native form styling                                 |
+| `@siemens/ix/css/globals.css`    | `@siemens/ix/scss/globals`    | Reset, base, scrollbar and complete utilities                                            | Adds all current global styles, but no legacy native form styling                                 |
 | `@siemens/ix/css/legacy.css`     | `@siemens/ix/scss/legacy`     | Previous reset, base, utilities and native form styles                                         | Restores the remaining global behavior from earlier releases without adding a theme or foundation |
 
 ## Import order
@@ -44,7 +44,7 @@ import '@siemens/ix/css/globals.css';
 import './app.css';
 ```
 
-Foundation styles document scrollbars automatically. Add `disable-scrollbar` to `body` to disable that behavior. Import the scoped scrollbar stylesheet to enable themed scrollbars for a selected subtree:
+Foundation styles document scrollbars automatically. Add `disable-scrollbar` to `body` to disable that behavior. Import the scrollbar stylesheet (`scrollbar.css`) and add `data-ix-scrollbars` to an element to theme scrollbars on that element and its descendants:
 
 ```ts
 import '@siemens/ix/css/scrollbar.css';
@@ -66,7 +66,7 @@ import '@siemens/ix/css/scrollbar.css';
 import '@siemens/ix/css/utilities.css';
 ```
 
-## Migrating existing applications
+## Migrating applications
 
 The previous monolithic stylesheet applied global native element and form styles. To preserve that behavior during migration, combine the new default and legacy stylesheets:
 
