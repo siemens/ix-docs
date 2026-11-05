@@ -124,9 +124,14 @@
   color: var(--si-sys-color-text-accent-hover);
 }
 
+.Tags:empty {
+  display: none;
+}
+
 .Tags {
   display: flex;
   flex-direction: row;
+  flex-wrap: wrap;
   gap: 0.5rem;
   margin-block-end: 1rem;
 }

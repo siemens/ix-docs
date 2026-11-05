@@ -18,12 +18,27 @@
 .Tag > * {
   border-radius: 0.25rem;
   padding: 0.25rem 0.5rem;
+  border: 1px solid;
+  background-color: transparent;
 }
 
 .Since,
 .FormReady {
   background-color: var(--si-sys-color-background-accent);
   color: var(--si-sys-color-text-on-accent);
+}
+
+.BreakingChange {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+  border-color: var(--si-sys-color-border-caution);
+  color: var(--si-sys-color-text-caution);
+}
+
+.BreakingChangeLink:hover {
+  color: var(--si-sys-color-text-caution);
+  text-decoration: underline;
 }
 
 .Deprecated {

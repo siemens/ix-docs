@@ -1,0 +1,27 @@
+/*
+ * SPDX-FileCopyrightText: 2025 Siemens AG
+ *
+ * SPDX-License-Identifier: MIT
+ *
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
+ */
+
+/* Icon after the sidebar label, colors match the BreakingChangeTag */
+.Marker {
+  display: inline-flex;
+  flex-shrink: 0;
+  width: 1rem;
+  height: 1rem;
+  margin-inline-start: 0.5rem;
+  color: var(--si-sys-color-text-caution);
+}
+
+.Marker::before {
+  content: '';
+  width: 100%;
+  height: 100%;
+  background-color: currentColor;
+  mask: var(--ix-docs-breaking-change-icon) center / contain no-repeat;
+  -webkit-mask: var(--ix-docs-breaking-change-icon) center / contain no-repeat;
+}

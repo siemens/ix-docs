@@ -13,6 +13,7 @@ import fs from 'fs-extra';
 import os from 'os';
 import path from 'path';
 import copyTheme from './copy-theme';
+import prepareIxVersions from './prepare-ix-versions';
 
 const __dirname = path.resolve();
 
@@ -92,6 +93,10 @@ async function main() {
 
   const branch = getBranch(defaults);
   await downloadLatestArtifact(branch);
+  // Read changesets from the same branch as the artifact
+  await prepareIxVersions(
+    branch.startsWith('pull/') ? `refs/${branch}/head` : branch
+  );
 }
 
 function getBranch(config: BranchConfig) {

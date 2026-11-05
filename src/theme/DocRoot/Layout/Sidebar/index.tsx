@@ -8,12 +8,18 @@ import ExpandButton from '@theme-original/DocRoot/Layout/Sidebar/ExpandButton';
 import type { Props } from '@theme/DocRoot/Layout/Sidebar';
 import DocSidebar from '@theme/DocSidebar';
 import clsx from 'clsx';
-import React, { type ReactNode, useCallback, useState } from 'react';
+import React, { type ReactNode, useCallback, useMemo, useState } from 'react';
 
 import type { PropSidebarItem } from '@docusaurus/plugin-content-docs';
 import { useLocalStorage } from './../../../../hooks/use-localStorage';
 import styles from './styles.module.css';
 import SortSwitch from '@site/src/components/theme/SortSwitch';
+import {
+  BreakingChangeTooltip,
+  getBreakingChangeIndicatorVars,
+  withBreakingChangeIndicators,
+} from '@site/src/components/theme/BreakingChangeIndicator';
+import { useIxVersions } from '@site/src/utils/hooks/useIxVersions';
 
 // Reset sidebar state when sidebar changes
 // Use React key to unmount/remount the children
@@ -27,34 +33,8 @@ function ResetOnSidebarChange({ children }: { children: ReactNode }) {
   );
 }
 
-export default function DocRootLayoutSidebar({
-  sidebar,
-  hiddenSidebarContainer,
-  setHiddenSidebarContainer,
-}: Props): ReactNode {
-  const { pathname } = useLocation();
-
-  // Check if the current path is for the components documentation
-  const isComponentsPath = pathname.startsWith('/docs/components/');
-
-  const [componentListStyle, setComponentListStyle] = useLocalStorage<
-    'grouped' | 'sorted'
-  >('components_list_style', 'grouped');
-
-  const [hiddenSidebar, setHiddenSidebar] = useState(false);
-  const toggleSidebar = useCallback(() => {
-    if (hiddenSidebar) {
-      setHiddenSidebar(false);
-    }
-    // onTransitionEnd won't fire when sidebar animation is disabled
-    // fixes https://github.com/facebook/docusaurus/issues/8918
-    if (!hiddenSidebar && prefersReducedMotion()) {
-      setHiddenSidebar(true);
-    }
-    setHiddenSidebarContainer((value) => !value);
-  }, [setHiddenSidebarContainer, hiddenSidebar]);
-
-  const flatSidebarItems = (sidebar as PropSidebarItem[])
+function getFlatSidebarItems(sidebar: PropSidebarItem[]) {
+  return sidebar
     .flatMap((item) => (item.type === 'category' ? item.items : [item]))
     .sort((a, b) => {
       const aIgnoreSort =
@@ -72,13 +52,56 @@ export default function DocRootLayoutSidebar({
       return a.type === 'category' ? -1 : 1;
     })
     .filter((item) => item.customProps?.hideOnAlphabetical !== true);
+}
 
-  let sidebarItems = sidebar;
+export default function DocRootLayoutSidebar({
+  sidebar,
+  hiddenSidebarContainer,
+  setHiddenSidebarContainer,
+}: Props): ReactNode {
+  const { pathname } = useLocation();
 
-  if (isComponentsPath) {
-    sidebarItems =
-      componentListStyle === 'grouped' ? sidebar : flatSidebarItems;
-  }
+  // Check if the current path is for the components documentation
+  const isComponentsPath = pathname.startsWith('/docs/components/');
+
+  const [componentListStyle, setComponentListStyle] = useLocalStorage<
+    'grouped' | 'sorted'
+  >('components_list_style', 'grouped');
+
+  const ixVersions = useIxVersions();
+  const breakingVersion = ixVersions.breakingChanges?.version;
+
+  const [hiddenSidebar, setHiddenSidebar] = useState(false);
+  const toggleSidebar = useCallback(() => {
+    if (hiddenSidebar) {
+      setHiddenSidebar(false);
+    }
+    // onTransitionEnd won't fire when sidebar animation is disabled
+    // fixes https://github.com/facebook/docusaurus/issues/8918
+    if (!hiddenSidebar && prefersReducedMotion()) {
+      setHiddenSidebar(true);
+    }
+    setHiddenSidebarContainer((value) => !value);
+  }, [setHiddenSidebarContainer, hiddenSidebar]);
+
+  const sidebarItems = useMemo(() => {
+    if (!isComponentsPath) {
+      return sidebar;
+    }
+
+    const items =
+      componentListStyle === 'grouped' ? sidebar : getFlatSidebarItems(sidebar);
+
+    return breakingVersion
+      ? withBreakingChangeIndicators(items, ixVersions.pages)
+      : items;
+  }, [
+    sidebar,
+    isComponentsPath,
+    componentListStyle,
+    breakingVersion,
+    ixVersions.pages,
+  ]);
 
   return (
     <aside
@@ -87,6 +110,7 @@ export default function DocRootLayoutSidebar({
         styles.docSidebarContainer,
         hiddenSidebarContainer && styles.docSidebarContainerHidden
       )}
+      style={getBreakingChangeIndicatorVars(breakingVersion)}
       onTransitionEnd={(e) => {
         if (!e.currentTarget.classList.contains(styles.docSidebarContainer!)) {
           return;
@@ -97,6 +121,9 @@ export default function DocRootLayoutSidebar({
         }
       }}
     >
+      {isComponentsPath && breakingVersion && (
+        <BreakingChangeTooltip version={breakingVersion} />
+      )}
       {isComponentsPath && (
         <SortSwitch
           grouped={componentListStyle === 'grouped'}

@@ -42,6 +42,7 @@ Create a `.env` file in the project root with the required tokens:
 ```env
 GITHUB_TOKEN=your-github-token-here
 FIGMA_API_TOKEN=your-figma-api-token-here  # Optional, only for Figma updates
+IX_CHANGESETS_BRANCH=main  # Optional, IX branch used for since/breaking change tags (default: branch of the downloaded artifact)
 ```
 
 ---
@@ -85,6 +86,18 @@ There are several ways to contribute to this project:
   - `docs/components/[component-name]/guide.md` - Design system usage and guidelines
   - `docs/components/[component-name]/code.mdx` - Development examples and APIs
 - Test locally: `pnpm start`
+
+### Since and Breaking Change Tags
+
+`Since x.x.x` tags are only shown for the latest and the maintenance major version (e.g. `6.x.x` and `5.x.x`), tags of end of life versions are hidden automatically.
+
+- **Component level:** Shown next to the component name above the tabs. The version comes from the `@since` JSDoc tag of the component class in the [siemens/ix](https://github.com/siemens/ix) repository.
+- **Property level:** Shown in the API tables. The version comes from the `@since` JSDoc tag of the property or event.
+- **Manual:** Use `<SinceTag message="5.3.0" />` from `@site/src/components/UI/Tags` within the docs; it follows the same rules.
+
+During `pnpm start` / `pnpm build`, `scripts/prepare-ix-versions.ts` resolves the upcoming IX version from `packages/core/package.json` and the pending changesets of the IX branch the documentation artifact was downloaded from (`IX_REPO_BRANCH`, or the head of the pull request). Set `IX_CHANGESETS_BRANCH` to use another branch. If the IX repository can't be reached, the version of the downloaded artifact (or `@siemens/ix` in `package.json`) is used instead.
+
+Components and properties described in the `BREAKING_CHANGES/vX.md` document of the IX repository get a `Breaking change in vX.0.0` tag linking to the related section of that document. While a major release is pending, the tags show its upcoming breaking changes based on the pending changesets. After the release, they are kept based on the major changes in `CHANGELOG.md` until the next major version replaces them.
 
 ### Blog Posts
 
