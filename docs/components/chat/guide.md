@@ -13,6 +13,11 @@ Chats are the outer containers that bring together the three building blocks of 
 2. [AI message](../ai-message)
 3. [Chat input](../chat-input)
 
+## Options
+
+- **Welcome screen:** While the chat has no messages, greet users and show what the assistant can do, e.g. with a short heading, a description and a few Prompt suggestions users can pick instead of typing. The Welcome screen disappears as soon as the conversation starts.
+- **Message actions:** Use the same message actions for each message, e.g. copy, regenerate and feedback, and move further actions into an overflow menu.
+
 ## Behavior in context
 
 - **Placement:** We recommend placing the chat either in the main content or in panes depending on the user goals:
@@ -28,6 +33,7 @@ Chats are the outer containers that bring together the three building blocks of 
 - Do keep auto-scroll enabled so users can read along while a response streams
 - Don't scroll users back to the latest content while they are reading previous responses
 - Don't add limits to how many messages are visible, instead always display full chat sessions
+- Do keep Prompt suggestions short, specific and limited to a few, so users can scan them quickly
 
 ## Related
 
