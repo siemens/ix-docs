@@ -15,7 +15,7 @@ description: Elevation in our design system defines the perceived distance of a 
 Our design system achieves elevation through the application of background color layers, borders and selective shadows to achieve depth and clarity.
 
 :::info
-**Important note:** We changed the elevation approach starting with version 4.0 of our design system, so it is only partially applicable for v3.x (see [migration guide](../home/migration/4_0_0/index.md) for guidance).
+**Important note:** We changed the elevation approach starting with version 4.0 of our design system, so it is only partially applicable for v3.x (see [migration guide](../home/migration/migrationoverview.md) for guidance).
 :::
 
 Our approach to elevation is two-fold:
