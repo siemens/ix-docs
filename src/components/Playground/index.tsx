@@ -30,7 +30,7 @@ function PreviewActions(
         href={props.openExternalUrl}
         target="_blank"
         className={clsx(
-          'flex gap-1 text-[var(--theme-color-soft-text)] flex-nowrap text-nowrap pr-2',
+          'flex gap-1 text-[var(--si-sys-color-text-secondary)] flex-nowrap text-nowrap pr-2',
           styles.openExternal
         )}
       >

@@ -8,6 +8,4 @@
  */
 @use '@siemens/ix/scss/mixins/input';
 
-@include input.label('');
 @include input.form('');
-@include input.element-form('');
