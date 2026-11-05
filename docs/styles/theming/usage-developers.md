@@ -79,7 +79,7 @@ System tokens are available through a stable Sass entry point:
 
 Use `@siemens/ix/scss/tokens/legacy` only when application styles still depend on legacy Sass constants. The previous `@siemens/ix/scss/misc/common-variables` path remains available during the Version 6 migration period for generated corporate themes. Other deep `misc/*` imports are not public API.
 
-Deep internal partials are not public API. Use the documented Sass entry points, `@siemens/ix/scss/deprecated/components` for retained compatibility or the supported mixins instead.
+Deep internal partials are not public API. Use the documented Sass entry points or the supported mixins below `@siemens/ix/scss/mixins/*` instead.
 
 See [Global styles](../global-styles.md) for reset, body, scrollbar, utility and legacy imports.
 

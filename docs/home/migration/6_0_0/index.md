@@ -73,7 +73,7 @@ Use the supported purpose-based Sass entry points:
 
 Use the legacy token entry point only while migrating styles that depend on the previous Sass constants. The `@siemens/ix/scss/misc/common-variables` path remains available during Version 6 for generated corporate themes.
 
-Other deep files below `@siemens/ix/scss/*` are no longer exported. `@siemens/ix/scss/deprecated/components` and selected public mixins remain available for compatibility.
+Other deep files below `@siemens/ix/scss/*` are no longer exported. Selected public mixins below `@siemens/ix/scss/mixins/*` remain available for compatibility.
 
 ## Optional peer dependencies
 
