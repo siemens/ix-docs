@@ -17,6 +17,7 @@ import {
 } from './code-runtime';
 import sdk from '@stackblitz/sdk';
 import { docusaurusFetch } from './docusaurus-fetching';
+import { prepareGlobalCss } from './stackblitz-global-css';
 
 export type PlaygroundVersions = {
   ix: string;
@@ -347,8 +348,9 @@ export async function openStackBlitz({
   );
 
   if (framework === 'react') {
-    const globalCss = await docusaurusFetch(
-      `${snippetBaseUrl}/react/global.css`
+    const globalCss = prepareGlobalCss(
+      await docusaurusFetch(`${snippetBaseUrl}/react/global.css`),
+      name
     );
     sourceFiles['styles/global.css'] = globalCss;
 
@@ -361,8 +363,9 @@ export async function openStackBlitz({
   }
 
   if (framework === 'angular') {
-    const globalCss = await docusaurusFetch(
-      `${snippetBaseUrl}/angular/global.css`
+    const globalCss = prepareGlobalCss(
+      await docusaurusFetch(`${snippetBaseUrl}/angular/global.css`),
+      name
     );
     sourceFiles['styles.css'] = globalCss;
 
@@ -375,8 +378,9 @@ export async function openStackBlitz({
   }
 
   if (framework === 'angular_standalone') {
-    const globalCss = await docusaurusFetch(
-      `${snippetBaseUrl}/angular/global.css`
+    const globalCss = prepareGlobalCss(
+      await docusaurusFetch(`${snippetBaseUrl}/angular/global.css`),
+      name
     );
     sourceFiles['styles.css'] = globalCss;
 
@@ -389,8 +393,9 @@ export async function openStackBlitz({
   }
 
   if (framework === 'html') {
-    const globalCss = await docusaurusFetch(
-      `${snippetBaseUrl}/html/global.css`
+    const globalCss = prepareGlobalCss(
+      await docusaurusFetch(`${snippetBaseUrl}/html/global.css`),
+      name
     );
     sourceFiles['styles/global.css'] = globalCss;
 
@@ -403,7 +408,10 @@ export async function openStackBlitz({
   }
 
   if (framework === 'vue') {
-    const globalCss = await docusaurusFetch(`${snippetBaseUrl}/vue/global.css`);
+    const globalCss = prepareGlobalCss(
+      await docusaurusFetch(`${snippetBaseUrl}/vue/global.css`),
+      name
+    );
     sourceFiles['styles/global.css'] = globalCss;
 
     return openVueStackBlitz(runtimeBaseUrl, sourceFiles, name, libraryVersion);
