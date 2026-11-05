@@ -36,8 +36,10 @@ Install `@siemens/ix`, `@siemens/ix-react` and `@siemens/ix-icons` using a packa
 ## Apply theme
 
 ```css
-@import '@siemens/ix/dist/siemens-ix/siemens-ix.css';
+@import '@siemens/ix/css/default.css';
 ```
+
+The default stylesheet includes the Classic theme, foundation and common utilities for button groups, links, table classes and typography. Foundation applies the SiemensSans Pro font stack to `[data-ix-theme]` and sets body typography, text color, background and document-wide scrollbar styles. The default stylesheet does not include a reset, body margin reset, the complete utility layer or legacy native form styles. See [Global styles](/docs/styles/global-styles) for the optional entry points.
 
 Set the `data-ix-theme` attribute of the `<html>` tag to the theme of choice (e.g. `classic`) and the corresponding `data-ix-color-schema` attribute to the value `light`, `dark` or `system` to set the color scheme. `system` will automatically apply the color scheme of the users’ operating system.
 

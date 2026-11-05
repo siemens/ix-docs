@@ -49,7 +49,7 @@ const IconTable: React.FC<{
             <tr key={item.name}>
               <td className={styles.IconCell}>
                 <a href={href}>
-                  <IxIcon name={item.icon} color={item.color ?? "color-std-text"} />
+                  <IxIcon name={item.icon} color={item.color ?? "--si-sys-color-text-primary"} />
                 </a>
               </td>
               <td className={styles.NameCell}>
@@ -155,7 +155,7 @@ export const IconExamplesFilled = [
 export const IconExamplesStatus = [
   {
     icon: iconWarningOctagon,
-    color: "color-critical",
+    color: "--si-sys-color-text-critical",
     name: "warning-octagon",
     description: (
       <>
@@ -167,7 +167,7 @@ export const IconExamplesStatus = [
   },
   {
     icon: iconAlarm,
-    color: "color-danger",
+    color: "--si-sys-color-text-danger",
     name: "alarm",
     description: (
       <>
@@ -179,7 +179,7 @@ export const IconExamplesStatus = [
   },
   {
     icon: iconError,
-    color: "color-danger",
+    color: "--si-sys-color-text-danger",
     name: "error",
     description: (
       <>
@@ -191,7 +191,7 @@ export const IconExamplesStatus = [
   },
   {
     icon: iconWarning,
-    color: "color-warning",
+    color: "--si-sys-color-text-warning",
     name: "warning",
     description: (
       <>
@@ -203,7 +203,7 @@ export const IconExamplesStatus = [
   },
   {
     icon: iconWarningRhomb,
-    color: "color-caution",
+    color: "--si-sys-color-text-caution",
     name: "warning-rhomb",
     description: (
       <>
@@ -215,7 +215,7 @@ export const IconExamplesStatus = [
   },
   {
     icon: iconSuccess,
-    color: "color-success",
+    color: "--si-sys-color-text-success",
     name: "success",
     description: (
       <>
@@ -227,7 +227,7 @@ export const IconExamplesStatus = [
   },
   {
     icon: iconInfo,
-    color: "color-information",
+    color: "--si-sys-color-text-information",
     name: "info",
     description: (
       <>

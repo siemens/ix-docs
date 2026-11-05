@@ -24,14 +24,14 @@ importers:
         specifier: ^3.0.0
         version: 3.1.0(@types/react@18.3.22)(react@18.3.1)
       '@siemens/ix':
-        specifier: 5.3.0
-        version: 5.3.0(@siemens/ix-icons@3.6.0)
+        specifier: 0.0.0-beta-20261030094057
+        version: 0.0.0-beta-20261030094057(@floating-ui/dom@1.7.0)(@siemens/ix-icons@0.0.0-beta-20261021072559)(@stencil/core@4.31.0)(luxon@3.6.1)
       '@siemens/ix-icons':
-        specifier: 3.6.0
-        version: 3.6.0
+        specifier: 0.0.0-beta-20261021072559
+        version: 0.0.0-beta-20261021072559
       '@siemens/ix-react':
-        specifier: 5.3.0
-        version: 5.3.0(@siemens/ix-icons@3.6.0)(@stencil/core@4.31.0)(@types/react@18.3.22)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+        specifier: 0.0.0-beta-20261030094057
+        version: 0.0.0-beta-20261030094057(@floating-ui/dom@1.7.0)(@siemens/ix-icons@0.0.0-beta-20261021072559)(@stencil/core@4.31.0)(@types/react@18.3.22)(luxon@3.6.1)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
       '@stackblitz/sdk':
         specifier: ^1.11.0
         version: 1.11.0
@@ -1912,21 +1912,31 @@ packages:
   '@sideway/pinpoint@2.0.0':
     resolution: {integrity: sha512-RNiOoTPkptFtSVzQevY/yWtZwf/RxyVnPy/OcA9HBM3MlGDnBEYL5B41H0MTn0Uec8Hi+2qUtTfG2WWZBmMejQ==}
 
-  '@siemens/ix-icons@3.6.0':
-    resolution: {integrity: sha512-lonMxvhGYR/4cs7Vg7r/VeJSoxS0oCYQAPyiQOpl8/8Oyt9LB/oeXGHrKgENWiTRJW1MGMvCTfJRLASacuqhJg==}
+  '@siemens/ix-icons@0.0.0-beta-20261021072559':
+    resolution: {integrity: sha512-LJIbmViqzjLDHFb9Pjqqw7Go7cHfs1EYWJLHpGM2ITEPXpp/uy+uSoa5ieLmITKQyde9KEfzyQ9Faq7nJZ4Xnw==}
     engines: {node: '>=22.19.x', pnpm: '>=10.x.x'}
 
-  '@siemens/ix-react@5.3.0':
-    resolution: {integrity: sha512-+E9RwyU4oKxmyGGyTLox+34LoVxInUkz0Hg3baPYM8pm8EeZ9cvCGtbdapQ3FaT4+NgF9/JKA/Wrj6zVs4YnEA==}
+  '@siemens/ix-react@0.0.0-beta-20261030094057':
+    resolution: {integrity: sha512-z/SRCzFIevbyg8rvB42etEQ+0olzmqYbzzT585SL6ZlmitDht0SxNupdhqjn431yqcLEqEeNWtIsTtNy22Atfg==}
     peerDependencies:
-      '@siemens/ix-icons': ^3.5.0
+      '@siemens/ix-icons': 0.0.0-beta-20261021072559
       react: ^18 || ^19
       react-dom: ^18 || ^19
 
-  '@siemens/ix@5.3.0':
-    resolution: {integrity: sha512-7tbrWI2CYAYItx7AoVte5lNHcp0Psu55WP2zCg6StMlap3guaQLZdmIkA+x8bbKfuzvOmGBnaKhoY5oJI8x/Ag==}
+  '@siemens/ix@0.0.0-beta-20261030094057':
+    resolution: {integrity: sha512-IOpM4YM836xfR0Q0gqQOo+e43EQ8V/kmc/rWdtqOAepsf11A0I1e3toHU3WBU/wce5YSJ0/fyI/XZ3HLOo7Tgg==}
     peerDependencies:
-      '@siemens/ix-icons': ^3.5.0
+      '@floating-ui/dom': ^1.6.13
+      '@siemens/ix-icons': 0.0.0-beta-20261021072559
+      '@stencil/core': ^4.43.5
+      luxon: ^3.4.4
+    peerDependenciesMeta:
+      '@floating-ui/dom':
+        optional: true
+      '@stencil/core':
+        optional: true
+      luxon:
+        optional: true
 
   '@sinclair/typebox@0.27.8':
     resolution: {integrity: sha512-+Fj43pSMwJs4KRrH/938Uf+uAELIgVBmQzg/q1YG10djyfA3TnrU8N8XzqCh/okZdszqBQTZf96idMfE5lnwTA==}
@@ -2222,6 +2232,7 @@ packages:
 
   '@ungap/structured-clone@1.3.0':
     resolution: {integrity: sha512-WmoN8qaIAo7WTYWbAZuG8PYEhn5fkz7dZrqTBZ7dtt//lL2Gwms1IcnQ5yHqjDfX8Ft5j4YzDM23f87zBfDe9g==}
+    deprecated: Potential CWE-502 - Update to 1.3.1 or higher
 
   '@webassemblyjs/ast@1.14.1':
     resolution: {integrity: sha512-nuBEDgQfm1ccRp/8bCQrx1frohyufl4JlbMMZ4P1wpeOfDhF6FQkxZJ1b/e+PLwr6X1Nhw6OLme5usuBWYBvuQ==}
@@ -2339,9 +2350,6 @@ packages:
   algoliasearch@5.24.0:
     resolution: {integrity: sha512-CkaUygzZ91Xbw11s0CsHMawrK3tl+Ue57725HGRgRzKgt2Z4wvXVXRCtQfvzh8K7Tp4Zp7f1pyHAtMROtTJHxg==}
     engines: {node: '>= 14.0.0'}
-
-  animejs@4.2.2:
-    resolution: {integrity: sha512-Ys3RuvLdAeI14fsdKCQy7ytu4057QX6Bb7m4jwmfd6iKmUmLquTwk1ut0e4NtRQgCeq/s2Lv5+oMBjz6c7ZuIg==}
 
   ansi-align@3.0.1:
     resolution: {integrity: sha512-IOfwwBF5iczOjp/WeY4YxyjqAFMQoZufdQWDd19SEExbVLNXqvpzSJ/M7Za4/sCPmQ0+GRquoA7bGcINcxew6w==}
@@ -3773,9 +3781,6 @@ packages:
   ini@2.0.0:
     resolution: {integrity: sha512-7PnF4oN3CvZF23ADhA5wRaYEQpJ8qygSkbtTXWBeXWXmEVRXK+1ITciHWwHhsjv1TmW0MgacIv6hEi5pX5NQdA==}
     engines: {node: '>=10'}
-
-  inline-style-parser@0.2.4:
-    resolution: {integrity: sha512-0aO8FkhNZlj/ZIbNi7Lxxr12obT7cL1moPfE4tg1LkX7LlLfC6DeX4l2ZEud1ukP9jNQyNnfzQVqwbwmAATY4Q==}
 
   inline-style-parser@0.2.7:
     resolution: {integrity: sha512-Nb2ctOyNR8DqQoR0OwRG95uNWIC0C1lCgf5Naz5H6Ji72KZ8OcFZLz2P5sNgwlyoJ8Yif11oMuYs5pBQa86csA==}
@@ -5720,17 +5725,11 @@ packages:
     resolution: {integrity: sha512-6fPc+R4ihwqP6N/aIv2f1gMH8lOVtWQHoqC4yK6oSDVVocumAsfCqjkXnqiYMhmMwS/mEHLp7Vehlt3ql6lEig==}
     engines: {node: '>=8'}
 
-  style-to-js@1.1.16:
-    resolution: {integrity: sha512-/Q6ld50hKYPH3d/r6nr117TZkHR0w0kGGIVfpG9N6D8NymRPM9RqCUv4pRpJ62E5DqOYx2AFpbZMyCPnjQCnOw==}
-
   style-to-js@1.1.21:
     resolution: {integrity: sha512-RjQetxJrrUJLQPHbLku6U/ocGtzyjbJMP9lCNK7Ag0CNh690nSH8woqWH9u16nMjYBAok+i7JO1NP2pOy8IsPQ==}
 
   style-to-object@1.0.14:
     resolution: {integrity: sha512-LIN7rULI0jBscWQYaSswptyderlarFkjQ+t79nzty8tcIAceVomEVlLzH5VP4Cmsv6MtKhs7qaAiwlcp+Mgaxw==}
-
-  style-to-object@1.0.8:
-    resolution: {integrity: sha512-xT47I/Eo0rwJmaXC4oilDGDWLohVhR6o/xAQcPQN8q6QBuZVL8qMYL85kLmST5cPjAorwvqIA4qXTRQoYHaL6g==}
 
   stylehacks@6.1.1:
     resolution: {integrity: sha512-gSTTEQ670cJNoaeIp9KX6lZmm8LJ3jPB5yJmX8Zq/wQxOsAFXV3qjWzHas3YYk1qesuVIyYWWUpZ0vSE/dTSGg==}
@@ -5986,6 +5985,7 @@ packages:
 
   uuid@8.3.2:
     resolution: {integrity: sha512-+NYs2QeMWy+GWFOEm9xnn6HCDp0l7QBD7ml8zLUmJ+93Q5NF0NocErnwkTkXVFNiX3/fpC6afS8Dhb/gz7R7eg==}
+    deprecated: uuid@10 and below is no longer supported.  For ESM codebases, update to uuid@latest.  For CommonJS codebases, use uuid@11 (but be aware this version will likely be deprecated in 2028).
     hasBin: true
 
   value-equal@1.0.1:
@@ -8353,13 +8353,16 @@ snapshots:
   '@floating-ui/core@1.7.0':
     dependencies:
       '@floating-ui/utils': 0.2.9
+    optional: true
 
   '@floating-ui/dom@1.7.0':
     dependencies:
       '@floating-ui/core': 1.7.0
       '@floating-ui/utils': 0.2.9
+    optional: true
 
-  '@floating-ui/utils@0.2.9': {}
+  '@floating-ui/utils@0.2.9':
+    optional: true
 
   '@hapi/hoek@9.3.0': {}
 
@@ -8736,7 +8739,7 @@ snapshots:
       detect-libc: 2.1.2
       is-glob: 4.0.3
       node-addon-api: 7.1.1
-      picomatch: 4.0.3
+      picomatch: 4.0.7
     optionalDependencies:
       '@parcel/watcher-android-arm64': 2.5.6
       '@parcel/watcher-darwin-arm64': 2.5.6
@@ -8802,25 +8805,28 @@ snapshots:
 
   '@sideway/pinpoint@2.0.0': {}
 
-  '@siemens/ix-icons@3.6.0': {}
+  '@siemens/ix-icons@0.0.0-beta-20261021072559': {}
 
-  '@siemens/ix-react@5.3.0(@siemens/ix-icons@3.6.0)(@stencil/core@4.31.0)(@types/react@18.3.22)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)':
+  '@siemens/ix-react@0.0.0-beta-20261030094057(@floating-ui/dom@1.7.0)(@siemens/ix-icons@0.0.0-beta-20261021072559)(@stencil/core@4.31.0)(@types/react@18.3.22)(luxon@3.6.1)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)':
     dependencies:
-      '@siemens/ix': 5.3.0(@siemens/ix-icons@3.6.0)
-      '@siemens/ix-icons': 3.6.0
+      '@siemens/ix': 0.0.0-beta-20261030094057(@floating-ui/dom@1.7.0)(@siemens/ix-icons@0.0.0-beta-20261021072559)(@stencil/core@4.31.0)(luxon@3.6.1)
+      '@siemens/ix-icons': 0.0.0-beta-20261021072559
       '@stencil/react-output-target': 1.6.5(@stencil/core@4.31.0)(@types/react@18.3.22)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
       react: 18.3.1
       react-dom: 18.3.1(react@18.3.1)
       tslib: 2.8.1
     transitivePeerDependencies:
+      - '@floating-ui/dom'
       - '@stencil/core'
       - '@types/react'
+      - luxon
 
-  '@siemens/ix@5.3.0(@siemens/ix-icons@3.6.0)':
+  '@siemens/ix@0.0.0-beta-20261030094057(@floating-ui/dom@1.7.0)(@siemens/ix-icons@0.0.0-beta-20261021072559)(@stencil/core@4.31.0)(luxon@3.6.1)':
     dependencies:
+      '@siemens/ix-icons': 0.0.0-beta-20261021072559
+    optionalDependencies:
       '@floating-ui/dom': 1.7.0
-      '@siemens/ix-icons': 3.6.0
-      animejs: 4.2.2
+      '@stencil/core': 4.31.0
       luxon: 3.6.1
 
   '@sinclair/typebox@0.27.8': {}
@@ -9348,8 +9354,6 @@ snapshots:
       '@algolia/requester-browser-xhr': 5.24.0
       '@algolia/requester-fetch': 5.24.0
       '@algolia/requester-node-http': 5.24.0
-
-  animejs@4.2.2: {}
 
   ansi-align@3.0.1:
     dependencies:
@@ -10731,7 +10735,7 @@ snapshots:
       mdast-util-mdxjs-esm: 2.0.1
       property-information: 7.1.0
       space-separated-tokens: 2.0.2
-      style-to-js: 1.1.16
+      style-to-js: 1.1.21
       unist-util-position: 5.0.0
       zwitch: 2.0.4
     transitivePeerDependencies:
@@ -10751,7 +10755,7 @@ snapshots:
       mdast-util-mdxjs-esm: 2.0.1
       property-information: 7.1.0
       space-separated-tokens: 2.0.2
-      style-to-js: 1.1.16
+      style-to-js: 1.1.21
       unist-util-position: 5.0.0
       vfile-message: 4.0.2
     transitivePeerDependencies:
@@ -10970,8 +10974,6 @@ snapshots:
   ini@1.3.8: {}
 
   ini@2.0.0: {}
-
-  inline-style-parser@0.2.4: {}
 
   inline-style-parser@0.2.7: {}
 
@@ -11220,7 +11222,8 @@ snapshots:
 
   lunr-languages@1.14.0: {}
 
-  luxon@3.6.1: {}
+  luxon@3.6.1:
+    optional: true
 
   mark.js@8.11.1: {}
 
@@ -13284,10 +13287,6 @@ snapshots:
 
   strip-json-comments@3.1.1: {}
 
-  style-to-js@1.1.16:
-    dependencies:
-      style-to-object: 1.0.8
-
   style-to-js@1.1.21:
     dependencies:
       style-to-object: 1.0.14
@@ -13295,10 +13294,6 @@ snapshots:
   style-to-object@1.0.14:
     dependencies:
       inline-style-parser: 0.2.7
-
-  style-to-object@1.0.8:
-    dependencies:
-      inline-style-parser: 0.2.4
 
   stylehacks@6.1.1(postcss@8.5.3):
     dependencies:

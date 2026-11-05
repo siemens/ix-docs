@@ -6,9 +6,9 @@
   position: relative;
   flex-direction: column;
   height: 15rem;
-  background-color: var(--theme-color-3);
+  background-color: var(--si-sys-color-background-2);
   border-radius: 0.1875rem;
-  border: 1px solid var(--theme-color-x-weak-bdr);
+  border: 1px solid var(--si-sys-color-border-4);
 
   margin-bottom: 1rem;
 }
@@ -32,7 +32,7 @@
   flex-shrink: 0;
 
   border-radius: 1.125rem 0rem 0rem 0rem;
-  background: var(--theme-color-4);
+  background: var(--si-sys-color-background-4);
 
   align-items: center;
   justify-content: space-evenly;
@@ -49,28 +49,28 @@
   width: 2rem;
   height: 2rem;
   border-radius: 100%;
-  background-color: var(--theme-color-1);
+  background-color: var(--si-sys-color-background-0);
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
 .toolButtonLight {
-  background-color: var(--theme-color-3);
+  background-color: var(--si-sys-color-background-2);
 }
 
 .toolButton:hover {
-  background-color: var(--theme-color-1--hover);
+  background-color: var(--si-sys-color-background-hover);
 }
 
 .toolButtonLight:hover {
-  background-color: var(--theme-color-ghost--hover);
+  background-color: var(--si-sys-color-background-hover);
 }
 
 .toolButton:active {
-  background-color: var(--theme-color-1--active);
+  background-color: var(--si-sys-color-background-selected);
 }
 
 .toolButtonLight:active {
-  background-color: var(--theme-color-ghost--active);
+  background-color: var(--si-sys-color-background-selected);
 }

@@ -12,14 +12,14 @@
   }
 
   .api-row {
-    background-color: var(--theme-color-1);
-    color: var(--theme-color-std-text);
+    background-color: var(--si-sys-color-background-0);
+    color: var(--si-sys-color-text-primary);
   }
 
   code {
-    --ifm-code-background: var(--theme-color-5);
+    --ifm-code-background: var(--si-sys-color-background-3);
     padding: 2px 4px;
-    color: var(--theme-color-std-text);
+    color: var(--si-sys-color-text-primary);
     border: none;
   }
 
