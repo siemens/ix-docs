@@ -32,6 +32,8 @@ $font-family:
 
 body {
   font-family: $font-family;
+  font-size: var(--ifm-font-size-base);
+  line-height: var(--ifm-line-height-base);
 }
 
 #__docusaurus {
