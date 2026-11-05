@@ -27,7 +27,7 @@ export function BreakingChangeTag({
     <>
       <IxIcon
         name={iconElectricalEnergyFilled}
-        color="color-warning-text"
+        color="--si-sys-color-text-caution"
         size="16"
       />
       Breaking change in v{message}

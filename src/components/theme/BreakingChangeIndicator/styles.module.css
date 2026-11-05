@@ -14,7 +14,7 @@
   width: 1rem;
   height: 1rem;
   margin-inline-start: 0.5rem;
-  color: var(--theme-color-warning-text);
+  color: var(--si-sys-color-text-caution);
 }
 
 .Marker::before {

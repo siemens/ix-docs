@@ -32,12 +32,12 @@
   display: flex;
   align-items: center;
   gap: 0.25rem;
-  border-color: var(--theme-color-warning-bdr);
-  color: var(--theme-color-warning-text);
+  border-color: var(--si-sys-color-border-caution);
+  color: var(--si-sys-color-text-caution);
 }
 
 .BreakingChangeLink:hover {
-  color: var(--theme-color-warning-text);
+  color: var(--si-sys-color-text-caution);
   text-decoration: underline;
 }
 
