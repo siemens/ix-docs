@@ -68,7 +68,7 @@ function PropertyHeader({
 }: ApiTableProps) {
   return (
     <div className="flex bg-[var(--si-sys-color-background-1)] text-[var(--si-sys-color-text-primary)] p-4 border-solid border-0 border-b border-[var(--si-sys-color-border-3)] anchor">
-      <div className="flex items-center font-bold">
+      <div className="flex items-center font-[var(--si-ref-typography-font-weight-sbold)]">
         <BrowserOnly>
           {() => <FrameworkHeaderName name={name} type={type} />}
         </BrowserOnly>
@@ -100,7 +100,7 @@ function SlotHeader({ children, name }: ApiTableProps) {
 function Text({ children, name }: ApiTableProps) {
   return (
     <div className={clsx(styles.ApiTableText, 'api-row')}>
-      <div className="px-8 py-4 font-bold w-auto border-solid border-0 border-r border-[var(--si-sys-color-border-3)]">
+      <div className="px-8 py-4 font-[var(--si-ref-typography-font-weight-sbold)] w-auto border-solid border-0 border-r border-[var(--si-sys-color-border-3)]">
         {name}
       </div>
       <div className="w-auto p-4">{children}</div>
@@ -156,7 +156,7 @@ export function AnchorHeader({
       )}
     >
       <div
-        className={clsx('flex items-center font-bold w-full', leftClassName)}
+        className={clsx('flex items-center font-[var(--si-ref-typography-font-weight-sbold)] w-full', leftClassName)}
       >
         <button
           onClick={onClick}

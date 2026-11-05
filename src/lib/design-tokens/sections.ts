@@ -70,16 +70,19 @@ export function extractTokenTableUsages(
   return usages;
 }
 
-export function tokenTableSectionEntries<T extends SectionEntry>(
+export function tokenTableSectionEntries<T extends SectionEntry & { name: string }>(
   entries: readonly T[],
   table: TokenTableName,
   section: string
 ): T[] {
   const rule = tokenTableSectionRules[table];
-  return entries.filter((entry) => entry.group === section && rule(entry));
+  // The manifest is ordered lexicographically; docs show numbered series (e.g. 1, 2, …, 10) in natural order.
+  return entries
+    .filter((entry) => entry.group === section && rule(entry))
+    .sort((a, b) => a.name.localeCompare(b.name, 'en', { numeric: true }));
 }
 
-export function selectTokenTableSection<T extends SectionEntry>(
+export function selectTokenTableSection<T extends SectionEntry & { name: string }>(
   entries: readonly T[],
   table: TokenTableName,
   section: string | undefined

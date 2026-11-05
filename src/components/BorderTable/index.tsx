@@ -30,6 +30,7 @@ import {
 } from 'react';
 import { ColorContainerFix, ThemeContext } from '../ContainerFix';
 import CopyButton from '../UI/CopyButton';
+import TokenDescription from '../UI/TokenDescription';
 import ThemeSelection from '../UI/ThemeSelection';
 import ThemeVariantToggle from '../UI/ThemeVariantToggle';
 import styles from './BorderTable.module.css';
@@ -122,8 +123,7 @@ function BrowserOnlyBorderTable({ entry }: { entry: DesignTokenEntry }) {
           {expanded && (
             <>
               <BorderTable.Text name="Description">
-                {entry.description ??
-                  'No description is provided by the package manifest.'}
+                <TokenDescription description={entry.description} />
               </BorderTable.Text>
               <BorderTable.Text name="Color">
                 <code>{value}</code>
@@ -148,7 +148,7 @@ function Text({
 }) {
   return (
     <div className={clsx(styles.borderTextRow, 'api-row')}>
-      <div className="px-8 py-4 font-bold w-auto border-solid border-0 border-r border-[var(--si-sys-color-border-3)]">
+      <div className="px-8 py-4 font-[var(--si-ref-typography-font-weight-sbold)] w-auto border-solid border-0 border-r border-[var(--si-sys-color-border-3)]">
         {name}
       </div>
       <div className="w-auto p-4">{children}</div>

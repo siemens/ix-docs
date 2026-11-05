@@ -34,6 +34,7 @@ import {
   useState,
 } from 'react';
 import CopyButton from '../UI/CopyButton';
+import TokenDescription from '../UI/TokenDescription';
 import FrameworkSelection from '../UI/FrameworkSelection';
 import ThemeSelection from '../UI/ThemeSelection';
 import { ColorContainerFix, ThemeContext } from '../ContainerFix';
@@ -250,8 +251,7 @@ function TypographyStyle() {
       </TypographyTable.Text>
 
       <TypographyTable.Text name="Description">
-        {entry.description ??
-          'No description is provided by the package manifest.'}
+        <TokenDescription description={entry.description} />
       </TypographyTable.Text>
 
       <TypographyTable.Text name="Font family">
@@ -288,7 +288,7 @@ function Text({
 }) {
   return (
     <div className={styles.typographyTextRow}>
-      <div className="px-8 py-4 font-bold w-auto border-solid border-0 border-r border-[var(--si-sys-color-border-3)]">
+      <div className="px-8 py-4 font-[var(--si-ref-typography-font-weight-sbold)] w-auto border-solid border-0 border-r border-[var(--si-sys-color-border-3)]">
         {name}
       </div>
       <div className={flush ? 'w-auto' : 'w-auto p-4'}>{children}</div>

@@ -100,7 +100,7 @@
   min-width: 11rem;
   height: 2.875rem;
   cursor: pointer;
-  font-weight: 700;
+  font-weight: var(--si-ref-typography-font-weight-sbold);
 }
 
 .Tab:focus-visible {

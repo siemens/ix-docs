@@ -32,6 +32,7 @@ import {
 } from 'react';
 import { ColorContainerFix, ThemeContext } from '../ContainerFix';
 import CopyButton from '../UI/CopyButton';
+import TokenDescription from '../UI/TokenDescription';
 import ThemeSelection from '../UI/ThemeSelection';
 import ThemeVariantToggle from '../UI/ThemeVariantToggle';
 import styles from './ColorTable.module.css';
@@ -44,33 +45,71 @@ const ColorContext = createContext<ColorContextType>({
   value: '',
 });
 
-function formatColor(value: string): string {
-  const normalized = value.trim().toUpperCase();
-  if (!normalized.startsWith('#')) {
-    return normalized;
-  }
+function toHex(channel: number): string {
+  return Math.round(Math.min(Math.max(channel, 0), 255))
+    .toString(16)
+    .padStart(2, '0')
+    .toUpperCase();
+}
 
-  const hex = normalized.slice(1);
-  if (hex.length === 3) {
-    return `#${hex
-      .split('')
-      .map((character) => character + character)
-      .join('')}`;
+function parseAlpha(alpha: string | undefined): number {
+  if (!alpha) {
+    return 1;
   }
+  return alpha.endsWith('%') ? parseFloat(alpha) / 100 : parseFloat(alpha);
+}
 
-  if (hex.length === 4 || hex.length === 8) {
-    const alphaLength = hex.length === 8 ? 2 : 1;
-    const color = hex.slice(0, -alphaLength);
-    const alpha = hex.slice(-alphaLength);
-    const alphaPercentage = Math.round(
-      (parseInt(alpha, 16) / (alphaLength === 2 ? 255 : 15)) * 100
+function formatRgb(rgb: number[], alpha: number): string {
+  const hex = `#${rgb.map(toHex).join('')}`;
+  const alphaPercentage = Math.round(alpha * 100);
+  return alphaPercentage < 100 ? `${hex} ${alphaPercentage}%` : hex;
+}
+
+// Browsers serialize computed colors as rgb()/rgba(), or as color(srgb …)
+// for relative color syntax such as `rgb(from #c75300 r g b / 0)`.
+function formatComputedColor(computed: string): string | undefined {
+  const number = '[-+]?\\d*\\.?\\d+(?:e[-+]?\\d+)?';
+  const rgb = computed.match(
+    new RegExp(
+      `^rgba?\\(\\s*(${number})[,\\s]+(${number})[,\\s]+(${number})(?:\\s*[,/]\\s*(${number}%?))?\\s*\\)$`,
+      'i'
+    )
+  );
+  if (rgb) {
+    return formatRgb(
+      [rgb[1], rgb[2], rgb[3]].map(Number),
+      parseAlpha(rgb[4])
     );
-    return alphaPercentage < 100
-      ? `#${color} ${alphaPercentage}%`
-      : `#${color}`;
   }
 
-  return normalized;
+  const srgb = computed.match(
+    new RegExp(
+      `^color\\(\\s*srgb\\s+(${number})\\s+(${number})\\s+(${number})(?:\\s*/\\s*(${number}%?))?\\s*\\)$`,
+      'i'
+    )
+  );
+  if (srgb) {
+    return formatRgb(
+      [srgb[1], srgb[2], srgb[3]].map((channel) => Number(channel) * 255),
+      parseAlpha(srgb[4])
+    );
+  }
+
+  return undefined;
+}
+
+function resolveColor(container: HTMLElement, tokenName: string): string {
+  const probe = document.createElement('span');
+  probe.hidden = true;
+  probe.style.color = `var(${tokenName})`;
+  container.appendChild(probe);
+  const computed = getComputedStyle(probe).color;
+  probe.remove();
+
+  return (
+    formatComputedColor(computed) ??
+    getComputedStyle(container).getPropertyValue(tokenName).trim()
+  );
 }
 
 function ColorCircle({ tokenName }: { tokenName: string }) {
@@ -103,9 +142,7 @@ function BrowserOnlyColorTable({ entry }: { entry: DesignTokenEntry }) {
     }
 
     const updateValue = () => {
-      setValue(
-        formatColor(getComputedStyle(themeContainer).getPropertyValue(entry.name))
-      );
+      setValue(resolveColor(themeContainer, entry.name));
     };
     const observer = new MutationObserver(updateValue);
     observer.observe(themeContainer, {
@@ -159,8 +196,7 @@ function BrowserOnlyColorTable({ entry }: { entry: DesignTokenEntry }) {
             {expanded && (
               <>
                 <ColorTable.Text name="Description">
-                  {entry.description ??
-                    'No description is provided by the package manifest.'}
+                  <TokenDescription description={entry.description} />
                 </ColorTable.Text>
                 <ColorTable.Text name="Value">
                   <code>{value}</code>
@@ -186,7 +222,7 @@ function Text({
 }) {
   return (
     <div className={clsx(styles.colorTextRow, 'api-row')}>
-      <div className="px-8 py-4 font-bold w-auto border-solid border-0 border-r border-[var(--si-sys-color-border-3)]">
+      <div className="px-8 py-4 font-[var(--si-ref-typography-font-weight-sbold)] w-auto border-solid border-0 border-r border-[var(--si-sys-color-border-3)]">
         {name}
       </div>
       <div className="w-auto p-4">{children}</div>

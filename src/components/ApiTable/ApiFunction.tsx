@@ -62,7 +62,7 @@ function ApiFunction({
                   'api-row border-solid border-0 border-b border-[var(--si-sys-color-border-3)]'
                 )}
               >
-                <div className="px-8 py-4 font-bold w-auto border-solid border-0 border-r border-[var(--si-sys-color-border-3)] break-words">
+                <div className="px-8 py-4 font-[var(--si-ref-typography-font-weight-sbold)] w-auto border-solid border-0 border-r border-[var(--si-sys-color-border-3)] break-words">
                   Description
                 </div>
                 <div className="w-auto p-4 break-words">{children}</div>
@@ -79,7 +79,7 @@ function ApiFunction({
                       'api-row border-solid border-0 border-b border-[var(--si-sys-color-border-3)]'
                     )}
                   >
-                    <div className="px-8 py-4 font-bold w-auto border-solid border-0 border-r border-[var(--si-sys-color-border-3)]">
+                    <div className="px-8 py-4 font-[var(--si-ref-typography-font-weight-sbold)] w-auto border-solid border-0 border-r border-[var(--si-sys-color-border-3)]">
                       <div>{param.name}</div>
                       {param.optional && (
                         <div className="font-normal text-xs opacity-70">
@@ -113,7 +113,7 @@ function ApiFunction({
             )}
 
             <div className={clsx(styles.ApiTableText, 'api-row')}>
-              <div className="px-8 py-4 font-bold w-auto border-solid border-0 border-r border-[var(--si-sys-color-border-3)]">
+              <div className="px-8 py-4 font-[var(--si-ref-typography-font-weight-sbold)] w-auto border-solid border-0 border-r border-[var(--si-sys-color-border-3)]">
                 Returns
               </div>
               <div className="w-auto p-4 flex items-center">

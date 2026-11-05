@@ -19,11 +19,16 @@ import sdk from '@stackblitz/sdk';
 import { docusaurusFetch } from './docusaurus-fetching';
 import { prepareGlobalCss } from './stackblitz-global-css';
 
+export type PlaygroundVersions = {
+  ix: string;
+  icons: string;
+};
+
 function openProject(
   name: string,
   projectFiles: Record<string, string>,
   openFile: Array<string> | string,
-  version: string
+  version: PlaygroundVersions
 ) {
   replaceLibraryImports(projectFiles, version);
   sdk.openProject(
@@ -41,14 +46,18 @@ function openProject(
 
 function replaceLibraryImports(
   project: Record<string, string>,
-  version: string
+  version: PlaygroundVersions
 ) {
   let packageJson = project["package.json"];
   packageJson = packageJson.replace(
     /"@siemens\/ix-echarts":\s*"<VERSION>"/g,
     '"@siemens/ix-echarts": "^3.0.0"'
   );
-  packageJson = packageJson.replace(/\"<VERSION>\"/g, `"${version}"`);
+  packageJson = packageJson.replace(/\"<VERSION>\"/g, `"${version.ix}"`);
+  packageJson = packageJson.replace(
+    /\"<ICONS_VERSION>\"/g,
+    `"${version.icons}"`
+  );
   project["package.json"] = packageJson;
 }
 
@@ -56,7 +65,7 @@ async function openVueStackBlitz(
   baseUrl: string,
   snippets: Record<string, string>,
   name: string,
-  version: string
+  version: PlaygroundVersions
 ) {
   const projectFiles = await createVueProjectFiles(baseUrl, snippets, name);
 
@@ -67,7 +76,7 @@ async function openHtmlStackBlitz(
   baseUrl: string,
   snippets: Record<string, string>,
   name: string,
-  version: string
+  version: PlaygroundVersions
 ) {
   const projectFiles = await createHTMLProjectFiles(baseUrl, snippets, name);
 
@@ -78,7 +87,7 @@ async function openAngularStackBlitz(
   baseUrl: string,
   snippets: Record<string, string>,
   name: string,
-  version: string
+  version: PlaygroundVersions
 ) {
   const projectFiles = await createAngularProjectFiles(baseUrl, snippets, name);
 
@@ -89,7 +98,7 @@ async function openAngularStandaloneStackBlitz(
   baseUrl: string,
   snippets: Record<string, string>,
   name: string,
-  version: string
+  version: PlaygroundVersions
 ) {
   const projectFiles = await createAngularStandaloneProjectFiles(
     baseUrl,
@@ -104,7 +113,7 @@ async function openReactStackBlitz(
   baseUrl: string,
   snippets: Record<string, string>,
   name: string,
-  version: string
+  version: PlaygroundVersions
 ) {
   const projectFiles = await createReactProjectFiles(baseUrl, snippets, name);
 
@@ -322,9 +331,12 @@ export async function openStackBlitz({
   name: string;
   sourcePath: Record<string, string>;
   framework: FrameworkTypes;
-  version: string;
+  version: Partial<PlaygroundVersions>;
 }) {
-  const libraryVersion = version || 'latest';
+  const libraryVersion: PlaygroundVersions = {
+    ix: version.ix || 'latest',
+    icons: version.icons || 'latest',
+  };
   const sourceFiles: Record<string, string> = {};
 
   await Promise.all(

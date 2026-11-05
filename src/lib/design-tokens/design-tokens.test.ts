@@ -87,6 +87,33 @@ test('accepts entries whose upstream source does not provide a description', () 
   assert.equal(manifest.entries[0].description, undefined);
 });
 
+test('accepts number tokens', () => {
+  const input = cloneManifest();
+  const entries = input.entries as Array<Record<string, unknown>>;
+  entries.splice(1, 0, {
+    name: '--si-sys-color-effects-disable-opacity',
+    sourcePath: 'si.sys.color.effects.disable-opacity',
+    group: 'color.effects',
+    type: 'number',
+    sourceType: 'number',
+    applicability: {
+      modes: ['dark', 'light'],
+      densities: ['default', 'compact'],
+      densityOverrides: [],
+    },
+  });
+
+  const manifest = parseDesignTokenManifest(input);
+  assert.equal(manifest.entries[1].type, 'number');
+  assert.equal(manifest.entries[1].sourceType, 'number');
+
+  entries[1].sourceType = 'dimension';
+  assert.throws(
+    () => parseDesignTokenManifest(input),
+    /sourceType "dimension" is incompatible with semantic type "number"/
+  );
+});
+
 test('rejects the retired publication envelope', () => {
   for (const key of ['package', 'assets']) {
     const manifest = cloneManifest();
