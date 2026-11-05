@@ -74,7 +74,7 @@ export default function VersionSelection({ value }: { value: VersionFile }) {
             aria-haspopup="listbox"
           >
             <span>
-              <IxTypography textColor="std" format="body-lg">
+              <IxTypography textColor="primary" format="body-lg">
                 {currentVersion?.label}
               </IxTypography>
               <IxIcon

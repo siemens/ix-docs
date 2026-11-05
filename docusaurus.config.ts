@@ -72,7 +72,7 @@ function getSiemensSansFontFaceHeadTag() {
   };
 }
 const customCss = [
-  require.resolve('@siemens/ix/css/default.css'),
+  './src/scss/ix-default.css',
   './src/scss/custom.scss',
 ];
 
