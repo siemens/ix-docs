@@ -1,5 +1,5 @@
 ---
-sidebar_position: 3
+sidebar_position: 1
 sidebar_label: UX writer role
 title: UX writer role
 doc-type: 'banner'
