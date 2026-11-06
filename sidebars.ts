@@ -66,6 +66,7 @@ const sidebars: SidebarsConfig = {
       className: 'doc-sidebar-item-bold',
       label: 'Migration and upgrade',
       items: [
+        'home/migration/6_0_0/index',
         'home/migration/5_0_0/index',
         'home/migration/4_0_0/index',
         'home/migration/3_0_0/index',
@@ -96,6 +97,7 @@ const sidebars: SidebarsConfig = {
       items: [
         'home/releases/roadmap',
         'home/releases/release-version',
+        'home/releases/compatibility-v5',
         {
           type: 'link',
           href: 'https://github.com/siemens/ix/releases',
@@ -984,6 +986,24 @@ const sidebars: SidebarsConfig = {
           ],
         }),
         createTabItem({
+          id: 'components/info-page/index',
+          label: 'Info page',
+          items: [
+            {
+              id: 'components/info-page/guide',
+              label: 'Usage',
+            },
+            {
+              id: 'components/info-page/code',
+              label: 'Code',
+            },
+            {
+              id: 'components/info-page/language',
+              label: 'Writing'
+            }
+          ],
+        }),
+        createTabItem({
           id: 'components/loading-modal/index',
           label: 'Loading modal',
           items: [
@@ -1366,8 +1386,10 @@ const sidebars: SidebarsConfig = {
     }),
     'styles/borders',
     'styles/shadows',
+    'styles/density',
     'styles/elevation',
     'styles/animation',
+    'styles/global-styles',
     {
       type: 'category',
       className: 'doc-sidebar-item-bold',
