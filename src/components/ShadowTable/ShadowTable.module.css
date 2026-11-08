@@ -56,7 +56,7 @@
   height: 100%;
 
   padding-right: 1rem;
-  border-right: 1px solid var(--theme-color-soft-bdr);
+  border-right: 1px solid var(--si-sys-color-border-3);
 }
 
 .shadowColumnChildName {
@@ -75,7 +75,7 @@
   display: grid;
   grid-template-columns: minmax(100px, 20%) 1fr;
   border: 0;
-  border-bottom: 1px solid var(--theme-color-soft-bdr);
+  border-bottom: 1px solid var(--si-sys-color-border-3);
 }
 
 .shadowTextRow:last-child {
