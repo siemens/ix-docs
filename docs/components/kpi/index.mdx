@@ -3,4 +3,11 @@ doc-type: "tabs"
 description: 'KPIs display measured values together with a status indicator to help users interpret data.'
 title: 'KPI'
 deprecated:
+breaking-change:
+  version: 6.0.0
+  description: 'Status state values renamed and alarm/warning icon aria-label properties removed'
+  properties:
+    - state
+  source:
+    - https://github.com/siemens/ix/blob/dcdb2e8a5664e771cb7f17f02974f897d556a6cd/.changeset/eix-259-kpi-status-states.md
 ---

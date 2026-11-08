@@ -8,8 +8,9 @@
  */
 
 /**
- * Pure helpers to resolve which IX versions are supported (latest + maintenance)
- * and to derive "since" and "breaking change" information from the IX repository.
+ * Pure helpers to resolve which IX versions are supported (latest + maintenance),
+ * to read "since" information of the IX repository and the "breaking change"
+ * front matter of the doc pages.
  *
  * Used by `scripts/prepare-ix-versions.ts` (build time) and by the tag components (runtime).
  */
@@ -29,35 +30,32 @@ export type Changeset = {
   summary: string;
 };
 
-export type BreakingChangeSection = {
-  title: string;
-  anchor: string;
-  body: string;
+export type BreakingChangeMembers = {
+  props: string[];
+  events: string[];
 };
 
-export type BreakingChangeLink = {
-  title: string;
-  href: string;
-};
-
-export type BreakingChangeInfo = {
+/**
+ * `breaking-change` front matter of a doc page (`docs/components/<name>/index.mdx`).
+ * Properties and events of the page's primary component are listed by name,
+ * those of other components on the page as `ix-other-component.name`.
+ * Optional: `description` summarizes the breaking changes in one line (shown as tooltip
+ * of the component tag), `source` names what the entry is based on, e.g. links to
+ * changesets or a note like "new xyz property".
+ */
+export type BreakingChange = {
   version: string;
-  docUrl: string;
-  components: Record<
-    string,
-    {
-      links: BreakingChangeLink[];
-      props: string[];
-      events: string[];
-    }
-  >;
+  description?: string;
+  properties: string[];
+  events: string[];
+  source: string[];
 };
 
 export type IxPageVersionInfo = {
-  /** Primary component tag of the page, e.g. `ix-blind` */
-  tag: string;
+  /** Primary component tag of the page, e.g. `ix-blind` (if it has API tables) */
+  tag?: string;
   since?: string;
-  breaking?: BreakingChangeLink & { version: string };
+  breaking?: { version: string; href: string; description?: string };
 };
 
 export type IxVersionInfo = {
@@ -68,7 +66,8 @@ export type IxVersionInfo = {
   /** Where `version` was resolved from */
   source: 'changesets' | 'artifact' | 'package';
   branch?: string;
-  breakingChanges?: BreakingChangeInfo;
+  /** Latest breaking change version shown on any page */
+  breakingChanges?: { version: string; docUrl: string };
   /** Keyed by doc directory, e.g. `components/blind` */
   pages: Record<string, IxPageVersionInfo>;
 };
@@ -155,48 +154,6 @@ export function parseChangeset(
   return { name, releases, summary: match[2].trim() };
 }
 
-/**
- * Major changes of a released version from a changesets generated `CHANGELOG.md`.
- * Used once the changesets of a major release are consumed.
- */
-export function parseChangelogMajorChanges(
-  changelog: string,
-  version: string,
-  pkg = IX_CORE_PACKAGE
-): Changeset[] {
-  const lines = changelog.split(/\r?\n/);
-  const start = lines.findIndex((line) => line.trim() === `## ${version}`);
-  if (start === -1) {
-    return [];
-  }
-
-  const summary: string[] = [];
-  let inMajorChanges = false;
-  for (const line of lines.slice(start + 1)) {
-    if (/^## /.test(line)) {
-      break;
-    }
-    if (/^### /.test(line)) {
-      inMajorChanges = line.trim() === '### Major Changes';
-      continue;
-    }
-    if (inMajorChanges) {
-      summary.push(line);
-    }
-  }
-
-  const text = summary.join('\n').trim();
-  return text
-    ? [
-        {
-          name: `CHANGELOG ${version}`,
-          releases: { [pkg]: 'major' },
-          summary: text,
-        },
-      ]
-    : [];
-}
-
 const bumpOrder: ChangesetBump[] = ['patch', 'minor', 'major'];
 
 /**
@@ -241,82 +198,6 @@ export function getUpcomingVersion(
   }
 }
 
-/**
- * Slug of a heading like GitHub renders it for markdown files.
- */
-export function githubSlug(heading: string, occurrences?: Map<string, number>) {
-  const base = heading
-    .trim()
-    .toLowerCase()
-    .replace(/[^\p{L}\p{N}\s_-]/gu, '')
-    .replace(/\s/g, '-');
-
-  if (!occurrences) {
-    return base;
-  }
-
-  const count = occurrences.get(base) ?? 0;
-  occurrences.set(base, count + 1);
-  return count === 0 ? base : `${base}-${count}`;
-}
-
-/**
- * Split a breaking change document into its level 2 sections.
- */
-export function parseBreakingChangeSections(
-  markdown: string
-): BreakingChangeSection[] {
-  const sections: BreakingChangeSection[] = [];
-  const occurrences = new Map<string, number>();
-  let current: BreakingChangeSection | undefined;
-  let inCodeBlock = false;
-
-  for (const line of markdown.split(/\r?\n/)) {
-    if (/^\s*(```|~~~)/.test(line)) {
-      inCodeBlock = !inCodeBlock;
-    }
-
-    const heading = inCodeBlock
-      ? null
-      : /^(#{1,6})\s+(.*?)\s*#*\s*$/.exec(line);
-    if (heading) {
-      const anchor = githubSlug(heading[2], occurrences);
-      if (heading[1].length <= 2) {
-        current =
-          heading[1].length === 2
-            ? { title: heading[2], anchor, body: '' }
-            : undefined;
-        if (current) {
-          sections.push(current);
-        }
-        continue;
-      }
-    }
-
-    if (current) {
-      current.body += `${line}\n`;
-    }
-  }
-
-  return sections.filter(({ title }) => title.toLowerCase() !== 'contents');
-}
-
-export function findComponentTags(text: string, knownTags: Set<string>) {
-  const tags = new Set<string>();
-  for (const [tag] of text.matchAll(/(?<![\w-])ix-[a-z0-9-]*[a-z0-9]/g)) {
-    if (knownTags.has(tag)) {
-      tags.add(tag);
-    }
-  }
-  return tags;
-}
-
-function findInlineCode(text: string) {
-  return new Set(
-    Array.from(text.matchAll(/`([^`\n]+)`/g), ([, code]) => code.trim())
-  );
-}
-
 export type ApiMember = { name: string; since?: string };
 
 export type ComponentApi = {
@@ -354,178 +235,135 @@ export function parseComponentSince(content: string) {
   return sinceTagPattern.exec(content)?.[1];
 }
 
-type SectionBlock = {
-  tags: Set<string>;
-  code: Set<string>;
-  /** Below a level 3+ heading */
-  nested: boolean;
-};
+export const BREAKING_CHANGE_FRONT_MATTER_KEY = 'breaking-change';
 
 /**
- * Split a section body into blocks (paragraphs, list items, table rows, code blocks).
- * Tags of a level 3+ heading apply to all blocks below it.
+ * Migration guide of a major version (`docs/home/migration/<major>_0_0`). Not linked
+ * to a section on purpose, the changes of a component can be spread over the guide.
  */
-export function splitSectionBlocks(
-  body: string,
-  knownTags: Set<string>
-): SectionBlock[] {
-  const blocks: SectionBlock[] = [];
-  let lines: string[] = [];
-  let headingTags = new Set<string>();
-  let nested = false;
-  let inCodeBlock = false;
-
-  const flush = () => {
-    const text = lines.join('\n');
-    lines = [];
-    if (!text.trim()) {
-      return;
-    }
-    blocks.push({
-      tags: new Set([...headingTags, ...findComponentTags(text, knownTags)]),
-      code: findInlineCode(text),
-      nested,
-    });
-  };
-
-  for (const line of body.split(/\r?\n/)) {
-    const isFence = /^\s*(```|~~~)/.test(line);
-    if (inCodeBlock) {
-      lines.push(line);
-      if (isFence) {
-        inCodeBlock = false;
-        flush();
-      }
-      continue;
-    }
-    if (isFence) {
-      flush();
-      inCodeBlock = true;
-      lines.push(line);
-      continue;
-    }
-
-    const heading = /^#{3,6}\s+(.*)$/.exec(line);
-    if (heading) {
-      flush();
-      headingTags = findComponentTags(heading[1], knownTags);
-      nested = true;
-      continue;
-    }
-    if (!line.trim()) {
-      flush();
-      continue;
-    }
-    // List items and table rows are blocks of their own
-    if (/^\s*([-*+]|\d+\.)\s|^\s*\|/.test(line)) {
-      flush();
-    }
-    lines.push(line);
+export function getMigrationGuideUrl(version: string) {
+  const major = parseVersion(version)?.major;
+  if (major === undefined) {
+    throw new Error(`Invalid version "${version}"`);
   }
-  flush();
-
-  return blocks;
+  return `/docs/home/migration/${major}_0_0`;
 }
 
 /**
- * Collect breaking changes of the upcoming major version.
- *
- * A component is affected if it is mentioned in a pending major changeset and
- * described in the breaking change document, either in a section dedicated to it
- * (named in the title) or in a general section (no component in the title).
- * Sections dedicated to other components are ignored, they only cross-reference.
- *
- * Properties and events are affected if they are mentioned as inline code in a
- * section about the component (named in the title or the first paragraph), or in
- * a block of a general section that mentions the component, except members that
- * are newly introduced with the upcoming major.
+ * Validate the `breaking-change` front matter of a doc page.
+ * Returns `undefined` if not set, throws if invalid.
  */
-export function collectBreakingChanges(options: {
-  version: string;
-  docUrl: string;
-  changesets: Changeset[];
-  breakingChangeDoc: string;
-  components: Record<string, ComponentApi>;
-  pkg?: string;
-}): BreakingChangeInfo {
-  const { version, docUrl, changesets, breakingChangeDoc, components } =
-    options;
-  const pkg = options.pkg ?? IX_CORE_PACKAGE;
-  const major = parseVersion(version)?.major;
-  const knownTags = new Set(Object.keys(components));
-
-  const changesetTags = new Set<string>();
-  changesets
-    .filter((changeset) => changeset.releases[pkg] === 'major')
-    .forEach((changeset) =>
-      findComponentTags(changeset.summary, knownTags).forEach((tag) =>
-        changesetTags.add(tag)
-      )
+export function parseBreakingChangeFrontMatter(
+  value: unknown
+): BreakingChange | undefined {
+  if (value === undefined || value === null) {
+    return undefined;
+  }
+  if (typeof value !== 'object' || Array.isArray(value)) {
+    throw new Error(
+      `"${BREAKING_CHANGE_FRONT_MATTER_KEY}" must contain a "version" field`
     );
-
-  const sections = parseBreakingChangeSections(breakingChangeDoc)
-    .map((section) => ({
-      ...section,
-      titleTags: findComponentTags(section.title, knownTags),
-      tags: findComponentTags(`${section.title}\n${section.body}`, knownTags),
-      code: findInlineCode(`${section.title}\n${section.body}`),
-      blocks: splitSectionBlocks(section.body, knownTags),
-    }))
-    .map((section) => {
-      const intro = section.blocks[0]?.nested ? undefined : section.blocks[0];
-      return {
-        ...section,
-        subjectTags: new Set([...section.titleTags, ...(intro?.tags ?? [])]),
-      };
-    });
-
-  const result: BreakingChangeInfo = { version, docUrl, components: {} };
-
-  for (const tag of changesetTags) {
-    const related = sections
-      .filter(
-        (section) =>
-          section.tags.has(tag) &&
-          (section.titleTags.has(tag) || section.titleTags.size === 0)
-      )
-      // Sections dedicated to the component first, then sections about it,
-      // then the most specific ones
-      .sort(
-        (a, b) =>
-          Number(b.titleTags.has(tag)) - Number(a.titleTags.has(tag)) ||
-          Number(b.subjectTags.has(tag)) - Number(a.subjectTags.has(tag)) ||
-          a.tags.size - b.tags.size
-      );
-
-    if (related.length === 0) {
-      continue;
-    }
-
-    const code = new Set<string>();
-    for (const section of related) {
-      const sources = section.subjectTags.has(tag)
-        ? [section]
-        : section.blocks.filter((block) => block.tags.has(tag));
-      sources.forEach((source) => source.code.forEach((c) => code.add(c)));
-    }
-
-    const isNew = (member: ApiMember) =>
-      parseVersion(member.since)?.major === major;
-    const affected = (members: ApiMember[]) =>
-      members
-        .filter((member) => !isNew(member) && code.has(member.name))
-        .map(({ name }) => name);
-
-    result.components[tag] = {
-      links: related.map(({ title, anchor }) => ({
-        title: title.replace(/`/g, ''),
-        href: `${docUrl}#${anchor}`,
-      })),
-      props: affected(components[tag].props),
-      events: affected(components[tag].events),
-    };
   }
 
+  const { version, description, properties, events, source, ...unknown } =
+    value as Record<string, unknown>;
+  const unknownKeys = Object.keys(unknown);
+  if (unknownKeys.length > 0) {
+    throw new Error(
+      `Unknown "${BREAKING_CHANGE_FRONT_MATTER_KEY}" keys: ${unknownKeys.join(', ')} (allowed: version, description, properties, events, source)`
+    );
+  }
+  if (typeof version !== 'string' || !parseVersion(version)) {
+    throw new Error(
+      `"${BREAKING_CHANGE_FRONT_MATTER_KEY}.version" must be a version like 6.0.0, got "${String(version)}"`
+    );
+  }
+
+  const hasDescription = description !== undefined && description !== null;
+  if (
+    hasDescription &&
+    (typeof description !== 'string' ||
+      !description.trim() ||
+      /[\r\n]/.test(description.trim()))
+  ) {
+    throw new Error(
+      `"${BREAKING_CHANGE_FRONT_MATTER_KEY}.description" must be a single-line summary of the breaking changes`
+    );
+  }
+
+  const readNames = (key: string, names: unknown) => {
+    if (names === undefined || names === null) {
+      return [];
+    }
+    if (
+      !Array.isArray(names) ||
+      names.some((name) => typeof name !== 'string' || !name.trim())
+    ) {
+      throw new Error(
+        `"${BREAKING_CHANGE_FRONT_MATTER_KEY}.${key}" must be a list of names`
+      );
+    }
+    return [...new Set(names.map((name: string) => name.trim()))];
+  };
+
+  const sources =
+    source === undefined || source === null
+      ? []
+      : typeof source === 'string'
+        ? [source]
+        : source;
+  if (
+    !Array.isArray(sources) ||
+    sources.some((entry) => typeof entry !== 'string' || !entry.trim())
+  ) {
+    throw new Error(
+      `"${BREAKING_CHANGE_FRONT_MATTER_KEY}.source" must be a text or a list of texts, e.g. a link to the changeset or a note like "new xyz property"`
+    );
+  }
+
+  return {
+    version: version.trim(),
+    ...(hasDescription ? { description: (description as string).trim() } : {}),
+    properties: readNames('properties', properties),
+    events: readNames('events', events),
+    source: [...new Set(sources.map((entry: string) => entry.trim()))],
+  };
+}
+
+/**
+ * Breaking changes stay visible until the next major version replaces them.
+ * Upcoming majors (e.g. preview docs) are always shown.
+ */
+export function isActiveBreakingChange(version: string, currentMajor: number) {
+  const parsed = parseVersion(version);
+  return !!parsed && parsed.major >= currentMajor;
+}
+
+/**
+ * Members of a `breaking-change` front matter by component tag.
+ * Unqualified names belong to the primary component of the page.
+ */
+export function groupBreakingChangeMembers(
+  primaryTag: string,
+  breakingChange: BreakingChange
+): Record<string, BreakingChangeMembers> {
+  const result: Record<string, BreakingChangeMembers> = {};
+
+  const add = (kind: keyof BreakingChangeMembers, names: string[]) => {
+    for (const name of names) {
+      const qualified = /^(ix-[a-z0-9-]+)\.(.+)$/.exec(name);
+      const [tag, member] = qualified
+        ? [qualified[1], qualified[2]]
+        : [primaryTag, name];
+      result[tag] ??= { props: [], events: [] };
+      if (!result[tag][kind].includes(member)) {
+        result[tag][kind].push(member);
+      }
+    }
+  };
+
+  add('props', breakingChange.properties);
+  add('events', breakingChange.events);
   return result;
 }
 
@@ -552,11 +390,11 @@ export function removeBreakingChangeTags(content: string) {
 export function injectBreakingChangeTags(
   content: string,
   version: string,
-  component: BreakingChangeInfo['components'][string]
+  href: string,
+  members: BreakingChangeMembers
 ) {
   content = removeBreakingChangeTags(content);
 
-  const href = component.links[0]?.href ?? '';
   const tag = `<BreakingChangeTag message={\`${version}\`} href={\`${href}\`} />`;
   let changed = false;
 
@@ -576,8 +414,8 @@ export function injectBreakingChangeTags(
     );
   };
 
-  inject('PropertyHeader', component.props);
-  inject('EventHeader', component.events);
+  inject('PropertyHeader', members.props);
+  inject('EventHeader', members.events);
 
   return changed ? `${breakingChangeTagImport}\n${content}` : content;
 }

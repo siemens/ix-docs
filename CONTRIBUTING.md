@@ -89,15 +89,26 @@ There are several ways to contribute to this project:
 
 ### Since and Breaking Change Tags
 
-`Since x.x.x` tags are only shown for the latest and the maintenance major version (e.g. `6.x.x` and `5.x.x`), tags of end of life versions are hidden automatically.
+`Since x.x.x` tags come from the `@since` JSDoc tag of the component (shown next to its name) or of a property/event (shown in the API table) in [siemens/ix](https://github.com/siemens/ix). Use `<SinceTag message="5.3.0" />` from `@site/src/components/UI/Tags` to add one manually. Only the latest and the maintenance major (e.g. `6.x.x` and `5.x.x`) are shown.
 
-- **Component level:** Shown next to the component name above the tabs. The version comes from the `@since` JSDoc tag of the component class in the [siemens/ix](https://github.com/siemens/ix) repository.
-- **Property level:** Shown in the API tables. The version comes from the `@since` JSDoc tag of the property or event.
-- **Manual:** Use `<SinceTag message="5.3.0" />` from `@site/src/components/UI/Tags` within the docs; it follows the same rules.
+The upcoming IX version is resolved from the changesets of the IX branch the docs were downloaded from; set `IX_CHANGESETS_BRANCH` to use another branch.
 
-During `pnpm start` / `pnpm build`, `scripts/prepare-ix-versions.ts` resolves the upcoming IX version from `packages/core/package.json` and the pending changesets of the IX branch the documentation artifact was downloaded from (`IX_REPO_BRANCH`, or the head of the pull request). Set `IX_CHANGESETS_BRANCH` to use another branch. If the IX repository can't be reached, the version of the downloaded artifact (or `@siemens/ix` in `package.json`) is used instead.
+Breaking change tags come from the `breaking-change` front matter of the component's `index.mdx`:
 
-Components and properties described in the `BREAKING_CHANGES/vX.md` document of the IX repository get a `Breaking change in vX.0.0` tag linking to the related section of that document. While a major release is pending, the tags show its upcoming breaking changes based on the pending changesets. After the release, they are kept based on the major changes in `CHANGELOG.md` until the next major version replaces them.
+```yaml
+breaking-change:
+  version: 6.0.0
+  description: 'Status variants renamed' # optional, tooltip of the tag
+  properties: # optional, tagged in the API table
+    - variant
+    - ix-push-card.variant # other component on the same page
+  events: # optional
+    - collapsedChange
+  source: # optional, not shown (e.g. changeset link or "new xyz property")
+    - https://github.com/siemens/ix/blob/<commit>/.changeset/blind.md
+```
+
+Tags link to the migration guide of the major (`docs/home/migration/<major>_0_0`) and are hidden once the next major is released.
 
 ### Blog Posts
 

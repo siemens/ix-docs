@@ -3,4 +3,14 @@ doc-type: "tabs"
 description: 'Date dropdowns allow users to select a specific date from a date picker or pre-defined date options.'
 title: 'Date dropdown'
 deprecated:
+breaking-change:
+  version: 6.0.0
+  description: 'Done button removed (i18nDone has no effect), dateRangeChange fires on every pick and event payload dates are localized'
+  properties:
+    - i18nDone
+  events:
+    - dateRangeChange
+  source:
+    - https://github.com/siemens/ix/blob/dcdb2e8a5664e771cb7f17f02974f897d556a6cd/.changeset/date-time-require-confirmation.md
+    - https://github.com/siemens/ix/blob/dcdb2e8a5664e771cb7f17f02974f897d556a6cd/.changeset/datetime-locale-support.md
 ---

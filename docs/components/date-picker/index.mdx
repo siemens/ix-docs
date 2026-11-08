@@ -3,4 +3,14 @@ doc-type: "tabs"
 description: 'Date pickers provide a versatile calendar that can be used as a standalone element or within a dropdown for date input, offering a seamless way to select dates.'
 title: 'Date picker'
 deprecated:
+breaking-change:
+  version: 6.0.0
+  description: 'Event payload dates are localized and dateRangeChange is deprecated'
+  events:
+    - dateChange
+    - dateRangeChange
+    - dateSelect
+  source:
+    - https://github.com/siemens/ix/blob/dcdb2e8a5664e771cb7f17f02974f897d556a6cd/.changeset/date-time-require-confirmation.md
+    - https://github.com/siemens/ix/blob/dcdb2e8a5664e771cb7f17f02974f897d556a6cd/.changeset/datetime-locale-support.md
 ---

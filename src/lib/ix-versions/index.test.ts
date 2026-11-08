@@ -1,15 +1,15 @@
 import assert from 'node:assert/strict';
 import test from 'node:test';
 import {
-  collectBreakingChanges,
   findPageVersionInfo,
+  getMigrationGuideUrl,
   getUpcomingVersion,
-  githubSlug,
+  groupBreakingChangeMembers,
   injectBreakingChangeTags,
+  isActiveBreakingChange,
   isSupportedVersion,
   parseApiMdx,
-  parseBreakingChangeSections,
-  parseChangelogMajorChanges,
+  parseBreakingChangeFrontMatter,
   parseChangeset,
   parseDependencyVersion,
   parseComponentSince,
@@ -87,81 +87,6 @@ test('#getUpcomingVersion applies the highest pending bump', () => {
   assert.equal(getUpcomingVersion('6.0.0-beta.2', [major]), '6.0.0');
 });
 
-test('#githubSlug matches GitHub heading anchors', () => {
-  assert.equal(
-    githubSlug('Card family: status variants, `outline`, and `clickable`'),
-    'card-family-status-variants-outline-and-clickable'
-  );
-  assert.equal(
-    githubSlug('`ix-blind`: status variants and `outline`'),
-    'ix-blind-status-variants-and-outline'
-  );
-  assert.equal(
-    githubSlug('`passive` removed → `clickable`'),
-    'passive-removed--clickable'
-  );
-
-  const occurrences = new Map<string, number>();
-  assert.equal(
-    githubSlug('Migration checklist', occurrences),
-    'migration-checklist'
-  );
-  assert.equal(
-    githubSlug('Migration checklist', occurrences),
-    'migration-checklist-1'
-  );
-});
-
-const breakingDoc = `# Breaking Changes V6
-
-## Contents
-
-- [ix-blind](#ix-blind-status-variants-and-outline)
-
-## Card family: status variants, \`outline\`, and \`clickable\`
-
-\`ix-card\` and \`ix-push-card\` use \`StatusVariant\`. The \`variant\` property changed.
-
-### Migration checklist
-
-Replace \`passive\` with \`clickable\`.
-
-\`\`\`html
-## not a heading
-<ix-card variant="base"></ix-card>
-\`\`\`
-
-## \`ix-blind\`: status variants and \`outline\`
-
-\`ix-blind\` uses the same rename as \`variant\`.
-
-### Migration checklist
-
-## Default icon size is 20
-
-\`ix-icon-button\` uses 20px. The \`size\` property changed.
-`;
-
-test('#parseBreakingChangeSections splits level 2 sections', () => {
-  const sections = parseBreakingChangeSections(breakingDoc);
-  assert.deepEqual(
-    sections.map(({ title, anchor }) => [title, anchor]),
-    [
-      [
-        'Card family: status variants, `outline`, and `clickable`',
-        'card-family-status-variants-outline-and-clickable',
-      ],
-      [
-        '`ix-blind`: status variants and `outline`',
-        'ix-blind-status-variants-and-outline',
-      ],
-      ['Default icon size is 20', 'default-icon-size-is-20'],
-    ]
-  );
-  assert.match(sections[0].body, /Replace `passive`/);
-  assert.match(sections[0].body, /## not a heading/);
-});
-
 const apiMdx = `import {SinceTag, DeprecatedTag} from '@site/src/components/UI/Tags';
 
 <ApiTable id="property-clickable">
@@ -211,221 +136,193 @@ test('#parseComponentSince reads the component since tag', () => {
   );
 });
 
-test('#collectBreakingChanges combines changesets and breaking change document', () => {
-  const docUrl =
-    'https://github.com/siemens/ix/blob/main/BREAKING_CHANGES/v6.md';
-  const result = collectBreakingChanges({
-    version: '6.0.0',
-    docUrl,
-    breakingChangeDoc: breakingDoc,
-    changesets: [
-      changeset(
-        'card',
-        `'@siemens/ix': major`,
-        'Migrate **ix-card** and **ix-blind**.'
-      ),
-      changeset('icons', `'@siemens/ix': minor`, 'Improve ix-icon-button.'),
-      changeset('menu', `'@siemens/ix': major`, 'Change ix-menu.'),
-    ],
-    components: {
-      'ix-card': parseApiMdx(apiMdx),
-      'ix-blind': {
-        props: [{ name: 'variant' }, { name: 'label' }],
-        events: [],
-      },
-      'ix-icon-button': { props: [{ name: 'size' }], events: [] },
-      'ix-menu': { props: [], events: [] },
-      'ix-push-card': { props: [], events: [] },
-    },
-  });
+const changesetUrl =
+  'https://github.com/siemens/ix/blob/abc123/.changeset/blind-variants.md';
+const docUrl =
+  'https://github.com/siemens/ix/blob/abc123/BREAKING_CHANGES/v6.md';
 
-  assert.deepEqual(result, {
-    version: '6.0.0',
-    docUrl,
-    components: {
-      'ix-card': {
-        links: [
-          {
-            title: 'Card family: status variants, outline, and clickable',
-            href: `${docUrl}#card-family-status-variants-outline-and-clickable`,
-          },
-        ],
-        // `clickable` is new in 6.0.0, `label` is not mentioned
-        props: ['variant'],
-        events: [],
-      },
-      'ix-blind': {
-        links: [
-          {
-            title: 'ix-blind: status variants and outline',
-            href: `${docUrl}#ix-blind-status-variants-and-outline`,
-          },
-        ],
-        props: ['variant'],
-        events: [],
-      },
-      // ix-icon-button: no major changeset, ix-menu: not in breaking change doc
-    },
-  });
+test('#parseBreakingChangeFrontMatter reads version, members and source', () => {
+  assert.equal(parseBreakingChangeFrontMatter(undefined), undefined);
+  assert.equal(parseBreakingChangeFrontMatter(null), undefined);
+  assert.deepEqual(
+    parseBreakingChangeFrontMatter({
+      version: '6.0.0',
+      description: 'Renamed variants',
+      properties: ['show', 'hide', 'show', ' animationDelay '],
+      source: [changesetUrl, docUrl, changesetUrl],
+    }),
+    {
+      version: '6.0.0',
+      description: 'Renamed variants',
+      properties: ['show', 'hide', 'animationDelay'],
+      events: [],
+      source: [changesetUrl, docUrl],
+    }
+  );
+  // A single source can be given without a list
+  assert.deepEqual(
+    parseBreakingChangeFrontMatter({
+      version: '6.0.0',
+      description: 'Renamed variants',
+      properties: null,
+      events: ['ix-other.valueChange'],
+      source: changesetUrl,
+    }),
+    {
+      version: '6.0.0',
+      description: 'Renamed variants',
+      properties: [],
+      events: ['ix-other.valueChange'],
+      source: [changesetUrl],
+    }
+  );
 });
 
-test('#collectBreakingChanges ignores cross-references and unrelated blocks', () => {
-  const docUrl = 'https://example.com/v6.md';
-  const doc = `## \`ix-time-picker\`: \`i18nConfirmTime\` renamed
-
-Use \`i18nConfirm\` instead of \`i18nConfirmTime\`.
-
-\`ix-time-input\` is not affected and keeps \`i18nSelectTime\`.
-
-## Default icon size is 20
-
-Icons render 20px instead of 24px.
-
-Omitted icon \`size\` on \`ix-icon-button\` renders 20px.
-
-\`ix-checkbox\` glyphs also move to 20, see \`checked\`.
-
-- \`ix-icon-button\` keeps \`icon\`.
-- Inputs emit \`valueChange\` on confirm.
-
-### \`ix-checkbox\` details
-
-The \`indeterminate\` state is smaller.
-`;
-
-  const result = collectBreakingChanges({
-    version: '6.0.0',
-    docUrl,
-    breakingChangeDoc: doc,
-    changesets: [
-      changeset(
-        'all',
-        `'@siemens/ix': major`,
-        'ix-time-picker, ix-time-input, ix-icon-button, ix-checkbox'
-      ),
-    ],
-    components: {
-      'ix-time-picker': {
-        props: [
-          { name: 'i18nConfirm', since: '6.0.0' },
-          { name: 'i18nConfirmTime' },
-        ],
-        events: [],
-      },
-      'ix-time-input': { props: [{ name: 'i18nSelectTime' }], events: [] },
-      'ix-icon-button': {
-        props: [{ name: 'size' }, { name: 'icon' }, { name: 'checked' }],
-        events: [{ name: 'valueChange' }],
-      },
-      'ix-checkbox': {
-        props: [
-          { name: 'checked' },
-          { name: 'indeterminate' },
-          { name: 'size' },
-        ],
-        events: [],
-      },
-    },
-  });
-
-  const href = (anchor: string) => `${docUrl}#${anchor}`;
-  assert.deepEqual(result.components, {
-    'ix-time-picker': {
-      links: [
-        {
-          title: 'ix-time-picker: i18nConfirmTime renamed',
-          href: href('ix-time-picker-i18nconfirmtime-renamed'),
-        },
-      ],
-      props: ['i18nConfirmTime'],
-      events: [],
-    },
-    // ix-time-input: only mentioned in a section of another component
-    'ix-icon-button': {
-      links: [
-        {
-          title: 'Default icon size is 20',
-          href: href('default-icon-size-is-20'),
-        },
-      ],
-      // `checked` and `valueChange` are mentioned in blocks of other components
-      props: ['size', 'icon'],
-      events: [],
-    },
-    'ix-checkbox': {
-      links: [
-        {
-          title: 'Default icon size is 20',
-          href: href('default-icon-size-is-20'),
-        },
-      ],
-      // `indeterminate` is below a heading of the component
-      props: ['checked', 'indeterminate'],
-      events: [],
-    },
-  });
+test('#parseBreakingChangeFrontMatter rejects invalid front matter', () => {
+  const source = [changesetUrl];
+  assert.throws(() => parseBreakingChangeFrontMatter('6.0.0'), /version/);
+  assert.throws(() => parseBreakingChangeFrontMatter({ source }), /version/);
+  // YAML reads an unquoted `6.0` as number
+  assert.throws(
+    () => parseBreakingChangeFrontMatter({ version: 6.0, source }),
+    /version/
+  );
+  assert.throws(
+    () =>
+      parseBreakingChangeFrontMatter({
+        version: '6.0.0',
+        description: 'Renamed variants',
+        properties: 'show',
+        source,
+      }),
+    /properties/
+  );
+  assert.throws(
+    () =>
+      parseBreakingChangeFrontMatter({
+        version: '6.0.0',
+        description: 'x',
+        events: [1],
+        source,
+      }),
+    /events/
+  );
+  assert.throws(
+    () =>
+      parseBreakingChangeFrontMatter({
+        version: '6.0.0',
+        description: 'Renamed variants',
+        props: ['show'],
+        source,
+      }),
+    /Unknown .* props/
+  );
+  // If set, the description has one line
+  for (const invalid of ['', ' ', 'Line 1\nLine 2', ['x']]) {
+    assert.throws(
+      () =>
+        parseBreakingChangeFrontMatter({
+          version: '6.0.0',
+          description: invalid,
+          source,
+        }),
+      /description/
+    );
+  }
+  // If set, the source has texts
+  for (const invalid of ['', ' ', [1], [''], { url: 'x' }]) {
+    assert.throws(
+      () =>
+        parseBreakingChangeFrontMatter({
+          version: '6.0.0',
+          description: 'x',
+          source: invalid,
+        }),
+      /source/
+    );
+  }
 });
 
-test('#collectBreakingChanges links sections about the component first', () => {
-  const doc = `## Global tokens
+test('#parseBreakingChangeFrontMatter accepts notes as source', () => {
+  assert.deepEqual(
+    parseBreakingChangeFrontMatter({
+      version: '6.0.0',
+      source: ['new xyz property', changesetUrl],
+    })?.source,
+    ['new xyz property', changesetUrl]
+  );
+  assert.deepEqual(
+    parseBreakingChangeFrontMatter({
+      version: '6.0.0',
+      source: ' .changeset/blind.md ',
+    })?.source,
+    ['.changeset/blind.md']
+  );
+});
 
-Tokens are renamed.
-
-\`ix-card\`, \`ix-blind\` and \`ix-chip\` use new tokens. See \`label\`.
-
-## Card family
-
-\`ix-card\` and \`ix-blind\` use \`StatusVariant\`.
-
-Default \`variant\` is now \`base\`.
-
-## Status rename
-
-Statuses are renamed.
-
-\`ix-card\` uses \`StatusVariant\`.
-
-## \`ix-card\`: outline
-
-Card details.
-`;
-
-  const result = collectBreakingChanges({
+test('#parseBreakingChangeFrontMatter does not require description and source', () => {
+  assert.deepEqual(parseBreakingChangeFrontMatter({ version: '6.0.0' }), {
     version: '6.0.0',
-    docUrl: '',
-    breakingChangeDoc: doc,
-    changesets: [changeset('card', `'@siemens/ix': major`, 'ix-card')],
-    components: {
-      'ix-card': {
-        props: [{ name: 'variant' }, { name: 'label' }, { name: 'outline' }],
-        events: [],
-      },
-      'ix-blind': { props: [], events: [] },
-      'ix-chip': { props: [], events: [] },
-    },
-  });
-
-  assert.deepEqual(result.components['ix-card'], {
-    links: [
-      { title: 'ix-card: outline', href: '#ix-card-outline' },
-      { title: 'Card family', href: '#card-family' },
-      { title: 'Status rename', href: '#status-rename' },
-      { title: 'Global tokens', href: '#global-tokens' },
-    ],
-    // The whole "Card family" section is about ix-card (named in the first paragraph),
-    // `label` is mentioned next to ix-card in "Global tokens"
-    props: ['variant', 'label'],
+    properties: [],
     events: [],
+    source: [],
   });
+  assert.deepEqual(
+    parseBreakingChangeFrontMatter({
+      version: '6.0.0',
+      description: null,
+      source: null,
+    }),
+    { version: '6.0.0', properties: [], events: [], source: [] }
+  );
+});
+
+test('#isActiveBreakingChange shows breaking changes until the next major', () => {
+  assert.equal(isActiveBreakingChange('6.0.0', 5), true);
+  assert.equal(isActiveBreakingChange('6.0.0', 6), true);
+  assert.equal(isActiveBreakingChange('6.0.0', 7), false);
+  assert.equal(isActiveBreakingChange('invalid', 6), false);
+});
+
+test('#getMigrationGuideUrl links the migration guide of the major', () => {
+  assert.equal(getMigrationGuideUrl('6.0.0'), '/docs/home/migration/6_0_0');
+  assert.equal(getMigrationGuideUrl('7.1.0'), '/docs/home/migration/7_0_0');
+  assert.throws(() => getMigrationGuideUrl('next'));
+});
+
+test('#groupBreakingChangeMembers assigns members to the components of a page', () => {
+  assert.deepEqual(
+    groupBreakingChangeMembers('ix-card', {
+      version: '6.0.0',
+      description: 'Renamed variants',
+      properties: ['variant', 'ix-push-card.variant', 'ix-push-card.outline'],
+      events: ['ix-push-card.collapsedChange', 'ix-card.variantChange'],
+      source: [changesetUrl],
+    }),
+    {
+      'ix-card': { props: ['variant'], events: ['variantChange'] },
+      'ix-push-card': {
+        props: ['variant', 'outline'],
+        events: ['collapsedChange'],
+      },
+    }
+  );
+  assert.deepEqual(
+    groupBreakingChangeMembers('ix-blind', {
+      version: '6.0.0',
+      description: 'Renamed variants',
+      properties: [],
+      events: [],
+      source: [changesetUrl],
+    }),
+    {}
+  );
 });
 
 test('#injectBreakingChangeTags adds tags to affected headers only once', () => {
-  const component = {
-    links: [{ title: 'Card', href: 'https://example.com#card' }],
-    props: ['variant'],
-    events: ['collapsedChange'],
-  };
-  const result = injectBreakingChangeTags(apiMdx, '6.0.0', component);
+  const href = 'https://example.com/v6.md';
+  const members = { props: ['variant'], events: ['collapsedChange'] };
+  const result = injectBreakingChangeTags(apiMdx, '6.0.0', href, members);
 
   assert.match(
     result,
@@ -433,78 +330,31 @@ test('#injectBreakingChangeTags adds tags to affected headers only once', () => 
   );
   assert.match(
     result,
-    /<ApiTable\.PropertyHeader name="variant" singleFramework="">\n\s+<BreakingChangeTag message=\{`6\.0\.0`\} href=\{`https:\/\/example\.com#card`\} \/>/
+    /<ApiTable\.PropertyHeader name="variant" singleFramework="">\n\s+<BreakingChangeTag message=\{`6\.0\.0`\} href=\{`https:\/\/example\.com\/v6\.md`\} \/>/
   );
   assert.match(
     result,
     /<ApiTable\.EventHeader name="collapsedChange">\n\s+<BreakingChangeTag/
   );
   assert.equal(result.match(/<BreakingChangeTag /g)?.length, 2);
-  assert.equal(injectBreakingChangeTags(result, '6.0.0', component), result);
+  assert.equal(
+    injectBreakingChangeTags(result, '6.0.0', href, members),
+    result
+  );
 
   // Tags of previous runs are replaced
-  const relinked = injectBreakingChangeTags(result, '6.0.0', {
-    ...component,
-    links: [{ title: 'Card', href: 'https://example.com/v6.md#card-family' }],
-    events: [],
-  });
+  const relinked = injectBreakingChangeTags(
+    result,
+    '7.0.0',
+    'https://example.com/v7.md',
+    { ...members, events: [] }
+  );
   assert.equal(relinked.match(/<BreakingChangeTag /g)?.length, 1);
   assert.equal(relinked.match(/import \{ BreakingChangeTag \}/g)?.length, 1);
-  assert.match(
-    relinked,
-    /href=\{`https:\/\/example\.com\/v6\.md#card-family`\}/
-  );
+  assert.match(relinked, /href=\{`https:\/\/example\.com\/v7\.md`\}/);
   assert.equal(removeBreakingChangeTags(result), apiMdx);
   assert.equal(
-    injectBreakingChangeTags(apiMdx, '6.0.0', {
-      ...component,
-      props: [],
-      events: [],
-    }),
+    injectBreakingChangeTags(apiMdx, '6.0.0', href, { props: [], events: [] }),
     apiMdx
-  );
-});
-
-test('#parseChangelogMajorChanges reads major changes of a released version', () => {
-  const changelog = `# @siemens/ix
-
-## 6.1.0
-
-### Major Changes
-
-- Not part of 6.0.0 (ix-menu)
-
-## 6.0.0
-
-### Major Changes
-
-- [#1](https://github.com/siemens/ix/pull/1) Migrate **ix-card**.
-
-  Details about \`variant\`.
-
-### Minor Changes
-
-- Add ix-info-page.
-
-## 5.4.0
-
-### Major Changes
-
-- Old ix-blind change
-`;
-
-  const [result, ...rest] = parseChangelogMajorChanges(changelog, '6.0.0');
-  assert.equal(rest.length, 0);
-  assert.deepEqual(result.releases, { '@siemens/ix': 'major' });
-  assert.match(result.summary, /Migrate \*\*ix-card\*\*/);
-  assert.match(result.summary, /Details about `variant`/);
-  assert.doesNotMatch(result.summary, /ix-info-page|ix-menu|ix-blind/);
-  assert.deepEqual(parseChangelogMajorChanges(changelog, '7.0.0'), []);
-  assert.deepEqual(
-    parseChangelogMajorChanges(
-      '## 6.0.0\n\n### Patch Changes\n\n- Fix',
-      '6.0.0'
-    ),
-    []
   );
 });

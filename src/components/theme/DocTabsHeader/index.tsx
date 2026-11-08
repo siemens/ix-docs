@@ -146,7 +146,7 @@ I want to ask some questions`,
               <BreakingChangeTag
                 message={componentVersion.breaking.version}
                 href={componentVersion.breaking.href}
-                title={componentVersion.breaking.title}
+                description={componentVersion.breaking.description}
               />
             )}
           </div>
