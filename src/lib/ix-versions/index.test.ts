@@ -2,24 +2,19 @@ import assert from 'node:assert/strict';
 import test from 'node:test';
 import {
   findPageVersionInfo,
+  getCurrentMajor,
   getMigrationGuideUrl,
-  getUpcomingVersion,
   groupBreakingChangeMembers,
   injectBreakingChangeTags,
   isActiveBreakingChange,
   isSupportedVersion,
   parseApiMdx,
   parseBreakingChangeFrontMatter,
-  parseChangeset,
-  parseDependencyVersion,
   parseComponentSince,
   removeBreakingChangeTags,
 } from '.';
 
-const changeset = (name: string, frontmatter: string, summary: string) =>
-  parseChangeset(name, `---\n${frontmatter}\n---\n\n${summary}\n`)!;
-
-test('#isSupportedVersion only accepts latest and maintenance major', () => {
+test('#isSupportedVersion only accepts the major in development and the latest released major', () => {
   assert.equal(isSupportedVersion('6.0.0', 6), true);
   assert.equal(isSupportedVersion('5.3.0', 6), true);
   assert.equal(isSupportedVersion('5.2.0', 6), true);
@@ -29,13 +24,17 @@ test('#isSupportedVersion only accepts latest and maintenance major', () => {
   assert.equal(isSupportedVersion('TODO: Define', 6), false);
 });
 
-test('#parseDependencyVersion reads the version of a dependency range', () => {
-  assert.equal(parseDependencyVersion('5.3.0'), '5.3.0');
-  assert.equal(parseDependencyVersion('^5.3.0'), '5.3.0');
-  assert.equal(parseDependencyVersion('~6.0.0-beta.1'), '6.0.0-beta.1');
-  assert.equal(parseDependencyVersion('npm:@siemens/ix@5.3.0'), '5.3.0');
-  assert.equal(parseDependencyVersion('workspace:*'), undefined);
-  assert.equal(parseDependencyVersion(undefined), undefined);
+test('#getCurrentMajor uses the release tag or the next major after currentVersion', () => {
+  // Release builds
+  assert.equal(getCurrentMajor('v6', '@siemens/ix@7.0.1'), 7);
+  assert.equal(getCurrentMajor('v5', '@siemens/ix@5.3.0'), 5);
+  assert.equal(getCurrentMajor('v7', '@siemens/ix@7.1.0-beta.1'), 7);
+  // Development and pull request builds
+  assert.equal(getCurrentMajor('v5', 'main'), 6);
+  assert.equal(getCurrentMajor('v6', 'pull/123'), 7);
+  assert.equal(getCurrentMajor('v5'), 6);
+  assert.equal(getCurrentMajor('5.2.0'), 6);
+  assert.throws(() => getCurrentMajor('latest', 'main'));
 });
 
 test('#findPageVersionInfo matches doc ids and URLs', () => {
@@ -57,34 +56,6 @@ test('#findPageVersionInfo matches doc ids and URLs', () => {
   assert.equal(findPageVersionInfo(pages, 'components/blind/a/b'), undefined);
   assert.equal(findPageVersionInfo(pages, '/docs/components'), undefined);
   assert.equal(findPageVersionInfo(pages, undefined), undefined);
-});
-
-test('#parseChangeset reads releases and summary', () => {
-  const result = changeset(
-    'card',
-    `'@siemens/ix': major\n"@siemens/ix-react": minor`,
-    'Migrate **ix-card**.'
-  );
-  assert.deepEqual(result.releases, {
-    '@siemens/ix': 'major',
-    '@siemens/ix-react': 'minor',
-  });
-  assert.equal(result.summary, 'Migrate **ix-card**.');
-  assert.equal(parseChangeset('readme', '# Changesets'), null);
-});
-
-test('#getUpcomingVersion applies the highest pending bump', () => {
-  const patch = changeset('a', `'@siemens/ix': patch`, '');
-  const minor = changeset('b', `'@siemens/ix': minor`, '');
-  const major = changeset('c', `'@siemens/ix': major`, '');
-  const other = changeset('d', `'@siemens/ix-echarts': major`, '');
-
-  assert.equal(getUpcomingVersion('5.2.1', []), '5.2.1');
-  assert.equal(getUpcomingVersion('5.2.1', [patch]), '5.2.2');
-  assert.equal(getUpcomingVersion('5.2.1', [patch, minor]), '5.3.0');
-  assert.equal(getUpcomingVersion('5.2.1', [minor, major, patch]), '6.0.0');
-  assert.equal(getUpcomingVersion('5.2.1', [other]), '5.2.1');
-  assert.equal(getUpcomingVersion('6.0.0-beta.2', [major]), '6.0.0');
 });
 
 const apiMdx = `import {SinceTag, DeprecatedTag} from '@site/src/components/UI/Tags';
@@ -277,7 +248,7 @@ test('#parseBreakingChangeFrontMatter does not require description and source', 
   );
 });
 
-test('#isActiveBreakingChange shows breaking changes until the next major', () => {
+test('#isActiveBreakingChange only shows breaking changes of the major in development', () => {
   assert.equal(isActiveBreakingChange('6.0.0', 5), true);
   assert.equal(isActiveBreakingChange('6.0.0', 6), true);
   assert.equal(isActiveBreakingChange('6.0.0', 7), false);

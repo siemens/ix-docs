@@ -8,7 +8,7 @@
  */
 
 /**
- * Pure helpers to resolve which IX versions are supported (latest + maintenance),
+ * Pure helpers to resolve which IX versions are shown (major of the docs + previous major),
  * to read "since" information of the IX repository and the "breaking change"
  * front matter of the doc pages.
  *
@@ -20,14 +20,6 @@ export type SemVer = {
   minor: number;
   patch: number;
   prerelease?: string;
-};
-
-export type ChangesetBump = 'major' | 'minor' | 'patch';
-
-export type Changeset = {
-  name: string;
-  releases: Record<string, ChangesetBump>;
-  summary: string;
 };
 
 export type BreakingChangeMembers = {
@@ -59,20 +51,16 @@ export type IxPageVersionInfo = {
 };
 
 export type IxVersionInfo = {
-  /** Version the documentation describes, e.g. `6.0.0` */
-  version: string;
-  /** Latest major; since tags of this and the previous (maintenance) major are shown */
+  /**
+   * Major the docs are built for, see `getCurrentMajor`.
+   * Since tags of this and the previous major are shown, breaking changes of this major only.
+   */
   currentMajor: number;
-  /** Where `version` was resolved from */
-  source: 'changesets' | 'artifact' | 'package';
-  branch?: string;
   /** Latest breaking change version shown on any page */
   breakingChanges?: { version: string; docUrl: string };
   /** Keyed by doc directory, e.g. `components/blind` */
   pages: Record<string, IxPageVersionInfo>;
 };
-
-export const IX_CORE_PACKAGE = '@siemens/ix';
 
 export function parseVersion(
   version: string | undefined | null
@@ -92,11 +80,29 @@ export function parseVersion(
 }
 
 /**
- * Version of a dependency range like `^5.3.0` or `npm:@siemens/ix@5.3.0`
+ * Major the docs are built for:
+ * - Release builds (`IX_REPO_BRANCH` is a release tag like `@siemens/ix@7.0.1`): major of the tag.
+ * - Development and pull request builds (`main`, `pull/123`, ...): the next major after
+ *   `currentVersion` (e.g. `v6`) of `version-deployment.json`, which is bumped when a major is released.
  */
-export function parseDependencyVersion(range: string | undefined) {
-  const match = /(\d+\.\d+\.\d+(?:-[0-9A-Za-z.-]+)?)/.exec(range ?? '');
-  return match && parseVersion(match[1]) ? match[1] : undefined;
+export function getCurrentMajor(
+  currentVersion: string,
+  ixRepoBranch?: string
+) {
+  const release = /^@siemens\/ix@v?(\d+)\.\d+\.\d+/.exec(
+    ixRepoBranch?.trim() ?? ''
+  );
+  if (release) {
+    return Number(release[1]);
+  }
+
+  const match = /^\s*v?(\d+)/.exec(currentVersion);
+  if (!match) {
+    throw new Error(
+      `Invalid currentVersion "${currentVersion}" in version-deployment.json`
+    );
+  }
+  return Number(match[1]) + 1;
 }
 
 /**
@@ -122,8 +128,8 @@ export function findPageVersionInfo(
 }
 
 /**
- * Only the latest major and the previous (maintenance) major are supported,
- * every older major is end of life. Newer majors (e.g. preview docs) are always shown.
+ * Since tags are shown for the major the docs are built for and the previous major
+ * (e.g. 7.x.x and 6.x.x for released v7 docs, or while working on v7), older majors are hidden.
  */
 export function isSupportedVersion(version: string, currentMajor: number) {
   const parsed = parseVersion(version);
@@ -131,71 +137,6 @@ export function isSupportedVersion(version: string, currentMajor: number) {
     return false;
   }
   return parsed.major >= currentMajor - 1;
-}
-
-export function parseChangeset(
-  name: string,
-  content: string
-): Changeset | null {
-  const match = /^---\r?\n([\s\S]*?)\r?\n---\r?\n?([\s\S]*)$/.exec(content);
-  if (!match) {
-    return null;
-  }
-
-  const releases: Record<string, ChangesetBump> = {};
-  for (const line of match[1].split(/\r?\n/)) {
-    const release =
-      /^\s*['"]?([^'"]+?)['"]?\s*:\s*(major|minor|patch)\s*$/.exec(line);
-    if (release) {
-      releases[release[1]] = release[2] as ChangesetBump;
-    }
-  }
-
-  return { name, releases, summary: match[2].trim() };
-}
-
-const bumpOrder: ChangesetBump[] = ['patch', 'minor', 'major'];
-
-/**
- * Resolve the version that will be released from the current package version
- * and the pending changesets (same logic as `changeset version`).
- */
-export function getUpcomingVersion(
-  currentVersion: string,
-  changesets: Changeset[],
-  pkg = IX_CORE_PACKAGE
-): string {
-  const parsed = parseVersion(currentVersion);
-  if (!parsed) {
-    throw new Error(`Invalid version "${currentVersion}"`);
-  }
-
-  // Pre-release mode: the upcoming release is the version without pre-release suffix
-  if (parsed.prerelease) {
-    return `${parsed.major}.${parsed.minor}.${parsed.patch}`;
-  }
-
-  const bump = changesets
-    .map((changeset) => changeset.releases[pkg])
-    .filter(Boolean)
-    .reduce<ChangesetBump | undefined>(
-      (max, current) =>
-        !max || bumpOrder.indexOf(current) > bumpOrder.indexOf(max)
-          ? current
-          : max,
-      undefined
-    );
-
-  switch (bump) {
-    case 'major':
-      return `${parsed.major + 1}.0.0`;
-    case 'minor':
-      return `${parsed.major}.${parsed.minor + 1}.0`;
-    case 'patch':
-      return `${parsed.major}.${parsed.minor}.${parsed.patch + 1}`;
-    default:
-      return `${parsed.major}.${parsed.minor}.${parsed.patch}`;
-  }
 }
 
 export type ApiMember = { name: string; since?: string };
@@ -331,8 +272,8 @@ export function parseBreakingChangeFrontMatter(
 }
 
 /**
- * Breaking changes stay visible until the next major version replaces them.
- * Upcoming majors (e.g. preview docs) are always shown.
+ * Breaking changes are only shown for the major the docs are built for
+ * (e.g. 7.0.0 for released v7 docs, or while working on v7).
  */
 export function isActiveBreakingChange(version: string, currentMajor: number) {
   const parsed = parseVersion(version);

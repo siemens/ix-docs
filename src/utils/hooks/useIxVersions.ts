@@ -18,7 +18,7 @@ export function useIxVersions(): IxVersionInfo {
 }
 
 /**
- * Since tags are only shown for the latest and the maintenance major version
+ * Since tags are only shown for the major in development and the latest released major
  */
 export function useIsSupportedVersion(version: string | undefined) {
   const { currentMajor } = useIxVersions();

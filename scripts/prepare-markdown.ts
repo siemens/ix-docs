@@ -93,10 +93,7 @@ async function main() {
 
   const branch = getBranch(defaults);
   await downloadLatestArtifact(branch);
-  // Read changesets from the same branch as the artifact
-  await prepareIxVersions(
-    branch.startsWith('pull/') ? `refs/${branch}/head` : branch
-  );
+  await prepareIxVersions(defaults.branch);
 }
 
 function getBranch(config: BranchConfig) {

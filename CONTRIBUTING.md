@@ -42,7 +42,6 @@ Create a `.env` file in the project root with the required tokens:
 ```env
 GITHUB_TOKEN=your-github-token-here
 FIGMA_API_TOKEN=your-figma-api-token-here  # Optional, only for Figma updates
-IX_CHANGESETS_BRANCH=main  # Optional, IX branch used for since/breaking change tags (default: branch of the downloaded artifact)
 ```
 
 ---
@@ -89,9 +88,7 @@ There are several ways to contribute to this project:
 
 ### Since and Breaking Change Tags
 
-`Since x.x.x` tags come from the `@since` JSDoc tag of the component (shown next to its name) or of a property/event (shown in the API table) in [siemens/ix](https://github.com/siemens/ix). Use `<SinceTag message="5.3.0" />` from `@site/src/components/UI/Tags` to add one manually. Only the latest and the maintenance major (e.g. `6.x.x` and `5.x.x`) are shown.
-
-The upcoming IX version is resolved from the changesets of the IX branch the docs were downloaded from; set `IX_CHANGESETS_BRANCH` to use another branch.
+`Since x.x.x` tags come from the `@since` JSDoc tag of the component (shown next to its name) or of a property/event (shown in the API table) in [siemens/ix](https://github.com/siemens/ix). Use `<SinceTag message="5.3.0" />` from `@site/src/components/UI/Tags` to add one manually. Only tags of the docs' major and the previous major are shown (e.g. `7.x.x` and `6.x.x`). The docs' major is taken from the `IX_REPO_BRANCH` release tag (e.g. `@siemens/ix@7.0.1`), otherwise during development it's `currentVersion` in `version-deployment.json` + 1.
 
 Breaking change tags come from the `breaking-change` front matter of the component's `index.mdx`:
 
@@ -108,7 +105,7 @@ breaking-change:
     - https://github.com/siemens/ix/blob/<commit>/.changeset/blind.md
 ```
 
-Tags link to the migration guide of the major (`docs/home/migration/<major>_0_0`) and are hidden once the next major is released.
+Tags link to the migration guide of the major (`docs/home/migration/<major>_0_0`) and are only shown for the docs' major.
 
 ### Blog Posts
 
