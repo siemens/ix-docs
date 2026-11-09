@@ -8,9 +8,9 @@
  */
 #__docusaurus {
   .aa-DetachedSearchButton {
-    --aa-primary-color-rgb: var(--theme-color-std-text);
+    --aa-primary-color-rgb: var(--si-sys-color-text-primary);
     background-color: transparent;
-    color: var(--theme-color-std-text);
+    color: var(--si-sys-color-text-primary);
     padding: 0 1rem 0 0.5rem;
     width: 7rem;
     max-width: 12.5rem;
@@ -22,7 +22,7 @@
   }
 
   .aa-DetachedSearchButton:hover {
-    background-color: var(--theme-color-1);
+    background-color: var(--si-sys-color-background-0);
   }
 
   .aa-DetachedSearchButtonIcon {
@@ -31,18 +31,18 @@
   }
 
   .aa-DetachedSearchButtonPlaceholder {
-    color: var(--theme-color-soft-text);
+    color: var(--si-sys-color-text-secondary);
   }
 }
 
 .aa-DetachedContainer.aa-DetachedContainer--modal {
-  background-color: var(--theme-color-1);
+  background-color: var(--si-sys-color-background-0);
 }
 
 .aa-Form {
   background-color: transparent !important;
-  --aa-primary-color-rgb: var(--theme-color-std-text);
-  color: var(--theme-color-std-text);
+  --aa-primary-color-rgb: var(--si-sys-color-text-primary);
+  color: var(--si-sys-color-text-primary);
 
   // The search field is only one part of the form, so the focus ring belongs on
   // the whole form. Otherwise it is drawn inside the form and overlaps its
@@ -69,12 +69,12 @@
 
   .aa-InputWrapperSuffix,
   .aa-InputWrapperPrefix {
-    background-color: var(--theme-input--background);
+    background-color: var(--si-sys-color-background-1);
     box-shadow: none;
   }
 
   .aa-Input {
-    background-color: var(--theme-input--background);
+    background-color: var(--si-sys-color-background-1);
     box-shadow: none;
   }
 
@@ -86,18 +86,18 @@
   }
 
   .aa-Input::placeholder {
-    color: var(--theme-color-soft-text);
+    color: var(--si-sys-color-text-secondary);
   }
 
   .aa-SubmitButton {
     display: flex;
     justify-content: center;
     align-items: center;
-    color: var(--theme-color-std-text);
+    color: var(--si-sys-color-text-primary);
   }
 
   .aa-ClearButton {
-    color: var(--theme-color-std-text);
+    color: var(--si-sys-color-text-primary);
   }
 
   // Keep a keyboard ring on the clear button. The form ring is scoped to
@@ -113,7 +113,7 @@
 
 .aa-Panel,
 .aa-PanelLayout {
-  background-color: var(--theme-color-1);
+  background-color: var(--si-sys-color-background-0);
 
   .aa-Item {
     padding: 0.75rem;
