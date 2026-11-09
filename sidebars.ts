@@ -497,6 +497,20 @@ const sidebars: SidebarsConfig = {
           ],
         }),
         createTabItem({
+          id: 'components/list/index',
+          label: 'List',
+          items: [
+            {
+              id: 'components/list/guide',
+              label: 'Usage',
+            },
+            {
+              id: 'components/list/code',
+              label: 'Code',
+            },
+          ],
+        }),
+        createTabItem({
           id: 'components/modal/index',
           label: 'Modal',
           items: [
@@ -551,7 +565,7 @@ const sidebars: SidebarsConfig = {
               label: 'Code',
             },
           ],
-        }),
+        })
       ],
       collapsed: true,
     },
@@ -660,6 +674,10 @@ const sidebars: SidebarsConfig = {
           label: 'Date dropdown',
           items: [
             {
+              id: 'components/date-dropdown/guide',
+              label: 'Usage',
+            },
+            {
               id: 'components/date-dropdown/code',
               label: 'Code',
             },
@@ -704,7 +722,7 @@ const sidebars: SidebarsConfig = {
             {
               id: 'components/date-picker/code',
               label: 'Code',
-            }
+            },
           ],
         }),
         createTabItem({
@@ -715,10 +733,10 @@ const sidebars: SidebarsConfig = {
               id: 'components/date-time-picker/guide',
               label: 'Usage',
             },
-                        {
+            {
               id: 'components/date-time-picker/code',
               label: 'Code',
-            }
+            },
           ],
         }),
         createTabItem({
