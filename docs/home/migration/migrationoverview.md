@@ -48,7 +48,7 @@ For large projects, we recommend running the agent one section at a time rather 
 
 1. Install the new iX npm packages in your project.
 2. Start an agent session (GitHub Copilot, Claude Code, etc.) in the root folder of your project.
-3. Scope the prompt to the section you want to migrate and run the agent. For example (replace `<section>` with the relevant section, and `<framework>` with the framework your project uses):
+3. Scope the prompt to the section you want to migrate and run the agent. Replace `<section>` with the relevant section, and `<framework>` with the framework your project uses, e.g.:
 
    ```text
    This app has been updated to iX x.0.
@@ -68,7 +68,7 @@ This keeps each batch of changes small and reviewable.
 ### Manual
 
 1. Search the codebase for the deprecated APIs listed in that section.
-2. Apply the documented V5 replacement using the before/after examples and migration rules.
+2. Apply the documented version replacement using the before/after examples and migration rules.
 3. Validate each domain immediately before moving to the next one.
 4. Use the final validation checklist as a whole-repository review once all domains are complete.
 

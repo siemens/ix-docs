@@ -21,6 +21,8 @@ description: Upgrade from V5 to V6 with guidance on design tokens, component cha
 
 V6 replaces legacy color, typography, and sizing tokens with Siemens Design Language system tokens to align components with a shared visual foundation. Update custom styles and component properties by choosing tokens that match their purpose. This is not a one-to-one rename, and some values and defaults have changed.
 
+#### Community theme
+
 #### Color tokens
 
 - [Replaced legacy tokens with Siemens design tokens](https://github.com/siemens/ix/blob/main/BREAKING_CHANGES/v6.md#siemens-design-tokens)
@@ -171,7 +173,7 @@ Affected components are: ix-blind, ix-card, ix-action-card, ix-push-card, ix-chi
 
 ### Icon size
 
-We changed the icon size from 24px to 20px. This change has been done globally via the Icon library.
+For affected components, the default icon size changed from 24px to 20px. Other components and contexts can retain different icon sizes.
 
 Affected components are: ix-blind, ix-breadcrumb, ix-button, ix-card-list, ix-chip, ix-date-dropdown, ix-dropdown, ix-event-list, ix-group, ix-icon-button, ix-input (date time), ix-date-time-picker, ix-key-value, ix-message-bar, ix-popover, ix-split-button, ix-tree, ix-upload, ix-workflow
 
@@ -180,7 +182,7 @@ Affected components are: ix-blind, ix-breadcrumb, ix-button, ix-card-list, ix-ch
 | Component | Changelog |
 | --- | --- |
 | App frame | <ul><li>Applied min-width to popover news container to align with code</li></ul> |
-| App menu | <ul><li>Changed app-menu size (with menu items, menu category and menu subitem): Collapsed to size-100, expanded to size-160</li><li>Fixed dropdown for menu categories by replacing fixed widths with hug content and min-width to align with code</li></ul> |
+| App menu | <ul><li>Changed app-menu size (with menu items, menu category and menu subitem): Collapsed to size-100, expanded to size-160</li><li>Fixed dropdown for menu categories by replacing fixed widths with hug content and min-width to align with code</li><li>Replaced notification with badge component, boolean to hide/show still works, values will be reset</li></ul> |
 | Blind | <ul><li>Added new variant: critical (purple)</li><li>Adaptions needed with icon size change: changed to auto layout, max height 48px, gap between chevron and title set to 8px again</li><li>Breaking: Reset icon buttons in header so that they receive updates</li><li>Breaking: Removed old slot</li><li>Previous blind has been deprecated.</li></ul> |
 | Button | <ul><li>Added auto-layout</li><li>Breaking: Reset button group default content text+icon and icon only (otherwise icon color won’t update with property changes)</li></ul> |
 | Card | <ul><li>Added new variants for all cards: critical (purple)</li><li>Removed color-0 (transparent colors)</li><li>Removed component set background</li><li>Breaking: New boolean property introduced for all cards: outline</li><li>Changed fill color for all outline=false to background-1</li><li>Added color strip for all status variants for outline=false</li></ul> |
