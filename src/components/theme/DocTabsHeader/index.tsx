@@ -13,7 +13,13 @@ import {
   RedirectTag,
   SinceTag,
 } from '@site/src/components/UI/Tags';
-import { findPageVersionInfo } from '@site/src/lib/ix-versions';
+import {
+  BREAKING_CHANGE_FRONT_MATTER_KEY,
+  findPageVersionInfo,
+  getMigrationGuideUrl,
+  isActiveBreakingChange,
+  parseVersion,
+} from '@site/src/lib/ix-versions';
 import {
   useIsSupportedVersion,
   useIxVersions,
@@ -75,11 +81,19 @@ export default function DocTabsHeader(
   const componentVersion = findPageVersionInfo(ixVersions.pages, id);
   const since = componentVersion?.since;
   const showSince = useIsSupportedVersion(since);
+  const breakingChange = frontMatter[BREAKING_CHANGE_FRONT_MATTER_KEY] as
+    | { version?: string; description?: string }
+    | undefined;
+  const breakingVersion = breakingChange?.version;
+  const showBreaking =
+    !!breakingVersion &&
+    !!parseVersion(breakingVersion) &&
+    isActiveBreakingChange(breakingVersion, ixVersions.currentMajor);
   const hasTags =
     !!frontMatter.deprecated ||
     !!frontMatter.formReady ||
     showSince ||
-    !!componentVersion?.breaking;
+    showBreaking;
 
   const prompt = useMemo(
     () => `Use web browsing to access links and information:
@@ -142,11 +156,11 @@ I want to ask some questions`,
               )}
             {frontMatter.formReady && <FormReady />}
             {since && showSince && <SinceTag message={since} />}
-            {componentVersion?.breaking && (
+            {showBreaking && (
               <BreakingChangeTag
-                message={componentVersion.breaking.version}
-                href={componentVersion.breaking.href}
-                description={componentVersion.breaking.description}
+                message={breakingVersion}
+                href={getMigrationGuideUrl(breakingVersion)}
+                description={breakingChange?.description}
               />
             )}
           </div>

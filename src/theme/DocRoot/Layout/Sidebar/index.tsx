@@ -16,10 +16,9 @@ import styles from './styles.module.css';
 import SortSwitch from '@site/src/components/theme/SortSwitch';
 import {
   BreakingChangeTooltip,
-  getBreakingChangeIndicatorVars,
-  withBreakingChangeIndicators,
+  breakingChangeIndicatorVars,
+  getBreakingChangeVersions,
 } from '@site/src/components/theme/BreakingChangeIndicator';
-import { useIxVersions } from '@site/src/utils/hooks/useIxVersions';
 
 // Reset sidebar state when sidebar changes
 // Use React key to unmount/remount the children
@@ -68,9 +67,6 @@ export default function DocRootLayoutSidebar({
     'grouped' | 'sorted'
   >('components_list_style', 'grouped');
 
-  const ixVersions = useIxVersions();
-  const breakingVersion = ixVersions.breakingChanges?.version;
-
   const [hiddenSidebar, setHiddenSidebar] = useState(false);
   const toggleSidebar = useCallback(() => {
     if (hiddenSidebar) {
@@ -89,19 +85,15 @@ export default function DocRootLayoutSidebar({
       return sidebar;
     }
 
-    const items =
-      componentListStyle === 'grouped' ? sidebar : getFlatSidebarItems(sidebar);
+    return componentListStyle === 'grouped'
+      ? sidebar
+      : getFlatSidebarItems(sidebar);
+  }, [sidebar, isComponentsPath, componentListStyle]);
 
-    return breakingVersion
-      ? withBreakingChangeIndicators(items, ixVersions.pages)
-      : items;
-  }, [
-    sidebar,
-    isComponentsPath,
-    componentListStyle,
-    breakingVersion,
-    ixVersions.pages,
-  ]);
+  const breakingVersions = useMemo(
+    () => (isComponentsPath ? getBreakingChangeVersions(sidebar) : []),
+    [sidebar, isComponentsPath]
+  );
 
   return (
     <aside
@@ -110,7 +102,7 @@ export default function DocRootLayoutSidebar({
         styles.docSidebarContainer,
         hiddenSidebarContainer && styles.docSidebarContainerHidden
       )}
-      style={getBreakingChangeIndicatorVars(breakingVersion)}
+      style={breakingChangeIndicatorVars}
       onTransitionEnd={(e) => {
         if (!e.currentTarget.classList.contains(styles.docSidebarContainer!)) {
           return;
@@ -121,9 +113,9 @@ export default function DocRootLayoutSidebar({
         }
       }}
     >
-      {isComponentsPath && breakingVersion && (
-        <BreakingChangeTooltip version={breakingVersion} />
-      )}
+      {breakingVersions.map((version) => (
+        <BreakingChangeTooltip key={version} version={version} />
+      ))}
       {isComponentsPath && (
         <SortSwitch
           grouped={componentListStyle === 'grouped'}

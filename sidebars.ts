@@ -7,6 +7,42 @@
  * LICENSE file in the root directory of this source tree.
  */
 import type { SidebarsConfig } from '@docusaurus/plugin-content-docs';
+import fs from 'fs';
+import matter from 'gray-matter';
+import path from 'path';
+import versionDeployment from './version-deployment.json' with { type: 'json' };
+import {
+  BREAKING_CHANGE_FRONT_MATTER_KEY,
+  getCurrentMajor,
+  isActiveBreakingChange,
+  parseBreakingChangeFrontMatter,
+} from './src/lib/ix-versions';
+
+const currentMajor = getCurrentMajor(
+  versionDeployment.currentVersion,
+  process.env.IX_REPO_BRANCH
+);
+
+/**
+ * `breaking-change` front matter of a doc, if it belongs to the major the docs are built for.
+ * Rendered as marker by `src/theme/DocSidebarItem/Category`.
+ */
+function getBreakingChange(id: string) {
+  const file = ['.mdx', '.md']
+    .map((ext) => path.join(__dirname, 'docs', `${id}${ext}`))
+    .find((candidate) => fs.existsSync(candidate));
+  if (!file) {
+    return undefined;
+  }
+
+  const breakingChange = parseBreakingChangeFrontMatter(
+    matter(fs.readFileSync(file, 'utf8')).data[BREAKING_CHANGE_FRONT_MATTER_KEY]
+  );
+  return breakingChange &&
+    isActiveBreakingChange(breakingChange.version, currentMajor)
+    ? { version: breakingChange.version }
+    : undefined;
+}
 
 function createTabItem(item: {
   id: string;
@@ -16,6 +52,8 @@ function createTabItem(item: {
     label: string;
   }[];
 }): any {
+  const breakingChange = getBreakingChange(item.id);
+
   return {
     type: 'category',
     label: item.label,
@@ -26,6 +64,7 @@ function createTabItem(item: {
     className: 'category-tabs',
     collapsed: true,
     collapsible: false,
+    ...(breakingChange && { customProps: { breakingChange } }),
     items: item.items.map((child) => ({
       type: 'doc',
       id: child.id,

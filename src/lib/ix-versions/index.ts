@@ -47,7 +47,6 @@ export type IxPageVersionInfo = {
   /** Primary component tag of the page, e.g. `ix-blind` (if it has API tables) */
   tag?: string;
   since?: string;
-  breaking?: { version: string; href: string; description?: string };
 };
 
 export type IxVersionInfo = {
@@ -56,8 +55,6 @@ export type IxVersionInfo = {
    * Since tags of this and the previous major are shown, breaking changes of this major only.
    */
   currentMajor: number;
-  /** Latest breaking change version shown on any page */
-  breakingChanges?: { version: string; docUrl: string };
   /** Keyed by doc directory, e.g. `components/blind` */
   pages: Record<string, IxPageVersionInfo>;
 };
