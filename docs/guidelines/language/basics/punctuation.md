@@ -559,7 +559,7 @@ Use the tilde primarily in technical contexts to indicate approximation and home
       <li>File path: ~/Documents/Projects</li>
       <li>Processing time: ~ 5 minutes</li>
       <li>Processing time: about 5 minutes</li>
-      <li>Temperature range: approximately 20–25°C</li>
+      <li>Temperature range: approximately 20–25 °C</li>
     </ul>
   </div>
   <div class="donts">
