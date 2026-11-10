@@ -8,11 +8,7 @@
  */
 
 /**
- * Pure helpers to resolve which IX versions are shown (major of the docs + previous major),
- * to read "since" information of the IX repository and the "breaking change"
- * front matter of the doc pages.
- *
- * Used by `scripts/prepare-ix-versions.ts` (build time) and by the tag components (runtime).
+ * Helpers for the since and breaking change tags: shown versions, API tables, front matter.
  */
 
 export type SemVer = {
@@ -28,12 +24,9 @@ export type BreakingChangeMembers = {
 };
 
 /**
- * `breaking-change` front matter of a doc page (`docs/components/<name>/index.mdx`).
- * Properties and events of the page's primary component are listed by name,
- * those of other components on the page as `ix-other-component.name`.
- * Optional: `description` summarizes the breaking changes in one line (shown as tooltip
- * of the component tag), `source` names what the entry is based on, e.g. links to
- * changesets or a note like "new xyz property".
+ * `breaking-change` front matter. Members of other components on the page are
+ * prefixed with their tag (`ix-other.name`). `description` is the tooltip,
+ * `source` is not shown.
  */
 export type BreakingChange = {
   version: string;
@@ -43,20 +36,9 @@ export type BreakingChange = {
   source: string[];
 };
 
-export type IxPageVersionInfo = {
-  /** Primary component tag of the page, e.g. `ix-blind` (if it has API tables) */
-  tag?: string;
-  since?: string;
-};
-
 export type IxVersionInfo = {
-  /**
-   * Major the docs are built for, see `getCurrentMajor`.
-   * Since tags of this and the previous major are shown, breaking changes of this major only.
-   */
+  /** Major the docs are built for, see `getCurrentMajor` */
   currentMajor: number;
-  /** Keyed by doc directory, e.g. `components/blind` */
-  pages: Record<string, IxPageVersionInfo>;
 };
 
 export function parseVersion(
@@ -77,15 +59,10 @@ export function parseVersion(
 }
 
 /**
- * Major the docs are built for:
- * - Release builds (`IX_REPO_BRANCH` is a release tag like `@siemens/ix@7.0.1`): major of the tag.
- * - Development and pull request builds (`main`, `pull/123`, ...): the next major after
- *   `currentVersion` (e.g. `v6`) of `version-deployment.json`, which is bumped when a major is released.
+ * Major the docs are built for: the major of an `IX_REPO_BRANCH` release tag,
+ * otherwise (development) `currentVersion` + 1.
  */
-export function getCurrentMajor(
-  currentVersion: string,
-  ixRepoBranch?: string
-) {
+export function getCurrentMajor(currentVersion: string, ixRepoBranch?: string) {
   const release = /^@siemens\/ix@v?(\d+)\.\d+\.\d+/.exec(
     ixRepoBranch?.trim() ?? ''
   );
@@ -103,30 +80,7 @@ export function getCurrentMajor(
 }
 
 /**
- * Version info of a page by doc id (`components/blind/code`) or URL (`/base/docs/components/blind`).
- * Pages are keyed by doc directory, so the path itself or its parent is matched.
- */
-export function findPageVersionInfo(
-  pages: Record<string, IxPageVersionInfo>,
-  pathOrId: string | undefined
-): IxPageVersionInfo | undefined {
-  if (!pathOrId) {
-    return undefined;
-  }
-
-  const key = pathOrId
-    .split(/[?#]/)[0]
-    .replace(/^.*?\/docs\//, '')
-    .replace(/^\/+|\/+$/g, '')
-    .replace(/\/index$/, '');
-  const parent = key.split('/').slice(0, -1).join('/');
-
-  return pages[key] ?? (parent ? pages[parent] : undefined);
-}
-
-/**
- * Since tags are shown for the major the docs are built for and the previous major
- * (e.g. 7.x.x and 6.x.x for released v7 docs, or while working on v7), older majors are hidden.
+ * Since tags are shown for the docs' major and the previous one.
  */
 export function isSupportedVersion(version: string, currentMajor: number) {
   const parsed = parseVersion(version);
@@ -146,7 +100,7 @@ export type ComponentApi = {
 const sinceTagPattern = /<SinceTag\s+message=\{?\s*[`'"]([^`'"]+)[`'"]\s*\}?/;
 
 /**
- * Read properties and events (incl. their since version) from a generated `api.mdx`.
+ * Properties and events (with since version) of a generated `api.mdx`
  */
 export function parseApiMdx(content: string): ComponentApi {
   const read = (header: 'PropertyHeader' | 'EventHeader') =>
@@ -166,18 +120,10 @@ export function parseApiMdx(content: string): ComponentApi {
   return { props: read('PropertyHeader'), events: read('EventHeader') };
 }
 
-/**
- * Read the component level since version from a generated `tags.mdx`.
- */
-export function parseComponentSince(content: string) {
-  return sinceTagPattern.exec(content)?.[1];
-}
-
 export const BREAKING_CHANGE_FRONT_MATTER_KEY = 'breaking-change';
 
 /**
- * Migration guide of a major version (`docs/home/migration/<major>_0_0`). Not linked
- * to a section on purpose, the changes of a component can be spread over the guide.
+ * Migration guide of a major (no section, a component's changes can be spread over it)
  */
 export function getMigrationGuideUrl(version: string) {
   const major = parseVersion(version)?.major;
@@ -188,8 +134,7 @@ export function getMigrationGuideUrl(version: string) {
 }
 
 /**
- * Validate the `breaking-change` front matter of a doc page.
- * Returns `undefined` if not set, throws if invalid.
+ * Validates `breaking-change` front matter, throws if invalid
  */
 export function parseBreakingChangeFrontMatter(
   value: unknown
@@ -255,7 +200,7 @@ export function parseBreakingChangeFrontMatter(
     sources.some((entry) => typeof entry !== 'string' || !entry.trim())
   ) {
     throw new Error(
-      `"${BREAKING_CHANGE_FRONT_MATTER_KEY}.source" must be a text or a list of texts, e.g. a link to the changeset or a note like "new xyz property"`
+      `"${BREAKING_CHANGE_FRONT_MATTER_KEY}.source" must be a text or a list of texts`
     );
   }
 
@@ -269,17 +214,15 @@ export function parseBreakingChangeFrontMatter(
 }
 
 /**
- * Breaking changes are only shown for the major the docs are built for
- * (e.g. 7.0.0 for released v7 docs, or while working on v7).
+ * Breaking changes are only shown for the docs' major.
  */
 export function isActiveBreakingChange(version: string, currentMajor: number) {
   const parsed = parseVersion(version);
-  return !!parsed && parsed.major >= currentMajor;
+  return !!parsed && parsed.major === currentMajor;
 }
 
 /**
- * Members of a `breaking-change` front matter by component tag.
- * Unqualified names belong to the primary component of the page.
+ * `breaking-change` members by component tag, unprefixed names belong to `primaryTag`
  */
 export function groupBreakingChangeMembers(
   primaryTag: string,
@@ -322,8 +265,7 @@ export function removeBreakingChangeTags(content: string) {
 }
 
 /**
- * Add `BreakingChangeTag`s to the property and event headers of a generated `api.mdx`.
- * Previously added tags are replaced.
+ * Adds `BreakingChangeTag`s to the API table headers, replacing previous ones
  */
 export function injectBreakingChangeTags(
   content: string,
@@ -356,4 +298,97 @@ export function injectBreakingChangeTags(
   inject('EventHeader', members.events);
 
   return changed ? `${breakingChangeTagImport}\n${content}` : content;
+}
+
+export const SINCE_FRONT_MATTER_KEY = 'since';
+
+export const DEPRECATED_FRONT_MATTER_KEY = 'deprecated';
+
+/**
+ * Link to the deprecated version, or `{ type: 'deprecated', message }`
+ */
+export type DeprecatedEntry = string | { type: string; message: string };
+
+/** Front matter keys of the header tags */
+export const PAGE_TAG_FRONT_MATTER_KEYS = [
+  DEPRECATED_FRONT_MATTER_KEY,
+  'formReady',
+  SINCE_FRONT_MATTER_KEY,
+  BREAKING_CHANGE_FRONT_MATTER_KEY,
+] as const;
+
+/**
+ * Header tags of a page (for tabs pages from `index.mdx`, see `sidebars.ts`)
+ */
+export type PageTags = {
+  deprecated?: DeprecatedEntry[];
+  formReady?: boolean;
+  since?: string;
+  breakingChange?: { version: string; href: string; description?: string };
+};
+
+/**
+ * Header tags shown for the docs' major, throws on invalid front matter
+ */
+export function getPageTags(
+  frontMatter: Record<string, unknown>,
+  currentMajor: number
+): PageTags {
+  const tags: PageTags = {};
+
+  const deprecated = frontMatter[DEPRECATED_FRONT_MATTER_KEY];
+  if (deprecated !== undefined && deprecated !== null) {
+    if (
+      !Array.isArray(deprecated) ||
+      deprecated.some(
+        (entry) =>
+          typeof entry !== 'string' &&
+          (typeof entry !== 'object' ||
+            entry === null ||
+            typeof entry.type !== 'string' ||
+            typeof entry.message !== 'string')
+      )
+    ) {
+      throw new Error(
+        `"${DEPRECATED_FRONT_MATTER_KEY}" must be a list of links or { type, message } entries`
+      );
+    }
+    if (deprecated.length > 0) {
+      tags.deprecated = deprecated;
+    }
+  }
+
+  if (frontMatter.formReady === true) {
+    tags.formReady = true;
+  }
+
+  const since = frontMatter[SINCE_FRONT_MATTER_KEY];
+  if (since !== undefined && since !== null) {
+    if (typeof since !== 'string' || !parseVersion(since)) {
+      throw new Error(
+        `"${SINCE_FRONT_MATTER_KEY}" must be a version like 6.0.0, got "${String(since)}"`
+      );
+    }
+    if (isSupportedVersion(since, currentMajor)) {
+      tags.since = since.trim();
+    }
+  }
+
+  const breakingChange = parseBreakingChangeFrontMatter(
+    frontMatter[BREAKING_CHANGE_FRONT_MATTER_KEY]
+  );
+  if (
+    breakingChange &&
+    isActiveBreakingChange(breakingChange.version, currentMajor)
+  ) {
+    tags.breakingChange = {
+      version: breakingChange.version,
+      href: getMigrationGuideUrl(breakingChange.version),
+      ...(breakingChange.description && {
+        description: breakingChange.description,
+      }),
+    };
+  }
+
+  return tags;
 }

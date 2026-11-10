@@ -87,26 +87,31 @@ There are several ways to contribute to this project:
   - `docs/components/[component-name]/code.mdx` - Development examples and APIs
 - Test locally: `pnpm start`
 
-### Since and Breaking Change Tags
+### Header Tags
 
-`Since x.x.x` tags come from the `@since` JSDoc tag of the component (shown next to its name) or of a property/event (shown in the API table) in [siemens/ix](https://github.com/siemens/ix). Use `<SinceTag message="5.3.0" />` from `@site/src/components/UI/Tags` to add one manually. Only tags of the docs' major and the previous major are shown (e.g. `7.x.x` and `6.x.x`). The docs' major is taken from the `IX_REPO_BRANCH` release tag (e.g. `@siemens/ix@7.0.1`), otherwise during development it's `currentVersion` in `version-deployment.json` + 1.
-
-Breaking change tags come from the `breaking-change` front matter of the component's `index.mdx`:
+Set component header tags in the front matter of the component's `index.mdx`, not in its tab pages:
 
 ```yaml
+formReady: true
+deprecated:
+  - /docs/legacy/input # link to the deprecated version
+since: 6.0.0 # for new components
 breaking-change:
   version: 6.0.0
-  description: 'Status variants renamed' # optional, tooltip of the tag
+  description: 'Status variants renamed' # optional, tooltip
   properties: # optional, tagged in the API table
     - variant
-    - ix-push-card.variant # other component on the same page
+    - ix-push-card.variant # other component on the page
   events: # optional
     - collapsedChange
-  source: # optional, not shown (e.g. changeset link or "new xyz property")
+  source: # optional, not shown
     - https://github.com/siemens/ix/blob/<commit>/.changeset/blind.md
 ```
 
-Tags link to the migration guide of the major (`docs/home/migration/<major>_0_0`) and are only shown for the docs' major.
+- Property and event `since` tags come from `@since` in the [siemens/ix](https://github.com/siemens/ix) JSDoc.
+- `since` tags are shown for the current major and maintenance versions, breaking changes only for the current major. Remove outdated entries.
+- The docs' major is the `IX_REPO_BRANCH` release tag's major, during development uses `currentVersion` in `version-deployment.json` + 1.
+- Breaking change tags link to the major's migration guide.
 
 ### Using Examples from an Open siemens/ix Pull Request
 

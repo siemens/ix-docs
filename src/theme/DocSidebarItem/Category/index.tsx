@@ -20,9 +20,7 @@ export default function CategoryWrapper(props: Readonly<Props>): JSX.Element {
   const { item } = props;
   const indicator = getBreakingChangeIndicator(item);
 
-  // The label is typed as string, but only rendered as link content.
-  // The collapse button (only shown for collapsible categories with a link)
-  // uses it as text in its aria label, keep the plain label there.
+  // The label is typed as string: keep it plain where the collapse button uses it as aria label
   if (!indicator || (item.collapsible && item.href)) {
     return <Category {...props} />;
   }

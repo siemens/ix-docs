@@ -6,24 +6,8 @@ import { useHistory, useLocation } from '@docusaurus/router';
 import { useScrollPosition } from '@docusaurus/theme-common/internal';
 import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 import { IxTooltip, IxTypography } from '@siemens/ix-react';
-import {
-  BreakingChangeTag,
-  DeprecatedTag,
-  FormReady,
-  RedirectTag,
-  SinceTag,
-} from '@site/src/components/UI/Tags';
-import {
-  BREAKING_CHANGE_FRONT_MATTER_KEY,
-  findPageVersionInfo,
-  getMigrationGuideUrl,
-  isActiveBreakingChange,
-  parseVersion,
-} from '@site/src/lib/ix-versions';
-import {
-  useIsSupportedVersion,
-  useIxVersions,
-} from '@site/src/utils/hooks/useIxVersions';
+import PageTags, { hasPageTags } from '@site/src/components/theme/PageTags';
+import type { PageTags as PageTagsData } from '@site/src/lib/ix-versions';
 import clsx from 'clsx';
 import { useCallback, useMemo, useState } from 'react';
 import AskAI from '../AskAI';
@@ -72,28 +56,14 @@ export default function DocTabsHeader(
     title: string;
     description: string;
     tabs: PropSidebarItemLink[];
-    frontMatter: any;
+    /** Tags of the page's `index.mdx`, see `sidebars.ts` */
+    indexTags?: PageTagsData;
   }>
 ) {
-  const { description, tabs, title, frontMatter, id } = props;
+  const { description, tabs, title, id, indexTags } = props;
   const { siteConfig } = useDocusaurusContext();
-  const ixVersions = useIxVersions();
-  const componentVersion = findPageVersionInfo(ixVersions.pages, id);
-  const since = componentVersion?.since;
-  const showSince = useIsSupportedVersion(since);
-  const breakingChange = frontMatter[BREAKING_CHANGE_FRONT_MATTER_KEY] as
-    | { version?: string; description?: string }
-    | undefined;
-  const breakingVersion = breakingChange?.version;
-  const showBreaking =
-    !!breakingVersion &&
-    !!parseVersion(breakingVersion) &&
-    isActiveBreakingChange(breakingVersion, ixVersions.currentMajor);
-  const hasTags =
-    !!frontMatter.deprecated ||
-    !!frontMatter.formReady ||
-    showSince ||
-    showBreaking;
+  const tags = indexTags ?? {};
+  const hasTags = hasPageTags(tags);
 
   const prompt = useMemo(
     () => `Use web browsing to access links and information:
@@ -130,39 +100,7 @@ I want to ask some questions`,
       {(description || hasTags) && (
         <div className={clsx(styles.componentHeroHeader, 'HeroHeader')}>
           <div className={styles.Tags}>
-            {frontMatter.deprecated &&
-              Array.from(frontMatter.deprecated) &&
-              frontMatter.deprecated.map(
-                (
-                  link: string | { type: string; message: string; href: string }
-                ) => {
-                  if (typeof link === 'string') {
-                    return (
-                      <RedirectTag key={link} link={link}>
-                        Show deprecated version
-                      </RedirectTag>
-                    );
-                  }
-
-                  if (link.type === 'deprecated') {
-                    return (
-                      <DeprecatedTag
-                        key={link.message}
-                        message={link.message}
-                      ></DeprecatedTag>
-                    );
-                  }
-                }
-              )}
-            {frontMatter.formReady && <FormReady />}
-            {since && showSince && <SinceTag message={since} />}
-            {showBreaking && (
-              <BreakingChangeTag
-                message={breakingVersion}
-                href={getMigrationGuideUrl(breakingVersion)}
-                description={breakingChange?.description}
-              />
-            )}
+            <PageTags tags={tags} />
           </div>
           {description && <p className={styles.Description}>{description}</p>}
         </div>

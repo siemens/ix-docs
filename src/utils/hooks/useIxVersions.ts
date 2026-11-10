@@ -14,12 +14,11 @@ import {
 
 export function useIxVersions(): IxVersionInfo {
   const { siteConfig } = useDocusaurusContext();
-  return siteConfig.customFields.ixVersions as IxVersionInfo;
+  // Always set in docusaurus.config.ts
+  return siteConfig.customFields!.ixVersions as IxVersionInfo;
 }
 
-/**
- * Since tags are only shown for the major in development and the latest released major
- */
+/** Since tags are shown for the docs' major and the previous version */
 export function useIsSupportedVersion(version: string | undefined) {
   const { currentMajor } = useIxVersions();
   return !!version && isSupportedVersion(version, currentMajor);

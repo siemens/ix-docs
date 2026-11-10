@@ -12,10 +12,9 @@ import matter from 'gray-matter';
 import path from 'path';
 import versionDeployment from './version-deployment.json' with { type: 'json' };
 import {
-  BREAKING_CHANGE_FRONT_MATTER_KEY,
+  PAGE_TAG_FRONT_MATTER_KEYS,
   getCurrentMajor,
-  isActiveBreakingChange,
-  parseBreakingChangeFrontMatter,
+  getPageTags,
 } from './src/lib/ix-versions';
 
 const currentMajor = getCurrentMajor(
@@ -23,25 +22,45 @@ const currentMajor = getCurrentMajor(
   process.env.IX_REPO_BRANCH
 );
 
-/**
- * `breaking-change` front matter of a doc, if it belongs to the major the docs are built for.
- * Rendered as marker by `src/theme/DocSidebarItem/Category`.
- */
-function getBreakingChange(id: string) {
-  const file = ['.mdx', '.md']
+function findDoc(id: string) {
+  return ['.mdx', '.md']
     .map((ext) => path.join(__dirname, 'docs', `${id}${ext}`))
     .find((candidate) => fs.existsSync(candidate));
-  if (!file) {
-    return undefined;
+}
+
+/**
+ * Header tags from the `index.mdx` front matter, passed as category `customProps`
+ * because tab pages don't see it. Used by `DocTabsHeader` and the sidebar marker.
+ */
+function getTabsPageTags(id: string, tabIds: string[]) {
+  for (const tabId of tabIds) {
+    const tabFile = findDoc(tabId);
+    const data = tabFile ? matter(fs.readFileSync(tabFile, 'utf8')).data : {};
+    const keys = PAGE_TAG_FRONT_MATTER_KEYS.filter(
+      (key) => data[key] !== undefined && data[key] !== null
+    );
+    if (keys.length > 0) {
+      throw new Error(
+        `${path.relative(__dirname, tabFile!)}: move ${keys.join(', ')} to docs/${id}`
+      );
+    }
   }
 
-  const breakingChange = parseBreakingChangeFrontMatter(
-    matter(fs.readFileSync(file, 'utf8')).data[BREAKING_CHANGE_FRONT_MATTER_KEY]
-  );
-  return breakingChange &&
-    isActiveBreakingChange(breakingChange.version, currentMajor)
-    ? { version: breakingChange.version }
-    : undefined;
+  const file = findDoc(id);
+  if (!file) {
+    return {};
+  }
+
+  try {
+    return getPageTags(
+      matter(fs.readFileSync(file, 'utf8')).data,
+      currentMajor
+    );
+  } catch (e) {
+    throw new Error(
+      `Invalid front matter in ${path.relative(__dirname, file)}: ${e instanceof Error ? e.message : e}`
+    );
+  }
 }
 
 function createTabItem(item: {
@@ -52,7 +71,10 @@ function createTabItem(item: {
     label: string;
   }[];
 }): any {
-  const breakingChange = getBreakingChange(item.id);
+  const pageTags = getTabsPageTags(
+    item.id,
+    item.items.map((child) => child.id)
+  );
 
   return {
     type: 'category',
@@ -64,7 +86,7 @@ function createTabItem(item: {
     className: 'category-tabs',
     collapsed: true,
     collapsible: false,
-    ...(breakingChange && { customProps: { breakingChange } }),
+    ...(Object.keys(pageTags).length > 0 && { customProps: pageTags }),
     items: item.items.map((child) => ({
       type: 'doc',
       id: child.id,
@@ -565,7 +587,7 @@ const sidebars: SidebarsConfig = {
               label: 'Code',
             },
           ],
-        })
+        }),
       ],
       collapsed: true,
     },
@@ -1056,8 +1078,8 @@ const sidebars: SidebarsConfig = {
             },
             {
               id: 'components/info-page/language',
-              label: 'Writing'
-            }
+              label: 'Writing',
+            },
           ],
         }),
         createTabItem({

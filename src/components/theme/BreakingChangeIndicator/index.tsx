@@ -8,9 +8,7 @@
  */
 
 /**
- * Indicates components with breaking changes of the upcoming/current major
- * in the sidebar. The version is set as `customProps.breakingChange` of the
- * sidebar category by `sidebars.ts`, based on the `breaking-change` front matter.
+ * Sidebar marker for components with breaking changes (`customProps.breakingChange`, see `sidebars.ts`)
  */
 import type { PropSidebarItem } from '@docusaurus/plugin-content-docs';
 import { iconElectricalEnergyFilled } from '@siemens/ix-icons/icons';
@@ -29,9 +27,7 @@ export function getBreakingChangeIndicator(item: PropSidebarItem) {
     BreakingChangeIndicator | undefined;
 }
 
-/**
- * Versions of all breaking change markers in the sidebar
- */
+/** Versions of all markers in the sidebar */
 export function getBreakingChangeVersions(items: PropSidebarItem[]): string[] {
   const versions = new Set<string>();
   const collect = (list: PropSidebarItem[]) => {
@@ -62,9 +58,7 @@ export function BreakingChangeMarker({
   );
 }
 
-/**
- * One tooltip for all markers of a version, ix-tooltip also attaches to markers rendered later
- */
+/** One tooltip per version, also attaches to markers rendered later */
 export function BreakingChangeTooltip({
   version,
 }: Readonly<{ version: string }>) {
@@ -80,9 +74,7 @@ export function BreakingChangeTooltip({
   );
 }
 
-/**
- * CSS variables used by the markers, set on a common parent of the sidebar
- */
+/** Set on a common parent of the markers */
 export const breakingChangeIndicatorVars = {
   '--ix-docs-breaking-change-icon': `url("${iconElectricalEnergyFilled}")`,
 } as CSSProperties;

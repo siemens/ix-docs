@@ -1,8 +1,8 @@
 import assert from 'node:assert/strict';
 import test from 'node:test';
 import {
-  findPageVersionInfo,
   getCurrentMajor,
+  getPageTags,
   getMigrationGuideUrl,
   groupBreakingChangeMembers,
   injectBreakingChangeTags,
@@ -10,7 +10,6 @@ import {
   isSupportedVersion,
   parseApiMdx,
   parseBreakingChangeFrontMatter,
-  parseComponentSince,
   removeBreakingChangeTags,
 } from '.';
 
@@ -35,27 +34,6 @@ test('#getCurrentMajor uses the release tag or the next major after currentVersi
   assert.equal(getCurrentMajor('v5'), 6);
   assert.equal(getCurrentMajor('5.2.0'), 6);
   assert.throws(() => getCurrentMajor('latest', 'main'));
-});
-
-test('#findPageVersionInfo matches doc ids and URLs', () => {
-  const blind = { tag: 'ix-blind' };
-  const pages = { 'components/blind': blind };
-
-  assert.equal(findPageVersionInfo(pages, 'components/blind/code'), blind);
-  assert.equal(findPageVersionInfo(pages, 'components/blind/index'), blind);
-  assert.equal(findPageVersionInfo(pages, '/docs/components/blind'), blind);
-  assert.equal(findPageVersionInfo(pages, '/docs/components/blind/'), blind);
-  assert.equal(
-    findPageVersionInfo(pages, '/version-5/docs/components/blind/code#api'),
-    blind
-  );
-  assert.equal(
-    findPageVersionInfo(pages, 'components/blind-x/code'),
-    undefined
-  );
-  assert.equal(findPageVersionInfo(pages, 'components/blind/a/b'), undefined);
-  assert.equal(findPageVersionInfo(pages, '/docs/components'), undefined);
-  assert.equal(findPageVersionInfo(pages, undefined), undefined);
 });
 
 const apiMdx = `import {SinceTag, DeprecatedTag} from '@site/src/components/UI/Tags';
@@ -92,19 +70,6 @@ test('#parseApiMdx reads properties, events and since versions', () => {
     ],
     events: [{ name: 'collapsedChange', since: undefined }],
   });
-});
-
-test('#parseComponentSince reads the component since tag', () => {
-  assert.equal(
-    parseComponentSince(
-      "import { SinceTag } from '@site/src/components/UI/Tags';\n\n<SinceTag message={`5.0.0`} />\n"
-    ),
-    '5.0.0'
-  );
-  assert.equal(
-    parseComponentSince('<DeprecatedTag message={`x`} />'),
-    undefined
-  );
 });
 
 const changesetUrl =
@@ -248,8 +213,8 @@ test('#parseBreakingChangeFrontMatter does not require description and source', 
   );
 });
 
-test('#isActiveBreakingChange only shows breaking changes of the major in development', () => {
-  assert.equal(isActiveBreakingChange('6.0.0', 5), true);
+test('#isActiveBreakingChange only shows breaking changes of the major of the docs', () => {
+  assert.equal(isActiveBreakingChange('6.0.0', 5), false);
   assert.equal(isActiveBreakingChange('6.0.0', 6), true);
   assert.equal(isActiveBreakingChange('6.0.0', 7), false);
   assert.equal(isActiveBreakingChange('invalid', 6), false);
@@ -328,4 +293,48 @@ test('#injectBreakingChangeTags adds tags to affected headers only once', () => 
     injectBreakingChangeTags(apiMdx, '6.0.0', href, { props: [], events: [] }),
     apiMdx
   );
+});
+
+test('#getPageTags keeps the tags shown for the major of the docs', () => {
+  const frontMatter = {
+    title: 'Blind',
+    since: '6.0.0',
+    'breaking-change': { version: '6.0.0', description: 'Variants renamed' },
+  };
+
+  assert.deepEqual(getPageTags(frontMatter, 6), {
+    since: '6.0.0',
+    breakingChange: {
+      version: '6.0.0',
+      href: '/docs/home/migration/6_0_0',
+      description: 'Variants renamed',
+    },
+  });
+  // Not yet in the docs of the previous major
+  assert.deepEqual(getPageTags(frontMatter, 5), { since: '6.0.0' });
+  // After the next major only the since tag of the previous major is left
+  assert.deepEqual(getPageTags(frontMatter, 7), { since: '6.0.0' });
+  assert.deepEqual(getPageTags(frontMatter, 8), {});
+  assert.deepEqual(getPageTags({ title: 'Blind' }, 6), {});
+});
+
+test('#getPageTags reads deprecated and formReady', () => {
+  const deprecated = [
+    '/docs/legacy/input',
+    { type: 'deprecated', message: 'Use ix-input instead' },
+  ];
+  assert.deepEqual(getPageTags({ deprecated, formReady: true }, 6), {
+    deprecated,
+    formReady: true,
+  });
+  assert.deepEqual(getPageTags({ deprecated: null, formReady: false }, 6), {});
+  assert.deepEqual(getPageTags({ deprecated: [] }, 6), {});
+  assert.throws(() => getPageTags({ deprecated: '/docs/legacy' }, 6));
+  assert.throws(() => getPageTags({ deprecated: [{ type: 'x' }] }, 6));
+});
+
+test('#getPageTags rejects invalid front matter', () => {
+  assert.throws(() => getPageTags({ since: 'next' }, 6));
+  assert.throws(() => getPageTags({ since: 6 }, 6));
+  assert.throws(() => getPageTags({ 'breaking-change': { version: 'x' } }, 6));
 });
