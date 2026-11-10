@@ -6,14 +6,11 @@ import type {
 } from '@docusaurus/plugin-content-docs';
 import {
   resolveCanonicalSourceDocId,
+  toComponentOverviewTOC,
   transformComponentOverview,
 } from './transformer';
 
-function doc(
-  id: string,
-  title = id,
-  description = `${id} description`
-) {
+function doc(id: string, title = id, description = `${id} description`) {
   return { id, title, description };
 }
 
@@ -57,7 +54,12 @@ function docs(...metadata: ReturnType<typeof doc>[]): PropVersionDocs {
 test('preserves category and component sidebar ordering', () => {
   const result = transformComponentOverview(
     [
-      { type: 'link', docId: 'components/overview', href: '/overview', label: 'Overview' },
+      {
+        type: 'link',
+        docId: 'components/overview',
+        href: '/overview',
+        label: 'Overview',
+      },
       category('Forms', [
         tab('Second', '/second', [
           link('components/second/code', '/second/code'),
@@ -105,11 +107,7 @@ test('uses canonical index metadata and prefers code links', () => {
       ]),
     ],
     docs(
-      doc(
-        'components/example/index',
-        'Metadata title',
-        'Metadata description'
-      ),
+      doc('components/example/index', 'Metadata title', 'Metadata description'),
       doc('components/example/guide', 'Guide title'),
       doc('components/example/code', 'Code title')
     )
@@ -120,10 +118,10 @@ test('uses canonical index metadata and prefers code links', () => {
   assert.equal(result[0].items[0].title, 'Metadata title');
   assert.equal(result[0].items[0].description, 'Metadata description');
   assert.equal(
-    resolveCanonicalSourceDocId('components/example/code', docs(
-      doc('components/example/index'),
-      doc('components/example/code')
-    )),
+    resolveCanonicalSourceDocId(
+      'components/example/code',
+      docs(doc('components/example/index'), doc('components/example/code'))
+    ),
     'components/example/index'
   );
 });
@@ -208,7 +206,6 @@ test('fails clearly for missing metadata', () => {
       ),
     /source document "components\/broken\/index" is missing from the docs metadata/
   );
-
 });
 
 test('fails clearly for malformed included sidebar entries', () => {
@@ -232,5 +229,28 @@ test('fails clearly for malformed included sidebar entries', () => {
         docs()
       ),
     /Category "Forms" item 1 docId must be a non-empty string/
+  );
+});
+
+test('builds h2 TOC entries that reuse the category anchors', () => {
+  const categories = transformComponentOverview(
+    [
+      category('Buttons and actions', [link('components/button/index')]),
+      category('Data <display> & "charts"', [link('components/chart/index')]),
+    ],
+    docs(doc('components/button/index'), doc('components/chart/index'))
+  );
+
+  assert.deepEqual(toComponentOverviewTOC(categories), [
+    { value: 'Buttons and actions', id: 'buttons-and-actions', level: 2 },
+    {
+      value: 'Data &lt;display&gt; &amp; &quot;charts&quot;',
+      id: 'data-display-charts',
+      level: 2,
+    },
+  ]);
+  assert.deepEqual(
+    toComponentOverviewTOC(categories).map((item) => item.id),
+    categories.map((item) => item.anchorId)
   );
 });

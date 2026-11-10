@@ -12,6 +12,7 @@ import {
 } from './component-overview';
 import { transformComponentOverview } from '../../src/components/ComponentOverview/transformer';
 import { replaceImportedComponentWithMarkdown } from './utils/replace-imported-component';
+import { replaceComponentOverviewWithMarkdown } from './post-build';
 
 function metadata(
   id: string,
@@ -26,11 +27,7 @@ function doc(id: string, label?: string) {
   return { type: 'doc', id, ...(label ? { label } : {}) };
 }
 
-function tab(
-  id: string,
-  label: string,
-  children: ReturnType<typeof doc>[]
-) {
+function tab(id: string, label: string, children: ReturnType<typeof doc>[]) {
   return {
     type: 'category',
     label,
@@ -257,8 +254,11 @@ test('replaces aliased self-closing and paired component JSX', () => {
   assert.doesNotMatch(selfClosing, /ComponentOverview|<Overview/);
 
   const paired = replaceImportedComponentWithMarkdown(
-    "import Overview from '@site/src/components/ComponentOverview';\n\n<Overview data-mode=\"full\">ignored</Overview>",
-    { importPath: '@site/src/components/ComponentOverview', markdown: '- paired' }
+    'import Overview from \'@site/src/components/ComponentOverview\';\n\n<Overview data-mode="full">ignored</Overview>',
+    {
+      importPath: '@site/src/components/ComponentOverview',
+      markdown: '- paired',
+    }
   );
   assert.equal(paired, '\n- paired');
   assert.doesNotMatch(paired, /ComponentOverview|<Overview/);
@@ -295,4 +295,46 @@ test('fails clearly for invalid loaded content and missing JSX usage', () => {
       ),
     /no JSX usage/
   );
+});
+
+test('replaces the component overview inside aggregate llms-full content', () => {
+  const llmsFull = [
+    '# Buttons',
+    '',
+    'Button docs.',
+    '',
+    '# Components overview',
+    '',
+    "import ComponentOverview from '@site/src/components/ComponentOverview';",
+    '',
+    '<ComponentOverview />',
+    '',
+    '# Icons',
+    '',
+    'Icon docs.',
+  ].join('\n');
+
+  const result = replaceComponentOverviewWithMarkdown(
+    llmsFull,
+    '- **Actions**\n  - [Button](/docs/components/button): Button description'
+  );
+
+  assert.equal(
+    result,
+    [
+      '# Buttons',
+      '',
+      'Button docs.',
+      '',
+      '# Components overview',
+      '',
+      '',
+      '- **Actions**\n  - [Button](/docs/components/button): Button description',
+      '',
+      '# Icons',
+      '',
+      'Icon docs.',
+    ].join('\n')
+  );
+  assert.doesNotMatch(result, /ComponentOverview/);
 });

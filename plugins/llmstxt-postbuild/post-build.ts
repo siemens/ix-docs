@@ -79,7 +79,10 @@ function replaceIconsPreviewWithMarkdown(
 
   for (const match of imports) {
     const componentName = match[1];
-    const selfClosingTagRegex = new RegExp(`<${componentName}\\b[^>]*\\/>`, 'g');
+    const selfClosingTagRegex = new RegExp(
+      `<${componentName}\\b[^>]*\\/>`,
+      'g'
+    );
     const pairedTagRegex = new RegExp(
       `<${componentName}\\b[^>]*>[\\s\\S]*?<\\/${componentName}>`,
       'g'
@@ -94,6 +97,18 @@ function replaceIconsPreviewWithMarkdown(
     /^\s*(?:>\s*)?import\s+\w+\s+from\s+['"]@site\/src\/components\/IconsPreview['"];?\s*$\n?/gm;
 
   return nextContent.replace(importLineRegex, '');
+}
+
+const componentOverviewImportPath = '@site/src/components/ComponentOverview';
+
+export function replaceComponentOverviewWithMarkdown(
+  content: string,
+  markdown: string
+) {
+  return replaceImportedComponentWithMarkdown(content, {
+    importPath: componentOverviewImportPath,
+    markdown,
+  });
 }
 
 function escapeRegExp(value: string) {
@@ -151,10 +166,10 @@ export async function runPostBuild({
     let nextContent = originalContent;
 
     if (path.resolve(filePath) === path.resolve(overviewPath)) {
-      nextContent = replaceImportedComponentWithMarkdown(nextContent, {
-        importPath: '@site/src/components/ComponentOverview',
-        markdown: componentOverviewMarkdown,
-      });
+      nextContent = replaceComponentOverviewWithMarkdown(
+        nextContent,
+        componentOverviewMarkdown
+      );
       overviewReplaced = true;
     }
 
@@ -338,14 +353,21 @@ export async function runPostBuild({
 
   let updatedLlmsFiles = 0;
 
-  // Keep aggregate llms output behavior unchanged: it only receives the
-  // existing icon-table transform, never the component overview replacement.
+  // Aggregate llms output receives the icon-table transform. llms-full.txt
+  // also embeds the component overview page, so it gets the same overview
+  // replacement as the standalone overview Markdown.
   for (const llmsFile of llmsFiles) {
     const originalContent = await readFile(llmsFile, 'utf8');
-    const nextContent = replaceIconsPreviewWithMarkdown(
+    let nextContent = replaceIconsPreviewWithMarkdown(
       originalContent,
       iconsMarkdownTable
     );
+    if (path.basename(llmsFile) === 'llms-full.txt') {
+      nextContent = replaceComponentOverviewWithMarkdown(
+        nextContent,
+        componentOverviewMarkdown
+      );
+    }
 
     if (nextContent !== originalContent) {
       await writeFile(llmsFile, nextContent, 'utf8');
@@ -354,6 +376,6 @@ export async function runPostBuild({
   }
 
   console.log(
-    `Updated ${updatedLlmsFiles} llms output files with icon metadata tables`
+    `Updated ${updatedLlmsFiles} llms output files with icon metadata tables and component overview`
   );
 }

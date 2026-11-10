@@ -13,7 +13,7 @@ import type {
   PropSidebarItemLink,
 } from '@docusaurus/plugin-content-docs';
 
-const OVERVIEW_DOC_ID = 'components/overview';
+export const OVERVIEW_DOC_ID = 'components/overview';
 
 export type ComponentOverviewDoc = {
   id: string;
@@ -41,6 +41,16 @@ export type ComponentOverviewCategory = {
   anchorId: string;
   label: string;
   items: ComponentOverviewItem[];
+};
+
+/**
+ * Structurally compatible with the Docusaurus `TOCItem`. `value` is rendered
+ * as HTML by the theme TOC, so it must be escaped.
+ */
+export type ComponentOverviewTOCItem = {
+  readonly value: string;
+  readonly id: string;
+  readonly level: number;
 };
 
 function fail(message: string): never {
@@ -169,9 +179,7 @@ function sourceDocIdForCategory(
         canonicalSourceDocIds.filter((docId) => docId.endsWith('/index'))
       ),
     ];
-    if (
-      tabSourceDocIds.some((docId) => docId !== preferredSourceDocId)
-    ) {
+    if (tabSourceDocIds.some((docId) => docId !== preferredSourceDocId)) {
       fail(
         `${context} has guide and code links that resolve to different source documents.`
       );
@@ -244,11 +252,7 @@ function transformTabItem(
       fail(`${context} child ${index + 1} must be a sidebar link.`);
     }
 
-    return validateSidebarLink(
-      child,
-      docs,
-      `${context} child ${index + 1}`
-    );
+    return validateSidebarLink(child, docs, `${context} child ${index + 1}`);
   });
 
   const canonicalSourceDocIds = links.map(({ docId }) =>
@@ -370,4 +374,30 @@ export function transformComponentOverview(
   }
 
   return categories;
+}
+
+const HTML_ESCAPES: Readonly<Record<string, string>> = {
+  '&': '&amp;',
+  '<': '&lt;',
+  '>': '&gt;',
+  '"': '&quot;',
+  "'": '&#39;',
+};
+
+function escapeHtml(value: string): string {
+  return value.replace(/[&<>"']/g, (char) => HTML_ESCAPES[char] ?? char);
+}
+
+/**
+ * Build the page TOC from the overview categories. Each category is rendered
+ * as an h2 whose id is the category anchor, so the TOC entries reuse it.
+ */
+export function toComponentOverviewTOC(
+  categories: readonly ComponentOverviewCategory[]
+): ComponentOverviewTOCItem[] {
+  return categories.map((category) => ({
+    value: escapeHtml(category.label),
+    id: category.anchorId,
+    level: 2,
+  }));
 }
