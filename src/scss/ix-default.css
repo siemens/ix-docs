@@ -1,0 +1,15 @@
+/*
+ * SPDX-FileCopyrightText: 2026 Siemens AG
+ *
+ * SPDX-License-Identifier: MIT
+ *
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
+ */
+
+/*
+ * The iX default stylesheet ships global element styles (links, headings, body
+ * typography). Layering it keeps the design tokens available while Infima and
+ * the documentation overrides keep precedence over those globals.
+ */
+@import '@siemens/ix/css/default.css' layer(ix);

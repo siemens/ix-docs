@@ -15,7 +15,7 @@
 }
 
 .Card_Icon path {
-  fill: var(--theme-color-std-text);
+  fill: var(--si-sys-color-text-primary);
 }
 
 .GuidingPrinciples {

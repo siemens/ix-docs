@@ -7,3 +7,42 @@
   gap: 0.25rem;
   margin-right: 0.5rem;
 }
+
+.markdown {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+  width: 2rem;
+  min-width: 2rem;
+  height: 2rem;
+  min-height: 2rem;
+  border: var(--si-sys-sizing-border-width-default) solid transparent;
+  border-radius: var(--si-sys-sizing-border-radius-xs);
+  background-color: transparent;
+  color: var(--si-sys-color-text-accent);
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.markdown:hover {
+  border-color: transparent;
+  background-color: var(--si-sys-color-background-accent-secondary-hover);
+  color: var(--si-sys-color-text-accent-hover);
+  text-decoration: none;
+}
+
+.markdown:active {
+  border-color: transparent;
+  background-color: var(--si-sys-color-background-accent-secondary-active);
+  color: var(--si-sys-color-text-accent-active);
+}
+
+.markdown:focus-visible {
+  outline: 1px solid var(--si-sys-color-effects-focus);
+  outline-offset: var(--si-sys-sizing-focus-ring-offset);
+}
+
+.markdown > ix-icon {
+  pointer-events: none;
+}

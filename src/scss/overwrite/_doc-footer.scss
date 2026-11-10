@@ -13,11 +13,15 @@
     gap: 1rem;
   }
 
+  .theme-last-updated {
+    font-style: normal;
+  }
+
   .footer {
-    border-top: 1px solid var(--theme-color-x-weak-bdr);
+    border-top: 1px solid var(--si-sys-color-border-4);
   }
 
   .footer--dark {
-    --ifm-footer-background-color: var(--theme-color-1);
+    --ifm-footer-background-color: var(--si-sys-color-background-0);
   }
 }

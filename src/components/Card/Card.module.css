@@ -20,7 +20,7 @@
   width: 19.375rem;
   min-width: 19.375rem;
   height: 60px;
-  background-color: var(--theme-color-2);
+  background-color: var(--si-sys-color-background-1);
   margin: 0 1.25rem 1.25rem 0;
   cursor: pointer;
   text-decoration: none;
@@ -62,7 +62,7 @@
   width: 100%;
   min-width: 19.375rem;
   height: 60px;
-  background-color: var(--theme-color-2);
+  background-color: var(--si-sys-color-background-1);
   margin: 0 0 1.25rem 0;
   cursor: pointer;
 }
@@ -80,7 +80,7 @@
 .Splitter {
   height: 2px;
   width: 100%;
-  background-color: var(--theme-color-1);
+  background-color: var(--si-sys-color-background-0);
 }
 
 .Label {
@@ -98,15 +98,15 @@
 }
 
 .Card__Primary {
-  background-color: var(--theme-color-primary);
+  background-color: var(--si-sys-color-background-accent);
 }
 
 .Card__Primary .Label {
-  color: var(--theme-color-inv-std-text);
+  color: var(--si-sys-color-text-inverse);
 }
 
 .Card__Primary .Icon ix-icon {
-  color: var(--theme-color-inv-std-text) !important;
+  color: var(--si-sys-color-text-inverse) !important;
 }
 
 .Icon {
@@ -116,7 +116,7 @@
   width: 100%;
   justify-content: center;
   align-items: center;
-  color: var(--theme-color-std-text);
+  color: var(--si-sys-color-text-primary);
 }
 
 .Icon ix-icon {
