@@ -17,13 +17,13 @@ export default function Guideline(props: { label: string; do?: boolean }) {
       return React.createElement('ix-icon', {
         name: 'single-check',
         size: '16',
-        color: 'color-success',
+        color: '--si-sys-color-text-success',
       });
     } else {
       return React.createElement('ix-icon', {
         name: 'close',
         size: '16',
-        color: 'color-alarm',
+        color: '--si-sys-color-text-danger',
       });
     }
   }

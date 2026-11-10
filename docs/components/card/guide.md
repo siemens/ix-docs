@@ -36,27 +36,32 @@ We offer three types of cards:
 
 ## Variants
 
-Cards are available in nine variants:
+Cards can either be outlined or filled.
 
 * Outline: Use as default for a balanced and subtle appearance.
-* Filled
-* Alarm
-* Critical
-* Warning
-* Success
-* Info
-* Neutral
-* Primary
+* Filled: Use when the card needs a solid background to remain distinct from the surface behind it.
 
-Each variant emphasizes different aspects to guide the user's attention. These variants differ visually through the presence of an outline and a distinct container fill color, but they all follow the same interaction pattern.
+Cards are available in eight status variants:
+
+* Critical
+* Danger
+* Warning
+* Caution
+* Success
+* Information
+* Neutral
+* Accent
+
+Each variant emphasizes different aspects to guide the user's attention. These variants differ visually through the presence of an outline and a distinct color indicator, but they all follow the same interaction pattern.
 
 ![Card variants](https://www.figma.com/design/wEptRgAezDU1z80Cn3eZ0o/iX-Pattern-Illustrations?type=design&node-id=858-4969&mode=design&t=RDimbEsIHFIXIByo-1)
 
 ## Options
 
 - **Card:**
-	- **Selected:** Use the selected state to indicate that the corresponding action is currently active.
-	- **Content area:** Cards can contain various types of content, e.g. images, charts, key data. It is positioned below the heading and subheading. We recommend a padding of `1rem`.
+  - **Outline:** Use the boolean property to show the card in an outline variant without any fill color.
+  - **Selected:** Use the selected state to indicate that the corresponding action is currently active.
+  - **Content area:** Cards can contain various types of content, e.g. images, charts, key data. It is positioned below the heading and subheading. We recommend a padding of `1rem`.
 - **Action card & push card**:
 	- **Selected (action card only):** Use the selected state in action cards to indicate that the corresponding action is currently active.
 	- **Icon:** Use icons that are widely recognized by users for the intended action.

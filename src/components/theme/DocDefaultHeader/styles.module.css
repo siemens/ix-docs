@@ -64,19 +64,24 @@
 }
 
 .Scrolled {
-  box-shadow: 0px 10px 30px -10px var(--theme-color-shadow-1);
+  box-shadow: 0px 10px 30px -10px rgba(0, 0, 40, 0.1);
+  clip-path: inset(0 0 -40px 0);
+}
+
+:global([data-theme='dark']) .Scrolled {
+  box-shadow: 0px 10px 30px -10px rgba(0, 0, 0, 0.6);
 }
 
 .Tabs::before {
   content: '';
   border-image: linear-gradient(
       to right,
-      var(--theme-color-x-weak-bdr) 0%,
-      var(--theme-color-dynamic) 15%,
-      var(--theme-color-dynamic) 100%
+      var(--si-sys-color-border-4) 0%,
+      var(--si-sys-color-border-accent-hover) 15%,
+      var(--si-sys-color-border-accent-hover) 100%
     )
     1;
-  /* border-bottom: 1px solid var(--theme-color-dynamic); */
+  /* border-bottom: 1px solid var(--si-sys-color-border-accent-hover); */
   border-bottom-width: 1px;
   border-bottom-style: solid;
   position: absolute;
@@ -98,20 +103,20 @@
 }
 
 .Tab:not(.Tab--active):hover {
-  background-color: var(--theme-color-1--hover);
-  border-bottom: 1px solid var(--theme-color-dynamic);
+  background-color: var(--si-sys-color-background-hover);
+  border-bottom: 1px solid var(--si-sys-color-border-accent-hover);
 }
 
 .Tab:not(.Tab--active):active {
-  background-color: var(--theme-color-1--active);
-  border-bottom: 1px solid var(--theme-color-dynamic);
+  background-color: var(--si-sys-color-background-selected);
+  border-bottom: 1px solid var(--si-sys-color-border-accent-hover);
 }
 
 .Tab--active {
-  border: 1px solid var(--theme-color-dynamic);
+  border: 1px solid var(--si-sys-color-border-accent-hover);
   border-bottom: 1px solid var(--ix-docs-hero-tab-active);
   background-color: var(--ix-docs-hero-tab-active);
-  color: var(--theme-color-dynamic);
+  color: var(--si-sys-color-text-accent-hover);
 }
 
 .Tags {

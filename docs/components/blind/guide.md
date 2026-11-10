@@ -26,8 +26,8 @@ Multiple blind variants are available:
 
 - **Filled**: Default variant
 - **Outline**: Variant for lower visual emphasis
-- **Primary**: Variant for high visual emphasis
-- **State-related variants**: Alarm, critical, warning, success, info, neutral
+- **Accent**: Variant for high visual emphasis
+- **State-related variants**: critical, danger, warning, caution, success, information and neutral
 
 ![Blind variants](https://www.figma.com/design/wEptRgAezDU1z80Cn3eZ0o/iX-Pattern-Illustrations?type=design&node-id=929-47485&mode=design&t=9faEnH99BaAxqCGM-1)
 
