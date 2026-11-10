@@ -15,9 +15,9 @@ import { useLocalStorage } from './../../../../hooks/use-localStorage';
 import styles from './styles.module.css';
 import SortSwitch from '@site/src/components/theme/SortSwitch';
 import {
-  BreakingChangeTooltip,
+  // BreakingChangeTooltip,
   breakingChangeIndicatorVars,
-  getBreakingChangeVersions,
+  // getBreakingChangeVersions,
 } from '@site/src/components/theme/BreakingChangeIndicator';
 
 // Reset sidebar state when sidebar changes
@@ -90,10 +90,11 @@ export default function DocRootLayoutSidebar({
       : getFlatSidebarItems(sidebar);
   }, [sidebar, isComponentsPath, componentListStyle]);
 
-  const breakingVersions = useMemo(
-    () => (isComponentsPath ? getBreakingChangeVersions(sidebar) : []),
-    [sidebar, isComponentsPath]
-  );
+  // Breaking change marker hidden for now
+  // const breakingVersions = useMemo(
+  //   () => (isComponentsPath ? getBreakingChangeVersions(sidebar) : []),
+  //   [sidebar, isComponentsPath]
+  // );
 
   return (
     <aside
@@ -113,9 +114,9 @@ export default function DocRootLayoutSidebar({
         }
       }}
     >
-      {breakingVersions.map((version) => (
+      {/* {breakingVersions.map((version) => (
         <BreakingChangeTooltip key={version} version={version} />
-      ))}
+      ))} */}
       {isComponentsPath && (
         <SortSwitch
           grouped={componentListStyle === 'grouped'}

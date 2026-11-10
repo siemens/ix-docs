@@ -8,7 +8,7 @@
  */
 import type { WrapperProps } from '@docusaurus/types';
 import {
-  BreakingChangeMarker,
+  // BreakingChangeMarker,
   getBreakingChangeIndicator,
 } from '@site/src/components/theme/BreakingChangeIndicator';
 import Category from '@theme-original/DocSidebarItem/Category';
@@ -28,7 +28,7 @@ export default function CategoryWrapper(props: Readonly<Props>): JSX.Element {
   const label = (
     <>
       {item.label}
-      <BreakingChangeMarker {...indicator} />
+      {/* Marker hidden for now <BreakingChangeMarker {...indicator} /> */}
     </>
   ) as unknown as string;
 
