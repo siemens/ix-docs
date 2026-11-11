@@ -51,7 +51,7 @@ V6 replaces legacy design tokens with **Siemens Design Language** system tokens.
 #### Icon size
 
 - [Changed the default icon size to 20px](https://github.com/siemens/ix/blob/main/BREAKING_CHANGES/v6.md#default-icon-size-is-20)
-- Affected components are: `ix-blind`, `ix-breadcrumb`, `ix-button`, `ix-card-list`, `ix-chip`, `ix-date-dropdown`, `ix-dropdown`, `ix-event-list`, `ix-group`, `ix-icon-button`, `ix-input` (date time), `ix-date-time-picker`, `ix-key-value`, `ix-message-bar`, `ix-popover`, `ix-split-button`, `ix-tree`, `ix-upload`, `ix-workflow`. Other components and contexts can retain different icon sizes.
+- Affected components are: [blind](../../../components/blind/index.mdx), [breadcrumb](../../../components/breadcrumb/index.mdx), [button](../../../components/button/index.mdx), [card list](../../../components/card-list/index.mdx), [chip](../../../components/chip/index.mdx), [date dropdown](../../../components/date-dropdown/index.mdx), [dropdown](../../../components/dropdown/index.mdx), [event list](../../../components/event-list/index.mdx), [group](../../../components/group/index.mdx), [icon button](../../../components/icon-button/index.mdx), [date time input](../../../components/input-date-time/index.mdx), [date time picker](../../../components/date-time-picker/index.mdx), [key value](../../../components/key-value/index.mdx), [message bar](../../../components/messagebar/index.mdx), [popover](../../../components/popover/index.mdx), [split button](../../../components/split-button/index.mdx), [tree](../../../components/tree/index.mdx), [upload](../../../components/upload/index.mdx), [workflow](../../../components/workflow/index.mdx). Other components and contexts can retain different icon sizes.
 
 #### Sizing tokens
 
@@ -63,7 +63,6 @@ V6 replaces legacy design tokens with **Siemens Design Language** system tokens.
 #### Community theme
 
 - [Renamed the Classic theme to Community](https://github.com/siemens/ix/blob/main/BREAKING_CHANGES/v6.md#classic-theme-renamed-to-community)
-
 
 :::tip
 
@@ -209,6 +208,12 @@ yarn add @floating-ui/dom @siemens/ix-icons@4.0.0 @stencil/core luxon
 - [Changed untyped React callback values to `unknown`](https://github.com/siemens/ix/blob/main/BREAKING_CHANGES/v6.md#react-callback-types)
 - [Changed untyped Vue modal close reasons to `unknown`](https://github.com/siemens/ix/blob/main/BREAKING_CHANGES/v6.md#vue-modal-types)
 - [Replaced the hydration class with an attribute](https://github.com/siemens/ix/blob/main/BREAKING_CHANGES/v6.md#hydration-class-changed-to-attribute)
+
+### Slots in Figma
+
+V6 continues the transition from custom content-replacement slots to **native Figma slots**, first introduced in the iX Figma library in V5. Native slots let you add content directly to component instances without detaching them or creating custom content components.
+
+For most affected components, the previous Figma component has been deprecated and replaced with a new version that uses native slots. Follow the component's migration prompt in Figma to update existing instances, then review the slot content and layout.
 
 ## Migration by component
 
