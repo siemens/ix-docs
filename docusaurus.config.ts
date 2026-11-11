@@ -109,8 +109,12 @@ const config: Config = {
   projectName: 'Siemens Industrial Experience', // Usually your repo name.
 
   onBrokenLinks: brokenLinks,
-  onBrokenMarkdownLinks: brokenLinks,
   onBrokenAnchors: brokenLinks,
+  markdown: {
+    hooks: {
+      onBrokenMarkdownLinks: brokenLinks,
+    },
+  },
 
   // Even if you don't use internationalization, you can use this field to set
   // useful metadata like html lang. For example, if your site is Chinese, you
