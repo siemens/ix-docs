@@ -27,7 +27,7 @@ A valid `GITHUB_TOKEN` is required to build or start the documentation site (`pn
 **Important for Contributors:**
 
 - Examples (code and preview) are automatically provided via artifacts from the [siemens/ix](https://github.com/siemens/ix) repository during the start and build process
-- If your contribution depends on new or updated examples from the `siemens/ix` repo, those changes must be merged into the main branch of `siemens/ix` before your documentation PR can be built and reviewed.
+- If your contribution depends on new or updated examples from the `siemens/ix` repo, either wait until those changes are merged in `siemens/ix`, or build against the open `siemens/ix` pull request (see [Linking an open siemens/ix pull request](#linking-an-open-siemensix-pull-request)).
 - Non-maintainers should ensure their example changes are accepted upstream first, then reference them in their documentation PR here.
 
 ### Figma API Token (Optional)
@@ -149,6 +149,36 @@ The script downloads new images and replaces outdated ones in the `static/figma/
    - Respond to review feedback promptly
    - Make requested changes and push updates
    - Your PR will be merged once approved
+
+### Choosing the base branch
+
+- `development`: documentation for `siemens/ix` features that are not released yet.
+- `main`: everything that applies to the released version (fixes, guidelines, blog posts).
+
+### Linking an open siemens/ix pull request
+
+By default, examples are downloaded from the release configured in `.env.production` (`IX_REPO_BRANCH`). To build your documentation against an open `siemens/ix` pull request instead, add a `.env.pullrequest` file to your branch:
+
+```env
+IX_REPO_TYPE='pull request' # For pull requests use "pull request" as value
+IX_REPO_PR='1234' # Number of the siemens/ix pull request
+```
+
+- The file overrides `.env.production`, so the preview and local builds use the examples of that pull request.
+- Link the `siemens/ix` pull request in your PR description as well.
+- Remove `.env.pullrequest` before your PR is merged. The deployment workflows also delete it before building.
+
+### Stacked pull requests
+
+When documentation PRs build on each other (for example, one per `siemens/ix` pull request of a stack), each branch has its own `.env.pullrequest` with a different `IX_REPO_PR`.
+
+The repository marks `.env.pullrequest` with `merge=ours` in `.gitattributes`. Enable the driver once per clone:
+
+```bash
+git config merge.ours.driver true
+```
+
+With the driver enabled, merges and rebases resolve `.env.pullrequest` without a conflict, but not always to the value of your branch. A rebase onto another layer can keep the lower layer's `IX_REPO_PR`. After every merge or rebase, check `IX_REPO_PR` and set it to your branch's `siemens/ix` pull request in a final commit if it changed.
 
 ## Code of Conduct
 
