@@ -21,7 +21,7 @@ Use the 24-hour clock system (the ISO 8601 time standards) when backend localiza
 Use colons (:) to split times between hours, minutes, and seconds.
 
   
-    hh:mm:ss
+    {"hh:mm:ss"}
   
 
   
@@ -31,8 +31,8 @@ Use colons (:) to split times between hours, minutes, and seconds.
 Use periods (.) to add milliseconds and nanoseconds, not a colon (:) according to ISO standards.
 
   
-    hh:mm:ss.mms
-    hh:mm:ss.sss (ISO 8601 standard)
+    {"hh:mm:ss.mms"}
+    {"hh:mm:ss.sss (ISO 8601 standard)"}
     0:00:00.920
   
 
