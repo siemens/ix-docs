@@ -171,7 +171,7 @@ import { CategoryButton } from '@site/src/components/CategoryButton';
 
 | Component                                    | Description                                                                                                                                                                             |
 | :------------------------------------------- | :-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| [Angular data grid](./grid/index.mdx)        | The popular data grid library AG Grid is seamlessly integrated into our design system, allowing you to harness its powerful features while maintaining consistency with our styleguide. |
+| [AG Grid](./grid/index.mdx)        | The popular data grid library AG Grid is seamlessly integrated into our design system, allowing you to harness its powerful features while maintaining consistency with our styleguide. |
 | [HTML table](./html-grid/index.mdx)          | HTML tables are used to display tabular data in a structured way.                                                                                                                       |
 | [Key value](./key-value/index.mdx)           | Key value pairs display a label (key) and a value in a structured, easy way.                                                                                                            |
 | [Key value list](./key-value-list/index.mdx) | Key value lists organize and list a series of key value pairs.                                                                                                                          |

@@ -1107,7 +1107,7 @@ const sidebars: SidebarsConfig = {
       items: [
         createTabItem({
           id: 'components/grid/index',
-          label: 'Data grid',
+          label: 'AG Grid',
           items: [
             {
               id: 'components/grid/guide',
