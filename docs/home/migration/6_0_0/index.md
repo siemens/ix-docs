@@ -32,7 +32,7 @@ V6 replaces legacy design tokens with **Siemens Design Language** system tokens.
 
 [Replaced legacy tokens with Siemens Design Language tokens](https://github.com/siemens/ix/blob/main/BREAKING_CHANGES/v6.md#siemens-design-tokens)
 
-![Token changes](https://www.figma.com/design/wEptRgAezDU1z80Cn3eZ0o/iX-Documentation-illustrations?node-id=8729-378&t=gkb8iEqBC8dAIiib-4)
+![Token changes](https://www.figma.com/design/wEptRgAezDU1z80Cn3eZ0o/iX-Documentation-illustrations?node-id=8733-37&t=MXfjpPOICnCLiEZ3-4)
 
 #### Color tokens
 
@@ -48,9 +48,13 @@ V6 replaces legacy design tokens with **Siemens Design Language** system tokens.
 - [Renamed `ix-typography` `textColor` values](https://github.com/siemens/ix/blob/main/BREAKING_CHANGES/v6.md#ix-typography-textcolor-rename)
 - [Removed unsupported typography utility classes](https://github.com/siemens/ix/blob/main/BREAKING_CHANGES/v6.md#typography-utility-classes)
 
-#### Sizing tokens
+#### Icon size
 
 - [Changed the default icon size to 20px](https://github.com/siemens/ix/blob/main/BREAKING_CHANGES/v6.md#default-icon-size-is-20)
+- Affected components are: `ix-blind`, `ix-breadcrumb`, `ix-button`, `ix-card-list`, `ix-chip`, `ix-date-dropdown`, `ix-dropdown`, `ix-event-list`, `ix-group`, `ix-icon-button`, `ix-input` (date time), `ix-date-time-picker`, `ix-key-value`, `ix-message-bar`, `ix-popover`, `ix-split-button`, `ix-tree`, `ix-upload`, `ix-workflow`. Other components and contexts can retain different icon sizes.
+
+#### Sizing tokens
+
 - [Changed the `ix-progress-indicator` circular `sm` size to 20px](https://github.com/siemens/ix/blob/main/BREAKING_CHANGES/v6.md#ix-progress-indicator-size-scale)
 - [Renamed and remapped `ix-spinner` sizes](https://github.com/siemens/ix/blob/main/BREAKING_CHANGES/v6.md#ix-spinner-size-scale)
 - [Replaced common border, radius, and focus tokens](https://github.com/siemens/ix/blob/main/BREAKING_CHANGES/v6.md#common-border-radius-and-focus-overrides)
@@ -97,11 +101,37 @@ V6 renames status variants, adds missing variants and aligns their colors and ic
 - [Changed `ix-progress-indicator` status values](https://github.com/siemens/ix/blob/main/BREAKING_CHANGES/v6.md#ix-progress-indicator-status-rename)
 - [Changed `showMessage` status helpers](https://github.com/siemens/ix/blob/main/BREAKING_CHANGES/v6.md#showmessage-status-helper-rename)
 
-### Icon size
 
-For affected components, the default icon size changed from 24px to 20px. Other components and contexts can retain different icon sizes.
+### Appearance and interaction changes
 
-Affected components are: `ix-blind`, `ix-breadcrumb`, `ix-button`, `ix-card-list`, `ix-chip`, `ix-date-dropdown`, `ix-dropdown`, `ix-event-list`, `ix-group`, `ix-icon-button`, `ix-input` (date time), `ix-date-time-picker`, `ix-key-value`, `ix-message-bar`, `ix-popover`, `ix-split-button`, `ix-tree`, `ix-upload`, `ix-workflow`
+The following is a selection of the most important appearance and interaction changes in V6, not a complete list. Review affected layouts and workflows, and check visual regression tests before accepting new baselines. Further changes are covered under [Foundations](#foundations), [Status variants](#status-variants) and [Migration by component](#migration-by-component).
+
+![Appearance changes](https://www.figma.com/design/wEptRgAezDU1z80Cn3eZ0o/iX-Documentation-illustrations?node-id=8733-123&t=MXfjpPOICnCLiEZ3-4)
+
+#### Status color indicators
+
+Affected card components and blinds now indicate status with a colored stripe instead of a full status-color fill. Check that status remains clear in your application, especially where custom styles rely on the previous background fill.
+
+#### Icon sizing
+
+The default icon size changes from 24px to 20px in affected components. Review alignment and spacing, especially in layouts with custom sizing. This does not necessarily reduce the size of the interactive area. See [Icon size](#icon-size) for the affected components.
+
+#### Information icon
+
+The information status icon now has a square shape to help distinguish it from the alarm icon. Review any custom status icons for consistency.
+
+#### Focus outline
+
+The focus outline now uses a 2px width and a 1px offset. Check that it remains visible and is not clipped by custom containers, and that custom focus styles provide sufficient contrast against adjacent colors.
+
+#### Input shadows
+
+Decorative input shadows have been removed from text inputs, selects, expanding search and chat inputs. Review custom styling that relied on these shadows to distinguish controls from their surroundings.
+
+#### Confirmation buttons in date and time components
+
+Date and time components now show Confirm and Cancel buttons when confirmation is required. Confirmation is optional for date and date-time components and always required for time-only pickers and inputs. Confirm applies pending selections; cancellation discards them. Review event handlers to account for the updated selection workflow.
+
 
 ### Stylesheets and Sass
 
