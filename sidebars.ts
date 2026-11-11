@@ -66,7 +66,7 @@ const sidebars: SidebarsConfig = {
       className: 'doc-sidebar-item-bold',
       label: 'Migration and upgrade',
       items: [
-        'home/migration/migrationoverview',
+        'home/migration/migration-overview',
         'home/migration/6_0_0/index',
         'home/migration/5_0_0/index',
       ],

@@ -10,11 +10,21 @@ description: 'Upgrade one major version at a time, use AI assistance and find mi
 
 #
 
-## Recommended upgrade path
+## Choose your migration path
 
-We strongly recommend upgrading version by version and not skipping major versions. If your project is still on an older major release, complete each intermediate migration first before moving to Version 6.
+We strongly recommend upgrading version by version and not skipping major versions. If your project is still on an older major release, complete each intermediate migration first before moving to the latest version.
 
-## Migrate with your agent
+| Migration guide | Breaking changes markdown |
+| :--- | :--- |
+| [Migration guide iX V5 → iX V6](./6_0_0/index.md) | [BREAKING_CHANGES/v6.md](https://github.com/siemens/ix/blob/main/BREAKING_CHANGES/v6.md) |
+| [Migration guide iX V4 → iX V5](./5_0_0/index.md) | [BREAKING_CHANGES/v5.md](https://github.com/siemens/ix/blob/main/BREAKING_CHANGES/v5.md) |
+| [Migration guide iX V3 → iX V4](./4_0_0/index.md) | [BREAKING_CHANGES/v4.md](https://github.com/siemens/ix/blob/main/BREAKING_CHANGES/v4.md) |
+| [Migration guide iX V2 → iX V3](./3_0_0/index.md) | [BREAKING_CHANGES/v3.md](https://github.com/siemens/ix/blob/main/BREAKING_CHANGES/v3.md) |
+| [Migration guide iX V1 → iX V2](./2_0_0/index.md) | [BREAKING_CHANGES/v2.md](https://github.com/siemens/ix/blob/main/BREAKING_CHANGES/v2.md) |
+| [Migration guide CoreUI → iX V1](./core-ui.md) | - |
+| [Migration guide UXT → iX V3](./uxt.md) | - |
+
+## Choose how you want to migrate
 
 We optimized our breaking changes guides with a clear structure that is easy to parse both for humans and AI agents.
 
@@ -27,7 +37,11 @@ It starts with a high-level title and then splits the migration into isolated ch
 - In some sections, a mapping table from previous version behavior to the new version replacement
 - A final validation checklist to confirm the migration is complete
 
-### Small to mid-sized projects
+### With an AI agent
+
+We recommend using an AI agent to apply the breaking changes, then reviewing all changes before accepting them.
+
+#### Small to mid-sized projects
 
 1. Install the new iX npm packages in your project.
 2. Start an agent session (GitHub Copilot, Claude Code, etc.) in the root folder of your project.
@@ -42,7 +56,7 @@ It starts with a high-level title and then splits the migration into isolated ch
 
 4. Review all changes after the agent finishes.
 
-### Large projects
+#### Large projects
 
 For large projects, we recommend running the agent one section at a time rather than the entire breaking changes guide at once:
 
@@ -65,19 +79,9 @@ For large projects, we recommend running the agent one section at a time rather 
 
 This keeps each batch of changes small and reviewable.
 
-### Manual
+### Manually
 
-1. Search the codebase for the deprecated APIs listed in that section.
+1. For each change domain in the breaking changes guide, search the codebase for usages affected by each listed breaking change.
 2. Apply the documented version replacement using the before/after examples and migration rules.
 3. Validate each domain immediately before moving to the next one.
 4. Use the final validation checklist as a whole-repository review once all domains are complete.
-
-## Migration guides
-
-- [Migration guide V5 → V6](./6_0_0/index.md)
-- [Migration guide V4 → V5](./5_0_0/index.md)
-- [Migration guide V3 → V4](./4_0_0/index.md)
-- [Migration guide V2 → V3](./3_0_0/index.md)
-- [Migration guide V1 → V2](./2_0_0/index.md)
-- [Migration guide CoreUI → iX](./core-ui.md)
-- [Migration guide UXT → iX](./uxt.md)
