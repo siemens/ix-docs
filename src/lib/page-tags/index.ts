@@ -8,7 +8,7 @@
  */
 
 /**
- * Helpers for the since and breaking change tags: shown versions, API tables, front matter.
+ * Helpers for the header tags and the breaking change tags of the API tables.
  */
 
 export type SemVer = {
@@ -36,11 +36,6 @@ export type BreakingChange = {
   source: string[];
 };
 
-export type IxVersionInfo = {
-  /** Major the docs are built for, see `getCurrentMajor` */
-  currentMajor: number;
-};
-
 export function parseVersion(
   version: string | undefined | null
 ): SemVer | null {
@@ -58,63 +53,23 @@ export function parseVersion(
   };
 }
 
-/**
- * Major the docs are built for: the major of an `IX_REPO_BRANCH` release tag,
- * otherwise (development) `currentVersion` + 1.
- */
-export function getCurrentMajor(currentVersion: string, ixRepoBranch?: string) {
-  const release = /^@siemens\/ix@v?(\d+)\.\d+\.\d+/.exec(
-    ixRepoBranch?.trim() ?? ''
-  );
-  if (release) {
-    return Number(release[1]);
-  }
-
-  const match = /^\s*v?(\d+)/.exec(currentVersion);
-  if (!match) {
-    throw new Error(
-      `Invalid currentVersion "${currentVersion}" in version-deployment.json`
-    );
-  }
-  return Number(match[1]) + 1;
-}
-
-/**
- * Since tags are shown for the docs' major and the previous one.
- */
-export function isSupportedVersion(version: string, currentMajor: number) {
-  const parsed = parseVersion(version);
-  if (!parsed) {
-    return false;
-  }
-  return parsed.major >= currentMajor - 1;
-}
-
-export type ApiMember = { name: string; since?: string };
+export type ApiMember = { name: string };
 
 export type ComponentApi = {
   props: ApiMember[];
   events: ApiMember[];
 };
 
-const sinceTagPattern = /<SinceTag\s+message=\{?\s*[`'"]([^`'"]+)[`'"]\s*\}?/;
-
 /**
- * Properties and events (with since version) of a generated `api.mdx`
+ * Properties and events of a generated `api.mdx`
  */
 export function parseApiMdx(content: string): ComponentApi {
   const read = (header: 'PropertyHeader' | 'EventHeader') =>
     Array.from(
       content.matchAll(
-        new RegExp(
-          `<ApiTable\\.${header}\\s+name="([^"]+)"[^>]*>([\\s\\S]*?)</ApiTable\\.${header}>`,
-          'g'
-        )
+        new RegExp(`<ApiTable\\.${header}\\s+name="([^"]+)"`, 'g')
       ),
-      ([, name, children]) => ({
-        name,
-        since: sinceTagPattern.exec(children)?.[1],
-      })
+      ([, name]) => ({ name })
     );
 
   return { props: read('PropertyHeader'), events: read('EventHeader') };
@@ -211,14 +166,6 @@ export function parseBreakingChangeFrontMatter(
     events: readNames('events', events),
     source: [...new Set(sources.map((entry: string) => entry.trim()))],
   };
-}
-
-/**
- * Breaking changes are only shown for the docs' major.
- */
-export function isActiveBreakingChange(version: string, currentMajor: number) {
-  const parsed = parseVersion(version);
-  return !!parsed && parsed.major === currentMajor;
 }
 
 /**
@@ -328,12 +275,9 @@ export type PageTags = {
 };
 
 /**
- * Header tags shown for the docs' major, throws on invalid front matter
+ * Header tags of a page, throws on invalid front matter
  */
-export function getPageTags(
-  frontMatter: Record<string, unknown>,
-  currentMajor: number
-): PageTags {
+export function getPageTags(frontMatter: Record<string, unknown>): PageTags {
   const tags: PageTags = {};
 
   const deprecated = frontMatter[DEPRECATED_FRONT_MATTER_KEY];
@@ -369,18 +313,13 @@ export function getPageTags(
         `"${SINCE_FRONT_MATTER_KEY}" must be a version like 6.0.0, got "${String(since)}"`
       );
     }
-    if (isSupportedVersion(since, currentMajor)) {
-      tags.since = since.trim();
-    }
+    tags.since = since.trim();
   }
 
   const breakingChange = parseBreakingChangeFrontMatter(
     frontMatter[BREAKING_CHANGE_FRONT_MATTER_KEY]
   );
-  if (
-    breakingChange &&
-    isActiveBreakingChange(breakingChange.version, currentMajor)
-  ) {
+  if (breakingChange) {
     tags.breakingChange = {
       version: breakingChange.version,
       href: getMigrationGuideUrl(breakingChange.version),

@@ -109,8 +109,7 @@ breaking-change:
 ```
 
 - Property and event `since` tags come from `@since` in the [siemens/ix](https://github.com/siemens/ix) JSDoc.
-- `since` tags are shown for the current major and maintenance versions, breaking changes only for the current major. Remove outdated entries.
-- The docs' major is the `IX_REPO_BRANCH` release tag's major, during development uses `currentVersion` in `version-deployment.json` + 1.
+- All `since` and breaking change tags are managed manually: remove outdated `since` and `breaking-change` entries when starting a new major. Outdated property `since` tags are removed in siemens/ix.
 - Breaking change tags link to the major's migration guide.
 
 ### Using Examples from an Open siemens/ix Pull Request

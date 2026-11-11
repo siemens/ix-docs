@@ -15,16 +15,13 @@ import {
   BreakingChange,
   BreakingChangeMembers,
   ComponentApi,
-  getCurrentMajor,
   getMigrationGuideUrl,
   groupBreakingChangeMembers,
   injectBreakingChangeTags,
-  isActiveBreakingChange,
   parseApiMdx,
   parseBreakingChangeFrontMatter,
-  parseVersion,
   removeBreakingChangeTags,
-} from '../src/lib/ix-versions';
+} from '../src/lib/page-tags';
 
 const __dirname = path.resolve();
 const __docs = path.join(__dirname, 'docs');
@@ -77,21 +74,6 @@ function readPageComponents() {
 function getPrimaryTag(dir: string, tags: string[]) {
   const folder = dir.split('/').pop();
   return tags.find((tag) => tag === `ix-${folder}`) ?? tags[0];
-}
-
-/** Since tags without a valid version are hidden, report them */
-function warnInvalidSince(components: Record<string, ComponentApi>) {
-  const invalid = Object.entries(components).flatMap(([tag, component]) =>
-    [...component.props, ...component.events]
-      .filter(({ since }) => since !== undefined && !parseVersion(since))
-      .map(({ name, since }) => `${tag}.${name} ("${since}")`)
-  );
-
-  if (invalid.length > 0) {
-    console.warn(
-      `Hiding ${invalid.length} since tags without a valid version: ${invalid.join(', ')}`
-    );
-  }
 }
 
 /** `breaking-change` front matter by doc directory, fails on invalid entries */
@@ -178,19 +160,11 @@ function resolveBreakingChangeMembers(
   return grouped;
 }
 
-/**
- * @param ixRepoBranch IX branch or release tag (`IX_REPO_BRANCH`) the docs are built from
- */
-export default async function prepareIxVersions(ixRepoBranch?: string) {
+/** Adds the breaking change tags of the `breaking-change` front matter to the API tables */
+export default async function prepareBreakingChangeTags() {
   const components = readComponents();
-  warnInvalidSince(components);
   const pageComponents = readPageComponents();
   const breakingChanges = await readBreakingChanges();
-
-  const { currentVersion } = await fs.readJSON(
-    path.join(__dirname, 'version-deployment.json')
-  );
-  const currentMajor = getCurrentMajor(currentVersion, ixRepoBranch);
 
   let breakingPages = 0;
 
@@ -209,10 +183,7 @@ export default async function prepareIxVersions(ixRepoBranch?: string) {
     const tag = getPrimaryTag(dir, tags);
 
     const breakingChange = breakingChanges[dir];
-    if (
-      !breakingChange ||
-      !isActiveBreakingChange(breakingChange.version, currentMajor)
-    ) {
+    if (!breakingChange) {
       continue;
     }
     breakingPages++;
@@ -263,6 +234,6 @@ export default async function prepareIxVersions(ixRepoBranch?: string) {
   }
 
   console.log(
-    `Breaking change tags: docs for v${currentMajor} (IX "${ixRepoBranch ?? 'unknown'}", currentVersion ${currentVersion}), ${breakingPages} pages with breaking changes`
+    `Breaking change tags: ${breakingPages} pages with breaking changes`
   );
 }

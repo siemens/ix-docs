@@ -13,7 +13,7 @@ import {
   RedirectTag,
   SinceTag,
 } from '@site/src/components/UI/Tags';
-import type { PageTags as PageTagsData } from '@site/src/lib/ix-versions';
+import type { PageTags as PageTagsData } from '@site/src/lib/page-tags';
 
 export function hasPageTags(tags: PageTagsData) {
   return (

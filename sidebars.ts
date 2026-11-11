@@ -10,17 +10,7 @@ import type { SidebarsConfig } from '@docusaurus/plugin-content-docs';
 import fs from 'fs';
 import matter from 'gray-matter';
 import path from 'path';
-import versionDeployment from './version-deployment.json' with { type: 'json' };
-import {
-  PAGE_TAG_FRONT_MATTER_KEYS,
-  getCurrentMajor,
-  getPageTags,
-} from './src/lib/ix-versions';
-
-const currentMajor = getCurrentMajor(
-  versionDeployment.currentVersion,
-  process.env.IX_REPO_BRANCH
-);
+import { PAGE_TAG_FRONT_MATTER_KEYS, getPageTags } from './src/lib/page-tags';
 
 function findDoc(id: string) {
   return ['.mdx', '.md']
@@ -30,7 +20,7 @@ function findDoc(id: string) {
 
 /**
  * Header tags from the `index.mdx` front matter, passed as category `customProps`
- * because tab pages don't see it. Used by `DocTabsHeader` and the sidebar marker.
+ * because tab pages don't see it. Rendered by `DocTabsHeader`.
  */
 function getTabsPageTags(id: string, tabIds: string[]) {
   for (const tabId of tabIds) {
@@ -52,10 +42,7 @@ function getTabsPageTags(id: string, tabIds: string[]) {
   }
 
   try {
-    return getPageTags(
-      matter(fs.readFileSync(file, 'utf8')).data,
-      currentMajor
-    );
+    return getPageTags(matter(fs.readFileSync(file, 'utf8')).data);
   } catch (e) {
     throw new Error(
       `Invalid front matter in ${path.relative(__dirname, file)}: ${e instanceof Error ? e.message : e}`

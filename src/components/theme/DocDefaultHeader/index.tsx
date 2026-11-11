@@ -8,8 +8,7 @@ import {
 import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 import { IxTooltip, IxTypography } from '@siemens/ix-react';
 import PageTags, { hasPageTags } from '@site/src/components/theme/PageTags';
-import { getPageTags } from '@site/src/lib/ix-versions';
-import { useIxVersions } from '@site/src/utils/hooks/useIxVersions';
+import { getPageTags } from '@site/src/lib/page-tags';
 import clsx from 'clsx';
 import { useMemo, useState } from 'react';
 import AskAI from '../AskAI';
@@ -40,11 +39,7 @@ export default function DocDefaultHeader(props: {
   const { description, title, frontMatter, id } = props;
   const { siteConfig } = useDocusaurusContext();
   const pathname = useLocalPathname();
-  const { currentMajor } = useIxVersions();
-  const tags = useMemo(
-    () => getPageTags(frontMatter, currentMajor),
-    [frontMatter, currentMajor]
-  );
+  const tags = useMemo(() => getPageTags(frontMatter), [frontMatter]);
   const hasTags = hasPageTags(tags);
 
   const prompt = useMemo(

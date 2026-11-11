@@ -8,7 +8,6 @@ import { figmaPlugin } from './plugins/figma-pictures/figma';
 import versionDeployment from './version-deployment.json' with { type: 'json ' };
 import packageJson from './package.json' with { type: 'json' };
 import llmstxtPostbuildPlugin from './plugins/llmstxt-postbuild/plugin';
-import { getCurrentMajor, type IxVersionInfo } from './src/lib/ix-versions';
 
 dotenv();
 
@@ -123,12 +122,6 @@ const config: Config = {
 
   customFields: {
     withBrandTheme,
-    ixVersions: {
-      currentMajor: getCurrentMajor(
-        versionDeployment.currentVersion,
-        process.env.IX_REPO_BRANCH
-      ),
-    } satisfies IxVersionInfo,
     // Keep exported playgrounds on the same packages the docs are built with.
     playgroundVersion: packageJson.dependencies['@siemens/ix'],
     playgroundIconsVersion: packageJson.dependencies['@siemens/ix-icons'],

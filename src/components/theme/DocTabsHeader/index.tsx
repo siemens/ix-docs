@@ -7,7 +7,7 @@ import { useScrollPosition } from '@docusaurus/theme-common/internal';
 import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 import { IxTooltip, IxTypography } from '@siemens/ix-react';
 import PageTags, { hasPageTags } from '@site/src/components/theme/PageTags';
-import type { PageTags as PageTagsData } from '@site/src/lib/ix-versions';
+import type { PageTags as PageTagsData } from '@site/src/lib/page-tags';
 import clsx from 'clsx';
 import { useCallback, useMemo, useState } from 'react';
 import AskAI from '../AskAI';

@@ -1,40 +1,14 @@
 import assert from 'node:assert/strict';
 import test from 'node:test';
 import {
-  getCurrentMajor,
   getPageTags,
   getMigrationGuideUrl,
   groupBreakingChangeMembers,
   injectBreakingChangeTags,
-  isActiveBreakingChange,
-  isSupportedVersion,
   parseApiMdx,
   parseBreakingChangeFrontMatter,
   removeBreakingChangeTags,
 } from '.';
-
-test('#isSupportedVersion only accepts the major in development and the latest released major', () => {
-  assert.equal(isSupportedVersion('6.0.0', 6), true);
-  assert.equal(isSupportedVersion('5.3.0', 6), true);
-  assert.equal(isSupportedVersion('5.2.0', 6), true);
-  assert.equal(isSupportedVersion('4.4.0', 6), false);
-  assert.equal(isSupportedVersion('1.5.0', 6), false);
-  assert.equal(isSupportedVersion('7.0.0', 6), true);
-  assert.equal(isSupportedVersion('TODO: Define', 6), false);
-});
-
-test('#getCurrentMajor uses the release tag or the next major after currentVersion', () => {
-  // Release builds
-  assert.equal(getCurrentMajor('v6', '@siemens/ix@7.0.1'), 7);
-  assert.equal(getCurrentMajor('v5', '@siemens/ix@5.3.0'), 5);
-  assert.equal(getCurrentMajor('v7', '@siemens/ix@7.1.0-beta.1'), 7);
-  // Development and pull request builds
-  assert.equal(getCurrentMajor('v5', 'main'), 6);
-  assert.equal(getCurrentMajor('v6', 'pull/123'), 7);
-  assert.equal(getCurrentMajor('v5'), 6);
-  assert.equal(getCurrentMajor('5.2.0'), 6);
-  assert.throws(() => getCurrentMajor('latest', 'main'));
-});
 
 const apiMdx = `import {SinceTag, DeprecatedTag} from '@site/src/components/UI/Tags';
 
@@ -61,14 +35,10 @@ const apiMdx = `import {SinceTag, DeprecatedTag} from '@site/src/components/UI/T
 </ApiTable>
 `;
 
-test('#parseApiMdx reads properties, events and since versions', () => {
+test('#parseApiMdx reads properties and events', () => {
   assert.deepEqual(parseApiMdx(apiMdx), {
-    props: [
-      { name: 'clickable', since: '6.0.0' },
-      { name: 'variant', since: undefined },
-      { name: 'label', since: '5.1.0' },
-    ],
-    events: [{ name: 'collapsedChange', since: undefined }],
+    props: [{ name: 'clickable' }, { name: 'variant' }, { name: 'label' }],
+    events: [{ name: 'collapsedChange' }],
   });
 });
 
@@ -213,13 +183,6 @@ test('#parseBreakingChangeFrontMatter does not require description and source', 
   );
 });
 
-test('#isActiveBreakingChange only shows breaking changes of the major of the docs', () => {
-  assert.equal(isActiveBreakingChange('6.0.0', 5), false);
-  assert.equal(isActiveBreakingChange('6.0.0', 6), true);
-  assert.equal(isActiveBreakingChange('6.0.0', 7), false);
-  assert.equal(isActiveBreakingChange('invalid', 6), false);
-});
-
 test('#getMigrationGuideUrl links the migration guide of the major', () => {
   assert.equal(getMigrationGuideUrl('6.0.0'), '/docs/home/migration/6_0_0');
   assert.equal(getMigrationGuideUrl('7.1.0'), '/docs/home/migration/7_0_0');
@@ -295,14 +258,14 @@ test('#injectBreakingChangeTags adds tags to affected headers only once', () => 
   );
 });
 
-test('#getPageTags keeps the tags shown for the major of the docs', () => {
+test('#getPageTags reads since and breaking-change', () => {
   const frontMatter = {
     title: 'Blind',
     since: '6.0.0',
     'breaking-change': { version: '6.0.0', description: 'Variants renamed' },
   };
 
-  assert.deepEqual(getPageTags(frontMatter, 6), {
+  assert.deepEqual(getPageTags(frontMatter), {
     since: '6.0.0',
     breakingChange: {
       version: '6.0.0',
@@ -310,12 +273,7 @@ test('#getPageTags keeps the tags shown for the major of the docs', () => {
       description: 'Variants renamed',
     },
   });
-  // Not yet in the docs of the previous major
-  assert.deepEqual(getPageTags(frontMatter, 5), { since: '6.0.0' });
-  // After the next major only the since tag of the previous major is left
-  assert.deepEqual(getPageTags(frontMatter, 7), { since: '6.0.0' });
-  assert.deepEqual(getPageTags(frontMatter, 8), {});
-  assert.deepEqual(getPageTags({ title: 'Blind' }, 6), {});
+  assert.deepEqual(getPageTags({ title: 'Blind' }), {});
 });
 
 test('#getPageTags reads deprecated and formReady', () => {
@@ -323,18 +281,18 @@ test('#getPageTags reads deprecated and formReady', () => {
     '/docs/legacy/input',
     { type: 'deprecated', message: 'Use ix-input instead' },
   ];
-  assert.deepEqual(getPageTags({ deprecated, formReady: true }, 6), {
+  assert.deepEqual(getPageTags({ deprecated, formReady: true }), {
     deprecated,
     formReady: true,
   });
-  assert.deepEqual(getPageTags({ deprecated: null, formReady: false }, 6), {});
-  assert.deepEqual(getPageTags({ deprecated: [] }, 6), {});
-  assert.throws(() => getPageTags({ deprecated: '/docs/legacy' }, 6));
-  assert.throws(() => getPageTags({ deprecated: [{ type: 'x' }] }, 6));
+  assert.deepEqual(getPageTags({ deprecated: null, formReady: false }), {});
+  assert.deepEqual(getPageTags({ deprecated: [] }), {});
+  assert.throws(() => getPageTags({ deprecated: '/docs/legacy' }));
+  assert.throws(() => getPageTags({ deprecated: [{ type: 'x' }] }));
 });
 
 test('#getPageTags rejects invalid front matter', () => {
-  assert.throws(() => getPageTags({ since: 'next' }, 6));
-  assert.throws(() => getPageTags({ since: 6 }, 6));
-  assert.throws(() => getPageTags({ 'breaking-change': { version: 'x' } }, 6));
+  assert.throws(() => getPageTags({ since: 'next' }));
+  assert.throws(() => getPageTags({ since: 6 }));
+  assert.throws(() => getPageTags({ 'breaking-change': { version: 'x' } }));
 });

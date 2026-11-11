@@ -8,17 +8,12 @@ import ExpandButton from '@theme-original/DocRoot/Layout/Sidebar/ExpandButton';
 import type { Props } from '@theme/DocRoot/Layout/Sidebar';
 import DocSidebar from '@theme/DocSidebar';
 import clsx from 'clsx';
-import React, { type ReactNode, useCallback, useMemo, useState } from 'react';
+import React, { type ReactNode, useCallback, useState } from 'react';
 
 import type { PropSidebarItem } from '@docusaurus/plugin-content-docs';
 import { useLocalStorage } from './../../../../hooks/use-localStorage';
 import styles from './styles.module.css';
 import SortSwitch from '@site/src/components/theme/SortSwitch';
-import {
-  // BreakingChangeTooltip,
-  breakingChangeIndicatorVars,
-  // getBreakingChangeVersions,
-} from '@site/src/components/theme/BreakingChangeIndicator';
 
 // Reset sidebar state when sidebar changes
 // Use React key to unmount/remount the children
@@ -30,27 +25,6 @@ function ResetOnSidebarChange({ children }: { children: ReactNode }) {
       {children}
     </React.Fragment>
   );
-}
-
-function getFlatSidebarItems(sidebar: PropSidebarItem[]) {
-  return sidebar
-    .flatMap((item) => (item.type === 'category' ? item.items : [item]))
-    .sort((a, b) => {
-      const aIgnoreSort =
-        'customProps' in a && a.customProps?.ignoreSortingOnAlphabetical;
-      const bIgnoreSort =
-        'customProps' in b && b.customProps?.ignoreSortingOnAlphabetical;
-
-      if (aIgnoreSort || bIgnoreSort) {
-        return 0;
-      }
-
-      if ('label' in a && 'label' in b) {
-        return a.label.localeCompare(b.label);
-      }
-      return a.type === 'category' ? -1 : 1;
-    })
-    .filter((item) => item.customProps?.hideOnAlphabetical !== true);
 }
 
 export default function DocRootLayoutSidebar({
@@ -80,21 +54,31 @@ export default function DocRootLayoutSidebar({
     setHiddenSidebarContainer((value) => !value);
   }, [setHiddenSidebarContainer, hiddenSidebar]);
 
-  const sidebarItems = useMemo(() => {
-    if (!isComponentsPath) {
-      return sidebar;
-    }
+  const flatSidebarItems = (sidebar as PropSidebarItem[])
+    .flatMap((item) => (item.type === 'category' ? item.items : [item]))
+    .sort((a, b) => {
+      const aIgnoreSort =
+        'customProps' in a && a.customProps?.ignoreSortingOnAlphabetical;
+      const bIgnoreSort =
+        'customProps' in b && b.customProps?.ignoreSortingOnAlphabetical;
 
-    return componentListStyle === 'grouped'
-      ? sidebar
-      : getFlatSidebarItems(sidebar);
-  }, [sidebar, isComponentsPath, componentListStyle]);
+      if (aIgnoreSort || bIgnoreSort) {
+        return 0;
+      }
 
-  // Breaking change marker hidden for now
-  // const breakingVersions = useMemo(
-  //   () => (isComponentsPath ? getBreakingChangeVersions(sidebar) : []),
-  //   [sidebar, isComponentsPath]
-  // );
+      if ('label' in a && 'label' in b) {
+        return a.label.localeCompare(b.label);
+      }
+      return a.type === 'category' ? -1 : 1;
+    })
+    .filter((item) => item.customProps?.hideOnAlphabetical !== true);
+
+  let sidebarItems = sidebar;
+
+  if (isComponentsPath) {
+    sidebarItems =
+      componentListStyle === 'grouped' ? sidebar : flatSidebarItems;
+  }
 
   return (
     <aside
@@ -103,7 +87,6 @@ export default function DocRootLayoutSidebar({
         styles.docSidebarContainer,
         hiddenSidebarContainer && styles.docSidebarContainerHidden
       )}
-      style={breakingChangeIndicatorVars}
       onTransitionEnd={(e) => {
         if (!e.currentTarget.classList.contains(styles.docSidebarContainer!)) {
           return;
@@ -114,9 +97,6 @@ export default function DocRootLayoutSidebar({
         }
       }}
     >
-      {/* {breakingVersions.map((version) => (
-        <BreakingChangeTooltip key={version} version={version} />
-      ))} */}
       {isComponentsPath && (
         <SortSwitch
           grouped={componentListStyle === 'grouped'}

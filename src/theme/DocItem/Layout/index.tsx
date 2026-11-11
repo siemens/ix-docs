@@ -11,7 +11,7 @@ import { PropSidebarItemLink } from '@docusaurus/plugin-content-docs';
 import type { WrapperProps } from '@docusaurus/types';
 import DocDefaultHeader from '@site/src/components/theme/DocDefaultHeader';
 import DocTabsHeader from '@site/src/components/theme/DocTabsHeader';
-import type { PageTags } from '@site/src/lib/ix-versions';
+import type { PageTags } from '@site/src/lib/page-tags';
 import { useDocType } from '@site/src/utils/hooks/useDocType';
 import DocItemContent from '@theme-original/DocItem/Content';
 import DocItemFooter from '@theme-original/DocItem/Footer';
