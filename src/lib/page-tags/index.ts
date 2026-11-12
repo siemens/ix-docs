@@ -278,3 +278,60 @@ export function findUnmatchedBreakingChangeMembers(
     return prefix ? !wrapped.has(prefix) : tables.size > 1 || wrapped.size > 0;
   });
 }
+
+/**
+ * Anchor of a component's section in a migration guide: a heading with the explicit id
+ * `{#<doc folder>}`, otherwise a heading with the page title in "Migration by component".
+ * `createSlug` must create heading ids like Docusaurus (`createSlugger` of `@docusaurus/utils`).
+ */
+export function findMigrationGuideAnchor(
+  markdown: string,
+  page: { folder: string; title: string },
+  createSlug: () => (text: string) => string
+) {
+  const slug = createSlug();
+  let inFence = false;
+  let inComponents = false;
+  let titleMatch: { level: number; anchor: string } | undefined;
+
+  for (const line of markdown.split('\n')) {
+    if (/^\s*(```|~~~)/.test(line)) {
+      inFence = !inFence;
+      continue;
+    }
+    const heading = inFence ? null : /^(#{1,6})\s+(.+?)\s*$/.exec(line);
+    if (!heading) {
+      continue;
+    }
+
+    const level = heading[1].length;
+    const explicitId = /\s*\{#([^}]+)\}$/.exec(heading[2]);
+    const text = heading[2]
+      .replace(/\s*\{#[^}]+\}$/, '')
+      .replace(/\[([^\]]*)\]\([^)]*\)/g, '$1')
+      .replace(/`/g, '');
+    const anchor = explicitId?.[1] ?? slug(text);
+
+    if (anchor === page.folder && explicitId) {
+      return anchor;
+    }
+    if (level === 2) {
+      inComponents = /^migration by component/i.test(text);
+    } else if (
+      inComponents &&
+      text.toLowerCase() === page.title.toLowerCase() &&
+      (!titleMatch || level > titleMatch.level)
+    ) {
+      titleMatch = { level, anchor };
+    }
+  }
+
+  return titleMatch?.anchor;
+}
+
+/**
+ * Whether a migration guide lists changes per component ("Migration by component")
+ */
+export function hasComponentMigrationSection(markdown: string) {
+  return /^##\s+Migration by component/im.test(markdown);
+}

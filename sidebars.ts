@@ -7,20 +7,61 @@
  * LICENSE file in the root directory of this source tree.
  */
 import type { SidebarsConfig } from '@docusaurus/plugin-content-docs';
+import { createSlugger } from '@docusaurus/utils';
 import fs from 'fs';
 import matter from 'gray-matter';
 import path from 'path';
 import {
   PAGE_TAG_FRONT_MATTER_KEYS,
   type PageTags,
+  findMigrationGuideAnchor,
   findUnmatchedBreakingChangeMembers,
   getPageTags,
+  hasComponentMigrationSection,
 } from './src/lib/page-tags';
 
 function findDoc(id: string) {
   return ['.mdx', '.md']
     .map((ext) => path.join(__dirname, 'docs', `${id}${ext}`))
     .find((candidate) => fs.existsSync(candidate));
+}
+
+const migrationGuides = new Map<string, string | undefined>();
+
+/** Content of a migration guide by URL (`/docs/home/migration/6_0_0`) */
+function readMigrationGuide(href: string) {
+  if (!migrationGuides.has(href)) {
+    const file = findDoc(`${href.replace(/^\/docs\//, '')}/index`);
+    migrationGuides.set(href, file && fs.readFileSync(file, 'utf8'));
+  }
+  return migrationGuides.get(href);
+}
+
+/**
+ * Link to the component's section of the migration guide if there is one (heading id
+ * `{#<doc folder>}` or the page title), otherwise to the whole guide
+ */
+function getBreakingChangeHref(id: string, title: unknown, href: string) {
+  const guide = readMigrationGuide(href);
+  if (!guide) {
+    return href;
+  }
+
+  const folder = id.split('/').slice(-2)[0];
+  const anchor = findMigrationGuideAnchor(
+    guide,
+    { folder, title: typeof title === 'string' ? title : folder },
+    () => {
+      const slugger = createSlugger();
+      return (text) => slugger.slug(text);
+    }
+  );
+  if (!anchor && hasComponentMigrationSection(guide)) {
+    console.warn(
+      `docs/${id}: no section in the migration guide ${href}, add the heading id {#${folder}}`
+    );
+  }
+  return anchor ? `${href}#${anchor}` : href;
 }
 
 /**
@@ -49,9 +90,10 @@ function getTabsPageTags(id: string, tabIds: string[]) {
     return {};
   }
 
+  const { data } = matter(fs.readFileSync(file, 'utf8'));
   let tags: PageTags;
   try {
-    tags = getPageTags(matter(fs.readFileSync(file, 'utf8')).data);
+    tags = getPageTags(data);
   } catch (e) {
     throw new Error(
       `Invalid front matter in ${path.relative(__dirname, file)}: ${e instanceof Error ? e.message : e}`
@@ -68,6 +110,14 @@ function getTabsPageTags(id: string, tabIds: string[]) {
   if (unmatched.length > 0) {
     throw new Error(
       `docs/${id}: breaking-change members ${unmatched.join(', ')} don't match an API table. On pages with several components, prefix them (ix-x.name) and wrap the tables in <ApiComponent tag="ix-x">.`
+    );
+  }
+
+  if (tags.breakingChange) {
+    tags.breakingChange.href = getBreakingChangeHref(
+      id,
+      data.title,
+      tags.breakingChange.href
     );
   }
 

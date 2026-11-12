@@ -109,7 +109,7 @@ breaking-change:
 
 - Property and event `since` tags come from `@since` in the [siemens/ix](https://github.com/siemens/ix) JSDoc.
 - All `since` and breaking change tags are managed manually: remove outdated `since` and `breaking-change` entries when starting a new major. Outdated property `since` tags are removed in siemens/ix.
-- Breaking change tags link to the major's migration guide.
+- Breaking change tags link to the component's section of the major's migration guide (heading id `{#<doc folder>}`, e.g. `#### App menu {#application-menu}`, or a heading with the page title under "Migration by component"), otherwise to the whole guide.
 - On pages with several components, wrap each API table in `<ApiComponent tag="ix-x">` (from `@site/src/components/ApiTable`) and prefix the members: `ix-x.variant`.
 
 ### Using Examples from an Open siemens/ix Pull Request
