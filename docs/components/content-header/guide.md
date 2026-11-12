@@ -49,7 +49,7 @@ The title and subtitle wrap onto multiple lines by default when their available 
 - Content in the header slot remains beside the title and aligned with its first line.
 - The back button and action buttons remain aligned with the first title line.
 
-Set the `textOverflow` property to `truncate` only when the header must retain a compact height. In HTML, use `text-overflow="truncate"`. In this mode, the title and subtitle each use a single line and are truncated with an ellipsis when needed. The complete values remain available as native browser tooltips.
+Set the `textOverflow` property to `ellipsis` only when the header must retain a compact height. In HTML, use `text-overflow="ellipsis"`. In this mode, the title and subtitle each use a single line and are truncated with an ellipsis when needed. The content header doesn't add a tooltip or other way to reveal the hidden text, so make sure the complete title and subtitle are available elsewhere on the page when users need them.
 
 ### Responsive actions
 
