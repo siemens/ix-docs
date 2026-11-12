@@ -34,7 +34,7 @@ The guides start with a high-level title and then split the migration into isola
 - Exact API or attribute names that were removed, added or renamed
 - Concrete before/after code examples
 - Migration rules phrased as explicit rewrite steps
-- In some sections, a mapping table from previous version behavior to the new version replacement
+- In some sections, there is a mapping table showing previous version behavior to the new version replacement
 - A final validation checklist to confirm the migration is complete
 
 ### With an AI agent
@@ -44,7 +44,7 @@ We recommend using an AI agent to apply the breaking changes, then reviewing all
 #### Small to mid-sized projects
 
 1. Install the new iX npm packages in your project.
-2. Start an agent session (GitHub Copilot, Claude Code, etc.) in the root folder of your project.
+2. Start an AI agent session (GitHub Copilot, Claude Code, etc.) in the root folder of your project.
 3. Attach the breaking changes guide to the session and use the following prompt, replacing `<framework>` with the framework your project uses (Angular, React, Vue, etc.):
 
    ```text
@@ -58,10 +58,10 @@ We recommend using an AI agent to apply the breaking changes, then reviewing all
 
 #### Large projects
 
-For large projects, we recommend running the agent one section at a time rather than the entire breaking changes guide at once:
+For large projects, we recommend running the AI agent one section at a time rather than the entire breaking changes guide at once:
 
 1. Install the new iX npm packages in your project.
-2. Start an agent session (GitHub Copilot, Claude Code, etc.) in the root folder of your project.
+2. Start an AI agent session (GitHub Copilot, Claude Code, etc.) in the root folder of your project.
 3. Scope the prompt to the section you want to migrate and run the agent. Replace `<section>` with the relevant section, and `<framework>` with the framework your project uses, e.g.:
 
    ```text
@@ -74,7 +74,7 @@ For large projects, we recommend running the agent one section at a time rather 
    ```
 
 4. Review the changes.
-5. Start a new agent session to reset the context for better results before moving to the next section.
+5. Start a new AI agent session to reset the context for better results before moving to the next section.
 6. Use the final validation checklist as a whole-repository review once all domains are complete.
 
 This keeps each batch of changes small and reviewable.

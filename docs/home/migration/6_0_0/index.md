@@ -198,7 +198,7 @@ yarn add @floating-ui/dom @siemens/ix-icons@4.0.0 @stencil/core luxon
 | Package | Supported version | Migration details |
 | :--- | :--- | :--- |
 | `vue` | `^3.5.0` | [Vue requirement](https://github.com/siemens/ix/blob/main/BREAKING_CHANGES/v6.md#vue-35-requirement) |
-| `@angular/core`, `@angular/forms` | `>=21.2.25` | [Angular requirement](https://github.com/siemens/ix/blob/main/BREAKING_CHANGES/v6.md#angular-21-requirement) |
+| `@angular/core`, `@angular/forms` | `>=21.2.25`; TypeScript `>=5.9 <6.1` for Angular 21 | [Angular requirement](https://github.com/siemens/ix/blob/main/BREAKING_CHANGES/v6.md#angular-21-requirement) |
 | `echarts` | `^6.1.0` | [ECharts requirement](https://github.com/siemens/ix/blob/main/BREAKING_CHANGES/v6.md#echarts-6-requirement) |
 
 </div>
