@@ -28,7 +28,7 @@ We strongly recommend upgrading version by version and not skipping major versio
 
 We optimized our breaking changes guides with a clear structure that is easy to parse both for humans and AI agents.
 
-It starts with a high-level title and then splits the migration into isolated change domains. Within each domain, the guide follows a repeatable pattern:
+The guides start with a high-level title and then split the migration into isolated change domains. Within each domain, the guides follow a repeatable pattern:
 
 - A short explanation of what changed and why
 - Exact API or attribute names that were removed, added or renamed
