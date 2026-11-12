@@ -66,6 +66,7 @@ const sidebars: SidebarsConfig = {
       className: 'doc-sidebar-item-bold',
       label: 'Migration and upgrade',
       items: [
+        'home/migration/6_0_0/index',
         'home/migration/5_0_0/index',
         'home/migration/4_0_0/index',
         'home/migration/3_0_0/index',
@@ -457,6 +458,20 @@ const sidebars: SidebarsConfig = {
           ],
         }),
         createTabItem({
+          id: 'components/list/index',
+          label: 'List',
+          items: [
+            {
+              id: 'components/list/guide',
+              label: 'Usage',
+            },
+            {
+              id: 'components/list/code',
+              label: 'Code',
+            },
+          ],
+        }),
+        createTabItem({
           id: 'components/modal/index',
           label: 'Modal',
           items: [
@@ -511,7 +526,7 @@ const sidebars: SidebarsConfig = {
               label: 'Code',
             },
           ],
-        }),
+        })
       ],
       collapsed: true,
     },
@@ -620,6 +635,10 @@ const sidebars: SidebarsConfig = {
           label: 'Date dropdown',
           items: [
             {
+              id: 'components/date-dropdown/guide',
+              label: 'Usage',
+            },
+            {
               id: 'components/date-dropdown/code',
               label: 'Code',
             },
@@ -664,7 +683,7 @@ const sidebars: SidebarsConfig = {
             {
               id: 'components/date-picker/code',
               label: 'Code',
-            }
+            },
           ],
         }),
         createTabItem({
@@ -675,10 +694,10 @@ const sidebars: SidebarsConfig = {
               id: 'components/date-time-picker/guide',
               label: 'Usage',
             },
-                        {
+            {
               id: 'components/date-time-picker/code',
               label: 'Code',
-            }
+            },
           ],
         }),
         createTabItem({
@@ -982,6 +1001,24 @@ const sidebars: SidebarsConfig = {
               id: 'components/empty-state/uxwriting',
               label: 'Writing',
             },
+          ],
+        }),
+        createTabItem({
+          id: 'components/info-page/index',
+          label: 'Info page',
+          items: [
+            {
+              id: 'components/info-page/guide',
+              label: 'Usage',
+            },
+            {
+              id: 'components/info-page/code',
+              label: 'Code',
+            },
+            {
+              id: 'components/info-page/language',
+              label: 'Writing'
+            }
           ],
         }),
         createTabItem({
@@ -1367,8 +1404,10 @@ const sidebars: SidebarsConfig = {
     }),
     'styles/borders',
     'styles/shadows',
+    'styles/density',
     'styles/elevation',
     'styles/animation',
+    'styles/global-styles',
     {
       type: 'category',
       className: 'doc-sidebar-item-bold',

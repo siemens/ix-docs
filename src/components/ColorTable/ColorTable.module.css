@@ -17,7 +17,7 @@
   min-height: 2rem;
   border-radius: 100px;
   border-width: 0.125rem;
-  border-color: var(--theme-color-soft-bdr);
+  border-color: var(--si-sys-color-border-3);
   border-style: solid;
   overflow: hidden;
 }
@@ -54,7 +54,7 @@
   height: 100%;
 
   padding-right: 1rem;
-  border-right: 1px solid var(--theme-color-soft-bdr);
+  border-right: 1px solid var(--si-sys-color-border-3);
 }
 
 .colorColumnChildName {
@@ -79,7 +79,7 @@
   display: grid;
   grid-template-columns: minmax(100px, 20%) 1fr;
   border: 0;
-  border-bottom: 1px solid var(--theme-color-soft-bdr);
+  border-bottom: 1px solid var(--si-sys-color-border-3);
 }
 
 .colorTextRow:last-child {

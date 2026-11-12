@@ -26,7 +26,7 @@ Use tooltips to clarify the function of familiar icon-only controls or add brief
 
 ![Tooltip behavior](https://www.figma.com/design/wEptRgAezDU1z80Cn3eZ0o/iX-Documentation-illustrations?node-id=8196-111&t=PY7WtvFZYEs3ukFT-4)
 
-- **Interaction:** Tooltips appear when users hover over or focus the trigger and disappear when the pointer or focus moves away. The component controls the delay for showing and hiding tooltips.
+- **Interaction:** Tooltips appear when users hover over or focus the trigger and disappear when the pointer or focus moves away. By default, tooltips appear immediately and disappear after a short delay. Interactive tooltips stay visible slightly longer so users can move the pointer onto them. Adjust the delays only when needed, e.g. to avoid tooltips appearing while users move the pointer across a dense toolbar.
 - **Overflow:** Tooltips wrap content within their predefined maximum width of 292 px. Their height adapts to the content and has no predefined maximum.
 - **Placement:** The position depends on the trigger element, e.g. a button. By default, tooltips appear above the trigger. When there isn’t enough space for the selected placement, the position is corrected automatically.
 - **Responsiveness:** Touch devices don’t provide a persistent hover state. Tapping a trigger can open its tooltip and activate the trigger’s primary action at the same time.
