@@ -8,8 +8,8 @@
  */
 
 /**
- * Header tags of the doc pages: front matter validation and matching of
- * breaking change members in the API tables.
+ * Header tags of the doc pages: front matter validation and migration guide links.
+ * Property and event tags of the API tables come from the siemens/ix JSDoc.
  */
 
 export type SemVer = {
@@ -20,14 +20,11 @@ export type SemVer = {
 };
 
 /**
- * `breaking-change` front matter. `description` is the tooltip, `properties` and `events`
- * are tagged in the API tables, `source` is not shown.
+ * `breaking-change` front matter. `description` is the tooltip, `source` is not shown.
  */
 export type BreakingChange = {
   version: string;
   description?: string;
-  properties: string[];
-  events: string[];
   source: string[];
 };
 
@@ -51,7 +48,7 @@ export function parseVersion(
 export const BREAKING_CHANGE_FRONT_MATTER_KEY = 'breaking-change';
 
 /**
- * Migration guide of a major (no section, a component's changes can be spread over it)
+ * Migration guide of a major, see `getComponentMigrationGuideUrl` for a component's section
  */
 export function getMigrationGuideUrl(version: string) {
   const major = parseVersion(version)?.major;
@@ -59,6 +56,36 @@ export function getMigrationGuideUrl(version: string) {
     throw new Error(`Invalid version "${version}"`);
   }
   return `/docs/home/migration/${major}_0_0`;
+}
+
+/**
+ * Folder of a doc (`components/card/code` -> `card`), the heading id of the
+ * component's section in the migration guides
+ */
+export function getDocFolder(docId: string) {
+  return docId.split('/').slice(-2)[0];
+}
+
+/**
+ * Component's section of a major's migration guide (heading id `{#<doc folder>}`),
+ * linked by the breaking change tags of the API tables
+ */
+export function getComponentMigrationGuideUrl(version: string, docId: string) {
+  return `${getMigrationGuideUrl(version)}#${getDocFolder(docId)}`;
+}
+
+/**
+ * Versions of the breaking change tags in generated API tables (`@breaking-change` JSDoc)
+ */
+export function findApiBreakingChangeVersions(apiMarkdown: string) {
+  return [
+    ...new Set(
+      Array.from(
+        apiMarkdown.matchAll(/<BreakingChangeTag\s+message=\{`([^`]+)`\}/g),
+        ([, version]) => version
+      )
+    ),
+  ];
 }
 
 /**
@@ -76,12 +103,14 @@ export function parseBreakingChangeFrontMatter(
     );
   }
 
-  const { version, description, properties, events, source, ...unknown } =
-    value as Record<string, unknown>;
+  const { version, description, source, ...unknown } = value as Record<
+    string,
+    unknown
+  >;
   const unknownKeys = Object.keys(unknown);
   if (unknownKeys.length > 0) {
     throw new Error(
-      `Unknown "${BREAKING_CHANGE_FRONT_MATTER_KEY}" keys: ${unknownKeys.join(', ')} (allowed: version, description, properties, events, source)`
+      `Unknown "${BREAKING_CHANGE_FRONT_MATTER_KEY}" keys: ${unknownKeys.join(', ')} (allowed: version, description, source)`
     );
   }
   if (typeof version !== 'string' || !parseVersion(version)) {
@@ -102,21 +131,6 @@ export function parseBreakingChangeFrontMatter(
     );
   }
 
-  const readNames = (key: string, names: unknown) => {
-    if (names === undefined || names === null) {
-      return [];
-    }
-    if (
-      !Array.isArray(names) ||
-      names.some((name) => typeof name !== 'string' || !name.trim())
-    ) {
-      throw new Error(
-        `"${BREAKING_CHANGE_FRONT_MATTER_KEY}.${key}" must be a list of names`
-      );
-    }
-    return [...new Set(names.map((name: string) => name.trim()))];
-  };
-
   const sources =
     source === undefined || source === null
       ? []
@@ -135,8 +149,6 @@ export function parseBreakingChangeFrontMatter(
   return {
     version: version.trim(),
     ...(hasDescription ? { description: (description as string).trim() } : {}),
-    properties: readNames('properties', properties),
-    events: readNames('events', events),
     source: [...new Set(sources.map((entry: string) => entry.trim()))],
   };
 }
@@ -169,9 +181,6 @@ export type PageTags = {
     version: string;
     href: string;
     description?: string;
-    /** Tagged in the API tables, see `isBreakingChangeMember` */
-    properties?: string[];
-    events?: string[];
   };
 };
 
@@ -227,12 +236,6 @@ export function getPageTags(frontMatter: Record<string, unknown>): PageTags {
       ...(breakingChange.description && {
         description: breakingChange.description,
       }),
-      ...(breakingChange.properties.length > 0 && {
-        properties: breakingChange.properties,
-      }),
-      ...(breakingChange.events.length > 0 && {
-        events: breakingChange.events,
-      }),
     };
   }
 
@@ -240,43 +243,59 @@ export function getPageTags(frontMatter: Record<string, unknown>): PageTags {
 }
 
 /**
- * Whether a property or event of an API table is listed in `breaking-change`.
- * Tables in `<ApiComponent tag="ix-x">` match `ix-x.name`, other tables match `name`.
+ * Headings of a markdown page with their ids like Docusaurus: the explicit id
+ * `{#id}` or the slug of the text. Skips code blocks.
  */
-export function isBreakingChangeMember(
-  breakingChange: PageTags['breakingChange'],
-  type: 'property' | 'event',
-  name: string,
-  componentTag?: string
+function parseHeadings(
+  markdown: string,
+  createSlug: () => (text: string) => string
 ) {
-  const names =
-    (type === 'event' ? breakingChange?.events : breakingChange?.properties) ??
-    [];
-  return names.includes(componentTag ? `${componentTag}.${name}` : name);
+  const slug = createSlug();
+  const headings: {
+    level: number;
+    text: string;
+    anchor: string;
+    explicit: boolean;
+  }[] = [];
+  let inFence = false;
+
+  for (const line of markdown.split('\n')) {
+    if (/^\s*(```|~~~)/.test(line)) {
+      inFence = !inFence;
+      continue;
+    }
+    const heading = inFence ? null : /^(#{1,6})\s+(.+?)\s*$/.exec(line);
+    if (!heading) {
+      continue;
+    }
+
+    const explicitId = /\s*\{#([^}]+)\}$/.exec(heading[2]);
+    const text = heading[2]
+      .replace(/\s*\{#[^}]+\}$/, '')
+      .replace(/\[([^\]]*)\]\([^)]*\)/g, '$1')
+      .replace(/`/g, '');
+    headings.push({
+      level: heading[1].length,
+      text,
+      anchor: explicitId?.[1] ?? slug(text),
+      explicit: !!explicitId,
+    });
+  }
+
+  return headings;
 }
 
 /**
- * `breaking-change` members that can't be matched to an API table of the tab pages:
- * `ix-x.name` needs an `<ApiComponent tag="ix-x">`, unprefixed names a page with a single
- * API table and no `ApiComponent`.
+ * Whether a markdown page has a heading with the id (explicit `{#id}` or slug)
  */
-export function findUnmatchedBreakingChangeMembers(
-  members: string[],
-  tabContents: string[]
+export function hasHeadingId(
+  markdown: string,
+  id: string,
+  createSlug: () => (text: string) => string
 ) {
-  const findAll = (pattern: RegExp) =>
-    new Set(
-      tabContents.flatMap((content) =>
-        Array.from(content.matchAll(pattern), ([, tag]) => tag)
-      )
-    );
-  const tables = findAll(/autogenerated\/api\/([a-z0-9-]+)\/api\.mdx/g);
-  const wrapped = findAll(/<ApiComponent\s+tag="([^"]+)"/g);
-
-  return members.filter((member) => {
-    const prefix = /^(ix-[a-z0-9-]+)\./.exec(member)?.[1];
-    return prefix ? !wrapped.has(prefix) : tables.size > 1 || wrapped.size > 0;
-  });
+  return parseHeadings(markdown, createSlug).some(
+    ({ anchor }) => anchor === id
+  );
 }
 
 /**
@@ -289,30 +308,14 @@ export function findMigrationGuideAnchor(
   page: { folder: string; title: string },
   createSlug: () => (text: string) => string
 ) {
-  const slug = createSlug();
-  let inFence = false;
   let inComponents = false;
   let titleMatch: { level: number; anchor: string } | undefined;
 
-  for (const line of markdown.split('\n')) {
-    if (/^\s*(```|~~~)/.test(line)) {
-      inFence = !inFence;
-      continue;
-    }
-    const heading = inFence ? null : /^(#{1,6})\s+(.+?)\s*$/.exec(line);
-    if (!heading) {
-      continue;
-    }
-
-    const level = heading[1].length;
-    const explicitId = /\s*\{#([^}]+)\}$/.exec(heading[2]);
-    const text = heading[2]
-      .replace(/\s*\{#[^}]+\}$/, '')
-      .replace(/\[([^\]]*)\]\([^)]*\)/g, '$1')
-      .replace(/`/g, '');
-    const anchor = explicitId?.[1] ?? slug(text);
-
-    if (anchor === page.folder && explicitId) {
+  for (const { level, text, anchor, explicit } of parseHeadings(
+    markdown,
+    createSlug
+  )) {
+    if (anchor === page.folder && explicit) {
       return anchor;
     }
     if (level === 2) {

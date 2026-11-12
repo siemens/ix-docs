@@ -2,11 +2,13 @@ import assert from 'node:assert/strict';
 import test from 'node:test';
 import { createSlugger } from '@docusaurus/utils';
 import {
+  findApiBreakingChangeVersions,
   findMigrationGuideAnchor,
-  findUnmatchedBreakingChangeMembers,
+  getComponentMigrationGuideUrl,
+  getDocFolder,
   getPageTags,
   hasComponentMigrationSection,
-  isBreakingChangeMember,
+  hasHeadingId,
   getMigrationGuideUrl,
   parseBreakingChangeFrontMatter,
 } from '.';
@@ -16,21 +18,18 @@ const changesetUrl =
 const docUrl =
   'https://github.com/siemens/ix/blob/abc123/BREAKING_CHANGES/v6.md';
 
-test('#parseBreakingChangeFrontMatter reads version, members and source', () => {
+test('#parseBreakingChangeFrontMatter reads version, description and source', () => {
   assert.equal(parseBreakingChangeFrontMatter(undefined), undefined);
   assert.equal(parseBreakingChangeFrontMatter(null), undefined);
   assert.deepEqual(
     parseBreakingChangeFrontMatter({
       version: '6.0.0',
       description: 'Renamed variants',
-      properties: ['show', 'hide', 'show', ' animationDelay '],
       source: [changesetUrl, docUrl, changesetUrl],
     }),
     {
       version: '6.0.0',
       description: 'Renamed variants',
-      properties: ['show', 'hide', 'animationDelay'],
-      events: [],
       source: [changesetUrl, docUrl],
     }
   );
@@ -39,15 +38,11 @@ test('#parseBreakingChangeFrontMatter reads version, members and source', () => 
     parseBreakingChangeFrontMatter({
       version: '6.0.0',
       description: 'Renamed variants',
-      properties: null,
-      events: ['ix-other.valueChange'],
       source: changesetUrl,
     }),
     {
       version: '6.0.0',
       description: 'Renamed variants',
-      properties: [],
-      events: ['ix-other.valueChange'],
       source: [changesetUrl],
     }
   );
@@ -62,26 +57,18 @@ test('#parseBreakingChangeFrontMatter rejects invalid front matter', () => {
     () => parseBreakingChangeFrontMatter({ version: 6.0, source }),
     /version/
   );
-  assert.throws(
-    () =>
-      parseBreakingChangeFrontMatter({
-        version: '6.0.0',
-        description: 'Renamed variants',
-        properties: 'show',
-        source,
-      }),
-    /properties/
-  );
-  assert.throws(
-    () =>
-      parseBreakingChangeFrontMatter({
-        version: '6.0.0',
-        description: 'x',
-        events: [1],
-        source,
-      }),
-    /events/
-  );
+  // Property and event tags come from the siemens/ix JSDoc
+  for (const key of ['properties', 'events']) {
+    assert.throws(
+      () =>
+        parseBreakingChangeFrontMatter({
+          version: '6.0.0',
+          [key]: ['variant'],
+          source,
+        }),
+      new RegExp(`Unknown .* ${key}`)
+    );
+  }
   assert.throws(
     () =>
       parseBreakingChangeFrontMatter({
@@ -138,8 +125,6 @@ test('#parseBreakingChangeFrontMatter accepts notes as source', () => {
 test('#parseBreakingChangeFrontMatter does not require description and source', () => {
   assert.deepEqual(parseBreakingChangeFrontMatter({ version: '6.0.0' }), {
     version: '6.0.0',
-    properties: [],
-    events: [],
     source: [],
   });
   assert.deepEqual(
@@ -148,7 +133,7 @@ test('#parseBreakingChangeFrontMatter does not require description and source', 
       description: null,
       source: null,
     }),
-    { version: '6.0.0', properties: [], events: [], source: [] }
+    { version: '6.0.0', source: [] }
   );
 });
 
@@ -174,20 +159,37 @@ test('#getPageTags reads since and breaking-change', () => {
     },
   });
   assert.deepEqual(getPageTags({ title: 'Blind' }), {});
+});
+
+test('#getComponentMigrationGuideUrl links the section of the doc folder', () => {
+  assert.equal(getDocFolder('components/card/code'), 'card');
+  assert.equal(
+    getDocFolder('components/application-menu/index'),
+    'application-menu'
+  );
+  assert.equal(
+    getComponentMigrationGuideUrl('6.0.0', 'components/card/code'),
+    '/docs/home/migration/6_0_0#card'
+  );
+  assert.equal(
+    getComponentMigrationGuideUrl('7.2.0', 'components/application-menu/code'),
+    '/docs/home/migration/7_0_0#application-menu'
+  );
+});
+
+test('#findApiBreakingChangeVersions reads the versions of generated API tables', () => {
+  const api = `<ApiTable.PropertyHeader name="variant" singleFramework="">
+      <SinceTag message={\`5.2.0\`} />
+      <BreakingChangeTag message={\`6.0.0\`} description={\`Renamed \\\`x\\\`\`} />
+  </ApiTable.PropertyHeader>
+  <ApiTable.PropertyHeader name="outline" singleFramework="">
+      <BreakingChangeTag message={\`6.0.0\`} description={\`y\`} />
+      <BreakingChangeTag message={\`7.0.0\`} description={\`z\`} />
+  </ApiTable.PropertyHeader>`;
+  assert.deepEqual(findApiBreakingChangeVersions(api), ['6.0.0', '7.0.0']);
   assert.deepEqual(
-    getPageTags({
-      'breaking-change': {
-        version: '6.0.0',
-        properties: ['variant'],
-        events: ['collapsedChange'],
-      },
-    }).breakingChange,
-    {
-      version: '6.0.0',
-      href: '/docs/home/migration/6_0_0',
-      properties: ['variant'],
-      events: ['collapsedChange'],
-    }
+    findApiBreakingChangeVersions('<SinceTag message={`6.0.0`} />'),
+    []
   );
 });
 
@@ -210,95 +212,6 @@ test('#getPageTags rejects invalid front matter', () => {
   assert.throws(() => getPageTags({ since: 'next' }));
   assert.throws(() => getPageTags({ since: 6 }));
   assert.throws(() => getPageTags({ 'breaking-change': { version: 'x' } }));
-});
-
-test('#isBreakingChangeMember matches names, prefixed in ApiComponent tables', () => {
-  const breakingChange = {
-    version: '6.0.0',
-    href: '/docs/home/migration/6_0_0',
-    properties: ['variant', 'ix-push-card.outline'],
-    events: ['collapsedChange'],
-  };
-
-  assert.equal(
-    isBreakingChangeMember(breakingChange, 'property', 'variant'),
-    true
-  );
-  assert.equal(
-    isBreakingChangeMember(breakingChange, 'event', 'variant'),
-    false
-  );
-  assert.equal(
-    isBreakingChangeMember(breakingChange, 'event', 'collapsedChange'),
-    true
-  );
-  assert.equal(
-    isBreakingChangeMember(breakingChange, 'property', 'outline'),
-    false
-  );
-  assert.equal(
-    isBreakingChangeMember(
-      breakingChange,
-      'property',
-      'outline',
-      'ix-push-card'
-    ),
-    true
-  );
-  assert.equal(
-    isBreakingChangeMember(
-      breakingChange,
-      'property',
-      'variant',
-      'ix-push-card'
-    ),
-    false
-  );
-  assert.equal(isBreakingChangeMember(undefined, 'property', 'variant'), false);
-});
-
-test('#findUnmatchedBreakingChangeMembers requires ApiComponent on pages with several tables', () => {
-  const single = `import Api from '@site/docs/autogenerated/api/ix-blind/api.mdx';\n<Api />`;
-  const multi = `import CardApi from '@site/docs/autogenerated/api/ix-card/api.mdx';
-import PushCardApi from '@site/docs/autogenerated/api/ix-push-card/api.mdx';
-<CardApi />
-<PushCardApi />`;
-  const wrapped = `import CardApi from '@site/docs/autogenerated/api/ix-card/api.mdx';
-import PushCardApi from '@site/docs/autogenerated/api/ix-push-card/api.mdx';
-<ApiComponent tag="ix-card">
-  <CardApi />
-</ApiComponent>
-<ApiComponent tag="ix-push-card">
-  <PushCardApi />
-</ApiComponent>`;
-
-  assert.deepEqual(
-    findUnmatchedBreakingChangeMembers(['variant'], ['', single]),
-    []
-  );
-  assert.deepEqual(
-    findUnmatchedBreakingChangeMembers(['ix-blind.variant'], [single]),
-    ['ix-blind.variant']
-  );
-  // Several tables without ApiComponent: names can't be assigned
-  assert.deepEqual(findUnmatchedBreakingChangeMembers(['variant'], [multi]), [
-    'variant',
-  ]);
-  assert.deepEqual(
-    findUnmatchedBreakingChangeMembers(
-      ['ix-card.variant', 'ix-push-card.outline'],
-      [wrapped]
-    ),
-    []
-  );
-  assert.deepEqual(
-    findUnmatchedBreakingChangeMembers(
-      ['variant', 'ix-action-card.variant'],
-      [wrapped]
-    ),
-    ['variant', 'ix-action-card.variant']
-  );
-  assert.deepEqual(findUnmatchedBreakingChangeMembers([], [multi]), []);
 });
 
 const guide = `# Upgrade to V6
@@ -350,4 +263,12 @@ test('#hasComponentMigrationSection detects guides with sections per component',
     hasComponentMigrationSection('# Upgrade\n\n## Installation'),
     false
   );
+});
+
+test('#hasHeadingId detects explicit and generated heading ids', () => {
+  assert.equal(hasHeadingId(guide, 'application-menu', docusaurusSlug), true);
+  assert.equal(hasHeadingId(guide, 'blind', docusaurusSlug), true);
+  assert.equal(hasHeadingId(guide, 'app-menu', docusaurusSlug), false);
+  assert.equal(hasHeadingId(guide, 'application', docusaurusSlug), false);
+  assert.equal(hasHeadingId('Text {#card}', 'card', docusaurusSlug), false);
 });

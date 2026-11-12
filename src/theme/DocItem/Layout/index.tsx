@@ -11,7 +11,6 @@ import { PropSidebarItemLink } from '@docusaurus/plugin-content-docs';
 import type { WrapperProps } from '@docusaurus/types';
 import DocDefaultHeader from '@site/src/components/theme/DocDefaultHeader';
 import DocTabsHeader from '@site/src/components/theme/DocTabsHeader';
-import { PageTagsContext } from '@site/src/context/page-tags-context';
 import type { PageTags } from '@site/src/lib/page-tags';
 import { useDocType } from '@site/src/utils/hooks/useDocType';
 import DocItemContent from '@theme-original/DocItem/Content';
@@ -172,7 +171,7 @@ export function DocItemTabItemLayout({ children }: Props): JSX.Element {
   const indexTags = sidebar.customProps?.pageTags as PageTags | undefined;
 
   return (
-    <PageTagsContext.Provider value={indexTags}>
+    <>
       <DocTabsHeader
         id={metadata.id}
         title={parentDoc.title}
@@ -200,6 +199,6 @@ export function DocItemTabItemLayout({ children }: Props): JSX.Element {
         </div>
         <div className={clsx('col', styles.toc)}>{docTOC.desktop}</div>
       </div>
-    </PageTagsContext.Provider>
+    </>
   );
 }

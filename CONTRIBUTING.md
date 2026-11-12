@@ -99,18 +99,13 @@ since: 6.0.0 # for new components
 breaking-change:
   version: 6.0.0
   description: 'Status variants renamed' # optional, tooltip
-  properties: # optional, tagged in the API table
-    - variant
-  events: # optional
-    - collapsedChange
   source: # optional, not shown
     - https://github.com/siemens/ix/blob/<commit>/.changeset/blind.md
 ```
 
-- Property and event `since` tags come from `@since` in the [siemens/ix](https://github.com/siemens/ix) JSDoc.
-- All `since` and breaking change tags are managed manually: remove outdated `since` and `breaking-change` entries when starting a new major. Outdated property `since` tags are removed in siemens/ix.
-- Breaking change tags link to the component's section of the major's migration guide (heading id `{#<doc folder>}`, e.g. `#### App menu {#application-menu}`, or a heading with the page title under "Migration by component"), otherwise to the whole guide.
-- On pages with several components, wrap each API table in `<ApiComponent tag="ix-x">` (from `@site/src/components/ApiTable`) and prefix the members: `ix-x.variant`.
+- Property and event tags of the API tables come from the [siemens/ix](https://github.com/siemens/ix) JSDoc: `@since 6.0.0` and `@breaking-change 6.0.0 <summary>` (the summary is the tooltip).
+- All `since` and breaking change tags are managed manually: remove outdated `since` and `breaking-change` entries when starting a new major. Outdated property and event tags are removed in siemens/ix.
+- Breaking change tags link to the component's section of the major's migration guide: the heading id `{#<doc folder>}`, e.g. `#### App menu {#application-menu}`. Add it for every component with breaking changes, the build warns if it's missing. The page header tag also falls back to a heading with the page title under "Migration by component", otherwise to the whole guide.
 
 ### Using Examples from an Open siemens/ix Pull Request
 

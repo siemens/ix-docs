@@ -8,25 +8,53 @@
  */
 import Link from '@docusaurus/Link';
 import isInternalUrl from '@docusaurus/isInternalUrl';
+import { useDoc } from '@docusaurus/plugin-content-docs/client';
 import { iconElectricalEnergyFilled } from '@siemens/ix-icons/icons';
 import { IxIcon, IxTooltip, IxTypography } from '@siemens/ix-react';
 import clsx from 'clsx';
+import { getComponentMigrationGuideUrl } from '@site/src/lib/page-tags';
 import { useId } from 'react';
 import BaseTag from './baseTag';
 import styles from './base.module.css';
 
-export function BreakingChangeTag({
-  message,
-  href,
-  title,
-  description,
-}: Readonly<{
+type BreakingChangeTagProps = Readonly<{
   message: string;
+  /** Defaults to the current component's section of the migration guide */
   href?: string;
   title?: string;
   /** Summary of the breaking changes, shown as tooltip */
   description?: string;
-}>) {
+}>;
+
+/**
+ * Breaking change tag of the page headers and of the API tables (generated from
+ * `@breaking-change` in the siemens/ix JSDoc, without `href`)
+ */
+export function BreakingChangeTag(props: BreakingChangeTagProps) {
+  return props.href ? (
+    <BreakingChangeTagBase {...props} />
+  ) : (
+    <ComponentBreakingChangeTag {...props} />
+  );
+}
+
+/** Links to the section `{#<doc folder>}` of the migration guide */
+function ComponentBreakingChangeTag(props: BreakingChangeTagProps) {
+  const { metadata } = useDoc();
+  return (
+    <BreakingChangeTagBase
+      {...props}
+      href={getComponentMigrationGuideUrl(props.message, metadata.id)}
+    />
+  );
+}
+
+function BreakingChangeTagBase({
+  message,
+  href,
+  title,
+  description,
+}: BreakingChangeTagProps) {
   // `useId` returns ids like `:r1:`, which are no valid CSS selectors
   const id = `breaking-change-${useId().replace(/[^a-zA-Z0-9_-]/g, '')}`;
   const tooltip = description ? (
