@@ -10,8 +10,12 @@ import BrowserOnly from '@docusaurus/BrowserOnly';
 import { useFramework } from '@site/src/hooks/use-framework';
 import clsx from 'clsx';
 import FrameworkSelection from '../UI/FrameworkSelection';
+import BreakingChangeMemberTag from './BreakingChangeMemberTag';
 import { toKebabCase } from './toKebabCase';
 import styles from './ApiTable.module.css';
+
+// Imported by the `code.mdx` pages together with the API tables
+export { ApiComponent } from '@site/src/context/api-component-context';
 
 export type ApiTableProps = {
   readonly children?: React.ReactNode;
@@ -74,6 +78,12 @@ function PropertyHeader({
         </BrowserOnly>
       </div>
       <div className="flex items-center ml-auto gap-2">
+        {type !== 'slot' && (
+          <BreakingChangeMemberTag
+            name={name}
+            type={type === 'event' ? 'event' : 'property'}
+          />
+        )}
         {children}
         {singleFramework ? '' : <FrameworkSelection />}
       </div>

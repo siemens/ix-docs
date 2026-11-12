@@ -10,7 +10,12 @@ import type { SidebarsConfig } from '@docusaurus/plugin-content-docs';
 import fs from 'fs';
 import matter from 'gray-matter';
 import path from 'path';
-import { PAGE_TAG_FRONT_MATTER_KEYS, getPageTags } from './src/lib/page-tags';
+import {
+  PAGE_TAG_FRONT_MATTER_KEYS,
+  type PageTags,
+  findUnmatchedBreakingChangeMembers,
+  getPageTags,
+} from './src/lib/page-tags';
 
 function findDoc(id: string) {
   return ['.mdx', '.md']
@@ -20,12 +25,15 @@ function findDoc(id: string) {
 
 /**
  * Header tags from the `index.mdx` front matter, passed as category `customProps`
- * because tab pages don't see it. Rendered by `DocTabsHeader`.
+ * (`pageTags`) because tab pages don't see it. Rendered by `DocTabsHeader` and `ApiTable`.
  */
 function getTabsPageTags(id: string, tabIds: string[]) {
+  const tabContents: string[] = [];
   for (const tabId of tabIds) {
     const tabFile = findDoc(tabId);
-    const data = tabFile ? matter(fs.readFileSync(tabFile, 'utf8')).data : {};
+    const content = tabFile ? fs.readFileSync(tabFile, 'utf8') : '';
+    tabContents.push(content);
+    const { data } = matter(content);
     const keys = PAGE_TAG_FRONT_MATTER_KEYS.filter(
       (key) => data[key] !== undefined && data[key] !== null
     );
@@ -41,13 +49,29 @@ function getTabsPageTags(id: string, tabIds: string[]) {
     return {};
   }
 
+  let tags: PageTags;
   try {
-    return getPageTags(matter(fs.readFileSync(file, 'utf8')).data);
+    tags = getPageTags(matter(fs.readFileSync(file, 'utf8')).data);
   } catch (e) {
     throw new Error(
       `Invalid front matter in ${path.relative(__dirname, file)}: ${e instanceof Error ? e.message : e}`
     );
   }
+
+  const unmatched = findUnmatchedBreakingChangeMembers(
+    [
+      ...(tags.breakingChange?.properties ?? []),
+      ...(tags.breakingChange?.events ?? []),
+    ],
+    tabContents
+  );
+  if (unmatched.length > 0) {
+    throw new Error(
+      `docs/${id}: breaking-change members ${unmatched.join(', ')} don't match an API table. On pages with several components, prefix them (ix-x.name) and wrap the tables in <ApiComponent tag="ix-x">.`
+    );
+  }
+
+  return tags;
 }
 
 function createTabItem(item: {
@@ -73,7 +97,7 @@ function createTabItem(item: {
     className: 'category-tabs',
     collapsed: true,
     collapsible: false,
-    ...(Object.keys(pageTags).length > 0 && { customProps: pageTags }),
+    ...(Object.keys(pageTags).length > 0 && { customProps: { pageTags } }),
     items: item.items.map((child) => ({
       type: 'doc',
       id: child.id,

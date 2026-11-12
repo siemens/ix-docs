@@ -8,7 +8,8 @@
  */
 
 /**
- * Helpers for the header tags and the breaking change tags of the API tables.
+ * Header tags of the doc pages: front matter validation and matching of
+ * breaking change members in the API tables.
  */
 
 export type SemVer = {
@@ -18,15 +19,9 @@ export type SemVer = {
   prerelease?: string;
 };
 
-export type BreakingChangeMembers = {
-  props: string[];
-  events: string[];
-};
-
 /**
- * `breaking-change` front matter. Members of other components on the page are
- * prefixed with their tag (`ix-other.name`). `description` is the tooltip,
- * `source` is not shown.
+ * `breaking-change` front matter. `description` is the tooltip, `properties` and `events`
+ * are tagged in the API tables, `source` is not shown.
  */
 export type BreakingChange = {
   version: string;
@@ -51,28 +46,6 @@ export function parseVersion(
     patch: Number(match[3]),
     prerelease: match[4],
   };
-}
-
-export type ApiMember = { name: string };
-
-export type ComponentApi = {
-  props: ApiMember[];
-  events: ApiMember[];
-};
-
-/**
- * Properties and events of a generated `api.mdx`
- */
-export function parseApiMdx(content: string): ComponentApi {
-  const read = (header: 'PropertyHeader' | 'EventHeader') =>
-    Array.from(
-      content.matchAll(
-        new RegExp(`<ApiTable\\.${header}\\s+name="([^"]+)"`, 'g')
-      ),
-      ([, name]) => ({ name })
-    );
-
-  return { props: read('PropertyHeader'), events: read('EventHeader') };
 }
 
 export const BREAKING_CHANGE_FRONT_MATTER_KEY = 'breaking-change';
@@ -168,85 +141,6 @@ export function parseBreakingChangeFrontMatter(
   };
 }
 
-/**
- * `breaking-change` members by component tag, unprefixed names belong to `primaryTag`
- */
-export function groupBreakingChangeMembers(
-  primaryTag: string,
-  breakingChange: BreakingChange
-): Record<string, BreakingChangeMembers> {
-  const result: Record<string, BreakingChangeMembers> = {};
-
-  const add = (kind: keyof BreakingChangeMembers, names: string[]) => {
-    for (const name of names) {
-      const qualified = /^(ix-[a-z0-9-]+)\.(.+)$/.exec(name);
-      const [tag, member] = qualified
-        ? [qualified[1], qualified[2]]
-        : [primaryTag, name];
-      result[tag] ??= { props: [], events: [] };
-      if (!result[tag][kind].includes(member)) {
-        result[tag][kind].push(member);
-      }
-    }
-  };
-
-  add('props', breakingChange.properties);
-  add('events', breakingChange.events);
-  return result;
-}
-
-export const breakingChangeTagImport = `import { BreakingChangeTag } from '@site/src/components/UI/Tags';`;
-
-/**
- * Remove `BreakingChangeTag`s added by `injectBreakingChangeTags`.
- */
-export function removeBreakingChangeTags(content: string) {
-  return content
-    .split('\n')
-    .filter(
-      (line) =>
-        line !== breakingChangeTagImport &&
-        !/^\s*<BreakingChangeTag\s.*\/>\s*$/.test(line)
-    )
-    .join('\n');
-}
-
-/**
- * Adds `BreakingChangeTag`s to the API table headers, replacing previous ones
- */
-export function injectBreakingChangeTags(
-  content: string,
-  version: string,
-  href: string,
-  members: BreakingChangeMembers
-) {
-  content = removeBreakingChangeTags(content);
-
-  const tag = `<BreakingChangeTag message={\`${version}\`} href={\`${href}\`} />`;
-  let changed = false;
-
-  const inject = (
-    header: 'PropertyHeader' | 'EventHeader',
-    names: string[]
-  ) => {
-    content = content.replace(
-      new RegExp(`(<ApiTable\\.${header}\\s+name="([^"]+)"[^>]*>)`, 'g'),
-      (match, open: string, name: string) => {
-        if (!names.includes(name)) {
-          return match;
-        }
-        changed = true;
-        return `${open}\n      ${tag}`;
-      }
-    );
-  };
-
-  inject('PropertyHeader', members.props);
-  inject('EventHeader', members.events);
-
-  return changed ? `${breakingChangeTagImport}\n${content}` : content;
-}
-
 export const SINCE_FRONT_MATTER_KEY = 'since';
 
 export const DEPRECATED_FRONT_MATTER_KEY = 'deprecated';
@@ -271,7 +165,14 @@ export type PageTags = {
   deprecated?: DeprecatedEntry[];
   formReady?: boolean;
   since?: string;
-  breakingChange?: { version: string; href: string; description?: string };
+  breakingChange?: {
+    version: string;
+    href: string;
+    description?: string;
+    /** Tagged in the API tables, see `isBreakingChangeMember` */
+    properties?: string[];
+    events?: string[];
+  };
 };
 
 /**
@@ -326,8 +227,54 @@ export function getPageTags(frontMatter: Record<string, unknown>): PageTags {
       ...(breakingChange.description && {
         description: breakingChange.description,
       }),
+      ...(breakingChange.properties.length > 0 && {
+        properties: breakingChange.properties,
+      }),
+      ...(breakingChange.events.length > 0 && {
+        events: breakingChange.events,
+      }),
     };
   }
 
   return tags;
+}
+
+/**
+ * Whether a property or event of an API table is listed in `breaking-change`.
+ * Tables in `<ApiComponent tag="ix-x">` match `ix-x.name`, other tables match `name`.
+ */
+export function isBreakingChangeMember(
+  breakingChange: PageTags['breakingChange'],
+  type: 'property' | 'event',
+  name: string,
+  componentTag?: string
+) {
+  const names =
+    (type === 'event' ? breakingChange?.events : breakingChange?.properties) ??
+    [];
+  return names.includes(componentTag ? `${componentTag}.${name}` : name);
+}
+
+/**
+ * `breaking-change` members that can't be matched to an API table of the tab pages:
+ * `ix-x.name` needs an `<ApiComponent tag="ix-x">`, unprefixed names a page with a single
+ * API table and no `ApiComponent`.
+ */
+export function findUnmatchedBreakingChangeMembers(
+  members: string[],
+  tabContents: string[]
+) {
+  const findAll = (pattern: RegExp) =>
+    new Set(
+      tabContents.flatMap((content) =>
+        Array.from(content.matchAll(pattern), ([, tag]) => tag)
+      )
+    );
+  const tables = findAll(/autogenerated\/api\/([a-z0-9-]+)\/api\.mdx/g);
+  const wrapped = findAll(/<ApiComponent\s+tag="([^"]+)"/g);
+
+  return members.filter((member) => {
+    const prefix = /^(ix-[a-z0-9-]+)\./.exec(member)?.[1];
+    return prefix ? !wrapped.has(prefix) : tables.size > 1 || wrapped.size > 0;
+  });
 }

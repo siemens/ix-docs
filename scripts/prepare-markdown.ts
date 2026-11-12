@@ -13,7 +13,6 @@ import fs from 'fs-extra';
 import os from 'os';
 import path from 'path';
 import copyTheme from './copy-theme';
-import prepareBreakingChangeTags from './prepare-breaking-change-tags';
 
 const __dirname = path.resolve();
 
@@ -93,7 +92,6 @@ async function main() {
 
   const branch = getBranch(defaults);
   await downloadLatestArtifact(branch);
-  await prepareBreakingChangeTags();
 }
 
 function getBranch(config: BranchConfig) {

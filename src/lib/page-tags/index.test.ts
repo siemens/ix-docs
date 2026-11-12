@@ -1,46 +1,12 @@
 import assert from 'node:assert/strict';
 import test from 'node:test';
 import {
+  findUnmatchedBreakingChangeMembers,
   getPageTags,
+  isBreakingChangeMember,
   getMigrationGuideUrl,
-  groupBreakingChangeMembers,
-  injectBreakingChangeTags,
-  parseApiMdx,
   parseBreakingChangeFrontMatter,
-  removeBreakingChangeTags,
 } from '.';
-
-const apiMdx = `import {SinceTag, DeprecatedTag} from '@site/src/components/UI/Tags';
-
-<ApiTable id="property-clickable">
-  <ApiTable.PropertyHeader name="clickable" singleFramework="">
-      <SinceTag message={\`6.0.0\`} />
-  </ApiTable.PropertyHeader>
-</ApiTable>
-
-<ApiTable id="property-variant">
-  <ApiTable.PropertyHeader name="variant" singleFramework="">
-  </ApiTable.PropertyHeader>
-</ApiTable>
-
-<ApiTable id="property-label">
-  <ApiTable.PropertyHeader name="label" singleFramework="">
-      <SinceTag message={\`5.1.0\`} />
-  </ApiTable.PropertyHeader>
-</ApiTable>
-
-<ApiTable id="event-collapsedChange">
-  <ApiTable.EventHeader name="collapsedChange">
-  </ApiTable.EventHeader>
-</ApiTable>
-`;
-
-test('#parseApiMdx reads properties and events', () => {
-  assert.deepEqual(parseApiMdx(apiMdx), {
-    props: [{ name: 'clickable' }, { name: 'variant' }, { name: 'label' }],
-    events: [{ name: 'collapsedChange' }],
-  });
-});
 
 const changesetUrl =
   'https://github.com/siemens/ix/blob/abc123/.changeset/blind-variants.md';
@@ -189,75 +155,6 @@ test('#getMigrationGuideUrl links the migration guide of the major', () => {
   assert.throws(() => getMigrationGuideUrl('next'));
 });
 
-test('#groupBreakingChangeMembers assigns members to the components of a page', () => {
-  assert.deepEqual(
-    groupBreakingChangeMembers('ix-card', {
-      version: '6.0.0',
-      description: 'Renamed variants',
-      properties: ['variant', 'ix-push-card.variant', 'ix-push-card.outline'],
-      events: ['ix-push-card.collapsedChange', 'ix-card.variantChange'],
-      source: [changesetUrl],
-    }),
-    {
-      'ix-card': { props: ['variant'], events: ['variantChange'] },
-      'ix-push-card': {
-        props: ['variant', 'outline'],
-        events: ['collapsedChange'],
-      },
-    }
-  );
-  assert.deepEqual(
-    groupBreakingChangeMembers('ix-blind', {
-      version: '6.0.0',
-      description: 'Renamed variants',
-      properties: [],
-      events: [],
-      source: [changesetUrl],
-    }),
-    {}
-  );
-});
-
-test('#injectBreakingChangeTags adds tags to affected headers only once', () => {
-  const href = 'https://example.com/v6.md';
-  const members = { props: ['variant'], events: ['collapsedChange'] };
-  const result = injectBreakingChangeTags(apiMdx, '6.0.0', href, members);
-
-  assert.match(
-    result,
-    /^import \{ BreakingChangeTag \} from '@site\/src\/components\/UI\/Tags';/
-  );
-  assert.match(
-    result,
-    /<ApiTable\.PropertyHeader name="variant" singleFramework="">\n\s+<BreakingChangeTag message=\{`6\.0\.0`\} href=\{`https:\/\/example\.com\/v6\.md`\} \/>/
-  );
-  assert.match(
-    result,
-    /<ApiTable\.EventHeader name="collapsedChange">\n\s+<BreakingChangeTag/
-  );
-  assert.equal(result.match(/<BreakingChangeTag /g)?.length, 2);
-  assert.equal(
-    injectBreakingChangeTags(result, '6.0.0', href, members),
-    result
-  );
-
-  // Tags of previous runs are replaced
-  const relinked = injectBreakingChangeTags(
-    result,
-    '7.0.0',
-    'https://example.com/v7.md',
-    { ...members, events: [] }
-  );
-  assert.equal(relinked.match(/<BreakingChangeTag /g)?.length, 1);
-  assert.equal(relinked.match(/import \{ BreakingChangeTag \}/g)?.length, 1);
-  assert.match(relinked, /href=\{`https:\/\/example\.com\/v7\.md`\}/);
-  assert.equal(removeBreakingChangeTags(result), apiMdx);
-  assert.equal(
-    injectBreakingChangeTags(apiMdx, '6.0.0', href, { props: [], events: [] }),
-    apiMdx
-  );
-});
-
 test('#getPageTags reads since and breaking-change', () => {
   const frontMatter = {
     title: 'Blind',
@@ -274,6 +171,21 @@ test('#getPageTags reads since and breaking-change', () => {
     },
   });
   assert.deepEqual(getPageTags({ title: 'Blind' }), {});
+  assert.deepEqual(
+    getPageTags({
+      'breaking-change': {
+        version: '6.0.0',
+        properties: ['variant'],
+        events: ['collapsedChange'],
+      },
+    }).breakingChange,
+    {
+      version: '6.0.0',
+      href: '/docs/home/migration/6_0_0',
+      properties: ['variant'],
+      events: ['collapsedChange'],
+    }
+  );
 });
 
 test('#getPageTags reads deprecated and formReady', () => {
@@ -295,4 +207,93 @@ test('#getPageTags rejects invalid front matter', () => {
   assert.throws(() => getPageTags({ since: 'next' }));
   assert.throws(() => getPageTags({ since: 6 }));
   assert.throws(() => getPageTags({ 'breaking-change': { version: 'x' } }));
+});
+
+test('#isBreakingChangeMember matches names, prefixed in ApiComponent tables', () => {
+  const breakingChange = {
+    version: '6.0.0',
+    href: '/docs/home/migration/6_0_0',
+    properties: ['variant', 'ix-push-card.outline'],
+    events: ['collapsedChange'],
+  };
+
+  assert.equal(
+    isBreakingChangeMember(breakingChange, 'property', 'variant'),
+    true
+  );
+  assert.equal(
+    isBreakingChangeMember(breakingChange, 'event', 'variant'),
+    false
+  );
+  assert.equal(
+    isBreakingChangeMember(breakingChange, 'event', 'collapsedChange'),
+    true
+  );
+  assert.equal(
+    isBreakingChangeMember(breakingChange, 'property', 'outline'),
+    false
+  );
+  assert.equal(
+    isBreakingChangeMember(
+      breakingChange,
+      'property',
+      'outline',
+      'ix-push-card'
+    ),
+    true
+  );
+  assert.equal(
+    isBreakingChangeMember(
+      breakingChange,
+      'property',
+      'variant',
+      'ix-push-card'
+    ),
+    false
+  );
+  assert.equal(isBreakingChangeMember(undefined, 'property', 'variant'), false);
+});
+
+test('#findUnmatchedBreakingChangeMembers requires ApiComponent on pages with several tables', () => {
+  const single = `import Api from '@site/docs/autogenerated/api/ix-blind/api.mdx';\n<Api />`;
+  const multi = `import CardApi from '@site/docs/autogenerated/api/ix-card/api.mdx';
+import PushCardApi from '@site/docs/autogenerated/api/ix-push-card/api.mdx';
+<CardApi />
+<PushCardApi />`;
+  const wrapped = `import CardApi from '@site/docs/autogenerated/api/ix-card/api.mdx';
+import PushCardApi from '@site/docs/autogenerated/api/ix-push-card/api.mdx';
+<ApiComponent tag="ix-card">
+  <CardApi />
+</ApiComponent>
+<ApiComponent tag="ix-push-card">
+  <PushCardApi />
+</ApiComponent>`;
+
+  assert.deepEqual(
+    findUnmatchedBreakingChangeMembers(['variant'], ['', single]),
+    []
+  );
+  assert.deepEqual(
+    findUnmatchedBreakingChangeMembers(['ix-blind.variant'], [single]),
+    ['ix-blind.variant']
+  );
+  // Several tables without ApiComponent: names can't be assigned
+  assert.deepEqual(findUnmatchedBreakingChangeMembers(['variant'], [multi]), [
+    'variant',
+  ]);
+  assert.deepEqual(
+    findUnmatchedBreakingChangeMembers(
+      ['ix-card.variant', 'ix-push-card.outline'],
+      [wrapped]
+    ),
+    []
+  );
+  assert.deepEqual(
+    findUnmatchedBreakingChangeMembers(
+      ['variant', 'ix-action-card.variant'],
+      [wrapped]
+    ),
+    ['variant', 'ix-action-card.variant']
+  );
+  assert.deepEqual(findUnmatchedBreakingChangeMembers([], [multi]), []);
 });
