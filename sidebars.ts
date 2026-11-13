@@ -1375,15 +1375,12 @@ const sidebars: SidebarsConfig = {
   ],
   icons: [
     'icons/icon-library',
+    'icons/icon-usage',
     {
       type: 'category',
       className: 'doc-sidebar-item-bold',
-      label: 'Icon guidelines',
-      items: [
-        'icons/icon-usage',
-        'icons/design-new-icons',
-        'icons/developing-with-icons',
-      ],
+      label: 'Add new icons',
+      items: ['icons/design-new-icons', 'icons/developing-with-icons'],
     },
   ],
   styles: [
