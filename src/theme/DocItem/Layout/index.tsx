@@ -1,4 +1,5 @@
 import {
+  DocProvider,
   useCurrentSidebarCategory,
   useDoc,
   useDocById,
@@ -7,8 +8,12 @@ import Head from '@docusaurus/Head';
 import { useHistory } from '@docusaurus/router';
 import { useWindowSize } from '@docusaurus/theme-common';
 
-import { PropSidebarItemLink } from '@docusaurus/plugin-content-docs';
+import type {
+  PropDocContent,
+  PropSidebarItemLink,
+} from '@docusaurus/plugin-content-docs';
 import type { WrapperProps } from '@docusaurus/types';
+import { useComponentOverviewTOC } from '@site/src/components/ComponentOverview/hooks';
 import DocDefaultHeader from '@site/src/components/theme/DocDefaultHeader';
 import DocTabsHeader from '@site/src/components/theme/DocTabsHeader';
 import { useDocType } from '@site/src/utils/hooks/useDocType';
@@ -23,7 +28,7 @@ import DocItemTOCDesktop from '@theme/DocItem/TOC/Desktop';
 import DocItemTOCMobile from '@theme/DocItem/TOC/Mobile';
 import DocVersionBanner from '@theme/DocVersionBanner';
 import clsx from 'clsx';
-import { useEffect } from 'react';
+import { useEffect, useMemo, type ReactNode } from 'react';
 import styles from './styles.module.css';
 
 type Props = WrapperProps<typeof LayoutType>;
@@ -76,19 +81,47 @@ function DocItemLayout({
   );
 }
 
+/**
+ * Some docs render their headings at runtime, so the MDX compiler cannot
+ * collect them. Provide the runtime TOC to the theme TOC components.
+ */
+function useRuntimeTOCDoc() {
+  const doc = useDoc();
+  const runtimeToc = useComponentOverviewTOC(doc.metadata.id);
+
+  const runtimeDoc = useMemo(
+    () => (runtimeToc ? { ...doc, toc: runtimeToc } : undefined),
+    [doc, runtimeToc]
+  );
+
+  return runtimeDoc;
+}
+
 function useDocTOC() {
-  const { frontMatter, toc } = useDoc();
+  const doc = useDoc();
+  const runtimeDoc = useRuntimeTOCDoc();
+  const { frontMatter, toc } = runtimeDoc ?? doc;
   const windowSize = useWindowSize();
 
   const hidden = frontMatter.hide_table_of_contents;
   const canRender = !hidden && toc.length > 0;
 
-  const mobile = canRender ? <DocItemTOCMobile /> : undefined;
+  const withTOC = (node: ReactNode) =>
+    runtimeDoc ? (
+      // DocProvider only reads the doc data fields, not the MDX component.
+      <DocProvider content={runtimeDoc as unknown as PropDocContent}>
+        {node}
+      </DocProvider>
+    ) : (
+      node
+    );
+
+  const mobile = canRender ? withTOC(<DocItemTOCMobile />) : undefined;
 
   const desktop =
-    canRender && (windowSize === 'desktop' || windowSize === 'ssr') ? (
-      <DocItemTOCDesktop />
-    ) : undefined;
+    canRender && (windowSize === 'desktop' || windowSize === 'ssr')
+      ? withTOC(<DocItemTOCDesktop />)
+      : undefined;
 
   return {
     hidden,
