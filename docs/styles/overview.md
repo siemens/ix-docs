@@ -50,7 +50,7 @@ Use the following deep dives for details on each style foundation:
 - [Typography](./typography/index.mdx)
 - [Borders](./borders.md)
 - [Shadows](./shadows.md)
-- [Density](./density.md)
+- [Sizing](./sizing.md)
 - [Elevation](./elevation.md)
 - [Animation](./animation.md)
 - [Global styles](./global-styles.md)

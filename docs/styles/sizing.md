@@ -25,6 +25,8 @@ The system supports two densities. **Default** is the base density. **Compact**
 is a sparse override: it only redefines the tokens listed on this page and
 inherits every other token from the default density.
 
+![Default and compact density comparison](https://www.figma.com/design/wEptRgAezDU1z80Cn3eZ0o/iX-Documentation-illustrations?node-id=8742-7072&t=Mmsji7qvSnFGiH3D-11)
+
 Enable compact density by adding `data-ix-density="compact"` to the element that
 sets the theme and color schema:
 
