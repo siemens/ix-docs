@@ -13,7 +13,7 @@ product.
 ## Connection to the Siemens design language
 
 iX is aligned with the Siemens design language (SDL). SDL is maintained in a
-separate, internal repository that defines foundational topics such as colors
+separate, internal repository that defines foundational topics e.g. colors
 and their tokens centrally. This separation helps keep foundational design
 decisions consistent across Siemens products and design systems.
 
