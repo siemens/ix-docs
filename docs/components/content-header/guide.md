@@ -39,23 +39,9 @@ Our content header variants makes it easier to achieve a well-balanced visual hi
 	- Back button, title and subtitle are automatically aligned on the left side while the action buttons are aligned on the right side.
 	- Elements in the header slot are top aligned by default. Use top margin to center align it with the title.
 - **Cluster action buttons**: Action buttons are automatically aligned to the right. An example for the primary content header has the back button, title and subtitle at the left top corner of the whole page, and the action buttons at the right top corner of the page.
-
-### Responsive text
-
-The title and subtitle wrap onto multiple lines by default when their available space is limited. Wrapping responds to the width of the content header rather than a specific viewport breakpoint, so the same behavior applies in pages, panes, dialogs and other constrained containers.
-
-- Title and subtitle text remain fully visible and can use as many lines as needed.
-- Long text without natural break opportunities wraps when necessary to prevent horizontal overflow.
-- Content in the header slot remains beside the title and aligned with its first line.
-- The back button and action buttons remain aligned with the first title line.
-
-Set the `textOverflow` property to `ellipsis` only when the header must retain a compact height. In HTML, use `text-overflow="ellipsis"`. In this mode, the title and subtitle each use a single line and are truncated with an ellipsis when needed. The content header doesn't add a tooltip or other way to reveal the hidden text, so make sure the complete title and subtitle are available elsewhere on the page when users need them.
-
-### Responsive actions
-
-Action button labels remain on one line and continue to occupy their required width. The content header does not automatically prioritize actions or move them into an overflow menu.
-
-Keep the most important actions visible. When all actions do not fit comfortably, move secondary actions into a consumer-managed overflow menu, for example using the [dropdown](../dropdown) pattern. Test the resulting composition at all supported viewport and container widths to ensure that actions do not overlap the title or subtitle.
+- **Text wrapping**: Title and subtitle wrap onto multiple lines when space is limited. Wrapping depends on the width of the content header, not the viewport, so it also applies in panes and dialogs. The back button, header slot and action buttons stay aligned with the first line of the title.
+- **Text truncation**: Set `textOverflow` to `ellipsis` to keep the title and subtitle on one line each and truncate them with an ellipsis. No tooltip is added, so use truncation only when the complete text is available elsewhere on the page.
+- **Action overflow**: Action buttons keep their full width and are not moved into an overflow menu automatically. If not all actions fit, keep the most important ones visible and move the others into a [dropdown](../dropdown).
 
 ## Dos and Don’ts
 
@@ -73,7 +59,6 @@ Keep the most important actions visible. When all actions do not fit comfortably
       <li>Don’t use a secondary content header as a page title</li>
       <li>Don’t use more than one primary headline in one page</li>
       <li>Don’t use truncation by default when users need the complete title or subtitle for context</li>
-      <li>Don’t allow action labels to wrap or overlap header text</li>
     </ul>
   </div>
 </div>
