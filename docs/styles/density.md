@@ -6,10 +6,20 @@ hide_table_of_contents: false
 doc-type: 'banner'
 component-tabs: ['']
 no_single_tab: true
-description: 'Sizing tokens adapt sizes, spacing and icon dimensions to enable applications to switch between the default and a compact layout.'
+description: 'Sizing tokens adapt sizes, spacing and icon dimensions to enable applications to switch between the default and a compact layout. Compact mode is experimental and may change.'
 ---
 
 import DensityTable from '@site/src/components/DensityTable';
+
+:::warning Experimental feature
+
+Compact mode is a new feature and is currently experimental. We are still
+evaluating how well it works across components and use cases. Its token
+coverage, values and behavior may change as we learn from its use and make
+further adaptations. Test compact mode with your application before relying
+on it in production.
+
+:::
 
 The system supports two densities. **Default** is the base density. **Compact**
 is a sparse override: it only redefines the tokens listed on this page and
