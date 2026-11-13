@@ -7,7 +7,8 @@ import {
 } from '@docusaurus/theme-common/internal';
 import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 import { IxTooltip, IxTypography } from '@siemens/ix-react';
-import { DeprecatedTag, RedirectTag } from '@site/src/components/UI/Tags';
+import PageTags, { hasPageTags } from '@site/src/components/theme/PageTags';
+import { getPageTags } from '@site/src/lib/page-tags';
 import clsx from 'clsx';
 import { useMemo, useState } from 'react';
 import AskAI from '../AskAI';
@@ -38,6 +39,8 @@ export default function DocDefaultHeader(props: {
   const { description, title, frontMatter, id } = props;
   const { siteConfig } = useDocusaurusContext();
   const pathname = useLocalPathname();
+  const tags = useMemo(() => getPageTags(frontMatter), [frontMatter]);
+  const hasTags = hasPageTags(tags);
 
   const prompt = useMemo(
     () => `Use web browsing to access links and information ${siteConfig.url + pathname + '.md'}
@@ -69,35 +72,12 @@ I want to ask some questions`,
           Copy a prompt to ask an AI assistant about this page.
         </IxTypography>
       </IxTooltip>
-      {description && (
+      {(description || hasTags) && (
         <div className={clsx(styles.componentHeroHeader, 'HeroHeader')}>
           <div className={styles.Tags}>
-            {frontMatter.deprecated &&
-              Array.from(frontMatter.deprecated) &&
-              frontMatter.deprecated.map(
-                (
-                  link: string | { type: string; message: string; href: string }
-                ) => {
-                  if (typeof link === 'string') {
-                    return (
-                      <RedirectTag key={link} link={link}>
-                        Show deprecated version
-                      </RedirectTag>
-                    );
-                  }
-
-                  if (link.type === 'deprecated') {
-                    return (
-                      <DeprecatedTag
-                        key={link.message}
-                        message={link.message}
-                      ></DeprecatedTag>
-                    );
-                  }
-                }
-              )}
+            <PageTags tags={tags} />
           </div>
-          <p className={styles.Description}>{description}</p>
+          {description && <p className={styles.Description}>{description}</p>}
         </div>
       )}
 

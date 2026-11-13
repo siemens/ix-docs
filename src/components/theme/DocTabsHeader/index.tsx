@@ -6,11 +6,8 @@ import { useHistory, useLocation } from '@docusaurus/router';
 import { useScrollPosition } from '@docusaurus/theme-common/internal';
 import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 import { IxTooltip, IxTypography } from '@siemens/ix-react';
-import {
-  DeprecatedTag,
-  FormReady,
-  RedirectTag,
-} from '@site/src/components/UI/Tags';
+import PageTags, { hasPageTags } from '@site/src/components/theme/PageTags';
+import type { PageTags as PageTagsData } from '@site/src/lib/page-tags';
 import clsx from 'clsx';
 import { useCallback, useMemo, useState } from 'react';
 import AskAI from '../AskAI';
@@ -59,11 +56,14 @@ export default function DocTabsHeader(
     title: string;
     description: string;
     tabs: PropSidebarItemLink[];
-    frontMatter: any;
+    /** Tags of the page's `index.mdx`, see `sidebars.ts` */
+    indexTags?: PageTagsData;
   }>
 ) {
-  const { description, tabs, title, frontMatter, id } = props;
+  const { description, tabs, title, id, indexTags } = props;
   const { siteConfig } = useDocusaurusContext();
+  const tags = indexTags ?? {};
+  const hasTags = hasPageTags(tags);
 
   const prompt = useMemo(
     () => `Use web browsing to access links and information:
@@ -97,36 +97,12 @@ I want to ask some questions`,
           Copy a prompt to ask an AI assistant about this page.
         </IxTypography>
       </IxTooltip>
-      {description && (
+      {(description || hasTags) && (
         <div className={clsx(styles.componentHeroHeader, 'HeroHeader')}>
           <div className={styles.Tags}>
-            {frontMatter.deprecated &&
-              Array.from(frontMatter.deprecated) &&
-              frontMatter.deprecated.map(
-                (
-                  link: string | { type: string; message: string; href: string }
-                ) => {
-                  if (typeof link === 'string') {
-                    return (
-                      <RedirectTag key={link} link={link}>
-                        Show deprecated version
-                      </RedirectTag>
-                    );
-                  }
-
-                  if (link.type === 'deprecated') {
-                    return (
-                      <DeprecatedTag
-                        key={link.message}
-                        message={link.message}
-                      ></DeprecatedTag>
-                    );
-                  }
-                }
-              )}
-            {frontMatter.formReady && <FormReady />}
+            <PageTags tags={tags} />
           </div>
-          <p className={styles.Description}>{description}</p>
+          {description && <p className={styles.Description}>{description}</p>}
         </div>
       )}
 

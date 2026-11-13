@@ -2,6 +2,14 @@
 doc-type: 'tabs'
 description: 'Time inputs allow users to enter and select times in a standardized format, ensuring consistency and accuracy.'
 title: 'Time input'
+formReady: true
 deprecated:
   - /docs/legacy/input
+breaking-change:
+  version: 6.0.0
+  description: 'Time selection always requires confirmation, boolean attributes follow native HTML semantics and no validation feedback in novalidate forms'
+  source:
+    - https://github.com/siemens/ix/blob/dcdb2e8a5664e771cb7f17f02974f897d556a6cd/.changeset/date-time-require-confirmation.md
+    - https://github.com/siemens/ix/blob/dcdb2e8a5664e771cb7f17f02974f897d556a6cd/.changeset/form-validation-novalidate.md
+    - https://github.com/siemens/ix/blob/dcdb2e8a5664e771cb7f17f02974f897d556a6cd/BREAKING_CHANGES/v6.md
 ---

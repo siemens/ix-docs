@@ -1,7 +1,6 @@
 ---
 doc-type: 'tab-item'
 description: 'Usage guide for the ix-range-field'
-formReady: true
 ---
 
 # Range field - Usage
