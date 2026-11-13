@@ -1,12 +1,12 @@
 ---
 sidebar_position: 3
-sidebar_label: Density
-title: Density
+sidebar_label: Sizing
+title: Sizing
 hide_table_of_contents: false
 doc-type: 'banner'
 component-tabs: ['']
 no_single_tab: true
-description: 'Density tokens adapt sizes, spacing, and icon dimensions so applications can switch between the default and a compact layout.'
+description: 'Sizing tokens adapt sizes, spacing and icon dimensions to enable applications to switch between the default and a compact layout.'
 ---
 
 import DensityTable from '@site/src/components/DensityTable';

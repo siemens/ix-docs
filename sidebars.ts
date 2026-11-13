@@ -1387,6 +1387,7 @@ const sidebars: SidebarsConfig = {
     },
   ],
   styles: [
+    'styles/overview',
     'styles/colors',
     createTabItem({
       id: 'styles/typography/index',
