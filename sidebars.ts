@@ -128,6 +128,11 @@ const sidebars: SidebarsConfig = {
       id: 'home/mcp-server',
       className: 'doc-sidebar-item-bold',
     },
+    {
+      type: 'doc',
+      id: 'home/agent-skill',
+      className: 'doc-sidebar-item-bold',
+    },
   ],
   components: [
     {
