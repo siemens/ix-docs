@@ -55,7 +55,7 @@ export function getFigmaMeta(node: MDXImageNode): {
   };
 }
 
-function getLocalFilename(fileName: string, nodeId: string) {
+export function getLocalFilename(fileName: string, nodeId: string) {
   const localId = decodeURIComponent(nodeId)
     .replace(/:/, '_')
     .replace(/-/, '_');
