@@ -182,7 +182,7 @@ Use ellipsis with transitional text to inform users that something is happening 
   </div>
 </div>
 
-They are also sometimes used to show that a new dialog box will open within the UI, e.g. "Print…" or "Save as…", but as this comes with consistency challenges it is slowly being removed from UX writing guidelines.
+They are also sometimes used to show that a new dialog box will open within the UI, e.g. "Print…" or "Save as…", but as this comes with consistency challenges, it is slowly being removed from UX writing guidelines.
 
 <div class="dos-and-donts">
   <div class="dos">
@@ -461,7 +461,7 @@ Question marks are appropriate for genuine informational questions, in help text
     <ul aria-label="Recommended practices">
       <li>Need help? Contact support.</li>
       <li>What are you looking for?</li>
-      <li>What's new with Version 3.4?</li>
+      <li>What's new with Version 3.4</li>
     </ul>
   </div>
   <div class="donts">
