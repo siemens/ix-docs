@@ -32,7 +32,7 @@ sets the theme and color schema:
 
 ```html
 <html
-  data-ix-theme="classic"
+  data-ix-theme="community"
   data-ix-color-schema="dark"
   data-ix-density="compact"
 >
@@ -50,8 +50,7 @@ automatically when the density changes:
 }
 ```
 
-Do not hardcode the values shown below: they are resolved from the installed
-theme and differ between densities.
+Do not hardcode the values shown below. They are resolved from the installed theme and differ between densities.
 
 ## Size {#token-group-sizing-size}
 

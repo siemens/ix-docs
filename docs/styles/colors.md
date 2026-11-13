@@ -25,7 +25,7 @@ CSS `var()` function:
 ```
 
 Choose a token for its semantic role rather than for its current rendered
-color. This allows the classic light and dark color schemes to provide the
+color. This allows the light and dark color schemes to provide the
 appropriate value automatically.
 
 ## Usage guidance

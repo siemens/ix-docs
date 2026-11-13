@@ -1384,33 +1384,62 @@ const sidebars: SidebarsConfig = {
     },
   ],
   styles: [
-    'styles/overview',
-    'styles/colors',
     createTabItem({
-      id: 'styles/typography/index',
-      label: 'Typography',
+      id: 'styles/overview/index',
+      label: 'Overview',
       items: [
         {
-          id: 'styles/typography/guide',
-          label: 'Usage',
+          id: 'styles/overview/guide',
+          label: 'Overview',
         },
         {
-          id: 'styles/typography/code',
+          id: 'styles/overview/code',
           label: 'Code',
         },
       ],
     }),
-    'styles/borders',
-    'styles/shadows',
-    'styles/sizing',
-    'styles/elevation',
-    'styles/animation',
-    'styles/global-styles',
     {
       type: 'category',
       className: 'doc-sidebar-item-bold',
-      label: 'Theme',
+      label: 'Visual tokens',
       items: [
+        'styles/colors',
+        createTabItem({
+          id: 'styles/typography/index',
+          label: 'Typography',
+          items: [
+            {
+              id: 'styles/typography/guide',
+              label: 'Usage',
+            },
+            {
+              id: 'styles/typography/code',
+              label: 'Code',
+            },
+          ],
+        }),
+        'styles/sizing',
+      ],
+      collapsed: true,
+    },
+    {
+      type: 'category',
+      className: 'doc-sidebar-item-bold',
+      label: 'Surfaces & motion',
+      items: [
+        'styles/elevation',
+        'styles/borders',
+        'styles/shadows',
+        'styles/animation',
+      ],
+      collapsed: true,
+    },
+    {
+      type: 'category',
+      className: 'doc-sidebar-item-bold',
+      label: 'Theming & setup',
+      items: [
+        'styles/global-styles',
         'styles/theming/usage-developers',
         'styles/theming/usage-designers',
       ],
