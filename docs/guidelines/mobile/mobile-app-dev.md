@@ -12,27 +12,11 @@ import mobileGif from './mobile.gif';
 
 #
 
-<br/>
+Regardless of the technology there are aspects to take into consideration when you optimize applications for mobile devices:
 
-<table className="table-no-border">
-  <tbody>
-    <tr >
-      <td>
-        <DevicePreview/>
-      </td>
-      <td style={{ verticalAlign: 'top', paddingLeft: '2rem' }}>
-        <br/>
-        Check out our hybrid example application using Ionic, React and Siemens Industrial Experience on the left.
-
-        Regardless of the technology there are aspects to take into consideration when you optimize applications for mobile devices:
-          1. **Responsive and adaptive design** due to different viewport sizes.
-          2. **Interaction through touch**, without access to mouse or keyboard.
-          3. **Device-specific features** like notches or rounded corners.
-      </td>
-    </tr>
-
-  </tbody>
-</table>
+1. **Responsive and adaptive design** due to different viewport sizes.
+2. **Interaction through touch**, without access to mouse or keyboard.
+3. **Device-specific features** like notches or rounded corners.
 
 ## Mobile app development
 
@@ -85,7 +69,37 @@ In the first step, we’re going to create a theme mapping between Siemens Indus
 
 Ionic uses CSS custom properties (variables), just like Siemens Industrial Experience does. This makes is easy to map between the two theming systems.
 
-Here is an example of a default theme mapping: [Repository Link](https://github.com/siemens/ix/blob/main/packages/ionic-test-app/src/theme/variables.css).
+Here is an example of a default theme mapping:
+
+```css
+:root body[class*='theme-'] {
+  --ion-background-color: var(--si-sys-color-background-0);
+  --ion-text-color: var(--si-sys-color-text-primary);
+  --ion-item-background: var(--si-sys-color-background-0);
+  --ion-toolbar-background: var(--si-sys-color-background-1);
+  --ion-font-family: var(--si-ref-typography-font-family-sans);
+
+  --ion-color-primary: var(--si-sys-color-background-accent);
+  --ion-color-primary-contrast: var(--si-sys-color-text-on-accent);
+  --ion-color-primary-shade: var(--si-sys-color-background-accent-active);
+  --ion-color-primary-tint: var(--si-sys-color-background-accent-hover);
+
+  --ion-color-success: var(--si-sys-color-background-success);
+  --ion-color-success-contrast: var(--si-sys-color-text-on-success);
+  --ion-color-success-shade: var(--si-sys-color-background-success-active);
+  --ion-color-success-tint: var(--si-sys-color-background-success-hover);
+
+  --ion-color-warning: var(--si-sys-color-background-warning);
+  --ion-color-warning-contrast: var(--si-sys-color-text-on-warning);
+  --ion-color-warning-shade: var(--si-sys-color-background-warning-active);
+  --ion-color-warning-tint: var(--si-sys-color-background-warning-hover);
+
+  --ion-color-danger: var(--si-sys-color-background-danger);
+  --ion-color-danger-contrast: var(--si-sys-color-text-on-danger);
+}
+```
+
+Map the remaining Ionic colors (e.g. `secondary`, `medium`, `dark`) the same way to the matching Siemens Industrial Experience tokens.
 
 ### Define safe areas
 
