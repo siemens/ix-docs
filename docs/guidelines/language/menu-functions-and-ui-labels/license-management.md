@@ -507,3 +507,4 @@ Use “basic” product when talking about a simplified or entry-level version o
 - [Time and time zones](../formatting/timezones.mdx)
 - [UI terminology](./ui-terminology.md)
 - [User management](./user-management.md)
+- [Operational emails](../operational-emails/system-and-product-lifecycle-emails/usage.mdx)

@@ -301,3 +301,4 @@ Use "if" for uncertain conditions or user choices, and "when" for inevitable or 
 - [Error messages](../messaging/error-messages.mdx)
 - [Warning messages](../messaging/warning-messages.mdx)
 - [License management](../menu-functions-and-ui-labels/license-management.md)
+- [Localization](../support-and-resources/uxw-localization/overview.md)

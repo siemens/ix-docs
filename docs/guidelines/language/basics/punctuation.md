@@ -182,7 +182,7 @@ Use ellipsis with transitional text to inform users that something is happening 
   </div>
 </div>
 
-They are also sometimes used to show that a new dialog box will open within the UI, e.g. "Print…" or "Save as…", but as this comes with consistency challenges it is slowly being removed from UX writing guidelines.
+They are also sometimes used to show that a new dialog box will open within the UI, e.g. "Print…" or "Save as…", but as this comes with consistency challenges, it is slowly being removed from UX writing guidelines.
 
 <div class="dos-and-donts">
   <div class="dos">
@@ -237,19 +237,19 @@ Remove hyphens for widely understood terms that have evolved beyond needing them
 
 ## Minus sign `−`
 
-Use the proper minus sign (−) rather than a hyphen (-) when expressing negative values or subtraction. In UI contexts such as labels, values or data displays, the minus sign should be used to ensure mathematical clarity. The minus sign should be placed directly before the number with no intervening space except for mathematical operations for readability. See [Formatting of Numbers and percentages](../formatting/numbers.mdx).
+Use the proper minus sign (−) rather than a hyphen (-) when expressing negative values or subtraction. In UI contexts such as labels, values or data displays, the minus sign should be used to ensure mathematical clarity. The minus sign should be placed directly before the number with no intervening space except for mathematical operations for readability. See formatting of [Numbers and percentages](../formatting/numbers.mdx).
 
 <div class="dos-and-donts">
   <div class="dos">
     <ul aria-label="Recommended practices">
-      <li>The temperature dropped to −12°C</li>
+      <li>The temperature dropped to −12 °C</li>
       <li>Balance: −$50.00</li>
       <li>10 − 3 = 7</li>
     </ul>
   </div>
   <div class="donts">
     <ul aria-label="Practices to avoid">
-      <li>The temperature dropped to -12°C (hyphen as minus sign)</li>
+      <li>The temperature dropped to -12 °C (hyphen as minus sign)</li>
       <li>Balance: -$50.00 (hyphen as minus sign)</li>
       <li>10-3=7</li>
     </ul>
@@ -461,7 +461,7 @@ Question marks are appropriate for genuine informational questions, in help text
     <ul aria-label="Recommended practices">
       <li>Need help? Contact support.</li>
       <li>What are you looking for?</li>
-      <li>What's new with Version 3.4?</li>
+      <li>What's new with Version 3.4</li>
     </ul>
   </div>
   <div class="donts">
@@ -538,9 +538,7 @@ Use semi-colons to separate key application features to enhance and contrast the
   <div class="dos">
     <ul aria-label="Recommended practices">
       <li>The system is offline; check your connection.</li>
-      <li>Our app offers real-time plant updates; personalized dashboards; and interactive maps.</li>
       <li>Our app offers real-time plant updates, personalized dashboards and interactive maps.</li>
-      <li>1. Calibrate sensors;<br/>2. Set operating parameters;<br/>3. Start the process.</li>
     </ul>
   </div>
   <div class="donts">
@@ -561,7 +559,7 @@ Use the tilde primarily in technical contexts to indicate approximation and home
       <li>File path: ~/Documents/Projects</li>
       <li>Processing time: ~ 5 minutes</li>
       <li>Processing time: about 5 minutes</li>
-      <li>Temperature range: approximately 20–25°C</li>
+      <li>Temperature range: approximately 20–25 °C</li>
     </ul>
   </div>
   <div class="donts">
