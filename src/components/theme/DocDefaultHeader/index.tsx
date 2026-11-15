@@ -39,7 +39,7 @@ export default function DocDefaultHeader(props: {
   const { description, title, frontMatter, id } = props;
   const { siteConfig } = useDocusaurusContext();
   const pathname = useLocalPathname();
-  const tags = useMemo(() => getPageTags(frontMatter), [frontMatter]);
+  const tags = useMemo(() => getPageTags(frontMatter, id), [frontMatter, id]);
   const hasTags = hasPageTags(tags);
 
   const prompt = useMemo(

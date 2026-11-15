@@ -56,7 +56,7 @@ export default function DocTabsHeader(
     title: string;
     description: string;
     tabs: PropSidebarItemLink[];
-    /** Tags of the page's `index.mdx`, see `sidebars.ts` */
+    /** Tags of the page's `index.mdx`, see `src/lib/page-tags/tabs.ts` */
     indexTags?: PageTagsData;
   }>
 ) {
