@@ -103,7 +103,7 @@ breaking-change:
 ```
 
 - Property and event tags of the API tables come from the [siemens/ix](https://github.com/siemens/ix) JSDoc: `@since 6.0.0` and `@breaking-change 6.0.0 <summary>` (the summary is the tooltip).
-- All `since` and breaking change tags are managed manually: remove outdated `since` and `breaking-change` entries when starting a new major. Outdated property and event tags are removed in siemens/ix.
+- All `since` and breaking change tags are managed manually: remove outdated component-level `since` and `breaking-change` frontmatter entries when starting a new major. Outdated property and event tags should be removed in siemens/ix.
 - Breaking change tags link to the component's section of the major's migration guide: the heading id `{#<doc folder>}`, e.g. `#### App menu {#application-menu}`. Add it for every component with breaking changes, the build fails on missing anchors (`onBrokenAnchors`).
 
 ### Using Examples from an Open siemens/ix Pull Request
