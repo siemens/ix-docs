@@ -204,6 +204,10 @@ ix-dropdown {
   border-radius: var(--ifm-alert-border-radius);
 }
 
+ix-badge.outline {
+  outline: none;
+}
+
 .table-full-width {
   table {
     width: 100% !important;
@@ -214,5 +218,29 @@ ix-dropdown {
 .table-column-equal-width {
   table {
     table-layout: fixed;
+  }
+}
+
+.table-migration-changelog {
+  overflow-x: auto;
+
+  table {
+    table-layout: fixed;
+    min-width: 36rem;
+  }
+
+  th:nth-child(1),
+  td:nth-child(1) {
+    width: 9rem;
+  }
+
+  th:nth-child(2),
+  td:nth-child(2) {
+    width: 8rem;
+  }
+
+  th:nth-child(3),
+  td:nth-child(3) {
+    overflow-wrap: anywhere;
   }
 }

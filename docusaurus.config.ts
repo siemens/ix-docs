@@ -170,7 +170,11 @@ const config: Config = {
         redirects: [
           {
             from: '/docs/migration/uxt',
-            to: '/docs/home/migration/uxt',
+            to: '/docs/home/migration/migration-overview',
+          },
+          {
+            from: '/docs/home/migration/migrationoverview',
+            to: '/docs/home/migration/migration-overview',
           },
           {
             from: '/docs/home/theming/usage-developers',
