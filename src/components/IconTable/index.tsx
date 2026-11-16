@@ -11,6 +11,7 @@ import { IxIcon } from "@siemens/ix-react";
 import styles from "./styles.module.css";
 import {
   iconAlarm,
+  iconAlarmFilled,
   iconAppMenu,
   iconApps,
   iconCogwheel,
@@ -26,8 +27,14 @@ import {
   iconTrashcan,
   iconUpload,
   iconUser,
+  iconUserFilled,
   iconWarning,
+  iconWarningOctagon,
   iconWarningRhomb,
+  iconVideoCamera,
+  iconVideoCameraFilled,
+  iconPin,
+  iconPinFilled
 } from "@siemens/ix-icons/icons";
 
 const IconTable: React.FC<{
@@ -42,7 +49,7 @@ const IconTable: React.FC<{
             <tr key={item.name}>
               <td className={styles.IconCell}>
                 <a href={href}>
-                  <IxIcon name={item.icon} color={item.color ?? "color-std-text"} />
+                  <IxIcon name={item.icon} color={item.color ?? "--si-sys-color-text-primary"} />
                 </a>
               </td>
               <td className={styles.NameCell}>
@@ -102,42 +109,133 @@ export const IconExamplesClarity = [
   },
 ];
 
-export const IconExamplesStatus = [
+export const IconExamplesFilled = [
+  {
+    icon: iconVideoCamera,
+    name: "video-camera",
+    description: "Standard",
+  },
+  {
+    icon: iconVideoCameraFilled,
+    name: "video-camera-filled",
+    description: "Filled",
+  },
+  {
+    icon: iconUser,
+    name: "user",
+    description: "Standard",
+  },
+  {
+    icon: iconUserFilled,
+    name: "user-filled",
+    description: "Filled",
+  },
+  {
+    icon: iconPin,
+    name: "pin",
+    description: "Standard",
+  },
+  {
+    icon: iconPinFilled,
+    name: "pin-filled",
+    description: "Filled",
+  },
   {
     icon: iconAlarm,
-    color: "color-alarm",
     name: "alarm",
-    description: "Use for hazardous states",
+    description: "Standard",
+  },
+  {
+    icon: iconAlarmFilled,
+    name: "alarm-filled",
+    description: "Filled",
+  },
+];
+
+export const IconExamplesStatus = [
+  {
+    icon: iconWarningOctagon,
+    color: "--si-sys-color-text-critical",
+    name: "warning-octagon",
+    description: (
+      <>
+        <strong>Critical</strong>
+        <br />
+        Use for states beyond danger
+      </>
+    ),
+  },
+  {
+    icon: iconAlarm,
+    color: "--si-sys-color-text-danger",
+    name: "alarm",
+    description: (
+      <>
+        <strong>Danger</strong>
+        <br />
+        Use for dangerous states
+      </>
+    ),
   },
   {
     icon: iconError,
-    color: "color-alarm",
+    color: "--si-sys-color-text-danger",
     name: "error",
-    description: "Use for error states",
-  },
-  {
-    icon: iconWarningRhomb,
-    color: "color-critical",
-    name: "warning-rhomb",
-    description: "Use for critical states",
+    description: (
+      <>
+        <strong>Error</strong>
+        <br />
+        Use for error states
+      </>
+    ),
   },
   {
     icon: iconWarning,
-    color: "color-warning",
+    color: "--si-sys-color-text-warning",
     name: "warning",
-    description: "Use for warning states",
+    description: (
+      <>
+        <strong>Warning</strong>
+        <br />
+        Use for warning states
+      </>
+    ),
+  },
+  {
+    icon: iconWarningRhomb,
+    color: "--si-sys-color-text-caution",
+    name: "warning-rhomb",
+    description: (
+      <>
+        <strong>Caution</strong>
+        <br />
+        Use for states with low severity
+      </>
+    ),
   },
   {
     icon: iconSuccess,
-    color: "color-success",
+    color: "--si-sys-color-text-success",
     name: "success",
-    description: "Use for success states",
+    description: (
+      <>
+        <strong>Success</strong>
+        <br />
+        Use for success states
+      </>
+    ),
   },
   {
     icon: iconInfo,
-    color: "color-info",
+    color: "--si-sys-color-text-information",
     name: "info",
-    description: "Use for info states",
+    description: (
+      <>
+        <strong>Information</strong>
+        <br />
+        Use for info states
+      </>
+    ),
   },
 ];
 
@@ -172,6 +270,6 @@ export const IconExamplesMenu = [
   {
     icon: iconMoreMenu,
     name: "more-menu",
-    description: "Use for additional options, e.g. in toolbars",
+    description: "Use for overflow and additional options, e.g. in toolbars",
   },
 ];

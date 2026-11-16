@@ -29,6 +29,6 @@
     "@siemens/ix-react": "<VERSION>",
     "@siemens/ix-aggrid": "<VERSION>",
     "@siemens/ix-echarts": "latest",
-    "@siemens/ix-icons": "latest"
+    "@siemens/ix-icons": "<ICONS_VERSION>"
   }
 }

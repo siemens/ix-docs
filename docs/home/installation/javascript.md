@@ -62,7 +62,7 @@ In the following section we will describe how you can build an application with 
 `main.js`
 
 ```javascript
-import '@siemens/ix/dist/siemens-ix/siemens-ix.css';
+import '@siemens/ix/css/default.css';
 import { defineCustomElements } from '@siemens/ix/loader';
 import { defineCustomElements as defineIxIconCustomElement } from '@siemens/ix-icons/loader';
 
@@ -71,3 +71,5 @@ import { defineCustomElements as defineIxIconCustomElement } from '@siemens/ix-i
   defineCustomElements();
 })();
 ```
+
+The default stylesheet includes the Classic theme, foundation and common utilities for button groups, links, table classes and typography. Foundation applies the SiemensSans Pro font stack to `[data-ix-theme]` and sets body typography, text color, background and document-wide scrollbar styles. The default stylesheet does not include a reset, body margin reset, the complete utility layer or legacy native form styles. See [Global styles](/docs/styles/global-styles) for the optional entry points.

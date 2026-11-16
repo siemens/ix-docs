@@ -13,7 +13,7 @@
   padding: 0px;
   gap: 1rem;
 
-  color: var(--theme-color-std-text);
+  color: var(--si-sys-color-text-primary);
 
   min-width: 16rem;
   width: calc(50% - 32px);
@@ -35,15 +35,15 @@
   }
 
   &:is(div) .GuidingPrincipleCard__Image{
-    background-color: var(--theme-color-2);
+    background-color: var(--si-sys-color-background-1);
   }
 
   &:is(a) .GuidingPrincipleCard__Image{
-    background-color: var(--theme-color-primary);
+    background-color: var(--si-sys-color-background-accent);
 
     svg, svg path, ix-icon, img{
-      fill: var(--theme-color-primary--contrast);
-      color: var(--theme-color-primary--contrast);
+      fill: var(--si-sys-color-text-on-accent);
+      color: var(--si-sys-color-text-on-accent);
       width: 4rem;
       height: 4rem;
     }
@@ -51,8 +51,7 @@
 
   &:is(a):hover .GuidingPrincipleCard__Image {
     transition: ease-in-out 0.15s;
-    background-color: var(--theme-color-primary--hover);
+    background-color: var(--si-sys-color-background-accent-hover);
   }
 
 }
-

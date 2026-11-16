@@ -6,39 +6,15 @@
  * This source code is licensed under the MIT license found in the
  * LICENSE file in the root directory of this source tree.
  */
-import clsx from 'clsx';
 import './DevicePreview.scss';
-import useBaseUrl from '@docusaurus/useBaseUrl';
 
-const DevicePreview = (props: {
-  children: any;
-  image?: string;
-  style?: any;
-}) => {
-  const theme = 'brand';
-  const url = useBaseUrl('/demo/v2/preview/mobile/');
-
+const DevicePreview = (props: { image: string; style?: any }) => {
   return (
     <figure className="DevicePreview" style={props.style}>
-      <div
-        className={clsx('Content', {
-          NoUI: !!props.image,
-        })}
-      >
-        {props.image ? (
-          <img src={props.image} alt="Device preview" />
-        ) : (
-          <iframe
-            src={`${url}?preview-mode=ios&preview-theme=${theme}#/`}
-          ></iframe>
-        )}
+      <div className="Content">
+        <img src={props.image} alt="Device preview" />
       </div>
-      <div
-        className={clsx('Frame', {
-          Light: theme.includes('-light'),
-          NoUI: !!props.image,
-        })}
-      ></div>
+      <div className="Frame"></div>
     </figure>
   );
 };

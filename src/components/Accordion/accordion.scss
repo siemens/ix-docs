@@ -12,14 +12,14 @@
 }
 
 .Accordion.Accordion__Last {
-  border-block-end: solid 1px var(--theme-color-contrast-bdr);
+  border-block-end: solid 1px var(--si-sys-color-border-1);
 }
 
 .Accordion.Accordion__Expanded {
-  background-color: var(--theme-color-component-1);
+  background-color: var(--si-sys-color-background-1);
 
   .Accordion__Header {
-    border-block-start-color: var(--theme-color-dynamic);
+    border-block-start-color: var(--si-sys-color-border-accent-hover);
   }
 }
 
@@ -34,26 +34,26 @@
   padding: 1.5rem;
   width: 100%;
   min-height: 5.125rem;
-  background-color: var(--theme-color-0);
-  border-block-start: 1px solid var(--theme-color-contrast-bdr);
+  background-color: transparent;
+  border-block-start: 1px solid var(--si-sys-color-border-1);
 
   &:focus {
     outline: none;
   }
 
   &:focus-visible {
-    outline: solid 1px var(--theme-color-focus-bdr);
+    outline: solid 1px var(--si-sys-color-effects-focus);
     outline-offset: -4px;
   }
 
   &:hover {
-    border-block-start-color: var(--theme-color-dynamic);
-    background-color: var(--theme-color-ghost--selected-hover);
+    border-block-start-color: var(--si-sys-color-border-accent-hover);
+    background-color: var(--si-sys-color-background-hover);
   }
 
   &:active {
-    border-block-start-color: var(--theme-color-dynamic);
-    background-color: var(--theme-color-ghost--selected-active);
+    border-block-start-color: var(--si-sys-color-border-accent-hover);
+    background-color: var(--si-sys-color-background-selected);
   }
 }
 

@@ -10,16 +10,17 @@ doc-type: 'tab-item'
 2. Weekday labels
 3. Week numbers
 4. Selected date or date range
-5. Confirm [button](../button)
+5. Confirmation footer (where applicable)
 
 ## Options
 
 - **Value**: Defines the selected date or date range.
 - **Single selection**: By default, users select date ranges. Use single selection to allow selecting a single date.
-- **Format**: Define the date format that determines how dates are displayed, e.g. `yyyy/LL/dd` for `2024/06/15`.
+- **Format**: Define the date format that determines how dates are displayed, e.g. `yyyy/LL/dd` for `2024/06/15`. See options [here](https://moment.github.io/luxon/#/formatting?id=table-of-tokens)
 - **Week start**: Define which day the week starts on. By default, it will be defined based on the locale.
 - **Week numbers**: Show calendar weeks on the left side of the calendar when needed for reference.
 - **Min and max dates**: Restrict the selectable date range by defining the earliest and latest dates users can choose.
+- **Require confirmation**: Define if selected dates are applied directly after date/date range selection or on clicking the confirm button.
 - **Corners**: By default, date pickers show rounded corners to be consistent with the [dropdown](../dropdown). Use straight, left or right corners to combine with other components.
 
 ## Behavior in context
@@ -31,6 +32,7 @@ doc-type: 'tab-item'
   - **Arrow keys**: Move through dates in the calendar.
   - **Enter or click**: Select the highlighted date.
   - **Escape**: Close date pickers when used in a dropdown. If header dropdown for month/year selection is open, it closes first.
+- **Confirmation**: With require confirmation, clicking the cancel button or outside the date picker, or pressing the `Escape` key reverts any pending selections. The done and confirm buttons are disabled while the selection is incomplete (e.g. a range with only a start date) or unchanged from the applied value.
 
 ## States
 

@@ -14,7 +14,7 @@
   padding: 0.15rem 0.25rem;
   align-items: center;
   justify-content: flex-start;
-  color: var(--theme-color-soft-text);
+  color: var(--si-sys-color-text-secondary);
   gap: 0.25rem;
   white-space: nowrap;
   cursor: pointer;
@@ -40,13 +40,13 @@
 }
 
 .Button:hover {
-  background-color: var(--theme-color-ghost--hover);
+  background-color: var(--si-sys-color-background-hover);
 }
 
 .Button:active {
-  background-color: var(--theme-color-ghost--active);
+  background-color: var(--si-sys-color-background-selected);
 }
 
 .Button:focus-visible {
-  outline: 1px solid var(--theme-color-focus-bdr);
+  outline: 1px solid var(--si-sys-color-effects-focus);
 }
