@@ -3,13 +3,13 @@ description: 'PNPM & Turbo Cache'
 runs:
   using: 'composite'
   steps:
-    - uses: pnpm/action-setup@a7487c7e89a18df4991f7f222e4898a00d66ddda
+    - uses: pnpm/action-setup@a7487c7e89a18df4991f7f222e4898a00d66ddda # v4.1.0
       name: Install pnpm
       with:
         run_install: false
 
     - name: Setup Node.js environment
-      uses: actions/setup-node@v3
+      uses: actions/setup-node@3235b876344d2a9aa001b8d1453c930bba69e610 # v3.9.1
       with:
         node-version: 22
         cache: 'pnpm'
@@ -19,7 +19,7 @@ runs:
         echo "STORE_PATH=$(pnpm store path --silent)" >> $GITHUB_ENV
       shell: bash
 
-    - uses: actions/cache@v3
+    - uses: actions/cache@6f8efc29b200d32929f49075959781ed54ec270c # v3.5.0
       name: Setup pnpm cache
       with:
         path: ${{ env.STORE_PATH }}
@@ -28,7 +28,7 @@ runs:
           ${{ runner.os }}-pnpm-store-
 
     - name: Cache turbo build setup
-      uses: actions/cache@v3
+      uses: actions/cache@6f8efc29b200d32929f49075959781ed54ec270c # v3.5.0
       with:
         path: .turbo
         key: ${{ runner.os }}-turbo-${{ github.sha }}

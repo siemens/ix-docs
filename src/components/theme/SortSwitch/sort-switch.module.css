@@ -21,19 +21,19 @@
   gap: 4px;
   flex: 1 0 0;
   border-radius: 4px;
-  border: 1px solid var(--theme-color-x-weak-bdr);
+  border: 1px solid var(--si-sys-color-border-4);
   cursor: pointer;
-  color: var(--theme-color-std-text);
+  color: var(--si-sys-color-text-primary);
 }
 
 .SortSwitchButton.Active {
-  background: var(--theme-color-2);
+  background: var(--si-sys-color-background-1);
 }
 
 .SortSwitchButton:hover {
-  background: var(--theme-color-1--hover);
+  background: var(--si-sys-color-background-hover);
 }
 
 .SortSwitchButton:active {
-  background: var(--theme-color-1--active);
+  background: var(--si-sys-color-background-selected);
 }

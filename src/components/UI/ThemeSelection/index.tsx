@@ -38,7 +38,7 @@ type ThemeSelectionProps = {
 };
 
 export function ThemeSelection(props: Readonly<ThemeSelectionProps>) {
-  const { playgroundTheme: activeTheme, setPlaygroundTheme: setTheme } =
+  const { playgroundTheme, setPlaygroundTheme: setTheme } =
     usePlaygroundTheme();
   const context = useDocusaurusContext();
   const [availableThemes] = useState(() => {
@@ -49,6 +49,9 @@ export function ThemeSelection(props: Readonly<ThemeSelectionProps>) {
 
     return themes;
   });
+  const activeTheme = availableThemes.includes(playgroundTheme)
+    ? playgroundTheme
+    : availableThemes[0];
 
   const [ref, setRef] = useState<HTMLButtonElement>(null);
   const displayTheme = toUppercase(activeTheme);

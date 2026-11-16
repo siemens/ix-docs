@@ -7,7 +7,7 @@
  * LICENSE file in the root directory of this source tree.
  */
 .uc-embed .uc-embed-container {
-  background-color: var(--theme-color-0) !important;
+  background-color: transparent !important;
 }
 
 .uc-embed .uc-embed-list-item,.uc-embed-list-headline-description {
@@ -19,9 +19,9 @@
 }
 
 .uc-embed .uc-embed-opened-button, .uc-embed-collapsed-button {
-  background-color: var(--theme-color-3) !important;
+  background-color: var(--si-sys-color-background-2) !important;
 }
 
 .uc-embed .uc-embed-opened-button-content, .uc-embed-collapsed-button-content {
-  color: var(--theme-color-std-text);
+  color: var(--si-sys-color-text-primary);
 }

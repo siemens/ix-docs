@@ -4,7 +4,7 @@
 
 #__docusaurus {
   [class*='toggleButton'] {
-    color: var(--theme-color-std-text);
+    color: var(--si-sys-color-text-primary);
   }
 
   .navbar__items:not(.navbar__items--right) {
@@ -25,12 +25,12 @@
       top: calc(100% + 0.6rem);
       height: 2px;
       width: 100%;
-      background-color: var(--theme-color-dynamic);
+      background-color: var(--si-sys-color-background-accent-hover);
     }
   }
 
   .navbar {
-    border-bottom: 1px solid var(--theme-color-x-weak-bdr);
+    border-bottom: 1px solid var(--si-sys-color-border-4);
     .navbar__inner {
       padding: 0 2rem;
     }
@@ -105,12 +105,12 @@
   .icon-link-github::before {
     mask-image: url('../../static/logos/github-mark.svg');
     width: 1.25rem;
-    color: var(--theme-color-std-text);
+    color: var(--si-sys-color-text-primary);
   }
 
   .separator {
     width: 1px;
     height: 1.75rem;
-    background: var(--theme-color-weak-bdr);
+    background: var(--si-sys-color-border-4);
   }
 }
