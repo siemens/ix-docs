@@ -30,39 +30,39 @@ Pay particular attention to **design tokens, status variants and icon sizing** w
 
 V6 replaces legacy design tokens with **Siemens Design Language** system tokens. Updating token names alone may not preserve the previous appearance: token values and formats have changed, some tokens and typography classes have been removed, and affected components now use 20px icons instead of 24px. Use the sections below to update custom styles and review sizing changes.
 
-[Replaced legacy tokens with Siemens Design Language tokens](https://github.com/siemens/ix/blob/main/BREAKING_CHANGES/v6.md#siemens-design-tokens)
+[Replaced legacy tokens with Siemens Design Language tokens](https://github.com/siemens/ix/blob/main/BREAKING_CHANGES/v6.md#replaced-legacy-tokens-with-siemens-design-language-tokens)
 
 ![Token changes](https://www.figma.com/design/wEptRgAezDU1z80Cn3eZ0o/iX-Documentation-illustrations?node-id=8733-37&t=MXfjpPOICnCLiEZ3-4)
 
 #### Color tokens
 
-- [Changed shadow and typography tokens to contain complete `box-shadow` and `font` values](https://github.com/siemens/ix/blob/main/BREAKING_CHANGES/v6.md#token-value-shapes)
-- [Changed icon and component color properties to use complete token names](https://github.com/siemens/ix/blob/main/BREAKING_CHANGES/v6.md#icon-and-component-color-properties)
+- [Changed shadow and typography tokens to contain complete `box-shadow` and `font` values](https://github.com/siemens/ix/blob/main/BREAKING_CHANGES/v6.md#changed-shadow-and-typography-tokens-to-contain-complete-box-shadow-and-font-values)
+- [Changed icon and component color properties to use complete token names](https://github.com/siemens/ix/blob/main/BREAKING_CHANGES/v6.md#changed-icon-and-component-color-properties-to-use-complete-token-names)
 - [Removed legacy theme exports](https://github.com/siemens/ix/blob/main/BREAKING_CHANGES/v6.md#removed-legacy-theme-exports)
 - [Removed deprecated component tokens](https://github.com/siemens/ix/blob/main/BREAKING_CHANGES/v6.md#removed-deprecated-component-tokens)
-- [Removed automatic token prefixing from ECharts computed CSS properties](https://github.com/siemens/ix/blob/main/BREAKING_CHANGES/v6.md#echarts-computed-css-properties)
+- [Removed automatic token prefixing from ECharts computed CSS properties](https://github.com/siemens/ix/blob/main/BREAKING_CHANGES/v6.md#removed-automatic-token-prefixing-from-echarts-computed-css-properties)
 
 #### Typography
 
-- [Changed the default monospace font family](https://github.com/siemens/ix/blob/main/BREAKING_CHANGES/v6.md#monospace-font-family)
-- [Renamed `ix-typography` `textColor` values](https://github.com/siemens/ix/blob/main/BREAKING_CHANGES/v6.md#ix-typography-textcolor-rename)
-- [Removed unsupported typography utility classes](https://github.com/siemens/ix/blob/main/BREAKING_CHANGES/v6.md#typography-utility-classes)
+- [Changed the default monospace font family](https://github.com/siemens/ix/blob/main/BREAKING_CHANGES/v6.md#changed-the-default-monospace-font-family)
+- [Renamed `ix-typography` `textColor` values](https://github.com/siemens/ix/blob/main/BREAKING_CHANGES/v6.md#renamed-ix-typography-textcolor-values)
+- [Removed unsupported typography utility classes](https://github.com/siemens/ix/blob/main/BREAKING_CHANGES/v6.md#removed-unsupported-typography-utility-classes)
 
 #### Icon size
 
-- [Changed the default icon size to 20px](https://github.com/siemens/ix/blob/main/BREAKING_CHANGES/v6.md#default-icon-size-is-20)
+- [Changed the default icon size to 20px](https://github.com/siemens/ix/blob/main/BREAKING_CHANGES/v6.md#changed-the-default-icon-size-to-20px)
 - Affected components are: [application header](../../../components/application-header/index.mdx) (overflow button), [blind](../../../components/blind/index.mdx), [breadcrumb](../../../components/breadcrumb/index.mdx), [button](../../../components/button/index.mdx), [card list](../../../components/card-list/index.mdx), [checkbox](../../../components/checkbox/index.mdx), [chip](../../../components/chip/index.mdx), [content header](../../../components/content-header/index.mdx) (back button), [date dropdown](../../../components/date-dropdown/index.mdx), [dropdown](../../../components/dropdown/index.mdx), [dropdown button](../../../components/dropdown-button/index.mdx), [event list](../../../components/event-list/index.mdx), [group](../../../components/group/index.mdx), [icon button](../../../components/icon-button/index.mdx), [icon toggle button](#icon-toggle-button), [date time input](../../../components/input-date-time/index.mdx), [date time picker](../../../components/date-time-picker/index.mdx), [key value](../../../components/key-value/index.mdx), [menu, menu item and menu category](../../../components/application-menu/index.mdx), [message bar](../../../components/messagebar/index.mdx), [popover](../../../components/popover/index.mdx), [radio](../../../components/radio/index.mdx), [range field](../../../components/range-field/index.mdx) (arrow between fields), [split button](../../../components/split-button/index.mdx), [toast](../../../components/toast/index.mdx) (type and custom icons), [tree](../../../components/tree/index.mdx), [upload](../../../components/upload/index.mdx), [workflow](../../../components/workflow/index.mdx). Other components and contexts can retain different icon sizes.
 
 #### Sizing tokens
 
-- [Changed the `ix-progress-indicator` circular `sm` size to 20px](https://github.com/siemens/ix/blob/main/BREAKING_CHANGES/v6.md#ix-progress-indicator-size-scale)
-- [Renamed and remapped `ix-spinner` sizes](https://github.com/siemens/ix/blob/main/BREAKING_CHANGES/v6.md#ix-spinner-size-scale)
-- [Replaced common border, radius, and focus tokens](https://github.com/siemens/ix/blob/main/BREAKING_CHANGES/v6.md#common-border-radius-and-focus-overrides)
+- [Changed the `ix-progress-indicator` circular `sm` size to 20px](https://github.com/siemens/ix/blob/main/BREAKING_CHANGES/v6.md#changed-the-ix-progress-indicator-circular-sm-size-to-20px)
+- [Renamed and remapped `ix-spinner` sizes](https://github.com/siemens/ix/blob/main/BREAKING_CHANGES/v6.md#renamed-and-remapped-ix-spinner-sizes)
+- [Replaced common border, radius, and focus tokens](https://github.com/siemens/ix/blob/main/BREAKING_CHANGES/v6.md#replaced-common-border-radius-and-focus-tokens)
 - [Removed common dimension and typography tokens](https://github.com/siemens/ix/blob/main/BREAKING_CHANGES/v6.md#removed-common-dimension-and-typography-tokens)
 
 #### Community theme
 
-- [Renamed the Classic theme to Community](https://github.com/siemens/ix/blob/main/BREAKING_CHANGES/v6.md#classic-theme-renamed-to-community)
+- [Renamed the Classic theme to Community](https://github.com/siemens/ix/blob/main/BREAKING_CHANGES/v6.md#renamed-the-classic-theme-to-community)
 
 :::tip
 
@@ -90,15 +90,15 @@ V6 renames status variants, adds missing variants and aligns their colors and ic
 
 </div>
 
-- [Changed card-family status variants, `outline`, and `clickable`](https://github.com/siemens/ix/blob/main/BREAKING_CHANGES/v6.md#card-family-status-variants-outline-and-clickable)
-- [Changed `ix-blind` status variants and `outline`](https://github.com/siemens/ix/blob/main/BREAKING_CHANGES/v6.md#ix-blind-status-variants-and-outline)
-- [Changed chip, pill, and badge status variants](https://github.com/siemens/ix/blob/main/BREAKING_CHANGES/v6.md#chip-pill-and-badge-status-variant-rename)
-- [Changed `ix-message-bar` status `type` values](https://github.com/siemens/ix/blob/main/BREAKING_CHANGES/v6.md#ix-message-bar-status-type-rename)
-- [Changed `ix-flip-tile` status `variant` values](https://github.com/siemens/ix/blob/main/BREAKING_CHANGES/v6.md#ix-flip-tile-status-variant-rename)
-- [Changed `ix-kpi` status `state` values](https://github.com/siemens/ix/blob/main/BREAKING_CHANGES/v6.md#ix-kpi-status-state-rename)
-- [Changed `ix-toast` status `type` values and helpers](https://github.com/siemens/ix/blob/main/BREAKING_CHANGES/v6.md#ix-toast-status-type-rename)
-- [Changed `ix-progress-indicator` status values](https://github.com/siemens/ix/blob/main/BREAKING_CHANGES/v6.md#ix-progress-indicator-status-rename)
-- [Changed `showMessage` status helpers](https://github.com/siemens/ix/blob/main/BREAKING_CHANGES/v6.md#showmessage-status-helper-rename)
+- [Changed card-family status variants, `outline`, and `clickable`](https://github.com/siemens/ix/blob/main/BREAKING_CHANGES/v6.md#changed-card-family-status-variants-outline-and-clickable)
+- [Changed `ix-blind` status variants and `outline`](https://github.com/siemens/ix/blob/main/BREAKING_CHANGES/v6.md#changed-ix-blind-status-variants-and-outline)
+- [Changed chip, pill, and badge status variants](https://github.com/siemens/ix/blob/main/BREAKING_CHANGES/v6.md#changed-chip-pill-and-badge-status-variants)
+- [Changed `ix-message-bar` status `type` values](https://github.com/siemens/ix/blob/main/BREAKING_CHANGES/v6.md#changed-ix-message-bar-status-type-values)
+- [Changed `ix-flip-tile` status `variant` values](https://github.com/siemens/ix/blob/main/BREAKING_CHANGES/v6.md#changed-ix-flip-tile-status-variant-values)
+- [Changed `ix-kpi` status `state` values](https://github.com/siemens/ix/blob/main/BREAKING_CHANGES/v6.md#changed-ix-kpi-status-state-values)
+- [Changed `ix-toast` status `type` values and helpers](https://github.com/siemens/ix/blob/main/BREAKING_CHANGES/v6.md#changed-ix-toast-status-type-values-and-helpers)
+- [Changed `ix-progress-indicator` status values](https://github.com/siemens/ix/blob/main/BREAKING_CHANGES/v6.md#changed-ix-progress-indicator-status-values)
+- [Changed `showMessage` status helpers](https://github.com/siemens/ix/blob/main/BREAKING_CHANGES/v6.md#changed-showmessage-status-helpers)
 
 
 ### Appearance and interaction changes
@@ -136,7 +136,7 @@ Date and time components now show Confirm and Cancel buttons when confirmation i
 
 V6 separates component foundation styles from optional global and legacy styles, giving applications more control over document-wide styling. Update CSS and Sass imports to the supported public entry points, explicitly include any global styles you still need, and replace removed Sass modules, mixins, and shadow aliases.
 
-- [Changed global CSS and Sass entry points](https://github.com/siemens/ix/blob/main/BREAKING_CHANGES/v6.md#global-css-and-sass-entry-points)
+- [Changed global CSS and Sass entry points](https://github.com/siemens/ix/blob/main/BREAKING_CHANGES/v6.md#changed-global-css-and-sass-entry-points)
 - [Removed legacy Sass modules](https://github.com/siemens/ix/blob/main/BREAKING_CHANGES/v6.md#removed-legacy-sass-modules)
 - [Removed Sass mixins](https://github.com/siemens/ix/blob/main/BREAKING_CHANGES/v6.md#removed-sass-mixins)
 - [Removed shadow utility aliases](https://github.com/siemens/ix/blob/main/BREAKING_CHANGES/v6.md#removed-shadow-utility-aliases)
@@ -173,7 +173,7 @@ Standard/root distribution, the custom-elements entry point `@siemens/ix/compone
 
 The published Stencil collection output, using the `collection` / `collection:main` package entries and `dist/collection`, retains bare imports for these runtime libraries. Consumers relying on this Stencil collection must explicitly install **all three packages** listed above, plus the required `@siemens/ix-icons` peer. These four packages are not optional for collection users.
 
-[Declared Stencil collection runtime dependencies as optional peers](https://github.com/siemens/ix/blob/main/BREAKING_CHANGES/v6.md#stencil-collection-optional-peers)
+[Declared Stencil collection runtime dependencies as optional peers](https://github.com/siemens/ix/blob/main/BREAKING_CHANGES/v6.md#declared-stencil-collection-runtime-dependencies-as-optional-peers)
 
 #### Installation
 
@@ -197,17 +197,17 @@ yarn add @floating-ui/dom @siemens/ix-icons@4.0.0 @stencil/core luxon
 
 | Package | Supported version | Migration details |
 | :--- | :--- | :--- |
-| `vue` | `^3.5.0` | [Vue requirement](https://github.com/siemens/ix/blob/main/BREAKING_CHANGES/v6.md#vue-35-requirement) |
-| `@angular/core`, `@angular/forms` | `>=21.2.25`; TypeScript `>=5.9 <6.1` for Angular 21 | [Angular requirement](https://github.com/siemens/ix/blob/main/BREAKING_CHANGES/v6.md#angular-21-requirement) |
-| `echarts` | `^6.1.0` | [ECharts requirement](https://github.com/siemens/ix/blob/main/BREAKING_CHANGES/v6.md#echarts-6-requirement) |
+| `vue` | `^3.5.0` | [Vue requirement](https://github.com/siemens/ix/blob/main/BREAKING_CHANGES/v6.md#vue-requirement) |
+| `@angular/core`, `@angular/forms` | `>=21.2.25`; TypeScript `>=5.9 <6.1` for Angular 21 | [Angular requirement](https://github.com/siemens/ix/blob/main/BREAKING_CHANGES/v6.md#angular-requirement) |
+| `echarts` | `^6.1.0` | [ECharts requirement](https://github.com/siemens/ix/blob/main/BREAKING_CHANGES/v6.md#echarts-requirement) |
 
 </div>
 
 #### Wrapper types and hydration
 
-- [Changed untyped React callback values to `unknown`](https://github.com/siemens/ix/blob/main/BREAKING_CHANGES/v6.md#react-callback-types)
-- [Changed untyped Vue modal close reasons to `unknown`](https://github.com/siemens/ix/blob/main/BREAKING_CHANGES/v6.md#vue-modal-types)
-- [Replaced the hydration class with an attribute](https://github.com/siemens/ix/blob/main/BREAKING_CHANGES/v6.md#hydration-class-changed-to-attribute)
+- [Changed untyped React callback values to `unknown`](https://github.com/siemens/ix/blob/main/BREAKING_CHANGES/v6.md#changed-untyped-react-callback-values-to-unknown)
+- [Changed untyped Vue modal close reasons to `unknown`](https://github.com/siemens/ix/blob/main/BREAKING_CHANGES/v6.md#changed-untyped-vue-modal-close-reasons-to-unknown)
+- [Replaced the hydration class with an attribute](https://github.com/siemens/ix/blob/main/BREAKING_CHANGES/v6.md#replaced-the-hydration-class-with-an-attribute)
 
 ### Slots in Figma
 
@@ -275,7 +275,7 @@ The following tables combine component-specific code and Figma changes, with com
 
 | Type | Details | Description |
 | :--- | :--- | :--- |
-| <IxBadge type="label" label="Changed" variant="caution" icon={iconCode} /> | <IxLinkButton url="https://github.com/siemens/ix/blob/main/BREAKING_CHANGES/v6.md#application-switch-target-behavior" icon="external" aria-label="View code change" title="View code change">Code</IxLinkButton> | Changed target behavior to use `noopener,noreferrer` for `_blank` and named targets; named targets no longer guarantee tab reuse |
+| <IxBadge type="label" label="Changed" variant="caution" icon={iconCode} /> | <IxLinkButton url="https://github.com/siemens/ix/blob/main/BREAKING_CHANGES/v6.md#changed-target-behavior-to-use-noopenernoreferrer-for-_blank-and-named-targets" icon="external" aria-label="View code change" title="View code change">Code</IxLinkButton> | Changed target behavior to use `noopener,noreferrer` for `_blank` and named targets; named targets no longer guarantee tab reuse |
 
 </div>
 
@@ -285,7 +285,7 @@ The following tables combine component-specific code and Figma changes, with com
 
 | Type | Details | Description |
 | :--- | :--- | :--- |
-| <IxBadge type="label" label="Changed" variant="caution" icon={iconCode} /> | <IxLinkButton url="https://github.com/siemens/ix/blob/main/BREAKING_CHANGES/v6.md#content-header-text-wraps-by-default" icon="external" aria-label="View code change" title="View code change">Code</IxLinkButton> | Enabled text wrapping by default; set `text-overflow="ellipsis"` to retain single-line truncation |
+| <IxBadge type="label" label="Changed" variant="caution" icon={iconCode} /> | <IxLinkButton url="https://github.com/siemens/ix/blob/main/BREAKING_CHANGES/v6.md#enabled-text-wrapping-by-default" icon="external" aria-label="View code change" title="View code change">Code</IxLinkButton> | Enabled text wrapping by default; set `text-overflow="ellipsis"` to retain single-line truncation |
 
 </div>
 
@@ -297,7 +297,7 @@ The following tables combine component-specific code and Figma changes, with com
 
 | Type | Details | Description |
 | :--- | :--- | :--- |
-| <IxBadge type="label" label="Changed" variant="caution" icon={iconCode} /> | <IxLinkButton url="https://github.com/siemens/ix/blob/main/BREAKING_CHANGES/v6.md#default-icon-size-is-20" icon="external" aria-label="View code change" title="View code change">Code</IxLinkButton><br /><IxLinkButton url="https://www.figma.com/design/r2nqdNNXXZtPmWuVjIlM1Q/iX-Components?node-id=358-2971" icon="external" aria-label="View design change" title="View design change">Figma</IxLinkButton> | Changed the default icon size to 20px in affected slots |
+| <IxBadge type="label" label="Changed" variant="caution" icon={iconCode} /> | <IxLinkButton url="https://github.com/siemens/ix/blob/main/BREAKING_CHANGES/v6.md#changed-the-default-icon-size-to-20px" icon="external" aria-label="View code change" title="View code change">Code</IxLinkButton><br /><IxLinkButton url="https://www.figma.com/design/r2nqdNNXXZtPmWuVjIlM1Q/iX-Components?node-id=358-2971" icon="external" aria-label="View design change" title="View design change">Figma</IxLinkButton> | Changed the default icon size to 20px in affected slots |
 
 </div>
 
@@ -307,7 +307,7 @@ The following tables combine component-specific code and Figma changes, with com
 
 | Type | Details | Description |
 | :--- | :--- | :--- |
-| <IxBadge type="label" label="Changed" variant="caution" icon={iconCode} /> | <IxLinkButton url="https://github.com/siemens/ix/blob/main/BREAKING_CHANGES/v6.md#default-icon-size-is-20" icon="external" aria-label="View code change" title="View code change">Code</IxLinkButton><br /><IxLinkButton url="https://www.figma.com/design/r2nqdNNXXZtPmWuVjIlM1Q/iX-Components?node-id=1036-22112" icon="external" aria-label="View design change" title="View design change">Figma</IxLinkButton> | Changed the default icon size to 20px in affected slots |
+| <IxBadge type="label" label="Changed" variant="caution" icon={iconCode} /> | <IxLinkButton url="https://github.com/siemens/ix/blob/main/BREAKING_CHANGES/v6.md#changed-the-default-icon-size-to-20px" icon="external" aria-label="View code change" title="View code change">Code</IxLinkButton><br /><IxLinkButton url="https://www.figma.com/design/r2nqdNNXXZtPmWuVjIlM1Q/iX-Components?node-id=1036-22112" icon="external" aria-label="View design change" title="View design change">Figma</IxLinkButton> | Changed the default icon size to 20px in affected slots |
 | <IxBadge type="label" label="Deprecated" variant="critical" outline icon={iconShapes} /> | <IxLinkButton url="https://www.figma.com/design/r2nqdNNXXZtPmWuVjIlM1Q/iX-Components?node-id=1274-38298&t=uyzhGeD7C5A58xnU-4" icon="external" aria-label="View design change" title="View design change">Figma</IxLinkButton> | Figma: Deprecated the previous group component. Follow the migration prompt in Figma to migrate to the new group component with updated slots. |
 
 
@@ -320,8 +320,8 @@ The following tables combine component-specific code and Figma changes, with com
 
 | Type | Details | Description |
 | :--- | :--- | :--- |
-| <IxBadge type="label" label="Changed" variant="caution" icon={iconCode} /> | <IxLinkButton url="https://github.com/siemens/ix/blob/main/BREAKING_CHANGES/v6.md#default-icon-size-is-20" icon="external" aria-label="View code change" title="View code change">Code</IxLinkButton><br /><IxLinkButton url="https://www.figma.com/design/r2nqdNNXXZtPmWuVjIlM1Q/iX-Components?node-id=721-9472" icon="external" aria-label="View design change" title="View design change">Figma</IxLinkButton> | Changed the default icon size to 20px in affected slots |
-| <IxBadge type="label" label="Changed" variant="caution" icon={iconCode} /> | <IxLinkButton url="https://github.com/siemens/ix/blob/main/BREAKING_CHANGES/v6.md#react-callback-types" icon="external" aria-label="View code change" title="View code change">Code</IxLinkButton> | Changed React `renderItem` values to `unknown` and `onNodeRemoved` payloads to `CustomEvent<unknown[]>` |
+| <IxBadge type="label" label="Changed" variant="caution" icon={iconCode} /> | <IxLinkButton url="https://github.com/siemens/ix/blob/main/BREAKING_CHANGES/v6.md#changed-the-default-icon-size-to-20px" icon="external" aria-label="View code change" title="View code change">Code</IxLinkButton><br /><IxLinkButton url="https://www.figma.com/design/r2nqdNNXXZtPmWuVjIlM1Q/iX-Components?node-id=721-9472" icon="external" aria-label="View design change" title="View design change">Figma</IxLinkButton> | Changed the default icon size to 20px in affected slots |
+| <IxBadge type="label" label="Changed" variant="caution" icon={iconCode} /> | <IxLinkButton url="https://github.com/siemens/ix/blob/main/BREAKING_CHANGES/v6.md#changed-untyped-react-callback-values-to-unknown" icon="external" aria-label="View code change" title="View code change">Code</IxLinkButton> | Changed React `renderItem` values to `unknown` and `onNodeRemoved` payloads to `CustomEvent<unknown[]>` |
 
 </div>
 
@@ -331,7 +331,7 @@ The following tables combine component-specific code and Figma changes, with com
 
 | Type | Details | Description |
 | :--- | :--- | :--- |
-| <IxBadge type="label" label="Changed" variant="caution" icon={iconCode} /> | <IxLinkButton url="https://github.com/siemens/ix/blob/main/BREAKING_CHANGES/v6.md#default-icon-size-is-20" icon="external" aria-label="View code change" title="View code change">Code</IxLinkButton><br /><IxLinkButton url="https://www.figma.com/design/r2nqdNNXXZtPmWuVjIlM1Q/iX-Components?node-id=1036-22111" icon="external" aria-label="View design change" title="View design change">Figma</IxLinkButton> | Changed the default icon size to 20px in affected slots |
+| <IxBadge type="label" label="Changed" variant="caution" icon={iconCode} /> | <IxLinkButton url="https://github.com/siemens/ix/blob/main/BREAKING_CHANGES/v6.md#changed-the-default-icon-size-to-20px" icon="external" aria-label="View code change" title="View code change">Code</IxLinkButton><br /><IxLinkButton url="https://www.figma.com/design/r2nqdNNXXZtPmWuVjIlM1Q/iX-Components?node-id=1036-22111" icon="external" aria-label="View design change" title="View design change">Figma</IxLinkButton> | Changed the default icon size to 20px in affected slots |
 
 </div>
 
@@ -343,7 +343,7 @@ The following tables combine component-specific code and Figma changes, with com
 
 | Type | Details | Description |
 | :--- | :--- | :--- |
-| <IxBadge type="label" label="Changed" variant="caution" icon={iconCode} /> | <IxLinkButton url="https://github.com/siemens/ix/blob/main/BREAKING_CHANGES/v6.md#card-family-status-variants-outline-and-clickable" icon="external" aria-label="View code change" title="View code change">Code</IxLinkButton><br /><IxLinkButton url="https://www.figma.com/design/r2nqdNNXXZtPmWuVjIlM1Q/iX-Components?node-id=5221-130098" icon="external" aria-label="View design change" title="View design change">Figma</IxLinkButton> | Changed status variants, outline styling, host classes, theming overrides, and TypeScript types; replaced `passive` with `clickable`, which remains enabled by default |
+| <IxBadge type="label" label="Changed" variant="caution" icon={iconCode} /> | <IxLinkButton url="https://github.com/siemens/ix/blob/main/BREAKING_CHANGES/v6.md#changed-card-family-status-variants-outline-and-clickable" icon="external" aria-label="View code change" title="View code change">Code</IxLinkButton><br /><IxLinkButton url="https://www.figma.com/design/r2nqdNNXXZtPmWuVjIlM1Q/iX-Components?node-id=5221-130098" icon="external" aria-label="View design change" title="View design change">Figma</IxLinkButton> | Changed status variants, outline styling, host classes, theming overrides, and TypeScript types; replaced `passive` with `clickable`, which remains enabled by default |
 | <IxBadge type="label" label="Deprecated" variant="critical" outline icon={iconShapes} /> | <IxLinkButton url="https://www.figma.com/design/r2nqdNNXXZtPmWuVjIlM1Q/iX-Components?node-id=163078-224910&t=uyzhGeD7C5A58xnU-4" icon="external" aria-label="View design change" title="View design change">Figma</IxLinkButton> | Figma: Deprecated the previous action card component. Follow the migration prompt in Figma to migrate to the new action card component with updated slot properties. |
 
 </div>
@@ -354,8 +354,8 @@ The following tables combine component-specific code and Figma changes, with com
 
 | Type | Details | Description |
 | :--- | :--- | :--- |
-| <IxBadge type="label" label="Changed" variant="caution" icon={iconCode} /> | <IxLinkButton url="https://github.com/siemens/ix/blob/main/BREAKING_CHANGES/v6.md#ix-blind-status-variants-and-outline" icon="external" aria-label="View code change" title="View code change">Code</IxLinkButton><br /><IxLinkButton url="https://www.figma.com/design/r2nqdNNXXZtPmWuVjIlM1Q/iX-Components?node-id=388-3951" icon="external" aria-label="View design change" title="View design change">Figma</IxLinkButton> | Changed status variants, outline styling, and host classes; replaced `BlindVariant` with `StatusVariant`. A bare blind now uses outline chrome, and status no longer fills the header |
-| <IxBadge type="label" label="Changed" variant="caution" icon={iconCode} /> | <IxLinkButton url="https://github.com/siemens/ix/blob/main/BREAKING_CHANGES/v6.md#default-icon-size-is-20" icon="external" aria-label="View code change" title="View code change">Code</IxLinkButton><br /><IxLinkButton url="https://www.figma.com/design/r2nqdNNXXZtPmWuVjIlM1Q/iX-Components?node-id=388-3951" icon="external" aria-label="View design change" title="View design change">Figma</IxLinkButton> | Changed the default icon size to 20px in affected slots |
+| <IxBadge type="label" label="Changed" variant="caution" icon={iconCode} /> | <IxLinkButton url="https://github.com/siemens/ix/blob/main/BREAKING_CHANGES/v6.md#changed-ix-blind-status-variants-and-outline" icon="external" aria-label="View code change" title="View code change">Code</IxLinkButton><br /><IxLinkButton url="https://www.figma.com/design/r2nqdNNXXZtPmWuVjIlM1Q/iX-Components?node-id=388-3951" icon="external" aria-label="View design change" title="View design change">Figma</IxLinkButton> | Changed status variants, outline styling, and host classes; replaced `BlindVariant` with `StatusVariant`. A bare blind now uses outline chrome, and status no longer fills the header |
+| <IxBadge type="label" label="Changed" variant="caution" icon={iconCode} /> | <IxLinkButton url="https://github.com/siemens/ix/blob/main/BREAKING_CHANGES/v6.md#changed-the-default-icon-size-to-20px" icon="external" aria-label="View code change" title="View code change">Code</IxLinkButton><br /><IxLinkButton url="https://www.figma.com/design/r2nqdNNXXZtPmWuVjIlM1Q/iX-Components?node-id=388-3951" icon="external" aria-label="View design change" title="View design change">Figma</IxLinkButton> | Changed the default icon size to 20px in affected slots |
 | <IxBadge type="label" label="Changed" variant="caution" outline icon={iconShapes} /> | <IxLinkButton url="https://www.figma.com/design/r2nqdNNXXZtPmWuVjIlM1Q/iX-Components?node-id=388-3951" icon="external" aria-label="View design change" title="View design change">Figma</IxLinkButton> | Figma: Reset header icon buttons so they receive updates. |
 | <IxBadge type="label" label="Removed" variant="warning" outline icon={iconShapes} /> | <IxLinkButton url="https://www.figma.com/design/r2nqdNNXXZtPmWuVjIlM1Q/iX-Components?node-id=388-3951" icon="external" aria-label="View design change" title="View design change">Figma</IxLinkButton> | Figma: Removed the old slot. Code slots are unchanged. |
 | <IxBadge type="label" label="Deprecated" variant="critical" outline icon={iconShapes} /> | <IxLinkButton url="https://www.figma.com/design/r2nqdNNXXZtPmWuVjIlM1Q/iX-Components?node-id=388-3986" icon="external" aria-label="View design change" title="View design change">Figma</IxLinkButton> | Figma: Deprecated the previous blind component. Follow the migration prompt in Figma to migrate to the new blind component. |
@@ -368,7 +368,7 @@ The following tables combine component-specific code and Figma changes, with com
 
 | Type | Details | Description |
 | :--- | :--- | :--- |
-| <IxBadge type="label" label="Changed" variant="caution" icon={iconCode} /> | <IxLinkButton url="https://github.com/siemens/ix/blob/main/BREAKING_CHANGES/v6.md#card-family-status-variants-outline-and-clickable" icon="external" aria-label="View code change" title="View code change">Code</IxLinkButton><br /><IxLinkButton url="https://www.figma.com/design/r2nqdNNXXZtPmWuVjIlM1Q/iX-Components?node-id=5221-130098" icon="external" aria-label="View design change" title="View design change">Figma</IxLinkButton> | Changed status variants, outline styling, host classes, theming overrides, and TypeScript types; replaced `passive` with `clickable`, which defaults to `false` |
+| <IxBadge type="label" label="Changed" variant="caution" icon={iconCode} /> | <IxLinkButton url="https://github.com/siemens/ix/blob/main/BREAKING_CHANGES/v6.md#changed-card-family-status-variants-outline-and-clickable" icon="external" aria-label="View code change" title="View code change">Code</IxLinkButton><br /><IxLinkButton url="https://www.figma.com/design/r2nqdNNXXZtPmWuVjIlM1Q/iX-Components?node-id=5221-130098" icon="external" aria-label="View design change" title="View design change">Figma</IxLinkButton> | Changed status variants, outline styling, host classes, theming overrides, and TypeScript types; replaced `passive` with `clickable`, which defaults to `false` |
 | <IxBadge type="label" label="Deprecated" variant="critical" outline icon={iconShapes} /> | <IxLinkButton url="https://www.figma.com/design/r2nqdNNXXZtPmWuVjIlM1Q/iX-Components?node-id=163078-224910&t=uyzhGeD7C5A58xnU-4" icon="external" aria-label="View design change" title="View design change">Figma</IxLinkButton> | Figma: Deprecated the previous card component. Follow the migration prompt in Figma to migrate to the new card component with updated slot properties. |
 
 </div>
@@ -379,7 +379,7 @@ The following tables combine component-specific code and Figma changes, with com
 
 | Type | Details | Description |
 | :--- | :--- | :--- |
-| <IxBadge type="label" label="Changed" variant="caution" icon={iconCode} /> | <IxLinkButton url="https://github.com/siemens/ix/blob/main/BREAKING_CHANGES/v6.md#card-family-status-variants-outline-and-clickable" icon="external" aria-label="View code change" title="View code change">Code</IxLinkButton> | Changed card-family types and outline styling; omit the visually ineffective accordion `variant` and pass through the parent's `outline` value |
+| <IxBadge type="label" label="Changed" variant="caution" icon={iconCode} /> | <IxLinkButton url="https://github.com/siemens/ix/blob/main/BREAKING_CHANGES/v6.md#changed-card-family-status-variants-outline-and-clickable" icon="external" aria-label="View code change" title="View code change">Code</IxLinkButton> | Changed card-family types and outline styling; omit the visually ineffective accordion `variant` and pass through the parent's `outline` value |
 
 </div>
 
@@ -389,7 +389,7 @@ The following tables combine component-specific code and Figma changes, with com
 
 | Type | Details | Description |
 | :--- | :--- | :--- |
-| <IxBadge type="label" label="Changed" variant="caution" icon={iconCode} /> | <IxLinkButton url="https://github.com/siemens/ix/blob/main/BREAKING_CHANGES/v6.md#default-icon-size-is-20" icon="external" aria-label="View code change" title="View code change">Code</IxLinkButton><br /><IxLinkButton url="https://www.figma.com/design/r2nqdNNXXZtPmWuVjIlM1Q/iX-Components?node-id=29225-90536" icon="external" aria-label="View design change" title="View design change">Figma</IxLinkButton> | Changed the default icon size to 20px in affected slots |
+| <IxBadge type="label" label="Changed" variant="caution" icon={iconCode} /> | <IxLinkButton url="https://github.com/siemens/ix/blob/main/BREAKING_CHANGES/v6.md#changed-the-default-icon-size-to-20px" icon="external" aria-label="View code change" title="View code change">Code</IxLinkButton><br /><IxLinkButton url="https://www.figma.com/design/r2nqdNNXXZtPmWuVjIlM1Q/iX-Components?node-id=29225-90536" icon="external" aria-label="View design change" title="View design change">Figma</IxLinkButton> | Changed the default icon size to 20px in affected slots |
 
 </div>
 
@@ -399,7 +399,7 @@ The following tables combine component-specific code and Figma changes, with com
 
 | Type | Details | Description |
 | :--- | :--- | :--- |
-| <IxBadge type="label" label="Changed" variant="caution" icon={iconCode} /> | <IxLinkButton url="https://github.com/siemens/ix/blob/main/BREAKING_CHANGES/v6.md#default-icon-size-is-20" icon="external" aria-label="View code change" title="View code change">Code</IxLinkButton><br /><IxLinkButton url="https://www.figma.com/design/r2nqdNNXXZtPmWuVjIlM1Q/iX-Components?node-id=613-8995" icon="external" aria-label="View design change" title="View design change">Figma</IxLinkButton> | Changed the default icon size to 20px in affected slots |
+| <IxBadge type="label" label="Changed" variant="caution" icon={iconCode} /> | <IxLinkButton url="https://github.com/siemens/ix/blob/main/BREAKING_CHANGES/v6.md#changed-the-default-icon-size-to-20px" icon="external" aria-label="View code change" title="View code change">Code</IxLinkButton><br /><IxLinkButton url="https://www.figma.com/design/r2nqdNNXXZtPmWuVjIlM1Q/iX-Components?node-id=613-8995" icon="external" aria-label="View design change" title="View design change">Figma</IxLinkButton> | Changed the default icon size to 20px in affected slots |
 | <IxBadge type="label" label="Changed" variant="caution" outline icon={iconShapes} /> | <IxLinkButton url="https://www.figma.com/design/r2nqdNNXXZtPmWuVjIlM1Q/iX-Components?node-id=613-8995" icon="external" aria-label="View design change" title="View design change">Figma</IxLinkButton> | Figma: Renamed status variants and added missing variants using the status mapping above. |
 
 </div>
@@ -410,7 +410,7 @@ The following tables combine component-specific code and Figma changes, with com
 
 | Type | Details | Description |
 | :--- | :--- | :--- |
-| <IxBadge type="label" label="Changed" variant="caution" icon={iconCode} /> | <IxLinkButton url="https://github.com/siemens/ix/blob/main/BREAKING_CHANGES/v6.md#icon-and-component-color-properties" icon="external" aria-label="View code change" title="View code change">Code</IxLinkButton> | Changed `itemColor` to require the complete CSS custom-property name, including `--` |
+| <IxBadge type="label" label="Changed" variant="caution" icon={iconCode} /> | <IxLinkButton url="https://github.com/siemens/ix/blob/main/BREAKING_CHANGES/v6.md#changed-icon-and-component-color-properties-to-use-complete-token-names" icon="external" aria-label="View code change" title="View code change">Code</IxLinkButton> | Changed `itemColor` to require the complete CSS custom-property name, including `--` |
 | <IxBadge type="label" label="Changed" variant="caution" icon={iconCode} /> | <IxLinkButton url="https://github.com/siemens/ix/blob/main/BREAKING_CHANGES/v6.md#borders-and-effects" icon="external" aria-label="View code change" title="View code change">Code</IxLinkButton> | Replaced legacy empty-indicator border shorthands with system tokens; scoped overrides still accept complete borders |
 
 </div>
@@ -421,7 +421,7 @@ The following tables combine component-specific code and Figma changes, with com
 
 | Type | Details | Description |
 | :--- | :--- | :--- |
-| <IxBadge type="label" label="Changed" variant="caution" icon={iconCode} /> | <IxLinkButton url="https://github.com/siemens/ix/blob/main/BREAKING_CHANGES/v6.md#ix-flip-tile-status-variant-rename" icon="external" aria-label="View code change" title="View code change">Code</IxLinkButton><br /><IxLinkButton url="https://www.figma.com/design/r2nqdNNXXZtPmWuVjIlM1Q/iX-Components?node-id=406-3368" icon="external" aria-label="View design change" title="View design change">Figma</IxLinkButton> | Renamed and expanded status variants, host classes, and theming properties; retained the `outline` and `filled` variants and the `filled` default |
+| <IxBadge type="label" label="Changed" variant="caution" icon={iconCode} /> | <IxLinkButton url="https://github.com/siemens/ix/blob/main/BREAKING_CHANGES/v6.md#changed-ix-flip-tile-status-variant-values" icon="external" aria-label="View code change" title="View code change">Code</IxLinkButton><br /><IxLinkButton url="https://www.figma.com/design/r2nqdNNXXZtPmWuVjIlM1Q/iX-Components?node-id=406-3368" icon="external" aria-label="View design change" title="View design change">Figma</IxLinkButton> | Renamed and expanded status variants, host classes, and theming properties; retained the `outline` and `filled` variants and the `filled` default |
 | <IxBadge type="label" label="Deprecated" variant="critical" outline icon={iconShapes} /> | <IxLinkButton url="https://www.figma.com/design/r2nqdNNXXZtPmWuVjIlM1Q/iX-Components?node-id=407-3446&t=uyzhGeD7C5A58xnU-4" icon="external" aria-label="View design change" title="View design change">Figma</IxLinkButton> | Figma: Deprecated the previous flip tile component. Follow the migration prompt in Figma to migrate to the new flip tile component with updated slots. |
 
 </div>
@@ -432,8 +432,8 @@ The following tables combine component-specific code and Figma changes, with com
 
 | Type | Details | Description |
 | :--- | :--- | :--- |
-| <IxBadge type="label" label="Changed" variant="caution" icon={iconCode} /> | <IxLinkButton url="https://github.com/siemens/ix/blob/main/BREAKING_CHANGES/v6.md#react-callback-types" icon="external" aria-label="View code change" title="View code change">Code</IxLinkButton> | Changed untyped React `closeModal`, `ModalRef.close`, and `ModalRef.dismiss` results to `unknown` |
-| <IxBadge type="label" label="Changed" variant="caution" icon={iconCode} /> | <IxLinkButton url="https://github.com/siemens/ix/blob/main/BREAKING_CHANGES/v6.md#vue-modal-types" icon="external" aria-label="View code change" title="View code change">Code</IxLinkButton> | Changed untyped Vue `closeModal` reasons to `unknown` |
+| <IxBadge type="label" label="Changed" variant="caution" icon={iconCode} /> | <IxLinkButton url="https://github.com/siemens/ix/blob/main/BREAKING_CHANGES/v6.md#changed-untyped-react-callback-values-to-unknown" icon="external" aria-label="View code change" title="View code change">Code</IxLinkButton> | Changed untyped React `closeModal`, `ModalRef.close`, and `ModalRef.dismiss` results to `unknown` |
+| <IxBadge type="label" label="Changed" variant="caution" icon={iconCode} /> | <IxLinkButton url="https://github.com/siemens/ix/blob/main/BREAKING_CHANGES/v6.md#changed-untyped-vue-modal-close-reasons-to-unknown" icon="external" aria-label="View code change" title="View code change">Code</IxLinkButton> | Changed untyped Vue `closeModal` reasons to `unknown` |
 | <IxBadge type="label" label="Removed" variant="warning" icon={iconCode} /> | <IxLinkButton url="https://github.com/siemens/ix/blob/main/BREAKING_CHANGES/v6.md#removed-legacy-sass-modules" icon="external" aria-label="View code change" title="View code change">Code</IxLinkButton> | Removed the legacy modal Sass module |
 | <IxBadge type="label" label="Changed" variant="caution" outline icon={iconShapes} /> | <IxLinkButton url="https://www.figma.com/design/r2nqdNNXXZtPmWuVjIlM1Q/iX-Components?node-id=445-4906" icon="external" aria-label="View design change" title="View design change">Figma</IxLinkButton> | Figma: Changed modal slots. |
 | <IxBadge type="label" label="Deprecated" variant="critical" outline icon={iconShapes} /> | <IxLinkButton url="https://www.figma.com/design/r2nqdNNXXZtPmWuVjIlM1Q/iX-Components?node-id=445-4906" icon="external" aria-label="View design change" title="View design change">Figma</IxLinkButton> | Figma: Deprecated the previous modal component. Follow the migration prompt in Figma to migrate to the new modal component. |
@@ -456,7 +456,7 @@ The following tables combine component-specific code and Figma changes, with com
 
 | Type | Details | Description |
 | :--- | :--- | :--- |
-| <IxBadge type="label" label="Changed" variant="caution" icon={iconCode} /> | <IxLinkButton url="https://github.com/siemens/ix/blob/main/BREAKING_CHANGES/v6.md#card-family-status-variants-outline-and-clickable" icon="external" aria-label="View code change" title="View code change">Code</IxLinkButton><br /><IxLinkButton url="https://www.figma.com/design/r2nqdNNXXZtPmWuVjIlM1Q/iX-Components?node-id=5221-130098" icon="external" aria-label="View design change" title="View design change">Figma</IxLinkButton> | Changed status variants, outline styling, host classes, theming overrides, and types; replaced `passive` with `clickable`, defaulting to `false` for the upper region while the accordion stays interactive |
+| <IxBadge type="label" label="Changed" variant="caution" icon={iconCode} /> | <IxLinkButton url="https://github.com/siemens/ix/blob/main/BREAKING_CHANGES/v6.md#changed-card-family-status-variants-outline-and-clickable" icon="external" aria-label="View code change" title="View code change">Code</IxLinkButton><br /><IxLinkButton url="https://www.figma.com/design/r2nqdNNXXZtPmWuVjIlM1Q/iX-Components?node-id=5221-130098" icon="external" aria-label="View design change" title="View design change">Figma</IxLinkButton> | Changed status variants, outline styling, host classes, theming overrides, and types; replaced `passive` with `clickable`, defaulting to `false` for the upper region while the accordion stays interactive |
 | <IxBadge type="label" label="Deprecated" variant="critical" outline icon={iconShapes} /> | <IxLinkButton url="https://www.figma.com/design/r2nqdNNXXZtPmWuVjIlM1Q/iX-Components?node-id=163078-224910&t=uyzhGeD7C5A58xnU-4" icon="external" aria-label="View design change" title="View design change">Figma</IxLinkButton> | Figma: Deprecated the previous push card component. Follow the migration prompt in Figma to migrate to the new push card component with updated slot properties. |
 
 </div>
@@ -479,8 +479,8 @@ The following tables combine component-specific code and Figma changes, with com
 
 | Type | Details | Description |
 | :--- | :--- | :--- |
-| <IxBadge type="label" label="Changed" variant="caution" icon={iconCode} /> | <IxLinkButton url="https://github.com/siemens/ix/blob/main/BREAKING_CHANGES/v6.md#boolean-attributes-on-form-components" icon="external" aria-label="View code change" title="View code change">Code</IxLinkButton> | Changed boolean attributes to follow native HTML semantics |
-| <IxBadge type="label" label="Changed" variant="caution" icon={iconCode} /> | <IxLinkButton url="https://github.com/siemens/ix/blob/main/BREAKING_CHANGES/v6.md#default-icon-size-is-20" icon="external" aria-label="View code change" title="View code change">Code</IxLinkButton> | Changed the control glyph to 20px while retaining the 24px hit area |
+| <IxBadge type="label" label="Changed" variant="caution" icon={iconCode} /> | <IxLinkButton url="https://github.com/siemens/ix/blob/main/BREAKING_CHANGES/v6.md#changed-boolean-attributes-to-follow-native-html-semantics" icon="external" aria-label="View code change" title="View code change">Code</IxLinkButton> | Changed boolean attributes to follow native HTML semantics |
+| <IxBadge type="label" label="Changed" variant="caution" icon={iconCode} /> | <IxLinkButton url="https://github.com/siemens/ix/blob/main/BREAKING_CHANGES/v6.md#changed-the-default-icon-size-to-20px" icon="external" aria-label="View code change" title="View code change">Code</IxLinkButton> | Changed the control glyph to 20px while retaining the 24px hit area |
 | <IxBadge type="label" label="Changed" variant="caution" icon={iconCode} /> | <IxLinkButton url="https://github.com/siemens/ix/blob/main/BREAKING_CHANGES/v6.md#removed-common-dimension-and-typography-tokens" icon="external" aria-label="View code change" title="View code change">Code</IxLinkButton> | Applied compact density to the migrated checkbox label gap |
 
 </div>
@@ -501,11 +501,11 @@ The following tables combine component-specific code and Figma changes, with com
 
 | Type | Details | Description |
 | :--- | :--- | :--- |
-| <IxBadge type="label" label="Changed" variant="caution" icon={iconCode} /> | <IxLinkButton url="https://github.com/siemens/ix/blob/main/BREAKING_CHANGES/v6.md#date-time-picker---locale-support" icon="external" aria-label="View code change" title="View code change">Code</IxLinkButton> | Localized event values and added locale-independent ISO fields |
+| <IxBadge type="label" label="Changed" variant="caution" icon={iconCode} /> | <IxLinkButton url="https://github.com/siemens/ix/blob/main/BREAKING_CHANGES/v6.md#changed-date-and-time-picker-locale-support" icon="external" aria-label="View code change" title="View code change">Code</IxLinkButton> | Localized event values and added locale-independent ISO fields |
 | <IxBadge type="label" label="Changed" variant="caution" icon={iconCode} /> | <IxLinkButton url="https://github.com/siemens/ix/blob/main/BREAKING_CHANGES/v6.md#date-and-time-pickers-confirmation-and-selection" icon="external" aria-label="View code change" title="View code change">Code</IxLinkButton> | Changed selection and closing behavior: emit `dateRangeChange` for every pick, use `dateSelect` for applied ranges, and revert incomplete ranges on close |
 | <IxBadge type="label" label="Added" variant="success" icon={iconCode} /> | <IxLinkButton url="https://github.com/siemens/ix/blob/main/BREAKING_CHANGES/v6.md#new-requireconfirmation-property" icon="external" aria-label="View code change" title="View code change">Code</IxLinkButton> | Added optional `requireConfirmation` with Confirm and Cancel labels |
 | <IxBadge type="label" label="Deprecated" variant="critical" icon={iconCode} /> | <IxLinkButton url="https://github.com/siemens/ix/blob/main/BREAKING_CHANGES/v6.md#behavior-without-requireconfirmation" icon="external" aria-label="View code change" title="View code change">Code</IxLinkButton> | Deprecated `i18nDone`; without confirmation, complete or predefined ranges apply and close without a Done button |
-| <IxBadge type="label" label="Changed" variant="caution" icon={iconCode} /> | <IxLinkButton url="https://github.com/siemens/ix/blob/main/BREAKING_CHANGES/v6.md#default-icon-size-is-20" icon="external" aria-label="View code change" title="View code change">Code</IxLinkButton><br /><IxLinkButton url="https://www.figma.com/design/r2nqdNNXXZtPmWuVjIlM1Q/iX-Components?node-id=71682-192322" icon="external" aria-label="View design change" title="View design change">Figma</IxLinkButton> | Changed the default icon size to 20px in affected slots |
+| <IxBadge type="label" label="Changed" variant="caution" icon={iconCode} /> | <IxLinkButton url="https://github.com/siemens/ix/blob/main/BREAKING_CHANGES/v6.md#changed-the-default-icon-size-to-20px" icon="external" aria-label="View code change" title="View code change">Code</IxLinkButton><br /><IxLinkButton url="https://www.figma.com/design/r2nqdNNXXZtPmWuVjIlM1Q/iX-Components?node-id=71682-192322" icon="external" aria-label="View design change" title="View design change">Figma</IxLinkButton> | Changed the default icon size to 20px in affected slots |
 | <IxBadge type="label" label="Changed" variant="caution" icon={iconCode} /> | <IxLinkButton url="https://github.com/siemens/ix/blob/main/BREAKING_CHANGES/v6.md#borders-and-effects" icon="external" aria-label="View code change" title="View code change">Code</IxLinkButton> | Replaced legacy divider-border shorthands with system tokens; scoped border overrides still accept complete borders |
 
 </div>
@@ -516,10 +516,10 @@ The following tables combine component-specific code and Figma changes, with com
 
 | Type | Details | Description |
 | :--- | :--- | :--- |
-| <IxBadge type="label" label="Changed" variant="caution" icon={iconCode} /> | <IxLinkButton url="https://github.com/siemens/ix/blob/main/BREAKING_CHANGES/v6.md#boolean-attributes-on-form-components" icon="external" aria-label="View code change" title="View code change">Code</IxLinkButton> | Changed boolean attributes to follow native HTML semantics |
-| <IxBadge type="label" label="Changed" variant="caution" icon={iconCode} /> | <IxLinkButton url="https://github.com/siemens/ix/blob/main/BREAKING_CHANGES/v6.md#date-time-picker---locale-support" icon="external" aria-label="View code change" title="View code change">Code</IxLinkButton> | Clarified that `locale` affects parsing and emitted `valueChange` values |
+| <IxBadge type="label" label="Changed" variant="caution" icon={iconCode} /> | <IxLinkButton url="https://github.com/siemens/ix/blob/main/BREAKING_CHANGES/v6.md#changed-boolean-attributes-to-follow-native-html-semantics" icon="external" aria-label="View code change" title="View code change">Code</IxLinkButton> | Changed boolean attributes to follow native HTML semantics |
+| <IxBadge type="label" label="Changed" variant="caution" icon={iconCode} /> | <IxLinkButton url="https://github.com/siemens/ix/blob/main/BREAKING_CHANGES/v6.md#changed-date-and-time-picker-locale-support" icon="external" aria-label="View code change" title="View code change">Code</IxLinkButton> | Clarified that `locale` affects parsing and emitted `valueChange` values |
 | <IxBadge type="label" label="Added" variant="success" icon={iconCode} /> | <IxLinkButton url="https://github.com/siemens/ix/blob/main/BREAKING_CHANGES/v6.md#new-requireconfirmation-property" icon="external" aria-label="View code change" title="View code change">Code</IxLinkButton> | Added `requireConfirmation` to apply values only on Confirm and discard pending selections on cancellation |
-| <IxBadge type="label" label="Fixed" variant="information" icon={iconCode} /> | <IxLinkButton url="https://github.com/siemens/ix/blob/main/BREAKING_CHANGES/v6.md#no-built-in-validation-feedback-in-novalidate-forms" icon="external" aria-label="View code change" title="View code change">Code</IxLinkButton> | Removed built-in validation feedback in `novalidate` forms; unparseable input reports `patternMismatch` |
+| <IxBadge type="label" label="Fixed" variant="information" icon={iconCode} /> | <IxLinkButton url="https://github.com/siemens/ix/blob/main/BREAKING_CHANGES/v6.md#removed-built-in-validation-feedback-in-novalidate-forms" icon="external" aria-label="View code change" title="View code change">Code</IxLinkButton> | Removed built-in validation feedback in `novalidate` forms; unparseable input reports `patternMismatch` |
 
 </div>
 
@@ -529,7 +529,7 @@ The following tables combine component-specific code and Figma changes, with com
 
 | Type | Details | Description |
 | :--- | :--- | :--- |
-| <IxBadge type="label" label="Changed" variant="caution" icon={iconCode} /> | <IxLinkButton url="https://github.com/siemens/ix/blob/main/BREAKING_CHANGES/v6.md#date-time-picker---locale-support" icon="external" aria-label="View code change" title="View code change">Code</IxLinkButton> | Localized event values and added locale-independent ISO fields |
+| <IxBadge type="label" label="Changed" variant="caution" icon={iconCode} /> | <IxLinkButton url="https://github.com/siemens/ix/blob/main/BREAKING_CHANGES/v6.md#changed-date-and-time-picker-locale-support" icon="external" aria-label="View code change" title="View code change">Code</IxLinkButton> | Localized event values and added locale-independent ISO fields |
 | <IxBadge type="label" label="Changed" variant="caution" icon={iconCode} /> | <IxLinkButton url="https://github.com/siemens/ix/blob/main/BREAKING_CHANGES/v6.md#date-and-time-pickers-confirmation-and-selection" icon="external" aria-label="View code change" title="View code change">Code</IxLinkButton> | Changed change/select event handling and added optional confirmation, cancellation, and button-label properties |
 | <IxBadge type="label" label="Deprecated" variant="critical" icon={iconCode} /> | <IxLinkButton url="https://github.com/siemens/ix/blob/main/BREAKING_CHANGES/v6.md#ix-date-picker-daterangechange-deprecated" icon="external" aria-label="View code change" title="View code change">Code</IxLinkButton> | Deprecated `dateRangeChange` in favor of `dateChange`; removal is planned for V7 |
 
@@ -541,11 +541,11 @@ The following tables combine component-specific code and Figma changes, with com
 
 | Type | Details | Description |
 | :--- | :--- | :--- |
-| <IxBadge type="label" label="Changed" variant="caution" icon={iconCode} /> | <IxLinkButton url="https://github.com/siemens/ix/blob/main/BREAKING_CHANGES/v6.md#boolean-attributes-on-form-components" icon="external" aria-label="View code change" title="View code change">Code</IxLinkButton> | Changed boolean attributes to follow native HTML semantics |
+| <IxBadge type="label" label="Changed" variant="caution" icon={iconCode} /> | <IxLinkButton url="https://github.com/siemens/ix/blob/main/BREAKING_CHANGES/v6.md#changed-boolean-attributes-to-follow-native-html-semantics" icon="external" aria-label="View code change" title="View code change">Code</IxLinkButton> | Changed boolean attributes to follow native HTML semantics |
 | <IxBadge type="label" label="Changed" variant="caution" icon={iconCode} /> | <IxLinkButton url="https://github.com/siemens/ix/blob/main/BREAKING_CHANGES/v6.md#date-and-time-pickers-confirmation-and-selection" icon="external" aria-label="View code change" title="View code change">Code</IxLinkButton> | Changed selection handling: without confirmation, apply every pick via `valueChange` and emit `ixChange` on close; changed the default `i18nDone` label to Done |
 | <IxBadge type="label" label="Added" variant="success" icon={iconCode} /> | <IxLinkButton url="https://github.com/siemens/ix/blob/main/BREAKING_CHANGES/v6.md#new-requireconfirmation-property" icon="external" aria-label="View code change" title="View code change">Code</IxLinkButton> | Added `requireConfirmation` to defer value changes until Confirm and discard pending selections on cancellation |
-| <IxBadge type="label" label="Fixed" variant="information" icon={iconCode} /> | <IxLinkButton url="https://github.com/siemens/ix/blob/main/BREAKING_CHANGES/v6.md#no-built-in-validation-feedback-in-novalidate-forms" icon="external" aria-label="View code change" title="View code change">Code</IxLinkButton> | Removed built-in validation feedback in `novalidate` forms; unparseable input reports `typeMismatch` |
-| <IxBadge type="label" label="Changed" variant="caution" icon={iconCode} /> | <IxLinkButton url="https://github.com/siemens/ix/blob/main/BREAKING_CHANGES/v6.md#default-icon-size-is-20" icon="external" aria-label="View code change" title="View code change">Code</IxLinkButton><br /><IxLinkButton url="https://www.figma.com/design/r2nqdNNXXZtPmWuVjIlM1Q/iX-Components?node-id=69781-31295" icon="external" aria-label="View design change" title="View design change">Figma</IxLinkButton> | Changed the default icon size to 20px in affected slots |
+| <IxBadge type="label" label="Fixed" variant="information" icon={iconCode} /> | <IxLinkButton url="https://github.com/siemens/ix/blob/main/BREAKING_CHANGES/v6.md#removed-built-in-validation-feedback-in-novalidate-forms" icon="external" aria-label="View code change" title="View code change">Code</IxLinkButton> | Removed built-in validation feedback in `novalidate` forms; unparseable input reports `typeMismatch` |
+| <IxBadge type="label" label="Changed" variant="caution" icon={iconCode} /> | <IxLinkButton url="https://github.com/siemens/ix/blob/main/BREAKING_CHANGES/v6.md#changed-the-default-icon-size-to-20px" icon="external" aria-label="View code change" title="View code change">Code</IxLinkButton><br /><IxLinkButton url="https://www.figma.com/design/r2nqdNNXXZtPmWuVjIlM1Q/iX-Components?node-id=69781-31295" icon="external" aria-label="View design change" title="View design change">Figma</IxLinkButton> | Changed the default icon size to 20px in affected slots |
 
 </div>
 
@@ -555,10 +555,10 @@ The following tables combine component-specific code and Figma changes, with com
 
 | Type | Details | Description |
 | :--- | :--- | :--- |
-| <IxBadge type="label" label="Changed" variant="caution" icon={iconCode} /> | <IxLinkButton url="https://github.com/siemens/ix/blob/main/BREAKING_CHANGES/v6.md#date-time-picker---locale-support" icon="external" aria-label="View code change" title="View code change">Code</IxLinkButton> | Localized event values, added ISO fields, and added AM/PM and time-column labels |
+| <IxBadge type="label" label="Changed" variant="caution" icon={iconCode} /> | <IxLinkButton url="https://github.com/siemens/ix/blob/main/BREAKING_CHANGES/v6.md#changed-date-and-time-picker-locale-support" icon="external" aria-label="View code change" title="View code change">Code</IxLinkButton> | Localized event values, added ISO fields, and added AM/PM and time-column labels |
 | <IxBadge type="label" label="Changed" variant="caution" icon={iconCode} /> | <IxLinkButton url="https://github.com/siemens/ix/blob/main/BREAKING_CHANGES/v6.md#date-and-time-pickers-confirmation-and-selection" icon="external" aria-label="View code change" title="View code change">Code</IxLinkButton> | Changed change/select event handling and added optional confirmation and cancellation |
 | <IxBadge type="label" label="Removed" variant="warning" icon={iconCode} /> | <IxLinkButton url="https://github.com/siemens/ix/blob/main/BREAKING_CHANGES/v6.md#ix-datetime-picker-daterangechange-no-longer-bubbles" icon="external" aria-label="View code change" title="View code change">Code</IxLinkButton> | Stopped the embedded `dateRangeChange` event from bubbling; use `dateChange` or `dateSelect` |
-| <IxBadge type="label" label="Changed" variant="caution" icon={iconCode} /> | <IxLinkButton url="https://github.com/siemens/ix/blob/main/BREAKING_CHANGES/v6.md#default-icon-size-is-20" icon="external" aria-label="View code change" title="View code change">Code</IxLinkButton><br /><IxLinkButton url="https://www.figma.com/design/r2nqdNNXXZtPmWuVjIlM1Q/iX-Components?node-id=69781-31295" icon="external" aria-label="View design change" title="View design change">Figma</IxLinkButton> | Changed the default icon size to 20px in affected slots |
+| <IxBadge type="label" label="Changed" variant="caution" icon={iconCode} /> | <IxLinkButton url="https://github.com/siemens/ix/blob/main/BREAKING_CHANGES/v6.md#changed-the-default-icon-size-to-20px" icon="external" aria-label="View code change" title="View code change">Code</IxLinkButton><br /><IxLinkButton url="https://www.figma.com/design/r2nqdNNXXZtPmWuVjIlM1Q/iX-Components?node-id=69781-31295" icon="external" aria-label="View design change" title="View design change">Figma</IxLinkButton> | Changed the default icon size to 20px in affected slots |
 
 </div>
 
@@ -579,8 +579,8 @@ The following tables combine component-specific code and Figma changes, with com
 
 | Type | Details | Description |
 | :--- | :--- | :--- |
-| <IxBadge type="label" label="Changed" variant="caution" icon={iconCode} /> | <IxLinkButton url="https://github.com/siemens/ix/blob/main/BREAKING_CHANGES/v6.md#boolean-attributes-on-form-components" icon="external" aria-label="View code change" title="View code change">Code</IxLinkButton> | Changed boolean attributes to follow native HTML semantics |
-| <IxBadge type="label" label="Fixed" variant="information" icon={iconCode} /> | <IxLinkButton url="https://github.com/siemens/ix/blob/main/BREAKING_CHANGES/v6.md#no-built-in-validation-feedback-in-novalidate-forms" icon="external" aria-label="View code change" title="View code change">Code</IxLinkButton> | Removed built-in validation feedback in `novalidate` forms |
+| <IxBadge type="label" label="Changed" variant="caution" icon={iconCode} /> | <IxLinkButton url="https://github.com/siemens/ix/blob/main/BREAKING_CHANGES/v6.md#changed-boolean-attributes-to-follow-native-html-semantics" icon="external" aria-label="View code change" title="View code change">Code</IxLinkButton> | Changed boolean attributes to follow native HTML semantics |
+| <IxBadge type="label" label="Fixed" variant="information" icon={iconCode} /> | <IxLinkButton url="https://github.com/siemens/ix/blob/main/BREAKING_CHANGES/v6.md#removed-built-in-validation-feedback-in-novalidate-forms" icon="external" aria-label="View code change" title="View code change">Code</IxLinkButton> | Removed built-in validation feedback in `novalidate` forms |
 
 </div>
 
@@ -590,8 +590,8 @@ The following tables combine component-specific code and Figma changes, with com
 
 | Type | Details | Description |
 | :--- | :--- | :--- |
-| <IxBadge type="label" label="Changed" variant="caution" icon={iconCode} /> | <IxLinkButton url="https://github.com/siemens/ix/blob/main/BREAKING_CHANGES/v6.md#boolean-attributes-on-form-components" icon="external" aria-label="View code change" title="View code change">Code</IxLinkButton> | Changed boolean attributes to follow native HTML semantics |
-| <IxBadge type="label" label="Fixed" variant="information" icon={iconCode} /> | <IxLinkButton url="https://github.com/siemens/ix/blob/main/BREAKING_CHANGES/v6.md#no-built-in-validation-feedback-in-novalidate-forms" icon="external" aria-label="View code change" title="View code change">Code</IxLinkButton> | Removed built-in validation feedback in `novalidate` forms |
+| <IxBadge type="label" label="Changed" variant="caution" icon={iconCode} /> | <IxLinkButton url="https://github.com/siemens/ix/blob/main/BREAKING_CHANGES/v6.md#changed-boolean-attributes-to-follow-native-html-semantics" icon="external" aria-label="View code change" title="View code change">Code</IxLinkButton> | Changed boolean attributes to follow native HTML semantics |
+| <IxBadge type="label" label="Fixed" variant="information" icon={iconCode} /> | <IxLinkButton url="https://github.com/siemens/ix/blob/main/BREAKING_CHANGES/v6.md#removed-built-in-validation-feedback-in-novalidate-forms" icon="external" aria-label="View code change" title="View code change">Code</IxLinkButton> | Removed built-in validation feedback in `novalidate` forms |
 | <IxBadge type="label" label="Removed" variant="warning" icon={iconCode} /> | <IxLinkButton url="https://github.com/siemens/ix/blob/main/BREAKING_CHANGES/v6.md#removed-shadow-utility-aliases" icon="external" aria-label="View code change" title="View code change">Code</IxLinkButton> | Removed decorative input shadows and `--ix-input--box-shadow` |
 
 </div>
@@ -602,8 +602,8 @@ The following tables combine component-specific code and Figma changes, with com
 
 | Type | Details | Description |
 | :--- | :--- | :--- |
-| <IxBadge type="label" label="Changed" variant="caution" icon={iconCode} /> | <IxLinkButton url="https://github.com/siemens/ix/blob/main/BREAKING_CHANGES/v6.md#boolean-attributes-on-form-components" icon="external" aria-label="View code change" title="View code change">Code</IxLinkButton> | Changed boolean attributes to follow native HTML semantics |
-| <IxBadge type="label" label="Changed" variant="caution" icon={iconCode} /> | <IxLinkButton url="https://github.com/siemens/ix/blob/main/BREAKING_CHANGES/v6.md#default-icon-size-is-20" icon="external" aria-label="View code change" title="View code change">Code</IxLinkButton> | Changed the control glyph to 20px while retaining the 24px hit area |
+| <IxBadge type="label" label="Changed" variant="caution" icon={iconCode} /> | <IxLinkButton url="https://github.com/siemens/ix/blob/main/BREAKING_CHANGES/v6.md#changed-boolean-attributes-to-follow-native-html-semantics" icon="external" aria-label="View code change" title="View code change">Code</IxLinkButton> | Changed boolean attributes to follow native HTML semantics |
+| <IxBadge type="label" label="Changed" variant="caution" icon={iconCode} /> | <IxLinkButton url="https://github.com/siemens/ix/blob/main/BREAKING_CHANGES/v6.md#changed-the-default-icon-size-to-20px" icon="external" aria-label="View code change" title="View code change">Code</IxLinkButton> | Changed the control glyph to 20px while retaining the 24px hit area |
 
 </div>
 
@@ -623,7 +623,7 @@ The following tables combine component-specific code and Figma changes, with com
 
 | Type | Details | Description |
 | :--- | :--- | :--- |
-| <IxBadge type="label" label="Changed" variant="caution" icon={iconCode} /> | <IxLinkButton url="https://github.com/siemens/ix/blob/main/BREAKING_CHANGES/v6.md#boolean-attributes-on-form-components" icon="external" aria-label="View code change" title="View code change">Code</IxLinkButton> | Changed boolean attributes to follow native HTML semantics |
+| <IxBadge type="label" label="Changed" variant="caution" icon={iconCode} /> | <IxLinkButton url="https://github.com/siemens/ix/blob/main/BREAKING_CHANGES/v6.md#changed-boolean-attributes-to-follow-native-html-semantics" icon="external" aria-label="View code change" title="View code change">Code</IxLinkButton> | Changed boolean attributes to follow native HTML semantics |
 | <IxBadge type="label" label="Removed" variant="warning" icon={iconCode} /> | <IxLinkButton url="https://github.com/siemens/ix/blob/main/BREAKING_CHANGES/v6.md#removed-shadow-utility-aliases" icon="external" aria-label="View code change" title="View code change">Code</IxLinkButton> | Removed decorative input shadows and `--ix-select--box-shadow` |
 
 </div>
@@ -634,7 +634,7 @@ The following tables combine component-specific code and Figma changes, with com
 
 | Type | Details | Description |
 | :--- | :--- | :--- |
-| <IxBadge type="label" label="Changed" variant="caution" icon={iconCode} /> | <IxLinkButton url="https://github.com/siemens/ix/blob/main/BREAKING_CHANGES/v6.md#boolean-attributes-on-form-components" icon="external" aria-label="View code change" title="View code change">Code</IxLinkButton> | Changed boolean attributes to follow native HTML semantics |
+| <IxBadge type="label" label="Changed" variant="caution" icon={iconCode} /> | <IxLinkButton url="https://github.com/siemens/ix/blob/main/BREAKING_CHANGES/v6.md#changed-boolean-attributes-to-follow-native-html-semantics" icon="external" aria-label="View code change" title="View code change">Code</IxLinkButton> | Changed boolean attributes to follow native HTML semantics |
 
 </div>
 
@@ -644,8 +644,8 @@ The following tables combine component-specific code and Figma changes, with com
 
 | Type | Details | Description |
 | :--- | :--- | :--- |
-| <IxBadge type="label" label="Changed" variant="caution" icon={iconCode} /> | <IxLinkButton url="https://github.com/siemens/ix/blob/main/BREAKING_CHANGES/v6.md#boolean-attributes-on-form-components" icon="external" aria-label="View code change" title="View code change">Code</IxLinkButton> | Changed boolean attributes to follow native HTML semantics |
-| <IxBadge type="label" label="Fixed" variant="information" icon={iconCode} /> | <IxLinkButton url="https://github.com/siemens/ix/blob/main/BREAKING_CHANGES/v6.md#no-built-in-validation-feedback-in-novalidate-forms" icon="external" aria-label="View code change" title="View code change">Code</IxLinkButton> | Removed built-in validation feedback in `novalidate` forms |
+| <IxBadge type="label" label="Changed" variant="caution" icon={iconCode} /> | <IxLinkButton url="https://github.com/siemens/ix/blob/main/BREAKING_CHANGES/v6.md#changed-boolean-attributes-to-follow-native-html-semantics" icon="external" aria-label="View code change" title="View code change">Code</IxLinkButton> | Changed boolean attributes to follow native HTML semantics |
+| <IxBadge type="label" label="Fixed" variant="information" icon={iconCode} /> | <IxLinkButton url="https://github.com/siemens/ix/blob/main/BREAKING_CHANGES/v6.md#removed-built-in-validation-feedback-in-novalidate-forms" icon="external" aria-label="View code change" title="View code change">Code</IxLinkButton> | Removed built-in validation feedback in `novalidate` forms |
 
 </div>
 
@@ -655,10 +655,10 @@ The following tables combine component-specific code and Figma changes, with com
 
 | Type | Details | Description |
 | :--- | :--- | :--- |
-| <IxBadge type="label" label="Changed" variant="caution" icon={iconCode} /> | <IxLinkButton url="https://github.com/siemens/ix/blob/main/BREAKING_CHANGES/v6.md#boolean-attributes-on-form-components" icon="external" aria-label="View code change" title="View code change">Code</IxLinkButton> | Changed boolean attributes to follow native HTML semantics |
-| <IxBadge type="label" label="Added" variant="success" icon={iconCode} /> | <IxLinkButton url="https://github.com/siemens/ix/blob/main/BREAKING_CHANGES/v6.md#date-time-picker---locale-support" icon="external" aria-label="View code change" title="View code change">Code</IxLinkButton> | Added `locale`, `i18nAm`, and `i18nPm` |
+| <IxBadge type="label" label="Changed" variant="caution" icon={iconCode} /> | <IxLinkButton url="https://github.com/siemens/ix/blob/main/BREAKING_CHANGES/v6.md#changed-boolean-attributes-to-follow-native-html-semantics" icon="external" aria-label="View code change" title="View code change">Code</IxLinkButton> | Changed boolean attributes to follow native HTML semantics |
+| <IxBadge type="label" label="Added" variant="success" icon={iconCode} /> | <IxLinkButton url="https://github.com/siemens/ix/blob/main/BREAKING_CHANGES/v6.md#changed-date-and-time-picker-locale-support" icon="external" aria-label="View code change" title="View code change">Code</IxLinkButton> | Added `locale`, `i18nAm`, and `i18nPm` |
 | <IxBadge type="label" label="Changed" variant="caution" icon={iconCode} /> | <IxLinkButton url="https://github.com/siemens/ix/blob/main/BREAKING_CHANGES/v6.md#ix-time-picker-and-ix-time-input-always-require-confirmation" icon="external" aria-label="View code change" title="View code change">Code</IxLinkButton> | Required Confirm to apply time and discarded pending selections on Cancel, Escape, or outside click; added `i18nCancel` and retained `i18nSelectTime` for the Confirm label |
-| <IxBadge type="label" label="Fixed" variant="information" icon={iconCode} /> | <IxLinkButton url="https://github.com/siemens/ix/blob/main/BREAKING_CHANGES/v6.md#no-built-in-validation-feedback-in-novalidate-forms" icon="external" aria-label="View code change" title="View code change">Code</IxLinkButton> | Removed built-in validation feedback in `novalidate` forms; unparseable input reports `patternMismatch` |
+| <IxBadge type="label" label="Fixed" variant="information" icon={iconCode} /> | <IxLinkButton url="https://github.com/siemens/ix/blob/main/BREAKING_CHANGES/v6.md#removed-built-in-validation-feedback-in-novalidate-forms" icon="external" aria-label="View code change" title="View code change">Code</IxLinkButton> | Removed built-in validation feedback in `novalidate` forms; unparseable input reports `patternMismatch` |
 
 </div>
 
@@ -668,9 +668,9 @@ The following tables combine component-specific code and Figma changes, with com
 
 | Type | Details | Description |
 | :--- | :--- | :--- |
-| <IxBadge type="label" label="Added" variant="success" icon={iconCode} /> | <IxLinkButton url="https://github.com/siemens/ix/blob/main/BREAKING_CHANGES/v6.md#date-time-picker---locale-support" icon="external" aria-label="View code change" title="View code change">Code</IxLinkButton> | Added locale and AM/PM properties and the locale-independent `getCurrentIsoTime` method |
-| <IxBadge type="label" label="Changed" variant="caution" icon={iconCode} /> | <IxLinkButton url="https://github.com/siemens/ix/blob/main/BREAKING_CHANGES/v6.md#ix-time-picker-i18nconfirmtime-renamed-to-i18nconfirm" icon="external" aria-label="View code change" title="View code change">Code</IxLinkButton> | Renamed `i18nConfirmTime` to `i18nConfirm` |
-| <IxBadge type="label" label="Removed" variant="warning" icon={iconCode} /> | <IxLinkButton url="https://github.com/siemens/ix/blob/main/BREAKING_CHANGES/v6.md#ix-time-picker-datetimepickerappearance-removed" icon="external" aria-label="View code change" title="View code change">Code</IxLinkButton> | Removed `dateTimePickerAppearance`; Cancel and Confirm are always shown |
+| <IxBadge type="label" label="Added" variant="success" icon={iconCode} /> | <IxLinkButton url="https://github.com/siemens/ix/blob/main/BREAKING_CHANGES/v6.md#changed-date-and-time-picker-locale-support" icon="external" aria-label="View code change" title="View code change">Code</IxLinkButton> | Added locale and AM/PM properties and the locale-independent `getCurrentIsoTime` method |
+| <IxBadge type="label" label="Changed" variant="caution" icon={iconCode} /> | <IxLinkButton url="https://github.com/siemens/ix/blob/main/BREAKING_CHANGES/v6.md#renamed-i18nconfirmtime-to-i18nconfirm" icon="external" aria-label="View code change" title="View code change">Code</IxLinkButton> | Renamed `i18nConfirmTime` to `i18nConfirm` |
+| <IxBadge type="label" label="Removed" variant="warning" icon={iconCode} /> | <IxLinkButton url="https://github.com/siemens/ix/blob/main/BREAKING_CHANGES/v6.md#removed-datetimepickerappearance" icon="external" aria-label="View code change" title="View code change">Code</IxLinkButton> | Removed `dateTimePickerAppearance`; Cancel and Confirm are always shown |
 | <IxBadge type="label" label="Changed" variant="caution" icon={iconCode} /> | <IxLinkButton url="https://github.com/siemens/ix/blob/main/BREAKING_CHANGES/v6.md#ix-time-picker-and-ix-time-input-always-require-confirmation" icon="external" aria-label="View code change" title="View code change">Code</IxLinkButton> | Changed confirmation, cancellation, initial pending-time events, and getter behavior: `timeChange` reports pending values, `timeSelect` applies them, and time getters return confirmed values |
 | <IxBadge type="label" label="Removed" variant="warning" icon={iconCode} /> | <IxLinkButton url="https://github.com/siemens/ix/blob/main/BREAKING_CHANGES/v6.md#ix-time-picker-and-ix-time-input-always-require-confirmation" icon="external" aria-label="View code change" title="View code change">Code</IxLinkButton> | Removed `--ix-time-picker-footer--gap`; the shared footer retains the same default gap |
 
@@ -682,7 +682,7 @@ The following tables combine component-specific code and Figma changes, with com
 
 | Type | Details | Description |
 | :--- | :--- | :--- |
-| <IxBadge type="label" label="Changed" variant="caution" icon={iconCode} /> | <IxLinkButton url="https://github.com/siemens/ix/blob/main/BREAKING_CHANGES/v6.md#boolean-attributes-on-form-components" icon="external" aria-label="View code change" title="View code change">Code</IxLinkButton> | Changed boolean attributes to follow native HTML semantics |
+| <IxBadge type="label" label="Changed" variant="caution" icon={iconCode} /> | <IxLinkButton url="https://github.com/siemens/ix/blob/main/BREAKING_CHANGES/v6.md#changed-boolean-attributes-to-follow-native-html-semantics" icon="external" aria-label="View code change" title="View code change">Code</IxLinkButton> | Changed boolean attributes to follow native HTML semantics |
 
 </div>
 
@@ -692,7 +692,7 @@ The following tables combine component-specific code and Figma changes, with com
 
 | Type | Details | Description |
 | :--- | :--- | :--- |
-| <IxBadge type="label" label="Changed" variant="caution" icon={iconCode} /> | <IxLinkButton url="https://github.com/siemens/ix/blob/main/BREAKING_CHANGES/v6.md#default-icon-size-is-20" icon="external" aria-label="View code change" title="View code change">Code</IxLinkButton><br /><IxLinkButton url="https://www.figma.com/design/r2nqdNNXXZtPmWuVjIlM1Q/iX-Components?node-id=290-1441" icon="external" aria-label="View design change" title="View design change">Figma</IxLinkButton> | Changed the default icon size to 20px in affected slots |
+| <IxBadge type="label" label="Changed" variant="caution" icon={iconCode} /> | <IxLinkButton url="https://github.com/siemens/ix/blob/main/BREAKING_CHANGES/v6.md#changed-the-default-icon-size-to-20px" icon="external" aria-label="View code change" title="View code change">Code</IxLinkButton><br /><IxLinkButton url="https://www.figma.com/design/r2nqdNNXXZtPmWuVjIlM1Q/iX-Components?node-id=290-1441" icon="external" aria-label="View design change" title="View design change">Figma</IxLinkButton> | Changed the default icon size to 20px in affected slots |
 
 </div>
 
@@ -704,7 +704,7 @@ The following tables combine component-specific code and Figma changes, with com
 
 | Type | Details | Description |
 | :--- | :--- | :--- |
-| <IxBadge type="label" label="Changed" variant="caution" icon={iconCode} /> | <IxLinkButton url="https://github.com/siemens/ix/blob/main/BREAKING_CHANGES/v6.md#default-icon-size-is-20" icon="external" aria-label="View code change" title="View code change">Code</IxLinkButton><br /><IxLinkButton url="https://www.figma.com/design/r2nqdNNXXZtPmWuVjIlM1Q/iX-Components?node-id=2-3" icon="external" aria-label="View design change" title="View design change">Figma</IxLinkButton> | Changed the default icon size to 20px in affected slots |
+| <IxBadge type="label" label="Changed" variant="caution" icon={iconCode} /> | <IxLinkButton url="https://github.com/siemens/ix/blob/main/BREAKING_CHANGES/v6.md#changed-the-default-icon-size-to-20px" icon="external" aria-label="View code change" title="View code change">Code</IxLinkButton><br /><IxLinkButton url="https://www.figma.com/design/r2nqdNNXXZtPmWuVjIlM1Q/iX-Components?node-id=2-3" icon="external" aria-label="View design change" title="View design change">Figma</IxLinkButton> | Changed the default icon size to 20px in affected slots |
 
 </div>
 
@@ -724,8 +724,8 @@ The following tables combine component-specific code and Figma changes, with com
 
 | Type | Details | Description |
 | :--- | :--- | :--- |
-| <IxBadge type="label" label="Changed" variant="caution" icon={iconCode} /> | <IxLinkButton url="https://github.com/siemens/ix/blob/main/BREAKING_CHANGES/v6.md#chip-pill-and-badge-status-variant-rename" icon="external" aria-label="View code change" title="View code change">Code</IxLinkButton><br /><IxLinkButton url="https://www.figma.com/design/r2nqdNNXXZtPmWuVjIlM1Q/iX-Components?node-id=276-397" icon="external" aria-label="View design change" title="View design change">Figma</IxLinkButton> | Renamed status variants, classes, and theming properties; changed the default variant to `accent` |
-| <IxBadge type="label" label="Changed" variant="caution" icon={iconCode} /> | <IxLinkButton url="https://github.com/siemens/ix/blob/main/BREAKING_CHANGES/v6.md#default-icon-size-is-20" icon="external" aria-label="View code change" title="View code change">Code</IxLinkButton><br /><IxLinkButton url="https://www.figma.com/design/r2nqdNNXXZtPmWuVjIlM1Q/iX-Components?node-id=276-397" icon="external" aria-label="View design change" title="View design change">Figma</IxLinkButton> | Changed the default icon size to 20px in affected slots |
+| <IxBadge type="label" label="Changed" variant="caution" icon={iconCode} /> | <IxLinkButton url="https://github.com/siemens/ix/blob/main/BREAKING_CHANGES/v6.md#changed-chip-pill-and-badge-status-variants" icon="external" aria-label="View code change" title="View code change">Code</IxLinkButton><br /><IxLinkButton url="https://www.figma.com/design/r2nqdNNXXZtPmWuVjIlM1Q/iX-Components?node-id=276-397" icon="external" aria-label="View design change" title="View design change">Figma</IxLinkButton> | Renamed status variants, classes, and theming properties; changed the default variant to `accent` |
+| <IxBadge type="label" label="Changed" variant="caution" icon={iconCode} /> | <IxLinkButton url="https://github.com/siemens/ix/blob/main/BREAKING_CHANGES/v6.md#changed-the-default-icon-size-to-20px" icon="external" aria-label="View code change" title="View code change">Code</IxLinkButton><br /><IxLinkButton url="https://www.figma.com/design/r2nqdNNXXZtPmWuVjIlM1Q/iX-Components?node-id=276-397" icon="external" aria-label="View design change" title="View design change">Figma</IxLinkButton> | Changed the default icon size to 20px in affected slots |
 | <IxBadge type="label" label="Changed" variant="caution" outline icon={iconShapes} /> | <IxLinkButton url="https://www.figma.com/design/r2nqdNNXXZtPmWuVjIlM1Q/iX-Components?node-id=276-397" icon="external" aria-label="View design change" title="View design change">Figma</IxLinkButton> | Figma: Changed the color of the custom variant. |
 
 </div>
@@ -736,7 +736,7 @@ The following tables combine component-specific code and Figma changes, with com
 
 | Type | Details | Description |
 | :--- | :--- | :--- |
-| <IxBadge type="label" label="Changed" variant="caution" icon={iconCode} /> | <IxLinkButton url="https://github.com/siemens/ix/blob/main/BREAKING_CHANGES/v6.md#default-icon-size-is-20" icon="external" aria-label="View code change" title="View code change">Code</IxLinkButton><br /><IxLinkButton url="https://www.figma.com/design/r2nqdNNXXZtPmWuVjIlM1Q/iX-Components?node-id=1219-25402" icon="external" aria-label="View design change" title="View design change">Figma</IxLinkButton> | Changed the default icon size to 20px in affected slots |
+| <IxBadge type="label" label="Changed" variant="caution" icon={iconCode} /> | <IxLinkButton url="https://github.com/siemens/ix/blob/main/BREAKING_CHANGES/v6.md#changed-the-default-icon-size-to-20px" icon="external" aria-label="View code change" title="View code change">Code</IxLinkButton><br /><IxLinkButton url="https://www.figma.com/design/r2nqdNNXXZtPmWuVjIlM1Q/iX-Components?node-id=1219-25402" icon="external" aria-label="View design change" title="View design change">Figma</IxLinkButton> | Changed the default icon size to 20px in affected slots |
 | <IxBadge type="label" label="Removed" variant="warning" icon={iconCode} /> | <IxLinkButton url="https://github.com/siemens/ix/blob/main/BREAKING_CHANGES/v6.md#removed-legacy-sass-modules" icon="external" aria-label="View code change" title="View code change">Code</IxLinkButton> | Removed the legacy dropdown Sass module |
 
 </div>
@@ -747,8 +747,8 @@ The following tables combine component-specific code and Figma changes, with com
 
 | Type | Details | Description |
 | :--- | :--- | :--- |
-| <IxBadge type="label" label="Changed" variant="caution" icon={iconCode} /> | <IxLinkButton url="https://github.com/siemens/ix/blob/main/BREAKING_CHANGES/v6.md#default-icon-size-is-20" icon="external" aria-label="View code change" title="View code change">Code</IxLinkButton><br /><IxLinkButton url="https://www.figma.com/design/r2nqdNNXXZtPmWuVjIlM1Q/iX-Components?node-id=107193-14086" icon="external" aria-label="View design change" title="View design change">Figma</IxLinkButton> | Changed the default glyph from 24px to 20px and added explicit size `20`; retained the 32px host for sizes `20` and `24` |
-| <IxBadge type="label" label="Changed" variant="caution" icon={iconCode} /> | <IxLinkButton url="https://github.com/siemens/ix/blob/main/BREAKING_CHANGES/v6.md#icon-and-component-color-properties" icon="external" aria-label="View code change" title="View code change">Code</IxLinkButton> | Changed `iconColor` to require complete CSS custom-property names |
+| <IxBadge type="label" label="Changed" variant="caution" icon={iconCode} /> | <IxLinkButton url="https://github.com/siemens/ix/blob/main/BREAKING_CHANGES/v6.md#changed-the-default-icon-size-to-20px" icon="external" aria-label="View code change" title="View code change">Code</IxLinkButton><br /><IxLinkButton url="https://www.figma.com/design/r2nqdNNXXZtPmWuVjIlM1Q/iX-Components?node-id=107193-14086" icon="external" aria-label="View design change" title="View design change">Figma</IxLinkButton> | Changed the default glyph from 24px to 20px and added explicit size `20`; retained the 32px host for sizes `20` and `24` |
+| <IxBadge type="label" label="Changed" variant="caution" icon={iconCode} /> | <IxLinkButton url="https://github.com/siemens/ix/blob/main/BREAKING_CHANGES/v6.md#changed-icon-and-component-color-properties-to-use-complete-token-names" icon="external" aria-label="View code change" title="View code change">Code</IxLinkButton> | Changed `iconColor` to require complete CSS custom-property names |
 
 </div>
 
@@ -758,7 +758,7 @@ The following tables combine component-specific code and Figma changes, with com
 
 | Type | Details | Description |
 | :--- | :--- | :--- |
-| <IxBadge type="label" label="Changed" variant="caution" icon={iconCode} /> | <IxLinkButton url="https://github.com/siemens/ix/blob/main/BREAKING_CHANGES/v6.md#default-icon-size-is-20" icon="external" aria-label="View code change" title="View code change">Code</IxLinkButton><br /><IxLinkButton url="https://www.figma.com/design/r2nqdNNXXZtPmWuVjIlM1Q/iX-Components?node-id=107193-14087" icon="external" aria-label="View design change" title="View design change">Figma</IxLinkButton> | Changed the default glyph from 24px to 20px and added explicit size `20`; retained the 32px host for sizes `20` and `24` |
+| <IxBadge type="label" label="Changed" variant="caution" icon={iconCode} /> | <IxLinkButton url="https://github.com/siemens/ix/blob/main/BREAKING_CHANGES/v6.md#changed-the-default-icon-size-to-20px" icon="external" aria-label="View code change" title="View code change">Code</IxLinkButton><br /><IxLinkButton url="https://www.figma.com/design/r2nqdNNXXZtPmWuVjIlM1Q/iX-Components?node-id=107193-14087" icon="external" aria-label="View design change" title="View design change">Figma</IxLinkButton> | Changed the default glyph from 24px to 20px and added explicit size `20`; retained the 32px host for sizes `20` and `24` |
 
 </div>
 
@@ -778,7 +778,7 @@ The following tables combine component-specific code and Figma changes, with com
 
 | Type | Details | Description |
 | :--- | :--- | :--- |
-| <IxBadge type="label" label="Changed" variant="caution" icon={iconCode} /> | <IxLinkButton url="https://github.com/siemens/ix/blob/main/BREAKING_CHANGES/v6.md#default-icon-size-is-20" icon="external" aria-label="View code change" title="View code change">Code</IxLinkButton><br /><IxLinkButton url="https://www.figma.com/design/r2nqdNNXXZtPmWuVjIlM1Q/iX-Components?node-id=201-3398" icon="external" aria-label="View design change" title="View design change">Figma</IxLinkButton> | Changed the default icon size to 20px in affected slots |
+| <IxBadge type="label" label="Changed" variant="caution" icon={iconCode} /> | <IxLinkButton url="https://github.com/siemens/ix/blob/main/BREAKING_CHANGES/v6.md#changed-the-default-icon-size-to-20px" icon="external" aria-label="View code change" title="View code change">Code</IxLinkButton><br /><IxLinkButton url="https://www.figma.com/design/r2nqdNNXXZtPmWuVjIlM1Q/iX-Components?node-id=201-3398" icon="external" aria-label="View design change" title="View design change">Figma</IxLinkButton> | Changed the default icon size to 20px in affected slots |
 
 </div>
 
@@ -790,7 +790,7 @@ The following tables combine component-specific code and Figma changes, with com
 
 | Type | Details | Description |
 | :--- | :--- | :--- |
-| <IxBadge type="label" label="Changed" variant="caution" icon={iconCode} /> | <IxLinkButton url="https://github.com/siemens/ix/blob/main/BREAKING_CHANGES/v6.md#chip-pill-and-badge-status-variant-rename" icon="external" aria-label="View code change" title="View code change">Code</IxLinkButton> | Renamed status variants, classes, and theming properties; changed the default to `accent` and updated status-icon mappings, including `error` |
+| <IxBadge type="label" label="Changed" variant="caution" icon={iconCode} /> | <IxLinkButton url="https://github.com/siemens/ix/blob/main/BREAKING_CHANGES/v6.md#changed-chip-pill-and-badge-status-variants" icon="external" aria-label="View code change" title="View code change">Code</IxLinkButton> | Renamed status variants, classes, and theming properties; changed the default to `accent` and updated status-icon mappings, including `error` |
 
 </div>
 
@@ -800,7 +800,7 @@ The following tables combine component-specific code and Figma changes, with com
 
 | Type | Details | Description |
 | :--- | :--- | :--- |
-| <IxBadge type="label" label="Changed" variant="caution" icon={iconCode} /> | <IxLinkButton url="https://github.com/siemens/ix/blob/main/BREAKING_CHANGES/v6.md#ix-empty-state-subheader-renamed-to-description" icon="external" aria-label="View code change" title="View code change">Code</IxLinkButton> | Renamed `subHeader` to `description`; removed support for `sub-header` |
+| <IxBadge type="label" label="Changed" variant="caution" icon={iconCode} /> | <IxLinkButton url="https://github.com/siemens/ix/blob/main/BREAKING_CHANGES/v6.md#renamed-subheader-to-description" icon="external" aria-label="View code change" title="View code change">Code</IxLinkButton> | Renamed `subHeader` to `description`; removed support for `sub-header` |
 
 </div>
 
@@ -820,8 +820,8 @@ The following tables combine component-specific code and Figma changes, with com
 
 | Type | Details | Description |
 | :--- | :--- | :--- |
-| <IxBadge type="label" label="Changed" variant="caution" icon={iconCode} /> | <IxLinkButton url="https://github.com/siemens/ix/blob/main/BREAKING_CHANGES/v6.md#ix-message-bar-status-type-rename" icon="external" aria-label="View code change" title="View code change">Code</IxLinkButton><br /><IxLinkButton url="https://www.figma.com/design/r2nqdNNXXZtPmWuVjIlM1Q/iX-Components?node-id=287-421" icon="external" aria-label="View design change" title="View design change">Figma</IxLinkButton> | Renamed status `type` values, changed the default to `information`, added `error`, and updated status icons and type classes; status icons are now hidden from assistive technology |
-| <IxBadge type="label" label="Changed" variant="caution" icon={iconCode} /> | <IxLinkButton url="https://github.com/siemens/ix/blob/main/BREAKING_CHANGES/v6.md#default-icon-size-is-20" icon="external" aria-label="View code change" title="View code change">Code</IxLinkButton><br /><IxLinkButton url="https://www.figma.com/design/r2nqdNNXXZtPmWuVjIlM1Q/iX-Components?node-id=287-421" icon="external" aria-label="View design change" title="View design change">Figma</IxLinkButton> | Changed the default icon size to 20px in affected slots |
+| <IxBadge type="label" label="Changed" variant="caution" icon={iconCode} /> | <IxLinkButton url="https://github.com/siemens/ix/blob/main/BREAKING_CHANGES/v6.md#changed-ix-message-bar-status-type-values" icon="external" aria-label="View code change" title="View code change">Code</IxLinkButton><br /><IxLinkButton url="https://www.figma.com/design/r2nqdNNXXZtPmWuVjIlM1Q/iX-Components?node-id=287-421" icon="external" aria-label="View design change" title="View design change">Figma</IxLinkButton> | Renamed status `type` values, changed the default to `information`, added `error`, and updated status icons and type classes; status icons are now hidden from assistive technology |
+| <IxBadge type="label" label="Changed" variant="caution" icon={iconCode} /> | <IxLinkButton url="https://github.com/siemens/ix/blob/main/BREAKING_CHANGES/v6.md#changed-the-default-icon-size-to-20px" icon="external" aria-label="View code change" title="View code change">Code</IxLinkButton><br /><IxLinkButton url="https://www.figma.com/design/r2nqdNNXXZtPmWuVjIlM1Q/iX-Components?node-id=287-421" icon="external" aria-label="View design change" title="View design change">Figma</IxLinkButton> | Changed the default icon size to 20px in affected slots |
 
 </div>
 
@@ -831,7 +831,7 @@ The following tables combine component-specific code and Figma changes, with com
 
 | Type | Details | Description |
 | :--- | :--- | :--- |
-| <IxBadge type="label" label="Changed" variant="caution" icon={iconCode} /> | <IxLinkButton url="https://github.com/siemens/ix/blob/main/BREAKING_CHANGES/v6.md#showmessage-status-helper-rename" icon="external" aria-label="View code change" title="View code change">Code</IxLinkButton><br /><IxLinkButton url="https://www.figma.com/design/r2nqdNNXXZtPmWuVjIlM1Q/iX-Components?node-id=120048-15477" icon="external" aria-label="View design change" title="View design change">Figma</IxLinkButton> | Renamed `showMessage` and Angular `MessageService` helpers, added status helpers, and changed the question icon color; migrate `info` to `information` and the previous warning meaning to `caution` |
+| <IxBadge type="label" label="Changed" variant="caution" icon={iconCode} /> | <IxLinkButton url="https://github.com/siemens/ix/blob/main/BREAKING_CHANGES/v6.md#changed-showmessage-status-helpers" icon="external" aria-label="View code change" title="View code change">Code</IxLinkButton><br /><IxLinkButton url="https://www.figma.com/design/r2nqdNNXXZtPmWuVjIlM1Q/iX-Components?node-id=120048-15477" icon="external" aria-label="View design change" title="View design change">Figma</IxLinkButton> | Renamed `showMessage` and Angular `MessageService` helpers, added status helpers, and changed the question icon color; migrate `info` to `information` and the previous warning meaning to `caution` |
 
 </div>
 
@@ -841,7 +841,7 @@ The following tables combine component-specific code and Figma changes, with com
 
 | Type | Details | Description |
 | :--- | :--- | :--- |
-| <IxBadge type="label" label="Changed" variant="caution" icon={iconCode} /> | <IxLinkButton url="https://github.com/siemens/ix/blob/main/BREAKING_CHANGES/v6.md#chip-pill-and-badge-status-variant-rename" icon="external" aria-label="View code change" title="View code change">Code</IxLinkButton> | Renamed status variants and changed the default to `accent`; use `ChipVariant` instead of deprecated `PillVariant` |
+| <IxBadge type="label" label="Changed" variant="caution" icon={iconCode} /> | <IxLinkButton url="https://github.com/siemens/ix/blob/main/BREAKING_CHANGES/v6.md#changed-chip-pill-and-badge-status-variants" icon="external" aria-label="View code change" title="View code change">Code</IxLinkButton> | Renamed status variants and changed the default to `accent`; use `ChipVariant` instead of deprecated `PillVariant` |
 | <IxBadge type="label" label="Deprecated" variant="critical" outline icon={iconShapes} /> | <IxLinkButton url="https://www.figma.com/design/r2nqdNNXXZtPmWuVjIlM1Q/iX-Components?node-id=312-1219&t=uyzhGeD7C5A58xnU-4" icon="external" aria-label="View design change" title="View design change">Figma</IxLinkButton> | Figma: Deprecated the pill component. Follow the migration prompt in Figma to migrate to the badge component. |
 
 </div>
@@ -852,7 +852,7 @@ The following tables combine component-specific code and Figma changes, with com
 
 | Type | Details | Description |
 | :--- | :--- | :--- |
-| <IxBadge type="label" label="Changed" variant="caution" icon={iconCode} /> | <IxLinkButton url="https://github.com/siemens/ix/blob/main/BREAKING_CHANGES/v6.md#default-icon-size-is-20" icon="external" aria-label="View code change" title="View code change">Code</IxLinkButton><br /><IxLinkButton url="https://www.figma.com/design/r2nqdNNXXZtPmWuVjIlM1Q/iX-Components?node-id=113253-20078" icon="external" aria-label="View design change" title="View design change">Figma</IxLinkButton> | Changed the default icon size to 20px in affected slots |
+| <IxBadge type="label" label="Changed" variant="caution" icon={iconCode} /> | <IxLinkButton url="https://github.com/siemens/ix/blob/main/BREAKING_CHANGES/v6.md#changed-the-default-icon-size-to-20px" icon="external" aria-label="View code change" title="View code change">Code</IxLinkButton><br /><IxLinkButton url="https://www.figma.com/design/r2nqdNNXXZtPmWuVjIlM1Q/iX-Components?node-id=113253-20078" icon="external" aria-label="View design change" title="View design change">Figma</IxLinkButton> | Changed the default icon size to 20px in affected slots |
 
 </div>
 
@@ -862,8 +862,8 @@ The following tables combine component-specific code and Figma changes, with com
 
 | Type | Details | Description |
 | :--- | :--- | :--- |
-| <IxBadge type="label" label="Changed" variant="caution" icon={iconCode} /> | <IxLinkButton url="https://github.com/siemens/ix/blob/main/BREAKING_CHANGES/v6.md#ix-progress-indicator-status-rename" icon="external" aria-label="View code change" title="View code change">Code</IxLinkButton> | Renamed `default` to `base` and `info` to `information`, updated classes and theming properties, changed the meaning of `warning`, and updated the success track color; helper icons are decorative |
-| <IxBadge type="label" label="Changed" variant="caution" icon={iconCode} /> | <IxLinkButton url="https://github.com/siemens/ix/blob/main/BREAKING_CHANGES/v6.md#ix-progress-indicator-size-scale" icon="external" aria-label="View code change" title="View code change">Code</IxLinkButton><br /><IxLinkButton url="https://www.figma.com/design/r2nqdNNXXZtPmWuVjIlM1Q/iX-Components?node-id=22209-18970" icon="external" aria-label="View design change" title="View design change">Figma</IxLinkButton> | Changed circular `sm` from 24px to 20px; other size names and dimensions remain unchanged |
+| <IxBadge type="label" label="Changed" variant="caution" icon={iconCode} /> | <IxLinkButton url="https://github.com/siemens/ix/blob/main/BREAKING_CHANGES/v6.md#changed-ix-progress-indicator-status-values" icon="external" aria-label="View code change" title="View code change">Code</IxLinkButton> | Renamed `default` to `base` and `info` to `information`, updated classes and theming properties, changed the meaning of `warning`, and updated the success track color; helper icons are decorative |
+| <IxBadge type="label" label="Changed" variant="caution" icon={iconCode} /> | <IxLinkButton url="https://github.com/siemens/ix/blob/main/BREAKING_CHANGES/v6.md#changed-the-ix-progress-indicator-circular-sm-size-to-20px" icon="external" aria-label="View code change" title="View code change">Code</IxLinkButton><br /><IxLinkButton url="https://www.figma.com/design/r2nqdNNXXZtPmWuVjIlM1Q/iX-Components?node-id=22209-18970" icon="external" aria-label="View design change" title="View design change">Figma</IxLinkButton> | Changed circular `sm` from 24px to 20px; other size names and dimensions remain unchanged |
 
 </div>
 
@@ -873,7 +873,7 @@ The following tables combine component-specific code and Figma changes, with com
 
 | Type | Details | Description |
 | :--- | :--- | :--- |
-| <IxBadge type="label" label="Changed" variant="caution" icon={iconCode} /> | <IxLinkButton url="https://github.com/siemens/ix/blob/main/BREAKING_CHANGES/v6.md#ix-spinner-size-scale" icon="external" aria-label="View code change" title="View code change">Code</IxLinkButton><br /><IxLinkButton url="https://www.figma.com/design/r2nqdNNXXZtPmWuVjIlM1Q/iX-Components?node-id=486-5980" icon="external" aria-label="View design change" title="View design change">Figma</IxLinkButton> | Renamed and remapped sizes to `xxs` (12px), `xs` (16px), `sm` (20px), `md` (32px default), and `xxl` (96px) |
+| <IxBadge type="label" label="Changed" variant="caution" icon={iconCode} /> | <IxLinkButton url="https://github.com/siemens/ix/blob/main/BREAKING_CHANGES/v6.md#renamed-and-remapped-ix-spinner-sizes" icon="external" aria-label="View code change" title="View code change">Code</IxLinkButton><br /><IxLinkButton url="https://www.figma.com/design/r2nqdNNXXZtPmWuVjIlM1Q/iX-Components?node-id=486-5980" icon="external" aria-label="View design change" title="View design change">Figma</IxLinkButton> | Renamed and remapped sizes to `xxs` (12px), `xs` (16px), `sm` (20px), `md` (32px default), and `xxl` (96px) |
 
 </div>
 
@@ -893,7 +893,7 @@ The following tables combine component-specific code and Figma changes, with com
 
 | Type | Details | Description |
 | :--- | :--- | :--- |
-| <IxBadge type="label" label="Changed" variant="caution" icon={iconCode} /> | <IxLinkButton url="https://github.com/siemens/ix/blob/main/BREAKING_CHANGES/v6.md#ix-toast-status-type-rename" icon="external" aria-label="View code change" title="View code change">Code</IxLinkButton><br /><IxLinkButton url="https://www.figma.com/design/r2nqdNNXXZtPmWuVjIlM1Q/iX-Components?node-id=443-6501" icon="external" aria-label="View design change" title="View design change">Figma</IxLinkButton> | Renamed status types and helpers, changed the default to `information`, and updated colors and icons; use `caution` for the previous yellow warning meaning |
+| <IxBadge type="label" label="Changed" variant="caution" icon={iconCode} /> | <IxLinkButton url="https://github.com/siemens/ix/blob/main/BREAKING_CHANGES/v6.md#changed-ix-toast-status-type-values-and-helpers" icon="external" aria-label="View code change" title="View code change">Code</IxLinkButton><br /><IxLinkButton url="https://www.figma.com/design/r2nqdNNXXZtPmWuVjIlM1Q/iX-Components?node-id=443-6501" icon="external" aria-label="View design change" title="View design change">Figma</IxLinkButton> | Renamed status types and helpers, changed the default to `information`, and updated colors and icons; use `caution` for the previous yellow warning meaning |
 
 </div>
 
@@ -915,8 +915,8 @@ The following tables combine component-specific code and Figma changes, with com
 
 | Type | Details | Description |
 | :--- | :--- | :--- |
-| <IxBadge type="label" label="Changed" variant="caution" icon={iconCode} /> | <IxLinkButton url="https://github.com/siemens/ix/blob/main/BREAKING_CHANGES/v6.md#ix-key-value-divider-for-every-label-position" icon="external" aria-label="View code change" title="View code change">Code</IxLinkButton> | Enabled dividers for all label positions; use the new `hide-divider` property to retain a divider-free item |
-| <IxBadge type="label" label="Changed" variant="caution" icon={iconCode} /> | <IxLinkButton url="https://github.com/siemens/ix/blob/main/BREAKING_CHANGES/v6.md#default-icon-size-is-20" icon="external" aria-label="View code change" title="View code change">Code</IxLinkButton><br /><IxLinkButton url="https://www.figma.com/design/r2nqdNNXXZtPmWuVjIlM1Q/iX-Components?node-id=4791-124358" icon="external" aria-label="View design change" title="View design change">Figma</IxLinkButton> | Changed the default icon size to 20px in affected slots |
+| <IxBadge type="label" label="Changed" variant="caution" icon={iconCode} /> | <IxLinkButton url="https://github.com/siemens/ix/blob/main/BREAKING_CHANGES/v6.md#enabled-dividers-for-every-label-position" icon="external" aria-label="View code change" title="View code change">Code</IxLinkButton> | Enabled dividers for all label positions; use the new `hide-divider` property to retain a divider-free item |
+| <IxBadge type="label" label="Changed" variant="caution" icon={iconCode} /> | <IxLinkButton url="https://github.com/siemens/ix/blob/main/BREAKING_CHANGES/v6.md#changed-the-default-icon-size-to-20px" icon="external" aria-label="View code change" title="View code change">Code</IxLinkButton><br /><IxLinkButton url="https://www.figma.com/design/r2nqdNNXXZtPmWuVjIlM1Q/iX-Components?node-id=4791-124358" icon="external" aria-label="View design change" title="View design change">Figma</IxLinkButton> | Changed the default icon size to 20px in affected slots |
 
 </div>
 
@@ -926,7 +926,7 @@ The following tables combine component-specific code and Figma changes, with com
 
 | Type | Details | Description |
 | :--- | :--- | :--- |
-| <IxBadge type="label" label="Added" variant="success" icon={iconCode} /> | <IxLinkButton url="https://github.com/siemens/ix/blob/main/BREAKING_CHANGES/v6.md#ix-key-value-divider-for-every-label-position" icon="external" aria-label="View code change" title="View code change">Code</IxLinkButton> | Added `hide-dividers` to hide item dividers without style overrides |
+| <IxBadge type="label" label="Added" variant="success" icon={iconCode} /> | <IxLinkButton url="https://github.com/siemens/ix/blob/main/BREAKING_CHANGES/v6.md#enabled-dividers-for-every-label-position" icon="external" aria-label="View code change" title="View code change">Code</IxLinkButton> | Added `hide-dividers` to hide item dividers without style overrides |
 
 </div>
 
@@ -936,7 +936,7 @@ The following tables combine component-specific code and Figma changes, with com
 
 | Type | Details | Description |
 | :--- | :--- | :--- |
-| <IxBadge type="label" label="Changed" variant="caution" icon={iconCode} /> | <IxLinkButton url="https://github.com/siemens/ix/blob/main/BREAKING_CHANGES/v6.md#ix-kpi-status-state-rename" icon="external" aria-label="View code change" title="View code change">Code</IxLinkButton> | Renamed and expanded `state` values, updated status icons and border properties, and changed the neutral indicator line to a system token |
+| <IxBadge type="label" label="Changed" variant="caution" icon={iconCode} /> | <IxLinkButton url="https://github.com/siemens/ix/blob/main/BREAKING_CHANGES/v6.md#changed-ix-kpi-status-state-values" icon="external" aria-label="View code change" title="View code change">Code</IxLinkButton> | Renamed and expanded `state` values, updated status icons and border properties, and changed the neutral indicator line to a system token |
 | <IxBadge type="label" label="Removed" variant="warning" icon={iconCode} /> | <IxLinkButton url="https://github.com/siemens/ix/blob/main/BREAKING_CHANGES/v6.md#accessibility" icon="external" aria-label="View code change" title="View code change">Code</IxLinkButton> | Removed `ariaLabelAlarmIcon` and `ariaLabelWarningIcon`; convey meaningful status in visible text or the host accessible name |
 
 </div>
@@ -959,7 +959,7 @@ The following tables combine component-specific code and Figma changes, with com
 
 | Type | Details | Description |
 | :--- | :--- | :--- |
-| <IxBadge type="label" label="Changed" variant="caution" icon={iconCode} /> | <IxLinkButton url="https://github.com/siemens/ix/blob/main/BREAKING_CHANGES/v6.md#boolean-attributes-on-form-components" icon="external" aria-label="View code change" title="View code change">Code</IxLinkButton> | Changed boolean attributes to follow native HTML semantics |
+| <IxBadge type="label" label="Changed" variant="caution" icon={iconCode} /> | <IxLinkButton url="https://github.com/siemens/ix/blob/main/BREAKING_CHANGES/v6.md#changed-boolean-attributes-to-follow-native-html-semantics" icon="external" aria-label="View code change" title="View code change">Code</IxLinkButton> | Changed boolean attributes to follow native HTML semantics |
 | <IxBadge type="label" label="Removed" variant="warning" icon={iconCode} /> | <IxLinkButton url="https://github.com/siemens/ix/blob/main/BREAKING_CHANGES/v6.md#removed-shadow-utility-aliases" icon="external" aria-label="View code change" title="View code change">Code</IxLinkButton> | Removed decorative input shadows and `--ix-chat-input--box-shadow` |
 
 </div>
@@ -972,9 +972,9 @@ The following tables combine component-specific code and Figma changes, with com
 
 | Type | Details | Description |
 | :--- | :--- | :--- |
-| <IxBadge type="label" label="Changed" variant="caution" icon={iconCode} /> | <IxLinkButton url="https://github.com/siemens/ix/blob/main/BREAKING_CHANGES/v6.md#echarts-6-requirement" icon="external" aria-label="View code change" title="View code change">Code</IxLinkButton> | Raised the minimum ECharts version to 6.1.0 |
-| <IxBadge type="label" label="Changed" variant="caution" icon={iconCode} /> | <IxLinkButton url="https://github.com/siemens/ix/blob/main/BREAKING_CHANGES/v6.md#echarts-computed-css-properties" icon="external" aria-label="View code change" title="View code change">Code</IxLinkButton> | Removed automatic token prefixing from `getComputedCSSProperty`; pass complete system-token names |
-| <IxBadge type="label" label="Changed" variant="caution" icon={iconCode} /> | <IxLinkButton url="https://github.com/siemens/ix/blob/main/BREAKING_CHANGES/v6.md#classic-theme-renamed-to-community" icon="external" aria-label="View code change" title="View code change">Code</IxLinkButton> | Renamed Classic ECharts exports and registered theme names to Community |
+| <IxBadge type="label" label="Changed" variant="caution" icon={iconCode} /> | <IxLinkButton url="https://github.com/siemens/ix/blob/main/BREAKING_CHANGES/v6.md#echarts-requirement" icon="external" aria-label="View code change" title="View code change">Code</IxLinkButton> | Raised the minimum ECharts version to 6.1.0 |
+| <IxBadge type="label" label="Changed" variant="caution" icon={iconCode} /> | <IxLinkButton url="https://github.com/siemens/ix/blob/main/BREAKING_CHANGES/v6.md#removed-automatic-token-prefixing-from-echarts-computed-css-properties" icon="external" aria-label="View code change" title="View code change">Code</IxLinkButton> | Removed automatic token prefixing from `getComputedCSSProperty`; pass complete system-token names |
+| <IxBadge type="label" label="Changed" variant="caution" icon={iconCode} /> | <IxLinkButton url="https://github.com/siemens/ix/blob/main/BREAKING_CHANGES/v6.md#renamed-the-classic-theme-to-community" icon="external" aria-label="View code change" title="View code change">Code</IxLinkButton> | Renamed Classic ECharts exports and registered theme names to Community |
 
 </div>
 
@@ -987,7 +987,7 @@ The following tables combine component-specific code and Figma changes, with com
 
 | Type | Details | Description |
 | :--- | :--- | :--- |
-| <IxBadge type="label" label="Changed" variant="caution" icon={iconCode} /> | <IxLinkButton url="https://github.com/siemens/ix/blob/main/BREAKING_CHANGES/v6.md#icon-and-component-color-properties" icon="external" aria-label="View code change" title="View code change">Code</IxLinkButton> | Changed `color` to require the complete CSS custom-property name; updated `NotificationColor` literals to include leading `--` |
+| <IxBadge type="label" label="Changed" variant="caution" icon={iconCode} /> | <IxLinkButton url="https://github.com/siemens/ix/blob/main/BREAKING_CHANGES/v6.md#changed-icon-and-component-color-properties-to-use-complete-token-names" icon="external" aria-label="View code change" title="View code change">Code</IxLinkButton> | Changed `color` to require the complete CSS custom-property name; updated `NotificationColor` literals to include leading `--` |
 
 </div>
 
@@ -997,7 +997,7 @@ The following tables combine component-specific code and Figma changes, with com
 
 | Type | Details | Description |
 | :--- | :--- | :--- |
-| <IxBadge type="label" label="Changed" variant="caution" icon={iconCode} /> | <IxLinkButton url="https://github.com/siemens/ix/blob/main/BREAKING_CHANGES/v6.md#global-css-and-sass-entry-points" icon="external" aria-label="View code change" title="View code change">Code</IxLinkButton> | Changed scrollbar loading: foundation enables global scrollbars; use `disable-scrollbar` and the scoped scrollbar stylesheet for selected subtrees |
+| <IxBadge type="label" label="Changed" variant="caution" icon={iconCode} /> | <IxLinkButton url="https://github.com/siemens/ix/blob/main/BREAKING_CHANGES/v6.md#changed-global-css-and-sass-entry-points" icon="external" aria-label="View code change" title="View code change">Code</IxLinkButton> | Changed scrollbar loading: foundation enables global scrollbars; use `disable-scrollbar` and the scoped scrollbar stylesheet for selected subtrees |
 
 </div>
 
@@ -1007,8 +1007,8 @@ The following tables combine component-specific code and Figma changes, with com
 
 | Type | Details | Description |
 | :--- | :--- | :--- |
-| <IxBadge type="label" label="Changed" variant="caution" icon={iconCode} /> | <IxLinkButton url="https://github.com/siemens/ix/blob/main/BREAKING_CHANGES/v6.md#ix-typography-textcolor-rename" icon="external" aria-label="View code change" title="View code change">Code</IxLinkButton> | Renamed `textColor` values and added semantic status colors; replaced inverse and contrast names without compatibility aliases |
-| <IxBadge type="label" label="Removed" variant="warning" icon={iconCode} /> | <IxLinkButton url="https://github.com/siemens/ix/blob/main/BREAKING_CHANGES/v6.md#token-value-shapes" icon="external" aria-label="View code change" title="View code change">Code</IxLinkButton> | Removed `label`, `label-xs`, `label-sm`, `label-lg`, `body-xs`, `display-xs`, and `display-sm` formats; select supported body, heading, or display roles |
-| <IxBadge type="label" label="Changed" variant="caution" icon={iconCode} /> | <IxLinkButton url="https://github.com/siemens/ix/blob/main/BREAKING_CHANGES/v6.md#typography-utility-classes" icon="external" aria-label="View code change" title="View code change">Code</IxLinkButton> | Removed matching unsupported utility classes and added paragraph typography roles |
+| <IxBadge type="label" label="Changed" variant="caution" icon={iconCode} /> | <IxLinkButton url="https://github.com/siemens/ix/blob/main/BREAKING_CHANGES/v6.md#renamed-ix-typography-textcolor-values" icon="external" aria-label="View code change" title="View code change">Code</IxLinkButton> | Renamed `textColor` values and added semantic status colors; replaced inverse and contrast names without compatibility aliases |
+| <IxBadge type="label" label="Removed" variant="warning" icon={iconCode} /> | <IxLinkButton url="https://github.com/siemens/ix/blob/main/BREAKING_CHANGES/v6.md#changed-shadow-and-typography-tokens-to-contain-complete-box-shadow-and-font-values" icon="external" aria-label="View code change" title="View code change">Code</IxLinkButton> | Removed `label`, `label-xs`, `label-sm`, `label-lg`, `body-xs`, `display-xs`, and `display-sm` formats; select supported body, heading, or display roles |
+| <IxBadge type="label" label="Changed" variant="caution" icon={iconCode} /> | <IxLinkButton url="https://github.com/siemens/ix/blob/main/BREAKING_CHANGES/v6.md#removed-unsupported-typography-utility-classes" icon="external" aria-label="View code change" title="View code change">Code</IxLinkButton> | Removed matching unsupported utility classes and added paragraph typography roles |
 
 </div>
