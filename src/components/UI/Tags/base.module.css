@@ -71,3 +71,10 @@
   margin: 0;
   padding-inline-start: 1rem;
 }
+
+.BreakingChange:focus-visible,
+.BreakingChangeLink:focus-visible {
+  outline: var(--si-sys-sizing-focus-ring-width) solid
+    var(--si-sys-color-effects-focus);
+  outline-offset: var(--si-sys-sizing-focus-ring-offset);
+}
