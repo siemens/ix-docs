@@ -46,13 +46,6 @@ Change selectors. From `cui-` to `ix-`
 - Chart colors are not part of the library
 - theme.ts with hardcoded hex color values are removed
 
-### Changed theme naming
-
-- `theme-dark` -> `theme-classic-dark`
-- `theme-light` -> `theme-classic-light`
-
-Default theme is `theme-classic-dark`.
-
 ### About and Legal
 
 Default content is removed regarding of various developer feedback

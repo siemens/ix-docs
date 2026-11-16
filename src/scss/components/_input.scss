@@ -8,6 +8,13 @@
  */
 @use '@siemens/ix/scss/mixins/input';
 
-@include input.label('');
+label {
+  color: var(--theme-color-soft-text);
+  padding: 2px 0;
+}
+
+label.label-alignment-left {
+  padding: 6px 0;
+}
+
 @include input.form('');
-@include input.element-form('');
