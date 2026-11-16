@@ -2,6 +2,12 @@
 doc-type: "tabs"
 description: 'Date inputs allow users to enter and select dates in a standardized format, ensuring consistency and accuracy.'
 title: 'Date input'
+formReady: true
 deprecated:
   - /docs/legacy/input
+breaking-changes:
+  - version: 6.0.0
+    breaking:
+      - description: 'locale now drives date parsing, valueChange timing changed, boolean attributes follow native HTML semantics and no validation feedback in novalidate forms'
+        link: /docs/home/migration/6_0_0#date-input
 ---
