@@ -28,6 +28,12 @@
   background-color: var(--si-sys-color-background-selected);
 }
 
+.pill:focus-visible {
+  outline: var(--si-sys-sizing-focus-ring-width) solid
+    var(--si-sys-color-effects-focus);
+  outline-offset: var(--si-sys-sizing-focus-ring-offset);
+}
+
 .pill__active {
   color: var(--si-sys-color-text-primary);
   background-color: var(--si-sys-color-background-1);

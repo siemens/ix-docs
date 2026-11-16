@@ -42,8 +42,16 @@
   }
 
   &:focus-visible {
-    outline: solid 1px var(--si-sys-color-effects-focus);
-    outline-offset: -4px;
+    outline: var(--si-sys-sizing-focus-ring-width) solid
+      var(--si-sys-color-effects-focus);
+    // Inset so the ring is not clipped by the surrounding accordion list.
+    outline-offset: calc(
+      -1 *
+        (
+          var(--si-sys-sizing-focus-ring-width) +
+            var(--si-sys-sizing-focus-ring-offset)
+        )
+    );
   }
 
   &:hover {

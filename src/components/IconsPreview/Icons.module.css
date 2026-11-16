@@ -58,8 +58,9 @@
 }
 
 .Icon__Tile:focus-visible {
-  outline: 1px solid var(--si-sys-color-effects-focus);
-  outline-offset: 2px;
+  outline: var(--si-sys-sizing-focus-ring-width) solid
+    var(--si-sys-color-effects-focus);
+  outline-offset: var(--si-sys-sizing-focus-ring-offset);
 }
 
 .Icon__Tile.Selected {
@@ -169,8 +170,9 @@
 }
 
 .Icon__Details:focus-visible {
-  outline: 1px solid var(--si-sys-color-effects-focus);
-  outline-offset: 2px;
+  outline: var(--si-sys-sizing-focus-ring-width) solid
+    var(--si-sys-color-effects-focus);
+  outline-offset: var(--si-sys-sizing-focus-ring-offset);
 }
 
 .Icon__Details .Icon__NameContainer {
@@ -191,7 +193,9 @@
 }
 
 .Icon__Details .Icon__NameContainer [class*='hash-link']:focus-visible {
-  border: 1px solid var(--si-sys-color-effects-focus);
+  outline: var(--si-sys-sizing-focus-ring-width) solid
+    var(--si-sys-color-effects-focus);
+  outline-offset: var(--si-sys-sizing-focus-ring-offset);
 }
 
 .Icon__Details [class*='prism-code'] {
@@ -280,7 +284,6 @@ ix-typography:focus-visible,
     display: none;
   }
 }
-
 
 @media (max-width: 1280px) {
   .FrameworkSelectionContainer {

@@ -17,7 +17,9 @@
 }
 
 .AnchorButton:focus-visible {
-  outline: 1px solid var(--si-sys-color-effects-focus);
+  outline: var(--si-sys-sizing-focus-ring-width) solid
+    var(--si-sys-color-effects-focus);
+  outline-offset: var(--si-sys-sizing-focus-ring-offset);
 }
 
 .AnchorHeader {
