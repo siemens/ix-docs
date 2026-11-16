@@ -4690,196 +4690,104 @@ Modals have two states: Closed and opened.
 
 ## Components overview
 
-import { IxLayoutGrid, IxRow } from '@siemens/ix-react';
-import { CategoryButton } from '@site/src/components/CategoryButton';
 
 #
 
-<IxLayoutGrid style={{marginBottom: '3rem'}} no-margin>
-<IxRow style={{gap: '0.5rem', justifyContent: 'center'}}>
-<CategoryButton
-    title="Application frame"
-    link="#application-frame">
-![Application frame](https://www.figma.com/design/wEptRgAezDU1z80Cn3eZ0o/iX-Documentation-illustrations?node-id=5186-249&t=gkh6VNlJun96I6Ac-4)
-</CategoryButton>
-<CategoryButton
-    title="Navigation and hierarchy"
-    link="#navigation-and-hierarchy">
-![Navigation and hierarchy](https://www.figma.com/design/wEptRgAezDU1z80Cn3eZ0o/iX-Documentation-illustrations?node-id=5186-259&t=gkh6VNlJun96I6Ac-4)
-</CategoryButton>
-<CategoryButton
-    title="Containers and layouts"
-    link="#containers-and-layouts">
-![Containers and layouts](https://www.figma.com/design/wEptRgAezDU1z80Cn3eZ0o/iX-Documentation-illustrations?node-id=5186-269&t=gkh6VNlJun96I6Ac-4)
-</CategoryButton>
-<CategoryButton
-    title="Forms"
-    link="#forms">
-![Forms](https://www.figma.com/design/wEptRgAezDU1z80Cn3eZ0o/iX-Documentation-illustrations?node-id=5186-283&t=gkh6VNlJun96I6Ac-4)
-</CategoryButton>
-<CategoryButton
-    title="Input fields and selections"
-    link="#input-fields-and-selections">
-![Input fields and selections](https://www.figma.com/design/wEptRgAezDU1z80Cn3eZ0o/iX-Documentation-illustrations?node-id=5186-298&t=gkh6VNlJun96I6Ac-11)
-</CategoryButton>
-<CategoryButton
-    title="Buttons and actions"
-    link="#buttons-and-actions">
-![Buttons and actions](https://www.figma.com/design/wEptRgAezDU1z80Cn3eZ0o/iX-Documentation-illustrations?node-id=5186-305&t=gkh6VNlJun96I6Ac-11)
-</CategoryButton>
-<CategoryButton
-    title="System feedback and status"
-    link="#system-feedback-and-status">
-![System feedback and status](https://www.figma.com/design/wEptRgAezDU1z80Cn3eZ0o/iX-Documentation-illustrations?node-id=5186-332&t=gkh6VNlJun96I6Ac-11)
-</CategoryButton>
-<CategoryButton
-    title="Data display"
-    link="#data-display">
-![Data display](https://www.figma.com/design/wEptRgAezDU1z80Cn3eZ0o/iX-Documentation-illustrations?node-id=5186-370&t=gkh6VNlJun96I6Ac-11)
-</CategoryButton>
-<CategoryButton
-    title="Chat"
-    link="#chat">
-![Chat](https://www.figma.com/design/wEptRgAezDU1z80Cn3eZ0o/iX-Documentation-illustrations?node-id=7974-3280&t=HrpSIFfB7yjzt741-4)
-</CategoryButton>
-<CategoryButton
-    title="Charts"
-    link="#charts">
-![Charts](https://www.figma.com/design/wEptRgAezDU1z80Cn3eZ0o/iX-Documentation-illustrations?node-id=5186-387&t=gkh6VNlJun96I6Ac-11)
-</CategoryButton>
-</IxRow>
-</IxLayoutGrid>
-
-## Application frame
-
-| Component                                            | Description                                                                                                                                                                                          |
-| :--------------------------------------------------- | :--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| [Application](./application/index.mdx)               | Applications manage the layout and theming of top-level app elements, ensuring a cohesive user experience.                                                                                           |
-| [Application header](./application-header/index.mdx) | Application headers provide a structured area for key elements like brand logo, application name and user avatar.                                                                                    |
-| [Application menu](./application-menu/index.mdx)     | The navigation menu provides direct access to main application parts, legal and version information, and settings.                                                                                   |
-| [Avatar](./avatar/index.mdx)                         | Avatars visually or textually represent individual identities, typically for users logged into a system.                                                                                             |
-| [Content](./content/index.mdx)                       | The content component is a simple layout component made for hosting content.                                                                                                                         |
-| [Content header](./content-header/index.mdx)         | Content headers provide a brief overview of the content on a page.                                                                                                                                   |
-| [About and legal](./about-and-legal/index.mdx)       | The About and legal component is an overlay we typically use to show application information, application versions, license terms, legal regulations, copyright information and other legal content. |
-| [Settings](./settings/index.mdx)                     | The settings overlay provides a centralized location for application settings.                                                                                                                       |
-| [Popover news](./popover-news/index.mdx)             | Popover news presents important updates and information when the application starts.                                                                                                                 |
-
-## Navigation and hierarchy
-
-| Component                            | Description                                                                                               |
-| :----------------------------------- | :-------------------------------------------------------------------------------------------------------- |
-| [Breadcrumb](./breadcrumb/index.mdx) | Breadcrumbs provide a clear navigation path within an application.                                        |
-| [Group](./group/index.mdx)           | Groups are expandable containers for a list of selectable options.                                        |
-| [Pagination](./pagination/index.mdx) | Paginations allow users to navigate between pages of content when it is split for performance reasons.    |
-| [Tabs](./tabs/index.mdx)             | Tabs consist of tab items and organize content into separate sections by grouping similar information.    |
-| [Tree](./tree/index.mdx)             | Trees display hierarchical data structures and allow users to navigate by expanding and collapsing nodes. |
-| [Workflow](./workflow/index.mdx)     | Workflows are a series of logical steps that guide users through a process.                               |
-
-## Containers and layouts
-
-| Component                              | Description                                                                                                                  |
-| :------------------------------------- | :--------------------------------------------------------------------------------------------------------------------------- |
-| [Blind](./blind/index.mdx)             | Blinds enhance content organization by allowing users to toggle visibility through collapsing and expanding sections.        |
-| [Card](./card/index.mdx)               | Cards neatly organize and group related information about a specific subject.                                                |
-| [Card list](./card-list/index.mdx)     | Card lists display a large number of cards or items of the same type in a lightweight, grouped manner.                       |
-| [Flip](./flip/index.mdx)               | Flips are containers that flip when clicked to reveal additional content.                                                    |
-| [Event list](./event-list/index.mdx)   | Event lists display a list of any type of element with additional details.                                                   |
-| [Layout auto](./layout-auto/index.mdx) | Auto-layouts are containers that automatically adjust the size of their columns based on the content.                        |
-| [Layout grid](./layout-grid/index.mdx) | Layout grids are used to structure the layout of a page or screen responsively.                                              |
-| [Modal](./modal/index.mdx)             | Modals present information prominently and are useful for gathering essential user input without navigating to another page. |
-| [Panes](./panes/index.mdx)             | Panes are interactive components that allow users to access content that isn&#39;t constantly visible on the screen.         |
-| [Popovers](./popover/index.mdx)             | Popovers display contextual information next to a trigger element.       |
-| [Tile](./tile/index.mdx)               | Tiles are containers that display content in a card-like format.                                                             |
-
-## Forms
-
-| Component                                        | Description                                                                                                                                                                                                                         |
-| :----------------------------------------------- | :---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| [Forms field](./forms-field/index.mdx)           | A field is a form element when user input is needed. It's typically used with other form elements in a fieldset.                                                                                                                    |
-| [Forms layout](./forms-layout/index.mdx)         | Effective form layouts play a crucial role in usability. Well-structured forms include fieldsets, considering the hierarchy of information, and understanding how to strike the right balance between aesthetics and functionality. |
-| [Forms validation](./forms-validation/index.mdx) | Form validation gives users feedback on their input to ensure accurate, consistent data is submitted. When requirements are not met or data is incorrect, it’s rejected.                                                            |
-| [Forms behavior](./forms-behavior/index.mdx)     | Forms behavior refers to the way in which user input is handled and validated within a form. It plays a crucial role in providing a seamless and user-friendly experience for form interactions.                                    |
-
-## Input fields and selections
-
-| Component                                        | Description                                                                                                                                                                                      |
-| :----------------------------------------------- | :----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| [Category filter](./category-filter/index.mdx)   | Category filters allow users to quickly narrow their search by selecting predefined categories.                                                                                                  |
-| [Checkbox](./checkbox/index.mdx)                 | Checkboxes are form controls that allow users to select none, one or more options.                                                                                                               |
-| [Custom field](./custom-field/index.mdx)         | Custom fields are wrapper components that can host any form component.                                                                                                                           |
-| [Date dropdown](./date-dropdown/index.mdx)       | Date dropdowns allow users to select a specific date from a date picker or pre-defined date options.                                                                                             |
-| [Date input](./input-date/index.mdx)             | Date inputs allow users to enter and select dates in a standardized format, ensuring consistency and accuracy.                                                                                   |
-| [Date picker](./date-picker/index.mdx)           | Date pickers provide a versatile calendar that can be used as a standalone element or within a dropdown for date input, offering a seamless way to select dates.                                 |
-| [Date time picker](./date-time-picker/index.mdx) | Date-time pickers offer an interface for selecting both dates and times, which can be used as a standalone element or within a dropdown, providing a seamless way to input date and time values. |
-| [Expanding search](./expanding-search/index.mdx) | Expanding searches are search fields that expand on click to save space.                                                                                                                         |
-| [Number input](./input-number/index.mdx)         | Number inputs allow users to enter and adjust numerical values.                                                                                                                                  |
-| [Range field](./range-field/index.mdx)           | Range fields group two related inputs into a start and end value so users can enter date, time and date-time ranges consistently.                                                             |
-| [Radio](./radio/index.mdx)                       | Radio buttons enable users to choose only one option from a predefined set of mutually exclusive options.                                                                                        |
-| [Select](./select/index.mdx)                     | Selects allow users to choose from a list of options.                                                                                                                                            |
-| [Slider](./slider/index.mdx)                     | Sliders allow users to select a value from a range of values.                                                                                                                                    |
-| [Input](./input/index.mdx)                       | Input fields allow users to enter and edit single-line text, numbers, and other character-based symbols within an application.                                                                   |
-| [Textarea](./textarea/index.mdx)                 | Textareas allow users to enter and edit multi-line text input, making it perfect for forms that require longer entries.                                                                          |
-| [Time picker](./time-picker/index.mdx)           | Time pickers allow users to select specific times ensuring accurate time input.                                                                                                                  |
-| [Toggle](./toggle/index.mdx)                     | Toggle switches enable users to toggle between an on and off state.                                                                                                                              |
-| [Upload](./upload/index.mdx)                     | Uploads allow users to select and upload files from their device via drag-and-drop.                                                                                                              |
-
-## Buttons and actions
-
-| Component                                      | Description                                                                                                                               |
-| :--------------------------------------------- | :---------------------------------------------------------------------------------------------------------------------------------------- |
-| [Button](./button/index.mdx)                   | Buttons facilitate user interactions by initiating actions and applying functions within an application.                                  |
-| [Dropdown button](./dropdown-button/index.mdx) | Dropdown buttons reveal a list of actions when selected.                                                                                  |
-| [Icon button](./icon-button/index.mdx)         | Icon buttons use only icons to represent actions, making them ideal for space-constrained layouts.                                        |
-| [Link button](./link-button/index.mdx)         | Link buttons take users to another location either within or outside the application and contain a chevron and a text label.              |
-| [Split button](./split-button/index.mdx)       | Split buttons are button elements that allow users to either trigger an action with one click or select an action from a list of options. |
-| [Toggle button](./toggle-button/index.mdx)     | Toggle buttons allow users to either activate or deactivate a function.                                                                   |
-| [Chip](./chip/index.mdx)                       | Chips are interactive elements that display small pieces of information in a compact and visually appealing way.                          |
-
-## System feedback and status
-
-| Component                                         | Description                                                                                                                                        |
-| :------------------------------------------------ | :------------------------------------------------------------------------------------------------------------------------------------------------- |
-| [Empty state](./empty-state/index.mdx)            | Empty states inform users that there is no content to display.                                                                                     |
-| [Message bar](./messagebar/index.mdx)             | Message bars display important information to users, e.g. feedback, warnings or errors.                                                            |
-| [Badge](./badge/index.mdx)                        | Badges display compact status, counter or notification cues on (or next to) UI elements.                                                             |
-| [Pill](./pill/index.mdx)                          | Pills display small pieces of information, e.g. counters or statuses.                                                                              |
-| [Popover](./popover/index.mdx)                    | Popovers display contextual information in a floating panel anchored to a trigger element.                                                         |
-| [Progress indicator](progress-indicator/guide.md) | Progress indicators inform users about the status of ongoing processes, e.g. loading data, submitting forms or processing non-blocking operations. |
-| [Spinner](./spinner/index.mdx)                    | Spinners indicate that a process is running to provide feedback to the user.                                                                       |
-| [Toast](./toast/index.mdx)                        | Toasts are small pop-ups that provide simple feedback on a process.                                                                                |
-| [Tooltip](./tooltip/index.mdx)                    | Tooltips provide additional information when users hover over or focus on an element.                                                              |
-
-## Data display
-
-| Component                                    | Description                                                                                                                                                                             |
-| :------------------------------------------- | :-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| [Angular data grid](./grid/index.mdx)        | The popular data grid library AG Grid is seamlessly integrated into our design system, allowing you to harness its powerful features while maintaining consistency with our styleguide. |
-| [HTML table](./html-grid/index.mdx)          | HTML tables are used to display tabular data in a structured way.                                                                                                                       |
-| [Key value](./key-value/index.mdx)           | Key value pairs display a label (key) and a value in a structured, easy way.                                                                                                            |
-| [Key value list](./key-value-list/index.mdx) | Key value lists organize and list a series of key value pairs.                                                                                                                          |
-| [KPI](./kpi/index.mdx)                       | KPIs display measured values together with a status indicator to help users interpret data.                                                                                             |
-
-## Chat
-
-| Component                                            | Description                                                                                                                 |
-| :--------------------------------------------------- | :-------------------------------------------------------------------------------------------------------------------------- |
-| [Chat](./chat/index.mdx)                             | Chat component for building conversational chatbot experiences.                                                             |
-| [Chat input](./chat-input/index.mdx)                 | Chat inputs are used to compose and submit messages, attachments and follow-up actions in a conversational AI thread.                      |
-| [User message](./user-message/index.mdx)             | User messages display messages authored by the user in a chat thread.                           |
-| [AI message](./ai-message/index.mdx)                 | AI messages display responses generated by the AI in a conversational chat.                                           |
-| [Chat attachment](./chat-attachment/index.mdx)       | Chat attachments are files attached to chat inputs and user messages.                                                                                        |
-
-## Charts
-
-| Component                                        | Description                                                                                                                                                                                                                                                                                                                         |
-| :----------------------------------------------- | :---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| [Chart overview](./charts-overview/overview.mdx) | Charts are essential tools for visualizing data, making complex information more accessible and easier to understand.                                                                                                                                                                                                               |
-| [Line chart](./line-chart/overview.mdx)          | Line charts display data as a series of data points connected by straight line segments. Line charts are commonly used to visualize trends over time or compare two variables. We typically use line charts to visualize continuous data.                                                                                           |
-| [Bar chart](./bar-chart/overview.mdx)            | Bar charts display data using rectangular bars. The length of each bar is proportional to the value it represents. Bar charts are commonly used to compare the values of different categories. We typically use bar charts to visualize data that is categorical or ordinal in nature.                                              |
-| [Gauge chart](./gauge-chart/overview.mdx)        | Gauge charts are a type of chart that displays data using a dial or needle to indicate a value within a specific range. Gauge charts are commonly used to visualize performance metrics, such as speedometers, progress meters, and other KPIs. We typically use gauge charts to represent a single value within a range of values. |
-| [Pie chart](./pie-chart/overview.mdx)            | Pie charts display data using a circular graph. The length of each slice is proportional to the value it represents. Pie charts are commonly used to visualize the parts of a whole and are particularly useful for comparing the relative sizes of different categories.                                                           |
-| [3D chart](./3d/overview.mdx)                    | 3D charts are a powerful way to visualize data in three dimensions. They provide a more immersive and interactive experience compared to traditional 2D charts. We typically use 3D charts to represent complex data sets or to visualize data in a more engaging way.                                                              |
-| [Special chart](./special-chart/overview.mdx)    | ECharts offer a wide variety of different chart types and features. The following page deals with some of the more special chart types and features.                                                                                                                                                                                |
+- **Application frame**
+  - [Application](/docs/components/application/code): Applications manage the layout and theming of top-level app elements, ensuring a cohesive user experience.
+  - [Application header](/docs/components/application-header/code): Application headers provide a structured area for essential elements such as company logo and application name, while allowing flexibility through optional elements like the user avatar or application switch.
+  - [Application menu](/docs/components/application-menu/code): The navigation menu provides direct access to main application parts, legal and version information, and settings.
+  - [Avatar](/docs/components/avatar/code): Avatars visually or textually represent individual identities, typically for users logged into a system.
+  - [Content](/docs/components/content/code): The content component is a simple layout component made for hosting content.
+  - [Content header](/docs/components/content-header/code): Content headers provide a brief overview of the content on a page.
+  - [About and legal](/docs/components/about-and-legal/code): The About and legal component is an overlay we typically use to show application information, application versions, license terms, legal regulations, copyright information and other legal content.
+  - [Settings](/docs/components/settings/code): The settings overlay provides a centralized location for application settings.
+  - [Popover news](/docs/components/popover-news/code): Popover news presents important updates and information when the application starts.
+- **Navigation and hierarchy**
+  - [Breadcrumb](/docs/components/breadcrumb/code): Breadcrumbs provide a clear navigation path within an application.
+  - [Group](/docs/components/group/code): Groups are expandable containers for a list of selectable options.
+  - [Pagination](/docs/components/pagination/code): Paginations allow users to navigate between pages of content when it is split for performance reasons.
+  - [Tabs](/docs/components/tabs/code): Tabs consist of tab items and organize content into separate sections by grouping similar information.
+  - [Tree](/docs/components/tree/code): Trees display hierarchical data structures and allow users to navigate by expanding and collapsing nodes.
+  - [Workflow](/docs/components/workflow/code): Workflows are a series of logical steps that guide users through a process.
+- **Containers and layout**
+  - [Blind](/docs/components/blind/code): Blinds enhance content organization by allowing users to toggle visibility through collapsing and expanding sections.
+  - [Card](/docs/components/card/code): Cards neatly organize and group related information about a specific subject.
+  - [Card list](/docs/components/card-list/code): Card lists display a large number of cards or items of the same type in a lightweight, grouped manner.
+  - [Dropdown](/docs/components/dropdown/code): Dropdown containers display a menu with additional items when users click on the trigger element, e.g. a dropdown button.
+  - [Flip](/docs/components/flip/code): Flips are containers that flip when clicked to reveal additional content.
+  - [Event list](/docs/components/event-list/code): Event lists display a list of any type of element with additional details.
+  - [Layout auto](/docs/components/layout-auto/code): Auto-layouts are containers that automatically adjust the size of their columns based on the content.
+  - [Layout grid](/docs/components/layout-grid/code): Layout grids are used to structure the layout of a page or screen responsively.
+  - [Modal](/docs/components/modal/code): Modals appear on top of the main content of a webpage or application, blocking interaction with the rest of the page until the user completes a specific action or closes the modal.
+  - [Panes](/docs/components/panes/code): Panes are interactive components that allow users to access content that isn&#39;t constantly visible on the screen.
+  - [Popover](/docs/components/popover/code): Popovers display contextual information next to a trigger element.
+  - [Tile](/docs/components/tile/code): Tiles are containers that display content in a card-like format.
+- **Forms**
+  - [Forms field](/docs/components/forms-field/code): A field is a form element when user input is needed. It's typically used with other form elements in a fieldset.
+  - [Forms layout](/docs/components/forms-layout/code): Effective form layouts play a crucial role in usability. Well-structured forms include fieldsets, considering the hierarchy of information, and understanding how to strike the right balance between aesthetics and functionality.
+  - [Forms validation](/docs/components/forms-validation/code): Form validation gives users feedback on their input to ensure accurate, consistent data is submitted. When requirements are not met or data is incorrect, it’s rejected.
+  - [Forms behavior](/docs/components/forms-behavior/): Forms behavior refers to the way in which user input is handled and validated within a form. It plays a crucial role in providing a seamless and user-friendly experience for form interactions.
+- **Input fields and selections**
+  - [Category filter](/docs/components/category-filter/code): Category filters allow users to quickly narrow their search by selecting predefined categories.
+  - [Checkbox](/docs/components/checkbox/code): Checkboxes are form controls that allow users to select none, one or more options.
+  - [Custom field](/docs/components/custom-field/code): Custom fields are wrapper components that can host any form component.
+  - [Date dropdown](/docs/components/date-dropdown/code): Date dropdowns allow users to select a specific date from a date picker or pre-defined date options.
+  - [Date input](/docs/components/input-date/code): Date inputs allow users to enter and select dates in a standardized format, ensuring consistency and accuracy.
+  - [Date time input](/docs/components/input-date-time/code): Date time input provides a versatile interface for selecting both date and time values, offering a seamless way to input date and time information either as a standalone element or within a dropdown.
+  - [Date picker](/docs/components/date-picker/code): Date pickers provide a versatile calendar that can be used as a standalone element or within a dropdown for date input, offering a seamless way to select dates.
+  - [Date time picker](/docs/components/date-time-picker/code): Date time pickers offer an interface for selecting both dates and times, which can be used as a standalone element or within a dropdown, providing a seamless way to input date and time values.
+  - [Expanding search](/docs/components/expanding-search/code): Expanding searches are search fields that expand on click to save space.
+  - [Number input](/docs/components/input-number/code): Number inputs allow users to enter and adjust numerical values.
+  - [Range field](/docs/components/range-field/code): Range fields group two related inputs into a start and end value so users can enter date, time and date-time ranges consistently.
+  - [Radio](/docs/components/radio/code): Radio buttons enable users to choose only one option from a predefined set of mutually exclusive options.
+  - [Select](/docs/components/select/code): Selects allow users to choose from a list of options.
+  - [Slider](/docs/components/slider/code): Sliders allow users to select a value from a range of values.
+  - [Input](/docs/components/input/code): Input fields allow users to enter and edit single-line text, numbers, and other character-based symbols within an application.
+  - [Textarea](/docs/components/textarea/code): Textareas allow users to enter and edit multi-line text input, making it perfect for forms that require longer entries.
+  - [Time input](/docs/components/input-time/code): Time inputs allow users to enter and select times in a standardized format, ensuring consistency and accuracy.
+  - [Time picker](/docs/components/time-picker/code): Time pickers allow users to select specific times ensuring accurate time input.
+  - [Toggle](/docs/components/toggle/code): Toggle switches enable users to toggle between an on and off state.
+  - [Upload](/docs/components/upload/code): Uploads allow users to select and upload files from their device via drag-and-drop.
+- **Buttons and actions**
+  - [Button](/docs/components/button/code): Buttons facilitate user interactions by initiating actions and applying functions within an application.
+  - [Dropdown button](/docs/components/dropdown-button/code): Dropdown buttons reveal a list of actions when selected.
+  - [Icon button](/docs/components/icon-button/code): Icon buttons use only icons to represent actions, making them ideal for space-constrained layouts.
+  - [Link button](/docs/components/link-button/code): Link buttons take users to another location either within or outside the application and contain a chevron and a text label.
+  - [Split button](/docs/components/split-button/code): Split buttons are button elements that allow users to either trigger an action with one click or select an action from a list of options.
+  - [Toggle button](/docs/components/toggle-button/code): Toggle buttons allow users to either activate or deactivate a function.
+  - [Chip](/docs/components/chip/code): Chips are interactive elements that display small pieces of information in a compact and visually appealing way.
+- **System feedback and status**
+  - [Badge](/docs/components/badge/code): Badges display compact status, counter or notification cues on (or next to) UI elements.
+  - [Empty state](/docs/components/empty-state/code): Empty states inform users that there is no content to display.
+  - [Loading modal](/docs/components/loading-modal/code): Loading modals appear on top of the main content of a webpage or application, blocking interaction with the rest of the page until the process is finished.
+  - [Message bar](/docs/components/messagebar/code): Message bars display important information to users, e.g. feedback, warnings or errors.
+  - [Message modal](/docs/components/message-modal/code): Modal messages appear on top of the main content of a webpage or application, blocking interaction with the rest of the page until the user meets a decision or closes the modal.
+  - [Pill](/docs/components/pill/code): Pills display small pieces of information, e.g. counters or statuses.
+  - [Spinner](/docs/components/spinner/code): Spinners indicate that a process is running to provide feedback to the user.
+  - [Toast](/docs/components/toast/code): Toasts are small pop-ups that provide simple feedback on a process.
+  - [Tooltip](/docs/components/tooltip/code): Tooltips provide additional information when users hover over or focus on an element.
+  - [Progress indicator](/docs/components/progress-indicator/code): Progress indicators show the status or completion of a process. Use them to provide feedback for operations that take one second or more.
+- **Data display**
+  - [Data grid](/docs/components/grid/code): The popular data grid library AG Grid is seamlessly integrated into our design system, allowing you to harness its powerful features while maintaining consistency with our styleguide.
+  - [HTML table](/docs/components/html-grid/code): HTML tables are used to display tabular data in a structured way.
+  - [Key value](/docs/components/key-value/code): Key value pairs display a label (key) and a value in a structured, easy way.
+  - [Key value list](/docs/components/key-value-list/code): Key value lists organize and list a series of key value pairs.
+  - [KPI](/docs/components/kpi/code): KPIs display measured values together with a status indicator to help users interpret data.
+- **Chat**
+  - [Chat](/docs/components/chat/code): Chats are layout components for building conversational chatbot experiences.
+  - [Chat input](/docs/components/chat-input/code): Chat inputs are used to write messages with attachments in a chat experience.
+  - [User message](/docs/components/user-message/code): User messages display a single message authored by the user in a chat thread, e.g. conversational AI.
+  - [AI message](/docs/components/ai-message/code): AI messages display a single response generated by AI in a conversational chat experience.
+  - [Chat attachment](/docs/components/chat-attachment/code): Chat attachments are used to display a single attachment in chat experiences.
+- **Charts**
+  - [Overview](/docs/components/charts-overview/overview): Charts are essential tools for visualizing data, making complex information more accessible and easier to understand.
+  - [Line chart](/docs/components/line-chart/overview): Line charts display data as a series of data points connected by straight line segments. Line charts are commonly used to visualize trends over time or compare two variables. We typically use line charts to visualize continuous data.
+  - [Bar chart](/docs/components/bar-chart/overview): Bar charts display data using rectangular bars. The length of each bar is proportional to the value it represents. Bar charts are commonly used to compare the values of different categories. We typically use bar charts to visualize data that is categorical or ordinal in nature.
+  - [Gauge chart](/docs/components/gauge-chart/overview): Gauge charts are a type of chart that displays data using a dial or needle to indicate a value within a specific range. Gauge charts are commonly used to visualize performance metrics, such as speedometers, progress meters, and other KPIs. We typically use gauge charts to represent a single value within a range of values.
+  - [Pie chart](/docs/components/pie-chart/overview): Pie charts display data using a circular graph. The length of each slice is proportional to the value it represents. Pie charts are commonly used to visualize the parts of a whole and are particularly useful for comparing the relative sizes of different categories.
+  - [3D chart](/docs/components/3d/overview): 3D charts are a powerful way to visualize data in three dimensions. They provide a more immersive and interactive experience compared to traditional 2D charts. We typically use 3D charts to represent complex data sets or to visualize data in a more engaging way.
+  - [Special chart](/docs/components/special-chart/overview): ECharts offer a wide variety of different chart types and features. The following page deals with some of the more special chart types and features.
 
 ---
 
@@ -10102,6 +10010,7 @@ Use "if" for uncertain conditions or user choices, and "when" for inevitable or 
 - [Error messages](../messaging/error-messages.mdx)
 - [Warning messages](../messaging/warning-messages.mdx)
 - [License management](../menu-functions-and-ui-labels/license-management.md)
+- [Localization](../support-and-resources/uxw-localization/overview.md)
 
 ---
 
@@ -10184,6 +10093,7 @@ Official Siemens brand resources regarding this theme are exclusively available 
 
 - [Offensive language](./offensive-language.md)
 - [UX writing resources and support](../support-and-resources/UX-writing-resources.md)
+- [Vocabulary](./vocabulary.md)
 
 ---
 
@@ -10267,6 +10177,8 @@ Engage with language experts specializing in content moderation to ensure compre
 
 - [Voice and tone](./voice-and-tone.md)
 - [User management](../menu-functions-and-ui-labels/user-management.md)
+- [Vocabulary](./vocabulary.md)
+- [Voice and tone](./voice-and-tone.md)
 
 ---
 
@@ -10426,7 +10338,7 @@ Use ellipsis with transitional text to inform users that something is happening 
     
   
 
-They are also sometimes used to show that a new dialog box will open within the UI, e.g. "Print…" or "Save as…", but as this comes with consistency challenges it is slowly being removed from UX writing guidelines.
+They are also sometimes used to show that a new dialog box will open within the UI, e.g. "Print…" or "Save as…", but as this comes with consistency challenges, it is slowly being removed from UX writing guidelines.
 
   
     
@@ -10475,18 +10387,18 @@ Remove hyphens for widely understood terms that have evolved beyond needing them
 
 ## Minus sign `−`
 
-Use the proper minus sign (−) rather than a hyphen (-) when expressing negative values or subtraction. In UI contexts such as labels, values or data displays, the minus sign should be used to ensure mathematical clarity. The minus sign should be placed directly before the number with no intervening space except for mathematical operations for readability. See [Formatting of Numbers and percentages](../formatting/numbers.mdx).
+Use the proper minus sign (−) rather than a hyphen (-) when expressing negative values or subtraction. In UI contexts such as labels, values or data displays, the minus sign should be used to ensure mathematical clarity. The minus sign should be placed directly before the number with no intervening space except for mathematical operations for readability. See formatting of [Numbers and percentages](../formatting/numbers.mdx).
 
   
     
-      The temperature dropped to −12°C
+      The temperature dropped to −12 °C
       Balance: −$50.00
       10 − 3 = 7
     
   
   
     
-      The temperature dropped to -12°C (hyphen as minus sign)
+      The temperature dropped to -12 °C (hyphen as minus sign)
       Balance: -$50.00 (hyphen as minus sign)
       10-3=7
     
@@ -10675,7 +10587,7 @@ Question marks are appropriate for genuine informational questions, in help text
     
       Need help? Contact support.
       What are you looking for?
-      What's new with Version 3.4?
+      What's new with Version 3.4
     
   
   
@@ -10741,9 +10653,7 @@ Use semi-colons to separate key application features to enhance and contrast the
   
     
       The system is offline; check your connection.
-      Our app offers real-time plant updates; personalized dashboards; and interactive maps.
       Our app offers real-time plant updates, personalized dashboards and interactive maps.
-      1. Calibrate sensors;2. Set operating parameters;3. Start the process.
     
   
   
@@ -10762,7 +10672,7 @@ Use the tilde primarily in technical contexts to indicate approximation and home
       File path: ~/Documents/Projects
       Processing time: ~ 5 minutes
       Processing time: about 5 minutes
-      Temperature range: approximately 20–25°C
+      Temperature range: approximately 20–25 °C
     
   
   
@@ -11369,6 +11279,7 @@ Avoid using negative shortened word forms such as “can’t” and “won’t�
 - [Grammar](./grammar.md)
 - [Punctuation](./punctuation.md)
 - [Capitalization](./capitalization-and-proper-nouns.md)
+- [Messages overview](../messaging/messages-overview.md)
 
 ---
 
@@ -12118,23 +12029,23 @@ Use en dashes (–) instead of hyphens (-) for ranges.
 
   
     10–0
-    The shipment weighs 50–75kg
+    The shipment weighs 50–75 kg
   
 
 Write out the unit only once in ranges.
 
   
-    The temperature fluctuated between 20–25°C
+    The temperature fluctuated between 20–25 °C
   
 
   
-    The temperature fluctuated between 20°C–25°C
+    The temperature fluctuated between 20 °C–25 °C
   
 
-Use the minus hyphen for negative numbers which is better aligned than a normal hyphen (Unicode U+2212).
+Use the minus sign (Unicode U+2212) for negative numbers which is better aligned than a normal hyphen.
 
   
-    -12
+    −12
   
 
   
@@ -12144,8 +12055,8 @@ Use the minus hyphen for negative numbers which is better aligned than a normal 
 Use either "to" or separate text fields for ranges with minus numbers for readability.
 
   
-    -12 to -15°C
-    Min temp (C): -12° / Max temp (C): -15°
+    −12 to −15 °C
+    Min temp (C): −12° / Max temp (C): −15°
   
 
 ## Decimals
@@ -12211,8 +12122,8 @@ Write out numbers in the millions and billions ("one million" instead of "1,000,
 Use numerals for numbers in the millions for dates, addresses, units of measurement, currencies and percentages.
 
   
-    The temperature can reach 1,000,000°C in the pod.
-    The cargo ship can carry up to 1,000,000kg.
+    The temperature can reach 1,000,000 °C in the pod.
+    The cargo ship can carry up to 1,000,000 kg.
     The success rate of our new implementation is 1,000,000%.
     The project budget is $1,000,000.
   
@@ -12527,11 +12438,11 @@ Present multiple time zones clearly by using either "Local time" or "Your local 
 Use "current" for active, ongoing states and avoid "actual" when referring to time.
 
   
-    Current temperature: 72°F
+    Current temperature: 72 °F
   
 
   
-    Actual temperature: 72°F
+    Actual temperature: 72 °F
   
 
 Use "latest" for the newest updates or versions and "last" for final items in a sequence.
@@ -13493,6 +13404,7 @@ Make sure tooltips and aria-labels match. See [Accessibility guidelines](../../a
 - [Warning messages](../messaging/warning-messages.mdx)
 - [UI terminology](../menu-functions-and-ui-labels/ui-terminology.md)
 - [External links and resources](../menu-functions-and-ui-labels/external-links-and-resources.md)
+- [Punctuation](../basics/punctuation.md)
 - [WCAG: Using aria-label to provide labels for objects](https://www.w3.org/WAI/WCAG22/Techniques/aria/ARIA6) <IxIcon name={iconOpenExternal} size="16" aria-label="external" role="img"></IxIcon>
 
 ---
@@ -14054,6 +13966,7 @@ Use “basic” product when talking about a simplified or entry-level version o
 - [Time and time zones](../formatting/timezones.mdx)
 - [UI terminology](./ui-terminology.md)
 - [User management](./user-management.md)
+- [Operational emails](../operational-emails/overview-operational-emails/usage.mdx)
 
 ---
 
@@ -14960,6 +14873,7 @@ Many actions come in natural pairs or opposites. Using the right pairs help user
 - [Button (component)](../../../components/button/)
 - [Search and filter](./search-and-filter.md)
 - [Logging in and out](./logging-in-and-out.md)
+- [Button labels](./button-labels.md)
 
 ---
 
@@ -15769,7 +15683,7 @@ Use infotips to help users understand complex features and workflows.
 
   
     Set thresholds
-    Set project thresholds here. Adjust the value to trigger alerts when the temperature exceeds a specified limit (e.g. 80°C).
+    Set project thresholds here. Adjust the value to trigger alerts when the temperature exceeds a specified limit (e.g. 80 °C).
     PID controller tuning
     Adjust these parameters (Proportional, Integral, Derivative) to optimize the system's response to errors and achieve stable control.
     Schedule maintenance
@@ -15840,14 +15754,15 @@ First define your use case and message type from the list below, then use this o
 
 | Message type                      | Usage                                                                                                                               | Best practice example                                                                                                                                 |
 | :-------------------------------- | :---------------------------------------------------------------------------------------------------------------------------------- | :---------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Error messages                    | Notify users of operational issues that have already happened and require their immediate action to resolve.                        | **Heading:** No data received**Description:** Unable to receive data as sensor is inactive.**Instructions:** Check sensor                   |
-| Warning messages                  | Alert users to a potential problem or risk. Advises caution or suggests different actions to prevent unwanted future consequences.  | **Heading:** Temperature approaching threshold**Description:** Temperature in Zone 3 approaching 30° threshold.**Instructions:** Check zone |
-| Non-critical information messages | Inform users about general information. Often no action is required.                                                                | System backup completed at 21:00 CET.                                                                                                                 |
-| Empty-state messages              | Tell users the empty space is intentional, i.e. not an error, and how it can be filled.                                             | **Heading:** No zones created**Description:** Create zones to display on dashboard.**Button:** Create zone                                  |
-| Toast messages                    | Give short and often quickly disappearing feedback to a user action.                                                                | **Heading:** Asset deleted**Description:** Valve 4a/203/22                                                                                       |
-| Tooltips                          | Provide brief additional information about the tool with contextual help. Answer the question, “What is this?”                      | Shows machine activity and operator actions.                                                                                                          |
-| Infotips                          | Provide more detailed explanations or guidance regarding user actions. Answer the question, “Why is this here and what does it do?” | Hover over icons or labels to see more details about their function or status.                                                                        |
-| Time-related messages             | Provide specific timeframes with actionable guidance.                                                                               | System maintenance scheduled for 22 August, 02:00–04:00 CEST.                                                                                         |
+| [Error messages](./error-messages.mdx)                    | Notify users of operational issues that have already happened and require their immediate action to resolve.                        | **Heading:** No data received**Description:** Unable to receive data as sensor is inactive.**Instructions:** Check sensor                   |
+| [Error pages](./error-pages.md)                    | Notify users of a problem following the HTTP code and guide them to the next step.                        | **HTTP code:** 400**Heading:** Bad request**Description:** Failed to process the request. Check your request and try again. **Action:** Go back                   |
+| [Warning messages](./warning-messages.mdx)                  | Alert users to a potential problem or risk. Advises caution or suggests different actions to prevent unwanted future consequences.  | **Heading:** Temperature approaching threshold**Description:** Temperature in Zone 3 approaching 30° threshold.**Instructions:** Check zone |
+| [Non-critical information messages](./non-critical-information-messages.mdx) | Inform users about general information. Often no action is required.                                                                | System backup completed at 21:00 CET.                                                                                                                 |
+| [Empty-state messages](./empty-state-messages.mdx)              | Tell users the empty space is intentional, i.e. not an error, and how it can be filled.                                             | **Heading:** No zones created**Description:** Create zones to display on dashboard.**Button:** Create zone                                  |
+| [Toast messages](./toast-messages.mdx)                    | Give short and often quickly disappearing feedback to a user action.                                                                | **Heading:** Asset deleted**Description:** Valve 4a/203/22                                                                                       |
+| [Tooltips](./tooltips.mdx)                          | Provide brief additional information about the tool with contextual help. Answer the question, “What is this?”                      | Shows machine activity and operator actions.                                                                                                          |
+| [Infotips](./infotips.mdx)                          | Provide more detailed explanations or guidance regarding user actions. Answer the question, “Why is this here and what does it do?” | Hover over icons or labels to see more details about their function or status.                                                                        |
+| [Time-related messages](./time-related-messages.mdx)         | Provide specific timeframes with actionable guidance.                                                                               | System maintenance scheduled for 22 August, 02:00–04:00 CEST.                                                                                         |
 
 ## General rules
 

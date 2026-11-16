@@ -43,13 +43,6 @@
     "ix-menu",
     "ix-menu-item"
   ],
-  "/src/preview-examples/application-header.html": [
-    "ix-application-header",
-    "ix-avatar",
-    "ix-dropdown-button",
-    "ix-dropdown-item",
-    "ix-icon-button"
-  ],
   "/src/preview-examples/application-breakpoints.html": [
     "ix-application",
     "ix-application-header",
@@ -63,8 +56,12 @@
     "ix-radio",
     "ix-radio-group"
   ],
-  "/src/preview-examples/aria-label-properties.html": [
-    "ix-date-picker"
+  "/src/preview-examples/application-header.html": [
+    "ix-application-header",
+    "ix-avatar",
+    "ix-dropdown-button",
+    "ix-dropdown-item",
+    "ix-icon-button"
   ],
   "/src/preview-examples/application.html": [
     "ix-application",
@@ -73,6 +70,9 @@
     "ix-content-header",
     "ix-menu",
     "ix-menu-item"
+  ],
+  "/src/preview-examples/aria-label-properties.html": [
+    "ix-date-picker"
   ],
   "/src/preview-examples/avatar-image.html": [
     "ix-avatar"
@@ -167,15 +167,15 @@
   "/src/preview-examples/buttons.html": [
     "ix-button"
   ],
-  "/src/preview-examples/card-list.html": [
-    "ix-card-list",
-    "ix-push-card"
-  ],
   "/src/preview-examples/card.html": [
     "ix-card",
     "ix-card-content",
     "ix-icon",
     "ix-typography"
+  ],
+  "/src/preview-examples/card-list.html": [
+    "ix-card-list",
+    "ix-push-card"
   ],
   "/src/preview-examples/category-filter-suggestions.html": [
     "ix-category-filter"
@@ -213,21 +213,21 @@
   "/src/preview-examples/chip.html": [
     "ix-chip"
   ],
-  "/src/preview-examples/content-header-no-back.html": [
-    "ix-content-header",
-    "ix-icon-button"
-  ],
   "/src/preview-examples/content-header-with-slot.html": [
     "ix-button",
     "ix-content-header",
     "ix-pill"
   ],
-  "/src/preview-examples/content-header.html": [
-    "ix-button",
-    "ix-content-header"
+  "/src/preview-examples/content-header-no-back.html": [
+    "ix-content-header",
+    "ix-icon-button"
   ],
   "/src/preview-examples/content.html": [
     "ix-content",
+    "ix-content-header"
+  ],
+  "/src/preview-examples/content-header.html": [
+    "ix-button",
     "ix-content-header"
   ],
   "/src/preview-examples/custom-field-validation.html": [
@@ -238,10 +238,10 @@
     "ix-icon-button",
     "ix-input"
   ],
-  "/src/preview-examples/date-dropdown-presets.html": [
+  "/src/preview-examples/date-dropdown.html": [
     "ix-date-dropdown"
   ],
-  "/src/preview-examples/date-dropdown.html": [
+  "/src/preview-examples/date-dropdown-presets.html": [
     "ix-date-dropdown"
   ],
   "/src/preview-examples/date-input-disabled.html": [
@@ -285,13 +285,13 @@
   "/src/preview-examples/datetime-input-disabled.html": [
     "ix-datetime-input"
   ],
-  "/src/preview-examples/datetime-input-label.html": [
-    "ix-datetime-input"
-  ],
   "/src/preview-examples/datetime-input-min-max-date.html": [
     "ix-datetime-input"
   ],
   "/src/preview-examples/datetime-input-readonly.html": [
+    "ix-datetime-input"
+  ],
+  "/src/preview-examples/datetime-input-label.html": [
     "ix-datetime-input"
   ],
   "/src/preview-examples/datetime-input-validation.html": [
@@ -442,18 +442,18 @@
     "ix-row",
     "ix-typography"
   ],
+  "/src/preview-examples/group-context-menu.html": [
+    "ix-dropdown",
+    "ix-dropdown-item",
+    "ix-group",
+    "ix-group-item"
+  ],
   "/src/preview-examples/group-custom-entry.html": [
     "ix-button",
     "ix-group",
     "ix-group-item"
   ],
   "/src/preview-examples/group-header-suppressed.html": [
-    "ix-group",
-    "ix-group-item"
-  ],
-  "/src/preview-examples/group-context-menu.html": [
-    "ix-dropdown",
-    "ix-dropdown-item",
     "ix-group",
     "ix-group-item"
   ],
@@ -825,7 +825,7 @@
   "/src/preview-examples/time-input.html": [
     "ix-time-input"
   ],
-  "/src/preview-examples/timepicker-min-max-time.html": [
+  "/src/preview-examples/timepicker-format-adjusted.html": [
     "ix-time-picker"
   ],
   "/src/preview-examples/timepicker.html": [
@@ -918,10 +918,10 @@
     "ix-workflow-step",
     "ix-workflow-steps"
   ],
-  "/src/preview-examples/timepicker-format-adjusted.html": [
+  "/src/preview-examples/timepicker-intervals.html": [
     "ix-time-picker"
   ],
-  "/src/preview-examples/timepicker-intervals.html": [
+  "/src/preview-examples/timepicker-min-max-time.html": [
     "ix-time-picker"
   ],
   "/src/preview-examples/time-range.html": [

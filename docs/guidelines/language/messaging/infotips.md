@@ -41,7 +41,7 @@ Use infotips to help users understand complex features and workflows.
 
   
     Set thresholds
-    Set project thresholds here. Adjust the value to trigger alerts when the temperature exceeds a specified limit (e.g. 80°C).
+    Set project thresholds here. Adjust the value to trigger alerts when the temperature exceeds a specified limit (e.g. 80 °C).
     PID controller tuning
     Adjust these parameters (Proportional, Integral, Derivative) to optimize the system's response to errors and achieve stable control.
     Schedule maintenance

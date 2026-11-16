@@ -62,23 +62,23 @@ Use en dashes (–) instead of hyphens (-) for ranges.
 
   
     10–0
-    The shipment weighs 50–75kg
+    The shipment weighs 50–75 kg
   
 
 Write out the unit only once in ranges.
 
   
-    The temperature fluctuated between 20–25°C
+    The temperature fluctuated between 20–25 °C
   
 
   
-    The temperature fluctuated between 20°C–25°C
+    The temperature fluctuated between 20 °C–25 °C
   
 
-Use the minus hyphen for negative numbers which is better aligned than a normal hyphen (Unicode U+2212).
+Use the minus sign (Unicode U+2212) for negative numbers which is better aligned than a normal hyphen.
 
   
-    -12
+    −12
   
 
   
@@ -88,8 +88,8 @@ Use the minus hyphen for negative numbers which is better aligned than a normal 
 Use either "to" or separate text fields for ranges with minus numbers for readability.
 
   
-    -12 to -15°C
-    Min temp (C): -12° / Max temp (C): -15°
+    −12 to −15 °C
+    Min temp (C): −12° / Max temp (C): −15°
   
 
 ## Decimals
@@ -155,8 +155,8 @@ Write out numbers in the millions and billions ("one million" instead of "1,000,
 Use numerals for numbers in the millions for dates, addresses, units of measurement, currencies and percentages.
 
   
-    The temperature can reach 1,000,000°C in the pod.
-    The cargo ship can carry up to 1,000,000kg.
+    The temperature can reach 1,000,000 °C in the pod.
+    The cargo ship can carry up to 1,000,000 kg.
     The success rate of our new implementation is 1,000,000%.
     The project budget is $1,000,000.
   

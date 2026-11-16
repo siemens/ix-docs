@@ -145,6 +145,18 @@
     "/src/preview-examples/split-button-icons.html",
     "/src/preview-examples/split-button.html"
   ],
+  "ix-radio-group": [
+    "/src/preview-examples/application-breakpoints.html",
+    "/src/preview-examples/radio-group.html",
+    "/src/preview-examples/radio-validation.html"
+  ],
+  "ix-radio": [
+    "/src/preview-examples/application-breakpoints.html",
+    "/src/preview-examples/radio-disabled.html",
+    "/src/preview-examples/radio-group.html",
+    "/src/preview-examples/radio-validation.html",
+    "/src/preview-examples/radio.html"
+  ],
   "ix-icon-button": [
     "/home/runner/work/ix/ix/packages/core/dist/esm/ix-select.entry.js",
     "/src/preview-examples/application-header.html",
@@ -160,18 +172,6 @@
     "/src/preview-examples/custom-field.html",
     "/src/preview-examples/dropdown-quick-actions.html",
     "/src/preview-examples/tile.html"
-  ],
-  "ix-radio-group": [
-    "/src/preview-examples/application-breakpoints.html",
-    "/src/preview-examples/radio-group.html",
-    "/src/preview-examples/radio-validation.html"
-  ],
-  "ix-radio": [
-    "/src/preview-examples/application-breakpoints.html",
-    "/src/preview-examples/radio-disabled.html",
-    "/src/preview-examples/radio-group.html",
-    "/src/preview-examples/radio-validation.html",
-    "/src/preview-examples/radio.html"
   ],
   "ix-date-picker": [
     "/src/preview-examples/aria-label-properties.html",
@@ -255,13 +255,6 @@
     "/src/preview-examples/breadcrumb-truncate.html",
     "/src/preview-examples/breadcrumb.html"
   ],
-  "ix-card-list": [
-    "/src/preview-examples/card-list.html"
-  ],
-  "ix-push-card": [
-    "/src/preview-examples/card-list.html",
-    "/src/preview-examples/push-card.html"
-  ],
   "ix-card": [
     "/src/preview-examples/card.html"
   ],
@@ -281,6 +274,13 @@
     "/src/preview-examples/modal-non-blocking.html",
     "/src/preview-examples/number-input-with-slots.html",
     "/src/preview-examples/time-input-with-slots.html"
+  ],
+  "ix-card-list": [
+    "/src/preview-examples/card-list.html"
+  ],
+  "ix-push-card": [
+    "/src/preview-examples/card-list.html",
+    "/src/preview-examples/push-card.html"
   ],
   "ix-category-filter": [
     "/src/preview-examples/category-filter-suggestions.html",

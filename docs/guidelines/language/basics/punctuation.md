@@ -156,7 +156,7 @@ Use ellipsis with transitional text to inform users that something is happening 
     
   
 
-They are also sometimes used to show that a new dialog box will open within the UI, e.g. "Print…" or "Save as…", but as this comes with consistency challenges it is slowly being removed from UX writing guidelines.
+They are also sometimes used to show that a new dialog box will open within the UI, e.g. "Print…" or "Save as…", but as this comes with consistency challenges, it is slowly being removed from UX writing guidelines.
 
   
     
@@ -205,18 +205,18 @@ Remove hyphens for widely understood terms that have evolved beyond needing them
 
 ## Minus sign `−`
 
-Use the proper minus sign (−) rather than a hyphen (-) when expressing negative values or subtraction. In UI contexts such as labels, values or data displays, the minus sign should be used to ensure mathematical clarity. The minus sign should be placed directly before the number with no intervening space except for mathematical operations for readability. See [Formatting of Numbers and percentages](../formatting/numbers.mdx).
+Use the proper minus sign (−) rather than a hyphen (-) when expressing negative values or subtraction. In UI contexts such as labels, values or data displays, the minus sign should be used to ensure mathematical clarity. The minus sign should be placed directly before the number with no intervening space except for mathematical operations for readability. See formatting of [Numbers and percentages](../formatting/numbers.mdx).
 
   
     
-      The temperature dropped to −12°C
+      The temperature dropped to −12 °C
       Balance: −$50.00
       10 − 3 = 7
     
   
   
     
-      The temperature dropped to -12°C (hyphen as minus sign)
+      The temperature dropped to -12 °C (hyphen as minus sign)
       Balance: -$50.00 (hyphen as minus sign)
       10-3=7
     
@@ -405,7 +405,7 @@ Question marks are appropriate for genuine informational questions, in help text
     
       Need help? Contact support.
       What are you looking for?
-      What's new with Version 3.4?
+      What's new with Version 3.4
     
   
   
@@ -471,9 +471,7 @@ Use semi-colons to separate key application features to enhance and contrast the
   
     
       The system is offline; check your connection.
-      Our app offers real-time plant updates; personalized dashboards; and interactive maps.
       Our app offers real-time plant updates, personalized dashboards and interactive maps.
-      1. Calibrate sensors;2. Set operating parameters;3. Start the process.
     
   
   
@@ -492,7 +490,7 @@ Use the tilde primarily in technical contexts to indicate approximation and home
       File path: ~/Documents/Projects
       Processing time: ~ 5 minutes
       Processing time: about 5 minutes
-      Temperature range: approximately 20–25°C
+      Temperature range: approximately 20–25 °C
     
   
   

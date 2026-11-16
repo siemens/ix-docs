@@ -160,11 +160,11 @@ Present multiple time zones clearly by using either "Local time" or "Your local 
 Use "current" for active, ongoing states and avoid "actual" when referring to time.
 
   
-    Current temperature: 72°F
+    Current temperature: 72 °F
   
 
   
-    Actual temperature: 72°F
+    Actual temperature: 72 °F
   
 
 Use "latest" for the newest updates or versions and "last" for final items in a sequence.
