@@ -8,7 +8,7 @@
  */
 
 /**
- * Header tags of the doc pages: front matter validation and migration guide links.
+ * Header tags of the doc pages: front matter validation.
  * Property and event tags of the API tables come from the siemens/ix JSDoc.
  */
 
@@ -20,11 +20,13 @@ export type SemVer = {
 };
 
 /**
- * `breaking-change` front matter. `description` is the tooltip.
+ * Entry of the `breaking-changes` front matter: the breaking changes of a version.
+ * `description` is listed in the popover, `link` points to the migration guide or any
+ * external page.
  */
 export type BreakingChange = {
   version: string;
-  description?: string;
+  breaking: { description: string; link: string }[];
 };
 
 export function parseVersion(
@@ -44,57 +46,52 @@ export function parseVersion(
   };
 }
 
-export const BREAKING_CHANGE_FRONT_MATTER_KEY = 'breaking-change';
+export const BREAKING_CHANGES_FRONT_MATTER_KEY = 'breaking-changes';
 
-/**
- * Migration guide of a major, see `getComponentMigrationGuideUrl` for a component's section
- */
-export function getMigrationGuideUrl(version: string) {
-  const major = parseVersion(version)?.major;
-  if (major === undefined) {
-    throw new Error(`Invalid version "${version}"`);
-  }
-  return `/docs/home/migration/${major}_0_0`;
+function isNonEmptyString(value: unknown): value is string {
+  return typeof value === 'string' && value.trim() !== '';
 }
 
 /**
- * Folder of a doc (`components/card/code` -> `card`), the heading id of the
- * component's section in the migration guides
+ * Validates `breaking-changes` front matter, throws if invalid
  */
-export function getDocFolder(docId: string) {
-  return docId.split('/').slice(-2)[0];
-}
-
-/**
- * Component's section of a major's migration guide (heading id `{#<doc folder>}`),
- * linked by the breaking change tags of the page headers and the API tables
- */
-export function getComponentMigrationGuideUrl(version: string, docId: string) {
-  return `${getMigrationGuideUrl(version)}#${getDocFolder(docId)}`;
-}
-
-/**
- * Validates `breaking-change` front matter, throws if invalid
- */
-export function parseBreakingChangeFrontMatter(
+export function parseBreakingChangesFrontMatter(
   value: unknown
-): BreakingChange | undefined {
+): BreakingChange[] {
+  const key = BREAKING_CHANGES_FRONT_MATTER_KEY;
   if (value === undefined || value === null) {
-    return undefined;
+    return [];
+  }
+  if (!Array.isArray(value)) {
+    throw new Error(`"${key}" must be a list of { version, breaking } entries`);
   }
 
-  const { version, description } = value as Record<string, unknown>;
-  if (typeof version !== 'string' || !parseVersion(version)) {
-    throw new Error(
-      `"${BREAKING_CHANGE_FRONT_MATTER_KEY}.version" must be a version like 6.0.0, got "${String(version)}"`
-    );
-  }
+  return value.map((entry, i) => {
+    const { version, breaking } = (entry ?? {}) as Record<string, unknown>;
+    if (typeof version !== 'string' || !parseVersion(version)) {
+      throw new Error(
+        `"${key}[${i}].version" must be a version like 6.0.0, got "${String(version)}"`
+      );
+    }
+    if (!Array.isArray(breaking) || breaking.length === 0) {
+      throw new Error(
+        `"${key}[${i}].breaking" must be a non-empty list of { description, link } entries`
+      );
+    }
 
-  return {
-    version: version.trim(),
-    ...(typeof description === 'string' &&
-      description.trim() && { description: description.trim() }),
-  };
+    return {
+      version: version.trim(),
+      breaking: breaking.map((item, j) => {
+        const { description, link } = (item ?? {}) as Record<string, unknown>;
+        if (!isNonEmptyString(description) || !isNonEmptyString(link)) {
+          throw new Error(
+            `"${key}[${i}].breaking[${j}]" needs a description and a link`
+          );
+        }
+        return { description: description.trim(), link: link.trim() };
+      }),
+    };
+  });
 }
 
 export const SINCE_FRONT_MATTER_KEY = 'since';
@@ -113,21 +110,13 @@ export type PageTags = {
   deprecated?: DeprecatedEntry[];
   formReady?: boolean;
   since?: string;
-  breakingChange?: {
-    version: string;
-    href: string;
-    description?: string;
-  };
+  breakingChanges?: BreakingChange[];
 };
 
 /**
- * Header tags of a page, throws on invalid front matter. The breaking change tag links
- * to the component's section of the migration guide (heading id `{#<doc folder>}`).
+ * Header tags of a page, throws on invalid front matter
  */
-export function getPageTags(
-  frontMatter: Record<string, unknown>,
-  docId: string
-): PageTags {
+export function getPageTags(frontMatter: Record<string, unknown>): PageTags {
   const tags: PageTags = {};
 
   const deprecated = frontMatter[DEPRECATED_FRONT_MATTER_KEY];
@@ -166,17 +155,11 @@ export function getPageTags(
     tags.since = since.trim();
   }
 
-  const breakingChange = parseBreakingChangeFrontMatter(
-    frontMatter[BREAKING_CHANGE_FRONT_MATTER_KEY]
+  const breakingChanges = parseBreakingChangesFrontMatter(
+    frontMatter[BREAKING_CHANGES_FRONT_MATTER_KEY]
   );
-  if (breakingChange) {
-    tags.breakingChange = {
-      version: breakingChange.version,
-      href: getComponentMigrationGuideUrl(breakingChange.version, docId),
-      ...(breakingChange.description && {
-        description: breakingChange.description,
-      }),
-    };
+  if (breakingChanges.length > 0) {
+    tags.breakingChanges = breakingChanges;
   }
 
   return tags;

@@ -8,99 +8,120 @@
  */
 import Link from '@docusaurus/Link';
 import isInternalUrl from '@docusaurus/isInternalUrl';
-import { useDoc } from '@docusaurus/plugin-content-docs/client';
 import { iconElectricalEnergyFilled } from '@siemens/ix-icons/icons';
-import { IxIcon, IxTooltip, IxTypography } from '@siemens/ix-react';
+import {
+  IxIcon,
+  IxPopover,
+  IxPopoverContent,
+  IxPopoverHeader,
+} from '@siemens/ix-react';
 import clsx from 'clsx';
-import { getComponentMigrationGuideUrl } from '@site/src/lib/page-tags';
-import { useId } from 'react';
+import type { BreakingChange } from '@site/src/lib/page-tags';
+import { useHistory } from '@docusaurus/router';
+import { useEffect, useId, useRef } from 'react';
 import BaseTag from './baseTag';
 import styles from './base.module.css';
 
-type BreakingChangeTagProps = Readonly<{
-  message: string;
-  /** Defaults to the current component's section of the migration guide */
-  href?: string;
-  title?: string;
-  /** Summary of the breaking changes, shown as tooltip */
-  description?: string;
-}>;
+type BreakingChangeTagProps = Readonly<BreakingChange>;
 
-/**
- * Breaking change tag of the page headers and of the API tables (generated from
- * `@breaking-change` in the siemens/ix JSDoc, without `href`)
- */
-export function BreakingChangeTag(props: BreakingChangeTagProps) {
-  return props.href ? (
-    <BreakingChangeTagBase {...props} />
-  ) : (
-    <ComponentBreakingChangeTag {...props} />
-  );
-}
-
-/** Links to the section `{#<doc folder>}` of the migration guide */
-function ComponentBreakingChangeTag(props: BreakingChangeTagProps) {
-  const { metadata } = useDoc();
+function ExternalLink(
+  props: Readonly<{
+    to: string;
+    id?: string;
+    className?: string;
+    children: React.ReactNode;
+  }>
+) {
   return (
-    <BreakingChangeTagBase
+    <Link
       {...props}
-      href={getComponentMigrationGuideUrl(props.message, metadata.id)}
+      {...(isInternalUrl(props.to)
+        ? {}
+        : { target: '_blank', rel: 'noreferrer' })}
     />
   );
 }
 
-function BreakingChangeTagBase({
-  message,
-  href,
-  title,
-  description,
+/**
+ * Breaking change tag of the page headers (`breaking-changes` front matter): links to the
+ * first breaking change, the popover lists all of them
+ */
+export function BreakingChangeTag({
+  version,
+  breaking,
 }: BreakingChangeTagProps) {
-  // `useId` returns ids like `:r1:`, which are no valid CSS selectors
+  // `useId` returns ids like `:r1:`, which are no valid element ids for the popover trigger
   const id = `breaking-change-${useId().replace(/[^a-zA-Z0-9_-]/g, '')}`;
-  const tooltip = description ? (
-    <IxTooltip for={`#${id}`} placement="right">
-      <IxTypography format="body">{description}</IxTypography>
-    </IxTooltip>
-  ) : null;
+  const popoverRef = useRef<HTMLIxPopoverElement>(null);
+  const listRef = useRef<HTMLUListElement>(null);
+  const history = useHistory();
 
-  const label = (
-    <>
-      <IxIcon
-        name={iconElectricalEnergyFilled}
-        color="--si-sys-color-text-caution"
-        size="16"
-      />
-      Breaking change in v{message}
-    </>
-  );
+  // In hover mode the popover stops the propagation of clicks inside it, so React (and with
+  // it the client side routing of `Link`) never sees them and the browser reloads the page
+  // without scrolling to the anchor. Handle internal links natively before that happens.
+  useEffect(() => {
+    const list = listRef.current;
+    if (!list) {
+      return;
+    }
+    const onClick = async (event: MouseEvent) => {
+      const anchor = (event.target as Element).closest('a');
+      const link = anchor?.getAttribute('href');
+      if (
+        !link ||
+        !isInternalUrl(link) ||
+        event.button !== 0 ||
+        event.metaKey ||
+        event.ctrlKey ||
+        event.shiftKey ||
+        event.altKey
+      ) {
+        return;
+      }
+      event.preventDefault();
+      await popoverRef.current?.hidePopover();
+      history.push(link);
+    };
+    list.addEventListener('click', onClick);
+    return () => list.removeEventListener('click', onClick);
+  }, [history]);
 
   return (
     <>
       <BaseTag>
-        {href ? (
-          <Link
-            id={id}
-            className={clsx(styles.BreakingChange, styles.BreakingChangeLink)}
-            to={href}
-            // The tooltip replaces the native title
-            title={
-              description
-                ? undefined
-                : (title ?? `Show breaking changes of v${message}`)
-            }
-            {...(isInternalUrl(href)
-              ? {}
-              : { target: '_blank', rel: 'noreferrer' })}
-          >
-            {label}
-          </Link>
-        ) : (
-          <div id={id} className={styles.BreakingChange}>
-            {label}
-          </div>
-        )}
+        <ExternalLink
+          id={id}
+          className={clsx(styles.BreakingChange, styles.BreakingChangeLink)}
+          to={breaking[0].link}
+        >
+          <IxIcon
+            name={iconElectricalEnergyFilled}
+            color="--si-sys-color-text-caution"
+            size="16"
+          />
+          Breaking change in v{version}
+        </ExternalLink>
       </BaseTag>
-      {tooltip}
+      <IxPopover
+        ref={popoverRef}
+        trigger={id}
+        triggerMode="hover"
+        placement="right"
+        hasSpike
+      >
+        <IxPopoverHeader hideClose>
+          Breaking changes in v{version}
+        </IxPopoverHeader>
+        <IxPopoverContent>
+          <ul ref={listRef} className={styles.BreakingChangeList}>
+            {breaking.map((item) => (
+              <li key={item.link + item.description}>
+                <ExternalLink to={item.link}>{item.description}</ExternalLink>
+              </li>
+            ))}
+          </ul>
+        </IxPopoverContent>
+      </IxPopover>
     </>
   );
 }

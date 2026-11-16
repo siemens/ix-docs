@@ -28,7 +28,7 @@ export function getTabsPageTags(id: string): PageTags {
     return {};
   }
   try {
-    return getPageTags(matter(fs.readFileSync(file, 'utf8')).data, id);
+    return getPageTags(matter(fs.readFileSync(file, 'utf8')).data);
   } catch (e) {
     throw new Error(`docs/${id}.mdx: ${e instanceof Error ? e.message : e}`);
   }

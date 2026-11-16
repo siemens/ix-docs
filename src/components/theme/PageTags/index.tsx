@@ -20,13 +20,13 @@ export function hasPageTags(tags: PageTagsData) {
     !!tags.deprecated?.length ||
     !!tags.formReady ||
     !!tags.since ||
-    !!tags.breakingChange
+    !!tags.breakingChanges?.length
   );
 }
 
 /** Header tags, see `getPageTags` */
 export default function PageTags({ tags }: Readonly<{ tags: PageTagsData }>) {
-  const { deprecated, formReady, since, breakingChange } = tags;
+  const { deprecated, formReady, since, breakingChanges } = tags;
 
   return (
     <>
@@ -47,13 +47,13 @@ export default function PageTags({ tags }: Readonly<{ tags: PageTagsData }>) {
       })}
       {formReady && <FormReady />}
       {since && <SinceTag message={since} />}
-      {breakingChange && (
+      {breakingChanges?.map(({ version, breaking }) => (
         <BreakingChangeTag
-          message={breakingChange.version}
-          href={breakingChange.href}
-          description={breakingChange.description}
+          key={version}
+          version={version}
+          breaking={breaking}
         />
-      )}
+      ))}
     </>
   );
 }
