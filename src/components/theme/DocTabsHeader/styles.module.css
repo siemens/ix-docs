@@ -106,7 +106,15 @@
 .Tab:focus-visible {
   outline: var(--si-sys-sizing-focus-ring-width) solid
     var(--si-sys-color-effects-focus);
-  outline-offset: var(--si-sys-sizing-focus-ring-offset);
+  /* Inset inside the tab border so the active tab outline stays visible. */
+  outline-offset: calc(
+    -1 *
+      (
+        var(--si-sys-sizing-border-width-default) +
+          var(--si-sys-sizing-focus-ring-offset) +
+          var(--si-sys-sizing-focus-ring-width)
+      )
+  );
 }
 
 .Tab:not(.Tab--active):hover {
