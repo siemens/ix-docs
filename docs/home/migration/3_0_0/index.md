@@ -325,6 +325,8 @@ type NodeToggleEventPayload = { id: string; isExpanded: boolean };
 
 - From `brand-light` to `theme-brand-light`
 - From `brand-dark` to `theme-brand-dark`
+- From `classic-light` to `theme-classic-light`
+- From `classic-dark` to `theme-classic-dark`
 
 ### Utility function `convertThemeName` war removed from `@siemens/ix-echarts`
 

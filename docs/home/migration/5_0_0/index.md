@@ -30,14 +30,14 @@ Several existing components now follow clearer and more consistent API patterns 
 - `ix-tabs` changed from index-based selection to key-based selection. Replace `selected` with `activeTabKey`, `selectedChange` with `tabChange`, and add a unique `tabKey` to every tab item.
 - `ix-menu-about` and `ix-menu-settings` now use tab keys consistently. New slotted `ix-tabs` integrations require `suppressLegacyTabs`, and `ix-menu-about-news` replaces `about-item-label` with `activeAboutTabKey`.
 - `ThemeSwitcher` now uses the new theme and color schema model and updates its event payloads accordingly.
-- `ix-application` now separates the theme name from the color schema, replacing combined values, e.g. `community-dark`.
+- `ix-application` now separates the theme name from the color schema, replacing combined values, e.g. `classic-dark`.
 - `@siemens/ix-aggrid` now expects `@siemens/ix` as a direct dependency in the consuming application.
 
 ### Global style updates
 
 Theming is the largest migration topic in Version 5.
 
-- We replaced legacy theme classes with `data-ix-theme` and `data-ix-color-schema` on the `html` element.
+- We replaced legacy classes, e.g. `theme-classic-light` and `theme-classic-dark`, with `data-ix-theme` and `data-ix-color-schema` on the `html` element.
 - iX no longer injects a default theme automatically, so applications should set both attributes explicitly if a default theme is required.
 - `ThemeSwitcher` is now fully aligned with the split theme model: replace `setVariant()` with `setColorSchema()`, `schemaChanged` with `themeChanged`, and update handlers to read the new object payload.
 - The remaining Bootstrap font variable has been removed. If your application still relies on it, map `--bs-font-sans-serif` to `var(--theme-font-family)`.
