@@ -27,6 +27,7 @@
     "@siemens/ix": "0.0.0-beta-20261110140127",
     "@siemens/ix-icons": "0.0.0-beta-20261021072559",
     "@siemens/ix-react": "0.0.0-beta-20261110140127",
+    "@stencil/core": "^4.43.5",
     "@stackblitz/sdk": "^1.11.0",
     "minisearch": "^7.2.0",
     "prism-react-renderer": "^2.3.0",

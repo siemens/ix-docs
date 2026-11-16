@@ -14,7 +14,7 @@ export default function SiteMetadataWrapper(props: Props): JSX.Element {
     const initialVariant =
       document.documentElement.getAttribute('data-theme') || 'dark';
 
-    const theme = isDevelopedWithoutBrandTheme ? 'classic' : 'brand';
+    const theme = isDevelopedWithoutBrandTheme ? 'community' : 'brand';
     document.documentElement.setAttribute('data-ix-theme', theme);
     document.documentElement.setAttribute(
       'data-ix-color-schema',
@@ -23,7 +23,7 @@ export default function SiteMetadataWrapper(props: Props): JSX.Element {
 
     const observer = new MutationObserver(() => {
       const variant = document.documentElement.getAttribute('data-theme');
-      const theme = isDevelopedWithoutBrandTheme ? 'classic' : 'brand';
+      const theme = isDevelopedWithoutBrandTheme ? 'community' : 'brand';
 
       if (isDevelopedWithoutBrandTheme) {
         console.log('development theme');

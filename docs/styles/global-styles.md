@@ -7,7 +7,7 @@ description: 'Siemens Industrial Experience components are self-contained. Appli
 
 #
 
-The default stylesheet contains the Classic theme, component foundation and common utilities:
+The default stylesheet contains the Community theme, component foundation and common utilities:
 
 ```ts
 import '@siemens/ix/css/default.css';
@@ -19,7 +19,7 @@ Foundation applies the SiemensSans Pro font stack to `[data-ix-theme]` and sets 
 
 | CSS                              | Sass                          | Includes                                                                                       | Global effect                                                                                     |
 | -------------------------------- | ----------------------------- | ---------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------- |
-| `@siemens/ix/css/default.css`    | `@siemens/ix/scss/default`    | Foundation, Classic light and dark themes, and button group, link, table and typography utilities | Provides the recommended setup, including selected native element and utility styles              |
+| `@siemens/ix/css/default.css`    | `@siemens/ix/scss/default`    | Foundation, Community light and dark themes, and button group, link, table and typography utilities | Provides the recommended setup, including selected native element and utility styles              |
 | `@siemens/ix/css/foundation.css` | `@siemens/ix/scss/foundation` | Variables and foundation behavior required by components                                       | Sets the theme font stack and applies body typography, color, background and document scrollbars   |
 | `@siemens/ix/css/reset.css`      | `@siemens/ix/scss/reset`      | Normalized browser defaults and `box-sizing`                                                   | Styles native HTML elements globally                                                              |
 | `@siemens/ix/css/base.css`       | `@siemens/ix/scss/base`       | System primary text color and body margin reset                                                | Sets color on `[data-ix-theme]` and resets the `body` margin                                      |
@@ -51,7 +51,7 @@ import '@siemens/ix/css/scrollbar.css';
 ```
 
 ```html
-<html data-ix-theme="classic" data-ix-color-schema="dark">
+<html data-ix-theme="community" data-ix-color-schema="dark">
   <body class="disable-scrollbar">
     <main data-ix-scrollbars></main>
   </body>

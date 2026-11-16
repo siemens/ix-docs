@@ -1,0 +1,52 @@
+// The docs UI still consumes legacy token names; component previews use the
+// community theme bundled by siemens/ix and do not load this bridge.
+[data-ix-theme='community'] {
+  --theme-color-0: transparent;
+  --theme-color-1: var(--si-sys-color-background-0);
+  --theme-color-1--active: var(--si-sys-color-background-active);
+  --theme-color-1--hover: var(--si-sys-color-background-hover);
+  --theme-color-2: var(--si-sys-color-background-1);
+  --theme-color-3: var(--si-sys-color-background-2);
+  --theme-color-4: var(--si-sys-color-background-3);
+  --theme-color-5: var(--si-sys-color-background-4);
+  --theme-color-alarm: var(--si-sys-color-text-danger);
+  --theme-color-component-1: var(--si-sys-color-background-1);
+  --theme-color-contrast-bdr: var(--si-sys-color-border-inverse);
+  --theme-color-dynamic: var(--si-sys-color-text-accent);
+  --theme-color-focus-bdr: var(--si-sys-color-effects-focus);
+  --theme-color-ghost: transparent;
+  --theme-color-ghost--active: var(--si-sys-color-background-active);
+  --theme-color-ghost--hover: var(--si-sys-color-background-hover);
+  --theme-color-ghost--selected-active: var(--si-sys-color-background-selected);
+  --theme-color-ghost--selected-hover: var(--si-sys-color-background-selected);
+  --theme-color-gradient-effect-1: var(--si-sys-color-text-accent);
+  --theme-color-gradient-effect-2: var(--si-sys-color-text-accent-hover);
+  --theme-color-info-40: var(--si-sys-color-background-information-subtle);
+  --theme-color-inv-std-text: var(--si-sys-color-text-inverse);
+  --theme-color-logo: var(--si-sys-color-effects-logo);
+  --theme-color-primary: var(--si-sys-color-background-accent);
+  --theme-color-primary--contrast: var(--si-sys-color-text-on-accent);
+  --theme-color-primary--hover: var(--si-sys-color-background-accent-hover);
+  --theme-color-shadow-1: var(--si-sys-color-effects-shadow-10);
+  --theme-color-soft-bdr: var(--si-sys-color-border-2);
+  --theme-color-soft-text: var(--si-sys-color-text-secondary);
+  --theme-color-std-text: var(--si-sys-color-text-primary);
+  --theme-color-success: var(--si-sys-color-text-success);
+  --theme-color-warning: var(--si-sys-color-text-warning);
+  --theme-color-weak-bdr: var(--si-sys-color-border-2);
+  --theme-color-x-weak-bdr: var(--si-sys-color-border-1);
+  --theme-input--background: var(--si-sys-color-background-1);
+  --theme-primary-bdr-1: 0.0625rem solid var(--si-sys-color-border-accent);
+  --theme-std-bdr-1: 0.0625rem solid var(--si-sys-color-border-2);
+  --theme-btn-outline-primary--border-color--active: var(--si-sys-color-border-accent-active);
+  --theme-btn-outline-primary--border-color--hover: var(--si-sys-color-border-accent-hover);
+  --theme-btn-primary--background--active: var(--si-sys-color-background-accent-active);
+  --theme-btn-primary--background--hover: var(--si-sys-color-background-accent-hover);
+  --theme-btn-primary--color: var(--si-sys-color-text-on-accent);
+  --theme-btn-primary--color--active: var(--si-sys-color-text-on-accent);
+  --theme-btn-primary--color--hover: var(--si-sys-color-text-on-accent);
+  --theme-btn-secondary--background--active: var(--si-sys-color-background-active);
+  --theme-btn-secondary--background--hover: var(--si-sys-color-background-hover);
+  --theme-btn-secondary--color--active: var(--si-sys-color-text-accent-active);
+  --theme-btn-secondary--color--hover: var(--si-sys-color-text-accent-hover);
+}

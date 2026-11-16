@@ -4,7 +4,7 @@ title: Designing with themes
 doc-type: 'banner'
 component-tabs: ['']
 no_single_tab: true
-description: "Siemens Industrial Experience supports theming for all of its components. Our Figma library includes all four embedded themes: Brand dark, Brand light, Classic dark and Classic light. You can use these themes to ensure consistency and alignment with Siemens AG's design standards. Siemens AG applications should utilize the exclusive Siemens AG Corporate Brand Theme."
+description: "Siemens Industrial Experience supports theming for all of its components. Our Figma library includes all four embedded themes: Brand dark, Brand light, Community dark and Community light. You can use these themes to ensure consistency and alignment with Siemens AG's design standards. Siemens AG applications should utilize the exclusive Siemens AG Corporate Brand Theme."
 ---
 
 #
@@ -35,7 +35,7 @@ For more information see the official [Figma documentation](https://help.figma.c
 
 ![Changing theme variables](https://www.figma.com/design/wEptRgAezDU1z80Cn3eZ0o/iX-Pattern-Illustrations?type=design&node-id=2232-101&mode=design&t=C6IjeY71MP4uA7vZ-4)
 
-If want to adapt the classic theme to your own brand design, follow these steps to modify the colors and other theme values within the Figma library:
+If want to adapt the community theme to your own brand design, follow these steps to modify the colors and other theme values within the Figma library:
 
 1. Import "iX Components" into your Figma workspace.
 2. In the top-right corner of the Figma interface, click the button labeled "Open settings" with a settings icon to open the variables dialog.

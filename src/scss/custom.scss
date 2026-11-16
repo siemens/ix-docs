@@ -1,8 +1,9 @@
 /**
- * Any CSS included here will be global. The classic template
+ * Any CSS included here will be global. The Docusaurus template
  * bundles Infima by default. Infima is a CSS framework designed to
  * work well for content-centric websites.
  */
+@use './community-tokens';
 
 @use './overwrite/doc-sidebar';
 @use './overwrite/navbar';
@@ -108,12 +109,12 @@ th {
   --ifm-blockquote-padding-horizontal: 0.5rem;
 }
 
-[data-ix-theme='classic'][data-ix-color-schema='dark'] {
+[data-ix-theme='community'][data-ix-color-schema='dark'] {
   --ix-docs-hero-background: var(--si-sys-color-background-0);
   --ix-docs-hero-tab-active: transparent;
 }
 
-[data-ix-theme='classic'][data-ix-color-schema='light'] {
+[data-ix-theme='community'][data-ix-color-schema='light'] {
   --ix-docs-hero-background: #fff;
   --ix-docs-hero-tab-active: transparent;
 }
