@@ -2,6 +2,12 @@
 doc-type: 'tabs'
 description: 'Time inputs allow users to enter and select times in a standardized format, ensuring consistency and accuracy.'
 title: 'Time input'
+formReady: true
 deprecated:
   - /docs/legacy/input
+breaking-changes:
+  - version: 6.0.0
+    breaking:
+      - description: 'Time selection always requires confirmation, boolean attributes follow native HTML semantics and no validation feedback in novalidate forms'
+        link: /docs/home/migration/6_0_0#time-input
 ---
