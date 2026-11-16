@@ -1,7 +1,6 @@
 ---
 doc-type: 'tab-item'
 description: 'Usage guide for the ix-date-input'
-formReady: true
 ---
 
 # Date input - Usage
