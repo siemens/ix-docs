@@ -125,7 +125,7 @@ function ColorCircle({ tokenName }: { tokenName: string }) {
 
 function BrowserOnlyColorTable({ entry }: { entry: DesignTokenEntry }) {
   const location = useLocation();
-  const [theme, setTheme] = useState('classic');
+  const [theme, setTheme] = useState('community');
   const { playgroundThemeVariant } = usePlaygroundThemeVariant();
   const isDarkColor = playgroundThemeVariant === 'dark';
   const anchorName = `color-${entry.name.slice('--si-sys-color-'.length)}`;

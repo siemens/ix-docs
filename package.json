@@ -27,6 +27,7 @@
     "@siemens/ix": "0.0.0-beta-20261110140127",
     "@siemens/ix-icons": "0.0.0-beta-20261021072559",
     "@siemens/ix-react": "0.0.0-beta-20261110140127",
+    "@stencil/core": "^4.43.5",
     "@stackblitz/sdk": "^1.11.0",
     "minisearch": "^7.2.0",
     "prism-react-renderer": "^2.3.0",
@@ -81,15 +82,12 @@
     ]
   },
   "engines": {
-    "node": ">=22.19.0"
+    "node": "^24.22.2"
   },
   "packageManager": "pnpm@10.17.0",
   "pnpm": {
     "overrides": {
       "cheerio": "1.0.0-rc.12"
     }
-  },
-  "volta": {
-    "node": "22.19.0"
   }
 }

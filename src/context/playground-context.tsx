@@ -25,16 +25,17 @@ export const PlaygroundContext = createContext<{
 
 function getStoredTheme(defaultTheme: string, withBrandTheme: boolean) {
   const storedTheme = themeStorage.get();
-  return storedTheme === 'classic' || (withBrandTheme && storedTheme === 'brand')
-    ? storedTheme
-    : defaultTheme;
+  if (storedTheme === 'classic' || storedTheme === 'community') {
+    return 'community';
+  }
+  return withBrandTheme && storedTheme === 'brand' ? storedTheme : defaultTheme;
 }
 
 function useContextValue() {
   const docusaurusContext = useDocusaurusContext();
   const withBrandTheme =
     docusaurusContext.siteConfig.customFields.withBrandTheme !== false;
-  const defaultTheme = withBrandTheme ? 'brand' : 'classic';
+  const defaultTheme = withBrandTheme ? 'brand' : 'community';
 
   const cbOnVariantChange = useCallback((variant: string) => {
     setContext((prev) => ({

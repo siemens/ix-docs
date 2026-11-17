@@ -25,16 +25,19 @@ importers:
         version: 3.1.0(@types/react@18.3.22)(react@18.3.1)
       '@siemens/ix':
         specifier: 0.0.0-beta-20261110140127
-        version: 0.0.0-beta-20261110140127(@floating-ui/dom@1.7.0)(@siemens/ix-icons@0.0.0-beta-20261021072559)(@stencil/core@4.31.0)(luxon@3.6.1)
+        version: 0.0.0-beta-20261110140127(@floating-ui/dom@1.7.0)(@siemens/ix-icons@0.0.0-beta-20261021072559)(@stencil/core@4.45.2)(luxon@3.6.1)
       '@siemens/ix-icons':
         specifier: 0.0.0-beta-20261021072559
         version: 0.0.0-beta-20261021072559
       '@siemens/ix-react':
         specifier: 0.0.0-beta-20261110140127
-        version: 0.0.0-beta-20261110140127(@floating-ui/dom@1.7.0)(@siemens/ix-icons@0.0.0-beta-20261021072559)(@stencil/core@4.31.0)(@types/react@18.3.22)(luxon@3.6.1)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+        version: 0.0.0-beta-20261110140127(@floating-ui/dom@1.7.0)(@siemens/ix-icons@0.0.0-beta-20261021072559)(@stencil/core@4.45.2)(@types/react@18.3.22)(luxon@3.6.1)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
       '@stackblitz/sdk':
         specifier: ^1.11.0
         version: 1.11.0
+      '@stencil/core':
+        specifier: ^4.43.5
+        version: 4.45.2
       minisearch:
         specifier: ^7.2.0
         version: 7.2.0
@@ -1859,47 +1862,47 @@ packages:
   '@polka/url@1.0.0-next.29':
     resolution: {integrity: sha512-wwQAWhWSuHaag8c4q/KN/vCoeOJYshAIvMQwD4GpSb3OiZklFfvAgmj0VCBBImRpuF/aFgIRzllXlVX93Jevww==}
 
-  '@rollup/rollup-darwin-arm64@4.34.9':
-    resolution: {integrity: sha512-0CY3/K54slrzLDjOA7TOjN1NuLKERBgk9nY5V34mhmuu673YNb+7ghaDUs6N0ujXR7fz5XaS5Aa6d2TNxZd0OQ==}
+  '@rollup/rollup-darwin-arm64@4.44.0':
+    resolution: {integrity: sha512-VGF3wy0Eq1gcEIkSCr8Ke03CWT+Pm2yveKLaDvq51pPpZza3JX/ClxXOCmTYYq3us5MvEuNRTaeyFThCKRQhOA==}
     cpu: [arm64]
     os: [darwin]
 
-  '@rollup/rollup-darwin-x64@4.34.9':
-    resolution: {integrity: sha512-eOojSEAi/acnsJVYRxnMkPFqcxSMFfrw7r2iD9Q32SGkb/Q9FpUY1UlAu1DH9T7j++gZ0lHjnm4OyH2vCI7l7Q==}
+  '@rollup/rollup-darwin-x64@4.44.0':
+    resolution: {integrity: sha512-fBkyrDhwquRvrTxSGH/qqt3/T0w5Rg0L7ZIDypvBPc1/gzjJle6acCpZ36blwuwcKD/u6oCE/sRWlUAcxLWQbQ==}
     cpu: [x64]
     os: [darwin]
 
-  '@rollup/rollup-linux-arm64-gnu@4.34.9':
-    resolution: {integrity: sha512-6TZjPHjKZUQKmVKMUowF3ewHxctrRR09eYyvT5eFv8w/fXarEra83A2mHTVJLA5xU91aCNOUnM+DWFMSbQ0Nxw==}
+  '@rollup/rollup-linux-arm64-gnu@4.44.0':
+    resolution: {integrity: sha512-ZTR2mxBHb4tK4wGf9b8SYg0Y6KQPjGpR4UWwTFdnmjB4qRtoATZ5dWn3KsDwGa5Z2ZBOE7K52L36J9LueKBdOQ==}
     cpu: [arm64]
     os: [linux]
     libc: [glibc]
 
-  '@rollup/rollup-linux-arm64-musl@4.34.9':
-    resolution: {integrity: sha512-LD2fytxZJZ6xzOKnMbIpgzFOuIKlxVOpiMAXawsAZ2mHBPEYOnLRK5TTEsID6z4eM23DuO88X0Tq1mErHMVq0A==}
+  '@rollup/rollup-linux-arm64-musl@4.44.0':
+    resolution: {integrity: sha512-GFWfAhVhWGd4r6UxmnKRTBwP1qmModHtd5gkraeW2G490BpFOZkFtem8yuX2NyafIP/mGpRJgTJ2PwohQkUY/Q==}
     cpu: [arm64]
     os: [linux]
     libc: [musl]
 
-  '@rollup/rollup-linux-x64-gnu@4.34.9':
-    resolution: {integrity: sha512-FwBHNSOjUTQLP4MG7y6rR6qbGw4MFeQnIBrMe161QGaQoBQLqSUEKlHIiVgF3g/mb3lxlxzJOpIBhaP+C+KP2A==}
+  '@rollup/rollup-linux-x64-gnu@4.44.0':
+    resolution: {integrity: sha512-iUVJc3c0o8l9Sa/qlDL2Z9UP92UZZW1+EmQ4xfjTc1akr0iUFZNfxrXJ/R1T90h/ILm9iXEY6+iPrmYB3pXKjw==}
     cpu: [x64]
     os: [linux]
     libc: [glibc]
 
-  '@rollup/rollup-linux-x64-musl@4.34.9':
-    resolution: {integrity: sha512-cYRpV4650z2I3/s6+5/LONkjIz8MBeqrk+vPXV10ORBnshpn8S32bPqQ2Utv39jCiDcO2eJTuSlPXpnvmaIgRA==}
+  '@rollup/rollup-linux-x64-musl@4.44.0':
+    resolution: {integrity: sha512-PQUobbhLTQT5yz/SPg116VJBgz+XOtXt8D1ck+sfJJhuEsMj2jSej5yTdp8CvWBSceu+WW+ibVL6dm0ptG5fcA==}
     cpu: [x64]
     os: [linux]
     libc: [musl]
 
-  '@rollup/rollup-win32-arm64-msvc@4.34.9':
-    resolution: {integrity: sha512-z4mQK9dAN6byRA/vsSgQiPeuO63wdiDxZ9yg9iyX2QTzKuQM7T4xlBoeUP/J8uiFkqxkcWndWi+W7bXdPbt27Q==}
+  '@rollup/rollup-win32-arm64-msvc@4.44.0':
+    resolution: {integrity: sha512-M0CpcHf8TWn+4oTxJfh7LQuTuaYeXGbk0eageVjQCKzYLsajWS/lFC94qlRqOlyC2KvRT90ZrfXULYmukeIy7w==}
     cpu: [arm64]
     os: [win32]
 
-  '@rollup/rollup-win32-x64-msvc@4.34.9':
-    resolution: {integrity: sha512-AyleYRPU7+rgkMWbEh71fQlrzRfeP6SyMnRf9XX4fCdDPAJumdSBqYEcWPMzVQ4ScAl7E4oFfK0GUVn77xSwbw==}
+  '@rollup/rollup-win32-x64-msvc@4.44.0':
+    resolution: {integrity: sha512-Q2Mgwt+D8hd5FIPUuPDsvPR7Bguza6yTkJxspDGkZj7tBRn2y4KSWYuIXpftFSjBra76TbKerCV7rgFPQrn+wQ==}
     cpu: [x64]
     os: [win32]
 
@@ -1961,13 +1964,13 @@ packages:
   '@stackblitz/sdk@1.11.0':
     resolution: {integrity: sha512-DFQGANNkEZRzFk1/rDP6TcFdM82ycHE+zfl9C/M/jXlH68jiqHWHFMQURLELoD8koxvu/eW5uhg94NSAZlYrUQ==}
 
-  '@stencil/core@4.31.0':
-    resolution: {integrity: sha512-Ei9MFJ6LPD9BMFs+klkHylbVOOYhG10Jv4bvoFf3GMH15kA41rSYkEdr4DiX84ZdErQE2qtFV/2SUyWoXh0AhA==}
+  '@stencil/core@4.45.2':
+    resolution: {integrity: sha512-CNkPVZsqyNMjFMX9bEkMJsvBbQxjLw480OaoamoqiLPdQCFjJQReeOjnWX1A5ivSn3UYEIJ6MoN5VXDkaHGt8Q==}
     engines: {node: '>=16.0.0', npm: '>=7.10.0'}
     hasBin: true
 
-  '@stencil/react-output-target@1.6.5':
-    resolution: {integrity: sha512-S7ldaSwjjysJIo3E/ksxApHzRxEncT191wb5bovDZx5da+5B33k2cyiz4lOZ0zk2I5GRWniDsHIJJs94vKU6rQ==}
+  '@stencil/react-output-target@1.8.1':
+    resolution: {integrity: sha512-6HWtiAoPjX6oJplkp+JoiUxbpDrDtF8NkdyE57pOucymdplEd1qSwtJjelNyjPQ9dV2V+AV5zjgpbNCQSp+zHw==}
     peerDependencies:
       '@stencil/core': '>=3 || >=4.0.0 || ^5.0.0 || >=5.0.0-beta.18'
       react: ^18 || ^19
@@ -5731,6 +5734,9 @@ packages:
   style-to-object@1.0.14:
     resolution: {integrity: sha512-LIN7rULI0jBscWQYaSswptyderlarFkjQ+t79nzty8tcIAceVomEVlLzH5VP4Cmsv6MtKhs7qaAiwlcp+Mgaxw==}
 
+  style-to-object@1.0.8:
+    resolution: {integrity: sha512-xT47I/Eo0rwJmaXC4oilDGDWLohVhR6o/xAQcPQN8q6QBuZVL8qMYL85kLmST5cPjAorwvqIA4qXTRQoYHaL6g==}
+
   stylehacks@6.1.1:
     resolution: {integrity: sha512-gSTTEQ670cJNoaeIp9KX6lZmm8LJ3jPB5yJmX8Zq/wQxOsAFXV3qjWzHas3YYk1qesuVIyYWWUpZ0vSE/dTSGg==}
     engines: {node: ^14 || ^16 || >=18.0}
@@ -8773,28 +8779,28 @@ snapshots:
 
   '@polka/url@1.0.0-next.29': {}
 
-  '@rollup/rollup-darwin-arm64@4.34.9':
+  '@rollup/rollup-darwin-arm64@4.44.0':
     optional: true
 
-  '@rollup/rollup-darwin-x64@4.34.9':
+  '@rollup/rollup-darwin-x64@4.44.0':
     optional: true
 
-  '@rollup/rollup-linux-arm64-gnu@4.34.9':
+  '@rollup/rollup-linux-arm64-gnu@4.44.0':
     optional: true
 
-  '@rollup/rollup-linux-arm64-musl@4.34.9':
+  '@rollup/rollup-linux-arm64-musl@4.44.0':
     optional: true
 
-  '@rollup/rollup-linux-x64-gnu@4.34.9':
+  '@rollup/rollup-linux-x64-gnu@4.44.0':
     optional: true
 
-  '@rollup/rollup-linux-x64-musl@4.34.9':
+  '@rollup/rollup-linux-x64-musl@4.44.0':
     optional: true
 
-  '@rollup/rollup-win32-arm64-msvc@4.34.9':
+  '@rollup/rollup-win32-arm64-msvc@4.44.0':
     optional: true
 
-  '@rollup/rollup-win32-x64-msvc@4.34.9':
+  '@rollup/rollup-win32-x64-msvc@4.44.0':
     optional: true
 
   '@sideway/address@4.1.5':
@@ -8807,11 +8813,11 @@ snapshots:
 
   '@siemens/ix-icons@0.0.0-beta-20261021072559': {}
 
-  '@siemens/ix-react@0.0.0-beta-20261110140127(@floating-ui/dom@1.7.0)(@siemens/ix-icons@0.0.0-beta-20261021072559)(@stencil/core@4.31.0)(@types/react@18.3.22)(luxon@3.6.1)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)':
+  '@siemens/ix-react@0.0.0-beta-20261110140127(@floating-ui/dom@1.7.0)(@siemens/ix-icons@0.0.0-beta-20261021072559)(@stencil/core@4.45.2)(@types/react@18.3.22)(luxon@3.6.1)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)':
     dependencies:
-      '@siemens/ix': 0.0.0-beta-20261110140127(@floating-ui/dom@1.7.0)(@siemens/ix-icons@0.0.0-beta-20261021072559)(@stencil/core@4.31.0)(luxon@3.6.1)
+      '@siemens/ix': 0.0.0-beta-20261110140127(@floating-ui/dom@1.7.0)(@siemens/ix-icons@0.0.0-beta-20261021072559)(@stencil/core@4.45.2)(luxon@3.6.1)
       '@siemens/ix-icons': 0.0.0-beta-20261021072559
-      '@stencil/react-output-target': 1.6.5(@stencil/core@4.31.0)(@types/react@18.3.22)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+      '@stencil/react-output-target': 1.8.1(@stencil/core@4.45.2)(@types/react@18.3.22)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
       react: 18.3.1
       react-dom: 18.3.1(react@18.3.1)
       tslib: 2.8.1
@@ -8821,12 +8827,12 @@ snapshots:
       - '@types/react'
       - luxon
 
-  '@siemens/ix@0.0.0-beta-20261110140127(@floating-ui/dom@1.7.0)(@siemens/ix-icons@0.0.0-beta-20261021072559)(@stencil/core@4.31.0)(luxon@3.6.1)':
+  '@siemens/ix@0.0.0-beta-20261110140127(@floating-ui/dom@1.7.0)(@siemens/ix-icons@0.0.0-beta-20261021072559)(@stencil/core@4.45.2)(luxon@3.6.1)':
     dependencies:
       '@siemens/ix-icons': 0.0.0-beta-20261021072559
     optionalDependencies:
       '@floating-ui/dom': 1.7.0
-      '@stencil/core': 4.31.0
+      '@stencil/core': 4.45.2
       luxon: 3.6.1
 
   '@sinclair/typebox@0.27.8': {}
@@ -8853,21 +8859,21 @@ snapshots:
 
   '@stackblitz/sdk@1.11.0': {}
 
-  '@stencil/core@4.31.0':
+  '@stencil/core@4.45.2':
     optionalDependencies:
-      '@rollup/rollup-darwin-arm64': 4.34.9
-      '@rollup/rollup-darwin-x64': 4.34.9
-      '@rollup/rollup-linux-arm64-gnu': 4.34.9
-      '@rollup/rollup-linux-arm64-musl': 4.34.9
-      '@rollup/rollup-linux-x64-gnu': 4.34.9
-      '@rollup/rollup-linux-x64-musl': 4.34.9
-      '@rollup/rollup-win32-arm64-msvc': 4.34.9
-      '@rollup/rollup-win32-x64-msvc': 4.34.9
+      '@rollup/rollup-darwin-arm64': 4.44.0
+      '@rollup/rollup-darwin-x64': 4.44.0
+      '@rollup/rollup-linux-arm64-gnu': 4.44.0
+      '@rollup/rollup-linux-arm64-musl': 4.44.0
+      '@rollup/rollup-linux-x64-gnu': 4.44.0
+      '@rollup/rollup-linux-x64-musl': 4.44.0
+      '@rollup/rollup-win32-arm64-msvc': 4.44.0
+      '@rollup/rollup-win32-x64-msvc': 4.44.0
 
-  '@stencil/react-output-target@1.6.5(@stencil/core@4.31.0)(@types/react@18.3.22)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)':
+  '@stencil/react-output-target@1.8.1(@stencil/core@4.45.2)(@types/react@18.3.22)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)':
     dependencies:
       '@lit/react': 1.0.8(@types/react@18.3.22)
-      '@stencil/core': 4.31.0
+      '@stencil/core': 4.45.2
       html-react-parser: 5.2.17(@types/react@18.3.22)(react@18.3.1)
       react: 18.3.1
       react-dom: 18.3.1(react@18.3.1)
@@ -13292,6 +13298,10 @@ snapshots:
       style-to-object: 1.0.14
 
   style-to-object@1.0.14:
+    dependencies:
+      inline-style-parser: 0.2.7
+
+  style-to-object@1.0.8:
     dependencies:
       inline-style-parser: 0.2.7
 

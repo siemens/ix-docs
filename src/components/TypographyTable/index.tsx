@@ -92,7 +92,7 @@ function TypographyCopyButton({ tokenName }: { tokenName: string }) {
 
 function BrowserOnlyTypographyTable({ entry }: { entry: DesignTokenEntry }) {
   const location = useLocation();
-  const [theme, setTheme] = useState('classic');
+  const [theme, setTheme] = useState('community');
   const { colorMode } = useColorMode();
   const isDarkColor = colorMode === 'dark';
   const anchorName = `typography-${entry.name.slice(

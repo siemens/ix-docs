@@ -57,7 +57,7 @@ function DensityProbe({
       aria-hidden="true"
       ref={probeRef}
       hidden
-      data-ix-theme="classic"
+      data-ix-theme="community"
       data-ix-color-schema="light"
       data-ix-density={density}
     />
