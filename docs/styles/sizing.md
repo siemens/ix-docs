@@ -13,22 +13,15 @@ import DensityTable from '@site/src/components/DensityTable';
 
 :::warning Experimental feature
 
-Compact mode is a new feature and is currently experimental. We are still
-evaluating how well it works across components and use cases. Its token
-coverage, values and behavior may change as we learn from its use and make
-further adaptations. Test compact mode with your application before relying
-on it in production.
+Compact mode is a new feature and is currently experimental. We are still evaluating how well it works across components and use cases. Its token coverage, values and behavior may change as we learn from its use and make further adaptations. Test compact mode with your application before relying on it in production.
 
 :::
 
-The system supports two densities. **Default** is the base density. **Compact**
-is a sparse override: it only redefines the tokens listed on this page and
-inherits every other token from the default density.
+The system supports two densities. **Default** is the base density. **Compact** is a sparse override: it only redefines the tokens listed on this page and inherits every other token from the default density.
 
 ![Default and compact density comparison](https://www.figma.com/design/wEptRgAezDU1z80Cn3eZ0o/iX-Documentation-illustrations?node-id=8742-7072&t=Mmsji7qvSnFGiH3D-11)
 
-Enable compact density by adding `data-ix-density="compact"` to the element that
-sets the theme and color schema:
+Enable compact density by adding `data-ix-density="compact"` to the element that sets the theme and color schema:
 
 ```html
 <html
@@ -40,8 +33,7 @@ sets the theme and color schema:
 </html>
 ```
 
-Reference the tokens with the CSS `var()` function. Their values switch
-automatically when the density changes:
+Reference the tokens with the CSS `var()` function. Their values switch automatically when the density changes:
 
 ```css
 .some-example {

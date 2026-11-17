@@ -35,6 +35,6 @@ Use the following deep dives for details on each style foundation:
 - [Borders](../borders.md)
 - [Shadows](../shadows.md)
 - [Animations](../animation.md)
-- [Global styles](../global-styles.md)
+- [Global styles](./code.mdx)
 - [Developing with themes](../theming/usage-developers.md)
 - [Designing with themes](../theming/usage-designers.md)

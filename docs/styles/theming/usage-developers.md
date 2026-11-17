@@ -39,13 +39,23 @@ import '@siemens/ix/css/default.css';
 
 Foundation applies the SiemensSans Pro font stack to `[data-ix-theme]` and sets body typography, text color, background and document-wide scrollbar styles. The default stylesheet also includes utilities for button groups, links, table classes and typography. It does not include a reset, body margin reset, the complete utility layer or legacy native form styles.
 
+## Global styles
+
+Components are self-contained and work with the default stylesheet alone. Add global styles only when your application needs them, for example a browser reset, the complete utility layer, themed scrollbars or legacy native form styles during migration:
+
+```ts
+import '@siemens/ix/css/default.css';
+import '@siemens/ix/css/globals.css';
+```
+
+See [Global styles](../overview/code.mdx) for all entry points, their global effects, the recommended import order and migration guidance.
+
 ## Loading foundation and themes separately
 
 Import the foundation and theme files separately when you provide a custom theme or only need selected Community color schemas:
 
 ```ts
 import '@siemens/ix/css/foundation.css';
-
 import '@siemens/ix/css/theme/community-light.css';
 import '@siemens/ix/css/theme/community-dark.css';
 ```
@@ -80,8 +90,6 @@ System tokens are available through a stable Sass entry point:
 Use `@siemens/ix/scss/tokens/legacy` only when application styles still depend on legacy Sass constants. The previous `@siemens/ix/scss/misc/common-variables` path remains available during the Version 6 migration period for generated corporate themes. Other deep `misc/*` imports are not public API.
 
 Deep internal partials are not public API. Use the documented Sass entry points or the supported mixins below `@siemens/ix/scss/mixins/*` instead.
-
-See [Global styles](../global-styles.md) for reset, body, scrollbar, utility and legacy imports.
 
 ## Working with themes during runtime
 
