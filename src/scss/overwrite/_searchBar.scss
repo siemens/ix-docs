@@ -17,8 +17,14 @@
     border-radius: 6px;
   }
 
-  .aa-DetachedSearchButton:focus-visible {
-    outline: none;
+  // Remove the autocomplete focus border and glow, the ix focus ring is
+  // applied in `_focus-ring.scss`.
+  .aa-DetachedSearchButton:focus {
+    border-color: rgba(
+      var(--aa-input-border-color-rgb),
+      var(--aa-input-border-color-alpha)
+    );
+    box-shadow: none;
   }
 
   .aa-DetachedSearchButton:hover {
@@ -51,13 +57,11 @@
   // equally specific rule that is loaded later.
   // Scoped to input focus via `:has()` so tabbing to the clear button does
   // not keep the container ring and avoids a double outline.
-  // Uses the same color and offset tokens as the ix input focus mixin.
+  // Uses the same focus ring tokens as the ix input.
   &:has(.aa-Input:focus) {
-    outline: 1px solid var(--theme-color-focus-bdr) !important;
-    outline-offset: var(
-      --theme-input--focus--outline-offset,
-      var(--theme-focus-outline-offset)
-    );
+    outline: var(--si-sys-sizing-focus-ring-width) solid
+      var(--si-sys-color-effects-focus) !important;
+    outline-offset: var(--si-sys-sizing-focus-ring-offset);
   }
 
   // Algolia adds a blue glow via `:focus-within`. Suppress it so the only
@@ -105,8 +109,15 @@
   // Negative offset keeps the ring inside the form so it is not clipped.
   .aa-ClearButton:focus,
   .aa-ClearButton:focus-visible {
-    outline: 1px solid var(--theme-color-focus-bdr) !important;
-    outline-offset: -2px;
+    outline: var(--si-sys-sizing-focus-ring-width) solid
+      var(--si-sys-color-effects-focus) !important;
+    outline-offset: calc(
+      -1 *
+        (
+          var(--si-sys-sizing-focus-ring-width) +
+            var(--si-sys-sizing-focus-ring-offset)
+        )
+    );
     box-shadow: none !important;
   }
 }
