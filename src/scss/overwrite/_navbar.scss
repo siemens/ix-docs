@@ -34,8 +34,13 @@
     .navbar__inner {
       padding: 0 2rem;
     }
+    // Fit the 24px logo so the focus ring of the brand link surrounds it
     .navbar__logo {
-      height: 1.25rem;
+      height: auto;
+
+      svg {
+        display: block;
+      }
     }
   }
 
