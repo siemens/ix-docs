@@ -34,3 +34,9 @@
     var(--si-sys-color-effects-focus);
   outline-offset: var(--si-sys-sizing-focus-ring-offset);
 }
+
+// Align the edit icon so the ring is a single box
+#__docusaurus .theme-edit-this-page {
+  display: inline-flex;
+  align-items: center;
+}
