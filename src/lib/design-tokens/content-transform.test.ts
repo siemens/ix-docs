@@ -8,6 +8,7 @@ import assert from 'node:assert/strict';
 import test from 'node:test';
 import {
   removeTokenTableImports,
+  replaceApiTablesWithMarkdown,
   replaceTokenTablesWithMarkdown,
 } from '../../../plugins/llmstxt-postbuild/utils/content-transforms';
 
@@ -92,5 +93,37 @@ test('fails rather than emitting an unrendered empty reference', () => {
   assert.throws(
     () => replaceTokenTablesWithMarkdown('<ColorTable />', entries),
     /requires a "section" prop/
+  );
+});
+
+test('keeps BreakingChangeTag version and summary in API table notes', () => {
+  const apiTable = (tag: string) =>
+    [
+      '<ApiTable id="property-variant">',
+      '  <ApiTable.PropertyHeader name="variant" singleFramework="">',
+      `      ${tag}`,
+      '  </ApiTable.PropertyHeader>',
+      '</ApiTable>',
+    ].join('\n');
+
+  assert.match(
+    replaceApiTablesWithMarkdown(
+      apiTable(
+        '<BreakingChangeTag message={"6.0.0"} description={"Values \\"default\\" renamed"} />'
+      )
+    ),
+    /\| variant \| Breaking change in v6\.0\.0: Values "default" renamed \|/
+  );
+  assert.match(
+    replaceApiTablesWithMarkdown(
+      apiTable('<BreakingChangeTag message="6.0.0" description=\'Renamed\' />')
+    ),
+    /\| variant \| Breaking change in v6\.0\.0: Renamed \|/
+  );
+  assert.match(
+    replaceApiTablesWithMarkdown(
+      apiTable('<BreakingChangeTag message={"6.0.0"} />')
+    ),
+    /\| variant \| Breaking change in v6\.0\.0 \|/
   );
 });
