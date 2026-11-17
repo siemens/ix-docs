@@ -7,6 +7,7 @@
  * LICENSE file in the root directory of this source tree.
  */
 import type { SidebarsConfig } from '@docusaurus/plugin-content-docs';
+import { getTabsPageTags } from './src/lib/page-tags/tabs';
 
 function createTabItem(item: {
   id: string;
@@ -16,6 +17,8 @@ function createTabItem(item: {
     label: string;
   }[];
 }): any {
+  const pageTags = getTabsPageTags(item.id);
+
   return {
     type: 'category',
     label: item.label,
@@ -26,6 +29,7 @@ function createTabItem(item: {
     className: 'category-tabs',
     collapsed: true,
     collapsible: false,
+    ...(Object.keys(pageTags).length > 0 && { customProps: { pageTags } }),
     items: item.items.map((child) => ({
       type: 'doc',
       id: child.id,
@@ -522,7 +526,7 @@ const sidebars: SidebarsConfig = {
               label: 'Code',
             },
           ],
-        })
+        }),
       ],
       collapsed: true,
     },
@@ -1013,8 +1017,8 @@ const sidebars: SidebarsConfig = {
             },
             {
               id: 'components/info-page/language',
-              label: 'Writing'
-            }
+              label: 'Writing',
+            },
           ],
         }),
         createTabItem({
@@ -1140,7 +1144,7 @@ const sidebars: SidebarsConfig = {
       items: [
         createTabItem({
           id: 'components/grid/index',
-          label: 'Data grid',
+          label: 'AG Grid',
           items: [
             {
               id: 'components/grid/guide',

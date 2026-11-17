@@ -28,7 +28,7 @@
     "@siemens/ix": "<VERSION>",
     "@siemens/ix-react": "<VERSION>",
     "@siemens/ix-aggrid": "<VERSION>",
-    "@siemens/ix-echarts": "latest",
+    "@siemens/ix-echarts": "0.0.0-beta-20261110140127",
     "@siemens/ix-icons": "<ICONS_VERSION>"
   }
 }

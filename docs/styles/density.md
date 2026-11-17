@@ -20,7 +20,7 @@ sets the theme and color schema:
 
 ```html
 <html
-  data-ix-theme="classic"
+  data-ix-theme="community"
   data-ix-color-schema="dark"
   data-ix-density="compact"
 >

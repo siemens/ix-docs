@@ -48,7 +48,7 @@ function BorderRect({ tokenName }: { tokenName: string }) {
 
 function BrowserOnlyBorderTable({ entry }: { entry: DesignTokenEntry }) {
   const location = useLocation();
-  const [theme, setTheme] = useState('classic');
+  const [theme, setTheme] = useState('community');
   const { playgroundThemeVariant } = usePlaygroundThemeVariant();
   const isDarkColor = playgroundThemeVariant === 'dark';
   const anchorName = `border-${entry.name.slice('--si-sys-color-border-'.length)}`;

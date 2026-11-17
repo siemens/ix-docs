@@ -34,7 +34,7 @@ function BoxShadowRect({ tokenName }: { tokenName: string }) {
 }
 
 function BrowserOnlyShadowTable({ entry }: { entry: DesignTokenEntry }) {
-  const [theme, setTheme] = useState('classic');
+  const [theme, setTheme] = useState('community');
   const { playgroundThemeVariant } = usePlaygroundThemeVariant();
   const isDarkColor = playgroundThemeVariant === 'dark';
   const themeRef = useRef<HTMLDivElement>(null);

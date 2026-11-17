@@ -1,7 +1,6 @@
 ---
 doc-type: 'tab-item'
 description: 'Usage guide for the ix-radio, ix-radio-group'
-formReady: true
 ---
 # Radio button - Usage
 
