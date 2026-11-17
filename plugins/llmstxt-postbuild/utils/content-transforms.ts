@@ -180,8 +180,57 @@ export function removeTokenTableImports(content: string) {
   );
 }
 
+const jsxStringAttributeValue =
+  /\{\s*"(?:[^"\\]|\\.)*"\s*\}|\{\s*`[^`]*`\s*\}|"[^"]*"|'[^']*'/.source;
+
+function readJsxStringAttribute(attributes: string, name: string) {
+  const match = attributes.match(
+    new RegExp(`\\b${name}\\s*=\\s*(${jsxStringAttributeValue})`)
+  );
+  if (!match) {
+    return undefined;
+  }
+
+  const raw = match[1];
+  if (raw.startsWith('{')) {
+    const inner = raw.slice(1, -1).trim();
+    if (inner.startsWith('"')) {
+      try {
+        return JSON.parse(inner) as string;
+      } catch {
+        return inner.slice(1, -1);
+      }
+    }
+    return inner.slice(1, -1);
+  }
+  return raw.slice(1, -1);
+}
+
+function replaceBreakingChangeTags(content: string) {
+  return content.replace(
+    new RegExp(
+      `<BreakingChangeTag((?:\\s+\\w+\\s*=\\s*(?:${jsxStringAttributeValue}))*)\\s*\\/>`,
+      'g'
+    ),
+    (fullMatch, attributes: string) => {
+      const version = readJsxStringAttribute(attributes, 'message')?.trim();
+      if (!version) {
+        return fullMatch;
+      }
+
+      const description = readJsxStringAttribute(
+        attributes,
+        'description'
+      )?.trim();
+      return description
+        ? `Breaking change in v${version}: ${description}`
+        : `Breaking change in v${version}`;
+    }
+  );
+}
+
 function cleanApiValue(value: string) {
-  let cleanedValue = value
+  let cleanedValue = replaceBreakingChangeTags(value)
     .replace(/<ReactMarkdown>/g, '')
     .replace(/<\/ReactMarkdown>/g, '')
     .replace(/\{`([\s\S]*?)`\}/g, '$1')
