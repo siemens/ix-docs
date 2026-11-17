@@ -2,11 +2,11 @@
 doc-type: 'tab-item'
 ---
 
-# Data Grid (AG Grid) - Usage
+# AG Grid - Usage
 
 [AG Grid](https://www.ag-grid.com) displays large datasets with advanced interactive features such as sorting, filtering, and row selection. Use it when you need to present tabular data with complex interactions and rich customization options.
 
-![Data grid overview](https://www.figma.com/design/wEptRgAezDU1z80Cn3eZ0o/iX-Documentation-illustrations?node-id=7694-2867&t=DhTc5f9RNL434mRu-4)
+![AG Grid overview](https://www.figma.com/design/wEptRgAezDU1z80Cn3eZ0o/iX-Documentation-illustrations?node-id=7694-2867&t=DhTc5f9RNL434mRu-4)
 
 1. Header
 2. Row with checkbox selection
@@ -43,9 +43,9 @@ Only a subset of the most commonly used options and features are listed here. Fo
 
 ## States
 
-Data grid columns, rows and cells have multiple states: Default, hover, active and focused.
+Grid columns, rows and cells have multiple states: Default, hover, active and focused.
 
-![Data grid states](https://www.figma.com/design/wEptRgAezDU1z80Cn3eZ0o/iX-Documentation-illustrations?node-id=7743-1852&t=pnIkODidZu9oNqXj-4)
+![AG Grid states](https://www.figma.com/design/wEptRgAezDU1z80Cn3eZ0o/iX-Documentation-illustrations?node-id=7743-1852&t=pnIkODidZu9oNqXj-4)
 
 ## Dos and Don’ts
 
