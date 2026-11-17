@@ -82,5 +82,11 @@
 :global(#__docusaurus) .openExternal:focus-visible {
   outline: var(--si-sys-sizing-focus-ring-width) solid
     var(--si-sys-color-effects-focus);
-  outline-offset: var(--si-sys-sizing-focus-ring-offset);
+  outline-offset: calc(
+    -1 *
+      (
+        var(--si-sys-sizing-focus-ring-width) +
+          var(--si-sys-sizing-focus-ring-offset)
+      )
+  );
 }
