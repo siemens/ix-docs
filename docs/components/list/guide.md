@@ -90,7 +90,7 @@ List items have these states: Default, hover, active, focused, dragging and disa
 
 ## Related
 
-- [Grid](../grid)
+- [AG Grid](../grid)
 - [Tree](../tree)
 - [Event list](../event-list)
 - [Card list](../card-list)
