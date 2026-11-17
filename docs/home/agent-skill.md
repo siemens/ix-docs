@@ -11,6 +11,9 @@ that teaches AI coding agents (e.g. GitHub Copilot, Claude Code, OpenCode) how t
 Industrial Experience. The skill guides the agent to use version-matched component APIs, examples,
 patterns and Figma mappings, as well as the official design-system guidance.
 
+The skill is currently experimental. We would welcome your feedback, so please share your experience
+or suggestions by [creating an issue on GitHub](https://github.com/siemens/ix/issues).
+
 ## Installation
 
 Run the following command in the root of your project:
