@@ -174,10 +174,10 @@ The script downloads new images and replaces outdated ones in the `static/figma/
 
 The token reference chain is authoritative from source to published package:
 `@siemens-ux/design-tokens` supplies canonical names, paths, types, and
-descriptions; the generator emits the source manifest and validates Classic as
+descriptions; the generator emits the source manifest and validates Community as
 a value and structure delta; and IX publishes that manifest as
 `@siemens/ix/tokens/manifest.json`. The docs validate its schema, contract,
-provenance, coverage, and entries. The manifest contains metadata only: Classic
+provenance, coverage, and entries. The manifest contains metadata only: Community
 values come from the installed IX CSS, and Brand values come from the installed
 `@siemens-ix/corporate-theme` CSS.
 
