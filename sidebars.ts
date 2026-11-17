@@ -1439,7 +1439,6 @@ const sidebars: SidebarsConfig = {
       className: 'doc-sidebar-item-bold',
       label: 'Theming & setup',
       items: [
-        'styles/global-styles',
         'styles/theming/usage-developers',
         'styles/theming/usage-designers',
       ],
