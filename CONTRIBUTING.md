@@ -103,7 +103,7 @@ breaking-changes:
         link: /docs/home/migration/6_0_0#blind # migration guide or any external page
 ```
 
-- Property and event tags of the API tables come from the [siemens/ix](https://github.com/siemens/ix) JSDoc: `@since 6.0.0` and `@breaking-change 6.0.0 <summary>` (the summary is shown in a tooltip).
+- Property and event tags of the API tables come from the [siemens/ix](https://github.com/siemens/ix) JSDoc: `@since 6.0.0` and `@breaking-change 6.0.0 <summary>` (the summary is shown in the popover).
 - All `since` and breaking change tags are managed manually: remove outdated component-level `since` and `breaking-changes` frontmatter entries when starting a new major. Outdated property and event tags should be removed in siemens/ix.
 - Each `breaking-changes` version renders one tag: it links to the first `link`, its popover lists all `description`s with their links. The build fails on broken internal links and anchors (`onBrokenLinks`, `onBrokenAnchors`).
 
