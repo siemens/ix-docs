@@ -17,7 +17,7 @@ Compact mode is a new feature and is currently experimental. We are still evalua
 
 :::
 
-The system supports two densities. **Default** is the base density. **Compact** is a sparse override: it only redefines the tokens listed on this page and inherits every other token from the default density.
+The system supports two densities. **Default** is the base density. **Compact** is a sparse override: it only redefines the sizing tokens listed on this page, and the font-size and line-height from the [typography](./typography) variables. Every other token is inherited from the default density.
 
 ![Default and compact density comparison](https://www.figma.com/design/wEptRgAezDU1z80Cn3eZ0o/iX-Documentation-illustrations?node-id=8742-7072&t=Mmsji7qvSnFGiH3D-11)
 

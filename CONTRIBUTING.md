@@ -173,13 +173,7 @@ The script downloads new images and replaces outdated ones in the `static/figma/
 ## Design Token References
 
 The token reference chain is authoritative from source to published package:
-`@siemens-ux/design-tokens` supplies canonical names, paths, types, and
-descriptions; the generator emits the source manifest and validates Community as
-a value and structure delta; and IX publishes that manifest as
-`@siemens/ix/tokens/manifest.json`. The docs validate its schema, contract,
-provenance, coverage, and entries. The manifest contains metadata only: Community
-values come from the installed IX CSS, and Brand values come from the installed
-`@siemens-ix/corporate-theme` CSS.
+`@siemens-ux/design-tokens` supplies canonical names, paths, types, and descriptions; the generator emits the source manifest and validates Community (previously Classic) as a value and structure delta; and IX publishes that manifest as `@siemens/ix/tokens/manifest.json`. The docs validate its schema, contract, provenance, coverage, and entries. The manifest contains metadata only: Community values come from the installed IX CSS, and Brand values come from the installed `@siemens-ix/corporate-theme` CSS.
 
 To update a reference, publish the system-token, IX, and corporate-theme
 changes; update `@siemens/ix`, `BRAND_VERSION`, and the lockfile to matching

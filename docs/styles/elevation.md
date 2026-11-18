@@ -52,7 +52,7 @@ Visually separate large sections on the base layer by applying [borders](borders
 
 #### Floating elements
 - **Purpose:** Elements that float above the main UI, demanding immediate attention or representing a temporary interaction.
-- **Usage:** Use selective shadows (primarily `--si-sys-color-effects-shadow-30`, see [shadow](shadows.md)) to indicate physical overlap for components like [dropdowns](../components/dropdown/index.mdx), [tooltips](../components/tooltip/index.mdx), [modals](../components/modal/index.mdx), and [toasts](../components/toast/index.mdx).
+- **Usage:** Use selective shadows (primarily `--si-sys-color-effects-shadow-30`, see [shadow](shadows.md)) to indicate physical overlap for components like [dropdowns](../components/dropdown/index.mdx), [tooltips](../components/tooltip/index.mdx) and [toasts](../components/toast/index.mdx).
 
 We don’t use shadows that are part of the primary layout flow e.g. [navigation elements](../components/application-menu) or [cards](../components/card/index.mdx).
 

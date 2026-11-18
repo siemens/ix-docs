@@ -52,7 +52,7 @@ See [Global styles](../overview/code.mdx) for all entry points, their global eff
 
 ## Loading foundation and themes separately
 
-Import the foundation and theme files separately when you provide a custom theme or only need selected Community color schemas:
+Import the foundation and theme files separately when you provide a custom theme or only need selected Community (previously Classic) color schemas:
 
 ```ts
 import '@siemens/ix/css/foundation.css';

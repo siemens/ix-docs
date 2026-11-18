@@ -35,7 +35,7 @@ For more information see the official [Figma documentation](https://help.figma.c
 
 ![Changing theme variables](https://www.figma.com/design/wEptRgAezDU1z80Cn3eZ0o/iX-Pattern-Illustrations?type=design&node-id=2232-101&mode=design&t=C6IjeY71MP4uA7vZ-4)
 
-If want to adapt the community theme to your own brand design, follow these steps to modify the colors and other theme values within the Figma library:
+If want to adapt the community (previously Classic) theme to your own brand design, follow these steps to modify the colors and other theme values within the Figma library:
 
 1. Import "iX Components" into your Figma workspace.
 2. In the top-right corner of the Figma interface, click the button labeled "Open settings" with a settings icon to open the variables dialog.
