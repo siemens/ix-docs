@@ -44,6 +44,8 @@ V6 replaces legacy design tokens with **Siemens Design Language** system tokens.
 
 #### Typography
 
+Typography has been aligned with the Siemens Design Language, adding Siemens Font V7 and updated typography tokens and styles. The new font can introduce a 1px difference in text height, so review affected layouts and vertical alignment when migrating.
+
 - [Changed the default monospace font family](https://github.com/siemens/ix/blob/main/BREAKING_CHANGES/v6.md#changed-the-default-monospace-font-family)
 - [Renamed `ix-typography` `textColor` values](https://github.com/siemens/ix/blob/main/BREAKING_CHANGES/v6.md#renamed-ix-typography-textcolor-values)
 - [Removed unsupported typography utility classes](https://github.com/siemens/ix/blob/main/BREAKING_CHANGES/v6.md#removed-unsupported-typography-utility-classes)
@@ -51,7 +53,7 @@ V6 replaces legacy design tokens with **Siemens Design Language** system tokens.
 #### Icon size
 
 - [Changed the default icon size to 20px](https://github.com/siemens/ix/blob/main/BREAKING_CHANGES/v6.md#changed-the-default-icon-size-to-20px)
-- Affected components are: [application header](../../../components/application-header/index.mdx) (overflow button), [blind](../../../components/blind/index.mdx), [breadcrumb](../../../components/breadcrumb/index.mdx), [button](../../../components/button/index.mdx), [card list](../../../components/card-list/index.mdx), [checkbox](../../../components/checkbox/index.mdx), [chip](../../../components/chip/index.mdx), [content header](../../../components/content-header/index.mdx) (back button), [date dropdown](../../../components/date-dropdown/index.mdx), [dropdown](../../../components/dropdown/index.mdx), [dropdown button](../../../components/dropdown-button/index.mdx), [event list](../../../components/event-list/index.mdx), [group](../../../components/group/index.mdx), [icon button](../../../components/icon-button/index.mdx), [icon toggle button](#icon-toggle-button), [date time input](../../../components/input-date-time/index.mdx), [date time picker](../../../components/date-time-picker/index.mdx), [key value](../../../components/key-value/index.mdx), [menu, menu item and menu category](../../../components/application-menu/index.mdx), [message bar](../../../components/messagebar/index.mdx), [popover](../../../components/popover/index.mdx), [radio](../../../components/radio/index.mdx), [range field](../../../components/range-field/index.mdx) (arrow between fields), [split button](../../../components/split-button/index.mdx), [toast](../../../components/toast/index.mdx) (type and custom icons), [tree](../../../components/tree/index.mdx), [upload](../../../components/upload/index.mdx), [workflow](../../../components/workflow/index.mdx). Other components and contexts can retain different icon sizes.
+- Affected components are: application header (overflow button), blind, breadcrumb, button, card list, checkbox, chip, content header (back button), date dropdown, dropdown, dropdown button, event list, group, icon button, icon toggle button, date time input, date time picker, key value, menu, menu item and menu category, message bar, popover, radio, range field (arrow between fields), split button, toast (type and custom icons), tree, upload, workflow. Other components and contexts can retain different icon sizes.
 
 #### Sizing tokens
 
@@ -230,15 +232,20 @@ The following tables combine component-specific code and Figma changes, with com
 
 #### App menu
 
+![App menu](https://www.figma.com/design/wEptRgAezDU1z80Cn3eZ0o/iX-Documentation-illustrations?node-id=8745-957&t=hNTaZnRWqmj2iF50-4)
+
 <div class="table-full-width table-migration-changelog">
 
 | Type | Details | Description |
 | :--- | :--- | :--- |
+| <IxBadge type="label" label="Changed" variant="caution" outline icon={iconShapes} /> | <IxLinkButton url="https://www.figma.com/design/r2nqdNNXXZtPmWuVjIlM1Q/iX-Components?node-id=144092-46630" icon="external" aria-label="View design change" title="View design change">Figma</IxLinkButton> | Figma: Changed the collapsed and expanded menu widths. Review surrounding layouts after updating. |
 | <IxBadge type="label" label="Changed" variant="caution" outline icon={iconShapes} /> | <IxLinkButton url="https://www.figma.com/design/r2nqdNNXXZtPmWuVjIlM1Q/iX-Components?node-id=144092-46630" icon="external" aria-label="View design change" title="View design change">Figma</IxLinkButton> | Figma: Replaced notifications with badges. The show/hide boolean still works, but values are reset and need to be manually adapted. |
 
 </div>
 
 #### Application content
+
+![Application content](https://www.figma.com/design/wEptRgAezDU1z80Cn3eZ0o/iX-Documentation-illustrations?node-id=8745-1897)
 
 <div class="table-full-width table-migration-changelog">
 
@@ -250,6 +257,8 @@ The following tables combine component-specific code and Figma changes, with com
 
 #### Application
 
+![Application](https://www.figma.com/design/wEptRgAezDU1z80Cn3eZ0o/iX-Documentation-illustrations?node-id=8746-2442)
+
 <div class="table-full-width table-migration-changelog">
 
 | Type | Details | Description |
@@ -260,6 +269,8 @@ The following tables combine component-specific code and Figma changes, with com
 </div>
 
 #### Application header
+
+![Application header](https://www.figma.com/design/wEptRgAezDU1z80Cn3eZ0o/iX-Documentation-illustrations?node-id=8748-897)
 
 <div class="table-full-width table-migration-changelog">
 
@@ -293,6 +304,8 @@ The following tables combine component-specific code and Figma changes, with com
 
 #### Breadcrumb
 
+![Breadcrumb](https://www.figma.com/design/wEptRgAezDU1z80Cn3eZ0o/iX-Documentation-illustrations?node-id=8749-6381)
+
 <div class="table-full-width table-migration-changelog">
 
 | Type | Details | Description |
@@ -302,6 +315,8 @@ The following tables combine component-specific code and Figma changes, with com
 </div>
 
 #### Group
+
+![Group](https://www.figma.com/design/wEptRgAezDU1z80Cn3eZ0o/iX-Documentation-illustrations?node-id=8749-7076)
 
 <div class="table-full-width table-migration-changelog">
 
@@ -316,6 +331,8 @@ The following tables combine component-specific code and Figma changes, with com
 
 #### Tree
 
+![Tree](https://www.figma.com/design/wEptRgAezDU1z80Cn3eZ0o/iX-Documentation-illustrations?node-id=8772-14177)
+
 <div class="table-full-width table-migration-changelog">
 
 | Type | Details | Description |
@@ -327,6 +344,8 @@ The following tables combine component-specific code and Figma changes, with com
 
 #### Workflow
 
+![Workflow](https://www.figma.com/design/wEptRgAezDU1z80Cn3eZ0o/iX-Documentation-illustrations?node-id=8780-29527)
+
 <div class="table-full-width table-migration-changelog">
 
 | Type | Details | Description |
@@ -335,20 +354,36 @@ The following tables combine component-specific code and Figma changes, with com
 
 </div>
 
+#### Tabs
+
+![Tabs](https://www.figma.com/design/wEptRgAezDU1z80Cn3eZ0o/iX-Documentation-illustrations?node-id=8805-37439)
+
+<div class="table-full-width table-migration-changelog">
+
+| Type | Details | Description |
+| :--- | :--- | :--- |
+| <IxBadge type="label" label="Changed" variant="caution" outline icon={iconShapes} /> | <IxLinkButton url="https://www.figma.com/design/r2nqdNNXXZtPmWuVjIlM1Q/iX-Components" icon="external" aria-label="View Figma library" title="View Figma library">Figma</IxLinkButton> | Figma: Changed icons to 20px. Review icon alignment and spacing. |
+
+</div>
+
 ### Containers and layouts
 
 #### Action card
+
+![Action card](https://www.figma.com/design/wEptRgAezDU1z80Cn3eZ0o/iX-Documentation-illustrations?node-id=8805-40241)
 
 <div class="table-full-width table-migration-changelog">
 
 | Type | Details | Description |
 | :--- | :--- | :--- |
 | <IxBadge type="label" label="Changed" variant="caution" icon={iconCode} /> | <IxLinkButton url="https://github.com/siemens/ix/blob/main/BREAKING_CHANGES/v6.md#changed-card-family-status-variants-outline-and-clickable" icon="external" aria-label="View code change" title="View code change">Code</IxLinkButton><br /><IxLinkButton url="https://www.figma.com/design/r2nqdNNXXZtPmWuVjIlM1Q/iX-Components?node-id=5221-130098" icon="external" aria-label="View design change" title="View design change">Figma</IxLinkButton> | Changed status variants, outline styling, host classes, theming overrides, and TypeScript types; replaced `passive` with `clickable`, which remains enabled by default |
-| <IxBadge type="label" label="Deprecated" variant="critical" outline icon={iconShapes} /> | <IxLinkButton url="https://www.figma.com/design/r2nqdNNXXZtPmWuVjIlM1Q/iX-Components?node-id=163078-224910&t=uyzhGeD7C5A58xnU-4" icon="external" aria-label="View design change" title="View design change">Figma</IxLinkButton> | Figma: Deprecated the previous action card component. Follow the migration prompt in Figma to migrate to the new action card component with updated slot properties. |
+| <IxBadge type="label" label="Deprecated" variant="critical" outline icon={iconShapes} /> | <IxLinkButton url="https://www.figma.com/design/r2nqdNNXXZtPmWuVjIlM1Q/iX-Components?node-id=163078-224910&t=uyzhGeD7C5A58xnU-4" icon="external" aria-label="View design change" title="View design change">Figma</IxLinkButton> | Figma: Deprecated the previous action card component. Follow the migration prompt in Figma to migrate to the new action card component. |
 
 </div>
 
 #### Blind
+
+![Blind](https://www.figma.com/design/wEptRgAezDU1z80Cn3eZ0o/iX-Documentation-illustrations?node-id=8805-41337)
 
 <div class="table-full-width table-migration-changelog">
 
@@ -363,6 +398,8 @@ The following tables combine component-specific code and Figma changes, with com
 </div>
 
 #### Card
+
+![Card](https://www.figma.com/design/wEptRgAezDU1z80Cn3eZ0o/iX-Documentation-illustrations?node-id=8805-43085)
 
 <div class="table-full-width table-migration-changelog">
 
@@ -385,6 +422,8 @@ The following tables combine component-specific code and Figma changes, with com
 
 #### Card list
 
+![Card list](https://www.figma.com/design/wEptRgAezDU1z80Cn3eZ0o/iX-Documentation-illustrations?node-id=8805-43600)
+
 <div class="table-full-width table-migration-changelog">
 
 | Type | Details | Description |
@@ -406,6 +445,8 @@ The following tables combine component-specific code and Figma changes, with com
 
 #### Event list item
 
+![Event list item](https://www.figma.com/design/wEptRgAezDU1z80Cn3eZ0o/iX-Documentation-illustrations?node-id=8807-43948)
+
 <div class="table-full-width table-migration-changelog">
 
 | Type | Details | Description |
@@ -416,6 +457,8 @@ The following tables combine component-specific code and Figma changes, with com
 </div>
 
 #### Flip tile
+
+![Flip tile](https://www.figma.com/design/wEptRgAezDU1z80Cn3eZ0o/iX-Documentation-illustrations?node-id=8819-45881)
 
 <div class="table-full-width table-migration-changelog">
 
@@ -428,10 +471,13 @@ The following tables combine component-specific code and Figma changes, with com
 
 #### Modal
 
+![Modal](https://www.figma.com/design/wEptRgAezDU1z80Cn3eZ0o/iX-Documentation-illustrations?node-id=8819-46348)
+
 <div class="table-full-width table-migration-changelog">
 
 | Type | Details | Description |
 | :--- | :--- | :--- |
+| <IxBadge type="label" label="Added" variant="success" outline icon={iconShapes} /> | <IxLinkButton url="https://www.figma.com/design/r2nqdNNXXZtPmWuVjIlM1Q/iX-Components?node-id=445-4906" icon="external" aria-label="View design change" title="View design change">Figma</IxLinkButton> | Figma: Added fixed-width modal variants. Review the selected width when migrating instances. |
 | <IxBadge type="label" label="Changed" variant="caution" icon={iconCode} /> | <IxLinkButton url="https://github.com/siemens/ix/blob/main/BREAKING_CHANGES/v6.md#changed-untyped-react-callback-values-to-unknown" icon="external" aria-label="View code change" title="View code change">Code</IxLinkButton> | Changed untyped React `closeModal`, `ModalRef.close`, and `ModalRef.dismiss` results to `unknown` |
 | <IxBadge type="label" label="Changed" variant="caution" icon={iconCode} /> | <IxLinkButton url="https://github.com/siemens/ix/blob/main/BREAKING_CHANGES/v6.md#changed-untyped-vue-modal-close-reasons-to-unknown" icon="external" aria-label="View code change" title="View code change">Code</IxLinkButton> | Changed untyped Vue `closeModal` reasons to `unknown` |
 | <IxBadge type="label" label="Removed" variant="warning" icon={iconCode} /> | <IxLinkButton url="https://github.com/siemens/ix/blob/main/BREAKING_CHANGES/v6.md#removed-legacy-sass-modules" icon="external" aria-label="View code change" title="View code change">Code</IxLinkButton> | Removed the legacy modal Sass module |
@@ -441,6 +487,8 @@ The following tables combine component-specific code and Figma changes, with com
 </div>
 
 #### Pane
+
+![Pane](https://www.figma.com/design/wEptRgAezDU1z80Cn3eZ0o/iX-Documentation-illustrations?node-id=8819-46643)
 
 <div class="table-full-width table-migration-changelog">
 
@@ -452,6 +500,8 @@ The following tables combine component-specific code and Figma changes, with com
 
 #### Push card
 
+![Push card](https://www.figma.com/design/wEptRgAezDU1z80Cn3eZ0o/iX-Documentation-illustrations?node-id=8819-48550)
+
 <div class="table-full-width table-migration-changelog">
 
 | Type | Details | Description |
@@ -462,6 +512,8 @@ The following tables combine component-specific code and Figma changes, with com
 </div>
 
 #### Tile
+
+![Tile](https://www.figma.com/design/wEptRgAezDU1z80Cn3eZ0o/iX-Documentation-illustrations?node-id=8819-51207)
 
 <div class="table-full-width table-migration-changelog">
 
@@ -475,10 +527,14 @@ The following tables combine component-specific code and Figma changes, with com
 
 #### Checkbox
 
+![Checkbox](https://www.figma.com/design/wEptRgAezDU1z80Cn3eZ0o/iX-Documentation-illustrations?node-id=8819-51315)
+
 <div class="table-full-width table-migration-changelog">
 
 | Type | Details | Description |
 | :--- | :--- | :--- |
+| <IxBadge type="label" label="Changed" variant="caution" outline icon={iconShapes} /> | <IxLinkButton url="https://www.figma.com/design/r2nqdNNXXZtPmWuVjIlM1Q/iX-Components" icon="external" aria-label="View Figma library" title="View Figma library">Figma</IxLinkButton> | Figma: Replaced the focus variant with a boolean property. Review the focus setting on existing instances. |
+| <IxBadge type="label" label="Deprecated" variant="critical" outline icon={iconShapes} /> | <IxLinkButton url="https://www.figma.com/design/r2nqdNNXXZtPmWuVjIlM1Q/iX-Components" icon="external" aria-label="View Figma library" title="View Figma library">Figma</IxLinkButton> | Figma: Deprecated the previous checkbox component. Follow the migration prompt in Figma to migrate to the new checkbox component with native slots. |
 | <IxBadge type="label" label="Changed" variant="caution" icon={iconCode} /> | <IxLinkButton url="https://github.com/siemens/ix/blob/main/BREAKING_CHANGES/v6.md#changed-boolean-attributes-to-follow-native-html-semantics" icon="external" aria-label="View code change" title="View code change">Code</IxLinkButton> | Changed boolean attributes to follow native HTML semantics |
 | <IxBadge type="label" label="Changed" variant="caution" icon={iconCode} /> | <IxLinkButton url="https://github.com/siemens/ix/blob/main/BREAKING_CHANGES/v6.md#changed-the-default-icon-size-to-20px" icon="external" aria-label="View code change" title="View code change">Code</IxLinkButton> | Changed the control glyph to 20px while retaining the 24px hit area |
 | <IxBadge type="label" label="Changed" variant="caution" icon={iconCode} /> | <IxLinkButton url="https://github.com/siemens/ix/blob/main/BREAKING_CHANGES/v6.md#removed-common-dimension-and-typography-tokens" icon="external" aria-label="View code change" title="View code change">Code</IxLinkButton> | Applied compact density to the migrated checkbox label gap |
@@ -486,6 +542,8 @@ The following tables combine component-specific code and Figma changes, with com
 </div>
 
 #### Custom field
+
+![Custom field](https://www.figma.com/design/wEptRgAezDU1z80Cn3eZ0o/iX-Documentation-illustrations?node-id=8819-51435)
 
 <div class="table-full-width table-migration-changelog">
 
@@ -496,6 +554,8 @@ The following tables combine component-specific code and Figma changes, with com
 </div>
 
 #### Date dropdown
+
+![Date dropdown](https://www.figma.com/design/wEptRgAezDU1z80Cn3eZ0o/iX-Documentation-illustrations?node-id=8819-51869)
 
 <div class="table-full-width table-migration-changelog">
 
@@ -512,6 +572,8 @@ The following tables combine component-specific code and Figma changes, with com
 
 #### Date input
 
+![Date input](https://www.figma.com/design/wEptRgAezDU1z80Cn3eZ0o/iX-Documentation-illustrations?node-id=8819-54637)
+
 <div class="table-full-width table-migration-changelog">
 
 | Type | Details | Description |
@@ -525,6 +587,8 @@ The following tables combine component-specific code and Figma changes, with com
 
 #### Date picker
 
+![Date picker](https://www.figma.com/design/wEptRgAezDU1z80Cn3eZ0o/iX-Documentation-illustrations?node-id=8819-61745)
+
 <div class="table-full-width table-migration-changelog">
 
 | Type | Details | Description |
@@ -536,6 +600,8 @@ The following tables combine component-specific code and Figma changes, with com
 </div>
 
 #### Date time input
+
+![Date time input](https://www.figma.com/design/wEptRgAezDU1z80Cn3eZ0o/iX-Documentation-illustrations?node-id=8819-62987)
 
 <div class="table-full-width table-migration-changelog">
 
@@ -551,6 +617,8 @@ The following tables combine component-specific code and Figma changes, with com
 
 #### Date time picker
 
+![Date time picker](https://www.figma.com/design/wEptRgAezDU1z80Cn3eZ0o/iX-Documentation-illustrations?node-id=8819-70898)
+
 <div class="table-full-width table-migration-changelog">
 
 | Type | Details | Description |
@@ -564,6 +632,8 @@ The following tables combine component-specific code and Figma changes, with com
 
 #### Expanding search
 
+![Expanding search](https://www.figma.com/design/wEptRgAezDU1z80Cn3eZ0o/iX-Documentation-illustrations?node-id=8821-5756)
+
 <div class="table-full-width table-migration-changelog">
 
 | Type | Details | Description |
@@ -575,10 +645,13 @@ The following tables combine component-specific code and Figma changes, with com
 
 #### Input (number)
 
+![Input (number)](https://www.figma.com/design/wEptRgAezDU1z80Cn3eZ0o/iX-Documentation-illustrations?node-id=8821-9397)
+
 <div class="table-full-width table-migration-changelog">
 
 | Type | Details | Description |
 | :--- | :--- | :--- |
+| <IxBadge type="label" label="Changed" variant="caution" outline icon={iconShapes} /> | <IxLinkButton url="https://www.figma.com/design/r2nqdNNXXZtPmWuVjIlM1Q/iX-Components" icon="external" aria-label="View Figma library" title="View Figma library">Figma</IxLinkButton> | Figma: Changed start and end slot buttons to 20px. Review custom slot content and alignment. |
 | <IxBadge type="label" label="Changed" variant="caution" icon={iconCode} /> | <IxLinkButton url="https://github.com/siemens/ix/blob/main/BREAKING_CHANGES/v6.md#changed-boolean-attributes-to-follow-native-html-semantics" icon="external" aria-label="View code change" title="View code change">Code</IxLinkButton> | Changed boolean attributes to follow native HTML semantics |
 | <IxBadge type="label" label="Fixed" variant="information" icon={iconCode} /> | <IxLinkButton url="https://github.com/siemens/ix/blob/main/BREAKING_CHANGES/v6.md#removed-built-in-validation-feedback-in-novalidate-forms" icon="external" aria-label="View code change" title="View code change">Code</IxLinkButton> | Removed built-in validation feedback in `novalidate` forms |
 
@@ -586,10 +659,13 @@ The following tables combine component-specific code and Figma changes, with com
 
 #### Input (text)
 
+![Input (text)](https://www.figma.com/design/wEptRgAezDU1z80Cn3eZ0o/iX-Documentation-illustrations?node-id=8821-16095)
+
 <div class="table-full-width table-migration-changelog">
 
 | Type | Details | Description |
 | :--- | :--- | :--- |
+| <IxBadge type="label" label="Changed" variant="caution" outline icon={iconShapes} /> | <IxLinkButton url="https://www.figma.com/design/r2nqdNNXXZtPmWuVjIlM1Q/iX-Components" icon="external" aria-label="View Figma library" title="View Figma library">Figma</IxLinkButton> | Figma: Changed start and end slot buttons to 20px. Review custom slot content and alignment. |
 | <IxBadge type="label" label="Changed" variant="caution" icon={iconCode} /> | <IxLinkButton url="https://github.com/siemens/ix/blob/main/BREAKING_CHANGES/v6.md#changed-boolean-attributes-to-follow-native-html-semantics" icon="external" aria-label="View code change" title="View code change">Code</IxLinkButton> | Changed boolean attributes to follow native HTML semantics |
 | <IxBadge type="label" label="Fixed" variant="information" icon={iconCode} /> | <IxLinkButton url="https://github.com/siemens/ix/blob/main/BREAKING_CHANGES/v6.md#removed-built-in-validation-feedback-in-novalidate-forms" icon="external" aria-label="View code change" title="View code change">Code</IxLinkButton> | Removed built-in validation feedback in `novalidate` forms |
 | <IxBadge type="label" label="Removed" variant="warning" icon={iconCode} /> | <IxLinkButton url="https://github.com/siemens/ix/blob/main/BREAKING_CHANGES/v6.md#removed-shadow-utility-aliases" icon="external" aria-label="View code change" title="View code change">Code</IxLinkButton> | Removed decorative input shadows and `--ix-input--box-shadow` |
@@ -598,10 +674,13 @@ The following tables combine component-specific code and Figma changes, with com
 
 #### Radio
 
+![Radio](https://www.figma.com/design/wEptRgAezDU1z80Cn3eZ0o/iX-Documentation-illustrations?node-id=8821-16249)
+
 <div class="table-full-width table-migration-changelog">
 
 | Type | Details | Description |
 | :--- | :--- | :--- |
+| <IxBadge type="label" label="Changed" variant="caution" outline icon={iconShapes} /> | <IxLinkButton url="https://www.figma.com/design/r2nqdNNXXZtPmWuVjIlM1Q/iX-Components" icon="external" aria-label="View Figma library" title="View Figma library">Figma</IxLinkButton> | Figma: Replaced the focus variant with a boolean property and aligned validation-state names with code. Review focus and validation settings on existing instances. |
 | <IxBadge type="label" label="Changed" variant="caution" icon={iconCode} /> | <IxLinkButton url="https://github.com/siemens/ix/blob/main/BREAKING_CHANGES/v6.md#changed-boolean-attributes-to-follow-native-html-semantics" icon="external" aria-label="View code change" title="View code change">Code</IxLinkButton> | Changed boolean attributes to follow native HTML semantics |
 | <IxBadge type="label" label="Changed" variant="caution" icon={iconCode} /> | <IxLinkButton url="https://github.com/siemens/ix/blob/main/BREAKING_CHANGES/v6.md#changed-the-default-icon-size-to-20px" icon="external" aria-label="View code change" title="View code change">Code</IxLinkButton> | Changed the control glyph to 20px while retaining the 24px hit area |
 
@@ -619,6 +698,8 @@ The following tables combine component-specific code and Figma changes, with com
 
 #### Select
 
+![Select](https://www.figma.com/design/wEptRgAezDU1z80Cn3eZ0o/iX-Documentation-illustrations?node-id=8821-19049)
+
 <div class="table-full-width table-migration-changelog">
 
 | Type | Details | Description |
@@ -630,6 +711,8 @@ The following tables combine component-specific code and Figma changes, with com
 
 #### Slider
 
+![Slider](https://www.figma.com/design/wEptRgAezDU1z80Cn3eZ0o/iX-Documentation-illustrations?node-id=8821-25154)
+
 <div class="table-full-width table-migration-changelog">
 
 | Type | Details | Description |
@@ -639,6 +722,8 @@ The following tables combine component-specific code and Figma changes, with com
 </div>
 
 #### Textarea
+
+![Textarea](https://www.figma.com/design/wEptRgAezDU1z80Cn3eZ0o/iX-Documentation-illustrations?node-id=8821-33194)
 
 <div class="table-full-width table-migration-changelog">
 
@@ -651,10 +736,13 @@ The following tables combine component-specific code and Figma changes, with com
 
 #### Time input
 
+![Time input](https://www.figma.com/design/wEptRgAezDU1z80Cn3eZ0o/iX-Documentation-illustrations?node-id=8821-34907)
+
 <div class="table-full-width table-migration-changelog">
 
 | Type | Details | Description |
 | :--- | :--- | :--- |
+| <IxBadge type="label" label="Changed" variant="caution" outline icon={iconShapes} /> | <IxLinkButton url="https://www.figma.com/design/r2nqdNNXXZtPmWuVjIlM1Q/iX-Components" icon="external" aria-label="View Figma library" title="View Figma library">Figma</IxLinkButton> | Figma: Replaced the 12-hour variant with a boolean property and removed the internal AM/PM button. Review the time-format setting and any overrides after updating. |
 | <IxBadge type="label" label="Changed" variant="caution" icon={iconCode} /> | <IxLinkButton url="https://github.com/siemens/ix/blob/main/BREAKING_CHANGES/v6.md#changed-boolean-attributes-to-follow-native-html-semantics" icon="external" aria-label="View code change" title="View code change">Code</IxLinkButton> | Changed boolean attributes to follow native HTML semantics |
 | <IxBadge type="label" label="Added" variant="success" icon={iconCode} /> | <IxLinkButton url="https://github.com/siemens/ix/blob/main/BREAKING_CHANGES/v6.md#changed-date-and-time-picker-locale-support" icon="external" aria-label="View code change" title="View code change">Code</IxLinkButton> | Added `locale`, `i18nAm`, and `i18nPm` |
 | <IxBadge type="label" label="Changed" variant="caution" icon={iconCode} /> | <IxLinkButton url="https://github.com/siemens/ix/blob/main/BREAKING_CHANGES/v6.md#ix-time-picker-and-ix-time-input-always-require-confirmation" icon="external" aria-label="View code change" title="View code change">Code</IxLinkButton> | Required Confirm to apply time and discarded pending selections on Cancel, Escape, or outside click; added `i18nCancel` and retained `i18nSelectTime` for the Confirm label |
@@ -663,6 +751,8 @@ The following tables combine component-specific code and Figma changes, with com
 </div>
 
 #### Time picker
+
+![Time picker](https://www.figma.com/design/wEptRgAezDU1z80Cn3eZ0o/iX-Documentation-illustrations?node-id=8821-42444)
 
 <div class="table-full-width table-migration-changelog">
 
@@ -678,20 +768,26 @@ The following tables combine component-specific code and Figma changes, with com
 
 #### Toggle
 
+![Toggle](https://www.figma.com/design/wEptRgAezDU1z80Cn3eZ0o/iX-Documentation-illustrations?node-id=8821-42803)
+
 <div class="table-full-width table-migration-changelog">
 
 | Type | Details | Description |
 | :--- | :--- | :--- |
+| <IxBadge type="label" label="Changed" variant="caution" outline icon={iconShapes} /> | <IxLinkButton url="https://www.figma.com/design/r2nqdNNXXZtPmWuVjIlM1Q/iX-Components" icon="external" aria-label="View Figma library" title="View Figma library">Figma</IxLinkButton> | Figma: Replaced the focus variant with a boolean property. Review the focus setting on existing instances. |
 | <IxBadge type="label" label="Changed" variant="caution" icon={iconCode} /> | <IxLinkButton url="https://github.com/siemens/ix/blob/main/BREAKING_CHANGES/v6.md#changed-boolean-attributes-to-follow-native-html-semantics" icon="external" aria-label="View code change" title="View code change">Code</IxLinkButton> | Changed boolean attributes to follow native HTML semantics |
 
 </div>
 
 #### Upload
 
+![Upload](https://www.figma.com/design/wEptRgAezDU1z80Cn3eZ0o/iX-Documentation-illustrations?node-id=8821-43275)
+
 <div class="table-full-width table-migration-changelog">
 
 | Type | Details | Description |
 | :--- | :--- | :--- |
+| <IxBadge type="label" label="Deprecated" variant="critical" outline icon={iconShapes} /> | <IxLinkButton url="https://www.figma.com/design/r2nqdNNXXZtPmWuVjIlM1Q/iX-Components?node-id=290-1441" icon="external" aria-label="View design change" title="View design change">Figma</IxLinkButton> | Figma: Deprecated "check fast" to align with code. Review instances using this option. |
 | <IxBadge type="label" label="Changed" variant="caution" icon={iconCode} /> | <IxLinkButton url="https://github.com/siemens/ix/blob/main/BREAKING_CHANGES/v6.md#changed-the-default-icon-size-to-20px" icon="external" aria-label="View code change" title="View code change">Code</IxLinkButton><br /><IxLinkButton url="https://www.figma.com/design/r2nqdNNXXZtPmWuVjIlM1Q/iX-Components?node-id=290-1441" icon="external" aria-label="View design change" title="View design change">Figma</IxLinkButton> | Changed the default icon size to 20px in affected slots |
 
 </div>
@@ -700,10 +796,13 @@ The following tables combine component-specific code and Figma changes, with com
 
 #### Button
 
+![Button](https://www.figma.com/design/wEptRgAezDU1z80Cn3eZ0o/iX-Documentation-illustrations?node-id=8821-43794)
+
 <div class="table-full-width table-migration-changelog">
 
 | Type | Details | Description |
 | :--- | :--- | :--- |
+| <IxBadge type="label" label="Changed" variant="caution" outline icon={iconShapes} /> | <IxLinkButton url="https://www.figma.com/design/r2nqdNNXXZtPmWuVjIlM1Q/iX-Components?node-id=2-3" icon="external" aria-label="View design change" title="View design change">Figma</IxLinkButton> | Figma: Reset nested icons so they receive updates. Check and reapply any required icon overrides. |
 | <IxBadge type="label" label="Changed" variant="caution" icon={iconCode} /> | <IxLinkButton url="https://github.com/siemens/ix/blob/main/BREAKING_CHANGES/v6.md#changed-the-default-icon-size-to-20px" icon="external" aria-label="View code change" title="View code change">Code</IxLinkButton><br /><IxLinkButton url="https://www.figma.com/design/r2nqdNNXXZtPmWuVjIlM1Q/iX-Components?node-id=2-3" icon="external" aria-label="View design change" title="View design change">Figma</IxLinkButton> | Changed the default icon size to 20px in affected slots |
 
 </div>
@@ -720,6 +819,8 @@ The following tables combine component-specific code and Figma changes, with com
 
 #### Chip
 
+![Chip](https://www.figma.com/design/wEptRgAezDU1z80Cn3eZ0o/iX-Documentation-illustrations?node-id=8821-43850)
+
 <div class="table-full-width table-migration-changelog">
 
 | Type | Details | Description |
@@ -732,6 +833,8 @@ The following tables combine component-specific code and Figma changes, with com
 
 #### Dropdown
 
+![Dropdown](https://www.figma.com/design/wEptRgAezDU1z80Cn3eZ0o/iX-Documentation-illustrations?node-id=8821-45405)
+
 <div class="table-full-width table-migration-changelog">
 
 | Type | Details | Description |
@@ -741,18 +844,35 @@ The following tables combine component-specific code and Figma changes, with com
 
 </div>
 
-#### Icon button
+#### Dropdown button
+
+![Dropdown button](https://www.figma.com/design/wEptRgAezDU1z80Cn3eZ0o/iX-Documentation-illustrations?node-id=8821-46086)
 
 <div class="table-full-width table-migration-changelog">
 
 | Type | Details | Description |
 | :--- | :--- | :--- |
+| <IxBadge type="label" label="Added" variant="success" outline icon={iconShapes} /> | <IxLinkButton url="https://www.figma.com/design/r2nqdNNXXZtPmWuVjIlM1Q/iX-Components" icon="external" aria-label="View Figma library" title="View Figma library">Figma</IxLinkButton> | Figma: Added Danger variants. Use them where the action's semantic intent calls for danger styling. |
+
+</div>
+
+#### Icon button
+
+![Icon button](https://www.figma.com/design/wEptRgAezDU1z80Cn3eZ0o/iX-Documentation-illustrations?node-id=8821-47841)
+
+<div class="table-full-width table-migration-changelog">
+
+| Type | Details | Description |
+| :--- | :--- | :--- |
+| <IxBadge type="label" label="Changed" variant="caution" outline icon={iconShapes} /> | <IxLinkButton url="https://www.figma.com/design/r2nqdNNXXZtPmWuVjIlM1Q/iX-Components?node-id=107193-14086" icon="external" aria-label="View design change" title="View design change">Figma</IxLinkButton> | Figma: Reset nested icons so they receive updates. Check and reapply any required icon overrides. |
 | <IxBadge type="label" label="Changed" variant="caution" icon={iconCode} /> | <IxLinkButton url="https://github.com/siemens/ix/blob/main/BREAKING_CHANGES/v6.md#changed-the-default-icon-size-to-20px" icon="external" aria-label="View code change" title="View code change">Code</IxLinkButton><br /><IxLinkButton url="https://www.figma.com/design/r2nqdNNXXZtPmWuVjIlM1Q/iX-Components?node-id=107193-14086" icon="external" aria-label="View design change" title="View design change">Figma</IxLinkButton> | Changed the default glyph from 24px to 20px and added explicit size `20`; retained the 32px host for sizes `20` and `24` |
 | <IxBadge type="label" label="Changed" variant="caution" icon={iconCode} /> | <IxLinkButton url="https://github.com/siemens/ix/blob/main/BREAKING_CHANGES/v6.md#changed-icon-and-component-color-properties-to-use-complete-token-names" icon="external" aria-label="View code change" title="View code change">Code</IxLinkButton> | Changed `iconColor` to require complete CSS custom-property names |
 
 </div>
 
 #### Icon toggle button
+
+![Icon toggle button](https://www.figma.com/design/wEptRgAezDU1z80Cn3eZ0o/iX-Documentation-illustrations?node-id=8821-48037)
 
 <div class="table-full-width table-migration-changelog">
 
@@ -764,20 +884,26 @@ The following tables combine component-specific code and Figma changes, with com
 
 #### Link button
 
+![Link button](https://www.figma.com/design/wEptRgAezDU1z80Cn3eZ0o/iX-Documentation-illustrations?node-id=8821-51542)
+
 <div class="table-full-width table-migration-changelog">
 
 | Type | Details | Description |
 | :--- | :--- | :--- |
+| <IxBadge type="label" label="Added" variant="success" outline icon={iconShapes} /> | <IxLinkButton url="https://www.figma.com/design/r2nqdNNXXZtPmWuVjIlM1Q/iX-Components?node-id=1432-40622" icon="external" aria-label="View design change" title="View design change">Figma</IxLinkButton> | Figma: Added a replacement link button component with position and icon options. Review these settings when migrating instances. |
 | <IxBadge type="label" label="Deprecated" variant="critical" outline icon={iconShapes} /> | <IxLinkButton url="https://www.figma.com/design/r2nqdNNXXZtPmWuVjIlM1Q/iX-Components?node-id=1432-40622&t=uyzhGeD7C5A58xnU-4" icon="external" aria-label="View design change" title="View design change">Figma</IxLinkButton> | Figma: Deprecated the previous link button component. Follow the migration prompt in Figma to migrate to the new link button component. |
 
 </div>
 
 #### Split button
 
+![Split button](https://www.figma.com/design/wEptRgAezDU1z80Cn3eZ0o/iX-Documentation-illustrations?node-id=8821-51727)
+
 <div class="table-full-width table-migration-changelog">
 
 | Type | Details | Description |
 | :--- | :--- | :--- |
+| <IxBadge type="label" label="Changed" variant="caution" outline icon={iconShapes} /> | <IxLinkButton url="https://www.figma.com/design/r2nqdNNXXZtPmWuVjIlM1Q/iX-Components?node-id=201-3398" icon="external" aria-label="View design change" title="View design change">Figma</IxLinkButton> | Figma: Reset nested icons so they receive updates. Check and reapply any required icon overrides. |
 | <IxBadge type="label" label="Changed" variant="caution" icon={iconCode} /> | <IxLinkButton url="https://github.com/siemens/ix/blob/main/BREAKING_CHANGES/v6.md#changed-the-default-icon-size-to-20px" icon="external" aria-label="View code change" title="View code change">Code</IxLinkButton><br /><IxLinkButton url="https://www.figma.com/design/r2nqdNNXXZtPmWuVjIlM1Q/iX-Components?node-id=201-3398" icon="external" aria-label="View design change" title="View design change">Figma</IxLinkButton> | Changed the default icon size to 20px in affected slots |
 
 </div>
@@ -785,6 +911,8 @@ The following tables combine component-specific code and Figma changes, with com
 ### System feedback and status
 
 #### Badge
+
+![Badge](https://www.figma.com/design/wEptRgAezDU1z80Cn3eZ0o/iX-Documentation-illustrations?node-id=8821-52024)
 
 <div class="table-full-width table-migration-changelog">
 
@@ -816,6 +944,8 @@ The following tables combine component-specific code and Figma changes, with com
 
 #### Message bar
 
+![Message bar](https://www.figma.com/design/wEptRgAezDU1z80Cn3eZ0o/iX-Documentation-illustrations?node-id=8826-2210)
+
 <div class="table-full-width table-migration-changelog">
 
 | Type | Details | Description |
@@ -827,6 +957,8 @@ The following tables combine component-specific code and Figma changes, with com
 
 #### Message modal
 
+![Message modal](https://www.figma.com/design/wEptRgAezDU1z80Cn3eZ0o/iX-Documentation-illustrations?node-id=8826-5192)
+
 <div class="table-full-width table-migration-changelog">
 
 | Type | Details | Description |
@@ -836,6 +968,8 @@ The following tables combine component-specific code and Figma changes, with com
 </div>
 
 #### Pill
+
+![Pill](https://www.figma.com/design/wEptRgAezDU1z80Cn3eZ0o/iX-Documentation-illustrations?node-id=8826-5548)
 
 <div class="table-full-width table-migration-changelog">
 
@@ -848,6 +982,8 @@ The following tables combine component-specific code and Figma changes, with com
 
 #### Popover
 
+![Popover](https://www.figma.com/design/wEptRgAezDU1z80Cn3eZ0o/iX-Documentation-illustrations?node-id=8829-5904)
+
 <div class="table-full-width table-migration-changelog">
 
 | Type | Details | Description |
@@ -857,6 +993,8 @@ The following tables combine component-specific code and Figma changes, with com
 </div>
 
 #### Progress indicator
+
+![Progress indicator](https://www.figma.com/design/wEptRgAezDU1z80Cn3eZ0o/iX-Documentation-illustrations?node-id=8829-9082)
 
 <div class="table-full-width table-migration-changelog">
 
@@ -869,6 +1007,8 @@ The following tables combine component-specific code and Figma changes, with com
 
 #### Spinner
 
+![Spinner](https://www.figma.com/design/wEptRgAezDU1z80Cn3eZ0o/iX-Documentation-illustrations?node-id=8829-10723)
+
 <div class="table-full-width table-migration-changelog">
 
 | Type | Details | Description |
@@ -877,32 +1017,29 @@ The following tables combine component-specific code and Figma changes, with com
 
 </div>
 
-#### System banner
-
-<div class="table-full-width table-migration-changelog">
-
-| Type | Details | Description |
-| :--- | :--- | :--- |
-| <IxBadge type="label" label="Changed" variant="caution" outline icon={iconShapes} /> | <IxLinkButton url="https://www.figma.com/design/r2nqdNNXXZtPmWuVjIlM1Q/iX-Components?node-id=150034-89244" icon="external" aria-label="View design change" title="View design change">Figma</IxLinkButton> | Figma: Renamed status variants and added missing variants using the status mapping above. |
-
-</div>
 
 #### Toast
 
+![Toast](https://www.figma.com/design/wEptRgAezDU1z80Cn3eZ0o/iX-Documentation-illustrations?node-id=8829-10903)
+
 <div class="table-full-width table-migration-changelog">
 
 | Type | Details | Description |
 | :--- | :--- | :--- |
+| <IxBadge type="label" label="Changed" variant="caution" outline icon={iconShapes} /> | <IxLinkButton url="https://www.figma.com/design/r2nqdNNXXZtPmWuVjIlM1Q/iX-Components?node-id=443-6501" icon="external" aria-label="View design change" title="View design change">Figma</IxLinkButton> | Figma: Added a striped color indicator for status. Review the updated appearance in existing layouts. |
 | <IxBadge type="label" label="Changed" variant="caution" icon={iconCode} /> | <IxLinkButton url="https://github.com/siemens/ix/blob/main/BREAKING_CHANGES/v6.md#changed-ix-toast-status-type-values-and-helpers" icon="external" aria-label="View code change" title="View code change">Code</IxLinkButton><br /><IxLinkButton url="https://www.figma.com/design/r2nqdNNXXZtPmWuVjIlM1Q/iX-Components?node-id=443-6501" icon="external" aria-label="View design change" title="View design change">Figma</IxLinkButton> | Renamed status types and helpers, changed the default to `information`, and updated colors and icons; use `caution` for the previous yellow warning meaning |
 
 </div>
 
 #### Tooltip
 
+![Tooltip](https://www.figma.com/design/wEptRgAezDU1z80Cn3eZ0o/iX-Documentation-illustrations?node-id=8829-11275)
+
 <div class="table-full-width table-migration-changelog">
 
 | Type | Details | Description |
 | :--- | :--- | :--- |
+| <IxBadge type="label" label="Changed" variant="caution" outline icon={iconShapes} /> | <IxLinkButton url="https://www.figma.com/design/r2nqdNNXXZtPmWuVjIlM1Q/iX-Components?node-id=64253-3695" icon="external" aria-label="View design change" title="View design change">Figma</IxLinkButton> | Figma: Changed the default icon from `info` to `about` and added native max-width. Review icon overrides and text wrapping. |
 | <IxBadge type="label" label="Deprecated" variant="critical" outline icon={iconShapes} /> | <IxLinkButton url="https://www.figma.com/design/r2nqdNNXXZtPmWuVjIlM1Q/iX-Components?node-id=64253-3695&t=uyzhGeD7C5A58xnU-4" icon="external" aria-label="View design change" title="View design change">Figma</IxLinkButton> | Figma: Deprecated the previous tooltip component. Follow the migration prompt in Figma to migrate to the new tooltip component with updated slot properties. |
 
 </div>
@@ -910,6 +1047,8 @@ The following tables combine component-specific code and Figma changes, with com
 ### Data display
 
 #### Key value
+
+![Key value](https://www.figma.com/design/wEptRgAezDU1z80Cn3eZ0o/iX-Documentation-illustrations?node-id=8829-11426)
 
 <div class="table-full-width table-migration-changelog">
 
@@ -922,6 +1061,8 @@ The following tables combine component-specific code and Figma changes, with com
 
 #### Key value list
 
+![Key value list](https://www.figma.com/design/wEptRgAezDU1z80Cn3eZ0o/iX-Documentation-illustrations?node-id=8829-15483)
+
 <div class="table-full-width table-migration-changelog">
 
 | Type | Details | Description |
@@ -931,6 +1072,8 @@ The following tables combine component-specific code and Figma changes, with com
 </div>
 
 #### KPI
+
+![KPI](https://www.figma.com/design/wEptRgAezDU1z80Cn3eZ0o/iX-Documentation-illustrations?node-id=8829-16433)
 
 <div class="table-full-width table-migration-changelog">
 
@@ -954,6 +1097,8 @@ The following tables combine component-specific code and Figma changes, with com
 </div>
 
 #### Chat input
+
+![Chat input](https://www.figma.com/design/wEptRgAezDU1z80Cn3eZ0o/iX-Documentation-illustrations?node-id=8829-17146)
 
 <div class="table-full-width table-migration-changelog">
 
@@ -981,12 +1126,25 @@ The following tables combine component-specific code and Figma changes, with com
 ### Utilities
 
 
+#### Common foundations
+
+<div class="table-full-width table-migration-changelog">
+
+| Type | Details | Description |
+| :--- | :--- | :--- |
+| <IxBadge type="label" label="Changed" variant="caution" outline icon={iconShapes} /> | <IxLinkButton url="https://www.figma.com/design/r2nqdNNXXZtPmWuVjIlM1Q/iX-Components?node-id=165984-752" icon="external" aria-label="View design change" title="View design change">Figma</IxLinkButton> | Figma: Migrated to Siemens Design Language system tokens v0.17 and deprecated local color tokens and styles. Overrides may reset after updating; review and reapply required overrides using the new tokens. |
+| <IxBadge type="label" label="Added" variant="success" outline icon={iconShapes} /> | <IxLinkButton url="https://www.figma.com/design/r2nqdNNXXZtPmWuVjIlM1Q/iX-Components?node-id=165984-752" icon="external" aria-label="View design change" title="View design change">Figma</IxLinkButton> | Figma: Added density tokens. Review spacing and sizing in affected layouts. |
+| <IxBadge type="label" label="Changed" variant="caution" outline icon={iconShapes} /> | <IxLinkButton url="https://www.figma.com/design/r2nqdNNXXZtPmWuVjIlM1Q/iX-Components?node-id=166008-10490" icon="external" aria-label="View design change" title="View design change">Figma</IxLinkButton> | Figma: Changed the common focus outline to use a shadow and removed the old focus-offset and typography-format variants from common atoms. Review affected atom instances and focus overrides. |
+
+</div>
+
 #### Icon
 
 <div class="table-full-width table-migration-changelog">
 
 | Type | Details | Description |
 | :--- | :--- | :--- |
+| <IxBadge type="label" label="Added" variant="success" outline icon={iconShapes} /> | <IxLinkButton url="https://www.figma.com/design/r2nqdNNXXZtPmWuVjIlM1Q/iX-Components" icon="external" aria-label="View Figma library" title="View Figma library">Figma</IxLinkButton> | Figma: Added an `xxl` icon size to common atoms. |
 | <IxBadge type="label" label="Changed" variant="caution" icon={iconCode} /> | <IxLinkButton url="https://github.com/siemens/ix/blob/main/BREAKING_CHANGES/v6.md#changed-icon-and-component-color-properties-to-use-complete-token-names" icon="external" aria-label="View code change" title="View code change">Code</IxLinkButton> | Changed `color` to require the complete CSS custom-property name; updated `NotificationColor` literals to include leading `--` |
 
 </div>
@@ -997,6 +1155,7 @@ The following tables combine component-specific code and Figma changes, with com
 
 | Type | Details | Description |
 | :--- | :--- | :--- |
+| <IxBadge type="label" label="Changed" variant="caution" outline icon={iconShapes} /> | <IxLinkButton url="https://www.figma.com/design/r2nqdNNXXZtPmWuVjIlM1Q/iX-Components" icon="external" aria-label="View Figma library" title="View Figma library">Figma</IxLinkButton> | Figma: Migrated scrollbars to Siemens Design Language tokens and increased contrast for WCAG accessibility. Review scrollbar visibility against surrounding surfaces. |
 | <IxBadge type="label" label="Changed" variant="caution" icon={iconCode} /> | <IxLinkButton url="https://github.com/siemens/ix/blob/main/BREAKING_CHANGES/v6.md#changed-global-css-and-sass-entry-points" icon="external" aria-label="View code change" title="View code change">Code</IxLinkButton> | Changed scrollbar loading: foundation enables global scrollbars; use `disable-scrollbar` and the scoped scrollbar stylesheet for selected subtrees |
 
 </div>
@@ -1007,6 +1166,8 @@ The following tables combine component-specific code and Figma changes, with com
 
 | Type | Details | Description |
 | :--- | :--- | :--- |
+| <IxBadge type="label" label="Deprecated" variant="critical" outline icon={iconShapes} /> | <IxLinkButton url="https://www.figma.com/design/r2nqdNNXXZtPmWuVjIlM1Q/iX-Components?node-id=165976-9313" icon="external" aria-label="View design change" title="View design change">Figma</IxLinkButton> | Figma: Deprecated the previous typography styles. Migrate text layers to the Siemens Design Language styles using the provided mapping. |
+| <IxBadge type="label" label="Removed" variant="warning" outline icon={iconShapes} /> | <IxLinkButton url="https://www.figma.com/design/r2nqdNNXXZtPmWuVjIlM1Q/iX-Components?node-id=165976-9313" icon="external" aria-label="View design change" title="View design change">Figma</IxLinkButton> | Figma: Removed experimental typography styles and the old typography specification. Review affected text layers against the current styles. |
 | <IxBadge type="label" label="Changed" variant="caution" icon={iconCode} /> | <IxLinkButton url="https://github.com/siemens/ix/blob/main/BREAKING_CHANGES/v6.md#renamed-ix-typography-textcolor-values" icon="external" aria-label="View code change" title="View code change">Code</IxLinkButton> | Renamed `textColor` values and added semantic status colors; replaced inverse and contrast names without compatibility aliases |
 | <IxBadge type="label" label="Removed" variant="warning" icon={iconCode} /> | <IxLinkButton url="https://github.com/siemens/ix/blob/main/BREAKING_CHANGES/v6.md#changed-shadow-and-typography-tokens-to-contain-complete-box-shadow-and-font-values" icon="external" aria-label="View code change" title="View code change">Code</IxLinkButton> | Removed `label`, `label-xs`, `label-sm`, `label-lg`, `body-xs`, `display-xs`, and `display-sm` formats; select supported body, heading, or display roles |
 | <IxBadge type="label" label="Changed" variant="caution" icon={iconCode} /> | <IxLinkButton url="https://github.com/siemens/ix/blob/main/BREAKING_CHANGES/v6.md#removed-unsupported-typography-utility-classes" icon="external" aria-label="View code change" title="View code change">Code</IxLinkButton> | Removed matching unsupported utility classes and added paragraph typography roles |
