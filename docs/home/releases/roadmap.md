@@ -16,13 +16,13 @@ description: 'We’re constantly improving our design system for you by extendin
 
 **🔹 Release 6.0**
 
-- **Shared design foundation**: Adopted Siemens Design Language system tokens for colors, typography, sizing and effects, and renamed the Classic theme to Community.
-- **Consistent status and visuals**: Aligned status variants, colors and icons, introduced status stripes and updated affected components to 20px icons.
-- **New components**: Added [List](../../components/list) with keyboard navigation, selection and optional reordering, and [Info page](../../components/info-page) for informational page states.
-- **Flexible interactions**: Added responsive content-header actions, context-menu dropdown positioning and configurable dropdown keyboard navigation.
-- **Date, time and forms**: Improved display formats, locale support, confirmation flows, input clearing and validation.
-- **Accessibility and reliability**: Improved skip links, screen-reader labels, keyboard and focus handling, date/time input performance and framework integrations.
-- **Figma slots and layouts**: Extended native slots to more components and introduced new layout templates.
+- **Shared design foundation**: We adopted Siemens Design Language system tokens for colors, typography, sizing and effects, and renamed the Classic theme to Community.
+- **Consistent status and visuals**: We aligned status variants, colors and icons, introduced status stripes and updated affected components to 20px icons.
+- **New components**: We added [List](../../components/list) with keyboard navigation, selection and optional reordering, and [Info page](../../components/info-page) for informational page states.
+- **Flexible interactions**: We added responsive content-header actions, context-menu dropdown positioning and configurable dropdown keyboard navigation.
+- **Date, time and forms**: We improved display formats, locale support, confirmation flows, input clearing and validation.
+- **Accessibility and reliability**: We improved skip links, screen-reader labels, keyboard and focus handling, date/time input performance and framework integrations.
+- **Figma slots and layouts**: We extended native slots to more components and introduced new layout templates.
 
 See the [V6 migration guide](../migration/6_0_0/index.md) for breaking changes and the [GitHub releases page](https://github.com/siemens/ix/releases) for all changes.
 

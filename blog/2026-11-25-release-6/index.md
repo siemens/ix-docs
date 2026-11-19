@@ -19,7 +19,7 @@ Alongside this visual refresh, V6 introduces new components and improves everyda
 
 Version 6 continues our path toward closer alignment with Siemens Design Language. Building on the shared reference colors introduced in previous versions, it replaces legacy iX design tokens with Siemens Design Language system tokens.
 
-The updated foundation adopts **system tokens** and introduces the renamed **Community theme** which previously known as Classic theme. More modular stylesheets also give developers greater flexibility in how they integrate styles.
+The updated foundation adopts **system tokens** and introduces the renamed **Community theme**, which was previously known as the Classic theme. More modular stylesheets also give developers greater flexibility in how they integrate styles.
 
 Colors, typography and effects now draw on a shared foundation. The updated status variants make this connection tangible. Their colors and icons follow Siemens Design Language, bringing a shared visual vocabulary directly into the products.
 
