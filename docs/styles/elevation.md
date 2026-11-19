@@ -39,7 +39,7 @@ This model outlines the primary elevation levels for static UI elements:
 - **Usage:** Use `--si-sys-color-background-0` for the main canvas of your application, large sections, or the default background of a page.
 
 :::tip
-Visually separate large sections on the base layer by applying [borders](borders.md) (e.g. `--si-sys-color-border-4` or `--si-sys-color-border-3`). When using our components, we recommend using the available `outline` variants.
+Visually separate large sections on the base layer by applying [borders](borders.md), e.g. `--si-sys-color-border-4` for layout structure or `--si-sys-color-border-2` for interactive elements. When using our components, we recommend using the available `outline` variants.
 :::
 
 #### First-level containers
@@ -60,7 +60,7 @@ We don’t use shadows that are part of the primary layout flow e.g. [navigation
 
 ### Other `background-#` tokens
 
-We recommend to stick to the `--si-sys-color-background-0` and `--si-sys-color-background-1` model for primary background layering. `--si-sys-color-background-2` to `--si-sys-color-background-3` are preserved for specific component use cases and should not be used.
+We recommend to stick to the `--si-sys-color-background-0` and `--si-sys-color-background-1` model for primary background layering. The other base backgrounds are preserved for specific component use cases. In particular, `--si-sys-color-background-3` is intended for elevated overlay containers (e.g. menus, dropdowns, popovers, toasts), while `--si-sys-color-background-2` and `--si-sys-color-background-4` provide stronger contrast to highlight containers.
 
 ### Interaction states (hover & active)
 

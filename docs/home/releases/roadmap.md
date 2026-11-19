@@ -37,7 +37,7 @@ description: 'We’re constantly improving our design system for you by extendin
 
 - **Patterns**: We curate patterns as copy-paste code examples that show how multiple components work together in real UI scenarios. Patterns give users practical, ready-to-use starting points beyond components.
 - **Vertical navigation menu rework**: Our vertical navigation will change in alignment with other design systems at Siemens.
-- **Density options**: Density tokens allow for changing sizes and spacings of elements on the screen without creating different variants of components. They use the same mechanism as switching color modes or themes. To use density modes, all relevant dimensions of a component must use density tokens, e.g. for font size and line height, widths, heights, paddings and gaps.
+- **Density options**: [Sizing tokens](../../styles/sizing.md) allow for changing sizes and spacings of elements on the screen without creating different variants of components. They use the same mechanism as switching color modes or themes. To use density modes, all relevant dimensions of a component must use sizing tokens, e.g. for font size and line height, widths, heights, paddings and gaps.
 
 ### ⏳ Planned
 

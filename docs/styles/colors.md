@@ -31,10 +31,8 @@ appropriate value automatically.
 ## Usage guidance
 
 - **Background** tokens establish the application layers and interactive
-  surfaces. We also use them for icons that only enhance the visual design, e.g. icons in [message modals](../components/message-modal).
-- **Text** tokens provide foreground roles, including status and on-color
-  variants. Do not select a status color solely by appearance; verify the
-  required contrast in its intended context. We also use it for icons that convey meaning,e.g. icons in [chips](../components/chip).
+  surfaces, including icons that only enhance the visual design, e.g. icons in [message modals](../components/message-modal).
+- **Text** tokens provide foreground roles, including status, on-color variants and icons that convey meaning, e.g. icons in [chips](../components/chip). Do not select a status color solely by appearance; verify the required contrast in its intended context.
 - **Code** tokens provide syntax-highlighting roles.
 - **Data** tokens provide categorical, rating, and sequential visualization
   palettes. Preserve the documented sequence when assigning a series.
