@@ -57,7 +57,7 @@ V6 introduces the [**List**](/docs/components/list) component (`ix-list` and `ix
 
 Ghost, filled and outline variants help lists fit their surrounding surface. Optional checkboxes, item selection and drag-and-drop reordering support different workflows, with keyboard navigation and keyboard-based reordering built in.
 
-The new **Info page** component (`ix-info-page`) supports informational page states, helping teams communicate context at the page level.
+The new [**Info page**](/docs/components/info-page) component (`ix-info-page`) supports informational page states, helping teams communicate context at the page level.
 
 ## More control in date and time selection
 
