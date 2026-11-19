@@ -15,7 +15,7 @@ Alongside this visual refresh, V6 introduces new components and improves everyda
 
 ## One shared foundation
 
-![foundation](../2026-11-25-release-6/2611_blog_designlanguage.png)
+![Shared design foundation illustrated as stacked patterned layers](../2026-11-25-release-6/2611_blog_designlanguage.png)
 
 Version 6 continues our path toward closer alignment with Siemens Design Language. Building on the shared reference colors introduced in previous versions, it replaces legacy iX design tokens with Siemens Design Language system tokens.
 
@@ -25,7 +25,7 @@ Colors, typography, sizing and effects now draw on a shared foundation. The upda
 
 ## Recognizable status across the interface
 
-![status](../2026-11-25-release-6/2611_blog_statusvariants.png)
+![New status colors and variants](../2026-11-25-release-6/2611_blog_statusvariants.png)
 
 A status should not need a new interpretation every time it appears in a different component. V6 aligns status names, colors and icons and adds missing variants across more components.
 
