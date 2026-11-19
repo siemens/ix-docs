@@ -53,7 +53,7 @@ Application skip links, semantic headings and clearer screen-reader labels impro
 
 ![List and Info page components](../2026-11-25-release-6/2611_blog_newcomponents.png)
 
-V6 introduces the [**List**](/docs/components/list) component (`ix-list` and `ix-list-item`) for presenting related items in a scannable vertical layout. Items can combine icons, labels, descriptions, status badges and actions, or use custom content for layouts such as notifications and events.
+V6 introduces the [**List**](/docs/components/list) component (`ix-list` and `ix-list-item`) for presenting related items in a scannable vertical layout. Items can combine icons, labels, descriptions, status badges and actions, or use custom content for layouts such as notifications and events. In the long run, List is intended to replace the [Event list](/docs/components/event-list) component.
 
 Ghost, filled and outline variants help lists fit their surrounding surface. Optional checkboxes, item selection and drag-and-drop reordering support different workflows, with keyboard navigation and keyboard-based reordering built in.
 
