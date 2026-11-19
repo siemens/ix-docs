@@ -909,7 +909,7 @@ const sidebars: SidebarsConfig = {
               label: 'Code',
             },
             {
-              id: 'components/link-button/language',
+              id: 'components/link-button/writing',
               label: 'Writing',
             },
           ],
