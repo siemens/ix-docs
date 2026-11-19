@@ -15,7 +15,7 @@ Alongside this visual refresh, V6 introduces new components and improves everyda
 
 ## One shared foundation
 
-![Shared design foundation illustrated as stacked patterned layers](../2026-11-25-release-6/2611_blog_designlanguage.png)
+![Shared foundation styles for colors, typography and sizing](../2026-11-25-release-6/2611_blog_designlanguage.png)
 
 Version 6 continues our path toward closer alignment with Siemens Design Language. Building on the shared reference colors introduced in previous versions, it replaces legacy iX design tokens with Siemens Design Language system tokens.
 
