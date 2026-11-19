@@ -15,20 +15,83 @@ This guide summarizes the [V6 breaking changes](https://github.com/siemens/ix/bl
 
 Pay particular attention to **design tokens, status variants and icon sizing** when migrating.
 
-1. **Check requirements:** review the [framework and tooling requirements](#framework-and-tooling-requirements) for your application.
-2. **Update dependencies:** upgrade `@siemens/ix` and any framework wrappers to V6, and use `@siemens/ix-icons@4.0.0`. Only Stencil collection consumers need to install the [optional runtime peers](#optional-peer-dependencies) explicitly.
-3. **Replace legacy design tokens:** migrate custom styles to [Siemens Design Language tokens](#foundations), accounting for changed values and formats as well as names.
+1. **Check requirements:** review the [package requirements](#package-requirements) for your application.
+2. **Update dependencies:** upgrade `@siemens/ix` and any framework wrappers to `6.0.0`, and use `@siemens/ix-icons@4.0.0`. If your application uses `@siemens/ix-aggrid` or `@siemens/ix-echarts`, upgrade them to `@siemens/ix-aggrid@6.0.0` and `@siemens/ix-echarts@5.0.0` in the same install command. Both integration versions require `@siemens/ix@^6.0.0`; update these packages together to avoid npm peer-dependency conflicts. Only Stencil collection consumers need to install the [optional runtime peers](#optional-peer-dependencies) explicitly.
+3. **Replace legacy design tokens:** search all source files, including JavaScript and TypeScript as well as CSS and Sass, and migrate removed tokens to [Siemens Design Language tokens](#foundations), accounting for changed values and formats as well as names.
 4. **Preserve status meaning:** migrate [status variants](#status-variants) by semantic intent, not name alone. Existing names such as `warning` and `critical` now mean something different.
 5. **Update stylesheet imports:** use the supported [CSS and Sass entry points](#stylesheets-and-sass) and explicitly include any global styles you still need.
 6. **Review affected components:** apply the relevant [component migrations](#migration-by-component), check the [24px-to-20px icon change](#icon-size), and address any [wrapper-type and hydration changes](#wrapper-types-and-hydration) that affect your integration.
-7. **Build, run and test your application:** check affected workflows and visually review token values, status colors, typography and icon sizing.
+7. **Search, build, run and test your application:** [search for removed or renamed string values](#validate-string-values) before relying on a successful build, then check affected workflows and visually review token values, status colors, typography and icon sizing. Complete the [V6 migration validation checklist](https://github.com/siemens/ix/blob/main/BREAKING_CHANGES/v6.md#v6-migration-validation-checklist).
 8. **Migrate Figma files:** enable the Siemens Design Language token library, migrate colors, text and shadows using the [Foundations guidance](#foundations), and follow the component-specific migration guides for deprecated components.
+
+### Package requirements
+
+Update the packages your application uses together. Do not apply a blanket `@siemens/ix*` version: the ECharts integration has a different major version.
+
+<div class="table-full-width">
+
+| Package | Required version | Migration details |
+| :--- | :--- | :--- |
+| `@siemens/ix` | `6.0.0` | Upgrade core and framework wrappers together. |
+| `@siemens/ix-angular`, `@siemens/ix-react`, `@siemens/ix-vue` | `6.0.0` | Install the wrapper for your framework. |
+| `@siemens/ix-aggrid` | `6.0.0` | Requires iX `^6.0.0` and the AG Grid range below. |
+| `@siemens/ix-echarts` | `5.0.0` | Requires iX `^6.0.0` and ECharts `^6.1.0`. |
+| `@siemens/ix-icons` | `4.0.0` | Planned stable release for V6; required by core and framework wrappers. |
+| `echarts` | `^6.1.0` | [ECharts requirement](https://github.com/siemens/ix/blob/main/BREAKING_CHANGES/v6.md#echarts-requirement); [ECharts 6 upgrade guide](https://echarts.apache.org/handbook/en/basics/release-note/v6-upgrade-guide/). |
+| `ag-grid-community` | `^33`, `^34`, `^35`, or `^36` | Use a supported major with `@siemens/ix-aggrid`. |
+| `@angular/core`, `@angular/forms` | `>=21.2.25`; TypeScript `>=5.9 <6.1` for Angular 21 | [Angular requirement](https://github.com/siemens/ix/blob/main/BREAKING_CHANGES/v6.md#angular-requirement). |
+| `vue` | `^3.5.0` | [Vue requirement](https://github.com/siemens/ix/blob/main/BREAKING_CHANGES/v6.md#vue-requirement). |
+
+</div>
+
+:::warning[Use compatible icons]
+
+`@siemens/ix-icons@3.x` still uses the legacy color-token lookup and can render incorrect icon colors without a build error. This guide targets the planned stable `@siemens/ix-icons@4.0.0` release.
+
+:::
+
+Check third-party ECharts wrappers and extensions as well as `echarts` itself. For example, `echarts-for-react@3.0.6` and `echarts-gl@2.1.0` declare ECharts 6 peer support; use these or newer compatible versions and verify their peer dependencies before upgrading.
+
+### Validate string values
+
+:::warning[Successful builds can miss removed values]
+
+Angular templates can still compile removed or renamed string attribute values with `ng build`, even with `strictTemplates`. Vue templates can also pass `vue-tsc` with these values. For example, `format="label-lg"` can pass both checks even though V6 removes that typography format. React/TSX type checking rejects this value, but it does not detect changed meanings of still-valid values.
+
+Search your source for **each old value** listed in the breaking changes, including template attributes, property bindings, and values supplied through application code. Do not treat a successful build or type check as confirmation that these values have been migrated.
+
+:::
+
+Run these example searches from your application root (replace `src` with your source directories):
+
+```bash
+# Removed typography formats
+rg -n "['\"](label(-xs|-sm|-lg)?|body-xs|display-(xs|sm))['\"]" src
+
+# Renamed or removed typography textColor values
+rg -n "['\"](alarm(-contrast)?|info-contrast|success-contrast|neutral-contrast|primary-contrast|warning-contrast|critical-contrast|std|contrast|soft|weak|inv-(contrast|soft|std|weak))['\"]" src
+
+# Status values to review against each component's mapping
+rg -n "['\"](primary|info|alarm|default|warning|critical)['\"]" src
+```
+
+These are starting points, not an exhaustive migration check. They match quoted literals, including unrelated uses; also inspect computed values and search for the old values in every applicable component migration. Review each match in context rather than replacing globally. In particular, `warning` and `critical` remain valid but change meaning; follow the [status mapping](#status-variants) to preserve intent.
 
 ## Migration by topic
 
 ### Foundations
 
 V6 replaces legacy design tokens with **Siemens Design Language** system tokens. Updating token names alone may not preserve the previous appearance: token values and formats have changed, some tokens and typography classes have been removed, and affected components now use 20px icons instead of 24px. Use the sections below to update custom styles and review sizing changes.
+
+Search **all source files**, not only stylesheets, for legacy `--theme-*` tokens. Include JavaScript/TypeScript strings used in chart configurations, inline styles, and calls such as `getComputedStyle().getPropertyValue()` and `style.setProperty()`. For example, run the following from your application root, replacing `src` with all of your source directories:
+
+```bash
+rg -n -- '--theme-' src
+```
+
+Review each match against the token mappings rather than replacing the prefix globally; the five timing compatibility variables remain supported. Also inspect code that constructs token names dynamically, which this literal search may not find.
+
+Use the [V6 component-token migration table](https://github.com/siemens/ix/blob/main/BREAKING_CHANGES/v6_components_tokens.md) to replace removed component tokens, and review entries without a direct replacement.
 
 [Replaced legacy tokens with Siemens Design Language tokens](https://github.com/siemens/ix/blob/main/BREAKING_CHANGES/v6.md#replaced-legacy-tokens-with-siemens-design-language-tokens)
 
@@ -117,6 +180,10 @@ Affected card components and blinds now indicate status with a colored stripe in
 
 The default icon size changes from 24px to 20px in affected components. Review alignment and spacing, especially in layouts with custom sizing. This does not necessarily reduce the size of the interactive area. See [Icon size](#icon-size) for the affected components.
 
+#### Link button icons
+
+Link button icons are now opt-in: `icon` defaults to `none`, so existing link buttons no longer show a chevron. Set `icon="internal"` to retain the previous leading chevron. The new `iconPosition` property defaults to `start`; use `end` to place the icon after the label. See [Link button](#link-button) for the component migration.
+
 #### Information icon
 
 The information status icon now has a square shape to help distinguish it from the alarm icon. Review any custom status icons for consistency.
@@ -136,7 +203,52 @@ Date and time components now show Confirm and Cancel buttons when confirmation i
 
 ### Stylesheets and Sass
 
-V6 separates component foundation styles from optional global and legacy styles, giving applications more control over document-wide styling. Update CSS and Sass imports to the supported public entry points, explicitly include any global styles you still need, and replace removed Sass modules, mixins, and shadow aliases.
+V6 separates component foundation styles from optional global and legacy styles, giving applications more control over document-wide styling. The default bundle (`@siemens/ix/css/default.css`, also available at `@siemens/ix/dist/siemens-ix/siemens-ix.css`) still includes the Community theme, foundation, typography utilities and native heading/link styling, table utilities, and button groups. **Native link styles and supported typography utilities have not been dropped from the default bundle.**
+
+#### V5 stylesheet import replacements
+
+V6 removes `siemens-ix-core.css` and `siemens-ix-standalone.css` without compatibility aliases. Search stylesheet imports and build configuration (such as Angular's `styles` array) for these paths:
+
+| V5 import | V6 import(s), in order |
+| :--- | :--- |
+| `@siemens/ix/dist/siemens-ix/siemens-ix.css` | `@siemens/ix/css/default.css` + `@siemens/ix/css/legacy.css` to retain legacy/global styles |
+| `@siemens/ix/dist/siemens-ix/siemens-ix-core.css` | `@siemens/ix/css/default.css` + `@siemens/ix/css/legacy.css` for the bundled Community theme; see the theme-free alternative below |
+| `@siemens/ix/dist/siemens-ix/siemens-ix-standalone.css` | `@siemens/ix/css/foundation.css` + `@siemens/ix/css/base.css`; retain a separately selected theme |
+| `@siemens/ix/dist/siemens-ix/theme/classic-dark.css` | `@siemens/ix/css/theme/community-dark.css` |
+| `@siemens/ix/dist/siemens-ix/theme/classic-light.css` | `@siemens/ix/css/theme/community-light.css` |
+
+V5 core and standalone did not bundle a theme. If you select a theme separately, replace the core bundle with `foundation.css`, your selected theme, then `legacy.css` instead of adding the combined Community theme through `default.css`. For standalone, import foundation before your selected theme; `base.css` restores the previous body margin reset and theme text color. See the [Classic-to-Community migration](https://github.com/siemens/ix/blob/main/BREAKING_CHANGES/v6.md#renamed-the-classic-theme-to-community) for theme-switcher and Sass changes.
+
+The original `siemens-ix.css` distribution path remains available, but its contents have changed. Add `legacy.css` only if you need the omitted styles; the supported default utilities do not require it.
+
+#### Restore omitted global styles
+
+The following styles are no longer included by default. Import the corresponding stylesheet after `default.css` if your application relies on them:
+
+| Styles omitted from the default bundle | Import to restore them |
+| :--- | :--- |
+| Native HTML normalization and universal `box-sizing: border-box` | `@siemens/ix/css/reset.css` |
+| Body margin reset and additional `[data-ix-theme]` text color | `@siemens/ix/css/base.css` |
+| Legacy native form-control styles | `@siemens/ix/css/legacy.css` (also includes reset, base, and utilities) |
+| Input-group helpers such as `.input-group-label` | `@siemens/ix/css/utilities.css` |
+
+To include the legacy styles together while migrating:
+
+```css
+@import '@siemens/ix/css/default.css';
+@import '@siemens/ix/css/legacy.css';
+```
+
+If you retain the existing distribution import, add the same legacy bundle:
+
+```css
+@import '@siemens/ix/dist/siemens-ix/siemens-ix.css';
+@import '@siemens/ix/css/legacy.css';
+```
+
+For applications using only `foundation.css` and a separately selected theme, import `@siemens/ix/css/utilities.css` to add native link styling and the supported utilities. No import restores removed typography selectors or shadow aliases; migrate those usages to their documented replacements.
+
+See [Global CSS and Sass entry points](https://github.com/siemens/ix/blob/main/BREAKING_CHANGES/v6.md#changed-global-css-and-sass-entry-points) for the complete bundle contents and composition examples. Update CSS and Sass imports to the supported public entry points and replace removed Sass modules, mixins, and shadow aliases.
 
 - [Changed global CSS and Sass entry points](https://github.com/siemens/ix/blob/main/BREAKING_CHANGES/v6.md#changed-global-css-and-sass-entry-points)
 - [Removed legacy Sass modules](https://github.com/siemens/ix/blob/main/BREAKING_CHANGES/v6.md#removed-legacy-sass-modules)
@@ -167,7 +279,7 @@ Standard/root distribution, the custom-elements entry point `@siemens/ix/compone
 
 :::warning
 
-`@siemens/ix-icons` remains a required peer for all consumers. For the V6 release, use the stable `@siemens/ix-icons@4.0.0`; version 3.x still uses the legacy color-token lookup and is not compatible with the new system-token names.
+`@siemens/ix-icons` remains a required peer for all consumers. For V6, use the planned stable `@siemens/ix-icons@4.0.0`, as listed in [Package requirements](#package-requirements); version 3.x still uses the legacy color-token lookup and is not compatible with the new system-token names.
 
 :::
 
@@ -195,15 +307,7 @@ yarn add @floating-ui/dom @siemens/ix-icons@4.0.0 @stencil/core luxon
 
 #### Framework and tooling requirements
 
-<div class="table-full-width">
-
-| Package | Supported version | Migration details |
-| :--- | :--- | :--- |
-| `vue` | `^3.5.0` | [Vue requirement](https://github.com/siemens/ix/blob/main/BREAKING_CHANGES/v6.md#vue-requirement) |
-| `@angular/core`, `@angular/forms` | `>=21.2.25`; TypeScript `>=5.9 <6.1` for Angular 21 | [Angular requirement](https://github.com/siemens/ix/blob/main/BREAKING_CHANGES/v6.md#angular-requirement) |
-| `echarts` | `^6.1.0` | [ECharts requirement](https://github.com/siemens/ix/blob/main/BREAKING_CHANGES/v6.md#echarts-requirement) |
-
-</div>
+See [Package requirements](#package-requirements) for framework versions, chart and grid dependencies, and third-party ECharts compatibility checks.
 
 #### Wrapper types and hydration
 
@@ -890,6 +994,7 @@ The following tables combine component-specific code and Figma changes, with com
 
 | Type | Details | Description |
 | :--- | :--- | :--- |
+| <IxBadge type="label" label="Changed" variant="caution" icon={iconCode} /> | <IxLinkButton url="https://github.com/siemens/ix/blob/main/BREAKING_CHANGES/v6.md#made-ix-link-button-icons-opt-in" icon="external" aria-label="View code change" title="View code change">Code</IxLinkButton> | Icons are now opt-in (`icon` defaults to `none`), so existing link buttons lose their chevron. Set `icon="internal"` to retain it; `iconPosition` defaults to `start`, preserving the previous placement, or use `end` to place the icon after the label. |
 | <IxBadge type="label" label="Added" variant="success" outline icon={iconShapes} /> | <IxLinkButton url="https://www.figma.com/design/r2nqdNNXXZtPmWuVjIlM1Q/iX-Components?node-id=1432-40622" icon="external" aria-label="View design change" title="View design change">Figma</IxLinkButton> | Figma: Added a replacement link button component with position and icon options. Review these settings when migrating instances. |
 | <IxBadge type="label" label="Deprecated" variant="critical" outline icon={iconShapes} /> | <IxLinkButton url="https://www.figma.com/design/r2nqdNNXXZtPmWuVjIlM1Q/iX-Components?node-id=1432-40622&t=uyzhGeD7C5A58xnU-4" icon="external" aria-label="View design change" title="View design change">Figma</IxLinkButton> | Figma: Deprecated the previous link button component. Follow the migration prompt in Figma to migrate to the new link button component. |
 
