@@ -21,7 +21,7 @@ Version 6 continues our path toward closer alignment with Siemens Design Languag
 
 The updated foundation adopts **system tokens** and introduces the renamed **Community theme**, which was previously known as the Classic theme. More modular stylesheets also give developers greater flexibility in how they integrate styles.
 
-Colors, typography and effects now draw on a shared foundation. The updated status variants make this connection tangible. Their colors and icons follow Siemens Design Language, bringing a shared visual vocabulary directly into the products.
+Colors, typography, sizing and effects now draw on a shared foundation. The updated status variants make this connection tangible. Their colors and icons follow Siemens Design Language, bringing a shared visual vocabulary directly into the products.
 
 ## Recognizable status across the interface
 
