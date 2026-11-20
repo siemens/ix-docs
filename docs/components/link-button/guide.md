@@ -36,6 +36,7 @@ Use inline [hyperlinks](https://developer.mozilla.org/de/docs/Web/HTML/Reference
     - **File**: Use for links to any type of file, usually opened in a new tab.
     - **Action**: Use for navigation to a next step in a task.
 - **Position:** Place the icon before (`start`) or after (`end`) the label.
+
 ![Options](https://www.figma.com/design/wEptRgAezDU1z80Cn3eZ0o/iX-Documentation-illustrations?node-id=8685-960&t=26bNTa4vYaKevea2-4)
 
 ## Behavior in context
