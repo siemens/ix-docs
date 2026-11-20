@@ -60,7 +60,7 @@ We don’t use shadows that are part of the primary layout flow e.g. [navigation
 
 ### Other `background-#` tokens
 
-We recommend to stick to the `--si-sys-color-background-0` and `--si-sys-color-background-1` model for primary background layering. The other base backgrounds are preserved for specific component use cases. In particular, `--si-sys-color-background-3` is intended for elevated overlay containers (e.g. menus, dropdowns, popovers, toasts), while `--si-sys-color-background-2` and `--si-sys-color-background-4` provide stronger contrast to highlight containers.
+We recommend using the `--si-sys-color-background-0` and `--si-sys-color-background-1` model for primary background layering. The other base backgrounds are preserved for specific component use cases. In particular, `--si-sys-color-background-3` is intended for elevated overlay containers (e.g. menus, dropdowns, popovers, toasts), while `--si-sys-color-background-2` and `--si-sys-color-background-4` provide stronger contrast to highlight containers.
 
 ### Interaction states (hover & active)
 
