@@ -105,6 +105,12 @@ Use the [V6 component-token migration table](https://github.com/siemens/ix/blob/
 - [Removed deprecated component tokens](https://github.com/siemens/ix/blob/main/BREAKING_CHANGES/v6.md#removed-deprecated-component-tokens)
 - [Removed automatic token prefixing from ECharts computed CSS properties](https://github.com/siemens/ix/blob/main/BREAKING_CHANGES/v6.md#removed-automatic-token-prefixing-from-echarts-computed-css-properties)
 
+#### Component CSS custom properties
+
+Separately from replacing legacy `--theme-*` tokens, migrate component CSS custom-property overrides to the naming scheme `--ix-<component>[-<part>]--<property>[--<modifier>...]`. Modifiers such as variant, status, size and state now follow the property name. For example, replace `--ix-button-primary--background--hover` with `--ix-button--background--primary--hover`, and `--ix-badge-max-width` with `--ix-badge--max-width`.
+
+Review the [component CSS custom-property naming migration](https://github.com/siemens/ix/blob/main/BREAKING_CHANGES/v6.md#changed-component-css-custom-property-naming) for modifier ordering, the other badge property renames and removed properties. Updating system-token references alone does not migrate these overrides.
+
 #### Typography
 
 Typography has been aligned with the Siemens Design Language, adding Siemens Font V7 and updated typography tokens and styles. The new font can introduce a 1px difference in text height, so review affected layouts and vertical alignment when migrating.
@@ -154,6 +160,8 @@ V6 renames status variants, adds missing variants and aligns their colors and ic
 | N/A          | Critical      | <IxBadge type="label" label="Critical" variant="critical" icon={iconWarningOctagon} />     |
 
 </div>
+
+Not every component supports every target status in this mapping. In particular, [progress indicators](#progress-indicator) do not support `caution`, so the `warning` to `caution` mapping cannot be applied to them.
 
 - [Changed card-family status variants, `outline`, and `clickable`](https://github.com/siemens/ix/blob/main/BREAKING_CHANGES/v6.md#changed-card-family-status-variants-outline-and-clickable)
 - [Changed `ix-blind` status variants and `outline`](https://github.com/siemens/ix/blob/main/BREAKING_CHANGES/v6.md#changed-ix-blind-status-variants-and-outline)
@@ -336,7 +344,7 @@ The following tables combine component-specific code and Figma changes, with com
 
 #### App menu
 
-![App menu before and after: the expanded menu item is narrower, with a smaller home icon; the active stripe and count badge remain.](https://www.figma.com/design/wEptRgAezDU1z80Cn3eZ0o/iX-Documentation-illustrations?node-id=8745-957&t=hNTaZnRWqmj2iF50-4)
+![App menu before and after](https://www.figma.com/design/wEptRgAezDU1z80Cn3eZ0o/iX-Documentation-illustrations?node-id=8745-957&t=hNTaZnRWqmj2iF50-4)
 
 <div class="table-full-width table-migration-changelog">
 
@@ -349,7 +357,7 @@ The following tables combine component-specific code and Figma changes, with com
 
 #### Application content
 
-![Application content before and after: beneath the content header, the Swap Instance placeholder is replaced by a native Figma slot marked with a plus.](https://www.figma.com/design/wEptRgAezDU1z80Cn3eZ0o/iX-Documentation-illustrations?node-id=8745-1897)
+![Application content before and after](https://www.figma.com/design/wEptRgAezDU1z80Cn3eZ0o/iX-Documentation-illustrations?node-id=8745-1897)
 
 <div class="table-full-width table-migration-changelog">
 
@@ -361,7 +369,7 @@ The following tables combine component-specific code and Figma changes, with com
 
 #### Application
 
-![Application before and after: the header and side navigation remain, while the content area replaces its Swap Instance placeholder with a native Figma slot marked with a plus.](https://www.figma.com/design/wEptRgAezDU1z80Cn3eZ0o/iX-Documentation-illustrations?node-id=8746-2442)
+![Application before and after](https://www.figma.com/design/wEptRgAezDU1z80Cn3eZ0o/iX-Documentation-illustrations?node-id=8746-2442)
 
 <div class="table-full-width table-migration-changelog">
 
@@ -374,7 +382,7 @@ The following tables combine component-specific code and Figma changes, with com
 
 #### Application header
 
-![Application header before and after: the app switcher, Siemens logo and avatar retain their order; the example label changes from Header label to App name and the avatar becomes lighter.](https://www.figma.com/design/wEptRgAezDU1z80Cn3eZ0o/iX-Documentation-illustrations?node-id=8748-897)
+![Application header before and after](https://www.figma.com/design/wEptRgAezDU1z80Cn3eZ0o/iX-Documentation-illustrations?node-id=8748-897)
 
 <div class="table-full-width table-migration-changelog">
 
@@ -408,7 +416,7 @@ The following tables combine component-specific code and Figma changes, with com
 
 #### Breadcrumb
 
-![Breadcrumb before and after: MyProject, Logics and Input validation remain separated by chevrons, with revised icon proportions and spacing.](https://www.figma.com/design/wEptRgAezDU1z80Cn3eZ0o/iX-Documentation-illustrations?node-id=8749-6381)
+![Breadcrumb before and after](https://www.figma.com/design/wEptRgAezDU1z80Cn3eZ0o/iX-Documentation-illustrations?node-id=8749-6381)
 
 <div class="table-full-width table-migration-changelog">
 
@@ -420,7 +428,7 @@ The following tables combine component-specific code and Figma changes, with com
 
 #### Group
 
-![Group before and after: beneath the expanded header and item rows, the Swap Instance content placeholder becomes a native Figma slot marked with a plus.](https://www.figma.com/design/wEptRgAezDU1z80Cn3eZ0o/iX-Documentation-illustrations?node-id=8749-7076)
+![Group before and after](https://www.figma.com/design/wEptRgAezDU1z80Cn3eZ0o/iX-Documentation-illustrations?node-id=8749-7076)
 
 <div class="table-full-width table-migration-changelog">
 
@@ -435,7 +443,7 @@ The following tables combine component-specific code and Figma changes, with com
 
 #### Tree
 
-![Tree before and after: the expanded node hierarchy is unchanged, while folder and document icons become smaller and checkbox outlines become dimmer.](https://www.figma.com/design/wEptRgAezDU1z80Cn3eZ0o/iX-Documentation-illustrations?node-id=8772-14177)
+![Tree before and after](https://www.figma.com/design/wEptRgAezDU1z80Cn3eZ0o/iX-Documentation-illustrations?node-id=8772-14177)
 
 <div class="table-full-width table-migration-changelog">
 
@@ -448,7 +456,7 @@ The following tables combine component-specific code and Figma changes, with com
 
 #### Workflow
 
-![Workflow before and after: the vertical sequence and highlighted warning step remain, with smaller status icons beside the step labels.](https://www.figma.com/design/wEptRgAezDU1z80Cn3eZ0o/iX-Documentation-illustrations?node-id=8780-29527)
+![Workflow before and after](https://www.figma.com/design/wEptRgAezDU1z80Cn3eZ0o/iX-Documentation-illustrations?node-id=8780-29527)
 
 <div class="table-full-width table-migration-changelog">
 
@@ -460,7 +468,7 @@ The following tables combine component-specific code and Figma changes, with com
 
 #### Tabs
 
-![Tabs before and after: two icon-labeled tabs retain an underline beneath the first, active tab, with revised icon proportions and label spacing.](https://www.figma.com/design/wEptRgAezDU1z80Cn3eZ0o/iX-Documentation-illustrations?node-id=8805-37439)
+![Tabs before and after](https://www.figma.com/design/wEptRgAezDU1z80Cn3eZ0o/iX-Documentation-illustrations?node-id=8805-37439)
 
 <div class="table-full-width table-migration-changelog">
 
@@ -474,7 +482,7 @@ The following tables combine component-specific code and Figma changes, with com
 
 #### Action card
 
-![Action card before and after: a fully green success card with dark text becomes a dark card with a thin green top stripe, green status icon and light text.](https://www.figma.com/design/wEptRgAezDU1z80Cn3eZ0o/iX-Documentation-illustrations?node-id=8805-40241)
+![Action card before and after](https://www.figma.com/design/wEptRgAezDU1z80Cn3eZ0o/iX-Documentation-illustrations?node-id=8805-40241)
 
 <div class="table-full-width table-migration-changelog">
 
@@ -487,7 +495,7 @@ The following tables combine component-specific code and Figma changes, with com
 
 #### Blind
 
-![Blind before and after: the yellow Warning header becomes a dark Caution header with a yellow left stripe; the Swap Instance content placeholder becomes a native Figma slot.](https://www.figma.com/design/wEptRgAezDU1z80Cn3eZ0o/iX-Documentation-illustrations?node-id=8805-41337)
+![Blind before and after](https://www.figma.com/design/wEptRgAezDU1z80Cn3eZ0o/iX-Documentation-illustrations?node-id=8805-41337)
 
 <div class="table-full-width table-migration-changelog">
 
@@ -503,7 +511,7 @@ The following tables combine component-specific code and Figma changes, with com
 
 #### Card
 
-![Card before and after: the full orange status fill is replaced by a thin orange top stripe above a dark content area.](https://www.figma.com/design/wEptRgAezDU1z80Cn3eZ0o/iX-Documentation-illustrations?node-id=8805-43085)
+![Card before and after](https://www.figma.com/design/wEptRgAezDU1z80Cn3eZ0o/iX-Documentation-illustrations?node-id=8805-43085)
 
 <div class="table-full-width table-migration-changelog">
 
@@ -526,7 +534,7 @@ The following tables combine component-specific code and Figma changes, with com
 
 #### Card list
 
-![Card list before and after: the header keeps its expand chevron, title and Show all link, while the chevron and title icon become smaller.](https://www.figma.com/design/wEptRgAezDU1z80Cn3eZ0o/iX-Documentation-illustrations?node-id=8805-43600)
+![Card list before and after](https://www.figma.com/design/wEptRgAezDU1z80Cn3eZ0o/iX-Documentation-illustrations?node-id=8805-43600)
 
 <div class="table-full-width table-migration-changelog">
 
@@ -549,7 +557,7 @@ The following tables combine component-specific code and Figma changes, with com
 
 #### Event list item
 
-![Event list item before and after: the orange-striped High temperature item changes its label from Critical to Warning and uses a smaller triangular status icon.](https://www.figma.com/design/wEptRgAezDU1z80Cn3eZ0o/iX-Documentation-illustrations?node-id=8807-43948)
+![Event list item before and after](https://www.figma.com/design/wEptRgAezDU1z80Cn3eZ0o/iX-Documentation-illustrations?node-id=8807-43948)
 
 <div class="table-full-width table-migration-changelog">
 
@@ -562,7 +570,7 @@ The following tables combine component-specific code and Figma changes, with com
 
 #### Flip tile
 
-![Flip tile before and after: the Swap Instance content placeholder becomes a native Figma slot; the blue information footer replaces its circular information icon with a square one.](https://www.figma.com/design/wEptRgAezDU1z80Cn3eZ0o/iX-Documentation-illustrations?node-id=8819-45881)
+![Flip tile before and after](https://www.figma.com/design/wEptRgAezDU1z80Cn3eZ0o/iX-Documentation-illustrations?node-id=8819-45881)
 
 <div class="table-full-width table-migration-changelog">
 
@@ -575,7 +583,7 @@ The following tables combine component-specific code and Figma changes, with com
 
 #### Modal
 
-![Modal before and after: the circular information icon becomes square, the surface becomes lighter, and the Swap Instance content placeholder becomes a native Figma slot above Cancel and OK.](https://www.figma.com/design/wEptRgAezDU1z80Cn3eZ0o/iX-Documentation-illustrations?node-id=8819-46348)
+![Modal before and after](https://www.figma.com/design/wEptRgAezDU1z80Cn3eZ0o/iX-Documentation-illustrations?node-id=8819-46348)
 
 <div class="table-full-width table-migration-changelog">
 
@@ -592,7 +600,7 @@ The following tables combine component-specific code and Figma changes, with com
 
 #### Pane
 
-![Pane before and after: the Swap Instance body placeholder becomes a native Figma slot, and a separate slot appears at the right of the header.](https://www.figma.com/design/wEptRgAezDU1z80Cn3eZ0o/iX-Documentation-illustrations?node-id=8819-46643)
+![Pane before and after](https://www.figma.com/design/wEptRgAezDU1z80Cn3eZ0o/iX-Documentation-illustrations?node-id=8819-46643)
 
 <div class="table-full-width table-migration-changelog">
 
@@ -604,7 +612,7 @@ The following tables combine component-specific code and Figma changes, with com
 
 #### Push card
 
-![Push card before and after: the yellow-filled card becomes dark with a thin yellow top stripe, light text and a yellow diamond status icon instead of a black triangle.](https://www.figma.com/design/wEptRgAezDU1z80Cn3eZ0o/iX-Documentation-illustrations?node-id=8819-48550)
+![Push card before and after](https://www.figma.com/design/wEptRgAezDU1z80Cn3eZ0o/iX-Documentation-illustrations?node-id=8819-48550)
 
 <div class="table-full-width table-migration-changelog">
 
@@ -617,7 +625,7 @@ The following tables combine component-specific code and Figma changes, with com
 
 #### Tile
 
-![Tile before and after: the Swap Instance content placeholder is replaced by a native Figma slot marked with a plus.](https://www.figma.com/design/wEptRgAezDU1z80Cn3eZ0o/iX-Documentation-illustrations?node-id=8819-51207)
+![Tile before and after](https://www.figma.com/design/wEptRgAezDU1z80Cn3eZ0o/iX-Documentation-illustrations?node-id=8819-51207)
 
 <div class="table-full-width table-migration-changelog">
 
@@ -631,7 +639,7 @@ The following tables combine component-specific code and Figma changes, with com
 
 #### Checkbox
 
-![Checkbox before and after: checked and indeterminate fills change from mint green to cyan, corners become rounded, and the focused indeterminate checkbox gains a thicker blue outline.](https://www.figma.com/design/wEptRgAezDU1z80Cn3eZ0o/iX-Documentation-illustrations?node-id=8819-51315)
+![Checkbox before and after](https://www.figma.com/design/wEptRgAezDU1z80Cn3eZ0o/iX-Documentation-illustrations?node-id=8819-51315)
 
 <div class="table-full-width table-migration-changelog">
 
@@ -647,7 +655,7 @@ The following tables combine component-specific code and Figma changes, with com
 
 #### Custom field
 
-![Custom field before and after: the Swap Instance content placeholder becomes a native Figma slot; the warning text remains below it with an orange rather than yellow warning icon.](https://www.figma.com/design/wEptRgAezDU1z80Cn3eZ0o/iX-Documentation-illustrations?node-id=8819-51435)
+![Custom field before and after](https://www.figma.com/design/wEptRgAezDU1z80Cn3eZ0o/iX-Documentation-illustrations?node-id=8819-51435)
 
 <div class="table-full-width table-migration-changelog">
 
@@ -659,7 +667,7 @@ The following tables combine component-specific code and Figma changes, with com
 
 #### Date dropdown
 
-![Date dropdown before and after: Done is replaced by Cancel and Confirm, the calendar shadow is reduced, and the selected range uses a muted fill with a cyan end date instead of a continuous mint-green fill.](https://www.figma.com/design/wEptRgAezDU1z80Cn3eZ0o/iX-Documentation-illustrations?node-id=8819-51869)
+![Date dropdown before and after](https://www.figma.com/design/wEptRgAezDU1z80Cn3eZ0o/iX-Documentation-illustrations?node-id=8819-51869)
 
 <div class="table-full-width table-migration-changelog">
 
@@ -676,7 +684,7 @@ The following tables combine component-specific code and Figma changes, with com
 
 #### Date input
 
-![Date input before and after: the field background changes from dark blue to dark gray-purple, while the date, trailing calendar icon and format hint retain their positions.](https://www.figma.com/design/wEptRgAezDU1z80Cn3eZ0o/iX-Documentation-illustrations?node-id=8819-54637)
+![Date input before and after](https://www.figma.com/design/wEptRgAezDU1z80Cn3eZ0o/iX-Documentation-illustrations?node-id=8819-54637)
 
 <div class="table-full-width table-migration-changelog">
 
@@ -691,7 +699,7 @@ The following tables combine component-specific code and Figma changes, with com
 
 #### Date picker
 
-![Date picker before and after: Done becomes Cancel and Confirm, the surface shadow is reduced, and the selected range changes from mint green to a muted fill with a cyan end date.](https://www.figma.com/design/wEptRgAezDU1z80Cn3eZ0o/iX-Documentation-illustrations?node-id=8819-61745)
+![Date picker before and after](https://www.figma.com/design/wEptRgAezDU1z80Cn3eZ0o/iX-Documentation-illustrations?node-id=8819-61745)
 
 <div class="table-full-width table-migration-changelog">
 
@@ -705,7 +713,7 @@ The following tables combine component-specific code and Figma changes, with com
 
 #### Date time input
 
-![Date-time input before and after: the dark-blue field becomes dark gray-purple; the combined date and time, trailing calendar icon and helper text remain in place.](https://www.figma.com/design/wEptRgAezDU1z80Cn3eZ0o/iX-Documentation-illustrations?node-id=8819-62987)
+![Date-time input before and after](https://www.figma.com/design/wEptRgAezDU1z80Cn3eZ0o/iX-Documentation-illustrations?node-id=8819-62987)
 
 <div class="table-full-width table-migration-changelog">
 
@@ -721,7 +729,7 @@ The following tables combine component-specific code and Figma changes, with com
 
 #### Date time picker
 
-![Date-time picker before and after: selected date and time cells change from mint green to cyan, the surface becomes lighter with a reduced shadow, and Confirm remains below the calendar and time columns.](https://www.figma.com/design/wEptRgAezDU1z80Cn3eZ0o/iX-Documentation-illustrations?node-id=8819-70898)
+![Date-time picker before and after](https://www.figma.com/design/wEptRgAezDU1z80Cn3eZ0o/iX-Documentation-illustrations?node-id=8819-70898)
 
 <div class="table-full-width table-migration-changelog">
 
@@ -736,7 +744,7 @@ The following tables combine component-specific code and Figma changes, with com
 
 #### Expanding search
 
-![Expanding search before and after: the focused field changes from dark blue with thin outlines to dark gray-purple with a thicker blue focus outline.](https://www.figma.com/design/wEptRgAezDU1z80Cn3eZ0o/iX-Documentation-illustrations?node-id=8821-5756)
+![Expanding search before and after](https://www.figma.com/design/wEptRgAezDU1z80Cn3eZ0o/iX-Documentation-illustrations?node-id=8821-5756)
 
 <div class="table-full-width table-migration-changelog">
 
@@ -749,7 +757,7 @@ The following tables combine component-specific code and Figma changes, with com
 
 #### Input (number)
 
-![Number input before and after: the value changes from right-aligned to left-aligned, the field changes from dark blue to dark gray-purple, and the minus and plus controls remain on the right.](https://www.figma.com/design/wEptRgAezDU1z80Cn3eZ0o/iX-Documentation-illustrations?node-id=8821-9397)
+![Number input before and after](https://www.figma.com/design/wEptRgAezDU1z80Cn3eZ0o/iX-Documentation-illustrations?node-id=8821-9397)
 
 <div class="table-full-width table-migration-changelog">
 
@@ -763,7 +771,7 @@ The following tables combine component-specific code and Figma changes, with com
 
 #### Input (text)
 
-![Text input before and after: the dark-blue field becomes dark gray-purple and its trailing clear icon becomes smaller; the label and helper text remain above and below.](https://www.figma.com/design/wEptRgAezDU1z80Cn3eZ0o/iX-Documentation-illustrations?node-id=8821-16095)
+![Text input before and after](https://www.figma.com/design/wEptRgAezDU1z80Cn3eZ0o/iX-Documentation-illustrations?node-id=8821-16095)
 
 <div class="table-full-width table-migration-changelog">
 
@@ -778,7 +786,7 @@ The following tables combine component-specific code and Figma changes, with com
 
 #### Radio
 
-![Radio buttons before and after: the selected fill changes from mint green to cyan, the unselected outline becomes dimmer, and the focused option gains a thicker blue outer ring.](https://www.figma.com/design/wEptRgAezDU1z80Cn3eZ0o/iX-Documentation-illustrations?node-id=8821-16249)
+![Radio buttons before and after](https://www.figma.com/design/wEptRgAezDU1z80Cn3eZ0o/iX-Documentation-illustrations?node-id=8821-16249)
 
 <div class="table-full-width table-migration-changelog">
 
@@ -802,7 +810,7 @@ The following tables combine component-specific code and Figma changes, with com
 
 #### Select
 
-![Select before and after: the field background changes from dark blue to dark gray-purple and the trailing downward chevron becomes smaller.](https://www.figma.com/design/wEptRgAezDU1z80Cn3eZ0o/iX-Documentation-illustrations?node-id=8821-19049)
+![Select before and after](https://www.figma.com/design/wEptRgAezDU1z80Cn3eZ0o/iX-Documentation-illustrations?node-id=8821-19049)
 
 <div class="table-full-width table-migration-changelog">
 
@@ -815,7 +823,7 @@ The following tables combine component-specific code and Figma changes, with com
 
 #### Slider
 
-![Slider before and after: the thumb becomes larger, the active track changes from mint green to cyan, and the remaining tick marks become dimmer.](https://www.figma.com/design/wEptRgAezDU1z80Cn3eZ0o/iX-Documentation-illustrations?node-id=8821-25154)
+![Slider before and after](https://www.figma.com/design/wEptRgAezDU1z80Cn3eZ0o/iX-Documentation-illustrations?node-id=8821-25154)
 
 <div class="table-full-width table-migration-changelog">
 
@@ -827,7 +835,7 @@ The following tables combine component-specific code and Figma changes, with com
 
 #### Textarea
 
-![Textarea before and after: the example field becomes wider and changes from dark blue to dark gray-purple; the label, helper text, character count and resize handle remain.](https://www.figma.com/design/wEptRgAezDU1z80Cn3eZ0o/iX-Documentation-illustrations?node-id=8821-33194)
+![Textarea before and after](https://www.figma.com/design/wEptRgAezDU1z80Cn3eZ0o/iX-Documentation-illustrations?node-id=8821-33194)
 
 <div class="table-full-width table-migration-changelog">
 
@@ -840,7 +848,7 @@ The following tables combine component-specific code and Figma changes, with com
 
 #### Time input
 
-![Time input before and after: the dark-blue field becomes dark gray-purple, while the time value and trailing clock icon retain their positions.](https://www.figma.com/design/wEptRgAezDU1z80Cn3eZ0o/iX-Documentation-illustrations?node-id=8821-34907)
+![Time input before and after](https://www.figma.com/design/wEptRgAezDU1z80Cn3eZ0o/iX-Documentation-illustrations?node-id=8821-34907)
 
 <div class="table-full-width table-migration-changelog">
 
@@ -856,7 +864,7 @@ The following tables combine component-specific code and Figma changes, with com
 
 #### Time picker
 
-![Time picker before and after: the surface becomes lighter with a reduced shadow, selected time cells change from mint green to cyan, and Confirm remains beneath the time columns.](https://www.figma.com/design/wEptRgAezDU1z80Cn3eZ0o/iX-Documentation-illustrations?node-id=8821-42444)
+![Time picker before and after](https://www.figma.com/design/wEptRgAezDU1z80Cn3eZ0o/iX-Documentation-illustrations?node-id=8821-42444)
 
 <div class="table-full-width table-migration-changelog">
 
@@ -872,7 +880,7 @@ The following tables combine component-specific code and Figma changes, with com
 
 #### Toggle
 
-![Toggle before and after: the off state changes from a gray-filled track with a dark thumb to a dark outlined track with a light thumb; the on-state track changes from mint green to cyan.](https://www.figma.com/design/wEptRgAezDU1z80Cn3eZ0o/iX-Documentation-illustrations?node-id=8821-42803)
+![Toggle before and after](https://www.figma.com/design/wEptRgAezDU1z80Cn3eZ0o/iX-Documentation-illustrations?node-id=8821-42803)
 
 <div class="table-full-width table-migration-changelog">
 
@@ -885,7 +893,7 @@ The following tables combine component-specific code and Figma changes, with com
 
 #### Upload
 
-![Upload before and after: the success message and dashed drop-zone border remain, while the success icon becomes smaller and the button label changes from Upload file with an ellipsis to Upload file without one.](https://www.figma.com/design/wEptRgAezDU1z80Cn3eZ0o/iX-Documentation-illustrations?node-id=8821-43275)
+![Upload before and after](https://www.figma.com/design/wEptRgAezDU1z80Cn3eZ0o/iX-Documentation-illustrations?node-id=8821-43275)
 
 <div class="table-full-width table-migration-changelog">
 
@@ -900,7 +908,7 @@ The following tables combine component-specific code and Figma changes, with com
 
 #### Button
 
-![Buttons before and after: leading icons become smaller and the Subtle primary background changes from gray to dark, while the Primary button retains its cyan fill.](https://www.figma.com/design/wEptRgAezDU1z80Cn3eZ0o/iX-Documentation-illustrations?node-id=8821-43794)
+![Buttons before and after](https://www.figma.com/design/wEptRgAezDU1z80Cn3eZ0o/iX-Documentation-illustrations?node-id=8821-43794)
 
 <div class="table-full-width table-migration-changelog">
 
@@ -923,7 +931,7 @@ The following tables combine component-specific code and Figma changes, with com
 
 #### Chip
 
-![Chips before and after: the yellow Warning chip becomes Caution and the orange Critical chip becomes Warning, retaining their diamond and triangle status shapes respectively.](https://www.figma.com/design/wEptRgAezDU1z80Cn3eZ0o/iX-Documentation-illustrations?node-id=8821-43850)
+![Chips before and after](https://www.figma.com/design/wEptRgAezDU1z80Cn3eZ0o/iX-Documentation-illustrations?node-id=8821-43850)
 
 <div class="table-full-width table-migration-changelog">
 
@@ -937,7 +945,7 @@ The following tables combine component-specific code and Figma changes, with com
 
 #### Dropdown
 
-![Dropdown before and after: the menu surface becomes lighter, item icons become smaller, and Add item loses its trailing ellipsis; the item order and separators remain.](https://www.figma.com/design/wEptRgAezDU1z80Cn3eZ0o/iX-Documentation-illustrations?node-id=8821-45405)
+![Dropdown before and after](https://www.figma.com/design/wEptRgAezDU1z80Cn3eZ0o/iX-Documentation-illustrations?node-id=8821-45405)
 
 <div class="table-full-width table-migration-changelog">
 
@@ -950,7 +958,7 @@ The following tables combine component-specific code and Figma changes, with com
 
 #### Dropdown button
 
-![Dropdown buttons before and after: a red Danger example is added beside Default and Subtle, icons become smaller, and the Subtle background changes from gray to dark.](https://www.figma.com/design/wEptRgAezDU1z80Cn3eZ0o/iX-Documentation-illustrations?node-id=8821-46086)
+![Dropdown buttons before and after](https://www.figma.com/design/wEptRgAezDU1z80Cn3eZ0o/iX-Documentation-illustrations?node-id=8821-46086)
 
 <div class="table-full-width table-migration-changelog">
 
@@ -962,7 +970,7 @@ The following tables combine component-specific code and Figma changes, with com
 
 #### Icon button
 
-![Icon buttons before and after: the three size examples become four, including two large button examples with different icon sizes.](https://www.figma.com/design/wEptRgAezDU1z80Cn3eZ0o/iX-Documentation-illustrations?node-id=8821-47841)
+![Icon buttons before and after](https://www.figma.com/design/wEptRgAezDU1z80Cn3eZ0o/iX-Documentation-illustrations?node-id=8821-47841)
 
 <div class="table-full-width table-migration-changelog">
 
@@ -976,7 +984,7 @@ The following tables combine component-specific code and Figma changes, with com
 
 #### Icon toggle button
 
-![Icon toggle buttons before and after: four examples replace three, gray-filled backgrounds become dark, and the large examples show cyan and white icon treatments.](https://www.figma.com/design/wEptRgAezDU1z80Cn3eZ0o/iX-Documentation-illustrations?node-id=8821-48037)
+![Icon toggle buttons before and after](https://www.figma.com/design/wEptRgAezDU1z80Cn3eZ0o/iX-Documentation-illustrations?node-id=8821-48037)
 
 <div class="table-full-width table-migration-changelog">
 
@@ -988,13 +996,13 @@ The following tables combine component-specific code and Figma changes, with com
 
 #### Link button
 
-![Link button before and after: a link with a leading chevron is replaced by examples with no icon or with a trailing chevron, external-link, document or arrow icon.](https://www.figma.com/design/wEptRgAezDU1z80Cn3eZ0o/iX-Documentation-illustrations?node-id=8821-51542)
+![Link button before and after](https://www.figma.com/design/wEptRgAezDU1z80Cn3eZ0o/iX-Documentation-illustrations?node-id=8821-51542)
 
 <div class="table-full-width table-migration-changelog">
 
 | Type | Details | Description |
 | :--- | :--- | :--- |
-| <IxBadge type="label" label="Changed" variant="caution" icon={iconCode} /> | <IxLinkButton url="https://github.com/siemens/ix/blob/main/BREAKING_CHANGES/v6.md#made-ix-link-button-icons-opt-in" icon="external" aria-label="View code change" title="View code change">Code</IxLinkButton> | Icons are now opt-in (`icon` defaults to `none`), so existing link buttons lose their chevron. Set `icon="internal"` to retain it; `iconPosition` defaults to `start`, preserving the previous placement, or use `end` to place the icon after the label. |
+| <IxBadge type="label" label="Changed" variant="caution" icon={iconCode} /> | <IxLinkButton url="https://github.com/siemens/ix/blob/main/packages/core/src/components/link-button/link-button.tsx" icon="external" aria-label="View code change" title="View code change">Code</IxLinkButton> | Icons are now opt-in (`icon` defaults to `none`), so existing link buttons lose their chevron. Set `icon="internal"` to retain it; `iconPosition` defaults to `start`, preserving the previous placement, or use `end` to place the icon after the label. |
 | <IxBadge type="label" label="Added" variant="success" outline icon={iconShapes} /> | <IxLinkButton url="https://www.figma.com/design/r2nqdNNXXZtPmWuVjIlM1Q/iX-Components?node-id=1432-40622" icon="external" aria-label="View design change" title="View design change">Figma</IxLinkButton> | Figma: Added a replacement link button component with position and icon options. Review these settings when migrating instances. |
 | <IxBadge type="label" label="Deprecated" variant="critical" outline icon={iconShapes} /> | <IxLinkButton url="https://www.figma.com/design/r2nqdNNXXZtPmWuVjIlM1Q/iX-Components?node-id=1432-40622&t=uyzhGeD7C5A58xnU-4" icon="external" aria-label="View design change" title="View design change">Figma</IxLinkButton> | Figma: Deprecated the previous link button component. Follow the migration prompt in Figma to migrate to the new link button component. |
 
@@ -1002,7 +1010,7 @@ The following tables combine component-specific code and Figma changes, with com
 
 #### Split button
 
-![Split button before and after: the cyan main action and separate dropdown segment remain, while the leading action icon and dropdown chevron become smaller.](https://www.figma.com/design/wEptRgAezDU1z80Cn3eZ0o/iX-Documentation-illustrations?node-id=8821-51727)
+![Split button before and after](https://www.figma.com/design/wEptRgAezDU1z80Cn3eZ0o/iX-Documentation-illustrations?node-id=8821-51727)
 
 <div class="table-full-width table-migration-changelog">
 
@@ -1017,7 +1025,7 @@ The following tables combine component-specific code and Figma changes, with com
 
 #### Badge
 
-![Badges before and after: the blue information circle becomes a square, the yellow triangle becomes a diamond, the orange diamond becomes a triangle, and a purple octagonal status badge is added.](https://www.figma.com/design/wEptRgAezDU1z80Cn3eZ0o/iX-Documentation-illustrations?node-id=8821-52024)
+![Badges before and after](https://www.figma.com/design/wEptRgAezDU1z80Cn3eZ0o/iX-Documentation-illustrations?node-id=8821-52024)
 
 <div class="table-full-width table-migration-changelog">
 
@@ -1049,7 +1057,7 @@ The following tables combine component-specific code and Figma changes, with com
 
 #### Message bar
 
-![Message bar before and after: the circular information icon becomes a smaller square icon and the bar becomes shorter, retaining the message and trailing close control.](https://www.figma.com/design/wEptRgAezDU1z80Cn3eZ0o/iX-Documentation-illustrations?node-id=8826-2210)
+![Message bar before and after](https://www.figma.com/design/wEptRgAezDU1z80Cn3eZ0o/iX-Documentation-illustrations?node-id=8826-2210)
 
 <div class="table-full-width table-migration-changelog">
 
@@ -1062,7 +1070,7 @@ The following tables combine component-specific code and Figma changes, with com
 
 #### Message modal
 
-![Message modal before and after: the white circular information icon becomes a blue square icon, the surface becomes lighter, and the close icon becomes smaller; Cancel and OK remain below the message.](https://www.figma.com/design/wEptRgAezDU1z80Cn3eZ0o/iX-Documentation-illustrations?node-id=8826-5192)
+![Message modal before and after](https://www.figma.com/design/wEptRgAezDU1z80Cn3eZ0o/iX-Documentation-illustrations?node-id=8826-5192)
 
 <div class="table-full-width table-migration-changelog">
 
@@ -1074,7 +1082,7 @@ The following tables combine component-specific code and Figma changes, with com
 
 #### Pill
 
-![Pills before and after: the yellow Warning pill is renamed Caution and the orange Critical pill is renamed Warning, retaining their colors and rounded shapes.](https://www.figma.com/design/wEptRgAezDU1z80Cn3eZ0o/iX-Documentation-illustrations?node-id=8826-5548)
+![Pills before and after](https://www.figma.com/design/wEptRgAezDU1z80Cn3eZ0o/iX-Documentation-illustrations?node-id=8826-5548)
 
 <div class="table-full-width table-migration-changelog">
 
@@ -1087,7 +1095,7 @@ The following tables combine component-specific code and Figma changes, with com
 
 #### Popover
 
-![Popover before and after: the surface becomes lighter with a reduced shadow and smaller header icons; the image, content and footer actions retain their order.](https://www.figma.com/design/wEptRgAezDU1z80Cn3eZ0o/iX-Documentation-illustrations?node-id=8829-5904)
+![Popover before and after](https://www.figma.com/design/wEptRgAezDU1z80Cn3eZ0o/iX-Documentation-illustrations?node-id=8829-5904)
 
 <div class="table-full-width table-migration-changelog">
 
@@ -1099,7 +1107,9 @@ The following tables combine component-specific code and Figma changes, with com
 
 #### Progress indicator
 
-![Progress indicators before and after: the linear track changes from gray to dark blue, the circular track becomes darker, and the information icon beneath the bar changes from a circle to a square.](https://www.figma.com/design/wEptRgAezDU1z80Cn3eZ0o/iX-Documentation-illustrations?node-id=8829-9082)
+![Progress indicators before and after](https://www.figma.com/design/wEptRgAezDU1z80Cn3eZ0o/iX-Documentation-illustrations?node-id=8829-9082)
+
+Supported `status` values are `base`, `success`, `information`, `warning`, `error` and `paused`. There is no `caution` status or direct equivalent for the previous yellow warning meaning. Review existing `status="warning"` usages and keep the value only where the new orange warning meaning is intended.
 
 <div class="table-full-width table-migration-changelog">
 
@@ -1112,7 +1122,7 @@ The following tables combine component-specific code and Figma changes, with com
 
 #### Spinner
 
-![Spinners before and after: the same five size examples retain their green active arcs, while the inactive ring segments become darker.](https://www.figma.com/design/wEptRgAezDU1z80Cn3eZ0o/iX-Documentation-illustrations?node-id=8829-10723)
+![Spinners before and after](https://www.figma.com/design/wEptRgAezDU1z80Cn3eZ0o/iX-Documentation-illustrations?node-id=8829-10723)
 
 <div class="table-full-width table-migration-changelog">
 
@@ -1125,7 +1135,7 @@ The following tables combine component-specific code and Figma changes, with com
 
 #### Toast
 
-![Toast before and after: a green status stripe is added along the left edge, the surface becomes lighter with a reduced shadow, and the success and close icons become smaller.](https://www.figma.com/design/wEptRgAezDU1z80Cn3eZ0o/iX-Documentation-illustrations?node-id=8829-10903)
+![Toast before and after](https://www.figma.com/design/wEptRgAezDU1z80Cn3eZ0o/iX-Documentation-illustrations?node-id=8829-10903)
 
 <div class="table-full-width table-migration-changelog">
 
@@ -1138,7 +1148,7 @@ The following tables combine component-specific code and Figma changes, with com
 
 #### Tooltip
 
-![Tooltip before and after: the surface becomes lighter and its shadow is reduced, while the top pointer, information icon, heading and body text retain their layout.](https://www.figma.com/design/wEptRgAezDU1z80Cn3eZ0o/iX-Documentation-illustrations?node-id=8829-11275)
+![Tooltip before and after](https://www.figma.com/design/wEptRgAezDU1z80Cn3eZ0o/iX-Documentation-illustrations?node-id=8829-11275)
 
 <div class="table-full-width table-migration-changelog">
 
@@ -1153,7 +1163,7 @@ The following tables combine component-specific code and Figma changes, with com
 
 #### Key value
 
-![Key value before and after: the leading location icon becomes smaller, while the label remains stacked above the value with a divider beneath.](https://www.figma.com/design/wEptRgAezDU1z80Cn3eZ0o/iX-Documentation-illustrations?node-id=8829-11426)
+![Key value before and after](https://www.figma.com/design/wEptRgAezDU1z80Cn3eZ0o/iX-Documentation-illustrations?node-id=8829-11426)
 
 <div class="table-full-width table-migration-changelog">
 
@@ -1166,7 +1176,7 @@ The following tables combine component-specific code and Figma changes, with com
 
 #### Key value list
 
-![Key value list before and after: row dividers disappear, location icons become smaller, and the value fields change from dark blue to dark gray-purple.](https://www.figma.com/design/wEptRgAezDU1z80Cn3eZ0o/iX-Documentation-illustrations?node-id=8829-15483)
+![Key value list before and after](https://www.figma.com/design/wEptRgAezDU1z80Cn3eZ0o/iX-Documentation-illustrations?node-id=8829-15483)
 
 <div class="table-full-width table-migration-changelog">
 
@@ -1178,7 +1188,7 @@ The following tables combine component-specific code and Figma changes, with com
 
 #### KPI
 
-![KPI before and after: beside Motor speed, a triangular status icon becomes a smaller diamond; the Nominal value becomes bold and the yellow underline remains.](https://www.figma.com/design/wEptRgAezDU1z80Cn3eZ0o/iX-Documentation-illustrations?node-id=8829-16433)
+![KPI before and after](https://www.figma.com/design/wEptRgAezDU1z80Cn3eZ0o/iX-Documentation-illustrations?node-id=8829-16433)
 
 <div class="table-full-width table-migration-changelog">
 
@@ -1203,7 +1213,7 @@ The following tables combine component-specific code and Figma changes, with com
 
 #### Chat input
 
-![Chat input before and after: the field changes from dark blue to dark gray-purple and becomes taller, with smaller add, microphone and send icons along the bottom; the AI disclaimer remains below.](https://www.figma.com/design/wEptRgAezDU1z80Cn3eZ0o/iX-Documentation-illustrations?node-id=8829-17146)
+![Chat input before and after](https://www.figma.com/design/wEptRgAezDU1z80Cn3eZ0o/iX-Documentation-illustrations?node-id=8829-17146)
 
 <div class="table-full-width table-migration-changelog">
 
