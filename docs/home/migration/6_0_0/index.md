@@ -59,6 +59,10 @@ V6 replaces legacy design tokens with **Siemens Design Language** system tokens.
 - [Renamed and remapped `ix-spinner` sizes](https://github.com/siemens/ix/blob/main/BREAKING_CHANGES/v6.md#renamed-and-remapped-ix-spinner-sizes)
 - [Replaced common border, radius, and focus tokens](https://github.com/siemens/ix/blob/main/BREAKING_CHANGES/v6.md#replaced-common-border-radius-and-focus-tokens)
 - [Removed common dimension and typography tokens](https://github.com/siemens/ix/blob/main/BREAKING_CHANGES/v6.md#removed-common-dimension-and-typography-tokens)
+- [Changed size and spacing tokens to `px`](https://github.com/siemens/ix/blob/main/BREAKING_CHANGES/v6.md#changed-size-and-spacing-tokens-to-px)
+- [Changed numeric `ix-flip-tile` and `ix-event-list` sizes to `px`](https://github.com/siemens/ix/blob/main/BREAKING_CHANGES/v6.md#changed-numeric-ix-flip-tile-and-ix-event-list-sizes-to-px)
+
+Size and spacing tokens and component styles now use `px`, so component dimensions no longer scale with the root font size. Icon, avatar and typography tokens still use `rem`. If your application changes the root font size and expects components to scale with it, add `data-ix-sizing="rem"` to `<html>` or to the affected container. See [density](../../../styles/density.md#sizing-unit) for details.
 
 #### Community theme
 
@@ -400,6 +404,7 @@ The following tables combine component-specific code and Figma changes, with com
 | Type | Details | Description |
 | :--- | :--- | :--- |
 | <IxBadge type="label" label="Changed" variant="caution" icon={iconCode} /> | <IxLinkButton url="https://github.com/siemens/ix/blob/main/BREAKING_CHANGES/v6.md#changed-the-default-icon-size-to-20px" icon="external" aria-label="View code change" title="View code change">Code</IxLinkButton><br /><IxLinkButton url="https://www.figma.com/design/r2nqdNNXXZtPmWuVjIlM1Q/iX-Components?node-id=613-8995" icon="external" aria-label="View design change" title="View design change">Figma</IxLinkButton> | Changed the default icon size to 20px in affected slots |
+| <IxBadge type="label" label="Changed" variant="caution" icon={iconCode} /> | <IxLinkButton url="https://github.com/siemens/ix/blob/main/BREAKING_CHANGES/v6.md#changed-numeric-ix-flip-tile-and-ix-event-list-sizes-to-px" icon="external" aria-label="View code change" title="View code change">Code</IxLinkButton> | Changed numeric `itemHeight` values to be applied as `px` instead of being converted to `rem`, so the item height no longer scales with the root font size |
 | <IxBadge type="label" label="Changed" variant="caution" outline icon={iconShapes} /> | <IxLinkButton url="https://www.figma.com/design/r2nqdNNXXZtPmWuVjIlM1Q/iX-Components?node-id=613-8995" icon="external" aria-label="View design change" title="View design change">Figma</IxLinkButton> | Figma: Renamed status variants and added missing variants using the status mapping above. |
 
 </div>
@@ -422,6 +427,7 @@ The following tables combine component-specific code and Figma changes, with com
 | Type | Details | Description |
 | :--- | :--- | :--- |
 | <IxBadge type="label" label="Changed" variant="caution" icon={iconCode} /> | <IxLinkButton url="https://github.com/siemens/ix/blob/main/BREAKING_CHANGES/v6.md#changed-ix-flip-tile-status-variant-values" icon="external" aria-label="View code change" title="View code change">Code</IxLinkButton><br /><IxLinkButton url="https://www.figma.com/design/r2nqdNNXXZtPmWuVjIlM1Q/iX-Components?node-id=406-3368" icon="external" aria-label="View design change" title="View design change">Figma</IxLinkButton> | Renamed and expanded status variants, host classes, and theming properties; retained the `outline` and `filled` variants and the `filled` default |
+| <IxBadge type="label" label="Changed" variant="caution" icon={iconCode} /> | <IxLinkButton url="https://github.com/siemens/ix/blob/main/BREAKING_CHANGES/v6.md#changed-numeric-ix-flip-tile-and-ix-event-list-sizes-to-px" icon="external" aria-label="View code change" title="View code change">Code</IxLinkButton> | Changed numeric `height` and `width` values from `rem` to `px`; the defaults are now `242` and `256`. Multiply existing numeric values by 16 to keep the previous size |
 | <IxBadge type="label" label="Deprecated" variant="critical" outline icon={iconShapes} /> | <IxLinkButton url="https://www.figma.com/design/r2nqdNNXXZtPmWuVjIlM1Q/iX-Components?node-id=407-3446&t=uyzhGeD7C5A58xnU-4" icon="external" aria-label="View design change" title="View design change">Figma</IxLinkButton> | Figma: Deprecated the previous flip tile component. Follow the migration prompt in Figma to migrate to the new flip tile component with updated slots. |
 
 </div>
