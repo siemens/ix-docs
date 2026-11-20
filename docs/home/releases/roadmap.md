@@ -13,7 +13,7 @@ description: 'We’re constantly improving our design system for you by extendin
 ![Roadmap](https://www.figma.com/design/wEptRgAezDU1z80Cn3eZ0o/iX-Documentation-illustrations?node-id=6992-210&t=f7ioKZ1mzPPxTW76-4)
 
 ### ✅ Completed
-- **🔹 Release 5.0**: Applying reference color tokens aligned with Siemens design language, refactoring keyboard navigation in dropdowns, new [date-time input](../../components/input-date-time) and [range field](../../components/range-field) components, [tabs](../../components/tabs) with overflow menu and style adaptions. [Read more](../../../blog/2026/05/21/release-5)
+- **🔹 Release 5.0**: Applying reference color tokens aligned with Siemens Design Language, refactoring keyboard navigation in dropdowns, new [date-time input](../../components/input-date-time) and [range field](../../components/range-field) components, [tabs](../../components/tabs) with overflow menu and style adaptions. [Read more](../../../blog/2026/05/21/release-5)
 - **🔹 Release 5.1**: New [popover](../../components/popover) component, overflow option for chips in the [select](../../components/select/guide.md) component and optimized [icon search](../../icons/icon-library.mdx) with tags and related icons.
 - **🔹 Release 5.2**: New [badge](../../components/badge) component and [chat](../../components/chat) components.
 
@@ -35,9 +35,9 @@ description: 'We’re constantly improving our design system for you by extendin
 
 ### 🗓️ Scheduled
 
-- **Patterns**: We curate patterns as copy-paste code examples that show how multiple components work together in real UI scenarios. Patterns give users practical, ready-to-use starting points beyond components.  
+- **Patterns**: We curate patterns as copy-paste code examples that show how multiple components work together in real UI scenarios. Patterns give users practical, ready-to-use starting points beyond components.
 - **Vertical navigation menu rework**: Our vertical navigation will change in alignment with other design systems at Siemens.
-- **Density options**: Density tokens allow for changing sizes and spacings of elements on the screen without creating different variants of components. They use the same mechanism as switching color modes or themes. To use density modes, all relevant dimensions of a component must use density tokens, e.g. for font size and line height, widths, heights, paddings and gaps.
+- **Density options**: [Sizing tokens](../../styles/sizing.md) allow for changing sizes and spacings of elements on the screen without creating different variants of components. They use the same mechanism as switching color modes or themes. To use density modes, all relevant dimensions of a component must use sizing tokens, e.g. for font size and line height, widths, heights, paddings and gaps.
 
 ### ⏳ Planned
 
