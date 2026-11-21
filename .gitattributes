@@ -1,0 +1,2 @@
+# Each stacked docs branch keeps its own siemens/ix preview link, see CONTRIBUTING.md
+.env.pullrequest merge=ours
