@@ -19,10 +19,14 @@ Chats are the outer containers that bring together the three building blocks of 
   - [Main content](../content): Use when the chat is the main focus of the experience, e.g. standalone or workspace copilots
   - [Panes](../panes): Use when the chat is a secondary feature, e.g. for contextual help
 - **Responsiveness:** Chats will resize to a max-width of `45rem`.
+- **Auto-scroll:** By default, the chat keeps the latest content in view while new messages are added or a response streams. Auto-scroll stops as soon as users scroll away from the bottom and resumes when they return to the bottom, select "Scroll to latest" or send a new prompt.
+- **Scroll to latest:** While users are away from the bottom, a "Scroll to latest" button is shown above the chat input. It never covers the chat input and scrolls without animation when users prefer reduced motion.
+- **Custom scroll behavior:** Turn off auto-scroll and the "Scroll to latest" button with `suppressAutoScroll` if the application controls scrolling itself, e.g. to scroll to the start of a new answer. Use `scrollToBottom()` and `scrollToTop()` to scroll programmatically, e.g. after loading a conversation.
 
 ## Dos and Don’ts
 
-- Do enable auto-scroll when users are reading the current response, not when they are reading previous responses
+- Do keep auto-scroll enabled so users can read along while a response streams
+- Don't scroll users back to the latest content while they are reading previous responses
 - Don't add limits to how many messages are visible, instead always display full chat sessions
 
 ## Related
