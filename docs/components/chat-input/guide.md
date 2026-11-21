@@ -26,6 +26,7 @@ In chat inputs, users write and send messages. We recommend using them for quick
 - **End slot:** Use this slot to add alternative input methods, e.g. voice input.
 - **Disclaimer:** In AI contexts, we recommend including a visible disclaimer under the input instead of under each [AI message](../ai-message/). For Siemens AG products, find legal disclaimers [here](https://code.siemens.com/siemens-ix/ix-brand-theme/-/blob/main/apps/documentation/src/pages/legal-disclaimers-copilots.md).
 - **Character limit:** Set soft and hard character limits that either warn users or prevent further input.
+- **Interrupt:** Let users stop a response while it is being generated. Set `interruptible` to enable the stop button during processing, then cancel the request when `promptInterrupt` is emitted. Localize the stop button label with `i18nStopGenerating`.
 
 ## Behavior in context
 
@@ -39,7 +40,10 @@ In chat inputs, users write and send messages. We recommend using them for quick
 
 ## States
 
-Chat inputs have four states: default, hover, focused and processing.
+Chat inputs have five states: default, hover, focused, processing and interrupting.
+
+- **Processing:** A response is being generated. Users can't send a new prompt. With `interruptible`, the stop button is enabled so users can interrupt the response.
+- **Interrupting:** An interrupt was requested and is being processed. The stop button is disabled and shows progress until the application confirms the interrupt and returns to the default state.
 
 ![States](https://www.figma.com/design/wEptRgAezDU1z80Cn3eZ0o/iX-Documentation-illustrations?node-id=7940-2809&t=mrtbkWj76QJhvNLI-4)
 
@@ -47,6 +51,7 @@ Chat inputs have four states: default, hover, focused and processing.
 
 - Do keep action labels verb-based and specific so users understand the outcome (see [guidelines for Siemens AG employees](https://www.figma.com/design/lqjt9c5IzzwQ4eJ4nqG7Kv/AI-Terminology?node-id=1-9&t=d5UkOPKJfj9qDmYM-1))
 - Don’t allow users to send empty input
+- Do set the interrupting state right after users stop a response, so they don’t click stop repeatedly
 - Don’t rely on color alone to communicate validation errors
 - Don’t place AI disclaimers away from user input and messages
 
