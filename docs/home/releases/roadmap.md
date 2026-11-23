@@ -26,10 +26,6 @@ description: 'We’re constantly improving our design system for you by extendin
 
 See the [V6 migration guide](../migration/6_0_0/index.md) for breaking changes and the [GitHub releases page](https://github.com/siemens/ix/releases) for all changes.
 
-- **🔹 Release 5.0**: Applying reference color tokens aligned with Siemens design language, refactoring keyboard navigation in dropdowns, new [date-time input](../../components/input-date-time) and [range field](../../components/range-field) components, [tabs](../../components/tabs) with overflow menu and style adaptions. [Read more](../../../blog/2026/05/21/release-5)
-- **🔹 Release 5.1**: New [popover](../../components/popover) component, overflow option for chips in the [select](../../components/select/guide.md) component and optimized [icon search](../../icons/icon-library.mdx) with tags and related icons.
-- **🔹 Release 5.2**: New [badge](../../components/badge) component and [chat](../../components/chat) components.
-
 ### 🚧 Work in progress
 
 - **Inline notification**: A compact alternative to message bars for feedback within a specific section or component of a page.
