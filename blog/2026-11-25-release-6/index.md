@@ -75,6 +75,20 @@ Input clearing and more reliable validation also make forms easier to work with.
 
 For designers, V6 extends the **native Figma slots** introduced in V5 to more components. Content can be added directly to instances without detaching them or building custom content-replacement components, making it easier to compose realistic screens while staying connected to library updates. With the slot option we are also introducing new layout templates in Figma.
 
+## Build with AI: the iX agent skill
+
+With V6, the iX repository also provides an experimental [**agent skill**](/docs/home/agent-skill) that teaches AI coding agents such as GitHub Copilot, Claude Code or OpenCode how to work with Industrial Experience. It guides agents to use version-matched component APIs, examples, patterns, icons and Figma mappings, along with our design, accessibility and UX writing guidance.
+
+Install it in the root of your project:
+
+```bash
+npx skills add siemens/ix --skill ix
+```
+
+Agents can then select and implement iX components in React, Angular, Vue or plain web components, build screens from iX patterns and review existing code for API and accessibility issues. Using the version-matched mapping between Figma components and iX components, agents can also generate iX code directly from Figma designs without setting up Figma Code Connect.
+
+The skill can also support your upgrade, for example with a prompt such as "Migrate this project to the latest iX version". It complements the [iX MCP server](/docs/home/mcp-server). We welcome your feedback, so please share your experience by [creating an issue on GitHub](https://github.com/siemens/ix/issues).
+
 ## Make the move to V6
 
 V6 is an opportunity to bring your application onto a shared design foundation and communicate status more consistently, from the smallest badge to a complete operational view.
