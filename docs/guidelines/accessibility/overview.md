@@ -76,12 +76,6 @@ In industrial software applications, color significantly enhances the visual com
 - Ensure minimum contrast for large text is 3:1
 - Ensure icons meet 3:1 contrast with the background
 
-{/*
-**Example**: On background colors 1 to 4, both text colors (std-text and soft-text) pass the WCAG AA criteria for body text, large text, and icons.
-
-![Text colors on background colors](https://www.figma.com/design/wEptRgAezDU1z80Cn3eZ0o/iX-Documentation-illustrations?node-id=5402-18230&t=JzJxfVEhA9XmeCtN-4)
-*/}
-
 #### Contrast components
 
 While the components in our design system are built to meet baseline contrast requirements, it’s essential to evaluate contrast in the context of their implementation such as background colors or surrounding element.
@@ -89,17 +83,6 @@ While the components in our design system are built to meet baseline contrast re
 - Ensure component contrast for adjoining colors is 3:1
 - Ensure visual states for components meet 3:1 contrast with adjoining colors
 - Ensure data visualization meets 3:1 contrast with the background
-
-{/*
-**Example**: On background colors 1 to 4, primary [buttons](../../components/button/index.mdx) pass the WCAG AA criteria for default, hover, and active states. For disabled states, the criteria do not apply as inactive components are exempt.
-
-![Component contrast](https://www.figma.com/design/wEptRgAezDU1z80Cn3eZ0o/iX-Documentation-illustrations?node-id=5402-18322&t=JzJxfVEhA9XmeCtN-4)
-
-**Example**: In the [push card component](../../components/card/index.mdx), we adjust the font color based on the card's status color to ensure sufficient contrast.
-
-![Component contrast for push card](https://www.figma.com/design/wEptRgAezDU1z80Cn3eZ0o/iX-Documentation-illustrations?node-id=5638-15909&t=LBH5sM5nmqFyILZP-4)
-*/}
-
 
 #### Use more than color
 
