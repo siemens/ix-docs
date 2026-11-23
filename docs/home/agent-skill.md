@@ -25,6 +25,22 @@ npx skills add siemens/ix --skill ix
 The skill only needs file reading or HTTP fetch access to the iX registry and documentation.
 No additional scripts or runtimes are required.
 
+## Don't combine with the iX MCP server
+
+Use either the agent skill or the [iX MCP server](./mcp-server.md), not both in the same project.
+Both give the agent access to iX documentation, so enabling them together can cause problems:
+
+- **Conflicting sources:** The skill reads version-matched documentation from the iX registry,
+  while the MCP server returns results from its own bundled data. If the two are based on different
+  iX versions, the agent may mix APIs or examples that don't match your project.
+- **Unclear precedence:** The agent has to decide which source to trust, which can lead to
+  inconsistent answers between prompts.
+- **Duplicated context:** The same documentation is loaded twice, which uses up more of the
+  agent's context window and can reduce response quality.
+
+If you already use the MCP server and want to try the skill, disable the MCP server in your tool
+configuration first.
+
 ## When to use
 
 The agent uses the skill to:
