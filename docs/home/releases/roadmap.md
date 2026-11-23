@@ -33,10 +33,10 @@ See the [V6 migration guide](../migration/6_0_0/index.md) for breaking changes a
 
 ### 🗓️ Scheduled
 
-- **Density options**: Options to adjust component sizes and spacing for different information densities, building on reusable size tokens.
+- **Patterns**: We curate patterns as copy-paste code examples that show how multiple components work together in real UI scenarios. Patterns give users practical, ready-to-use starting points beyond components.
+- **Vertical navigation menu rework**: Our vertical navigation will change in alignment with other design systems at Siemens.
+- **Density options**: [Sizing tokens](../../styles/sizing.md) allow sizes and spacing to adapt to different densities without creating component variants. Compact density is experimental; further work will expand density support.
 - **Indeterminate progress indicator**: An indeterminate state for scenarios where the progress duration or completion time is unknown.
-- **Patterns**: Copy-paste code examples showing how multiple components work together in real UI scenarios, providing ready-to-use starting points beyond individual components.
-- **Vertical navigation menu rework**: Updated vertical navigation aligned with other Siemens design systems.
 
 ### ⏳ Planned
 
