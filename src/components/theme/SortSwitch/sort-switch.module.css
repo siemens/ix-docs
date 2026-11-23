@@ -34,6 +34,12 @@
   background: var(--si-sys-color-background-hover);
 }
 
+.SortSwitchButton:focus-visible {
+  outline: var(--si-sys-sizing-focus-ring-width) solid
+    var(--si-sys-color-effects-focus);
+  outline-offset: var(--si-sys-sizing-focus-ring-offset);
+}
+
 .SortSwitchButton:active {
   background: var(--si-sys-color-background-selected);
 }

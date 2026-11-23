@@ -15,12 +15,10 @@ Apply a complete system shadow value with `box-shadow`:
 
 ```css
 .some-example {
-  box-shadow: var(--si-sys-color-effects-shadow-1);
+  box-shadow: var(--si-sys-color-effects-shadow-30);
 }
 ```
 
-Choose a shadow according to the surface hierarchy. Do not decompose or
-reconstruct the value: a token can contain multiple shadow layers whose colors
-adapt to the selected color scheme.
+Choose a shadow according to the surface hierarchy. Do not decompose or reconstruct the value: a token can contain multiple shadow layers whose colors adapt to the selected color scheme.
 
 <ShadowTable section="color.effects.shadow" />
