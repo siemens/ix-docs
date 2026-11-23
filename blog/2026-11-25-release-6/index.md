@@ -87,7 +87,11 @@ npx skills add siemens/ix --skill ix
 
 Agents can then select and implement iX components in React, Angular, Vue or plain web components, build screens from iX patterns and review existing code for API and accessibility issues. Using the version-matched mapping between Figma components and iX components, agents can also generate iX code directly from Figma designs without setting up Figma Code Connect.
 
-The skill can also support your upgrade, for example with a prompt such as "Migrate this project to the latest iX version". It complements the [iX MCP server](/docs/home/mcp-server). We welcome your feedback, so please share your experience by [creating an issue on GitHub](https://github.com/siemens/ix/issues).
+The skill can also support your upgrade, for example with a prompt such as "Migrate this project to the latest iX version".
+
+The skill is an alternative to the [iX MCP server](/docs/home/mcp-server). Use one or the other in a project, not both, because two documentation sources can lead to conflicting answers. If you already use the MCP server, disable it before trying the skill.
+
+We welcome your feedback, so please share your experience by [creating an issue on GitHub](https://github.com/siemens/ix/issues).
 
 ## Make the move to V6
 
