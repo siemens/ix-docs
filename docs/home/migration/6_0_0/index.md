@@ -62,7 +62,7 @@ V6 replaces legacy design tokens with **Siemens Design Language** system tokens.
 - [Changed size and spacing tokens to `px`](https://github.com/siemens/ix/blob/main/BREAKING_CHANGES/v6.md#changed-size-and-spacing-tokens-to-px)
 - [Changed numeric `ix-flip-tile` and `ix-event-list` sizes to `px`](https://github.com/siemens/ix/blob/main/BREAKING_CHANGES/v6.md#changed-numeric-ix-flip-tile-and-ix-event-list-sizes-to-px)
 
-Size and spacing tokens and component styles now use `px`, so component dimensions no longer scale with the root font size. Icon, avatar and typography tokens still use `rem`. If your application changes the root font size and expects components to scale with it, add `data-ix-sizing="rem"` to `<html>` or to the affected container. See [density](../../../styles/density.md#sizing-unit) for details.
+Size and spacing tokens and component styles now use `px`, so component dimensions no longer scale with the root font size. Icon, avatar and typography tokens still use `rem`. If your application changes the root font size and expects components to scale with it, add `data-ix-sizing="rem"` to `<html>` or to the affected container. See [sizing](../../../styles/sizing.md#sizing-unit) for details.
 
 #### Community theme
 

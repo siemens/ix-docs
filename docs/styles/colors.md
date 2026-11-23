@@ -12,7 +12,7 @@ description: 'The system color tokens provide consistent, accessible roles for a
 
 import ColorTable from '@site/src/components/ColorTable';
 
-#
+# Color palette
 
 Use system colors by referencing their complete custom-property name with the
 CSS `var()` function:
@@ -25,16 +25,14 @@ CSS `var()` function:
 ```
 
 Choose a token for its semantic role rather than for its current rendered
-color. This allows the community light and dark color schemes to provide the
+color. This allows the light and dark color schemes to provide the
 appropriate value automatically.
 
 ## Usage guidance
 
 - **Background** tokens establish the application layers and interactive
-  surfaces.
-- **Text** tokens provide foreground roles, including status and on-color
-  variants. Do not select a status color solely by appearance; verify the
-  required contrast in its intended context.
+  surfaces, including icons that only enhance the visual design, e.g. icons in [message modals](../components/message-modal).
+- **Text** tokens provide foreground roles, including status, on-color variants and icons that convey meaning, e.g. icons in [chips](../components/chip). Do not select a status color solely by appearance; verify the required contrast in its intended context.
 - **Code** tokens provide syntax-highlighting roles.
 - **Data** tokens provide categorical, rating, and sequential visualization
   palettes. Preserve the documented sequence when assigning a series.

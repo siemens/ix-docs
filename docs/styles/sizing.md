@@ -1,22 +1,27 @@
 ---
 sidebar_position: 3
-sidebar_label: Density
-title: Density
+sidebar_label: Sizing
+title: Sizing
 hide_table_of_contents: false
 doc-type: 'banner'
 component-tabs: ['']
 no_single_tab: true
-description: 'Density tokens adapt sizes, spacing, and icon dimensions so applications can switch between the default and a compact layout, for the whole page or for individual sections.'
+description: 'Sizing tokens adapt sizes, spacing and icon dimensions to enable applications to switch between the default and a compact layout. Compact mode is experimental and may change.'
 ---
 
 import DensityTable from '@site/src/components/DensityTable';
 
-The system supports two densities. **Default** is the base density. **Compact**
-is a sparse override: it only redefines the tokens listed on this page and
-inherits every other token from the default density.
+:::warning Experimental feature
 
-Enable compact density by adding `data-ix-density="compact"` to the element that
-sets the theme and color schema:
+Compact mode is a new feature and is currently experimental. We are still evaluating how well it works across components and use cases. Its token coverage, values and behavior may change as we learn from its use and make further adaptations. Test compact mode with your application before relying on it in production.
+
+:::
+
+The system supports two densities. **Default** is the base density. **Compact** is a sparse override: it only redefines the sizing tokens listed on this page, and the font-size and line-height from the [typography](./typography) variables. Every other token is inherited from the default density.
+
+![Default and compact density comparison](https://www.figma.com/design/wEptRgAezDU1z80Cn3eZ0o/iX-Documentation-illustrations?node-id=8742-7072&t=Mmsji7qvSnFGiH3D-11)
+
+Enable compact density by adding `data-ix-density="compact"` to the element that sets the theme and color schema:
 
 ```html
 <html
@@ -50,8 +55,7 @@ the closest `data-ix-density` ancestor wins:
 
 ## Using the tokens {#using-the-tokens}
 
-Reference the tokens with the CSS `var()` function. Their values switch
-automatically when the density changes:
+Reference the tokens with the CSS `var()` function. Their values switch automatically when the density changes:
 
 ```css
 .some-example {
@@ -60,8 +64,7 @@ automatically when the density changes:
 }
 ```
 
-Do not hardcode the values shown below: they are resolved from the installed
-theme and differ between densities.
+Do not hardcode the values shown below. They are resolved from the installed theme and differ between densities.
 
 ## Sizing unit {#sizing-unit}
 
