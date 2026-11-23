@@ -16,7 +16,7 @@ This guide summarizes the [V6 breaking changes](https://github.com/siemens/ix/bl
 Pay particular attention to **design tokens, status variants and icon sizing** when migrating.
 
 1. **Check requirements:** review the [package requirements](#package-requirements) for your application.
-2. **Update dependencies:** upgrade `@siemens/ix` and any framework wrappers to `6.0.0`, and use `@siemens/ix-icons@4.0.0`. If your application uses `@siemens/ix-aggrid` or `@siemens/ix-echarts`, upgrade them to `@siemens/ix-aggrid@6.0.0` and `@siemens/ix-echarts@5.0.0` in the same install command. Both integration versions require `@siemens/ix@^6.0.0`; update these packages together to avoid npm peer-dependency conflicts. Only Stencil collection consumers need to install the [optional runtime peers](#optional-peer-dependencies) explicitly.
+2. **Update dependencies:** upgrade all iX packages your application uses to the versions in [package requirements](#package-requirements). Only Stencil collection consumers need to install the [optional runtime peers](#optional-peer-dependencies) explicitly.
 3. **Replace legacy design tokens:** search all source files, including JavaScript and TypeScript as well as CSS and Sass, and migrate removed tokens to [Siemens Design Language tokens](#foundations), accounting for changed values and formats as well as names.
 4. **Preserve status meaning:** migrate [status variants](#status-variants) by semantic intent, not name alone. Existing names such as `warning` and `critical` now mean something different.
 5. **Update stylesheet imports:** use the supported [CSS and Sass entry points](#stylesheets-and-sass) and explicitly include any global styles you still need.
@@ -43,12 +43,6 @@ Update the packages your application uses together. Do not apply a blanket `@sie
 | `vue` | `^3.5.0` | [Vue requirement](https://github.com/siemens/ix/blob/main/BREAKING_CHANGES/v6.md#vue-requirement). |
 
 </div>
-
-:::warning[Use compatible icons]
-
-`@siemens/ix-icons@3.x` still uses the legacy color-token lookup and can render incorrect icon colors without a build error. This guide targets the planned stable `@siemens/ix-icons@4.0.0` release.
-
-:::
 
 ## Migration by topic
 
@@ -276,7 +270,7 @@ yarn add @floating-ui/dom @siemens/ix-icons@4.0.0 @stencil/core luxon
 
 #### Framework and tooling requirements
 
-See [Package requirements](#package-requirements) for framework versions, chart and grid dependencies, and third-party ECharts compatibility checks.
+See [Package requirements](#package-requirements) for framework versions and chart and grid dependencies.
 
 #### Wrapper types and hydration
 
