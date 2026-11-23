@@ -18,7 +18,7 @@ Use custom modals when a task requires immediate attention and the user returns 
 
 ## Options
 
-- **Centered**: Center content by default; use top alignment for tall dialogs that expand during interaction.
+- **Centered**: Enable to center the modal vertically in the viewport. By default, modals are top-aligned, which we recommend for tall dialogs that expand during interaction.
 - **Size**: Choose an appropriate size based on context and device:
     - **Fixed max-width (360-840px):** Use as default for most layouts. Note that on narrower screens or viewports, the modal scales down and becomes proportionally narrower to fit the available space.
     - **Full width:** Use for data-heavy interfaces on desktop, e.g. large datasets.
@@ -47,7 +47,7 @@ Use custom modals when a task requires immediate attention and the user returns 
     - The modal height increases with content until reaching screen height, then a scrollbar appears.
     - We recommend implementing a sticky footer when content overflows.
     - Avoid horizontal scrollbars by using a larger modal size and defining adaptive behaviors for different viewports.
-- **Placement:** Vertically centered or top-aligned, horizontally centered.
+- **Placement:** Horizontally centered, vertically top-aligned by default or vertically centered with the centered option.
 - **Responsiveness:**
     - Height: Depends on its content except for `full-screen`.
     - Content: Needs to be built responsively to adapt with the container's width.
