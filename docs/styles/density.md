@@ -87,8 +87,8 @@ inside it keep `rem` sizing:
 ```
 
 Every size and spacing token also has a `--si-sys-sizing-rem-*` twin that always
-resolves to `rem`, for example `--si-sys-sizing-rem-size-80`. Use the twins when
-custom styles need `rem` values regardless of the sizing unit.
+resolves to `rem`, for example `--si-sys-sizing-rem-size-80`. The twins are
+converted from the `px` values (see [Rem size](#token-group-sizing-rem-size)).
 
 `data-ix-sizing="rem"` only affects the tokens. Fixed values in component and
 global styles use `px` and do not change.
@@ -110,6 +110,12 @@ global styles use `px` and do not change.
 <DensityTable section="sizing.icon" />
 
 ## Rem size {#token-group-sizing-rem-size}
+
+The `--si-sys-sizing-rem-*` tokens are converted from the `px` size and spacing
+tokens above. iX components only use the standard `px` tokens, never the `rem`
+twins, so prefer the standard tokens in your own styles as well. Only use the `rem` twins when you know a custom
+element must scale with the root font size, for example a container that wraps
+text-driven content.
 
 <DensityTable section="sizing.rem.size" />
 
