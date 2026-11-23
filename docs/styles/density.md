@@ -108,3 +108,15 @@ global styles use `px` and do not change.
 ## Icon {#token-group-sizing-icon}
 
 <DensityTable section="sizing.icon" />
+
+## Rem size {#token-group-sizing-rem-size}
+
+<DensityTable section="sizing.rem.size" />
+
+## Rem spacing X {#token-group-sizing-rem-spacing-x}
+
+<DensityTable section="sizing.rem.spacing-x" />
+
+## Rem spacing Y {#token-group-sizing-rem-spacing-y}
+
+<DensityTable section="sizing.rem.spacing-y" />
