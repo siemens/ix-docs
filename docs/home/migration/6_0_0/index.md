@@ -21,7 +21,7 @@ Pay particular attention to **design tokens, status variants and icon sizing** w
 4. **Preserve status meaning:** migrate [status variants](#status-variants) by semantic intent, not name alone. Existing names such as `warning` and `critical` now mean something different.
 5. **Update stylesheet imports:** use the supported [CSS and Sass entry points](#stylesheets-and-sass) and explicitly include any global styles you still need.
 6. **Review affected components:** apply the relevant [component migrations](#migration-by-component), check the [24px-to-20px icon change](#icon-size), and address any [wrapper-type and hydration changes](#wrapper-types-and-hydration) that affect your integration.
-7. **Search, build, run and test your application:** [search for removed or renamed string values](#validate-string-values) before relying on a successful build, then check affected workflows and visually review token values, status colors, typography and icon sizing. Complete the [V6 migration validation checklist](https://github.com/siemens/ix/blob/main/BREAKING_CHANGES/v6.md#v6-migration-validation-checklist).
+7. **Search, build, run and test your application:** search for removed or renamed string values before relying on a successful build (see the [migration overview](../migration-overview.md#choose-how-you-want-to-migrate)), then check affected workflows and visually review token values, status colors, typography and icon sizing. Complete the [V6 migration validation checklist](https://github.com/siemens/ix/blob/main/BREAKING_CHANGES/v6.md#v6-migration-validation-checklist).
 8. **Migrate Figma files:** enable the Siemens Design Language token library, migrate colors, text and shadows using the [Foundations guidance](#foundations), and follow the component-specific migration guides for deprecated components.
 
 ### Package requirements
@@ -50,46 +50,13 @@ Update the packages your application uses together. Do not apply a blanket `@sie
 
 :::
 
-Check third-party ECharts wrappers and extensions as well as `echarts` itself. For example, `echarts-for-react@3.0.6` and `echarts-gl@2.1.0` declare ECharts 6 peer support; use these or newer compatible versions and verify their peer dependencies before upgrading.
-
-### Validate string values
-
-:::warning[Successful builds can miss removed values]
-
-Angular templates can still compile removed or renamed string attribute values with `ng build`, even with `strictTemplates`. Vue templates can also pass `vue-tsc` with these values. For example, `format="label-lg"` can pass both checks even though V6 removes that typography format. React/TSX type checking rejects this value, but it does not detect changed meanings of still-valid values.
-
-Search your source for **each old value** listed in the breaking changes, including template attributes, property bindings, and values supplied through application code. Do not treat a successful build or type check as confirmation that these values have been migrated.
-
-:::
-
-Run these example searches from your application root (replace `src` with your source directories):
-
-```bash
-# Removed typography formats
-rg -n "['\"](label(-xs|-sm|-lg)?|body-xs|display-(xs|sm))['\"]" src
-
-# Renamed or removed typography textColor values
-rg -n "['\"](alarm(-contrast)?|info-contrast|success-contrast|neutral-contrast|primary-contrast|warning-contrast|critical-contrast|std|contrast|soft|weak|inv-(contrast|soft|std|weak))['\"]" src
-
-# Status values to review against each component's mapping
-rg -n "['\"](primary|info|alarm|default|warning|critical)['\"]" src
-```
-
-These are starting points, not an exhaustive migration check. They match quoted literals, including unrelated uses; also inspect computed values and search for the old values in every applicable component migration. Review each match in context rather than replacing globally. In particular, `warning` and `critical` remain valid but change meaning; follow the [status mapping](#status-variants) to preserve intent.
-
 ## Migration by topic
 
 ### Foundations
 
 V6 replaces legacy design tokens with **Siemens Design Language** system tokens. Updating token names alone may not preserve the previous appearance: token values and formats have changed, some tokens and typography classes have been removed, and affected components now use 20px icons instead of 24px. Use the sections below to update custom styles and review sizing changes.
 
-Search **all source files**, not only stylesheets, for legacy `--theme-*` tokens. Include JavaScript/TypeScript strings used in chart configurations, inline styles, and calls such as `getComputedStyle().getPropertyValue()` and `style.setProperty()`. For example, run the following from your application root, replacing `src` with all of your source directories:
-
-```bash
-rg -n -- '--theme-' src
-```
-
-Review each match against the token mappings rather than replacing the prefix globally; the five timing compatibility variables remain supported. Also inspect code that constructs token names dynamically, which this literal search may not find.
+Search **all source files**, not only stylesheets, for legacy `--theme-*` tokens. Include JavaScript/TypeScript strings used in chart configurations, inline styles, and calls such as `getComputedStyle().getPropertyValue()` and `style.setProperty()`, as well as code that constructs token names dynamically. Review each match against the token mappings rather than replacing the prefix globally; the five timing compatibility variables remain supported.
 
 Use the [V6 component-token migration table](https://github.com/siemens/ix/blob/main/BREAKING_CHANGES/v6_components_tokens.md) to replace removed component tokens, and review entries without a direct replacement.
 
@@ -104,12 +71,6 @@ Use the [V6 component-token migration table](https://github.com/siemens/ix/blob/
 - [Removed legacy theme exports](https://github.com/siemens/ix/blob/main/BREAKING_CHANGES/v6.md#removed-legacy-theme-exports)
 - [Removed deprecated component tokens](https://github.com/siemens/ix/blob/main/BREAKING_CHANGES/v6.md#removed-deprecated-component-tokens)
 - [Removed automatic token prefixing from ECharts computed CSS properties](https://github.com/siemens/ix/blob/main/BREAKING_CHANGES/v6.md#removed-automatic-token-prefixing-from-echarts-computed-css-properties)
-
-#### Component CSS custom properties
-
-Separately from replacing legacy `--theme-*` tokens, migrate component CSS custom-property overrides to the naming scheme `--ix-<component>[-<part>]--<property>[--<modifier>...]`. Modifiers such as variant, status, size and state now follow the property name. For example, replace `--ix-button-primary--background--hover` with `--ix-button--background--primary--hover`, and `--ix-badge-max-width` with `--ix-badge--max-width`.
-
-Review the [component CSS custom-property naming migration](https://github.com/siemens/ix/blob/main/BREAKING_CHANGES/v6.md#changed-component-css-custom-property-naming) for modifier ordering, the other badge property renames and removed properties. Updating system-token references alone does not migrate these overrides.
 
 #### Typography
 

@@ -41,7 +41,7 @@ The guides start with a high-level title and then split the migration into isola
 
 Angular templates can accept removed or renamed string attribute values even with `strictTemplates` and a successful `ng build`. Vue templates can also pass `vue-tsc` with these values. React/TSX type checking catches invalid typed props, but still-valid values whose meaning changed require manual review in every framework.
 
-Whether migrating manually or with an AI agent, search templates, property bindings, and application code for **each old value** in the breaking changes; do not rely on compiler errors or a successful build alone. For V6 examples covering typography formats, text colors, and statuses, see [Validate string values](./6_0_0/index.md#validate-string-values).
+Whether migrating manually or with an AI agent, search templates, property bindings, and application code for **each old value** in the breaking changes; do not rely on compiler errors or a successful build alone.
 
 :::
 
