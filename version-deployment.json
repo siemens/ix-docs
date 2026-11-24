@@ -1,12 +1,18 @@
 {
-  "latestVersion": "v5",
-  "currentVersion": "v5",
+  "latestVersion": "v6",
+  "currentVersion": "v6",
   "versions": [
+    {
+      "id": "v6",
+      "href": "https://ix.siemens.io",
+      "label": "Version 6",
+      "dropdownLabel": "Version 6 (latest)"
+    },
     {
       "id": "v5",
       "href": "https://ix.siemens.io",
       "label": "Version 5",
-      "dropdownLabel": "Version 5 (latest)"
+      "dropdownLabel": "Version 5"
     },
     {
       "id": "v4",
