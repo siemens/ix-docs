@@ -51,7 +51,7 @@ function replaceLibraryImports(
   let packageJson = project["package.json"];
   packageJson = packageJson.replace(
     /"@siemens\/ix-echarts":\s*"<VERSION>"/g,
-    '"@siemens/ix-echarts": "^3.0.0"'
+    '"@siemens/ix-echarts": "^5.0.0"'
   );
   packageJson = packageJson.replace(/\"<VERSION>\"/g, `"${version.ix}"`);
   packageJson = packageJson.replace(
