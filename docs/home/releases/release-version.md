@@ -53,4 +53,4 @@ We recommend always following the active release. When a version moves from the 
 | V3.0.0  | End of life | May 2025       | November 2025       | May 2026                 |
 | V2.0.0  | End of life | September 2023 | May 2025            | November 2025            |
 
-For detailed framework and dependency requirements per package, see the compatibility matrix for [V6](compatibility-v6.md) or [V5](compatibility-v5.md).
+For detailed framework and dependency requirements per package, see the [Compatibility matrix](compatibility-v6.md).

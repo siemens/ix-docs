@@ -19,7 +19,7 @@ Update all packages your application uses together. Don't apply a blanket `@siem
 
 | Package             | Version | Peer dependencies                                                                                     | Dependencies (installed automatically) |
 | ------------------- | ------- | ----------------------------------------------------------------------------------------------------- | -------------------------------------- |
-| `@siemens/ix`       | 6.x     | `@siemens/ix-icons` ^4.0.0, `@floating-ui/dom` ^1.6.13\*, `luxon` ^3.4.4\*, `@stencil/core` ^4.43.5\* | -                                      |
+| `@siemens/ix`       | 6.x     | `@siemens/ix-icons` ^4.0.0, `@floating-ui/dom` ^1.6.13\*, `luxon` ^3.4.4\*, `@stencil/core` ^4.43.5\* | None, runtime libraries are bundled    |
 | `@siemens/ix-icons` | ^4.0.0  | -                                                                                                     | -                                      |
 
 \* Optional peer dependencies. They're only required when consuming the Stencil collection output. The root, custom elements, loader, hydrate and framework outputs bundle these runtime libraries.
@@ -80,5 +80,3 @@ npm install @siemens-ix/corporate-theme
 | `@siemens/ix` | Released      | `@siemens/ix-icons` | Angular   | React        | Vue    |
 | ------------- | ------------- | ------------------- | --------- | ------------ | ------ |
 | 6.0.0         | November 2026 | ^4.0.0              | >=21.2.25 | ^18 \|\| ^19 | ^3.5.0 |
-
-For V5 requirements, see the [V5 compatibility matrix](compatibility-v5.md).
