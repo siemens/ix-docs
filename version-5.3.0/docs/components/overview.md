@@ -1,0 +1,101 @@
+# Components overview
+
+> Our design system clusters components into intuitive categories, making it easy to find the right tools for your app design. Explore each section to see how our components can enhance your projects.
+
+#
+
+- **Application frame**
+  - [Application](/version-5.3.0/docs/components/application/code): Applications manage the layout and theming of top-level app elements, ensuring a cohesive user experience.
+  - [Application header](/version-5.3.0/docs/components/application-header/code): Application headers provide a structured area for essential elements such as company logo and application name, while allowing flexibility through optional elements like the user avatar or application switch.
+  - [Application menu](/version-5.3.0/docs/components/application-menu/code): The navigation menu provides direct access to main application parts, legal and version information, and settings.
+  - [Avatar](/version-5.3.0/docs/components/avatar/code): Avatars visually or textually represent individual identities, typically for users logged into a system.
+  - [Content](/version-5.3.0/docs/components/content/code): The content component is a simple layout component made for hosting content.
+  - [Content header](/version-5.3.0/docs/components/content-header/code): Content headers provide a brief overview of the content on a page.
+  - [About and legal](/version-5.3.0/docs/components/about-and-legal/code): The About and legal component is an overlay we typically use to show application information, application versions, license terms, legal regulations, copyright information and other legal content.
+  - [Settings](/version-5.3.0/docs/components/settings/code): The settings overlay provides a centralized location for application settings.
+  - [Popover news](/version-5.3.0/docs/components/popover-news/code): Popover news presents important updates and information when the application starts.
+- **Navigation and hierarchy**
+  - [Breadcrumb](/version-5.3.0/docs/components/breadcrumb/code): Breadcrumbs provide a clear navigation path within an application.
+  - [Group](/version-5.3.0/docs/components/group/code): Groups are expandable containers for a list of selectable options.
+  - [Pagination](/version-5.3.0/docs/components/pagination/code): Paginations allow users to navigate between pages of content when it is split for performance reasons.
+  - [Tabs](/version-5.3.0/docs/components/tabs/code): Tabs consist of tab items and organize content into separate sections by grouping similar information.
+  - [Tree](/version-5.3.0/docs/components/tree/code): Trees display hierarchical data structures and allow users to navigate by expanding and collapsing nodes.
+  - [Workflow](/version-5.3.0/docs/components/workflow/code): Workflows are a series of logical steps that guide users through a process.
+- **Containers and layout**
+  - [Blind](/version-5.3.0/docs/components/blind/code): Blinds enhance content organization by allowing users to toggle visibility through collapsing and expanding sections.
+  - [Card](/version-5.3.0/docs/components/card/code): Cards neatly organize and group related information about a specific subject.
+  - [Card list](/version-5.3.0/docs/components/card-list/code): Card lists display a large number of cards or items of the same type in a lightweight, grouped manner.
+  - [Dropdown](/version-5.3.0/docs/components/dropdown/code): Dropdown containers display a menu with additional items when users click on the trigger element, e.g. a dropdown button.
+  - [Flip](/version-5.3.0/docs/components/flip/code): Flips are containers that flip when clicked to reveal additional content.
+  - [Event list](/version-5.3.0/docs/components/event-list/code): Event lists display a list of any type of element with additional details.
+  - [Layout auto](/version-5.3.0/docs/components/layout-auto/code): Auto-layouts are containers that automatically adjust the size of their columns based on the content.
+  - [Layout grid](/version-5.3.0/docs/components/layout-grid/code): Layout grids are used to structure the layout of a page or screen responsively.
+  - [Modal](/version-5.3.0/docs/components/modal/code): Modals appear on top of the main content of a webpage or application, blocking interaction with the rest of the page until the user completes a specific action or closes the modal.
+  - [Panes](/version-5.3.0/docs/components/panes/code): Panes are interactive components that allow users to access content that isn&#39;t constantly visible on the screen.
+  - [Popover](/version-5.3.0/docs/components/popover/code): Popovers display contextual information next to a trigger element.
+  - [Tile](/version-5.3.0/docs/components/tile/code): Tiles are containers that display content in a card-like format.
+- **Forms**
+  - [Forms field](/version-5.3.0/docs/components/forms-field/code): A field is a form element when user input is needed. It's typically used with other form elements in a fieldset.
+  - [Forms layout](/version-5.3.0/docs/components/forms-layout/code): Effective form layouts play a crucial role in usability. Well-structured forms include fieldsets, considering the hierarchy of information, and understanding how to strike the right balance between aesthetics and functionality.
+  - [Forms validation](/version-5.3.0/docs/components/forms-validation/code): Form validation gives users feedback on their input to ensure accurate, consistent data is submitted. When requirements are not met or data is incorrect, it’s rejected.
+  - [Forms behavior](/version-5.3.0/docs/components/forms-behavior/): Forms behavior refers to the way in which user input is handled and validated within a form. It plays a crucial role in providing a seamless and user-friendly experience for form interactions.
+- **Input fields and selections**
+  - [Category filter](/version-5.3.0/docs/components/category-filter/code): Category filters allow users to quickly narrow their search by selecting predefined categories.
+  - [Checkbox](/version-5.3.0/docs/components/checkbox/code): Checkboxes are form controls that allow users to select none, one or more options.
+  - [Custom field](/version-5.3.0/docs/components/custom-field/code): Custom fields are wrapper components that can host any form component.
+  - [Date dropdown](/version-5.3.0/docs/components/date-dropdown/code): Date dropdowns allow users to select a specific date from a date picker or pre-defined date options.
+  - [Date input](/version-5.3.0/docs/components/input-date/code): Date inputs allow users to enter and select dates in a standardized format, ensuring consistency and accuracy.
+  - [Date time input](/version-5.3.0/docs/components/input-date-time/code): Date time input provides a versatile interface for selecting both date and time values, offering a seamless way to input date and time information either as a standalone element or within a dropdown.
+  - [Date picker](/version-5.3.0/docs/components/date-picker/code): Date pickers provide a versatile calendar that can be used as a standalone element or within a dropdown for date input, offering a seamless way to select dates.
+  - [Date time picker](/version-5.3.0/docs/components/date-time-picker/code): Date time pickers offer an interface for selecting both dates and times, which can be used as a standalone element or within a dropdown, providing a seamless way to input date and time values.
+  - [Expanding search](/version-5.3.0/docs/components/expanding-search/code): Expanding searches are search fields that expand on click to save space.
+  - [Number input](/version-5.3.0/docs/components/input-number/code): Number inputs allow users to enter and adjust numerical values.
+  - [Range field](/version-5.3.0/docs/components/range-field/code): Range fields group two related inputs into a start and end value so users can enter date, time and date-time ranges consistently.
+  - [Radio](/version-5.3.0/docs/components/radio/code): Radio buttons enable users to choose only one option from a predefined set of mutually exclusive options.
+  - [Select](/version-5.3.0/docs/components/select/code): Selects allow users to choose from a list of options.
+  - [Slider](/version-5.3.0/docs/components/slider/code): Sliders allow users to select a value from a range of values.
+  - [Input](/version-5.3.0/docs/components/input/code): Input fields allow users to enter and edit single-line text, numbers, and other character-based symbols within an application.
+  - [Textarea](/version-5.3.0/docs/components/textarea/code): Textareas allow users to enter and edit multi-line text input, making it perfect for forms that require longer entries.
+  - [Time input](/version-5.3.0/docs/components/input-time/code): Time inputs allow users to enter and select times in a standardized format, ensuring consistency and accuracy.
+  - [Time picker](/version-5.3.0/docs/components/time-picker/code): Time pickers allow users to select specific times ensuring accurate time input.
+  - [Toggle](/version-5.3.0/docs/components/toggle/code): Toggle switches enable users to toggle between an on and off state.
+  - [Upload](/version-5.3.0/docs/components/upload/code): Uploads allow users to select and upload files from their device via drag-and-drop.
+- **Buttons and actions**
+  - [Button](/version-5.3.0/docs/components/button/code): Buttons facilitate user interactions by initiating actions and applying functions within an application.
+  - [Dropdown button](/version-5.3.0/docs/components/dropdown-button/code): Dropdown buttons reveal a list of actions when selected.
+  - [Icon button](/version-5.3.0/docs/components/icon-button/code): Icon buttons use only icons to represent actions, making them ideal for space-constrained layouts.
+  - [Link button](/version-5.3.0/docs/components/link-button/code): Link buttons take users to another location either within or outside the application and contain a chevron and a text label.
+  - [Split button](/version-5.3.0/docs/components/split-button/code): Split buttons are button elements that allow users to either trigger an action with one click or select an action from a list of options.
+  - [Toggle button](/version-5.3.0/docs/components/toggle-button/code): Toggle buttons allow users to either activate or deactivate a function.
+  - [Chip](/version-5.3.0/docs/components/chip/code): Chips are interactive elements that display small pieces of information in a compact and visually appealing way.
+- **System feedback and status**
+  - [Badge](/version-5.3.0/docs/components/badge/code): Badges display compact status, counter or notification cues on (or next to) UI elements.
+  - [Empty state](/version-5.3.0/docs/components/empty-state/code): Empty states inform users that there is no content to display.
+  - [Loading modal](/version-5.3.0/docs/components/loading-modal/code): Loading modals appear on top of the main content of a webpage or application, blocking interaction with the rest of the page until the process is finished.
+  - [Message bar](/version-5.3.0/docs/components/messagebar/code): Message bars display important information to users, e.g. feedback, warnings or errors.
+  - [Message modal](/version-5.3.0/docs/components/message-modal/code): Modal messages appear on top of the main content of a webpage or application, blocking interaction with the rest of the page until the user meets a decision or closes the modal.
+  - [Pill](/version-5.3.0/docs/components/pill/code): Pills display small pieces of information, e.g. counters or statuses.
+  - [Spinner](/version-5.3.0/docs/components/spinner/code): Spinners indicate that a process is running to provide feedback to the user.
+  - [Toast](/version-5.3.0/docs/components/toast/code): Toasts are small pop-ups that provide simple feedback on a process.
+  - [Tooltip](/version-5.3.0/docs/components/tooltip/code): Tooltips provide additional information when users hover over or focus on an element.
+  - [Progress indicator](/version-5.3.0/docs/components/progress-indicator/code): Progress indicators show the status or completion of a process. Use them to provide feedback for operations that take one second or more.
+- **Data display**
+  - [Data grid](/version-5.3.0/docs/components/grid/code): The popular data grid library AG Grid is seamlessly integrated into our design system, allowing you to harness its powerful features while maintaining consistency with our styleguide.
+  - [HTML table](/version-5.3.0/docs/components/html-grid/code): HTML tables are used to display tabular data in a structured way.
+  - [Key value](/version-5.3.0/docs/components/key-value/code): Key value pairs display a label (key) and a value in a structured, easy way.
+  - [Key value list](/version-5.3.0/docs/components/key-value-list/code): Key value lists organize and list a series of key value pairs.
+  - [KPI](/version-5.3.0/docs/components/kpi/code): KPIs display measured values together with a status indicator to help users interpret data.
+- **Chat**
+  - [Chat](/version-5.3.0/docs/components/chat/code): Chats are layout components for building conversational chatbot experiences.
+  - [Chat input](/version-5.3.0/docs/components/chat-input/code): Chat inputs are used to write messages with attachments in a chat experience.
+  - [User message](/version-5.3.0/docs/components/user-message/code): User messages display a single message authored by the user in a chat thread, e.g. conversational AI.
+  - [AI message](/version-5.3.0/docs/components/ai-message/code): AI messages display a single response generated by AI in a conversational chat experience.
+  - [Chat attachment](/version-5.3.0/docs/components/chat-attachment/code): Chat attachments are used to display a single attachment in chat experiences.
+- **Charts**
+  - [Overview](/version-5.3.0/docs/components/charts-overview/overview): Charts are essential tools for visualizing data, making complex information more accessible and easier to understand.
+  - [Line chart](/version-5.3.0/docs/components/line-chart/overview): Line charts display data as a series of data points connected by straight line segments. Line charts are commonly used to visualize trends over time or compare two variables. We typically use line charts to visualize continuous data.
+  - [Bar chart](/version-5.3.0/docs/components/bar-chart/overview): Bar charts display data using rectangular bars. The length of each bar is proportional to the value it represents. Bar charts are commonly used to compare the values of different categories. We typically use bar charts to visualize data that is categorical or ordinal in nature.
+  - [Gauge chart](/version-5.3.0/docs/components/gauge-chart/overview): Gauge charts are a type of chart that displays data using a dial or needle to indicate a value within a specific range. Gauge charts are commonly used to visualize performance metrics, such as speedometers, progress meters, and other KPIs. We typically use gauge charts to represent a single value within a range of values.
+  - [Pie chart](/version-5.3.0/docs/components/pie-chart/overview): Pie charts display data using a circular graph. The length of each slice is proportional to the value it represents. Pie charts are commonly used to visualize the parts of a whole and are particularly useful for comparing the relative sizes of different categories.
+  - [3D chart](/version-5.3.0/docs/components/3d/overview): 3D charts are a powerful way to visualize data in three dimensions. They provide a more immersive and interactive experience compared to traditional 2D charts. We typically use 3D charts to represent complex data sets or to visualize data in a more engaging way.
+  - [Special chart](/version-5.3.0/docs/components/special-chart/overview): ECharts offer a wide variety of different chart types and features. The following page deals with some of the more special chart types and features.

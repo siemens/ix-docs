@@ -1,0 +1,73 @@
+# Time input - Usage
+
+> Time inputs are typically used in forms, filters and scheduling tools to ensure consistent and accurate time entries. Standardizing time inputs ensures data integrity and improves the user experience in applications requiring precise time information.
+
+# Time input - Usage
+
+Time inputs are typically used in forms, filters and scheduling tools to ensure consistent and accurate time entries. Standardizing time inputs ensures data integrity and improves the user experience in applications requiring precise time information.
+
+![Time input overview](https://www.figma.com/design/wEptRgAezDU1z80Cn3eZ0o/iX-Documentation-illustrations?node-id=5647-1381&t=X5f645XuQl3ZV8XD-4)
+
+1. Label
+2. Required field indicator
+3. Current value
+4. Clock [icon button](../icon-button)
+5. [Input field](../input)
+6. [Time picker](../time-picker)
+
+## Options
+
+- **Label**: See [form field](../forms-field).
+- **Required**: See [form field](../forms-field).
+- **Helper text**: See [form field](../forms-field).
+- **Feedback text**: See [form field](../forms-field).
+- **Show text as tooltip**: See [form field](../forms-field).
+- **Placeholder**: See [form field](../forms-field). We typically use a placeholder to show an example time format to assist users when the field is empty.
+- **Text alignment:** See [form field](../forms-field/guide#options) (by default at start).
+- **Error message**: Feedback text when time is not parsable. We typically use this to inform users that the entered time format is incorrect and guide them to enter a valid time.
+- **Format**: Specify the time format to ensure that times are entered in a consistent and recognizable format. Default is `TT` which is the localized 24-hour time with seconds (read more in the [UX writing guidelines](./../../guidelines/language/writing-style-guide-getting-started)).
+  - **Columns**: Show the respective columns in the time picker (see [time picker](../time-picker/guide#options)).
+  - **Intervals**: Define intervals to restrict allowed values (see [time picker](../time-picker/guide#options)).
+- **Time picker**: See [time picker](../time-picker/guide#options)
+  - **Header**: Hide the header when there is a label on the input, or if the context is conveyed in another way.
+  - **Corners**
+  - **Standalone appearance**
+
+## Behavior in context
+
+- **Interaction**:
+  - Click or focus opens the time picker.
+  - Scroll via mouse or touch, or keyboard arrows navigates to the desired time.
+  - Confirm closes the time picker.
+  - Escape key closes the time picker.
+- **Validation**:
+  - Use feedback text for validation types valid, info, warning and invalid.
+  - Invalid feedback is automatically provided if the entered time is not parsable.
+  - Refer to the [validation](../forms-validation) chapter for detailed guidelines.
+- **Overflow**: Input fields should be wide enough to display the full time without truncation.
+- **Alignment**: Time inputs are always aligned to the left.
+
+## States
+
+Time input has five states: Default, hover, disabled, read-only and focused.
+
+![Time input states](https://www.figma.com/design/wEptRgAezDU1z80Cn3eZ0o/iX-Documentation-illustrations?node-id=7147-9559&t=DrLi4Tgyh22TBGiT-4)
+
+## Dos and Don’ts
+
+  Do use consistent time formats throughout the application to avoid confusion
+  Do add helper text to clarify the time format being used
+  Do ensure the time picker is accessible via keyboard
+  Do consider localization to adapt time formats to local conventions
+
+  Don’t use the same input for start and end times, instead separate them
+
+## Related
+
+- [Time picker](../time-picker)
+- [Date time picker](../date-time-picker)
+- [Date time input](../input-date-time)
+- [Forms field](../forms-field)
+- [Validation](../forms-validation)
+- [Writing guidelines for date and time](../../guidelines/language/formatting/date.mdx)
+- [W3C date picker accessibility reference](https://www.w3.org/WAI/ARIA/apg/patterns/combobox/examples/combobox-datepicker/)

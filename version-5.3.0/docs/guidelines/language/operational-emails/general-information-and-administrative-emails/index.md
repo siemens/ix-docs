@@ -1,0 +1,3 @@
+# General information and administrative emails
+
+> In everyday operations, general emails covering administrative details, confirmations, and other essential updates - outside specific operational categories - help keep stakeholders informed and processes organized.

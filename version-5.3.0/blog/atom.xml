@@ -1,0 +1,649 @@
+<?xml version="1.0" encoding="utf-8"?><?xml-stylesheet type="text/xsl" href="atom.xsl"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+    <id>https://ix.siemens.io/version-5.3.0/blog</id>
+    <title>Siemens Industrial Experience Blog</title>
+    <updated>2026-10-01T00:00:00.000Z</updated>
+    <generator>https://github.com/jpmonette/feed</generator>
+    <link rel="alternate" href="https://ix.siemens.io/version-5.3.0/blog"/>
+    <subtitle>Siemens Industrial Experience Blog</subtitle>
+    <icon>https://ix.siemens.io/version-5.3.0/img/favicon.png</icon>
+    <entry>
+        <title type="html"><![CDATA[Huge UX Writing evolution]]></title>
+        <id>https://ix.siemens.io/version-5.3.0/blog/2026/10/01/uxw-version-2</id>
+        <link href="https://ix.siemens.io/version-5.3.0/blog/2026/10/01/uxw-version-2"/>
+        <updated>2026-10-01T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[We are thrilled to share that UXW Version 2.0 is officially here!]]></summary>
+        <content type="html"><![CDATA[<p><img decoding="async" loading="lazy" src="https://ix.siemens.io/version-5.3.0/assets/images/2610_uxw_v2_title_announcement-7b6d3401b69ad95f68d85f57314bc793.png" width="896" height="360" class="img_QgcI"></p>
+<p>We are thrilled to share that UXW Version 2.0 is officially here!</p>
+<p>Following the launch of our initial version, we gathered a wealth of insights and feedback from teams across our entire organization. It quickly became clear: to truly support the diverse needs of global product teams creating industrial applications, we needed to think bigger.</p>
+<h2 class="anchor anchorWithStickyNavbar_loeA" id="why-is-it-3x-bigger">Why is it 3x bigger?<a href="https://ix.siemens.io/version-5.3.0/blog/2026/10/01/uxw-version-2#why-is-it-3x-bigger" class="hash-link" aria-label="Direct link to Why is it 3x bigger?" title="Direct link to Why is it 3x bigger?">​</a></h2>
+<p><img decoding="async" loading="lazy" alt="triple content" src="https://ix.siemens.io/version-5.3.0/assets/images/2610_triple_content-b63975cb90b5ebd69831d78b1aa7737e.png" width="896" height="360" class="img_QgcI"></p>
+<p>You’ll notice that Version 2.0 is more than three times the size of the original guide. This isn’t just about “more words”; it’s about providing more value. We expanded the guide for two key reasons:</p>
+<h3 class="anchor anchorWithStickyNavbar_loeA" id="broader-and-deeper-content">Broader and deeper content<a href="https://ix.siemens.io/version-5.3.0/blog/2026/10/01/uxw-version-2#broader-and-deeper-content" class="hash-link" aria-label="Direct link to Broader and deeper content" title="Direct link to Broader and deeper content">​</a></h3>
+<p>We’ve introduced a wide range of new topics and provided much deeper technical detail on existing guidelines to answer the questions we hear most often.</p>
+<h3 class="anchor anchorWithStickyNavbar_loeA" id="accessibility-and-clarity">Accessibility and clarity<a href="https://ix.siemens.io/version-5.3.0/blog/2026/10/01/uxw-version-2#accessibility-and-clarity" class="hash-link" aria-label="Direct link to Accessibility and clarity" title="Direct link to Accessibility and clarity">​</a></h3>
+<p>Inclusivity is at our core. We’ve redesigned our guidelines to be navigated easily by everyone (even AI agents), with a specific focus on supporting non-native English speakers. By providing more context and clearer “Dos and Don’ts” examples, we hope our guidelines are accessible to all.</p>
+<h2 class="anchor anchorWithStickyNavbar_loeA" id="get-involved">Get involved<a href="https://ix.siemens.io/version-5.3.0/blog/2026/10/01/uxw-version-2#get-involved" class="hash-link" aria-label="Direct link to Get involved" title="Direct link to Get involved">​</a></h2>
+<p><img decoding="async" loading="lazy" alt="write stuff" src="https://ix.siemens.io/version-5.3.0/assets/images/2610_uxw_write_stuff-cbb828e8b91b12add187f56ea742f802.png" width="896" height="360" class="img_QgcI"></p>
+<p>This release was made possible by the dedicated effort of our cross-functional contributors, including our design system partners, accessibility specialists, and meticulous editorial team. Thank you for helping us build a better voice for our users.</p>
+<p>Explore the new guidelines and integrate them into your workflow, starting here: <a href="https://ix.siemens.io/version-5.3.0/docs/guidelines/language/writing-style-guide-getting-started">UXW Writing Getting Started</a> and if you have any questions or a contribution, do not hesitate to reach out via our <a href="https://ix.siemens.io/version-5.3.0/docs/home/support/contact-us">support channels</a>.</p>]]></content>
+        <author>
+            <name>Zsuzsanna Racz</name>
+        </author>
+        <category label="UX writing" term="UX writing"/>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Status color update]]></title>
+        <id>https://ix.siemens.io/version-5.3.0/blog/2026/09/08/colorchange</id>
+        <link href="https://ix.siemens.io/version-5.3.0/blog/2026/09/08/colorchange"/>
+        <updated>2026-09-08T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[banner]]></summary>
+        <content type="html"><![CDATA[<p><img decoding="async" loading="lazy" alt="banner" src="https://ix.siemens.io/version-5.3.0/assets/images/2609_blog_colorchange-29f17345194e55aad2e99209aefcc026.svg" width="896" height="360" class="img_QgcI"></p>
+<p>With the upcoming version 6 release, we're updating and refining our status and risk-level terminology to align with international standards and improve accessibility. In this post, we explain what will change and why.</p>
+<h2 class="anchor anchorWithStickyNavbar_loeA" id="status-names-update">Status names update<a href="https://ix.siemens.io/version-5.3.0/blog/2026/09/08/colorchange#status-names-update" class="hash-link" aria-label="Direct link to Status names update" title="Direct link to Status names update">​</a></h2>
+<p><img decoding="async" loading="lazy" alt="banner" src="https://ix.siemens.io/version-5.3.0/assets/images/2609_blog_colorchange_mapping-964c43a6e8270772b7b337bb0f907212.svg" width="896" height="556" class="img_QgcI"></p>
+<p>We're refining our status color names to align with a unified color token set that will be part of our next major release. The table below shows how each status name is being updated:</p>
+<div class="table-full-width table-column-equal-width"><table><thead><tr><th>Previous</th><th>New</th></tr></thead><tbody><tr><td>Alarm (red)</td><td>Danger (red)</td></tr><tr><td>Critical (orange)</td><td>Warning (orange)</td></tr><tr><td>Warning (yellow)</td><td>Caution (yellow)</td></tr><tr><td>Success (green)</td><td>Success (green)</td></tr><tr><td>Info (blue)</td><td>Information (blue)</td></tr><tr><td>Neutral (gray)</td><td>Neutral (gray)</td></tr></tbody></table></div>
+<h3 class="anchor anchorWithStickyNavbar_loeA" id="why-were-making-this-change">Why we're making this change<a href="https://ix.siemens.io/version-5.3.0/blog/2026/09/08/colorchange#why-were-making-this-change" class="hash-link" aria-label="Direct link to Why we're making this change" title="Direct link to Why we're making this change">​</a></h3>
+<p><strong>Align with ISO standards:</strong> ISO 3864 and ISO 7010 provide guidance on risk levels and their associated colors. Although these standards were created for machine and consumer product labeling, their concepts are closely related and can be applied to software user interfaces as well.</p>
+<p>ISO 3864-2 defines:</p>
+<ul>
+<li>Danger as red</li>
+<li>Warning as orange</li>
+<li>Caution as yellow</li>
+</ul>
+<p>ISO 7010 additionally uses:</p>
+<ul>
+<li>Green for safe conditions</li>
+<li>Blue for mandatory information</li>
+</ul>
+<p><strong>Comply with web accessibility guidelines (WCAG):</strong> Orange as new system feedback color for Warning also improves compliance with WCAG contrast requirements, particularly in light mode.</p>
+<h2 class="anchor anchorWithStickyNavbar_loeA" id="a-new-status-level-above-danger">A new status level above danger<a href="https://ix.siemens.io/version-5.3.0/blog/2026/09/08/colorchange#a-new-status-level-above-danger" class="hash-link" aria-label="Direct link to A new status level above danger" title="Direct link to A new status level above danger">​</a></h2>
+<p><img decoding="async" loading="lazy" alt="banner" src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iODk2IiBoZWlnaHQ9IjIxOSIgdmlld0JveD0iMCAwIDg5NiAyMTkiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjxyZWN0IHdpZHRoPSI4OTYiIGhlaWdodD0iMjE5IiBmaWxsPSIjMjMyMzNDIi8+CjxyZWN0IHg9IjMxNyIgeT0iNDgiIHdpZHRoPSI4MCIgaGVpZ2h0PSIxMjMiIGZpbGw9IiMwMDAwMjgiLz4KPHBhdGggZD0iTTM0MS41ODcgODJWNzAuOTI5N0gzNDQuMDY0QzM0NC45MjMgNzAuOTI5NyAzNDUuNjM2IDcwLjk3OTIgMzQ2LjIwNCA3MS4wNzgxQzM0Ny40MzkgNzEuMzAyMSAzNDguMzU4IDcxLjkyNDUgMzQ4Ljk2MiA3Mi45NDUzQzM0OS41MDkgNzMuODcyNCAzNDkuNzgyIDc1LjAyMzQgMzQ5Ljc4MiA3Ni4zOTg0QzM0OS43ODIgNzcuNzMxOCAzNDkuNTI3IDc4Ljg1NDIgMzQ5LjAxNyA3OS43NjU2QzM0OC4zODYgODAuODg1NCAzNDcuNDMxIDgxLjU3MjkgMzQ2LjE0OSA4MS44MjgxQzM0NS41NjEgODEuOTQyNyAzNDQuODA4IDgyIDM0My44OTIgODJIMzQxLjU4N1pNMzQyLjg2OCA4MC45NDUzSDM0My45ODVDMzQ1LjI5OCA4MC45NDUzIDM0Ni4yNzcgODAuNzA4MyAzNDYuOTIzIDgwLjIzNDRDMzQ3LjQwMiA3OS44ODU0IDM0Ny43NzIgNzkuMzg1NCAzNDguMDMyIDc4LjczNDRDMzQ4LjI5MyA3OC4wNzgxIDM0OC40MjMgNzcuMzI4MSAzNDguNDIzIDc2LjQ4NDRDMzQ4LjQyMyA3NS4yNzA4IDM0OC4xODEgNzQuMjU3OCAzNDcuNjk2IDczLjQ0NTNDMzQ3LjI0OCA3Mi42OTAxIDM0Ni41NzEgNzIuMjM3IDM0NS42NjUgNzIuMDg1OUMzNDUuMjY5IDcyLjAxODIgMzQ0LjY0NyA3MS45ODQ0IDM0My43OTggNzEuOTg0NEgzNDIuODY4VjgwLjk0NTNaTTM1Ni41MjkgODEuMDU0N0MzNTYuMTY0IDgxLjQ1MDUgMzU1Ljc5NSA4MS43MzQ0IDM1NS40MiA4MS45MDYyQzM1NS4wNSA4Mi4wNzI5IDM1NC42MTIgODIuMTU2MiAzNTQuMTA3IDgyLjE1NjJDMzUzLjI1OCA4Mi4xNTYyIDM1Mi42MSA4MS45MTY3IDM1Mi4xNjIgODEuNDM3NUMzNTEuNzY2IDgxLjAxNTYgMzUxLjU2OCA4MC40NTgzIDM1MS41NjggNzkuNzY1NkMzNTEuNTY4IDc4LjY5NzkgMzUyLjAxOSA3Ny45Mzc1IDM1Mi45MiA3Ny40ODQ0QzM1My40NTEgNzcuMjE4OCAzNTQuMjM1IDc3LjA4NTkgMzU1LjI3MSA3Ny4wODU5QzM1NS40MzMgNzcuMDg1OSAzNTUuODIxIDc3LjA5NjQgMzU2LjQzNSA3Ny4xMTcyVjc2Ljg5ODRDMzU2LjQzNSA3Ni4zMDk5IDM1Ni4zNiA3NS44NjIgMzU2LjIwOSA3NS41NTQ3QzM1NS45MzggNzQuOTkyMiAzNTUuNDAxIDc0LjcxMDkgMzU0LjU5OSA3NC43MTA5QzM1My45NDMgNzQuNzEwOSAzNTMuMjQ1IDc0Ljk0NTMgMzUyLjUwNiA3NS40MTQxTDM1MS45NzQgNzQuNTM5MUMzNTIuODIzIDc0LjAwMjYgMzUzLjc0MyA3My43MzQ0IDM1NC43MzIgNzMuNzM0NEMzNTUuOTYxIDczLjczNDQgMzU2LjgwMiA3NC4xMDE2IDM1Ny4yNTYgNzQuODM1OUMzNTcuNDEyIDc1LjA5NjQgMzU3LjUxNiA3NS4zOTU4IDM1Ny41NjggNzUuNzM0NEMzNTcuNjI1IDc2LjA2NzcgMzU3LjY1NCA3Ni41OTkgMzU3LjY1NCA3Ny4zMjgxVjc5Ljk3NjZDMzU3LjY1NCA4MC44MDk5IDM1Ny42NzUgODEuNDg0NCAzNTcuNzE3IDgySDM1Ni41ODRMMzU2LjUyOSA4MS4wNTQ3Wk0zNTYuNDM1IDc4LjA0NjlDMzU2LjE0OSA3OC4wMjYgMzU1Ljg0NyA3OC4wMTU2IDM1NS41MjkgNzguMDE1NkMzNTQuNjU5IDc4LjAxNTYgMzU0LjAyNiA3OC4xMzAyIDM1My42MzEgNzguMzU5NEMzNTMuMTEgNzguNjU2MiAzNTIuODQ5IDc5LjExNDYgMzUyLjg0OSA3OS43MzQ0QzM1Mi44NDkgODAuMTcxOSAzNTIuOTggODAuNTIwOCAzNTMuMjQgODAuNzgxMkMzNTMuNTExIDgxLjA0NjkgMzUzLjg3MyA4MS4xNzk3IDM1NC4zMjYgODEuMTc5N0MzNTUuMTc1IDgxLjE3OTcgMzU1Ljg3OCA4MC43NjU2IDM1Ni40MzUgNzkuOTM3NVY3OC4wNDY5Wk0zNjAuNjU5IDgyVjc3LjM3NUMzNjAuNjU5IDc2LjM1OTQgMzYwLjY0MyA3NS4zMjI5IDM2MC42MTIgNzQuMjY1NkwzNjAuNjA0IDczLjg5MDZIMzYxLjczN0wzNjEuNzg0IDc1LjM4MjhDMzYyLjEwMSA3NC43OTQzIDM2Mi40MzcgNzQuMzcyNCAzNjIuNzkxIDc0LjExNzJDMzYzLjE0NSA3My44NTY4IDM2My41NjcgNzMuNzI2NiAzNjQuMDU3IDczLjcyNjZDMzY0LjIyNCA3My43MjY2IDM2NC40MTQgNzMuNzQ3NCAzNjQuNjI3IDczLjc4OTFMMzY0LjUxOCA3NC44ODI4QzM2NC4zNjcgNzQuODQ2NCAzNjQuMjI0IDc0LjgyODEgMzY0LjA4OCA3NC44MjgxQzM2My40ODkgNzQuODI4MSAzNjIuOTYxIDc1LjEzMDIgMzYyLjUwMiA3NS43MzQ0QzM2Mi4yNDIgNzYuMDcyOSAzNjIuMDM0IDc2LjQ1MDUgMzYxLjg3NyA3Ni44NjcyVjgySDM2MC42NTlaTTM2Ni40MjkgODJWNzAuMzA0N0gzNjcuNjQ3Vjc3LjMyODFMMzcwLjk0NCA3My44OTA2SDM3Mi40NjhMMzY4LjkyOSA3Ny40OTIyTDM3Mi43MDIgODJIMzcxLjE0TDM2Ny42NDcgNzcuODEyNVY4MkgzNjYuNDI5WiIgZmlsbD0id2hpdGUiLz4KPHJlY3QgeD0iMzk3IiB5PSI0OCIgd2lkdGg9IjgwIiBoZWlnaHQ9IjEyMyIgZmlsbD0iI0Y1RjVGNSIvPgo8cGF0aCBkPSJNNDE5Ljg1IDgyVjcwLjkyOTdINDIxLjEzMlY4MC45NDUzSDQyNS45MjhWODJINDE5Ljg1Wk00MjcuNTg5IDgyVjczLjg5MDZINDI4LjgwOFY4Mkg0MjcuNTg5Wk00MjguMTkxIDcwLjE0ODRDNDI4LjQ0NiA3MC4xNDg0IDQyOC42NTQgNzAuMjI5MiA0MjguODE2IDcwLjM5MDZDNDI4Ljk3NyA3MC41NTIxIDQyOS4wNTggNzAuNzU3OCA0MjkuMDU4IDcxLjAwNzhDNDI5LjA1OCA3MS4yNjMgNDI4Ljk3NyA3MS40NzE0IDQyOC44MTYgNzEuNjMyOEM0MjguNjU0IDcxLjc5NDMgNDI4LjQ0OSA3MS44NzUgNDI4LjE5OSA3MS44NzVDNDI3Ljk0MyA3MS44NzUgNDI3LjczNSA3MS43OTQzIDQyNy41NzQgNzEuNjMyOEM0MjcuNDEyIDcxLjQ3MTQgNDI3LjMzMSA3MS4yNjA0IDQyNy4zMzEgNzFDNDI3LjMzMSA3MC43NTUyIDQyNy40MTIgNzAuNTUyMSA0MjcuNTc0IDcwLjM5MDZDNDI3Ljc0IDcwLjIyOTIgNDI3Ljk0NiA3MC4xNDg0IDQyOC4xOTEgNzAuMTQ4NFpNNDM2Ljg3NSA3My44OTA2SDQzOC4wNjJDNDM4LjAyMSA3NS4yMDMxIDQzOCA3Ni4yNjgyIDQzOCA3Ny4wODU5VjgxLjE0MDZDNDM4IDgyLjAxNTYgNDM3Ljk1MyA4Mi42NzE5IDQzNy44NTkgODMuMTA5NEM0MzcuNzcxIDgzLjU1MjEgNDM3LjU5OSA4My45NDc5IDQzNy4zNDQgODQuMjk2OUM0MzYuNzA4IDg1LjE2NjcgNDM1Ljc2MyA4NS42MDE2IDQzNC41MDggODUuNjAxNkM0MzMuNDMgODUuNjAxNiA0MzIuNDA5IDg1LjMwNzMgNDMxLjQ0NSA4NC43MTg4TDQzMS45NjkgODMuNzgxMkM0MzIuNzk3IDg0LjM0MzggNDMzLjYzNSA4NC42MjUgNDM0LjQ4NCA4NC42MjVDNDM1LjQzNyA4NC42MjUgNDM2LjA5OSA4NC4yMzk2IDQzNi40NjkgODMuNDY4OEM0MzYuNjc3IDgzLjAzNjUgNDM2Ljc4MSA4Mi4yOTY5IDQzNi43ODEgODEuMjVWODAuNTc4MUM0MzYuMDI2IDgxLjQzMjMgNDM1LjIwMSA4MS44NTk0IDQzNC4zMDUgODEuODU5NEM0MzMuMzk4IDgxLjg1OTQgNDMyLjY0NiA4MS40OTQ4IDQzMi4wNDcgODAuNzY1NkM0MzEuNDU4IDgwLjA1MjEgNDMxLjE2NCA3OS4wODMzIDQzMS4xNjQgNzcuODU5NEM0MzEuMTY0IDc2LjUzNjUgNDMxLjQ5IDc1LjQ4OTYgNDMyLjE0MSA3NC43MTg4QzQzMi42OTggNzQuMDYyNSA0MzMuNDI3IDczLjczNDQgNDM0LjMyOCA3My43MzQ0QzQzNS4zOTYgNzMuNzM0NCA0MzYuMjI5IDc0LjIwMzEgNDM2LjgyOCA3NS4xNDA2TDQzNi44NzUgNzMuODkwNlpNNDM2Ljc4MSA3Ni4yNzM0QzQzNi41NjIgNzUuODU2OCA0MzYuMzE4IDc1LjUzMTIgNDM2LjA0NyA3NS4yOTY5QzQzNS41OTQgNzQuOTA2MiA0MzUuMTA3IDc0LjcxMDkgNDM0LjU4NiA3NC43MTA5QzQzMy44NjIgNzQuNzEwOSA0MzMuMzEyIDc1LjAzOTEgNDMyLjkzNyA3NS42OTUzQzQzMi42MDkgNzYuMjczNCA0MzIuNDQ1IDc2Ljk4OTYgNDMyLjQ0NSA3Ny44NDM4QzQzMi40NDUgNzguNjcxOSA0MzIuNjE3IDc5LjM2NzIgNDMyLjk2MSA3OS45Mjk3QzQzMy4zNTcgODAuNTY1MSA0MzMuOTE0IDgwLjg4MjggNDM0LjYzMyA4MC44ODI4QzQzNS41MDMgODAuODgyOCA0MzYuMjE5IDgwLjQwODkgNDM2Ljc4MSA3OS40NjA5Vjc2LjI3MzRaTTQ0MC45ODkgODJWNzAuMzA0N0g0NDIuMjA4Vjc1LjE0ODRDNDQzLjA5OCA3NC4yMDU3IDQ0NC4wNyA3My43MzQ0IDQ0NS4xMjIgNzMuNzM0NEM0NDYuMTQzIDczLjczNDQgNDQ2Ljg0NiA3NC4xMDk0IDQ0Ny4yMzEgNzQuODU5NEM0NDcuMzUxIDc1LjEwNDIgNDQ3LjQzNyA3NS40MTE1IDQ0Ny40ODkgNzUuNzgxMkM0NDcuNTQxIDc2LjE1MSA0NDcuNTY3IDc2LjY2MTUgNDQ3LjU2NyA3Ny4zMTI1VjgySDQ0Ni4zNDhWNzcuMjg5MUM0NDYuMzQ4IDc2LjQ3NjYgNDQ2LjI5MSA3NS45MDYyIDQ0Ni4xNzYgNzUuNTc4MUM0NDUuOTc4IDc1IDQ0NS41MTIgNzQuNzEwOSA0NDQuNzc4IDc0LjcxMDlDNDQzLjg5MyA3NC43MTA5IDQ0My4wMzYgNzUuMjE2MSA0NDIuMjA4IDc2LjIyNjZWODJINDQwLjk4OVpNNDUwLjkxNSA3NC44NjcySDQ0OS42MDNWNzMuODkwNkg0NTAuOTE1VjcyLjExNzJMNDUyLjEzNCA3MS44NTk0VjczLjg5MDZINDU0LjA0OFY3NC44NjcySDQ1Mi4xMzRWNzkuMjk2OUM0NTIuMTM0IDc5Ljk2ODggNDUyLjE5MSA4MC40MjcxIDQ1Mi4zMDYgODAuNjcxOUM0NTIuNDczIDgxLjAxMDQgNDUyLjc4IDgxLjE3OTcgNDUzLjIyOCA4MS4xNzk3QzQ1My40OTkgODEuMTc5NyA0NTMuODA4IDgxLjA5OSA0NTQuMTU3IDgwLjkzNzVMNDU0LjI2NyA4MS45MDYyQzQ1My43OTggODIuMDcyOSA0NTMuMzYxIDgyLjE1NjIgNDUyLjk1NCA4Mi4xNTYyQzQ1Mi4yMSA4Mi4xNTYyIDQ1MS42ODMgODEuOTU4MyA0NTEuMzc2IDgxLjU2MjVDNDUxLjA2OSA4MS4xNjY3IDQ1MC45MTUgODAuNDkyMiA0NTAuOTE1IDc5LjUzOTFWNzQuODY3MloiIGZpbGw9IiMwMDAwMjgiLz4KPHJlY3QgeD0iMzMzIiB5PSIxMDciIHdpZHRoPSI0OCIgaGVpZ2h0PSI0OCIgZmlsbD0iI0E3MzNCQyIvPgo8cmVjdCB4PSI0MTMiIHk9IjEwNyIgd2lkdGg9IjQ4IiBoZWlnaHQ9IjQ4IiBmaWxsPSIjQTczM0JDIi8+CjxwYXRoIGQ9Ik01MDEuNjg4IDEzNS41MTZMNTAyLjAwOCAxMzYuNTM5QzUwMC45NTEgMTM2Ljk1MSA0OTkuOTU4IDEzNy4xNTYgNDk5LjAzMSAxMzcuMTU2QzQ5Ny41MSAxMzcuMTU2IDQ5Ni4yODYgMTM2LjY2NyA0OTUuMzU5IDEzNS42ODhDNDk0LjM2NSAxMzQuNjM1IDQ5My44NjcgMTMzLjI1NSA0OTMuODY3IDEzMS41NDdDNDkzLjg2NyAxMzAuMzY1IDQ5NC4xMDIgMTI5LjMxOCA0OTQuNTcgMTI4LjQwNkM0OTUuMDkxIDEyNy40MDEgNDk1LjgxMiAxMjYuNjggNDk2LjczNCAxMjYuMjQyQzQ5Ny40MDEgMTI1LjkzIDQ5OC4xNDYgMTI1Ljc3MyA0OTguOTY5IDEyNS43NzNDNDk5LjkzMiAxMjUuNzczIDUwMC45MjQgMTI2LjAwMyA1MDEuOTQ1IDEyNi40NjFMNTAxLjUzMSAxMjcuNDg0QzUwMC42MTUgMTI3LjA0NyA0OTkuNzY4IDEyNi44MjggNDk4Ljk5MiAxMjYuODI4QzQ5Ny43NzMgMTI2LjgyOCA0OTYuODQxIDEyNy4yODkgNDk2LjE5NSAxMjguMjExQzQ5NS41NDkgMTI5LjEzOCA0OTUuMjI3IDEzMC4yNTMgNDk1LjIyNyAxMzEuNTU1QzQ5NS4yMjcgMTMyLjQ1MSA0OTUuMzkzIDEzMy4yNjYgNDk1LjcyNyAxMzRDNDk2LjAzOSAxMzQuNjg4IDQ5Ni40NzcgMTM1LjIxMSA0OTcuMDM5IDEzNS41N0M0OTcuNjAyIDEzNS45MjQgNDk4LjI2OCAxMzYuMTAyIDQ5OS4wMzkgMTM2LjEwMkM0OTkuOTA5IDEzNi4xMDIgNTAwLjc5MiAxMzUuOTA2IDUwMS42ODggMTM1LjUxNlpNNTAzLjk4OSAxMzdWMTMyLjM3NUM1MDMuOTg5IDEzMS4zNTkgNTAzLjk3MyAxMzAuMzIzIDUwMy45NDIgMTI5LjI2Nkw1MDMuOTM0IDEyOC44OTFINTA1LjA2N0w1MDUuMTE0IDEzMC4zODNDNTA1LjQzMiAxMjkuNzk0IDUwNS43NjggMTI5LjM3MiA1MDYuMTIyIDEyOS4xMTdDNTA2LjQ3NiAxMjguODU3IDUwNi44OTggMTI4LjcyNyA1MDcuMzg3IDEyOC43MjdDNTA3LjU1NCAxMjguNzI3IDUwNy43NDQgMTI4Ljc0NyA1MDcuOTU4IDEyOC43ODlMNTA3Ljg0OCAxMjkuODgzQzUwNy42OTcgMTI5Ljg0NiA1MDcuNTU0IDEyOS44MjggNTA3LjQxOSAxMjkuODI4QzUwNi44MiAxMjkuODI4IDUwNi4yOTEgMTMwLjEzIDUwNS44MzMgMTMwLjczNEM1MDUuNTcyIDEzMS4wNzMgNTA1LjM2NCAxMzEuNDUxIDUwNS4yMDggMTMxLjg2N1YxMzdINTAzLjk4OVpNNTA5Ljc1OSAxMzdWMTI4Ljg5MUg1MTAuOTc4VjEzN0g1MDkuNzU5Wk01MTAuMzYxIDEyNS4xNDhDNTEwLjYxNiAxMjUuMTQ4IDUxMC44MjQgMTI1LjIyOSA1MTAuOTg2IDEyNS4zOTFDNTExLjE0NyAxMjUuNTUyIDUxMS4yMjggMTI1Ljc1OCA1MTEuMjI4IDEyNi4wMDhDNTExLjIyOCAxMjYuMjYzIDUxMS4xNDcgMTI2LjQ3MSA1MTAuOTg2IDEyNi42MzNDNTEwLjgyNCAxMjYuNzk0IDUxMC42MTggMTI2Ljg3NSA1MTAuMzY4IDEyNi44NzVDNTEwLjExMyAxMjYuODc1IDUwOS45MDUgMTI2Ljc5NCA1MDkuNzQzIDEyNi42MzNDNTA5LjU4MiAxMjYuNDcxIDUwOS41MDEgMTI2LjI2IDUwOS41MDEgMTI2QzUwOS41MDEgMTI1Ljc1NSA1MDkuNTgyIDEyNS41NTIgNTA5Ljc0MyAxMjUuMzkxQzUwOS45MSAxMjUuMjI5IDUxMC4xMTYgMTI1LjE0OCA1MTAuMzYxIDEyNS4xNDhaTTUxNC4zODkgMTI5Ljg2N0g1MTMuMDc2VjEyOC44OTFINTE0LjM4OVYxMjcuMTE3TDUxNS42MDcgMTI2Ljg1OVYxMjguODkxSDUxNy41MjFWMTI5Ljg2N0g1MTUuNjA3VjEzNC4yOTdDNTE1LjYwNyAxMzQuOTY5IDUxNS42NjUgMTM1LjQyNyA1MTUuNzc5IDEzNS42NzJDNTE1Ljk0NiAxMzYuMDEgNTE2LjI1MyAxMzYuMTggNTE2LjcwMSAxMzYuMThDNTE2Ljk3MiAxMzYuMTggNTE3LjI4MiAxMzYuMDk5IDUxNy42MzEgMTM1LjkzOEw1MTcuNzQgMTM2LjkwNkM1MTcuMjcxIDEzNy4wNzMgNTE2LjgzNCAxMzcuMTU2IDUxNi40MjggMTM3LjE1NkM1MTUuNjgzIDEzNy4xNTYgNTE1LjE1NyAxMzYuOTU4IDUxNC44NDkgMTM2LjU2MkM1MTQuNTQyIDEzNi4xNjcgNTE0LjM4OSAxMzUuNDkyIDUxNC4zODkgMTM0LjUzOVYxMjkuODY3Wk01MTkuNjQzIDEzN1YxMjguODkxSDUyMC44NjJWMTM3SDUxOS42NDNaTTUyMC4yNDUgMTI1LjE0OEM1MjAuNSAxMjUuMTQ4IDUyMC43MDggMTI1LjIyOSA1MjAuODcgMTI1LjM5MUM1MjEuMDMxIDEyNS41NTIgNTIxLjExMiAxMjUuNzU4IDUyMS4xMTIgMTI2LjAwOEM1MjEuMTEyIDEyNi4yNjMgNTIxLjAzMSAxMjYuNDcxIDUyMC44NyAxMjYuNjMzQzUyMC43MDggMTI2Ljc5NCA1MjAuNTAyIDEyNi44NzUgNTIwLjI1MiAxMjYuODc1QzUxOS45OTcgMTI2Ljg3NSA1MTkuNzg5IDEyNi43OTQgNTE5LjYyNyAxMjYuNjMzQzUxOS40NjYgMTI2LjQ3MSA1MTkuMzg1IDEyNi4yNiA1MTkuMzg1IDEyNkM1MTkuMzg1IDEyNS43NTUgNTE5LjQ2NiAxMjUuNTUyIDUxOS42MjcgMTI1LjM5MUM1MTkuNzk0IDEyNS4yMjkgNTIwIDEyNS4xNDggNTIwLjI0NSAxMjUuMTQ4Wk01MjguOTk5IDEzNS40NjFMNTI5LjQ2OCAxMzYuNDA2QzUyOC43MzMgMTM2LjkwNiA1MjcuOTEzIDEzNy4xNTYgNTI3LjAwNyAxMzcuMTU2QzUyNS44NCAxMzcuMTU2IDUyNC45MjYgMTM2Ljc5OSA1MjQuMjY1IDEzNi4wODZDNTIzLjU3MiAxMzUuMzM2IDUyMy4yMjYgMTM0LjMxMiA1MjMuMjI2IDEzMy4wMTZDNTIzLjIyNiAxMzEuNTk0IDUyMy41OTMgMTMwLjUgNTI0LjMyNyAxMjkuNzM0QzUyNC45NjggMTI5LjA2MiA1MjUuODI1IDEyOC43MjcgNTI2Ljg5NyAxMjguNzI3QzUyNy43MzEgMTI4LjcyNyA1MjguNTM4IDEyOC45NDUgNTI5LjMxOSAxMjkuMzgzTDUyOC44NTggMTMwLjM0NEM1MjguMjAyIDEyOS45MTcgNTI3LjU0NiAxMjkuNzAzIDUyNi44OSAxMjkuNzAzQzUyNi4xMDMgMTI5LjcwMyA1MjUuNTA3IDEyOS45OTIgNTI1LjEwMSAxMzAuNTdDNTI0LjcwNSAxMzEuMTMzIDUyNC41MDcgMTMxLjg5OCA1MjQuNTA3IDEzMi44NjdDNTI0LjUwNyAxMzMuOTA0IDUyNC43NDEgMTM0LjcyOSA1MjUuMjEgMTM1LjM0NEM1MjUuNjQyIDEzNS45MDEgNTI2LjI0NiAxMzYuMTggNTI3LjAyMiAxMzYuMThDNTI3LjcxIDEzNi4xOCA1MjguMzY5IDEzNS45NCA1MjguOTk5IDEzNS40NjFaTTUzNS42OTkgMTM2LjA1NUM1MzUuMzM0IDEzNi40NTEgNTM0Ljk2NSAxMzYuNzM0IDUzNC41OSAxMzYuOTA2QzUzNC4yMiAxMzcuMDczIDUzMy43ODIgMTM3LjE1NiA1MzMuMjc3IDEzNy4xNTZDNTMyLjQyOCAxMzcuMTU2IDUzMS43OCAxMzYuOTE3IDUzMS4zMzIgMTM2LjQzOEM1MzAuOTM2IDEzNi4wMTYgNTMwLjczOCAxMzUuNDU4IDUzMC43MzggMTM0Ljc2NkM1MzAuNzM4IDEzMy42OTggNTMxLjE4OCAxMzIuOTM4IDUzMi4wOSAxMzIuNDg0QzUzMi42MjEgMTMyLjIxOSA1MzMuNDA1IDEzMi4wODYgNTM0LjQ0MSAxMzIuMDg2QzUzNC42MDMgMTMyLjA4NiA1MzQuOTkxIDEzMi4wOTYgNTM1LjYwNSAxMzIuMTE3VjEzMS44OThDNTM1LjYwNSAxMzEuMzEgNTM1LjUzIDEzMC44NjIgNTM1LjM3OSAxMzAuNTU1QzUzNS4xMDggMTI5Ljk5MiA1MzQuNTcxIDEyOS43MTEgNTMzLjc2OSAxMjkuNzExQzUzMy4xMTMgMTI5LjcxMSA1MzIuNDE1IDEyOS45NDUgNTMxLjY3NSAxMzAuNDE0TDUzMS4xNDQgMTI5LjUzOUM1MzEuOTkzIDEyOS4wMDMgNTMyLjkxMiAxMjguNzM0IDUzMy45MDIgMTI4LjczNEM1MzUuMTMxIDEyOC43MzQgNTM1Ljk3MiAxMjkuMTAyIDUzNi40MjUgMTI5LjgzNkM1MzYuNTgyIDEzMC4wOTYgNTM2LjY4NiAxMzAuMzk2IDUzNi43MzggMTMwLjczNEM1MzYuNzk1IDEzMS4wNjggNTM2LjgyNCAxMzEuNTk5IDUzNi44MjQgMTMyLjMyOFYxMzQuOTc3QzUzNi44MjQgMTM1LjgxIDUzNi44NDUgMTM2LjQ4NCA1MzYuODg2IDEzN0g1MzUuNzU0TDUzNS42OTkgMTM2LjA1NVpNNTM1LjYwNSAxMzMuMDQ3QzUzNS4zMTkgMTMzLjAyNiA1MzUuMDE3IDEzMy4wMTYgNTM0LjY5OSAxMzMuMDE2QzUzMy44MjkgMTMzLjAxNiA1MzMuMTk2IDEzMy4xMyA1MzIuOCAxMzMuMzU5QzUzMi4yOCAxMzMuNjU2IDUzMi4wMTkgMTM0LjExNSA1MzIuMDE5IDEzNC43MzRDNTMyLjAxOSAxMzUuMTcyIDUzMi4xNDkgMTM1LjUyMSA1MzIuNDEgMTM1Ljc4MUM1MzIuNjgxIDEzNi4wNDcgNTMzLjA0MyAxMzYuMTggNTMzLjQ5NiAxMzYuMThDNTM0LjM0NSAxMzYuMTggNTM1LjA0OCAxMzUuNzY2IDUzNS42MDUgMTM0LjkzOFYxMzMuMDQ3Wk01MzkuODEzIDEzN1YxMjUuMzA1SDU0MS4wMzJWMTM3SDUzOS44MTNaIiBmaWxsPSJ3aGl0ZSIvPgo8L3N2Zz4K" width="896" height="219" class="img_QgcI"></p>
+<p>We're introducing the <strong>new status color purple</strong> in iX version 6.</p>
+<p>Use purple for:</p>
+<ul>
+<li>Events that are more severe than danger (red).</li>
+<li>Rare, critical situations, e.g. a threat to safety, operations, or critical infrastructure.</li>
+<li>Events at a level higher than a normal danger alert.</li>
+</ul>
+<p>Do not use purple for:</p>
+<ul>
+<li>Another way to show a normal danger alert.</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_loeA" id="why-were-making-this-change-1">Why we're making this change<a href="https://ix.siemens.io/version-5.3.0/blog/2026/09/08/colorchange#why-were-making-this-change-1" class="hash-link" aria-label="Direct link to Why we're making this change" title="Direct link to Why we're making this change">​</a></h3>
+<p>ISO 3864-2 defines risk levels from least to most severe:
+Caution (yellow) → Warning (orange) → Danger (red)</p>
+<p>A level beyond Danger is not defined by the ISO standards even though other domains, such as environmental safety and cybersecurity, use additional risk levels beyond red.</p>
+<p>As it is already widely used for this severity, the term "Critical" will be used from iX version 6 for this level.</p>
+<p>The color purple is used for Critical to continue the color spectrum and to provide enough contrast in both light and dark mode.</p>
+<h2 class="anchor anchorWithStickyNavbar_loeA" id="way-forward">Way forward<a href="https://ix.siemens.io/version-5.3.0/blog/2026/09/08/colorchange#way-forward" class="hash-link" aria-label="Direct link to Way forward" title="Direct link to Way forward">​</a></h2>
+<p>We understand that these changes may affect your projects. Because of that, we're reaching out early to show you what to expect in the next version. With the release, we'll provide migration documentation in the breaking changes guide. If you have any questions, do not hesitate to reach out via our <a href="https://ix.siemens.io/docs/home/support/contact-us" target="_blank" rel="noopener noreferrer">support channels</a>.</p>]]></content>
+        <author>
+            <name>Felix Leist</name>
+        </author>
+        <category label="ux" term="ux"/>
+        <category label="development" term="development"/>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[How to use slots in iX]]></title>
+        <id>https://ix.siemens.io/version-5.3.0/blog/2026/06/10/slots</id>
+        <link href="https://ix.siemens.io/version-5.3.0/blog/2026/06/10/slots"/>
+        <updated>2026-06-10T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[banner]]></summary>
+        <content type="html"><![CDATA[<p><img decoding="async" loading="lazy" alt="banner" src="https://ix.siemens.io/version-5.3.0/assets/images/2607_blog_slots_header-0a5a0b40c0f8f8dc44509b426987f262.svg" width="896" height="360" class="img_QgcI"></p>
+<p>Slots are one of the most useful composition patterns in iX. They let you place custom content in predefined areas of a component without rebuilding the component itself.</p>
+<p>In this post, we explain what slots are, when to use them and how development and design teams can work with slots in a shared, consistent way.</p>
+<p>Think of it like this:</p>
+<ul>
+<li>The component defines the structure and behavior.</li>
+<li>The slot defines where additional content can be placed.</li>
+<li>You provide the content that belongs to that position.</li>
+</ul>
+<p>This keeps components reusable while still allowing flexible layouts:</p>
+<ul>
+<li><a href="https://ix.siemens.io/version-5.3.0/blog/2026/06/10/slots#use-slots-in-development">Get started in development</a></li>
+<li><a href="https://ix.siemens.io/version-5.3.0/blog/2026/06/10/slots#use-slots-in-figma">Get started in Figma</a></li>
+</ul>
+<p>Typical slot usage in iX:</p>
+<ul>
+<li>Input fields with start and end content</li>
+<li>Headers with additional status or actions</li>
+<li>Layout components with positional areas (top, right, bottom, left)</li>
+<li>Figma components with native slot-based composition</li>
+</ul>
+<h2 class="anchor anchorWithStickyNavbar_loeA" id="use-slots-in-development">Use slots in development<a href="https://ix.siemens.io/version-5.3.0/blog/2026/06/10/slots#use-slots-in-development" class="hash-link" aria-label="Direct link to Use slots in development" title="Direct link to Use slots in development">​</a></h2>
+<h3 class="anchor anchorWithStickyNavbar_loeA" id="example-patterns">Example patterns<a href="https://ix.siemens.io/version-5.3.0/blog/2026/06/10/slots#example-patterns" class="hash-link" aria-label="Direct link to Example patterns" title="Direct link to Example patterns">​</a></h3>
+<h4 class="anchor anchorWithStickyNavbar_loeA" id="1-add-start-and-end-content-to-an-input">1. Add start and end content to an input<a href="https://ix.siemens.io/version-5.3.0/blog/2026/06/10/slots#1-add-start-and-end-content-to-an-input" class="hash-link" aria-label="Direct link to 1. Add start and end content to an input" title="Direct link to 1. Add start and end content to an input">​</a></h4>
+<div class="language-html codeBlockContainer_NeE7 theme-code-block" style="--prism-color:#F8F8F2;--prism-background-color:#282A36"><div class="codeBlockContent_Znyc"><pre tabindex="0" class="prism-code language-html codeBlock_CAUA thin-scrollbar" style="color:#F8F8F2;background-color:#282A36"><code class="codeBlockLines_V4vN"><span class="token-line" style="color:#F8F8F2"><span class="token tag punctuation" style="color:rgb(248, 248, 242)">&lt;</span><span class="token tag" style="color:rgb(255, 121, 198)">ix-input</span><span class="token tag" style="color:rgb(255, 121, 198)"> </span><span class="token tag attr-name" style="color:rgb(241, 250, 140)">label</span><span class="token tag attr-value punctuation attr-equals" style="color:rgb(248, 248, 242)">=</span><span class="token tag attr-value punctuation" style="color:rgb(248, 248, 242)">"</span><span class="token tag attr-value" style="color:rgb(255, 121, 198)">Search</span><span class="token tag attr-value punctuation" style="color:rgb(248, 248, 242)">"</span><span class="token tag punctuation" style="color:rgb(248, 248, 242)">&gt;</span><span class="token plain"></span><br></span><span class="token-line" style="color:#F8F8F2"><span class="token plain">  </span><span class="token tag punctuation" style="color:rgb(248, 248, 242)">&lt;</span><span class="token tag" style="color:rgb(255, 121, 198)">ix-icon</span><span class="token tag" style="color:rgb(255, 121, 198)"> </span><span class="token tag attr-name" style="color:rgb(241, 250, 140)">slot</span><span class="token tag attr-value punctuation attr-equals" style="color:rgb(248, 248, 242)">=</span><span class="token tag attr-value punctuation" style="color:rgb(248, 248, 242)">"</span><span class="token tag attr-value" style="color:rgb(255, 121, 198)">start</span><span class="token tag attr-value punctuation" style="color:rgb(248, 248, 242)">"</span><span class="token tag" style="color:rgb(255, 121, 198)"> </span><span class="token tag attr-name" style="color:rgb(241, 250, 140)">name</span><span class="token tag attr-value punctuation attr-equals" style="color:rgb(248, 248, 242)">=</span><span class="token tag attr-value punctuation" style="color:rgb(248, 248, 242)">"</span><span class="token tag attr-value" style="color:rgb(255, 121, 198)">search</span><span class="token tag attr-value punctuation" style="color:rgb(248, 248, 242)">"</span><span class="token tag" style="color:rgb(255, 121, 198)"> </span><span class="token tag attr-name" style="color:rgb(241, 250, 140)">size</span><span class="token tag attr-value punctuation attr-equals" style="color:rgb(248, 248, 242)">=</span><span class="token tag attr-value punctuation" style="color:rgb(248, 248, 242)">"</span><span class="token tag attr-value" style="color:rgb(255, 121, 198)">16</span><span class="token tag attr-value punctuation" style="color:rgb(248, 248, 242)">"</span><span class="token tag" style="color:rgb(255, 121, 198)"> </span><span class="token tag attr-name" style="color:rgb(241, 250, 140)">aria-label</span><span class="token tag attr-value punctuation attr-equals" style="color:rgb(248, 248, 242)">=</span><span class="token tag attr-value punctuation" style="color:rgb(248, 248, 242)">"</span><span class="token tag attr-value" style="color:rgb(255, 121, 198)">Search</span><span class="token tag attr-value punctuation" style="color:rgb(248, 248, 242)">"</span><span class="token tag punctuation" style="color:rgb(248, 248, 242)">&gt;</span><span class="token tag punctuation" style="color:rgb(248, 248, 242)">&lt;/</span><span class="token tag" style="color:rgb(255, 121, 198)">ix-icon</span><span class="token tag punctuation" style="color:rgb(248, 248, 242)">&gt;</span><span class="token plain"></span><br></span><span class="token-line" style="color:#F8F8F2"><span class="token plain">  </span><span class="token tag punctuation" style="color:rgb(248, 248, 242)">&lt;</span><span class="token tag" style="color:rgb(255, 121, 198)">ix-typography</span><span class="token tag" style="color:rgb(255, 121, 198)"> </span><span class="token tag attr-name" style="color:rgb(241, 250, 140)">slot</span><span class="token tag attr-value punctuation attr-equals" style="color:rgb(248, 248, 242)">=</span><span class="token tag attr-value punctuation" style="color:rgb(248, 248, 242)">"</span><span class="token tag attr-value" style="color:rgb(255, 121, 198)">end</span><span class="token tag attr-value punctuation" style="color:rgb(248, 248, 242)">"</span><span class="token tag punctuation" style="color:rgb(248, 248, 242)">&gt;</span><span class="token plain">Ctrl + K</span><span class="token tag punctuation" style="color:rgb(248, 248, 242)">&lt;/</span><span class="token tag" style="color:rgb(255, 121, 198)">ix-typography</span><span class="token tag punctuation" style="color:rgb(248, 248, 242)">&gt;</span><span class="token plain"></span><br></span><span class="token-line" style="color:#F8F8F2"><span class="token plain"></span><span class="token tag punctuation" style="color:rgb(248, 248, 242)">&lt;/</span><span class="token tag" style="color:rgb(255, 121, 198)">ix-input</span><span class="token tag punctuation" style="color:rgb(248, 248, 242)">&gt;</span><br></span></code></pre><div class="buttonGroup_BCku"><button type="button" aria-label="Copy code to clipboard" title="Copy" class="clean-btn"><span class="copyButtonIcons_CAvs" aria-hidden="true"><svg viewBox="0 0 24 24" class="copyButtonIcon_zDS_"><path fill="currentColor" d="M19,21H8V7H19M19,5H8A2,2 0 0,0 6,7V21A2,2 0 0,0 8,23H19A2,2 0 0,0 21,21V7A2,2 0 0,0 19,5M16,1H4A2,2 0 0,0 2,3V17H4V3H16V1Z"></path></svg><svg viewBox="0 0 24 24" class="copyButtonSuccessIcon_JAhv"><path fill="currentColor" d="M21,7L9,19L3.5,13.5L4.91,12.09L9,16.17L19.59,5.59L21,7Z"></path></svg></span></button></div></div></div>
+<p>Use this for compact, contextual information. Keep slot content short and scannable.</p>
+<h4 class="anchor anchorWithStickyNavbar_loeA" id="2-compose-pane-layouts-by-position">2. Compose pane layouts by position<a href="https://ix.siemens.io/version-5.3.0/blog/2026/06/10/slots#2-compose-pane-layouts-by-position" class="hash-link" aria-label="Direct link to 2. Compose pane layouts by position" title="Direct link to 2. Compose pane layouts by position">​</a></h4>
+<div class="language-html codeBlockContainer_NeE7 theme-code-block" style="--prism-color:#F8F8F2;--prism-background-color:#282A36"><div class="codeBlockContent_Znyc"><pre tabindex="0" class="prism-code language-html codeBlock_CAUA thin-scrollbar" style="color:#F8F8F2;background-color:#282A36"><code class="codeBlockLines_V4vN"><span class="token-line" style="color:#F8F8F2"><span class="token tag punctuation" style="color:rgb(248, 248, 242)">&lt;</span><span class="token tag" style="color:rgb(255, 121, 198)">ix-pane-layout</span><span class="token tag punctuation" style="color:rgb(248, 248, 242)">&gt;</span><span class="token plain"></span><br></span><span class="token-line" style="color:#F8F8F2"><span class="token plain">  </span><span class="token tag punctuation" style="color:rgb(248, 248, 242)">&lt;</span><span class="token tag" style="color:rgb(255, 121, 198)">ix-pane</span><span class="token tag" style="color:rgb(255, 121, 198)"> </span><span class="token tag attr-name" style="color:rgb(241, 250, 140)">heading</span><span class="token tag attr-value punctuation attr-equals" style="color:rgb(248, 248, 242)">=</span><span class="token tag attr-value punctuation" style="color:rgb(248, 248, 242)">"</span><span class="token tag attr-value" style="color:rgb(255, 121, 198)">Details</span><span class="token tag attr-value punctuation" style="color:rgb(248, 248, 242)">"</span><span class="token tag" style="color:rgb(255, 121, 198)"> </span><span class="token tag attr-name" style="color:rgb(241, 250, 140)">slot</span><span class="token tag attr-value punctuation attr-equals" style="color:rgb(248, 248, 242)">=</span><span class="token tag attr-value punctuation" style="color:rgb(248, 248, 242)">"</span><span class="token tag attr-value" style="color:rgb(255, 121, 198)">right</span><span class="token tag attr-value punctuation" style="color:rgb(248, 248, 242)">"</span><span class="token tag" style="color:rgb(255, 121, 198)"> </span><span class="token tag attr-name" style="color:rgb(241, 250, 140)">size</span><span class="token tag attr-value punctuation attr-equals" style="color:rgb(248, 248, 242)">=</span><span class="token tag attr-value punctuation" style="color:rgb(248, 248, 242)">"</span><span class="token tag attr-value" style="color:rgb(255, 121, 198)">33%</span><span class="token tag attr-value punctuation" style="color:rgb(248, 248, 242)">"</span><span class="token tag punctuation" style="color:rgb(248, 248, 242)">&gt;</span><span class="token tag punctuation" style="color:rgb(248, 248, 242)">&lt;/</span><span class="token tag" style="color:rgb(255, 121, 198)">ix-pane</span><span class="token tag punctuation" style="color:rgb(248, 248, 242)">&gt;</span><span class="token plain"></span><br></span><span class="token-line" style="color:#F8F8F2"><span class="token plain">  </span><span class="token tag punctuation" style="color:rgb(248, 248, 242)">&lt;</span><span class="token tag" style="color:rgb(255, 121, 198)">ix-pane</span><span class="token tag" style="color:rgb(255, 121, 198)"> </span><span class="token tag attr-name" style="color:rgb(241, 250, 140)">heading</span><span class="token tag attr-value punctuation attr-equals" style="color:rgb(248, 248, 242)">=</span><span class="token tag attr-value punctuation" style="color:rgb(248, 248, 242)">"</span><span class="token tag attr-value" style="color:rgb(255, 121, 198)">Filters</span><span class="token tag attr-value punctuation" style="color:rgb(248, 248, 242)">"</span><span class="token tag" style="color:rgb(255, 121, 198)"> </span><span class="token tag attr-name" style="color:rgb(241, 250, 140)">slot</span><span class="token tag attr-value punctuation attr-equals" style="color:rgb(248, 248, 242)">=</span><span class="token tag attr-value punctuation" style="color:rgb(248, 248, 242)">"</span><span class="token tag attr-value" style="color:rgb(255, 121, 198)">left</span><span class="token tag attr-value punctuation" style="color:rgb(248, 248, 242)">"</span><span class="token tag" style="color:rgb(255, 121, 198)"> </span><span class="token tag attr-name" style="color:rgb(241, 250, 140)">size</span><span class="token tag attr-value punctuation attr-equals" style="color:rgb(248, 248, 242)">=</span><span class="token tag attr-value punctuation" style="color:rgb(248, 248, 242)">"</span><span class="token tag attr-value" style="color:rgb(255, 121, 198)">25%</span><span class="token tag attr-value punctuation" style="color:rgb(248, 248, 242)">"</span><span class="token tag punctuation" style="color:rgb(248, 248, 242)">&gt;</span><span class="token tag punctuation" style="color:rgb(248, 248, 242)">&lt;/</span><span class="token tag" style="color:rgb(255, 121, 198)">ix-pane</span><span class="token tag punctuation" style="color:rgb(248, 248, 242)">&gt;</span><span class="token plain"></span><br></span><span class="token-line" style="color:#F8F8F2"><span class="token plain"></span><span class="token tag punctuation" style="color:rgb(248, 248, 242)">&lt;/</span><span class="token tag" style="color:rgb(255, 121, 198)">ix-pane-layout</span><span class="token tag punctuation" style="color:rgb(248, 248, 242)">&gt;</span><br></span></code></pre><div class="buttonGroup_BCku"><button type="button" aria-label="Copy code to clipboard" title="Copy" class="clean-btn"><span class="copyButtonIcons_CAvs" aria-hidden="true"><svg viewBox="0 0 24 24" class="copyButtonIcon_zDS_"><path fill="currentColor" d="M19,21H8V7H19M19,5H8A2,2 0 0,0 6,7V21A2,2 0 0,0 8,23H19A2,2 0 0,0 21,21V7A2,2 0 0,0 19,5M16,1H4A2,2 0 0,0 2,3V17H4V3H16V1Z"></path></svg><svg viewBox="0 0 24 24" class="copyButtonSuccessIcon_JAhv"><path fill="currentColor" d="M21,7L9,19L3.5,13.5L4.91,12.09L9,16.17L19.59,5.59L21,7Z"></path></svg></span></button></div></div></div>
+<p>Use positional slots to express page structure directly and keep layout intent readable.</p>
+<h3 class="anchor anchorWithStickyNavbar_loeA" id="dos-and-donts">Dos and Don’ts<a href="https://ix.siemens.io/version-5.3.0/blog/2026/06/10/slots#dos-and-donts" class="hash-link" aria-label="Direct link to Dos and Don’ts" title="Direct link to Dos and Don’ts">​</a></h3>
+<div class="dos-and-donts" markdown="true"><div class="dos" markdown="true"><ul>
+<li>Do use only documented slot names of components</li>
+<li>Do keep slot content lightweight and purpose-specific</li>
+<li>Do consider smaller breakpoints, interaction via keyboard and touch, and screen reader behavior</li>
+</ul></div><div class="donts" markdown="true"><ul>
+<li>Don’t use slots as a workaround for missing component behavior</li>
+<li>Don’t mix unrelated content into a slot just because space is available</li>
+<li>Don’t replace primary content hierarchy with slot content</li>
+</ul></div></div>
+<h2 class="anchor anchorWithStickyNavbar_loeA" id="use-slots-in-figma">Use slots in Figma<a href="https://ix.siemens.io/version-5.3.0/blog/2026/06/10/slots#use-slots-in-figma" class="hash-link" aria-label="Direct link to Use slots in Figma" title="Direct link to Use slots in Figma">​</a></h2>
+<p>Version 5 introduced native slot-based composition for key components such as card and tabs in the iX Figma library. It is now possible to add content directly into slots in Figma, instead of detaching your instances, or creating custom content components.</p>
+<p><img decoding="async" loading="lazy" alt="Replace slots in Figma" src="https://ix.siemens.io/version-5.3.0/assets/images/2607_blog_slots_figma-5a6ff6a257cbc82508e57886914b345d.svg" width="896" height="360" class="img_QgcI"></p>
+<p>When you select an instance, Figma shows a pink border around the slot area which helps identifying where content can be inserted.</p>
+<p>You can add any content to a slot, e.g. by clicking on the <ix-icon></ix-icon> ("Add instance") or creating new layers directly in the slot.</p>
+<p>If preferred instances are configured for a slot, the Add instances popup suggests specific components recommended by iX. For example, dropdown items are suggested for dropdowns by default.</p>
+<p>For handoff quality, keep slot content concise, validate responsive behavior (especially truncation and overflow), and annotate special interaction intent when needed.</p>
+<h2 class="anchor anchorWithStickyNavbar_loeA" id="collaboration-tips-for-design-and-development">Collaboration tips for design and development<a href="https://ix.siemens.io/version-5.3.0/blog/2026/06/10/slots#collaboration-tips-for-design-and-development" class="hash-link" aria-label="Direct link to Collaboration tips for design and development" title="Direct link to Collaboration tips for design and development">​</a></h2>
+<ul>
+<li>Use the same naming language for slot content in design specs and code reviews</li>
+<li>Document which content is required, optional or mutually exclusive</li>
+<li>Align early on responsive behavior for slot-heavy components</li>
+<li>Prefer one clear composition pattern over many one-off exceptions</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_loeA" id="when-not-to-use-slots">When not to use slots<a href="https://ix.siemens.io/version-5.3.0/blog/2026/06/10/slots#when-not-to-use-slots" class="hash-link" aria-label="Direct link to When not to use slots" title="Direct link to When not to use slots">​</a></h3>
+<p>Do not use slots to solve every customization request.</p>
+<p>Instead, consider:</p>
+<ul>
+<li>A different iX component that already matches the use case</li>
+<li>A layout-level composition change</li>
+<li>A design decision to simplify content hierarchy</li>
+</ul>
+<p>Slots are most effective when they enhance clarity, not when they increase complexity.</p>
+<h3 class="anchor anchorWithStickyNavbar_loeA" id="key-takeaway">Key takeaway<a href="https://ix.siemens.io/version-5.3.0/blog/2026/06/10/slots#key-takeaway" class="hash-link" aria-label="Direct link to Key takeaway" title="Direct link to Key takeaway">​</a></h3>
+<p>Slots are a shared design and development pattern:</p>
+<ul>
+<li>Developers get flexible composition without losing component quality.</li>
+<li>Designers get adaptable component structures without exploding variants.</li>
+<li>Teams get better consistency from Figma to implementation.</li>
+</ul>
+<p>When used intentionally, slots help iX applications stay scalable, maintainable and clear.</p>]]></content>
+        <author>
+            <name>Kathrin Schalber</name>
+        </author>
+        <category label="ux" term="ux"/>
+        <category label="development" term="development"/>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Release V5.0.0]]></title>
+        <id>https://ix.siemens.io/version-5.3.0/blog/2026/05/21/release-5</id>
+        <link href="https://ix.siemens.io/version-5.3.0/blog/2026/05/21/release-5"/>
+        <updated>2026-05-21T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[banner]]></summary>
+        <content type="html"><![CDATA[<p><img decoding="async" loading="lazy" alt="banner" src="https://ix.siemens.io/version-5.3.0/assets/images/2605_blog_5-0-768258213ec38878f3bef372f3f969af.png" width="896" height="360" class="img_QgcI"></p>
+<p>Version 5 marks a step forward for the Industrial Experience Design System. This major release focuses on improving accessibility, removing outdated components and strengthening the connection between design tokens, Figma and code.</p>
+<p>To upgrade to Version 5, start here:</p>
+<ul>
+<li>Review the <a href="https://ix.siemens.io/version-5.3.0/docs/home/migration/5_0_0">migration guide</a> for breaking changes and required updates.</li>
+<li>Expect the biggest changes to accessibility behavior, date and time inputs and status colors.</li>
+<li>Update both code and Figma assets if your team relies on shared component libraries.</li>
+</ul>
+<h1>Why upgrade to Version 5?</h1>
+<p>With Version 5, we took the opportunity to address topics that require breaking changes in areas where incremental updates were no longer enough.</p>
+<p>Our goals were clear:</p>
+<ul>
+<li>Reduce legacy APIs and outdated approaches.</li>
+<li>Align components with modern web and accessibility standards.</li>
+<li>Strengthen the connection between design tokens, Figma and code.</li>
+</ul>
+<h1>Brand theme colors now follow a shared reference model</h1>
+<p><img decoding="async" loading="lazy" alt="color-tokens" src="https://ix.siemens.io/version-5.3.0/assets/images/2605_blog_tokens-f9925783bef43e0cfc8210ec3921b366.png" width="896" height="360" class="img_QgcI"></p>
+<p>The color token basis is now aligned with the Siemens Design Language and built on strict reference token.</p>
+<p>Teams now have a more consistent foundation across design systems and codebases.</p>
+<ul>
+<li>Color tokens are now strictly reference-based.</li>
+<li>Contrast is increased for status colors and between interaction states.</li>
+<li>Recognition of interaction state changes is increased for keyboard interactions.</li>
+</ul>
+<h1>Accessibility improvements for keyboard navigation</h1>
+<p><img decoding="async" loading="lazy" alt="accessibility" src="https://ix.siemens.io/version-5.3.0/assets/images/2605_blog_accessibility-94fe513bc1debfff2863f7293721f910.png" width="896" height="360" class="img_QgcI"></p>
+<p>Keyboard navigation and focus handling have been improved across several complex components.</p>
+<p>The update focused especially on interaction clarity in areas such as:</p>
+<ul>
+<li><a href="https://ix.siemens.io/version-5.3.0/docs/components/dropdown">Dropdowns</a></li>
+<li>Menus</li>
+<li><a href="https://ix.siemens.io/version-5.3.0/docs/components/tabs">Tabs</a></li>
+<li>Composite form elements, e.g. <a href="https://ix.siemens.io/version-5.3.0/docs/components/range-field">range field</a></li>
+</ul>
+<h1>Date and time inputs are more capable</h1>
+<p><img decoding="async" loading="lazy" alt="date-and-time" src="https://ix.siemens.io/version-5.3.0/assets/images/2605_blog_datetime-8fd79b522504509b70d5c9dfbdcd8ffb.png" width="896" height="360" class="img_QgcI"></p>
+<p>Version 5 adds new date and time input capabilities and improves consistency across existing flows, including:</p>
+<ul>
+<li>A new <a href="https://ix.siemens.io/version-5.3.0/docs/components/input-date-time">date-time input</a></li>
+<li>A dedicated <a href="https://ix.siemens.io/version-5.3.0/docs/components/range-field">range field</a> concept</li>
+<li>Improved interaction consistency across <a href="https://ix.siemens.io/version-5.3.0/docs/components/date-picker">date pickers</a></li>
+</ul>
+<p>We've standardized date and time component interactions across all locales, making data entry more predictable for complex workflows. All components now feature robust integration with <a href="https://ix.siemens.io/version-5.3.0/docs/components/forms-field">forms</a> and validation. Architecturally, we've streamlined the implementation to support future enhancements.</p>
+<h1>Tabs now handle overflow with a More menu</h1>
+<p><img decoding="async" loading="lazy" alt="tabs-overflow" src="https://ix.siemens.io/version-5.3.0/assets/images/2605_blog_tab-overflow-cd882033a0037a89651dda906953a1f6.png" width="896" height="360" class="img_QgcI"></p>
+<p><a href="https://ix.siemens.io/version-5.3.0/docs/components/tabs">Tabs</a> now handle overflow more reliably in responsive layouts.</p>
+<ul>
+<li>Tab overflow is handled more intelligently. A “More menu” keeps all tabs accessible, regardless of viewport size.</li>
+<li>Visual styling is aligned with updated layout conventions.</li>
+<li>A continuous border helps separate the content below the tabs.</li>
+<li>Updated visuals make the selected tab more distinctive.</li>
+</ul>
+<h1>Card components now use Figma native slots</h1>
+<p><img decoding="async" loading="lazy" alt="Cards" src="https://ix.siemens.io/version-5.3.0/assets/images/2605_blog_Cards-9488ae3484d295ffeaa1e3d6123ecac7.png" width="896" height="360" class="img_QgcI"></p>
+<p>The <a href="https://ix.siemens.io/version-5.3.0/docs/components/card">card</a> updates in Version 5 are focused on the Figma library and are not related to code changes. Native Figma slots make card composition more flexible and support more responsive behavior directly in the library.</p>
+<p>That change required a breaking update in the Figma library:</p>
+<ul>
+<li>Older versions of card components are now deprecated.</li>
+<li>Reworked card components are now provided under the same existing names.</li>
+</ul>
+<p>Additionally, we introduced a new property for switching between outline and filled variants. We have added an example directly in the library showing slot usage for responsive card behavior.</p>
+<h1>More improvements in Version 5</h1>
+<p>Beyond the bigger themes, Version 5 also includes:</p>
+<ul>
+<li>Non-blocking <a href="https://ix.siemens.io/version-5.3.0/docs/components/modal">modal</a> behavior improvements</li>
+<li>Architectural refactoring under the hood</li>
+<li>Bug fixes and performance improvements</li>
+<li>Updated component specifications in Figma</li>
+</ul>
+<p>Together, these updates improve stability, consistency and future development speed even when they are less visible at first glance.</p>]]></content>
+        <author>
+            <name>Felix Leist</name>
+        </author>
+        <category label="Release" term="Release"/>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Beyond the toast: Mastering messaging and feedback]]></title>
+        <id>https://ix.siemens.io/version-5.3.0/blog/messaging</id>
+        <link href="https://ix.siemens.io/version-5.3.0/blog/messaging"/>
+        <updated>2026-02-23T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[Effective messaging approaches]]></summary>
+        <content type="html"><![CDATA[<p><img decoding="async" loading="lazy" alt="Effective messaging approaches" src="https://ix.siemens.io/version-5.3.0/assets/images/2602_blog_messaging1-8c71488ca106f4b17176e2ecc9c37575.svg" width="896" height="360" class="img_QgcI"></p>
+<p>Effective communication with users is of the highest priority. Providing timely, clear and contextual feedback within our applications is crucial for a smooth and intuitive user experience. While toast messages have their place, relying on them exclusively can sometimes lead to missed information or user frustration.</p>
+<p>In response to your questions about toast messages, and especially their interplay with modal dialogs, we want to guide you through our recommended best practices for displaying messages.</p>
+<h1>The problem with over toasting</h1>
+<p><img decoding="async" loading="lazy" alt="Problem with toasts" src="https://ix.siemens.io/version-5.3.0/assets/images/2602_blog_messaging_toast-2ceeaffbc2ec82ead8127aec9303b79b.svg" width="896" height="360" class="img_QgcI"></p>
+<p><a href="https://ix.siemens.io/version-5.3.0/docs/components/toast/guide">Toasts</a> are quick, non-intrusive pop-ups that provide simple feedback on a user action. They are excellent for immediate low-priority confirmations, e.g. a successful deletion.</p>
+<p>However, toasts can often be:</p>
+<ul>
+<li><strong>Missed</strong> when a modal is open or the user’s attention is elsewhere.</li>
+<li><strong>Overwhelming</strong> when several toasts appear in quick succession.</li>
+<li><strong>Lacking context</strong> due to their intentionally brief messaging.</li>
+</ul>
+<p>This is why, for most scenarios requiring user attention or detailed information, we recommend exploring more robust messaging patterns.</p>
+<h1>When to use what</h1>
+<p>We already offer a set of components designed to handle various messaging needs. Let’s explore the alternatives to toast messages and understand when to use each one from contextual feedback to required decision making.</p>
+<div class="table-full-width table-column-equal-width"><table><thead><tr><th style="text-align:left"><strong>Option</strong></th><th style="text-align:left"><strong>When to use</strong></th></tr></thead><tbody><tr><td style="text-align:left"><strong>Toast message</strong></td><td style="text-align:left">Low-priority confirmations</td></tr><tr><td style="text-align:left"><strong><a href="https://ix.siemens.io/version-5.3.0/blog/messaging#input-field-feedback-text">Input field feedback text</a></strong></td><td style="text-align:left">Immediate, field-level validation</td></tr><tr><td style="text-align:left"><strong><a href="https://ix.siemens.io/version-5.3.0/blog/messaging#inline-notification-planned">Inline notification</a></strong></td><td style="text-align:left">Noticeable, contextual feedback</td></tr><tr><td style="text-align:left"><strong><a href="https://ix.siemens.io/version-5.3.0/blog/messaging#message-bar-as-banner">Message bar as banner</a></strong></td><td style="text-align:left">Important and persistent non-blocking messages</td></tr><tr><td style="text-align:left"><strong><a href="https://ix.siemens.io/version-5.3.0/blog/messaging#modal">Modal</a></strong></td><td style="text-align:left">Critical information demanding user interaction</td></tr></tbody></table></div>
+<h3 class="anchor anchorWithStickyNavbar_loeA" id="input-field-feedback-text">Input field feedback text<a href="https://ix.siemens.io/version-5.3.0/blog/messaging#input-field-feedback-text" class="hash-link" aria-label="Direct link to Input field feedback text" title="Direct link to Input field feedback text">​</a></h3>
+<p><img decoding="async" loading="lazy" alt="Input feedback" src="https://ix.siemens.io/version-5.3.0/assets/images/2602_blog_messaging_inputfeedback-224773cb6139e3769a880f70b0324965.svg" width="896" height="360" class="img_QgcI"></p>
+<p><strong>When to use it:</strong> For immediate and highly contextual feedback related to user <a href="https://ix.siemens.io/version-5.3.0/docs/components/forms-validation/guide">input fields</a>, direct feedback texts are the recommended choice. These messages appear below the input field.</p>
+<p><strong>Why it’s better than a toast:</strong> Input field feedback is directly tied to the user’s action. It helps users correct errors and prevents frustration. A toast would be too far removed from the input field to be effective here.</p>
+<p>Examples:</p>
+<ul>
+<li>Invalid email format.</li>
+<li>Password too short (minimum 8 characters).</li>
+<li>Required field.</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_loeA" id="inline-notification-planned">Inline notification (planned)<a href="https://ix.siemens.io/version-5.3.0/blog/messaging#inline-notification-planned" class="hash-link" aria-label="Direct link to Inline notification (planned)" title="Direct link to Inline notification (planned)">​</a></h3>
+<p><img decoding="async" loading="lazy" alt="Inline notification" src="https://ix.siemens.io/version-5.3.0/assets/images/2602_blog_messaging_inlinemessage-9fac1b0a1f2912a26894f71ba588c980.svg" width="896" height="360" class="img_QgcI"></p>
+<p><strong>When to use it:</strong> Inline notifications appear within a specific section or component of a page, rather than spanning the entire width. We are planning on providing a component that is optimized for inline use in future.</p>
+<p><strong>Why it’s better than a toast:</strong> An inline notification provides contextual feedback directly where it’s most relevant, without disrupting the overall page flow. It’s less intrusive than a full banner but more persistent and noticeable than a toast for localized issues, especially when other UI elements (like modals) are present.</p>
+<p>Examples:</p>
+<ul>
+<li>Above a form, indicating validation errors for multiple fields.</li>
+<li>Within a data table, showing a message about filtering results.</li>
+<li>Inside a specific widget, providing status updates.</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_loeA" id="message-bar-as-banner">Message bar as banner<a href="https://ix.siemens.io/version-5.3.0/blog/messaging#message-bar-as-banner" class="hash-link" aria-label="Direct link to Message bar as banner" title="Direct link to Message bar as banner">​</a></h3>
+<p><img decoding="async" loading="lazy" alt="Message bar" src="https://ix.siemens.io/version-5.3.0/assets/images/2602_blog_messaging_messagebar-8a40fcb7aecab4a298eb90e2b33984cb.svg" width="896" height="360" class="img_QgcI"></p>
+<p><strong>When to use it:</strong> Banners are ideal for important, non-blocking messages that need to persist until dismissed or resolved. These messages can be system-wide (affecting the entire application) or page-specific (relevant to a particular view). In our design system the <a href="https://ix.siemens.io/version-5.3.0/docs/components/messagebar/code">message bar</a> component is used for banner notifications. See our UX writing section on
+<a href="https://ix.siemens.io/version-5.3.0/docs/guidelines/language/messaging/time-related-messages">time-related messages</a>.</p>
+<p><strong>Why it’s better than a toast:</strong> Unlike toasts, banners remain visible until the user takes action or the condition is resolved. This persistence ensures that important information, like a lost connection or planned maintenance, is not missed.</p>
+<p>Examples:</p>
+<ul>
+<li>Connection lost. Reconnecting…</li>
+<li>System maintenance scheduled for August 22nd, 02:00-04:00.</li>
+<li>Your trial period ends in 7 days.</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_loeA" id="modal">Modal<a href="https://ix.siemens.io/version-5.3.0/blog/messaging#modal" class="hash-link" aria-label="Direct link to Modal" title="Direct link to Modal">​</a></h3>
+<p><img decoding="async" loading="lazy" alt="Modal" src="https://ix.siemens.io/version-5.3.0/assets/images/2602_blog_messaging_messagemodal-76b3383387b73d611bf158716eea7204.svg" width="896" height="360" class="img_QgcI"></p>
+<p><strong>When to use it:</strong> Modals are your choice for critical information that demands immediate user attention and interaction. <a href="https://ix.siemens.io/version-5.3.0/docs/components/message-modal/guide">Modal messages</a> are recommended for scenarios where a user needs to confirm an action, acknowledge a severe error that blocks further progress, or make a crucial decision. See our UX writing section on <a href="https://ix.siemens.io/version-5.3.0/docs/guidelines/language/messaging/messages-overview">messaging</a>.</p>
+<p><strong>Why it’s better than a toast:</strong> Modals overlay the entire application, ensuring the user’s focus is entirely on the message. They prevent further interaction with the underlying content until dismissed, guaranteeing that critical information is seen and acted upon.</p>
+<p>Examples:</p>
+<ul>
+<li>Confirming a permanent deletion.</li>
+<li>Alerting the user about unsaved changes before navigating away.</li>
+<li>Displaying a critical system error that requires immediate resolution.</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_loeA" id="notification-management">Notification management<a href="https://ix.siemens.io/version-5.3.0/blog/messaging#notification-management" class="hash-link" aria-label="Direct link to Notification management" title="Direct link to Notification management">​</a></h3>
+<p><img decoding="async" loading="lazy" alt="Notification management" src="https://ix.siemens.io/version-5.3.0/assets/images/2602_blog_messaging_notificationhistory-8e7c0d0ad1bf60db3b1d24e741c4209e.svg" width="896" height="360" class="img_QgcI"></p>
+<p>Users might miss a critical message or need to refer back to past notifications. A dedicated notification management provides a persistent record of important events and messages.</p>
+<p><strong>When to use it:</strong> This is valuable for applications where:</p>
+<ul>
+<li>Users need to see a log of system actions or changes.</li>
+<li>Users need to catch up: After being away from the application, users can quickly review what they missed.</li>
+<li>Complex workflows: Where multiple actions trigger various messages.</li>
+</ul>
+<p><strong>How it adds value:</strong> A notification management is often presented as an <a href="https://ix.siemens.io/version-5.3.0/docs/components/event-list/code">event list</a> on a separate page, within a dedicated dialog, or accessible via a notification icon. It ensures that no critical information is permanently lost. It complements all other messaging patterns by offering a centralized archive, allowing users to review, filter and act upon past notifications. This significantly enhances user control and confidence in the application.</p>
+<h2 class="anchor anchorWithStickyNavbar_loeA" id="key-takeaways">Key takeaways<a href="https://ix.siemens.io/version-5.3.0/blog/messaging#key-takeaways" class="hash-link" aria-label="Direct link to Key takeaways" title="Direct link to Key takeaways">​</a></h2>
+<ul>
+<li><strong>Prioritize clarity and context:</strong> Always choose the messaging pattern that best communicates the information clearly and in the most relevant context.</li>
+<li><strong>Reserve toasts for small feedback:</strong> Use toasts for quick, non-critical confirmations that don’t require immediate user action or detailed explanation.</li>
+<li><strong>Embrace alternatives:</strong> Leverage input field feedback for direct validation, inline notifications for contextual feedback, banners for persistent alerts, and modals for critical interactions.</li>
+<li><strong>Provide a notification management:</strong> For important events and messages, offer a persistent record that users can access and review.</li>
+<li><strong>Stay aligned:</strong> You can always refer to our component usage guides for the most up-to-date guidance and examples.</li>
+</ul>
+<h2 class="anchor anchorWithStickyNavbar_loeA" id="more-on-messaging">More on messaging<a href="https://ix.siemens.io/version-5.3.0/blog/messaging#more-on-messaging" class="hash-link" aria-label="Direct link to More on messaging" title="Direct link to More on messaging">​</a></h2>
+<ul>
+<li>We highly recommend the <a href="https://ix.siemens.io/version-5.3.0/docs/guidelines/language/messaging/messages-overview">UX writing</a> chapter on how to effectively phrase your messages depending on the context, e.g. warning messages.</li>
+<li>The <strong>UX Design Pattern</strong> team is currently working on a detailed overview of messaging patterns. Follow them on <a href="https://engage.cloud.microsoft/main/org/siemens.com/groups/eyJfdHlwZSI6Ikdyb3VwIiwiaWQiOiIyMzcxMzg0NTI0ODAifQ/new" target="_blank" rel="noopener noreferrer">Viva Engage</a> to stay tuned.</li>
+</ul>]]></content>
+        <author>
+            <name>Felix Leist</name>
+        </author>
+        <category label="ux" term="ux"/>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[AI support with Siemens Design Language MCP Server]]></title>
+        <id>https://ix.siemens.io/version-5.3.0/blog/mcp</id>
+        <link href="https://ix.siemens.io/version-5.3.0/blog/mcp"/>
+        <updated>2025-12-01T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[banner]]></summary>
+        <content type="html"><![CDATA[<p><img decoding="async" loading="lazy" alt="banner" src="https://ix.siemens.io/version-5.3.0/assets/images/boost-productivity-f0ef52ffb6a81a61a5440c70dec32ada.svg" width="894" height="360" class="img_QgcI"></p>
+<p>Discover the new Siemens Design Language MCP Server — your gateway to machine-readable Siemens Design Language assets and standards. Streamline your workflow and boost productivity.</p>
+<p>Learn more in the <a href="https://ix.siemens.io/version-5.3.0/docs/home/mcp-server">technical documentation</a>.</p>]]></content>
+        <author>
+            <name>Lukas Maurer</name>
+        </author>
+        <category label="Release" term="Release"/>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Release V4.0.0]]></title>
+        <id>https://ix.siemens.io/version-5.3.0/blog/2025/11/10/release-4</id>
+        <link href="https://ix.siemens.io/version-5.3.0/blog/2025/11/10/release-4"/>
+        <updated>2025-11-10T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[banner]]></summary>
+        <content type="html"><![CDATA[<p><img decoding="async" loading="lazy" alt="banner" src="https://ix.siemens.io/version-5.3.0/assets/images/2510_blog_4-0-52c970429824a4272ffd494bdc16bed8.png" width="896" height="360" class="img_QgcI"></p>
+<p>The next chapter of the Industrial Experience Design System is here. This version brings together thoughtful feature enhancements and essential style refinements, offering greater flexibility while reinforcing design consistency.</p>
+<h1>How to start?</h1>
+<ul>
+<li>Install <code>@siemens/ix</code> (<code>@siemens/ix-angular</code>, <code>@siemens/ix-react</code>, <code>@siemens/ix-vue</code>) via the <code>latest</code> tag</li>
+<li>Review detailed changelog <a href="https://github.com/siemens/ix/releases/tag/%40siemens%2Fix%404.0.0" target="_blank" rel="noopener noreferrer">here</a></li>
+<li>Make sure you're using the latest published version of our Figma library</li>
+</ul>
+<h1>Button update</h1>
+<p><img decoding="async" loading="lazy" alt="button" src="https://ix.siemens.io/version-5.3.0/assets/images/2510_blog_buttons-c20f235feeb70c247fe57cdf18739e2b.png" width="896" height="360" class="img_QgcI"></p>
+<p>The time of confusing button naming is officially behind us. With this release, we’ve introduced a clear and intuitive naming convention: primary, secondary, and tertiary <a href="https://ix.siemens.io/version-5.3.0/docs/components/button/guide">buttons</a>. Now labeled exactly as such. This change improves clarity, making it easier to choose the right button for the right context.</p>
+<p>To implement this improvement, we had to introduce a breaking change. Existing variant names will need to be updated manually. Please refer to our <a href="https://ix.siemens.io/version-5.3.0/docs/home/migration/4_0_0">migration guide</a> for detailed instructions.</p>
+<p>In line with brand consistency efforts, all buttons now feature slightly rounded corners, offering a more modern and approachable look. Additionally, we’ve added support for placing icons to the right of the label. Especially useful for “Next” actions, where a left-aligned arrow often felt visually off.</p>
+<h1>New app header options</h1>
+<p><img decoding="async" loading="lazy" alt="appheaderoptions" src="https://ix.siemens.io/version-5.3.0/assets/images/2510_blog_appheader-308e0d97bdf94c0a2cf8befddfd6ff49.png" width="896" height="360" class="img_QgcI"></p>
+<p>The <a href="https://ix.siemens.io/version-5.3.0/docs/components/application-header/guide">app header</a> is now more flexible than before. With the introduction of an additional secondary slot, teams can tailor the header to better fit their application needs.</p>
+<p>We’ve also updated the documentation to showcase all available configuration options, including:</p>
+<ul>
+<li>Displaying a user avatar</li>
+<li>Using a secondary slot</li>
+<li>Enabling the borderless variant</li>
+<li>Showing an app icon</li>
+<li>Adding a sub-label to the app name</li>
+</ul>
+<p>These enhancements come as additions to the existing header component, giving teams more options without disrupting current implementation.</p>
+<h1>Elevation principle</h1>
+<p><img decoding="async" loading="lazy" alt="elevation" src="https://ix.siemens.io/version-5.3.0/assets/images/2510_blog_elevation-2abf9df51d58ec925007aee984f27e5c.png" width="896" height="360" class="img_QgcI"></p>
+<p>Elevation helps create depth in the user interface. A simple elevation principle makes it easier for users to understand which elements sit above others, improving both hierarchy and interactivity.</p>
+<p>With this major release, we are reducing the use of semi-transparent colors in favor of solid tones. This change improves visual separation between layers and aligns with our goal of a consistent design language.</p>
+<p>The new colors are applied automatically when migrating to this version. Therefore, we recommend teams visually review their interfaces. To support this, our migration guide includes an overview where switching to outline variants is needed for good layer separation.</p>
+<h1>Angular 20</h1>
+<p><img decoding="async" loading="lazy" alt="angular20" src="https://ix.siemens.io/version-5.3.0/assets/images/2510_blog_angular-ea8bbb42ecf6707612c6a37c7e7c9543.png" width="896" height="360" class="img_QgcI"></p>
+<p>This release brings full compatibility with Angular 20 and up, helping teams keep their projects aligned with the latest framework improvements.</p>
+<p>To reflect this, the Angular specific peer dependencies have been updated to require at least version 20. Projects using this package will need to upgrade to Angular 20 or higher before migrating to the latest version of iX. See more in the <a href="https://ix.siemens.io/version-5.3.0/docs/home/migration/4_0_0">migration guide</a>.</p>
+<h1>AG Grid update</h1>
+<p><img decoding="async" loading="lazy" alt="aggrid" src="https://ix.siemens.io/version-5.3.0/assets/images/2510_blog_aggrid-e08da9e69d54ec6ae18d94e658dcce47.png" width="896" height="360" class="img_QgcI"></p>
+<p>We are now publishing a separate Figma library based on the <a href="https://www.figma.com/community/file/1360600846643230092" target="_blank" rel="noopener noreferrer">official AG Grid design system</a> styled with the iX theme. This gives designers direct access to AG Grid’s native components and layout logic. Developers benefit from AG Grid’s new <a href="https://blog.ag-grid.com/introducing-our-new-theming-api/" target="_blank" rel="noopener noreferrer">theming API</a>, which makes styling grids easier and more flexible. Together, this change makes design and development faster, clearer, and better aligned.</p>
+<h1>New section within UX writing guidelines: Formatting</h1>
+<p>We’ve just released a brand-new section in our <a href="https://ix.siemens.io/version-5.3.0/docs/guidelines/language/writing-style-guide-getting-started">UX writing guidelines</a>, designed to bring clarity, consistency, and user-friendliness to some of the most commonly used — and often overlooked — elements in digital communication. This update covers:</p>
+<ul>
+<li>Addresses</li>
+<li>Dates</li>
+<li>Measurements and units</li>
+<li>Money and currency</li>
+<li>Names and titles</li>
+<li>Numbers and percentages</li>
+<li>Software versions</li>
+<li>Time and time zones</li>
+</ul>
+<h1>Any questions or feedback?</h1>
+<p>Please reach out to us at <a href="mailto:team.ix.industry@siemens.com" target="_blank" rel="noopener noreferrer">team.ix.industry@siemens.com</a> and tell us about your migration experience.
+If you encounter any issues, we are here to support you every step of the way.</p>
+<p>We greatly appreciate your contributions.</p>]]></content>
+        <author>
+            <name>Felix Leist</name>
+        </author>
+        <category label="Release" term="Release"/>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[UXT Migration to Siemens Industrial Experience]]></title>
+        <id>https://ix.siemens.io/version-5.3.0/blog/2025/09/31/uxt-eos</id>
+        <link href="https://ix.siemens.io/version-5.3.0/blog/2025/09/31/uxt-eos"/>
+        <updated>2025-10-01T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[banner]]></summary>
+        <content type="html"><![CDATA[<p><img decoding="async" loading="lazy" alt="banner" src="https://ix.siemens.io/version-5.3.0/assets/images/2025_uxt-ba6a5557513b8acd03c1b943aed82a8f.png" width="896" height="360" class="img_QgcI"></p>
+<p>As part of our journey, we proudly announce the integration of User Experience Toolkit (UXT) into Siemens Industrial Experience (iX). This strategic move consolidates our design resources and provides you with a more comprehensive, modern, and efficient solution.</p>
+<div class="Card__List_uG0B"><a class="Card_iqH1 Card_iqH1" href="https://ix.siemens.io/version-5.3.0/docs/home/migration/uxt"><div class="Label_fp8h text-h2 Full__Height_omEW"><ix-icon></ix-icon> Migrate from UXT to iX</div></a><a class="Card_iqH1 Card_iqH1" href="https://ix.siemens.io/version-5.3.0/docs/home/support/contact-us"><div class="Label_fp8h text-h2 Full__Height_omEW"><ix-icon></ix-icon>Get support</div></a></div>
+<h1>How to start?</h1>
+<ul>
+<li><a href="https://ix.siemens.io/version-5.3.0/docs/home/migration/uxt">Migration guide</a>: For UXT users transitioning to iX, find step-by-step instructions.</li>
+<li><a href="https://ix.siemens.io/version-5.3.0/docs/home/support/contact-us">Support channels</a>: Reach out for any questions or assistance you might need.</li>
+<li><a href="https://github.com/siemens/ix/issues" target="_blank" rel="noopener noreferrer">GitHub</a>: Explore our official open-source repository to request new features.</li>
+</ul>
+<h2 class="anchor anchorWithStickyNavbar_loeA" id="benefits-of-joining-ix">Benefits of joining iX<a href="https://ix.siemens.io/version-5.3.0/blog/2025/09/31/uxt-eos#benefits-of-joining-ix" class="hash-link" aria-label="Direct link to Benefits of joining iX" title="Direct link to Benefits of joining iX">​</a></h2>
+<p>The integration of UXT into iX brings several key benefits:</p>
+<ul>
+<li><strong>Enhanced consistency:</strong> Unified design language across all Siemens industrial applications, creating a more cohesive user experience.</li>
+<li><strong>Streamlined workflow:</strong> Modern components and patterns enhance the productivity and quality of your application.</li>
+<li><strong>Unified documentation:</strong> Comprehensive, centralized resources for all your design system needs.</li>
+<li><strong>Consolidated maintenance:</strong> Single, robust design system with regular updates and improvements.</li>
+</ul>
+<h2 class="anchor anchorWithStickyNavbar_loeA" id="important-notice-for-uxt-users">Important notice for UXT users<a href="https://ix.siemens.io/version-5.3.0/blog/2025/09/31/uxt-eos#important-notice-for-uxt-users" class="hash-link" aria-label="Direct link to Important notice for UXT users" title="Direct link to Important notice for UXT users">​</a></h2>
+<ul>
+<li>UXT has reached end-of-service and is no longer actively maintained.</li>
+<li>The UXT CDN will be discontinued soon.</li>
+</ul>
+<p>We strongly recommend migrating to iX as soon as possible. Our team is here to support you with a smooth transition.</p>]]></content>
+        <author>
+            <name>Kathrin Schalber</name>
+        </author>
+        <category label="Merging" term="Merging"/>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Release V3.2.0]]></title>
+        <id>https://ix.siemens.io/version-5.3.0/blog/2025/07/25/release-3-2</id>
+        <link href="https://ix.siemens.io/version-5.3.0/blog/2025/07/25/release-3-2"/>
+        <updated>2025-07-25T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[banner]]></summary>
+        <content type="html"><![CDATA[<p><img decoding="async" loading="lazy" alt="banner" src="https://ix.siemens.io/version-5.3.0/assets/images/2507_blog_3-2-089665150658908e9248b029dc218a83.png" width="896" height="360" class="img_QgcI"></p>
+<p>Over the past few months, we've been hard at work delivering new features, usability improvements, and important bug fixes. In this post, we’ll walk you through the highlights of our recent 3.1.0 and 3.2.0 minor releases.</p>
+<p>We’ll also give you a sneak peek at what’s coming in the upcoming 4.0 major release.</p>
+<h1>How to start?</h1>
+<ul>
+<li>Install <code>@siemens/ix</code> (<code>@siemens/ix-angular</code>, <code>@siemens/ix-react</code>, <code>@siemens/ix-vue</code>) via the <code>latest</code> tag</li>
+<li>Review detailed changelog <a href="https://ix.siemens.io/version-5.3.0/docs/home/migration/3_0_0">here</a></li>
+<li>Make sure you're using the latest published version of our Figma library</li>
+</ul>
+<h1>Time input and redesigned time picker</h1>
+<p><img decoding="async" loading="lazy" alt="Time input" src="https://ix.siemens.io/version-5.3.0/assets/images/2507_blog_timepicker-fcb658caf345b1f989c512684a56f91e.png" width="896" height="360" class="img_QgcI"></p>
+<p>The redesigned time picker introduces a smoother, more intuitive experience with scrollable values and one-click selection for hours, minutes, seconds, and milliseconds. This makes it easier and faster for users to select precise times, especially on touch devices. Learn more in the <a href="https://ix.siemens.io/version-5.3.0/docs/components/time-picker/guide">usage guide</a>.</p>
+<p>Built on top of the new time picker, the new time input component is fully form-ready and integrates seamlessly with our form infrastructure described in the <a href="https://ix.siemens.io/version-5.3.0/docs/components/forms-field/guide">forms field section</a>. It supports validation, accessibility, and consistent styling.</p>
+<p>Learn more in the <a href="https://ix.siemens.io/version-5.3.0/docs/components/input-time/guide">usage guide</a>.</p>
+<h1>Progress indicator</h1>
+<p><img decoding="async" loading="lazy" alt="Progress indicator" src="https://ix.siemens.io/version-5.3.0/assets/images/2507_blog_progress-f280a82351452a95bded6da4b6a05d9a.png" width="896" height="360" class="img_QgcI"></p>
+<p>A long-awaited feature, the progress indicator is now available in both linear and circular variants. The linear variant is designed for horizontal layouts or when the progress value should be more visible. The circular variant is more suitable for compact or centered layouts, e.g. when it’s replacing an icon.</p>
+<p>Whether you're tracking file uploads, form completion, or background tasks, these indicators provide clear, accessible feedback to users. They’re fully customizable and easy to integrate.</p>
+<p>Learn more in the <a href="https://ix.siemens.io/version-5.3.0/docs/components/progress-indicator/code">usage guide</a>.</p>
+<h1>Improved initial render performance</h1>
+<p><img decoding="async" loading="lazy" alt="Render performance" src="https://ix.siemens.io/version-5.3.0/assets/images/2507_blog_render-2d275a7f4544040514acc09135c8ca16.png" width="896" height="360" class="img_QgcI"></p>
+<p>We’ve significantly improved the initial render performance by optimizing how components are initialized and rendered with StencilJS.</p>
+<p>Users will notice faster load times and smoother interactions, particularly in data-heavy applications, especially in complex environments like AG Grid.</p>
+<h1>Enhanced icon toggle button</h1>
+<p><img decoding="async" loading="lazy" alt="Icon toggle button" src="https://ix.siemens.io/version-5.3.0/assets/images/2507_blog_icontogglebutton-2076a52196d896cb754097d342763951.png" width="896" height="360" class="img_QgcI"></p>
+<p>The icon toggle button has a new oval attribute, allowing its shape to be adjusted from square to oval. This provides greater flexibility in aligning with different design aesthetics and layout needs.</p>
+<p>Toggle buttons are ideal for switching between states or modes. They’re commonly used in scenarios where a setting can be turned on or off independently.</p>
+<p>Learn more in the <a href="https://ix.siemens.io/version-5.3.0/docs/components/toggle-button/guide">usage guide</a>.</p>
+<h1>Theme generator</h1>
+<p><img decoding="async" loading="lazy" alt="Theme generator" src="https://ix.siemens.io/version-5.3.0/assets/images/2507_blog_themegenerator-a1ef6ee934dfa763312bca2ed4dad699.png" width="896" height="360" class="img_QgcI"></p>
+<p>Our updated theme generator produces smaller, more efficient CSS variable files. It also supports cross-platform theming, making it easier to apply your design system consistently across web, mobile, and desktop applications. This update simplifies customization while improving performance.</p>
+<h1>Accessibility</h1>
+<p><img decoding="async" loading="lazy" alt="Accessibility" src="https://ix.siemens.io/version-5.3.0/assets/images/2507_blog_accessibility-fd5071456042c1060fde84945074d52a.png" width="896" height="360" class="img_QgcI"></p>
+<p>We’ve expanded our accessibility support with:</p>
+<ul>
+<li>Extended <a href="https://ix.siemens.io/version-5.3.0/docs/guidelines/accessibility/overview">WCAG guidelines</a> tailored to our components</li>
+<li>Component-level accessibility checklists in Figma</li>
+<li>ARIA label support for our components</li>
+</ul>
+<p>These improvements help teams build inclusive, accessible experiences more easily and confidently.</p>
+<h1>Upcoming 4.0 major release</h1>
+<p><img decoding="async" loading="lazy" alt="Upcoming" src="https://ix.siemens.io/version-5.3.0/assets/images/2507_blog_upcoming-625ae5d05433a8de7d1789e7e999f94c.png" width="896" height="360" class="img_QgcI"></p>
+<p>The upcoming 4.0 major release will introduce several impactful changes and enhancements across the design system and component libraries:</p>
+<ul>
+<li>
+<p><strong>Button rework:</strong> We’re refining the button component with:</p>
+<ul>
+<li>Updated naming conventions for clarity</li>
+<li>Rounded corners for Siemens brand consistency</li>
+<li>A new icon-right option for better layout flexibility</li>
+</ul>
+</li>
+<li>
+<p><strong>App header enhancements:</strong> The app header will become more customizable with an additional slot option for providing custom content.</p>
+</li>
+<li>
+<p><strong>Elevation principle simplification:</strong> We’re streamlining the elevation system to make it easier to apply and understand visual hierarchy across components.</p>
+</li>
+<li>
+<p><strong>Angular 20 support:</strong> Full compatibility with Angular 20, ensuring your projects stay up-to-date with the latest framework improvements.</p>
+</li>
+<li>
+<p><strong>AG Grid update:</strong> We’re aligning with the latest AG Grid version to ensure seamless integration and improved performance.</p>
+</li>
+</ul>
+<p>Please reach out to us at <a href="mailto:team.ix.industry@siemens.com" target="_blank" rel="noopener noreferrer">team.ix.industry@siemens.com</a> and tell us about your migration experience.
+If you encounter any issues, we are here to support you every step of the way.</p>
+<p>We greatly appreciate your contributions.</p>]]></content>
+        <author>
+            <name>Felix Leist</name>
+        </author>
+        <category label="Release" term="Release"/>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Release V3.0.0]]></title>
+        <id>https://ix.siemens.io/version-5.3.0/blog/2025/05/09/release-3</id>
+        <link href="https://ix.siemens.io/version-5.3.0/blog/2025/05/09/release-3"/>
+        <updated>2025-05-09T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[banner]]></summary>
+        <content type="html"><![CDATA[<p><img decoding="async" loading="lazy" alt="banner" src="https://ix.siemens.io/version-5.3.0/assets/images/2505_blog_3-0015b09895ca25c1346a245570a6742a.png" width="896" height="360" class="img_QgcI"></p>
+<p>After gathering feedback on our alpha release, we proudly present the official launch of Industrial Experience V3.0.0.</p>
+<h1>How to start?</h1>
+<ul>
+<li>Install <code>@siemens/ix</code> (<code>@siemens/ix-angular</code>, <code>@siemens/ix-react</code>, <code>@siemens/ix-vue</code>) via the <code>latest</code> tag</li>
+<li>Access the comprehensive migration guide to smoothly transition to the new version <a href="https://ix.siemens.io/version-5.3.0/docs/home/migration/3_0_0">here</a>.</li>
+</ul>
+<h1>What's new?</h1>
+<p>Our previous <a href="https://ix.siemens.io/version-5.3.0/blog/v3-alpha">blog entry on the alpha release</a> provides a detailed description of the new features. Here is a brief summary:</p>
+<ul>
+<li><strong>Improved Angular support:</strong> Enhancing compatibility and ease of use for developers by updaging the minimum supported Angular version to version 18 and supporting Angular standalone components out of the box.</li>
+<li><strong>Global CSS Changes:</strong> To avoid style collisions with other CSS frameworks or libraries, a prefix has been added to some global styles such as table, input, and label.</li>
+<li><strong>Bootstrap removal:</strong> The CSS framework Bootstrap has been removed from our main style file, marking a significant change in our approach to styling.</li>
+<li><strong>Input validation enhancements:</strong> Input elements have been updated to improve user experience by preventing required validation errors from appearing without any user interaction.</li>
+<li><strong>Date picker enhancements:</strong> Week numbers are now hidden by default in several date-related components, enhancing the user interface and simplifying the display.</li>
+<li><strong>Documentation redesign:</strong> Introducing horizontal navigation in the header for quick access to essential resources and improved usability for component pages with a new preview and code snippet and an aligned property table.</li>
+<li><strong>Versioning of documentation:</strong> Users can now switch between different versions, making it easier to reference older documentation and track changes over time.</li>
+</ul>
+<p>Please reach out to us at <a href="mailto:team.ix.industry@siemens.com" target="_blank" rel="noopener noreferrer">team.ix.industry@siemens.com</a> and tell us about your migration experience.
+If you encounter any issues, we are here to support you every step of the way.</p>
+<p>🙏 We greatly appreciate your contributions.</p>]]></content>
+        <author>
+            <name>Felix Leist</name>
+        </author>
+        <category label="Release" term="Release"/>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Release V3.0.0-alpha]]></title>
+        <id>https://ix.siemens.io/version-5.3.0/blog/v3-alpha</id>
+        <link href="https://ix.siemens.io/version-5.3.0/blog/v3-alpha"/>
+        <updated>2025-04-03T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[banner]]></summary>
+        <content type="html"><![CDATA[<p><img decoding="async" loading="lazy" alt="banner" src="https://ix.siemens.io/version-5.3.0/assets/images/intro-c9d067d0c4349e53480310fdbfd999d5.png" width="1792" height="720" class="img_QgcI"></p>
+<p>Are you ready to be among the first to experience V3.0.0?</p>
+<p>We are seeking early adopters to test our alpha release and provide valuable feedback.</p>
+<p>As we prepare for the official launch of Industrial Experience V3.0.0, your insights will help us refine the code, documentation, and migration guide.</p>
+<p>Your participation not only benefits us but also the entire community eagerly awaiting this major update.</p>
+<h1>How to start?</h1>
+<ul>
+<li>Install <code>@siemens/ix</code> (<code>@siemens/ix-angular</code>, <code>@siemens/ix-react</code>, <code>@siemens/ix-vue</code>) via the <code>alpha</code> tag</li>
+<li>Get an exclusive preview of our revamped documentation <a href="https://ix.siemens.io/version-alpha/" target="_blank" rel="noopener noreferrer">here</a></li>
+</ul>
+<p>Access the comprehensive migration guide to smoothly transition to the new version <a href="https://ix.siemens.io/version-alpha/docs/home/migration/3_0_0/" target="_blank" rel="noopener noreferrer">here</a></p>
+<p>Your feedback on the new version, documentation redesign, and change log is crucial.</p>
+<h1>Update Angular version and support standalone components</h1>
+<p><img decoding="async" loading="lazy" alt="Angular standalone" src="https://ix.siemens.io/version-5.3.0/assets/images/angular-112d38f614b17d22b4abbcfde23f3eeb.png" width="1792" height="720" class="img_QgcI"></p>
+<p><strong>Exciting updates</strong> have been made to our Angular support, enhancing compatibility and ease of use for developers.</p>
+<p><strong>Key changes:</strong></p>
+<ul>
+<li><strong>Minimum Angular version:</strong> The minimum supported Angular version has been updated to version 18.</li>
+<li><strong>Standalone components:</strong> We now support Angular standalone components out of the box.</li>
+</ul>
+<p><strong>Example:</strong></p>
+<div class="language-typescript codeBlockContainer_NeE7 theme-code-block" style="--prism-color:#F8F8F2;--prism-background-color:#282A36"><div class="codeBlockContent_Znyc"><pre tabindex="0" class="prism-code language-typescript codeBlock_CAUA thin-scrollbar" style="color:#F8F8F2;background-color:#282A36"><code class="codeBlockLines_V4vN"><span class="token-line" style="color:#F8F8F2"><span class="token keyword" style="color:rgb(189, 147, 249);font-style:italic">import</span><span class="token plain"> </span><span class="token punctuation" style="color:rgb(248, 248, 242)">{</span><span class="token plain"> Component </span><span class="token punctuation" style="color:rgb(248, 248, 242)">}</span><span class="token plain"> </span><span class="token keyword" style="color:rgb(189, 147, 249);font-style:italic">from</span><span class="token plain"> </span><span class="token string" style="color:rgb(255, 121, 198)">'@angular/core'</span><span class="token punctuation" style="color:rgb(248, 248, 242)">;</span><span class="token plain"></span><br></span><span class="token-line" style="color:#F8F8F2"><span class="token plain"></span><span class="token keyword" style="color:rgb(189, 147, 249);font-style:italic">import</span><span class="token plain"> </span><span class="token punctuation" style="color:rgb(248, 248, 242)">{</span><span class="token plain"> IxButton </span><span class="token punctuation" style="color:rgb(248, 248, 242)">}</span><span class="token plain"> </span><span class="token keyword" style="color:rgb(189, 147, 249);font-style:italic">from</span><span class="token plain"> </span><span class="token string" style="color:rgb(255, 121, 198)">'@siemens/ix-angular/standalone'</span><span class="token punctuation" style="color:rgb(248, 248, 242)">;</span><span class="token plain"></span><br></span><span class="token-line" style="color:#F8F8F2"><span class="token plain" style="display:inline-block"></span><br></span><span class="token-line" style="color:#F8F8F2"><span class="token plain"></span><span class="token decorator at operator">@</span><span class="token decorator function" style="color:rgb(80, 250, 123)">Component</span><span class="token punctuation" style="color:rgb(248, 248, 242)">(</span><span class="token punctuation" style="color:rgb(248, 248, 242)">{</span><span class="token plain"></span><br></span><span class="token-line" style="color:#F8F8F2"><span class="token plain">  standalone</span><span class="token operator">:</span><span class="token plain"> </span><span class="token boolean">true</span><span class="token punctuation" style="color:rgb(248, 248, 242)">,</span><span class="token plain"></span><br></span><span class="token-line" style="color:#F8F8F2"><span class="token plain">  selector</span><span class="token operator">:</span><span class="token plain"> </span><span class="token string" style="color:rgb(255, 121, 198)">'app-example'</span><span class="token punctuation" style="color:rgb(248, 248, 242)">,</span><span class="token plain"></span><br></span><span class="token-line" style="color:#F8F8F2"><span class="token plain">  imports</span><span class="token operator">:</span><span class="token plain"> </span><span class="token punctuation" style="color:rgb(248, 248, 242)">[</span><span class="token plain">IxButton</span><span class="token punctuation" style="color:rgb(248, 248, 242)">]</span><span class="token punctuation" style="color:rgb(248, 248, 242)">,</span><span class="token plain"></span><br></span><span class="token-line" style="color:#F8F8F2"><span class="token plain">  template</span><span class="token operator">:</span><span class="token plain"> </span><span class="token template-string template-punctuation string" style="color:rgb(255, 121, 198)">`</span><span class="token template-string string" style="color:rgb(255, 121, 198)"></span><br></span><span class="token-line" style="color:#F8F8F2"><span class="token template-string string" style="color:rgb(255, 121, 198)">    &lt;ix-button&gt;Button&lt;/ix-button&gt;</span><br></span><span class="token-line" style="color:#F8F8F2"><span class="token template-string string" style="color:rgb(255, 121, 198)">    &lt;ix-button disabled&gt;Button&lt;/ix-button&gt;</span><br></span><span class="token-line" style="color:#F8F8F2"><span class="token template-string string" style="color:rgb(255, 121, 198)">  </span><span class="token template-string template-punctuation string" style="color:rgb(255, 121, 198)">`</span><span class="token punctuation" style="color:rgb(248, 248, 242)">,</span><span class="token plain"></span><br></span><span class="token-line" style="color:#F8F8F2"><span class="token plain"></span><span class="token punctuation" style="color:rgb(248, 248, 242)">}</span><span class="token punctuation" style="color:rgb(248, 248, 242)">)</span><span class="token plain"></span><br></span><span class="token-line" style="color:#F8F8F2"><span class="token plain"></span><span class="token keyword" style="color:rgb(189, 147, 249);font-style:italic">export</span><span class="token plain"> </span><span class="token keyword" style="color:rgb(189, 147, 249);font-style:italic">default</span><span class="token plain"> </span><span class="token keyword" style="color:rgb(189, 147, 249);font-style:italic">class</span><span class="token plain"> </span><span class="token class-name">Buttons</span><span class="token plain"> </span><span class="token punctuation" style="color:rgb(248, 248, 242)">{</span><span class="token punctuation" style="color:rgb(248, 248, 242)">}</span><br></span></code></pre><div class="buttonGroup_BCku"><button type="button" aria-label="Copy code to clipboard" title="Copy" class="clean-btn"><span class="copyButtonIcons_CAvs" aria-hidden="true"><svg viewBox="0 0 24 24" class="copyButtonIcon_zDS_"><path fill="currentColor" d="M19,21H8V7H19M19,5H8A2,2 0 0,0 6,7V21A2,2 0 0,0 8,23H19A2,2 0 0,0 21,21V7A2,2 0 0,0 19,5M16,1H4A2,2 0 0,0 2,3V17H4V3H16V1Z"></path></svg><svg viewBox="0 0 24 24" class="copyButtonSuccessIcon_JAhv"><path fill="currentColor" d="M21,7L9,19L3.5,13.5L4.91,12.09L9,16.17L19.59,5.59L21,7Z"></path></svg></span></button></div></div></div>
+<p>Standalone components offer a more straightforward approach to developing Angular applications. By utilizing standalone components, directives, and pipes, developers can enhance the authoring experience and minimize reliance on NgModules.</p>
+<h1>Global CSS Changes</h1>
+<p><img decoding="async" loading="lazy" alt="global style changes" src="https://ix.siemens.io/version-5.3.0/assets/images/css-ad0d94283ad2762220aed32dd065107e.png" width="1792" height="720" class="img_QgcI"></p>
+<p>To avoid style collisions with other CSS frameworks or libraries, a prefix has been added to some global styles such as table, input, and label.</p>
+<p><strong>Key changes</strong>:</p>
+<ul>
+<li><strong>Input and textarea</strong>: Global styling has been removed. To use legacy styling, add <code>class="ix-form-control"</code> to input or textarea.</li>
+<li><strong>Label</strong>: Global styling has been removed. To use legacy styling, add <code>class="ix-form-label"</code> to label.</li>
+<li><strong>Table</strong>: New global classes <code>.ix-table</code> and <code>.ix-table-striped</code> have been added to display a simple HTML table. These changes aim to enhance compatibility and prevent conflicts in styling across different frameworks and libraries.</li>
+</ul>
+<h1>Bootstrap is removed from our dependencies</h1>
+<p><img decoding="async" loading="lazy" alt="remove bootstrap" src="https://ix.siemens.io/version-5.3.0/assets/images/bootstrap-0a81e39767ec5ae727cdc28ce654bf32.png" width="1792" height="720" class="img_QgcI"></p>
+<p>The CSS framework Bootstrap has been removed from our main style file, marking a significant change in our approach to styling.</p>
+<p><strong>Key changes:</strong></p>
+<ul>
+<li><strong>Bootstrap removal:</strong> The third-party CSS framework Bootstrap has been completely removed from our style file.</li>
+</ul>
+<p><strong>Why this is beneficial:</strong></p>
+<ul>
+<li><strong>Reduced dependency:</strong> Removing Bootstrap reduces dependency on third-party frameworks, leading to fewer compatibility issues and conflicts with other libraries.</li>
+<li><strong>Improved performance:</strong> Without the additional overhead of Bootstrap, the overall performance and loading times of our applications can improve.</li>
+<li><strong>Customization and control:</strong> This change allows for greater customization and control over the styling, enabling more tailored and specific design choices that align with our unique requirements.</li>
+</ul>
+<h1>Input validation enhancements</h1>
+<p><img decoding="async" loading="lazy" alt="input validation" src="https://ix.siemens.io/version-5.3.0/assets/images/input-validation-ef5409701f01c7819151a5989235dc61.png" width="1792" height="720" class="img_QgcI"></p>
+<p>Input elements have been updated to improve user experience by preventing required validation errors from appearing without any user interaction.</p>
+<p><strong>Key changes:</strong></p>
+<ul>
+<li><strong>Input elements affected:</strong> ix-input, ix-number-input, ix-date-input, ix-select, and ix-textarea will no longer show required validation errors unless there has been user interaction.</li>
+<li><strong>Programmatic validation:</strong> If the class <code>ix-invalid</code> is applied programmatically, an error message will still be shown even without user interaction.</li>
+</ul>
+<h1>Date picker enhancements</h1>
+<p><img decoding="async" loading="lazy" alt="date picker" src="https://ix.siemens.io/version-5.3.0/assets/images/picker-87e5e9a7ce60984bfe55fe78a0d10049.png" width="1792" height="720" class="img_QgcI"></p>
+<p>Week numbers are now hidden by default in several date-related components, enhancing the user interface and simplifying the display.</p>
+<h1>Documentation redesign</h1>
+<p><img decoding="async" loading="lazy" alt="documentation redesign" src="https://ix.siemens.io/version-5.3.0/assets/images/documentation-c41ac47d3a81b0b82e1688348ef6c644.png" width="1792" height="720" class="img_QgcI"></p>
+<p>In response to valuable user feedback, we are unveiling the redesigned documentation for our design system. Last year, we sent out a comprehensive survey to our users. They provided insights that have shaped this transformation. Our goal is to enhance usability and accessibility, ensuring that our documentation meets the needs of our diverse user base.</p>
+<p><strong>Key changes:</strong></p>
+<ul>
+<li><strong>Horizontal navigation in the header:</strong> One of the most significant changes is the introduction of horizontal navigation in the header. Previously, users had to navigate deep within the main navigation to find components and icons, which were the most sought-after elements. The new horizontal navigation prominently features main categories, allowing users to access these critical sections quickly and efficiently.</li>
+<li><strong>Quick access to essential resources:</strong> We have added quick access links to the header. Users can now effortlessly reach the starter app, support resources, and our GitHub repository. This change ensures that essential tools and information are always within easy reach, reducing the time spent searching for these resources.</li>
+<li><strong>Versioning of documentation:</strong> We understand the importance of maintaining access to previous versions of our documentation. Users can now switch between different versions, making it easier to reference older documentation and track changes over time. This feature is particularly useful for teams working with legacy systems or those who need to compare updates.</li>
+<li><strong>Clustering components:</strong> In the past, components were listed alphabetically, which could be cumbersome for users looking for related items. We have now clustered components based on their functionality and usage. This logical grouping helps users find what they need more intuitively, enhancing the overall efficiency of the documentation.</li>
+<li><strong>Preview and code snippet:</strong> For the component pages, we have integrated the preview and code snippet sections. This allows users to easily switch between viewing a component in different themes and accessing the corresponding code for various frameworks.</li>
+<li><strong>Property table:</strong> Component and style pages now use the same property table for a better overview and consistent behavior.</li>
+</ul>
+<p>The redesign of our documentation is a direct result of listening to our users and understanding their needs. We believe these changes will significantly improve the user experience, making our design system easier to navigate. We are committed to continuous improvement and have exciting upcoming topics already planned. We welcome any further feedback to ensure our documentation remains a valuable resource for all users.</p>
+<p>Please reach out to us at <a href="mailto:team.ix.industry@siemens.com" target="_blank" rel="noopener noreferrer">team.ix.industry@siemens.com</a> and tell us about your migration experience.
+If you encounter any issues, we are here to support you every step of the way.</p>
+<p>🙏 We greatly appreciate your contributions.</p>]]></content>
+        <author>
+            <name>Daniel Leroux</name>
+        </author>
+        <category label="Release" term="Release"/>
+    </entry>
+</feed>

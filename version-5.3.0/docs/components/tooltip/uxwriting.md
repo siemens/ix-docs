@@ -1,0 +1,153 @@
+# Tooltip - Language
+
+> Language guide for the ix-tooltip
+# Tooltip - Language
+
+import { IxIcon } from '@siemens/ix-react';
+import { iconEditDocument } from '@siemens/ix-icons/icons';
+
+## General rules
+
+Use tooltips to define icons and show control names.
+
+<div className="dos-and-donts">
+  <div className="dos">
+    <ul aria-label="Recommended practices">
+      <li>Edit</li>
+      <li>Delete</li>
+      <li>Log out</li>
+    </ul>
+  </div>
+</div>
+
+Avoid punctuation or periods for tool names or icons.
+
+<div className="dos-and-donts">
+  <div className="dos">
+    <ul aria-label="Recommended practices">
+      <li>Edit</li>
+      <li>Open file</li>
+    </ul>
+  </div>
+  <div className="donts">
+    <ul aria-label="Practices to avoid">
+      <li>Edit.</li>
+      <li>Open file.</li>
+    </ul>
+  </div>
+</div>
+
+Use sentence case and a period if the tooltip is a complete sentence or multiple sentences.
+
+<div className="dos-and-donts">
+  <div className="dos">
+    <ul aria-label="Recommended practices">
+      <li>Add users to project.</li>
+    </ul>
+  </div>
+  <div className="donts">
+    <ul aria-label="Practices to avoid">
+      <li>Add new users to project</li>
+    </ul>
+  </div>
+</div>
+
+Use verbs to start your tooltip and avoid passive voice.
+
+<div className="dos-and-donts">
+  <div className="dos">
+    <ul aria-label="Recommended practices">
+      <li>Create KPI tables.</li>
+    </ul>
+  </div>
+  <div className="donts">
+    <ul aria-label="Practices to avoid">
+      <li>Tables are created.</li>
+    </ul>
+  </div>
+</div>
+
+Avoid complicated sentence constructions, e.g. no relative clauses.
+
+<div className="dos-and-donts">
+  <div className="dos">
+    <ul aria-label="Recommended practices">
+      <li>Share with team members.</li>
+    </ul>
+  </div>
+  <div className="donts">
+    <ul aria-label="Practices to avoid">
+      <li>Projects can be shared with team members who work with you.</li>
+    </ul>
+  </div>
+</div>
+
+Use a heading with a short description for longer tooltips.
+
+<div className="dos-and-donts">
+  <div className="dos">
+    <ul aria-label="Recommended practices">
+      <li>
+        <div>
+          Heading: Cycle time input
+          <br />
+          Description: Set the duration of each production cycle in seconds.
+          <br />
+        </div>
+      </li>
+      <li>
+        <div>
+          Heading: Log history
+          <br />
+          Description: View historical logs of machine activity and operator actions.
+        </div>
+      </li>
+    </ul>
+  </div>
+</div>
+
+Avoid repeating text already visible and readable on the screen.
+
+<div className="dos-and-donts">
+  <div className="dos">
+    <ul aria-label="Recommended practices">
+      <li>
+        <span>Edit (as icon <IxIcon name={iconEditDocument} size="16"></IxIcon>)</span>
+        <br />
+        Tooltip: Edit
+      </li>
+    </ul>
+  </div>
+  <div className="donts">
+    <ul aria-label="Practices to avoid">
+      <li>
+        Edit (as text) <br />
+        Tooltip: Edit
+      </li>
+    </ul>
+  </div>
+</div>
+
+## Dos and Don’ts
+
+<div class="dos-and-donts">
+  <div class="dos">
+    <ul aria-label="Recommended practices">
+      <li>Do write tooltips to give context for complex features</li>
+      <li>Do write tooltips to support new users</li>
+    </ul>
+  </div>
+  <div class="donts">
+    <ul aria-label="Practices to avoid">
+      <li>Don’t use tooltips for lengthy updates use [Toast messages](./toast-messages.mdx) instead</li>
+      <li>Don’t use tooltips for critical blocking feedback use [Message modal](../../../components/message-modal/index.mdx) instead</li>
+    </ul>
+  </div>
+</div>
+
+## Related
+
+- [Toast messages](./toast-messages.mdx)
+- [Message modal](../../../components/message-modal/index.mdx)
+- [Non-critical information messages](./non-critical-information-messages.mdx)
+- [Messages overview](./messages-overview.md)
