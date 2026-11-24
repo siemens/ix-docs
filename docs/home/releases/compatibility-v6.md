@@ -40,7 +40,7 @@ The framework wrappers depend on the matching minor version of `@siemens/ix` (e.
 | `@siemens/ix-angular` | 6.x     | `@angular/core` >=21.2.25, `@angular/forms` >=21.2.25, `@siemens/ix-icons` ^4.0.0\* | `@siemens/ix` (matching minor, see above), `tslib` ^2.3.0                                 |
 | `@siemens/ix-vue`     | 6.x     | `vue` ^3.5.0, `@siemens/ix-icons` ^4.0.0                                            | `@siemens/ix` (matching minor, see above), `@stencil/vue-output-target` ^0.14.6           |
 
-\* Angular 21 requires TypeScript `>=5.9 <6.1`.
+\* Angular 21 requires TypeScript `>=5.9 <6.0`.
 
 ## Third-party integrations
 
