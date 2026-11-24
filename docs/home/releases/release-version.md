@@ -53,4 +53,4 @@ We recommend always following the active release. When a version moves from the 
 | V3.0.0  | End of life | May 2025       | November 2025       | May 2026                 |
 | V2.0.0  | End of life | September 2023 | May 2025            | November 2025            |
 
-For detailed framework and dependency requirements per package, see the [Compatibility matrix](compatibility-v6.md).
+For detailed framework and dependency requirements per package, see the [Compatibility matrix](compatibility-v6.md). For V5, see the [V5 compatibility matrix](https://ix.siemens.io/version-5.3.0/docs/home/releases/compatibility-v5) in the versioned documentation.
