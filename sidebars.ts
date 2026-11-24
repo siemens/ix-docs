@@ -886,6 +886,10 @@ const sidebars: SidebarsConfig = {
               id: 'components/button/code',
               label: 'Code',
             },
+            {
+              id: 'components/button/language',
+              label: 'Writing',
+            },
           ],
         }),
         createTabItem({
@@ -927,6 +931,10 @@ const sidebars: SidebarsConfig = {
             {
               id: 'components/link-button/code',
               label: 'Code',
+            },
+            {
+              id: 'components/link-button/language',
+              label: 'Writing',
             },
           ],
         }),
