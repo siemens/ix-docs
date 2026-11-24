@@ -18,11 +18,12 @@ export default () => {
     <>
       <IxCardList label="Stack Layout" showAllCount={12} listStyle={'stack'}>
         <IxPushCard
-          icon={iconBulb}
+          icon={iconRocket}
           notification="3"
           heading="Heading content"
           subheading="Subheading"
-          variant="filled"
+          variant="base"
+          outline={false}
         ></IxPushCard>
         <IxPushCard
           icon={iconBulb}
@@ -46,7 +47,7 @@ export default () => {
           notification="3"
           heading="Heading content"
           subheading="Subheading"
-          variant="filled"
+          variant="base" outline={false}
         ></IxPushCard>
         <IxPushCard
           icon={iconBulb}
@@ -60,21 +61,21 @@ export default () => {
           notification="3"
           heading="Heading content"
           subheading="Subheading"
-          variant="filled"
+          variant="base" outline={false}
         ></IxPushCard>
         <IxPushCard
           icon={iconRocket}
           notification="3"
           heading="Heading content"
           subheading="Subheading"
-          variant="filled"
+          variant="base" outline={false}
         ></IxPushCard>
         <IxPushCard
           icon={iconRocket}
           notification="3"
           heading="Heading content"
           subheading="Subheading"
-          variant="filled"
+          variant="base" outline={false}
         ></IxPushCard>
       </IxCardList>
     </>
@@ -98,13 +99,13 @@ export default class CardList {}
 
 #### card-list.html
 ```html
-<ix-card-list label="Stack Layout" show-all-count="12" list-style="stack">
+<ix-card-list label="Stack Layout" showAllCount="12" listStyle="stack">
   <ix-push-card
     icon="rocket"
     notification="3"
     heading="Heading content"
     subheading="Subheading"
-    variant="filled"
+    variant="base" outline="false"
   ></ix-push-card>
   <ix-push-card
     icon="bulb"
@@ -122,13 +123,13 @@ export default class CardList {}
   ></ix-push-card>
 </ix-card-list>
 
-<ix-card-list label="Flow Layout" show-all-count="12" list-style="scroll">
+<ix-card-list label="Flow Layout" showAllCount="12" listStyle="scroll">
   <ix-push-card
     icon="rocket"
     notification="3"
     heading="Heading content"
     subheading="Subheading"
-    variant="filled"
+    variant="base" outline="false"
   ></ix-push-card>
   <ix-push-card
     icon="bulb"
@@ -142,21 +143,21 @@ export default class CardList {}
     notification="3"
     heading="Heading content"
     subheading="Subheading"
-    variant="filled"
+    variant="base" outline="false"
   ></ix-push-card>
   <ix-push-card
     icon="rocket"
     notification="3"
     heading="Heading content"
     subheading="Subheading"
-    variant="filled"
+    variant="base" outline="false"
   ></ix-push-card>
   <ix-push-card
     icon="rocket"
     notification="3"
     heading="Heading content"
     subheading="Subheading"
-    variant="filled"
+    variant="base" outline="false"
   ></ix-push-card>
 </ix-card-list>
 ```
@@ -178,13 +179,13 @@ export default class CardList {}
 
 #### card-list.html
 ```html
-<ix-card-list label="Stack Layout" show-all-count="12" list-style="stack">
+<ix-card-list label="Stack Layout" showAllCount="12" listStyle="stack">
   <ix-push-card
     icon="rocket"
     notification="3"
     heading="Heading content"
     subheading="Subheading"
-    variant="filled"
+    variant="base" outline="false"
   ></ix-push-card>
   <ix-push-card
     icon="bulb"
@@ -202,13 +203,13 @@ export default class CardList {}
   ></ix-push-card>
 </ix-card-list>
 
-<ix-card-list label="Flow Layout" show-all-count="12" list-style="scroll">
+<ix-card-list label="Flow Layout" showAllCount="12" listStyle="scroll">
   <ix-push-card
     icon="rocket"
     notification="3"
     heading="Heading content"
     subheading="Subheading"
-    variant="filled"
+    variant="base" outline="false"
   ></ix-push-card>
   <ix-push-card
     icon="bulb"
@@ -222,21 +223,21 @@ export default class CardList {}
     notification="3"
     heading="Heading content"
     subheading="Subheading"
-    variant="filled"
+    variant="base" outline="false"
   ></ix-push-card>
   <ix-push-card
     icon="rocket"
     notification="3"
     heading="Heading content"
     subheading="Subheading"
-    variant="filled"
+    variant="base" outline="false"
   ></ix-push-card>
   <ix-push-card
     icon="rocket"
     notification="3"
     heading="Heading content"
     subheading="Subheading"
-    variant="filled"
+    variant="base" outline="false"
   ></ix-push-card>
 </ix-card-list>
 ```
@@ -251,13 +252,13 @@ import { IxCardList, IxPushCard } from '@siemens/ix-vue';
 </script>
 
 <template>
-  <IxCardList label="Stack Layout" :showAllCount="12" listStyle="stack">
+  <IxCardList label="Stack Layout" :show-all-count="12" list-style="stack">
     <IxPushCard
       :icon="iconRocket"
       notification="3"
       heading="Heading content"
       subheading="Subheading"
-      variant="filled"
+      variant="base" :outline="false"
     ></IxPushCard>
     <IxPushCard
       :icon="iconBulb"
@@ -275,41 +276,41 @@ import { IxCardList, IxPushCard } from '@siemens/ix-vue';
     ></IxPushCard>
   </IxCardList>
 
-  <IxCardList label="Flow Layout" :showAllCount="12" listStyle="scroll">
+  <IxCardList label="Flow Layout" :show-all-count="12" list-style="scroll">
     <IxPushCard
       :icon="iconRocket"
       notification="3"
       heading="Heading content"
       subheading="Subheading"
-      variant="filled"
+      variant="base" :outline="false"
     ></IxPushCard>
     <IxPushCard
       :icon="iconBulb"
       notification="1"
       heading="Heading content"
       subheading="Subheading"
-      variant="filled"
+      variant="warning"
     ></IxPushCard>
     <IxPushCard
       :icon="iconRocket"
       notification="3"
       heading="Heading content"
       subheading="Subheading"
-      variant="filled"
+      variant="base" :outline="false"
     ></IxPushCard>
     <IxPushCard
       :icon="iconRocket"
       notification="3"
       heading="Heading content"
       subheading="Subheading"
-      variant="filled"
+      variant="base" :outline="false"
     ></IxPushCard>
     <IxPushCard
       :icon="iconRocket"
       notification="3"
       heading="Heading content"
       subheading="Subheading"
-      variant="filled"
+      variant="base" :outline="false"
     ></IxPushCard>
   </IxCardList>
 </template>
@@ -321,7 +322,7 @@ import { IxCardList, IxPushCard } from '@siemens/ix-vue';
 
 | Name | Description | Attribute | Type | Default |
 | --- | --- | --- | --- | --- |
-| ariaLabelExpandButton | { "ARIA label for the card's expand button.\n\nWill be set as aria-label on the nested HTML button element" } | aria-label-expand-button | string \| undefined |  |
+| ariaLabelExpandButton | { "ARIA label for the card list's expand and collapse button.\n\nDefaults to `Collapse card list` when expanded and `Expand card list` when\n\ncollapsed. A non-empty custom value overrides the label in both states." } | aria-label-expand-button | string \| undefined |  |
 | collapse | { "Collapse the list" } | collapse | boolean | false |
 | hideShowAll | { "Hide the show all button" } | hide-show-all | boolean | false |
 | i18nMoreCards | { "i18n More cards available" } | i18n-more-cards | string | 'There are more cards available' |

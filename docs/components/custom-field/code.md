@@ -4,12 +4,16 @@
 
 # Custom field - Code
 
-With the help of `ix-custom-field` you are able to create form fields that can host any component / markup, while still having access to all validation states as well as ascociated explanatory texts like `helper-text`, `valid-text`, `info-text`, `warning-text` or `invalid-text`.
+With the help of `ix-custom-field` you are able to create form fields that can host any component/markup, while still having access to all validation states as well as associated explanatory texts like `helper-text`, `valid-text`, `info-text`, `warning-text` or `invalid-text`.
 The component will check if any of its children has one of these classes set:
 `ix-valid, ix-info, ix-warning or ix-invalid`
 If this is the case the custom field will display the corresponding text.
 
-Custom fields can be used to migrate from the existing input validation (native inputs) to the new validation / froms concept.
+Custom fields can be used to migrate from the current input validation (native inputs) to the new validation/forms concept.
+
+:::info Legacy native input styles
+The validation example uses the legacy `.ix-form-control` class. Import `@siemens/ix/css/legacy.css` while migrating native inputs. For new applications, we prefer to use the dedicated form components or provide application-specific styles for custom native controls.
+:::
 
 ## Basic
 
@@ -19,14 +23,20 @@ Custom fields can be used to migrate from the existing input validation (native 
 ```tsx
 import { useRef } from 'react';
 import { IxCustomField, IxIconButton, IxInput } from '@siemens/ix-react';
+import { addIcons } from '@siemens/ix-icons';
+import { iconOpenFile } from '@siemens/ix-icons/icons';
+addIcons({ iconOpenFile });
 
 export default () => {
   const ref = useRef<HTMLInputElement>(null);
 
   return (
-    <IxCustomField helper-text="Choose file">
-      <IxInput value="Enter text here" readonly></IxInput>
-      <IxIconButton icon="open-file" variant="subtle-primary" onClick={() => {
+    <IxCustomField helperText="Choose file">
+      <IxInput value="No file chosen" readonly></IxInput>
+      <IxIconButton
+        icon="open-file"
+        variant="subtle-primary"
+        onClick={() => {
           ref.current?.click();
         }}
       ></IxIconButton>
@@ -67,7 +77,7 @@ export default class CustomField {
 
 #### custom-field.html
 ```html
-<ix-custom-field helper-text="Choose file">
+<ix-custom-field helperText="Choose file">
   <ix-input value="No file chosen" readonly></ix-input>
   <ix-icon-button icon="open-file" variant="subtle-primary" (click)="openFileBrowser()"></ix-icon-button>
   <input #fileUpload type="file" style="display: none" />
@@ -105,7 +115,7 @@ export default class CustomField {
 
 #### custom-field.html
 ```html
-<ix-custom-field helper-text="Choose file">
+<ix-custom-field helperText="Choose file">
   <ix-input value="No file chosen" readonly></ix-input>
   <ix-icon-button icon="open-file" variant="subtle-primary" (click)="openFileBrowser()"></ix-icon-button>
   <input #fileUpload type="file" style="display: none" />
@@ -119,6 +129,9 @@ export default class CustomField {
 <script setup lang="ts">
 import { ref } from 'vue';
 import { IxCustomField, IxInput, IxIconButton } from '@siemens/ix-vue';
+import { addIcons } from '@siemens/ix-icons';
+import { iconOpenFile } from '@siemens/ix-icons/icons';
+addIcons({ iconOpenFile });
 
 const input = ref();
 const openFileBrowser = () => {
@@ -128,7 +141,7 @@ const openFileBrowser = () => {
 
 <template>
   <IxCustomField helper-text="Choose file">
-    <IxInput value="Enter text here" readonly></IxInput>
+    <IxInput value="No file chosen" readonly></IxInput>
     <IxIconButton icon="open-file" variant="subtle-primary" @click="openFileBrowser()"></IxIconButton>
     <input
       ref="input"
@@ -158,8 +171,8 @@ export default () => {
     <>
       <div style={wrapperStyle}>
         <IxCustomField
-          helper-text="Add your first name here"
-          valid-text="Valid first name"
+          helperText="Add your first name here"
+          validText="Valid first name"
           label="First name"
         >
           <input
@@ -171,7 +184,7 @@ export default () => {
       </div>
 
       <div style={wrapperStyle}>
-        <IxCustomField info-text="Family name" label="Last name">
+        <IxCustomField infoText="Family name" label="Last name">
           <input
             id="last-name"
             className="ix-form-control ix-info"
@@ -181,7 +194,7 @@ export default () => {
       </div>
 
       <div style={wrapperStyle}>
-        <IxCustomField warning-text="Not a valid email address" label="Email">
+        <IxCustomField warningText="Not a valid email address" label="Email">
           <input
             id="email"
             className="ix-form-control ix-warning"
@@ -191,7 +204,7 @@ export default () => {
       </div>
 
       <div style={wrapperStyle}>
-        <IxCustomField invalid-text="Required" label="Address">
+        <IxCustomField invalidText="Required" label="Address">
           <input id="address" className="ix-form-control ix-invalid" />
         </IxCustomField>
       </div>
@@ -224,8 +237,8 @@ export default class CustomFieldValidation {}
 
 <div class="custom-field-wrapper">
   <ix-custom-field
-    helper-text="Add your first name here"
-    valid-text="Valid first name"
+    helperText="Add your first name here"
+    validText="Valid first name"
     label="First name"
   >
     <input
@@ -238,7 +251,7 @@ export default class CustomFieldValidation {}
 </div>
 
 <div class="custom-field-wrapper">
-  <ix-custom-field info-text="Family name" label="Last name">
+  <ix-custom-field infoText="Family name" label="Last name">
     <input
       id="last-name"
       type="text"
@@ -249,7 +262,7 @@ export default class CustomFieldValidation {}
 </div>
 
 <div class="custom-field-wrapper">
-  <ix-custom-field warning-Text="Not a valid email address" label="Email">
+  <ix-custom-field warningText="Not a valid email address" label="Email">
     <input
       id="email"
       type="email"
@@ -260,7 +273,7 @@ export default class CustomFieldValidation {}
 </div>
 
 <div class="custom-field-wrapper">
-  <ix-custom-field invalid-text="Required" label="Address">
+  <ix-custom-field invalidText="Required" label="Address">
     <input id="address" type="text" class="ix-form-control ix-invalid" />
   </ix-custom-field>
 </div>
@@ -291,44 +304,44 @@ export default class CustomFieldValidation {}
 
 <div class="custom-field-wrapper">
   <ix-custom-field
-    helper-text="Add your first name here"
-    valid-text="Valid first name"
+    helperText="Add your first name here"
+    validText="Valid first name"
     label="First name"
   >
     <input
       id="first-name"
       type="text"
-      class="form-control ix-valid"
+      class="ix-form-control ix-valid"
       value="Jane"
     />
   </ix-custom-field>
 </div>
 
 <div class="custom-field-wrapper">
-  <ix-custom-field info-text="Family name" label="Last name">
+  <ix-custom-field infoText="Family name" label="Last name">
     <input
       id="last-name"
       type="text"
-      class="form-control ix-info"
+      class="ix-form-control ix-info"
       value="Doe"
     />
   </ix-custom-field>
 </div>
 
 <div class="custom-field-wrapper">
-  <ix-custom-field warning-Text="Not a valid email address" label="Email">
+  <ix-custom-field warningText="Not a valid email address" label="Email">
     <input
       id="email"
       type="email"
-      class="form-control ix-warning"
+      class="ix-form-control ix-warning"
       value="info@"
     />
   </ix-custom-field>
 </div>
 
 <div class="custom-field-wrapper">
-  <ix-custom-field invalid-text="Required" label="Address">
-    <input id="address" type="text" class="form-control ix-invalid" />
+  <ix-custom-field invalidText="Required" label="Address">
+    <input id="address" type="text" class="ix-form-control ix-invalid" />
   </ix-custom-field>
 </div>
 ```
@@ -401,4 +414,4 @@ import { IxCustomField } from '@siemens/ix-vue';
 
 | Name | Description |
 | --- | --- |
-| default | { "The form control." } |
+| default | { "Custom form field content." } |

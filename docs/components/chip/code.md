@@ -19,25 +19,28 @@ export default () => {
   return (
     <div className="chip">
       <div className="chip-column">
-        <IxChip icon={iconPrint} variant="primary" closable>
-          Primary
-        </IxChip>
-        <IxChip icon={iconPrint} variant="alarm" closable>
-          Alarm
-        </IxChip>
-        <IxChip icon={iconPrint} variant="critical">
-          Critical
+        <IxChip icon={iconPrint} variant="danger" closable>
+          Danger
         </IxChip>
         <IxChip icon={iconPrint} variant="warning">
           Warning
         </IxChip>
+        <IxChip icon={iconPrint} variant="caution">
+          Caution
+        </IxChip>
         <IxChip
           icon={iconPrint}
-          variant="info"
+          variant="information"
           tooltipText="Open details for this status"
           aria-label="In review"
         >
-          Info
+          Information
+        </IxChip>
+        <IxChip icon={iconPrint} variant="accent" closable>
+          Accent
+        </IxChip>
+        <IxChip icon={iconPrint} variant="critical">
+          Critical
         </IxChip>
         <IxChip icon={iconPrint} variant="success">
           Success
@@ -48,37 +51,40 @@ export default () => {
         <IxChip
           icon={iconPrint}
           variant="custom"
-          background="var(--theme-chart-11)"
-          chipColor="var(--theme-color-inv-std-text)"
+          background="var(--si-sys-color-data-categorical-9)"
+          chipColor="var(--si-sys-color-text-inverse)"
           closable
         >
           Custom
         </IxChip>
-        <IxChip icon={iconPrint} variant="primary" closable>
+        <IxChip icon={iconPrint} variant="accent" closable>
           Chip with icon
         </IxChip>
       </div>
       <div className="chip-column">
-        <IxChip icon={iconPrint} variant="primary" outline closable>
-          Primary
-        </IxChip>
-        <IxChip icon={iconPrint} variant="alarm" outline closable>
-          Alarm
-        </IxChip>
-        <IxChip icon={iconPrint} variant="critical" outline>
-          Critical
+        <IxChip icon={iconPrint} variant="danger" outline closable>
+          Danger
         </IxChip>
         <IxChip icon={iconPrint} variant="warning" outline>
           Warning
         </IxChip>
+        <IxChip icon={iconPrint} variant="caution" outline>
+          Caution
+        </IxChip>
         <IxChip
           icon={iconPrint}
-          variant="info"
+          variant="information"
           outline
           tooltipText="Open details for this status"
           aria-label="In review"
         >
-          Info
+          Information
+        </IxChip>
+        <IxChip icon={iconPrint} variant="accent" outline closable>
+          Accent
+        </IxChip>
+        <IxChip icon={iconPrint} variant="critical" outline>
+          Critical
         </IxChip>
         <IxChip icon={iconPrint} variant="success" outline>
           Success
@@ -89,14 +95,14 @@ export default () => {
         <IxChip
           icon={iconPrint}
           variant="custom"
-          background="var(--theme-chart-11)"
-          chipColor="var(--theme-chip-outline--color)"
+          background="var(--si-sys-color-data-categorical-9)"
+          chipColor="var(--si-sys-color-text-primary)"
           outline
           closable
         >
           Custom
         </IxChip>
-        <IxChip variant="primary" outline closable>
+        <IxChip variant="accent" outline closable>
           Chip without icon
         </IxChip>
       </div>
@@ -131,58 +137,60 @@ import { Component } from '@angular/core';
   template: `
     <div class="chip">
       <div class="chip-column">
-        <ix-chip icon="print" variant="primary" closable>Primary</ix-chip>
-        <ix-chip icon="print" variant="alarm" closable>Alarm</ix-chip>
-        <ix-chip icon="print" variant="critical">Critical</ix-chip>
+        <ix-chip icon="print" variant="danger" closable>Danger</ix-chip>
         <ix-chip icon="print" variant="warning">Warning</ix-chip>
+        <ix-chip icon="print" variant="caution">Caution</ix-chip>
         <ix-chip
           icon="print"
-          variant="info"
+          variant="information"
           tooltipText="Open details for this status"
           aria-label="In review"
-          >Info</ix-chip
+          >Information</ix-chip
         >
+        <ix-chip icon="print" variant="accent" closable>Accent</ix-chip>
+        <ix-chip icon="print" variant="critical">Critical</ix-chip>
         <ix-chip icon="print" variant="success">Success</ix-chip>
         <ix-chip icon="print" variant="neutral">Neutral</ix-chip>
         <ix-chip
           icon="print"
           variant="custom"
-          background="var(--theme-chart-11)"
-          chipColor="var(--theme-color-inv-std-text)"
+          background="var(--si-sys-color-data-categorical-9)"
+          chipColor="var(--si-sys-color-text-inverse)"
           closable
           >Custom</ix-chip
         >
-        <ix-chip icon="print" variant="primary" closable
+        <ix-chip icon="print" variant="accent" closable
           >Chip with icon
         </ix-chip>
       </div>
       <div class="chip-column">
-        <ix-chip icon="print" variant="primary" outline closable
-          >Primary</ix-chip
-        >
-        <ix-chip icon="print" variant="alarm" outline closable>Alarm</ix-chip>
-        <ix-chip icon="print" variant="critical" outline>Critical</ix-chip>
+        <ix-chip icon="print" variant="danger" outline closable>Danger</ix-chip>
         <ix-chip icon="print" variant="warning" outline>Warning</ix-chip>
+        <ix-chip icon="print" variant="caution" outline>Caution</ix-chip>
         <ix-chip
           icon="print"
-          variant="info"
+          variant="information"
           outline
           tooltipText="Open details for this status"
           aria-label="In review"
-          >Info</ix-chip
+          >Information</ix-chip
         >
+        <ix-chip icon="print" variant="accent" outline closable
+          >Accent</ix-chip
+        >
+        <ix-chip icon="print" variant="critical" outline>Critical</ix-chip>
         <ix-chip icon="print" variant="success" outline>Success</ix-chip>
         <ix-chip icon="print" variant="neutral" outline>Neutral</ix-chip>
         <ix-chip
           icon="print"
           variant="custom"
-          background="var(--theme-chart-11)"
-          chipColor="var(--theme-chip-outline--color)"
+          background="var(--si-sys-color-data-categorical-9)"
+          chipColor="var(--si-sys-color-text-primary)"
           outline
           closable
           >Custom</ix-chip
         >
-        <ix-chip variant="primary" outline closable>Chip without icon</ix-chip>
+        <ix-chip variant="accent" outline closable>Chip without icon</ix-chip>
       </div>
     </div>
   `,
@@ -218,58 +226,60 @@ import { IxChip } from '@siemens/ix-angular/standalone';
   template: `
     <div class="chip">
       <div class="chip-column">
-        <ix-chip icon="print" variant="primary" closable>Primary</ix-chip>
-        <ix-chip icon="print" variant="alarm" closable>Alarm</ix-chip>
-        <ix-chip icon="print" variant="critical">Critical</ix-chip>
+        <ix-chip icon="print" variant="danger" closable>Danger</ix-chip>
         <ix-chip icon="print" variant="warning">Warning</ix-chip>
+        <ix-chip icon="print" variant="caution">Caution</ix-chip>
         <ix-chip
           icon="print"
-          variant="info"
+          variant="information"
           tooltipText="Open details for this status"
           aria-label="In review"
-          >Info</ix-chip
+          >Information</ix-chip
         >
+        <ix-chip icon="print" variant="accent" closable>Accent</ix-chip>
+        <ix-chip icon="print" variant="critical">Critical</ix-chip>
         <ix-chip icon="print" variant="success">Success</ix-chip>
         <ix-chip icon="print" variant="neutral">Neutral</ix-chip>
         <ix-chip
           icon="print"
           variant="custom"
-          background="var(--theme-chart-11)"
-          chipColor="var(--theme-color-inv-std-text)"
+          background="var(--si-sys-color-data-categorical-9)"
+          chipColor="var(--si-sys-color-text-inverse)"
           closable
           >Custom</ix-chip
         >
-        <ix-chip icon="print" variant="primary" closable
+        <ix-chip icon="print" variant="accent" closable
           >Chip with icon
         </ix-chip>
       </div>
       <div class="chip-column">
-        <ix-chip icon="print" variant="primary" outline closable
-          >Primary</ix-chip
-        >
-        <ix-chip icon="print" variant="alarm" outline closable>Alarm</ix-chip>
-        <ix-chip icon="print" variant="critical" outline>Critical</ix-chip>
+        <ix-chip icon="print" variant="danger" outline closable>Danger</ix-chip>
         <ix-chip icon="print" variant="warning" outline>Warning</ix-chip>
+        <ix-chip icon="print" variant="caution" outline>Caution</ix-chip>
         <ix-chip
           icon="print"
-          variant="info"
+          variant="information"
           outline
           tooltipText="Open details for this status"
           aria-label="In review"
-          >Info</ix-chip
+          >Information</ix-chip
         >
+        <ix-chip icon="print" variant="accent" outline closable
+          >Accent</ix-chip
+        >
+        <ix-chip icon="print" variant="critical" outline>Critical</ix-chip>
         <ix-chip icon="print" variant="success" outline>Success</ix-chip>
         <ix-chip icon="print" variant="neutral" outline>Neutral</ix-chip>
         <ix-chip
           icon="print"
           variant="custom"
-          background="var(--theme-chart-11)"
-          chipColor="var(--theme-chip-outline--color)"
+          background="var(--si-sys-color-data-categorical-9)"
+          chipColor="var(--si-sys-color-text-primary)"
           outline
           closable
           >Custom</ix-chip
         >
-        <ix-chip variant="primary" outline closable>Chip without icon</ix-chip>
+        <ix-chip variant="accent" outline closable>Chip without icon</ix-chip>
       </div>
     </div>
   `,
@@ -306,64 +316,62 @@ import { IxChip } from '@siemens/ix-vue';
 <template>
   <div class="chip">
     <div class="chip-column">
-      <IxChip :icon="iconPrint" variant="primary" closable> Primary </IxChip>
-      <IxChip :icon="iconPrint" variant="alarm" closable> Alarm </IxChip>
-      <IxChip :icon="iconPrint" variant="critical"> Critical </IxChip>
-      <IxChip :icon="iconPrint" variant="warning"> Warning </IxChip>
+      <IxChip :icon="iconPrint" variant="danger" closable>Danger</IxChip>
+      <IxChip :icon="iconPrint" variant="warning">Warning</IxChip>
+      <IxChip :icon="iconPrint" variant="caution">Caution</IxChip>
       <IxChip
         :icon="iconPrint"
-        variant="info"
+        variant="information"
         tooltip-text="Open details for this status"
         aria-label="In review"
       >
-        Info
+        Information
       </IxChip>
-      <IxChip :icon="iconPrint" variant="success"> Success </IxChip>
-      <IxChip :icon="iconPrint" variant="neutral"> Neutral </IxChip>
+      <IxChip :icon="iconPrint" variant="accent" closable>Accent</IxChip>
+      <IxChip :icon="iconPrint" variant="critical">Critical</IxChip>
+      <IxChip :icon="iconPrint" variant="success">Success</IxChip>
+      <IxChip :icon="iconPrint" variant="neutral">Neutral</IxChip>
       <IxChip
         :icon="iconPrint"
         variant="custom"
-        background="var(--theme-chart-11)"
-        chip-color="var(--theme-color-inv-std-text)"
+        background="var(--si-sys-color-data-categorical-9)"
+        chip-color="var(--si-sys-color-text-inverse)"
         closable
       >
         Custom
       </IxChip>
-      <IxChip :icon="iconPrint" variant="primary" closable>
+      <IxChip :icon="iconPrint" variant="accent" closable>
         Chip with icon
       </IxChip>
     </div>
     <div class="chip-column">
-      <IxChip :icon="iconPrint" variant="primary" outline closable>
-        Primary
-      </IxChip>
-      <IxChip :icon="iconPrint" variant="alarm" outline closable>
-        Alarm
-      </IxChip>
-      <IxChip :icon="iconPrint" variant="critical" outline> Critical </IxChip>
-      <IxChip :icon="iconPrint" variant="warning" outline> Warning </IxChip>
+      <IxChip :icon="iconPrint" variant="danger" outline closable>Danger</IxChip>
+      <IxChip :icon="iconPrint" variant="warning" outline>Warning</IxChip>
+      <IxChip :icon="iconPrint" variant="caution" outline>Caution</IxChip>
       <IxChip
         :icon="iconPrint"
-        variant="info"
+        variant="information"
         outline
         tooltip-text="Open details for this status"
         aria-label="In review"
       >
-        Info
+        Information
       </IxChip>
-      <IxChip :icon="iconPrint" variant="success" outline> Success </IxChip>
-      <IxChip :icon="iconPrint" variant="neutral" outline> Neutral </IxChip>
+      <IxChip :icon="iconPrint" variant="accent" outline closable>Accent</IxChip>
+      <IxChip :icon="iconPrint" variant="critical" outline>Critical</IxChip>
+      <IxChip :icon="iconPrint" variant="success" outline>Success</IxChip>
+      <IxChip :icon="iconPrint" variant="neutral" outline>Neutral</IxChip>
       <IxChip
         :icon="iconPrint"
         variant="custom"
-        background="var(--theme-chart-11)"
-        chip-color="var(--theme-chip-outline--color)"
+        background="var(--si-sys-color-data-categorical-9)"
+        chip-color="var(--si-sys-color-text-primary)"
         outline
         closable
       >
         Custom
       </IxChip>
-      <IxChip variant="primary" outline closable>Chip without icon</IxChip>
+      <IxChip variant="accent" outline closable>Chip without icon</IxChip>
     </div>
   </div>
 </template>
@@ -387,19 +395,19 @@ import { IxChip } from '@siemens/ix-vue';
 
 ### Properties
 
-| Name | Description | Attribute | Type | Default |
-| --- | --- | --- | --- | --- |
-| ariaLabelCloseButton | { "ARIA label for the close button\n\nWill be set as aria-label on the nested HTML button element" } | aria-label-close-button | string \| undefined | 'Close chip' |
-| ariaLabelIcon | { "Accessible name for the leading icon.\n\nWhen unset, the icon is treated as decorative (hidden from assistive tech) when the default slot supplies a visible label." } | aria-label-icon | string \| undefined |  |
-| background | { "Custom background color.\n\nOnly has an effect on chips with `variant='custom'`" } | background | string \| undefined |  |
-| centerContent | { "Center the content of the chip.\n\nSet to false to disable centering." } | center-content | boolean | false |
-| chipColor | { "Custom font and icon color.\n\nOnly has an effect on chips with `variant='custom'`" } | chip-color | string \| undefined |  |
-| closable | { "Show close icon" } | closable | boolean | false |
-| icon | { "Show icon" } | icon | string \| undefined |  |
-| inactive | { "Determines if the chip is interactive. If true no user input (e.g. mouse states, keyboard navigation)\n\nwill be possible on the main chip content." } | inactive | boolean | false |
-| outline | { "Show chip with outline style" } | outline | boolean | false |
-| tooltipText | { "Display a tooltip. By default, no tooltip will be displayed.\n\nAdd the attribute to display the text content of the component as a tooltip or use a string to display a custom text." } | tooltip-text | boolean \| string | false |
-| variant | { "Chip variant.\n\nDefaults to `primary`. When unset or set to an unknown value the chip falls back to `primary` styling." } | variant | "alarm" \| "critical" \| "custom" \| "info" \| "neutral" \| "primary" \| "success" \| "warning" | 'primary' |
+| Name | Description | Attribute | Type | Default | Notes |
+| --- | --- | --- | --- | --- | --- |
+| ariaLabelCloseButton | { "ARIA label for the close button\n\nWill be set as aria-label on the nested HTML button element" } | aria-label-close-button | string \| undefined | 'Close chip' |  |
+| ariaLabelIcon | { "Accessible name for the leading icon.\n\nWhen unset, the icon is treated as decorative (hidden from assistive tech) when the default slot supplies a visible label." } | aria-label-icon | string \| undefined |  |  |
+| background | { "Custom background color.\n\nOnly has an effect on chips with `variant='custom'`" } | background | string \| undefined |  |  |
+| centerContent | { "Center the content of the chip.\n\nSet to false to disable centering." } | center-content | boolean | false |  |
+| chipColor | { "Custom font and icon color.\n\nOnly has an effect on chips with `variant='custom'`" } | chip-color | string \| undefined |  |  |
+| closable | { "Show close icon" } | closable | boolean | false |  |
+| icon | { "Show icon" } | icon | string \| undefined |  |  |
+| inactive | { "Determines if the chip is interactive. If true no user input (e.g. mouse states, keyboard navigation)\n\nwill be possible on the main chip content." } | inactive | boolean | false |  |
+| outline | { "Show chip with outline style" } | outline | boolean | false |  |
+| tooltipText | { "Display a tooltip. By default, no tooltip will be displayed.\n\nAdd the attribute to display the text content of the component as a tooltip or use a string to display a custom text." } | tooltip-text | boolean \| string | false |  |
+| variant | { "Chip variant.\n\nDefaults to `accent`. When unset or set to an unknown value the chip falls back to `accent` styling." } | variant | "accent" \| "caution" \| "critical" \| "custom" \| "danger" \| "information" \| "neutral" \| "success" \| "warning" | 'accent' | Breaking change in v6.0.0: Status variant values renamed and default changed from primary to accent |
 
 ### Events
 
@@ -411,4 +419,4 @@ import { IxChip } from '@siemens/ix-vue';
 
 | Name | Description |
 | --- | --- |
-| default | { "Chip label." } |
+| default | { "Chip content." } |

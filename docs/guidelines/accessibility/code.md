@@ -179,7 +179,7 @@ export default class InputLabel {}
   label='Some label'
   placeholder='Some placeholder'
   value='Some example text'
-  helper-text='Some helper text'
+  helperText='Some helper text'
 ></ix-input>
 ```
 
@@ -207,7 +207,7 @@ export default class InputLabel {}
   label="Some label"
   placeholder="Some placeholder"
   value="Some example text"
-  helper-text="Some helper text"
+  helperText="Some helper text"
 ></ix-input>
 ```
 
@@ -326,6 +326,8 @@ The `navigation` role can also be used instead of the `<nav>` element:
 
 ```
 
+When using the [application](../../components/application/) component, a built-in skip-link list lets keyboard and screen reader users bypass repeated application-shell content. It is enabled by default. The main link always appears first and targets the internal main region unless `skipLinkMainTarget` points to a focusable element. A footer link appears only when meaningful content is assigned to the `bottom` slot. Set `disableSkipLinks` only when the document provides an equivalent bypass mechanism.
+
 ### Lists
 
 Lists must be correctly structured to be recognized by screen readers. This means that parent (`` or ``) must be directly followed by `` and no other content element is allowed to be in-between.
@@ -362,10 +364,18 @@ import { IxEventList, IxEventListItem } from '@siemens/ix-react';
 export default function EventList() {
   return (
     <IxEventList>
-      <IxEventListItem itemColor="color-primary">Text 1</IxEventListItem>
-      <IxEventListItem itemColor="color-primary">Text 2</IxEventListItem>
-      <IxEventListItem itemColor="color-alarm">Text 3</IxEventListItem>
-      <IxEventListItem itemColor="color-success">Text 4</IxEventListItem>
+      <IxEventListItem itemColor="--si-sys-color-background-accent">
+        Text 1
+      </IxEventListItem>
+      <IxEventListItem itemColor="--si-sys-color-background-accent">
+        Text 2
+      </IxEventListItem>
+      <IxEventListItem itemColor="--si-sys-color-background-danger">
+        Text 3
+      </IxEventListItem>
+      <IxEventListItem itemColor="--si-sys-color-background-success">
+        Text 4
+      </IxEventListItem>
     </IxEventList>
   );
 }
@@ -382,10 +392,18 @@ import { Component } from '@angular/core';
   selector: 'app-example',
   template: `
     <ix-event-list>
-      <ix-event-list-item item-color="color-primary">Text 1</ix-event-list-item>
-      <ix-event-list-item item-color="color-primary">Text 2</ix-event-list-item>
-      <ix-event-list-item item-color="color-alarm">Text 3</ix-event-list-item>
-      <ix-event-list-item item-color="color-success">Text 4</ix-event-list-item>
+      <ix-event-list-item itemColor="--si-sys-color-background-accent"
+        >Text 1</ix-event-list-item
+      >
+      <ix-event-list-item itemColor="--si-sys-color-background-accent"
+        >Text 2</ix-event-list-item
+      >
+      <ix-event-list-item itemColor="--si-sys-color-background-danger"
+        >Text 3</ix-event-list-item
+      >
+      <ix-event-list-item itemColor="--si-sys-color-background-success"
+        >Text 4</ix-event-list-item
+      >
     </ix-event-list>
   `,
 })
@@ -404,10 +422,18 @@ import { IxEventList, IxEventListItem } from '@siemens/ix-angular/standalone';
   imports: [IxEventList, IxEventListItem],
   template: `
     <ix-event-list>
-      <ix-event-list-item item-color="color-primary">Text 1</ix-event-list-item>
-      <ix-event-list-item item-color="color-primary">Text 2</ix-event-list-item>
-      <ix-event-list-item item-color="color-alarm">Text 3</ix-event-list-item>
-      <ix-event-list-item item-color="color-success">Text 4</ix-event-list-item>
+      <ix-event-list-item itemColor="--si-sys-color-background-accent"
+        >Text 1</ix-event-list-item
+      >
+      <ix-event-list-item itemColor="--si-sys-color-background-accent"
+        >Text 2</ix-event-list-item
+      >
+      <ix-event-list-item itemColor="--si-sys-color-background-danger"
+        >Text 3</ix-event-list-item
+      >
+      <ix-event-list-item itemColor="--si-sys-color-background-success"
+        >Text 4</ix-event-list-item
+      >
     </ix-event-list>
   `,
 })
@@ -424,10 +450,18 @@ import { IxEventList, IxEventListItem } from '@siemens/ix-vue';
 
 <template>
   <IxEventList>
-    <IxEventListItem itemColor="color-primary">Text 1</IxEventListItem>
-    <IxEventListItem itemColor="color-primary">Text 2</IxEventListItem>
-    <IxEventListItem itemColor="color-alarm">Text 3</IxEventListItem>
-    <IxEventListItem itemColor="color-success">Text 4</IxEventListItem>
+    <IxEventListItem item-color="--si-sys-color-background-accent"
+      >Text 1</IxEventListItem
+    >
+    <IxEventListItem item-color="--si-sys-color-background-accent"
+      >Text 2</IxEventListItem
+    >
+    <IxEventListItem item-color="--si-sys-color-background-danger"
+      >Text 3</IxEventListItem
+    >
+    <IxEventListItem item-color="--si-sys-color-background-success"
+      >Text 4</IxEventListItem
+    >
   </IxEventList>
 </template>
 ```
@@ -445,11 +479,12 @@ export default () => {
     <>
       <IxCardList label="Stack Layout" showAllCount={12} listStyle={'stack'}>
         <IxPushCard
-          icon={iconBulb}
+          icon={iconRocket}
           notification="3"
           heading="Heading content"
           subheading="Subheading"
-          variant="filled"
+          variant="base"
+          outline={false}
         ></IxPushCard>
         <IxPushCard
           icon={iconBulb}
@@ -473,7 +508,7 @@ export default () => {
           notification="3"
           heading="Heading content"
           subheading="Subheading"
-          variant="filled"
+          variant="base" outline={false}
         ></IxPushCard>
         <IxPushCard
           icon={iconBulb}
@@ -487,21 +522,21 @@ export default () => {
           notification="3"
           heading="Heading content"
           subheading="Subheading"
-          variant="filled"
+          variant="base" outline={false}
         ></IxPushCard>
         <IxPushCard
           icon={iconRocket}
           notification="3"
           heading="Heading content"
           subheading="Subheading"
-          variant="filled"
+          variant="base" outline={false}
         ></IxPushCard>
         <IxPushCard
           icon={iconRocket}
           notification="3"
           heading="Heading content"
           subheading="Subheading"
-          variant="filled"
+          variant="base" outline={false}
         ></IxPushCard>
       </IxCardList>
     </>
@@ -525,13 +560,13 @@ export default class CardList {}
 
 #### card-list.html
 ```html
-<ix-card-list label="Stack Layout" show-all-count="12" list-style="stack">
+<ix-card-list label="Stack Layout" showAllCount="12" listStyle="stack">
   <ix-push-card
     icon="rocket"
     notification="3"
     heading="Heading content"
     subheading="Subheading"
-    variant="filled"
+    variant="base" outline="false"
   ></ix-push-card>
   <ix-push-card
     icon="bulb"
@@ -549,13 +584,13 @@ export default class CardList {}
   ></ix-push-card>
 </ix-card-list>
 
-<ix-card-list label="Flow Layout" show-all-count="12" list-style="scroll">
+<ix-card-list label="Flow Layout" showAllCount="12" listStyle="scroll">
   <ix-push-card
     icon="rocket"
     notification="3"
     heading="Heading content"
     subheading="Subheading"
-    variant="filled"
+    variant="base" outline="false"
   ></ix-push-card>
   <ix-push-card
     icon="bulb"
@@ -569,21 +604,21 @@ export default class CardList {}
     notification="3"
     heading="Heading content"
     subheading="Subheading"
-    variant="filled"
+    variant="base" outline="false"
   ></ix-push-card>
   <ix-push-card
     icon="rocket"
     notification="3"
     heading="Heading content"
     subheading="Subheading"
-    variant="filled"
+    variant="base" outline="false"
   ></ix-push-card>
   <ix-push-card
     icon="rocket"
     notification="3"
     heading="Heading content"
     subheading="Subheading"
-    variant="filled"
+    variant="base" outline="false"
   ></ix-push-card>
 </ix-card-list>
 ```
@@ -605,13 +640,13 @@ export default class CardList {}
 
 #### card-list.html
 ```html
-<ix-card-list label="Stack Layout" show-all-count="12" list-style="stack">
+<ix-card-list label="Stack Layout" showAllCount="12" listStyle="stack">
   <ix-push-card
     icon="rocket"
     notification="3"
     heading="Heading content"
     subheading="Subheading"
-    variant="filled"
+    variant="base" outline="false"
   ></ix-push-card>
   <ix-push-card
     icon="bulb"
@@ -629,13 +664,13 @@ export default class CardList {}
   ></ix-push-card>
 </ix-card-list>
 
-<ix-card-list label="Flow Layout" show-all-count="12" list-style="scroll">
+<ix-card-list label="Flow Layout" showAllCount="12" listStyle="scroll">
   <ix-push-card
     icon="rocket"
     notification="3"
     heading="Heading content"
     subheading="Subheading"
-    variant="filled"
+    variant="base" outline="false"
   ></ix-push-card>
   <ix-push-card
     icon="bulb"
@@ -649,21 +684,21 @@ export default class CardList {}
     notification="3"
     heading="Heading content"
     subheading="Subheading"
-    variant="filled"
+    variant="base" outline="false"
   ></ix-push-card>
   <ix-push-card
     icon="rocket"
     notification="3"
     heading="Heading content"
     subheading="Subheading"
-    variant="filled"
+    variant="base" outline="false"
   ></ix-push-card>
   <ix-push-card
     icon="rocket"
     notification="3"
     heading="Heading content"
     subheading="Subheading"
-    variant="filled"
+    variant="base" outline="false"
   ></ix-push-card>
 </ix-card-list>
 ```
@@ -678,13 +713,13 @@ import { IxCardList, IxPushCard } from '@siemens/ix-vue';
 </script>
 
 <template>
-  <IxCardList label="Stack Layout" :showAllCount="12" listStyle="stack">
+  <IxCardList label="Stack Layout" :show-all-count="12" list-style="stack">
     <IxPushCard
       :icon="iconRocket"
       notification="3"
       heading="Heading content"
       subheading="Subheading"
-      variant="filled"
+      variant="base" :outline="false"
     ></IxPushCard>
     <IxPushCard
       :icon="iconBulb"
@@ -702,41 +737,41 @@ import { IxCardList, IxPushCard } from '@siemens/ix-vue';
     ></IxPushCard>
   </IxCardList>
 
-  <IxCardList label="Flow Layout" :showAllCount="12" listStyle="scroll">
+  <IxCardList label="Flow Layout" :show-all-count="12" list-style="scroll">
     <IxPushCard
       :icon="iconRocket"
       notification="3"
       heading="Heading content"
       subheading="Subheading"
-      variant="filled"
+      variant="base" :outline="false"
     ></IxPushCard>
     <IxPushCard
       :icon="iconBulb"
       notification="1"
       heading="Heading content"
       subheading="Subheading"
-      variant="filled"
+      variant="warning"
     ></IxPushCard>
     <IxPushCard
       :icon="iconRocket"
       notification="3"
       heading="Heading content"
       subheading="Subheading"
-      variant="filled"
+      variant="base" :outline="false"
     ></IxPushCard>
     <IxPushCard
       :icon="iconRocket"
       notification="3"
       heading="Heading content"
       subheading="Subheading"
-      variant="filled"
+      variant="base" :outline="false"
     ></IxPushCard>
     <IxPushCard
       :icon="iconRocket"
       notification="3"
       heading="Heading content"
       subheading="Subheading"
-      variant="filled"
+      variant="base" :outline="false"
     ></IxPushCard>
   </IxCardList>
 </template>

@@ -30,6 +30,7 @@
   - [Event list](/docs/components/event-list/code): Event lists display a list of any type of element with additional details.
   - [Layout auto](/docs/components/layout-auto/code): Auto-layouts are containers that automatically adjust the size of their columns based on the content.
   - [Layout grid](/docs/components/layout-grid/code): Layout grids are used to structure the layout of a page or screen responsively.
+  - [List](/docs/components/list/code): Lists display collections of related items with flexible content and interactions.
   - [Modal](/docs/components/modal/code): Modals appear on top of the main content of a webpage or application, blocking interaction with the rest of the page until the user completes a specific action or closes the modal.
   - [Panes](/docs/components/panes/code): Panes are interactive components that allow users to access content that isn&#39;t constantly visible on the screen.
   - [Popover](/docs/components/popover/code): Popovers display contextual information next to a trigger element.
@@ -71,6 +72,7 @@
 - **System feedback and status**
   - [Badge](/docs/components/badge/code): Badges display compact status, counter or notification cues on (or next to) UI elements.
   - [Empty state](/docs/components/empty-state/code): Empty states inform users that there is no content to display.
+  - [Info page](/docs/components/info-page/code): Info pages explain a page-level situation and guide users toward useful next steps.
   - [Loading modal](/docs/components/loading-modal/code): Loading modals appear on top of the main content of a webpage or application, blocking interaction with the rest of the page until the process is finished.
   - [Message bar](/docs/components/messagebar/code): Message bars display important information to users, e.g. feedback, warnings or errors.
   - [Message modal](/docs/components/message-modal/code): Modal messages appear on top of the main content of a webpage or application, blocking interaction with the rest of the page until the user meets a decision or closes the modal.
@@ -80,7 +82,7 @@
   - [Tooltip](/docs/components/tooltip/code): Tooltips provide additional information when users hover over or focus on an element.
   - [Progress indicator](/docs/components/progress-indicator/code): Progress indicators show the status or completion of a process. Use them to provide feedback for operations that take one second or more.
 - **Data display**
-  - [Data grid](/docs/components/grid/code): The popular data grid library AG Grid is seamlessly integrated into our design system, allowing you to harness its powerful features while maintaining consistency with our styleguide.
+  - [AG Grid](/docs/components/grid/code): The popular data grid library AG Grid is seamlessly integrated into our design system, allowing you to harness its powerful features while maintaining consistency with our styleguide.
   - [HTML table](/docs/components/html-grid/code): HTML tables are used to display tabular data in a structured way.
   - [Key value](/docs/components/key-value/code): Key value pairs display a label (key) and a value in a structured, easy way.
   - [Key value list](/docs/components/key-value-list/code): Key value lists organize and list a series of key value pairs.

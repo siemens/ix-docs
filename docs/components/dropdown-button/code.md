@@ -18,20 +18,28 @@ import { IxDropdownButton, IxDropdownItem } from '@siemens/ix-react';
 export default () => {
   return (
     <div className="dropdown-button">
-      <IxDropdownButton label="Dropdown" icon={iconCheckboxes}>
-        <IxDropdownItem label="Item 1"></IxDropdownItem>
-        <IxDropdownItem label="Item 2"></IxDropdownItem>
-      </IxDropdownButton>
-      <IxDropdownButton variant="subtle-primary" label="Dropdown" icon={iconCheckboxes}>
-        <IxDropdownItem label="Item 1"></IxDropdownItem>
-        <IxDropdownItem label="Item 2"></IxDropdownItem>
-      </IxDropdownButton>
-      <IxDropdownButton variant="tertiary" label="Dropdown" icon={iconCheckboxes}>
+      <IxDropdownButton label="Primary dropdown" icon={iconCheckboxes}>
         <IxDropdownItem label="Item 1"></IxDropdownItem>
         <IxDropdownItem label="Item 2"></IxDropdownItem>
       </IxDropdownButton>
       <IxDropdownButton
-        label="Dropdown"
+        variant="subtle-primary"
+        label="Subtle primary dropdown"
+        icon={iconCheckboxes}
+      >
+        <IxDropdownItem label="Item 1"></IxDropdownItem>
+        <IxDropdownItem label="Item 2"></IxDropdownItem>
+      </IxDropdownButton>
+      <IxDropdownButton
+        variant="tertiary"
+        label="Tertiary dropdown"
+        icon={iconCheckboxes}
+      >
+        <IxDropdownItem label="Item 1"></IxDropdownItem>
+        <IxDropdownItem label="Item 2"></IxDropdownItem>
+      </IxDropdownButton>
+      <IxDropdownButton
+        label="Disabled dropdown"
         disabled
         icon={iconCheckboxes}
       ></IxDropdownButton>
@@ -45,6 +53,7 @@ export default () => {
 .dropdown-button {
   display: flex;
   flex-direction: column;
+  align-items: flex-start;
   justify-content: center;
   position: relative;
   max-width: 20rem;
@@ -65,20 +74,28 @@ import { Component } from '@angular/core';
   standalone: false,
   selector: 'app-example',
   template: `
-    <div class="example">
-      <ix-dropdown-button label="Dropdown" icon="checkboxes">
+    <div class="dropdown-button">
+      <ix-dropdown-button label="Primary dropdown" icon="checkboxes">
         <ix-dropdown-item label="Item 1"></ix-dropdown-item>
         <ix-dropdown-item label="Item 2"></ix-dropdown-item>
       </ix-dropdown-button>
-      <ix-dropdown-button variant="subtle-primary" label="Dropdown" icon="checkboxes">
+      <ix-dropdown-button
+        variant="subtle-primary"
+        label="Subtle primary dropdown"
+        icon="checkboxes"
+      >
         <ix-dropdown-item label="Item 1"></ix-dropdown-item>
         <ix-dropdown-item label="Item 2"></ix-dropdown-item>
       </ix-dropdown-button>
-      <ix-dropdown-button variant="tertiary" label="Dropdown" icon="checkboxes">
+      <ix-dropdown-button
+        variant="tertiary"
+        label="Tertiary dropdown"
+        icon="checkboxes"
+      >
         <ix-dropdown-item label="Item 1"></ix-dropdown-item>
         <ix-dropdown-item label="Item 2"></ix-dropdown-item>
       </ix-dropdown-button>
-      <ix-dropdown-button label="Dropdown" disabled icon="checkboxes">
+      <ix-dropdown-button label="Disabled dropdown" disabled icon="checkboxes">
       </ix-dropdown-button>
     </div>
   `,
@@ -92,6 +109,7 @@ export default class Dropdown {}
 .dropdown-button {
   display: flex;
   flex-direction: column;
+  align-items: flex-start;
   justify-content: center;
   position: relative;
   max-width: 20rem;
@@ -116,20 +134,28 @@ import {
   selector: 'app-example',
   imports: [IxDropdownButton, IxDropdownItem],
   template: `
-    <div class="example">
-      <ix-dropdown-button label="Dropdown" icon="checkboxes">
+    <div class="dropdown-button">
+      <ix-dropdown-button label="Primary dropdown" icon="checkboxes">
         <ix-dropdown-item label="Item 1"></ix-dropdown-item>
         <ix-dropdown-item label="Item 2"></ix-dropdown-item>
       </ix-dropdown-button>
-      <ix-dropdown-button variant="subtle-primary" label="Dropdown" icon="checkboxes">
+      <ix-dropdown-button
+        variant="subtle-primary"
+        label="Subtle primary dropdown"
+        icon="checkboxes"
+      >
         <ix-dropdown-item label="Item 1"></ix-dropdown-item>
         <ix-dropdown-item label="Item 2"></ix-dropdown-item>
       </ix-dropdown-button>
-      <ix-dropdown-button variant="tertiary" label="Dropdown" icon="checkboxes">
+      <ix-dropdown-button
+        variant="tertiary"
+        label="Tertiary dropdown"
+        icon="checkboxes"
+      >
         <ix-dropdown-item label="Item 1"></ix-dropdown-item>
         <ix-dropdown-item label="Item 2"></ix-dropdown-item>
       </ix-dropdown-button>
-      <ix-dropdown-button label="Dropdown" disabled icon="checkboxes">
+      <ix-dropdown-button label="Disabled dropdown" disabled icon="checkboxes">
       </ix-dropdown-button>
     </div>
   `,
@@ -143,6 +169,7 @@ export default class Dropdown {}
 .dropdown-button {
   display: flex;
   flex-direction: column;
+  align-items: flex-start;
   justify-content: center;
   position: relative;
   max-width: 20rem;
@@ -166,22 +193,31 @@ import { IxDropdownButton } from '@siemens/ix-vue';
 
 <template>
   <div class="dropdown-button">
-    <IxDropdownButton label="Dropdown" :icon="iconCheckboxes">
+    <IxDropdownButton label="Primary dropdown" :icon="iconCheckboxes">
       <IxDropdownItem label="Item 1"></IxDropdownItem>
       <IxDropdownItem label="Item 2"></IxDropdownItem>
     </IxDropdownButton>
-    <IxDropdownButton variant="subtle-primary" label="Dropdown" :icon="iconCheckboxes">
+    <IxDropdownButton
+      variant="subtle-primary"
+      label="Subtle primary dropdown"
+      :icon="iconCheckboxes"
+    >
       <IxDropdownItem label="Item 1"></IxDropdownItem>
       <IxDropdownItem label="Item 2"></IxDropdownItem>
     </IxDropdownButton>
-    <IxDropdownButton variant="tertiary" label="Dropdown" :icon="iconCheckboxes">
+    <IxDropdownButton
+      variant="tertiary"
+      label="Tertiary dropdown"
+      :icon="iconCheckboxes"
+    >
       <IxDropdownItem label="Item 1"></IxDropdownItem>
       <IxDropdownItem label="Item 2"></IxDropdownItem>
     </IxDropdownButton>
-    <IxDropdownButton label="Dropdown" disabled :icon="iconCheckboxes">
-      <IxDropdownItem label="Item 1"></IxDropdownItem>
-      <IxDropdownItem label="Item 2"></IxDropdownItem>
-    </IxDropdownButton>
+    <IxDropdownButton
+      label="Disabled dropdown"
+      disabled
+      :icon="iconCheckboxes"
+    />
   </div>
 </template>
 ```
@@ -191,6 +227,7 @@ import { IxDropdownButton } from '@siemens/ix-vue';
 .dropdown-button {
   display: flex;
   flex-direction: column;
+  align-items: flex-start;
   justify-content: center;
   position: relative;
   max-width: 20rem;
@@ -265,16 +302,16 @@ import { Component } from '@angular/core';
   template: `
     <div class="dropdown-button">
       <ix-dropdown-button label="" icon="checkboxes">
-        <ix-dropdown-item label="Item 1" value="1"></ix-dropdown-item>
-        <ix-dropdown-item label="Item 2" value="2"></ix-dropdown-item>
+        <ix-dropdown-item label="Item 1"></ix-dropdown-item>
+        <ix-dropdown-item label="Item 2"></ix-dropdown-item>
       </ix-dropdown-button>
       <ix-dropdown-button variant="subtle-primary" label="" icon="checkboxes">
-        <ix-dropdown-item label="Item 1" value="1"></ix-dropdown-item>
-        <ix-dropdown-item label="Item 2" value="2"></ix-dropdown-item>
+        <ix-dropdown-item label="Item 1"></ix-dropdown-item>
+        <ix-dropdown-item label="Item 2"></ix-dropdown-item>
       </ix-dropdown-button>
       <ix-dropdown-button variant="tertiary" label="" icon="checkboxes">
-        <ix-dropdown-item label="Item 1" value="1"></ix-dropdown-item>
-        <ix-dropdown-item label="Item 2" value="2"></ix-dropdown-item>
+        <ix-dropdown-item label="Item 1"></ix-dropdown-item>
+        <ix-dropdown-item label="Item 2"></ix-dropdown-item>
       </ix-dropdown-button>
       <ix-dropdown-button label="" disabled icon="checkboxes">
       </ix-dropdown-button>
@@ -316,16 +353,16 @@ import {
   template: `
     <div class="dropdown-button">
       <ix-dropdown-button label="" icon="checkboxes">
-        <ix-dropdown-item label="Item 1" value="1"></ix-dropdown-item>
-        <ix-dropdown-item label="Item 2" value="2"></ix-dropdown-item>
+        <ix-dropdown-item label="Item 1"></ix-dropdown-item>
+        <ix-dropdown-item label="Item 2"></ix-dropdown-item>
       </ix-dropdown-button>
       <ix-dropdown-button variant="subtle-primary" label="" icon="checkboxes">
-        <ix-dropdown-item label="Item 1" value="1"></ix-dropdown-item>
-        <ix-dropdown-item label="Item 2" value="2"></ix-dropdown-item>
+        <ix-dropdown-item label="Item 1"></ix-dropdown-item>
+        <ix-dropdown-item label="Item 2"></ix-dropdown-item>
       </ix-dropdown-button>
       <ix-dropdown-button variant="tertiary" label="" icon="checkboxes">
-        <ix-dropdown-item label="Item 1" value="1"></ix-dropdown-item>
-        <ix-dropdown-item label="Item 2" value="2"></ix-dropdown-item>
+        <ix-dropdown-item label="Item 1"></ix-dropdown-item>
+        <ix-dropdown-item label="Item 2"></ix-dropdown-item>
       </ix-dropdown-button>
       <ix-dropdown-button label="" disabled icon="checkboxes">
       </ix-dropdown-button>
@@ -356,7 +393,7 @@ export default class Dropdown {}
 ```vue
 <script setup lang="ts">
 import { iconCheckboxes } from '@siemens/ix-icons/icons';
-import { IxDropdownButton } from '@siemens/ix-vue';
+import { IxDropdownButton, IxDropdownItem } from '@siemens/ix-vue';
 </script>
 
 <style scoped src="./dropdown-button-icon.css"></style>
@@ -375,10 +412,7 @@ import { IxDropdownButton } from '@siemens/ix-vue';
       <IxDropdownItem label="Item 1"></IxDropdownItem>
       <IxDropdownItem label="Item 2"></IxDropdownItem>
     </IxDropdownButton>
-    <IxDropdownButton label="" disabled :icon="iconCheckboxes">
-      <IxDropdownItem label="Item 1"></IxDropdownItem>
-      <IxDropdownItem label="Item 2"></IxDropdownItem>
-    </IxDropdownButton>
+    <IxDropdownButton label="" disabled :icon="iconCheckboxes" />
   </div>
 </template>
 ```
@@ -404,13 +438,14 @@ import { IxDropdownButton } from '@siemens/ix-vue';
 
 | Name | Description | Attribute | Type | Default |
 | --- | --- | --- | --- | --- |
-| ariaLabelDropdownButton | { "ARIA label for the dropdown button\n\nWill be set as aria-label on the nested HTML button element" } | aria-label-dropdown-button | string \| undefined |  |
+| ariaLabelDropdownButton | { "ARIA label for the dropdown button.\n\nSet as `aria-label` on the host, which is the interactive control.\n\nThe nested button is inert and is not exposed to assistive technology." } | aria-label-dropdown-button | string \| undefined |  |
 | closeBehavior | { "Controls if the dropdown will be closed in response to a click event depending on the position of the event relative to the dropdown." } | close-behavior | "both" \| "inside" \| "outside" \| boolean | 'both' |
 | disabled | { "Disable button" } | disabled | boolean | false |
 | enableTopLayer | { "Enable Popover API rendering for dropdown." } | enable-top-layer | boolean | false |
 | focusCheckedItem | { "If true, the dropdown will try to focus checked items first when opened via keyboard, otherwise it will always focus the first focusable item." } | focus-checked-item | boolean | false |
 | icon | { "Button icon" } | icon | string \| undefined |  |
-| label | { "Set label" } | label | null \| string \| undefined |  |
+| label | { "Set label text.\n\nAn empty or omitted label renders an icon-only trigger.\n\nSet to `null` to keep the standard trigger layout for custom `button-label` slot content." } | label | null \| string \| undefined |  |
+| navigationMode | { "Controls how keyboard navigation moves focus between dropdown items.\n\n- `active-descendant`: DOM focus stays on the dropdown button while a visual\n\n focus indicator moves between the items, exposed via `aria-activedescendant`.\n\n- `roving-tabindex`: real DOM focus is moved to each item using a roving\n\n `tabindex` (`0` for the active item, `-1` for the others). No\n\n `aria-activedescendant` is used because the focused item is announced\n\n directly." } | navigation-mode | "active-descendant" \| "roving-tabindex" | 'active-descendant' |
 | placement | { "Placement of the dropdown" } | placement | "bottom-end" \| "bottom-start" \| "left-end" \| "left-start" \| "right-end" \| "right-start" \| "top-end" \| "top-start" \| undefined |  |
 | variant | { "Button variant" } | variant | "danger-primary" \| "danger-secondary" \| "danger-tertiary" \| "primary" \| "secondary" \| "subtle-primary" \| "subtle-secondary" \| "subtle-tertiary" \| "tertiary" | 'primary' |
 
@@ -425,5 +460,5 @@ import { IxDropdownButton } from '@siemens/ix-vue';
 
 | Name | Description |
 | --- | --- |
-| button-label | { "Custom content displayed next to the button label." } |
-| default | { "Dropdown items." } |
+| default | { "Dropdown content." } |
+| button-label | { "Custom button label." } |

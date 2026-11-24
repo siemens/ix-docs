@@ -71,7 +71,7 @@ import { IxToggle } from '@siemens/ix-vue';
 import { IxToggle } from '@siemens/ix-react';
 
 export default () => {
-  return <IxToggle text-off="Offline" text-on="Online" aria-label="Connection status"></IxToggle>;
+  return <IxToggle textOff="Offline" textOn="Online" aria-label="Connection status"></IxToggle>;
 };
 ```
 
@@ -84,7 +84,7 @@ import { Component } from '@angular/core';
 @Component({
   standalone: false,
   selector: 'app-example',
-  template: ` <ix-toggle text-off="Offline" text-on="Online" aria-label="Connection status"></ix-toggle> `,
+  template: ` <ix-toggle textOff="Offline" textOn="Online" aria-label="Connection status"></ix-toggle> `,
 })
 export default class ToggleCustomLabel {}
 ```
@@ -102,7 +102,7 @@ import {
 @Component({
   selector: 'app-example',
   imports: [IxToggle, IxBooleanValueAccessorDirective],
-  template: ` <ix-toggle text-off="Offline" text-on="Online" aria-label="Connection status"></ix-toggle> `,
+  template: ` <ix-toggle textOff="Offline" textOn="Online" aria-label="Connection status"></ix-toggle> `,
 })
 export default class ToggleCustomLabel {}
 ```

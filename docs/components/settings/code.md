@@ -218,9 +218,9 @@ onMounted(async () => {
     </IxApplicationHeader>
     <IxMenu ref="menu">
       <IxMenuSettings>
-        <IxTabs :activeTabKey="activeTabKey" @tabChange="setActiveTabKey">
-          <IxTabItem tabKey="tab-1">Example Setting 1</IxTabItem>
-          <IxTabItem tabKey="tab-2">Example Setting 2</IxTabItem>
+        <IxTabs :active-tab-key="activeTabKey" @tabChange="setActiveTabKey">
+          <IxTabItem tab-key="tab-1">Example Setting 1</IxTabItem>
+          <IxTabItem tab-key="tab-2">Example Setting 2</IxTabItem>
         </IxTabs>
         <section
           v-if="activeTabKey === 'tab-1'"
@@ -264,4 +264,4 @@ onMounted(async () => {
 
 | Name | Description |
 | --- | --- |
-| default | { "Settings overlay content." } |
+| default | { "Settings menu content." } |

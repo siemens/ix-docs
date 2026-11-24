@@ -43,11 +43,11 @@ export default function PopoverPreview() {
       >
         <IxPopoverHeader
           icon={iconInfo}
-          iconColor="color-info"
+          iconColor="--si-sys-color-text-information"
           ariaLabelCloseIconButton="Close popover"
         >
           Release highlights
-          <IxPill slot="additional-items" variant="info">
+          <IxPill slot="additional-items" variant="information">
             New
           </IxPill>
         </IxPopoverHeader>

@@ -80,7 +80,7 @@ export default class Pane {
     composition="right"
     size="50%"
     variant="floating"
-    hide-on-collapse
+    hideOnCollapse
     [expanded]="expanded"
     (expandedChanged)="expandedChanged($event)"
     style="position: absolute; right: 0; z-index: 1"
@@ -127,7 +127,7 @@ export default class Pane {
     composition="right"
     size="50%"
     variant="floating"
-    hide-on-collapse
+    hideOnCollapse
     [expanded]="expanded"
     (expandedChanged)="expandedChanged($event)"
     style="position: absolute; right: 0; z-index: 1"
@@ -168,7 +168,7 @@ onMounted(() => {
       composition="right"
       size="50%"
       variant="floating"
-      hideOnCollapse
+      hide-on-collapse
       :expanded="expanded"
       style="position: absolute; right: 0; z-index: 1"
     >
@@ -454,7 +454,7 @@ const layout = ref<'full-horizontal' | 'full-vertical'>('full-horizontal');
 
 | Name | Description |
 | --- | --- |
-| default | { "Pane body content." } |
+| default | { "Pane content." } |
 | header | { "Additional slot for the header content" } |
 
 ## API for ix-pane-layout
@@ -471,9 +471,9 @@ const layout = ref<'full-horizontal' | 'full-vertical'>('full-horizontal');
 
 | Name | Description |
 | --- | --- |
-| bottom | { "Pane displayed below the content." } |
-| content | { "Main layout content." } |
-| default | { "Additional main layout content." } |
-| left | { "Pane displayed to the left of the content." } |
-| right | { "Pane displayed to the right of the content." } |
-| top | { "Pane displayed above the content." } |
+| default | { "Main pane content." } |
+| bottom | { "Content displayed in the bottom pane." } |
+| content | { "Main pane content." } |
+| left | { "Content displayed in the left pane." } |
+| right | { "Content displayed in the right pane." } |
+| top | { "Content displayed in the top pane." } |

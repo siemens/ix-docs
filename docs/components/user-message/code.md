@@ -291,6 +291,6 @@ import {
 
 | Name | Description |
 | --- | --- |
-|  | { "Message content displayed in the user message bubble" } |
+| default | { "Message content displayed in the user message bubble" } |
 | actions | { "Optional actions displayed below the user message bubble" } |
 | attachments | { "ix-chat-attachment elements with variant=\"sent\" displayed above the user message bubble" } |

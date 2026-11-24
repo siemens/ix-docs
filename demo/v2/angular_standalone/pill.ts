@@ -17,30 +17,35 @@ import { IxPill } from '@siemens/ix-angular/standalone';
   template: `
     <ix-pill
       variant="custom"
-      pill-color="var(--theme-color-inv-std-text)"
-      background="var(--theme-color-dynamic)"
-      >Label</ix-pill>
+      pillColor="var(--si-sys-color-text-inverse)"
+      background="var(--si-sys-color-background-accent-hover)"
+      >Label</ix-pill
+    >
 
-    <ix-pill tooltip-text="Custom tooltip text">Label</ix-pill>
+    <ix-pill tooltipText="Custom tooltip text">Label</ix-pill>
     <ix-pill class="styled">Label</ix-pill>
 
     <ix-pill icon="star">Label</ix-pill>
     <ix-pill icon="star" aria-label="Featured"></ix-pill>
     <ix-pill icon="star" class="styled">Label</ix-pill>
-    <ix-pill variant="primary" outline alignLeft icon="star" class="styled">Label</ix-pill>
+    <ix-pill variant="accent" outline alignLeft icon="star" class="styled"
+      >Label</ix-pill
+    >
 
-    <ix-pill variant="alarm">Label</ix-pill>
-    <ix-pill variant="alarm" class="styled">Label</ix-pill>
+    <ix-pill variant="danger">Label</ix-pill>
+    <ix-pill variant="danger" class="styled">Label</ix-pill>
 
-    <ix-pill variant="alarm" icon="star">Label</ix-pill>
-    <ix-pill variant="alarm" icon="star" class="styled">Label</ix-pill>
-    <ix-pill variant="alarm" alignLeft icon="star" class="styled">
+    <ix-pill variant="danger" icon="star">Label</ix-pill>
+    <ix-pill variant="danger" icon="star" class="styled">Label</ix-pill>
+    <ix-pill variant="danger" alignLeft icon="star" class="styled">
       Label
     </ix-pill>
     <ix-pill icon="star" class="styled-ellipsis-4">Label</ix-pill>
-    <ix-pill variant="primary" outline icon="star" class="styled-ellipsis-4">Label</ix-pill>
+    <ix-pill variant="accent" outline icon="star" class="styled-ellipsis-4"
+      >Label</ix-pill
+    >
     <ix-pill class="styled-ellipsis-3">Label</ix-pill>
-    <ix-pill variant="primary" outline class="styled-ellipsis-3">Label</ix-pill>
+    <ix-pill variant="accent" outline class="styled-ellipsis-3">Label</ix-pill>
   `,
 })
 export default class Pill {}

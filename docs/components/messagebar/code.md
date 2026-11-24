@@ -22,10 +22,35 @@ export default () => {
   return (
     <>
       <div className="message-bar">
-        <IxMessageBar persistent>Message text</IxMessageBar>
-        <IxMessageBar persistent>Message text</IxMessageBar>
-        <IxMessageBar persistent type="alarm">
-          <div className="message-bar-alarm">
+        <IxMessageBar persistent type="error">
+          Message text
+        </IxMessageBar>
+        <IxMessageBar persistent type="danger">
+          Message text
+        </IxMessageBar>
+        <IxMessageBar persistent type="warning">
+          Message text
+        </IxMessageBar>
+        <IxMessageBar persistent type="caution">
+          Message text
+        </IxMessageBar>
+        <IxMessageBar persistent type="success">
+          Message text
+        </IxMessageBar>
+        <IxMessageBar persistent type="information">
+          Message text
+        </IxMessageBar>
+        <IxMessageBar persistent type="neutral">
+          Message text
+        </IxMessageBar>
+        <IxMessageBar persistent type="accent">
+          Message text
+        </IxMessageBar>
+        <IxMessageBar persistent type="critical">
+          Message text
+        </IxMessageBar>
+        <IxMessageBar persistent type="danger">
+          <div className="message-bar-with-action">
             Message text <IxButton>Action</IxButton>
           </div>
         </IxMessageBar>
@@ -46,7 +71,7 @@ export default () => {
   display: block;
 }
 
-.message-bar-alarm {
+.message-bar-with-action {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -71,10 +96,17 @@ export default class MessageBar {}
 #### message-bar.html
 ```html
 <div class="message-bar">
-  <ix-message-bar persistent>Message text</ix-message-bar>
-  <ix-message-bar persistent>Message text</ix-message-bar>
-  <ix-message-bar persistent>
-    <div class="message-bar-alarm">
+  <ix-message-bar persistent type="error">Message text</ix-message-bar>
+  <ix-message-bar persistent type="danger">Message text</ix-message-bar>
+  <ix-message-bar persistent type="warning">Message text</ix-message-bar>
+  <ix-message-bar persistent type="caution">Message text</ix-message-bar>
+  <ix-message-bar persistent type="success">Message text</ix-message-bar>
+  <ix-message-bar persistent type="information">Message text</ix-message-bar>
+  <ix-message-bar persistent type="neutral">Message text</ix-message-bar>
+  <ix-message-bar persistent type="accent">Message text</ix-message-bar>
+  <ix-message-bar persistent type="critical">Message text</ix-message-bar>
+  <ix-message-bar persistent type="danger">
+    <div class="message-bar-with-action">
       Message text
       <ix-button>Action</ix-button>
     </div>
@@ -93,7 +125,7 @@ export default class MessageBar {}
   display: block;
 }
 
-.message-bar-alarm {
+.message-bar-with-action {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -112,10 +144,19 @@ import { IxButton, IxMessageBar } from '@siemens/ix-angular/standalone';
   imports: [IxMessageBar, IxButton],
   template: `
     <div class="message-bar">
-      <ix-message-bar>Message text</ix-message-bar>
-      <ix-message-bar type="warning">Message text</ix-message-bar>
-      <ix-message-bar type="alarm">
-        <div class="message-bar-alarm">
+      <ix-message-bar persistent type="error">Message text</ix-message-bar>
+      <ix-message-bar persistent type="danger">Message text</ix-message-bar>
+      <ix-message-bar persistent type="warning">Message text</ix-message-bar>
+      <ix-message-bar persistent type="caution">Message text</ix-message-bar>
+      <ix-message-bar persistent type="success">Message text</ix-message-bar>
+      <ix-message-bar persistent type="information"
+        >Message text</ix-message-bar
+      >
+      <ix-message-bar persistent type="neutral">Message text</ix-message-bar>
+      <ix-message-bar persistent type="accent">Message text</ix-message-bar>
+      <ix-message-bar persistent type="critical">Message text</ix-message-bar>
+      <ix-message-bar persistent type="danger">
+        <div class="message-bar-with-action">
           Message text
           <ix-button>Action</ix-button>
         </div>
@@ -138,7 +179,7 @@ export default class MessageBar {}
   display: block;
 }
 
-.message-bar-alarm {
+.message-bar-with-action {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -157,12 +198,19 @@ import { IxButton, IxMessageBar } from '@siemens/ix-vue';
 
 <template>
   <div class="message-bar">
-    <IxMessageBar :persistent type="alarm">Message text</IxMessageBar>
-    <IxMessageBar :persistent>Message text</IxMessageBar>
-    <IxMessageBar :persistent>
-      <div class="message-bar-alarm">
+    <IxMessageBar persistent type="error">Message text</IxMessageBar>
+    <IxMessageBar persistent type="danger">Message text</IxMessageBar>
+    <IxMessageBar persistent type="warning">Message text</IxMessageBar>
+    <IxMessageBar persistent type="caution">Message text</IxMessageBar>
+    <IxMessageBar persistent type="success">Message text</IxMessageBar>
+    <IxMessageBar persistent type="information">Message text</IxMessageBar>
+    <IxMessageBar persistent type="neutral">Message text</IxMessageBar>
+    <IxMessageBar persistent type="accent">Message text</IxMessageBar>
+    <IxMessageBar persistent type="critical">Message text</IxMessageBar>
+    <IxMessageBar persistent type="danger">
+      <div class="message-bar-with-action">
         Message text
-        <ix-button>Action</ix-button>
+        <IxButton>Action</IxButton>
       </div>
     </IxMessageBar>
   </div>
@@ -180,7 +228,7 @@ import { IxButton, IxMessageBar } from '@siemens/ix-vue';
   display: block;
 }
 
-.message-bar-alarm {
+.message-bar-with-action {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -353,10 +401,10 @@ const handleShowMessage = () => {
 
 ### Properties
 
-| Name | Description | Attribute | Type | Default |
-| --- | --- | --- | --- | --- |
-| persistent | { "If true, close button is disabled and alert cannot be dismissed by the user" } | persistent | boolean | false |
-| type | { "Specifies the type of the alert." } | type | "alarm" \| "critical" \| "info" \| "neutral" \| "primary" \| "success" \| "warning" | 'info' |
+| Name | Description | Attribute | Type | Default | Notes |
+| --- | --- | --- | --- | --- | --- |
+| persistent | { "If true, close button is disabled and alert cannot be dismissed by the user" } | persistent | boolean | false |  |
+| type | { "Specifies the type of the alert." } | type | "accent" \| "caution" \| "critical" \| "danger" \| "error" \| "information" \| "neutral" \| "success" \| "warning" | 'information' | Breaking change in v6.0.0: Type values renamed (info is now information) |
 
 ### Events
 

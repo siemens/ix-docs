@@ -270,7 +270,7 @@ export default () => {
     <>
       <IxSlider
         trace
-        trace-reference={50}
+        traceReference={50}
         marker={[0, 25, 50, 75, 100]}
         value={25}
       >
@@ -284,7 +284,7 @@ export default () => {
         value={20}
         step={10}
         trace
-        trace-reference={10}
+        traceReference={10}
         marker={[0, 10, 20, 30, 40, 50]}
       >
         <span slot="label-start">0</span>
@@ -313,7 +313,7 @@ export default class SliderTrace {}
 ```html
 <ix-slider
   trace
-  trace-reference="50"
+  traceReference="50"
   [marker]="[0, 25, 50, 75, 100]"
   value="25"
 >
@@ -327,7 +327,7 @@ export default class SliderTrace {}
   value="20"
   step="10"
   trace
-  trace-reference="10"
+  traceReference="10"
   [marker]="[0, 10, 20, 30, 40, 50]"
 >
   <span slot="label-start">0</span>
@@ -354,7 +354,7 @@ export default class SliderTrace {}
 ```html
 <ix-slider
   trace
-  trace-reference="50"
+  traceReference="50"
   [marker]="[0, 25, 50, 75, 100]"
   value="25"
 >
@@ -368,7 +368,7 @@ export default class SliderTrace {}
   value="20"
   step="10"
   trace
-  trace-reference="10"
+  traceReference="10"
   [marker]="[0, 10, 20, 30, 40, 50]"
 >
   <span slot="label-start">0</span>
@@ -424,7 +424,7 @@ export default () => {
       <IxSlider
         className="ix-invalid"
         trace
-        trace-reference={50}
+        traceReference={50}
         marker={[0, 25, 50, 75, 100]}
       >
         <span slot="label-start">0</span>
@@ -437,7 +437,7 @@ export default () => {
         max={50}
         step={10}
         trace
-        trace-reference={10}
+        traceReference={10}
         marker={[0, 10, 20, 30, 40, 50]}
         invalidText="Error message"
       >
@@ -468,7 +468,7 @@ export default class SliderError {}
 <ix-slider
   class="ix-invalid"
   trace
-  trace-reference="50"
+  traceReference="50"
   [marker]="[0, 25, 50, 75, 100]"
 >
   <span slot="label-start">0</span>
@@ -482,9 +482,9 @@ export default class SliderError {}
   step="10"
   value="20"
   trace
-  trace-reference="50"
+  traceReference="50"
   [marker]="[0, 10, 20, 30, 40, 50]"
-  invalid-text="Error message"
+  invalidText="Error message"
 >
   <span slot="label-start">0</span>
   <span slot="label-end">50</span>
@@ -511,7 +511,7 @@ export default class SliderError {}
 <ix-slider
   class="ix-invalid"
   trace
-  trace-reference="50"
+  traceReference="50"
   [marker]="[0, 25, 50, 75, 100]"
 >
   <span slot="label-start">0</span>
@@ -525,9 +525,9 @@ export default class SliderError {}
   step="10"
   value="20"
   trace
-  trace-reference="50"
+  traceReference="50"
   [marker]="[0, 10, 20, 30, 40, 50]"
-  invalid-text="Error message"
+  invalidText="Error message"
 >
   <span slot="label-start">0</span>
   <span slot="label-end">50</span>
@@ -585,7 +585,7 @@ export default () => {
           label="Info"
           value={10}
           trace
-          info-text="Info text"
+          infoText="Info text"
           className="ix-info"
         >
           <span slot="label-start">0</span>
@@ -657,7 +657,7 @@ export default class SliderValidation {}
     label="Info"
     value="10"
     trace
-    info-text="Info text"
+    infoText="Info text"
     class="ix-info"
   >
     <span slot="label-start">0</span>
@@ -727,7 +727,7 @@ export default class SliderValidation {}
     label="Info"
     value="10"
     trace
-    info-text="Info text"
+    infoText="Info text"
     class="ix-info"
   >
     <span slot="label-start">0</span>
@@ -854,8 +854,8 @@ import { IxSlider } from '@siemens/ix-vue';
 | min | { "Minimum slider value" } | min | number | 0 |
 | showTextAsTooltip | { "Show helper, info, warning, error and valid text as tooltip" } | show-text-as-tooltip | boolean | false |
 | step | { "Legal number intervals\n\n[https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/range#step](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/range#step)" } | step | number | 1 |
-| trace | { "Show a trace line" } | trace | boolean | false |
-| traceReference | { "Define the start point of the trace line" } | trace-reference | number | 0 |
+| trace | { "Color the track from **traceReference** to the current value, or from the minimum if they are equal.\n\nShow the reference marker only when it is between the minimum and maximum and differs from the value." } | trace | boolean | false |
+| traceReference | { "Start point of the trace segment when **trace** is enabled" } | trace-reference | number | 0 |
 | validText | { "Valid text for the field component" } | valid-text | string \| undefined |  |
 | value | { "Current value of the slider" } | value | number | 0 |
 | warningText | { "Warning text for the field component" } | warning-text | string \| undefined |  |

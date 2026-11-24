@@ -12,37 +12,37 @@ import './badge-label.scoped.css';
 
 import { IxBadge } from '@siemens/ix-react';
 
-const CUSTOM_BACKGROUND = 'var(--theme-chart-11)';
-const CUSTOM_COLOR = 'var(--theme-color-inv-std-text)';
-const CUSTOM_OUTLINE_COLOR = 'var(--theme-chip-outline--color)';
+const CUSTOM_BACKGROUND = 'var(--si-sys-color-data-categorical-9)';
+const CUSTOM_COLOR = 'var(--si-sys-color-text-inverse)';
+const CUSTOM_OUTLINE_COLOR = 'var(--si-sys-color-text-primary)';
 
 export default () => {
   return (
     <div className="container">
       <IxBadge
         type="label"
-        label="Primary"
-        variant="primary"
+        label="Accent"
+        variant="accent"
         icon={iconInfo}
       ></IxBadge>
       <IxBadge
         type="label"
-        label="Primary"
-        variant="primary"
+        label="Accent"
+        variant="accent"
         outline
         icon={iconInfo}
       ></IxBadge>
       <IxBadge
         type="label"
-        label="Primary"
-        variant="primary"
+        label="Accent"
+        variant="accent"
         enableAnimation
         icon={iconInfo}
       ></IxBadge>
       <IxBadge
         type="label"
-        label="Primary"
-        variant="primary"
+        label="Accent"
+        variant="accent"
         outline
         enableAnimation
         icon={iconInfo}
@@ -50,28 +50,28 @@ export default () => {
 
       <IxBadge
         type="label"
-        label="Alarm"
-        variant="alarm"
+        label="Danger"
+        variant="danger"
         icon={iconInfo}
       ></IxBadge>
       <IxBadge
         type="label"
-        label="Alarm"
-        variant="alarm"
+        label="Danger"
+        variant="danger"
         outline
         icon={iconInfo}
       ></IxBadge>
       <IxBadge
         type="label"
-        label="Alarm"
-        variant="alarm"
+        label="Danger"
+        variant="danger"
         enableAnimation
         icon={iconInfo}
       ></IxBadge>
       <IxBadge
         type="label"
-        label="Alarm"
-        variant="alarm"
+        label="Danger"
+        variant="danger"
         outline
         enableAnimation
         icon={iconInfo}
@@ -137,28 +137,28 @@ export default () => {
 
       <IxBadge
         type="label"
-        label="Info"
-        variant="info"
+        label="Information"
+        variant="information"
         icon={iconInfo}
       ></IxBadge>
       <IxBadge
         type="label"
-        label="Info"
-        variant="info"
+        label="Information"
+        variant="information"
         outline
         icon={iconInfo}
       ></IxBadge>
       <IxBadge
         type="label"
-        label="Info"
-        variant="info"
+        label="Information"
+        variant="information"
         enableAnimation
         icon={iconInfo}
       ></IxBadge>
       <IxBadge
         type="label"
-        label="Info"
-        variant="info"
+        label="Information"
+        variant="information"
         outline
         enableAnimation
         icon={iconInfo}

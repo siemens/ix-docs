@@ -607,5 +607,5 @@ import {
 
 | Name | Description |
 | --- | --- |
-|  | { "Chat messages, for example ix-chat-user-message and ix-chat-ai-message" } |
+| default | { "Chat messages, for example ix-chat-user-message and ix-chat-ai-message" } |
 | prompt | { "Chat input displayed below the chat messages" } |

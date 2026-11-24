@@ -459,7 +459,7 @@ export default function EchartsSpecialZoom() {
           color: new echarts.graphic.LinearGradient(0, 0, 0, 1, [
             {
               offset: 0,
-              color: getComputedCSSProperty('color-primary'),
+              color: getComputedCSSProperty('--si-sys-color-background-accent'),
             },
             {
               offset: 1,
@@ -565,7 +565,9 @@ export default class EchartsSpecialZoom implements OnDestroy, OnInit {
             color: new echarts.graphic.LinearGradient(0, 0, 0, 1, [
               {
                 offset: 0,
-                color: getComputedCSSProperty('color-primary'),
+                color: getComputedCSSProperty(
+                  '--si-sys-color-background-accent'
+                ),
               },
               {
                 offset: 1,
@@ -703,7 +705,9 @@ export default class EchartsSpecialZoom implements OnDestroy, OnInit {
             color: new echarts.graphic.LinearGradient(0, 0, 0, 1, [
               {
                 offset: 0,
-                color: getComputedCSSProperty('color-primary'),
+                color: getComputedCSSProperty(
+                  '--si-sys-color-background-accent'
+                ),
               },
               {
                 offset: 1,
@@ -853,7 +857,7 @@ function getOptions(): EChartsOption {
           color: new echarts.graphic.LinearGradient(0, 0, 0, 1, [
             {
               offset: 0,
-              color: getComputedCSSProperty('color-primary'),
+              color: getComputedCSSProperty('--si-sys-color-background-accent'),
             },
             {
               offset: 1,

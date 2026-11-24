@@ -49,10 +49,12 @@ export default function EchartsGauge() {
   const value = 45.3;
 
   function getGaugeColor(value: number) {
-    if (value > 60) return getComputedCSSProperty('color-success');
-    else if (value > 25) return getComputedCSSProperty('color-warning');
+    if (value > 60)
+      return getComputedCSSProperty('--si-sys-color-background-success');
+    else if (value > 25)
+      return getComputedCSSProperty('--si-sys-color-background-warning');
     else {
-      return getComputedCSSProperty('color-alarm');
+      return getComputedCSSProperty('--si-sys-color-background-danger');
     }
   }
 
@@ -65,7 +67,14 @@ export default function EchartsGauge() {
           show: true,
           lineStyle: {
             width: 18,
-            color: [[1, getComputedCSSProperty('color-neutral-40')]],
+            color: [
+              [
+                1,
+                getComputedCSSProperty(
+                  '--si-sys-color-data-sequential-deep-blue-4'
+                ),
+              ],
+            ],
           },
         },
         axisTick: {
@@ -83,7 +92,7 @@ export default function EchartsGauge() {
           show: true,
           distance: 30,
           fontSize: 16,
-          color: getComputedCSSProperty('color-std-text'),
+          color: getComputedCSSProperty('--si-sys-color-text-primary'),
         },
         progress: {
           show: true,
@@ -110,7 +119,7 @@ export default function EchartsGauge() {
               fontSize: '1.5rem',
               width: 250,
               lineHeight: 35,
-              color: getComputedCSSProperty('color-soft-text'),
+              color: getComputedCSSProperty('--si-sys-color-text-secondary'),
               formatter: '{value}Mbps \nNetwork Speed',
             },
             pointer: {
@@ -136,9 +145,15 @@ export default function EchartsGauge() {
           lineStyle: {
             width: 5,
             color: [
-              [0.25, getComputedCSSProperty('color-alarm')],
-              [0.6, getComputedCSSProperty('color-warning')],
-              [1, getComputedCSSProperty('color-success')],
+              [
+                0.25,
+                getComputedCSSProperty('--si-sys-color-background-danger'),
+              ],
+              [
+                0.6,
+                getComputedCSSProperty('--si-sys-color-background-warning'),
+              ],
+              [1, getComputedCSSProperty('--si-sys-color-background-success')],
             ],
           },
         },
@@ -198,10 +213,12 @@ export default class EchartsGauge implements OnDestroy, OnInit {
   value = 45.3;
 
   private getGaugeColor(value: number) {
-    if (value > 60) return getComputedCSSProperty('color-success');
-    else if (value > 25) return getComputedCSSProperty('color-warning');
+    if (value > 60)
+      return getComputedCSSProperty('--si-sys-color-background-success');
+    else if (value > 25)
+      return getComputedCSSProperty('--si-sys-color-background-warning');
     else {
-      return getComputedCSSProperty('color-alarm');
+      return getComputedCSSProperty('--si-sys-color-background-danger');
     }
   }
 
@@ -217,7 +234,14 @@ export default class EchartsGauge implements OnDestroy, OnInit {
             show: true,
             lineStyle: {
               width: 18,
-              color: [[1, getComputedCSSProperty('color-neutral-40')]],
+              color: [
+                [
+                  1,
+                  getComputedCSSProperty(
+                    '--si-sys-color-data-sequential-deep-blue-4'
+                  ),
+                ],
+              ],
             },
           },
           axisTick: {
@@ -235,7 +259,7 @@ export default class EchartsGauge implements OnDestroy, OnInit {
             show: true,
             distance: 30,
             fontSize: 16,
-            color: getComputedCSSProperty('color-std-text'),
+            color: getComputedCSSProperty('--si-sys-color-text-primary'),
           },
           progress: {
             show: true,
@@ -262,7 +286,7 @@ export default class EchartsGauge implements OnDestroy, OnInit {
                 fontSize: '1.5rem',
                 width: 250,
                 lineHeight: 35,
-                color: getComputedCSSProperty('color-soft-text'),
+                color: getComputedCSSProperty('--si-sys-color-text-secondary'),
                 formatter: '{value}Mbps \nNetwork Speed',
               },
               pointer: {
@@ -288,9 +312,18 @@ export default class EchartsGauge implements OnDestroy, OnInit {
             lineStyle: {
               width: 5,
               color: [
-                [0.25, getComputedCSSProperty('color-alarm')],
-                [0.6, getComputedCSSProperty('color-warning')],
-                [1, getComputedCSSProperty('color-success')],
+                [
+                  0.25,
+                  getComputedCSSProperty('--si-sys-color-background-danger'),
+                ],
+                [
+                  0.6,
+                  getComputedCSSProperty('--si-sys-color-background-warning'),
+                ],
+                [
+                  1,
+                  getComputedCSSProperty('--si-sys-color-background-success'),
+                ],
               ],
             },
           },
@@ -368,10 +401,12 @@ export default class EchartsGauge implements OnDestroy, OnInit {
   value = 45.3;
 
   private getGaugeColor(value: number) {
-    if (value > 60) return getComputedCSSProperty('color-success');
-    else if (value > 25) return getComputedCSSProperty('color-warning');
+    if (value > 60)
+      return getComputedCSSProperty('--si-sys-color-background-success');
+    else if (value > 25)
+      return getComputedCSSProperty('--si-sys-color-background-warning');
     else {
-      return getComputedCSSProperty('color-alarm');
+      return getComputedCSSProperty('--si-sys-color-background-danger');
     }
   }
 
@@ -387,7 +422,14 @@ export default class EchartsGauge implements OnDestroy, OnInit {
             show: true,
             lineStyle: {
               width: 18,
-              color: [[1, getComputedCSSProperty('color-neutral-40')]],
+              color: [
+                [
+                  1,
+                  getComputedCSSProperty(
+                    '--si-sys-color-data-sequential-deep-blue-4'
+                  ),
+                ],
+              ],
             },
           },
           axisTick: {
@@ -405,7 +447,7 @@ export default class EchartsGauge implements OnDestroy, OnInit {
             show: true,
             distance: 30,
             fontSize: 16,
-            color: getComputedCSSProperty('color-std-text'),
+            color: getComputedCSSProperty('--si-sys-color-text-primary'),
           },
           progress: {
             show: true,
@@ -432,7 +474,7 @@ export default class EchartsGauge implements OnDestroy, OnInit {
                 fontSize: '1.5rem',
                 width: 250,
                 lineHeight: 35,
-                color: getComputedCSSProperty('color-soft-text'),
+                color: getComputedCSSProperty('--si-sys-color-text-secondary'),
                 formatter: '{value}Mbps \nNetwork Speed',
               },
               pointer: {
@@ -458,9 +500,18 @@ export default class EchartsGauge implements OnDestroy, OnInit {
             lineStyle: {
               width: 5,
               color: [
-                [0.25, getComputedCSSProperty('color-alarm')],
-                [0.6, getComputedCSSProperty('color-warning')],
-                [1, getComputedCSSProperty('color-success')],
+                [
+                  0.25,
+                  getComputedCSSProperty('--si-sys-color-background-danger'),
+                ],
+                [
+                  0.6,
+                  getComputedCSSProperty('--si-sys-color-background-warning'),
+                ],
+                [
+                  1,
+                  getComputedCSSProperty('--si-sys-color-background-success'),
+                ],
               ],
             },
           },
@@ -535,10 +586,12 @@ const theme = ref(resolveEChartThemeName());
 const value = 45.3;
 
 function getGaugeColor(value: number) {
-  if (value > 60) return getComputedCSSProperty('color-success');
-  else if (value > 25) return getComputedCSSProperty('color-warning');
+  if (value > 60)
+    return getComputedCSSProperty('--si-sys-color-background-success');
+  else if (value > 25)
+    return getComputedCSSProperty('--si-sys-color-background-warning');
   else {
-    return getComputedCSSProperty('color-alarm');
+    return getComputedCSSProperty('--si-sys-color-background-danger');
   }
 }
 
@@ -552,7 +605,14 @@ function getOptions(): EChartsOption {
           show: true,
           lineStyle: {
             width: 18,
-            color: [[1, getComputedCSSProperty('color-neutral-40')]],
+            color: [
+              [
+                1,
+                getComputedCSSProperty(
+                  '--si-sys-color-data-sequential-deep-blue-4'
+                ),
+              ],
+            ],
           },
         },
         axisTick: {
@@ -570,7 +630,7 @@ function getOptions(): EChartsOption {
           show: true,
           distance: 30,
           fontSize: 16,
-          color: getComputedCSSProperty('color-std-text'),
+          color: getComputedCSSProperty('--si-sys-color-text-primary'),
         },
         progress: {
           show: true,
@@ -597,7 +657,7 @@ function getOptions(): EChartsOption {
               fontSize: '1.5rem',
               width: 250,
               lineHeight: 35,
-              color: getComputedCSSProperty('color-soft-text'),
+              color: getComputedCSSProperty('--si-sys-color-text-secondary'),
               formatter: '{value}Mbps \nNetwork Speed',
             },
             pointer: {
@@ -623,9 +683,15 @@ function getOptions(): EChartsOption {
           lineStyle: {
             width: 5,
             color: [
-              [0.25, getComputedCSSProperty('color-alarm')],
-              [0.6, getComputedCSSProperty('color-warning')],
-              [1, getComputedCSSProperty('color-success')],
+              [
+                0.25,
+                getComputedCSSProperty('--si-sys-color-background-danger'),
+              ],
+              [
+                0.6,
+                getComputedCSSProperty('--si-sys-color-background-warning'),
+              ],
+              [1, getComputedCSSProperty('--si-sys-color-background-success')],
             ],
           },
         },
@@ -720,7 +786,14 @@ export default function EchartsGauge() {
           show: true,
           lineStyle: {
             width: 15,
-            color: [[1, getComputedCSSProperty('color-neutral-40')]],
+            color: [
+              [
+                1,
+                getComputedCSSProperty(
+                  '--si-sys-color-data-sequential-deep-blue-4'
+                ),
+              ],
+            ],
           },
         },
         axisTick: {
@@ -741,7 +814,7 @@ export default function EchartsGauge() {
           width: 35,
           itemStyle: {
             borderMiterLimit: 16,
-            color: getComputedCSSProperty('color-success'),
+            color: getComputedCSSProperty('--si-sys-color-background-success'),
           },
         },
         pointer: {
@@ -754,16 +827,20 @@ export default function EchartsGauge() {
               offsetCenter: [0, 0],
               fontSize: '2rem',
               fontWeight: 'normal',
-              color: getComputedCSSProperty('color-soft-text'),
+              color: getComputedCSSProperty('--si-sys-color-text-secondary'),
               rich: {
                 valueStyle: {
                   fontSize: '2rem',
-                  color: getComputedCSSProperty('color-soft-text'),
+                  color: getComputedCSSProperty(
+                    '--si-sys-color-text-secondary'
+                  ),
                   fontWeight: 'bold',
                 },
                 textStyle: {
                   fontSize: '1.5rem',
-                  color: getComputedCSSProperty('color-soft-text'),
+                  color: getComputedCSSProperty(
+                    '--si-sys-color-text-secondary'
+                  ),
                 },
               },
               formatter: `{valueStyle|{value}}/100\n{textStyle|completed}`,
@@ -836,7 +913,14 @@ export default class EchartsProgressCircle implements OnDestroy, OnInit {
             show: true,
             lineStyle: {
               width: 15,
-              color: [[1, getComputedCSSProperty('color-neutral-40')]],
+              color: [
+                [
+                  1,
+                  getComputedCSSProperty(
+                    '--si-sys-color-data-sequential-deep-blue-4'
+                  ),
+                ],
+              ],
             },
           },
           axisTick: {
@@ -857,7 +941,9 @@ export default class EchartsProgressCircle implements OnDestroy, OnInit {
             width: 35,
             itemStyle: {
               borderMiterLimit: 16,
-              color: getComputedCSSProperty('color-success'),
+              color: getComputedCSSProperty(
+                '--si-sys-color-background-success'
+              ),
             },
           },
           pointer: {
@@ -870,16 +956,20 @@ export default class EchartsProgressCircle implements OnDestroy, OnInit {
                 offsetCenter: [0, 0],
                 fontSize: '2rem',
                 fontWeight: 'normal',
-                color: getComputedCSSProperty('color-soft-text'),
+                color: getComputedCSSProperty('--si-sys-color-text-secondary'),
                 rich: {
                   valueStyle: {
                     fontSize: '2rem',
-                    color: getComputedCSSProperty('color-soft-text'),
+                    color: getComputedCSSProperty(
+                      '--si-sys-color-text-secondary'
+                    ),
                     fontWeight: 'bold',
                   },
                   textStyle: {
                     fontSize: '1.5rem',
-                    color: getComputedCSSProperty('color-soft-text'),
+                    color: getComputedCSSProperty(
+                      '--si-sys-color-text-secondary'
+                    ),
                   },
                 },
                 formatter: `{valueStyle|{value}}/100\n{textStyle|completed}`,
@@ -970,7 +1060,14 @@ export default class EchartsProgressCircle implements OnDestroy, OnInit {
             show: true,
             lineStyle: {
               width: 15,
-              color: [[1, getComputedCSSProperty('color-neutral-40')]],
+              color: [
+                [
+                  1,
+                  getComputedCSSProperty(
+                    '--si-sys-color-data-sequential-deep-blue-4'
+                  ),
+                ],
+              ],
             },
           },
           axisTick: {
@@ -991,7 +1088,9 @@ export default class EchartsProgressCircle implements OnDestroy, OnInit {
             width: 35,
             itemStyle: {
               borderMiterLimit: 16,
-              color: getComputedCSSProperty('color-success'),
+              color: getComputedCSSProperty(
+                '--si-sys-color-background-success'
+              ),
             },
           },
           pointer: {
@@ -1004,16 +1103,20 @@ export default class EchartsProgressCircle implements OnDestroy, OnInit {
                 offsetCenter: [0, 0],
                 fontSize: '2rem',
                 fontWeight: 'normal',
-                color: getComputedCSSProperty('color-soft-text'),
+                color: getComputedCSSProperty('--si-sys-color-text-secondary'),
                 rich: {
                   valueStyle: {
                     fontSize: '2rem',
-                    color: getComputedCSSProperty('color-soft-text'),
+                    color: getComputedCSSProperty(
+                      '--si-sys-color-text-secondary'
+                    ),
                     fontWeight: 'bold',
                   },
                   textStyle: {
                     fontSize: '1.5rem',
-                    color: getComputedCSSProperty('color-soft-text'),
+                    color: getComputedCSSProperty(
+                      '--si-sys-color-text-secondary'
+                    ),
                   },
                 },
                 formatter: `{valueStyle|{value}}/100\n{textStyle|completed}`,
@@ -1099,7 +1202,14 @@ function getOptions(): EChartsOption {
           show: true,
           lineStyle: {
             width: 15,
-            color: [[1, getComputedCSSProperty('color-neutral-40')]],
+            color: [
+              [
+                1,
+                getComputedCSSProperty(
+                  '--si-sys-color-data-sequential-deep-blue-4'
+                ),
+              ],
+            ],
           },
         },
         axisTick: {
@@ -1120,7 +1230,7 @@ function getOptions(): EChartsOption {
           width: 35,
           itemStyle: {
             borderMiterLimit: 16,
-            color: getComputedCSSProperty('color-success'),
+            color: getComputedCSSProperty('--si-sys-color-background-success'),
           },
         },
         pointer: {
@@ -1133,16 +1243,20 @@ function getOptions(): EChartsOption {
               offsetCenter: [0, 0],
               fontSize: '2rem',
               fontWeight: 'normal',
-              color: getComputedCSSProperty('color-soft-text'),
+              color: getComputedCSSProperty('--si-sys-color-text-secondary'),
               rich: {
                 valueStyle: {
                   fontSize: '2rem',
-                  color: getComputedCSSProperty('color-soft-text'),
+                  color: getComputedCSSProperty(
+                    '--si-sys-color-text-secondary'
+                  ),
                   fontWeight: 'bold',
                 },
                 textStyle: {
                   fontSize: '1.5rem',
-                  color: getComputedCSSProperty('color-soft-text'),
+                  color: getComputedCSSProperty(
+                    '--si-sys-color-text-secondary'
+                  ),
                 },
               },
               formatter: `{valueStyle|{value}}/100\n{textStyle|completed}`,
@@ -1244,7 +1358,14 @@ export default function EchartsProgressArc() {
           show: true,
           lineStyle: {
             width: 15,
-            color: [[1, getComputedCSSProperty('color-neutral-40')]],
+            color: [
+              [
+                1,
+                getComputedCSSProperty(
+                  '--si-sys-color-data-sequential-deep-blue-4'
+                ),
+              ],
+            ],
           },
         },
         axisTick: {
@@ -1265,7 +1386,7 @@ export default function EchartsProgressArc() {
           width: 35,
           itemStyle: {
             borderMiterLimit: 16,
-            color: getComputedCSSProperty('color-success'),
+            color: getComputedCSSProperty('--si-sys-color-background-success'),
           },
         },
         pointer: {
@@ -1279,7 +1400,7 @@ export default function EchartsProgressArc() {
               overflow: 'break',
               fontSize: '2rem',
               fontWeight: 'normal',
-              color: getComputedCSSProperty('color-soft-text'),
+              color: getComputedCSSProperty('--si-sys-color-text-secondary'),
               width: 250,
               lineHeight: 35,
               formatter: '{value} / 100 \n completed',
@@ -1352,7 +1473,14 @@ export default class EchartsProgressArc implements OnDestroy, OnInit {
             show: true,
             lineStyle: {
               width: 15,
-              color: [[1, getComputedCSSProperty('color-neutral-40')]],
+              color: [
+                [
+                  1,
+                  getComputedCSSProperty(
+                    '--si-sys-color-data-sequential-deep-blue-4'
+                  ),
+                ],
+              ],
             },
           },
           axisTick: {
@@ -1373,7 +1501,9 @@ export default class EchartsProgressArc implements OnDestroy, OnInit {
             width: 35,
             itemStyle: {
               borderMiterLimit: 16,
-              color: getComputedCSSProperty('color-success'),
+              color: getComputedCSSProperty(
+                '--si-sys-color-background-success'
+              ),
             },
           },
           pointer: {
@@ -1387,7 +1517,7 @@ export default class EchartsProgressArc implements OnDestroy, OnInit {
                 overflow: 'break',
                 fontSize: '2rem',
                 fontWeight: 'normal',
-                color: getComputedCSSProperty('color-soft-text'),
+                color: getComputedCSSProperty('--si-sys-color-text-secondary'),
                 width: 250,
                 lineHeight: 35,
                 formatter: '{value} / 100 \n completed',
@@ -1478,7 +1608,14 @@ export default class EchartsProgressArc implements OnDestroy, OnInit {
             show: true,
             lineStyle: {
               width: 15,
-              color: [[1, getComputedCSSProperty('color-neutral-40')]],
+              color: [
+                [
+                  1,
+                  getComputedCSSProperty(
+                    '--si-sys-color-data-sequential-deep-blue-4'
+                  ),
+                ],
+              ],
             },
           },
           axisTick: {
@@ -1499,7 +1636,9 @@ export default class EchartsProgressArc implements OnDestroy, OnInit {
             width: 35,
             itemStyle: {
               borderMiterLimit: 16,
-              color: getComputedCSSProperty('color-success'),
+              color: getComputedCSSProperty(
+                '--si-sys-color-background-success'
+              ),
             },
           },
           pointer: {
@@ -1513,7 +1652,7 @@ export default class EchartsProgressArc implements OnDestroy, OnInit {
                 overflow: 'break',
                 fontSize: '2rem',
                 fontWeight: 'normal',
-                color: getComputedCSSProperty('color-soft-text'),
+                color: getComputedCSSProperty('--si-sys-color-text-secondary'),
                 width: 250,
                 lineHeight: 35,
                 formatter: '{value} / 100 \n completed',
@@ -1599,7 +1738,14 @@ function getOptions(): EChartsOption {
           show: true,
           lineStyle: {
             width: 15,
-            color: [[1, getComputedCSSProperty('color-neutral-40')]],
+            color: [
+              [
+                1,
+                getComputedCSSProperty(
+                  '--si-sys-color-data-sequential-deep-blue-4'
+                ),
+              ],
+            ],
           },
         },
         axisTick: {
@@ -1620,7 +1766,7 @@ function getOptions(): EChartsOption {
           width: 35,
           itemStyle: {
             borderMiterLimit: 16,
-            color: getComputedCSSProperty('color-success'),
+            color: getComputedCSSProperty('--si-sys-color-background-success'),
           },
         },
         pointer: {
@@ -1634,7 +1780,7 @@ function getOptions(): EChartsOption {
               overflow: 'break',
               fontSize: '2rem',
               fontWeight: 'normal',
-              color: getComputedCSSProperty('color-soft-text'),
+              color: getComputedCSSProperty('--si-sys-color-text-secondary'),
               width: 250,
               lineHeight: 35,
               formatter: '{value} / 100 \n completed',

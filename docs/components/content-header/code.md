@@ -15,9 +15,9 @@ import { IxButton, IxContentHeader } from '@siemens/ix-react';
 export default () => {
   return (
     <IxContentHeader
-      has-back-button
-      header-title="Content title"
-      header-subtitle="Subtitle"
+      hasBackButton
+      headerTitle="Content title"
+      headerSubtitle="Subtitle"
     >
       <IxButton variant="tertiary">Button1</IxButton>
       <IxButton variant="tertiary">Button2</IxButton>
@@ -120,8 +120,8 @@ export default () => {
   return (
     <IxContentHeader
       variant="subtle-primary"
-      header-title="Content title"
-      header-subtitle="Subtitle"
+      headerTitle="Content title"
+      headerSubtitle="Subtitle"
     >
       <IxIconButton icon={iconPen} variant="tertiary">
         Button1
@@ -285,9 +285,9 @@ export default class ContentHeaderWithSlot {}
 #### content-header-with-slot.html
 ```html
 <ix-content-header
-  has-back-button
-  header-title="Content title"
-  header-subtitle="Subtitle"
+  hasBackButton
+  headerTitle="Content title"
+  headerSubtitle="Subtitle"
 >
   <ix-pill slot="header" icon="info" class="margin-top">Label</ix-pill>
   <ix-button variant="tertiary">Button1</ix-button>
@@ -326,9 +326,9 @@ export default class ContentHeaderWithSlot {}
 #### content-header-with-slot.html
 ```html
 <ix-content-header
-  has-back-button
-  header-title="Content title"
-  header-subtitle="Subtitle"
+  hasBackButton
+  headerTitle="Content title"
+  headerSubtitle="Subtitle"
 >
   <ix-pill slot="header" icon="info" class="margin-top">Label</ix-pill>
   <ix-button variant="tertiary">Button1</ix-button>
@@ -372,16 +372,123 @@ import { iconInfo } from '@siemens/ix-icons/icons';
 }
 ```
 
+## Truncated text
+
+Titles and subtitles wrap by default when space is limited. Set `textOverflow` to `ellipsis` when the header must retain a compact height.
+
+### React Examples
+
+#### content-header-text-overflow.tsx
+```tsx
+import { IxButton, IxContentHeader } from '@siemens/ix-react';
+
+export default () => {
+  return (
+    <IxContentHeader
+      hasBackButton
+      headerTitle="Content title that remains compact when horizontal space is limited"
+      headerSubtitle="Supporting context is truncated independently when space is limited"
+      textOverflow="ellipsis"
+    >
+      <IxButton variant="tertiary">Button1</IxButton>
+      <IxButton variant="tertiary">Button2</IxButton>
+      <IxButton variant="tertiary">Button3</IxButton>
+    </IxContentHeader>
+  );
+};
+```
+
+### Angular Examples
+
+#### content-header-text-overflow.ts
+```ts
+import { Component } from '@angular/core';
+
+@Component({
+  standalone: false,
+  selector: 'app-example',
+  templateUrl: './content-header-text-overflow.html',
+})
+export default class ContentHeaderTextOverflow {}
+```
+
+#### content-header-text-overflow.html
+```html
+<ix-content-header
+  hasBackButton
+  headerTitle="Content title that remains compact when horizontal space is limited"
+  headerSubtitle="Supporting context is truncated independently when space is limited"
+  textOverflow="ellipsis"
+>
+  <ix-button variant="tertiary">Button1</ix-button>
+  <ix-button variant="tertiary">Button2</ix-button>
+  <ix-button variant="tertiary">Button3</ix-button>
+</ix-content-header>
+```
+
+### Angular Standalone Examples
+
+#### content-header-text-overflow.ts
+```ts
+import { Component } from '@angular/core';
+import { IxButton, IxContentHeader } from '@siemens/ix-angular/standalone';
+
+@Component({
+  selector: 'app-example',
+  imports: [IxContentHeader, IxButton],
+  templateUrl: './content-header-text-overflow.html',
+})
+export default class ContentHeaderTextOverflow {}
+```
+
+#### content-header-text-overflow.html
+```html
+<ix-content-header
+  hasBackButton
+  headerTitle="Content title that remains compact when horizontal space is limited"
+  headerSubtitle="Supporting context is truncated independently when space is limited"
+  textOverflow="ellipsis"
+>
+  <ix-button variant="tertiary">Button1</ix-button>
+  <ix-button variant="tertiary">Button2</ix-button>
+  <ix-button variant="tertiary">Button3</ix-button>
+</ix-content-header>
+```
+
+### Vue Examples
+
+#### content-header-text-overflow.vue
+```vue
+<script setup lang="ts">
+import { IxButton, IxContentHeader } from '@siemens/ix-vue';
+</script>
+
+<template>
+  <IxContentHeader
+    has-back-button
+    header-title="Content title that remains compact when horizontal space is limited"
+    header-subtitle="Supporting context is truncated independently when space is limited"
+    text-overflow="ellipsis"
+  >
+    <IxButton variant="tertiary">Button1</IxButton>
+    <IxButton variant="tertiary">Button2</IxButton>
+    <IxButton variant="tertiary">Button3</IxButton>
+  </IxContentHeader>
+</template>
+```
+
 ## API for ix-content-header
 
 ### Properties
 
-| Name | Description | Attribute | Type | Default |
-| --- | --- | --- | --- | --- |
-| hasBackButton | { "Display a back button" } | has-back-button | boolean | false |
-| headerSubtitle | { "Subtitle of Header" } | header-subtitle | string \| undefined | undefined |
-| headerTitle | { "Title of Header" } | header-title | string \| undefined |  |
-| variant | { "Variant of content header" } | variant | "primary" \| "secondary" | 'primary' |
+| Name | Description | Attribute | Type | Default | Notes |
+| --- | --- | --- | --- | --- | --- |
+| ariaLabelMoreActions | { "Accessible label for the secondary actions overflow menu." } | aria-label-more-actions | string | 'More actions' |  |
+| hasBackButton | { "Display a back button" } | has-back-button | boolean | false |  |
+| headerSubtitle | { "Subtitle of Header" } | header-subtitle | string \| undefined | undefined |  |
+| headerTitle | { "Title of Header" } | header-title | string \| undefined |  |  |
+| textOverflow | { "Controls how the title and subtitle handle limited horizontal space.\n\nEllipsis visually truncates the text without adding a tooltip." } | text-overflow | "ellipsis" \| "wrap" | 'wrap' | Breaking change in v6.0.0: Text wraps by default instead of truncating, set ellipsis to restore truncation |
+| variant | { "Variant of content header" } | variant | "primary" \| "secondary" | 'primary' |  |
 
 ### Events
 
@@ -395,3 +502,4 @@ import { iconInfo } from '@siemens/ix-icons/icons';
 | --- | --- |
 | default | { "Default slot for action buttons or other content" } |
 | header | { "Content to be placed in the header area next to the title" } |
+| secondary-actions | { "ix-button and ix-icon-button actions that collapse into a vertical overflow menu when space is limited. Provide an accessible name for icon-only actions." } |

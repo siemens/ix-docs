@@ -1,4 +1,4 @@
-import { NgModule } from '@angular/core';
+import { NgModule, provideZoneChangeDetection } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { ReactiveFormsModule } from '@angular/forms';
 import { IxModule } from '@siemens/ix-angular';
@@ -18,7 +18,7 @@ import ExampleComponent from './example.component';
       echarts: () => import('echarts'),
     }),
   ],
-  providers: [],
+  providers: [provideZoneChangeDetection()],
   bootstrap: [AppComponent],
 })
 export class AppModule {}

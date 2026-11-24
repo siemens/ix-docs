@@ -39,8 +39,8 @@ ix-layout-auto ix-typography {
   justify-content: center;
   align-items: center;
   align-self: stretch;
-  border: 0.0625rem solid var(--theme-color-soft-bdr);
-  background: var(--theme-color-ghost);
+  border: 0.0625rem solid var(--si-sys-color-border-3);
+  background: transparent;
   border-radius: 0.1875rem;
 }
 ```
@@ -81,8 +81,8 @@ ix-layout-auto ix-typography {
   justify-content: center;
   align-items: center;
   align-self: stretch;
-  border: 0.0625rem solid var(--theme-color-soft-bdr);
-  background: var(--theme-color-ghost);
+  border: 0.0625rem solid var(--si-sys-color-border-3);
+  background: transparent;
   border-radius: 0.1875rem;
 }
 ```
@@ -124,8 +124,8 @@ ix-layout-auto ix-typography {
   justify-content: center;
   align-items: center;
   align-self: stretch;
-  border: 0.0625rem solid var(--theme-color-soft-bdr);
-  background: var(--theme-color-ghost);
+  border: 0.0625rem solid var(--si-sys-color-border-3);
+  background: transparent;
   border-radius: 0.1875rem;
 }
 ```
@@ -161,8 +161,8 @@ ix-layout-auto ix-typography {
   justify-content: center;
   align-items: center;
   align-self: stretch;
-  border: 0.0625rem solid var(--theme-color-soft-bdr);
-  background: var(--theme-color-ghost);
+  border: 0.0625rem solid var(--si-sys-color-border-3);
+  background: transparent;
   border-radius: 0.1875rem;
 }
 ```
@@ -307,4 +307,4 @@ const layout = [
 
 | Name | Description |
 | --- | --- |
-| default | { "Content arranged by the automatic layout." } |
+| default | { "Layout content." } |

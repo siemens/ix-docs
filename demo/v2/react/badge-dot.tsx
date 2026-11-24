@@ -11,69 +11,69 @@ import './badge-dot.scoped.css';
 
 import { IxBadge } from '@siemens/ix-react';
 
-const CUSTOM_BACKGROUND = 'var(--theme-chart-11)';
-const CUSTOM_COLOR = 'var(--theme-color-inv-std-text)';
-const CUSTOM_OUTLINE_COLOR = 'var(--theme-chip-outline--color)';
+const CUSTOM_BACKGROUND = 'var(--si-sys-color-data-categorical-9)';
+const CUSTOM_COLOR = 'var(--si-sys-color-text-inverse)';
+const CUSTOM_OUTLINE_COLOR = 'var(--si-sys-color-text-primary)';
 
 export default () => {
   return (
     <div className="container">
       <IxBadge
         type="dot"
-        variant="primary"
+        variant="accent"
         role="img"
-        aria-label="Primary"
+        aria-label="Accent"
       ></IxBadge>
       <IxBadge
         type="dot"
-        variant="primary"
+        variant="accent"
         outline
         role="img"
-        aria-label="Primary outline"
+        aria-label="Accent outline"
       ></IxBadge>
       <IxBadge
         type="dot"
-        variant="primary"
+        variant="accent"
         enableAnimation
         role="img"
-        aria-label="Primary pulse"
+        aria-label="Accent pulse"
       ></IxBadge>
       <IxBadge
         type="dot"
-        variant="primary"
+        variant="accent"
         outline
         enableAnimation
         role="img"
-        aria-label="Primary pulse outline"
+        aria-label="Accent pulse outline"
       ></IxBadge>
 
       <IxBadge
         type="dot"
-        variant="alarm"
+        variant="danger"
         role="img"
-        aria-label="Alarm"
+        aria-label="Danger"
       ></IxBadge>
       <IxBadge
         type="dot"
-        variant="alarm"
+        variant="danger"
         outline
         role="img"
-        aria-label="Alarm outline"
+        aria-label="Danger outline"
       ></IxBadge>
       <IxBadge
         type="dot"
-        variant="alarm"
+        variant="danger"
         enableAnimation
         role="img"
-        aria-label="Alarm pulse"
+        aria-label="Danger pulse"
       ></IxBadge>
       <IxBadge
         type="dot"
-        variant="alarm"
+        variant="danger"
         outline
         enableAnimation
         role="img"
-        aria-label="Alarm pulse outline"
+        aria-label="Danger pulse outline"
       ></IxBadge>
 
       <IxBadge
@@ -134,33 +134,28 @@ export default () => {
         aria-label="Warning pulse outline"
       ></IxBadge>
 
+      <IxBadge type="dot" variant="information" role="img" aria-label="Information"></IxBadge>
       <IxBadge
         type="dot"
-        variant="info"
-        role="img"
-        aria-label="Info"
-      ></IxBadge>
-      <IxBadge
-        type="dot"
-        variant="info"
+        variant="information"
         outline
         role="img"
-        aria-label="Info outline"
+        aria-label="Information outline"
       ></IxBadge>
       <IxBadge
         type="dot"
-        variant="info"
+        variant="information"
         enableAnimation
         role="img"
-        aria-label="Info pulse"
+        aria-label="Information pulse"
       ></IxBadge>
       <IxBadge
         type="dot"
-        variant="info"
+        variant="information"
         outline
         enableAnimation
         role="img"
-        aria-label="Info pulse outline"
+        aria-label="Information pulse outline"
       ></IxBadge>
 
       <IxBadge

@@ -17,64 +17,62 @@ import { IxChip } from '@siemens/ix-vue';
 <template>
   <div class="chip">
     <div class="chip-column">
-      <IxChip :icon="iconPrint" variant="primary" closable> Primary </IxChip>
-      <IxChip :icon="iconPrint" variant="alarm" closable> Alarm </IxChip>
-      <IxChip :icon="iconPrint" variant="critical"> Critical </IxChip>
-      <IxChip :icon="iconPrint" variant="warning"> Warning </IxChip>
+      <IxChip :icon="iconPrint" variant="danger" closable>Danger</IxChip>
+      <IxChip :icon="iconPrint" variant="warning">Warning</IxChip>
+      <IxChip :icon="iconPrint" variant="caution">Caution</IxChip>
       <IxChip
         :icon="iconPrint"
-        variant="info"
+        variant="information"
         tooltip-text="Open details for this status"
         aria-label="In review"
       >
-        Info
+        Information
       </IxChip>
-      <IxChip :icon="iconPrint" variant="success"> Success </IxChip>
-      <IxChip :icon="iconPrint" variant="neutral"> Neutral </IxChip>
+      <IxChip :icon="iconPrint" variant="accent" closable>Accent</IxChip>
+      <IxChip :icon="iconPrint" variant="critical">Critical</IxChip>
+      <IxChip :icon="iconPrint" variant="success">Success</IxChip>
+      <IxChip :icon="iconPrint" variant="neutral">Neutral</IxChip>
       <IxChip
         :icon="iconPrint"
         variant="custom"
-        background="var(--theme-chart-11)"
-        chip-color="var(--theme-color-inv-std-text)"
+        background="var(--si-sys-color-data-categorical-9)"
+        chip-color="var(--si-sys-color-text-inverse)"
         closable
       >
         Custom
       </IxChip>
-      <IxChip :icon="iconPrint" variant="primary" closable>
+      <IxChip :icon="iconPrint" variant="accent" closable>
         Chip with icon
       </IxChip>
     </div>
     <div class="chip-column">
-      <IxChip :icon="iconPrint" variant="primary" outline closable>
-        Primary
-      </IxChip>
-      <IxChip :icon="iconPrint" variant="alarm" outline closable>
-        Alarm
-      </IxChip>
-      <IxChip :icon="iconPrint" variant="critical" outline> Critical </IxChip>
-      <IxChip :icon="iconPrint" variant="warning" outline> Warning </IxChip>
+      <IxChip :icon="iconPrint" variant="danger" outline closable>Danger</IxChip>
+      <IxChip :icon="iconPrint" variant="warning" outline>Warning</IxChip>
+      <IxChip :icon="iconPrint" variant="caution" outline>Caution</IxChip>
       <IxChip
         :icon="iconPrint"
-        variant="info"
+        variant="information"
         outline
         tooltip-text="Open details for this status"
         aria-label="In review"
       >
-        Info
+        Information
       </IxChip>
-      <IxChip :icon="iconPrint" variant="success" outline> Success </IxChip>
-      <IxChip :icon="iconPrint" variant="neutral" outline> Neutral </IxChip>
+      <IxChip :icon="iconPrint" variant="accent" outline closable>Accent</IxChip>
+      <IxChip :icon="iconPrint" variant="critical" outline>Critical</IxChip>
+      <IxChip :icon="iconPrint" variant="success" outline>Success</IxChip>
+      <IxChip :icon="iconPrint" variant="neutral" outline>Neutral</IxChip>
       <IxChip
         :icon="iconPrint"
         variant="custom"
-        background="var(--theme-chart-11)"
-        chip-color="var(--theme-chip-outline--color)"
+        background="var(--si-sys-color-data-categorical-9)"
+        chip-color="var(--si-sys-color-text-primary)"
         outline
         closable
       >
         Custom
       </IxChip>
-      <IxChip variant="primary" outline closable>Chip without icon</IxChip>
+      <IxChip variant="accent" outline closable>Chip without icon</IxChip>
     </div>
   </div>
 </template>

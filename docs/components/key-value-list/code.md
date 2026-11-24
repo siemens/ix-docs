@@ -4,6 +4,10 @@
 
 # Key value list - Code
 
+:::info Legacy native input styles
+The custom value example uses the legacy `.ix-form-control` class. Import `@siemens/ix/css/legacy.css` while migrating native inputs. For new applications, we prefer to use an input component or provide application-specific styles for the slotted native control.
+:::
+
 ## Basic
 
 ### React Examples
@@ -540,16 +544,124 @@ import { IxKeyValue, IxKeyValueList } from '@siemens/ix-vue';
 </template>
 ```
 
+## Without divider
+
+Set `hide-dividers` to hide the dividers below key values.
+
+### React Examples
+
+#### key-value-list-without-divider.tsx
+```tsx
+import { IxKeyValue, IxKeyValueList } from '@siemens/ix-react';
+
+export default () => {
+  return (
+    <IxKeyValueList hideDividers>
+      <IxKeyValue label="Label" labelPosition="left" value="Value"></IxKeyValue>
+      <IxKeyValue label="Label" labelPosition="left" value="Value"></IxKeyValue>
+      <IxKeyValue label="Label" labelPosition="left" value="Value"></IxKeyValue>
+    </IxKeyValueList>
+  );
+};
+```
+
+### Angular Examples
+
+#### key-value-list-without-divider.ts
+```ts
+import { Component } from '@angular/core';
+
+@Component({
+  standalone: false,
+  selector: 'app-example',
+  template: `
+    <ix-key-value-list [hideDividers]="true">
+      <ix-key-value
+        label="Label"
+        labelPosition="left"
+        value="Value"
+      ></ix-key-value>
+
+      <ix-key-value
+        label="Label"
+        labelPosition="left"
+        value="Value"
+      ></ix-key-value>
+
+      <ix-key-value
+        label="Label"
+        labelPosition="left"
+        value="Value"
+      ></ix-key-value>
+    </ix-key-value-list>
+  `,
+})
+export default class KeyValueListWithoutDivider {}
+```
+
+### Angular Standalone Examples
+
+#### key-value-list-without-divider.ts
+```ts
+import { Component } from '@angular/core';
+import { IxKeyValueList, IxKeyValue } from '@siemens/ix-angular/standalone';
+
+@Component({
+  selector: 'app-example',
+  imports: [IxKeyValueList, IxKeyValue],
+  template: `
+    <ix-key-value-list [hideDividers]="true">
+      <ix-key-value
+        label="Label"
+        labelPosition="left"
+        value="Value"
+      ></ix-key-value>
+
+      <ix-key-value
+        label="Label"
+        labelPosition="left"
+        value="Value"
+      ></ix-key-value>
+
+      <ix-key-value
+        label="Label"
+        labelPosition="left"
+        value="Value"
+      ></ix-key-value>
+    </ix-key-value-list>
+  `,
+})
+export default class KeyValueListWithoutDivider {}
+```
+
+### Vue Examples
+
+#### key-value-list-without-divider.vue
+```vue
+<script setup lang="ts">
+import { IxKeyValue, IxKeyValueList } from '@siemens/ix-vue';
+</script>
+
+<template>
+  <IxKeyValueList hide-dividers>
+    <IxKeyValue label="Label" label-position="left" value="Value"></IxKeyValue>
+    <IxKeyValue label="Label" label-position="left" value="Value"></IxKeyValue>
+    <IxKeyValue label="Label" label-position="left" value="Value"></IxKeyValue>
+  </IxKeyValueList>
+</template>
+```
+
 ## API for ix-key-value-list
 
 ### Properties
 
 | Name | Description | Attribute | Type | Default |
 | --- | --- | --- | --- | --- |
+| hideDividers | { "Hide the divider lines below all key value items." } | hide-dividers | boolean | false |
 | striped | { "Optional striped key value list style" } | striped | boolean | false |
 
 ### Slot
 
 | Name | Description |
 | --- | --- |
-| default | { "Key-value entries." } |
+| default | { "Key value items." } |

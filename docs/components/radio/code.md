@@ -450,14 +450,14 @@ export default class RadioValidation {}
       name='storage-256gb'
       checked
       class='ix-info'
-      info-text='Storage options might differ in speed.'
+      infoText='Storage options might differ in speed.'
     ></ix-radio>
     <ix-radio
       label='512GB SSD storage'
       value='512'
       name='storage-512gb'
       class='ix-warning'
-      warning-text='Storage options might not be available.'
+      warningText='Storage options might not be available.'
     ></ix-radio>
   </ix-radio-group>
 </div>
@@ -472,14 +472,14 @@ export default class RadioValidation {}
       name='storage-256gb'
       checked
       class='ix-valid'
-      valid-text='Storage option is available.'
+      validText='Storage option is available.'
     ></ix-radio>
     <ix-radio
       label='512GB SSD storage'
       value='512'
       name='storage-512gb'
       class='ix-invalid'
-      invalid-text='Storage option is not available.'
+      invalidText='Storage option is not available.'
     ></ix-radio>
   </ix-radio-group>
 </div>
@@ -514,14 +514,14 @@ export default class RadioValidation {}
       name="storage-256gb"
       checked
       class="ix-info"
-      info-text="Storage options might differ in speed."
+      infoText="Storage options might differ in speed."
     ></ix-radio>
     <ix-radio
       label="512GB SSD storage"
       value="512"
       name="storage-512gb"
       class="ix-warning"
-      warning-text="Storage options might not be available."
+      warningText="Storage options might not be available."
     ></ix-radio>
   </ix-radio-group>
 </div>
@@ -534,14 +534,14 @@ export default class RadioValidation {}
       name="storage-256gb"
       checked
       class="ix-valid"
-      valid-text="Storage option is available."
+      validText="Storage option is available."
     ></ix-radio>
     <ix-radio
       label="512GB SSD storage"
       value="512"
       name="storage-512gb"
       class="ix-invalid"
-      invalid-text="Storage option is not available."
+      invalidText="Storage option is not available."
     ></ix-radio>
   </ix-radio-group>
 </div>
@@ -667,7 +667,7 @@ import { IxRadio, IxRadioGroup } from '@siemens/ix-vue';
 
 | Name | Description |
 | --- | --- |
-| default | { "Radio button label." } |
+| default | { "Radio label." } |
 
 ## API for ix-radio-group
 
@@ -695,4 +695,4 @@ import { IxRadio, IxRadioGroup } from '@siemens/ix-vue';
 
 | Name | Description |
 | --- | --- |
-| default | { "Radio buttons displayed in the group." } |
+| default | { "Radio components." } |

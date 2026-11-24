@@ -170,7 +170,13 @@ export default () => {
   return (
     <>
       <IxBlind label="Example" icon={iconInfo}>
-        <IxIconButton variant="tertiary" id="context-menu" slot="header-actions" icon={iconContextMenu} iconColor="color-primary"></IxIconButton>
+        <IxIconButton
+          variant="tertiary"
+          id="context-menu"
+          slot="header-actions"
+          icon={iconContextMenu}
+          iconColor="--si-sys-color-text-accent"
+        ></IxIconButton>
         Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy
         eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam
         voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet
@@ -208,7 +214,13 @@ import { Component } from '@angular/core';
   selector: 'app-example',
   template: `
     <ix-blind label="Example" icon="info">
-      <ix-icon-button variant="tertiary" id="context-menu" slot="header-actions" icon="context-menu" iconColor="color-primary"></ix-icon-button>
+      <ix-icon-button
+        variant="tertiary"
+        id="context-menu"
+        slot="header-actions"
+        icon="context-menu"
+        iconColor="--si-sys-color-text-accent"
+      ></ix-icon-button>
       Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy
       eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam
       voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet
@@ -253,7 +265,13 @@ import {
   imports: [IxBlind, IxIconButton, IxDropdown, IxDropdownItem],
   template: `
     <ix-blind label="Example" icon="info">
-      <ix-icon-button variant="tertiary" id="context-menu" slot="header-actions" icon="context-menu" iconColor="color-primary"></ix-icon-button>
+      <ix-icon-button
+        variant="tertiary"
+        id="context-menu"
+        slot="header-actions"
+        icon="context-menu"
+        iconColor="--si-sys-color-text-accent"
+      ></ix-icon-button>
       Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy
       eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam
       voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet
@@ -299,7 +317,13 @@ import { IxBlind, IxDropdown, IxIconButton } from '@siemens/ix-vue';
 
 <template>
   <IxBlind label="Example" :icon="iconInfo">
-    <IxIconButton variant="tertiary" id="context-menu" slot="header-actions" :icon="iconContextMenu" icon-color="color-primary"></IxIconButton>
+    <IxIconButton
+      variant="tertiary"
+      id="context-menu"
+      slot="header-actions"
+      :icon="iconContextMenu"
+      icon-color="--si-sys-color-text-accent"
+    ></IxIconButton>
     Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy
     eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam
     voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet
@@ -340,36 +364,28 @@ import { IxBlind } from '@siemens/ix-react';
 export default () => {
   return (
     <>
-      <IxBlind icon={iconBulb} label="Example" sublabel="sublabel">
-        <div>Filled content</div>
-      </IxBlind>
       <IxBlind
-        variant="outline"
+        outline={false}
         icon={iconBulb}
-        label="Outline"
+        label="Filled"
         sublabel="sublabel"
       >
+        <div>Filled content</div>
+      </IxBlind>
+      <IxBlind icon={iconBulb} label="Outline" sublabel="sublabel">
         <div>Outline content</div>
       </IxBlind>
       <IxBlind
         icon={iconBulb}
-        variant={'alarm'}
-        label="Alarm"
+        variant="danger"
+        label="Danger"
         sublabel="sublabel"
       >
-        <div>Alarm content</div>
+        <div>Danger content</div>
       </IxBlind>
       <IxBlind
         icon={iconBulb}
-        variant={'critical'}
-        label="Critical"
-        sublabel="sublabel"
-      >
-        <div>Critical content</div>
-      </IxBlind>
-      <IxBlind
-        icon={iconBulb}
-        variant={'warning'}
+        variant="warning"
         label="Warning"
         sublabel="sublabel"
       >
@@ -377,15 +393,39 @@ export default () => {
       </IxBlind>
       <IxBlind
         icon={iconBulb}
-        variant={'info'}
-        label="Info"
+        variant="caution"
+        label="Caution"
         sublabel="sublabel"
       >
-        <div>Info content</div>
+        <div>Caution content</div>
       </IxBlind>
       <IxBlind
         icon={iconBulb}
-        variant={'success'}
+        variant="information"
+        label="Information"
+        sublabel="sublabel"
+      >
+        <div>Information content</div>
+      </IxBlind>
+      <IxBlind
+        icon={iconBulb}
+        variant="accent"
+        label="Accent"
+        sublabel="sublabel"
+      >
+        <div>Accent content</div>
+      </IxBlind>
+      <IxBlind
+        icon={iconBulb}
+        variant="critical"
+        label="Critical"
+        sublabel="sublabel"
+      >
+        <div>Critical content</div>
+      </IxBlind>
+      <IxBlind
+        icon={iconBulb}
+        variant="success"
         label="Success"
         sublabel="sublabel"
       >
@@ -393,7 +433,7 @@ export default () => {
       </IxBlind>
       <IxBlind
         icon={iconBulb}
-        variant={'neutral'}
+        variant="neutral"
         label="Neutral"
         sublabel="sublabel"
       >
@@ -428,23 +468,34 @@ export default class Blind {}
 
 #### blind-variants.html
 ```html
-<ix-blind icon="bulb" label="Example" sublabel="sublabel">
+<ix-blind outline="false" icon="bulb" label="Filled" sublabel="sublabel">
   <div>Filled content</div>
 </ix-blind>
-<ix-blind variant="outline" icon="bulb" label="Outline" sublabel="sublabel">
+<ix-blind icon="bulb" label="Outline" sublabel="sublabel">
   <div>Outline content</div>
 </ix-blind>
-<ix-blind icon="bulb" variant="alarm" label="Alarm" sublabel="sublabel">
-  <div>Alarm content</div>
-</ix-blind>
-<ix-blind icon="bulb" variant="critical" label="Critical" sublabel="sublabel">
-  <div>Critical content</div>
+<ix-blind icon="bulb" variant="danger" label="Danger" sublabel="sublabel">
+  <div>Danger content</div>
 </ix-blind>
 <ix-blind icon="bulb" variant="warning" label="Warning" sublabel="sublabel">
   <div>Warning content</div>
 </ix-blind>
-<ix-blind icon="bulb" variant="info" label="Info" sublabel="sublabel">
-  <div>Info content</div>
+<ix-blind icon="bulb" variant="caution" label="Caution" sublabel="sublabel">
+  <div>Caution content</div>
+</ix-blind>
+<ix-blind
+  icon="bulb"
+  variant="information"
+  label="Information"
+  sublabel="sublabel"
+>
+  <div>Information content</div>
+</ix-blind>
+<ix-blind icon="bulb" variant="accent" label="Accent" sublabel="sublabel">
+  <div>Accent content</div>
+</ix-blind>
+<ix-blind icon="bulb" variant="critical" label="Critical" sublabel="sublabel">
+  <div>Critical content</div>
 </ix-blind>
 <ix-blind icon="bulb" variant="success" label="Success" sublabel="sublabel">
   <div>Success content</div>
@@ -479,23 +530,34 @@ export default class Blind {}
 
 #### blind-variants.html
 ```html
-<ix-blind icon="bulb" label="Example" sublabel="sublabel">
+<ix-blind outline="false" icon="bulb" label="Filled" sublabel="sublabel">
   <div>Filled content</div>
 </ix-blind>
-<ix-blind variant="outline" icon="bulb" label="Outline" sublabel="sublabel">
+<ix-blind icon="bulb" label="Outline" sublabel="sublabel">
   <div>Outline content</div>
 </ix-blind>
-<ix-blind icon="bulb" variant="alarm" label="Alarm" sublabel="sublabel">
-  <div>Alarm content</div>
-</ix-blind>
-<ix-blind icon="bulb" variant="critical" label="Critical" sublabel="sublabel">
-  <div>Critical content</div>
+<ix-blind icon="bulb" variant="danger" label="Danger" sublabel="sublabel">
+  <div>Danger content</div>
 </ix-blind>
 <ix-blind icon="bulb" variant="warning" label="Warning" sublabel="sublabel">
   <div>Warning content</div>
 </ix-blind>
-<ix-blind icon="bulb" variant="info" label="Info" sublabel="sublabel">
-  <div>Info content</div>
+<ix-blind icon="bulb" variant="caution" label="Caution" sublabel="sublabel">
+  <div>Caution content</div>
+</ix-blind>
+<ix-blind
+  icon="bulb"
+  variant="information"
+  label="Information"
+  sublabel="sublabel"
+>
+  <div>Information content</div>
+</ix-blind>
+<ix-blind icon="bulb" variant="accent" label="Accent" sublabel="sublabel">
+  <div>Accent content</div>
+</ix-blind>
+<ix-blind icon="bulb" variant="critical" label="Critical" sublabel="sublabel">
+  <div>Critical content</div>
 </ix-blind>
 <ix-blind icon="bulb" variant="success" label="Success" sublabel="sublabel">
   <div>Success content</div>
@@ -524,27 +586,14 @@ import { IxBlind } from '@siemens/ix-vue';
 <style scoped src="./blind-variants.css"></style>
 
 <template>
-  <IxBlind :icon="iconBulb" label="Example" sublabel="sublabel">
+  <IxBlind :outline="false" :icon="iconBulb" label="Filled" sublabel="sublabel">
     <div>Filled content</div>
   </IxBlind>
-  <IxBlind
-    variant="outline"
-    :icon="iconBulb"
-    label="Outline"
-    sublabel="sublabel"
-  >
+  <IxBlind :icon="iconBulb" label="Outline" sublabel="sublabel">
     <div>Outline content</div>
   </IxBlind>
-  <IxBlind :icon="iconBulb" variant="alarm" label="Alarm" sublabel="sublabel">
-    <div>Alarm content</div>
-  </IxBlind>
-  <IxBlind
-    :icon="iconBulb"
-    variant="critical"
-    label="Critical"
-    sublabel="sublabel"
-  >
-    <div>Critical content</div>
+  <IxBlind :icon="iconBulb" variant="danger" label="Danger" sublabel="sublabel">
+    <div>Danger content</div>
   </IxBlind>
   <IxBlind
     :icon="iconBulb"
@@ -554,8 +603,32 @@ import { IxBlind } from '@siemens/ix-vue';
   >
     <div>Warning content</div>
   </IxBlind>
-  <IxBlind :icon="iconBulb" variant="info" label="Info" sublabel="sublabel">
-    <div>Info content</div>
+  <IxBlind
+    :icon="iconBulb"
+    variant="caution"
+    label="Caution"
+    sublabel="sublabel"
+  >
+    <div>Caution content</div>
+  </IxBlind>
+  <IxBlind
+    :icon="iconBulb"
+    variant="information"
+    label="Information"
+    sublabel="sublabel"
+  >
+    <div>Information content</div>
+  </IxBlind>
+  <IxBlind :icon="iconBulb" variant="accent" label="Accent" sublabel="sublabel">
+    <div>Accent content</div>
+  </IxBlind>
+  <IxBlind
+    :icon="iconBulb"
+    variant="critical"
+    label="Critical"
+    sublabel="sublabel"
+  >
+    <div>Critical content</div>
   </IxBlind>
   <IxBlind
     :icon="iconBulb"
@@ -587,13 +660,14 @@ ix-blind {
 
 ### Properties
 
-| Name | Description | Attribute | Type | Default |
-| --- | --- | --- | --- | --- |
-| collapsed | { "Collapsed state" } | collapsed | boolean | false |
-| icon | { "Optional icon to be displayed next to the header label" } | icon | string \| undefined |  |
-| label | { "Label of blind" } | label | string \| undefined |  |
-| sublabel | { "Secondary label inside blind header" } | sublabel | string \| undefined |  |
-| variant | { "Blind variant" } | variant | "alarm" \| "critical" \| "filled" \| "info" \| "neutral" \| "outline" \| "primary" \| "success" \| "warning" | 'filled' |
+| Name | Description | Attribute | Type | Default | Notes |
+| --- | --- | --- | --- | --- | --- |
+| collapsed | { "Collapsed state" } | collapsed | boolean | false |  |
+| icon | { "Optional icon to be displayed next to the header label" } | icon | string \| undefined |  |  |
+| label | { "Label of blind" } | label | string \| undefined |  |  |
+| outline | { "Show the blind with outline chrome.\n\nWhen omitted, outline chrome is used (`true`).\n\nWhen `false`, uses a filled surface.\n\nA non-base status shows a left status strip." } | outline | boolean \| undefined |  | Breaking change in v6.0.0: Replaces the outline and filled values of variant |
+| sublabel | { "Secondary label inside blind header" } | sublabel | string \| undefined |  |  |
+| variant | { "Blind status variant" } | variant | "accent" \| "base" \| "caution" \| "critical" \| "danger" \| "information" \| "neutral" \| "success" \| "warning" | 'base' | Breaking change in v6.0.0: Status variant values renamed (default is now base), outline and filled replaced by the outline property |
 
 ### Events
 
@@ -605,6 +679,6 @@ ix-blind {
 
 | Name | Description |
 | --- | --- |
-| custom-header | { "Custom content inside blind header." } |
-| default | { "Expandable blind content." } |
-| header-actions | { "Actions displayed at the end of the header." } |
+| default | { "Content shown when the blind is expanded." } |
+| custom-header | { "Custom header content replacing the label and icon." } |
+| header-actions | { "Additional actions displayed in the header." } |

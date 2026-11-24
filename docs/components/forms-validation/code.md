@@ -206,7 +206,7 @@ export default function FormValidation() {
           {...register('room-size')}
         >
           <IxIcon slot="start" name={iconBezierCurve} size="16"></IxIcon>
-          <IxTypography slot="end" color="weak" className="padding-right">
+          <IxTypography slot="end" textColor="disabled" className="padding-right">
             m<sup>2</sup>
           </IxTypography>
         </IxNumberInput>
@@ -553,7 +553,7 @@ export default class FormValidation implements OnInit, OnDestroy {
 
     <ix-number-input label="Preferred room size" formControlName="room-size" class="ix-info" infoText="You can adjust the room size">
       <ix-icon slot="start" name="bezier-curve" size="16"></ix-icon>
-      <ix-typography slot="end" color="weak" class="padding-right">
+      <ix-typography slot="end" text-color="disabled" class="padding-right">
         m<sup>2</sup>
       </ix-typography>
     </ix-number-input>
@@ -598,7 +598,7 @@ export default class FormValidation implements OnInit, OnDestroy {
     </ix-date-input>
 
     <ix-textarea
-      max-length="100"
+      maxLength="100"
       formControlName="comment"
       label="Comment"
       data-colspan="2"
@@ -898,7 +898,7 @@ export default class FormValidation implements OnInit, OnDestroy {
       infoText="You can adjust the room size"
     >
       <ix-icon slot="start" name="bezier-curve" size="16"></ix-icon>
-      <ix-typography slot="end" color="weak" class="padding-right">
+      <ix-typography slot="end" text-color="disabled" class="padding-right">
         m<sup>2</sup>
       </ix-typography>
     </ix-number-input>
@@ -947,7 +947,7 @@ export default class FormValidation implements OnInit, OnDestroy {
     </ix-date-input>
 
     <ix-textarea
-      max-length="100"
+      maxLength="100"
       formControlName="comment"
       label="Comment"
       data-colspan="2"
@@ -1170,17 +1170,17 @@ export default {
       <IxNumberInput
         label="Preferred room size"
         className="ix-info"
-        infoText="You can adjust the room size"
+        info-text="You can adjust the room size"
       >
         <IxIcon slot="start" :name="iconBezierCurve" size="16"></IxIcon>
-        <IxTypography slot="end" color="weak" className="padding-right">
+        <IxTypography slot="end" text-color="disabled" class="padding-right">
           m<sup>2</sup>
         </IxTypography>
       </IxNumberInput>
 
       <IxSelect
         v-model="travelOption"
-        allowClear
+        allow-clear
         label="Select your travel option"
         data-colspan="2"
       >
@@ -1213,7 +1213,7 @@ export default {
         :class="{ 'ix-warning': warningLimitB }"
         warning-text="A threshold greater than 5 is not recommended"
         v-model="limitB"
-        showStepperButtons
+        show-stepper-buttons
       ></IxNumberInput>
 
       <IxDateInput
@@ -1247,7 +1247,7 @@ export default {
       ></IxInput>
 
       
-      <IxCustomField label="Upload" invalidText="You need to upload a file">
+      <IxCustomField label="Upload" invalid-text="You need to upload a file">
         <IxInput
           type="text"
           readonly
@@ -1269,8 +1269,8 @@ export default {
       <IxInput
         type="password"
         label="PIN"
-        helperText="Only numbers between 1 and 4 is allowed"
-        allowedCharactersPattern="[1-4]"
+        helper-text="Only numbers between 1 and 4 is allowed"
+        allowed-characters-pattern="[1-4]"
         :max-length="4"
         v-model="pin"
         :class="{ 'ix-invalid': v$.pin.$invalid }"
@@ -1280,8 +1280,8 @@ export default {
         required
         type="password"
         label="PIN"
-        helperText="Confirm password"
-        allowedCharactersPattern="[1-4]"
+        helper-text="Confirm password"
+        allowed-characters-pattern="[1-4]"
         :max-length="4"
         v-model="pinConfirm"
         :class="{ 'ix-invalid': v$.pinConfirm.sameAsPin.$invalid }"
@@ -1458,7 +1458,7 @@ export default function FormValidation() {
           {...register('room-size')}
         >
           <IxIcon slot="start" name={iconBezierCurve} size="16"></IxIcon>
-          <IxTypography slot="end" color="weak" className="padding-right">
+          <IxTypography slot="end" textColor="disabled" className="padding-right">
             m<sup>2</sup>
           </IxTypography>
         </IxNumberInput>
@@ -1805,7 +1805,7 @@ export default class FormValidation implements OnInit, OnDestroy {
 
     <ix-number-input label="Preferred room size" formControlName="room-size" class="ix-info" infoText="You can adjust the room size">
       <ix-icon slot="start" name="bezier-curve" size="16"></ix-icon>
-      <ix-typography slot="end" color="weak" class="padding-right">
+      <ix-typography slot="end" text-color="disabled" class="padding-right">
         m<sup>2</sup>
       </ix-typography>
     </ix-number-input>
@@ -1850,7 +1850,7 @@ export default class FormValidation implements OnInit, OnDestroy {
     </ix-date-input>
 
     <ix-textarea
-      max-length="100"
+      maxLength="100"
       formControlName="comment"
       label="Comment"
       data-colspan="2"
@@ -2150,7 +2150,7 @@ export default class FormValidation implements OnInit, OnDestroy {
       infoText="You can adjust the room size"
     >
       <ix-icon slot="start" name="bezier-curve" size="16"></ix-icon>
-      <ix-typography slot="end" color="weak" class="padding-right">
+      <ix-typography slot="end" text-color="disabled" class="padding-right">
         m<sup>2</sup>
       </ix-typography>
     </ix-number-input>
@@ -2199,7 +2199,7 @@ export default class FormValidation implements OnInit, OnDestroy {
     </ix-date-input>
 
     <ix-textarea
-      max-length="100"
+      maxLength="100"
       formControlName="comment"
       label="Comment"
       data-colspan="2"
@@ -2422,17 +2422,17 @@ export default {
       <IxNumberInput
         label="Preferred room size"
         className="ix-info"
-        infoText="You can adjust the room size"
+        info-text="You can adjust the room size"
       >
         <IxIcon slot="start" :name="iconBezierCurve" size="16"></IxIcon>
-        <IxTypography slot="end" color="weak" className="padding-right">
+        <IxTypography slot="end" text-color="disabled" class="padding-right">
           m<sup>2</sup>
         </IxTypography>
       </IxNumberInput>
 
       <IxSelect
         v-model="travelOption"
-        allowClear
+        allow-clear
         label="Select your travel option"
         data-colspan="2"
       >
@@ -2465,7 +2465,7 @@ export default {
         :class="{ 'ix-warning': warningLimitB }"
         warning-text="A threshold greater than 5 is not recommended"
         v-model="limitB"
-        showStepperButtons
+        show-stepper-buttons
       ></IxNumberInput>
 
       <IxDateInput
@@ -2499,7 +2499,7 @@ export default {
       ></IxInput>
 
       
-      <IxCustomField label="Upload" invalidText="You need to upload a file">
+      <IxCustomField label="Upload" invalid-text="You need to upload a file">
         <IxInput
           type="text"
           readonly
@@ -2521,8 +2521,8 @@ export default {
       <IxInput
         type="password"
         label="PIN"
-        helperText="Only numbers between 1 and 4 is allowed"
-        allowedCharactersPattern="[1-4]"
+        helper-text="Only numbers between 1 and 4 is allowed"
+        allowed-characters-pattern="[1-4]"
         :max-length="4"
         v-model="pin"
         :class="{ 'ix-invalid': v$.pin.$invalid }"
@@ -2532,8 +2532,8 @@ export default {
         required
         type="password"
         label="PIN"
-        helperText="Confirm password"
-        allowedCharactersPattern="[1-4]"
+        helper-text="Confirm password"
+        allowed-characters-pattern="[1-4]"
         :max-length="4"
         v-model="pinConfirm"
         :class="{ 'ix-invalid': v$.pinConfirm.sameAsPin.$invalid }"
@@ -2710,7 +2710,7 @@ export default function FormValidation() {
           {...register('room-size')}
         >
           <IxIcon slot="start" name={iconBezierCurve} size="16"></IxIcon>
-          <IxTypography slot="end" color="weak" className="padding-right">
+          <IxTypography slot="end" textColor="disabled" className="padding-right">
             m<sup>2</sup>
           </IxTypography>
         </IxNumberInput>
@@ -3057,7 +3057,7 @@ export default class FormValidation implements OnInit, OnDestroy {
 
     <ix-number-input label="Preferred room size" formControlName="room-size" class="ix-info" infoText="You can adjust the room size">
       <ix-icon slot="start" name="bezier-curve" size="16"></ix-icon>
-      <ix-typography slot="end" color="weak" class="padding-right">
+      <ix-typography slot="end" text-color="disabled" class="padding-right">
         m<sup>2</sup>
       </ix-typography>
     </ix-number-input>
@@ -3102,7 +3102,7 @@ export default class FormValidation implements OnInit, OnDestroy {
     </ix-date-input>
 
     <ix-textarea
-      max-length="100"
+      maxLength="100"
       formControlName="comment"
       label="Comment"
       data-colspan="2"
@@ -3402,7 +3402,7 @@ export default class FormValidation implements OnInit, OnDestroy {
       infoText="You can adjust the room size"
     >
       <ix-icon slot="start" name="bezier-curve" size="16"></ix-icon>
-      <ix-typography slot="end" color="weak" class="padding-right">
+      <ix-typography slot="end" text-color="disabled" class="padding-right">
         m<sup>2</sup>
       </ix-typography>
     </ix-number-input>
@@ -3451,7 +3451,7 @@ export default class FormValidation implements OnInit, OnDestroy {
     </ix-date-input>
 
     <ix-textarea
-      max-length="100"
+      maxLength="100"
       formControlName="comment"
       label="Comment"
       data-colspan="2"
@@ -3674,17 +3674,17 @@ export default {
       <IxNumberInput
         label="Preferred room size"
         className="ix-info"
-        infoText="You can adjust the room size"
+        info-text="You can adjust the room size"
       >
         <IxIcon slot="start" :name="iconBezierCurve" size="16"></IxIcon>
-        <IxTypography slot="end" color="weak" className="padding-right">
+        <IxTypography slot="end" text-color="disabled" class="padding-right">
           m<sup>2</sup>
         </IxTypography>
       </IxNumberInput>
 
       <IxSelect
         v-model="travelOption"
-        allowClear
+        allow-clear
         label="Select your travel option"
         data-colspan="2"
       >
@@ -3717,7 +3717,7 @@ export default {
         :class="{ 'ix-warning': warningLimitB }"
         warning-text="A threshold greater than 5 is not recommended"
         v-model="limitB"
-        showStepperButtons
+        show-stepper-buttons
       ></IxNumberInput>
 
       <IxDateInput
@@ -3751,7 +3751,7 @@ export default {
       ></IxInput>
 
       
-      <IxCustomField label="Upload" invalidText="You need to upload a file">
+      <IxCustomField label="Upload" invalid-text="You need to upload a file">
         <IxInput
           type="text"
           readonly
@@ -3773,8 +3773,8 @@ export default {
       <IxInput
         type="password"
         label="PIN"
-        helperText="Only numbers between 1 and 4 is allowed"
-        allowedCharactersPattern="[1-4]"
+        helper-text="Only numbers between 1 and 4 is allowed"
+        allowed-characters-pattern="[1-4]"
         :max-length="4"
         v-model="pin"
         :class="{ 'ix-invalid': v$.pin.$invalid }"
@@ -3784,8 +3784,8 @@ export default {
         required
         type="password"
         label="PIN"
-        helperText="Confirm password"
-        allowedCharactersPattern="[1-4]"
+        helper-text="Confirm password"
+        allowed-characters-pattern="[1-4]"
         :max-length="4"
         v-model="pinConfirm"
         :class="{ 'ix-invalid': v$.pinConfirm.sameAsPin.$invalid }"

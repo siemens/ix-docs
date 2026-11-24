@@ -52,7 +52,7 @@ export default class ContentExample {}
 #### content.html
 ```html
 <ix-content>
-  <ix-content-header slot="header" header-title="My Content Page">
+  <ix-content-header slot="header" headerTitle="My Content Page">
   </ix-content-header>
   Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy
   eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam
@@ -83,7 +83,7 @@ export default class ContentExample {}
 #### content.html
 ```html
 <ix-content>
-  <ix-content-header slot="header" header-title="My Content Page">
+  <ix-content-header slot="header" headerTitle="My Content Page">
   </ix-content-header>
   Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy
   eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam
@@ -108,7 +108,7 @@ import { IxContent, IxContentHeader } from '@siemens/ix-vue';
   <IxContent>
     <IxContentHeader
       slot="header"
-      headerTitle="My Content Page"
+      header-title="My Content Page"
     ></IxContentHeader>
     Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy
     eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam
@@ -129,5 +129,5 @@ import { IxContent, IxContentHeader } from '@siemens/ix-vue';
 
 | Name | Description |
 | --- | --- |
-| default | { "Main page content." } |
-| header | { "Display content at the top of the content page" } |
+| default | { "Main content." } |
+| header | { "Display content at the top of the content page." } |

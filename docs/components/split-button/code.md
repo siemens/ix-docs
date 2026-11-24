@@ -305,4 +305,4 @@ import { IxSplitButton, IxDropdownItem } from '@siemens/ix-vue';
 
 | Name | Description |
 | --- | --- |
-| default | { "Dropdown items for the split button." } |
+| default | { "Dropdown content." } |

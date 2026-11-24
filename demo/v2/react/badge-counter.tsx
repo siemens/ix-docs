@@ -11,41 +11,41 @@ import './badge-counter.scoped.css';
 
 import { IxBadge } from '@siemens/ix-react';
 
-const CUSTOM_BACKGROUND = 'var(--theme-chart-11)';
-const CUSTOM_COLOR = 'var(--theme-color-inv-std-text)';
-const CUSTOM_OUTLINE_COLOR = 'var(--theme-chip-outline--color)';
+const CUSTOM_BACKGROUND = 'var(--si-sys-color-data-categorical-9)';
+const CUSTOM_COLOR = 'var(--si-sys-color-text-inverse)';
+const CUSTOM_OUTLINE_COLOR = 'var(--si-sys-color-text-primary)';
 
 export default () => {
   return (
     <div className="container">
-      <IxBadge type="counter" label="8" variant="primary"></IxBadge>
-      <IxBadge type="counter" label="8" variant="primary" outline></IxBadge>
+      <IxBadge type="counter" label="8" variant="accent"></IxBadge>
+      <IxBadge type="counter" label="8" variant="accent" outline></IxBadge>
       <IxBadge
         type="counter"
         label="8"
-        variant="primary"
+        variant="accent"
         enableAnimation
       ></IxBadge>
       <IxBadge
         type="counter"
         label="8"
-        variant="primary"
+        variant="accent"
         outline
         enableAnimation
       ></IxBadge>
 
-      <IxBadge type="counter" label="8" variant="alarm"></IxBadge>
-      <IxBadge type="counter" label="8" variant="alarm" outline></IxBadge>
+      <IxBadge type="counter" label="8" variant="danger"></IxBadge>
+      <IxBadge type="counter" label="8" variant="danger" outline></IxBadge>
       <IxBadge
         type="counter"
         label="8"
-        variant="alarm"
+        variant="danger"
         enableAnimation
       ></IxBadge>
       <IxBadge
         type="counter"
         label="8"
-        variant="alarm"
+        variant="danger"
         outline
         enableAnimation
       ></IxBadge>
@@ -82,18 +82,18 @@ export default () => {
         enableAnimation
       ></IxBadge>
 
-      <IxBadge type="counter" label="8" variant="info"></IxBadge>
-      <IxBadge type="counter" label="8" variant="info" outline></IxBadge>
+      <IxBadge type="counter" label="8" variant="information"></IxBadge>
+      <IxBadge type="counter" label="8" variant="information" outline></IxBadge>
       <IxBadge
         type="counter"
         label="8"
-        variant="info"
+        variant="information"
         enableAnimation
       ></IxBadge>
       <IxBadge
         type="counter"
         label="8"
-        variant="info"
+        variant="information"
         outline
         enableAnimation
       ></IxBadge>

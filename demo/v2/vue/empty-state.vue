@@ -15,7 +15,7 @@ import { IxEmptyState } from '@siemens/ix-vue';
 <template>
   <IxEmptyState
     header="No elements available"
-    subHeader="Create an element first"
+    description="Create an element first"
     :icon="iconAdd"
     action="Create element"
   ></IxEmptyState>

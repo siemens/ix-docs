@@ -4,6 +4,12 @@
 
 # HTML table - Code
 
+The default stylesheet includes the `.ix-table` and `.ix-table-striped` classes used by these examples. If you load the foundation and a theme separately instead, import the utility stylesheet once in your application:
+
+```css
+@import '@siemens/ix/css/utilities.css';
+```
+
 ## Basic
 
 ### React Examples

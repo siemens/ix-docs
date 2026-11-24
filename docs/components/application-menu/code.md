@@ -193,7 +193,7 @@ export default class MenuCategory {}
 
 #### menu-category.html
 ```html
-<ix-application force-breakpoint="md">
+<ix-application forceBreakpoint="md">
   <ix-menu>
     <ix-menu-item home icon="home">Home</ix-menu-item>
     <ix-menu-item icon="globe">Normal Tab</ix-menu-item>
@@ -231,7 +231,7 @@ export default class MenuCategory {}
 
 #### menu-category.html
 ```html
-<ix-application force-breakpoint="md">
+<ix-application forceBreakpoint="md">
   <ix-menu>
     <ix-menu-item home icon="home">Home</ix-menu-item>
     <ix-menu-item icon="globe">Normal Tab</ix-menu-item>
@@ -384,7 +384,7 @@ import { IxMenu, IxMenuItem } from '@siemens/ix-vue';
 
 | Name | Description |
 | --- | --- |
-| default | { "Settings overlay content." } |
+| default | { "Settings menu content." } |
 
 ## API for ix-menu
 
@@ -456,12 +456,12 @@ toggleSettings(show: boolean): Promise&lt;void&gt;;
 
 | Name | Description |
 | --- | --- |
-| bottom | { "Menu items displayed below the main navigation." } |
-| default | { "Main menu items and categories." } |
-| home | { "Home menu item." } |
-| ix-menu-about | { "About content displayed in the menu overlay." } |
-| ix-menu-avatar | { "Avatar displayed at the top of the menu." } |
-| ix-menu-settings | { "Settings content displayed in the menu overlay." } |
+| default | { "Menu items." } |
+| bottom | { "Menu items displayed at the bottom." } |
+| home | { "Menu item displayed in the home position." } |
+| ix-menu-about | { "About menu content." } |
+| ix-menu-avatar | { "Avatar displayed in the menu header." } |
+| ix-menu-settings | { "Settings menu content." } |
 
 ## API for ix-menu-item
 
@@ -474,7 +474,7 @@ toggleSettings(show: boolean): Promise&lt;void&gt;;
 | disableTooltip | { "Disable the tooltip for this menu item." } | disable-tooltip | boolean | false |
 | disabled | { "Disable tab and remove event handlers" } | disabled | boolean | false |
 | home | { "Move the Tab to a top position." } | home | boolean | false |
-| href | { "URL for the button link. When provided, the button will render as an anchor tag." } | href | string \| undefined |  |
+| href | { "URL for the button link. When provided, the button will render as an anchor tag.\n\nThe value is forwarded unchanged to the `href` of the native anchor. URL schemes such as\n\n`javascript:` or `data:` are not rejected. Do not bind untrusted input; validate destinations\n\nagainst an allowlist (for example `https:` and relative URLs)." } | href | string \| undefined |  |
 | icon | { "Name of the icon you want to display. Icon names can be resolved from the documentation [https://ix.siemens.io/docs/icon-library/icons](https://ix.siemens.io/docs/icon-library/icons)" } | icon | string \| undefined |  |
 | label | { "Label of the menu item. Will also be used as tooltip text" } | label | string \| undefined |  |
 | notifications | { "Show notification count on tab" } | notifications | number \| undefined |  |
@@ -486,7 +486,7 @@ toggleSettings(show: boolean): Promise&lt;void&gt;;
 
 | Name | Description |
 | --- | --- |
-| default | { "Custom menu item label." } |
+| default | { "Menu item label." } |
 
 ## API for ix-menu-category
 
@@ -504,4 +504,4 @@ toggleSettings(show: boolean): Promise&lt;void&gt;;
 
 | Name | Description |
 | --- | --- |
-| default | { "Menu items in the category." } |
+| default | { "Menu category items." } |

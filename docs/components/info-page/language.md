@@ -1,0 +1,9 @@
+# Info pages - Writing
+
+> Writing guide for info pages
+
+import ErrorPagesContent from '@site/docs/guidelines/language/messaging/error-pages.md';
+
+# Info pages - Writing
+
+<ErrorPagesContent />

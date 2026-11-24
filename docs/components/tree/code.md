@@ -274,6 +274,17 @@ type TreeData = {
   icon: string;
 };
 
+function isTreeData(data: unknown): data is TreeData {
+  return (
+    typeof data === 'object' &&
+    data !== null &&
+    'name' in data &&
+    typeof data.name === 'string' &&
+    'icon' in data &&
+    typeof data.icon === 'string'
+  );
+}
+
 export default () => {
   const [context, setContext] = useState<TreeContext>();
   const [model] = useState<TreeModel<TreeData>>({
@@ -337,7 +348,11 @@ export default () => {
         height: '40rem',
       }}
     >
-      <IxButton variant="tertiary" onClick={expandAndSelect} style={{ marginBottom: '2rem' }}>
+      <IxButton
+        variant="tertiary"
+        onClick={expandAndSelect}
+        style={{ marginBottom: '2rem' }}
+      >
         Expand Tree
       </IxButton>
       <IxTree
@@ -348,23 +363,25 @@ export default () => {
         onContextChange={({ detail }) => {
           setContext(detail);
         }}
-        renderItem={(data: TreeData) => (
-          <div
-            style={{
-              display: 'flex',
-              alignItems: 'center',
-            }}
-          >
-            <IxIcon
-              name={data.icon}
-              size="16"
+        renderItem={(data) =>
+          isTreeData(data) ? (
+            <div
               style={{
-                marginInlineEnd: '0.5rem',
+                display: 'flex',
+                alignItems: 'center',
               }}
-            />
-            {data.name}
-          </div>
-        )}
+            >
+              <IxIcon
+                name={data.icon}
+                size="16"
+                style={{
+                  marginInlineEnd: '0.5rem',
+                }}
+              />
+              {data.name}
+            </div>
+          ) : null
+        }
       ></IxTree>
     </div>
   );
@@ -688,7 +705,7 @@ onMounted(() => {
 | Name | Description | Attribute | Type | Default |
 | --- | --- | --- | --- | --- |
 | context | { "Selection and collapsed state management" } |  | { [x: string]: TreeItemContext; } | {} |
-| model | { "Tree model" } |  | any | {} |
+| model | { "Tree model\n\nThe model is processed recursively and must be acyclic. Bound the size of untrusted or\n\nuser-controlled models to keep the page responsive. Item IDs are used in CSS selectors; use\n\nsimple, application-controlled IDs (letters, digits, `-`, `_`)." } |  | any | {} |
 | renderItem | { "Render function of tree items" } |  | ( (index: number, data: T, dataList: T[], context: TreeContext, update: (callback: UpdateCallback) => void) => HTMLElement) \| undefined |  |
 | root | { "Initial root element will not be rendered" } | root | string | 'root' |
 | toggleOnItemClick | { "Enable to toggle items by click on the item" } | toggle-on-item-click | boolean \| undefined |  |
@@ -732,9 +749,11 @@ refreshTree(): Promise&lt;void&gt;;
 
 | Name | Description | Attribute | Type | Default |
 | --- | --- | --- | --- | --- |
-| ariaLabelChevronIcon | { "ARIA label for the chevron icon" } | aria-label-chevron-icon | string \| undefined |  |
+| ariaLabelChevronIcon | { "ARIA label for the expand/collapse button" } | aria-label-chevron-icon | string \| undefined |  |
+| ariaLabelTreeCollapsed | { "ARIA label for the expand control when the tree item is collapsed." } | aria-label-tree-collapsed | string | 'Expand tree item' |
+| ariaLabelTreeExpanded | { "ARIA label for the collapse control when the tree item is expanded." } | aria-label-tree-expanded | string | 'Collapse tree item' |
 | context | { "Context" } |  | TreeItemContext \| undefined |  |
-| disabled | { "Disable tree item" } | disabled | boolean | false |
+| disabled | { "Disable selection and expansion while keeping the tree item focusable." } | disabled | boolean | false |
 | hasChildren | { "Has tree item children" } | has-children | boolean | false |
 | text | { "Text" } | text | string \| undefined |  |
 
@@ -749,4 +768,4 @@ refreshTree(): Promise&lt;void&gt;;
 
 | Name | Description |
 | --- | --- |
-| default | { "Tree item content and nested items." } |
+| default | { "Tree item content." } |

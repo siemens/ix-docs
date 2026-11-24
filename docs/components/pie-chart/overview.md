@@ -70,7 +70,7 @@ export default function EchartsPie() {
         data: data,
         label: {
           show: true,
-          color: getComputedCSSProperty('color-neutral'),
+          color: getComputedCSSProperty('--si-sys-color-background-neutral'),
         },
         emphasis: {
           itemStyle: {
@@ -157,7 +157,7 @@ export default class EchartsPie implements OnDestroy, OnInit {
           data: this.data,
           label: {
             show: true,
-            color: getComputedCSSProperty('color-neutral'),
+            color: getComputedCSSProperty('--si-sys-color-background-neutral'),
           },
           emphasis: {
             itemStyle: {
@@ -262,7 +262,7 @@ export default class EchartsPie implements OnDestroy, OnInit {
           data: this.data,
           label: {
             show: true,
-            color: getComputedCSSProperty('color-neutral'),
+            color: getComputedCSSProperty('--si-sys-color-background-neutral'),
           },
           emphasis: {
             itemStyle: {
@@ -362,7 +362,7 @@ function getOptions(): EChartsOption {
         data: data,
         label: {
           show: true,
-          color: getComputedCSSProperty('color-neutral'),
+          color: getComputedCSSProperty('--si-sys-color-background-neutral'),
         },
         emphasis: {
           itemStyle: {
@@ -471,7 +471,7 @@ export default function EchartsCircle() {
         radius: ['60%', '90%'],
         label: {
           show: true,
-          color: getComputedCSSProperty('color-neutral'),
+          color: getComputedCSSProperty('--si-sys-color-background-neutral'),
         },
         emphasis: {
           label: {
@@ -560,7 +560,7 @@ export default class EchartsCircle implements OnDestroy, OnInit {
           radius: ['60%', '90%'],
           label: {
             show: true,
-            color: getComputedCSSProperty('color-neutral'),
+            color: getComputedCSSProperty('--si-sys-color-background-neutral'),
           },
           emphasis: {
             label: {
@@ -667,7 +667,7 @@ export default class EchartsCircle implements OnDestroy, OnInit {
           radius: ['60%', '90%'],
           label: {
             show: true,
-            color: getComputedCSSProperty('color-neutral'),
+            color: getComputedCSSProperty('--si-sys-color-background-neutral'),
           },
           emphasis: {
             label: {
@@ -769,7 +769,7 @@ function getOptions(): EChartsOption {
         radius: ['60%', '90%'],
         label: {
           show: true,
-          color: getComputedCSSProperty('color-neutral'),
+          color: getComputedCSSProperty('--si-sys-color-background-neutral'),
         },
         emphasis: {
           label: {

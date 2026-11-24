@@ -370,7 +370,7 @@ export default class SelectValidation {}
   <ix-select
     label='Framework options'
     name='framework-option'
-    info-text='We will show examples based on your selection.'
+    infoText='We will show examples based on your selection.'
     class='ix-info'
   >
     <ix-select-item value='angular' label='Angular'></ix-select-item>
@@ -382,7 +382,7 @@ export default class SelectValidation {}
   <ix-select
     label='Framework options'
     name='framework-option'
-    warning-text='Selected Framework is partly supported.'
+    warningText='Selected Framework is partly supported.'
     class='ix-warning'
     value='blazor'
   >
@@ -394,7 +394,7 @@ export default class SelectValidation {}
   <ix-select
     label='Framework options'
     name='framework-option'
-    valid-text='Selected Framework is fully supported.'
+    validText='Selected Framework is fully supported.'
     class='ix-valid'
     value='angular'
   >
@@ -407,7 +407,7 @@ export default class SelectValidation {}
   <ix-select
     label='Framework options'
     name='framework-option'
-    invalid-text='Selected Framework is not supported.'
+    invalidText='Selected Framework is not supported.'
     class='ix-invalid'
     value='svelte'
   >
@@ -442,7 +442,7 @@ export default class SelectValidation {}
   <ix-select
     label="Framework options"
     name="framework-option"
-    info-text="We will show examples based on your selection."
+    infoText="We will show examples based on your selection."
     class="ix-info"
   >
     <ix-select-item value="angular" label="Angular"></ix-select-item>
@@ -454,7 +454,7 @@ export default class SelectValidation {}
   <ix-select
     label="Framework options"
     name="framework-option"
-    warning-text="Selected Framework is partly supported."
+    warningText="Selected Framework is partly supported."
     class="ix-warning"
     value="blazor"
   >
@@ -466,7 +466,7 @@ export default class SelectValidation {}
   <ix-select
     label="Framework options"
     name="framework-option"
-    valid-text="Selected Framework is fully supported."
+    validText="Selected Framework is fully supported."
     class="ix-valid"
     value="angular"
   >
@@ -479,7 +479,7 @@ export default class SelectValidation {}
   <ix-select
     label="Framework options"
     name="framework-option"
-    invalid-text="Selected Framework is not supported."
+    invalidText="Selected Framework is not supported."
     class="ix-invalid"
     value="svelte"
   >
@@ -561,8 +561,8 @@ import { IxSelect, IxSelectItem } from '@siemens/ix-vue';
 | ariaLabelClearIconButton | { "ARIA label for the clear icon button\n\nWill be set as aria-label on the nested HTML button element" } | aria-label-clear-icon-button | string \| undefined | 'Clear selection' |
 | collapseMultipleSelection | { "Show \"all\" chip when all items are selected in multiple mode" } | collapse-multiple-selection | boolean | false |
 | disabled | { "If true the select will be in disabled state" } | disabled | boolean | false |
-| dropdownMaxWidth | { "The maximum width of the dropdown element with value and unit (e.g. \"200px\" or \"12.5rem\").\n\nBy default the maximum width of the dropdown element is set to 100%." } | dropdown-max-width | string \| undefined |  |
-| dropdownWidth | { "The width of the dropdown element with value and unit (e.g. \"200px\" or \"12.5rem\")." } | dropdown-width | string \| undefined |  |
+| dropdownMaxWidth | { "The maximum width of the dropdown element with value and unit (e.g. \"200px\").\n\nBy default the maximum width of the dropdown element is set to 100%." } | dropdown-max-width | string \| undefined |  |
+| dropdownWidth | { "The width of the dropdown element with value and unit (e.g. \"200px\")." } | dropdown-width | string \| undefined |  |
 | editable | { "Select is extendable" } | editable | boolean | false |
 | enableTopLayer | { "Enable Popover API rendering for dropdown." } | enable-top-layer | boolean | false |
 | helperText | { "Helper text for the select component" } | helper-text | string \| undefined |  |

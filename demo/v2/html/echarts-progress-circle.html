@@ -8,14 +8,18 @@ LICENSE file in the root directory of this source tree.
 -->
 
 <!DOCTYPE html>
-<html lang="en" data-ix-theme="classic" data-ix-color-schema="system">
+<html lang="en" data-ix-theme="community" data-ix-color-schema="system">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>ECharts progress circle example</title>
     <link rel="stylesheet" href="./echarts-progress-circle.css" />
     <!-- External resources -->
-    <script src="https://cdn.jsdelivr.net/npm/echarts@5.4.1/dist/echarts.min.js"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/echarts@5.4.1/dist/echarts.min.js"
+      integrity="sha384-lhqcLj8+hkrVGXhwTmMfhPx3TH5lnJCJLfinrfEzp6d2tHTSiwCr6D1e/fMqMaa9"
+      crossorigin="anonymous"
+    ></script>
     <!-- External resources -->
   </head>
   <body>
@@ -53,7 +57,14 @@ LICENSE file in the root directory of this source tree.
                 show: true,
                 lineStyle: {
                   width: 15,
-                  color: [[1, getComputedCSSProperty('color-neutral-40')]],
+                  color: [
+                    [
+                      1,
+                      getComputedCSSProperty(
+                        '--si-sys-color-data-sequential-deep-blue-4'
+                      ),
+                    ],
+                  ],
                 },
               },
               axisTick: {
@@ -74,7 +85,9 @@ LICENSE file in the root directory of this source tree.
                 width: 35,
                 itemStyle: {
                   borderMiterLimit: 16,
-                  color: getComputedCSSProperty('color-success'),
+                  color: getComputedCSSProperty(
+                    '--si-sys-color-background-success'
+                  ),
                 },
               },
               pointer: {
@@ -87,16 +100,22 @@ LICENSE file in the root directory of this source tree.
                     offsetCenter: [0, 0],
                     fontSize: '2rem',
                     fontWeight: 'normal',
-                    color: getComputedCSSProperty('color-soft-text'),
+                    color: getComputedCSSProperty(
+                      '--si-sys-color-text-secondary'
+                    ),
                     rich: {
                       valueStyle: {
                         fontSize: '2rem',
-                        color: getComputedCSSProperty('color-soft-text'),
+                        color: getComputedCSSProperty(
+                          '--si-sys-color-text-secondary'
+                        ),
                         fontWeight: 'bold',
                       },
                       textStyle: {
                         fontSize: '1.5rem',
-                        color: getComputedCSSProperty('color-soft-text'),
+                        color: getComputedCSSProperty(
+                          '--si-sys-color-text-secondary'
+                        ),
                       },
                     },
                     formatter: `{valueStyle|{value}}/100\n{textStyle|completed}`,

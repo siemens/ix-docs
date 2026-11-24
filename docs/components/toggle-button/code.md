@@ -2427,17 +2427,17 @@ ix-icon-toggle-button {
 
 ### Properties
 
-| Name | Description | Attribute | Type | Default |
-| --- | --- | --- | --- | --- |
-| disabled | { "Disable the button" } | disabled | boolean | false |
-| ghost | { "Button with no background or outline" } | ghost | boolean | false |
-| icon | { "Icon name" } | icon | string \| undefined |  |
-| loading | { "Loading button" } | loading | boolean | false |
-| outline | { "Outline button" } | outline | boolean | false |
-| oval | { "Button in oval shape" } | oval | boolean | false |
-| pressed | { "Show button as pressed" } | pressed | boolean | false |
-| size | { "Size of icon in button" } | size | "12" \| "16" \| "24" | '24' |
-| variant | { "Button variant." } | variant | "danger-primary" \| "danger-secondary" \| "danger-tertiary" \| "primary" \| "secondary" \| "subtle-primary" \| "subtle-secondary" \| "subtle-tertiary" \| "tertiary" | 'subtle-primary' |
+| Name | Description | Attribute | Type | Default | Notes |
+| --- | --- | --- | --- | --- | --- |
+| disabled | { "Disable the button" } | disabled | boolean | false |  |
+| ghost | { "Button with no background or outline" } | ghost | boolean | false |  |
+| icon | { "Icon name" } | icon | string \| undefined |  |  |
+| loading | { "Loading button" } | loading | boolean | false |  |
+| outline | { "Outline button" } | outline | boolean | false |  |
+| oval | { "Button in oval shape" } | oval | boolean | false |  |
+| pressed | { "Show button as pressed" } | pressed | boolean | false |  |
+| size | { "Size of icon in button.\n\n`12` and `16` shrink the control. `20` and `24` keep a 32×32 control.\n\nDefaults to `20`." } | size | "12" \| "16" \| "20" \| "24" | '20' | Breaking change in v6.0.0: Default changed to 20 |
+| variant | { "Button variant." } | variant | "danger-primary" \| "danger-secondary" \| "danger-tertiary" \| "primary" \| "secondary" \| "subtle-primary" \| "subtle-secondary" \| "subtle-tertiary" \| "tertiary" | 'subtle-primary' |  |
 
 ### Events
 

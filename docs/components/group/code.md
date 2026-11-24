@@ -14,7 +14,7 @@ import { IxGroup, IxGroupItem } from '@siemens/ix-react';
 
 export default () => {
   return (
-    <IxGroup header="Header text" sub-header="Subheader text">
+    <IxGroup header="Header text" subHeader="Subheader text">
       <IxGroupItem text="Example text 1"></IxGroupItem>
       <IxGroupItem text="Example text 2"></IxGroupItem>
       <IxGroupItem text="Example text 3"></IxGroupItem>
@@ -33,7 +33,7 @@ import { Component } from '@angular/core';
   standalone: false,
   selector: 'app-example',
   template: `
-    <ix-group header="Header text" sub-header="Subheader text">
+    <ix-group header="Header text" subHeader="Subheader text">
       <ix-group-item text="Example text 1"></ix-group-item>
       <ix-group-item text="Example text 2"></ix-group-item>
       <ix-group-item text="Example text 3"></ix-group-item>
@@ -54,7 +54,7 @@ import { IxGroup, IxGroupItem } from '@siemens/ix-angular/standalone';
   selector: 'app-example',
   imports: [IxGroup, IxGroupItem],
   template: `
-    <ix-group header="Header text" sub-header="Subheader text">
+    <ix-group header="Header text" subHeader="Subheader text">
       <ix-group-item text="Example text 1"></ix-group-item>
       <ix-group-item text="Example text 2"></ix-group-item>
       <ix-group-item text="Example text 3"></ix-group-item>
@@ -116,8 +116,8 @@ import { Component } from '@angular/core';
   template: `
     <ix-group
       header="Header text"
-      sub-header="Subheader text"
-      suppress-header-selection
+      subHeader="Subheader text"
+      suppressHeaderSelection
     >
       <ix-group-item text="Example text 1"></ix-group-item>
       <ix-group-item text="Example text 2"></ix-group-item>
@@ -141,8 +141,8 @@ import { IxGroup, IxGroupItem } from '@siemens/ix-angular/standalone';
   template: `
     <ix-group
       header="Header text"
-      sub-header="Subheader text"
-      suppress-header-selection
+      subHeader="Subheader text"
+      suppressHeaderSelection
     >
       <ix-group-item text="Example text 1"></ix-group-item>
       <ix-group-item text="Example text 2"></ix-group-item>
@@ -164,8 +164,8 @@ import { IxGroup, IxGroupItem } from '@siemens/ix-vue';
 <template>
   <IxGroup
     header="Header text"
-    subHeader="Subheader text"
-    suppressHeaderSelection
+    sub-header="Subheader text"
+    suppress-header-selection
   >
     <IxGroupItem text="Example text 1"></IxGroupItem>
     <IxGroupItem text="Example text 2"></IxGroupItem>
@@ -205,7 +205,7 @@ import { Component } from '@angular/core';
   standalone: false,
   selector: 'app-example',
   template: `
-    <ix-group header="Header text" sub-header="Subheader text">
+    <ix-group header="Header text" subHeader="Subheader text">
       <ix-group-item text="Example text 1"></ix-group-item>
       <ix-group-item text="Example text 2"></ix-group-item>
       <ix-group-item><ix-button>Test</ix-button></ix-group-item>
@@ -226,7 +226,7 @@ import { IxGroup, IxGroupItem, IxButton } from '@siemens/ix-angular/standalone';
   selector: 'app-example',
   imports: [IxGroup, IxGroupItem, IxButton],
   template: `
-    <ix-group header="Header text" sub-header="Subheader text">
+    <ix-group header="Header text" subHeader="Subheader text">
       <ix-group-item text="Example text 1"></ix-group-item>
       <ix-group-item text="Example text 2"></ix-group-item>
       <ix-group-item><ix-button>Test</ix-button></ix-group-item>
@@ -245,7 +245,7 @@ import { IxButton, IxGroup, IxGroupItem } from '@siemens/ix-vue';
 </script>
 
 <template>
-  <IxGroup header="Header text" subHeader="Subheader text">
+  <IxGroup header="Header text" sub-header="Subheader text">
     <IxGroupItem text="Example text 1"></IxGroupItem>
     <IxGroupItem text="Example text 2"></IxGroupItem>
     <IxGroupItem>
@@ -302,7 +302,7 @@ import { Component } from '@angular/core';
   standalone: false,
   selector: 'app-example',
   template: `
-    <ix-group header="Header text" sub-header="Subheader text">
+    <ix-group header="Header text" subHeader="Subheader text">
       <ix-dropdown slot="dropdown">
         <ix-dropdown-item label="Item 1"></ix-dropdown-item>
         <ix-dropdown-item label="Item 2"></ix-dropdown-item>
@@ -332,7 +332,7 @@ import {
   selector: 'app-example',
   imports: [IxGroup, IxDropdown, IxDropdownItem, IxGroupItem],
   template: `
-    <ix-group header="Header text" sub-header="Subheader text">
+    <ix-group header="Header text" subHeader="Subheader text">
       <ix-dropdown slot="dropdown">
         <ix-dropdown-item label="Item 1"></ix-dropdown-item>
         <ix-dropdown-item label="Item 2"></ix-dropdown-item>
@@ -360,7 +360,7 @@ import {
 </script>
 
 <template>
-  <IxGroup header="Header text" subHeader="Subheader text">
+  <IxGroup header="Header text" sub-header="Subheader text">
     <IxDropdown slot="dropdown">
       <IxDropdownItem label="Item 1"></IxDropdownItem>
       <IxDropdownItem label="Item 2"></IxDropdownItem>
@@ -378,6 +378,8 @@ import {
 
 | Name | Description | Attribute | Type | Default |
 | --- | --- | --- | --- | --- |
+| ariaLabelExpand | { "ARIA label for the expand disclosure button.\n\nFalls back to **header** when unset.\n\nExpanded/collapsed state comes from **aria-expanded**." } | aria-label-expand | string \| undefined |  |
+| ariaLabelSelect | { "ARIA label for the header select button.\n\nFalls back to **header** when unset." } | aria-label-select | string \| undefined |  |
 | expandOnHeaderClick | { "Expand the group if the header is clicked" } | expand-on-header-click | boolean | false |
 | expanded | { "Whether the group is expanded or collapsed. Defaults to false." } | expanded | boolean | false |
 | header | { "Group header" } | header | string \| undefined |  |
@@ -398,10 +400,10 @@ import {
 
 | Name | Description |
 | --- | --- |
-| default | { "Group items." } |
-| dropdown | { "Dropdown used for the group context menu." } |
-| footer | { "Content displayed below the group items." } |
-| header | { "Content displayed in the group header." } |
+| default | { "Group content." } |
+| dropdown | { "Dropdown content displayed in the group header." } |
+| footer | { "Footer content." } |
+| header | { "Additional header content." } |
 
 ## API for ix-group-item
 

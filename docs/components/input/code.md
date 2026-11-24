@@ -294,7 +294,7 @@ export default class InputLabel {}
   label='Some label'
   placeholder='Some placeholder'
   value='Some example text'
-  helper-text='Some helper text'
+  helperText='Some helper text'
 ></ix-input>
 ```
 
@@ -322,7 +322,7 @@ export default class InputLabel {}
   label="Some label"
   placeholder="Some placeholder"
   value="Some example text"
-  helper-text="Some helper text"
+  helperText="Some helper text"
 ></ix-input>
 ```
 
@@ -380,8 +380,8 @@ export default class InputPattern {}
 #### input-pattern.html
 ```html
 <ix-input
-  helper-text='Only characters a-d are allowed'
-  allowed-characters-pattern='[a-d]'
+  helperText='Only characters a-d are allowed'
+  allowedCharactersPattern='[a-d]'
   maxLength='4'
 ></ix-input>
 ```
@@ -407,8 +407,8 @@ export default class InputPattern {}
 #### input-pattern.html
 ```html
 <ix-input
-  helper-text="Only characters a-d are allowed"
-  allowed-characters-pattern="[a-d]"
+  helperText="Only characters a-d are allowed"
+  allowedCharactersPattern="[a-d]"
   maxLength="4"
 ></ix-input>
 ```
@@ -832,7 +832,7 @@ export default class InputValidation {}
   <ix-input
     label='Username'
     placeholder='Enter your Username'
-    info-text='Info text'
+    infoText='Info text'
     class='ix-info'
   ></ix-input>
 </div>
@@ -841,7 +841,7 @@ export default class InputValidation {}
   <ix-input
     label='Username'
     placeholder='Enter your Username'
-    warning-text='Warning text'
+    warningText='Warning text'
     class='ix-warning'
   ></ix-input>
 </div>
@@ -850,7 +850,7 @@ export default class InputValidation {}
   <ix-input
     label='Username'
     placeholder='Enter your Username'
-    valid-text='Valid text'
+    validText='Valid text'
     class='ix-valid'
   ></ix-input>
 </div>
@@ -859,7 +859,7 @@ export default class InputValidation {}
   <ix-input
     label='Username'
     placeholder='Enter your Username'
-    invalid-text='Invalid text'
+    invalidText='Invalid text'
     class='ix-invalid'
   ></ix-input>
 </div>
@@ -889,7 +889,7 @@ export default class InputValidation {}
   <ix-input
     label="Username"
     placeholder="Enter your Username"
-    info-text="Info text"
+    infoText="Info text"
     class="ix-info"
   ></ix-input>
 </div>
@@ -898,7 +898,7 @@ export default class InputValidation {}
   <ix-input
     label="Username"
     placeholder="Enter your Username"
-    warning-text="Warning text"
+    warningText="Warning text"
     class="ix-warning"
   ></ix-input>
 </div>
@@ -907,7 +907,7 @@ export default class InputValidation {}
   <ix-input
     label="Username"
     placeholder="Enter your Username"
-    valid-text="Valid text"
+    validText="Valid text"
     class="ix-valid"
   ></ix-input>
 </div>
@@ -916,7 +916,7 @@ export default class InputValidation {}
   <ix-input
     label="Username"
     placeholder="Enter your Username"
-    invalid-text="Invalid text"
+    invalidText="Invalid text"
     class="ix-invalid"
   ></ix-input>
 </div>
@@ -1084,6 +1084,14 @@ import { IxInput, IxIcon, IxTypography } from '@siemens/ix-vue';
 | warningText | { "The warning text for the text field." } | warning-text | string \| undefined |  |
 
 ### Methods
+
+#### clear
+
+```ts
+clear(): Promise&lt;void&gt;;
+```
+
+{ "Clears the input field value and resets validation state.\n\nSets the value to empty and removes touched state to suppress validation." }
 
 #### focusInput
 

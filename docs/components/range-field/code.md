@@ -252,4 +252,4 @@ import { IxDatetimeInput, IxRangeField } from '@siemens/ix-vue';
 
 | Name | Description |
 | --- | --- |
-| default | { "Range field controls." } |
+| default | { "Range field content." } |

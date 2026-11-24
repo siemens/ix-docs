@@ -34,9 +34,9 @@ export default class Textarea {}
 #### textarea.html
 ```html
 <ix-textarea
-  resize-behavior='dimensions'
-  textarea-height='100px'
-  textarea-width='300px'
+  resizeBehavior='dimensions'
+  textareaHeight='100px'
+  textareaWidth='300px'
 ></ix-textarea>
 ```
 
@@ -61,9 +61,9 @@ export default class Textarea {}
 #### textarea.html
 ```html
 <ix-textarea
-  resize-behavior="dimensions"
-  textarea-height="100px"
-  textarea-width="300px"
+  resizeBehavior="dimensions"
+  textareaHeight="100px"
+  textareaWidth="300px"
 ></ix-textarea>
 ```
 
@@ -117,9 +117,9 @@ export default class TextareaDisabled {}
 ```html
 <div>
   <ix-textarea
-    resize-behavior='dimensions'
-    textarea-height='100px'
-    textarea-width='300px'
+    resizeBehavior='dimensions'
+    textareaHeight='100px'
+    textareaWidth='300px'
     value='Some text'
     disabled
   ></ix-textarea>
@@ -148,9 +148,9 @@ export default class TextareaDisabled {}
 ```html
 <div>
   <ix-textarea
-    resize-behavior="dimensions"
-    textarea-height="100px"
-    textarea-width="300px"
+    resizeBehavior="dimensions"
+    textareaHeight="100px"
+    textareaWidth="300px"
     value="Some text"
     disabled
   ></ix-textarea>
@@ -208,9 +208,9 @@ export default class TextareaReadonly {}
 #### textarea-readonly.html
 ```html
 <ix-textarea
-  resize-behavior='dimensions'
-  textarea-height='100px'
-  textarea-width='300px'
+  resizeBehavior='dimensions'
+  textareaHeight='100px'
+  textareaWidth='300px'
   readonly
 ></ix-textarea>
 ```
@@ -236,9 +236,9 @@ export default class TextareaReadonly {}
 #### textarea-readonly.html
 ```html
 <ix-textarea
-  resize-behavior="dimensions"
-  textarea-height="100px"
-  textarea-width="300px"
+  resizeBehavior="dimensions"
+  textareaHeight="100px"
+  textareaWidth="300px"
   readonly
 ></ix-textarea>
 ```
@@ -302,13 +302,13 @@ export default class TextareaRowsCols {}
 #### textarea-rows-cols.html
 ```html
 <ix-textarea
-    max-length='100'
+    maxLength='100'
     name="comment"
     label="Comment"
-    resize-behavior="rowsCols"
-    textarea-rows="15"
-    textarea-cols="20"
-    helper-text="Let us know if you have any special requests or comments. We will do our best to accommodate you."
+    resizeBehavior="rowsCols"
+    textareaRows="15"
+    textareaCols="20"
+    helperText="Let us know if you have any special requests or comments. We will do our best to accommodate you."
 ></ix-textarea>
 ```
 
@@ -333,13 +333,13 @@ export default class TextareaRowsCols {}
 #### textarea-rows-cols.html
 ```html
 <ix-textarea
-  max-length="100"
+  maxLength="100"
   name="comment"
   label="Comment"
-  resize-behavior="rowsCols"
-  textarea-rows="15"
-  textarea-cols="20"
-  helper-text="Let us know if you have any special requests or comments. We will do our best to accommodate you."
+  resizeBehavior="rowsCols"
+  textareaRows="15"
+  textareaCols="20"
+  helperText="Let us know if you have any special requests or comments. We will do our best to accommodate you."
 ></ix-textarea>
 ```
 
@@ -358,7 +358,7 @@ export default {
 
 <template>
   <IxTextarea
-    :maxLength="100"
+    :max-length="100"
     name="comment"
     label="Comment"
     :textarea-rows="15"
@@ -441,50 +441,50 @@ export default class TextareaValidation {}
 ```html
 <div>
   <ix-textarea
-    max-length='100'
+    maxLength='100'
     name='comment'
     label='Comment'
-    resize-behavior='dimensions'
-    textarea-height='50px'
-    textarea-width='200px'
-    info-text='Info text'
+    resizeBehavior='dimensions'
+    textareaHeight='50px'
+    textareaWidth='200px'
+    infoText='Info text'
     class='ix-info'
   ></ix-textarea>
 </div>
 
 <div>
   <ix-textarea
-    max-length='100'
+    maxLength='100'
     name='comment'
     label='Comment'
-    resize-behavior='dimensions'
-    textarea-height='50px'
-    textarea-width='200px'
-    warning-text='Warning text'
+    resizeBehavior='dimensions'
+    textareaHeight='50px'
+    textareaWidth='200px'
+    warningText='Warning text'
     class='ix-warning'
   ></ix-textarea>
 </div>
 <div>
   <ix-textarea
-    max-length='100'
+    maxLength='100'
     name='comment'
     label='Comment'
-    resize-behavior='dimensions'
-    textarea-height='50px'
-    textarea-width='200px'
-    valid-text='Valid text'
+    resizeBehavior='dimensions'
+    textareaHeight='50px'
+    textareaWidth='200px'
+    validText='Valid text'
     class='valid'
   ></ix-textarea>
 </div>
 <div>
   <ix-textarea
-    max-length='100'
+    maxLength='100'
     name='comment'
     label='Comment'
-    resize-behavior='dimensions'
-    textarea-height='50px'
-    textarea-width='200px'
-    invalid-text='Invalid text'
+    resizeBehavior='dimensions'
+    textareaHeight='50px'
+    textareaWidth='200px'
+    invalidText='Invalid text'
     class='ix-invalid'
   ></ix-textarea>
 </div>
@@ -512,50 +512,50 @@ export default class TextareaValidation {}
 ```html
 <div>
   <ix-textarea
-    max-length="100"
+    maxLength="100"
     name="comment"
     label="Comment"
-    resize-behavior="dimensions"
-    textarea-height="50px"
-    textarea-width="200px"
-    info-text="Info text"
+    resizeBehavior="dimensions"
+    textareaHeight="50px"
+    textareaWidth="200px"
+    infoText="Info text"
     class="ix-info"
   ></ix-textarea>
 </div>
 
 <div>
   <ix-textarea
-    max-length="100"
+    maxLength="100"
     name="comment"
     label="Comment"
-    resize-behavior="dimensions"
-    textarea-height="50px"
-    textarea-width="200px"
-    warning-text="Warning text"
+    resizeBehavior="dimensions"
+    textareaHeight="50px"
+    textareaWidth="200px"
+    warningText="Warning text"
     class="ix-warning"
   ></ix-textarea>
 </div>
 <div>
   <ix-textarea
-    max-length="100"
+    maxLength="100"
     name="comment"
     label="Comment"
-    resize-behavior="dimensions"
-    textarea-height="50px"
-    textarea-width="200px"
-    valid-text="Valid text"
+    resizeBehavior="dimensions"
+    textareaHeight="50px"
+    textareaWidth="200px"
+    validText="Valid text"
     class="valid"
   ></ix-textarea>
 </div>
 <div>
   <ix-textarea
-    max-length="100"
+    maxLength="100"
     name="comment"
     label="Comment"
-    resize-behavior="dimensions"
-    textarea-height="50px"
-    textarea-width="200px"
-    invalid-text="Invalid text"
+    resizeBehavior="dimensions"
+    textareaHeight="50px"
+    textareaWidth="200px"
+    invalidText="Invalid text"
     class="ix-invalid"
   ></ix-textarea>
 </div>
@@ -646,6 +646,14 @@ export default {
 
 ### Methods
 
+#### clear
+
+```ts
+clear(): Promise&lt;void&gt;;
+```
+
+{ "Clears the input field value and resets validation state.\n\nSets the value to empty and removes touched state to suppress validation." }
+
 #### focusInput
 
 ```ts
@@ -661,6 +669,14 @@ getNativeInputElement(): Promise&lt;HTMLTextAreaElement&gt;;
 ```
 
 { "Get the native textarea element." }
+
+#### getValidityState
+
+```ts
+getValidityState(): Promise&lt;ValidityState&gt;;
+```
+
+{ "Returns the validity state of the textarea field." }
 
 ### Events
 

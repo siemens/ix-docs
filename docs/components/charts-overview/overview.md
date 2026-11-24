@@ -32,7 +32,7 @@ npm install --save @siemens/ix-echarts
 
 1. Import the `registerTheme` function from our module.
 2. Invoke this function, passing in your `echarts` instance as an argument. You do not need to provide the `echarts` instance if it’s provided globally in your `window` object when using vanilla JavaScript.
-3. Once this is done, you’ll be able to utilize the `brand-dark`, `brand-light`, `classic-dark` and `classic-light` themes for your chart.
+3. Once this is done, you’ll be able to utilize the `brand-dark`, `brand-light`, `community-dark` and `community-light` themes for your chart.
 
 ```typescript
 import { registerTheme } from '@siemens/ix-echarts';
@@ -47,22 +47,16 @@ For Angular, make sure to correctly add `NgxEcharts` in your module file.
 The Siemens Industrial Experience ECharts theme provides a set of colors that are used to style the charts. These colors are optimized for accessibility and readability.
 
 ### Categorical data
-For easily distinguishable data series, where each category is distinct but not ordered, we recommend the following color sequence.
-Example: Different product types or regions.
 
-![Colors for categorical data](https://www.figma.com/design/wEptRgAezDU1z80Cn3eZ0o/iX-Pattern-Illustrations?node-id=3223-1647&t=MD9MvUCkoIcmSi8H-4)
+Use the [categorical data colors](../../styles/colors.md#token-group-color-data-categorical) to distinguish unordered categories, such as product types or regions. Follow the documented color sequence when assigning data series.
 
 ### Sequential data
-For ordered data, we recommend using every second color, e.g. chart-1, chart-3, chart-5.
-Example: monthly data.
 
-![Colors for sequential data](https://www.figma.com/design/wEptRgAezDU1z80Cn3eZ0o/iX-Pattern-Illustrations?node-id=3225-2412&t=MD9MvUCkoIcmSi8H-4)
+Use a [sequential data palette](../../styles/colors.md#token-group-color-data-sequential) to represent ordered values, such as low to high production volumes. Choose one palette and follow its progression.
 
 ### Comparative data
-For comparing data within a category, we recommend using the matching -40 color with 40% opacity.
-Example: last year and current year.
 
-![Colors for comparative data](https://www.figma.com/design/wEptRgAezDU1z80Cn3eZ0o/iX-Pattern-Illustrations?node-id=3225-2885&t=MD9MvUCkoIcmSi8H-4)
+To compare values within a category, such as last year's and this year's results, use a [categorical data color](../../styles/colors.md#token-group-color-data-categorical) and a variant of the same color at 40% opacity.
 
 ### React Examples
 
@@ -821,7 +815,7 @@ export default function Echarts() {
           <IxEmptyState
             className="empty-state"
             header="No elements available"
-            subHeader="Failed to retrieve data"
+            description="Failed to retrieve data"
             icon={iconInfo}
             action="Try again"
           />
@@ -908,7 +902,7 @@ export default class EchartsLineSimple implements OnDestroy, OnInit {
     <ix-empty-state
       class="empty-state"
       header="No elements available"
-      sub-header="Failed to retrieve data"
+      description="Failed to retrieve data"
       icon="info"
       action="Try again"
     ></ix-empty-state>
@@ -1005,7 +999,7 @@ export default class EchartsLineSimple implements OnDestroy, OnInit {
     <ix-empty-state
       class="empty-state"
       header="No elements available"
-      sub-header="Failed to retrieve data"
+      description="Failed to retrieve data"
       icon="info"
       action="Try again"
     ></ix-empty-state>
@@ -1095,7 +1089,7 @@ const options = {
       <IxEmptyState
         className="empty-state"
         header="No elements available"
-        sub-header="Failed to retrieve data"
+        description="Failed to retrieve data"
         :icon="iconInfo"
         action="Try again"
       ></IxEmptyState>

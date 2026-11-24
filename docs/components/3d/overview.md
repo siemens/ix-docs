@@ -55,16 +55,16 @@ export default function EchartsSpecial3d() {
       type: 'value',
       axisLine: {
         lineStyle: {
-          color: getComputedCSSProperty('chart-axes'),
+          color: getComputedCSSProperty('--si-sys-color-border-3'),
         },
       },
       splitLine: {
         lineStyle: {
-          color: getComputedCSSProperty('chart-grid-lines'),
+          color: getComputedCSSProperty('--si-sys-color-background-3'),
         },
       },
       axisLabel: {
-        color: getComputedCSSProperty('color-std-text'),
+        color: getComputedCSSProperty('--si-sys-color-text-primary'),
       },
     };
   }
@@ -155,16 +155,16 @@ export default class EchartsSpecial3d implements OnDestroy, OnInit {
       type: 'value',
       axisLine: {
         lineStyle: {
-          color: getComputedCSSProperty('chart-axes'),
+          color: getComputedCSSProperty('--si-sys-color-border-3'),
         },
       },
       splitLine: {
         lineStyle: {
-          color: getComputedCSSProperty('chart-grid-lines'),
+          color: getComputedCSSProperty('--si-sys-color-background-3'),
         },
       },
       axisLabel: {
-        color: getComputedCSSProperty('color-std-text'),
+        color: getComputedCSSProperty('--si-sys-color-text-primary'),
       },
     };
   }
@@ -276,16 +276,16 @@ export default class EchartsSpecial3d implements OnDestroy, OnInit {
       type: 'value',
       axisLine: {
         lineStyle: {
-          color: getComputedCSSProperty('chart-axes'),
+          color: getComputedCSSProperty('--si-sys-color-border-3'),
         },
       },
       splitLine: {
         lineStyle: {
-          color: getComputedCSSProperty('chart-grid-lines'),
+          color: getComputedCSSProperty('--si-sys-color-background-3'),
         },
       },
       axisLabel: {
-        color: getComputedCSSProperty('color-std-text'),
+        color: getComputedCSSProperty('--si-sys-color-text-primary'),
       },
     };
   }
@@ -395,16 +395,16 @@ function gridConfig() {
     type: 'value',
     axisLine: {
       lineStyle: {
-        color: getComputedCSSProperty('chart-axes'),
+        color: getComputedCSSProperty('--si-sys-color-border-3'),
       },
     },
     splitLine: {
       lineStyle: {
-        color: getComputedCSSProperty('chart-grid-lines'),
+        color: getComputedCSSProperty('--si-sys-color-background-3'),
       },
     },
     axisLabel: {
-      color: getComputedCSSProperty('color-std-text'),
+      color: getComputedCSSProperty('--si-sys-color-text-primary'),
     },
   };
 }

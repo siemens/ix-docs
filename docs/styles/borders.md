@@ -1,60 +1,41 @@
 # Borders
 
-> Borders serve as essential visual elements that define boundaries, create structure, and enhance the clarity of user interfaces.
+> Border color tokens define boundaries, communicate state, and structure application surfaces.
 
-import BorderTable from '@site/src/components/BorderTable';
-
-All borders are provided as custom properties.
-To access them the `var()` CSS function can be called with the border's name:
+System border tokens provide colors. Combine a semantic border color with the
+appropriate width and style for the component:
 
 ```css
 .some-example {
-  border: var(--theme-primary-bdr-1);
+  border: var(--si-sys-sizing-border-width-default) solid
+    var(--si-sys-color-border-1);
 }
 ```
 
-- --theme-contrast-bdr is the darkest/lightest possible color and should be used in situations where the background color is hard to control (e.g. on custom colors)
-- --theme-color-hard-bdr is used whenever the border should be a solid, non-transparent color
-- --theme-color-std-bdr has a strong appearance and is used e.g. on input components
-- --theme-color-soft-bdr is more subtle and used on cards and similar components or for separators
-- --theme-color-weak-bdr is even more subtle and used for separations of, e.g., entire screen areas
-- --theme-color-x-weak-bdr can be used for very subtle separations or content structuring
+Use neutral border roles to structure surfaces, accent roles for interaction,
+and status roles only when the border communicates that status. Use a
+`--si-sys-sizing-border-width-*` token for the border width.
 
-<BorderTable borderName="std-bdr-1">
-</BorderTable>
+The generated swatches below set `border-color`; they do not infer a legacy
+composite border or interaction-state relationship.
 
-<BorderTable borderName="soft-bdr-1">
-</BorderTable>
-
-<BorderTable borderName="weak-bdr-1">
-</BorderTable>
-
-<BorderTable borderName="x-weak-bdr-1">
-</BorderTable>
-
-<BorderTable borderName="contrast-bdr-1">
-</BorderTable>
-
-<BorderTable borderName="primary-bdr-1">
-</BorderTable>
-
-<BorderTable borderName="dynamic-bdr-1">
-</BorderTable>
-
-<BorderTable borderName="alarm-bdr-1">
-</BorderTable>
-
-<BorderTable borderName="critical-bdr-1">
-</BorderTable>
-
-<BorderTable borderName="warning-bdr-1">
-</BorderTable>
-
-<BorderTable borderName="success-bdr-1">
-</BorderTable>
-
-<BorderTable borderName="info-bdr-1">
-</BorderTable>
-
-<BorderTable borderName="neutral-bdr-1">
-</BorderTable>
+| Token | Description | CSS expression | Source token |
+| --- | --- | --- | --- |
+| `--si-sys-color-border-1` | Primary border color for high emphasis. | `var(--si-sys-color-border-1)` | `si.sys.color.border.1` |
+| `--si-sys-color-border-2` | Secondary border color for default borders. | `var(--si-sys-color-border-2)` | `si.sys.color.border.2` |
+| `--si-sys-color-border-3` | Tertiary border color for ghost and chips borders. | `var(--si-sys-color-border-3)` | `si.sys.color.border.3` |
+| `--si-sys-color-border-4` | Very subtle border color for dividers, input disabled, outline for cards, status toggle. | `var(--si-sys-color-border-4)` | `si.sys.color.border.4` |
+| `--si-sys-color-border-accent` | Border color for accent elements. | `var(--si-sys-color-border-accent)` | `si.sys.color.border.accent` |
+| `--si-sys-color-border-accent-active` | Border color for active states for accent secondary. | `var(--si-sys-color-border-accent-active)` | `si.sys.color.border.accent-active` |
+| `--si-sys-color-border-accent-hover` | Border color for hover states for accent secondary. | `var(--si-sys-color-border-accent-hover)` | `si.sys.color.border.accent-hover` |
+| `--si-sys-color-border-caution` | Border color for caution states. | `var(--si-sys-color-border-caution)` | `si.sys.color.border.caution` |
+| `--si-sys-color-border-critical` | Border color for critical states. | `var(--si-sys-color-border-critical)` | `si.sys.color.border.critical` |
+| `--si-sys-color-border-danger` | Border color for danger states. | `var(--si-sys-color-border-danger)` | `si.sys.color.border.danger` |
+| `--si-sys-color-border-danger-secondary` | Border color for danger secondary states. | `var(--si-sys-color-border-danger-secondary)` | `si.sys.color.border.danger-secondary` |
+| `--si-sys-color-border-disabled` | Border color for disabled interactive controls, such as buttons and inputs. | `var(--si-sys-color-border-disabled)` | `si.sys.color.border.disabled` |
+| `--si-sys-color-border-information` | Border color for information states. | `var(--si-sys-color-border-information)` | `si.sys.color.border.information` |
+| `--si-sys-color-border-inverse` | Border color for inverse elements. | `var(--si-sys-color-border-inverse)` | `si.sys.color.border.inverse` |
+| `--si-sys-color-border-neutral` | Border color for neutral borders. | `var(--si-sys-color-border-neutral)` | `si.sys.color.border.neutral` |
+| `--si-sys-color-border-success` | Border color for success states. | `var(--si-sys-color-border-success)` | `si.sys.color.border.success` |
+| `--si-sys-color-border-warning` | Border color for warning states. | `var(--si-sys-color-border-warning)` | `si.sys.color.border.warning` |
+| `--si-sys-color-border-warning-secondary` | Border color for warning secondary states. | `var(--si-sys-color-border-warning-secondary)` | `si.sys.color.border.warning-secondary` |

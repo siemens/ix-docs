@@ -17,7 +17,7 @@ import { iconCapacity } from '@siemens/ix-icons/icons';
 
 export default () => {
   return (
-    <IxCard variant="outline" onClick={console.log}>
+    <IxCard variant="base" clickable onClick={console.log}>
       <IxCardContent>
         <IxIcon name={iconCapacity}></IxIcon>
         <IxTypography bold>Number of components</IxTypography>
@@ -78,7 +78,7 @@ export default class Card {
 
 #### card.html
 ```html
-<ix-card (click)="onClick($event)" variant="outline">
+<ix-card (click)="onClick($event)" variant="base" clickable>
   <ix-card-content>
     <ix-icon name="capacity"></ix-icon>
     <ix-typography bold>Number of components</ix-typography>
@@ -139,7 +139,7 @@ export default class Card {
 
 #### card.html
 ```html
-<ix-card (click)="onClick($event)" variant="outline">
+<ix-card (click)="onClick($event)" variant="base" clickable>
   <ix-card-content>
     <ix-icon name="capacity"></ix-icon>
     <ix-typography bold>Number of components</ix-typography>
@@ -189,7 +189,7 @@ const onClick = (event: Event) => {
 <style scoped src="./card.css"></style>
 
 <template>
-  <IxCard variant="outline" @click="onClick">
+  <IxCard variant="base" clickable @click="onClick">
     <IxCardContent>
       <IxIcon :name="iconCapacity"></IxIcon>
       <IxTypography bold>Number of components</IxTypography>
@@ -239,7 +239,7 @@ export default () => {
       icon={iconRefresh}
       heading="Scan for new devices"
       subheading="Secondary text"
-      variant="outline"
+      variant="base"
       onClick={console.log}
     ></IxActionCard>
   );
@@ -270,7 +270,7 @@ export default class ActionCard {
   icon="refresh"
   heading="Scan for new devices"
   subheading="Secondary text"
-  variant="outline"
+  variant="base"
   (click)="onClick($event)"
 ></ix-action-card>
 ```
@@ -300,7 +300,7 @@ export default class ActionCard {
   icon="refresh"
   heading="Scan for new devices"
   subheading="Secondary text"
-  variant="outline"
+  variant="base"
   (click)="onClick($event)"
 ></ix-action-card>
 ```
@@ -323,7 +323,7 @@ const onClick = (event: Event) => {
     :icon="iconRefresh"
     heading="Scan for new devices"
     subheading="Secondary text"
-    variant="outline"
+    variant="base"
     @click="onClick"
   ></IxActionCard>
 </template>
@@ -345,7 +345,7 @@ export default () => {
       notification="99"
       heading="Heading content"
       subheading="Subheading"
-      variant="outline"
+      variant="base"
     >
       <table className="table">
         <thead>
@@ -402,7 +402,7 @@ export default class PushCard {}
   notification="99"
   heading="Heading content"
   subheading="Subheading"
-  variant="outline"
+  variant="base"
 >
   <table class="table">
     <thead>
@@ -458,7 +458,7 @@ export default class PushCard {}
   notification="99"
   heading="Heading content"
   subheading="Subheading"
-  variant="outline"
+  variant="base"
 >
   <table class="table">
     <thead>
@@ -507,7 +507,7 @@ import { IxPushCard } from '@siemens/ix-vue';
     notification="99"
     heading="Heading content"
     subheading="Subheading"
-    variant="outline"
+    variant="base"
   >
     <table class="table">
       <thead>
@@ -546,58 +546,61 @@ import { IxPushCard } from '@siemens/ix-vue';
 
 ### Properties
 
-| Name | Description | Attribute | Type | Default |
-| --- | --- | --- | --- | --- |
-| ariaLabelCard | { "ARIA label for the card" } | aria-label-card | string \| undefined |  |
-| ariaLabelIcon | { "ARIA label for the icon" } | aria-label-icon | string \| undefined |  |
-| heading | { "Card heading" } | heading | string \| undefined |  |
-| icon | { "Card icon" } | icon | string \| undefined | undefined |
-| passive | { "If true, disables hover and active styles and changes cursor to default" } | passive | boolean | false |
-| selected | { "Card selection" } | selected | boolean | false |
-| subheading | { "Card subheading" } | subheading | string \| undefined |  |
-| variant | { "Card variant" } | variant | "alarm" \| "critical" \| "filled" \| "info" \| "neutral" \| "outline" \| "primary" \| "success" \| "warning" | 'outline' |
+| Name | Description | Attribute | Type | Default | Notes |
+| --- | --- | --- | --- | --- | --- |
+| ariaLabelCard | { "ARIA label for the card" } | aria-label-card | string \| undefined |  |  |
+| ariaLabelIcon | { "ARIA label for the icon" } | aria-label-icon | string \| undefined |  |  |
+| clickable | { "Enable pointer interaction on the action card.\n\nWhen omitted, the card is clickable (`true`).\n\nWhen `false`, the wrapping button is disabled." } | clickable | boolean \| undefined |  | Breaking change in v6.0.0: Replaces the passive property |
+| heading | { "Card heading" } | heading | string \| undefined |  |  |
+| icon | { "Card icon" } | icon | string \| undefined | undefined |  |
+| outline | { "Show the card with outline chrome.\n\nWhen omitted, outline chrome is used (`true`).\n\nWhen `false`, uses a filled surface; status variants then show a top color strip." } | outline | boolean \| undefined |  | Breaking change in v6.0.0: Replaces the outline and filled values of variant |
+| selected | { "Card selection" } | selected | boolean | false |  |
+| subheading | { "Card subheading" } | subheading | string \| undefined |  |  |
+| variant | { "Card status variant" } | variant | "accent" \| "base" \| "caution" \| "critical" \| "danger" \| "information" \| "neutral" \| "success" \| "warning" | 'base' | Breaking change in v6.0.0: Status variant values renamed (default is now base), outline and filled replaced by the outline property |
 
 ### Slot
 
 | Name | Description |
 | --- | --- |
-| default | { "Place additional non-interactive content inside the card. Avoid interactive elements (links, buttons, inputs) as the card itself is rendered as a single button." } |
+| default | { "Card content." } |
 
 ## API for ix-push-card
 
 ### Properties
 
-| Name | Description | Attribute | Type | Default |
-| --- | --- | --- | --- | --- |
-| ariaLabelIcon | { "ARIA label for the icon" } | aria-label-icon | string \| undefined |  |
-| expanded | { "Expand the card" } | expanded | boolean | false |
-| heading | { "Card heading" } | heading | string \| undefined |  |
-| icon | { "Card icon" } | icon | string \| undefined |  |
-| notification | { "Card KPI value" } | notification | string \| undefined |  |
-| passive | { "If true, disables hover and active styles and changes cursor to default" } | passive | boolean | false |
-| subheading | { "Card subheading" } | subheading | string \| undefined |  |
-| variant | { "Card variant" } | variant | "alarm" \| "critical" \| "filled" \| "info" \| "neutral" \| "outline" \| "primary" \| "success" \| "warning" | 'outline' |
+| Name | Description | Attribute | Type | Default | Notes |
+| --- | --- | --- | --- | --- | --- |
+| ariaLabelIcon | { "ARIA label for the icon" } | aria-label-icon | string \| undefined |  |  |
+| clickable | { "Enable pointer interaction on the upper card region.\n\nDefault is `false`; only the accordion control is interactive." } | clickable | boolean | false | Breaking change in v6.0.0: Replaces the passive property |
+| expanded | { "Expand the card" } | expanded | boolean | false |  |
+| heading | { "Card heading" } | heading | string \| undefined |  |  |
+| icon | { "Card icon" } | icon | string \| undefined |  |  |
+| notification | { "Card KPI value" } | notification | string \| undefined |  |  |
+| outline | { "Show the card with outline chrome.\n\nWhen omitted, outline chrome is used (`true`).\n\nWhen `false`, uses a filled surface; status variants then show a top color strip." } | outline | boolean \| undefined |  | Breaking change in v6.0.0: Replaces the outline and filled values of variant |
+| subheading | { "Card subheading" } | subheading | string \| undefined |  |  |
+| variant | { "Card status variant" } | variant | "accent" \| "base" \| "caution" \| "critical" \| "danger" \| "information" \| "neutral" \| "success" \| "warning" | 'base' | Breaking change in v6.0.0: Status variant values renamed (default is now base), outline and filled replaced by the outline property |
 
 ### Slot
 
 | Name | Description |
 | --- | --- |
-| default | { "Expandable card content." } |
-| title-action | { "Action displayed next to the card title." } |
+| default | { "Card content." } |
+| title-action | { "Action displayed next to the title." } |
 
 ## API for ix-card
 
 ### Properties
 
-| Name | Description | Attribute | Type | Default |
-| --- | --- | --- | --- | --- |
-| passive | { "If true, disables hover and active styles and changes cursor to default" } | passive | boolean | false |
-| selected | { "Show card in selected state" } | selected | boolean | false |
-| variant | { "Card variant" } | variant | "alarm" \| "critical" \| "filled" \| "info" \| "neutral" \| "outline" \| "primary" \| "success" \| "warning" | 'outline' |
+| Name | Description | Attribute | Type | Default | Notes |
+| --- | --- | --- | --- | --- | --- |
+| clickable | { "Enable pointer cursor and hover/active surface styles.\n\nDefault is `false` (non-clickable)." } | clickable | boolean | false | Breaking change in v6.0.0: Replaces the passive property |
+| outline | { "Show the card with outline chrome.\n\nWhen omitted, outline chrome is used (`true`).\n\nWhen `false`, uses a filled surface; status variants then show a top color strip." } | outline | boolean \| undefined |  | Breaking change in v6.0.0: Replaces the outline and filled values of variant |
+| selected | { "Show card in selected state" } | selected | boolean | false |  |
+| variant | { "Card status variant" } | variant | "accent" \| "base" \| "caution" \| "critical" \| "danger" \| "information" \| "neutral" \| "success" \| "warning" | 'base' | Breaking change in v6.0.0: Status variant values renamed (default is now base), outline and filled replaced by the outline property |
 
 ### Slot
 
 | Name | Description |
 | --- | --- |
-| card-accordion | { "Accordion displayed in the card footer." } |
-| default | { "Main card content." } |
+| default | { "Card content." } |
+| card-accordion | { "Accordion content displayed at the bottom of the card." } |

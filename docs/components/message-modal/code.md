@@ -41,7 +41,7 @@ export default () => {
 
 #### message.ts
 ```ts
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
 import { MessageService } from '@siemens/ix-angular';
 
 @Component({
@@ -52,7 +52,7 @@ import { MessageService } from '@siemens/ix-angular';
   `,
 })
 export default class Message {
-  constructor(private readonly messageService: MessageService) {}
+  private readonly messageService = inject(MessageService);
 
   triggerMessage = async () => {
     (
@@ -73,7 +73,7 @@ export default class Message {
 
 #### message.ts
 ```ts
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
 import { IxButton, MessageService } from '@siemens/ix-angular/standalone';
 
 @Component({
@@ -84,7 +84,7 @@ import { IxButton, MessageService } from '@siemens/ix-angular/standalone';
   `,
 })
 export default class Message {
-  constructor(private readonly messageService: MessageService) {}
+  private readonly messageService = inject(MessageService);
 
   triggerMessage = async () => {
     (
@@ -162,26 +162,50 @@ showMessage&lt;T&gt;(config: MessageConfig&lt;T&gt;): ShowMessageResult&lt;T&gt;
 
 ### Functions
 
+#### caution
+
+```ts
+caution(args: unknown): ShowMessageResult&lt;unknown&gt;;
+```
+
+{ "Displays a caution message modal with a warning-rhomb icon" }
+
+#### critical
+
+```ts
+critical(args: unknown): ShowMessageResult&lt;unknown&gt;;
+```
+
+{ "Displays a critical message modal with a warning-octagon icon" }
+
+#### danger
+
+```ts
+danger(args: unknown): ShowMessageResult&lt;unknown&gt;;
+```
+
+{ "Displays a danger message modal with an alarm icon" }
+
 #### error
 
 ```ts
-error(title: string, message: string, textOkay: string, textCancel: string, payloadOkay: any, payloadCancel: any): ShowMessageResult&lt;unknown&gt;;
+error(args: unknown): ShowMessageResult&lt;unknown&gt;;
 ```
 
 { "Displays an error message modal with an error icon" }
 
-#### info
+#### information
 
 ```ts
-info(title: string, message: string, textOkay: string, textCancel: string, payloadOkay: any, payloadCancel: any): ShowMessageResult&lt;unknown&gt;;
+information(args: unknown): ShowMessageResult&lt;unknown&gt;;
 ```
 
-{ "Displays an info message modal with an info icon" }
+{ "Displays an information message modal with an info icon" }
 
 #### question
 
 ```ts
-question(title: string, message: string, textOkay: string, textCancel: string, payloadOkay: any, payloadCancel: any): ShowMessageResult&lt;unknown&gt;;
+question(args: unknown): ShowMessageResult&lt;unknown&gt;;
 ```
 
 { "Displays a question message modal with a question icon" }
@@ -197,7 +221,7 @@ showMessage&lt;T&gt;(config: MessageConfig&lt;T&gt;): Promise&lt;TypedEvent&lt;u
 #### success
 
 ```ts
-success(title: string, message: string, textOkay: string, textCancel: string, payloadOkay: any, payloadCancel: any): ShowMessageResult&lt;unknown&gt;;
+success(args: unknown): ShowMessageResult&lt;unknown&gt;;
 ```
 
 { "Displays a success message modal with a success icon" }
@@ -205,7 +229,7 @@ success(title: string, message: string, textOkay: string, textCancel: string, pa
 #### warning
 
 ```ts
-warning(title: string, message: string, textOkay: string, textCancel: string, payloadOkay: any, payloadCancel: any): ShowMessageResult&lt;unknown&gt;;
+warning(args: unknown): ShowMessageResult&lt;unknown&gt;;
 ```
 
 { "Displays a warning message modal with a warning icon" }

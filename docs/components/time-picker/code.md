@@ -174,9 +174,9 @@ export default class TimepickerIntervals {}
 <ix-time-picker
   format="hh:mm:ss a"
   time="01:15:10 AM"
-  hour-interval="2"
-  minute-interval="15"
-  second-interval="10"
+  hourInterval="2"
+  minuteInterval="15"
+  secondInterval="10"
 ></ix-time-picker>
 ```
 
@@ -200,9 +200,9 @@ export default class TimepickerIntervals {}
 <ix-time-picker
   format="hh:mm:ss a"
   time="01:15:10 AM"
-  hour-interval="2"
-  minute-interval="15"
-  second-interval="10"
+  hourInterval="2"
+  minuteInterval="15"
+  secondInterval="10"
 ></ix-time-picker>
 ```
 
@@ -218,9 +218,9 @@ import { IxTimePicker } from '@siemens/ix-vue';
   <IxTimePicker
     format="hh:mm:ss a"
     time="01:15:10 AM"
-    :hourInterval="2"
-    :minuteInterval="15"
-    :secondInterval="10"
+    :hour-interval="2"
+    :minute-interval="15"
+    :second-interval="10"
   />
 </template>
 ```
@@ -229,27 +229,39 @@ import { IxTimePicker } from '@siemens/ix-vue';
 
 ### Properties
 
-| Name | Description | Attribute | Type | Default |
-| --- | --- | --- | --- | --- |
-| corners | { "Corner style." } | corners | "left" \| "right" \| "rounded" \| "straight" | 'rounded' |
-| embedded | { "Embedded style (for use in other components)." } | embedded | boolean | false |
-| format | { "Format of time string.\n\nSee [https://moment.github.io/luxon/#/formatting?id=table-of-tokens](https://moment.github.io/luxon/#/formatting?id=table-of-tokens) for all available tokens.\n\nNote: Formats that combine date and time (like f or F) are not supported. Timestamp tokens x and X are not supported either." } | format | string | 'TT' |
-| hideHeader | { "Hides the header of the picker." } | hide-header | boolean | false |
-| hourInterval | { "Interval for hour selection." } | hour-interval | number | 1 |
-| i18nConfirmTime | { "Text of the time confirm button." } | i18n-confirm-time | string | 'Confirm' |
-| i18nHeader | { "Text for the top header." } | i18n-header | string | 'Time' |
-| i18nHourColumnHeader | { "Text for the hour column header." } | i18n-hour-column-header | string | 'hr' |
-| i18nMillisecondColumnHeader | { "Text for the millisecond column header." } | i18n-millisecond-column-header | string | 'ms' |
-| i18nMinuteColumnHeader | { "Text for the minute column header." } | i18n-minute-column-header | string | 'min' |
-| i18nSecondColumnHeader | { "Text for the second column header." } | i18n-second-column-header | string | 'sec' |
-| maxTime | { "Latest selectable time (`format` tokens). Invalid non-empty values are ignored." } | max-time | string \| undefined |  |
-| millisecondInterval | { "Interval for millisecond selection." } | millisecond-interval | number | 100 |
-| minTime | { "Earliest selectable time (`format` tokens). Invalid non-empty values are ignored." } | min-time | string \| undefined |  |
-| minuteInterval | { "Interval for minute selection." } | minute-interval | number | 1 |
-| secondInterval | { "Interval for second selection." } | second-interval | number | 1 |
-| time | { "Selected time value.\n\nFormat has to match the `format` property." } | time | string \| undefined |  |
+| Name | Description | Attribute | Type | Default | Notes |
+| --- | --- | --- | --- | --- | --- |
+| corners | { "Corner style." } | corners | "left" \| "right" \| "rounded" \| "straight" | 'rounded' |  |
+| embedded | { "Embedded style (for use in other components)." } | embedded | boolean | false |  |
+| format | { "Format of time string.\n\nSee [https://moment.github.io/luxon/#/formatting?id=table-of-tokens](https://moment.github.io/luxon/#/formatting?id=table-of-tokens) for all available tokens.\n\nNote: Formats that combine date and time (like f or F) are not supported. Timestamp tokens x and X are not supported either." } | format | string | 'TT' |  |
+| hideHeader | { "Hides the header of the picker." } | hide-header | boolean | false |  |
+| hourInterval | { "Interval for hour selection." } | hour-interval | number | 1 |  |
+| i18nAm | { "Label for the AM button in 12-hour mode.\n\nIf not set, falls back to the first value of `Info.meridiems()` from Luxon." } | i18n-am | string \| undefined |  |  |
+| i18nCancel | { "Text of the cancel button." } | i18n-cancel | string | 'Cancel' |  |
+| i18nConfirm | { "Text of the time confirm button." } | i18n-confirm | string | 'Confirm' | Breaking change in v6.0.0: Replaces the removed i18nConfirmTime property |
+| i18nHeader | { "Text for the top header." } | i18n-header | string | 'Time' |  |
+| i18nHourColumnHeader | { "Text for the hour column header." } | i18n-hour-column-header | string | 'hr' |  |
+| i18nMillisecondColumnHeader | { "Text for the millisecond column header." } | i18n-millisecond-column-header | string | 'ms' |  |
+| i18nMinuteColumnHeader | { "Text for the minute column header." } | i18n-minute-column-header | string | 'min' |  |
+| i18nPm | { "Label for the PM button in 12-hour mode.\n\nIf not set, falls back to the second value of `Info.meridiems()` from Luxon." } | i18n-pm | string \| undefined |  |  |
+| i18nSecondColumnHeader | { "Text for the second column header." } | i18n-second-column-header | string | 'sec' |  |
+| locale | { "Locale identifier (e.g. 'en' or 'de'). Passed to Luxon for locale-aware parsing and formatting." } | locale | string \| undefined |  |  |
+| maxTime | { "Latest selectable time (`format` tokens). Invalid non-empty values are ignored." } | max-time | string \| undefined |  |  |
+| millisecondInterval | { "Interval for millisecond selection." } | millisecond-interval | number | 100 |  |
+| minTime | { "Earliest selectable time (`format` tokens). Invalid non-empty values are ignored." } | min-time | string \| undefined |  |  |
+| minuteInterval | { "Interval for minute selection." } | minute-interval | number | 1 |  |
+| secondInterval | { "Interval for second selection." } | second-interval | number | 1 |  |
+| time | { "Selected time value.\n\nFormat has to match the `format` property." } | time | string \| undefined |  |  |
 
 ### Methods
+
+#### getCurrentIsoTime
+
+```ts
+getCurrentIsoTime(): Promise&lt;string | undefined&gt;;
+```
+
+{ "Get the current confirmed time in ISO format" }
 
 #### getCurrentTime
 
@@ -257,11 +269,12 @@ import { IxTimePicker } from '@siemens/ix-vue';
 getCurrentTime(): Promise&lt;string | undefined&gt;;
 ```
 
-{ "Get the current time based on the wanted format" }
+{ "Get the current confirmed time based on the wanted format" }
 
 ### Events
 
-| Name | Description | Event | Detail |
-| --- | --- | --- | --- |
-| timeChange | { "Time change event. Emitted when the selected time changes while interacting with the picker." } | timeChange | string |
-| timeSelect | { "Time event. Emitted when the user confirms the selected time." } | timeSelect | string |
+| Name | Description | Event | Detail | Notes |
+| --- | --- | --- | --- | --- |
+| timeCancel | { "Emitted when the pending selection is discarded via the cancel button,\n\nafter `timeChange` reported the restored time." } | timeCancel | void |  |
+| timeChange | { "Time change event. Emitted for every change made, also for a time that is\n\nnot confirmed yet. When a pending time is discarded, it is emitted with\n\nthe confirmed time again, or the default time if none is confirmed, which\n\nis also emitted on load. Use `timeSelect` for the applied time." } | timeChange | string | Breaking change in v6.0.0: Emitted for every pick, the applied time is emitted with timeSelect |
+| timeSelect | { "Time event. Emitted only when the user confirms the selected time.\n\nUse it for the applied time." } | timeSelect | string |  |

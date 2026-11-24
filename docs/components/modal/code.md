@@ -83,7 +83,7 @@ export default () => {
 
 #### modal-sizes.ts
 ```ts
-import { Component, TemplateRef, ViewChild } from '@angular/core';
+import { Component, inject, TemplateRef, ViewChild } from '@angular/core';
 import { IxModalSize, ModalService } from '@siemens/ix-angular';
 
 @Component({
@@ -96,7 +96,7 @@ export default class ModalSizes {
   @ViewChild('customModal', { read: TemplateRef })
   customModalRef!: TemplateRef<any>;
 
-  constructor(private readonly modalService: ModalService) {}
+  private readonly modalService = inject(ModalService);
 
   async open(size: IxModalSize) {
     await this.modalService.open({
@@ -145,7 +145,7 @@ export default class ModalSizes {
 
 #### modal-sizes.ts
 ```ts
-import { Component, TemplateRef, ViewChild } from '@angular/core';
+import { Component, inject, TemplateRef, ViewChild } from '@angular/core';
 import { IxButton, ModalService } from '@siemens/ix-angular/standalone';
 
 import { IxModalSize } from '@siemens/ix-angular';
@@ -160,7 +160,7 @@ export default class ModalSizes {
   @ViewChild('customModal', { read: TemplateRef })
   customModalRef!: TemplateRef<any>;
 
-  constructor(private readonly modalService: ModalService) {}
+  private readonly modalService = inject(ModalService);
 
   async open(size: IxModalSize) {
     await this.modalService.open({
@@ -280,7 +280,7 @@ Select the appropriate section below for the respective usage information.
 
 #### modal-by-template.ts
 ```ts
-import { Component, TemplateRef, ViewChild } from '@angular/core';
+import { Component, inject, TemplateRef, ViewChild } from '@angular/core';
 import { ModalService } from '@siemens/ix-angular';
 
 @Component({
@@ -311,7 +311,7 @@ export default class Modal {
   @ViewChild('customModal', { read: TemplateRef })
   customModalRef!: TemplateRef<any>;
 
-  constructor(private readonly modalService: ModalService) {}
+  private readonly modalService = inject(ModalService);
 
   async openModal() {
     const instance = await this.modalService.open({
@@ -337,7 +337,7 @@ export default class Modal {
 
 #### modal-by-instance.ts
 ```ts
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
 import { ModalService } from '@siemens/ix-angular';
 import ModalByInstanceExample from './modal-by-instance-content';
 
@@ -347,7 +347,7 @@ import ModalByInstanceExample from './modal-by-instance-content';
   template: '<ix-button (click)="openModal()">Show modal</ix-button>',
 })
 export default class ModalByInstance {
-  constructor(private readonly modalService: ModalService) {}
+  private readonly modalService = inject(ModalService);
 
   async openModal() {
     await this.modalService.open({
@@ -360,7 +360,7 @@ export default class ModalByInstance {
 
 #### modal-by-instance-content.ts
 ```ts
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
 import { IxActiveModal } from '@siemens/ix-angular';
 
 @Component({
@@ -386,7 +386,7 @@ import { IxActiveModal } from '@siemens/ix-angular';
   `,
 })
 export default class ModalByInstanceContent {
-  constructor(readonly activeModal: IxActiveModal) {}
+  readonly activeModal: IxActiveModal = inject(IxActiveModal);
 
   close() {
     this.activeModal.close('My close response');
@@ -553,7 +553,7 @@ import { IxApplicationContext } from '@siemens/ix-vue';
 #### modal.html
 ```html
 <!DOCTYPE html>
-<html lang="en" data-ix-theme="classic" data-ix-color-schema="system">
+<html lang="en" data-ix-theme="community" data-ix-color-schema="system">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -641,13 +641,13 @@ import { IxApplicationContext } from '@siemens/ix-vue';
 
 ### Properties
 
-| Name | Description | Attribute | Type | Default |
-| --- | --- | --- | --- | --- |
-| ariaLabelCloseIconButton | { "ARIA label for the close icon button\n\nWill be set as aria-label on the nested HTML button element" } | aria-label-close-icon-button | string \| undefined | 'Close modal' |
-| ariaLabelIcon | { "ARIA label for the icon" } | aria-label-icon | string \| undefined |  |
-| hideClose | { "Hide the close button" } | hide-close | boolean | false |
-| icon | { "Icon of the header" } | icon | string \| undefined |  |
-| iconColor | { "Icon color" } | icon-color | string \| undefined |  |
+| Name | Description | Attribute | Type | Default | Notes |
+| --- | --- | --- | --- | --- | --- |
+| ariaLabelCloseIconButton | { "ARIA label for the close icon button\n\nWill be set as aria-label on the nested HTML button element" } | aria-label-close-icon-button | string \| undefined | 'Close modal' |  |
+| ariaLabelIcon | { "ARIA label for the icon" } | aria-label-icon | string \| undefined |  |  |
+| hideClose | { "Hide the close button" } | hide-close | boolean | false |  |
+| icon | { "Icon of the header" } | icon | string \| undefined |  |  |
+| iconColor | { "Icon color as a CSS custom property name, for example\n\n`--si-sys-color-text-primary`." } | icon-color | string \| undefined |  | Breaking change in v6.0.0: Requires the full CSS custom property name |
 
 ### Events
 

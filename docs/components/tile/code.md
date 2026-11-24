@@ -25,7 +25,7 @@ export default () => {
 
       <IxTile size="medium">
         <div slot="header">Tile header</div>
-        <div className="text-l">92.8 °C</div>
+        <div className="typography-body-lg">92.8 °C</div>
       </IxTile>
 
       <IxTile size="big">
@@ -91,7 +91,7 @@ import { Component } from '@angular/core';
 
     <ix-tile size="medium">
       <div slot="header">Tile header</div>
-      <div class="text-l">92.8 °C</div>
+      <div class="typography-body-lg">92.8 °C</div>
     </ix-tile>
 
     <ix-tile size="big">
@@ -160,7 +160,7 @@ import { IxTile, IxIconButton, IxButton } from '@siemens/ix-angular/standalone';
 
       <ix-tile size="medium">
         <div slot="header">Tile header</div>
-        <div class="text-l">92.8 °C</div>
+        <div class="typography-body-lg">92.8 °C</div>
       </ix-tile>
 
       <ix-tile size="big">
@@ -236,16 +236,16 @@ import { IxButton, IxIconButton, IxTile } from '@siemens/ix-vue';
 <style scoped src="./tile.css"></style>
 
 <template>
-  <div className="example">
+  <div class="example">
     <IxTile size="small">92.8 °C</IxTile>
 
     <IxTile size="medium">
       <div slot="header">Tile header</div>
-      <div className="text-l">92.8 °C</div>
+      <div class="typography-body-lg">92.8 °C</div>
     </IxTile>
 
     <IxTile size="big">
-      <div className="tile-header" slot="header">
+      <div class="tile-header" slot="header">
         Tile header
         <IxIconButton variant="tertiary" :icon="iconContextMenu"></IxIconButton>
       </div>
@@ -261,7 +261,7 @@ import { IxButton, IxIconButton, IxTile } from '@siemens/ix-vue';
       >
         <span>92.8 °C</span>
       </div>
-      <div className="tile-footer" slot="footer">
+      <div class="tile-footer" slot="footer">
         <IxButton variant="tertiary" :icon="iconChevronRightSmall" slot="footer">
           Details
         </IxButton>
@@ -304,7 +304,7 @@ ix-tile {
 
 | Name | Description |
 | --- | --- |
-| default | { "Main tile content." } |
-| footer | { "Content displayed in the tile footer." } |
-| header | { "Content displayed in the tile header." } |
-| subheader | { "Content displayed below the tile header." } |
+| default | { "Tile content." } |
+| footer | { "Footer content." } |
+| header | { "Header content." } |
+| subheader | { "Subheader content." } |

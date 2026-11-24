@@ -12,12 +12,12 @@ import './progress-indicator.scoped.css';
 export default () => {
   return (
     <>
-      <h2 className="example-header">Status - Default</h2>
+      <h2 className="example-header">Status - Base</h2>
       <IxProgressIndicator
         type="linear"
         label="Download"
         value={75}
-        helper-text="This is a help text for the progress indicator"
+        helperText="This is a help text for the progress indicator"
       >
         75%
       </IxProgressIndicator>
@@ -26,7 +26,7 @@ export default () => {
         type="linear"
         label="Download"
         value={75}
-        helper-text="This is a help text for the progress indicator"
+        helperText="This is a help text for the progress indicator"
         status="success"
       >
         75%
@@ -36,18 +36,18 @@ export default () => {
         type="linear"
         label="Download"
         value={75}
-        helper-text="This is a help text for the progress indicator"
+        helperText="This is a help text for the progress indicator"
         status="error"
       >
         75%
       </IxProgressIndicator>
-      <h2 className="example-header">Status - Info</h2>
+      <h2 className="example-header">Status - Information</h2>
       <IxProgressIndicator
         type="linear"
         label="Download"
         value={75}
-        helper-text="This is a help text for the progress indicator"
-        status="info"
+        helperText="This is a help text for the progress indicator"
+        status="information"
       >
         75%
       </IxProgressIndicator>
@@ -56,7 +56,7 @@ export default () => {
         type="linear"
         label="Download"
         value={75}
-        helper-text="This is a help text for the progress indicator"
+        helperText="This is a help text for the progress indicator"
         status="warning"
       >
         75%
@@ -66,7 +66,7 @@ export default () => {
         type="linear"
         label="Download"
         value={75}
-        helper-text="This is a help text for the progress indicator"
+        helperText="This is a help text for the progress indicator"
         status="paused"
       >
         75%

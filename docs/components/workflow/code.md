@@ -238,8 +238,8 @@ import { IxWorkflowStep, IxWorkflowSteps } from '@siemens/ix-vue';
 
 | Name | Description |
 | --- | --- |
-| custom-icon | { "Custom icon displayed for the workflow step." } |
-| default | { "Workflow step label and content." } |
+| default | { "Workflow step content." } |
+| custom-icon | { "Custom step icon." } |
 
 ## API for ix-workflow-steps
 
@@ -261,4 +261,4 @@ import { IxWorkflowStep, IxWorkflowSteps } from '@siemens/ix-vue';
 
 | Name | Description |
 | --- | --- |
-| default | { "Workflow step items." } |
+| default | { "Workflow steps." } |

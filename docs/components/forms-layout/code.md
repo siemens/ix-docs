@@ -177,7 +177,7 @@ export default () => {
   return (
     <IxLayoutGrid className="layout-grid-example">
       <IxRow>
-        <IxCol size="2" size-sm="12">
+        <IxCol size="2" sizeSm="12">
           <IxFieldLabel htmlFor="my-select-1">Example</IxFieldLabel>
         </IxCol>
         <IxCol>
@@ -185,7 +185,7 @@ export default () => {
         </IxCol>
       </IxRow>
       <IxRow>
-        <IxCol size="2" size-sm="12">
+        <IxCol size="2" sizeSm="12">
           <IxFieldLabel htmlFor="my-select-2">Example</IxFieldLabel>
         </IxCol>
         <IxCol>
@@ -193,7 +193,7 @@ export default () => {
         </IxCol>
       </IxRow>
       <IxRow>
-        <IxCol size="12" size-sm="12">
+        <IxCol size="12" sizeSm="12">
           <IxButton data-colspan="2">Submit</IxButton>
         </IxCol>
       </IxRow>
@@ -230,7 +230,7 @@ export default class FormLayoutGrid {}
 ```html
 <ix-layout-grid class="layout-grid-example">
   <ix-row>
-    <ix-col size="2" size-sm="12">
+    <ix-col size="2" sizeSm="12">
       <ix-field-label for="my-select-1">Example</ix-field-label>
     </ix-col>
     <ix-col>
@@ -238,7 +238,7 @@ export default class FormLayoutGrid {}
     </ix-col>
   </ix-row>
   <ix-row>
-    <ix-col size="2" size-sm="12">
+    <ix-col size="2" sizeSm="12">
       <ix-field-label for="my-select-2">Example</ix-field-label>
     </ix-col>
     <ix-col>
@@ -246,7 +246,7 @@ export default class FormLayoutGrid {}
     </ix-col>
   </ix-row>
   <ix-row>
-    <ix-col size="12" size-sm="12">
+    <ix-col size="12" sizeSm="12">
       <ix-button data-colspan="2">Submit</ix-button>
     </ix-col>
   </ix-row>
@@ -302,7 +302,7 @@ export default class FormLayoutGrid {}
 ```html
 <ix-layout-grid class="layout-grid-example">
   <ix-row>
-    <ix-col size="2" size-sm="12">
+    <ix-col size="2" sizeSm="12">
       <ix-field-label for="my-select-1">Example</ix-field-label>
     </ix-col>
     <ix-col>
@@ -310,7 +310,7 @@ export default class FormLayoutGrid {}
     </ix-col>
   </ix-row>
   <ix-row>
-    <ix-col size="2" size-sm="12">
+    <ix-col size="2" sizeSm="12">
       <ix-field-label for="my-select-2">Example</ix-field-label>
     </ix-col>
     <ix-col>
@@ -318,7 +318,7 @@ export default class FormLayoutGrid {}
     </ix-col>
   </ix-row>
   <ix-row>
-    <ix-col size="12" size-sm="12">
+    <ix-col size="12" sizeSm="12">
       <ix-button data-colspan="2">Submit</ix-button>
     </ix-col>
   </ix-row>

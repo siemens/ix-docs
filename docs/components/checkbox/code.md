@@ -654,7 +654,7 @@ export default class FormCheckboxValidation {}
 </style>
 
 <div class="checkbox-group-wrapper">
-  <ix-checkbox-group label="Terms of something" info-text="Info text">
+  <ix-checkbox-group label="Terms of something" infoText="Info text">
     <ix-checkbox
       label="I agree everything"
       name="agreed"
@@ -664,7 +664,7 @@ export default class FormCheckboxValidation {}
 </div>
 
 <div class="checkbox-group-wrapper">
-  <ix-checkbox-group label="Terms of something" warning-text="Warning text">
+  <ix-checkbox-group label="Terms of something" warningText="Warning text">
     <ix-checkbox label="I agree everything" name="agreed"></ix-checkbox>
     <ix-checkbox
       label="I disagree everything"
@@ -675,7 +675,7 @@ export default class FormCheckboxValidation {}
 </div>
 
 <div class="checkbox-group-wrapper">
-  <ix-checkbox-group label="Terms of something" invalid-text="Invalid text">
+  <ix-checkbox-group label="Terms of something" invalidText="Invalid text">
     <ix-checkbox label="I agree everything" name="agreed"></ix-checkbox>
     <ix-checkbox
       label="I disagree everything"
@@ -686,7 +686,7 @@ export default class FormCheckboxValidation {}
 </div>
 
 <div class="checkbox-group-wrapper">
-  <ix-checkbox-group label="Terms of something" valid-text="Valid text">
+  <ix-checkbox-group label="Terms of something" validText="Valid text">
     <ix-checkbox label="I agree everything" name="agreed"></ix-checkbox>
     <ix-checkbox
       label="I disagree everything"
@@ -725,7 +725,7 @@ export default class FormCheckboxValidation {}
 </style>
 
 <div class="checkbox-group-wrapper">
-  <ix-checkbox-group label="Terms of something" info-text="Info text">
+  <ix-checkbox-group label="Terms of something" infoText="Info text">
     <ix-checkbox
       label="I agree everything"
       name="agreed"
@@ -735,7 +735,7 @@ export default class FormCheckboxValidation {}
 </div>
 
 <div class="checkbox-group-wrapper">
-  <ix-checkbox-group label="Terms of something" warning-text="Warning text">
+  <ix-checkbox-group label="Terms of something" warningText="Warning text">
     <ix-checkbox label="I agree everything" name="agreed"></ix-checkbox>
     <ix-checkbox
       label="I disagree everything"
@@ -746,7 +746,7 @@ export default class FormCheckboxValidation {}
 </div>
 
 <div class="checkbox-group-wrapper">
-  <ix-checkbox-group label="Terms of something" invalid-text="Invalid text">
+  <ix-checkbox-group label="Terms of something" invalidText="Invalid text">
     <ix-checkbox label="I agree everything" name="agreed"></ix-checkbox>
     <ix-checkbox
       label="I disagree everything"
@@ -757,7 +757,7 @@ export default class FormCheckboxValidation {}
 </div>
 
 <div class="checkbox-group-wrapper">
-  <ix-checkbox-group label="Terms of something" valid-text="Valid text">
+  <ix-checkbox-group label="Terms of something" validText="Valid text">
     <ix-checkbox label="I agree everything" name="agreed"></ix-checkbox>
     <ix-checkbox
       label="I disagree everything"
@@ -887,4 +887,4 @@ import { IxCheckbox, IxCheckboxGroup } from '@siemens/ix-vue';
 
 | Name | Description |
 | --- | --- |
-| default | { "Checkboxes displayed in the group." } |
+| default | { "Checkbox components." } |

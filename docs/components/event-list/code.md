@@ -15,10 +15,18 @@ import { IxEventList, IxEventListItem } from '@siemens/ix-react';
 export default function EventList() {
   return (
     <IxEventList>
-      <IxEventListItem itemColor="color-primary">Text 1</IxEventListItem>
-      <IxEventListItem itemColor="color-primary">Text 2</IxEventListItem>
-      <IxEventListItem itemColor="color-alarm">Text 3</IxEventListItem>
-      <IxEventListItem itemColor="color-success">Text 4</IxEventListItem>
+      <IxEventListItem itemColor="--si-sys-color-background-accent">
+        Text 1
+      </IxEventListItem>
+      <IxEventListItem itemColor="--si-sys-color-background-accent">
+        Text 2
+      </IxEventListItem>
+      <IxEventListItem itemColor="--si-sys-color-background-danger">
+        Text 3
+      </IxEventListItem>
+      <IxEventListItem itemColor="--si-sys-color-background-success">
+        Text 4
+      </IxEventListItem>
     </IxEventList>
   );
 }
@@ -35,10 +43,18 @@ import { Component } from '@angular/core';
   selector: 'app-example',
   template: `
     <ix-event-list>
-      <ix-event-list-item item-color="color-primary">Text 1</ix-event-list-item>
-      <ix-event-list-item item-color="color-primary">Text 2</ix-event-list-item>
-      <ix-event-list-item item-color="color-alarm">Text 3</ix-event-list-item>
-      <ix-event-list-item item-color="color-success">Text 4</ix-event-list-item>
+      <ix-event-list-item itemColor="--si-sys-color-background-accent"
+        >Text 1</ix-event-list-item
+      >
+      <ix-event-list-item itemColor="--si-sys-color-background-accent"
+        >Text 2</ix-event-list-item
+      >
+      <ix-event-list-item itemColor="--si-sys-color-background-danger"
+        >Text 3</ix-event-list-item
+      >
+      <ix-event-list-item itemColor="--si-sys-color-background-success"
+        >Text 4</ix-event-list-item
+      >
     </ix-event-list>
   `,
 })
@@ -57,10 +73,18 @@ import { IxEventList, IxEventListItem } from '@siemens/ix-angular/standalone';
   imports: [IxEventList, IxEventListItem],
   template: `
     <ix-event-list>
-      <ix-event-list-item item-color="color-primary">Text 1</ix-event-list-item>
-      <ix-event-list-item item-color="color-primary">Text 2</ix-event-list-item>
-      <ix-event-list-item item-color="color-alarm">Text 3</ix-event-list-item>
-      <ix-event-list-item item-color="color-success">Text 4</ix-event-list-item>
+      <ix-event-list-item itemColor="--si-sys-color-background-accent"
+        >Text 1</ix-event-list-item
+      >
+      <ix-event-list-item itemColor="--si-sys-color-background-accent"
+        >Text 2</ix-event-list-item
+      >
+      <ix-event-list-item itemColor="--si-sys-color-background-danger"
+        >Text 3</ix-event-list-item
+      >
+      <ix-event-list-item itemColor="--si-sys-color-background-success"
+        >Text 4</ix-event-list-item
+      >
     </ix-event-list>
   `,
 })
@@ -77,10 +101,18 @@ import { IxEventList, IxEventListItem } from '@siemens/ix-vue';
 
 <template>
   <IxEventList>
-    <IxEventListItem itemColor="color-primary">Text 1</IxEventListItem>
-    <IxEventListItem itemColor="color-primary">Text 2</IxEventListItem>
-    <IxEventListItem itemColor="color-alarm">Text 3</IxEventListItem>
-    <IxEventListItem itemColor="color-success">Text 4</IxEventListItem>
+    <IxEventListItem item-color="--si-sys-color-background-accent"
+      >Text 1</IxEventListItem
+    >
+    <IxEventListItem item-color="--si-sys-color-background-accent"
+      >Text 2</IxEventListItem
+    >
+    <IxEventListItem item-color="--si-sys-color-background-danger"
+      >Text 3</IxEventListItem
+    >
+    <IxEventListItem item-color="--si-sys-color-background-success"
+      >Text 4</IxEventListItem
+    >
   </IxEventList>
 </template>
 ```
@@ -94,10 +126,10 @@ import { IxEventList, IxEventListItem } from '@siemens/ix-vue';
 import { IxEventList, IxEventListItem } from '@siemens/ix-react';
 
 const items = [
-  { text: 'Text 1', color: 'color-primary' },
-  { text: 'Text 2', color: 'color-primary' },
-  { text: 'Text 3', color: 'color-alarm' },
-  { text: 'Text 4', color: 'color-success' },
+  { text: 'Text 1', color: '--si-sys-color-background-accent' },
+  { text: 'Text 2', color: '--si-sys-color-background-accent' },
+  { text: 'Text 3', color: '--si-sys-color-background-danger' },
+  { text: 'Text 4', color: '--si-sys-color-background-success' },
 ];
 
 export default function EventListFilled() {
@@ -129,19 +161,19 @@ import { Component } from '@angular/core';
   template: `
     <ix-event-list>
       @for (item of items; track i; let i = $index) {
-        <ix-event-list-item variant="filled" [itemColor]="item.color">
-          {{ item.text }}
-        </ix-event-list-item>
+      <ix-event-list-item variant="filled" [itemColor]="item.color">
+        {{ item.text }}
+      </ix-event-list-item>
       }
     </ix-event-list>
   `,
 })
 export default class EventListFilled {
   items = [
-    { text: 'Text 1', color: 'color-primary' },
-    { text: 'Text 2', color: 'color-primary' },
-    { text: 'Text 3', color: 'color-alarm' },
-    { text: 'Text 4', color: 'color-success' },
+    { text: 'Text 1', color: '--si-sys-color-background-accent' },
+    { text: 'Text 2', color: '--si-sys-color-background-accent' },
+    { text: 'Text 3', color: '--si-sys-color-background-danger' },
+    { text: 'Text 4', color: '--si-sys-color-background-success' },
   ];
 }
 ```
@@ -159,19 +191,19 @@ import { IxEventList, IxEventListItem } from '@siemens/ix-angular/standalone';
   template: `
     <ix-event-list>
       @for (item of items; track i; let i = $index) {
-        <ix-event-list-item variant="filled" [itemColor]="item.color">
-          {{ item.text }}
-        </ix-event-list-item>
+      <ix-event-list-item variant="filled" [itemColor]="item.color">
+        {{ item.text }}
+      </ix-event-list-item>
       }
     </ix-event-list>
   `,
 })
 export default class EventListFilled {
   items = [
-    { text: 'Text 1', color: 'color-primary' },
-    { text: 'Text 2', color: 'color-primary' },
-    { text: 'Text 3', color: 'color-alarm' },
-    { text: 'Text 4', color: 'color-success' },
+    { text: 'Text 1', color: '--si-sys-color-background-accent' },
+    { text: 'Text 2', color: '--si-sys-color-background-accent' },
+    { text: 'Text 3', color: '--si-sys-color-background-danger' },
+    { text: 'Text 4', color: '--si-sys-color-background-success' },
   ];
 }
 ```
@@ -184,10 +216,10 @@ export default class EventListFilled {
 import { IxEventList, IxEventListItem } from '@siemens/ix-vue';
 
 const items = [
-  { text: 'Text 1', color: 'color-primary' },
-  { text: 'Text 2', color: 'color-primary' },
-  { text: 'Text 3', color: 'color-alarm' },
-  { text: 'Text 4', color: 'color-success' },
+  { text: 'Text 1', color: '--si-sys-color-background-accent' },
+  { text: 'Text 2', color: '--si-sys-color-background-accent' },
+  { text: 'Text 3', color: '--si-sys-color-background-danger' },
+  { text: 'Text 4', color: '--si-sys-color-background-success' },
 ];
 </script>
 
@@ -197,7 +229,7 @@ const items = [
       v-for="item in items"
       :key="item.text"
       variant="filled"
-      :itemColor="item.color"
+      :item-color="item.color"
     >
       {{ item.text }}
     </IxEventListItem>
@@ -224,7 +256,7 @@ export default function EventListSelected() {
       {items.map((text, index) => (
         <IxEventListItem
           key={text}
-          itemColor="color-primary"
+          itemColor="--si-sys-color-background-accent"
           selected={selectedIndex === index}
           onClick={() => setSelectedIndex(index)}
         >
@@ -249,7 +281,7 @@ import { Component } from '@angular/core';
     <ix-event-list>
       @for (item of items; track i; let i = $index) {
       <ix-event-list-item
-        item-color="color-primary"
+        itemColor="--si-sys-color-background-accent"
         [selected]="selectedIndex === i"
         (click)="selectedIndex = i"
       >
@@ -278,13 +310,13 @@ import { IxEventList, IxEventListItem } from '@siemens/ix-angular/standalone';
   template: `
     <ix-event-list>
       @for (item of items; track item; let i = $index) {
-        <ix-event-list-item
-          item-color="color-primary"
-          [selected]="selectedIndex === i"
-          (click)="selectedIndex = i"
-        >
-          {{ item }}
-        </ix-event-list-item>
+      <ix-event-list-item
+        itemColor="--si-sys-color-background-accent"
+        [selected]="selectedIndex === i"
+        (click)="selectedIndex = i"
+      >
+        {{ item }}
+      </ix-event-list-item>
       }
     </ix-event-list>
   `,
@@ -312,7 +344,7 @@ const items = ['Text 1', 'Text 2', 'Text 3', 'Text 4'];
     <IxEventListItem
       v-for="(item, index) in items"
       :key="item"
-      itemColor="color-primary"
+      item-color="--si-sys-color-background-accent"
       :selected="selectedIndex === index"
       @click="selectedIndex = index"
     >
@@ -333,8 +365,12 @@ import { IxEventList, IxEventListItem } from '@siemens/ix-react';
 export default () => {
   return (
     <IxEventList itemHeight={'L'}>
-      <IxEventListItem itemColor="color-primary">Text 1</IxEventListItem>
-      <IxEventListItem itemColor="color-primary">Text 2</IxEventListItem>
+      <IxEventListItem itemColor="--si-sys-color-background-accent">
+        Text 1
+      </IxEventListItem>
+      <IxEventListItem itemColor="--si-sys-color-background-accent">
+        Text 2
+      </IxEventListItem>
     </IxEventList>
   );
 };
@@ -350,9 +386,13 @@ import { Component } from '@angular/core';
   standalone: false,
   selector: 'app-example',
   template: `
-    <ix-event-list item-height="L">
-      <ix-event-list-item item-color="color-primary">Test 1</ix-event-list-item>
-      <ix-event-list-item item-color="color-primary">Test 2</ix-event-list-item>
+    <ix-event-list itemHeight="L">
+      <ix-event-list-item itemColor="--si-sys-color-background-accent"
+        >Test 1</ix-event-list-item
+      >
+      <ix-event-list-item itemColor="--si-sys-color-background-accent"
+        >Test 2</ix-event-list-item
+      >
     </ix-event-list>
   `,
 })
@@ -370,9 +410,13 @@ import { IxEventList, IxEventListItem } from '@siemens/ix-angular/standalone';
   selector: 'app-example',
   imports: [IxEventList, IxEventListItem],
   template: `
-    <ix-event-list item-height="L">
-      <ix-event-list-item item-color="color-primary">Test 1</ix-event-list-item>
-      <ix-event-list-item item-color="color-primary">Test 2</ix-event-list-item>
+    <ix-event-list itemHeight="L">
+      <ix-event-list-item itemColor="--si-sys-color-background-accent"
+        >Test 1</ix-event-list-item
+      >
+      <ix-event-list-item itemColor="--si-sys-color-background-accent"
+        >Test 2</ix-event-list-item
+      >
     </ix-event-list>
   `,
 })
@@ -388,9 +432,13 @@ import { IxEventList, IxEventListItem } from '@siemens/ix-vue';
 </script>
 
 <template>
-  <IxEventList itemHeight="L">
-    <IxEventListItem itemColor="color-primary">Text 1</IxEventListItem>
-    <IxEventListItem itemColor="color-primary">Text 2</IxEventListItem>
+  <IxEventList item-height="L">
+    <IxEventListItem item-color="--si-sys-color-background-accent"
+      >Text 1</IxEventListItem
+    >
+    <IxEventListItem item-color="--si-sys-color-background-accent"
+      >Text 2</IxEventListItem
+    >
   </IxEventList>
 </template>
 ```
@@ -411,7 +459,7 @@ export default () => {
     <IxEventList itemHeight={60}>
       {items.map((item) => (
         <div key={item}>
-          <IxEventListItem itemColor="color-primary">
+          <IxEventListItem itemColor="--si-sys-color-background-accent">
             Text {item}
           </IxEventListItem>
         </div>
@@ -433,7 +481,7 @@ import { Component } from '@angular/core';
   template: `
     <ix-event-list [itemHeight]="itemHeight">
       <ng-container *ngFor="let item of items">
-        <ix-event-list-item item-color="color-primary"
+        <ix-event-list-item itemColor="--si-sys-color-background-accent"
           >Text {{ item }}</ix-event-list-item
         >
       </ng-container>
@@ -456,8 +504,12 @@ import { IxEventList, IxEventListItem } from '@siemens/ix-vue';
 
 <template>
   <IxEventList :itemHeight="60">
-    <IxEventListItem itemColor="color-primary">Text 1</IxEventListItem>
-    <IxEventListItem itemColor="color-primary">Text 2</IxEventListItem>
+    <IxEventListItem item-color="--si-sys-color-background-accent"
+      >Text 1</IxEventListItem
+    >
+    <IxEventListItem item-color="--si-sys-color-background-accent"
+      >Text 2</IxEventListItem
+    >
   </IxEventList>
 </template>
 ```
@@ -473,10 +525,18 @@ import { IxEventList, IxEventListItem } from '@siemens/ix-react';
 export default () => {
   return (
     <IxEventList compact>
-      <IxEventListItem itemColor="color-primary">Text 1</IxEventListItem>
-      <IxEventListItem itemColor="color-primary">Text 2</IxEventListItem>
-      <IxEventListItem itemColor="color-primary">Text 3</IxEventListItem>
-      <IxEventListItem itemColor="color-primary">Text 4</IxEventListItem>
+      <IxEventListItem itemColor="--si-sys-color-background-accent">
+        Text 1
+      </IxEventListItem>
+      <IxEventListItem itemColor="--si-sys-color-background-accent">
+        Text 2
+      </IxEventListItem>
+      <IxEventListItem itemColor="--si-sys-color-background-accent">
+        Text 3
+      </IxEventListItem>
+      <IxEventListItem itemColor="--si-sys-color-background-accent">
+        Text 4
+      </IxEventListItem>
     </IxEventList>
   );
 };
@@ -493,10 +553,18 @@ import { Component } from '@angular/core';
   selector: 'app-example',
   template: `
     <ix-event-list compact>
-      <ix-event-list-item item-color="color-primary">Text 1</ix-event-list-item>
-      <ix-event-list-item item-color="color-primary">Text 2</ix-event-list-item>
-      <ix-event-list-item item-color="color-primary">Text 3</ix-event-list-item>
-      <ix-event-list-item item-color="color-primary">Text 4</ix-event-list-item>
+      <ix-event-list-item itemColor="--si-sys-color-background-accent"
+        >Text 1</ix-event-list-item
+      >
+      <ix-event-list-item itemColor="--si-sys-color-background-accent"
+        >Text 2</ix-event-list-item
+      >
+      <ix-event-list-item itemColor="--si-sys-color-background-accent"
+        >Text 3</ix-event-list-item
+      >
+      <ix-event-list-item itemColor="--si-sys-color-background-accent"
+        >Text 4</ix-event-list-item
+      >
     </ix-event-list>
   `,
 })
@@ -515,10 +583,18 @@ import { IxEventList, IxEventListItem } from '@siemens/ix-angular/standalone';
   imports: [IxEventList, IxEventListItem],
   template: `
     <ix-event-list compact>
-      <ix-event-list-item item-color="color-primary">Text 1</ix-event-list-item>
-      <ix-event-list-item item-color="color-primary">Text 2</ix-event-list-item>
-      <ix-event-list-item item-color="color-primary">Text 3</ix-event-list-item>
-      <ix-event-list-item item-color="color-primary">Text 4</ix-event-list-item>
+      <ix-event-list-item itemColor="--si-sys-color-background-accent"
+        >Text 1</ix-event-list-item
+      >
+      <ix-event-list-item itemColor="--si-sys-color-background-accent"
+        >Text 2</ix-event-list-item
+      >
+      <ix-event-list-item itemColor="--si-sys-color-background-accent"
+        >Text 3</ix-event-list-item
+      >
+      <ix-event-list-item itemColor="--si-sys-color-background-accent"
+        >Text 4</ix-event-list-item
+      >
     </ix-event-list>
   `,
 })
@@ -535,10 +611,18 @@ import { IxEventList, IxEventListItem } from '@siemens/ix-vue';
 
 <template>
   <IxEventList compact>
-    <IxEventListItem itemColor="color-primary">Text 1</IxEventListItem>
-    <IxEventListItem itemColor="color-primary">Text 2</IxEventListItem>
-    <IxEventListItem itemColor="color-primary">Text 3</IxEventListItem>
-    <IxEventListItem itemColor="color-primary">Text 4</IxEventListItem>
+    <IxEventListItem item-color="--si-sys-color-background-accent"
+      >Text 1</IxEventListItem
+    >
+    <IxEventListItem item-color="--si-sys-color-background-accent"
+      >Text 2</IxEventListItem
+    >
+    <IxEventListItem item-color="--si-sys-color-background-accent"
+      >Text 3</IxEventListItem
+    >
+    <IxEventListItem item-color="--si-sys-color-background-accent"
+      >Text 4</IxEventListItem
+    >
   </IxEventList>
 </template>
 ```
@@ -547,12 +631,12 @@ import { IxEventList, IxEventListItem } from '@siemens/ix-vue';
 
 ### Properties
 
-| Name | Description | Attribute | Type | Default |
-| --- | --- | --- | --- | --- |
-| animated | { "Animate state change transitions. Defaults to 'false'." } | animated | boolean | false |
-| chevron | { "Display a chevron icon in list items. Defaults to 'false'" } | chevron | boolean | false |
-| compact | { "Make event-list items more compact" } | compact | boolean | false |
-| itemHeight | { "Determines the height of list items.\n\nThis can either be one of two predefined sizes ('S' or 'L') or an absolute pixel value.\n\nIn case a number is supplied it will get converted to rem internally.\n\nDefaults to 'S'." } | item-height | "L" \| "S" \| number | 'S' |
+| Name | Description | Attribute | Type | Default | Notes |
+| --- | --- | --- | --- | --- | --- |
+| animated | { "Animate state change transitions. Defaults to 'false'." } | animated | boolean | false |  |
+| chevron | { "Display a chevron icon in list items. Defaults to 'false'" } | chevron | boolean | false |  |
+| compact | { "Make event-list items more compact" } | compact | boolean | false |  |
+| itemHeight | { "Determines the height of list items.\n\nThis can either be one of two predefined sizes ('S' or 'L') or an absolute pixel value.\n\nDefaults to 'S'." } | item-height | "L" \| "S" \| number | 'S' | Breaking change in v6.0.0: Numeric values are applied as pixels instead of being converted to rem |
 
 ### Slot
 
@@ -564,13 +648,13 @@ import { IxEventList, IxEventListItem } from '@siemens/ix-vue';
 
 ### Properties
 
-| Name | Description | Attribute | Type | Default |
-| --- | --- | --- | --- | --- |
-| chevron | { "Show chevron on right side of the event list item" } | chevron | boolean | false |
-| disabled | { "Disable event list item" } | disabled | boolean | false |
-| itemColor | { "Color of the status indicator.\n\nYou can find a list of all available colors in our documentation.\n\nExample values are `--theme-color-alarm` or `color-alarm`\n\n[https://ix.siemens.io/docs/styles/colors](https://ix.siemens.io/docs/styles/colors)" } | item-color | string \| undefined |  |
-| selected | { "Show event list item as selected" } | selected | boolean | false |
-| variant | { "Variant of the event list item" } | variant | "filled" \| "outline" | 'outline' |
+| Name | Description | Attribute | Type | Default | Notes |
+| --- | --- | --- | --- | --- | --- |
+| chevron | { "Show chevron on right side of the event list item" } | chevron | boolean | false |  |
+| disabled | { "Disable event list item" } | disabled | boolean | false |  |
+| itemColor | { "Color of the status indicator.\n\nYou can find a list of all available colors in our documentation.\n\nExample value: `--si-sys-color-background-danger`\n\n[https://ix.siemens.io/docs/styles/colors](https://ix.siemens.io/docs/styles/colors)" } | item-color | string \| undefined |  | Breaking change in v6.0.0: Requires the full CSS custom property name |
+| selected | { "Show event list item as selected" } | selected | boolean | false |  |
+| variant | { "Variant of the event list item" } | variant | "filled" \| "outline" | 'outline' |  |
 
 ### Events
 

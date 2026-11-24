@@ -176,7 +176,7 @@ export default class NumberInputLabel {}
 ```html
 <ix-number-input
   label='Some label'
-  helper-text='Some helper text'
+  helperText='Some helper text'
 ></ix-number-input>
 ```
 
@@ -202,7 +202,7 @@ export default class NumberInputLabel {}
 ```html
 <ix-number-input
   label="Some label"
-  helper-text="Some helper text"
+  helperText="Some helper text"
 ></ix-number-input>
 ```
 
@@ -321,7 +321,7 @@ export default class NumberInputStepperButton {}
 ```html
 <ix-number-input
   value='0'
-  show-stepper-buttons
+  showStepperButtons
 ></ix-number-input>
 ```
 
@@ -345,7 +345,7 @@ export default class NumberInputStepperButton {}
 
 #### number-input-stepper-button.html
 ```html
-<ix-number-input value="0" show-stepper-buttons></ix-number-input>
+<ix-number-input value="0" showStepperButtons></ix-number-input>
 ```
 
 ### Vue Examples
@@ -430,7 +430,7 @@ export default class NumberInputValidation {}
 <div>
   <ix-number-input
     value='5'
-    info-text='Info text'
+    infoText='Info text'
     class='ix-info'
   ></ix-number-input>
 </div>
@@ -438,7 +438,7 @@ export default class NumberInputValidation {}
 <div>
   <ix-number-input
     value='5'
-    warning-text='Warning text'
+    warningText='Warning text'
     class='ix-warning'
   ></ix-number-input>
 </div>
@@ -446,7 +446,7 @@ export default class NumberInputValidation {}
 <div>
   <ix-number-input
     value='5'
-    valid-text='Valid text'
+    validText='Valid text'
     class='ix-valid'
   ></ix-number-input>
 </div>
@@ -454,7 +454,7 @@ export default class NumberInputValidation {}
 <div>
   <ix-number-input
     value='5'
-    invalid-text='Invalid text'
+    invalidText='Invalid text'
     class='ix-invalid'
   ></ix-number-input>
 </div>
@@ -483,7 +483,7 @@ export default class NumberInputValidation {}
 <div>
   <ix-number-input
     value="5"
-    info-text="Info text"
+    infoText="Info text"
     class="ix-info"
   ></ix-number-input>
 </div>
@@ -491,7 +491,7 @@ export default class NumberInputValidation {}
 <div>
   <ix-number-input
     value="5"
-    warning-text="Warning text"
+    warningText="Warning text"
     class="ix-warning"
   ></ix-number-input>
 </div>
@@ -499,7 +499,7 @@ export default class NumberInputValidation {}
 <div>
   <ix-number-input
     value="5"
-    valid-text="Valid text"
+    validText="Valid text"
     class="ix-valid"
   ></ix-number-input>
 </div>
@@ -507,7 +507,7 @@ export default class NumberInputValidation {}
 <div>
   <ix-number-input
     value="5"
-    invalid-text="Invalid text"
+    invalidText="Invalid text"
     class="ix-invalid"
   ></ix-number-input>
 </div>
@@ -673,6 +673,14 @@ import { IxIcon, IxNumberInput, IxTypography } from '@siemens/ix-vue';
 
 ### Methods
 
+#### clear
+
+```ts
+clear(): Promise&lt;void&gt;;
+```
+
+{ "Clears the input field value and resets validation state.\n\nSets the value to empty and removes touched state to suppress validation.\n\nEmits 0 unless allowEmptyValueChange is enabled, in which case it emits undefined." }
+
 #### focusInput
 
 ```ts
@@ -688,6 +696,14 @@ getNativeInputElement(): Promise&lt;HTMLInputElement&gt;;
 ```
 
 { "Returns the native input element used under the hood" }
+
+#### getValidityState
+
+```ts
+getValidityState(): Promise&lt;ValidityState&gt;;
+```
+
+{ "Returns the validity state of the number input field." }
 
 ### Events
 

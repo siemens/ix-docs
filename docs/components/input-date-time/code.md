@@ -370,7 +370,7 @@ export default class DatetimeInputValidation {}
   <ix-datetime-input
     label="Info"
     value="2026/02/08 00:00:00"
-    info-text='Info text'
+    infoText='Info text'
     class='ix-info'
   ></ix-datetime-input>
 </div>
@@ -379,7 +379,7 @@ export default class DatetimeInputValidation {}
   <ix-datetime-input
     label="Warning"
     value="2026/02/08 00:00:00"
-    warning-text='Warning text'
+    warningText='Warning text'
     class='ix-warning'
   ></ix-datetime-input>
 </div>
@@ -388,7 +388,7 @@ export default class DatetimeInputValidation {}
   <ix-datetime-input
     label="Valid"
     value="2026/02/08 00:00:00"
-    valid-text='Valid text'
+    validText='Valid text'
     class='ix-valid'
   ></ix-datetime-input>
 </div>
@@ -397,7 +397,7 @@ export default class DatetimeInputValidation {}
   <ix-datetime-input
     label="Invalid"
     value="2026/02/08 00:00:00"
-    invalid-text='Invalid text'
+    invalidText='Invalid text'
     class='ix-invalid'
   ></ix-datetime-input>
 </div>
@@ -424,7 +424,7 @@ export default class DatetimeInputValidation {}
   <ix-datetime-input
     label="Info"
     value="2026/02/08 00:00:00"
-    info-text='Info text'
+    infoText='Info text'
     class='ix-info'
   ></ix-datetime-input>
 </div>
@@ -433,7 +433,7 @@ export default class DatetimeInputValidation {}
   <ix-datetime-input
     label="Warning"
     value="2026/02/08 00:00:00"
-    warning-text='Warning text'
+    warningText='Warning text'
     class='ix-warning'
   ></ix-datetime-input>
 </div>
@@ -442,7 +442,7 @@ export default class DatetimeInputValidation {}
   <ix-datetime-input
     label="Valid"
     value="2026/02/08 00:00:00"
-    valid-text='Valid text'
+    validText='Valid text'
     class='ix-valid'
   ></ix-datetime-input>
 </div>
@@ -451,7 +451,7 @@ export default class DatetimeInputValidation {}
   <ix-datetime-input
     label="Invalid"
     value="2026/02/08 00:00:00"
-    invalid-text='Invalid text'
+    invalidText='Invalid text'
     class='ix-invalid'
   ></ix-datetime-input>
 </div>
@@ -648,8 +648,181 @@ import { IxDatetimeInput } from '@siemens/ix-vue';
   <IxDatetimeInput
     label="Date and time"
     value="2026/02/08 00:00:00"
-    minDate="2026/02/01"
-    maxDate="2026/02/28"
+    min-date="2026/02/01"
+    max-date="2026/02/28"
+  ></IxDatetimeInput>
+</template>
+```
+
+## Require confirmation
+
+By default, date time inputs apply every pick immediately and **Done** closes the picker. Set `requireConfirmation` to only apply the value when users click **Confirm**. **Cancel**, <kbd>Escape</kbd> or clicking outside discards the pending selection. Date time inputs emit `valueChange` only for applied values. Valid values typed into the input field are always applied immediately and emit `valueChange`.
+
+### React Examples
+
+#### datetime-input-require-confirmation.tsx
+```tsx
+import { IxDatetimeInput } from '@siemens/ix-react';
+
+export default () => {
+  return (
+    <IxDatetimeInput
+      label="Date and time"
+      value="2026/10/05 09:30:00"
+      requireConfirmation
+    />
+  );
+};
+```
+
+### Angular Examples
+
+#### datetime-input-require-confirmation.ts
+```ts
+import { Component } from '@angular/core';
+
+@Component({
+  standalone: false,
+  selector: 'app-example',
+  templateUrl: './datetime-input-require-confirmation.html',
+})
+export default class DatetimeInputRequireConfirmation {}
+```
+
+#### datetime-input-require-confirmation.html
+```html
+<ix-datetime-input
+  label='Date and time'
+  value='2026/10/05 09:30:00'
+  requireConfirmation
+></ix-datetime-input>
+```
+
+### Angular Standalone Examples
+
+#### datetime-input-require-confirmation.ts
+```ts
+import { Component } from '@angular/core';
+import { IxDatetimeInput } from '@siemens/ix-angular/standalone';
+
+@Component({
+  selector: 'app-example',
+  imports: [IxDatetimeInput],
+  templateUrl: './datetime-input-require-confirmation.html',
+})
+export default class DatetimeInputRequireConfirmation {}
+```
+
+#### datetime-input-require-confirmation.html
+```html
+<ix-datetime-input
+  label='Date and time'
+  value='2026/10/05 09:30:00'
+  requireConfirmation
+></ix-datetime-input>
+```
+
+### Vue Examples
+
+#### datetime-input-require-confirmation.vue
+```vue
+<script setup lang="ts">
+import { IxDatetimeInput } from '@siemens/ix-vue';
+</script>
+
+<template>
+  <IxDatetimeInput
+    label="Date and time"
+    value="2026/10/05 09:30:00"
+    require-confirmation
+  ></IxDatetimeInput>
+</template>
+```
+
+## Display format
+
+Set `displayFormat` to show and type the date and time in a different format than `format`.
+`value`, `minDate`, `maxDate` and emitted values keep using `format`.
+When users type a date, parts missing in `displayFormat`, like seconds, are kept from the current value.
+A typed two-digit year resolves to the year closest to the current value.
+
+### React Examples
+
+#### datetime-input-display-format.tsx
+```tsx
+import { IxDatetimeInput } from '@siemens/ix-react';
+
+export default () => {
+  return (
+    <IxDatetimeInput
+      label="Date and time"
+      value="2026/10/05 09:30:00"
+      displayFormat="dd.LL.yy HH:mm"
+    />
+  );
+};
+```
+
+### Angular Examples
+
+#### datetime-input-display-format.ts
+```ts
+import { Component } from '@angular/core';
+
+@Component({
+  standalone: false,
+  selector: 'app-example',
+  templateUrl: './datetime-input-display-format.html',
+})
+export default class DatetimeInputDisplayFormat {}
+```
+
+#### datetime-input-display-format.html
+```html
+<ix-datetime-input
+  label='Date and time'
+  value='2026/10/05 09:30:00'
+  displayFormat='dd.LL.yy HH:mm'
+></ix-datetime-input>
+```
+
+### Angular Standalone Examples
+
+#### datetime-input-display-format.ts
+```ts
+import { Component } from '@angular/core';
+import { IxDatetimeInput } from '@siemens/ix-angular/standalone';
+
+@Component({
+  selector: 'app-example',
+  imports: [IxDatetimeInput],
+  templateUrl: './datetime-input-display-format.html',
+})
+export default class DatetimeInputDisplayFormat {}
+```
+
+#### datetime-input-display-format.html
+```html
+<ix-datetime-input
+  label='Date and time'
+  value='2026/10/05 09:30:00'
+  displayFormat='dd.LL.yy HH:mm'
+></ix-datetime-input>
+```
+
+### Vue Examples
+
+#### datetime-input-display-format.vue
+```vue
+<script setup lang="ts">
+import { IxDatetimeInput } from '@siemens/ix-vue';
+</script>
+
+<template>
+  <IxDatetimeInput
+    label="Date and time"
+    value="2026/10/05 09:30:00"
+    display-format="dd.LL.yy HH:mm"
   ></IxDatetimeInput>
 </template>
 ```
@@ -658,48 +831,52 @@ import { IxDatetimeInput } from '@siemens/ix-vue';
 
 ### Properties
 
-| Name | Description | Attribute | Type | Default |
-| --- | --- | --- | --- | --- |
-| ariaLabelCalendarButton | { "ARIA label for the calendar icon button\n\nWill be set as aria-label on the nested HTML button element" } | aria-label-calendar-button | string \| undefined | 'Toggle calendar' |
-| ariaLabelNextMonthButton | { "ARIA label for next month navigation button" } | aria-label-next-month-button | string \| undefined | 'Next month' |
-| ariaLabelPreviousMonthButton | { "ARIA label for previous month navigation button" } | aria-label-previous-month-button | string \| undefined | 'Previous month' |
-| disabled | { "Whether the input is disabled" } | disabled | boolean | false |
-| enableTopLayer | { "Enable Popover API rendering for dropdown." } | enable-top-layer | boolean | false |
-| format | { "Luxon date and time format for display (e.g., 'yyyy/LL/dd HH:mm:ss' → \"2026/01/20 13:07:04\").\n\nSee [https://moment.github.io/luxon/#/formatting?id=table-of-tokens](https://moment.github.io/luxon/#/formatting?id=table-of-tokens) for all available tokens." } | format | string | 'yyyy/LL/dd HH:mm:ss' |
-| helperText | { "Helper text displayed below the input" } | helper-text | string \| undefined |  |
-| i18nDone | { "Text for confirm button in picker (prop name matches datetime-picker)" } | i-1-8n-done | string | 'Confirm' |
-| i18nErrorDateTimeUnparsable | { "Error message when datetime cannot be parsed" } | i-1-8n-error-date-time-unparsable | string | 'Date time is not valid' |
-| i18nTime | { "Header text for time picker section" } | i-1-8n-time | string | 'Time' |
-| infoText | { "Informational message" } | info-text | string \| undefined |  |
-| invalidText | { "Validation message for invalid state" } | invalid-text | string \| undefined |  |
-| label | { "Label text displayed above the input" } | label | string \| undefined |  |
-| locale | { "Locale for date/time formatting (e.g., 'en-US', 'de-DE')" } | locale | string \| undefined |  |
-| maxDate | { "Maximum allowed date (matching format or date-only, e.g., \"2026/12/31\")" } | max-date | string \| undefined |  |
-| maxTime | { "Latest selectable time (tokens matching the time portion of `format`). Invalid non-empty values are ignored." } | max-time | string \| undefined |  |
-| minDate | { "Minimum allowed date (matching format or date-only, e.g., \"2026/01/20\")" } | min-date | string \| undefined |  |
-| minTime | { "Earliest selectable time (tokens matching the time portion of `format`). Invalid non-empty values are ignored." } | min-time | string \| undefined |  |
-| name | { "Name of the form control for form submission" } | name | string \| undefined |  |
-| placeholder | { "Placeholder text when input is empty" } | placeholder | string \| undefined |  |
-| readonly | { "Whether the input is read-only (calendar icon hidden)" } | readonly | boolean | false |
-| required | { "Whether the field is required" } | required | boolean | false |
-| showTextAsTooltip | { "Show helper text as tooltip instead of below input" } | show-text-as-tooltip | boolean | false |
-| showWeekNumbers | { "Show week numbers in date picker" } | show-week-numbers | boolean | false |
-| suppressSubmitOnEnter | { "Prevent form submission when Enter is pressed" } | suppress-submit-on-enter | boolean | false |
-| textAlignment | { "Text alignment within the input field" } | text-alignment | "end" \| "start" | 'start' |
-| validText | { "Success/valid message" } | valid-text | string \| undefined |  |
-| value | { "Value in display format (e.g., \"2026/01/21 13:07:04\" for default format)" } | value | string \| undefined | '' |
-| warningText | { "Warning message" } | warning-text | string \| undefined |  |
-| weekStartIndex | { "First day of week (0=Sunday, 1=Monday, etc.)" } | week-start-index | number | 0 |
+| Name | Description | Attribute | Type | Default | Notes |
+| --- | --- | --- | --- | --- | --- |
+| ariaLabelCalendarButton | { "ARIA label for the calendar icon button\n\nWill be set as aria-label on the nested HTML button element" } | aria-label-calendar-button | string \| undefined | 'Toggle calendar' |  |
+| ariaLabelNextMonthButton | { "ARIA label for next month navigation button" } | aria-label-next-month-button | string \| undefined | 'Next month' |  |
+| ariaLabelPreviousMonthButton | { "ARIA label for previous month navigation button" } | aria-label-previous-month-button | string \| undefined | 'Previous month' |  |
+| disabled | { "Whether the input is disabled" } | disabled | boolean | false |  |
+| displayFormat | { "Luxon date and time format used to display and type the value in the input field.\n\n`value`, `minDate`, `maxDate` and emitted values keep using `format`,\n\ne.g. `format=\"yyyy/LL/dd HH:mm:ss\"` with `displayFormat=\"yy/LL/dd HH:mm\"`\n\ndisplays a two-digit year without losing the century of the value.\n\nDate and time parts missing in `displayFormat`, like seconds, are kept\n\nfrom the current value when the user types a date. A typed two-digit\n\nyear resolves to the year closest to the current value.\n\nDefaults to `format`.\n\nSee [https://moment.github.io/luxon/#/formatting?id=table-of-tokens](https://moment.github.io/luxon/#/formatting?id=table-of-tokens) for all available tokens." } | display-format | string \| undefined |  |  |
+| enableTopLayer | { "Enable Popover API rendering for dropdown." } | enable-top-layer | boolean | false |  |
+| format | { "Luxon date and time format of `value`, `minDate`, `maxDate` and emitted values\n\n(e.g., 'yyyy/LL/dd HH:mm:ss' → \"2026/01/20 13:07:04\").\n\nSee [https://moment.github.io/luxon/#/formatting?id=table-of-tokens](https://moment.github.io/luxon/#/formatting?id=table-of-tokens) for all available tokens." } | format | string | 'yyyy/LL/dd HH:mm:ss' |  |
+| helperText | { "Helper text displayed below the input" } | helper-text | string \| undefined |  |  |
+| i18nCancel | { "Text for cancel button in picker when `requireConfirmation` is enabled" } | i18n-cancel | string | 'Cancel' |  |
+| i18nConfirm | { "Text for confirm button in picker when `requireConfirmation` is enabled" } | i18n-confirm | string | 'Confirm' |  |
+| i18nDone | { "Text for done button in picker (prop name matches datetime-picker)" } | i-1-8n-done | string | 'Done' | Breaking change in v6.0.0: Default changed from Confirm to Done |
+| i18nErrorDateTimeUnparsable | { "Error message when datetime cannot be parsed" } | i-1-8n-error-date-time-unparsable | string | 'Date time is not valid' |  |
+| i18nTime | { "Header text for time picker section" } | i-1-8n-time | string | 'Time' |  |
+| infoText | { "Informational message" } | info-text | string \| undefined |  |  |
+| invalidText | { "Validation message for invalid state" } | invalid-text | string \| undefined |  |  |
+| label | { "Label text displayed above the input" } | label | string \| undefined |  |  |
+| locale | { "Locale for date/time formatting (e.g., 'en-US', 'de-DE')" } | locale | string \| undefined |  |  |
+| maxDate | { "Maximum allowed date (matching format or date-only, e.g., \"2026/12/31\")" } | max-date | string \| undefined |  |  |
+| maxTime | { "Latest selectable time (tokens matching the time portion of `format`). Invalid non-empty values are ignored." } | max-time | string \| undefined |  |  |
+| minDate | { "Minimum allowed date (matching format or date-only, e.g., \"2026/01/20\")" } | min-date | string \| undefined |  |  |
+| minTime | { "Earliest selectable time (tokens matching the time portion of `format`). Invalid non-empty values are ignored." } | min-time | string \| undefined |  |  |
+| name | { "Name of the form control for form submission" } | name | string \| undefined |  |  |
+| placeholder | { "Placeholder text when input is empty" } | placeholder | string \| undefined |  |  |
+| readonly | { "Whether the input is read-only (calendar icon hidden)" } | readonly | boolean | false |  |
+| requireConfirmation | { "If true, a date and time picked in the dropdown are only applied after the\n\nuser confirms them with the confirm button. The cancel button, pressing\n\nEscape or clicking outside the dropdown discards the pending selection." } | require-confirmation | boolean | false |  |
+| required | { "Whether the field is required" } | required | boolean | false |  |
+| showTextAsTooltip | { "Show helper text as tooltip instead of below input" } | show-text-as-tooltip | boolean | false |  |
+| showWeekNumbers | { "Show week numbers in date picker" } | show-week-numbers | boolean | false |  |
+| suppressSubmitOnEnter | { "Prevent form submission when Enter is pressed" } | suppress-submit-on-enter | boolean | false |  |
+| textAlignment | { "Text alignment within the input field" } | text-alignment | "end" \| "start" | 'start' |  |
+| validText | { "Success/valid message" } | valid-text | string \| undefined |  |  |
+| value | { "Value in `format` (e.g., \"2026/01/21 13:07:04\" for default format)" } | value | string \| undefined | '' |  |
+| warningText | { "Warning message" } | warning-text | string \| undefined |  |  |
+| weekStartIndex | { "First day of week (0=Sunday, 1=Monday, etc.)" } | week-start-index | number | 0 |  |
 
 ### Events
 
-| Name | Description | Event | Detail |
-| --- | --- | --- | --- |
-| ixBlur | { "Emitted when the input loses focus" } | ixBlur | void |
-| ixChange | { "Emitted when the date/time value changes via user interaction.\n\nFires in two scenarios:\n\n- When the input loses focus (blur) and the value has changed\n\n- When a new date/time is selected in the picker and confirmed\n\nDoes NOT fire when:\n\n- The picker is opened/closed without confirming a change\n\n- The input is blurred without modifying the value\n\n- The value is changed programmatically via the value property" } | ixChange | string \| undefined |
-| ixFocus | { "Emitted when the input receives focus" } | ixFocus | void |
-| validityStateChange | { "Emitted when validation state changes" } | validityStateChange | DateTimeInputValidityState |
-| valueChange | { "Emitted when the datetime value changes. Payload is display format or undefined" } | valueChange | string \| undefined |
+| Name | Description | Event | Detail | Notes |
+| --- | --- | --- | --- | --- |
+| ixBlur | { "Emitted when the input loses focus" } | ixBlur | void |  |
+| ixChange | { "Emitted when the date/time value changes via user interaction.\n\nFires in two scenarios:\n\n- When the input loses focus (blur) and the value has changed\n\n- When the picker closes after the value was changed in it, or on\n\n Confirm when `requireConfirmation` is enabled\n\nDoes NOT fire when:\n\n- The picker is opened/closed without changing the value\n\n- The input is blurred without modifying the value\n\n- The value is changed programmatically via the value property" } | ixChange | string \| undefined | Breaking change in v6.0.0: Emitted once when the picker closes, or on Confirm with requireConfirmation |
+| ixFocus | { "Emitted when the input receives focus" } | ixFocus | void |  |
+| validityStateChange | { "Emitted when validation state changes" } | validityStateChange | DateTimeInputValidityState |  |
+| valueChange | { "Emitted when the datetime value changes. Payload is in `format` or undefined" } | valueChange | string \| undefined | Breaking change in v6.0.0: Emit timing changed for picker selections |
 
 ### Slot
 

@@ -6,7 +6,7 @@
 
 Chats are the outer containers that bring together the three building blocks of a conversational thread: [Chat input](../chat-input) at the bottom for writing and sending prompts, [user messages](../user-message) that show what users submitted and [AI messages](../ai-message) that display AI responses.
 
-![Chat anatomy](https://www.figma.com/design/wEptRgAezDU1z80Cn3eZ0o/iX-Documentation-illustrations?node-id=7962-804&t=8Rj3ErabF16Vm3lH-4)
+![Chat anatomy](https://www.figma.com/design/wEptRgAezDU1z80Cn3eZ0o/iX-Documentation-illustrations?node-id=8909-49727&t=eVKxr5qGy8GLG1Ge-4)
 
 1. [User message](../user-message)
 2. [AI message](../ai-message)

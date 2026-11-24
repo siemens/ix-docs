@@ -362,4 +362,4 @@ import { iconCheckboxes } from '@siemens/ix-icons/icons';
 
 | Name | Description |
 | --- | --- |
-| default | { "Custom content displayed inside the avatar dropdown when placed inside header." } |
+| default | { "Dropdown content displayed below the avatar." } |

@@ -374,9 +374,25 @@ export default function EchartsLineMultipleYAxis() {
     temperature: months.map(() => (Math.random() * 30).toFixed(2)),
   };
 
-  const themeChartList = Array.from({ length: 17 }, (_, i) =>
-    getComputedCSSProperty(`chart-${i + 1}`)
-  );
+  const themeChartList = [
+    getComputedCSSProperty('--si-sys-color-data-categorical-2'),
+    getComputedCSSProperty('--si-sys-color-data-categorical-4'),
+    getComputedCSSProperty('--si-sys-color-data-categorical-1'),
+    getComputedCSSProperty('--si-sys-color-data-categorical-6'),
+    getComputedCSSProperty('--si-sys-color-data-categorical-17'),
+    getComputedCSSProperty('--si-sys-color-data-categorical-5'),
+    getComputedCSSProperty('--si-sys-color-data-categorical-13'),
+    getComputedCSSProperty('--si-sys-color-data-sequential-royal-blue-4'),
+    getComputedCSSProperty('--si-sys-color-data-categorical-8'),
+    getComputedCSSProperty('--si-sys-color-data-categorical-7'),
+    getComputedCSSProperty('--si-sys-color-data-categorical-9'),
+    getComputedCSSProperty('--si-sys-color-data-categorical-11'),
+    getComputedCSSProperty('--si-sys-color-data-categorical-12'),
+    getComputedCSSProperty('--si-sys-color-data-sequential-orange-4'),
+    getComputedCSSProperty('--si-sys-color-data-sequential-orange-1'),
+    getComputedCSSProperty('--si-sys-color-data-sequential-sand-1'),
+    getComputedCSSProperty('--si-sys-color-data-categorical-16'),
+  ];
 
   function createYAxis(
     name: string,
@@ -578,9 +594,25 @@ export default class EchartsLineMultipleYAxis implements OnDestroy, OnInit {
   options: EChartsOption = this.getOptions();
 
   private getOptions(): EChartsOption {
-    const themeChartList = Array.from({ length: 17 }, (_, i) =>
-      getComputedCSSProperty(`chart-${i + 1}`)
-    );
+    const themeChartList = [
+      getComputedCSSProperty('--si-sys-color-data-categorical-2'),
+      getComputedCSSProperty('--si-sys-color-data-categorical-4'),
+      getComputedCSSProperty('--si-sys-color-data-categorical-1'),
+      getComputedCSSProperty('--si-sys-color-data-categorical-6'),
+      getComputedCSSProperty('--si-sys-color-data-categorical-17'),
+      getComputedCSSProperty('--si-sys-color-data-categorical-5'),
+      getComputedCSSProperty('--si-sys-color-data-categorical-13'),
+      getComputedCSSProperty('--si-sys-color-data-sequential-royal-blue-4'),
+      getComputedCSSProperty('--si-sys-color-data-categorical-8'),
+      getComputedCSSProperty('--si-sys-color-data-categorical-7'),
+      getComputedCSSProperty('--si-sys-color-data-categorical-9'),
+      getComputedCSSProperty('--si-sys-color-data-categorical-11'),
+      getComputedCSSProperty('--si-sys-color-data-categorical-12'),
+      getComputedCSSProperty('--si-sys-color-data-sequential-orange-4'),
+      getComputedCSSProperty('--si-sys-color-data-sequential-orange-1'),
+      getComputedCSSProperty('--si-sys-color-data-sequential-sand-1'),
+      getComputedCSSProperty('--si-sys-color-data-categorical-16'),
+    ];
 
     return {
       tooltip: {
@@ -602,7 +634,12 @@ export default class EchartsLineMultipleYAxis implements OnDestroy, OnInit {
         },
       ],
       yAxis: [
-        this.createYAxis('Evaporation', 'right', themeChartList[0], '{value} ml'),
+        this.createYAxis(
+          'Evaporation',
+          'right',
+          themeChartList[0],
+          '{value} ml'
+        ),
         this.createYAxis(
           'Precipitation',
           'right',
@@ -610,17 +647,32 @@ export default class EchartsLineMultipleYAxis implements OnDestroy, OnInit {
           '{value} ml',
           80
         ),
-        this.createYAxis('Temperature', 'left', themeChartList[12], '{value} °C'),
+        this.createYAxis(
+          'Temperature',
+          'left',
+          themeChartList[12],
+          '{value} °C'
+        ),
       ],
       series: [
-        this.createSeries('Evaporation', 0, this.data.evaporation, themeChartList[0]),
+        this.createSeries(
+          'Evaporation',
+          0,
+          this.data.evaporation,
+          themeChartList[0]
+        ),
         this.createSeries(
           'Precipitation',
           1,
           this.data.precipitation,
           themeChartList[7]
         ),
-        this.createSeries('Temperature', 2, this.data.temperature, themeChartList[12]),
+        this.createSeries(
+          'Temperature',
+          2,
+          this.data.temperature,
+          themeChartList[12]
+        ),
       ],
     };
   }
@@ -763,9 +815,25 @@ export default class EchartsLineMultipleYAxis implements OnDestroy, OnInit {
   options: EChartsOption = this.getOptions();
 
   private getOptions(): EChartsOption {
-    const themeChartList = Array.from({ length: 17 }, (_, i) =>
-      getComputedCSSProperty(`chart-${i + 1}`)
-    );
+    const themeChartList = [
+      getComputedCSSProperty('--si-sys-color-data-categorical-2'),
+      getComputedCSSProperty('--si-sys-color-data-categorical-4'),
+      getComputedCSSProperty('--si-sys-color-data-categorical-1'),
+      getComputedCSSProperty('--si-sys-color-data-categorical-6'),
+      getComputedCSSProperty('--si-sys-color-data-categorical-17'),
+      getComputedCSSProperty('--si-sys-color-data-categorical-5'),
+      getComputedCSSProperty('--si-sys-color-data-categorical-13'),
+      getComputedCSSProperty('--si-sys-color-data-sequential-royal-blue-4'),
+      getComputedCSSProperty('--si-sys-color-data-categorical-8'),
+      getComputedCSSProperty('--si-sys-color-data-categorical-7'),
+      getComputedCSSProperty('--si-sys-color-data-categorical-9'),
+      getComputedCSSProperty('--si-sys-color-data-categorical-11'),
+      getComputedCSSProperty('--si-sys-color-data-categorical-12'),
+      getComputedCSSProperty('--si-sys-color-data-sequential-orange-4'),
+      getComputedCSSProperty('--si-sys-color-data-sequential-orange-1'),
+      getComputedCSSProperty('--si-sys-color-data-sequential-sand-1'),
+      getComputedCSSProperty('--si-sys-color-data-categorical-16'),
+    ];
 
     return {
       tooltip: {
@@ -787,7 +855,12 @@ export default class EchartsLineMultipleYAxis implements OnDestroy, OnInit {
         },
       ],
       yAxis: [
-        this.createYAxis('Evaporation', 'right', themeChartList[0], '{value} ml'),
+        this.createYAxis(
+          'Evaporation',
+          'right',
+          themeChartList[0],
+          '{value} ml'
+        ),
         this.createYAxis(
           'Precipitation',
           'right',
@@ -795,17 +868,32 @@ export default class EchartsLineMultipleYAxis implements OnDestroy, OnInit {
           '{value} ml',
           80
         ),
-        this.createYAxis('Temperature', 'left', themeChartList[12], '{value} °C'),
+        this.createYAxis(
+          'Temperature',
+          'left',
+          themeChartList[12],
+          '{value} °C'
+        ),
       ],
       series: [
-        this.createSeries('Evaporation', 0, this.data.evaporation, themeChartList[0]),
+        this.createSeries(
+          'Evaporation',
+          0,
+          this.data.evaporation,
+          themeChartList[0]
+        ),
         this.createSeries(
           'Precipitation',
           1,
           this.data.precipitation,
           themeChartList[7]
         ),
-        this.createSeries('Temperature', 2, this.data.temperature, themeChartList[12]),
+        this.createSeries(
+          'Temperature',
+          2,
+          this.data.temperature,
+          themeChartList[12]
+        ),
       ],
     };
   }
@@ -945,9 +1033,25 @@ function createSeries(
 }
 
 function getOptions(): EChartsOption {
-  const themeChartList = Array.from({ length: 17 }, (_, i) =>
-    getComputedCSSProperty(`chart-${i + 1}`)
-  );
+  const themeChartList = [
+    getComputedCSSProperty('--si-sys-color-data-categorical-2'),
+    getComputedCSSProperty('--si-sys-color-data-categorical-4'),
+    getComputedCSSProperty('--si-sys-color-data-categorical-1'),
+    getComputedCSSProperty('--si-sys-color-data-categorical-6'),
+    getComputedCSSProperty('--si-sys-color-data-categorical-17'),
+    getComputedCSSProperty('--si-sys-color-data-categorical-5'),
+    getComputedCSSProperty('--si-sys-color-data-categorical-13'),
+    getComputedCSSProperty('--si-sys-color-data-sequential-royal-blue-4'),
+    getComputedCSSProperty('--si-sys-color-data-categorical-8'),
+    getComputedCSSProperty('--si-sys-color-data-categorical-7'),
+    getComputedCSSProperty('--si-sys-color-data-categorical-9'),
+    getComputedCSSProperty('--si-sys-color-data-categorical-11'),
+    getComputedCSSProperty('--si-sys-color-data-categorical-12'),
+    getComputedCSSProperty('--si-sys-color-data-sequential-orange-4'),
+    getComputedCSSProperty('--si-sys-color-data-sequential-orange-1'),
+    getComputedCSSProperty('--si-sys-color-data-sequential-sand-1'),
+    getComputedCSSProperty('--si-sys-color-data-categorical-16'),
+  ];
 
   return {
     tooltip: {
@@ -970,7 +1074,13 @@ function getOptions(): EChartsOption {
     ],
     yAxis: [
       createYAxis('Evaporation', 'right', themeChartList[0], '{value} ml'),
-      createYAxis('Precipitation', 'right', themeChartList[7], '{value} ml', 80),
+      createYAxis(
+        'Precipitation',
+        'right',
+        themeChartList[7],
+        '{value} ml',
+        80
+      ),
       createYAxis('Temperature', 'left', themeChartList[12], '{value} °C'),
     ],
     series: [
@@ -1078,7 +1188,7 @@ export default function EchartsLineAdvanced() {
           color: new echarts.graphic.LinearGradient(0, 0, 0, 1, [
             {
               offset: 0,
-              color: getComputedCSSProperty('color-primary'),
+              color: getComputedCSSProperty('--si-sys-color-background-accent'),
             },
             { offset: 1, color: 'transparent' },
           ]),
@@ -1090,7 +1200,7 @@ export default function EchartsLineAdvanced() {
           ],
           label: {
             fontWeight: 'bold',
-            color: getComputedCSSProperty('color-inv-contrast-text'),
+            color: getComputedCSSProperty('--si-sys-color-text-inverse'),
           },
         },
         markLine: {
@@ -1173,7 +1283,9 @@ export default class EchartsLineAdvanced implements OnDestroy, OnInit {
             color: new echarts.graphic.LinearGradient(0, 0, 0, 1, [
               {
                 offset: 0,
-                color: getComputedCSSProperty('color-primary'),
+                color: getComputedCSSProperty(
+                  '--si-sys-color-background-accent'
+                ),
               },
               { offset: 1, color: 'transparent' },
             ]),
@@ -1185,7 +1297,7 @@ export default class EchartsLineAdvanced implements OnDestroy, OnInit {
             ],
             label: {
               fontWeight: 'bold',
-              color: getComputedCSSProperty('color-inv-contrast-text'),
+              color: getComputedCSSProperty('--si-sys-color-text-inverse'),
             },
           },
           markLine: {
@@ -1286,7 +1398,9 @@ export default class EchartsLineAdvanced implements OnDestroy, OnInit {
             color: new echarts.graphic.LinearGradient(0, 0, 0, 1, [
               {
                 offset: 0,
-                color: getComputedCSSProperty('color-primary'),
+                color: getComputedCSSProperty(
+                  '--si-sys-color-background-accent'
+                ),
               },
               { offset: 1, color: 'transparent' },
             ]),
@@ -1298,7 +1412,7 @@ export default class EchartsLineAdvanced implements OnDestroy, OnInit {
             ],
             label: {
               fontWeight: 'bold',
-              color: getComputedCSSProperty('color-inv-contrast-text'),
+              color: getComputedCSSProperty('--si-sys-color-text-inverse'),
             },
           },
           markLine: {
@@ -1397,7 +1511,7 @@ function getOptions(): EChartsOption {
           color: new echarts.graphic.LinearGradient(0, 0, 0, 1, [
             {
               offset: 0,
-              color: getComputedCSSProperty('color-primary'),
+              color: getComputedCSSProperty('--si-sys-color-background-accent'),
             },
             { offset: 1, color: 'transparent' },
           ]),
@@ -1409,7 +1523,7 @@ function getOptions(): EChartsOption {
           ],
           label: {
             fontWeight: 'bold',
-            color: getComputedCSSProperty('color-inv-contrast-text'),
+            color: getComputedCSSProperty('--si-sys-color-text-inverse'),
           },
         },
         markLine: {

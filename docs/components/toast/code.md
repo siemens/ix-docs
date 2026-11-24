@@ -10,16 +10,33 @@
 
 #### toast.tsx
 ```tsx
+import type { ToastType } from '@siemens/ix';
 import { IxButton, showToast } from '@siemens/ix-react';
 
 export default () => {
   return (
     <>
       <IxButton
-        onClick={() => {
-          showToast({
-            message: 'My toast message!',
-          });
+        onClick={async () => {
+          const toastTypes: ToastType[] = [
+            'information',
+            'success',
+            'caution',
+            'warning',
+            'danger',
+            'critical',
+            'error',
+            'base',
+          ];
+
+          for (const type of toastTypes) {
+            await showToast({
+              type,
+              title: 'Toast headline',
+              message: 'This is a toast test message!',
+              autoClose: false,
+            });
+          }
         }}
       >
         Trigger toast
@@ -33,7 +50,8 @@ export default () => {
 
 #### toast.ts
 ```ts
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
+import type { ToastType } from '@siemens/ix';
 import { ToastService } from '@siemens/ix-angular';
 
 @Component({
@@ -44,12 +62,28 @@ import { ToastService } from '@siemens/ix-angular';
   `,
 })
 export default class Toast {
-  constructor(private readonly toastService: ToastService) {}
+  private readonly toastService = inject(ToastService);
 
   async showToastMessage() {
-    this.toastService.show({
-      message: 'My toast message!',
-    });
+    const toastTypes: ToastType[] = [
+      'information',
+      'success',
+      'caution',
+      'warning',
+      'danger',
+      'critical',
+      'error',
+      'base',
+    ];
+
+    for (const type of toastTypes) {
+      await this.toastService.show({
+        type,
+        title: 'Toast headline',
+        message: 'This is a toast test message!',
+        autoClose: false,
+      });
+    }
   }
 }
 ```
@@ -58,7 +92,8 @@ export default class Toast {
 
 #### toast.ts
 ```ts
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
+import type { ToastType } from '@siemens/ix';
 import { IxButton, ToastService } from '@siemens/ix-angular/standalone';
 
 @Component({
@@ -70,12 +105,28 @@ import { IxButton, ToastService } from '@siemens/ix-angular/standalone';
   `,
 })
 export default class Toast {
-  constructor(private readonly toastService: ToastService) {}
+  private readonly toastService = inject(ToastService);
 
   async showToastMessage() {
-    this.toastService.show({
-      message: 'My toast message!',
-    });
+    const toastTypes: ToastType[] = [
+      'information',
+      'success',
+      'caution',
+      'warning',
+      'danger',
+      'critical',
+      'error',
+      'base',
+    ];
+
+    for (const type of toastTypes) {
+      await this.toastService.show({
+        type,
+        title: 'Toast headline',
+        message: 'This is a toast test message!',
+        autoClose: false,
+      });
+    }
   }
 }
 ```
@@ -85,13 +136,34 @@ export default class Toast {
 #### toast.vue
 ```vue
 <script setup lang="ts">
+import type { ToastType } from '@siemens/ix';
 import { IxButton, showToast } from '@siemens/ix-vue';
+
+async function showToastMessage() {
+  const toastTypes: ToastType[] = [
+    'information',
+    'success',
+    'caution',
+    'warning',
+    'danger',
+    'critical',
+    'error',
+    'base',
+  ];
+
+  for (const type of toastTypes) {
+    await showToast({
+      type,
+      title: 'Toast headline',
+      message: 'This is a toast test message!',
+      autoClose: false,
+    });
+  }
+}
 </script>
 
 <template>
-  <IxButton @click="showToast({ message: 'My toast message!' })">
-    Trigger toast
-  </IxButton>
+  <IxButton @click="showToastMessage">Trigger toast</IxButton>
 </template>
 ```
 
@@ -154,7 +226,7 @@ export default () => {
 
 #### toast-custom.ts
 ```ts
-import { Component, TemplateRef, ViewChild } from '@angular/core';
+import { Component, inject, TemplateRef, ViewChild } from '@angular/core';
 import { ToastService } from '@siemens/ix-angular';
 
 @Component({
@@ -195,7 +267,7 @@ export default class ToastCustom {
   @ViewChild('customToastAction', { read: TemplateRef })
   customToastActionRef!: TemplateRef<any>;
 
-  constructor(private readonly toastService: ToastService) {}
+  private readonly toastService = inject(ToastService);
 
   async showToastMessage() {
     this.toastService.show({
@@ -219,7 +291,7 @@ export default class ToastCustom {
 
 #### toast-custom.ts
 ```ts
-import { Component, TemplateRef, ViewChild } from '@angular/core';
+import { Component, inject, TemplateRef, ViewChild } from '@angular/core';
 import { IxButton, ToastService } from '@siemens/ix-angular/standalone';
 
 @Component({
@@ -254,7 +326,7 @@ export default class ToastCustom {
   @ViewChild('customToastAction', { read: TemplateRef })
   customToastActionRef!: TemplateRef<any>;
 
-  constructor(private readonly toastService: ToastService) {}
+  private readonly toastService = inject(ToastService);
 
   async showToastMessage() {
     this.toastService.show({
@@ -362,7 +434,7 @@ export default () => {
 
 #### toast-position.ts
 ```ts
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
 import { ToastService } from '@siemens/ix-angular';
 
 @Component({
@@ -373,7 +445,7 @@ import { ToastService } from '@siemens/ix-angular';
   `,
 })
 export default class ToastPosition {
-  constructor(private readonly toastService: ToastService) {}
+  private readonly toastService = inject(ToastService);
 
   async showToastMessage() {
     this.toastService.setPosition('top-right');
@@ -388,7 +460,7 @@ export default class ToastPosition {
 
 #### toast-position.ts
 ```ts
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
 import { IxButton, ToastService } from '@siemens/ix-angular/standalone';
 
 @Component({
@@ -400,7 +472,7 @@ import { IxButton, ToastService } from '@siemens/ix-angular/standalone';
   `,
 })
 export default class ToastPosition {
-  constructor(private readonly toastService: ToastService) {}
+  private readonly toastService = inject(ToastService);
 
   async showToastMessage() {
     this.toastService.setPosition('top-right');
@@ -439,10 +511,10 @@ setToastPosition('top-right');
 | autoCloseDelay | { "Sets the delay for autoClose in milliseconds" } | autoCloseDelay | number |
 | hideIcon | { "Allows to hide the icon in the toast" } | hideIcon | boolean |
 | icon | { "Icon that is displayed with the toast" } | icon | string |
-| iconColor | { "Color of the icon" } | iconColor | string |
+| iconColor | { "Icon color as a CSS custom property name, for example\n\n``--si-sys-color-text-primary``." } | iconColor | string |
 | message | { "Message of the toast" } | message | string \| HTMLElement |
 | title | { "Title of the toast" } | title | string |
-| type | { "Type of the toast" } | type | ToastType |
+| type | { "Type of the toast. Defaults to ``information``." } | type | ToastType |
 
 ## API for toast utils (JavaScript, React, Vue)
 
@@ -472,6 +544,38 @@ toast(config: ToastConfig): Promise&lt;ShowToastResult&gt;;
 
 { "Display a toast based on the provided configuration" }
 
+#### toast.base
+
+```ts
+toast.base(config: ToastConfig): Promise&lt;ShowToastResult&gt;;
+```
+
+{ "Display a base toast with the information icon in the primary text color and no left-side status strip." }
+
+#### toast.caution
+
+```ts
+toast.caution(config: ToastConfig): Promise&lt;ShowToastResult&gt;;
+```
+
+{ "Display a caution toast based on the provided configuration" }
+
+#### toast.critical
+
+```ts
+toast.critical(config: ToastConfig): Promise&lt;ShowToastResult&gt;;
+```
+
+{ "Display a critical toast based on the provided configuration" }
+
+#### toast.danger
+
+```ts
+toast.danger(config: ToastConfig): Promise&lt;ShowToastResult&gt;;
+```
+
+{ "Display a danger toast based on the provided configuration" }
+
 #### toast.error
 
 ```ts
@@ -480,13 +584,13 @@ toast.error(config: ToastConfig): Promise&lt;ShowToastResult&gt;;
 
 { "Display an error toast based on the provided configuration" }
 
-#### toast.info
+#### toast.information
 
 ```ts
-toast.info(config: ToastConfig): Promise&lt;ShowToastResult&gt;;
+toast.information(config: ToastConfig): Promise&lt;ShowToastResult&gt;;
 ```
 
-{ "Display an info toast based on the provided configuration" }
+{ "Display an information toast based on the provided configuration" }
 
 #### toast.success
 

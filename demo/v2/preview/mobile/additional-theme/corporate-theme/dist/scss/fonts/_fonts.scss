@@ -1,0 +1,20 @@
+/*
+ * COPYRIGHT (c) Siemens AG 2018-2026 ALL RIGHTS RESERVED.
+ */
+
+$font-family: 'SiemensSans Pro VF';
+
+@mixin font-face($file-name, $font-style, $font-path: './fonts/') {
+  @font-face {
+    font-family: $font-family;
+    src: url($font-path + $file-name + '.woff2') format('woff2');
+    font-style: $font-style;
+    font-weight: 400 700;
+    font-display: swap;
+  }
+}
+
+@mixin register-fonts($font-path: './fonts/') {
+  @include font-face('SiemensSansProVF_W_Wght', normal, $font-path);
+  @include font-face('SiemensSansProVF_Italics_W_Wght', italic, $font-path);
+}

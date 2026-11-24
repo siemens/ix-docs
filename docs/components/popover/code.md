@@ -46,11 +46,11 @@ export default function PopoverPreview() {
       >
         <IxPopoverHeader
           icon={iconInfo}
-          iconColor="color-info"
+          iconColor="--si-sys-color-text-information"
           ariaLabelCloseIconButton="Close popover"
         >
           Release highlights
-          <IxPill slot="additional-items" variant="info">
+          <IxPill slot="additional-items" variant="information">
             New
           </IxPill>
         </IxPopoverHeader>
@@ -96,22 +96,22 @@ export default class Popover {}
   #popover
   trigger="triggerId"
   placement="bottom"
-  trigger-mode="click"
-  has-spike
-  close-on-click-outside
+  triggerMode="click"
+  hasSpike
+  closeOnClickOutside
   aria-label="Release highlights"
 >
   <ix-popover-header
     icon="info"
-    icon-color="color-info"
+    iconColor="--si-sys-color-text-information"
     aria-label-close-icon-button="Close popover"
   >
     Release highlights
-    <ix-pill slot="additional-items" variant="info">New</ix-pill>
+    <ix-pill slot="additional-items" variant="information">New</ix-pill>
   </ix-popover-header>
   <ix-popover-image
     image="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='400' height='160'%3E%3Crect fill='%232a2a4a' width='100%25' height='100%25'/%3E%3Ctext x='50%25' y='50%25' fill='%23e0e0e0' text-anchor='middle' dy='.3em' font-size='18'%3ERelease%20preview%3C/text%3E%3C/svg%3E"
-    image-alt="Release preview"
+    imageAlt="Release preview"
   ></ix-popover-image>
   <ix-popover-content>
     Check out the new dashboard and improved performance metrics.
@@ -173,22 +173,22 @@ export default class Popover {
   #popover
   trigger="triggerId"
   placement="bottom"
-  trigger-mode="click"
-  has-spike
-  close-on-click-outside
+  triggerMode="click"
+  hasSpike
+  closeOnClickOutside
   aria-label="Release highlights"
 >
   <ix-popover-header
     icon="info"
-    icon-color="color-info"
+    iconColor="--si-sys-color-text-information"
     aria-label-close-icon-button="Close popover"
   >
     Release highlights
-    <ix-pill slot="additional-items" variant="info">New</ix-pill>
+    <ix-pill slot="additional-items" variant="information">New</ix-pill>
   </ix-popover-header>
   <ix-popover-image
     [image]="popoverImageSrc"
-    image-alt="Release preview"
+    imageAlt="Release preview"
   ></ix-popover-image>
   <ix-popover-content>
     Check out the new dashboard and improved performance metrics.
@@ -243,11 +243,11 @@ const onCancel = () => {
   >
     <IxPopoverHeader
       :icon="iconInfo"
-      icon-color="color-info"
+      icon-color="--si-sys-color-text-information"
       aria-label-close-icon-button="Close popover"
     >
       Release highlights
-      <IxPill slot="additional-items" variant="info">New</IxPill>
+      <IxPill slot="additional-items" variant="information">New</IxPill>
     </IxPopoverHeader>
     <IxPopoverImage :image="POPOVER_IMAGE_SRC" image-alt="Release preview" />
     <IxPopoverContent>
@@ -272,7 +272,7 @@ const onCancel = () => {
 | hasSpike | { "Show the spike pointing at the trigger" } | has-spike | boolean | false |
 | placement | { "Preferred placement relative to trigger" } | placement | "bottom" \| "left" \| "right" \| "top" | 'bottom' |
 | show | { "Show/hide state" } | show | boolean | false |
-| trigger | { "Element that toggles the popover.\n\nString values are resolved as the trigger element `id`, not as CSS selectors.\n\nAlso accepts a DOM element reference." } | trigger | HTMLElement \| Promise \| string \| undefined |  |
+| trigger | { "Element that toggles the popover.\n\nString values are resolved as the trigger element `id`. Also accepts a DOM element reference.\n\nString values are inserted into an ID selector (`# `) without escaping. Use\n\napplication-controlled IDs starting with an ASCII letter or `_`, followed by ASCII letters,\n\ndigits, `-` or `_`. Do not derive IDs from untrusted input. For other IDs, pass the DOM\n\nelement reference instead.\n\nIf no element with the ID exists, the popover observes the document until it appears; make sure\n\nthe trigger element exists." } | trigger | HTMLElement \| Promise \| string \| undefined |  |
 | triggerMode | { "Interaction that opens the popover" } | trigger-mode | "click" \| "hover" | 'click' |
 
 ### Methods
@@ -310,12 +310,12 @@ showPopover(): Promise&lt;void&gt;;
 
 ### Properties
 
-| Name | Description | Attribute | Type | Default |
-| --- | --- | --- | --- | --- |
-| ariaLabelCloseIconButton | { "ARIA label for the close icon button.\n\nWill be set as aria-label on the nested HTML button element." } | aria-label-close-icon-button | string \| undefined | 'Close' |
-| hideClose | { "Hide the close (X) button" } | hide-close | boolean | false |
-| icon | { "Icon name displayed before the title.\n\nThe icon is decorative; provide context in the default slot heading." } | icon | string \| undefined |  |
-| iconColor | { "Icon color" } | icon-color | string \| undefined |  |
+| Name | Description | Attribute | Type | Default | Notes |
+| --- | --- | --- | --- | --- | --- |
+| ariaLabelCloseIconButton | { "ARIA label for the close icon button.\n\nWill be set as aria-label on the nested HTML button element." } | aria-label-close-icon-button | string \| undefined | 'Close' |  |
+| hideClose | { "Hide the close (X) button" } | hide-close | boolean | false |  |
+| icon | { "Icon name displayed before the title.\n\nThe icon is decorative; provide context in the default slot heading." } | icon | string \| undefined |  |  |
+| iconColor | { "Icon color as a CSS custom property name, for example\n\n`--si-sys-color-text-primary`." } | icon-color | string \| undefined |  | Breaking change in v6.0.0: Requires the full CSS custom property name |
 
 ### Events
 
@@ -327,8 +327,8 @@ showPopover(): Promise&lt;void&gt;;
 
 | Name | Description |
 | --- | --- |
-| additional-items | { "Optional content beside the title (for example `ix-pill`)." } |
 | default | { "Popover title (rendered as heading text)." } |
+| additional-items | { "Optional content beside the title (for example `ix-pill`)." } |
 
 ## API for ix-popover-content
 

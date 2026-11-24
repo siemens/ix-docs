@@ -68,7 +68,7 @@ import { IxSpinner } from '@siemens/ix-vue';
 import { IxSpinner } from '@siemens/ix-react';
 
 export default () => {
-  return <IxSpinner size="large"></IxSpinner>;
+  return <IxSpinner size="xxl"></IxSpinner>;
 };
 ```
 
@@ -81,7 +81,7 @@ import { Component } from '@angular/core';
 @Component({
   standalone: false,
   selector: 'app-example',
-  template: ` <ix-spinner size="large"></ix-spinner> `,
+  template: ` <ix-spinner size="xxl"></ix-spinner> `,
 })
 export default class SpinnerLarge {}
 ```
@@ -96,7 +96,7 @@ import { IxSpinner } from '@siemens/ix-angular/standalone';
 @Component({
   selector: 'app-example',
   imports: [IxSpinner],
-  template: ` <ix-spinner size="large"></ix-spinner> `,
+  template: ` <ix-spinner size="xxl"></ix-spinner> `,
 })
 export default class SpinnerLarge {}
 ```
@@ -110,7 +110,7 @@ import { IxSpinner } from '@siemens/ix-vue';
 </script>
 
 <template>
-  <IxSpinner size="large"></IxSpinner>
+  <IxSpinner size="xxl"></IxSpinner>
 </template>
 ```
 
@@ -118,7 +118,7 @@ import { IxSpinner } from '@siemens/ix-vue';
 
 ### Properties
 
-| Name | Description | Attribute | Type | Default |
-| --- | --- | --- | --- | --- |
-| size | { "Size of spinner" } | size | "large" \| "medium" \| "small" \| "x-small" \| "xx-small" | 'medium' |
-| variant | { "Variant of spinner" } | variant | "primary" \| "secondary" | 'secondary' |
+| Name | Description | Attribute | Type | Default | Notes |
+| --- | --- | --- | --- | --- | --- |
+| size | { "Size of the spinner.\n\n- **xxs**: 12px.\n\n- **xs**: 16px.\n\n- **sm**: 20px.\n\n- **md**: 32px (default).\n\n- **xxl**: 96px." } | size | "md" \| "sm" \| "xs" \| "xxl" \| "xxs" | 'md' | Breaking change in v6.0.0: Size values renamed and remapped to different pixel sizes |
+| variant | { "Variant of spinner" } | variant | "primary" \| "secondary" | 'secondary' |  |

@@ -18,7 +18,7 @@ export default () => {
     <IxProgressIndicator
       label="Download"
       value={75}
-      helper-text="This is a help text for the progress indicator"
+      helperText="This is a help text for the progress indicator"
     >
       75%
     </IxProgressIndicator>
@@ -52,7 +52,7 @@ export default class ProgressIndicator {}
 <ix-progress-indicator
   label="Download"
   value="75"
-  helper-text="This is a help text for the progress indicator"
+  helperText="This is a help text for the progress indicator"
 >
   75%</ix-progress-indicator
 >
@@ -86,7 +86,7 @@ export default class ProgressIndicator {}
 <ix-progress-indicator
   label="Download"
   value="75"
-  helper-text="This is a help text for the progress indicator"
+  helperText="This is a help text for the progress indicator"
 >
   75%</ix-progress-indicator
 >
@@ -142,7 +142,7 @@ export default () => {
       type="circular"
       label="Download"
       value={75}
-      helper-text="This is a help text for the progress indicator"
+      helperText="This is a help text for the progress indicator"
     >
       75%
     </IxProgressIndicator>
@@ -179,7 +179,7 @@ export default class ProgressIndicatorCircular {}
       type="circular"
       label="Download"
       value="75"
-      helper-text="This is a help text for the progress indicator"
+      helperText="This is a help text for the progress indicator"
     >
       75%</ix-progress-indicator
     >
@@ -219,7 +219,7 @@ export default class ProgressIndicatorCircular {}
       type="circular"
       label="Download"
       value="75"
-      helper-text="This is a help text for the progress indicator"
+      helperText="This is a help text for the progress indicator"
     >
       75%</ix-progress-indicator
     >
@@ -262,12 +262,12 @@ import './progress-indicator.scoped.css';
 export default () => {
   return (
     <>
-      <h2 className="example-header">Status - Default</h2>
+      <h2 className="example-header">Status - Base</h2>
       <IxProgressIndicator
         type="linear"
         label="Download"
         value={75}
-        helper-text="This is a help text for the progress indicator"
+        helperText="This is a help text for the progress indicator"
       >
         75%
       </IxProgressIndicator>
@@ -276,7 +276,7 @@ export default () => {
         type="linear"
         label="Download"
         value={75}
-        helper-text="This is a help text for the progress indicator"
+        helperText="This is a help text for the progress indicator"
         status="success"
       >
         75%
@@ -286,18 +286,18 @@ export default () => {
         type="linear"
         label="Download"
         value={75}
-        helper-text="This is a help text for the progress indicator"
+        helperText="This is a help text for the progress indicator"
         status="error"
       >
         75%
       </IxProgressIndicator>
-      <h2 className="example-header">Status - Info</h2>
+      <h2 className="example-header">Status - Information</h2>
       <IxProgressIndicator
         type="linear"
         label="Download"
         value={75}
-        helper-text="This is a help text for the progress indicator"
-        status="info"
+        helperText="This is a help text for the progress indicator"
+        status="information"
       >
         75%
       </IxProgressIndicator>
@@ -306,7 +306,7 @@ export default () => {
         type="linear"
         label="Download"
         value={75}
-        helper-text="This is a help text for the progress indicator"
+        helperText="This is a help text for the progress indicator"
         status="warning"
       >
         75%
@@ -316,7 +316,7 @@ export default () => {
         type="linear"
         label="Download"
         value={75}
-        helper-text="This is a help text for the progress indicator"
+        helperText="This is a help text for the progress indicator"
         status="paused"
       >
         75%
@@ -351,12 +351,12 @@ export default class ProgressIndicatorLinearStatus {}
     <link rel="stylesheet" href="./progress-indicator.css" />
   </head>
   <body>
-    <h2 class="example-header">Status - Default</h2>
+    <h2 class="example-header">Status - Base</h2>
     <ix-progress-indicator
       type="linear"
       label="Download"
       value="75"
-      helper-text="This is a help text for the progress indicator"
+      helperText="This is a help text for the progress indicator"
     >
       75%</ix-progress-indicator
     >
@@ -365,7 +365,7 @@ export default class ProgressIndicatorLinearStatus {}
       type="linear"
       label="Download"
       value="75"
-      helper-text="This is a help text for the progress indicator"
+      helperText="This is a help text for the progress indicator"
       status="success"
     >
       75%</ix-progress-indicator
@@ -375,18 +375,18 @@ export default class ProgressIndicatorLinearStatus {}
       type="linear"
       label="Download"
       value="75"
-      helper-text="This is a help text for the progress indicator"
+      helperText="This is a help text for the progress indicator"
       status="error"
     >
       75%</ix-progress-indicator
     >
-    <h2 class="example-header">Status - Info</h2>
+    <h2 class="example-header">Status - Information</h2>
     <ix-progress-indicator
       type="linear"
       label="Download"
       value="75"
-      helper-text="This is a help text for the progress indicator"
-      status="info"
+      helperText="This is a help text for the progress indicator"
+      status="information"
     >
       75%</ix-progress-indicator
     >
@@ -395,7 +395,7 @@ export default class ProgressIndicatorLinearStatus {}
       type="linear"
       label="Download"
       value="75"
-      helper-text="This is a help text for the progress indicator"
+      helperText="This is a help text for the progress indicator"
       status="warning"
     >
       75%</ix-progress-indicator
@@ -405,7 +405,7 @@ export default class ProgressIndicatorLinearStatus {}
       type="linear"
       label="Download"
       value="75"
-      helper-text="This is a help text for the progress indicator"
+      helperText="This is a help text for the progress indicator"
       status="paused"
     >
       75%</ix-progress-indicator
@@ -442,12 +442,12 @@ export default class ProgressIndicatorLinearStatus {}
     <link rel="stylesheet" href="./progress-indicator.css" />
   </head>
   <body>
-    <h2 class="example-header">Status - Default</h2>
+    <h2 class="example-header">Status - Base</h2>
     <ix-progress-indicator
       type="linear"
       label="Download"
       value="75"
-      helper-text="This is a help text for the progress indicator"
+      helperText="This is a help text for the progress indicator"
     >
       75%</ix-progress-indicator
     >
@@ -456,7 +456,7 @@ export default class ProgressIndicatorLinearStatus {}
       type="linear"
       label="Download"
       value="75"
-      helper-text="This is a help text for the progress indicator"
+      helperText="This is a help text for the progress indicator"
       status="success"
     >
       75%</ix-progress-indicator
@@ -466,18 +466,18 @@ export default class ProgressIndicatorLinearStatus {}
       type="linear"
       label="Download"
       value="75"
-      helper-text="This is a help text for the progress indicator"
+      helperText="This is a help text for the progress indicator"
       status="error"
     >
       75%</ix-progress-indicator
     >
-    <h2 class="example-header">Status - Info</h2>
+    <h2 class="example-header">Status - Information</h2>
     <ix-progress-indicator
       type="linear"
       label="Download"
       value="75"
-      helper-text="This is a help text for the progress indicator"
-      status="info"
+      helperText="This is a help text for the progress indicator"
+      status="information"
     >
       75%</ix-progress-indicator
     >
@@ -486,7 +486,7 @@ export default class ProgressIndicatorLinearStatus {}
       type="linear"
       label="Download"
       value="75"
-      helper-text="This is a help text for the progress indicator"
+      helperText="This is a help text for the progress indicator"
       status="warning"
     >
       75%</ix-progress-indicator
@@ -496,7 +496,7 @@ export default class ProgressIndicatorLinearStatus {}
       type="linear"
       label="Download"
       value="75"
-      helper-text="This is a help text for the progress indicator"
+      helperText="This is a help text for the progress indicator"
       status="paused"
     >
       75%</ix-progress-indicator
@@ -517,7 +517,7 @@ import { IxProgressIndicator } from '@siemens/ix-vue';
 <style scoped src="./progress-indicator.css"></style>
 
 <template>
-  <h2 class="example-header">Status - Default</h2>
+  <h2 class="example-header">Status - Base</h2>
   <IxProgressIndicator
     type="linear"
     label="Download"
@@ -546,13 +546,13 @@ import { IxProgressIndicator } from '@siemens/ix-vue';
   >
     75%
   </IxProgressIndicator>
-  <h2 class="example-header">Status - Info</h2>
+  <h2 class="example-header">Status - Information</h2>
   <IxProgressIndicator
     type="linear"
     label="Download"
     :value="75"
     helper-text="This is a help text for the progress indicator"
-    status="info"
+    status="information"
   >
     75%
   </IxProgressIndicator>
@@ -596,7 +596,7 @@ export default () => {
         type="linear"
         label="Download"
         value={75}
-        helper-text="This is a help text for the progress indicator"
+        helperText="This is a help text for the progress indicator"
         size="xs"
       >
         75%
@@ -606,7 +606,7 @@ export default () => {
         type="linear"
         label="Download"
         value={75}
-        helper-text="This is a help text for the progress indicator"
+        helperText="This is a help text for the progress indicator"
         size="sm"
       >
         75%
@@ -616,7 +616,7 @@ export default () => {
         type="linear"
         label="Download"
         value={75}
-        helper-text="This is a help text for the progress indicator"
+        helperText="This is a help text for the progress indicator"
         size="md"
       >
         75%
@@ -626,7 +626,7 @@ export default () => {
         type="linear"
         label="Download"
         value={75}
-        helper-text="This is a help text for the progress indicator"
+        helperText="This is a help text for the progress indicator"
         size="lg"
       >
         75%
@@ -636,7 +636,7 @@ export default () => {
         type="linear"
         label="Download"
         value={75}
-        helper-text="This is a help text for the progress indicator"
+        helperText="This is a help text for the progress indicator"
         size="xl"
       >
         75%
@@ -676,7 +676,7 @@ export default class ProgressIndicatorLinearSizes {}
       type="linear"
       label="Download"
       value="75"
-      helper-text="This is a help text for the progress indicator"
+      helperText="This is a help text for the progress indicator"
       size="xs"
     >
       75%</ix-progress-indicator
@@ -686,7 +686,7 @@ export default class ProgressIndicatorLinearSizes {}
       type="linear"
       label="Download"
       value="75"
-      helper-text="This is a help text for the progress indicator"
+      helperText="This is a help text for the progress indicator"
       size="sm"
     >
       75%</ix-progress-indicator
@@ -696,7 +696,7 @@ export default class ProgressIndicatorLinearSizes {}
       type="linear"
       label="Download"
       value="75"
-      helper-text="This is a help text for the progress indicator"
+      helperText="This is a help text for the progress indicator"
       size="md"
     >
       75%</ix-progress-indicator
@@ -706,7 +706,7 @@ export default class ProgressIndicatorLinearSizes {}
       type="linear"
       label="Download"
       value="75"
-      helper-text="This is a help text for the progress indicator"
+      helperText="This is a help text for the progress indicator"
       size="lg"
     >
       75%</ix-progress-indicator
@@ -716,7 +716,7 @@ export default class ProgressIndicatorLinearSizes {}
       type="linear"
       label="Download"
       value="75"
-      helper-text="This is a help text for the progress indicator"
+      helperText="This is a help text for the progress indicator"
       size="xl"
     >
       75%</ix-progress-indicator
@@ -758,7 +758,7 @@ export default class ProgressIndicatorLinearSizes {}
       type="linear"
       label="Download"
       value="75"
-      helper-text="This is a help text for the progress indicator"
+      helperText="This is a help text for the progress indicator"
       size="xs"
     >
       75%</ix-progress-indicator
@@ -768,7 +768,7 @@ export default class ProgressIndicatorLinearSizes {}
       type="linear"
       label="Download"
       value="75"
-      helper-text="This is a help text for the progress indicator"
+      helperText="This is a help text for the progress indicator"
       size="sm"
     >
       75%</ix-progress-indicator
@@ -778,7 +778,7 @@ export default class ProgressIndicatorLinearSizes {}
       type="linear"
       label="Download"
       value="75"
-      helper-text="This is a help text for the progress indicator"
+      helperText="This is a help text for the progress indicator"
       size="md"
     >
       75%</ix-progress-indicator
@@ -788,7 +788,7 @@ export default class ProgressIndicatorLinearSizes {}
       type="linear"
       label="Download"
       value="75"
-      helper-text="This is a help text for the progress indicator"
+      helperText="This is a help text for the progress indicator"
       size="lg"
     >
       75%</ix-progress-indicator
@@ -798,7 +798,7 @@ export default class ProgressIndicatorLinearSizes {}
       type="linear"
       label="Download"
       value="75"
-      helper-text="This is a help text for the progress indicator"
+      helperText="This is a help text for the progress indicator"
       size="xl"
     >
       75%</ix-progress-indicator
@@ -884,12 +884,12 @@ import './progress-indicator.scoped.css';
 export default () => {
   return (
     <>
-      <h2 className="example-header">Status - Default</h2>
+      <h2 className="example-header">Status - Base</h2>
       <IxProgressIndicator
         type="circular"
         label="Download"
         value={75}
-        helper-text="This is a help text for the progress indicator"
+        helperText="This is a help text for the progress indicator"
       >
         75%
       </IxProgressIndicator>
@@ -898,7 +898,7 @@ export default () => {
         type="circular"
         label="Download"
         value={75}
-        helper-text="This is a help text for the progress indicator"
+        helperText="This is a help text for the progress indicator"
         status="success"
       >
         75%
@@ -908,18 +908,18 @@ export default () => {
         type="circular"
         label="Download"
         value={75}
-        helper-text="This is a help text for the progress indicator"
+        helperText="This is a help text for the progress indicator"
         status="error"
       >
         75%
       </IxProgressIndicator>
-      <h2 className="example-header">Status - Info</h2>
+      <h2 className="example-header">Status - Information</h2>
       <IxProgressIndicator
         type="circular"
         label="Download"
         value={75}
-        helper-text="This is a help text for the progress indicator"
-        status="info"
+        helperText="This is a help text for the progress indicator"
+        status="information"
       >
         75%
       </IxProgressIndicator>
@@ -928,7 +928,7 @@ export default () => {
         type="circular"
         label="Download"
         value={75}
-        helper-text="This is a help text for the progress indicator"
+        helperText="This is a help text for the progress indicator"
         status="warning"
       >
         75%
@@ -938,7 +938,7 @@ export default () => {
         type="circular"
         label="Download"
         value={75}
-        helper-text="This is a help text for the progress indicator"
+        helperText="This is a help text for the progress indicator"
         status="paused"
       >
         75%
@@ -973,12 +973,12 @@ export default class ProgressIndicatorCircularStatus {}
     <link rel="stylesheet" href="./progress-indicator.css" />
   </head>
   <body>
-    <h2 class="example-header">Status - Default</h2>
+    <h2 class="example-header">Status - Base</h2>
     <ix-progress-indicator
       type="circular"
       label="Download"
       value="75"
-      helper-text="This is a help text for the progress indicator"
+      helperText="This is a help text for the progress indicator"
     >
       75%</ix-progress-indicator
     >
@@ -987,7 +987,7 @@ export default class ProgressIndicatorCircularStatus {}
       type="circular"
       label="Download"
       value="75"
-      helper-text="This is a help text for the progress indicator"
+      helperText="This is a help text for the progress indicator"
       status="success"
     >
       75%</ix-progress-indicator
@@ -997,18 +997,18 @@ export default class ProgressIndicatorCircularStatus {}
       type="circular"
       label="Download"
       value="75"
-      helper-text="This is a help text for the progress indicator"
+      helperText="This is a help text for the progress indicator"
       status="error"
     >
       75%</ix-progress-indicator
     >
-    <h2 class="example-header">Status - Info</h2>
+    <h2 class="example-header">Status - Information</h2>
     <ix-progress-indicator
       type="circular"
       label="Download"
       value="75"
-      helper-text="This is a help text for the progress indicator"
-      status="info"
+      helperText="This is a help text for the progress indicator"
+      status="information"
     >
       75%</ix-progress-indicator
     >
@@ -1017,7 +1017,7 @@ export default class ProgressIndicatorCircularStatus {}
       type="circular"
       label="Download"
       value="75"
-      helper-text="This is a help text for the progress indicator"
+      helperText="This is a help text for the progress indicator"
       status="warning"
     >
       75%</ix-progress-indicator
@@ -1027,7 +1027,7 @@ export default class ProgressIndicatorCircularStatus {}
       type="circular"
       label="Download"
       value="75"
-      helper-text="This is a help text for the progress indicator"
+      helperText="This is a help text for the progress indicator"
       status="paused"
     >
       75%</ix-progress-indicator
@@ -1064,12 +1064,12 @@ export default class ProgressIndicatorCircularStatus {}
     <link rel="stylesheet" href="./progress-indicator.css" />
   </head>
   <body>
-    <h2 class="example-header">Status - Default</h2>
+    <h2 class="example-header">Status - Base</h2>
     <ix-progress-indicator
       type="circular"
       label="Download"
       value="75"
-      helper-text="This is a help text for the progress indicator"
+      helperText="This is a help text for the progress indicator"
     >
       75%</ix-progress-indicator
     >
@@ -1078,7 +1078,7 @@ export default class ProgressIndicatorCircularStatus {}
       type="circular"
       label="Download"
       value="75"
-      helper-text="This is a help text for the progress indicator"
+      helperText="This is a help text for the progress indicator"
       status="success"
     >
       75%</ix-progress-indicator
@@ -1088,18 +1088,18 @@ export default class ProgressIndicatorCircularStatus {}
       type="circular"
       label="Download"
       value="75"
-      helper-text="This is a help text for the progress indicator"
+      helperText="This is a help text for the progress indicator"
       status="error"
     >
       75%</ix-progress-indicator
     >
-    <h2 class="example-header">Status - Info</h2>
+    <h2 class="example-header">Status - Information</h2>
     <ix-progress-indicator
       type="circular"
       label="Download"
       value="75"
-      helper-text="This is a help text for the progress indicator"
-      status="info"
+      helperText="This is a help text for the progress indicator"
+      status="information"
     >
       75%</ix-progress-indicator
     >
@@ -1108,7 +1108,7 @@ export default class ProgressIndicatorCircularStatus {}
       type="circular"
       label="Download"
       value="75"
-      helper-text="This is a help text for the progress indicator"
+      helperText="This is a help text for the progress indicator"
       status="warning"
     >
       75%</ix-progress-indicator
@@ -1118,7 +1118,7 @@ export default class ProgressIndicatorCircularStatus {}
       type="circular"
       label="Download"
       value="75"
-      helper-text="This is a help text for the progress indicator"
+      helperText="This is a help text for the progress indicator"
       status="paused"
     >
       75%</ix-progress-indicator
@@ -1139,7 +1139,7 @@ import { IxProgressIndicator } from '@siemens/ix-vue';
 <style scoped src="./progress-indicator.css"></style>
 
 <template>
-  <h2 class="example-header">Status - Default</h2>
+  <h2 class="example-header">Status - Base</h2>
   <IxProgressIndicator
     type="circular"
     label="Download"
@@ -1168,13 +1168,13 @@ import { IxProgressIndicator } from '@siemens/ix-vue';
   >
     75%
   </IxProgressIndicator>
-  <h2 class="example-header">Status - Info</h2>
+  <h2 class="example-header">Status - Information</h2>
   <IxProgressIndicator
     type="circular"
     label="Download"
     :value="75"
     helper-text="This is a help text for the progress indicator"
-    status="info"
+    status="information"
   >
     75%
   </IxProgressIndicator>
@@ -1218,7 +1218,7 @@ export default () => {
         type="circular"
         label="Download"
         value={75}
-        helper-text="This is a help text for the progress indicator"
+        helperText="This is a help text for the progress indicator"
         size="xs"
       >
         75%
@@ -1228,7 +1228,7 @@ export default () => {
         type="circular"
         label="Download"
         value={75}
-        helper-text="This is a help text for the progress indicator"
+        helperText="This is a help text for the progress indicator"
         size="sm"
       >
         75%
@@ -1238,7 +1238,7 @@ export default () => {
         type="circular"
         label="Download"
         value={75}
-        helper-text="This is a help text for the progress indicator"
+        helperText="This is a help text for the progress indicator"
         size="md"
       >
         75%
@@ -1248,7 +1248,7 @@ export default () => {
         type="circular"
         label="Download"
         value={75}
-        helper-text="This is a help text for the progress indicator"
+        helperText="This is a help text for the progress indicator"
         size="lg"
       >
         75%
@@ -1258,7 +1258,7 @@ export default () => {
         type="circular"
         label="Download"
         value={75}
-        helper-text="This is a help text for the progress indicator"
+        helperText="This is a help text for the progress indicator"
         size="xl"
       >
         75%
@@ -1298,7 +1298,7 @@ export default class ProgressIndicatorCircularSizes {}
       type="circular"
       label="Download"
       value="75"
-      helper-text="This is a help text for the progress indicator"
+      helperText="This is a help text for the progress indicator"
       size="xs"
     >
       75%</ix-progress-indicator
@@ -1308,7 +1308,7 @@ export default class ProgressIndicatorCircularSizes {}
       type="circular"
       label="Download"
       value="75"
-      helper-text="This is a help text for the progress indicator"
+      helperText="This is a help text for the progress indicator"
       size="sm"
     >
       75%</ix-progress-indicator
@@ -1318,7 +1318,7 @@ export default class ProgressIndicatorCircularSizes {}
       type="circular"
       label="Download"
       value="75"
-      helper-text="This is a help text for the progress indicator"
+      helperText="This is a help text for the progress indicator"
       size="md"
     >
       75%</ix-progress-indicator
@@ -1328,7 +1328,7 @@ export default class ProgressIndicatorCircularSizes {}
       type="circular"
       label="Download"
       value="75"
-      helper-text="This is a help text for the progress indicator"
+      helperText="This is a help text for the progress indicator"
       size="lg"
     >
       75%</ix-progress-indicator
@@ -1338,7 +1338,7 @@ export default class ProgressIndicatorCircularSizes {}
       type="circular"
       label="Download"
       value="75"
-      helper-text="This is a help text for the progress indicator"
+      helperText="This is a help text for the progress indicator"
       size="xl"
     >
       75%</ix-progress-indicator
@@ -1380,7 +1380,7 @@ export default class ProgressIndicatorCircularSizes {}
       type="circular"
       label="Download"
       value="75"
-      helper-text="This is a help text for the progress indicator"
+      helperText="This is a help text for the progress indicator"
       size="xs"
     >
       75%</ix-progress-indicator
@@ -1390,7 +1390,7 @@ export default class ProgressIndicatorCircularSizes {}
       type="circular"
       label="Download"
       value="75"
-      helper-text="This is a help text for the progress indicator"
+      helperText="This is a help text for the progress indicator"
       size="sm"
     >
       75%</ix-progress-indicator
@@ -1400,7 +1400,7 @@ export default class ProgressIndicatorCircularSizes {}
       type="circular"
       label="Download"
       value="75"
-      helper-text="This is a help text for the progress indicator"
+      helperText="This is a help text for the progress indicator"
       size="md"
     >
       75%</ix-progress-indicator
@@ -1410,7 +1410,7 @@ export default class ProgressIndicatorCircularSizes {}
       type="circular"
       label="Download"
       value="75"
-      helper-text="This is a help text for the progress indicator"
+      helperText="This is a help text for the progress indicator"
       size="lg"
     >
       75%</ix-progress-indicator
@@ -1420,7 +1420,7 @@ export default class ProgressIndicatorCircularSizes {}
       type="circular"
       label="Download"
       value="75"
-      helper-text="This is a help text for the progress indicator"
+      helperText="This is a help text for the progress indicator"
       size="xl"
     >
       75%</ix-progress-indicator
@@ -1498,22 +1498,22 @@ import { IxProgressIndicator } from '@siemens/ix-vue';
 
 ### Properties
 
-| Name | Description | Attribute | Type | Default |
-| --- | --- | --- | --- | --- |
-| helperText | { "The helper text for the progress indicator." } | helper-text | string \| undefined |  |
-| label | { "The label for the progress indicator." } | label | string \| undefined |  |
-| max | { "The maximum value of the progress indicator." } | max | number | 100 |
-| min | { "The minimum value of the progress indicator." } | min | number | 0 |
-| showTextAsTooltip | { "Show the helper text as a tooltip" } | show-text-as-tooltip | boolean | false |
-| size | { "The size of the progress indicator." } | size | "lg" \| "md" \| "sm" \| "xl" \| "xs" | 'md' |
-| status | { "The state of the progress indicator.\n\nThis is used to indicate the current state of the progress indicator." } | status | "default" \| "error" \| "info" \| "paused" \| "success" \| "warning" | 'default' |
-| textAlignment | { "The text alignment for the helper text.\n\nCan be 'left', 'center', or 'right'." } | text-alignment | "center" \| "left" \| "right" | 'left' |
-| type | { "The type of progress indicator to use." } | type | "circular" \| "linear" | 'linear' |
-| value | { "The value of the progress indicator." } | value | number | 0 |
+| Name | Description | Attribute | Type | Default | Notes |
+| --- | --- | --- | --- | --- | --- |
+| helperText | { "The helper text for the progress indicator." } | helper-text | string \| undefined |  |  |
+| label | { "The label for the progress indicator." } | label | string \| undefined |  |  |
+| max | { "The maximum value of the progress indicator." } | max | number | 100 |  |
+| min | { "The minimum value of the progress indicator." } | min | number | 0 |  |
+| showTextAsTooltip | { "Show the helper text as a tooltip" } | show-text-as-tooltip | boolean | false |  |
+| size | { "Size of the progress indicator.\n\nFor **circular**, diameters are:\n\n- **xs**: 16px.\n\n- **sm**: 20px.\n\n- **md**: 32px (default).\n\n- **lg**: 48px.\n\n- **xl**: 64px." } | size | "lg" \| "md" \| "sm" \| "xl" \| "xs" | 'md' | Breaking change in v6.0.0: Size scale changed (sm is now 20px) |
+| status | { "Status of the progress indicator.\n\nShared status subset plus `error` and `paused`. Default is `base`." } | status | "base" \| "error" \| "information" \| "paused" \| "success" \| "warning" | 'base' | Breaking change in v6.0.0: Status values renamed (default is now base) |
+| textAlignment | { "The text alignment for the helper text.\n\nCan be 'left', 'center', or 'right'." } | text-alignment | "center" \| "left" \| "right" | 'left' |  |
+| type | { "The type of progress indicator to use." } | type | "circular" \| "linear" | 'linear' |  |
+| value | { "The value of the progress indicator." } | value | number | 0 |  |
 
 ### Slot
 
 | Name | Description |
 | --- | --- |
-| default | { "Content displayed with the progress indicator." } |
-| helper-text | { "Custom helper text content." } |
+| default | { "Progress indicator label." } |
+| helper-text | { "Helper text displayed below the progress indicator." } |

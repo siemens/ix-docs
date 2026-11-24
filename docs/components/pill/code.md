@@ -24,8 +24,8 @@ export default () => {
     <>
       <IxPill
         variant="custom"
-        pillColor="var(--theme-color-inv-std-text)"
-        background="var(--theme-color-dynamic)"
+        pillColor="var(--si-sys-color-text-inverse)"
+        background="var(--si-sys-color-background-accent-hover)"
       >
         Label
       </IxPill>
@@ -39,7 +39,7 @@ export default () => {
         Label
       </IxPill>
       <IxPill
-        variant="primary"
+        variant="accent"
         outline
         alignLeft
         icon={iconStar}
@@ -48,18 +48,18 @@ export default () => {
         Label
       </IxPill>
 
-      <IxPill variant="alarm">Label</IxPill>
-      <IxPill variant="alarm" className="styled">
+      <IxPill variant="danger">Label</IxPill>
+      <IxPill variant="danger" className="styled">
         Label
       </IxPill>
 
-      <IxPill variant="alarm" icon={iconStar}>
+      <IxPill variant="danger" icon={iconStar}>
         Label
       </IxPill>
-      <IxPill variant="alarm" icon={iconStar} className="styled">
+      <IxPill variant="danger" icon={iconStar} className="styled">
         Label
       </IxPill>
-      <IxPill variant="alarm" alignLeft icon={iconStar} className="styled">
+      <IxPill variant="danger" alignLeft icon={iconStar} className="styled">
         Label
       </IxPill>
 
@@ -67,7 +67,7 @@ export default () => {
         Label
       </IxPill>
       <IxPill
-        variant="primary"
+        variant="accent"
         outline
         icon={iconStar}
         className="styled-ellipsis-4"
@@ -75,7 +75,7 @@ export default () => {
         Label
       </IxPill>
       <IxPill className="styled-ellipsis-3">Label</IxPill>
-      <IxPill variant="primary" outline className="styled-ellipsis-3">
+      <IxPill variant="accent" outline className="styled-ellipsis-3">
         Label
       </IxPill>
     </>
@@ -121,30 +121,33 @@ export default class Pill {}
 ```html
 <ix-pill
   variant="custom"
-  pill-color="var(--theme-color-inv-std-text)"
-  background="var(--theme-color-dynamic)"
-  >Label</ix-pill>
+  pillColor="var(--si-sys-color-text-inverse)"
+  background="var(--si-sys-color-background-accent-hover)"
+  >Label</ix-pill
+>
 
-<ix-pill tooltip-text="Custom tooltip text">Label</ix-pill>
+<ix-pill tooltipText="Custom tooltip text">Label</ix-pill>
 <ix-pill class="styled">Label</ix-pill>
 
 <ix-pill icon="star">Label</ix-pill>
 <ix-pill icon="star" aria-label="Featured"></ix-pill>
 <ix-pill icon="star" class="styled">Label</ix-pill>
-<ix-pill variant="primary" outline alignLeft icon="star" class="styled">Label</ix-pill>
+<ix-pill variant="accent" outline alignLeft icon="star" class="styled"
+  >Label</ix-pill
+>
 
-<ix-pill variant="alarm">Label</ix-pill>
-<ix-pill variant="alarm" class="styled">Label</ix-pill>
+<ix-pill variant="danger">Label</ix-pill>
+<ix-pill variant="danger" class="styled">Label</ix-pill>
 
-<ix-pill variant="alarm" icon="star">Label</ix-pill>
-<ix-pill variant="alarm" icon="star" class="styled">Label</ix-pill>
-<ix-pill variant="alarm" alignLeft icon="star" class="styled">
-  Label
-</ix-pill>
+<ix-pill variant="danger" icon="star">Label</ix-pill>
+<ix-pill variant="danger" icon="star" class="styled">Label</ix-pill>
+<ix-pill variant="danger" alignLeft icon="star" class="styled"> Label </ix-pill>
 <ix-pill icon="star" class="styled-ellipsis-4">Label</ix-pill>
-<ix-pill variant="primary" outline icon="star" class="styled-ellipsis-4">Label</ix-pill>
+<ix-pill variant="accent" outline icon="star" class="styled-ellipsis-4"
+  >Label</ix-pill
+>
 <ix-pill class="styled-ellipsis-3">Label</ix-pill>
-<ix-pill variant="primary" outline class="styled-ellipsis-3">Label</ix-pill>
+<ix-pill variant="accent" outline class="styled-ellipsis-3">Label</ix-pill>
 ```
 
 #### pill.css
@@ -180,30 +183,35 @@ import { IxPill } from '@siemens/ix-angular/standalone';
   template: `
     <ix-pill
       variant="custom"
-      pill-color="var(--theme-color-inv-std-text)"
-      background="var(--theme-color-dynamic)"
-      >Label</ix-pill>
+      pillColor="var(--si-sys-color-text-inverse)"
+      background="var(--si-sys-color-background-accent-hover)"
+      >Label</ix-pill
+    >
 
-    <ix-pill tooltip-text="Custom tooltip text">Label</ix-pill>
+    <ix-pill tooltipText="Custom tooltip text">Label</ix-pill>
     <ix-pill class="styled">Label</ix-pill>
 
     <ix-pill icon="star">Label</ix-pill>
     <ix-pill icon="star" aria-label="Featured"></ix-pill>
     <ix-pill icon="star" class="styled">Label</ix-pill>
-    <ix-pill variant="primary" outline alignLeft icon="star" class="styled">Label</ix-pill>
+    <ix-pill variant="accent" outline alignLeft icon="star" class="styled"
+      >Label</ix-pill
+    >
 
-    <ix-pill variant="alarm">Label</ix-pill>
-    <ix-pill variant="alarm" class="styled">Label</ix-pill>
+    <ix-pill variant="danger">Label</ix-pill>
+    <ix-pill variant="danger" class="styled">Label</ix-pill>
 
-    <ix-pill variant="alarm" icon="star">Label</ix-pill>
-    <ix-pill variant="alarm" icon="star" class="styled">Label</ix-pill>
-    <ix-pill variant="alarm" alignLeft icon="star" class="styled">
+    <ix-pill variant="danger" icon="star">Label</ix-pill>
+    <ix-pill variant="danger" icon="star" class="styled">Label</ix-pill>
+    <ix-pill variant="danger" alignLeft icon="star" class="styled">
       Label
     </ix-pill>
     <ix-pill icon="star" class="styled-ellipsis-4">Label</ix-pill>
-    <ix-pill variant="primary" outline icon="star" class="styled-ellipsis-4">Label</ix-pill>
+    <ix-pill variant="accent" outline icon="star" class="styled-ellipsis-4"
+      >Label</ix-pill
+    >
     <ix-pill class="styled-ellipsis-3">Label</ix-pill>
-    <ix-pill variant="primary" outline class="styled-ellipsis-3">Label</ix-pill>
+    <ix-pill variant="accent" outline class="styled-ellipsis-3">Label</ix-pill>
   `,
 })
 export default class Pill {}
@@ -242,9 +250,10 @@ import { IxPill } from '@siemens/ix-vue';
 <template>
   <IxPill
     variant="custom"
-    pill-color="var(--theme-color-inv-std-text)"
-    background="var(--theme-color-dynamic)"
-    >Label</IxPill>
+    pill-color="var(--si-sys-color-text-inverse)"
+    background="var(--si-sys-color-background-accent-hover)"
+    >Label</IxPill
+  >
 
   <IxPill tooltip-text="Custom tooltip text">Label</IxPill>
   <IxPill class="styled">Label</IxPill>
@@ -252,20 +261,24 @@ import { IxPill } from '@siemens/ix-vue';
   <IxPill :icon="iconStar">Label</IxPill>
   <IxPill :icon="iconStar" aria-label="Featured"></IxPill>
   <IxPill :icon="iconStar" class="styled">Label</IxPill>
-  <IxPill variant="primary" outline alignLeft :icon="iconStar" class="styled">Label</IxPill>
+  <IxPill variant="accent" outline align-left :icon="iconStar" class="styled"
+    >Label</IxPill
+  >
 
-  <IxPill variant="alarm">Label</IxPill>
-  <IxPill variant="alarm" class="styled">Label</IxPill>
+  <IxPill variant="danger">Label</IxPill>
+  <IxPill variant="danger" class="styled">Label</IxPill>
 
-  <IxPill variant="alarm" :icon="iconStar">Label</IxPill>
-  <IxPill variant="alarm" :icon="iconStar" class="styled">Label</IxPill>
-  <IxPill variant="alarm" alignLeft :icon="iconStar" class="styled">
+  <IxPill variant="danger" :icon="iconStar">Label</IxPill>
+  <IxPill variant="danger" :icon="iconStar" class="styled">Label</IxPill>
+  <IxPill variant="danger" align-left :icon="iconStar" class="styled">
     Label
   </IxPill>
   <IxPill :icon="iconStar" class="styled-ellipsis-4">Label</IxPill>
-  <IxPill variant="primary" outline :icon="iconStar" class="styled-ellipsis-4">Label</IxPill>
+  <IxPill variant="accent" outline :icon="iconStar" class="styled-ellipsis-4"
+    >Label</IxPill
+  >
   <IxPill class="styled-ellipsis-3">Label</IxPill>
-  <IxPill variant="primary" outline class="styled-ellipsis-3">Label</IxPill>
+  <IxPill variant="accent" outline class="styled-ellipsis-3">Label</IxPill>
 </template>
 ```
 
@@ -305,39 +318,13 @@ export default () => {
       <IxLayoutGrid>
         <IxRow>
           <IxCol>
-            <IxPill variant="primary" icon={iconInfo}>
-              Primary
+            <IxPill variant="danger" icon={iconInfo}>
+              Danger
             </IxPill>
           </IxCol>
           <IxCol>
-            <IxPill variant="primary" outline icon={iconInfo}>
-              Primary
-            </IxPill>
-          </IxCol>
-        </IxRow>
-
-        <IxRow>
-          <IxCol>
-            <IxPill variant="alarm" icon={iconInfo}>
-              Alarm
-            </IxPill>
-          </IxCol>
-          <IxCol>
-            <IxPill variant="alarm" outline icon={iconInfo}>
-              Alarm
-            </IxPill>
-          </IxCol>
-        </IxRow>
-
-        <IxRow>
-          <IxCol>
-            <IxPill variant="critical" icon={iconInfo}>
-              Critical
-            </IxPill>
-          </IxCol>
-          <IxCol>
-            <IxPill variant="critical" outline icon={iconInfo}>
-              Critical
+            <IxPill variant="danger" outline icon={iconInfo}>
+              Danger
             </IxPill>
           </IxCol>
         </IxRow>
@@ -357,26 +344,52 @@ export default () => {
 
         <IxRow>
           <IxCol>
-            <IxPill variant="info" icon={iconInfo}>
-              Info
+            <IxPill variant="caution" icon={iconInfo}>
+              Caution
             </IxPill>
           </IxCol>
           <IxCol>
-            <IxPill variant="info" outline icon={iconInfo}>
-              Info
+            <IxPill variant="caution" outline icon={iconInfo}>
+              Caution
             </IxPill>
           </IxCol>
         </IxRow>
 
         <IxRow>
           <IxCol>
-            <IxPill variant="neutral" icon={iconInfo}>
-              Neutral
+            <IxPill variant="information" icon={iconInfo}>
+              Information
             </IxPill>
           </IxCol>
           <IxCol>
-            <IxPill variant="neutral" outline icon={iconInfo}>
-              Neutral
+            <IxPill variant="information" outline icon={iconInfo}>
+              Information
+            </IxPill>
+          </IxCol>
+        </IxRow>
+
+        <IxRow>
+          <IxCol>
+            <IxPill variant="accent" icon={iconInfo}>
+              Accent
+            </IxPill>
+          </IxCol>
+          <IxCol>
+            <IxPill variant="accent" outline icon={iconInfo}>
+              Accent
+            </IxPill>
+          </IxCol>
+        </IxRow>
+
+        <IxRow>
+          <IxCol>
+            <IxPill variant="critical" icon={iconInfo}>
+              Critical
+            </IxPill>
+          </IxCol>
+          <IxCol>
+            <IxPill variant="critical" outline icon={iconInfo}>
+              Critical
             </IxPill>
           </IxCol>
         </IxRow>
@@ -396,10 +409,23 @@ export default () => {
 
         <IxRow>
           <IxCol>
+            <IxPill variant="neutral" icon={iconInfo}>
+              Neutral
+            </IxPill>
+          </IxCol>
+          <IxCol>
+            <IxPill variant="neutral" outline icon={iconInfo}>
+              Neutral
+            </IxPill>
+          </IxCol>
+        </IxRow>
+
+        <IxRow>
+          <IxCol>
             <IxPill
               variant="custom"
-              pillColor="var(--theme-color-inv-std-text)"
-              background="var(--theme-color-dynamic)"
+              pillColor="var(--si-sys-color-text-inverse)"
+              background="var(--si-sys-color-background-accent-hover)"
               icon={iconInfo}
             >
               Custom
@@ -409,8 +435,8 @@ export default () => {
             <IxPill
               variant="custom"
               outline
-              pillColor="var(--theme-color-dynamic)"
-              background="var(--theme-color-dynamic)"
+              pillColor="var(--si-sys-color-text-accent-hover)"
+              background="var(--si-sys-color-background-accent-hover)"
               icon={iconInfo}
             >
               Custom
@@ -444,28 +470,10 @@ import { Component } from '@angular/core';
     <ix-layout-grid>
       <ix-row>
         <ix-col>
-          <ix-pill variant="primary" icon="info">Primary</ix-pill>
+          <ix-pill variant="danger" icon="info">Danger</ix-pill>
         </ix-col>
         <ix-col>
-          <ix-pill variant="primary" outline icon="info">Primary</ix-pill>
-        </ix-col>
-      </ix-row>
-
-      <ix-row>
-        <ix-col>
-          <ix-pill variant="alarm" icon="info">Alarm</ix-pill>
-        </ix-col>
-        <ix-col>
-          <ix-pill variant="alarm" outline icon="info">Alarm</ix-pill>
-        </ix-col>
-      </ix-row>
-
-      <ix-row>
-        <ix-col>
-          <ix-pill variant="critical" icon="info">Critical</ix-pill>
-        </ix-col>
-        <ix-col>
-          <ix-pill variant="critical" outline icon="info">Critical</ix-pill>
+          <ix-pill variant="danger" outline icon="info">Danger</ix-pill>
         </ix-col>
       </ix-row>
 
@@ -480,19 +488,39 @@ import { Component } from '@angular/core';
 
       <ix-row>
         <ix-col>
-          <ix-pill variant="info" icon="info">Info</ix-pill>
+          <ix-pill variant="caution" icon="info">Caution</ix-pill>
         </ix-col>
         <ix-col>
-          <ix-pill variant="info" outline icon="info">Info</ix-pill>
+          <ix-pill variant="caution" outline icon="info">Caution</ix-pill>
         </ix-col>
       </ix-row>
 
       <ix-row>
         <ix-col>
-          <ix-pill variant="neutral" icon="info">Neutral</ix-pill>
+          <ix-pill variant="information" icon="info">Information</ix-pill>
         </ix-col>
         <ix-col>
-          <ix-pill variant="neutral" outline icon="info">Neutral</ix-pill>
+          <ix-pill variant="information" outline icon="info"
+            >Information</ix-pill
+          >
+        </ix-col>
+      </ix-row>
+
+      <ix-row>
+        <ix-col>
+          <ix-pill variant="accent" icon="info">Accent</ix-pill>
+        </ix-col>
+        <ix-col>
+          <ix-pill variant="accent" outline icon="info">Accent</ix-pill>
+        </ix-col>
+      </ix-row>
+
+      <ix-row>
+        <ix-col>
+          <ix-pill variant="critical" icon="info">Critical</ix-pill>
+        </ix-col>
+        <ix-col>
+          <ix-pill variant="critical" outline icon="info">Critical</ix-pill>
         </ix-col>
       </ix-row>
 
@@ -507,27 +535,40 @@ import { Component } from '@angular/core';
 
       <ix-row>
         <ix-col>
+          <ix-pill variant="neutral" icon="info">Neutral</ix-pill>
+        </ix-col>
+        <ix-col>
+          <ix-pill variant="neutral" outline icon="info">Neutral</ix-pill>
+        </ix-col>
+      </ix-row>
+
+      <ix-row>
+        <ix-col>
           <ix-pill
             variant="custom"
-            pill-color="var(--theme-color-inv-std-text)"
-            background="var(--theme-color-dynamic)"
+            pillColor="var(--si-sys-color-text-inverse)"
+            background="var(--si-sys-color-background-accent-hover)"
             icon="info"
-          >Custom</ix-pill>
+          >
+            Custom
+          </ix-pill>
         </ix-col>
         <ix-col>
           <ix-pill
             variant="custom"
             outline
-            pill-color="var(--theme-color-dynamic)"
-            background="var(--theme-color-dynamic)"
+            pillColor="var(--si-sys-color-text-accent-hover)"
+            background="var(--si-sys-color-background-accent-hover)"
             icon="info"
-          >Custom</ix-pill>
+          >
+            Custom
+          </ix-pill>
         </ix-col>
       </ix-row>
     </ix-layout-grid>
   `,
 })
-export default class Pill {}
+export default class PillVariants {}
 ```
 
 #### pill-variants.css
@@ -557,28 +598,10 @@ import {
     <ix-layout-grid>
       <ix-row>
         <ix-col>
-          <ix-pill variant="primary" icon="info">Primary</ix-pill>
+          <ix-pill variant="danger" icon="info">Danger</ix-pill>
         </ix-col>
         <ix-col>
-          <ix-pill variant="primary" outline icon="info">Primary</ix-pill>
-        </ix-col>
-      </ix-row>
-
-      <ix-row>
-        <ix-col>
-          <ix-pill variant="alarm" icon="info">Alarm</ix-pill>
-        </ix-col>
-        <ix-col>
-          <ix-pill variant="alarm" outline icon="info">Alarm</ix-pill>
-        </ix-col>
-      </ix-row>
-
-      <ix-row>
-        <ix-col>
-          <ix-pill variant="critical" icon="info">Critical</ix-pill>
-        </ix-col>
-        <ix-col>
-          <ix-pill variant="critical" outline icon="info">Critical</ix-pill>
+          <ix-pill variant="danger" outline icon="info">Danger</ix-pill>
         </ix-col>
       </ix-row>
 
@@ -593,19 +616,39 @@ import {
 
       <ix-row>
         <ix-col>
-          <ix-pill variant="info" icon="info">Info</ix-pill>
+          <ix-pill variant="caution" icon="info">Caution</ix-pill>
         </ix-col>
         <ix-col>
-          <ix-pill variant="info" outline icon="info">Info</ix-pill>
+          <ix-pill variant="caution" outline icon="info">Caution</ix-pill>
         </ix-col>
       </ix-row>
 
       <ix-row>
         <ix-col>
-          <ix-pill variant="neutral" icon="info">Neutral</ix-pill>
+          <ix-pill variant="information" icon="info">Information</ix-pill>
         </ix-col>
         <ix-col>
-          <ix-pill variant="neutral" outline icon="info">Neutral</ix-pill>
+          <ix-pill variant="information" outline icon="info"
+            >Information</ix-pill
+          >
+        </ix-col>
+      </ix-row>
+
+      <ix-row>
+        <ix-col>
+          <ix-pill variant="accent" icon="info">Accent</ix-pill>
+        </ix-col>
+        <ix-col>
+          <ix-pill variant="accent" outline icon="info">Accent</ix-pill>
+        </ix-col>
+      </ix-row>
+
+      <ix-row>
+        <ix-col>
+          <ix-pill variant="critical" icon="info">Critical</ix-pill>
+        </ix-col>
+        <ix-col>
+          <ix-pill variant="critical" outline icon="info">Critical</ix-pill>
         </ix-col>
       </ix-row>
 
@@ -620,27 +663,40 @@ import {
 
       <ix-row>
         <ix-col>
+          <ix-pill variant="neutral" icon="info">Neutral</ix-pill>
+        </ix-col>
+        <ix-col>
+          <ix-pill variant="neutral" outline icon="info">Neutral</ix-pill>
+        </ix-col>
+      </ix-row>
+
+      <ix-row>
+        <ix-col>
           <ix-pill
             variant="custom"
-            pill-color="var(--theme-color-inv-std-text)"
-            background="var(--theme-color-dynamic)"
+            pillColor="var(--si-sys-color-text-inverse)"
+            background="var(--si-sys-color-background-accent-hover)"
             icon="info"
-          >Custom</ix-pill>
+          >
+            Custom
+          </ix-pill>
         </ix-col>
         <ix-col>
           <ix-pill
             variant="custom"
             outline
-            pill-color="var(--theme-color-dynamic)"
-            background="var(--theme-color-dynamic)"
+            pillColor="var(--si-sys-color-text-accent-hover)"
+            background="var(--si-sys-color-background-accent-hover)"
             icon="info"
-          >Custom</ix-pill>
+          >
+            Custom
+          </ix-pill>
         </ix-col>
       </ix-row>
     </ix-layout-grid>
   `,
 })
-export default class Pill {}
+export default class PillVariants {}
 ```
 
 #### pill-variants.css
@@ -665,28 +721,10 @@ import { IxCol, IxLayoutGrid, IxPill, IxRow } from '@siemens/ix-vue';
   <IxLayoutGrid>
     <IxRow>
       <IxCol>
-        <IxPill variant="primary" :icon="iconInfo">Primary</IxPill>
+        <IxPill variant="danger" :icon="iconInfo">Danger</IxPill>
       </IxCol>
       <IxCol>
-        <IxPill variant="primary" outline :icon="iconInfo">Primary</IxPill>
-      </IxCol>
-    </IxRow>
-
-    <IxRow>
-      <IxCol>
-        <IxPill variant="alarm" :icon="iconInfo">Alarm</IxPill>
-      </IxCol>
-      <IxCol>
-        <IxPill variant="alarm" outline :icon="iconInfo">Alarm</IxPill>
-      </IxCol>
-    </IxRow>
-
-    <IxRow>
-      <IxCol>
-        <IxPill variant="critical" :icon="iconInfo">Critical</IxPill>
-      </IxCol>
-      <IxCol>
-        <IxPill variant="critical" outline :icon="iconInfo">Critical</IxPill>
+        <IxPill variant="danger" outline :icon="iconInfo">Danger</IxPill>
       </IxCol>
     </IxRow>
 
@@ -701,19 +739,37 @@ import { IxCol, IxLayoutGrid, IxPill, IxRow } from '@siemens/ix-vue';
 
     <IxRow>
       <IxCol>
-        <IxPill variant="info" :icon="iconInfo">Info</IxPill>
+        <IxPill variant="caution" :icon="iconInfo">Caution</IxPill>
       </IxCol>
       <IxCol>
-        <IxPill variant="info" outline :icon="iconInfo">Info</IxPill>
+        <IxPill variant="caution" outline :icon="iconInfo">Caution</IxPill>
       </IxCol>
     </IxRow>
 
     <IxRow>
       <IxCol>
-        <IxPill variant="neutral" :icon="iconInfo">Neutral</IxPill>
+        <IxPill variant="information" :icon="iconInfo">Information</IxPill>
       </IxCol>
       <IxCol>
-        <IxPill variant="neutral" outline :icon="iconInfo">Neutral</IxPill>
+        <IxPill variant="information" outline :icon="iconInfo">Information</IxPill>
+      </IxCol>
+    </IxRow>
+
+    <IxRow>
+      <IxCol>
+        <IxPill variant="accent" :icon="iconInfo">Accent</IxPill>
+      </IxCol>
+      <IxCol>
+        <IxPill variant="accent" outline :icon="iconInfo">Accent</IxPill>
+      </IxCol>
+    </IxRow>
+
+    <IxRow>
+      <IxCol>
+        <IxPill variant="critical" :icon="iconInfo">Critical</IxPill>
+      </IxCol>
+      <IxCol>
+        <IxPill variant="critical" outline :icon="iconInfo">Critical</IxPill>
       </IxCol>
     </IxRow>
 
@@ -728,10 +784,19 @@ import { IxCol, IxLayoutGrid, IxPill, IxRow } from '@siemens/ix-vue';
 
     <IxRow>
       <IxCol>
+        <IxPill variant="neutral" :icon="iconInfo">Neutral</IxPill>
+      </IxCol>
+      <IxCol>
+        <IxPill variant="neutral" outline :icon="iconInfo">Neutral</IxPill>
+      </IxCol>
+    </IxRow>
+
+    <IxRow>
+      <IxCol>
         <IxPill
           variant="custom"
-          pill-color="var(--theme-color-inv-std-text)"
-          background="var(--theme-color-dynamic)"
+          pill-color="var(--si-sys-color-text-inverse)"
+          background="var(--si-sys-color-background-accent-hover)"
           :icon="iconInfo"
         >
           Custom
@@ -741,8 +806,8 @@ import { IxCol, IxLayoutGrid, IxPill, IxRow } from '@siemens/ix-vue';
         <IxPill
           variant="custom"
           outline
-          pill-color="var(--theme-color-dynamic)"
-          background="var(--theme-color-dynamic)"
+          pill-color="var(--si-sys-color-text-accent-hover)"
+          background="var(--si-sys-color-background-accent-hover)"
           :icon="iconInfo"
         >
           Custom
@@ -764,19 +829,19 @@ ix-pill {
 
 ### Properties
 
-| Name | Description | Attribute | Type | Default |
-| --- | --- | --- | --- | --- |
-| alignLeft | { "Align pill content left" } | align-left | boolean | false |
-| ariaLabelIcon | { "ARIA label for the icon" } | aria-label-icon | string \| undefined |  |
-| background | { "Custom color for pill. Only working for `variant='custom'`" } | background | string \| undefined |  |
-| icon | { "Show icon" } | icon | string \| undefined |  |
-| outline | { "Show pill as outline" } | outline | boolean | false |
-| pillColor | { "Custom font color for pill. Only working for `variant='custom'`" } | pill-color | string \| undefined |  |
-| tooltipText | { "Display a tooltip. By default, no tooltip will be displayed.\n\nAdd the attribute to display the text content of the component as a tooltip or use a string to display a custom text." } | tooltip-text | boolean \| string | false |
-| variant | { "Pill variant" } | variant | "alarm" \| "critical" \| "custom" \| "info" \| "neutral" \| "primary" \| "success" \| "warning" | 'primary' |
+| Name | Description | Attribute | Type | Default | Notes |
+| --- | --- | --- | --- | --- | --- |
+| alignLeft | { "Align pill content left" } | align-left | boolean | false |  |
+| ariaLabelIcon | { "ARIA label for the icon" } | aria-label-icon | string \| undefined |  |  |
+| background | { "Custom color for pill. Only working for `variant='custom'`" } | background | string \| undefined |  |  |
+| icon | { "Show icon" } | icon | string \| undefined |  |  |
+| outline | { "Show pill as outline" } | outline | boolean | false |  |
+| pillColor | { "Custom font color for pill. Only working for `variant='custom'`" } | pill-color | string \| undefined |  |  |
+| tooltipText | { "Display a tooltip. By default, no tooltip will be displayed.\n\nAdd the attribute to display the text content of the component as a tooltip or use a string to display a custom text." } | tooltip-text | boolean \| string | false |  |
+| variant | { "Pill variant.\n\nDefaults to `accent`. When unset or set to an unknown value the pill falls back to `accent` styling." } | variant | "accent" \| "caution" \| "critical" \| "custom" \| "danger" \| "information" \| "neutral" \| "success" \| "warning" | 'accent' | Breaking change in v6.0.0: Status variant values renamed and default changed from primary to accent |
 
 ### Slot
 
 | Name | Description |
 | --- | --- |
-| default | { "Pill label." } |
+| default | { "Pill content." } |

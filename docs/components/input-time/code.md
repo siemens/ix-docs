@@ -110,7 +110,7 @@ export default class TimeInputLabel {}
 <ix-time-input
   label="Time"
   name="time"
-  helper-text="Some helper text"
+  helperText="Some helper text"
 ></ix-time-input>
 ```
 
@@ -137,7 +137,7 @@ export default class TimeInputLabel {}
 <ix-time-input
   label="Time"
   name="time"
-  helper-text="Some helper text"
+  helperText="Some helper text"
 ></ix-time-input>
 ```
 
@@ -290,7 +290,7 @@ import { IxTimeInput } from '@siemens/ix-vue';
 </script>
 
 <template>
-  <IxTimeInput readOnly></IxTimeInput>
+  <IxTimeInput read-only></IxTimeInput>
 </template>
 ```
 
@@ -348,19 +348,19 @@ export default class TimeInputValidation {}
 #### time-input-validation.html
 ```html
 <div>
-  <ix-time-input info-text="Info text" class="ix-info"></ix-time-input>
+  <ix-time-input infoText="Info text" class="ix-info"></ix-time-input>
 </div>
 
 <div>
-  <ix-time-input warning-text="Warning text" class="ix-warning"></ix-time-input>
+  <ix-time-input warningText="Warning text" class="ix-warning"></ix-time-input>
 </div>
 
 <div>
-  <ix-time-input valid-text="Valid text" class="ix-valid"></ix-time-input>
+  <ix-time-input validText="Valid text" class="ix-valid"></ix-time-input>
 </div>
 
 <div>
-  <ix-time-input invalid-text="Invalid text" class="ix-invalid"></ix-time-input>
+  <ix-time-input invalidText="Invalid text" class="ix-invalid"></ix-time-input>
 </div>
 ```
 
@@ -385,19 +385,19 @@ export default class TimeInputValidation {}
 #### time-input-validation.html
 ```html
 <div>
-  <ix-time-input info-text="Info text" class="ix-info"></ix-time-input>
+  <ix-time-input infoText="Info text" class="ix-info"></ix-time-input>
 </div>
 
 <div>
-  <ix-time-input warning-text="Warning text" class="ix-warning"></ix-time-input>
+  <ix-time-input warningText="Warning text" class="ix-warning"></ix-time-input>
 </div>
 
 <div>
-  <ix-time-input valid-text="Valid text" class="ix-valid"></ix-time-input>
+  <ix-time-input validText="Valid text" class="ix-valid"></ix-time-input>
 </div>
 
 <div>
-  <ix-time-input invalid-text="Invalid text" class="ix-invalid"></ix-time-input>
+  <ix-time-input invalidText="Invalid text" class="ix-invalid"></ix-time-input>
 </div>
 ```
 
@@ -527,16 +527,20 @@ import { IxTimeInput, IxIcon, IxTypography } from '@siemens/ix-vue';
 | helperText | { "Helper text below the input field." } | helper-text | string \| undefined |  |
 | hideHeader | { "Hides the header of the picker." } | hide-header | boolean | false |
 | hourInterval | { "Interval for hour selection." } | hour-interval | number | 1 |
+| i18nAm | { "Label for the AM button in 12-hour mode." } | i18n-am | string | 'AM' |
+| i18nCancel | { "Text of the time picker cancel button. Cancel, pressing Escape or\n\nclicking outside the dropdown discards the time picked in the dropdown." } | i18n-cancel | string | 'Cancel' |
 | i18nErrorTimeUnparsable | { "I18n string for the error message when the time is not parsable." } | i18n-error-time-unparsable | string | 'Time is not valid' |
 | i18nHourColumnHeader | { "Text for the time picker hour column header." } | i18n-hour-column-header | string | 'hr' |
 | i18nMillisecondColumnHeader | { "Text for the time picker millisecond column header." } | i18n-millisecond-column-header | string | 'ms' |
 | i18nMinuteColumnHeader | { "Text for the time picker minute column header." } | i18n-minute-column-header | string | 'min' |
+| i18nPm | { "Label for the PM button in 12-hour mode." } | i18n-pm | string | 'PM' |
 | i18nSecondColumnHeader | { "Text for the time picker second column header." } | i18n-second-column-header | string | 'sec' |
 | i18nSelectTime | { "Text of the time picker confirm button." } | i18n-select-time | string | 'Confirm' |
 | i18nTime | { "Text for the time picker top label." } | i18n-time | string | 'Time' |
 | infoText | { "Info text below the input field." } | info-text | string \| undefined |  |
 | invalidText | { "Error text below the input field." } | invalid-text | string \| undefined |  |
 | label | { "Label of the input field." } | label | string \| undefined |  |
+| locale | { "Locale identifier (e.g. 'en' or 'de'). Passed to the embedded time picker for locale-aware parsing and formatting." } | locale | string \| undefined |  |
 | maxTime | { "Latest selectable time (`format` tokens). Invalid non-empty values are ignored." } | max-time | string \| undefined |  |
 | millisecondInterval | { "Interval for millisecond selection." } | millisecond-interval | number | 100 |
 | minTime | { "Earliest selectable time (`format` tokens). Invalid non-empty values are ignored." } | min-time | string \| undefined |  |

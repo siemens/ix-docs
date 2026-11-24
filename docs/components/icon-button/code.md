@@ -217,13 +217,13 @@ ix-icon-button {
 
 ### Properties
 
-| Name | Description | Attribute | Type | Default |
-| --- | --- | --- | --- | --- |
-| disabled | { "Disabled" } | disabled | boolean | false |
-| icon | { "Icon name" } | icon | string \| undefined |  |
-| iconColor | { "Color of icon in button" } | icon-color | string \| undefined |  |
-| loading | { "Loading button" } | loading | boolean | false |
-| oval | { "Button in oval shape" } | oval | boolean | false |
-| size | { "Size of icon in button" } | size | "12" \| "16" \| "24" | '24' |
-| type | { "Type of the button" } | type | "button" \| "submit" | 'button' |
-| variant | { "Variant of button" } | variant | "danger-primary" \| "danger-secondary" \| "danger-tertiary" \| "primary" \| "secondary" \| "subtle-primary" \| "subtle-secondary" \| "subtle-tertiary" \| "tertiary" | 'subtle-primary' |
+| Name | Description | Attribute | Type | Default | Notes |
+| --- | --- | --- | --- | --- | --- |
+| disabled | { "Disabled" } | disabled | boolean | false |  |
+| icon | { "Icon name" } | icon | string \| undefined |  |  |
+| iconColor | { "Icon color as a CSS custom property name, for example\n\n`--si-sys-color-text-primary`." } | icon-color | string \| undefined |  | Breaking change in v6.0.0: Requires the full CSS custom property name |
+| loading | { "Loading button" } | loading | boolean | false |  |
+| oval | { "Button in oval shape" } | oval | boolean | false |  |
+| size | { "Size of icon in button.\n\n`12` and `16` shrink the control. `20` and `24` keep a 32×32 control.\n\nDefaults to `20`." } | size | "12" \| "16" \| "20" \| "24" | '20' | Breaking change in v6.0.0: Default changed to 20 |
+| type | { "Type of the button" } | type | "button" \| "submit" | 'button' |  |
+| variant | { "Variant of button" } | variant | "danger-primary" \| "danger-secondary" \| "danger-tertiary" \| "primary" \| "secondary" \| "subtle-primary" \| "subtle-secondary" \| "subtle-tertiary" \| "tertiary" | 'subtle-primary' |  |

@@ -190,10 +190,10 @@ const setActiveTabKey = (event: CustomEvent<string | undefined>) => {
 
 <template>
   <div class="tabs">
-    <IxTabs :activeTabKey="activeTabKey" @tabChange="setActiveTabKey">
-      <IxTabItem tabKey="tab-1">Tab 1</IxTabItem>
-      <IxTabItem tabKey="tab-2">Tab 2</IxTabItem>
-      <IxTabItem tabKey="tab-3">Tab 3</IxTabItem>
+    <IxTabs :active-tab-key="activeTabKey" @tabChange="setActiveTabKey">
+      <IxTabItem tab-key="tab-1">Tab 1</IxTabItem>
+      <IxTabItem tab-key="tab-2">Tab 2</IxTabItem>
+      <IxTabItem tab-key="tab-3">Tab 3</IxTabItem>
     </IxTabs>
     <section
       role="tabpanel"
@@ -390,22 +390,22 @@ import { IxIcon, IxTabItem, IxTabs } from '@siemens/ix-vue';
 
 <template>
   <IxTabs rounded>
-    <IxTabItem tabKey="success" label="Success">
+    <IxTabItem tab-key="success" label="Success">
       <IxIcon :name="iconSuccess" aria-label="Success"></IxIcon>
     </IxTabItem>
-    <IxTabItem tabKey="tree" label="Tree" :counter="200">
+    <IxTabItem tab-key="tree" label="Tree" :counter="200">
       <IxIcon :name="iconTree" aria-label="Tree"></IxIcon>
     </IxTabItem>
-    <IxTabItem tabKey="maintenance" label="Maintenance">
+    <IxTabItem tab-key="maintenance" label="Maintenance">
       <IxIcon :name="iconMaintenance" aria-label="Maintenance"></IxIcon>
     </IxTabItem>
-    <IxTabItem tabKey="sound" label="Sound" disabled :counter="24">
+    <IxTabItem tab-key="sound" label="Sound" disabled :counter="24">
       <IxIcon :name="iconSoundLoud" aria-label="Sound"></IxIcon>
     </IxTabItem>
-    <IxTabItem tabKey="hierarchy" label="Hierarchy">
+    <IxTabItem tab-key="hierarchy" label="Hierarchy">
       <IxIcon :name="iconHierarchy" aria-label="Hierarchy"></IxIcon>
     </IxTabItem>
-    <IxTabItem tabKey="calendar-settings" label="Calendar settings" disabled>
+    <IxTabItem tab-key="calendar-settings" label="Calendar settings" disabled>
       <IxIcon
         :name="iconCalendarSettings"
         aria-label="Calendar settings"

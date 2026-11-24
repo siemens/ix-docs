@@ -169,8 +169,8 @@ const categories = {
 <template>
   <IxCategoryFilter
     placeholder="Filter by"
-    :uniqueCategories="false"
-    :filterState="filter"
+    :unique-categories="false"
+    :filter-state="filter"
     :categories="categories"
   ></IxCategoryFilter>
 </template>
@@ -271,7 +271,7 @@ const suggestions = ref(['Item 1', 'Item 2']);
 | categories | { "Configuration object hash used to populate the dropdown menu for type-ahead and quick selection functionality.\n\nEach ID maps to an object with a label and an array of options to select from." } |  | undefined \| { [id: string]: { label: string; options: string[]; }; } |  |
 | disabled | { "If true the filter will be in disabled state" } | disabled | boolean | false |
 | enableTopLayer | { "Enable Popover API rendering for dropdown." } | enable-top-layer | boolean | false |
-| filterState | { "A set of search criteria to populate the component with." } |  | FilterState \| undefined |  |
+| filterState | { "A set of search criteria to populate the component with.\n\nProcessing time grows quadratically with the number of tokens and categorical filters.\n\nBound the size of untrusted or user-controlled filter states to keep the page responsive." } |  | FilterState \| undefined |  |
 | hideIcon | { "Allows to hide the icon inside the text input.\n\nDefaults to false" } | hide-icon | boolean | false |
 | i18nPlainText | { "i18n label for 'Filter by text'" } | i18n-plain-text | string | 'Filter by text' |
 | icon | { "The icon next to the actual text input\n\nDefaults to 'search'" } | icon | string \| undefined |  |

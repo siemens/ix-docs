@@ -1,17 +1,11 @@
-# Angular data grid - Code
+# AG Grid - Code
 
 > Code examples and API documentation for the ix-aggrid
 
-# Angular data grid - Code
+# AG Grid - Code
 
 :::info
-AG Grid is a third party library that provides a feature rich data grid implementation.
-
-Its basic functionality is free and open source (distributed under the [MIT license](https://www.ag-grid.com/eula/AG-Grid-Community-License.html)).
-
-Please note that more advanced features like e.g. Row Grouping are only available with AG Grid Enterprise which is a commercial product.
-
-More information can be found on the [AG Grid licenses page](https://www.ag-grid.com/license-pricing).
+AG Grid is a third party library that provides a feature rich data grid implementation. Its basic functionality is free and open source (distributed under the [MIT license](https://www.ag-grid.com/eula/AG-Grid-Community-License.html)). More advanced features e.g. row grouping are only available with AG Grid Enterprise which is a commercial product (see [AG Grid licenses page](https://www.ag-grid.com/license-pricing)).
 :::
 
 ## Installation

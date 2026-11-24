@@ -17,7 +17,7 @@ export default () => {
   return (
     <IxEmptyState
       header="No elements available"
-      subHeader="Create an element first"
+      description="Create an element first"
       icon={iconAdd}
       action="Create element"
       onActionClick={console.log}
@@ -37,7 +37,7 @@ import { Component } from '@angular/core';
   selector: 'app-example',
   template: `<ix-empty-state
     header="No elements available"
-    subHeader="Create an element first"
+    description="Create an element first"
     icon="add"
     action="Create element"
     (actionClick)="onActionClick($event)"
@@ -62,7 +62,7 @@ import { IxEmptyState } from '@siemens/ix-angular/standalone';
   imports: [IxEmptyState],
   template: `<ix-empty-state
     header="No elements available"
-    subHeader="Create an element first"
+    description="Create an element first"
     icon="add"
     action="Create element"
     (actionClick)="onActionClick($event)"
@@ -87,7 +87,7 @@ import { IxEmptyState } from '@siemens/ix-vue';
 <template>
   <IxEmptyState
     header="No elements available"
-    subHeader="Create an element first"
+    description="Create an element first"
     :icon="iconAdd"
     action="Create element"
   ></IxEmptyState>
@@ -108,7 +108,7 @@ export default () => {
     <IxEmptyState
       layout="compact"
       header="No elements available"
-      subHeader="Create an element first"
+      description="Create an element first"
       icon={iconAdd}
       action="Create element"
       onActionClick={console.log}
@@ -129,7 +129,7 @@ import { Component } from '@angular/core';
   template: `<ix-empty-state
     layout="compact"
     header="No elements available"
-    subHeader="Create an element first"
+    description="Create an element first"
     icon="add"
     action="Create element"
     (actionClick)="onActionClick($event)"
@@ -155,7 +155,7 @@ import { IxEmptyState } from '@siemens/ix-angular/standalone';
   template: `<ix-empty-state
     layout="compact"
     header="No elements available"
-    subHeader="Create an element first"
+    description="Create an element first"
     icon="add"
     action="Create element"
     (actionClick)="onActionClick($event)"
@@ -181,7 +181,7 @@ import { IxEmptyState } from '@siemens/ix-vue';
   <IxEmptyState
     layout="compact"
     header="No elements available"
-    subHeader="Create an element first"
+    description="Create an element first"
     :icon="iconAdd"
     action="Create element"
   ></IxEmptyState>
@@ -202,7 +202,7 @@ export default () => {
     <IxEmptyState
       layout="compactBreak"
       header="No elements available"
-      subHeader="Create an element first"
+      description="Create an element first"
       icon={iconAdd}
       action="Create element"
       onActionClick={console.log}
@@ -223,7 +223,7 @@ import { Component } from '@angular/core';
   template: ` <ix-empty-state
     layout="compactBreak"
     header="No elements available"
-    subHeader="Create an element first"
+    description="Create an element first"
     icon="add"
     action="Create element"
     (actionClick)="onActionClick($event)"
@@ -249,7 +249,7 @@ import { IxEmptyState } from '@siemens/ix-angular/standalone';
   template: ` <ix-empty-state
     layout="compactBreak"
     header="No elements available"
-    subHeader="Create an element first"
+    description="Create an element first"
     icon="add"
     action="Create element"
     (actionClick)="onActionClick($event)"
@@ -275,7 +275,7 @@ import { IxEmptyState } from '@siemens/ix-vue';
   <IxEmptyState
     layout="compactBreak"
     header="No elements available"
-    subHeader="Create an element first"
+    description="Create an element first"
     :icon="iconAdd"
     action="Create element"
   ></IxEmptyState>
@@ -286,14 +286,14 @@ import { IxEmptyState } from '@siemens/ix-vue';
 
 ### Properties
 
-| Name | Description | Attribute | Type | Default |
-| --- | --- | --- | --- | --- |
-| action | { "Optional empty state action" } | action | string \| undefined |  |
-| ariaLabelEmptyStateIcon | { "ARIA label for the empty state icon" } | aria-label-empty-state-icon | string \| undefined |  |
-| header | { "Empty state header" } | header | string |  |
-| icon | { "Optional empty state icon" } | icon | string \| undefined |  |
-| layout | { "Optional empty state layout - one of 'large', 'compact' or 'compactBreak'" } | layout | "compact" \| "compactBreak" \| "large" | 'large' |
-| subHeader | { "Optional empty state sub header" } | sub-header | string \| undefined |  |
+| Name | Description | Attribute | Type | Default | Notes |
+| --- | --- | --- | --- | --- | --- |
+| action | { "Optional empty state action" } | action | string \| undefined |  |  |
+| ariaLabelEmptyStateIcon | { "ARIA label for the empty state icon" } | aria-label-empty-state-icon | string \| undefined |  |  |
+| description | { "Optional empty state description" } | description | string \| undefined |  | Breaking change in v6.0.0: Replaces the removed subHeader property |
+| header | { "Empty state header" } | header | string |  |  |
+| icon | { "Optional empty state icon" } | icon | string \| undefined |  |  |
+| layout | { "Optional empty state layout - one of 'large', 'compact' or 'compactBreak'" } | layout | "compact" \| "compactBreak" \| "large" | 'large' |  |
 
 ### Events
 

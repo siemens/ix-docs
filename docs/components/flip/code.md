@@ -18,21 +18,31 @@ import { iconInfo } from '@siemens/ix-icons/icons';
 export default () => {
   return (
     <div className="flip-tile">
+      <IxFlipTile variant={'outline'}>
+        <div slot="header">Flip header</div>
+        <div slot="footer">
+          <div>Predicted maintenance date</div>
+          <div className="footer-date">
+            <IxIcon name={iconInfo} size="16"></IxIcon>2021-06-22
+          </div>
+        </div>
+        <IxFlipTileContent> Example 1 </IxFlipTileContent>
+        <IxFlipTileContent> Example 2 </IxFlipTileContent>
+      </IxFlipTile>
+
       <IxFlipTile>
         <div slot="header">Flip header</div>
-
         <div slot="footer">
           <div>Predicted maintenance date</div>
           <div className="footer-date">
             <IxIcon name={iconInfo} size="16"></IxIcon>2021-06-22
           </div>
         </div>
-
         <IxFlipTileContent> Example 1 </IxFlipTileContent>
         <IxFlipTileContent> Example 2 </IxFlipTileContent>
       </IxFlipTile>
 
-      <IxFlipTile variant={'primary'}>
+      <IxFlipTile variant={'accent'}>
         <div slot="header">Flip header</div>
         <div slot="footer">
           <div>Predicted maintenance date</div>
@@ -44,7 +54,43 @@ export default () => {
         <IxFlipTileContent> Example 2 </IxFlipTileContent>
       </IxFlipTile>
 
-      <IxFlipTile variant={'info'}>
+      <IxFlipTile variant={'neutral'}>
+        <div slot="header">Flip header</div>
+        <div slot="footer">
+          <div>Predicted maintenance date</div>
+          <div className="footer-date">
+            <IxIcon name={iconInfo} size="16"></IxIcon>2021-06-22
+          </div>
+        </div>
+        <IxFlipTileContent> Example 1 </IxFlipTileContent>
+        <IxFlipTileContent> Example 2 </IxFlipTileContent>
+      </IxFlipTile>
+
+      <IxFlipTile variant={'information'}>
+        <div slot="header">Flip header</div>
+        <div slot="footer">
+          <div>Predicted maintenance date</div>
+          <div className="footer-date">
+            <IxIcon name={iconInfo} size="16"></IxIcon>2021-06-22
+          </div>
+        </div>
+        <IxFlipTileContent> Example 1 </IxFlipTileContent>
+        <IxFlipTileContent> Example 2 </IxFlipTileContent>
+      </IxFlipTile>
+
+      <IxFlipTile variant={'success'}>
+        <div slot="header">Flip header</div>
+        <div slot="footer">
+          <div>Predicted maintenance date</div>
+          <div className="footer-date">
+            <IxIcon name={iconInfo} size="16"></IxIcon>2021-06-22
+          </div>
+        </div>
+        <IxFlipTileContent> Example 1 </IxFlipTileContent>
+        <IxFlipTileContent> Example 2 </IxFlipTileContent>
+      </IxFlipTile>
+
+      <IxFlipTile variant={'caution'}>
         <div slot="header">Flip header</div>
         <div slot="footer">
           <div>Predicted maintenance date</div>
@@ -68,7 +114,19 @@ export default () => {
         <IxFlipTileContent> Example 2 </IxFlipTileContent>
       </IxFlipTile>
 
-      <IxFlipTile variant={'alarm'}>
+      <IxFlipTile variant={'danger'}>
+        <div slot="header">Flip header</div>
+        <div slot="footer">
+          <div>Predicted maintenance date</div>
+          <div className="footer-date">
+            <IxIcon name={iconInfo} size="16"></IxIcon>2021-06-22
+          </div>
+        </div>
+        <IxFlipTileContent> Example 1 </IxFlipTileContent>
+        <IxFlipTileContent> Example 2 </IxFlipTileContent>
+      </IxFlipTile>
+
+      <IxFlipTile variant={'critical'}>
         <div slot="header">Flip header</div>
         <div slot="footer">
           <div>Predicted maintenance date</div>
@@ -117,21 +175,31 @@ import { Component } from '@angular/core';
   selector: 'app-example',
   template: `
     <div class="flip-tile">
+      <ix-flip-tile variant="outline">
+        <div slot="header">Flip header</div>
+        <div slot="footer">
+          <div>Predicted maintenance date</div>
+          <div class="footer-date">
+            <ix-icon name="info" size="16"></ix-icon>2021-06-22
+          </div>
+        </div>
+        <ix-flip-tile-content> Example 1 </ix-flip-tile-content>
+        <ix-flip-tile-content> Example 2 </ix-flip-tile-content>
+      </ix-flip-tile>
+
       <ix-flip-tile>
         <div slot="header">Flip header</div>
-
         <div slot="footer">
           <div>Predicted maintenance date</div>
           <div class="footer-date">
             <ix-icon name="info" size="16"></ix-icon>2021-06-22
           </div>
         </div>
-
         <ix-flip-tile-content> Example 1 </ix-flip-tile-content>
         <ix-flip-tile-content> Example 2 </ix-flip-tile-content>
       </ix-flip-tile>
 
-      <ix-flip-tile variant="primary">
+      <ix-flip-tile variant="accent">
         <div slot="header">Flip header</div>
         <div slot="footer">
           <div>Predicted maintenance date</div>
@@ -143,7 +211,43 @@ import { Component } from '@angular/core';
         <ix-flip-tile-content> Example 2 </ix-flip-tile-content>
       </ix-flip-tile>
 
-      <ix-flip-tile variant="info">
+      <ix-flip-tile variant="neutral">
+        <div slot="header">Flip header</div>
+        <div slot="footer">
+          <div>Predicted maintenance date</div>
+          <div class="footer-date">
+            <ix-icon name="info" size="16"></ix-icon>2021-06-22
+          </div>
+        </div>
+        <ix-flip-tile-content> Example 1 </ix-flip-tile-content>
+        <ix-flip-tile-content> Example 2 </ix-flip-tile-content>
+      </ix-flip-tile>
+
+      <ix-flip-tile variant="information">
+        <div slot="header">Flip header</div>
+        <div slot="footer">
+          <div>Predicted maintenance date</div>
+          <div class="footer-date">
+            <ix-icon name="info" size="16"></ix-icon>2021-06-22
+          </div>
+        </div>
+        <ix-flip-tile-content> Example 1 </ix-flip-tile-content>
+        <ix-flip-tile-content> Example 2 </ix-flip-tile-content>
+      </ix-flip-tile>
+
+      <ix-flip-tile variant="success">
+        <div slot="header">Flip header</div>
+        <div slot="footer">
+          <div>Predicted maintenance date</div>
+          <div class="footer-date">
+            <ix-icon name="info" size="16"></ix-icon>2021-06-22
+          </div>
+        </div>
+        <ix-flip-tile-content> Example 1 </ix-flip-tile-content>
+        <ix-flip-tile-content> Example 2 </ix-flip-tile-content>
+      </ix-flip-tile>
+
+      <ix-flip-tile variant="caution">
         <div slot="header">Flip header</div>
         <div slot="footer">
           <div>Predicted maintenance date</div>
@@ -167,7 +271,19 @@ import { Component } from '@angular/core';
         <ix-flip-tile-content> Example 2 </ix-flip-tile-content>
       </ix-flip-tile>
 
-      <ix-flip-tile variant="alarm">
+      <ix-flip-tile variant="danger">
+        <div slot="header">Flip header</div>
+        <div slot="footer">
+          <div>Predicted maintenance date</div>
+          <div class="footer-date">
+            <ix-icon name="info" size="16"></ix-icon>2021-06-22
+          </div>
+        </div>
+        <ix-flip-tile-content> Example 1 </ix-flip-tile-content>
+        <ix-flip-tile-content> Example 2 </ix-flip-tile-content>
+      </ix-flip-tile>
+
+      <ix-flip-tile variant="critical">
         <div slot="header">Flip header</div>
         <div slot="footer">
           <div>Predicted maintenance date</div>
@@ -223,21 +339,31 @@ import {
   imports: [IxFlipTile, IxIcon, IxFlipTileContent],
   template: `
     <div class="flip-tile">
+      <ix-flip-tile variant="outline">
+        <div slot="header">Flip header</div>
+        <div slot="footer">
+          <div>Predicted maintenance date</div>
+          <div class="footer-date">
+            <ix-icon name="info" size="16"></ix-icon>2021-06-22
+          </div>
+        </div>
+        <ix-flip-tile-content> Example 1 </ix-flip-tile-content>
+        <ix-flip-tile-content> Example 2 </ix-flip-tile-content>
+      </ix-flip-tile>
+
       <ix-flip-tile>
         <div slot="header">Flip header</div>
-
         <div slot="footer">
           <div>Predicted maintenance date</div>
           <div class="footer-date">
             <ix-icon name="info" size="16"></ix-icon>2021-06-22
           </div>
         </div>
-
         <ix-flip-tile-content> Example 1 </ix-flip-tile-content>
         <ix-flip-tile-content> Example 2 </ix-flip-tile-content>
       </ix-flip-tile>
 
-      <ix-flip-tile variant="primary">
+      <ix-flip-tile variant="accent">
         <div slot="header">Flip header</div>
         <div slot="footer">
           <div>Predicted maintenance date</div>
@@ -249,7 +375,43 @@ import {
         <ix-flip-tile-content> Example 2 </ix-flip-tile-content>
       </ix-flip-tile>
 
-      <ix-flip-tile variant="info">
+      <ix-flip-tile variant="neutral">
+        <div slot="header">Flip header</div>
+        <div slot="footer">
+          <div>Predicted maintenance date</div>
+          <div class="footer-date">
+            <ix-icon name="info" size="16"></ix-icon>2021-06-22
+          </div>
+        </div>
+        <ix-flip-tile-content> Example 1 </ix-flip-tile-content>
+        <ix-flip-tile-content> Example 2 </ix-flip-tile-content>
+      </ix-flip-tile>
+
+      <ix-flip-tile variant="information">
+        <div slot="header">Flip header</div>
+        <div slot="footer">
+          <div>Predicted maintenance date</div>
+          <div class="footer-date">
+            <ix-icon name="info" size="16"></ix-icon>2021-06-22
+          </div>
+        </div>
+        <ix-flip-tile-content> Example 1 </ix-flip-tile-content>
+        <ix-flip-tile-content> Example 2 </ix-flip-tile-content>
+      </ix-flip-tile>
+
+      <ix-flip-tile variant="success">
+        <div slot="header">Flip header</div>
+        <div slot="footer">
+          <div>Predicted maintenance date</div>
+          <div class="footer-date">
+            <ix-icon name="info" size="16"></ix-icon>2021-06-22
+          </div>
+        </div>
+        <ix-flip-tile-content> Example 1 </ix-flip-tile-content>
+        <ix-flip-tile-content> Example 2 </ix-flip-tile-content>
+      </ix-flip-tile>
+
+      <ix-flip-tile variant="caution">
         <div slot="header">Flip header</div>
         <div slot="footer">
           <div>Predicted maintenance date</div>
@@ -273,7 +435,19 @@ import {
         <ix-flip-tile-content> Example 2 </ix-flip-tile-content>
       </ix-flip-tile>
 
-      <ix-flip-tile variant="alarm">
+      <ix-flip-tile variant="danger">
+        <div slot="header">Flip header</div>
+        <div slot="footer">
+          <div>Predicted maintenance date</div>
+          <div class="footer-date">
+            <ix-icon name="info" size="16"></ix-icon>2021-06-22
+          </div>
+        </div>
+        <ix-flip-tile-content> Example 1 </ix-flip-tile-content>
+        <ix-flip-tile-content> Example 2 </ix-flip-tile-content>
+      </ix-flip-tile>
+
+      <ix-flip-tile variant="critical">
         <div slot="header">Flip header</div>
         <div slot="footer">
           <div>Predicted maintenance date</div>
@@ -326,21 +500,31 @@ import { IxFlipTile, IxFlipTileContent, IxIcon } from '@siemens/ix-vue';
 
 <template>
   <div class="flip-tile">
+    <IxFlipTile variant="outline">
+      <div slot="header">Flip header</div>
+      <div slot="footer">
+        <div>Predicted maintenance date</div>
+        <div className="footer-date">
+          <IxIcon :name="iconInfo" size="16"></IxIcon>2021-06-22
+        </div>
+      </div>
+      <IxFlipTileContent> Example 1 </IxFlipTileContent>
+      <IxFlipTileContent> Example 2 </IxFlipTileContent>
+    </IxFlipTile>
+
     <IxFlipTile>
       <div slot="header">Flip header</div>
-
       <div slot="footer">
         <div>Predicted maintenance date</div>
         <div className="footer-date">
           <IxIcon :name="iconInfo" size="16"></IxIcon>2021-06-22
         </div>
       </div>
-
       <IxFlipTileContent> Example 1 </IxFlipTileContent>
       <IxFlipTileContent> Example 2 </IxFlipTileContent>
     </IxFlipTile>
 
-    <IxFlipTile variant="primary">
+    <IxFlipTile variant="accent">
       <div slot="header">Flip header</div>
       <div slot="footer">
         <div>Predicted maintenance date</div>
@@ -352,7 +536,43 @@ import { IxFlipTile, IxFlipTileContent, IxIcon } from '@siemens/ix-vue';
       <IxFlipTileContent> Example 2 </IxFlipTileContent>
     </IxFlipTile>
 
-    <IxFlipTile variant="info">
+    <IxFlipTile variant="neutral">
+      <div slot="header">Flip header</div>
+      <div slot="footer">
+        <div>Predicted maintenance date</div>
+        <div className="footer-date">
+          <IxIcon :name="iconInfo" size="16"></IxIcon>2021-06-22
+        </div>
+      </div>
+      <IxFlipTileContent> Example 1 </IxFlipTileContent>
+      <IxFlipTileContent> Example 2 </IxFlipTileContent>
+    </IxFlipTile>
+
+    <IxFlipTile variant="information">
+      <div slot="header">Flip header</div>
+      <div slot="footer">
+        <div>Predicted maintenance date</div>
+        <div className="footer-date">
+          <IxIcon :name="iconInfo" size="16"></IxIcon>2021-06-22
+        </div>
+      </div>
+      <IxFlipTileContent> Example 1 </IxFlipTileContent>
+      <IxFlipTileContent> Example 2 </IxFlipTileContent>
+    </IxFlipTile>
+
+    <IxFlipTile variant="success">
+      <div slot="header">Flip header</div>
+      <div slot="footer">
+        <div>Predicted maintenance date</div>
+        <div className="footer-date">
+          <IxIcon :name="iconInfo" size="16"></IxIcon>2021-06-22
+        </div>
+      </div>
+      <IxFlipTileContent> Example 1 </IxFlipTileContent>
+      <IxFlipTileContent> Example 2 </IxFlipTileContent>
+    </IxFlipTile>
+
+    <IxFlipTile variant="caution">
       <div slot="header">Flip header</div>
       <div slot="footer">
         <div>Predicted maintenance date</div>
@@ -376,7 +596,19 @@ import { IxFlipTile, IxFlipTileContent, IxIcon } from '@siemens/ix-vue';
       <IxFlipTileContent> Example 2 </IxFlipTileContent>
     </IxFlipTile>
 
-    <IxFlipTile variant="alarm">
+    <IxFlipTile variant="danger">
+      <div slot="header">Flip header</div>
+      <div slot="footer">
+        <div>Predicted maintenance date</div>
+        <div className="footer-date">
+          <IxIcon :name="iconInfo" size="16"></IxIcon>2021-06-22
+        </div>
+      </div>
+      <IxFlipTileContent> Example 1 </IxFlipTileContent>
+      <IxFlipTileContent> Example 2 </IxFlipTileContent>
+    </IxFlipTile>
+
+    <IxFlipTile variant="critical">
       <div slot="header">Flip header</div>
       <div slot="footer">
         <div>Predicted maintenance date</div>
@@ -417,13 +649,13 @@ import { IxFlipTile, IxFlipTileContent, IxIcon } from '@siemens/ix-vue';
 
 ### Properties
 
-| Name | Description | Attribute | Type | Default |
-| --- | --- | --- | --- | --- |
-| ariaLabelEyeIconButton | { "ARIA label for the eye icon button\n\nWill be set as aria-label on the nested HTML button element" } | aria-label-eye-icon-button | string \| undefined |  |
-| height | { "Height interpreted as REM" } | height | "auto" \| number | 15.125 |
-| index | { "Index of the currently visible content" } | index | number | 0 |
-| variant | { "Variation of the Flip" } | variant | "alarm" \| "filled" \| "info" \| "outline" \| "primary" \| "warning" | 'filled' |
-| width | { "Width interpreted as REM" } | width | "auto" \| number | 16 |
+| Name | Description | Attribute | Type | Default | Notes |
+| --- | --- | --- | --- | --- | --- |
+| ariaLabelEyeIconButton | { "ARIA label for the eye icon button\n\nWill be set as aria-label on the nested HTML button element" } | aria-label-eye-icon-button | string \| undefined |  |  |
+| height | { "Height in pixels" } | height | "auto" \| number | 242 | Breaking change in v6.0.0: Numeric values are interpreted as pixels instead of rem |
+| index | { "Index of the currently visible content" } | index | number | 0 |  |
+| variant | { "Variation of the Flip\n\nUse `outline` or `filled` for a neutral tile, or a status for a colored border and footer." } | variant | "accent" \| "caution" \| "critical" \| "danger" \| "filled" \| "information" \| "neutral" \| "outline" \| "success" \| "warning" | 'filled' | Breaking change in v6.0.0: Status variant values renamed |
+| width | { "Width in pixels" } | width | "auto" \| number | 256 | Breaking change in v6.0.0: Numeric values are interpreted as pixels instead of rem |
 
 ### Events
 
@@ -435,6 +667,6 @@ import { IxFlipTile, IxFlipTileContent, IxIcon } from '@siemens/ix-vue';
 
 | Name | Description |
 | --- | --- |
-| default | { "Flip tile pages." } |
-| footer | { "Content displayed in the tile footer." } |
-| header | { "Content displayed in the tile header." } |
+| default | { "Front-side content." } |
+| footer | { "Back-side content." } |
+| header | { "Header content." } |

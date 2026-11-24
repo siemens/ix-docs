@@ -4,6 +4,10 @@
 
 # Key value - Code
 
+:::info Legacy native input styles
+The custom value example uses the legacy `.ix-form-control` class. Import `@siemens/ix/css/legacy.css` while migrating native inputs. For new applications, we prefer to use an input component or provide application-specific styles for the slotted native control.
+:::
+
 ## Basic
 
 ### React Examples
@@ -315,6 +319,7 @@ import { IxKeyValue } from '@siemens/ix-vue';
 | Name | Description | Attribute | Type | Default |
 | --- | --- | --- | --- | --- |
 | ariaLabelIcon | { "ARIA label for the icon" } | aria-label-icon | string \| undefined |  |
+| hideDivider | { "Hide the divider line below the key value.\n\nInside `ix-key-value-list`, the divider is also hidden when the list sets `hideDividers`." } | hide-divider | boolean | false |
 | icon | { "Optional key value icon" } | icon | string \| undefined |  |
 | label | { "Key value label" } | label | string |  |
 | labelPosition | { "Optional key value label position - 'top' or 'left'" } | label-position | "left" \| "top" | 'top' |

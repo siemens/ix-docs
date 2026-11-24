@@ -23,7 +23,7 @@ import {
 
 export default () => {
   return (
-    <IxApplication>
+    <IxApplication skipLinkMainTarget="main-content">
       <IxApplicationHeader name="My Application">
         <div className="placeholder-logo" slot="logo"></div>
       </IxApplicationHeader>
@@ -33,12 +33,13 @@ export default () => {
         <IxMenuItem>Item 2</IxMenuItem>
       </IxMenu>
 
-      <IxContent>
+      <IxContent id="main-content" tabIndex={-1}>
         <IxContentHeader
           slot="header"
           headerTitle="My Content Page"
         ></IxContentHeader>
       </IxContent>
+      <button slot="bottom">Footer action</button>
     </IxApplication>
   );
 };
@@ -60,7 +61,7 @@ export default class ApplicationExample {}
 
 #### application.html
 ```html
-<ix-application>
+<ix-application skipLinkMainTarget="main-content">
   <ix-application-header name="My Application">
     <div class="placeholder-logo" slot="logo"></div>
   </ix-application-header>
@@ -70,10 +71,11 @@ export default class ApplicationExample {}
     <ix-menu-item>Item 2</ix-menu-item>
   </ix-menu>
 
-  <ix-content>
-    <ix-content-header slot="header" header-title="My Content Page">
+  <ix-content id="main-content" tabindex="-1">
+    <ix-content-header slot="header" headerTitle="My Content Page">
     </ix-content-header>
   </ix-content>
+  <button slot="bottom">Footer action</button>
 </ix-application>
 ```
 
@@ -108,7 +110,7 @@ export default class ApplicationExample {}
 
 #### application.html
 ```html
-<ix-application>
+<ix-application skipLinkMainTarget="main-content">
   <ix-application-header name="My Application">
     <div class="placeholder-logo" slot="logo"></div>
   </ix-application-header>
@@ -118,10 +120,11 @@ export default class ApplicationExample {}
     <ix-menu-item>Item 2</ix-menu-item>
   </ix-menu>
 
-  <ix-content>
-    <ix-content-header slot="header" header-title="My Content Page">
+  <ix-content id="main-content" tabindex="-1">
+    <ix-content-header slot="header" headerTitle="My Content Page">
     </ix-content-header>
   </ix-content>
+  <button slot="bottom">Footer action</button>
 </ix-application>
 ```
 
@@ -141,7 +144,7 @@ import {
 </script>
 
 <template>
-  <IxApplication>
+  <IxApplication skipLinkMainTarget="main-content">
     <IxApplicationHeader name="My Application">
       <div className="placeholder-logo" slot="logo"></div>
     </IxApplicationHeader>
@@ -151,15 +154,48 @@ import {
       <IxMenuItem>Item 2</IxMenuItem>
     </IxMenu>
 
-    <IxContent>
+    <IxContent id="main-content" tabindex="-1">
       <IxContentHeader
         slot="header"
         header-title="My Content Page"
       ></IxContentHeader>
     </IxContent>
+    <button slot="bottom">Footer action</button>
   </IxApplication>
 </template>
 ```
+
+## Skip links
+
+`ix-application` includes a skip-link list with no configuration required. The list is the first focusable content owned by `ix-application`; focusable document content rendered before the component remains before it in the tab order. The links remain visually hidden until they receive focus. Moving focus between them replaces the visible link at the same top-start position, and the list does not create an additional navigation landmark.
+
+The main link focuses the application's internal main region and scrolls it to the top by default. Use `skip-link-main-target` to focus a specific content boundary instead:
+
+```html
+<ix-application skip-link-main-target="main-content">
+  <ix-application-header name="My Application"></ix-application-header>
+  <ix-menu>...</ix-menu>
+  <ix-content id="main-content" tabindex="-1">...</ix-content>
+  <button slot="bottom">Footer action</button>
+</ix-application>
+```
+
+Pass an element ID, or set the `skipLinkMainTarget` property to an `HTMLElement`. The target must be focusable, so add `tabindex="-1"` to non-interactive elements. If the target can't be found or focused, the link falls back to the internal main region.
+
+Activating the main link moves focus to its destination. When the `bottom` slot contains meaningful content, a second “Skip to footer” link appears after the main link and updates automatically when the slot content changes. Activating it focuses the internal footer landmark without changing the main region's scroll position. Neither link changes the URL fragment or browser history.
+
+Use `i18n-skip-to-main` and `i18n-skip-to-footer` to translate the skip-link text. This example translates it into German:
+
+```html
+<ix-application
+  i18n-skip-to-main="Zum Hauptinhalt springen"
+  i18n-skip-to-footer="Zur Fußzeile springen"
+>
+  ...
+</ix-application>
+```
+
+Set `disable-skip-links` only when an equivalent document-level bypass mechanism is already available.
 
 ## Breakpoints
 
@@ -289,7 +325,7 @@ export default class ApplicationBreakpointExample {
   </ix-menu>
 
   <ix-content>
-    <ix-content-header slot="header" header-title="Choose breakpoint">
+    <ix-content-header slot="header" headerTitle="Choose breakpoint">
     </ix-content-header>
 
     <ix-radio-group
@@ -380,7 +416,7 @@ export default class ApplicationBreakpointExample {
   </ix-menu>
 
   <ix-content>
-    <ix-content-header slot="header" header-title="Choose breakpoint">
+    <ix-content-header slot="header" headerTitle="Choose breakpoint">
     </ix-content-header>
 
     <ix-radio-group
@@ -476,19 +512,19 @@ export default {
 </template>
 ```
 
-## Application Switch
+## Application switch
 
 The navigation to another application is implemented via `window.open` (https://developer.mozilla.org/en-US/docs/Web/API/Window/open). Therefore you can control if the navigation should happen inside the current browser context `target: '_self'` or inside a new tab `target: '_blank'` (more information about target can be found [here](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/a#target))
 
 ```javascript
-  {
+{
   id: 'demo-app-2',
-    name: 'Calculator App',
-    description: 'Example description for Calculator App',
-    iconSrc: '...url to some icon',
+  name: 'Calculator App',
+  description: 'Example description for Calculator App',
+  iconSrc: '...url to some icon',
 
-    url: '...target url',
-    target: '_self', // Define the navigation context (e.g current browser context or new tab)
+  url: '...target url',
+  target: '_self', // Define the navigation context, e.g current browser context or new tab
 }
 ```
 
@@ -630,7 +666,7 @@ export default class ApplicationAppSwitchExample {
   </ix-menu>
 
   <ix-content>
-    <ix-content-header slot="header" header-title="My Content Page">
+    <ix-content-header slot="header" headerTitle="My Content Page">
     </ix-content-header>
   </ix-content>
 </ix-application>
@@ -721,7 +757,7 @@ export default class ApplicationAppSwitchExample {
   </ix-menu>
 
   <ix-content>
-    <ix-content-header slot="header" header-title="My Content Page">
+    <ix-content-header slot="header" headerTitle="My Content Page">
     </ix-content-header>
   </ix-content>
 </ix-application>
@@ -770,7 +806,7 @@ const appSwitchConfig: AppSwitchConfiguration = {
 </script>
 
 <template>
-  <IxApplication :appSwitchConfig="appSwitchConfig">
+  <IxApplication :app-switch-config="appSwitchConfig">
     <IxApplicationHeader name="My Application">
       <div className="placeholder-logo" slot="logo"></div>
 
@@ -802,7 +838,7 @@ const appSwitchConfig: AppSwitchConfiguration = {
 </template>
 ```
 
-## Application Advanced
+## Application advanced
 
 ### React Examples
 
@@ -1123,20 +1159,24 @@ const activeContent = ref('home');
 
 ### Properties
 
-| Name | Description | Attribute | Type | Default |
-| --- | --- | --- | --- | --- |
-| appSwitchConfig | { "Define application switch configuration" } |  | undefined \| { currentAppId: string; apps: { id: string; name: string; description: string; url: string; target: AppSwitchConfigurationTarget; iconSrc: string; }[]; i18nAppSwitch?: string \| undefined; i18nLoadingApps?: string \| undefined; } |  |
-| breakpoints | { "Supported layouts" } |  | ("sm" \| "md" \| "lg")[] | ['sm', 'md', 'lg'] |
-| colorSchema | { "Color schema of the theme" } | color-schema | "dark" \| "light" \| "system" \| undefined | 'system' |
-| forceBreakpoint | { "Change the responsive layout of the menu structure" } | force-breakpoint | "lg" \| "md" \| "sm" \| undefined |  |
-| theme | { "Application theme" } | theme | string \| undefined |  |
+| Name | Description | Attribute | Type | Default | Notes |
+| --- | --- | --- | --- | --- | --- |
+| appSwitchConfig | { "Define application switch configuration\n\nApplication `url`s are opened unchanged via `window.open()`. URL schemes such as\n\n`javascript:` or `data:` are not rejected. Only configure trusted applications and do not\n\nderive URLs from untrusted input." } |  | undefined \| { currentAppId: string; apps: { id: string; name: string; description: string; url: string; target: AppSwitchConfigurationTarget; iconSrc: string; }[]; i18nAppSwitch?: string \| undefined; i18nLoadingApps?: string \| undefined; } |  | Breaking change in v6.0.0: New-tab apps open with noopener and noreferrer |
+| breakpoints | { "Supported layouts" } |  | ("sm" \| "md" \| "lg")[] | ['sm', 'md', 'lg'] |  |
+| colorSchema | { "Color schema of the theme" } | color-schema | "dark" \| "light" \| "system" \| undefined | 'system' |  |
+| disableSkipLinks | { "Disable the built-in links for bypassing repeated application content.\n\nOnly disable them when an equivalent bypass mechanism is provided\n\nelsewhere." } | disable-skip-links | boolean | false |  |
+| forceBreakpoint | { "Change the responsive layout of the menu structure" } | force-breakpoint | "lg" \| "md" \| "sm" \| undefined |  |  |
+| i18nSkipToFooter | { "Localized text for the link that focuses the application footer." } | i18n-skip-to-footer | string | 'Skip to footer' |  |
+| i18nSkipToMain | { "Localized text for the link that bypasses repeated application content and\n\nfocuses the main region." } | i18n-skip-to-main | string | 'Skip to main content' |  |
+| skipLinkMainTarget | { "Element, or ID of an element, to focus when the Main skip link is\n\nactivated. The element must be focusable, e.g. by setting `tabindex=\"-1\"`.\n\nFalls back to the internal main region when the element cannot be focused." } | skip-link-main-target | HTMLElement \| string \| undefined |  |  |
+| theme | { "Application theme" } | theme | string \| undefined |  |  |
 
 ### Slot
 
 | Name | Description |
 | --- | --- |
-| application-header | { "Header displayed at the top of the application." } |
-| application-sidebar | { "Sidebar displayed next to the main content." } |
-| bottom | { "Footer displayed below the main content." } |
 | default | { "Main application content." } |
-| menu | { "Main application navigation." } |
+| application-header | { "Application header, typically an `ix-application-header`." } |
+| application-sidebar | { "Application sidebar content." } |
+| bottom | { "Content displayed at the bottom of the application layout." } |
+| menu | { "Application menu, typically an `ix-menu`." } |

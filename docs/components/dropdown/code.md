@@ -525,20 +525,30 @@ Right-click here
 | Name | Description | Attribute | Type | Default |
 | --- | --- | --- | --- | --- |
 | anchor | { "Define an anchor element" } | anchor | HTMLElement \| Promise \| string \| undefined |  |
+| anchorPosition | { "Absolute position of the dropdown in viewport coordinates\n\n(e.g. `clientX`/`clientY` of a `contextmenu` event).\n\nThe coordinates are not relative to the parent, an anchor or a trigger element.\n\nWhile set, it takes precedence over `anchor` and `trigger` for positioning.\n\nUse `showAt` to open the dropdown at a position only once." } |  | undefined \| { x: number; y: number; } |  |
 | closeBehavior | { "Controls if the dropdown will be closed in response to a click event depending on the position of the event relative to the dropdown.\n\nIf the dropdown is a child of another one, it will be closed with the parent, regardless of its own close behavior." } | close-behavior | "both" \| "inside" \| "outside" \| boolean | 'both' |
 | disableFocusHandling | { "Suppress automatic focus when the dropdown is shown" } | disable-focus-handling | boolean | false |
 | disableFocusTrap | { "Close dropdown when tabbing away, and do not trap focus inside dropdown" } | disable-focus-trap | boolean | false |
 | enableTopLayer | { "Enable Popover API rendering for top-layer positioning." } | enable-top-layer | boolean | false |
 | focusCheckedItem | { "If true, the dropdown will try to focus checked items first when opened via keyboard, otherwise it will always focus the first focusable item." } | focus-checked-item | boolean | false |
 | header | { "An optional header shown at the top of the dropdown" } | header | string \| undefined |  |
+| navigationMode | { "Controls how keyboard navigation moves focus between dropdown items.\n\n- `active-descendant`: DOM focus stays on the trigger/anchor element while a\n\n visual focus indicator moves between the items. Consumers can expose the\n\n active item through `aria-activedescendant`.\n\n- `roving-tabindex`: real DOM focus is moved to each item using a roving\n\n `tabindex` (`0` for the active item, `-1` for the others). No\n\n `aria-activedescendant` is required because the focused item is announced\n\n directly. Besides the built-in item components, arbitrary focusable\n\n elements (e.g. a native ` `) can opt into this navigation by adding\n\n the `data-ix-roving-item` attribute; such native elements keep their own\n\n activation ( Enter / Space fire a real click)." } | navigation-mode | "active-descendant" \| "roving-tabindex" | 'active-descendant' |
 | placement | { "Placement of the dropdown" } | placement | "bottom-end" \| "bottom-start" \| "left-end" \| "left-start" \| "right-end" \| "right-start" \| "top-end" \| "top-start" | 'bottom-start' |
 | positioningStrategy | { "Position strategy" } | positioning-strategy | "absolute" \| "fixed" | 'fixed' |
 | show | { "Show dropdown" } | show | boolean | false |
 | suppressAutomaticPlacement | { "Suppress the automatic placement of the dropdown." } | suppress-automatic-placement | boolean | false |
 | suppressTriggerVisibilityCheck | { "By default the dropdown gets closed if the trigger is not visible anymore (e.g. due to scrolling). Setting this property prevents that behavior." } | suppress-trigger-visibility-check | boolean | false |
-| trigger | { "Define an element that triggers the dropdown.\n\nA trigger can either be a string that will be interpreted as id attribute or a DOM element." } | trigger | HTMLElement \| Promise \| string \| undefined |  |
+| trigger | { "Define an element that triggers the dropdown.\n\nA trigger can either be a string that will be interpreted as id attribute or a DOM element.\n\nString values are inserted into an ID selector (`# `) without escaping. Use\n\napplication-controlled IDs starting with an ASCII letter or `_`, followed by ASCII letters,\n\ndigits, `-` or `_`. Do not derive IDs from untrusted input. For other IDs, pass the DOM\n\nelement reference instead.\n\nIf no element with the ID exists, the dropdown observes the document until it appears; make sure\n\nthe trigger element exists." } | trigger | HTMLElement \| Promise \| string \| undefined |  |
 
 ### Methods
+
+#### showAt
+
+```ts
+showAt(x: number, y: number): Promise&lt;void&gt;;
+```
+
+{ "Show the dropdown at the given absolute point in viewport coordinates\n\n(not relative to a parent element), e.g. at `clientX`/`clientY` of a `contextmenu` event.\n\nMoves an already visible dropdown. The position takes precedence over\n\n`anchorPosition`, `anchor` and `trigger` until the dropdown is hidden." }
 
 #### updatePosition
 
@@ -559,7 +569,7 @@ updatePosition(): Promise&lt;void&gt;;
 
 | Name | Description |
 | --- | --- |
-| default | { "Dropdown items." } |
+| default | { "Dropdown content." } |
 
 ## API for ix-dropdown-item
 
@@ -580,4 +590,5 @@ updatePosition(): Promise&lt;void&gt;;
 
 | Name | Description |
 | --- | --- |
-| default | { "Dropdown item content." } |
+| default | { "Dropdown item label." } |
+| end | { "Trailing content aligned to the end of the item, rendered before the submenu indicator." } |

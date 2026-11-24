@@ -8,14 +8,18 @@ LICENSE file in the root directory of this source tree.
 -->
 
 <!DOCTYPE html>
-<html lang="en" data-ix-theme="classic" data-ix-color-schema="system">
+<html lang="en" data-ix-theme="community" data-ix-color-schema="system">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>ECharts line multiple y-axis example</title>
     <link rel="stylesheet" href="./echarts-line-multiple-y-axis.css" />
     <!-- External resources -->
-    <script src="https://cdn.jsdelivr.net/npm/echarts@5.4.1/dist/echarts.min.js"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/echarts@5.4.1/dist/echarts.min.js"
+      integrity="sha384-lhqcLj8+hkrVGXhwTmMfhPx3TH5lnJCJLfinrfEzp6d2tHTSiwCr6D1e/fMqMaa9"
+      crossorigin="anonymous"
+    ></script>
     <!-- External resources -->
   </head>
   <body>
@@ -100,9 +104,25 @@ LICENSE file in the root directory of this source tree.
       }
 
       function getOptions() {
-        const themeChartList = Array.from({ length: 17 }, (_, i) =>
-          getComputedCSSProperty(`chart-${i + 1}`)
-        );
+        const themeChartList = [
+          getComputedCSSProperty('--si-sys-color-data-categorical-2'),
+          getComputedCSSProperty('--si-sys-color-data-categorical-4'),
+          getComputedCSSProperty('--si-sys-color-data-categorical-1'),
+          getComputedCSSProperty('--si-sys-color-data-categorical-6'),
+          getComputedCSSProperty('--si-sys-color-data-categorical-17'),
+          getComputedCSSProperty('--si-sys-color-data-categorical-5'),
+          getComputedCSSProperty('--si-sys-color-data-categorical-13'),
+          getComputedCSSProperty('--si-sys-color-data-sequential-royal-blue-4'),
+          getComputedCSSProperty('--si-sys-color-data-categorical-8'),
+          getComputedCSSProperty('--si-sys-color-data-categorical-7'),
+          getComputedCSSProperty('--si-sys-color-data-categorical-9'),
+          getComputedCSSProperty('--si-sys-color-data-categorical-11'),
+          getComputedCSSProperty('--si-sys-color-data-categorical-12'),
+          getComputedCSSProperty('--si-sys-color-data-sequential-orange-4'),
+          getComputedCSSProperty('--si-sys-color-data-sequential-orange-1'),
+          getComputedCSSProperty('--si-sys-color-data-sequential-sand-1'),
+          getComputedCSSProperty('--si-sys-color-data-categorical-16'),
+        ];
 
         return {
           tooltip: {

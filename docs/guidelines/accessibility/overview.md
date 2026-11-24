@@ -75,10 +75,6 @@ In industrial software applications, color significantly enhances the visual com
 - Ensure minimum contrast for large text is 3:1
 - Ensure icons meet 3:1 contrast with the background
 
-**Example**: On background colors 1 to 4, both text colors (std-text and soft-text) pass the WCAG AA criteria for body text, large text, and icons.
-
-![Text colors on background colors](https://www.figma.com/design/wEptRgAezDU1z80Cn3eZ0o/iX-Documentation-illustrations?node-id=5402-18230&t=JzJxfVEhA9XmeCtN-4)
-
 #### Contrast components
 
 While the components in our design system are built to meet baseline contrast requirements, it’s essential to evaluate contrast in the context of their implementation such as background colors or surrounding element.
@@ -86,14 +82,6 @@ While the components in our design system are built to meet baseline contrast re
 - Ensure component contrast for adjoining colors is 3:1
 - Ensure visual states for components meet 3:1 contrast with adjoining colors
 - Ensure data visualization meets 3:1 contrast with the background
-
-**Example**: On background colors 1 to 4, primary [buttons](../../components/button/index.mdx) pass the WCAG AA criteria for default, hover, and active states. For disabled states, the criteria do not apply as inactive components are exempt.
-
-![Component contrast](https://www.figma.com/design/wEptRgAezDU1z80Cn3eZ0o/iX-Documentation-illustrations?node-id=5402-18322&t=JzJxfVEhA9XmeCtN-4)
-
-**Example**: In the [push card component](../../components/card/index.mdx), we adjust the font color based on the card's status color to ensure sufficient contrast.
-
-![Component contrast for push card](https://www.figma.com/design/wEptRgAezDU1z80Cn3eZ0o/iX-Documentation-illustrations?node-id=5638-15909&t=LBH5sM5nmqFyILZP-4)
 
 #### Use more than color
 
@@ -142,7 +130,7 @@ Navigation aids help users find content and understand their location within you
 - Use headings properly (`` ... ``)
 - Provide descriptive page titles
 - Provide clear link text
-- Provide links to skip blocks
+- Provide links to skip repeated blocks. [Application](../../components/application/guide.md) includes a default-on skip-link list with a main link and a conditional footer link.
 - Provide a search function
 - Reduce the use of text styles and decorations
 
@@ -159,9 +147,9 @@ Enhance the usability of your applications by making it easier for users to oper
 - Provide alternatives to device motion responses
 - Allow cancel, undo and reverse for pointer actions
 
-**Example**: The [chip component](../../components/chip/index.mdx), which is clickable, has a minimum height of 32px to ensure it meets accessibility requirements for touch targets. The [pill component](../../components/pill/index.mdx), being non-interactive and used only for displaying status, can have a smaller height.
+**Example**: The [chip component](../../components/chip/index.mdx), which is clickable, has a minimum height of 32px to ensure it meets accessibility requirements for touch targets. The [badge component](../../components/badge/index.mdx), being non-interactive and used only for displaying status, can have a smaller height.
 
-![Chips and pill](https://www.figma.com/design/wEptRgAezDU1z80Cn3eZ0o/iX-Documentation-illustrations?node-id=5402-18208&t=JzJxfVEhA9XmeCtN-4)
+![Chips and badge](https://www.figma.com/design/wEptRgAezDU1z80Cn3eZ0o/iX-Documentation-illustrations?node-id=5402-18208&t=JzJxfVEhA9XmeCtN-4)
 
 ## Principle 3: Understandable
 

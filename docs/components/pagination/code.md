@@ -135,12 +135,15 @@ import { IxPagination } from '@siemens/ix-vue';
 | advanced | { "Advanced mode" } | advanced | boolean | false |
 | ariaLabelChevronLeftIconButton | { "ARIA label for the chevron left icon button\n\nWill be set as aria-label on the nested HTML button element" } | aria-label-chevron-left-icon-button | string \| undefined | 'Previous page' |
 | ariaLabelChevronRightIconButton | { "ARIA label for the chevron right icon button\n\nWill be set as aria-label on the nested HTML button element" } | aria-label-chevron-right-icon-button | string \| undefined | 'Next page' |
+| ariaLabelJumpBackward | { "ARIA label for the jump backward button. The `{page}` placeholder is\n\nreplaced with the translated `i18nPage` label and destination page number\n\n(e.g. \"Jump backward to Page 3\"). Custom labels without `{page}` are used\n\nunchanged." } | aria-label-jump-backward | string | 'Jump backward to {page}' |
+| ariaLabelJumpForward | { "ARIA label for the jump forward button. The `{page}` placeholder is\n\nreplaced with the translated `i18nPage` label and destination page number\n\n(e.g. \"Jump forward to Page 9\"). Custom labels without `{page}` are used\n\nunchanged." } | aria-label-jump-forward | string | 'Jump forward to {page}' |
 | ariaLabelPageSelection | { "ARIA label for the page selection input\n\nWill be set as aria-label on the nested HTML input element" } | aria-label-page-selection | string | 'Page selection input' |
 | count | { "Total number of pages" } | count | number | 0 |
 | hideItemCount | { "Hide item count in advanced mode" } | hide-item-count | boolean | false |
 | i18nItems | { "i18n label for 'Items'" } | i18n-items | string | 'Items' |
 | i18nOf | { "i18n label for 'of'" } | i18n-of | string | 'of' |
 | i18nPage | { "i18n label for 'Page'" } | i18n-page | string | 'Page' |
+| i18nPagination | { "i18n label for the pagination navigation landmark" } | i18n-pagination | string | 'Pagination' |
 | itemCount | { "Number of items shown at once.\n\nCan only be changed in advanced mode." } | item-count | number | 15 |
 | itemCountOptions | { "Custom item count options for advanced mode.\n\nProvide an array of positive numbers to display in the items per page dropdown." } |  | number[] | [10, 15, 20, 40, 100] |
 | selectedPage | { "Zero based index of currently selected page" } | selected-page | number | 0 |

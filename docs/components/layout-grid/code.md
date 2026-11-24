@@ -90,7 +90,7 @@ export default () => {
 .grid {
   padding-top: 1rem;
   padding-bottom: 0.25rem;
-  background-color: var(--theme-color-ghost);
+  background-color: transparent;
 }
 
 .grid > ix-layout-grid {
@@ -105,8 +105,8 @@ export default () => {
   align-items: center;
   flex: 1 0 0;
   align-self: stretch;
-  border: 1px solid var(--theme-color-soft-bdr);
-  background: var(--theme-color-ghost);
+  border: 1px solid var(--si-sys-color-border-3);
+  background: transparent;
   border-radius: 3px;
 }
 ```
@@ -164,7 +164,7 @@ export default class Grid {}
 .grid {
   padding-top: 1rem;
   padding-bottom: 0.25rem;
-  background-color: var(--theme-color-ghost);
+  background-color: transparent;
 }
 
 .grid > ix-layout-grid {
@@ -179,8 +179,8 @@ export default class Grid {}
   align-items: center;
   flex: 1 0 0;
   align-self: stretch;
-  border: 1px solid var(--theme-color-soft-bdr);
-  background: var(--theme-color-ghost);
+  border: 1px solid var(--si-sys-color-border-3);
+  background: transparent;
   border-radius: 3px;
 }
 ```
@@ -244,7 +244,7 @@ export default class Grid {}
 .grid {
   padding-top: 1rem;
   padding-bottom: 0.25rem;
-  background-color: var(--theme-color-ghost);
+  background-color: transparent;
 }
 
 .grid > ix-layout-grid {
@@ -259,8 +259,8 @@ export default class Grid {}
   align-items: center;
   flex: 1 0 0;
   align-self: stretch;
-  border: 1px solid var(--theme-color-soft-bdr);
-  background: var(--theme-color-ghost);
+  border: 1px solid var(--si-sys-color-border-3);
+  background: transparent;
   border-radius: 3px;
 }
 ```
@@ -313,7 +313,7 @@ import { IxCol, IxLayoutGrid, IxRow, IxTypography } from '@siemens/ix-vue';
 .grid {
   padding-top: 1rem;
   padding-bottom: 0.25rem;
-  background-color: var(--theme-color-ghost);
+  background-color: transparent;
 }
 
 .grid > ix-layout-grid {
@@ -328,8 +328,8 @@ import { IxCol, IxLayoutGrid, IxRow, IxTypography } from '@siemens/ix-vue';
   align-items: center;
   flex: 1 0 0;
   align-self: stretch;
-  border: 1px solid var(--theme-color-soft-bdr);
-  background: var(--theme-color-ghost);
+  border: 1px solid var(--si-sys-color-border-3);
+  background: transparent;
   border-radius: 3px;
 }
 ```
@@ -374,16 +374,16 @@ export default () => {
       <h4>Stack columns on smaller screens</h4>
       <IxLayoutGrid>
         <IxRow>
-          <IxCol size="12" size-md="3">
+          <IxCol size="12" sizeMd="3">
             <IxTypography format="display">1</IxTypography>
           </IxCol>
-          <IxCol size="12" size-md="3">
+          <IxCol size="12" sizeMd="3">
             <IxTypography format="display">2</IxTypography>
           </IxCol>
-          <IxCol size="12" size-md="3">
+          <IxCol size="12" sizeMd="3">
             <IxTypography format="display">3</IxTypography>
           </IxCol>
-          <IxCol size="12" size-md="3">
+          <IxCol size="12" sizeMd="3">
             <IxTypography format="display">4</IxTypography>
           </IxCol>
         </IxRow>
@@ -398,7 +398,7 @@ export default () => {
 .grid {
   padding-top: 1rem;
   padding-bottom: 0.25rem;
-  background-color: var(--theme-color-ghost);
+  background-color: transparent;
 }
 
 .grid > ix-layout-grid {
@@ -413,8 +413,8 @@ export default () => {
   align-items: center;
   flex: 1 0 0;
   align-self: stretch;
-  border: 1px solid var(--theme-color-soft-bdr);
-  background: var(--theme-color-ghost);
+  border: 1px solid var(--si-sys-color-border-3);
+  background: transparent;
   border-radius: 3px;
 }
 ```
@@ -454,16 +454,16 @@ export default class GridSize {}
   <h4>Stack columns on smaller screens</h4>
   <ix-layout-grid>
     <ix-row>
-      <ix-col size="12" size-md="3"
+      <ix-col size="12" sizeMd="3"
         ><ix-typography format="display">1</ix-typography></ix-col
       >
-      <ix-col size="12" size-md="3"
+      <ix-col size="12" sizeMd="3"
         ><ix-typography format="display">2</ix-typography></ix-col
       >
-      <ix-col size="12" size-md="3"
+      <ix-col size="12" sizeMd="3"
         ><ix-typography format="display">3</ix-typography></ix-col
       >
-      <ix-col size="12" size-md="3"
+      <ix-col size="12" sizeMd="3"
         ><ix-typography format="display">4</ix-typography></ix-col
       >
     </ix-row>
@@ -476,7 +476,7 @@ export default class GridSize {}
 .grid {
   padding-top: 1rem;
   padding-bottom: 0.25rem;
-  background-color: var(--theme-color-ghost);
+  background-color: transparent;
 }
 
 .grid > ix-layout-grid {
@@ -491,8 +491,8 @@ export default class GridSize {}
   align-items: center;
   flex: 1 0 0;
   align-self: stretch;
-  border: 1px solid var(--theme-color-soft-bdr);
-  background: var(--theme-color-ghost);
+  border: 1px solid var(--si-sys-color-border-3);
+  background: transparent;
   border-radius: 3px;
 }
 ```
@@ -538,16 +538,16 @@ export default class GridSize {}
   <h4>Stack columns on smaller screens</h4>
   <ix-layout-grid>
     <ix-row>
-      <ix-col size="12" size-md="3"
+      <ix-col size="12" sizeMd="3"
         ><ix-typography format="display">1</ix-typography></ix-col
       >
-      <ix-col size="12" size-md="3"
+      <ix-col size="12" sizeMd="3"
         ><ix-typography format="display">2</ix-typography></ix-col
       >
-      <ix-col size="12" size-md="3"
+      <ix-col size="12" sizeMd="3"
         ><ix-typography format="display">3</ix-typography></ix-col
       >
-      <ix-col size="12" size-md="3"
+      <ix-col size="12" sizeMd="3"
         ><ix-typography format="display">4</ix-typography></ix-col
       >
     </ix-row>
@@ -560,7 +560,7 @@ export default class GridSize {}
 .grid {
   padding-top: 1rem;
   padding-bottom: 0.25rem;
-  background-color: var(--theme-color-ghost);
+  background-color: transparent;
 }
 
 .grid > ix-layout-grid {
@@ -575,8 +575,8 @@ export default class GridSize {}
   align-items: center;
   flex: 1 0 0;
   align-self: stretch;
-  border: 1px solid var(--theme-color-soft-bdr);
-  background: var(--theme-color-ghost);
+  border: 1px solid var(--si-sys-color-border-3);
+  background: transparent;
   border-radius: 3px;
 }
 ```
@@ -631,7 +631,7 @@ import { IxCol, IxLayoutGrid, IxRow, IxTypography } from '@siemens/ix-vue';
 .grid {
   padding-top: 1rem;
   padding-bottom: 0.25rem;
-  background-color: var(--theme-color-ghost);
+  background-color: transparent;
 }
 
 .grid > ix-layout-grid {
@@ -646,8 +646,8 @@ import { IxCol, IxLayoutGrid, IxRow, IxTypography } from '@siemens/ix-vue';
   align-items: center;
   flex: 1 0 0;
   align-self: stretch;
-  border: 1px solid var(--theme-color-soft-bdr);
-  background: var(--theme-color-ghost);
+  border: 1px solid var(--si-sys-color-border-3);
+  background: transparent;
   border-radius: 3px;
 }
 ```
@@ -758,7 +758,7 @@ export default () => {
 .grid {
   padding-top: 1rem;
   padding-bottom: 0.25rem;
-  background-color: var(--theme-color-ghost);
+  background-color: transparent;
 }
 
 .grid > ix-layout-grid {
@@ -773,8 +773,8 @@ export default () => {
   align-items: center;
   flex: 1 0 0;
   align-self: stretch;
-  border: 1px solid var(--theme-color-soft-bdr);
-  background: var(--theme-color-ghost);
+  border: 1px solid var(--si-sys-color-border-3);
+  background: transparent;
   border-radius: 3px;
 }
 ```
@@ -816,7 +816,7 @@ export default class GridPadding {}
   </ix-layout-grid>
 
   <h4>Grid without margin</h4>
-  <ix-layout-grid no-margin>
+  <ix-layout-grid noMargin>
     <ix-row>
       <ix-col><ix-typography format="display">1</ix-typography></ix-col>
       <ix-col><ix-typography format="display">2</ix-typography></ix-col>
@@ -840,7 +840,7 @@ export default class GridPadding {}
 .grid {
   padding-top: 1rem;
   padding-bottom: 0.25rem;
-  background-color: var(--theme-color-ghost);
+  background-color: transparent;
 }
 
 .grid > ix-layout-grid {
@@ -855,8 +855,8 @@ export default class GridPadding {}
   align-items: center;
   flex: 1 0 0;
   align-self: stretch;
-  border: 1px solid var(--theme-color-soft-bdr);
-  background: var(--theme-color-ghost);
+  border: 1px solid var(--si-sys-color-border-3);
+  background: transparent;
   border-radius: 3px;
 }
 ```
@@ -904,7 +904,7 @@ export default class GridPadding {}
   </ix-layout-grid>
 
   <h4>Grid without margin</h4>
-  <ix-layout-grid no-margin>
+  <ix-layout-grid noMargin>
     <ix-row>
       <ix-col><ix-typography format="display">1</ix-typography></ix-col>
       <ix-col><ix-typography format="display">2</ix-typography></ix-col>
@@ -928,7 +928,7 @@ export default class GridPadding {}
 .grid {
   padding-top: 1rem;
   padding-bottom: 0.25rem;
-  background-color: var(--theme-color-ghost);
+  background-color: transparent;
 }
 
 .grid > ix-layout-grid {
@@ -943,8 +943,8 @@ export default class GridPadding {}
   align-items: center;
   flex: 1 0 0;
   align-self: stretch;
-  border: 1px solid var(--theme-color-soft-bdr);
-  background: var(--theme-color-ghost);
+  border: 1px solid var(--si-sys-color-border-3);
+  background: transparent;
   border-radius: 3px;
 }
 ```
@@ -980,7 +980,7 @@ import { IxCol, IxLayoutGrid, IxRow, IxTypography } from '@siemens/ix-vue';
     </IxLayoutGrid>
 
     <h4>Grid without margin</h4>
-    <IxLayoutGrid noMargin>
+    <IxLayoutGrid no-margin>
       <IxRow>
         <IxCol><IxTypography format="display">1</IxTypography></IxCol>
         <IxCol><IxTypography format="display">2</IxTypography></IxCol>
@@ -1005,7 +1005,7 @@ import { IxCol, IxLayoutGrid, IxRow, IxTypography } from '@siemens/ix-vue';
 .grid {
   padding-top: 1rem;
   padding-bottom: 0.25rem;
-  background-color: var(--theme-color-ghost);
+  background-color: transparent;
 }
 
 .grid > ix-layout-grid {
@@ -1020,8 +1020,8 @@ import { IxCol, IxLayoutGrid, IxRow, IxTypography } from '@siemens/ix-vue';
   align-items: center;
   flex: 1 0 0;
   align-self: stretch;
-  border: 1px solid var(--theme-color-soft-bdr);
-  background: var(--theme-color-ghost);
+  border: 1px solid var(--si-sys-color-border-3);
+  background: transparent;
   border-radius: 3px;
 }
 ```
@@ -1040,7 +1040,7 @@ import { IxCol, IxLayoutGrid, IxRow, IxTypography } from '@siemens/ix-vue';
 
 | Name | Description |
 | --- | --- |
-| default | { "Content arranged in the grid." } |
+| default | { "Layout content." } |
 
 ## API for ix-col
 

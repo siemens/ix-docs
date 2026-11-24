@@ -321,6 +321,6 @@ import {
 
 | Name | Description |
 | --- | --- |
-|  | { "AI-generated message content" } |
+| default | { "AI-generated message content" } |
 | actions | { "Optional actions displayed below the AI message" } |
 | sources | { "Optional sources displayed next to the AI message actions" } |

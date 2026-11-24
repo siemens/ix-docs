@@ -101,9 +101,9 @@ import { IxBreadcrumb, IxBreadcrumbItem } from '@siemens/ix-vue';
 
 <template>
   <IxBreadcrumb>
-    <IxBreadcrumbItem label="Item 1" breadcrumbKey="item-1"></IxBreadcrumbItem>
-    <IxBreadcrumbItem label="Item 2" breadcrumbKey="item-2"></IxBreadcrumbItem>
-    <IxBreadcrumbItem label="Item 3" breadcrumbKey="item-3"></IxBreadcrumbItem>
+    <IxBreadcrumbItem label="Item 1" breadcrumb-key="item-1"></IxBreadcrumbItem>
+    <IxBreadcrumbItem label="Item 2" breadcrumb-key="item-2"></IxBreadcrumbItem>
+    <IxBreadcrumbItem label="Item 3" breadcrumb-key="item-3"></IxBreadcrumbItem>
   </IxBreadcrumb>
 </template>
 ```
@@ -228,12 +228,27 @@ import { IxBreadcrumb, IxBreadcrumbItem } from '@siemens/ix-vue';
 </script>
 
 <template>
-  <IxBreadcrumb :visibleItemCount="3">
-    <IxBreadcrumbItem label="Item 1" breadcrumbKey="item-1"></IxBreadcrumbItem>
-    <IxBreadcrumbItem label="Item 2" breadcrumbKey="item-2"></IxBreadcrumbItem>
-    <IxBreadcrumbItem label="Item 3" breadcrumbKey="item-3"></IxBreadcrumbItem>
-    <IxBreadcrumbItem label="Item 4" breadcrumbKey="item-4"></IxBreadcrumbItem>
-    <IxBreadcrumbItem label="Item 5" breadcrumbKey="item-5"></IxBreadcrumbItem>
+  <IxBreadcrumb :visible-item-count="3">
+    <IxBreadcrumbItem
+      label="Item 1"
+      breadcrumb-key="item-1"
+    ></IxBreadcrumbItem>
+    <IxBreadcrumbItem
+      label="Item 2"
+      breadcrumb-key="item-2"
+    ></IxBreadcrumbItem>
+    <IxBreadcrumbItem
+      label="Item 3"
+      breadcrumb-key="item-3"
+    ></IxBreadcrumbItem>
+    <IxBreadcrumbItem
+      label="Item 4"
+      breadcrumb-key="item-4"
+    ></IxBreadcrumbItem>
+    <IxBreadcrumbItem
+      label="Item 5"
+      breadcrumb-key="item-5"
+    ></IxBreadcrumbItem>
   </IxBreadcrumb>
 </template>
 ```
@@ -352,10 +367,10 @@ const nextItems = ref<{ breadcrumbKey: string; label: string }[]>([
 </script>
 
 <template>
-  <IxBreadcrumb :nextItems="nextItems">
-    <IxBreadcrumbItem label="Item 1" breadcrumbKey="item-1"></IxBreadcrumbItem>
-    <IxBreadcrumbItem label="Item 2" breadcrumbKey="item-2"></IxBreadcrumbItem>
-    <IxBreadcrumbItem label="Item 3" breadcrumbKey="item-3"></IxBreadcrumbItem>
+   <IxBreadcrumb :next-items="nextItems">
+    <IxBreadcrumbItem label="Item 1" breadcrumb-key="item-1"></IxBreadcrumbItem>
+    <IxBreadcrumbItem label="Item 2" breadcrumb-key="item-2"></IxBreadcrumbItem>
+    <IxBreadcrumbItem label="Item 3" breadcrumb-key="item-3"></IxBreadcrumbItem>
   </IxBreadcrumb>
 </template>
 ```
@@ -366,6 +381,7 @@ const nextItems = ref<{ breadcrumbKey: string; label: string }[]>([
 
 | Name | Description | Attribute | Type | Default |
 | --- | --- | --- | --- | --- |
+| ariaLabelNextButton | { "Accessible label for the next items dropdown button used to access the dropdown list\n\nwith conditionally hidden next items" } | aria-label-next-button | string | 'Show next breadcrumb items' |
 | ariaLabelPreviousButton | { "Accessibility label for the dropdown button (ellipsis icon) used to access the dropdown list\n\nwith conditionally hidden previous items" } | aria-label-previous-button | string | 'Show previous breadcrumb items' |
 | enableTopLayer | { "Enable Popover API rendering for dropdown." } | enable-top-layer | boolean | false |
 | nextItems | { "Items will be accessible through a dropdown" } |  | BreadcrumbClick[] | [] |
@@ -392,7 +408,7 @@ const nextItems = ref<{ breadcrumbKey: string; label: string }[]>([
 | Name | Description | Attribute | Type | Default |
 | --- | --- | --- | --- | --- |
 | breadcrumbKey | { "Will be used as the key for the breadcrumb item, which will be emitted in the itemClick event when the breadcrumb item is clicked." } | breadcrumb-key | string |  |
-| href | { "URL for the button link. When provided, the button will render as an anchor tag." } | href | string \| undefined |  |
+| href | { "URL for the button link. When provided, the button will render as an anchor tag.\n\nThe value is forwarded unchanged to the `href` of the native anchor. URL schemes such as\n\n`javascript:` or `data:` are not rejected. Do not bind untrusted input; validate destinations\n\nagainst an allowlist (for example `https:` and relative URLs)." } | href | string \| undefined |  |
 | icon | { "Icon to be displayed next ot the label" } | icon | string \| undefined |  |
 | label | { "Breadcrumb label" } | label | string \| undefined |  |
 | rel | { "Specifies the relationship between the current document and the linked document when href is provided." } | rel | string \| undefined |  |

@@ -202,7 +202,7 @@ export default class DateDropdownPresets {
 ```html
 <ix-date-dropdown
   [dateRangeOptions]="dateRangeOptions"
-  date-range-id="last-7"
+  dateRangeId="last-7"
   format="yyyy/LL/dd"
 ></ix-date-dropdown>
 ```
@@ -277,7 +277,7 @@ export default class DateDropdownPresets {
 ```html
 <ix-date-dropdown
   [dateRangeOptions]="dateRangeOptions"
-  dateRangeId="last-7"
+  date-range-id="last-7"
   format="yyyy/LL/dd"
 ></ix-date-dropdown>
 ```
@@ -337,10 +337,177 @@ const dateRangeOptions = [
 
 <template>
   <IxDateDropdown
-    :dateRangeOptions="dateRangeOptions"
+    :date-range-options="dateRangeOptions"
     date-range-id="last-7"
     format="yyyy/LL/dd"
   />
+</template>
+```
+
+## Require confirmation
+
+By default, date dropdowns apply the range and close as soon as the range is complete. Set `requireConfirmation` to only apply the range when users click **Confirm**. **Cancel**, <kbd>Escape</kbd> or clicking outside discards the pending selection. Date dropdowns emit `dateRangeChange` for every pick and `dateSelect` only when they apply the range.
+
+### React Examples
+
+#### date-dropdown-require-confirmation.tsx
+```tsx
+import { IxDateDropdown } from '@siemens/ix-react';
+
+export default () => {
+  return (
+    <IxDateDropdown from="2026/10/05" to="2026/10/09" requireConfirmation />
+  );
+};
+```
+
+### Angular Examples
+
+#### date-dropdown-require-confirmation.ts
+```ts
+import { Component } from '@angular/core';
+
+@Component({
+  standalone: false,
+  selector: 'app-example',
+  templateUrl: './date-dropdown-require-confirmation.html',
+})
+export default class DateDropdownRequireConfirmation {}
+```
+
+#### date-dropdown-require-confirmation.html
+```html
+<ix-date-dropdown
+  from='2026/10/05'
+  to='2026/10/09'
+  requireConfirmation
+></ix-date-dropdown>
+```
+
+### Angular Standalone Examples
+
+#### date-dropdown-require-confirmation.ts
+```ts
+import { Component } from '@angular/core';
+import { IxDateDropdown } from '@siemens/ix-angular/standalone';
+
+@Component({
+  selector: 'app-example',
+  imports: [IxDateDropdown],
+  templateUrl: './date-dropdown-require-confirmation.html',
+})
+export default class DateDropdownRequireConfirmation {}
+```
+
+#### date-dropdown-require-confirmation.html
+```html
+<ix-date-dropdown
+  from='2026/10/05'
+  to='2026/10/09'
+  requireConfirmation
+></ix-date-dropdown>
+```
+
+### Vue Examples
+
+#### date-dropdown-require-confirmation.vue
+```vue
+<script setup lang="ts">
+import { IxDateDropdown } from '@siemens/ix-vue';
+</script>
+
+<template>
+  <IxDateDropdown
+    from="2026/10/05"
+    to="2026/10/09"
+    require-confirmation
+  ></IxDateDropdown>
+</template>
+```
+
+## Display format
+
+Set `displayFormat` to show the selected dates in the dropdown button in a different format than `format`.
+`from`, `to`, `minDate`, `maxDate` and emitted values keep using `format`.
+
+### React Examples
+
+#### date-dropdown-display-format.tsx
+```tsx
+import { IxDateDropdown } from '@siemens/ix-react';
+
+export default () => {
+  return (
+    <IxDateDropdown
+      from="2026/10/05"
+      to="2026/10/09"
+      displayFormat="dd.LL.yy"
+    />
+  );
+};
+```
+
+### Angular Examples
+
+#### date-dropdown-display-format.ts
+```ts
+import { Component } from '@angular/core';
+
+@Component({
+  standalone: false,
+  selector: 'app-example',
+  templateUrl: './date-dropdown-display-format.html',
+})
+export default class DateDropdownDisplayFormat {}
+```
+
+#### date-dropdown-display-format.html
+```html
+<ix-date-dropdown
+  from='2026/10/05'
+  to='2026/10/09'
+  displayFormat='dd.LL.yy'
+></ix-date-dropdown>
+```
+
+### Angular Standalone Examples
+
+#### date-dropdown-display-format.ts
+```ts
+import { Component } from '@angular/core';
+import { IxDateDropdown } from '@siemens/ix-angular/standalone';
+
+@Component({
+  selector: 'app-example',
+  imports: [IxDateDropdown],
+  templateUrl: './date-dropdown-display-format.html',
+})
+export default class DateDropdownDisplayFormat {}
+```
+
+#### date-dropdown-display-format.html
+```html
+<ix-date-dropdown
+  from='2026/10/05'
+  to='2026/10/09'
+  displayFormat='dd.LL.yy'
+></ix-date-dropdown>
+```
+
+### Vue Examples
+
+#### date-dropdown-display-format.vue
+```vue
+<script setup lang="ts">
+import { IxDateDropdown } from '@siemens/ix-vue';
+</script>
+
+<template>
+  <IxDateDropdown
+    from="2026/10/05"
+    to="2026/10/09"
+    display-format="dd.LL.yy"
+  ></IxDateDropdown>
 </template>
 ```
 
@@ -348,25 +515,29 @@ const dateRangeOptions = [
 
 ### Properties
 
-| Name | Description | Attribute | Type | Default |
-| --- | --- | --- | --- | --- |
-| dateRangeId | { "Used to set the initial select date range as well as the button name,\n\nif not set or no according date range label is found, nothing will be selected" } | date-range-id | string | 'custom' |
-| dateRangeOptions | { "An array of predefined date range options for the date picker.\n\nEach option is an object with a label describing the range and a function\n\nthat returns the start and end dates of the range as a DateRangeOption object.\n\nExample format:\n\n {\n\n id: 'some unique id',\n\n label: 'Name of the range',\n\n from: undefined, to: '2023/03/29'\n\n },\n\n // ... other predefined date range options ..." } |  | DateDropdownOption[] | [] |
-| disabled | { "Disable the button that opens the dropdown containing the date picker." } | disabled | boolean | false |
-| enableTopLayer | { "Enable Popover API rendering for dropdown." } | enable-top-layer | boolean | false |
-| format | { "Date format string.\n\nSee [https://moment.github.io/luxon/#/formatting?id=table-of-tokens](https://moment.github.io/luxon/#/formatting?id=table-of-tokens) for all available tokens." } | format | string | 'yyyy/LL/dd' |
-| from | { "Picker date. If the picker is in range mode this property is the start date.\n\nIf set to `null` no default start date will be pre-selected.\n\nFormat is based on `format`" } | from | string | '' |
-| i18nDone | { "Text for the done button. Will be used for translation." } | i18n-done | string | 'Done' |
-| i18nNoRange | { "Text for the done button. Will be used for translation." } | i18n-no-range | string | 'No range set' |
-| loading | { "Loading button" } | loading | boolean | false |
-| locale | { "Locale identifier (e.g. 'en' or 'de')." } | locale | string \| undefined |  |
-| maxDate | { "The latest date that can be selected by the date picker.\n\nIf not set there will be no restriction." } | max-date | string | '' |
-| minDate | { "The earliest date that can be selected by the date picker.\n\nIf not set there will be no restriction." } | min-date | string | '' |
-| showWeekNumbers | { "Shows week numbers displayed on the left side of the date picker" } | show-week-numbers | boolean | false |
-| singleSelection | { "If true disables date range selection (from/to)." } | single-selection | boolean | false |
-| to | { "Picker date. If the picker is in range mode this property is the end date.\n\nIf the picker is not in range mode leave this value `null`\n\nFormat is based on `format`" } | to | string | '' |
-| variant | { "Button variant" } | variant | "danger-primary" \| "danger-secondary" \| "danger-tertiary" \| "primary" \| "secondary" \| "subtle-primary" \| "subtle-secondary" \| "subtle-tertiary" \| "tertiary" | 'primary' |
-| weekStartIndex | { "The index of which day to start the week on, based on the Locale#weekdays array.\n\nE.g. if the locale is en-us, weekStartIndex = 1 results in starting the week on monday." } | week-start-index | number | 0 |
+| Name | Description | Attribute | Type | Default | Notes |
+| --- | --- | --- | --- | --- | --- |
+| dateRangeId | { "Used to set the initial select date range as well as the button name,\n\nif not set or no according date range label is found, nothing will be selected" } | date-range-id | string | 'custom' |  |
+| dateRangeOptions | { "An array of predefined date range options for the date picker.\n\nEach option is an object with a label describing the range and a function\n\nthat returns the start and end dates of the range as a DateRangeOption object.\n\nExample format:\n\n {\n\n id: 'some unique id',\n\n label: 'Name of the range',\n\n from: undefined, to: '2023/03/29'\n\n },\n\n // ... other predefined date range options ..." } |  | DateDropdownOption[] | [] |  |
+| disabled | { "Disable the button that opens the dropdown containing the date picker." } | disabled | boolean | false |  |
+| displayFormat | { "Date format used to display the selected dates in the dropdown button.\n\n`from`, `to`, `minDate`, `maxDate` and emitted values keep using `format`.\n\nDefaults to `format`.\n\nSee [https://moment.github.io/luxon/#/formatting?id=table-of-tokens](https://moment.github.io/luxon/#/formatting?id=table-of-tokens) for all available tokens." } | display-format | string \| undefined |  |  |
+| enableTopLayer | { "Enable Popover API rendering for dropdown." } | enable-top-layer | boolean | false |  |
+| format | { "Date format string.\n\nSee [https://moment.github.io/luxon/#/formatting?id=table-of-tokens](https://moment.github.io/luxon/#/formatting?id=table-of-tokens) for all available tokens." } | format | string | 'yyyy/LL/dd' |  |
+| from | { "Picker date. If the picker is in range mode this property is the start date.\n\nIf set to `null` no default start date will be pre-selected.\n\nFormat is based on `format`" } | from | string | '' |  |
+| i18nCancel | { "Text of the cancel button shown when `requireConfirmation` is enabled." } | i18n-cancel | string | 'Cancel' |  |
+| i18nConfirm | { "Text of the confirm button shown when `requireConfirmation` is enabled." } | i18n-confirm | string | 'Confirm' |  |
+| i18nDone | { "Text for the done button. Will be used for translation." } | i18n-done | string | 'Done' | Breaking change in v6.0.0: The done button was removed, the property has no effect |
+| i18nNoRange | { "Text for the done button. Will be used for translation." } | i18n-no-range | string | 'No range set' |  |
+| loading | { "Loading button" } | loading | boolean | false |  |
+| locale | { "Locale identifier (e.g. 'en' or 'de')." } | locale | string \| undefined |  |  |
+| maxDate | { "The latest date that can be selected by the date picker.\n\nIf not set there will be no restriction." } | max-date | string | '' |  |
+| minDate | { "The earliest date that can be selected by the date picker.\n\nIf not set there will be no restriction." } | min-date | string | '' |  |
+| requireConfirmation | { "If true, a date range picked in the dropdown is only applied after the\n\nuser confirms it with the confirm button, which emits `dateSelect`. The\n\ntrigger label keeps the applied range until then, while `dateRangeChange`\n\nstill reports every pick. The cancel button, pressing Escape or clicking\n\noutside the dropdown discards the pending selection." } | require-confirmation | boolean | false |  |
+| showWeekNumbers | { "Shows week numbers displayed on the left side of the date picker" } | show-week-numbers | boolean | false |  |
+| singleSelection | { "If true disables date range selection (from/to)." } | single-selection | boolean | false |  |
+| to | { "Picker date. If the picker is in range mode this property is the end date.\n\nIf the picker is not in range mode leave this value `null`\n\nFormat is based on `format`" } | to | string | '' |  |
+| variant | { "Button variant" } | variant | "danger-primary" \| "danger-secondary" \| "danger-tertiary" \| "primary" \| "secondary" \| "subtle-primary" \| "subtle-secondary" \| "subtle-tertiary" \| "tertiary" | 'primary' |  |
+| weekStartIndex | { "The index of the day the week starts on, as a 0-based index into Luxon's\n\n`Info.weekdays()` array. That array is always ordered Monday-first\n\nregardless of locale, so 0 is Monday, 1 is Tuesday and 6 is Sunday.\n\nE.g. weekStartIndex = 6 results in starting the week on Sunday." } | week-start-index | number | 0 |  |
 
 ### Methods
 
@@ -376,10 +547,11 @@ const dateRangeOptions = [
 getDateRange(): Promise&lt;DateRangeChangeEvent&gt;;
 ```
 
-{ "Retrieves the currently selected date range from the component.\n\nThis method returns the selected date range as a `DateChangeEvent` object." }
+{ "Retrieves the applied date range from the component.\n\nThis method returns the applied date range as a `DateChangeEvent` object.\n\nWith `requireConfirmation`, a pending selection is not returned until it is\n\nconfirmed. Listen to `dateRangeChange` to get every pick." }
 
 ### Events
 
-| Name | Description | Event | Detail |
-| --- | --- | --- | --- |
-| dateRangeChange | { "EventEmitter for date range change events.\n\nThis event is emitted when the date range changes within the component.\n\nThe event payload contains information about the selected date range." } | dateRangeChange | { id: string; from?: string \| undefined; to?: string \| undefined; } |
+| Name | Description | Event | Detail | Notes |
+| --- | --- | --- | --- | --- |
+| dateRangeChange | { "EventEmitter for date range change events.\n\nThis event is emitted when the date range changes within the component.\n\nThe event payload contains information about the selected date range.\n\nWhen a pending selection is discarded, it is emitted with the applied\n\nrange again.\n\nUse `dateSelect` to only receive applied ranges." } | dateRangeChange | DateRange & { isoFrom?: string \| undefined; isoTo?: string \| undefined; } & { id: string; } | Breaking change in v6.0.0: Emitted for every pick instead of on close, from and to are localized (use isoFrom and isoTo) |
+| dateSelect | { "Emitted when the user applies a changed range: on confirm with\n\n`requireConfirmation`, otherwise when a complete range or a predefined\n\nrange is picked.\n\nIt is not emitted for programmatic prop input changes." } | dateSelect | DateRange & { isoFrom?: string \| undefined; isoTo?: string \| undefined; } & { id: string; } |  |

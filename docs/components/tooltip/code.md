@@ -146,6 +146,19 @@ ix-button {
 }
 ```
 
+## Delay
+
+Example is supported since version 6.0.0
+
+Use `showDelay` and `hideDelay` to set the delay in milliseconds before the tooltip is shown or hidden. By default, tooltips are shown immediately (`0` ms) and hidden after `50` ms. Interactive tooltips wait `150` ms before hiding by default, so users have time to move the pointer onto the tooltip. Avoid very short hide delays for interactive tooltips, otherwise the tooltip closes before the pointer reaches it. Pressing `Escape` closes the tooltip immediately, regardless of `hideDelay`.
+
+```html
+<ix-button id="delayed-trigger">Asset details</ix-button>
+<ix-tooltip for="#delayed-trigger" show-delay="500" hide-delay="200">
+  Additional asset information
+</ix-tooltip>
+```
+
 ## A11y
 
 Set the `aria-describedby` attribute on the trigger element to the tooltip `id` attribute. This allows assistive technologies to establish a logical connection between the trigger and the tooltip.
@@ -161,14 +174,16 @@ See examples [above](#basic).
 | Name | Description | Attribute | Type | Default |
 | --- | --- | --- | --- | --- |
 | for | { "CSS selector for hover trigger element e.g. `for=\"[data-my-custom-select]\"`" } | for | ElementReference[] \| HTMLElement \| Promise \| string \| undefined |  |
+| hideDelay | { "Delay in milliseconds before the tooltip is hidden.\n\nDefaults to 50 ms, or 150 ms for interactive tooltips,\n\nso the user has time to move the pointer into the tooltip.\n\nFor interactive tooltips, avoid very short delays, otherwise the tooltip\n\ncloses before the pointer reaches it." } | hide-delay | number \| undefined |  |
 | interactive | { "Define if the user can access the tooltip via mouse." } | interactive | boolean | false |
 | placement | { "Initial placement of the tooltip.\n\nIf the selected placement doesn't have enough space, the tooltip will be repositioned to another location." } | placement | "bottom" \| "left" \| "right" \| "top" | 'top' |
+| showDelay | { "Delay in milliseconds before the tooltip is shown." } | show-delay | number | 0 |
 | titleContent | { "Title of the tooltip" } | title-content | string \| undefined |  |
 
 ### Slot
 
 | Name | Description |
 | --- | --- |
-| default | { "Tooltip body content." } |
+| default | { "Tooltip content." } |
 | title-content | { "Content of tooltip title" } |
 | title-icon | { "Icon displayed next to the tooltip title. The icon will be displayed as 16x16px." } |

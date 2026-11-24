@@ -19,15 +19,20 @@ export default () => {
     <div className="kpi">
       <IxKpi label="Motor speed" value="Nominal"></IxKpi>
       <IxKpi label="Motor speed" value="{122.6}" unit="rpm"></IxKpi>
-      <IxKpi label="Motor speed" value="{122.6}" state="alarm"></IxKpi>
       <IxKpi label="Motor speed" value="{122.6}" state="warning"></IxKpi>
+      <IxKpi label="Motor speed" value="{122.6}" state="danger"></IxKpi>
+      <IxKpi label="Motor speed" value="{122.6}" state="caution"></IxKpi>
+      <IxKpi label="Motor speed" value="{122.6}" state="success"></IxKpi>
+      <IxKpi label="Motor speed" value="{122.6}" state="information"></IxKpi>
+      <IxKpi label="Motor speed" value="{122.6}" state="accent"></IxKpi>
+      <IxKpi label="Motor speed" value="{122.6}" state="critical"></IxKpi>
 
       <IxKpi label="Motor speed" value="Nominal" orientation="vertical"></IxKpi>
       <IxKpi
         label="Motor speed"
         value="{122.6}"
         unit="rpm"
-        state="alarm"
+        state="danger"
         orientation="vertical"
       ></IxKpi>
     </div>
@@ -63,8 +68,13 @@ import { Component } from '@angular/core';
     <div class="kpi">
       <ix-kpi label="Motor speed" value="Nominal"></ix-kpi>
       <ix-kpi label="Motor speed" value="{122.6}" unit="rpm"></ix-kpi>
-      <ix-kpi label="Motor speed" value="{122.6}" state="alarm"></ix-kpi>
       <ix-kpi label="Motor speed" value="{122.6}" state="warning"></ix-kpi>
+      <ix-kpi label="Motor speed" value="{122.6}" state="danger"></ix-kpi>
+      <ix-kpi label="Motor speed" value="{122.6}" state="caution"></ix-kpi>
+      <ix-kpi label="Motor speed" value="{122.6}" state="success"></ix-kpi>
+      <ix-kpi label="Motor speed" value="{122.6}" state="information"></ix-kpi>
+      <ix-kpi label="Motor speed" value="{122.6}" state="accent"></ix-kpi>
+      <ix-kpi label="Motor speed" value="{122.6}" state="critical"></ix-kpi>
 
       <ix-kpi
         label="Motor speed"
@@ -75,7 +85,7 @@ import { Component } from '@angular/core';
         label="Motor speed"
         value="{122.6}"
         unit="rpm"
-        state="alarm"
+        state="danger"
         orientation="vertical"
       ></ix-kpi>
     </div>
@@ -114,8 +124,13 @@ import { IxKpi } from '@siemens/ix-angular/standalone';
     <div class="kpi">
       <ix-kpi label="Motor speed" value="Nominal"></ix-kpi>
       <ix-kpi label="Motor speed" value="{122.6}" unit="rpm"></ix-kpi>
-      <ix-kpi label="Motor speed" value="{122.6}" state="alarm"></ix-kpi>
       <ix-kpi label="Motor speed" value="{122.6}" state="warning"></ix-kpi>
+      <ix-kpi label="Motor speed" value="{122.6}" state="danger"></ix-kpi>
+      <ix-kpi label="Motor speed" value="{122.6}" state="caution"></ix-kpi>
+      <ix-kpi label="Motor speed" value="{122.6}" state="success"></ix-kpi>
+      <ix-kpi label="Motor speed" value="{122.6}" state="information"></ix-kpi>
+      <ix-kpi label="Motor speed" value="{122.6}" state="accent"></ix-kpi>
+      <ix-kpi label="Motor speed" value="{122.6}" state="critical"></ix-kpi>
 
       <ix-kpi
         label="Motor speed"
@@ -126,7 +141,7 @@ import { IxKpi } from '@siemens/ix-angular/standalone';
         label="Motor speed"
         value="{122.6}"
         unit="rpm"
-        state="alarm"
+        state="danger"
         orientation="vertical"
       ></ix-kpi>
     </div>
@@ -165,15 +180,20 @@ import { IxKpi } from '@siemens/ix-vue';
   <div class="kpi">
     <IxKpi label="Motor speed" value="Nominal"></IxKpi>
     <IxKpi label="Motor speed" value="122.6" unit="rpm"></IxKpi>
-    <IxKpi label="Motor speed" value="122.6" state="alarm"></IxKpi>
     <IxKpi label="Motor speed" value="122.6" state="warning"></IxKpi>
+    <IxKpi label="Motor speed" value="122.6" state="danger"></IxKpi>
+    <IxKpi label="Motor speed" value="122.6" state="caution"></IxKpi>
+    <IxKpi label="Motor speed" value="122.6" state="success"></IxKpi>
+    <IxKpi label="Motor speed" value="122.6" state="information"></IxKpi>
+    <IxKpi label="Motor speed" value="122.6" state="accent"></IxKpi>
+    <IxKpi label="Motor speed" value="122.6" state="critical"></IxKpi>
 
     <IxKpi label="Motor speed" value="Nominal" orientation="vertical"></IxKpi>
     <IxKpi
       label="Motor speed"
       value="122.6"
       unit="rpm"
-      state="alarm"
+      state="danger"
       orientation="vertical"
     ></IxKpi>
   </div>
@@ -199,12 +219,10 @@ import { IxKpi } from '@siemens/ix-vue';
 
 ### Properties
 
-| Name | Description | Attribute | Type | Default |
-| --- | --- | --- | --- | --- |
-| ariaLabelAlarmIcon | { "ARIA label for the alarm icon" } | aria-label-alarm-icon | string \| undefined |  |
-| ariaLabelWarningIcon | { "ARIA label for the warning icon" } | aria-label-warning-icon | string \| undefined |  |
-| label | { "" } | label | string \| undefined |  |
-| orientation | { "" } | orientation | "horizontal" \| "vertical" | 'horizontal' |
-| state | { "" } | state | "alarm" \| "neutral" \| "warning" | 'neutral' |
-| unit | { "" } | unit | string \| undefined |  |
-| value | { "" } | value | number \| string \| undefined |  |
+| Name | Description | Attribute | Type | Default | Notes |
+| --- | --- | --- | --- | --- | --- |
+| label | { "" } | label | string \| undefined |  |  |
+| orientation | { "" } | orientation | "horizontal" \| "vertical" | 'horizontal' |  |
+| state | { "Status of the KPI.\n\n`neutral` and `accent` show no status icon.\n\nStatus icons are decorative (`aria-hidden`); convey status in visible text or the host accessible name when it matters for assistive technology." } | state | "accent" \| "caution" \| "critical" \| "danger" \| "information" \| "neutral" \| "success" \| "warning" | 'neutral' | Breaking change in v6.0.0: Status state values renamed |
+| unit | { "" } | unit | string \| undefined |  |  |
+| value | { "" } | value | number \| string \| undefined |  |  |

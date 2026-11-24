@@ -1,6 +1,6 @@
 /*
  * COPYRIGHT (c) Siemens AG 2018-2025 ALL RIGHTS RESERVED.
  */
-@use './mixins/theme' as theme;
+@use './brand/theme' as theme;
 
-@include theme.define-brand-theme();
+@include theme.theme();
