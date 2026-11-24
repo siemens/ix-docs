@@ -143,6 +143,8 @@ const config: Config = {
         },
         blog: {
           showReadingTime: true,
+          blogSidebarTitle: 'All posts',
+          blogSidebarCount: 'ALL',
           feedOptions: {
             type: ['rss', 'atom'],
             xslt: true,
@@ -289,14 +291,12 @@ const config: Config = {
           position: 'left',
           label: 'Styles',
         },
-        /* Hide news pill until next major release
         {
           type: 'custom-news-pill',
           position: 'left',
-          label: 'Release 5.0.0',
-          value: '/blog/2026/05/21/release-5',
+          label: 'Release 6.0.0',
+          value: '/blog/2026/11/25/release-6',
         },
-        */
         {
           type: 'custom-version-selection',
           position: 'right',
