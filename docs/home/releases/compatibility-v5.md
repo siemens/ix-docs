@@ -3,13 +3,13 @@ title: Compatibility matrix
 doc-type: 'banner'
 component-tabs: ['']
 no_single_tab: true
-sidebar_label: Compatibility matrix
+sidebar_label: Compatibility matrix V5
 description: 'Compatibility matrix for Siemens Industrial Experience Version 5.'
 ---
 
-# Compatibility matrix
+# Compatibility matrix V5
 
-**Status:** Latest &middot; **Released:** May 2026 &middot; **Latest version:** 5.3.0
+**Status:** Maintenance &middot; **Released:** May 2026 &middot; **Latest version:** 5.3.0
 
 This page lists the dependencies and peer dependencies of all Siemens Industrial Experience V5 packages, based on the versions published to npm. Whether peer dependencies are installed automatically depends on your package manager and its configuration. npm 7 and later install non-optional peer dependencies by default. We recommend declaring peer dependencies explicitly in your project's `package.json` when needed.
 
@@ -83,7 +83,3 @@ npm install @siemens-ix/corporate-theme
 | 5.2.x         | August 2026  | ^3.5.0              | >=20    | ^18 \|\| ^19 | >=3.2.45 |
 | 5.1.x         | July 2026    | ^3.4.0              | >=20    | ^18 \|\| ^19 | >=3.2.45 |
 | 5.0.x         | May 2026     | ^3.4.0              | >=20    | ^18 \|\| ^19 | >=3.2.45 |
-
-```
-
-```
