@@ -459,4 +459,5 @@ Make sure tooltips and aria-labels match. See [Accessibility guidelines](../../a
 - [Warning messages](../messaging/warning-messages.mdx)
 - [UI terminology](../menu-functions-and-ui-labels/ui-terminology.md)
 - [External links and resources](../menu-functions-and-ui-labels/external-links-and-resources.md)
+- [Punctuation](../basics/punctuation.md)
 - [WCAG: Using aria-label to provide labels for objects](https://www.w3.org/WAI/WCAG22/Techniques/aria/ARIA6) <IxIcon name={iconOpenExternal} size="16" aria-label="external" role="img"></IxIcon>

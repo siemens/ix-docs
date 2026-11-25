@@ -1,0 +1,131 @@
+---
+sidebar_position: 3
+sidebar_label: Sizing
+title: Sizing
+hide_table_of_contents: false
+doc-type: 'banner'
+component-tabs: ['']
+no_single_tab: true
+description: 'Sizing tokens adapt sizes, spacing and icon dimensions to enable applications to switch between the default and a compact layout. Compact mode is experimental and may change.'
+---
+
+import DensityTable from '@site/src/components/DensityTable';
+
+:::warning Experimental feature
+
+Compact mode is a new feature and is currently experimental. We are still evaluating how well it works across components and use cases. Its token coverage, values and behavior may change as we learn from its use and make further adaptations. Test compact mode with your application before relying on it in production.
+
+:::
+
+The system supports two densities. **Default** is the base density. **Compact** is a sparse override: it only redefines the sizing tokens listed on this page, and the font-size and line-height from the [typography](./typography) variables. Every other token is inherited from the default density.
+
+![Default and compact density comparison](https://www.figma.com/design/wEptRgAezDU1z80Cn3eZ0o/iX-Documentation-illustrations?node-id=8742-7072&t=Mmsji7qvSnFGiH3D-11)
+
+Enable compact density by adding `data-ix-density="compact"` to the element that sets the theme and color schema:
+
+```html
+<html
+  data-ix-theme="community"
+  data-ix-color-schema="dark"
+  data-ix-density="compact"
+>
+  ...
+</html>
+```
+
+## Scoped density {#scoped-density}
+
+`data-ix-density` also works on any element inside the themed root. The density
+applies to that element and its descendants. Density scopes can be nested, and
+the closest `data-ix-density` ancestor wins:
+
+```html
+<html data-ix-theme="community" data-ix-color-schema="dark">
+  <body>
+    <!-- Default density -->
+    <section data-ix-density="compact">
+      <!-- Compact density -->
+      <div data-ix-density="default">
+        <!-- Default density again -->
+      </div>
+    </section>
+  </body>
+</html>
+```
+
+## Using the tokens {#using-the-tokens}
+
+Reference the tokens with the CSS `var()` function. Their values switch automatically when the density changes:
+
+```css
+.some-example {
+  min-height: var(--si-sys-sizing-size-100);
+  padding-inline: var(--si-sys-sizing-spacing-x-40);
+}
+```
+
+Do not hardcode the values shown below. They are resolved from the installed theme and differ between densities.
+
+## Sizing unit {#sizing-unit}
+
+Size and spacing tokens (`--si-sys-sizing-size-*` and
+`--si-sys-sizing-spacing-*`) resolve to `px`. Component dimensions driven by
+these tokens therefore stay the same when the root font size changes. Icon,
+avatar and typography tokens use `rem`, so text and icons still scale with the
+root font size and components grow to fit them.
+
+If your application changes the root font size and expects component dimensions
+to scale with it, add `data-ix-sizing="rem"`. It switches the size and spacing
+tokens back to `rem` for that element and its descendants. Nested density scopes
+inside it keep `rem` sizing:
+
+```html
+<html
+  data-ix-theme="community"
+  data-ix-color-schema="dark"
+  data-ix-sizing="rem"
+>
+  ...
+</html>
+```
+
+Every size and spacing token also has a `--si-sys-sizing-rem-*` twin that always
+resolves to `rem`, for example `--si-sys-sizing-rem-size-80`. The twins are
+converted from the `px` values (see [Rem size](#token-group-sizing-rem-size)).
+
+`data-ix-sizing="rem"` only affects the tokens. Fixed values in component and
+global styles use `px` and do not change.
+
+## Size {#token-group-sizing-size}
+
+<DensityTable section="sizing.size" />
+
+## Spacing X {#token-group-sizing-spacing-x}
+
+<DensityTable section="sizing.spacing-x" />
+
+## Spacing Y {#token-group-sizing-spacing-y}
+
+<DensityTable section="sizing.spacing-y" />
+
+## Icon {#token-group-sizing-icon}
+
+<DensityTable section="sizing.icon" />
+
+## Rem size {#token-group-sizing-rem-size}
+
+The `--si-sys-sizing-rem-*` tokens are converted from the `px` size and spacing
+tokens above. iX components only use the standard `px` tokens, never the `rem`
+twins, so prefer the standard tokens in your own styles as well. Only use the `rem` twins when you know a custom
+element must scale with the root font size, for example a container that wraps
+text-driven content.
+
+<DensityTable section="sizing.rem.size" />
+
+## Rem spacing X {#token-group-sizing-rem-spacing-x}
+
+<DensityTable section="sizing.rem.spacing-x" />
+
+## Rem spacing Y {#token-group-sizing-rem-spacing-y}
+
+<DensityTable section="sizing.rem.spacing-y" />

@@ -476,7 +476,7 @@ sidebar_position: 100
 
 ### Features
 
-* feat(core): adjust classic theme variables by @danielleroux in https://github.com/siemens/ix/pull/1184
+* feat(core): adjust community theme variables by @danielleroux in https://github.com/siemens/ix/pull/1184
 * feat(core/menu): make behavior at breakpoint 'lg' configurable and change 'md' breakpoint menu icons by @jul-lam in https://github.com/siemens/ix/pull/1156
 * feat(core/card-list): make show all button optional by @nuke-ellington in https://github.com/siemens/ix/pull/1197
 * feat(core/menu-item): show tooltip on hover by @danielleroux in https://github.com/siemens/ix/pull/1200
