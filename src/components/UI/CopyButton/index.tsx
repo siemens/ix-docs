@@ -66,7 +66,7 @@ const CopyButton = ({
       )}
       <IxTooltip ref={tooltipRef}>
         <div className={styles.TooltipSuccess}>
-          <IxIcon name={iconSuccess} color="color-success" size="16"></IxIcon>
+          <IxIcon name={iconSuccess} color="--si-sys-color-text-success" size="16"></IxIcon>
           Copied
         </div>
       </IxTooltip>

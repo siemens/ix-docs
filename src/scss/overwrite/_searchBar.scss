@@ -8,21 +8,27 @@
  */
 #__docusaurus {
   .aa-DetachedSearchButton {
-    --aa-primary-color-rgb: var(--theme-color-std-text);
+    --aa-primary-color-rgb: var(--si-sys-color-text-primary);
     background-color: transparent;
-    color: var(--theme-color-std-text);
+    color: var(--si-sys-color-text-primary);
     padding: 0 1rem 0 0.5rem;
     width: 7rem;
     max-width: 12.5rem;
     border-radius: 6px;
   }
 
-  .aa-DetachedSearchButton:focus-visible {
-    outline: none;
+  // Remove the autocomplete focus border and glow, the ix focus ring is
+  // applied in `_focus-ring.scss`.
+  .aa-DetachedSearchButton:focus {
+    border-color: rgba(
+      var(--aa-input-border-color-rgb),
+      var(--aa-input-border-color-alpha)
+    );
+    box-shadow: none;
   }
 
   .aa-DetachedSearchButton:hover {
-    background-color: var(--theme-color-1);
+    background-color: var(--si-sys-color-background-0);
   }
 
   .aa-DetachedSearchButtonIcon {
@@ -31,18 +37,18 @@
   }
 
   .aa-DetachedSearchButtonPlaceholder {
-    color: var(--theme-color-soft-text);
+    color: var(--si-sys-color-text-secondary);
   }
 }
 
 .aa-DetachedContainer.aa-DetachedContainer--modal {
-  background-color: var(--theme-color-1);
+  background-color: var(--si-sys-color-background-0);
 }
 
 .aa-Form {
   background-color: transparent !important;
-  --aa-primary-color-rgb: var(--theme-color-std-text);
-  color: var(--theme-color-std-text);
+  --aa-primary-color-rgb: var(--si-sys-color-text-primary);
+  color: var(--si-sys-color-text-primary);
 
   // The search field is only one part of the form, so the focus ring belongs on
   // the whole form. Otherwise it is drawn inside the form and overlaps its
@@ -51,13 +57,11 @@
   // equally specific rule that is loaded later.
   // Scoped to input focus via `:has()` so tabbing to the clear button does
   // not keep the container ring and avoids a double outline.
-  // Uses the same color and offset tokens as the ix input focus mixin.
+  // Uses the same focus ring tokens as the ix input.
   &:has(.aa-Input:focus) {
-    outline: 1px solid var(--theme-color-focus-bdr) !important;
-    outline-offset: var(
-      --theme-input--focus--outline-offset,
-      var(--theme-focus-outline-offset)
-    );
+    outline: var(--si-sys-sizing-focus-ring-width) solid
+      var(--si-sys-color-effects-focus) !important;
+    outline-offset: var(--si-sys-sizing-focus-ring-offset);
   }
 
   // Algolia adds a blue glow via `:focus-within`. Suppress it so the only
@@ -69,12 +73,12 @@
 
   .aa-InputWrapperSuffix,
   .aa-InputWrapperPrefix {
-    background-color: var(--theme-input--background);
+    background-color: var(--si-sys-color-background-1);
     box-shadow: none;
   }
 
   .aa-Input {
-    background-color: var(--theme-input--background);
+    background-color: var(--si-sys-color-background-1);
     box-shadow: none;
   }
 
@@ -86,18 +90,18 @@
   }
 
   .aa-Input::placeholder {
-    color: var(--theme-color-soft-text);
+    color: var(--si-sys-color-text-secondary);
   }
 
   .aa-SubmitButton {
     display: flex;
     justify-content: center;
     align-items: center;
-    color: var(--theme-color-std-text);
+    color: var(--si-sys-color-text-primary);
   }
 
   .aa-ClearButton {
-    color: var(--theme-color-std-text);
+    color: var(--si-sys-color-text-primary);
   }
 
   // Keep a keyboard ring on the clear button. The form ring is scoped to
@@ -105,15 +109,22 @@
   // Negative offset keeps the ring inside the form so it is not clipped.
   .aa-ClearButton:focus,
   .aa-ClearButton:focus-visible {
-    outline: 1px solid var(--theme-color-focus-bdr) !important;
-    outline-offset: -2px;
+    outline: var(--si-sys-sizing-focus-ring-width) solid
+      var(--si-sys-color-effects-focus) !important;
+    outline-offset: calc(
+      -1 *
+        (
+          var(--si-sys-sizing-focus-ring-width) +
+            var(--si-sys-sizing-focus-ring-offset)
+        )
+    );
     box-shadow: none !important;
   }
 }
 
 .aa-Panel,
 .aa-PanelLayout {
-  background-color: var(--theme-color-1);
+  background-color: var(--si-sys-color-background-0);
 
   .aa-Item {
     padding: 0.75rem;

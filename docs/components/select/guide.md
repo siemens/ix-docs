@@ -1,7 +1,6 @@
 ---
 doc-type: 'tab-item'
 description: 'Usage guide for the ix-select, ix-select-item'
-formReady: true
 ---
 # Select - Usage
 

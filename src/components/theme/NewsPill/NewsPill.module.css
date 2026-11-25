@@ -16,11 +16,11 @@
   border-radius: 1.5rem;
   background: linear-gradient(
     90deg,
-    var(--theme-color-gradient-effect-2, rgba(0, 204, 204, 0.75)) 0%,
-    var(--theme-color-gradient-effect-1, rgba(0, 255, 185, 0.75)) 100%
+    rgba(0, 204, 204, 0.75) 0%,
+    rgba(0, 255, 185, 0.75) 100%
   );
 
-  color: var(--theme-color-primary--contrast);
+  color: var(--si-sys-color-text-on-accent);
   cursor: pointer;
 
   text-wrap: nowrap;
