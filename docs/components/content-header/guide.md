@@ -39,6 +39,9 @@ Our content header variants makes it easier to achieve a well-balanced visual hi
 	- Back button, title and subtitle are automatically aligned on the left side while the action buttons are aligned on the right side.
 	- Elements in the header slot are top aligned by default. Use top margin to center align it with the title.
 - **Cluster action buttons**: Action buttons are automatically aligned to the right. An example for the primary content header has the back button, title and subtitle at the left top corner of the whole page, and the action buttons at the right top corner of the page.
+- **Text wrapping**: Title and subtitle wrap onto multiple lines when space is limited. Wrapping depends on the width of the content header, not the viewport, so it also applies in panes and dialogs. The back button, header slot and action buttons stay aligned with the first line of the title.
+- **Text truncation**: Set `textOverflow` to `ellipsis` to keep the title and subtitle on one line each and truncate them with an ellipsis. No tooltip is added, so use truncation only when the complete text is available elsewhere on the page.
+- **Action overflow**: Action buttons keep their full width and are not moved into an overflow menu automatically. If not all actions fit, keep the most important ones visible and move the others into a [dropdown](../dropdown).
 
 ## Dos and Don’ts
 
@@ -47,12 +50,15 @@ Our content header variants makes it easier to achieve a well-balanced visual hi
     <ul aria-label="Recommended practices">
       <li>Do use to provide quick access to common tasks for the whole content area</li>
       <li>Do place only items in the header slot that don’t take up too much space, such as a status or a counter</li>
+      <li>Do allow titles and subtitles to wrap when the available width is limited</li>
+      <li>Do move secondary actions into an overflow menu when they compete with important header text</li>
     </ul>
   </div>
   <div class="donts">
     <ul aria-label="Practices to avoid">
       <li>Don’t use a secondary content header as a page title</li>
       <li>Don’t use more than one primary headline in one page</li>
+      <li>Don’t use truncation by default when users need the complete title or subtitle for context</li>
     </ul>
   </div>
 </div>

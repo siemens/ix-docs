@@ -23,9 +23,19 @@ export const PlaygroundContext = createContext<{
   theme: 'brand',
 });
 
+function getStoredTheme(defaultTheme: string, withBrandTheme: boolean) {
+  const storedTheme = themeStorage.get();
+  if (storedTheme === 'classic' || storedTheme === 'community') {
+    return 'community';
+  }
+  return withBrandTheme && storedTheme === 'brand' ? storedTheme : defaultTheme;
+}
+
 function useContextValue() {
   const docusaurusContext = useDocusaurusContext();
-  const defaultTheme = docusaurusContext.siteConfig.customFields.withBrandTheme === false ? 'classic' : 'brand';
+  const withBrandTheme =
+    docusaurusContext.siteConfig.customFields.withBrandTheme !== false;
+  const defaultTheme = withBrandTheme ? 'brand' : 'community';
 
   const cbOnVariantChange = useCallback((variant: string) => {
     setContext((prev) => ({
@@ -54,7 +64,7 @@ function useContextValue() {
     setContext((prev) => ({
       ...prev,
       variant: variantStorage.get() || 'dark',
-      theme: themeStorage.get() || defaultTheme,
+      theme: getStoredTheme(defaultTheme, withBrandTheme),
     }));
 
     variantStorage.listen(() => {
@@ -66,10 +76,10 @@ function useContextValue() {
     themeStorage.listen(() => {
       setContext((prev) => ({
         ...prev,
-        theme: themeStorage.get() || defaultTheme,
+        theme: getStoredTheme(defaultTheme, withBrandTheme),
       }));
     });
-  }, [defaultTheme]);
+  }, [defaultTheme, withBrandTheme]);
 
   return context;
 }

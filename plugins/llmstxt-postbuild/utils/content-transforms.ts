@@ -1,3 +1,10 @@
+import {
+  extractTokenTableUsages,
+  selectTokenTableSection,
+  createTokenTableTagRegex,
+  tokenTableNames,
+} from '../../../src/lib/design-tokens/sections';
+
 export function extractPlaygroundImports(content: string) {
   const imports = new Map<string, string>();
 
@@ -125,54 +132,105 @@ export function replaceSinceTags(content: string) {
   );
 }
 
-function buildTypographySnippetBlock(format: string) {
+type TokenManifestEntry = {
+  name: string;
+  sourcePath: string;
+  group: string;
+  type: string;
+  description?: string;
+  applicability?: { densityOverrides: readonly string[] };
+};
+
+function tokenManifestTable(entries: TokenManifestEntry[]) {
   return [
-    'HTML:',
-    '```html',
-    `<ix-typography format="${format}"></ix-typography>`,
-    '```',
-    '',
-    'Angular:',
-    '```html',
-    `<ix-typography format="${format}"></ix-typography>`,
-    '```',
-    '',
-    'Angular standalone:',
-    '```html',
-    `<ix-typography format="${format}"></ix-typography>`,
-    '```',
-    '',
-    'React:',
-    '```jsx',
-    `<IxTypography format="${format}"></IxTypography>`,
-    '```',
-    '',
-    'Vue:',
-    '```vue',
-    `<IxTypography format="${format}"></IxTypography>`,
-    '```',
+    '| Token | Description | CSS expression | Source token |',
+    '| --- | --- | --- | --- |',
+    ...entries.map(
+      (entry) =>
+        `| \`${escapeMarkdownTableValue(entry.name)}\` | ${escapeMarkdownTableValue(entry.description ?? 'No description is provided by the package manifest.')} | \`var(${escapeMarkdownTableValue(entry.name)})\` | \`${escapeMarkdownTableValue(entry.sourcePath)}\` |`
+    ),
   ].join('\n');
 }
 
-export function replaceTypographyTablesWithMarkdown(content: string) {
-  const typographyTableRegex =
-    /<TypographyTable\b[^>]*typographyName=("([^"]+)"|'([^']+)')[^>]*\/?>(?:<\/TypographyTable>)?/g;
+export function replaceTokenTablesWithMarkdown(
+  content: string,
+  allEntries: TokenManifestEntry[]
+) {
+  return content.replace(createTokenTableTagRegex(), (tag, componentName) => {
+    const [usage] = extractTokenTableUsages(tag, 'llms');
+    try {
+      return tokenManifestTable(
+        selectTokenTableSection(allEntries, usage.table, usage.section)
+      );
+    } catch (error) {
+      throw new Error(
+        `Cannot render ${componentName} from the generated manifest: ${(error as Error).message}`
+      );
+    }
+  });
+}
 
+export function removeTokenTableImports(content: string) {
   return content.replace(
-    typographyTableRegex,
-    (_fullMatch, _attr, doubleQuoted, singleQuoted) => {
-      const format = doubleQuoted ?? singleQuoted;
-      if (!format) {
-        return _fullMatch;
+    new RegExp(
+      `import\\s+(${tokenTableNames.join('|')})\\s+from\\s+['"]@site\\/src\\/components\\/\\1['"];?`,
+      'g'
+    ),
+    ''
+  );
+}
+
+const jsxStringAttributeValue =
+  /\{\s*"(?:[^"\\]|\\.)*"\s*\}|\{\s*`[^`]*`\s*\}|"[^"]*"|'[^']*'/.source;
+
+function readJsxStringAttribute(attributes: string, name: string) {
+  const match = attributes.match(
+    new RegExp(`\\b${name}\\s*=\\s*(${jsxStringAttributeValue})`)
+  );
+  if (!match) {
+    return undefined;
+  }
+
+  const raw = match[1];
+  if (raw.startsWith('{')) {
+    const inner = raw.slice(1, -1).trim();
+    if (inner.startsWith('"')) {
+      try {
+        return JSON.parse(inner) as string;
+      } catch {
+        return inner.slice(1, -1);
+      }
+    }
+    return inner.slice(1, -1);
+  }
+  return raw.slice(1, -1);
+}
+
+function replaceBreakingChangeTags(content: string) {
+  return content.replace(
+    new RegExp(
+      `<BreakingChangeTag((?:\\s+\\w+\\s*=\\s*(?:${jsxStringAttributeValue}))*)\\s*\\/>`,
+      'g'
+    ),
+    (fullMatch, attributes: string) => {
+      const version = readJsxStringAttribute(attributes, 'message')?.trim();
+      if (!version) {
+        return fullMatch;
       }
 
-      return buildTypographySnippetBlock(format);
+      const description = readJsxStringAttribute(
+        attributes,
+        'description'
+      )?.trim();
+      return description
+        ? `Breaking change in v${version}: ${description}`
+        : `Breaking change in v${version}`;
     }
   );
 }
 
 function cleanApiValue(value: string) {
-  let cleanedValue = value
+  let cleanedValue = replaceBreakingChangeTags(value)
     .replace(/<ReactMarkdown>/g, '')
     .replace(/<\/ReactMarkdown>/g, '')
     .replace(/\{`([\s\S]*?)`\}/g, '$1')

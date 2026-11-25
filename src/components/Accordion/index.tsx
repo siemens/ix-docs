@@ -65,7 +65,7 @@ export default function Accordion(
           </span>
           {React.createElement('ix-icon', {
             name: expanded ? iconMinus : iconPlus,
-            color: expanded ? 'color-dynamic' : 'color-std-text',
+            color: expanded ? '--si-sys-color-text-accent' : '--si-sys-color-text-primary',
           })}
         </div>
       </h3>
