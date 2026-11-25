@@ -629,6 +629,8 @@ import { IxEventList, IxEventListItem } from '@siemens/ix-vue';
 
 ## API for ix-event-list
 
+Figma main component ID: `1433:43161` (node ID of the matching main component in the IX Figma library; use it to map Figma design specs to this component).
+
 ### Properties
 
 | Name | Description | Attribute | Type | Default | Notes |
@@ -645,6 +647,8 @@ import { IxEventList, IxEventListItem } from '@siemens/ix-vue';
 | default | { "Event list items." } |
 
 ## API for ix-event-list-item
+
+Figma main component ID: `1433:41688` (node ID of the matching main component in the IX Figma library; use it to map Figma design specs to this component).
 
 ### Properties
 

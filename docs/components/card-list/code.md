@@ -318,6 +318,8 @@ import { IxCardList, IxPushCard } from '@siemens/ix-vue';
 
 ## API for ix-card-list
 
+Figma main component ID: `104638:14632` (node ID of the matching main component in the IX Figma library; use it to map Figma design specs to this component).
+
 ### Properties
 
 | Name | Description | Attribute | Type | Default |

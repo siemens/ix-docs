@@ -842,6 +842,8 @@ import { IxCheckbox, IxCheckboxGroup } from '@siemens/ix-vue';
 
 ## API for ix-checkbox
 
+Figma main component ID: `42365:47165` (node ID of the matching main component in the IX Figma library; use it to map Figma design specs to this component).
+
 ### Properties
 
 | Name | Description | Attribute | Type | Default |
@@ -869,6 +871,8 @@ import { IxCheckbox, IxCheckboxGroup } from '@siemens/ix-vue';
 | default | { "Checkbox label." } |
 
 ## API for ix-checkbox-group
+
+Figma main component ID: `84992:87199` (node ID of the matching main component in the IX Figma library; use it to map Figma design specs to this component).
 
 ### Properties
 

@@ -374,6 +374,8 @@ import {
 
 ## API for ix-group
 
+Figma main component ID: `162440:187838` (node ID of the matching main component in the IX Figma library; use it to map Figma design specs to this component).
+
 ### Properties
 
 | Name | Description | Attribute | Type | Default |
@@ -406,6 +408,8 @@ import {
 | header | { "Additional header content." } |
 
 ## API for ix-group-item
+
+Figma main component ID: `162374:19834` (node ID of the matching main component in the IX Figma library; use it to map Figma design specs to this component).
 
 ### Properties
 

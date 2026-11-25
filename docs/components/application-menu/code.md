@@ -388,6 +388,8 @@ import { IxMenu, IxMenuItem } from '@siemens/ix-vue';
 
 ## API for ix-menu
 
+Figma main component ID: `20977:55554` (node ID of the matching main component in the IX Figma library; use it to map Figma design specs to this component).
+
 ### Properties
 
 | Name | Description | Attribute | Type | Default |
@@ -465,6 +467,8 @@ toggleSettings(show: boolean): Promise&lt;void&gt;;
 
 ## API for ix-menu-item
 
+Figma main component ID: `308:1293` (node ID of the matching main component in the IX Figma library; use it to map Figma design specs to this component).
+
 ### Properties
 
 | Name | Description | Attribute | Type | Default |
@@ -489,6 +493,8 @@ toggleSettings(show: boolean): Promise&lt;void&gt;;
 | default | { "Menu item label." } |
 
 ## API for ix-menu-category
+
+Figma main component ID: `4533:132499` (node ID of the matching main component in the IX Figma library; use it to map Figma design specs to this component).
 
 ### Properties
 

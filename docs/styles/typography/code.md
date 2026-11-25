@@ -12,6 +12,8 @@ The `ix-typography` component provides consistent text formatting without relyin
 
 ## API for ix-typography
 
+Figma main component ID: `40211:13267` (node ID of the matching main component in the IX Figma library; use it to map Figma design specs to this component).
+
 ### Properties
 
 | Name | Description | Attribute | Type | Default |

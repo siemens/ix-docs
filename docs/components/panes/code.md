@@ -425,6 +425,8 @@ const layout = ref<'full-horizontal' | 'full-vertical'>('full-horizontal');
 
 ## API for ix-pane
 
+Figma main component ID: `153304:26230` (node ID of the matching main component in the IX Figma library; use it to map Figma design specs to this component).
+
 ### Properties
 
 | Name | Description | Attribute | Type | Default |
@@ -458,6 +460,8 @@ const layout = ref<'full-horizontal' | 'full-vertical'>('full-horizontal');
 | header | { "Additional slot for the header content" } |
 
 ## API for ix-pane-layout
+
+Figma main component ID: `153304:27060` (node ID of the matching main component in the IX Figma library; use it to map Figma design specs to this component).
 
 ### Properties
 

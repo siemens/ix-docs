@@ -261,6 +261,8 @@ const suggestions = ref(['Item 1', 'Item 2']);
 
 ## API for ix-category-filter
 
+Figma main component ID: `1221:30316` (node ID of the matching main component in the IX Figma library; use it to map Figma design specs to this component).
+
 ### Properties
 
 | Name | Description | Attribute | Type | Default |

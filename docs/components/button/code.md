@@ -1714,6 +1714,8 @@ ix-icon-button {
 
 ## API for ix-button
 
+Figma main component ID: `225:5535` (node ID of the matching main component in the IX Figma library; use it to map Figma design specs to this component).
+
 ### Properties
 
 | Name | Description | Attribute | Type | Default |

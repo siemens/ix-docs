@@ -520,6 +520,8 @@ Right-click here
 
 ## API for ix-dropdown
 
+Figma main component ID: `1233:32649` (node ID of the matching main component in the IX Figma library; use it to map Figma design specs to this component).
+
 ### Properties
 
 | Name | Description | Attribute | Type | Default |
@@ -572,6 +574,8 @@ updatePosition(): Promise&lt;void&gt;;
 | default | { "Dropdown content." } |
 
 ## API for ix-dropdown-item
+
+Figma main component ID: `1603:52792` (node ID of the matching main component in the IX Figma library; use it to map Figma design specs to this component).
 
 ### Properties
 

@@ -174,6 +174,8 @@ Enhance the interactivity of your application-header by placing the avatar compo
 
 ## API for ix-application-header
 
+Figma main component ID: `162383:24794` (node ID of the matching main component in the IX Figma library; use it to map Figma design specs to this component).
+
 ### Properties
 
 | Name | Description | Attribute | Type | Default |

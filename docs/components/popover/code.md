@@ -264,6 +264,8 @@ const onCancel = () => {
 
 ## API for ix-popover
 
+Figma main component ID: `145668:12518` (node ID of the matching main component in the IX Figma library; use it to map Figma design specs to this component).
+
 ### Properties
 
 | Name | Description | Attribute | Type | Default |

@@ -644,6 +644,8 @@ import { IxRadio, IxRadioGroup } from '@siemens/ix-vue';
 
 ## API for ix-radio
 
+Figma main component ID: `42365:44481` (node ID of the matching main component in the IX Figma library; use it to map Figma design specs to this component).
+
 ### Properties
 
 | Name | Description | Attribute | Type | Default |
@@ -670,6 +672,8 @@ import { IxRadio, IxRadioGroup } from '@siemens/ix-vue';
 | default | { "Radio label." } |
 
 ## API for ix-radio-group
+
+Figma main component ID: `42365:44973` (node ID of the matching main component in the IX Figma library; use it to map Figma design specs to this component).
 
 ### Properties
 

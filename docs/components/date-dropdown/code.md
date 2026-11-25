@@ -513,6 +513,8 @@ import { IxDateDropdown } from '@siemens/ix-vue';
 
 ## API for ix-date-dropdown
 
+Figma main component ID: `45886:27067` (node ID of the matching main component in the IX Figma library; use it to map Figma design specs to this component).
+
 ### Properties
 
 | Name | Description | Attribute | Type | Default | Notes |

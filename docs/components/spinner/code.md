@@ -116,6 +116,8 @@ import { IxSpinner } from '@siemens/ix-vue';
 
 ## API for ix-spinner
 
+Figma main component ID: `453:5375` (node ID of the matching main component in the IX Figma library; use it to map Figma design specs to this component).
+
 ### Properties
 
 | Name | Description | Attribute | Type | Default | Notes |

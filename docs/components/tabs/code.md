@@ -417,6 +417,8 @@ import { IxIcon, IxTabItem, IxTabs } from '@siemens/ix-vue';
 
 ## API for ix-tabs
 
+Figma main component ID: `427:6367` (node ID of the matching main component in the IX Figma library; use it to map Figma design specs to this component).
+
 ### Properties
 
 | Name | Description | Attribute | Type | Default |
@@ -443,6 +445,8 @@ import { IxIcon, IxTabItem, IxTabs } from '@siemens/ix-vue';
 | default | { "Tab items." } |
 
 ## API for ix-tab-item
+
+Figma main component ID: `426:4122` (node ID of the matching main component in the IX Figma library; use it to map Figma design specs to this component).
 
 ### Properties
 

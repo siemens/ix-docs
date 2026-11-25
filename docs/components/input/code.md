@@ -1058,6 +1058,8 @@ import { IxInput, IxIcon, IxTypography } from '@siemens/ix-vue';
 
 ## API for ix-input
 
+Figma main component ID: `42365:39459` (node ID of the matching main component in the IX Figma library; use it to map Figma design specs to this component).
+
 ### Properties
 
 | Name | Description | Attribute | Type | Default |

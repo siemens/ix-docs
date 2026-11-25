@@ -3000,6 +3000,8 @@ import { IxBadge, IxList, IxListItem, IxTypography } from '@siemens/ix-vue';
 
 ## API for ix-list
 
+Figma main component ID: `124354:231473` (node ID of the matching main component in the IX Figma library; use it to map Figma design specs to this component).
+
 ### Properties
 
 | Name | Description | Attribute | Type | Default |
@@ -3033,6 +3035,8 @@ import { IxBadge, IxList, IxListItem, IxTypography } from '@siemens/ix-vue';
 | default | { "List items and optional group separators." } |
 
 ## API for ix-list-item
+
+Figma main component ID: `124221:389212` (node ID of the matching main component in the IX Figma library; use it to map Figma design specs to this component).
 
 ### Properties
 

@@ -281,6 +281,8 @@ import {
 
 ## API for ix-chat-user-message
 
+Figma main component ID: `133528:33294` (node ID of the matching main component in the IX Figma library; use it to map Figma design specs to this component).
+
 ### Properties
 
 | Name | Description | Attribute | Type |

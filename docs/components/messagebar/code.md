@@ -399,6 +399,8 @@ const handleShowMessage = () => {
 
 ## API for ix-message-bar
 
+Figma main component ID: `103814:17693` (node ID of the matching main component in the IX Figma library; use it to map Figma design specs to this component).
+
 ### Properties
 
 | Name | Description | Attribute | Type | Default | Notes |

@@ -397,6 +397,8 @@ import { IxCustomField } from '@siemens/ix-vue';
 
 ## API for ix-custom-field
 
+Figma main component ID: `159477:16761` (node ID of the matching main component in the IX Figma library; use it to map Figma design specs to this component).
+
 ### Properties
 
 | Name | Description | Attribute | Type | Default |

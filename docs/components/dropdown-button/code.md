@@ -434,6 +434,8 @@ import { IxDropdownButton, IxDropdownItem } from '@siemens/ix-vue';
 
 ## API for ix-dropdown-button
 
+Figma main component ID: `294:1198` (node ID of the matching main component in the IX Figma library; use it to map Figma design specs to this component).
+
 ### Properties
 
 | Name | Description | Attribute | Type | Default |

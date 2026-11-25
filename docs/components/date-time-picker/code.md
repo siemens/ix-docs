@@ -179,6 +179,8 @@ export default async () => {
 
 ## API for ix-datetime-picker
 
+Figma main component ID: `70466:78415` (node ID of the matching main component in the IX Figma library; use it to map Figma design specs to this component).
+
 ### Properties
 
 | Name | Description | Attribute | Type | Default |

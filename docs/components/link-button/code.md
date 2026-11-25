@@ -408,6 +408,8 @@ import { IxLinkButton } from '@siemens/ix-vue';
 
 ## API for ix-link-button
 
+Figma main component ID: `154524:11000` (node ID of the matching main component in the IX Figma library; use it to map Figma design specs to this component).
+
 ### Properties
 
 | Name | Description | Attribute | Type | Default |

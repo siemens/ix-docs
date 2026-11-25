@@ -279,6 +279,8 @@ import { IxSplitButton, IxDropdownItem } from '@siemens/ix-vue';
 
 ## API for ix-split-button
 
+Figma main component ID: `237:4370` (node ID of the matching main component in the IX Figma library; use it to map Figma design specs to this component).
+
 ### Properties
 
 | Name | Description | Attribute | Type | Default |

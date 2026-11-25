@@ -2400,6 +2400,8 @@ ix-icon-toggle-button {
 
 ## API for ix-toggle-button
 
+Figma main component ID: `8994:173458` (node ID of the matching main component in the IX Figma library; use it to map Figma design specs to this component).
+
 ### Properties
 
 | Name | Description | Attribute | Type | Default |
@@ -2424,6 +2426,8 @@ ix-icon-toggle-button {
 | default | { "Toggle button label." } |
 
 ## API for ix-icon-toggle-button
+
+Figma main component ID: `107597:25227` (node ID of the matching main component in the IX Figma library; use it to map Figma design specs to this component).
 
 ### Properties
 

@@ -128,6 +128,8 @@ import { IxPagination } from '@siemens/ix-vue';
 
 ## API for ix-pagination
 
+Figma main component ID: `2302:67995, 2554:79100` (node ID of the matching main component in the IX Figma library; use it to map Figma design specs to this component).
+
 ### Properties
 
 | Name | Description | Attribute | Type | Default |

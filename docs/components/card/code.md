@@ -544,6 +544,8 @@ import { IxPushCard } from '@siemens/ix-vue';
 
 ## API for ix-action-card
 
+Figma main component ID: `104612:25269` (node ID of the matching main component in the IX Figma library; use it to map Figma design specs to this component).
+
 ### Properties
 
 | Name | Description | Attribute | Type | Default | Notes |
@@ -565,6 +567,8 @@ import { IxPushCard } from '@siemens/ix-vue';
 | default | { "Card content." } |
 
 ## API for ix-push-card
+
+Figma main component ID: `104612:25695` (node ID of the matching main component in the IX Figma library; use it to map Figma design specs to this component).
 
 ### Properties
 
@@ -588,6 +592,8 @@ import { IxPushCard } from '@siemens/ix-vue';
 | title-action | { "Action displayed next to the title." } |
 
 ## API for ix-card
+
+Figma main component ID: `162440:171408` (node ID of the matching main component in the IX Figma library; use it to map Figma design specs to this component).
 
 ### Properties
 

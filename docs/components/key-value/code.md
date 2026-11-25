@@ -314,6 +314,8 @@ import { IxKeyValue } from '@siemens/ix-vue';
 
 ## API for ix-key-value
 
+Figma main component ID: `4727:112546` (node ID of the matching main component in the IX Figma library; use it to map Figma design specs to this component).
+
 ### Properties
 
 | Name | Description | Attribute | Type | Default |

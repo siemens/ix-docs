@@ -65,6 +65,8 @@ import { IxExpandingSearch } from '@siemens/ix-vue';
 
 ## API for ix-expanding-search
 
+Figma main component ID: `680:9354` (node ID of the matching main component in the IX Figma library; use it to map Figma design specs to this component).
+
 ### Properties
 
 | Name | Description | Attribute | Type | Default |

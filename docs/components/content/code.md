@@ -125,6 +125,8 @@ import { IxContent, IxContentHeader } from '@siemens/ix-vue';
 
 ## API for ix-content
 
+Figma main component ID: `162440:168673` (node ID of the matching main component in the IX Figma library; use it to map Figma design specs to this component).
+
 ### Slot
 
 | Name | Description |

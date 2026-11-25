@@ -647,6 +647,8 @@ import { IxFlipTile, IxFlipTileContent, IxIcon } from '@siemens/ix-vue';
 
 ## API for ix-flip-tile
 
+Figma main component ID: `162362:111923` (node ID of the matching main component in the IX Figma library; use it to map Figma design specs to this component).
+
 ### Properties
 
 | Name | Description | Attribute | Type | Default | Notes |

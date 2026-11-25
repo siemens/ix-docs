@@ -377,6 +377,8 @@ const nextItems = ref<{ breadcrumbKey: string; label: string }[]>([
 
 ## API for ix-breadcrumb
 
+Figma main component ID: `1603:54616` (node ID of the matching main component in the IX Figma library; use it to map Figma design specs to this component).
+
 ### Properties
 
 | Name | Description | Attribute | Type | Default |
@@ -402,6 +404,8 @@ const nextItems = ref<{ breadcrumbKey: string; label: string }[]>([
 | default | { "Breadcrumb items." } |
 
 ## API for ix-breadcrumb-item
+
+Figma main component ID: `358:3004` (node ID of the matching main component in the IX Figma library; use it to map Figma design specs to this component).
 
 ### Properties
 

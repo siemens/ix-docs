@@ -61,6 +61,8 @@ import { IxUpload } from '@siemens/ix-vue';
 
 ## API for ix-upload
 
+Figma main component ID: `1028:14676` (node ID of the matching main component in the IX Figma library; use it to map Figma design specs to this component).
+
 ### Properties
 
 | Name | Description | Attribute | Type | Default |

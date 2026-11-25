@@ -845,6 +845,8 @@ function onDateChange(event: CustomEvent<DateChangeEvent>) {
 
 ## API for ix-date-picker
 
+Figma main component ID: `561:6290` (node ID of the matching main component in the IX Figma library; use it to map Figma design specs to this component).
+
 ### Properties
 
 | Name | Description | Attribute | Type | Default |
