@@ -1,0 +1,42 @@
+/*
+ * SPDX-FileCopyrightText: 2026 Siemens AG
+ *
+ * SPDX-License-Identifier: MIT
+ *
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
+ */
+
+// Docusaurus navigation and controls use the ix focus ring tokens.
+// Inline content links keep the default ix link focus style.
+// The id selector is required to win over the global ix link rule.
+#__docusaurus
+  :is(
+    .clean-btn,
+    .menu__link,
+    .menu__caret,
+    .navbar__brand,
+    .navbar__item,
+    .navbar__link,
+    .navbar-sidebar__back,
+    .icon-link,
+    .table-of-contents__link,
+    .footer a,
+    .pagination-nav__link,
+    .breadcrumbs__link,
+    .theme-edit-this-page,
+    .aa-DetachedSearchButton,
+    pre.prism-code,
+    [class*='skipToContent_'],
+    [class*='sidebarItemLink_']
+  ):focus-visible {
+  outline: var(--si-sys-sizing-focus-ring-width) solid
+    var(--si-sys-color-effects-focus);
+  outline-offset: var(--si-sys-sizing-focus-ring-offset);
+}
+
+// Align the edit icon so the ring is a single box
+#__docusaurus .theme-edit-this-page {
+  display: inline-flex;
+  align-items: center;
+}

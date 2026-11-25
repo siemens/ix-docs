@@ -33,11 +33,11 @@ $menu-link-active-offset: 0.25rem;
   }
 
   .menu__list-item-collapsible:hover {
-    background-color: var(--theme-color-1--hover) !important;
+    background-color: var(--si-sys-color-background-hover) !important;
   }
 
   .category-tabs .menu__list-item-collapsible .menu__link--active {
-    background-color: var(--theme-color-ghost--active) !important;
+    background-color: var(--si-sys-color-background-selected) !important;
   }
   .menu__link--active {
     border-inline-start: solid $menu-link-active-offset
@@ -54,7 +54,7 @@ $menu-link-active-offset: 0.25rem;
 
   .theme-doc-sidebar-item-category:not(.menu__list-item--collapsed)
     .menu__link.menu__link--sublist.menu__link--active {
-    color: var(--theme-color-std-text);
+    color: var(--si-sys-color-text-primary);
     border-inline-start: none;
     padding-inline-start: var(--ifm-menu-link-padding-horizontal);
   }

@@ -24,7 +24,7 @@ export function RedirectTag({
       <div className={clsx(styles.Redirect)}>
         {React.createElement('ix-icon', {
           name: iconOpenExternal,
-          color: 'color-primary',
+          color: '--si-sys-color-text-accent',
           size: '16',
         })}
         <a href={link} target="_blank" rel="noreferrer" className={styles.Link}>

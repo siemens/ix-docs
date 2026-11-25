@@ -264,3 +264,4 @@ Many actions come in natural pairs or opposites. Using the right pairs help user
 - [Button (component)](../../../components/button/)
 - [Search and filter](./search-and-filter.md)
 - [Logging in and out](./logging-in-and-out.md)
+- [Button labels](./button-labels.md)

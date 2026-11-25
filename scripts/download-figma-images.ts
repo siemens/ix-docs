@@ -14,6 +14,7 @@ import { readFile } from 'fs/promises';
 import yargs from 'yargs';
 import { hideBin } from 'yargs/helpers';
 import { config as dotenv } from '@dotenvx/dotenvx';
+import { CATEGORY_ILLUSTRATIONS } from '../src/components/ComponentOverview/illustrations';
 
 dotenv({
   override: true,
@@ -165,7 +166,32 @@ function getFigmaMeta(link: string): {
   };
 }
 
-async function updateFigmaImage(regex: string) {
+function addImageRequest(imageRequests: ImageRequest, link: string) {
+  const { fileName, nodeId } = getFigmaMeta(link);
+
+  if (imageRequests.has(fileName)) {
+    imageRequests.get(fileName)!.add(nodeId);
+  } else {
+    imageRequests.set(fileName, new Set([nodeId]));
+  }
+
+  return getLocalFilename(fileName, nodeId);
+}
+
+function addCategoryIllustrations(imageRequests: ImageRequest) {
+  for (const [category, { imagePath, sourceUrl }] of Object.entries(
+    CATEGORY_ILLUSTRATIONS
+  )) {
+    const localFilename = addImageRequest(imageRequests, sourceUrl);
+    if (imagePath !== `/figma/${localFilename}`) {
+      throw Error(
+        `Illustration "${category}" imagePath ${imagePath} does not match sourceUrl (expected /figma/${localFilename})`
+      );
+    }
+  }
+}
+
+async function updateFigmaImage(regex: string, dryRun = false) {
   const imageRequests: ImageRequest = new Map<string, Set<string>>();
 
   const markdownPath = path.join(process.cwd(), regex);
@@ -180,15 +206,20 @@ async function updateFigmaImage(regex: string) {
     );
     if (figmaImageLinks) {
       for (const link of figmaImageLinks) {
-        const { fileName, nodeId } = getFigmaMeta(link[1]);
-
-        if (imageRequests.has(fileName)) {
-          imageRequests.get(fileName)!.add(nodeId);
-        } else {
-          imageRequests.set(fileName, new Set([nodeId]));
-        }
+        addImageRequest(imageRequests, link[1]);
       }
     }
+  }
+
+  addCategoryIllustrations(imageRequests);
+
+  if (dryRun) {
+    for (const [fileName, nodeIds] of imageRequests) {
+      for (const nodeId of nodeIds) {
+        console.log(getLocalFilename(fileName, nodeId));
+      }
+    }
+    return;
   }
 
   for (const [fileName, nodeIds] of imageRequests) {
@@ -215,14 +246,20 @@ yargs(hideBin(process.argv))
     'update [regex]',
     'Update download and replace figma images',
     (yargs) => {
-      return yargs.positional('regex', {
-        describe: 'The regex to match image links',
-        type: 'string',
-        default: 'docs/**/*.md?(x)',
-      });
+      return yargs
+        .positional('regex', {
+          describe: 'The regex to match image links',
+          type: 'string',
+          default: 'docs/**/*.md?(x)',
+        })
+        .option('dry-run', {
+          describe: 'List discovered images without downloading',
+          type: 'boolean',
+          default: false,
+        });
     },
     async (argv) => {
-      await updateFigmaImage(argv.regex);
+      await updateFigmaImage(argv.regex, argv.dryRun);
     }
   )
   .parse();

@@ -19,7 +19,7 @@ import Button from '../Button';
 import styles from './ThemeSelection.module.css';
 
 const brandTheme = 'brand';
-const classicTheme = 'classic';
+const communityTheme = 'community';
 
 function toUppercase(str: string) {
   return str.charAt(0).toUpperCase() + str.slice(1);
@@ -30,7 +30,7 @@ export function useDefaultTheme() {
   if (context.siteConfig.customFields.withBrandTheme) {
     return brandTheme;
   }
-  return classicTheme;
+  return communityTheme;
 }
 
 type ThemeSelectionProps = {
@@ -38,17 +38,20 @@ type ThemeSelectionProps = {
 };
 
 export function ThemeSelection(props: Readonly<ThemeSelectionProps>) {
-  const { playgroundTheme: activeTheme, setPlaygroundTheme: setTheme } =
+  const { playgroundTheme, setPlaygroundTheme: setTheme } =
     usePlaygroundTheme();
   const context = useDocusaurusContext();
   const [availableThemes] = useState(() => {
-    const themes = [classicTheme];
+    const themes = [communityTheme];
     if (context.siteConfig.customFields.withBrandTheme) {
       themes.push(brandTheme);
     }
 
     return themes;
   });
+  const activeTheme = availableThemes.includes(playgroundTheme)
+    ? playgroundTheme
+    : availableThemes[0];
 
   const [ref, setRef] = useState<HTMLButtonElement>(null);
   const displayTheme = toUppercase(activeTheme);

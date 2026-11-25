@@ -7,11 +7,11 @@
       id="path-1"></path>
   </defs>
   <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-    <mask id="mask-2" fill="var(--theme-color-logo)">
+    <mask id="mask-2" fill="var(--si-sys-color-effects-logo)">
       <use xlink:href="#path-1"></use>
     </mask>
-    <use id="Siemens" fill="var(--theme-color-logo)" xlink:href="#path-1"></use>
-    <g id="c/white" mask="url(#mask-2)" fill="var(--theme-color-logo)">
+    <use id="Siemens" fill="var(--si-sys-color-effects-logo)" xlink:href="#path-1"></use>
+    <g id="c/white" mask="url(#mask-2)" fill="var(--si-sys-color-effects-logo)">
       <rect id="Rectangle" x="0" y="0" width="130" height="22"></rect>
     </g>
   </g>

@@ -7,6 +7,7 @@
  * LICENSE file in the root directory of this source tree.
  */
 import type { SidebarsConfig } from '@docusaurus/plugin-content-docs';
+import { getTabsPageTags } from './src/lib/page-tags/tabs';
 
 function createTabItem(item: {
   id: string;
@@ -16,6 +17,8 @@ function createTabItem(item: {
     label: string;
   }[];
 }): any {
+  const pageTags = getTabsPageTags(item.id);
+
   return {
     type: 'category',
     label: item.label,
@@ -26,6 +29,7 @@ function createTabItem(item: {
     className: 'category-tabs',
     collapsed: true,
     collapsible: false,
+    ...(Object.keys(pageTags).length > 0 && { customProps: { pageTags } }),
     items: item.items.map((child) => ({
       type: 'doc',
       id: child.id,
@@ -66,13 +70,9 @@ const sidebars: SidebarsConfig = {
       className: 'doc-sidebar-item-bold',
       label: 'Migration and upgrade',
       items: [
+        'home/migration/migration-overview',
         'home/migration/6_0_0/index',
         'home/migration/5_0_0/index',
-        'home/migration/4_0_0/index',
-        'home/migration/3_0_0/index',
-        'home/migration/2_0_0/index',
-        'home/migration/core-ui',
-        'home/migration/uxt',
       ],
       collapsed: true,
     },
@@ -97,6 +97,7 @@ const sidebars: SidebarsConfig = {
       items: [
         'home/releases/roadmap',
         'home/releases/release-version',
+        'home/releases/compatibility-v5',
         {
           type: 'link',
           href: 'https://github.com/siemens/ix/releases',
@@ -129,6 +130,11 @@ const sidebars: SidebarsConfig = {
     {
       type: 'doc',
       id: 'home/mcp-server',
+      className: 'doc-sidebar-item-bold',
+    },
+    {
+      type: 'doc',
+      id: 'home/agent-skill',
       className: 'doc-sidebar-item-bold',
     },
   ],
@@ -457,6 +463,20 @@ const sidebars: SidebarsConfig = {
           ],
         }),
         createTabItem({
+          id: 'components/list/index',
+          label: 'List',
+          items: [
+            {
+              id: 'components/list/guide',
+              label: 'Usage',
+            },
+            {
+              id: 'components/list/code',
+              label: 'Code',
+            },
+          ],
+        }),
+        createTabItem({
           id: 'components/modal/index',
           label: 'Modal',
           items: [
@@ -620,6 +640,10 @@ const sidebars: SidebarsConfig = {
           label: 'Date dropdown',
           items: [
             {
+              id: 'components/date-dropdown/guide',
+              label: 'Usage',
+            },
+            {
               id: 'components/date-dropdown/code',
               label: 'Code',
             },
@@ -664,7 +688,7 @@ const sidebars: SidebarsConfig = {
             {
               id: 'components/date-picker/code',
               label: 'Code',
-            }
+            },
           ],
         }),
         createTabItem({
@@ -675,10 +699,10 @@ const sidebars: SidebarsConfig = {
               id: 'components/date-time-picker/guide',
               label: 'Usage',
             },
-                        {
+            {
               id: 'components/date-time-picker/code',
               label: 'Code',
-            }
+            },
           ],
         }),
         createTabItem({
@@ -862,6 +886,10 @@ const sidebars: SidebarsConfig = {
               id: 'components/button/code',
               label: 'Code',
             },
+            {
+              id: 'components/button/language',
+              label: 'Writing',
+            },
           ],
         }),
         createTabItem({
@@ -903,6 +931,10 @@ const sidebars: SidebarsConfig = {
             {
               id: 'components/link-button/code',
               label: 'Code',
+            },
+            {
+              id: 'components/link-button/language',
+              label: 'Writing',
             },
           ],
         }),
@@ -998,8 +1030,8 @@ const sidebars: SidebarsConfig = {
             },
             {
               id: 'components/info-page/language',
-              label: 'Writing'
-            }
+              label: 'Writing',
+            },
           ],
         }),
         createTabItem({
@@ -1125,7 +1157,7 @@ const sidebars: SidebarsConfig = {
       items: [
         createTabItem({
           id: 'components/grid/index',
-          label: 'Data grid',
+          label: 'AG Grid',
           items: [
             {
               id: 'components/grid/guide',
@@ -1384,41 +1416,69 @@ const sidebars: SidebarsConfig = {
   ],
   icons: [
     'icons/icon-library',
+    'icons/icon-usage',
     {
       type: 'category',
       className: 'doc-sidebar-item-bold',
-      label: 'Icon guidelines',
-      items: [
-        'icons/icon-usage',
-        'icons/design-new-icons',
-        'icons/developing-with-icons',
-      ],
+      label: 'Add new icons',
+      items: ['icons/design-new-icons', 'icons/developing-with-icons'],
     },
   ],
   styles: [
-    'styles/colors',
     createTabItem({
-      id: 'styles/typography/index',
-      label: 'Typography',
+      id: 'styles/overview/index',
+      label: 'Overview',
       items: [
         {
-          id: 'styles/typography/guide',
-          label: 'Usage',
+          id: 'styles/overview/guide',
+          label: 'Overview',
         },
         {
-          id: 'styles/typography/code',
+          id: 'styles/overview/code',
           label: 'Code',
         },
       ],
     }),
-    'styles/borders',
-    'styles/shadows',
-    'styles/elevation',
-    'styles/animation',
     {
       type: 'category',
       className: 'doc-sidebar-item-bold',
-      label: 'Theme',
+      label: 'Visual tokens',
+      items: [
+        'styles/colors',
+        createTabItem({
+          id: 'styles/typography/index',
+          label: 'Typography',
+          items: [
+            {
+              id: 'styles/typography/guide',
+              label: 'Usage',
+            },
+            {
+              id: 'styles/typography/code',
+              label: 'Code',
+            },
+          ],
+        }),
+        'styles/sizing',
+      ],
+      collapsed: true,
+    },
+    {
+      type: 'category',
+      className: 'doc-sidebar-item-bold',
+      label: 'Surfaces & motion',
+      items: [
+        'styles/elevation',
+        'styles/borders',
+        'styles/shadows',
+        'styles/animation',
+      ],
+      collapsed: true,
+    },
+    {
+      type: 'category',
+      className: 'doc-sidebar-item-bold',
+      label: 'Theming & setup',
       items: [
         'styles/theming/usage-developers',
         'styles/theming/usage-designers',
