@@ -17,6 +17,7 @@ Chats are the outer containers that bring together the three building blocks of 
 
 - **Welcome screen:** While the chat has no messages, greet users and show what the assistant can do, e.g. with a short heading, a description and a few Prompt suggestions users can pick instead of typing. The Welcome screen disappears as soon as the conversation starts.
 - **Message actions:** Use the same message actions for each message, e.g. copy, regenerate and feedback, and move further actions into an overflow menu.
+- **Custom scroll behavior:** Turn off auto-scroll and the "Scroll to latest" button if your application controls scrolling itself, e.g. to show the start of a new answer instead of its end. The application can also scroll the chat to the top or bottom, e.g. after loading a previous conversation.
 
 ## Behavior in context
 
@@ -26,7 +27,6 @@ Chats are the outer containers that bring together the three building blocks of 
 - **Responsiveness:** Chats will resize to a max-width of `45rem`.
 - **Auto-scroll:** By default, the chat keeps the latest content in view while new messages are added or a response streams. Auto-scroll stops as soon as users scroll away from the bottom and resumes when they return to the bottom, select "Scroll to latest" or send a new prompt.
 - **Scroll to latest:** While users are away from the bottom, a "Scroll to latest" button is shown above the chat input. It never covers the chat input and scrolls without animation when users prefer reduced motion.
-- **Custom scroll behavior:** Turn off auto-scroll and the "Scroll to latest" button with `suppressAutoScroll` if the application controls scrolling itself, e.g. to scroll to the start of a new answer. Use `scrollToBottom()` and `scrollToTop()` to scroll programmatically, e.g. after loading a conversation.
 
 ## Dos and Don’ts
 
