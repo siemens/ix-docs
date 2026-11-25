@@ -97,7 +97,7 @@ const sidebars: SidebarsConfig = {
       items: [
         'home/releases/roadmap',
         'home/releases/release-version',
-        'home/releases/compatibility-v6',
+        'home/releases/compatibility',
         {
           type: 'link',
           href: 'https://github.com/siemens/ix/releases',
