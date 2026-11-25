@@ -22,6 +22,12 @@ Use info pages when a page-level situation interrupts the normal route and users
 - **Description:** Add brief supporting text that explains the situation or the next step (see [UX writing guidelines](./language)).
 - **Actions:** Add buttons that help users recover, navigate away or request support (see [UX writing guidelines](./language)).
 
+![Info page options](https://www.figma.com/design/wEptRgAezDU1z80Cn3eZ0o/iX-Documentation-illustrations?node-id=8464-68)
+
+:::info
+Siemens employees and partners can access more illustrations in the [Product illustrations Figma file](https://www.figma.com/design/7QfrdFpMmjDSDFDhTXwhZs/Product-illustrations?node-id=1-3133).
+:::
+
 ## Behavior in context
 
 - **Interaction:** Actions follow the heading and message in normal document order. Keep every action keyboard reachable. The first focusable element is the first button.
@@ -31,8 +37,6 @@ Use info pages when a page-level situation interrupts the normal route and users
 ## States
 
 Info pages have no separate hover, active, disabled, loading or error state. The states of controls in the `actions` slot come from those controls. The default icon is decorative; slotted images need their own meaningful alternative text when they convey information.
-
-![Info page states](https://www.figma.com/design/wEptRgAezDU1z80Cn3eZ0o/iX-Documentation-illustrations?node-id=8464-68)
 
 ## Dos and Don'ts
 

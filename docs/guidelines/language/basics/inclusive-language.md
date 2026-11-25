@@ -86,3 +86,4 @@ Official Siemens brand resources regarding this theme are exclusively available 
 
 - [Offensive language](./offensive-language.md)
 - [UX writing resources and support](../support-and-resources/UX-writing-resources.md)
+- [Vocabulary](./vocabulary.md)

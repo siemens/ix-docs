@@ -4,7 +4,7 @@ doc-type: 'tab-item'
 
 # HTML Table - Usage
 
-HTML tables display structured, tabular data enabling users to compare, sort, and filter information. In our applications, we use tables to present datasets where users need to quickly locate items and perform actions. Typically, we use tables for comparing data across rows and columns. For more complex datasets with advanced features, we recommend using [data grids](../grid).
+HTML tables display structured, tabular data enabling users to compare, sort, and filter information. In our applications, we use tables to present datasets where users need to quickly locate items and perform actions. Typically, we use tables for comparing data across rows and columns. For more complex datasets with advanced features, we recommend using [AG Grids](../grid).
 
 :::note
 
@@ -25,7 +25,7 @@ The HTML table is not a dedicated web component, but rather styling applied to t
 
 ## Behavior in context
 
-- **Interaction**: By default, HTML tables do not include interactive features like sorting or selection. However, we can enhance tables with JavaScript to add sorting by clicking column headers and row selection via checkboxes. For more advanced interactions (e.g. filtering, grouping, inline editing), we recommend using [data grids](../grid) instead.
+- **Interaction**: By default, HTML tables do not include interactive features like sorting or selection. However, we can enhance tables with JavaScript to add sorting by clicking column headers and row selection via checkboxes. For more advanced interactions (e.g. filtering, grouping, inline editing), we recommend using [AG Grids](../grid) instead.
 - **Overflow**: By default, text wraps within cells. For tables with many columns, enable horizontal scrolling to maintain readability.
 
 ## Dos and Don’ts
@@ -47,7 +47,7 @@ The HTML table is not a dedicated web component, but rather styling applied to t
 
 ## Related
 
-- [Data Grid (AG Grid)](../grid)
+- [AG Grid](../grid)
 - [Panes](../panes)
 - [Button](../button)
 - [Application Header](../application-header)

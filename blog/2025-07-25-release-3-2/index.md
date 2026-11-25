@@ -16,7 +16,7 @@ We’ll also give you a sneak peek at what’s coming in the upcoming 4.0 major 
 # How to start?
 
 - Install `@siemens/ix` (`@siemens/ix-angular`, `@siemens/ix-react`, `@siemens/ix-vue`) via the `latest` tag
-- Review detailed changelog [here](/docs/home/migration/3_0_0/)
+- Review detailed changelog [here](https://ix.siemens.io/version-4.4.0/docs/home/migration/3_0_0)
 - Make sure you're using the latest published version of our Figma library
 
 # Time input and redesigned time picker

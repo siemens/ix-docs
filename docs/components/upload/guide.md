@@ -41,7 +41,7 @@ Make the upload form-ready by using [custom fields](../custom-field/), e.g. to a
 
 ## States
 
-Uploads have six states: Default, drag over, checking, success, fail and disabled. The checking states keep users informed while the file is being inspected, while success and fail communicate the result of the upload. Multi-file implementations can also show queued or completed statuses on individual file rows.
+Uploads have six states: Default, drag over, checking, success, fail and disabled. The checking state keeps users informed while the file is being inspected, while success and fail communicate the result of the upload. Multi-file implementations can also show queued or completed statuses on individual file rows.
 
 ![Upload states](https://www.figma.com/design/wEptRgAezDU1z80Cn3eZ0o/iX-Documentation-illustrations?node-id=8251-245)
 

@@ -4,47 +4,16 @@
 
 import BrowserOnly from '@docusaurus/BrowserOnly';
 import useBaseUrl from '@docusaurus/useBaseUrl';
-import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 import {
   iconArrowRight,
-  iconChevronDown,
   iconSingleCheck,
 } from '@siemens/ix-icons/icons';
 import { IxIcon } from '@siemens/ix-react';
 import Layout from '@theme/Layout';
 import clsx from 'clsx';
-import React, { useEffect } from 'react';
+import React from 'react';
 import styles from './index.module.css';
 import Link from '@docusaurus/Link';
-
-function parallax(id: string, min: number, max: number, translateMax: number) {
-  let counter = 0;
-  var lastScrollTop = 0;
-
-  function translateY(el: HTMLElement, value: string) {
-    el.setAttribute('style', `transform:translateY(${value})`);
-  }
-
-  window.addEventListener('scroll', (event) => {
-    var st = window.pageYOffset || document.documentElement.scrollTop;
-    const isMin = counter < 0;
-    const isMax = counter > translateMax;
-    const parent = document.getElementById(id)?.getBoundingClientRect();
-
-    if (!parent) return;
-
-    if (st > lastScrollTop && !isMax && parent.y < max) {
-      //scroll down
-      counter += 0.5;
-    }
-    if (st < lastScrollTop && !isMin && parent.bottom > min) {
-      //scroll up
-      counter -= 0.5;
-    }
-    lastScrollTop = st <= 0 ? 0 : st;
-    translateY(document.getElementById(id), counter + 'px');
-  });
-}
 
 function Headline({
   title,
@@ -102,15 +71,6 @@ function Headline({
 }
 
 function Homepage() {
-  const context = useDocusaurusContext();
-
-  useEffect(() => {
-    const withBrandTheme = context.siteConfig.customFields.withBrandTheme;
-    document.body.className = withBrandTheme
-      ? 'theme-brand-dark'
-      : 'theme-classic-dark';
-  }, [context]);
-
   return (
     <div className={clsx(styles.container, styles.industrial_experience)}>
       <div className={styles.content}>

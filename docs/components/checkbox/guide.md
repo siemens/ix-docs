@@ -1,7 +1,6 @@
 ---
 doc-type: 'tab-item'
 description: 'Usage guide for the ix-checkbox, ix-checkbox-group'
-formReady: true
 ---
 # Checkbox - Usage
 
