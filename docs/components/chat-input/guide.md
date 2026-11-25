@@ -20,7 +20,7 @@ In chat inputs, users write and send messages. We recommend using them for quick
 ## Options
 
 - **Placeholder:** Use clear, contextual prompts, e.g. “Enter a command, question or topic…” (see [writing guidelines](../../guidelines/conversational-design/essentials/wording-terms)).
-- **Follow-up slot:** Optionally include a slot for follow-up questions. We typically use tertiary outline [buttons](../button) or [icon buttons](../icon-button) for that purpose.
+- **Follow-up slot:** Optionally include follow-up prompts after an AI response. We recommend Prompt suggestions (`ix-chat-prompt-suggestion`) so follow-up prompts look like the suggestions of the chat's Welcome screen; [buttons](../button) and [icon buttons](../icon-button), e.g. to refresh the prompts, also work.
 - **Attachment slot:** Optionally include a slot for [attachments](../chat-attachment/).
 - **Start slot:** Add secondary actions. We recommend using tertiary outline [icon buttons](../icon-button) and trying to stick to one action. If you have more than one action, use [dropdown buttons](../dropdown-button/).
 - **End slot:** Use this slot to add alternative input methods, e.g. voice input.
